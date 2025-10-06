@@ -1,5 +1,5 @@
-FLO-2D Plugin Gila
-=============================
+User Manual
+============
 
 Continuous enhancements and refinements are in progress for the FLO-2D Plugin.
 Users can choose from two versions:
