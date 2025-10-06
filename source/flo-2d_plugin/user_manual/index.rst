@@ -20,7 +20,7 @@ If the FLO-2D plugin is not visible on the QGIS toolbar, use the
    :caption: FLO-2D Plugin Version 1.0.0:
 
    plugin-features/index
-   toolbar/index
+..   toolbar/index
 
 ..  widgets/index
 ..  post-development-grid-modification/index
