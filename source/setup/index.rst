@@ -3,7 +3,7 @@ Setup
 
 .. toctree::
    :maxdepth: 2
-   :caption: Setup
+   :caption: Setup2
 
    flo-2d_pro_setup
    qgis_setup
