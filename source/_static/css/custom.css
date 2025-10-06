@@ -1,5 +1,145 @@
 
 /* Custom styles for FLO-2D Documentation */
+/* .wy-nav-content {
+    max-width: 1200px;
+} */
+
+
+
+
+/* Custom styles for FLO-2D Documentation */
 .wy-nav-content {
     max-width: 1200px;
 }
+
+/* Customize chapter-based equation numbering design */
+
+/* Align Sphinx equation numbers to the RIGHT of the equation */
+div.math {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center the whole block first */
+  margin: 1em 0;
+  gap: 1em; /* space between equation and number */
+}
+
+div.math .eqno {
+  order: 2; /* make sure it's after the equation */
+  margin-left: 1em;
+  color: #000;
+  font-size: 90%;
+  white-space: nowrap;
+}
+
+div.math mjx-container {
+  order: 1;
+  flex-shrink: 1;
+  text-align: right;
+}
+
+/* Hide the section number prefix (e.g., "1.") in chapter headings */
+h1 > .section-number{
+  display: none;
+}
+
+/* Hide section number in the breadcrumbs only */
+.wy-breadcrumbs .section-number {
+  display: none;
+}
+
+/* Remove the default border and background from sphinx-design dropdowns [Hydrology tutorial, Infiltration 07/10/2025] */
+
+/* Remove card-like background and border from sphinx-design dropdowns */
+details.sd-dropdown {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 0 1em 0 !important;
+    border-radius: 0 !important;
+}
+
+/* Fix any inherited card class (used internally by sphinx-design) */
+details.sd-dropdown.sd-card {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* Style the dropdown summary/title */
+details.sd-dropdown summary {
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-weight: bold;
+    font-size: 1.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    cursor: pointer;
+    justify-content: flex-start !important;
+}
+
+/* Add custom left arrow manually */
+details.sd-dropdown summary::before {
+    content: "▶";
+    color: #005a9c;
+    font-size: 0.9em;
+}
+
+details.sd-dropdown[open] summary::before {
+    content: "▼";
+}
+
+/* Remove SVGs inside the summary (edge case) */
+details.sd-dropdown summary svg {
+    display: none !important;
+}
+
+.h3 {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 1em;
+}
+
+.h4 {
+    font-weight: bold;
+    font-size: 1em;
+    margin-left: 1em;
+    color: #444;
+}
+
+
+/* Changes made on 19th July 2025 to allow toggling methods for Green-Ampt Infiltration */
+
+/* Default closed arrow for all dropdowns */
+details.sd-dropdown summary::before {
+    content: "▶";
+    color: #005a9c;
+    font-size: 0.9em;
+}
+
+/* Open arrow only when [open] attribute is actually present */
+details.sd-dropdown[open] > summary::before {
+    content: "▼" !important;
+}
+
+/* Fallback fix for nested dropdowns that don't use <details> properly */
+details.sd-dropdown summary:not([aria-expanded="true"])::before {
+    content: "▶";
+}
+details.sd-dropdown summary[aria-expanded="true"]::before {
+    content: "▼";
+}
+
+
+/* 19/07/2025 image-text spacing */
+/* Add space after images to separate from following text */
+img {
+    margin-bottom: 1em;
+}
+
+
+
