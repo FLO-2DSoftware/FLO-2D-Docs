@@ -16,23 +16,26 @@ Set the Environmental Variables for the System not the user.
 Open Control Panel and search for System Properties.
 Click the Environmental Variables button.
 
-.. image:: ../img/View-Options/View002.png
+.. image:: ../../img/View-Options/View002.png
 
 Click the New button for System Variables.
 Add the new variable as shown below.
 
-.. image:: ../img/View-Options/View003.png
+.. image:: ../../img/View-Options/View003.png
 
-.. image:: ../img/View-Options/View004.png
+.. image:: ../../img/View-Options/View004.png
 
 For QGIS, navigate to Settings > Options > General and set the icon size to 24 and the text size to 8.
 Try a few different combinations to optimize the display.
 
-.. image:: ../img/View-Options/View005.png
+.. image:: ../../img/View-Options/View005.png
 
 If any parts of the Plugin are missing, they can be retrieved using the View menu or by right clicking the Toolbar area.
 
-|View012| |View013|
+
+.. image:: ../../img/View-Options/View012.png
+
+.. image:: ../../img/View-Options/View013.png
 
 Plugin Toolbar
 --------------
@@ -40,7 +43,7 @@ Plugin Toolbar
 The FLO-2D Plugin toolbar is located on the QGIS toolbar lower tier.
 If the toolbar is missing, follow the FLO-2D Plugin installation instructions or use the View menu to load it onto the QGIS Toolbar menu.
 
-.. image:: ../img/Buttons/tools.png
+.. image:: ../../img/Buttons/tools.png
 
 Plugin Layers
 -------------
@@ -56,12 +59,12 @@ In the following images, the Layers and Browser panel were docked together by dr
 
 Close the Browser panel or dock both Layers and Browser together so layers can be easily viewed.
 
-.. image:: ../img/View-Options/View007.png
+.. image:: ../../img/View-Options/View007.png
 
 FLO-2D Grid Info Panel
 ----------------------
 
-.. image:: ../img/View-Options/View008.png
+.. image:: ../../img/View-Options/View008.png
 
 The FLO-2D Grid Info button is used with the FLO-2D Grid Info Panel.
 
@@ -74,7 +77,7 @@ The FLO-2D Grid Info button is used with the FLO-2D Grid Info Panel.
 
 4. If the panel is missing, show it using the View>Panels>FLO-2D Grid Info Panel.
 
-.. image:: ../img/View-Options/gridinfo.png
+.. image:: ../../img/View-Options/gridinfo.png
 
 FLO-2D Widgets
 --------------
@@ -82,11 +85,11 @@ FLO-2D Widgets
 The editor widget is used to digitize the User Layers.
 If the windows are missing, show them using the View>Panels>FLO-2D Panel.
 
-.. image:: ../img/Widgets/widgets.png
+.. image:: ../../img/Widgets/widgets.png
 
 This panel can be docked along with the QGIS Processing Tools Panel.
 
-.. image:: ../img/View-Options/View014.gif
+.. image:: ../../img/View-Options/View014.gif
 
 FLO-2D Plot and Table Editor Windows
 ------------------------------------
@@ -96,7 +99,7 @@ The user can copy and paste from excel or ASCII text files.
 If these windows are missing, they can be restored using the View Menu and they can be docked or shifted to other monitor screens for easy editing
 and viewing.
 
-.. image:: ../img/View-Options/View011.png
+.. image:: ../../img/View-Options/View011.png
 
-.. |View012| image:: ../img/View-Options/View012.png
-.. |View013| image:: ../img/View-Options/View013.png
+.. image:: ../../img/View-Options/View012.png
+.. image:: ../../img/View-Options/View013.png
