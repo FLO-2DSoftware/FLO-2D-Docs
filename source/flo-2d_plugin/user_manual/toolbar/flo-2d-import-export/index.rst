@@ -5,7 +5,7 @@ The FLO-2D Import Export button facilitates the import of FLO-2D data, including
 HEC-RAS channel data. It also serves as the tool for exporting FLO-2D data, providing options to export all
 components, selected components, or to the \*.HDF5 file.
 
-.. image:: ../../img/Buttons/importexport001.png
+.. image:: ../../../img/Buttons/importexport001.png
 
 .. toctree::
    :hidden:
