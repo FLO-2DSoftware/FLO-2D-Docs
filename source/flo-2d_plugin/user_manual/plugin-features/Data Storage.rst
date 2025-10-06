@@ -39,7 +39,7 @@ These layers are used to define the schematized layers that are FLO-2D format.
 The layers can be directly edited using the general QGIS editor tools and the FLO-2D Editor Widgets.
 They can also be edited using the Attribute Table Editor and the Field Calculator.
 
-.. image:: ../img/Data-Storage/data001.png
+.. image:: ../../img/Data-Storage/data001.png
 
 Schematic Layers
 ----------------
@@ -48,18 +48,18 @@ The Schematic Layers are organized such that the Plugin can generate the FLO-2D 
 These layers, created by the schematizing tools, should not be manipulated by the user.
 The layers are vector layers with attribute fields that fill the FLO-2D data files.
 
-.. image:: ../img/Data-Storage/data002.png
+.. image:: ../../img/Data-Storage/data002.png
 
 Hidden Layers
 ----------------
 
 Hidden tables and layers can be accessed by using the checkbox in the FLO-2D Setting button.
 
-.. image:: ../img/Data-Storage/data003a.png
+.. image:: ../../img/Data-Storage/data003a.png
 
 The hidden layers are now visible in the Layers List.
 
-.. image:: ../img/Data-Storage/data004a.png
+.. image:: ../../img/Data-Storage/data004a.png
 
 QGIS Save
 ----------
