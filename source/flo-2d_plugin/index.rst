@@ -5,4 +5,4 @@ FLO-2D Plugin
    :maxdepth: 2
 
    user_manual/index
-   technical_reference_manual/index
+   technical_reference_manual
