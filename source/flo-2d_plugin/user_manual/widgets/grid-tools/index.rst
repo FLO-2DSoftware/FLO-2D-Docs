@@ -5,7 +5,7 @@ Grid tools are used to sample various datatypes to the grid.  It employs methods
 layer and raster warp to the grid layer.  The processes can use External data such as elevation files or data layers
 that are part of the geopackage.  Each tool is described in this section.
 
-.. image:: ../../../img/Widgets/gridtoolswnum.png
+.. image:: ../../../../img/Widgets/gridtoolswnum.png
 
 1. Create Grid
 2. Grid Elevation from Raster Layer
