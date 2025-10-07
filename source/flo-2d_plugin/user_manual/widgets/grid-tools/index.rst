@@ -27,7 +27,7 @@ that are part of the geopackage.  Each tool is described in this section.
    :maxdepth: 4
 
    Create a Grid
-..   Elevation from Raster
+   Elevation from Raster
    Elevation GDAL Grid Method
    Elevation from LiDAR xyz
    Elevation Correction Tool
