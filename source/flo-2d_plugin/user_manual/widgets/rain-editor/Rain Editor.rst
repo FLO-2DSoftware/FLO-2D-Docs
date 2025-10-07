@@ -4,7 +4,7 @@ Rain Editor
 The rainfall editor is used to set up the RAINFALL.DAT file and the RAINCELL.DAT file.
 This section will describe how to set up uniform rainfall, spatially variable depth area reduction factors, and spatially and time variable rainfall.
 
-.. image:: ../../img/Widgets/rain.png
+.. image:: ../../../img/Widgets/rain.png
 
 Uniform Rainfall
 ----------------
@@ -17,23 +17,23 @@ The Building Rain switch is selected so that rain on totally blocked ARF cells w
 The initial abstraction is default of zero inches.
 The rainfall distribution is imported from a data file.
 
-.. image:: ../../img/Rain-Editor/rained002.png
+.. image:: ../../../img/Rain-Editor/rained002.png
 
 1. Select the rainfall
    distribution using the Folder menu.
 
-.. image:: ../../img/Rain-Editor/rained019.png
+.. image:: ../../../img/Rain-Editor/rained019.png
 
 2. Import the rainfall distribution file from a set of predefined files.
 
 .. note:: The files are installed in the FLO-2D Documentation folder:
           C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Rainfall Distributions
 
-.. image:: ../../img/Rain-Editor/rained003.png
+.. image:: ../../../img/Rain-Editor/rained003.png
 
 The rainfall data is imported into the FLO-2D Table Editor.
 
-.. image:: ../../img/Rain-Editor/rained004.png
+.. image:: ../../../img/Rain-Editor/rained004.png
 
 1. Load the currently selected time series into the editor
    table.
@@ -56,7 +56,7 @@ Moving Storm
 To simulate a moving storm cell, select a storm direction and speed.
 This data must be assigned along with isohyetal contours that represent storm intensity as depth are reductions contours.
 
-.. image:: ../../img/Rain-Editor/rained006.png
+.. image:: ../../../img/Rain-Editor/rained006.png
 
 Spatially Variable Rainfall NOAA Atlas 14
 ------------------------------------------
@@ -72,7 +72,7 @@ One map is required for each precipitation frequency.
 The following example is a map of the 100yr 6hr storm prediction for Arizona.
 The legend represents total rainfall in inches.
 
-.. image:: ../../img/Rain-Editor/rained007.png
+.. image:: ../../../img/Rain-Editor/rained007.png
 
 To perform the calculation, use the Area Reduction calculator.
 
@@ -89,7 +89,7 @@ It is not necessary to average the data.
 
 3. Select the maximum value to set the cell value.
 
-.. image:: ../../img/Rain-Editor/rained008.png
+.. image:: ../../../img/Rain-Editor/rained008.png
 
 Realtime Rainfall NEXRAD
 ------------------------
@@ -116,7 +116,7 @@ Both filetypes are text files.
 The \*.asc files are rainfall coverage for the project area at a specified time interval.
 In this case the time interval is 5 minutes.
 
-.. image:: ../../img/Rain-Editor/rained009.png
+.. image:: ../../../img/Rain-Editor/rained009.png
 
 The rainfall catalog is a text file that contains specific information about the layout and timing of the data.
 The first line of data is a control line that sets up the timing of the storm and the interval.
@@ -134,9 +134,9 @@ Line 1: Start Time, End Time, Time Interval, \*.asc File Count
                The engine will start the simulation at time and rainfall = zero.
                The rainfall data will interpolate from time = 0 rainfall = 0 to the first interval.
 
-.. image:: ../../img/Rain-Editor/rained010.png
+.. image:: ../../../img/Rain-Editor/rained010.png
 
-.. image:: ../../img/Rain-Editor/rained011.png
+.. image:: ../../../img/Rain-Editor/rained011.png
 
 Setup Import Options
 --------------------
@@ -147,11 +147,11 @@ The rainfall data does not have a specific coordinate reference system (CRS).
 
 2. Click Settings Options
 
-.. image:: ../../img/Rain-Editor/rained012.png
+.. image:: ../../../img/Rain-Editor/rained012.png
 
 3. Select the following options and click OK.
 
-.. image:: ../../img/Rain-Editor/rained013.png
+.. image:: ../../../img/Rain-Editor/rained013.png
 
 Import Realtime Rainfall
 ------------------------
@@ -160,18 +160,18 @@ Import Realtime Rainfall
 
 2. Click the Import Real Time Rainfall ASCII files.
 
-.. image:: ../../img/Rain-Editor/rained014.png
+.. image:: ../../../img/Rain-Editor/rained014.png
 
 The Plugin requests the directory where the NEXRAD data is stored.
 
 3. Navigate to the correct directory and click Select Folder.
 
-.. image:: ../../img/Rain-Editor/rained015.png
-  
+.. image:: ../../../img/Rain-Editor/rained015.png
+
 
 4. Click OK once the process is complete.
 
-.. image:: ../../img/Rain-Editor/rained016.png
+.. image:: ../../../img/Rain-Editor/rained016.png
 
 
 Export the rainfall data
@@ -180,20 +180,20 @@ Export the rainfall data
 1. Click Export the Realtime Rainfall Data.  There are 3 Options.  The recommended option is hdf5 due to the size
    differences in the data files.
 
-.. image:: ../../img/Rain-Editor/rained017.png
-  
+.. image:: ../../../img/Rain-Editor/rained017.png
+
 2. Name the storm and click Save.
 
-.. image:: ../../img/Rain-Editor/rained018.png
+.. image:: ../../../img/Rain-Editor/rained018.png
 
 .. Important::  RAINCELL.DAT is an ascii file.  RAINCELL.HDF5 is a compressible database file.  The file size of a
    large project can be many gigabytes of data if store in ascii format.  Even the self help kit results in a file
    that is close to 1 gigabyte.  HDF5 files are orders of magnitude smaller and in general load faster.
 
-   .. image:: ../../img/Rain-Editor/raincell001.png
+   .. image:: ../../../img/Rain-Editor/raincell001.png
 
 
-.. |rained024| image:: ../../img/Rain-Editor/rained024.png
+.. |rained024| image:: ../../../img/Rain-Editor/rained024.png
 
-.. |rained025| image:: ../../img/Rain-Editor/rained025.png
+.. |rained025| image:: ../../../img/Rain-Editor/rained025.png
 
