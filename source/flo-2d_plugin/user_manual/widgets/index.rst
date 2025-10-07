@@ -11,9 +11,9 @@ Simplify data preparation for grids, channels, initial conditions, boundary cond
    :maxdepth: 2
    :caption: Widgets
 
-   grid-tools/index
-   pre-processing-tools/Pre-Processing Tools
-..   profile-tool/Profile Tool
+.. grid-tools/index
+..   pre-processing-tools/Pre-Processing Tools
+   profile-tool/Profile Tool
    cross-sections-editor/Cross Sections Editor
    boundary-condition-editor/index
    initial-condition-editor/Initial Condition Editor
