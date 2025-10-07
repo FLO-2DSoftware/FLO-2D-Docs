@@ -24,7 +24,7 @@ Export FLO-2D \*.DAT Files
    components that will be exported by checking or unchecking the
    files to be exported and click OK.
 
-.. image:: ../../img/Export-Project/exportproject2.png
+.. image:: ../../../img/Export-Project/exportproject2.png
 
 .. note:: It is not necessary to export all files every time.
           Export large files like INFIL.DAT or TOPO.DAT only when needed.
