@@ -7,7 +7,7 @@ FLO-2D Pro Documentation
 Welcome to the main version of the FLO-2D Documentation.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 4
    :caption: Contents:
 
    setup/index
