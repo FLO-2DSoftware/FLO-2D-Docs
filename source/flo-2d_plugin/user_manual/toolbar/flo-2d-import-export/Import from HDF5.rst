@@ -14,19 +14,19 @@ Import FLO-2D data from HDF5 file
 1. Click the
    Import from HDF5.
 
-.. image:: ../../img/Buttons/importexport004.png
+.. image:: ../../../img/Buttons/importexport004.png
 
 2. Navigate to
    the FLO-2D \*.HDF5 file,
    select the \*.HDF5 file,
    and click Open.
 
-.. image:: ../../img/Import-From-Hdf5/importhdf5001.png
+.. image:: ../../../img/Import-From-Hdf5/importhdf5001.png
 
 3. A message asking to overwrite the current grid will appear.
    Click OK.
 
-.. image:: ../../img/Import-From-Hdf5/importhdf5002.png
+.. image:: ../../../img/Import-From-Hdf5/importhdf5002.png
 
 4. The \*.HDF5 file is imported into the project.
 
