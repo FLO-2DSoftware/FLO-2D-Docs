@@ -76,7 +76,9 @@ The legend represents total rainfall in inches.
 
 To perform the calculation, use the Area Reduction calculator.
 
-|rained024|\ |rained025|
+.. image:: ../../../img/Rain-Editor/rained024.png
+
+.. image:: ../../../img/Rain-Editor/rained025.png
 
 1. Click the
    Area Reduction button.
@@ -190,10 +192,10 @@ Export the rainfall data
    large project can be many gigabytes of data if store in ascii format.  Even the self help kit results in a file
    that is close to 1 gigabyte.  HDF5 files are orders of magnitude smaller and in general load faster.
 
-   .. image:: ../../../img/Rain-Editor/raincell001.png
+.. image:: ../../../img/Rain-Editor/raincell001.png
 
 
-.. |rained024| image:: ../../../img/Rain-Editor/rained024.png
+.. image:: ../../../img/Rain-Editor/rained024.png
 
-.. |rained025| image:: ../../../img/Rain-Editor/rained025.png
+.. image:: ../../../img/Rain-Editor/rained025.png
 
