@@ -12,7 +12,7 @@ It is used when the grid element size is larger than the width of curb and gutte
 This tool works best for streets that collect and distribute water over the grid system.
 The street should be able to convey water like a small channel.
 
-.. image:: ../../img/Widgets/street.png
+.. image:: ../../../img/Widgets/street.png
 
 Build a street
 --------------
@@ -26,13 +26,13 @@ Identify a street that meets the criteria
 2. Identify a street that is larger than the grid element size.
    The Santa Paula freeway lanes meet the grid element size criteria.
 
-.. image:: ../../img/Street-Editor/street003.png
+.. image:: ../../../img/Street-Editor/street003.png
 
 
 3. Determine if the street can convey water.
    The Santa Paula freeway has a well-defined curb and gutter on the outside lane.
 
-.. image:: ../../img/Street-Editor/street004.png
+.. image:: ../../../img/Street-Editor/street004.png
 
 
 4. Determine the flow direction.
@@ -41,10 +41,10 @@ Identify a street that meets the criteria
    The water will flow toward the point where the two arrows meet.
    Then it will overtop the channel onto the floodplain.
 
-.. image:: ../../img/Street-Editor/street005.png
+.. image:: ../../../img/Street-Editor/street005.png
 
 
-.. image:: ../../img/Street-Editor/street006.png
+.. image:: ../../../img/Street-Editor/street006.png
 
 
 1. Define the street width, curb height and n-value.
@@ -54,19 +54,19 @@ Identify a street that meets the criteria
 2. The n-value is 0.020
    and the curb height is 0.67 ft and the limiting Froude number is 1.25 because the street has a steep slope.
 
-.. image:: ../../img/Street-Editor/street007.png
-   
+.. image:: ../../../img/Street-Editor/street007.png
+
 
 3. Click the Global
    Parameters button.
 
-.. image:: ../../img/Street-Editor/street008.png
+.. image:: ../../../img/Street-Editor/street008.png
 
 
 4. Fill the form and
    click Save.
 
-.. image:: ../../img/Street-Editor/street009.png
+.. image:: ../../../img/Street-Editor/street009.png
 
 
 Digitize a street segment.
@@ -79,7 +79,7 @@ Any place where the street can no longer route water should be eliminated.
 1. Click the Add
    a Street Line button.
 
-.. image:: ../../img/Street-Editor/street012.png
+.. image:: ../../../img/Street-Editor/street012.png
 
 2. Digitize
    the street segment on the map.
@@ -87,23 +87,23 @@ Any place where the street can no longer route water should be eliminated.
 3. Enter
    the street data and click OK.
 
-.. image:: ../../img/Street-Editor/street010.png
+.. image:: ../../../img/Street-Editor/street010.png
 
 4. Save
    the street segment.
 
-.. image:: ../../img/Street-Editor/street013.png
+.. image:: ../../../img/Street-Editor/street013.png
 
 5. Repeat
    the process for the East Bound Lane.
 
-.. image:: ../../img/Street-Editor/street014.png
+.. image:: ../../../img/Street-Editor/street014.png
 
 6. Click the Schematize Button.
    The streets are schematized.
    Click ok to close the dialog box.
 
-.. image:: ../../img/Street-Editor/street011.png
+.. image:: ../../../img/Street-Editor/street011.png
 
 Troubleshooting
 
