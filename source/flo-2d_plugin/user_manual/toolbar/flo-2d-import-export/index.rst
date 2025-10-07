@@ -12,8 +12,8 @@ components, selected components, or to the \*.HDF5 file.
    :maxdepth: 4
 
    Import Data Files
-..   Import Selected Component Files
-   Export Project
+   Import Selected Component Files
+..   Export Project
    Import from HDF5
    Export to HDF5
    Import swmm
