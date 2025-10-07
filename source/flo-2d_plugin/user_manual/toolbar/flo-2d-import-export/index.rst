@@ -15,7 +15,7 @@ components, selected components, or to the \*.HDF5 file.
    Import Selected Component Files
    Export Project
    Import from HDF5
-   Export to HDF5
-   Import swmm
+..   Export to HDF5
+..   Import swmm
 ..   Export swmm
    Import RAS Channel
