@@ -17,8 +17,8 @@ Simplify data preparation for grids, channels, initial conditions, boundary cond
    cross-sections-editor/Cross Sections Editor
    boundary-condition-editor/index
    initial-condition-editor/Initial Condition Editor
-..   rain-editor/Rain Editor
-   schematized-channel-editor/Schematized Channel Editor
+   rain-editor/Rain Editor
+..   schematized-channel-editor/Schematized Channel Editor
    hydraulic-structure-editor/Hydraulic Structure Editor
    street-editor/Street Editor
    floodplain-cross-section-editor/Floodplain Cross Section Editor
