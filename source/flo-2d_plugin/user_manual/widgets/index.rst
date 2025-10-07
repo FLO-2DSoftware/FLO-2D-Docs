@@ -24,5 +24,5 @@ Simplify data preparation for grids, channels, initial conditions, boundary cond
    floodplain-cross-section-editor/Floodplain Cross Section Editor
    infiltration-editor/index
    storm-drain-editor/index
-..   levees-breach-editor/Levees Breach Editor
-   multiple-channels-editor/Multiple Channel Editor
+   levees-breach-editor/Levees Breach Editor
+..   multiple-channels-editor/Multiple Channel Editor
