@@ -7,10 +7,10 @@ Export to SWMM.INP
 
 The SWMM.INP can be created from shapefiles and then exported or it might be modified from an existing SWMM.INP.
 
-.. image:: ../../img/Buttons/importexport007.png
+.. image:: ../../../img/Buttons/importexport007.png
 
 Select the export folder.
 
-.. image:: ../../img/Import-Data-Files/exportswmm001.png
+.. image:: ../../../img/Import-Data-Files/exportswmm001.png
 
 The swmm.inp file and the swmm.ini file are exported to the export folder.
