@@ -12,23 +12,23 @@ Installation Test
 
    C:\\Program Files (x86)\\FLO-2D PRO\\Run for Project Folder
 
-.. image:: img/Instructions/installtest01.png
+.. image:: ../img/Instructions/installtest01.png
 
 2. Paste the files into any project folder with \*.DAT files like Barn.
 
    C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\Example Projects\\Barn Mudflow
 
-.. image:: img/Instructions/installtest02.png
+.. image:: ../img/Instructions/installtest02.png
 
 3. Double click FLOPRO.EXE to start a test run.
 
 4. If the computer is activated with the professional version, this message will appear.
 
-.. image:: img/Instructions/installtest03.png
+.. image:: ../img/Instructions/installtest03.png
 
 5. If the computer isn't activated, this message will appear.
 
-.. image:: img/Instructions/installtest04.png
+.. image:: ../img/Instructions/installtest04.png
 
 6. Any other message might need some troubleshooting.  Find the related issue below.
 
@@ -83,14 +83,14 @@ recognized. The error messages contain references that point to the file causing
 In the following image, vc2005con.dll and swmm_startif.f90 are listed in the error message.
 This indicates that the error is in the storm drain files.
 
-.. image:: img/Instructions/fortran.png\
+.. image:: ../img/Instructions/fortran.png\
 
 **Example 2**
 
 In the following image, hydrst.f90 is listed in the error message.
 This indicates that the error is in the hydraulic structure system.
 
-.. image:: img/Instructions/fortran2.png
+.. image:: ../img/Instructions/fortran2.png
 
 Check the data in the files for errors that could disrupt flopro.exe.
 
@@ -126,7 +126,7 @@ FLO-2D Plugin errors messages appear in error message windows.  If the error mes
 more troubleshooting ideas are sometimes available in the individual sections of the user manual.  For example, if
 an error message appeared during Create Grid, see the Troubleshooting section of Create a Grid.
 
-.. image:: img/Instructions/trouble002.png
+.. image:: ../img/Instructions/trouble002.png
 
 Plugin error messages are also listed in the FLO-2D Plugin Technical Reference manual.  Find it here:
 
@@ -143,7 +143,7 @@ but.
 Some error messages are related incorrect data in the QGIS vector or raster layers.  In those cases, use Chat GPT or the
 Stack Exchange to get ideas on how to fix a layer.
 
-.. image:: img/Instructions/trouble001.png
+.. image:: ../img/Instructions/trouble001.png
 
 GDS and Mapper Troubleshooting
 -------------------------------
@@ -159,7 +159,7 @@ use GDS or Mapper and you get missing dll failures or struggle to use GDS proces
 1. GDS might not be connected to it's MapObjects dlls.  These are the objects that do things like load images, load
    tables, intersect shapefiles, and create the grid.  The fault will look like this:
 
-.. image:: img/Instructions/gdsfault01.png
+.. image:: ../img/Instructions/gdsfault01.png
 
 2. If this fault shows up, delete the contents of this folder and run the FLO-2D Pro Setup Installer - MapObjects section again.
 
@@ -171,25 +171,25 @@ use GDS or Mapper and you get missing dll failures or struggle to use GDS proces
    A path correction will fix this fault.  When a new project doesn't have a project path, it tries to write data
    to the C:\\Program Filex(x86)\\FLO-2D Pro path.  This path is protected by Admin Rights.
 
-.. image:: img/Instructions/gdsfault03.png
+.. image:: ../img/Instructions/gdsfault03.png
 
 4. The error message that appears states something about admin rights or permissions.  Correct it by applying a project
    path in GDS\\Tools\\Options\\Directory Paths
 
-.. image:: img/Instructions/gdsfault04.png
+.. image:: ../img/Instructions/gdsfault04.png
 
 5. GDS and Mapper may have overflow or out of memory error messages.  This is not a correctable fault.
    They are both 32-bit programs and have limitations related to the memory they can use.  This varies by computer
    and by screen size so if you get this fault on one computer, it may not show up on an older computer.
 
-.. image:: img/Instructions/gdsfault05.png
+.. image:: ../img/Instructions/gdsfault05.png
 
 
 5. GDS and Mapper default settings are for computers in the USA.  It may be necessary to adjust the number separator.
    If an error message appears about the number separator, use the Control Panel\\Clock and Region\\Additional Settings
    to set the decimal separator to a ".".  International users might want to use QGIS so this is not necessary.
 
-.. image:: img/Instructions/gdsfault06.png
+.. image:: ../img/Instructions/gdsfault06.png
 
 6. Sometimes the Microsoft Data Access program doesn't install correctly and GDS cannot find the MDAC dlls.
    It may be possible to reinstall the MDAC setup program.
