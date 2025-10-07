@@ -13,7 +13,7 @@ components, selected components, or to the \*.HDF5 file.
 
    Import Data Files
    Import Selected Component Files
-..   Export Project
+   Export Project
    Import from HDF5
    Export to HDF5
    Import swmm
