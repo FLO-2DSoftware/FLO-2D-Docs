@@ -15,8 +15,8 @@ Simplify data preparation for grids, channels, initial conditions, boundary cond
    pre-processing-tools/Pre-Processing Tools
    profile-tool/Profile Tool
    cross-sections-editor/Cross Sections Editor
-..   boundary-condition-editor/index
-   initial-condition-editor/Initial Condition Editor
+   boundary-condition-editor/index
+..   initial-condition-editor/Initial Condition Editor
    rain-editor/Rain Editor
    schematized-channel-editor/Schematized Channel Editor
    hydraulic-structure-editor/Hydraulic Structure Editor
