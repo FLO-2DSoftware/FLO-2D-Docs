@@ -18,7 +18,7 @@ Import HEC-RAS Channel
 1. Click the Import RAS Geometry button to import channel data from a
    GeoRAS project.
 
-.. image:: ../../img/Buttons/importexport008.png
+.. image:: ../../../img/Buttons/importexport008.png
 
 2. The tool will import
    the project from the \*.g0\* geometry.
@@ -26,10 +26,10 @@ Import HEC-RAS Channel
 3. For FLO-2D,
    limit the cross sections to the bank stations.
 
-.. image:: ../../img/Import-RAS-Channel/importRASchannel2.png
+.. image:: ../../../img/Import-RAS-Channel/importRASchannel2.png
 
 
-.. image:: ../../img/Import-RAS-Channel/importRASchannel3.png
+.. image:: ../../../img/Import-RAS-Channel/importRASchannel3.png
 
 
 4. The imported RAS
@@ -41,5 +41,5 @@ Import HEC-RAS Channel
 6. See the `Schematize Channel Editor <../../widgets/schematized-channel-editor/Schematized%20Channel%20Editor.html>`__ in the FLO-2D
    Widgets section below for further instructions.
 
-.. image:: ../../img/Import-RAS-Channel/importRASchannel4.png
+.. image:: ../../../img/Import-RAS-Channel/importRASchannel4.png
 
