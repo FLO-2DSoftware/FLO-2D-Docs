@@ -18,6 +18,6 @@ Note that the toolbar's position may vary based on active QGIS plugins/features,
    run-flo-2d-pro/index
    flo-2d-parameters/index
    flo-2d-info-tool/index
+   flo-2d-project-review/index
 
-..   flo-2d-project-review/index
-   flo-2d-help/Help
+..   flo-2d-help/Help
