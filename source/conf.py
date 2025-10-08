@@ -13,7 +13,7 @@ html_logo = "FLO-2D Transparent.png"
 
 # 🔁 FULL BUILD: Use this when building all branches (e.g., on GitHub Actions)
 smv_tag_whitelist = r'^$'  # Exclude all tags
-smv_branch_whitelist = r'^Build.*$'  # Include branches like Build21, Build23, etc.
+smv_branch_whitelist = r'^Build21$'  # Include branches like Build21, Build23, etc.
 smv_remote_whitelist = r'^origin$'  # Default remote
 
 # 🔁 QUICK BUILD: Uncomment below for fast local dev on current branch
@@ -24,7 +24,9 @@ smv_remote_whitelist = r'^origin$'  # Default remote
 # -- General configuration ---------------------------------------------------
 extensions = [
     'sphinxcontrib.mermaid',
-    'sphinx_multiversion'
+    'sphinx_multiversion',
+    'sphinx_togglebutton',
+    'sphinx_design'
 ]
 templates_path = ['_templates']
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
@@ -33,7 +35,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 html_css_files = [
-    ('static/custom.css', {'priority': 1000})
+    ('css/custom.css', {'priority': 1000})
 ]
 
 # -- HTML Context for Version Dropdown (optional enhancement) ----------------
@@ -53,3 +55,18 @@ docx_documents = [
      }, True),
 ]
 docx_pagebreak_before_section = 1
+
+
+numfig = True
+numfig_secnum_depth = 1
+
+mathjax_path = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+mathjax3_config = {
+    "tex": {
+        "tags": "none",
+        "useLabelIds": True
+    },
+    "options": {
+        "displayAlign": "right"
+    }
+}
