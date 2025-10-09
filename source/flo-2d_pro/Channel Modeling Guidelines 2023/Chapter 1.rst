@@ -10,51 +10,40 @@ Here is a list of other available references for channel modeling: C:\\users\\Pu
 
 - Data Input Manual
 
-..
-
-   ˖ Chan.dat, chanbank.dat, xsec.dat
-   ˖ Profiles.exe processor program overview
-   ˖ Channel output files
+    - Chan.dat, chanbank.dat, xsec.dat
+    - Profiles.exe processor program overview
+    - Channel output files
 
 - Old Workshop Lessons
 
-..
-
-   ˖ Lesson 3 – Simple geometry and confluence
-   ˖ Lesson 4 – Simple cross-section converter
-   ˖ Lesson 5 – Profiles.exe overview and example
-   ˖ Lesson 8 – Import from HEC-RAS
-   ˖ Lesson 14 – Advanced natural channel modeling
+    - Lesson 3 – Simple geometry and confluence
+    - Lesson 4 – Simple cross-section converter
+    - Lesson 5 – Profiles.exe overview and example
+    - Lesson 8 – Import from HEC-RAS
+    - Lesson 14 – Advanced natural channel modeling
 
 - QGIS Workshop Lessons
 
-..
-
-   ˖ Lesson 2 – Import from HEC-RAS
-   ˖ Module 2 – Channel tools QGIS no HEC-RAS required.
-   ˖ Module 10 – Channel Review
+    - Lesson 2 – Import from HEC-RAS
+    - Module 2 – Channel tools QGIS no HEC-RAS required.
+    - Module 10 – Channel Review
 
 - Example Projects w/Channels
 
-..
-
-   ˖ Urban example
-   ˖ Lesson 15 – natural channel with levee
-   ˖ Rio Grande
-   ˖ Goat
-   ˖ Aqueduct
-   ˖ Sediment transport
-
-   Sharefile.flo-2d.com – Webinar Series\\Channel Series
+    - Urban example
+    - Lesson 15 – natural channel with levee
+    - Rio Grande
+    - Goat
+    - Aqueduct
+    - Sediment transport
+    - Sharefile.flo-2d.com – Webinar Series\\Channel Series
 
 - Videos
 
-..
-
-   ˖ Basic channels
-   ˖ Advanced channel modeling
-   ˖ Channel optimization
-   ˖ Advanced natural channels
+    - Basic channels
+    - Advanced channel modeling
+    - Channel optimization
+    - Advanced natural channels
 
 Channel Overview
 ----------------
