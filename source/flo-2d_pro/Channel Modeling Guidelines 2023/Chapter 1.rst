@@ -87,8 +87,8 @@ The flow transition between subcritical and supercritical flow is based on the a
 
 .. image:: img/Chapter1/Chapte002.jpg
 
-**Figure 1.
-Channel Flow is One-Dimensional – No Vertical or Horizontal Velocity Distribution**
+*Figure 1.
+Channel Flow is One-Dimensional – No Vertical or Horizontal Velocity Distribution*
 
 River flow is simulated with rectangular, trapezoidal or natural channel cross-sections.
 The CHAN.DAT file contains the following data: grid element number, rectangular or trapezoidal cross-section geometry (natural cross-section station
@@ -129,10 +129,10 @@ For data file example refer to the FLO-2D Data Input Manual.
 
 The rectangular channel geometry is defined by width, depth, and length of channel inside the grid element (Figure 2).
 
-|Chapte003|
+.. image:: img/Chapter1/Chapte003.jpg
 
-**Figure 2.
-Rectangular Channel Geometry.**
+*Figure 2.
+Rectangular Channel Geometry.*
 
 *Note: The channel bank elevations can be entered directly in the CHAN.DAT file for both rectangular and trapezoidal channels.*
 
@@ -173,7 +173,7 @@ For flow depths above this the cross-section is extended vertically.
 This data constitutes a channel geometry rating table for each cross-section.
 The cross-section data in the XSEC.DAT file can be automatically assigned from a GEO-RAS geometry file using the GDS.
 
-|Chapte004|
+.. image:: img/Chapter1/Chapte004.jpg
 
 **Figure 4.
 Natural Channel Cross-section Data.**
@@ -233,10 +233,10 @@ Using the background image or elevation data, a polyline can be drawn along the 
 identified with the appropriate channel bank element (Figure 7).
 This process is completely automated if a GEO-RAS geometry file can be imported with the cross-section data.
 
-|Chapte005|
+.. image:: img/Chapter1/Chapte005.jpg
 
-**Figure 7.
-Channel Delineation.**
+*Figure 7.
+Channel Delineation.*
 
 Create the cross-sections
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -248,10 +248,10 @@ In the QGIS, the sampled or surveyed cross-sections are assigned to correspondin
 elements have an interpolated cross-section assigned (Figure 8).
 A shapefile of cross-section locations can be used to help identify the cross-section to channel element placement.
 
-   |Chapte006|
+.. image:: img/Chapter1/Chapte006.jpg
 
-**Figure 8.
-Cross-section Assignment.**
+*Figure 8.
+Cross-section Assignment.*
 
 .. _create-the-cross-sections-1:
 
@@ -267,10 +267,10 @@ Profile.exe interpolates the cross-section shape and then a weighted flow area a
 flow area between interpolated cross-sections.
 The original cross-sections are not edited.
 
-   |Chapte007|
+.. image:: img/Chapter1/Chapte007.jpg
 
-**Figure 9.
-Channel Bed Profile Examples.**
+*Figure 9.
+Channel Bed Profile Examples.*
 
 Adjust the channel bed slope
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -288,10 +288,10 @@ Channel bank alignment
 Once the channel geometry has been assigned and interpolated, the left and right bank alignment can be adjusted using QGIS and the FLO-2D Plugin
 (Figure 10).
 
-|Chapte008|
+.. image:: img/Chapter1/Chapte008.jpg
 
-**Figure 10.
-Right Bank Assignment and Realignment.**
+*Figure 10.
+Right Bank Assignment and Realignment.*
 
 Channel length adjustment
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -300,19 +300,19 @@ The channel length within each grid element is initially estimated as a straight
 Channel Data.
 The length can be adjusted using QGIS table editor and a field centerline measuring tool (Figure 11).
 
-|Chapte009|
+.. image:: img/Chapter1/Chapte009.jpg
 
-**Figure 11.
-Channel Segment Length.**
+*Figure 11.
+Channel Segment Length.*
 
 This value is based on the position of each grid element with respect to its contiguous upstream and downstream neighbors.
 The length is the sum half the length of the grid element from the center of the node to the edge or corner closest to the upstream or downstream node
 (Figure 12).
 
-|Chapte010|
+.. image:: img/Chapter1/Chapte010.png
 
-**Figure 12.
-Channel Length for 3 Channel Elements.**
+*Figure 12.
+Channel Length for 3 Channel Elements.*
 
 The total channel length in the dialog box represents the sum of the individual grid element channel lengths.
 Using the QGIS distance measurement tool in the Tools menu, a channel centerline length can be computed.
@@ -323,10 +323,10 @@ Adjusting the channel element lengths to have an accurate total channel volume w
 and the flood volume on the floodplain.
 Figure 13 shows the total distance of the channel in the QGIS channel tables and the isolated channel lengths in the CHAN.DAT file.
 
-|Chapte011|
+.. image:: img/Chapter1/Chapte011.jpg
 
-**Figure 13.
-Channel Length.**
+*Figure 13.
+Channel Length.*
 
 Channel roughness
 ^^^^^^^^^^^^^^^^^
@@ -377,10 +377,10 @@ Bank Full Discharge.**
 
 A channel roughness adjustment can be assigned in the CHAN.DAT file to estimate the n-value at depths below bankfull discharge (Figure 15 – red box).
 
-   |Chapte012|
+.. image:: img/Chapter1/Chapte012.jpg
 
-**Figure 15.
-Channel Control Variables.**
+*Figure 15.
+Channel Control Variables.*
 
 The n-value assigned in CHAN.DAT should represent the flow roughness near bankfull flow.
 The depth integrated n-value based on the ROUGHADJ coefficient (0.2 to 0.4) will result in an n-value of 1.5 to 1.8 times the assigned bankfull
@@ -393,20 +393,20 @@ station in El Paso (107 miles downstream) 6 to 8 hours too soon.
 Similarly, matching the measured hydrographs at the Jensen, Utah gage from diurnal power plant releases at Flaming Gorge Dam would not be possible
 without the depth integrated n-value adjustment (Figure 18).
 
-   |Chapte013|
+.. image:: img/Chapter1/Chapte013.jpg
 
-**Figure 16.
-Depth Variable Roughness.**
+*Figure 16.
+Depth Variable Roughness.*
 
-|Chapte014|
+.. image:: img/Chapter1/Chapte014.jpg
 
-**Figure 17.
-Dam Release Hydrograph El Paso, TX.**
+*Figure 17.
+Dam Release Hydrograph El Paso, TX.*
 
-   |Chapte015|
+.. image:: img/Chapter1/Chapte015.png
 
-**Figure 18.
-Dam Release Hydrograph Jenson, UT.**\  [1]_
+*Figure 18.
+Dam Release Hydrograph Jenson, UT.*\  [1]_
 
 The applicability of Manning’s equation to a given flow condition depends on the relative submergence of the roughness elements (d/k\ :sub:`s`) where
 d is the flow depth and k\ :sub:`s` is the effective roughness height.
@@ -468,10 +468,10 @@ elevation and the top of bank elevation.
 Overbank discharge or return flow to the channel is computed using the floodplain assigned roughness.
 The overland flow can enter a previously dry channel.
 
-|Chapte016|
+.. image:: img/Chapter1/Chapte016.png
 
-**Figure 19.
-Channel Floodplain Flow Exchange.**
+*Figure 19.
+Channel Floodplain Flow Exchange.*
 
 Channel flow is exchanged with the floodplain grid elements in a separate routine after the channel and floodplain flow subroutines have been
 completed.
@@ -509,8 +509,8 @@ Highest Top of
 
 Lowest Top of
 
-**Figure 20.
-Vertical Extension of the Lowest Top of Bank to the Highest Top of Bank.**
+*Figure 20.
+Vertical Extension of the Lowest Top of Bank to the Highest Top of Bank.*
 
 Channel Numerical Stability and Volume Conservation
 ---------------------------------------------------
@@ -586,15 +586,15 @@ The HYDROG program plotted hydrographs (Figure 21) can also reveal channel surgi
 Typically, steep rising hydrographs and small channel storage cause the most frequent surging issues (Figure 22).
 The rate of change in the discharge flux (ΔQ/Δt) is the culprit.
 
-|Chapte017|
+.. image:: img/Chapter1/Chapte017.jpg
 
-**Figure 21.
-Surging Observed in a Channel Element Hydrograph.**
+*Figure 21.
+Surging Observed in a Channel Element Hydrograph.*
 
-|Chapte018|
+.. image:: img/Chapter1/Chapte018.jpg
 
-**Figure 22.
-Steep Rising Hydrograph.**
+*Figure 22.
+Steep Rising Hydrograph.*
 
 A steep rising hydrograph, intense rainfall, or severe overland flow to the channel may cause instability near the inflow node or at any location in
 the channel where the conveyance capacity may be highly variable.
@@ -610,10 +610,10 @@ To eliminate channel surging, perform the following steps:
 
 5. Use limiting Froude number FROUDC.
 
-|Chapte019|
+.. image:: img/Chapter1/Chapte019.jpg
 
-**Figure 23.
-Check the Channel Bed Profile for Data Errors.**
+*Figure 23.
+Check the Channel Bed Profile for Data Errors.*
 
 The Froude number is important for several reasons:
 
@@ -755,19 +755,19 @@ A volume conservation error that is greater than 0.001 percent can be improved.
 A successful simulation generally has a volume conservation error less than 0.000100 percent.
 The volume conservation accounting can be reviewed in the SUMMARY.OUT (Figure 24) as shown below for a project that had excellent volume conservation.
 
-|Chapte020|
+.. image:: img/Chapter1/Chapte020.png
 
-**Figure 24.
-SUMMARY.OUT Example.**
+*Figure 24.
+SUMMARY.OUT Example.*
 
 The CHVOLUME.OUT file reports the channel volume conservation.
 Usually if there is a volume conservation error it is in the channel and both CHVOLUME.OUT and SUMMARY.OUT will report the same error.
 CHVOLUME.OUT (Figure 25) is listed below:
 
-|Chapte021|
+.. image:: img/Chapter1/Chapte021.jpg
 
-**Figure 25.
-CHVOLUME.OUT Example.**
+*Figure 25.
+CHVOLUME.OUT Example.*
 
 Channel data issues that might lead to a volume conservation error include:
 
@@ -790,64 +790,3 @@ Troubleshooting channel volume conservation errors is discussed in Chapter 3.
    The difference in the predicted hydrograph and the measured
    hydrograph is around 200cfs. This is due to unmeasured tributary flow
    between the dam and the gage.
-
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 3.80139in
-   :height: 1.98333in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 5.17153in
-   :height: 2.16389in
-.. |Chapte004| image:: media\Chapte004.jpg
-   :width: 6.68167in
-   :height: 1.38681in
-.. |Chapte005| image:: media\Chapte005.jpg
-   :width: 6.70819in
-   :height: 2.10486in
-.. |Chapte006| image:: media\Chapte006.jpg
-   :width: 4.25625in
-   :height: 2.53264in
-.. |Chapte007| image:: media\Chapte007.jpg
-   :width: 4.34917in
-   :height: 2.06597in
-.. |Chapte008| image:: media\Chapte008.jpg
-   :width: 6.58514in
-   :height: 2.37361in
-.. |Chapte009| image:: media\Chapte009.jpg
-   :width: 6.92403in
-   :height: 3.25486in
-.. |Chapte010| image:: media\Chapte010.png
-   :width: 2.15819in
-   :height: 0.68125in
-.. |Chapte011| image:: media\Chapte011.jpg
-   :width: 5.82972in
-   :height: 4.53264in
-.. |Chapte012| image:: media\Chapte012.jpg
-   :width: 4.59583in
-   :height: 5.06375in
-.. |Chapte013| image:: media\Chapte013.jpg
-   :width: 5.53611in
-   :height: 2.32in
-.. |Chapte014| image:: media\Chapte014.jpg
-   :width: 4.95486in
-   :height: 2.19986in
-.. |Chapte015| image:: media\Chapte015.jpg
-   :width: 5.58403in
-   :height: 2.19986in
-.. |Chapte016| image:: media\Chapte016.png
-   :width: 6.69333in
-   :height: 3.20667in
-.. |Chapte017| image:: media\Chapte017.jpg
-   :width: 5.63097in
-   :height: 2.57431in
-.. |Chapte018| image:: media\Chapte018.jpg
-   :width: 4.72778in
-   :height: 2.41153in
-.. |Chapte019| image:: media\Chapte019.jpg
-   :width: 6.64417in
-   :height: 3.30069in
-.. |Chapte020| image:: media\Chapte020.png
-   :width: 6.37222in
-   :height: 5.68569in
-.. |Chapte021| image:: media\Chapte021.jpg
-   :width: 6.58194in
-   :height: 3.49486in
