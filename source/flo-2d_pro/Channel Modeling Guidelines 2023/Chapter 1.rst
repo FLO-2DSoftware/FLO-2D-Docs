@@ -85,7 +85,7 @@ The average flow length between two channel elements is approximately the length
 jumps over a short distance.
 The flow transition between subcritical and supercritical flow is based on the average conditions between two channel elements.
 
-|Chapte002|
+.. image:: img/Chapter1/Chapte002.jpg
 
 **Figure 1.
 Channel Flow is One-Dimensional – No Vertical or Horizontal Velocity Distribution**
