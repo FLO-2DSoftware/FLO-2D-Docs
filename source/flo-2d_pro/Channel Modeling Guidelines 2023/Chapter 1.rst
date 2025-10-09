@@ -313,7 +313,7 @@ There are several mean velocity equations for open channel uniform flow and Mann
 .. math::
    :label:
 
-   V = \frac{1.486}{n} R^{\frac{2}{3}} S^{\fac{1}{2}
+   V = \frac{1.486}{n} R^{\frac{2}{3}} S^{\fac{1}{2}}
 
 where:
 
