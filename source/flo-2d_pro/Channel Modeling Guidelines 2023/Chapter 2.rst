@@ -24,19 +24,14 @@ A suggested order of component development is:
 
 Turn off the rainfall and infiltration and test the remaining components using temporary inflow hydrographs as needed to test specific components.
 
-- Add mainstem channels in segments.
+    - Add mainstem channels in segments.
+    - Add tributary channels as separate segments.
+    - Add channel hydraulic structures.
+    - Add other urban components in no specific order…streets, buildings – ARF values, levees, etc.
+    - Add the storm drain.
+    - Other details: Sediment transport, groundwater, mudflows, etc.
 
-- Add tributary channels as separate segments.
-
-- Add channel hydraulic structures.
-
-- Add other urban components in no specific order…streets, buildings – ARF values, levees, etc.
-
-- Add the storm drain.
-
-- Other details: Sediment transport, groundwater, mudflows, etc.
-
-|Chapte002|
+.. image:: ../img/Chapter1/Chapte002.jpg
 
 **Figure 26.
 Start a Project with a Grid System and an Inflow Hydrograph Only.**
