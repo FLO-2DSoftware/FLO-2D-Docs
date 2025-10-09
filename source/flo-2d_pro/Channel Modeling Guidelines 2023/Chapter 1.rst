@@ -616,15 +616,15 @@ A steep rising hydrograph, intense rainfall, or severe overland flow to the chan
 the channel where the conveyance capacity may be highly variable.
 To eliminate channel surging, perform the following steps:
 
-1. Check the bed profile for unreasonable spikes (PROFILES program – Figure 23);
+    1. Check the bed profile for unreasonable spikes (PROFILES program – Figure 23);
 
-2. Adjust the n-values (particularly in channel area transition reaches);
+    2. Adjust the n-values (particularly in channel area transition reaches);
 
-3. Adjust the flow area - smooth out the area transitions (re-interpolate the cross-sections);
+    3. Adjust the flow area - smooth out the area transitions (re-interpolate the cross-sections);
 
-4. Apply the depth variable roughness;
+    4. Apply the depth variable roughness;
 
-5. Use limiting Froude number FROUDC.
+    5. Use limiting Froude number FROUDC.
 
 .. image:: img/Chapter1/Chapte019.jpg
 
@@ -633,29 +633,38 @@ Check the Channel Bed Profile for Data Errors.*
 
 The Froude number is important for several reasons:
 
-- It delineates subcritical and supercritical flow;
+    - It delineates subcritical and supercritical flow;
 
-- It is the ratio of average flow velocity to shallow wave celerity;
+    - It is the ratio of average flow velocity to shallow wave celerity;
 
-- It relates the movement of a translational wave to the stream flow; • It defines an appropriate relationship between velocity and depth.
+    - It relates the movement of a translational wave to the stream flow;
+
+    - It defines an appropriate relationship between velocity and depth.
 
 Most models report the Froude number or provide warnings when the Froude number is high, but do not make any model adjustments at runtime to limit
 unreasonable Froude numbers from being encountered.
 The Froude number is directly related to model stability through the Courant number:
 
-C = c(F + 1)/(x /t)
+.. math::
+   :label:
+
+   C = \frac{c(F + 1)}{\frac{\Delta x \Delta t)}
 
 where:
 
-   C = selected value of Courant number
+    C = selected value of Courant number
 
-   F = Froude number
+    F = Froude number
 
-   c = wave celerity = (gd)\ :sup:`0.5`; d = flow depth, g = gravitational acceleration
+    c = wave celerity = (gd)\ :sup:`0.5` where;
 
-   t = timestep
+        d = flow depth
 
-   x = channel element length
+        g = gravitational acceleration
+
+    Δt = timestep
+
+    Δx = channel element length
 
 Channel instability arises when the Froude number is high, the timestep is large, or the computation length is small (small channel conveyance
 capacity).
