@@ -1,5 +1,5 @@
-Channel Modeling Guideline
-==========================
+Channel Modeling Guidelines
+============================
 
 .. toctree::
    :maxdepth: 1
