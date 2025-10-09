@@ -31,7 +31,7 @@ Turn off the rainfall and infiltration and test the remaining components using t
     - Add the storm drain.
     - Other details: Sediment transport, groundwater, mudflows, etc.
 
-.. image:: ../img/Chapter1/Chapte002.jpg
+.. image:: /img/Chapter1/Chapte002.jpg
 
 **Figure 26.
 Start a Project with a Grid System and an Inflow Hydrograph Only.**
