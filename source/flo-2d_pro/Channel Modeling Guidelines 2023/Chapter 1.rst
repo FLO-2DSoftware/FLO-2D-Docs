@@ -528,14 +528,24 @@ The concept of the Courant Number is that a particle of fluid should not travel 
 timestep Δt.
 In the FLO-2D model the Courant number limits the timestep Δt by:
 
-Δt = C Δx / (V + c)
+.. math::
+   :label:
+
+   \Delta t = C \frac{\Delta x}{(V + c)}
 
 where:
 
-   C = Courant Number (C ≤ 1.0)
+    C = Courant Number (C ≤ 1.0)
 
-   Δx = square grid element width V = depth averaged velocity c = floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the
-   flow depth
+    Δx = square grid element width
+
+    V = depth averaged velocity
+
+    c = floodwave celerity = (gd)\ :sup:`0.5` where;
+
+        g is gravitation acceleration
+
+        d is the flow depth
 
 The Courant Number C can vary from 0.0 to 1.0 (recommended range 0.2 to 0.6), and a value of 1.0 in FLO-2D would enable the model to have the largest
 possible timestep.
