@@ -425,7 +425,9 @@ where:
 
     n\ :sub:`d` = n-value at the flow depth
 
-    r2 = ROUGHADJ factor (0.2 – 0.4) rc = 1./e –(r2)
+    r2 = ROUGHADJ factor (0.2 – 0.4)
+
+    r\ :sub:`c` = 1./e – (r2)
 
 The bankfull n-value is defined as the n-value for a depth of 3 ft or 1 m for overland or floodplain and the ROUGHADJ default value is 0.4.
 The ROUGHADJ factor can be higher ranging up to 1.0 or more, but a typical range is from 0.2 to 0.4.
