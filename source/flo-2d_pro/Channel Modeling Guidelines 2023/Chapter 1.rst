@@ -410,12 +410,22 @@ Using these criteria, a flow depth for coarse sand would be about 0.25 ft.
 
 The depth integrated roughness is given by the equation:
 
-n\ :sub:`d` = n\ :sub:`b` r\ :sub:`c` e –(r2 depth/dmax)
+.. math::
+   :label:
+
+   n_d = n_b r_c e^{-r2 \frac{depth}{dmax}}
 
 where:
 
-depth = flow depth d\ :sub:`max` = bankfull depth n\ :sub:`b` = bankfull n-value n\ :sub:`d` = n-value at the flow depth r2 = ROUGHADJ factor (0.2 –
-0.4) rc = 1./e –(r2)
+    depth = flow depth
+
+    d\ :sub:`max` = bankfull depth
+
+    n\ :sub:`b` = bankfull n-value
+
+    n\ :sub:`d` = n-value at the flow depth
+
+    r2 = ROUGHADJ factor (0.2 – 0.4) rc = 1./e –(r2)
 
 The bankfull n-value is defined as the n-value for a depth of 3 ft or 1 m for overland or floodplain and the ROUGHADJ default value is 0.4.
 The ROUGHADJ factor can be higher ranging up to 1.0 or more, but a typical range is from 0.2 to 0.4.
