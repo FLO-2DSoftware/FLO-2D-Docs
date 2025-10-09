@@ -686,21 +686,28 @@ High velocities and shallow depths on alluvial surfaces will dissipate energy wi
 Supercritical flow is more prevalent on hard surfaces such as concrete-lined channels.
 Jia (1990) provides a relationship to estimate a minimum Froude number (Fr\ :sub:`min`) for stable alluvial channels at equilibrium:
 
-Fr(min) = 4.49 d-0.186 (VS)0.377
+.. math::
+   :label:
 
-Where:
+   Fr_{(min)} = 4.49 d^{-0.186} (VS)^{0.377}
 
-   d = representative sediment size (typically D\ :sub:`50)` V = velocity and S = bed slope.
+where:
+
+    d = representative sediment size (typically D\ :sub:`50)`
+
+    V = velocity
+
+    ]S = bed slope.
 
 Recommended limiting Froude numbers are:
 
-- Major rivers: 0.3 – 0.6
+    - Major rivers: 0.3 – 0.6
 
-- Floodplain: 0.5 – 0.8
+    - Floodplain: 0.5 – 0.8
 
-- Alluvial fans: 0.9 – 1.1
+    - Alluvial fans: 0.9 – 1.1
 
-- Street flow: 1.1 – 1.75
+    - Street flow: 1.1 – 1.75
 
 When a limiting Froude number (FROUDC in CHAN.DAT) is assigned, the model computes the channel Froude number for each timestep.
 If the limiting Froude number is exceeded, the Manning’s n-value is increased according to the following criteria:
