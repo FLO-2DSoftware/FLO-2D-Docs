@@ -722,7 +722,7 @@ If the limiting Froude number is exceeded, the Manning’s n-value is increased 
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     percent change
-from the original value             n-value increment increase
+    from the original value             n-value increment increase
     < 20                                0.0002
     20 < % < 50                         0.0001
     50 < % < 100                        0.00002
