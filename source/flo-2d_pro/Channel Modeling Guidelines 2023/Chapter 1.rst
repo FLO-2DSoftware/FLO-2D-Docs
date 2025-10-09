@@ -396,7 +396,10 @@ The applicability of Manning’s equation to a given flow condition depends on t
 d is the flow depth and k\ :sub:`s` is the effective roughness height.
 In general, Manning’s equation is appropriate for a relative submergence greater than 100 (Julien, 1995):
 
-d/k\ :sub:`s` > 100
+.. math::
+   :label:
+
+   \frac{d}{k_s} > 100
 
 The typical roughness height for grain size bed materials can range from 0.0015 ft for rough concrete to 0.01 ft for coarse sand or uniform earth
 channels.
