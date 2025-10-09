@@ -431,23 +431,23 @@ The bankfull n-value is defined as the n-value for a depth of 3 ft or 1 m for ov
 The ROUGHADJ factor can be higher ranging up to 1.0 or more, but a typical range is from 0.2 to 0.4.
 The application of the depth variable roughness has the following advantages:
 
-- Can be used to reduce or eliminate surging from low to high flow;
+    - Can be used to reduce or eliminate surging from low to high flow;
 
-- Accounts for submerged roughness elements;
+    - Accounts for submerged roughness elements;
 
-- Enhances the modeling upper regime sediment transport.
+    - Enhances the modeling upper regime sediment transport.
 
 The basic guidelines for roughness assignment and temporal variation in a FLO-2D model are:
 
-- SHALLOWN – for very shallow flows up to 0.2 ft
+    - SHALLOWN – for very shallow flows up to 0.2 ft
 
-- SHALLOWN/2 for flows up to 0.5 ft
+    - SHALLOWN/2 for flows up to 0.5 ft
 
-- Assign n-values for floodplain flow depths > 3 ft or 1 m (channel – bankfull)
+    - Assign n-values for floodplain flow depths > 3 ft or 1 m (channel – bankfull)
 
-- Use depth integrated n-values (default for floodplain)
+    - Use depth integrated n-values (default for floodplain)
 
-- Calibrate n-values for reasonable Froude numbers – adjusted at runtime
+    - Calibrate n-values for reasonable Froude numbers – adjusted at runtime
 
 Channel – Floodplain Flow Exchange
 ----------------------------------
@@ -502,9 +502,7 @@ It does not significantly change the potential for overbank discharge exchange w
 It only slightly increases the flow area for channel hydraulic computations.
 The channel conveyance flow area for a natural channel is increased by the green space in Figure 20.
 
-Highest Top of
-
-Lowest Top of
+.. image:: img/Chapter1/Chapte026.jpg
 
 *Figure 20.
 Vertical Extension of the Lowest Top of Bank to the Highest Top of Bank.*
