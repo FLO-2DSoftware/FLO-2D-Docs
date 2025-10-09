@@ -176,12 +176,9 @@ There are three options for establishing the channel bank elevation to bed eleva
 
 1. A prismatic channel element bed elevation (rectangular and trapezoidal channels) is determined by subtracting the assigned channel thalweg depth from
    the floodplain elevation.
-   .
-
 2. A bank elevation is assigned in the CHAN.DAT file and the channel bed elevation is computed by subtracting the channel depth from the lowest bank
    elevation.
    This is appropriate for rectangular and trapezoidal geometry.
-
 3. Station/elevation cross-section data is assigned in XSEC.DAT that represents the top of bank and bed elevations in the channel.
    When using actual cross-section data for the channel geometry, option 3 should be applied.
 
