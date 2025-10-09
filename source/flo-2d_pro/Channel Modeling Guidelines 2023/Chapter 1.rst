@@ -318,8 +318,11 @@ There are several mean velocity equations for open channel uniform flow and Mann
 where:
 
     V = velocity
+
     R = hydraulic radius
+
     S = friction slope
+
     n = Manning’s roughness coefficient.
 
 The hydraulic radius exponent value (0.667) has been known to vary over a range from about 0.59 to 0.85 depending primarily on channel geometry and
