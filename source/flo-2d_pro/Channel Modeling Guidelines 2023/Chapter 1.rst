@@ -387,7 +387,7 @@ Depth Variable Roughness.*
 *Figure 17.
 Dam Release Hydrograph El Paso, TX.*
 
-.. image:: img/Chapter1/Chapte015.png
+.. image:: img/Chapter1/Chapte015.jpg
 
 *Figure 18.
 Dam Release Hydrograph Jenson, UT.*\  [1]_
