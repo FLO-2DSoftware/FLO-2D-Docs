@@ -353,9 +353,11 @@ When computing velocity for shallow flow depths on the order of 0.1 ft or smalle
 In lieu of using different velocity equations, one for deeper flow and one for shallow flow, it is necessary to compensate for overpredicting the low
 flow velocity by assigning higher shallow n-values or by using depth variable n-value adjustment or both.
 
-**Figure 14.
+.. image:: img/Chapter1/Chapte025.jpg
+
+*Figure 14.
 Low Flow vs.
-Bank Full Discharge.**
+Bank Full Discharge.*
 
 A channel roughness adjustment can be assigned in the CHAN.DAT file to estimate the n-value at depths below bankfull discharge (Figure 15 – red box).
 
