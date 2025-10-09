@@ -33,8 +33,8 @@ Turn off the rainfall and infiltration and test the remaining components using t
 
 .. image:: img/Chapter2/Chapte002.jpg
 
-**Figure 26.
-Start a Project with a Grid System and an Inflow Hydrograph Only.**
+*Figure 26.
+Start a Project with a Grid System and an Inflow Hydrograph Only.*
 
 Channel cross section data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -89,7 +89,7 @@ In this figure, two cross sections are contiguous but only one controls the flow
 One cross section has a bank full flow area of 33 ft\ :sup:`2` and the second one has 139 ft\ :sup:`2`.
 It is necessary to review the data source for each cross section to ensure they represent the physical configuration.
 
-|Chapte003|
+.. image:: img/Chapter2/Chapte003.jpg
 
 **Figure 27.
 Cross Section Comparison.**
