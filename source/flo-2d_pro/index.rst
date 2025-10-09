@@ -1,9 +1,9 @@
-FLO-2D Pro
-==========
+FLO-2D Pro Resource Center
+==========================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    data_input_manual
-   channel_modeling_guidelines
+   Channel Modeling Guidelines 2023/index
    storm_drain_modeling_guidelines
