@@ -721,12 +721,12 @@ If the limiting Froude number is exceeded, the Manning’s n-value is increased 
         <div><i><pre>    CONT.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
-    percent change
+        percent change
     from the original value             n-value increment increase
-    < 20                                0.0002
-    20 < % < 50                         0.0001
-    50 < % < 100                        0.00002
-    100 < % < 200                       0.000002
+        < 20                                0.0002
+    20 < % < 50                             0.0001
+    50 < % < 100                            0.00002
+    100 < % < 200                           0.000002
     </pre>
     </div>
 
