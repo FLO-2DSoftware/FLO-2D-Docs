@@ -557,19 +557,19 @@ values less than 1.0.
 A starting value of C = 0.6 is recommended.
 Some guidelines for applying the Courant number are:
 
-1. Use the default stability criteria for the initial simulation:
+    1. Use the default stability criteria for the initial simulation:
 
-   - Courant Number C = 0.6
+       - Courant Number C = 0.6
 
-   - DEPTOL = 0.0
+       - DEPTOL = 0.0
 
-   - WAVEMAX = 0.0.
+       - WAVEMAX = 0.0.
 
-2. If the model has no numerical surging or unreasonable maximum velocities, the model can run faster by increasing the Courant Number to 0.7 or 0.8.
+    2. If the model has no numerical surging or unreasonable maximum velocities, the model can run faster by increasing the Courant Number to 0.7 or 0.8.
 
-3. If the model has some numerical instability, decrease the Courant Number by 0.1 to a minimum value of 0.3.
+    3. If the model has some numerical instability, decrease the Courant Number by 0.1 to a minimum value of 0.3.
 
-4. After a flood simulation is complete, review the TIME.OUT file to determine which of the stability criterion is slowing down the model.
+    4. After a flood simulation is complete, review the TIME.OUT file to determine which of the stability criterion is slowing down the model.
 
 It has been determined that the Courant Number is more effective in controlling numerical instability surging than the other FLO-2D stability
 parameters DEPTOL and WAVEMAX.
@@ -579,9 +579,18 @@ Channel instability arises because of a mismatch in the channel flow area, frict
 Discharge is a function of the friction slope S\ :sub:`f` in Manning’s equations to the one-half power and is inversely proportional to the n-value,
 but the discharge is a function of the flow area A to approximately the 5/3 power.
 
-Q = f(A, S, n)
+.. math::
+   :label:
 
-where A = a d\ :sup:`b` and a = power regression coefficient and b = power regression exponent
+   Q = f(A, S, n)
+
+where:
+
+    A = a d\ :sup:`b` and;
+
+        a = power regression coefficient
+
+        b = power regression exponent
 
 Assigning a reasonable n-value that balances flow area and slope will make the model more stable.
 
