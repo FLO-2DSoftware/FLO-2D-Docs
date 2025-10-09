@@ -745,16 +745,25 @@ As slope increases, competent flow for sediment transport asymptotically approac
 In most instances, flow is forced to be less than critical by incipient motion thresholds.
 This will define a limiting Froude number as given by Grant (1997):
 
-F\ :sub:`r` = 3.85 S\ :sup:`0.33` gravel bed (τ\ :sup:`\*`\ :sub:`cr` = 0.03)
+.. math::
+   :label:
 
-F\ :sub:`r` = 5.18 S\ :sup:`0.11` sand bed (τ\ :sup:`\*`\ :sub:`cr` = 0.06)
+   F_r = 3.85 S^{0.33} gravel bed (τ^* _cr = 0.03)
+
+.. math::
+   :label:
+
+   F_r = 5.18 S^{0.11} sand bed (τ^* _cr = 0.06)
 
 For mobile bed channels a steep slope is required for flow to approach critical because the hydraulics oscillate with sediment entrainment.
 These relationships define the upper limit Froude number for sand and gravel for slopes < 0.10.
 There is a unique relationship that exists between slope, flow area and roughness.
 The Froude number (Fr) is related to the flow resistance K and the energy slope S as given by:
 
-Fr = (KS)\ :sup:`0.5`
+.. math::
+   :label:
+
+   Fr = (KS)^{0.5}
 
 If there is a mismatch between these physical variables in a flood routing model, then high velocities can occur that may result in flow surging.
 Assigning a limiting Froude number has several practical advantages.
