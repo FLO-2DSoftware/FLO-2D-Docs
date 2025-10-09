@@ -13,9 +13,7 @@ Here is a list of other available references for channel modeling: C:\\users\\Pu
 ..
 
    ˖ Chan.dat, chanbank.dat, xsec.dat
-
    ˖ Profiles.exe processor program overview
-
    ˖ Channel output files
 
 - Old Workshop Lessons
@@ -23,13 +21,9 @@ Here is a list of other available references for channel modeling: C:\\users\\Pu
 ..
 
    ˖ Lesson 3 – Simple geometry and confluence
-
    ˖ Lesson 4 – Simple cross-section converter
-
    ˖ Lesson 5 – Profiles.exe overview and example
-
    ˖ Lesson 8 – Import from HEC-RAS
-
    ˖ Lesson 14 – Advanced natural channel modeling
 
 - QGIS Workshop Lessons
@@ -37,9 +31,7 @@ Here is a list of other available references for channel modeling: C:\\users\\Pu
 ..
 
    ˖ Lesson 2 – Import from HEC-RAS
-
    ˖ Module 2 – Channel tools QGIS no HEC-RAS required.
-
    ˖ Module 10 – Channel Review
 
 - Example Projects w/Channels
@@ -47,15 +39,10 @@ Here is a list of other available references for channel modeling: C:\\users\\Pu
 ..
 
    ˖ Urban example
-
    ˖ Lesson 15 – natural channel with levee
-
    ˖ Rio Grande
-
    ˖ Goat
-
    ˖ Aqueduct
-
    ˖ Sediment transport
 
    Sharefile.flo-2d.com – Webinar Series\\Channel Series
@@ -65,11 +52,8 @@ Here is a list of other available references for channel modeling: C:\\users\\Pu
 ..
 
    ˖ Basic channels
-
    ˖ Advanced channel modeling
-
    ˖ Channel optimization
-
    ˖ Advanced natural channels
 
 Channel Overview
@@ -102,13 +86,10 @@ Channel Geometry, Length and Roughness
 
 There are four channel geometry options:
 
-- R - Rectangular
-
-- T - Trapezoidal
-
-- N - Natural
-
-- V - Regression Equation (not recommended except for unique cases)
+    - R - Rectangular
+    - T - Trapezoidal
+    - N - Natural
+    - V - Regression Equation (not recommended except for unique cases)
 
 The channel cross-section options are rectangular, trapezoidal, and natural.
 In FLO-2D, the floodwave movement in the channel is controlled by the rate of change in the discharge as a function of the rate of change in the flow
