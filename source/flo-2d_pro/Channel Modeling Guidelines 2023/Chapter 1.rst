@@ -648,7 +648,7 @@ The Froude number is directly related to model stability through the Courant num
 .. math::
    :label:
 
-   C = \frac{c(F + 1)}{\frac{\Delta x}{\Delta t)}}
+   C = \frac{c(F + 1)}{\frac{\Delta x}{\Delta t}}
 
 where:
 
