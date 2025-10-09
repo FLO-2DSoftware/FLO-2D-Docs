@@ -145,11 +145,13 @@ The cross-section data in the XSEC.DAT file can be automatically assigned from a
 
 .. image:: img/Chapter1/Chapte004.jpg
 
-**Figure 4.
-Natural Channel Cross-section Data.**
+*Figure 4.
+Natural Channel Cross-section Data.*
 
-**Figure 5.
-Natural Shape Cross-section Geometry.**
+.. image:: img/Chapter1/Chapte022.jpg
+
+*Figure 5.
+Natural Shape Cross-section Geometry.*
 
 Natural river cross-sections should be spaced to represent a uniform river reach that may encompass any number of channel elements.
 Interpolations between cross-sections facilitate transitions to changes in geometry.
