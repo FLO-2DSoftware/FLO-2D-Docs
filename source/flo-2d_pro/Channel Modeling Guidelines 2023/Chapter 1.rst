@@ -111,10 +111,10 @@ Rectangular Channel Geometry.*
 Similarly, the trapezoidal channels are defined by bottom width, channel depth and side slopes (ratio of horizontal to vertical) (Figure 3).
 Again, the channel length is the length inside the grid element.
 
-**Z/1**
+.. image:: img/Chapter1/Chapte022.jpg
 
-**Figure 3.
-Trapezoidal Channel Geometry.**
+*Figure 3.
+Trapezoidal Channel Geometry.*
 
 For small channels, urban channels, or channels with unknown detailed geometry or lack of survey data, a rectangular or trapezoidal cross-section
 representation can be used by estimating the channel configuration.
