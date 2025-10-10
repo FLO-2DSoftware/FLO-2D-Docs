@@ -28,8 +28,8 @@ FLO-2D Storm Drain Overview
 .. image:: img/Chapter1/Chapte002.jpg
 
 
-   **Figure 1.
-   Conceptualized FLO-2D Model System with a Storm Drain Component.**
+*Figure 1.
+Conceptualized FLO-2D Model System with a Storm Drain Component.*
 
    The FLO-2D storm drain component can be visualized in layers.
    The surficial layer represents all the surface water flood movement which is connected to the subsurface pipe layer through the pipe junctions defined
