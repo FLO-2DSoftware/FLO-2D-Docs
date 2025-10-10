@@ -522,21 +522,24 @@ Storm Drain Clogging
     </div>
 
 
-   The inlet discharge calculated using either the orifice or weir equations is subject to a blockage reduction that is specified by the user.
-   The inlet discharge is calculated and then reduced using the clogging factor in the following equation:
+The inlet discharge calculated using either the orifice or weir equations is subject to a blockage reduction that is specified by the user.
+The inlet discharge is calculated and then reduced using the clogging factor in the following equation:
 
-Q\ :sub:`R` = (1-C\ :sub:`f`) Q\ :sub:`c`
+.. math::
+   :label:
 
-   where:
+   Q_R = (1-C_f) \ Q_c
 
-Q\ :sub:`R` = reduced inflow discharge
+where:
 
-C\ :sub:`f` = clogging factor
+    Q\ :sub:`R` = reduced inflow discharge
 
-Q\ :sub:`c`\ = calculated discharge using the orifice/weir equations.
+    C\ :sub:`f` = clogging factor
 
-   This methodology is recommended for single inlets by entities such as the Colorado Department of Transportation and the cities of Denver and Las Vegas.
-   Figure 18 and Figure 19 show the reduced discharge for a Type 2 inlet using a clogging factor of 50% at time 0.5 hrs.
+    Q\ :sub:`c`\ = calculated discharge using the orifice/weir equations.
+
+This methodology is recommended for single inlets by entities such as the Colorado Department of Transportation and the cities of Denver and Las Vegas.
+Figure 18 and Figure 19 show the reduced discharge for a Type 2 inlet using a clogging factor of 50% at time 0.5 hrs.
 
 .. image:: img/Chapter1/Chapte014.jpg
 
