@@ -558,8 +558,8 @@ Type 2 Inlet Discharge versus Time Using a Clogging Factor of 50% at Time 0.5 hr
    Table **2** shows the FCDMC catch basin clogging factors for predicting inlet discharge (FCDMC, 2018).
    The clogging factor data file can be created in the SWMMFLO.DAT data dialog for all types of inlets.
 
-   **Table 2.
-   FCDMC Catch Basin Clogging Factors (FCDMC, 2018)**
+   *Table 2.
+   FCDMC Catch Basin Clogging Factors (FCDMC, 2018)*
 
 .. image:: img/Chapter1/Chapte016.jpg
 
@@ -572,20 +572,23 @@ Reduction of Return Flow to Surface
    water.
    The energy loss for a contraction in pressure flow can be calculated from the following equation (DOT Urban Drainage Design Manual):
 
-   H\ :sub:`c`\ =K\ :sub:`c`\ (V\ :sub:`2`\ :sup:`2`/2g)
+.. math::
+   :label:
 
-   where:
+   H_c = K_c(\frac{V_2 \ ^2{2g})
 
-K\ :sub:`c` = contraction coefficient (see Table 3)
+where:
 
-V = velocity downstream of transition
+    K\ :sub:`c` = contraction coefficient (see Table 3)
 
-G = acceleration due to gravity 9.81 m/s\ :sup:`2` (32.2 ft/s\ :sup:`2`)
+    V = velocity downstream of transition
 
-   **Table 3.
+    G = acceleration due to gravity 9.81 m/s\ :sup:`2` (32.2 ft/s\ :sup:`2`)
+
+   *Table 3.
    Values of K for Contraction.
    (Dept.
-   of Transportation, 2013)**
+   of Transportation, 2013)*
 
 .. image:: img/Chapter1/Chapte017.jpg
 
