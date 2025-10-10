@@ -611,8 +611,6 @@ Hydraulic Structure Rating Table Options.*
        WSEL that are nearly equilibrated.
 
 
-
-
 headwater depth H\ :sub:`w` and tailwater T\ :sub:`w` can switch with submergence to allow flow to go upstream.
 The INOUTCONT parameter does not apply to the generalized culvert equations.
 
@@ -635,23 +633,23 @@ again.
 
 The hydraulic structures that have the following flood routing issues will result in Warning Messages written to the ERROR.CHK file:
 
-- Adverse slope between the inflow and outflow nodes;
+    - Adverse slope between the inflow and outflow nodes;
 
-- Inflow or outflow cells that also contain levee, streets or ARF’s;
+    - Inflow or outflow cells that also contain levee, streets or ARF’s;
 
-- Rating table data where the first pair of stage-discharge values are non-zero (must be 0.0.);
+    - Rating table data where the first pair of stage-discharge values are non-zero (must be 0.0.);
 
-- The rate of increase in the rating table values is unreasonably high.
+    - The rate of increase in the rating table values is unreasonably high.
 
 Error Messages are written to the ERROR.CHK file for the following channel conditions:
 
-- Reference elevation is lower than the inlet or outlet grid elevations.
+    - Reference elevation is lower than the inlet or outlet grid elevations.
 
-- Inflow or outflow nodes are also assigned as channel elements.
+    - Inflow or outflow nodes are also assigned as channel elements.
 
-- Assignment of a channel element to more than one hydraulic structure inlet node.
+    - Assignment of a channel element to more than one hydraulic structure inlet node.
 
-- Rating table must have increasing stage and Q.
+    - Rating table must have increasing stage and Q.
 
 The most frequent problem with the application of the hydraulic structure routine is a mismatched flow condition.
 This occurs when the discharge through the structure defined by the rating curve or table is greater than the upstream inflow to the structure.
@@ -662,14 +660,14 @@ Review the HYDROSTRUCT.OUT and HYCHAN.OUT files for surging.
 If surging is noted in the hydraulic structure hydrograph or the channel hydrographs near the inlet, the rating table or curve will need adjustment.
 The following conditions should be reviewed:
 
-- Shallow flows less than 1 ft in depth with velocity > 5 fps.
-  Warning message
+    - Shallow flows less than 1 ft in depth with velocity > 5 fps.
+      Warning message
 
-- Downstream WSEL > upstream WSEL with INOUTCONT < 2 (potential upstream flow thru the structure).
-  Warning message.
+    - Downstream WSEL > upstream WSEL with INOUTCONT < 2 (potential upstream flow thru the structure).
+      Warning message.
 
-- Rating table adjusted with SUBFACTOR.
-  Warning message and revised table values are written to REVISED_RATING_TABLE.OUT file.
+    - Rating table adjusted with SUBFACTOR.
+      Warning message and revised table values are written to REVISED_RATING_TABLE.OUT file.
 
 Hydraulic structure – channel instability adjustments
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -726,7 +724,7 @@ linear.
 It is more reasonable for the discharge to be on the order of 100 cfs at one ft deep.
 The bridge in Figure 55 was assigned the rating table below (Table 4).
 
-.. image:: img/Chapter2/Chapte031.jpg
+.. image:: img/Chapter2/Chapte047.jpg
 
 *Figure 55.
 Bridge/Culvert and Concrete-Lined Trapezoidal Channel*
@@ -736,7 +734,7 @@ The discharge from Table 3 is approximately 100 cfs for a depth of about 1 ft (0
 *Table 3.
 Rating Table for the Bridge/Culvert*
 
-   |Chapte031|
+.. image:: img/Chapter2/Chapte031.jpg
 
 From the HYCHAN.OUT file the discharge several hundred feet upstream of the bridge is only 37 cfs at approximately one ft (Table 4).
 For 37 cfs discharge coming down the channel, the rating table (Table 4) has a corresponding depth of only about 0.45 ft, thus the bridge/culvert will
