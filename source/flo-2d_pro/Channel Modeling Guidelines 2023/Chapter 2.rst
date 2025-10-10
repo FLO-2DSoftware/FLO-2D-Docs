@@ -430,7 +430,11 @@ A discharge rating curve uses headwater depth to calculate discharge:
 
 
 
-   Q = a depth :sup:`b` where a = coefficient, b = exponent
+where:
+
+    a = coefficient
+
+    b = exponent
 
 A broadcrested weir (Figure 49) discharge curve is an example of a rating curve:
 
