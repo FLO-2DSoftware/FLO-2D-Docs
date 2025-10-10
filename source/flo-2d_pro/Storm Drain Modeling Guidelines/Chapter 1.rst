@@ -35,7 +35,7 @@ Conceptualized FLO-2D Model System with a Storm Drain Component.*
    as inlets (or outfalls).
    Figure 2 illustrates the layered system.
 
-.. image:: img/Chapter1/Chapte003.jpg
+.. image:: img/Chapter1/Chapte002.jpg
 
 *Figure 2.
 Volume Exchange between the Surface Water and Storm Drain System*
@@ -430,8 +430,8 @@ VOLCurb = volume equal to the curb height =
 
 .. image:: img/Chapter1/Chapte010.jpg
 
-**Figure 11.
-Volume Conversion - Square Floodplain Grid Element to Right Triangle at 2% Slope**
+*Figure 11.
+Volume Conversion - Square Floodplain Grid Element to Right Triangle at 2% Slope*
 
 To calculate flow depth on the storm drain inlet:
 
@@ -519,8 +519,8 @@ Pressure head oscillations for various times up to
 
 .. image:: img/Chapter1/Chapte011.jpg
 
-   **Figure 13.
-   Inlet Pressure Head - No Pressure Head Dampening is Applied**
+*Figure 13.
+Inlet Pressure Head - No Pressure Head Dampening is Applied*
 
 **Figure**
 
@@ -563,8 +563,8 @@ Times up to 03:24:30.
 
 .. image:: img/Chapter1/Chapte012.jpg
 
-   **Figure 15.
-   Inlet Pressure Head with Dampening up to 1.25 Times the Lateral Pipe Diameter.**
+*Figure 15.
+Inlet Pressure Head with Dampening up to 1.25 Times the Lateral Pipe Diameter.*
 
 **Figure**
 
@@ -591,8 +591,8 @@ Times up to 03:24:30.
 
 .. image:: img/Chapter1/Chapte013.jpg
 
-   **Figure 17.
-   Inlet Pressure Head with Dampening up to RIM Elevation**
+*Figure 17.
+Inlet Pressure Head with Dampening up to RIM Elevation*
 
 Storm Drain Clogging
 ^^^^^^^^^^^^^^^^^^^^
@@ -624,8 +624,8 @@ Q\ :sub:`c`\ = calculated discharge using the orifice/weir equations.
 
 .. image:: img/Chapter1/Chapte014.jpg
 
-   **Figure 18.
-   Type 2 Inlet Discharge versus Time**
+*Figure 18.
+Type 2 Inlet Discharge versus Time*
 
 .. image:: img/Chapter1/Chapte015.jpg
 
@@ -815,10 +815,10 @@ surface area contributed by the conduits connected to the node.
 net flow at Node J contributed by all connected conduits plus external inflows
 
 
-|Chapte020|
+.. image:: img/Chapter1/Chapte020.jpg
 
-   **Figure 20.
-   Node-Link Representation of a Drainage System (Roesner et al, 1992)**
+*Figure 20.
+ Node-Link Representation of a Drainage System (Roesner et al, 1992)*
 
 Solution Algorithm – How the Model Works
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1062,7 +1062,7 @@ To implement the flow continuity condition, a perturbation equation form is enfo
 
    ∂Q
 
-|Chapte021|
+.. image:: img/Chapter1/Chapte021.jpg
 
    where:
 
@@ -1272,18 +1272,18 @@ Outfall
    Only one conduit can be connected to an outfall node and there must be at least one outfall node in a pipeline.
    The required input data is:
 
-- Name
+        - Name
 
-- X and Y Coordinates
+        - X and Y Coordinates
 
-- Invert elevation
+        - Invert elevation
 
-- Tide Gate (optional) can be assigned to prevent backflow into the pipes.
+        - Tide Gate (optional) can be assigned to prevent backflow into the pipes.
 
-- Boundary Condition Types:
+        - Boundary Condition Types:
 
-  - Allow Discharge is ‘off’ - Free Outfalls can discharge the flow from the storm drain system.
-    Flow will not be added to the surface.
+       - Allow Discharge is ‘off’ - Free Outfalls can discharge the flow from the storm drain system.
+            Flow will not be added to the surface.
 
   - Allow Discharge is ‘on’ - The FLO-2D water surface elevation is imposed on the outfall node.
     Storm drain water will return to the surface model.
