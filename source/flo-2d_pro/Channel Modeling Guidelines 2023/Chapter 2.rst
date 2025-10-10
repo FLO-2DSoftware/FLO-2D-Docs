@@ -560,7 +560,7 @@ file (Table 1).
 If INOUTCONT =2,
 
 .. list-table::
-   :widths: 100
+   :widths: 50 50
    :header-rows: 0
 
    * - Control
