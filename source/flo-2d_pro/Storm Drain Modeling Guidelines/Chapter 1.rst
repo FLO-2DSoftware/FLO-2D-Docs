@@ -407,26 +407,28 @@ Curb Inlet Flow Adjustment
    The curb inlet flow assignment is the same concept as the Street Gutter Flow feature (requires GUTTER.DAT file) that can be applied to gutters in
    streets without storm drain inlets.
 
-   **Figure 10.
-   Curb Inlet Water Depth Profile Adjustment**
-
-   Definitions:
-
-Grid depth = flow depth on conventional grid element
-
-Curb depth = depth on the storm drain
-
-Flow depth = flow depth above the curb height
-
-L\ :sub:`c` = length of street away from curb that is inundated by the curb depth
-
-Volume = total water volume on a grid element = side L x side L x Grid Depth
-
-VOLCurb = volume equal to the curb height =
-
-   1/2 base (L) x height (0.02 x L) x side L = 0.5 x 0.02 x L\ :sup:`3` = 0.01 L\ :sup:`3`
-
 .. image:: img/Chapter1/Chapte010.jpg
+
+*Figure 10.
+Curb Inlet Water Depth Profile Adjustment*
+
+Definitions:
+
+    Grid depth = flow depth on conventional grid element
+
+    Curb depth = depth on the storm drain
+
+    Flow depth = flow depth above the curb height
+
+    L\ :sub:`c` = length of street away from curb that is inundated by the curb depth
+
+    Volume = total water volume on a grid element = side L x side L x Grid Depth
+
+    VOLCurb = volume equal to the curb height =
+
+       1/2 base (L) x height (0.02 x L) x side L = 0.5 x 0.02 x L\ :sup:`3` = 0.01 L\ :sup:`3`
+
+.. image:: img/Chapter1/Chapte024.jpg
 
 *Figure 11.
 Volume Conversion - Square Floodplain Grid Element to Right Triangle at 2% Slope*
