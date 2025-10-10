@@ -114,11 +114,11 @@ Flooding Conditions
    The ponding feature is activated when the inlet storm drain pressure head exceeds rim elevation.
    Two overflow conditions were evaluated by the SWMM model when the pressure head exceeds the rim elevation:
 
-   Flooding: Excess volume in the storm drain overflows and is lost because there is no inlet temporary storage.
+   *Flooding*: Excess volume in the storm drain overflows and is lost because there is no inlet temporary storage.
    Hydraulic head at the node will not rise above the inlet rim + surcharge depth.
    This approach is a simplification that ignores the additional surface water head that may force more water to move through the pipe system.
 
-   Ponding: This routine was created to represent a surface water layer in the EPA SWMM 5 model.
+   *Ponding*: This routine was created to represent a surface water layer in the EPA SWMM 5 model.
    Inlet overflow is stored at the node until such time when the pressure head is reduced below the rim elevation and the stored volume is released back
    to the storm drain system.
    In this case, the overflow volume is never lost from the storm drain system.
@@ -134,8 +134,6 @@ Flooding Conditions
 
 - The Allow Ponding option was selected, and those nonzero ponded area nodes would receive ponded water.
   Nodes with a zero-ponded area would receive flooding water.
-
-..
 
    When an inlet is flooded, the computed depth will decrease to the rim elevation and the overflow lost from the system is considered excess inflow into
    the node.
