@@ -431,7 +431,7 @@ Definitions:
 .. image:: img/Chapter1/Chapte024.jpg
 
 *Figure 11.
-Volume Conversion - Square Floodplain Grid Element to Right Triangle at 2% Slope*
+Volume Conversion - Square Floodplain Grid Element to Right Triangle at 2% Slope.*
 
 To calculate flow depth on the storm drain inlet:
 
