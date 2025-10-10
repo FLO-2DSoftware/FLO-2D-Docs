@@ -428,7 +428,7 @@ Definitions:
 
        1/2 base (L) x height (0.02 x L) x side L = 0.5 x 0.02 x L\ :sup:`3` = 0.01 L\ :sup:`3`
 
-.. image:: img/Chapter1/Chapte010.jpg
+.. image:: img/Chapter1/Chapte024.jpg
 
 *Figure 11.
 Volume Conversion - Square Floodplain Grid Element to Right Triangle at 2% Slope*
