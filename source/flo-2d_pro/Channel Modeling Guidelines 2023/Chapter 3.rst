@@ -161,19 +161,12 @@ Check for changes to the timestep that exceed one thousand corrections or an ord
 in Time.out (Figure 85).
 This channel is not responsible for timestep decrements.
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
-
-
-       * - Note:
-
-       * - Observation by K O’Brien. If channel elements are listed in TIME.OUT,correcting the cross section
-
-           might push the issue downstream.Channels have a high impact on the timestep
-           decrement if they are steep or if the grid element size is small.
-           If an unreasonable number of timestep decrements result because of a channel node, it may not be fixable.
-           This is OK so long as the channel is stable and volume conservation is observed.
+.. note::
+   Observation by K O’Brien. If channel elements are listed in TIME.OUT,correcting the cross section
+   might push the issue downstream.Channels have a high impact on the timestep
+   decrement if they are steep or if the grid element size is small.
+   If an unreasonable number of timestep decrements result because of a channel node, it may not be fixable.
+   This is OK so long as the channel is stable and volume conservation is observed.
 
 .. image:: img/Chapter3/Chapte014.jpg
 
@@ -234,15 +227,9 @@ If major elevation differences are listed, please review them, and see if correc
 *Figure 91.
 ChanBankEl.chk Example.*
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
-
-
-   * - Note:
-
-   * - The raw file is not easy to review.
-       It is better to open the file with the Debug tool.
+.. note::
+   The raw file is not easy to review.
+   It is better to open the file with the Debug tool.
 
 
 Create a new group called Debug (Figure 92).
@@ -307,18 +294,11 @@ The convergence for the channel is reported in Channel_Convergence.out (Figure 9
 When this file is written, some channel elements are not converging.
 This description will discuss ways to correct this issue.
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
-
-
-   * - Note:
-
-   * - The following file example is from another project.
-       The AdvancedChannel training module did not write the file because no convergence issues
-
-       existed.Let’s pretend that the grid element listed is 35368.
-       This is one from the training module so it can be inspected.
+.. note::
+   The following file example is from another project.
+   The AdvancedChannel training module did not write the file because no convergence issues
+   existed.Let’s pretend that the grid element listed is 35368.
+   This is one from the training module so it can be inspected.
 
 
 .. image:: img/Chapter3/Chapte027.jpg
@@ -397,14 +377,7 @@ It may be written for sediment transport or mudflow in channels.
 13.21 Evacuated
 ~~~~~~~~~~~~~~~
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
-
-
-   * - Note:
-
-   * - The following evacuatedchan.out file is from a different project.
+.. note:: The following evacuatedchan.out file is from a different project.
 
 
 EVACUATEDCHAN.OUT file (Figure 101) is written when all the water is taken from a cross section in a single timestep.
