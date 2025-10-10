@@ -629,8 +629,8 @@ Type 2 Inlet Discharge versus Time*
 
 .. image:: img/Chapter1/Chapte015.jpg
 
-   **Figure 19.
-   Type 2 Inlet Discharge versus Time Using a Clogging Factor of 50% at Time 0.5 hrs**
+*Figure 19.
+Type 2 Inlet Discharge versus Time Using a Clogging Factor of 50% at Time 0.5 hrs*
 
    It is noted that the Flood Control District of Maricopa County (FCDMC) in Phoenix, Arizona recommends this approach for flooding and drainage studies,
    but it should not be applied for storm drain design.
@@ -818,7 +818,7 @@ net flow at Node J contributed by all connected conduits plus external inflows
 .. image:: img/Chapter1/Chapte020.jpg
 
 *Figure 20.
- Node-Link Representation of a Drainage System (Roesner et al, 1992)*
+Node-Link Representation of a Drainage System (Roesner et al, 1992)*
 
 Solution Algorithm – How the Model Works
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
