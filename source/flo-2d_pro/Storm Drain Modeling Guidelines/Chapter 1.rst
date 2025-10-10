@@ -202,8 +202,8 @@ FLO-2D WSE > Storm drain pressure head> rim elevation:
 
 .. image:: img/Chapter1/Chapte005.png
 
-   **Figure 5.
-   No Return Flow No Inlet Flow**
+*Figure 5.
+No Return Flow No Inlet Flow*
 
 Storm drain pressure head > FLO-2D WSE > rim elevation:
 
@@ -217,8 +217,8 @@ Storm drain pressure head > FLO-2D WSE > rim elevation:
 
 .. image:: img/Chapter1/Chapte006.png
 
-   **Figure 6.
-   Inlet with Return Flow**
+*Figure 6.
+Inlet with Return Flow*
 
 Pressure head and manholes
 ''''''''''''''''''''''''''
@@ -235,8 +235,8 @@ Pressure head and manholes
 
 .. image:: img/Chapter1/Chapte007.png
 
-   **Figure 7.
-   Manhole under Pressure with Return Flow.**
+*Figure 7.
+Manhole under Pressure with Return Flow.*
 
 Pressure head variability
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -304,8 +304,8 @@ Outfall Discharge
 
 .. image:: img/Chapter1/Chapte008.jpg
 
-   **Figure 8.
-   Initial Condition for an Underground (Underwater) Storm Drain Outfall**
+*Figure 8.
+Initial Condition for an Underground (Underwater) Storm Drain Outfall*
 
    Typically, an outfall has an invert elevation equal to or greater than the floodplain, channel, or street elevations.
    To account for volume conservation, the storm drain outflow that represents inflow volume to a FLO-2D channel is reported in the CHVOLUME.OUT file.
@@ -333,8 +333,8 @@ Feature = 3, Turn off the reduction of the discharge in the inlet when drop box 
 
 .. image:: img/Chapter1/Chapte009.jpg
 
-   **Figure 9.
-   Vertical Inlet Opening with No Flap gate.**
+*Figure 9.
+Vertical Inlet Opening with No Flap gate.*
 
 Manhole
 ^^^^^^^
