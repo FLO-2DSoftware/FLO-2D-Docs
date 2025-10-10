@@ -603,9 +603,7 @@ Unsteady Flow in a Pipe Network
 
 Continuity Equation:
 
-∂A ∂Q
 
-   |Chapte018| t x
 
 Momentum equation for x-direction:
 
