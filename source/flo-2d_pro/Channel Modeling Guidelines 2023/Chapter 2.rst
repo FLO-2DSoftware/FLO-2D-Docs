@@ -758,19 +758,19 @@ In this case, it is not necessary to eliminate the instability, but perhaps it c
 
 To reduce or eliminate channel numerical surging with a hydraulic structure, the following steps are suggested:
 
-1. Provide more definition to the rating table at low flows;
+    1. Provide more definition to the rating table at low flows;
 
-2. Regenerate the rating curves in the external program with more realistic n-values used in the FLO-2D channel;
+    2. Regenerate the rating curves in the external program with more realistic n-values used in the FLO-2D channel;
 
-3. Review and adjust the slope through the structure;
+    3. Review and adjust the slope through the structure;
 
-4. Gradually increase the channel n-values upstream and downstream of the bridge/culvert;
+    4. Gradually increase the channel n-values upstream and downstream of the bridge/culvert;
 
-5. Review and adjust the channel flow area transition leading upstream to and away downstream from the bridge;
+    5. Review and adjust the channel flow area transition leading upstream to and away downstream from the bridge;
 
-6. Use a rating curve instead of the rating table, although, in general, the rating table is more accurate than a rating curve;
+    6. Use a rating curve instead of the rating table, although, in general, the rating table is more accurate than a rating curve;
 
-7. Use the FLO-2D bridge flow component that represents the combined bridge features and channel geometry.
+    7. Use the FLO-2D bridge flow component that represents the combined bridge features and channel geometry.
 
 Storm Drains
 ~~~~~~~~~~~~
@@ -787,19 +787,19 @@ Storm drain inlet – channel considerations
 
 After initial set up of the urban project, the following issues related to the storm drain inlet to channel system should be addressed:
 
-- Inlet locations:
+    - Inlet locations:
 
-  - Inlets must be inside the FLO-2D computational domain;
+      - Inlets must be inside the FLO-2D computational domain;
 
-  - Inlets cannot be assigned to the interior channel elements;
+      - Inlets cannot be assigned to the interior channel elements;
 
-  - Inlets that pick-up water from the street or overland should not be assigned to the channel left bank elements.
+      - Inlets that pick-up water from the street or overland should not be assigned to the channel left bank elements.
 
-- Inlet elevations:
+    - Inlet elevations:
 
-  - Channels discharging to a storm drain inlet should have a invert elevation that matches the inlet invert elevation;
+      - Channels discharging to a storm drain inlet should have a invert elevation that matches the inlet invert elevation;
 
-  - In most instances, the inlet should be set up as a vertical inlet in the SWMMFLO.DAT file using the Feature switch.
+      - In most instances, the inlet should be set up as a vertical inlet in the SWMMFLO.DAT file using the Feature switch.
 
 Storm drain inlets should not be assigned to an interior channel element.
 If a channel discharges directly to a storm drain conduit inlet, like a culvert inlet, assign the inlet to the channel left bank element.
@@ -807,9 +807,9 @@ For this configuration a vertical Type 4 inlet can be applied (refer to the Stor
 Figure 57 and Figure 58 provide some additional details about setting up the inlet/channel interface.
 This system shows that the bed elevation of the channel is equal to the invert elevation of the inlet.
 
-- Channel Bed Elevation = Bank Elevation – Depth = (299.8 – 3.5) = 296.3 ft
+    - Channel Bed Elevation = Bank Elevation – Depth = (299.8 – 3.5) = 296.3 ft
 
-- Inlet Elevation = 296.3 ft
+    - Inlet Elevation = 296.3 ft
 
 .. image:: img/Chapter2/Chapte033.png
 
@@ -825,9 +825,9 @@ Figure 59 shows another example of a storm drain system interfacing with a chann
 The surface water and the storm drain exchange flow based on the water surface elevation in the channel and the pressure head in the storm drain.
 The water surface elevation and the pressure head are a function of the following:
 
-- Channel thalweg elevation = inlet invert elevation
+    - Channel thalweg elevation = inlet invert elevation
 
-- Channel bank elevation = inlet rim elevation
+    - Channel bank elevation = inlet rim elevation
 
 .. image:: img/Chapter2/Chapte035.jpg
 
@@ -839,19 +839,19 @@ Storm drain outfall – channel considerations
 
 To connect a storm drain outfall to a channel element the following issues should be addressed:
 
-- Outfall locations:
+    - Outfall locations:
 
-  - Are all outfalls inside the FLO-2D computational domain?
+      - Are all outfalls inside the FLO-2D computational domain?
 
-  - Are there outfalls assigned to the interior channel elements? This is not allowed.
+      - Are there outfalls assigned to the interior channel elements? This is not allowed.
 
-  - Are outfalls assigned to the appropriate channel bank elements? They should be assigned to the left bank only.
+      - Are outfalls assigned to the appropriate channel bank elements? They should be assigned to the left bank only.
 
-- Outfall type:
+    - Outfall type:
 
-  - Are outfalls set up as a FREE condition outfall type in the SWMM.inp file? This is required.
+      - Are outfalls set up as a FREE condition outfall type in the SWMM.inp file? This is required.
 
-  - Is the switch to discharge flow back to the surface ‘ON’ in the SWMMOUTF.DAT file?
+      - Is the switch to discharge flow back to the surface ‘ON’ in the SWMMOUTF.DAT file?
 
 Figure 60 shows a complex storm drain – channel system where a channel feeds the storm drain as an inlet and flow returns to surface further
 downstream and back into the channel network.
@@ -1020,22 +1020,22 @@ Maximum floodplain velocities showing the flow downstream of the channel.**
 
 The guidelines for setting up a **channel termination** to the floodplain are:
 
-- Select a distance over which the channel will widen and become shallow (4 to 10 channel elements).
-  The final channel cross section should have a thalweg less than 2.0 ft.
+    - Select a distance over which the channel will widen and become shallow (4 to 10 channel elements).
+      The final channel cross section should have a thalweg less than 2.0 ft.
 
-- Maintain essentially the same channel cross section flow area (with maybe a slight reduction) over the last few channel elements.
+    - Maintain essentially the same channel cross section flow area (with maybe a slight reduction) over the last few channel elements.
 
-- Increase the n-values in the downstream direction.
+    - Increase the n-values in the downstream direction.
 
-- The floodplain elevations of the channel interior elements are set to the channel thalweg elevation of the last channel element and are identical.
+    - The floodplain elevations of the channel interior elements are set to the channel thalweg elevation of the last channel element and are identical.
 
-- The downstream floodplain grid element elevations contiguous to the channel end elements should be lower than the channel end thalweg elevation to
-  allow the flow to drain out of the channel.
+    - The downstream floodplain grid element elevations contiguous to the channel end elements should be lower than the channel end thalweg elevation to
+      allow the flow to drain out of the channel.
 
-- The channel can only terminate in one of the four compass directions.
-  The end of the channel cannot extend from bank to bank across diagonal directions.
-  At least three channel bank extensions should be oriented in one of the four compass directions as shown in Figure 70.
-  The incorrect set-up will not yield correct discharge results from the channel to the floodplain.
+    - The channel can only terminate in one of the four compass directions.
+      The end of the channel cannot extend from bank to bank across diagonal directions.
+      At least three channel bank extensions should be oriented in one of the four compass directions as shown in Figure 70.
+      The incorrect set-up will not yield correct discharge results from the channel to the floodplain.
 
 .. image:: img/Chapter2/Chapte044.png
 
