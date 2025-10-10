@@ -441,7 +441,7 @@ A broadcrested weir (Figure 49) discharge curve is an example of a rating curve:
 .. math::
    :label:
 
-   Q = C \ L \ h_d \ ^1.5
+   Q = C \ L \ h_d \ ^{1.5}
 
 where C = 2.65 - 3.40 in English Units
 
