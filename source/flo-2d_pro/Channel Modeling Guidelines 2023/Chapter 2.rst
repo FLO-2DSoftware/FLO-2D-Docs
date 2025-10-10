@@ -470,8 +470,8 @@ Several important features of hydraulic structures are:
 
 .. image:: img/Chapter2/Chapte026.jpg
 
-   *Figure 50.
-   Hydraulic Structure (Culvert) Connecting Two Channel Elements.*
+*Figure 50.
+Hydraulic Structure (Culvert) Connecting Two Channel Elements.*
 
 If a structure spans more than one channel element in a channel segment as shown in Figure 50 above, split the channel into two segments and assign
 the inlet node at the end of the first segment and the outlet node at the start of the second segment.
