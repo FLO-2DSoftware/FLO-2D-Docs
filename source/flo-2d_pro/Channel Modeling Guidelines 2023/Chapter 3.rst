@@ -11,10 +11,10 @@ It covers issues such as boundary conditions, check files, volume conservation, 
 The Reviewer’s checklist is an Excel workbook that lists every \*.dat and \*.out file required for a FLO-2D Project review.
 This section will focus on the Channels tab as shown in Figure 73.
 
-|Chapte002|
+.. image:: img/Chapter3/Chapte002.jpg
 
-**Figure 73.
-Reviewer’s checklist.**
+*Figure 73.
+Reviewer’s checklist.*
 
 13.1 Documentation
 ~~~~~~~~~~~~~~~~~~
@@ -31,15 +31,15 @@ Return to the inflow section for more details regarding channel inflow boundary.
 Figure 74 and Figure 75 show examples of the upstream and downstream boundary points and nodes.
 The points are user data, and the nodes are Schematized data.
 
-|Chapte003|
+.. image:: img/Chapter3/Chapte003.png
 
-**Figure 74.
-Upstream Channel Boundary with an Inflow Node.**
+*Figure 74.
+Upstream Channel Boundary with an Inflow Node.*
 
-   |Chapte004|
+.. image:: img/Chapter3/Chapte004.png
 
-**Figure 75.
-Downstream Channel Boundary with an Outflow Node.**
+*Figure 75.
+Downstream Channel Boundary with an Outflow Node.*
 
 13.3 Cross Sections
 ~~~~~~~~~~~~~~~~~~~
@@ -48,17 +48,17 @@ Check the cross section placement.
 Note any locations where more cross sections are required such as the top half of Figure 76.
 The bottom half shows a channel with good cross section placement to represent the transition from an urban channel to a natural channel.
 
-|Chapte005|
+.. image:: img/Chapter3/Chapte005.png
 
-**Figure 76.
-Cross Sections wih a Bad Transition and a Good Transition.**
+*Figure 76.
+Cross Sections wih a Bad Transition and a Good Transition.*
 
 Check each cross section plot for accuracy using the cross section geometry table and plot as shown in Figure 77.
 
-|Chapte006|
+.. image:: img/Chapter3/Chapte006.jpg
 
-**Figure 77.
-Review a Cross Section Shape.**
+*Figure 77.
+Review a Cross Section Shape.*
 
 13.4 Profiles
 ~~~~~~~~~~~~~
@@ -66,18 +66,18 @@ Review a Cross Section Shape.**
 Click the Profile button and then click the left bank channel line with the FLO-2D plugin to scan each channel profile.
 Figure 78 shows how to check the profile.
 
-|Chapte007|
+.. image:: img/Chapter3/Chapte007.jpg
 
-**Figure 78.
-Check Chanel Profile.**
+*Figure 78.
+Check Chanel Profile.*
 
 Check for unreasonable breaks in slope or bank elevations.
 Figure 79 shows some channel profiles.
 
-|Chapte008|
+.. image:: img/Chapter3/Chapte008.png
 
-**Figure 79.
-Channel Profile Examples.**
+*Figure 79.
+Channel Profile Examples.*
 
 13.5 Transitions
 ~~~~~~~~~~~~~~~~
@@ -86,10 +86,10 @@ Review the change in cross section area, width, and wetted perimeter for each cr
 Check for changes in these values that indicate the channel is transitioning too quickly for the model to remain numerically stable.
 Find this in the XSECAREA.OUT file (Figure 80) or by using the Profiles.exe program.
 
-|Chapte009|
+.. image:: img/Chapter3/Chapte009.png
 
-**Figure 80.
-XSECAREA.OUT Example.**
+*Figure 80.
+XSECAREA.OUT Example.*
 
 13.6 Alignment
 ~~~~~~~~~~~~~~
@@ -100,10 +100,10 @@ Make sure the banks are inside levees.
 Make sure the banks do not share with any components that have a high conflict rating.
 The advanced channel lesson has a good section on how to align channels to the banks correctly.
 
-|Chapte010|
+.. image:: img/Chapter3/Chapte010.jpg
 
-**Figure 81.
-Channel with Good Alignment.**
+*Figure 81.
+Channel with Good Alignment.*
 
 13.11 Volume Conservation
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,17 +113,17 @@ Volume Conservation (VC) errors exist if the Percent of Inflow column is higher 
 
 If VC errors occur, review the Channel Optimization training videos and the Channel Guidelines document.
 
-|Chapte011|
+.. image:: img/Chapter3/Chapte011.jpg
 
-**Figure 82.
-Summary.out Example.**
+*Figure 82.
+Summary.out Example.*
 
 If summary.out has a volume error but chvolume.out does not, the error is on the floodplain and not attributed to the channel data.
 
-|Chapte012|
+.. image:: img/Chapter3/Chapte012.jpg
 
-**Figure 83.
-CHVolume.out Example.**
+*Figure 83.
+CHVolume.out Example.*
 
 13.13 Velocities
 ~~~~~~~~~~~~~~~~
@@ -131,28 +131,28 @@ CHVolume.out Example.**
 Check the maximum velocities sorted by high to low in the veltimec.out (Figure 84).
 If the velocities are unreasonable, look for simple problems.
 
-- Steep slope o Drop structure or a naturally occurring steep channel slope can result in naturally high velocities.
-  o Bad cross section data resulting in bad bedslope can result in unnaturally high velocities.
-  o Test data against an Open Channel Flow Calculator.
+    - Steep slope o Drop structure or a naturally occurring steep channel slope can result in naturally high velocities.
+      o Bad cross section data resulting in bad bedslope can result in unnaturally high velocities.
+      o Test data against an Open Channel Flow Calculator.
 
-- Numerical instability.
+    - Numerical instability.
 
-  - If the time of occurrence is not near the peak, this could indicate instability.
-    o If the grid element listed is close to an inflow node, the velocity could be unnaturally high.
-    Fix this by ramping the inflow over 0.5 hours.
-    If water is added to a cross section too quickly, it can become unstable.
+      - If the time of occurrence is not near the peak, this could indicate instability.
+        o If the grid element listed is close to an inflow node, the velocity could be unnaturally high.
+        Fix this by ramping the inflow over 0.5 hours.
+        If water is added to a cross section too quickly, it can become unstable.
 
-  - If the grid element is close to a storm drain outfall or culvert, review the transition to make sure it matches the physical system.
-    Increase the roughness around connected component.
-    Lower the Channel Courant to 0.4, 0.3, or 0.2.
+      - If the grid element is close to a storm drain outfall or culvert, review the transition to make sure it matches the physical system.
+        Increase the roughness around connected component.
+        Lower the Channel Courant to 0.4, 0.3, or 0.2.
 
-  - If applied corrections do not help, consider the grid element size.
-    o Review the Channel Optimization video and Channel Guidelines for more ideas.
+      - If applied corrections do not help, consider the grid element size.
+        o Review the Channel Optimization video and Channel Guidelines for more ideas.
 
-|Chapte013|
+.. image:: img/Chapter3/Chapte013.jpg
 
-**Figure 84.
-Veltimec.out Example.**
+*Figure 84.
+Veltimec.out Example.*
 
 13.14. Timestep
 ~~~~~~~~~~~~~~~
@@ -166,21 +166,16 @@ This channel is not responsible for timestep decrements.
    :header-rows: 0
 
 
-   * - Note:
-
-   * - Observation by K O’Brien.
-       If channel elements are listed in TIME.OUT,correcting the cross section might push the issue downstream.Channels have a high impact on the timestep
+       Note:
+       Observation by K O’Brien. If channel elements are listed in TIME.OUT,correcting the cross section might push the issue downstream.Channels have a high impact on the timestep
        decrement if they aresteep or if the grid element size is small.
        If an unreasonable numberof timestep decrements result because of a channel node, it may notbe fixable.
        This is OK so long as the channel is stable and volumeconservation is observed.
 
+.. image:: img/Chapter3/Chapte014.jpg
 
-..
-
-   |Chapte014|
-
-**Figure 85.
-Time.out Example.**
+*Figure 85.
+Time.out Example.*
 
 13.15. Interior Nodes
 ~~~~~~~~~~~~~~~~~~~~~
@@ -194,36 +189,36 @@ Table joins are a very helpful tool for many different types of data analysis.
 
 Load the file CHAN_INTERIOR_NODES.OUT (Figure 86) as a delimited text file into QGIS (Figure 87).
 
-|Chapte015|
+.. image:: img/Chapter3/Chapte015.jpg
 
-**Figure 86.
-Chan_Interior_Nodes.out Example.**
+*Figure 86.
+Chan_Interior_Nodes.out Example.*
 
-|Chapte016|
+.. image:: img/Chapter3/Chapte016.jpg
 
-**Figure 87.
-Load Delimited Text.**
+*Figure 87.
+Load Delimited Text.*
 
 Join the new data to the Grid layer (Figure 88).
 
-|Chapte017|
+.. image:: img/Chapter3/Chapte017.jpg
 
-**Figure 88.
-Join Delimited Text to Grid.**
+*Figure 88.
+Join Delimited Text to Grid.*
 
 Add a symbology rule to the Grid layer (Figure 89).
 
-|Chapte018|
+.. image:: img/Chapter3/Chapte018.jpg
 
-**Figure 89.
-Rule-based Grid Symbology.**
+*Figure 89.
+Rule-based Grid Symbology.*
 
 Review the interior grid elements (Figure 90).
 
-|Chapte019|
+.. image:: img/Chapter3/Chapte019.jpg
 
-**Figure 90.
-Interior Channel Nodes Example.**
+*Figure 90.
+Interior Channel Nodes Example.*
 
 13.16. Check files
 ~~~~~~~~~~~~~~~~~~
@@ -231,10 +226,10 @@ Interior Channel Nodes Example.**
 ChanBankEl.chk (Figure 91) lists the differences between the channel cross section and the left or right bank grid elevation.
 If major elevation differences are listed, please review them, and see if corrections are required.
 
-|Chapte020|
+.. image:: img/Chapter3/Chapte020.jpg
 
-**Figure 91.
-ChanBankEl.chk Example.**
+*Figure 91.
+ChanBankEl.chk Example.*
 
 .. list-table::
    :widths: 100
@@ -250,54 +245,54 @@ ChanBankEl.chk Example.**
 Create a new group called Debug (Figure 92).
 Select the Group and run the debug tool.
 
-|Chapte021|
+.. image:: img/Chapter3/Chapte021.jpg
 
-**Figure 92.
-Create Debug Group.**
+*Figure 92.
+Create Debug Group.*
 
 Click the Load Debug tool (Figure 93) and click OK to load the debug data.
 
-|Chapte022|
+.. image:: img/Chapter3/Chapte022.jpg
 
-**Figure 93.
-Import Debug Data Tool.**
+*Figure 93.
+Import Debug Data Tool.*
 
 Data location: QGIS Tutorials/QGIS Lesson 2/Lesson 2/Advanced Debug Run (Figure 94).
 
-|Chapte023|
+.. image:: img/Chapter3/Chapte023.jpg
 
-**Figure 94.
-Example Debug Output Files.**
+*Figure 94.
+Example Debug Output Files.*
 
 Click Yes to load both extra error check files (Figure 95).
 
-|Chapte024|
+.. image:: img/Chapter3/Chapte024.jpg
 
-**Figure 95.
-Additional Debug Files Loaded.**
+*Figure 95.
+Additional Debug Files Loaded.*
 
 Double click the Channel Bank Elevation Differences layer and set the symbology properties (Figure 96).
 
-|Chapte025|
+.. image:: img/Chapter3/Chapte025.jpg
 
-**Figure 96.
-Style Channel Bank Elevation Difference.**
+*Figure 96.
+Style Channel Bank Elevation Difference.*
 
 Review the map for problems that should be fixed.
 
-- Grouped positive points mean the channel is embedded below the floodplain.
-  Check cross sections.
+    - Grouped positive points mean the channel is embedded below the floodplain.
+      Check cross sections.
 
-- Grouped negative points mean a channel is perched above the floodplain.
-  Floodplain to channel flow exchange is blocked.
-  Check cross section data.
+    - Grouped negative points mean a channel is perched above the floodplain.
+      Floodplain to channel flow exchange is blocked.
+      Check cross section data.
 
-- All the points in the following image are OK because they will be automatically corrected when flopro.exe runs (Figure 97).
+    - All the points in the following image are OK because they will be automatically corrected when flopro.exe runs (Figure 97).
 
-|Chapte026|
+.. image:: img/Chapter3/Chapte026.jpg
 
-**Figure 97.
-Channel Bank Difference Example.**
+*Figure 97.
+Channel Bank Difference Example.*
 
 **channel.chk** This file is usually empty.
 It contains messages related to channel extensions though other channel bank elements or levees or when the channel needs to be wider.
@@ -321,17 +316,17 @@ This description will discuss ways to correct this issue.
        This is one fromthe training module so it can be inspected.
 
 
-|Chapte027|
+.. image:: img/Chapter3/Chapte027.jpg
 
-**Figure 98.
-Channel_Convergence.out Example.**
+*Figure 98.
+Channel_Convergence.out Example.*
 
 Type 35368 into the FLO-2D grid info box (Figure 99) and click the eye button.
 
-|Chapte028|
+.. image:: img/Chapter3/Chapte028.jpg
 
-**Figure 99.
-Grid Info Tool.**
+*Figure 99.
+Grid Info Tool.*
 
 Assume that this channel element and cross section are not able to converge for depths greater than
 
@@ -342,19 +337,19 @@ If they are present, use the same techniques discussed in Channel Optimization v
 
 Corrective measures include:
 
-- Increasing the roughness around inflow nodes, structures, and outfalls.
+    - Increasing the roughness around inflow nodes, structures, and outfalls.
 
-- Using shallow n adjustments.
+    - Using shallow n adjustments.
 
-- Improving transitional cross sections with better interpolations.
+    - Improving transitional cross sections with better interpolations.
 
-- Fixing bedslope problems.
+    - Fixing bedslope problems.
 
-- Correct tributary/split transitional areas to match the physical system.
+    - Correct tributary/split transitional areas to match the physical system.
 
-- Applying correct tailwater conditions around hydraulic structures where backwater or reverse flow occurs.
+    - Applying correct tailwater conditions around hydraulic structures where backwater or reverse flow occurs.
 
-- Applying channel termination areas correctly.
+    - Applying channel termination areas correctly.
 
 13.18 Super Critical
 ~~~~~~~~~~~~~~~~~~~~
@@ -374,21 +369,21 @@ The file only exists if a super critical flow is reported.
 
 ..
 
-   |Chapte029|
+.. image:: img/Chapter3/Chapte029.jpg
 
-**Figure 100.
-Super.out Example.**
+*Figure 100.
+Super.out Example.*
 
 It is OK to have super critical channel cross sections.
 If the file reported grid elements that should not be super critical, check the following:
 
-- Check overly steep bedslope between cross sections.
+    - Check overly steep bedslope between cross sections.
 
-- Increasing the roughness.
+    - Increasing the roughness.
 
-- Using shallow n adjustments.
+    - Using shallow n adjustments.
 
-- Improving transitional cross sections with better interpolations.
+    - Improving transitional cross sections with better interpolations.
 
 13.19 Overbank flow
 ~~~~~~~~~~~~~~~~~~~
@@ -421,10 +416,10 @@ A V-shaped channel might result in evacuated timesteps.
 JS O’Brien has modified the channel flow so they do not share flow until 0.1ft or 0.03m of depth.
 This has eliminated most evacuated channel reporting.
 
-|Chapte030|
+.. image:: img/Chapter3/Chapte030.jpg
 
-**Figure 101.
-EvacuatedChan.out Example.**
+*Figure 101.
+EvacuatedChan.out Example.*
 
 13.22 Drain Time
 ~~~~~~~~~~~~~~~~
@@ -437,17 +432,17 @@ Here are two easy ones.
 HYDROG.EXE shows that the hydrograph at the end of the channel should be about finished.
 This one still has some residual rainfall.
 
-|Chapte031|
+.. image:: img/Chapter3/Chapte031.jpg
 
-**Figure 102.
-Channel Hydrograph Hydrog Example.**
+*Figure 102.
+Channel Hydrograph Hydrog Example.*
 
 PROFILES.EXE show that the flow channel is almost empty (Figure 103).
 
-|Chapte032|
+.. image:: img/Chapter3/Chapte032.jpg
 
-**Figure 103.
-Channel Profile Example.**
+*Figure 103.
+Channel Profile Example.*
 
 13.23 XSECAREA
 ~~~~~~~~~~~~~~
@@ -461,10 +456,10 @@ Review the change in cross section area, width, and wetted perimeter for each cr
 Check for changes in these values that indicate the channel is transitioning too quickly for the model to remain numerically stable.
 Find this in the XSECAREA.OUT file or by using the Profiles.exe program.
 
-|Chapte009|
+.. image:: img/Chapter3/Chapte009.jpg
 
-**Figure 104.
-XsecArea.out Example.**
+*Figure 104.
+XsecArea.out Example.*
 
 13.24 CHANMAX
 ~~~~~~~~~~~~~
@@ -474,10 +469,10 @@ Review this file for anomalies.
 Instability and volume conservation error can sometimes be traced back to cross sections with discharge values that are too high or discharge values
 that do not align with the water surface elevation and the time.
 
-   |Chapte033|
+.. image:: img/Chapter3/Chapte033.jpg
 
-**Figure 105.
-ChanMax.out Example.**
+*Figure 105.
+ChanMax.out Example.*
 
 References
 ----------
@@ -509,102 +504,3 @@ FHWA-NHI-01-020, National Technical Information Service, Springfield, VA.
 
 91 References
 
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 6.69931in
-   :height: 2.95694in
-.. |Chapte003| image:: media\Chapte003.png
-   :width: 5.90014in
-   :height: 2.65278in
-.. |Chapte004| image:: media\Chapte004.png
-   :width: 4.23333in
-   :height: 3.77431in
-.. |Chapte005| image:: media\Chapte005.png
-   :width: 3.75625in
-   :height: 4.20486in
-.. |Chapte006| image:: media\Chapte006.jpg
-   :width: 5.90125in
-   :height: 1.66042in
-.. |Chapte007| image:: media\Chapte007.jpg
-   :width: 4.70806in
-   :height: 2.41944in
-.. |Chapte008| image:: media\Chapte008.png
-   :width: 2.71458in
-   :height: 4.17722in
-.. |Chapte009| image:: media\Chapte009.png
-   :width: 5.9007in
-   :height: 5.00972in
-.. |Chapte010| image:: media\Chapte010.jpg
-   :width: 5.90097in
-   :height: 1.98472in
-.. |Chapte011| image:: media\Chapte011.jpg
-   :width: 5.90125in
-   :height: 3.52083in
-.. |Chapte012| image:: media\Chapte012.jpg
-   :width: 5.89986in
-   :height: 2.30139in
-.. |Chapte013| image:: media\Chapte013.jpg
-   :width: 5.90083in
-   :height: 3.77917in
-.. |Chapte014| image:: media\Chapte014.jpg
-   :width: 4.1125in
-   :height: 4.09569in
-.. |Chapte015| image:: media\Chapte015.jpg
-   :width: 5.18in
-   :height: 2.07361in
-.. |Chapte016| image:: media\Chapte016.jpg
-   :width: 5.20667in
-   :height: 3.14167in
-.. |Chapte017| image:: media\Chapte017.jpg
-   :width: 5.50972in
-   :height: 4.25972in
-.. |Chapte018| image:: media\Chapte018.jpg
-   :width: 6.30764in
-   :height: 4.02708in
-.. |Chapte019| image:: media\Chapte019.jpg
-   :width: 5.90042in
-   :height: 3.13542in
-.. |Chapte020| image:: media\Chapte020.jpg
-   :width: 5.62639in
-   :height: 2.20556in
-.. |Chapte021| image:: media\Chapte021.jpg
-   :width: 3.31458in
-   :height: 3.43181in
-.. |Chapte022| image:: media\Chapte022.jpg
-   :width: 6.92361in
-   :height: 3.04306in
-.. |Chapte023| image:: media\Chapte023.jpg
-   :width: 6.68653in
-   :height: 3.21875in
-.. |Chapte024| image:: media\Chapte024.jpg
-   :width: 2.68431in
-   :height: 2.44653in
-.. |Chapte025| image:: media\Chapte025.jpg
-   :width: 6.10986in
-   :height: 4.12292in
-.. |Chapte026| image:: media\Chapte026.jpg
-   :width: 6.29708in
-   :height: 1.39722in
-.. |Chapte027| image:: media\Chapte027.jpg
-   :width: 6.90208in
-   :height: 3.95833in
-.. |Chapte028| image:: media\Chapte028.jpg
-   :width: 5.89597in
-   :height: 0.45069in
-.. |Chapte029| image:: media\Chapte029.jpg
-   :width: 4.50042in
-   :height: 1.83542in
-.. |Chapte030| image:: media\Chapte030.jpg
-   :width: 4.82222in
-   :height: 2in
-.. |Chapte031| image:: media\Chapte031.jpg
-   :width: 5.9in
-   :height: 2.93472in
-.. |Chapte032| image:: media\Chapte032.jpg
-   :width: 5.90125in
-   :height: 2.7125in
-.. |Chapte009| image:: media\Chapte009.png
-   :width: 5.9007in
-   :height: 5.00972in
-.. |Chapte033| image:: media\Chapte033.jpg
-   :width: 4.22431in
-   :height: 5.08306in
