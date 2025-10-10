@@ -36,51 +36,7 @@ Conceptualized FLO-2D Model System with a Storm Drain Component.*
    as inlets (or outfalls).
    Figure 2 illustrates the layered system.
 
-Surface Hydrology and Hydraulics
-
-FLO
-
-(
-
--
-
-)
-
-D Model
-
-2
-
-Pipe Hydraulics
-
-)
-
-Closed Conduit System
-
-(
-
-Outlet nodes
-
-infiltration,
-
-evapo-
-
-ration
-
-Rainfall, inflow
-
-hydrographs
-
-External Inflow
-
-Outlets
-
-Dynamic Link
-
-Bi
-
--
-
-directional flow exchange
+.. image:: img/Chapter1/Chapte002.jpg
 
    **Figure 2.
    Volume Exchange between the Surface Water and Storm Drain System**
