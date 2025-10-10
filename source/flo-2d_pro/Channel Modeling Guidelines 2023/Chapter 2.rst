@@ -63,13 +63,13 @@ The elevation data is only valid as of the day it is flown.
 As the dataset ages, the actual channel geometry evolves with flow.
 Some of the issues are:
 
-- What was the original channel morphology and how much has it changed?
+    - What was the original channel morphology and how much has it changed?
 
-- What is the channel base flow?
+    - What is the channel base flow?
 
-- How does the base flow change in the downstream direction?
+    - How does the base flow change in the downstream direction?
 
-- What will be the bed form at high flows?
+    - What will be the bed form at high flows?
 
 These questions can usually be answered during a site visit.
 Look at the overall picture including the channel geometry, makeup of the bed material, any obstructions and how the channel evolves in the downstream
