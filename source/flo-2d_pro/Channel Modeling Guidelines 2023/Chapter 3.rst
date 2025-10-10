@@ -425,7 +425,7 @@ Review the change in cross section area, width, and wetted perimeter for each cr
 Check for changes in these values that indicate the channel is transitioning too quickly for the model to remain numerically stable.
 Find this in the XSECAREA.OUT file or by using the Profiles.exe program.
 
-.. image:: img/Chapter3/Chapte009.jpg
+.. image:: img/Chapter3/Chapte009.png
 
 *Figure 104.
 XsecArea.out Example.*
