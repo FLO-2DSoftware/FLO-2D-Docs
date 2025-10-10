@@ -1,10 +1,10 @@
 .. vim: syntax=rst
 
 Chapter 1
----------
+===========
 
 FLO-2D Storm Drain Overview
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------
 
    The FLO-2D PRO two-dimensional flood routing model was integrated with the Environmental Protection Agency (EPA) Storm Water Management Model (SWMM)
    Version 5.0.022 in 2013.
@@ -25,7 +25,8 @@ FLO-2D Storm Drain Overview
    The storm drain return flow to the surface water system is exchanged through storm drain inlets/outlets and outfalls.
    The complete conceptualized flood routing system is shown in Figure 1.
 
-|Chapte002|
+.. image::
+
 
    **Figure 1.
    Conceptualized FLO-2D Model System with a Storm Drain Component.**
