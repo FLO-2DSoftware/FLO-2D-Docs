@@ -475,91 +475,20 @@ Storm Drain Pressure Head Variation Dampening
    elevation.
    The selected method allows the pressure head to be exponentially reduced over to entire drop box to the RIM elevation.
 
-**Figure**
+.. image:: img/Chapter1/Chapte022.jpg
 
-**12**
-
-**.
-Water Elevation Profile at 03:17:00.**
-
-Water surface elevation is shown at 03:17:00
-
-T
-
-he re-
-
-porting step is 30 s
-
-econds.
-I
-
-t takes 2 output timesteps
-
-for the PH to build up to the RIM elevation at 03:18:00.
-
-The PH
-
-then
-
-quickly jumps up and down
-
-with
-
-each
-
-timestep
-
-.
-
-No Pressure head dampening algorithm is applied.
-
-Pressure head oscillations for various times up to
-
-03:24:30.
+*Figure 12
+Water Elevation Profile at 03:17:00.*
 
 .. image:: img/Chapter1/Chapte011.jpg
 
 *Figure 13.
 Inlet Pressure Head - No Pressure Head Dampening is Applied*
 
-**Figure**
+.. image:: img/Chapter1/Chapte023.jpg
 
-**14**
-
-**.
-Water Elevation Profile at 03:18:00.**
-
-Water surface elevation is shown at 03:18:00
-
-.
-
-R
-
-e-
-
-porting step is 30 s
-
-econds.
-Four
-
-output
-
-timesteps
-
-are required
-
-for the PH to build up to
-
-the RIM
-
-elevation at 03:19:30.
-
-No Pressure Head Dampening Algorithm is Ap-
-
-plied.
-Pressure Head Oscillations for Various
-
-Times up to 03:24:30.
+*Figure 14
+Water Elevation Profile at 03:18:00.*
 
 .. image:: img/Chapter1/Chapte012.jpg
 
