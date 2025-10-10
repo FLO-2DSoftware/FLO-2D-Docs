@@ -431,10 +431,10 @@ VOLCurb = volume equal to the curb height =
 
 .. image:: img/Chapter1/Chapte010.jpg
 
-   **Figure 11.
-   Volume Conversion - Square Floodplain Grid Element to Right Triangle at 2% Slope**
+**Figure 11.
+Volume Conversion - Square Floodplain Grid Element to Right Triangle at 2% Slope**
 
-   To calculate flow depth on the storm drain inlet:
+To calculate flow depth on the storm drain inlet:
 
 IF Volume < VOLCurb:
 
