@@ -575,7 +575,7 @@ Reduction of Return Flow to Surface
 .. math::
    :label:
 
-   H_c = K_c(\frac{V_2 \ ^2{2g})
+   H_c = K_c(\frac{V_2 \ ^2}{2g})
 
 where:
 
