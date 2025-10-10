@@ -495,28 +495,10 @@ Water Elevation Profile at 03:18:00.*
 *Figure 15.
 Inlet Pressure Head with Dampening up to 1.25 Times the Lateral Pipe Diameter.*
 
-**Figure**
+.. image:: img/Chapter1/Chapte025.jpg
 
-**16**
-
-**.
+*Figure 16
 Water Elevation Profile at 03:18:00.**
-
-Water surface elevation is shown at 03:18:00.
-
-Reporting step is 30 seconds.
-There are 13
-
-output timesteps for the PH to build up to the
-
-RIM elevation at 03:24:30.
-
-Pressure Head Dampening Occurs up to RIM El-
-
-evation.
-Pressure Head Oscillations for Various
-
-Times up to 03:24:30.
 
 .. image:: img/Chapter1/Chapte013.jpg
 
