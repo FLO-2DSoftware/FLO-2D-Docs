@@ -362,17 +362,8 @@ Corrective measures include:
 The super critical output file (Figure 100) will print the time and number of timesteps that a specific node or cross section is super critical.
 The file only exists if a super critical flow is reported.
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. note:: The following image is from another project.
 
-
-   * - Note:
-
-   * - The following image is from another project.
-
-
-..
 
 .. image:: img/Chapter3/Chapte029.jpg
 
