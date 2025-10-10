@@ -25,7 +25,7 @@ FLO-2D Storm Drain Overview
    The storm drain return flow to the surface water system is exchanged through storm drain inlets/outlets and outfalls.
    The complete conceptualized flood routing system is shown in Figure 1.
 
-.. image::
+.. image:: img/Chapter1/Chapte002.jpg
 
 
    **Figure 1.
