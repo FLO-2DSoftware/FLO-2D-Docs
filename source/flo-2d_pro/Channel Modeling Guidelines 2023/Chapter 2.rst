@@ -571,6 +571,42 @@ If INOUTCONT =2,
 
        solely a function of the headwater depth Hw. Flap gate no submergence.
 
+   * - INOUTCONT = 1
+     - Adjusts the rating table with a submergence factor as the tailwater approaches
+
+       the headwater.  As tailwater water surface approaches the upstream headwater
+
+       surface elevation. No upstream flow through the structure is permitted (flap gate).
+
+       The potential submergence is given by Q = Q * SUBFACTOR; where SUBFACTOR is computed by the
+
+       model based on HY-8 submergence criteria as defined by (initially the SUBFACTOR = 1.0)
+
+       IF DELTA > 0.975, SUBFACTOR = SUBFACTOR – 0.01
+
+       IF DELTA < 0.975, SUBFACTOR = SUBFACTOR + 0.015
+
+       IF DELTA > 1, SUBFACTOR = SUBFACTOR - 0.01* DELTA
+
+
+   * - INOUTCONT = 2
+     - Upstream flow through the structure is computed with the rating table adjustment when
+
+       the tailwater surface exceeds the headwater surface.  The headwater depth Hw and tailwater
+
+       Tw can switch with submergence to allow flow to go upstream.  For upstream discharge
+
+       through the bridge or culvert, the outflow node must have upstream flow into it from the
+
+       downstream channel element.
+
+   * - INOUTCONT = 1,2
+     - For bridges joining contiguous grid elements, the rating table is turned off for flow depths
+
+       less than one foot or when the SUBFACTOR is less than 0.02.  This would occur for inflow and outflow
+
+       WSEL that are nearly equilibrated.
+
 
 headwater depth H\ :sub:`w` and tailwater T\ :sub:`w` can switch with submergence to allow flow to go upstream.
 The INOUTCONT parameter does not apply to the generalized culvert equations.
