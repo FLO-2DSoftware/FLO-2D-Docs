@@ -330,12 +330,12 @@ Confluence Editor.*
 The following are guidelines to avoid numerical stability issues at the confluence.
 Use the PROFILES program when reviewing the confluence channel element geometry.
 
-- The channel bed elevations for the tributary and main channel upstream of the confluence should have the same approximate slope.
+    - The channel bed elevations for the tributary and main channel upstream of the confluence should have the same approximate slope.
 
-- The tributary flow area for the last channel element or two upstream of the confluence can be increased to reduce observed numerical instability.
+    - The tributary flow area for the last channel element or two upstream of the confluence can be increased to reduce observed numerical instability.
 
-- The roughness values for the tributary and main channel upstream and downstream of the confluence should be increased to reflect the highly turbulent
-  flow constriction.
+    - The roughness values for the tributary and main channel upstream and downstream of the confluence should be increased to reflect the highly turbulent
+      flow constriction.
 
 Channel infiltration
 ~~~~~~~~~~~~~~~~~~~~
@@ -395,11 +395,11 @@ Hydraulic Structures
 Channels and hydraulic structures can be used to simulate a variety of features.
 Hydraulic structures can interact with the channel in three ways:
 
-- *channel to channel*
+    - *channel to channel*
 
-- *floodplain to channel*
+    - *floodplain to channel*
 
-- *channel to floodplain*
+    - *channel to floodplain*
 
 .. image:: img/Chapter2/Chapte024.jpg
 
@@ -422,6 +422,13 @@ Hydraulic structure rating curves and tables
 The hydraulic structure stage-discharge relationship can be assigned as either a rating curve or rating table that is based on the headwater depth
 above the channel thalweg (assumed to be the hydraulic structure invert elevation) unless a headwater reference elevation is specified.
 A discharge rating curve uses headwater depth to calculate discharge:
+
+.. math::
+   :label:
+
+   Q = a \ depth \ ^b
+
+
 
    Q = a depth :sup:`b` where a = coefficient, b = exponent
 
