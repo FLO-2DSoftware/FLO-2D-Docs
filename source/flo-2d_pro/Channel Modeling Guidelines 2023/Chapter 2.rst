@@ -456,17 +456,17 @@ upstream normal flow depth condition.
 
 Several important features of hydraulic structures are:
 
-- If a rating curve or table computes an outflow discharge that is less than inflow to the inlet element, backwater will occur whether the flow is inlet
-  or outlet controlled.
+    - If a rating curve or table computes an outflow discharge that is less than inflow to the inlet element, backwater will occur whether the flow is inlet
+      or outlet controlled.
 
-- Using the rating table is more reliable and accurate than a rating curve.
+    - Using the rating table is more reliable and accurate than a rating curve.
 
-- Flow through a long culvert can be simulated with a rating curve or table using the culvert length.
-  Culvert routing (Muskingum volume routing method) is appropriate for culverts 500 ft or longer.
+    - Flow through a long culvert can be simulated with a rating curve or table using the culvert length.
+      Culvert routing (Muskingum volume routing method) is appropriate for culverts 500 ft or longer.
 
-- Flow upstream through the hydraulic structure can occur with the INOUTCONT parameter.
+    - Flow upstream through the hydraulic structure can occur with the INOUTCONT parameter.
 
-- Hydraulic structure inlet and outlet channel elements do not have to be contiguous (Figure 50)
+    - Hydraulic structure inlet and outlet channel elements do not have to be contiguous (Figure 50)
 
 .. image:: img/Chapter2/Chapte026.jpg
 
@@ -478,14 +478,14 @@ the inlet node at the end of the first segment and the outlet node at the start 
 
 The hydraulic structure rating table or curve can be created from:
 
-- Weir equations, HY-8, HEC-RAS, or another suitable program.
-  Always check with the regulating agency to determine what software will be accepted.
+    - Weir equations, HY-8, HEC-RAS, or another suitable program.
+      Always check with the regulating agency to determine what software will be accepted.
 
-- Two cross sections upstream and two downstream of a bridge are used to generate a rating table with HEC-RAS.
+    - Two cross sections upstream and two downstream of a bridge are used to generate a rating table with HEC-RAS.
 
-- Culvert tables or programs
+    - Culvert tables or programs
 
-- Weir and spillway equations
+    - Weir and spillway equations
 
 Generalized culvert equations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -503,21 +503,21 @@ Select the Hydraulic Structures Dialog Box.*
 
 The data requirements for the generalized culvert equations include:
 
-- Length
+    - Length
 
-- Diameter
+    - Diameter
 
-- Rectangular Width
+    - Rectangular Width
 
-- Type – Box or Pipe
+    - Type – Box or Pipe
 
-- Entrance Type (3)
+    - Entrance Type (3)
 
-- Entrance Loss Coefficient
+    - Entrance Loss Coefficient
 
-- Roughness
+    - Roughness
 
-- Multiple Barrels
+    - Multiple Barrels
 
 All the possible flow scenarios involving inlet and outlet control are analyzed internally by the generalized culvert equations, based on tailwater
 elevation, friction losses, slope, and entrance control and headwater elevation.
@@ -563,32 +563,13 @@ If INOUTCONT =2,
    :widths: 100
    :header-rows: 0
 
+   * - Control
+     - Control Details
 
-   * - Table 1.
-       Hydraulic Structure Rating Table Options
+   * - INOUTCONT = 0
+     - Simulates downstream flow through a structure or pump flow where the discharge is
 
-   * - Control                             | Control Details
-
-   * - INOUTCONT = 0                       |    Simulates downstream flow through a structure or|    pump flow where the discharge is solely a function|
-       of the headwater depth Hw.
-       Flap gate no|    submergence.
-
-   * - INOUTCONT = 1                       |    Adjusts the rating table with a submergence factor|    as the tailwater approaches the headwater.
-       As|    tailwater water surface approaches the upstream|    headwater surface elevation.
-       No upstream flow|    through the structure is permitted (flap gate).
-       The|    potential submergence is given by Q = Q \*|    SUBFACTOR; where SUBFACTOR is computed by the model|    based on HY-8 submergence criteria as
-       defined by|    (initially the SUBFACTOR = 1.0)||    IF DELTA > 0.975, SUBFACTOR = SUBFACTOR – 0.01||    IF DELTA < 0.975, SUBFACTOR = SUBFACTOR +
-       0.015||    IF DELTA > 1, SUBFACTOR = SUBFACTOR - 0.01\* DELTA
-
-   * - INOUTCONT = 2                       |    Upstream flow through the structure is computed|    with the rating table adjustment when the tailwater|
-       surface exceeds the headwater surface.
-       The|    headwater depth Hw and tailwater Tw can switch with|    submergence to allow flow to go upstream.
-       For|    upstream discharge through the bridge or culvert,|    the outflow node must have upstream flow into it|    from the downstream channel
-       element.
-
-   * - INOUTCONT = 1,                      |    For bridges joining contiguous grid elements, the|    rating table is turned off for flow depths less2
-       |    than one foot or when the SUBFACTOR is less than|    0.02.
-       This would occur for inflow and outflow WSEL|    that are nearly equilibrated.
+       solely a function of the headwater depth Hw. Flap gate no submergence.
 
 
 headwater depth H\ :sub:`w` and tailwater T\ :sub:`w` can switch with submergence to allow flow to go upstream.
