@@ -27,7 +27,6 @@ FLO-2D Storm Drain Overview
 
 .. image:: img/Chapter1/Chapte002.jpg
 
-
 *Figure 1.
 Conceptualized FLO-2D Model System with a Storm Drain Component.*
 
@@ -38,8 +37,8 @@ Conceptualized FLO-2D Model System with a Storm Drain Component.*
 
 .. image:: img/Chapter1/Chapte003.jpg
 
-   **Figure 2.
-   Volume Exchange between the Surface Water and Storm Drain System**
+*Figure 2.
+Volume Exchange between the Surface Water and Storm Drain System*
 
 The FLO-2D storm drain component can be applied to a variety of different storm water projects including:
 
