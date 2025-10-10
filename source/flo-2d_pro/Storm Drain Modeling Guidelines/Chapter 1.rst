@@ -53,7 +53,6 @@ The FLO-2D storm drain component can be applied to a variety of different storm 
     - Assessment of the reduction in capacity to collect, convey and discharge stormwater flows to low lying coastal areas due to sea level rise and high
       tides.
 
-..
    The FLO-2D storm drain system can be developed using the FLO-2D plugin for QGIS and the EPA SWMM Graphical User Interface (GUI) or other storm drain
    software.
    The EPA SWMM GUI (Build 5.0.022) is installed with FLO-2D.
@@ -62,7 +61,7 @@ The FLO-2D storm drain component can be applied to a variety of different storm 
    Following a successful simulation, the storm drain results can be reviewed in QGIS or in the EPA SWMM GUI.
    Figure 3 shows an example of a storm drain integrated with a surface model on a QGIS map.
 
-.. image:: img/Chapter1/Chapte003.png
+.. image:: img/Chapter1/Chapte003.jpg
 
 *Figure 3.
 A Typical Storm Drain System as Viewed in QGIS .**
