@@ -515,7 +515,7 @@ Storm Drain Clogging
 
     <div>
     <pre>
-    ID      Grid Cell       Inlet ID        Clogging Factor -C<sub>f</sub>(%)      Time for Clogging -T<sub>c</sub(hr)
+    ID      Grid Cell       Inlet ID        Clogging Factor -C<sub>f</sub>(%)      Time for Clogging -T<sub>c</sub>(hr)
     D         2694            l1                     25                           0.50
     D         2409            l2                     50                           3.25
     </pre>
