@@ -511,11 +511,16 @@ Storm Drain Clogging
    A clogging factor was created to simulate a reduction in inlet capacity.
    The SDCLOGGING.DAT file has the following format:
 
-   ID Grid Cell Inlet ID Clogging Factor - C\ :sub:`f` (%) Time for clogging -T\ :sub:`c` (hr)
+.. raw:: html
 
-   D 2694 I1 25 0.50
+    <div>
+    <pre>
+    ID      Grid Cell       Inlet ID        Clogging Factor -Cf(%)      Time for Clogging -Tc(hr)
+    D         2694            l1                     25                           0.50
+    D         2409            l2                     50                           3.25
+    </pre>
+    </div>
 
-   D 2409 I2 50 3.25
 
    The inlet discharge calculated using either the orifice or weir equations is subject to a blockage reduction that is specified by the user.
    The inlet discharge is calculated and then reduced using the clogging factor in the following equation:
