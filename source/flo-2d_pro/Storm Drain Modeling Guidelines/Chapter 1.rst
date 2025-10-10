@@ -42,19 +42,18 @@ Volume Exchange between the Surface Water and Storm Drain System*
 
 The FLO-2D storm drain component can be applied to a variety of different storm water projects including:
 
-- Assessment of the storm drain capacity.
+    - Assessment of the storm drain capacity.
 
-- Storm drain response to floods events.
+    - Storm drain response to floods events.
 
-- Design and mitigation.
+    - Design and mitigation.
 
-- Urban surface features (levees, walls, streets, channels) and their impact on the storm drain system.
+    - Urban surface features (levees, walls, streets, channels) and their impact on the storm drain system.
 
-- Assessment of the reduction in capacity to collect, convey and discharge stormwater flows to low lying coastal areas due to sea level rise and high
-  tides.
+    - Assessment of the reduction in capacity to collect, convey and discharge stormwater flows to low lying coastal areas due to sea level rise and high
+      tides.
 
 ..
-
    The FLO-2D storm drain system can be developed using the FLO-2D plugin for QGIS and the EPA SWMM Graphical User Interface (GUI) or other storm drain
    software.
    The EPA SWMM GUI (Build 5.0.022) is installed with FLO-2D.
@@ -180,11 +179,11 @@ Surface Water – Storm Drain Exchange Conditions:
 
 Storm drain pressure head < rim elevation:
 
-- Inflow discharge is passed from FLO-2D to the storm drain.
+    - Inflow discharge is passed from FLO-2D to the storm drain.
 
-- The conduit is not full.
+    - The conduit is not full.
 
-- No return flow.
+    - No return flow.
 
 .. image:: img/Chapter1/Chapte004.png
 
@@ -193,11 +192,11 @@ Inlet No Return Flow.*
 
 FLO-2D WSE > Storm drain pressure head> rim elevation:
 
-- No inflow discharge is passed from FLO-2D.
+    - No inflow discharge is passed from FLO-2D.
 
-- The conduit capacity is full.
+    - The conduit capacity is full.
 
-- No return flow.
+    - No return flow.
 
 .. image:: img/Chapter1/Chapte005.png
 
@@ -206,13 +205,13 @@ No Return Flow No Inlet Flow*
 
 Storm drain pressure head > FLO-2D WSE > rim elevation:
 
-- No inflow discharge is passed from FLO-2D surface to storm drain.
+    - No inflow discharge is passed from FLO-2D surface to storm drain.
 
-- The conduit capacity is full.
+    - The conduit capacity is full.
 
-- Return flow is exchanged to the surface.
+    - Return flow is exchanged to the surface.
 
-- Water leaves the storm drain system and it is added to the surface grid cell.
+    - Water leaves the storm drain system and it is added to the surface grid cell.
 
 .. image:: img/Chapter1/Chapte006.png
 
@@ -224,13 +223,13 @@ Pressure head and manholes
 
    Flooding will occur at manholes when the pressure head exceeds manhole rim elevation plus surcharge depth plus FLO-2D water depth (see Figure 7).
 
-- Conduit capacity is full.
+        - Conduit capacity is full.
 
-- Pressure head greater than water surface elevation.
+        - Pressure head greater than water surface elevation.
 
-- Return flow to system.
+        - Return flow to system.
 
-- Manhole cap is removed, and the manhole converts to a type 3 inlet that collects discharge from the surface.
+        - Manhole cap is removed, and the manhole converts to a type 3 inlet that collects discharge from the surface.
 
 .. image:: img/Chapter1/Chapte007.png
 
@@ -245,16 +244,16 @@ Pressure head variability
    models.
    The following response can be observed in the FLO-2D storm drain results:
 
-1. The head on the inlet continuously increases when the PH is less than the FLO-2D WSE even though the head exceeds the rim elevation.
-   Since the inlets are flooded, this results in higher storm drain pressure.
-   The volume above the rim is not released to the surface until the PH exceeds the FLO-2D WSE.
+    1. The head on the inlet continuously increases when the PH is less than the FLO-2D WSE even though the head exceeds the rim elevation.
+       Since the inlets are flooded, this results in higher storm drain pressure.
+       The volume above the rim is not released to the surface until the PH exceeds the FLO-2D WSE.
 
-2. For underwater inlets, the higher-pressure head pushes more water through the downstream conduits at higher velocity.
+    2. For underwater inlets, the higher-pressure head pushes more water through the downstream conduits at higher velocity.
 
-3. Higher velocities in downstream conduits may result in higher discharges in various locations in the storm drain with a possible corresponding
-   reduction in the return flow to the surface water for some inlets and manholes.
-   Maintaining continuity in the storm drain system, there may be sufficient head to force the flow to the outfalls instead of overflowing the inlets and
-   manholes.
+    3. Higher velocities in downstream conduits may result in higher discharges in various locations in the storm drain with a possible corresponding
+       reduction in the return flow to the surface water for some inlets and manholes.
+       Maintaining continuity in the storm drain system, there may be sufficient head to force the flow to the outfalls instead of overflowing the inlets and
+       manholes.
 
 ..
 
@@ -350,13 +349,13 @@ Manhole
    These files contain the same information, SDManholePopUp.OUT in a narrative format and ManholePop.OUT in columns for plotting.
    The following information is reported to the files:
 
-- Manhole ID.
+    - Manhole ID.
 
-- Time of occurrence
+    - Time of occurrence
 
-- Pressure head
+    - Pressure head
 
-- Rim elevation + Surcharge Elevation • FLO-2D WSE.
+    - Rim elevation + Surcharge Elevation • FLO-2D WSE.
 
 ..
 
@@ -970,24 +969,25 @@ t t+∆t
 
    The conduit surface area (A\ :sub:`store`) depends on the flow condition within the conduit as follows:
 
-1. Under normal conditions the pipe surface area equals half of the conduit length times the average of the top width at the end and mid points of the
-   conduit.
-   These widths are evaluated before the next updated timestep using the flow depths y1, y2, and y.
+        1. Under normal conditions the pipe surface area equals half of the conduit length times the average
 
-2. If the inflow of the conduit to a node is in free-fall (conduit invert elevation is above the water surface of the node), then the conduit does not
-   contribute to the node surface area.
+           of the top width at the end and mid points of the conduit.
+           These widths are evaluated before the next updated timestep using the flow depths y1, y2, and y.
 
-3. For conduits with closed shapes such as circular pipes that are greater than 96 percent full, a constant top width equal to the width when 96 percent
-   full is used.
-   This prevents the head adjustment term H\ :sub:`t` from creating numerical instability as the top width and corresponding surface area approach zero
-   when the conduit reaches a full condition.
-   A minimum surface area for A\ :sub:`store` is assigned to all nodes, including junctions that normally have no storage volume, preventing H\ :sub:`t`
-   from becoming unbounded.
-   Under normal conditions A\ :sub:`store` equals half the conduit’s length times the average of the top width at
+        2. If the inflow of the conduit to a node is in free-fall (conduit invert elevation is above the water surface of the node), then the conduit does not
+           contribute to the node surface area.
 
-the end- and mid-points of the conduit.
-These widths are evaluated before the next updated flow solution is found, using the flow depths y1, y2, and y discussed previously.
-The default value for this minimum area is 12.57 ft\ :sup:`2` which corresponds to the area of a 4-foot diameter manhole.
+        3. For conduits with closed shapes such as circular pipes that are greater than 96 percent full, a constant top width equal to the width when 96 percent
+           full is used.
+           This prevents the head adjustment term H\ :sub:`t` from creating numerical instability as the top width and corresponding surface area approach zero
+           when the conduit reaches a full condition.
+           A minimum surface area for A\ :sub:`store` is assigned to all nodes, including junctions that normally have no storage volume, preventing H\ :sub:`t`
+           from becoming unbounded.
+           Under normal conditions A\ :sub:`store` equals half the conduit’s length times the average of the top width at
+
+        the end- and mid-points of the conduit.
+        These widths are evaluated before the next updated flow solution is found, using the flow depths y1, y2, and y discussed previously.
+        The default value for this minimum area is 12.57 ft\ :sup:`2` which corresponds to the area of a 4-foot diameter manhole.
 
    To calculate the discharge Q and the head H, the equations are solved for each timestep using a method of successive approximations with under-
    relaxation (Rossman, 2005).
