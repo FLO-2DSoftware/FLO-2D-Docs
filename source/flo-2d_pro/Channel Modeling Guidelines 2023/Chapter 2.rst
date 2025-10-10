@@ -744,8 +744,9 @@ The result is the numerical surging displayed in the plotted hydrograph of flow 
 **Table 4.
 Channel Hydraulics Upstream of Bridge Reported by HYCHAN.OUT**
 
-.. image:: img/Chapter2/Chapte032.jpg
+.. image:: img/Chapter2/Chapte048.jpg
 
+.. image:: img/Chapter2/Chapte032.jpg
 *Figure 56.
 Box Culvert Hydrograph Numerical Surging.*
 
