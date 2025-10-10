@@ -1061,9 +1061,9 @@ Figure 72 shows the complete floodplain and channel scenario with channel termin
 
 .. image:: img/Chapter2/Chapte045.jpg
 
-   **Figure 71.
-   Floodplain flow entering the channel (from top of the image).
-   Levees are shown in red.**
+*Figure 71.
+Floodplain flow entering the channel (from top of the image).
+Levees are shown in red.*
 
 The conventional method of assigning an inflow hydrograph to the upstream channel element in this case would not generate the same results with the
 flow only going down the channel.
