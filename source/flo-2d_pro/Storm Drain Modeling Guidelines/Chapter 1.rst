@@ -35,7 +35,7 @@ Conceptualized FLO-2D Model System with a Storm Drain Component.*
    as inlets (or outfalls).
    Figure 2 illustrates the layered system.
 
-.. image:: img/Chapter1/Chapte002.jpg
+.. image:: img/Chapter1/Chapte021.jpg
 
 *Figure 2.
 Volume Exchange between the Surface Water and Storm Drain System*
