@@ -747,15 +747,20 @@ The flow equation solved for each conduit is given by:
 
 The ∆Q in each conduit corresponds to the different force terms expressed as:
 
-.. math:
+.. math::
    :label:
 
    ∆Q_{gravity} = g \bar{A} (H1-H2) ∆t/L
 
-.. math:
+.. math::
    :label:
 
    ∆Q_{inertial} = 2 \bar{V}(\ bar{A} - A_t) + \ bar{V}^2 (A2-A1) ∆t/L
+
+.. math::
+   :label:
+
+   ∆Q_{friction}
 
    ∆Q\ :sub:`gravity` = gA̅(H\ :sub:`1` − H\ :sub:`2`) ∆t⁄L
 
