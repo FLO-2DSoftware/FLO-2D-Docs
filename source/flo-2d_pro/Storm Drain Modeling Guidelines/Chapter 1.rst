@@ -852,7 +852,7 @@ The solution algorithm involves the following steps:
     A relaxation factor Ω is used to combine the new flow estimate Q\ :sub:`new` with the previous estimate Q\ :sub:`last` to generate a new Q\ :sub:`new`
     according to the equation:
 
-                Q\ :sub:`new' = (1−Ω)Q\ :sub:`last` +Ω Q\ :sub:`new`
+                Q\ :sub:`new' = (1−Ω) Q\ :sub:`last` +Ω Q\ :sub:`new`
 
     4. The equation for H\ :sub:`t+∆t`\ is solved again for heads using Q\ :sub:`new`.
     As with discharge, this new solution for head, H\ :sub:`new` is weighted with H\ :sub:`last` to produce an updated estimate for heads:
@@ -903,7 +903,7 @@ To implement the flow continuity condition, a perturbation equation form is enfo
 
 where:
 
-∆𝐻 = node head that must be made to achieve flow continuity.
+    ∆𝐻 = node head that must be made to achieve flow continuity.
 
 Solving for ∆𝐻:
 
