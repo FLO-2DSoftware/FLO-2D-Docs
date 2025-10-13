@@ -1208,96 +1208,98 @@ They can be either circular or rectangular in shape and can be located either at
 They can have a flap gate to prevent backflow.
 Orifice flow is based on the following criteria:
 
-- When fully submerged the classical orifice equation is used: |Chapte022| .
+    - When fully submerged the classical orifice equation is used: 𝑄𝑤 = 𝐶\ :sub: `𝑑` 𝐴√2𝑔ℎ.
 
-- A partially submerged orifice applies the modified weir equation:
+    - A partially submerged orifice applies the modified weir equation: 𝑄\ :sub: `𝑤` = 𝐶\ :sub: `𝑑` 𝐴√2𝑔𝐷ℎ𝑓\ sup: `1.5`.
 
-𝑄\ :sub:`𝑤` |Chapte023|.
+    - An orifice surface area contribution to the outlet is based on the equivalent pipe length and the depth of water in the orifice.
 
-- An orifice surface area contribution to the outlet is based on the equivalent pipe length and the depth of water in the orifice.
+where:
 
-..
+    A = orifice open area (may be an irregular shape)
 
-   where:
+    D = height of the full orifice opening
 
-   A = orifice open area (may be an irregular shape) D = height of the full orifice opening h = hydraulic head on the orifice
+    h = hydraulic head on the orifice
 
-   Cd = discharge coefficient hardcoded to 0.67 g = gravitational acceleration
+    C\ :sub: `d` = discharge coefficient hardcoded to 0.67
 
-*f* = fraction of the orifice that is submerged
+    g = gravitational acceleration
 
-   The parameters of an orifice in the storm drain system are:
+    *f* = fraction of the orifice that is submerged
 
-- Names of the inlet and outlet nodes
+The parameters of an orifice in the storm drain system are:
 
-- Type: located in the side or bottom through which fluid is flowing.
+    - Names of the inlet and outlet nodes
 
-- Shape: opening is a circular or rectangular geometry.
+    - Type: located in the side or bottom through which fluid is flowing.
 
-- Geometry: height and width of orifice when fully opened.
+    - Shape: opening is a circular or rectangular geometry.
 
-- Inlet offset is the depth of bottom of the orifice opening from inlet node invert.
+    - Geometry: height and width of orifice when fully opened.
 
-- Discharge coefficient.
+    - Inlet offset is the depth of bottom of the orifice opening from inlet node invert.
 
-- Flap Gate: select YES to prevent backflow.
-  Default option is NO.
+    - Discharge coefficient.
 
-- Time to Open/Close: the time to open or close a gated orifice.
+    - Flap Gate: select YES to prevent backflow.
+      Default option is NO.
+
+    - Time to Open/Close: the time to open or close a gated orifice.
 
 Weirs
 '''''
 
-   A weir is an unrestricted overflow opening oriented either transversely or parallel to the flow direction.
-   Weirs can be a link connecting two nodes where the weir itself is placed at the upstream node.
-   A flapgate can be included to prevent backflow.
-   The weir calculations are based on the following criteria:
+A weir is an unrestricted overflow opening oriented either transversely or parallel to the flow direction.
+Weirs can be a link connecting two nodes where the weir itself is placed at the upstream node.
+A flapgate can be included to prevent backflow.
+The weir calculations are based on the following criteria:
 
-- When the weir becomes completely submerged, the model switches to the orifice equation to predict flow as a function of the head.
+    - When the weir becomes completely submerged, the model switches to the orifice equation to predict flow as a function of the head.
 
-- Weirs do not contribute any surface area to their end nodes.
+    - Weirs do not contribute any surface area to their end nodes.
 
-- The general weir equation 𝑄 = 𝐶 𝐿 ℎ\ :sup:`𝑚` is used to compute the discharge as a function of head *h* across the weir when the weir is not fully
-  submerged.
+    - The general weir equation 𝑄 = 𝐶 𝐿 ℎ\ :sup:`𝑚` is used to compute the discharge as a function of head *h* across the weir when the weir is not fully
+      submerged.
 
-..
+where:
 
-   where:
+    C = the weir coefficient
 
-   C = the weir coefficient L = the crest length
+    L = the crest length
 
-   m = an exponent that depends on the type of weir being modeled: lateral, transverse, side-flow, V-notch, or trapezoidal.
-   Typically, m = 1.5 for a lateral weir.
-   This exponent is hardcoded in the FLO-2D storm drain model.
+    m = an exponent that depends on the type of weir being modeled: lateral, transverse, side-flow, V-notch, or trapezoidal.
+       Typically, m = 1.5 for a lateral weir.
+       This exponent is hardcoded in the FLO-2D storm drain model.
 
-   The parameters of an orifice in the storm drain system are:
+The parameters of an orifice in the storm drain system are:
 
-- Names of the inlet and outlet nodes
+    - Names of the inlet and outlet nodes
 
-- Type: transverse, side flow, v-notch and trapezoidal.
+    - Type: transverse, side flow, v-notch and trapezoidal.
 
-- Height: vertical heigh of weir opening.
+    - Height: vertical heigh of weir opening.
 
-- Length: horizontal length of weir crest or crown for v-notch weir.
+    - Length: horizontal length of weir crest or crown for v-notch weir.
 
-- Side slope, width to height of trapezoidal weir side walls.
+    - Side slope, width to height of trapezoidal weir side walls.
 
-- Inlet offset depth of bottom of the weir opening from inlet node invert.
+    - Inlet offset depth of bottom of the weir opening from inlet node invert.
 
-- Discharge coefficient for central portion of weir.
+    - Discharge coefficient for central portion of weir.
 
-- Flap Gate: select YES if weir contains a flap gate to prevent backflow.
-  The default option is NO.
+    - Flap Gate: select YES if weir contains a flap gate to prevent backflow.
+      The default option is NO.
 
-- Number of end contractions.
+    - Number of end contractions.
 
-- End of discharge coefficient: discharge coefficient of flow through the triangular ends of a trapezoidal weir.
+    - End of discharge coefficient: discharge coefficient of flow through the triangular ends of a trapezoidal weir.
 
 Outlets
 '''''''
 
-   Outlets are used to control discharge from storage units or to simulate special stage-discharge relationships that cannot be characterized by pumps,
-   orifices, and weirs.
-   They can have a flapgate that restricts the flow to only one direction.
-   This option does not discharge to the FLO-2D surface water system.
+Outlets are used to control discharge from storage units or to simulate special stage-discharge relationships that cannot be characterized by pumps,
+orifices, and weirs.
+They can have a flapgate that restricts the flow to only one direction.
+This option does not discharge to the FLO-2D surface water system.
 
