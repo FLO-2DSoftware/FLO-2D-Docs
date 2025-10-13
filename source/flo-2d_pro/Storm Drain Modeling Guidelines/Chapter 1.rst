@@ -774,7 +774,7 @@ A̅ = conduit average cross-sectional flow area
 
 \bar {V} = conduit average flow velocity
 
-where: :math:`\bar{A}` = mean cross-sectional area
+    :math:`\bar{A}` = mean cross-sectional area
 
 
 where::
