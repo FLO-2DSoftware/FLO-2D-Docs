@@ -810,7 +810,7 @@ The equation to calculate the head adjustment term for each timestep at each nod
 .. math::
    :label:
 
-   H_{t+∆t} = Ht + \frac {∆Vol}{(A_{store} + ∑A_s)_{t+∆t}}
+   H_{t+∆t} = H_t + \frac {∆Vol}{(A_{store} + ∑A_s)_{t+∆t}}
 
 where ∆Vol is the net volume flowing through the node over the timestep. The net volume is computed as:
 
@@ -822,7 +822,7 @@ where ∆Vol is the net volume flowing through the node over the timestep. The n
 The conduit surface area (A\ :sub:`store`) depends on the flow condition within the conduit as follows:
 
     1. Under normal conditions the pipe surface area equals half of the conduit length times the average of the top width at the end and mid points of the conduit.
-    These widths are evaluated before the next updated timestep using the flow depths y\ :`1`, y\ `2`, and y.
+    These widths are evaluated before the next updated timestep using the flow depths y\ :sub:`1`, y\ :sub:`2`, and y.
     2. If the inflow of the conduit to a node is in free-fall (conduit invert elevation is above the water surface of the node), then the conduit does not
     contribute to the node surface area.
     3. For conduits with closed shapes such as circular pipes that are greater than 96 percent full, a constant top width equal to the width when 96 percent
@@ -842,7 +842,6 @@ The solution algorithm involves the following steps:
 
     1. A first estimate of discharge Q in each conduit at time *t +* Δ\ *t* is calculated by solving for Q\ :sub:`t+∆t` using the heads, areas, and
        velocities determined at the current time *t*.
-
     2. A first estimate of the head (H) in each conduit at time *t +* Δ\ *t* is calculated by evaluating H\ :sub:`t+∆t` using the discharge Q just computed.
        The results are denoted as:
 
