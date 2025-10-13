@@ -667,26 +667,29 @@ The weighting factor 𝜎 varies as:
 
 
 
-   The inertial terms are multiplied by σ when they are added into the solution of the momentum equation for each timestep and conduit.
-   The Froude number is calculated at the midpoint depth in the conduit.
-   This solution (DAMPEN) produces more stable results around the critical stage of the flow but retains the essential accuracy of the fully dynamic
-   solution at sub-critical flow conditions.
+The inertial terms are multiplied by σ when they are added into the solution of the momentum equation for each timestep and conduit.
+The Froude number is calculated at the midpoint depth in the conduit.
+This solution (DAMPEN) produces more stable results around the critical stage of the flow but retains the essential accuracy of the fully dynamic
+solution at sub-critical flow conditions.
 
-   The friction slope component S\ :sub:`f` is based on Manning’s equation:
+The friction slope component S\ :sub:`f` is based on Manning’s equation:
 
-   n\ :sup:`2`\ V|V\| S\ :sub:`f` :sup:`=` k2\ :sub:`R`\ 4⁄3
+.. math::
+   :label:
 
-   where:
+   S_f = \frac{n_2V|V|}{k_2R^{\frac{4}{3}}
 
-n = Manning roughness coefficient
+where:
 
-V = average flow velocity (Q⁄A)
+    n = Manning roughness coefficient
 
-R = hydraulic radius
+    V = average flow velocity (Q⁄A)
 
-k = 1.486 for English units or 1.0 for metric units
+    R = hydraulic radius
 
-   The local head loss term h\ :sub:`L` is caused by an energy loss that is proportional to the velocity head and it can be expressed as:
+    k = 1.486 for English units or 1.0 for metric units
+
+The local head loss term h\ :sub:`L` is caused by an energy loss that is proportional to the velocity head and it can be expressed as:
 
    KV\ :sup:`2`
 
