@@ -918,19 +918,10 @@ where:
 .. math::
    :label:
 
-   \frac {∂H}{∂Q} = \frac
-   −gA̅ ∆t⁄L
+   \frac {∂H}{∂Q} = \frac {−g :math:`\bar{A}` ∆t⁄L}{∂H 1 + ∆Q_{friction} + ∆Q_{losses}}
 
-=
 
-∂H 1 + ∆Qfriction + ∆Qlosses
-
-𝜕𝑄
-
-   has a negative sign because when evaluating ∑ 𝑄 because the flow directed out of a node is
-
-𝜕𝐻
-
+\frac {∂H}{∂Q} has a negative sign because when evaluating ∑𝑄 because the flow directed out of a node is
 considered negative while flow into the node is positive.
 If surcharge (return flow to the surface water) is computed, the pressure head is considered in the total node adjustment for the successive
 approximation scheme.
