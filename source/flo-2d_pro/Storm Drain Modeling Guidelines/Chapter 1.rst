@@ -396,14 +396,14 @@ ManholePop.OUT File.*
 Curb Inlet Flow Adjustment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   For each timestep, the FLO-2D grid element water surface elevation (flow depth) is used to calculate the discharge that passes through the inlets
-   using the weir and orifice equations as well as the geometry of the inlets defined by the user in the SWMMFLO.DAT file.
-   This uniform water surface elevation over the grid element does not take into consideration a street cross slope and thus will under-predict the flow
-   into the drain.
-   Using an assumed 2% street cross slope results in a higher depth (more head) on the storm drain inlet (see Figure 10 and Figure 11).
-   The curb height can be entered in the SWMMFLO.DAT file to make this adjustment automatically for each inlet.
-   The curb inlet flow assignment is the same concept as the Street Gutter Flow feature (requires GUTTER.DAT file) that can be applied to gutters in
-   streets without storm drain inlets.
+For each timestep, the FLO-2D grid element water surface elevation (flow depth) is used to calculate the discharge that passes through the inlets
+using the weir and orifice equations as well as the geometry of the inlets defined by the user in the SWMMFLO.DAT file.
+This uniform water surface elevation over the grid element does not take into consideration a street cross slope and thus will under-predict the flow
+into the drain.
+Using an assumed 2% street cross slope results in a higher depth (more head) on the storm drain inlet (see Figure 10 and Figure 11).
+The curb height can be entered in the SWMMFLO.DAT file to make this adjustment automatically for each inlet.
+The curb inlet flow assignment is the same concept as the Street Gutter Flow feature (requires GUTTER.DAT file) that can be applied to gutters in
+streets without storm drain inlets.
 
 .. image:: img/Chapter1/Chapte010.jpg
 
