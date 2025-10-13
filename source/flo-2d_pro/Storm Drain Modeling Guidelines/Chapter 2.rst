@@ -16,10 +16,10 @@ when the pipe system capacity is exceeded.
 The storm drain system is represented by links and nodes where the links are the closed conduits and nodes are junctions and outfalls as shown in
 Figure 21.
 
+.. image:: img/Chapter2/Chapte001.jpg
+
 *Figure 21
 Surface and Closed Conduit Flow Exchange*
-
-.. image:: img/Chapter2/Chapte001.jpg
 
 Nodes represent several features of a storm drain system.
 One type of node is the inlet which constitutes an inflow point to the pipe system from the surface water.
@@ -465,17 +465,17 @@ Vertical inlets have unique constraints:
 
     3. The ‘Feature’ column in the QGIS Components inlets/junctions dialog window (SWMMFLO.DAT file) has three options:
 
-       1. - default, no flapgate, no vertical inlet opening
+       0. - default, no flapgate, no vertical inlet opening
 
-       2. - vertical inlet opening
+       1. - vertical inlet opening
 
            a. Channel pipe inlet invert elevation = channel bed elevation
 
            b. Floodplain grid element elevation = pipe invert elevation
 
-       2 - flapgate (outfall)
+       2. - flapgate (outfall)
 
-       3.- Turn off the adjustment of discharge during runtime for those inlets with drop box capacity exceeded.
+       3. - Turn off the adjustment of discharge during runtime for those inlets with drop box capacity exceeded.
 
     4. Revised floodplain elevations are not changed in the FPLAIN.DAT file.
        These modifications are only implemented at runtime.
