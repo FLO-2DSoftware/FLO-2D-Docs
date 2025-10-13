@@ -556,8 +556,8 @@ In a design project the storm drain features are oversized to provide enough cap
 Table **2** shows the FCDMC catch basin clogging factors for predicting inlet discharge (FCDMC, 2018).
 The clogging factor data file can be created in the SWMMFLO.DAT data dialog for all types of inlets.
 
- *Table 2.
- FCDMC Catch Basin Clogging Factors (FCDMC, 2018)*
+*Table 2.
+FCDMC Catch Basin Clogging Factors (FCDMC, 2018)*
 
 .. image:: img/Chapter1/Chapte016.jpg
 
