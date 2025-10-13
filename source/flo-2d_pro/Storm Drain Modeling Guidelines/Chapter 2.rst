@@ -290,7 +290,11 @@ The required manhole input parameters are:
 
     - Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)
 
-    - Manhole perimeter (manhole cover shapes can vary) • Manhole flow area (ft\ :sup:`2` or m\ :sup:`2`) • Surcharge depth (ft or m).
+    - Manhole perimeter (manhole cover shapes can vary)
+
+    - Manhole flow area (ft\ :sup:`2` or m\ :sup:`2`)
+
+    - Surcharge depth (ft or m).
 
 A manhole is assumed to be level without sag and column 7 in the SWMMFLO.DAT is used to define the surcharge depth (ft or m).
 The surcharge depth can be estimated by the user as the equivalent depth that the pressure must overcome to pop the cover.
@@ -300,11 +304,7 @@ Manhole covers are typically circular but can be found in other shapes.
 
 The water depth (head) that represents the manhole cover weight can be estimated by:
 
-   w\ :sub:`m`
-
-   d\ :sub:`s` =
-
-   Amγw
+d\ :sub:`s` = \frac {w\ :sub:`m`} {A\ :sub:`m`γ\ :sub:`w`}
 
 where:
 
