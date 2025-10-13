@@ -304,7 +304,10 @@ Manhole covers are typically circular but can be found in other shapes.
 
 The water depth (head) that represents the manhole cover weight can be estimated by:
 
-d\ :sub:`s` = \frac {w\ :sub:`m`} {A\ :sub:`m`γ\ :sub:`w`}
+.. math::
+   :label:
+
+   d_s = \frac {w_m} {A_m γ_w}
 
 where:
 
