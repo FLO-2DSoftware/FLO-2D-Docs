@@ -706,15 +706,13 @@ where:
 
     g = gravitational acceleration
 
-   To calculate the change in pressure head at each node that connects two or more conduits an additional equation is necessary (Figure 20):
+To calculate the change in pressure head at each node that connects two or more conduits an additional equation is necessary (Figure 20):
 
-∂H ∑ Q
+.. math::
+   :label:
 
-=
 
-∂t A\ :sub:`store` + ∑ As
-
-.. _`where:`:
+   \frac{∂H}{∂t} = \frac {∑Q}{A_store+∑As}
 
 where::
 
