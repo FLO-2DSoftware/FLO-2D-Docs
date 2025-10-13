@@ -230,7 +230,7 @@ where:
 
 If H ≤ h then: Q\ :sub:`o` = C\ :sub:`d`\ A√2gH
 
-If H > h then: Q\ :sub:`o` |Chapte010|
+If H > h then: Q\ :sub:`o` = C\ :sub:`d` A√2g (H + h/2)
 
 where:
 
