@@ -333,6 +333,9 @@ Solution:
 
    w_m = 100 lb (45.4 kg)
 
+.. math::
+   :label:
+
    A_m = (π({2ft)^2}{4}) = 3.14 ft^2(0.29 m^2)
 
 w\ *m* 100lb 45.4 kg
