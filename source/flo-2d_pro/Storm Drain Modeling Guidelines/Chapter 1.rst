@@ -768,21 +768,12 @@ The ∆Q in each conduit corresponds to the different force terms expressed as:
 
 where:
 
-    :math:'\bar{A}' = conduit average cross-sectional flow area
+    :math:`\bar{A}` = conduit average cross-sectional flow area
 
-    :math:'\bar{R}' = average conduit hydraulic radius
+    :math:`\bar{R}` = average conduit hydraulic radius
 
-    :math:'\bar{V}' = conduit average flow velocity
+    :math:`\bar{V}` = conduit average flow velocity
 
-
-
-
-where::
-
-
-.. _`a̅=`:
-
-a̅=:
 
 | conduit average cross-sectional flow area
 
