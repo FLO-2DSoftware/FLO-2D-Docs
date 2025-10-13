@@ -6,34 +6,34 @@ Chapter 1
 FLO-2D Storm Drain Overview
 ----------------------------------
 
-   The FLO-2D PRO two-dimensional flood routing model was integrated with the Environmental Protection Agency (EPA) Storm Water Management Model (SWMM)
-   Version 5.0.022 in 2013.
-   The FLO-2D storm drain engine has evolved into a completely new and unique model component.
-   The FLO-2D storm drain engine simulates the exchange of surface water flow with a storm drain system as a flow continuum (one body of water).
-   As two-dimensional flood modeling has advanced in the urban setting, the original SWMM interaction between the surface and the storm drain system is
-   too basic to capture the physical processes of the system.
-   A FLO-2D storm drain system represents a significant advancement in storm drain detail, accuracy, and speed.
+The FLO-2D PRO two-dimensional flood routing model was integrated with the Environmental Protection Agency (EPA) Storm Water Management Model (SWMM)
+Version 5.0.022 in 2013.
+The FLO-2D storm drain engine has evolved into a completely new and unique model component.
+The FLO-2D storm drain engine simulates the exchange of surface water flow with a storm drain system as a flow continuum (one body of water).
+As two-dimensional flood modeling has advanced in the urban setting, the original SWMM interaction between the surface and the storm drain system is
+too basic to capture the physical processes of the system.
+A FLO-2D storm drain system represents a significant advancement in storm drain detail, accuracy, and speed.
 
-   In the coupled model system FLO-2D hosts the closed conduit storm drain system and both models run simultaneously.
-   FLO-2D calculates all hydrologic and hydraulic flood routing while the closed conduit component computes the storm drain hydraulics.
-   The integration process involves allowing both systems to share data on a computational timestep controlled by the FLO-2D surface water engine.
-   The storm drain inlet discharge and the potential return flow to the surface is a function of the water surface elevation (WSE) and the storm drain
-   pressure requiring seamless sharing of data.
-   Both data sets must have the same coordinate system.
-   The FLO-2D model will compute the storm drain inflow discharge based on the predicted grid element headwater depth and inlet geometry type.
-   This inlet-controlled discharge will then be routed as storm drain conduit discharge.
-   The storm drain return flow to the surface water system is exchanged through storm drain inlets/outlets and outfalls.
-   The complete conceptualized flood routing system is shown in Figure 1.
+In the coupled model system FLO-2D hosts the closed conduit storm drain system and both models run simultaneously.
+FLO-2D calculates all hydrologic and hydraulic flood routing while the closed conduit component computes the storm drain hydraulics.
+The integration process involves allowing both systems to share data on a computational timestep controlled by the FLO-2D surface water engine.
+The storm drain inlet discharge and the potential return flow to the surface is a function of the water surface elevation (WSE) and the storm drain
+pressure requiring seamless sharing of data.
+Both data sets must have the same coordinate system.
+The FLO-2D model will compute the storm drain inflow discharge based on the predicted grid element headwater depth and inlet geometry type.
+This inlet-controlled discharge will then be routed as storm drain conduit discharge.
+The storm drain return flow to the surface water system is exchanged through storm drain inlets/outlets and outfalls.
+The complete conceptualized flood routing system is shown in Figure 1.
 
 .. image:: img/Chapter1/Chapte002.jpg
 
 *Figure 1.
 Conceptualized FLO-2D Model System with a Storm Drain Component.*
 
-   The FLO-2D storm drain component can be visualized in layers.
-   The surficial layer represents all the surface water flood movement which is connected to the subsurface pipe layer through the pipe junctions defined
-   as inlets (or outfalls).
-   Figure 2 illustrates the layered system.
+The FLO-2D storm drain component can be visualized in layers.
+The surficial layer represents all the surface water flood movement which is connected to the subsurface pipe layer through the pipe junctions defined
+as inlets (or outfalls).
+Figure 2 illustrates the layered system.
 
 .. image:: img/Chapter1/Chapte021.jpg
 
@@ -53,13 +53,13 @@ The FLO-2D storm drain component can be applied to a variety of different storm 
     - Assessment of the reduction in capacity to collect, convey and discharge stormwater flows to low lying coastal areas due to sea level rise and high
       tides.
 
-   The FLO-2D storm drain system can be developed using the FLO-2D plugin for QGIS and the EPA SWMM Graphical User Interface (GUI) or other storm drain
-   software.
-   The EPA SWMM GUI (Build 5.0.022) is installed with FLO-2D.
-   Once the storm drain system is built and the run switch is set, the flow into and through the pipe system is simulated automatically when the FLO-2D
-   model is started.
-   Following a successful simulation, the storm drain results can be reviewed in QGIS or in the EPA SWMM GUI.
-   Figure 3 shows an example of a storm drain integrated with a surface model on a QGIS map.
+The FLO-2D storm drain system can be developed using the FLO-2D plugin for QGIS and the EPA SWMM Graphical User Interface (GUI) or other storm drain
+software.
+The EPA SWMM GUI (Build 5.0.022) is installed with FLO-2D.
+Once the storm drain system is built and the run switch is set, the flow into and through the pipe system is simulated automatically when the FLO-2D
+model is started.
+Following a successful simulation, the storm drain results can be reviewed in QGIS or in the EPA SWMM GUI.
+Figure 3 shows an example of a storm drain integrated with a surface model on a QGIS map.
 
 .. image:: img/Chapter1/Chapte003.jpg
 
@@ -69,100 +69,100 @@ A Typical Storm Drain System as Viewed in QGIS .**
 FLO-2D Storm Drain Model Overview
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   The enhancements to the original SWMM model are extensive.
-   Some of the enhancements are related to the water surface head on the storm drain system.
-   The original SWMM model did not predict or utilize surface water elevation.
-   The FLO-2D model computes the storm drain inlet inflow discharge based on the inlet geometry and the head on the inlet and shares the discharge with
-   the storm drain engine.
-   The inlet and outfall exchange with the surface water including return flow to the storm drain system are based on the comparison between the water
-   surface elevation and the hydraulic head not just the rim elevation.
-   There are several enhancements to the outfall functions.
-   Finally, there have been several enhancements made to both model codes that include timestep management, inlet geometry, manhole covers, storm drain
-   return flows, reporting output, and feature options.
+The enhancements to the original SWMM model are extensive.
+Some of the enhancements are related to the water surface head on the storm drain system.
+The original SWMM model did not predict or utilize surface water elevation.
+The FLO-2D model computes the storm drain inlet inflow discharge based on the inlet geometry and the head on the inlet and shares the discharge with
+the storm drain engine.
+The inlet and outfall exchange with the surface water including return flow to the storm drain system are based on the comparison between the water
+surface elevation and the hydraulic head not just the rim elevation.
+There are several enhancements to the outfall functions.
+Finally, there have been several enhancements made to both model codes that include timestep management, inlet geometry, manhole covers, storm drain
+return flows, reporting output, and feature options.
 
 Computational Timesteps
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-   A timestep synchronization method is used in the FLO-2D Storm Drain Model.
-   The surface water and the storm drain systems communicate at each FLO-2D computational timestep.
-   The storm drain system uses the FLO-2D computational timestep for the water volume exchange as well as for the flow routing through the pipe system.
-   With the frequent water volume exchange at each FLO-2D computational timestep, any inconsistency between the volumes leaving the surface water and
-   entering the storm drain system are eliminated.
-   The storm drain routing timestep is set up as the FLO-2D timestep for the dynamic wave solution throughout the simulation for all conditions,
-   regardless user sets up a fixed timestep or a variable timestep.
+A timestep synchronization method is used in the FLO-2D Storm Drain Model.
+The surface water and the storm drain systems communicate at each FLO-2D computational timestep.
+The storm drain system uses the FLO-2D computational timestep for the water volume exchange as well as for the flow routing through the pipe system.
+With the frequent water volume exchange at each FLO-2D computational timestep, any inconsistency between the volumes leaving the surface water and
+entering the storm drain system are eliminated.
+The storm drain routing timestep is set up as the FLO-2D timestep for the dynamic wave solution throughout the simulation for all conditions,
+regardless user sets up a fixed timestep or a variable timestep.
 
-   The FLO-2D timesteps are small enough for the storm drain solution to converge.
-   For all conditions, the computed variable timestep is equal to the FLO-2D computational timestep.
+The FLO-2D timesteps are small enough for the storm drain solution to converge.
+For all conditions, the computed variable timestep is equal to the FLO-2D computational timestep.
 
 Inlet Geometry
 ^^^^^^^^^^^^^^
 
-   In the original SWMM model, pipe discharge was based on the system conveyance capacity, ignoring the inlets discharge capacity (control).
-   The FLO-2D storm drain model computes the storm drain inlet discharge based on the storm drain inlet geometry and the predicted water surface
-   elevations.
-   An inlet can be assigned to a floodplain, channel, or street element.
-   Three inlet options represent typical storm drain inlet designs.
-   A fourth option enables a stage-discharge rating table or the use of the generalized culvert equation for a unique inlet condition (INTYPE= 4) and a
-   fifth option will simulate a manhole (INTYPE=5).
+In the original SWMM model, pipe discharge was based on the system conveyance capacity, ignoring the inlets discharge capacity (control).
+The FLO-2D storm drain model computes the storm drain inlet discharge based on the storm drain inlet geometry and the predicted water surface
+elevations.
+An inlet can be assigned to a floodplain, channel, or street element.
+Three inlet options represent typical storm drain inlet designs.
+A fourth option enables a stage-discharge rating table or the use of the generalized culvert equation for a unique inlet condition (INTYPE= 4) and a
+fifth option will simulate a manhole (INTYPE=5).
 
 Flooding Conditions
 ^^^^^^^^^^^^^^^^^^^
 
-   The EPA SWMM5 model introduced a ponding feature to enhance the flooding approach used by the EPA SWMM 4 model.
-   The purpose of this feature was to emulate surface water that would both keep the excess storm drain water under pressure and return flow to the
-   system when storage capacity became available.
-   The ponding feature is activated when the inlet storm drain pressure head exceeds rim elevation.
-   Two overflow conditions were evaluated by the SWMM model when the pressure head exceeds the rim elevation:
+The EPA SWMM5 model introduced a ponding feature to enhance the flooding approach used by the EPA SWMM 4 model.
+The purpose of this feature was to emulate surface water that would both keep the excess storm drain water under pressure and return flow to the
+system when storage capacity became available.
+The ponding feature is activated when the inlet storm drain pressure head exceeds rim elevation.
+Two overflow conditions were evaluated by the SWMM model when the pressure head exceeds the rim elevation:
 
-   *Flooding*: Excess volume in the storm drain overflows and is lost because there is no inlet temporary storage.
-   Hydraulic head at the node will not rise above the inlet rim + surcharge depth.
-   This approach is a simplification that ignores the additional surface water head that may force more water to move through the pipe system.
+*Flooding*: Excess volume in the storm drain overflows and is lost because there is no inlet temporary storage.
+Hydraulic head at the node will not rise above the inlet rim + surcharge depth.
+This approach is a simplification that ignores the additional surface water head that may force more water to move through the pipe system.
 
-   *Ponding*: This routine was created to represent a surface water layer in the EPA SWMM 5 model.
-   Inlet overflow is stored at the node until such time when the pressure head is reduced below the rim elevation and the stored volume is released back
-   to the storm drain system.
-   In this case, the overflow volume is never lost from the storm drain system.
-   Ponded nodes do not contribute any volume to the surface water and in the flow routing continuity report any remaining ponded volume at the end of the
-   simulation is reported as Final Stored Volume.
-   The ponded volume continues to increase with more inlet overflow (return flow).
-   To enable return flow, the catch basin pressure head must exceed the rim elevation plus surcharge depth (manhole cover).
-   The rate of the rise in the pressure head depends on multiple factors including the available ponded area.
-   There is no maximum ponded volume.
+*Ponding*: This routine was created to represent a surface water layer in the EPA SWMM 5 model.
+Inlet overflow is stored at the node until such time when the pressure head is reduced below the rim elevation and the stored volume is released back
+to the storm drain system.
+In this case, the overflow volume is never lost from the storm drain system.
+Ponded nodes do not contribute any volume to the surface water and in the flow routing continuity report any remaining ponded volume at the end of the
+simulation is reported as Final Stored Volume.
+The ponded volume continues to increase with more inlet overflow (return flow).
+To enable return flow, the catch basin pressure head must exceed the rim elevation plus surcharge depth (manhole cover).
+The rate of the rise in the pressure head depends on multiple factors including the available ponded area.
+There is no maximum ponded volume.
 
-- The global ponding options were off and none of the nodes could store volume.
-  The flooding option was applied for this case.
+    - The global ponding options were off and none of the nodes could store volume.
+      The flooding option was applied for this case.
 
-- The Allow Ponding option was selected, and those nonzero ponded area nodes would receive ponded water.
-  Nodes with a zero-ponded area would receive flooding water.
+    - The Allow Ponding option was selected, and those nonzero ponded area nodes would receive ponded water.
+      Nodes with a zero-ponded area would receive flooding water.
 
-   When an inlet is flooded, the computed depth will decrease to the rim elevation and the overflow lost from the system is considered excess inflow into
-   the node.
-   For a ponded node, the depth is based on volume divided by the ponded area.
-   The smaller the assigned ponded area, the higher the water rises and drains.
-   The ponded area affects how quickly ponded water reenters the storm drain system because it defines the pressure head at node.
-   The program accounts for the ponded volume so the pressure head can be computed for the next time step.
+When an inlet is flooded, the computed depth will decrease to the rim elevation and the overflow lost from the system is considered excess inflow into
+the node.
+For a ponded node, the depth is based on volume divided by the ponded area.
+The smaller the assigned ponded area, the higher the water rises and drains.
+The ponded area affects how quickly ponded water reenters the storm drain system because it defines the pressure head at node.
+The program accounts for the ponded volume so the pressure head can be computed for the next time step.
 
-   EPA SWMM5 ponded routine represents an unrealistic condition where the storm drain water under pressure exceeding the rim elevation is accumulated at
-   an inlet but does not return to the surface water to flow away from the inlet.
-   This is because the SWMM model cannot route surface water.
-   Since the FLO-2D model routes the surface water and predicts flood hydraulics, the SWMM ponding feature was modified.
-   Consideration was given to the fact that no inflow should occur during flooding conditions in the storm drain.
-   If the inflow to inlet is ceased at the moment there is no storm drain capacity, discharge oscillations can physically occur.
-   This is an actual response of the storm drain system to the surface water.
+EPA SWMM5 ponded routine represents an unrealistic condition where the storm drain water under pressure exceeding the rim elevation is accumulated at
+an inlet but does not return to the surface water to flow away from the inlet.
+This is because the SWMM model cannot route surface water.
+Since the FLO-2D model routes the surface water and predicts flood hydraulics, the SWMM ponding feature was modified.
+Consideration was given to the fact that no inflow should occur during flooding conditions in the storm drain.
+If the inflow to inlet is ceased at the moment there is no storm drain capacity, discharge oscillations can physically occur.
+This is an actual response of the storm drain system to the surface water.
 
-   There are two pressure conditions that had to be assessed in the revised ponding feature:
+There are two pressure conditions that had to be assessed in the revised ponding feature:
 
-                                                FLO-2D WSE > storm drain pressure head > rim elevation:
+    FLO-2D WSE > storm drain pressure head > rim elevation:
 
-   The conduit water volume under pressure stays in the pipe and the return volume is assigned to the drop basin pipe based on its flow area.
-   No volume is lost from the storm drain system to the surface water and the volume stays in the pipe.
-   The pressure head in the storm drain is correctly represented for this condition.
-   For the second condition:
+The conduit water volume under pressure stays in the pipe and the return volume is assigned to the drop basin pipe based on its flow area.
+No volume is lost from the storm drain system to the surface water and the volume stays in the pipe.
+The pressure head in the storm drain is correctly represented for this condition.
+For the second condition:
 
-                                                FLO-2D WSE < storm drain pressure head > rim elevation:
+    FLO-2D WSE < storm drain pressure head > rim elevation:
 
-   When the storm drain pressure exceeds the surface water elevation, the water should overflow the inlet and join the surface water to be routed away
-   from the inlet and there is no storage volume in the pipe system.
+When the storm drain pressure exceeds the surface water elevation, the water should overflow the inlet and join the surface water to be routed away
+from the inlet and there is no storage volume in the pipe system.
 
 Surface Water – Storm Drain Exchange Conditions:
 
@@ -218,7 +218,7 @@ Inlet with Return Flow*
 Pressure head and manholes
 ''''''''''''''''''''''''''
 
-   Flooding will occur at manholes when the pressure head exceeds manhole rim elevation plus surcharge depth plus FLO-2D water depth (see Figure 7).
+Flooding will occur at manholes when the pressure head exceeds manhole rim elevation plus surcharge depth plus FLO-2D water depth (see Figure 7).
 
         - Conduit capacity is full.
 
