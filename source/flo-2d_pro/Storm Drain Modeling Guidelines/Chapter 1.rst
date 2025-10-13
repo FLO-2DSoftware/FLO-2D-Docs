@@ -762,6 +762,13 @@ The ∆Q in each conduit corresponds to the different force terms expressed as:
 
    ∆Q_{friction}= \frac{gn^2 |\ bar{V}|∆t} {k^2 \bar{R}^{4/3}}
 
+.. math::
+   :label:
+
+   ∆Q_{losses} = \frac{∑_i K_i |V_i|∆t}{2L}
+
+
+
    ∆Q\ :sub:`gravity` = gA̅(H\ :sub:`1` − H\ :sub:`2`) ∆t⁄L
 
    ∆Q\ :sub:`inertial` = 2V̅(A̅ − A\ :sub:`t`) +V̅\ :sup:`2`\ (A\ :sub:`2` − A\ :sub:`1`)∆t⁄L
