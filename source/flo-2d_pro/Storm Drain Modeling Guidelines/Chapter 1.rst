@@ -845,19 +845,19 @@ velocities determined at the current time *t*.
 2. A first estimate of the head (H) in each conduit at time *t +* Δ\ *t* is calculated by evaluating H\ :sub:`t+∆t` using the discharge Q just computed.
 The results are denoted as:
 
-            Q_{last} and H_{last}
+            Q\ :sub: `last` and H\ :sub: `last`
 
 3. The equation Q\ :sub:`t+∆t` is solved once again, using the head, area, and velocity based on the Q\ :sub:`last` and H\ :sub:`last` values just
 computed.
 A relaxation factor Ω is used to combine the new flow estimate Q\ :sub:`new` with the previous estimate Q\ :sub:`last` to generate a new Q\ :sub:`new`
 according to the equation:
 
-            Qnew = (1−Ω) Qlast +Ω Qnew
+            Q\ :sub: `new' = (1−Ω) Q\ :sub: `last` +Ω Q\ :sub: `new`
 
 4. The equation for H\ :sub:`t+∆t`\ is solved again for heads using Q\ :sub:`new`.
 As with discharge, this new solution for head, H\ :sub:`new` is weighted with H\ :sub:`last` to produce an updated estimate for heads:
 
-   Hnew = (1−Ω) Hlast +Ω Hnew
+            H\ :sub: `new` = (1−Ω) H :sub: `last` +Ω H :sub: `new`
 
 5. If H\ :sub:`new` is close enough to H\ :sub:`last` then the process stops with Q\ :sub:`new` and H\ :sub:`new` as the solution for time t + Δt.
    Otherwise H\ :sub:`last` and Q\ :sub:`last` are replaced with H\ :sub:`new` and Q\ :sub:`new`, respectively and the process returns to step 2.
