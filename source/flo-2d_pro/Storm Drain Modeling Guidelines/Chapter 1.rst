@@ -918,7 +918,7 @@ where:
 .. math::
    :label:
 
-   \frac {∂H}{∂Q} = \frac {−g :math:`\bar{A}` ∆t⁄L}{∂H 1 + ∆Q_{friction} + ∆Q_{losses}}
+   \frac {∂H}{∂Q} = \frac {−g :math:`\bar{A} ∆t⁄L}{∂H 1 + ∆Q_{friction} + ∆Q_{losses}}
 
 
 \frac {∂H}{∂Q} has a negative sign because when evaluating ∑𝑄 because the flow directed out of a node is
@@ -957,6 +957,9 @@ where:
     m = 1.5 for a broad crested weir. This is hardcoded.
 
 Orifice Flow:
+
+.. math::
+   :label:
 
    𝑄\ :sub:`𝑜` = 𝐶\ :sub:`𝑑`\ 𝐴√2𝑔𝐻
 
