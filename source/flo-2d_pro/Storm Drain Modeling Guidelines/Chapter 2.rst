@@ -343,10 +343,6 @@ Solution:
 
    d_s = frac\ {w_m} {A_m γ_w} = frac\ {100lb} {3.14ft^2 62.4lb/ft^3} ≈ frac\ {45.4kg}{0.29m^2 1000kg/m^3 ≈ 0.5 ft (0.16
 
-w\ *m* 100lb 45.4 kg
-
-   ds = Amγw = 3.14 ft2 62.4 lb/ft3 ≈ 0.29 m2 1000 kg/m3 ≈ 0.5 ft (0.16
-
 Table 4 presents some suggested surcharge depths.
 
    **Table 4.
