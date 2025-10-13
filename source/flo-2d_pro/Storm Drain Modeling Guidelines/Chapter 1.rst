@@ -1270,7 +1270,7 @@ where:
     L = the crest length
 
     m = an exponent that depends on the type of weir being modeled: lateral, transverse, side-flow, V-notch, or trapezoidal.
-       Typically, m = 1.5 for a lateral weir. This exponent is hardcoded in the FLO-2D storm drain model.
+    Typically, m = 1.5 for a lateral weir. This exponent is hardcoded in the FLO-2D storm drain model.
 
 The parameters of an orifice in the storm drain system are:
 
