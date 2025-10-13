@@ -774,9 +774,9 @@ where:
 
     :math:`\bar{V}` = conduit average flow velocity
 
-    V\ :sub: 'i' = local flow velocity at location i along the conduit
+    V\ :sub: `i` = local flow velocity at location i along the conduit
 
-    K\ :sub: 'i' = local loss coefficient at location i along the conduit
+    K\ :sub: `i` = local loss coefficient at location i along the conduit
 
 .. _`h\:sub:`1`=`:
 
