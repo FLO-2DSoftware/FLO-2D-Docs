@@ -315,9 +315,7 @@ where:
 
     A\ :sub:`m` = area of the circular manhole opening (πD\ :sup:`2`/4) γ\ :sub:`w` = clear water density 62.4 lb/ft\ :sup:`3` (1000 kg/m\ :sup:`3`)
 
-
-.. image:: img/Chapter2/Chapte013g.jpg
-
+.. image:: img/Chapter2/Chapte013.jpg
 
 *Figure 33.
 Popped Manhole Cover with Pressure Head (Source: istock)*
@@ -341,17 +339,7 @@ Solution:
 .. math::
    :label:
 
-   d_s = \frac {w_m} {A_m γ_w}
-
-.. math::
-   :label:
-
-   \frac {100lb}{3.14ft^2 \ 62.4lb/ft^3}
-
-.. math::
-   :label:
-
-   \frac {45.4kg}{0.29m^2 \ 1000kg/m^3} ≈ 0.5 ft (0.16)
+   d_s = \frac {w_m} {A_m γ_w} = \frac {100lb}{3.14ft^2 \ 62.4lb/ft^3} ≈ \frac {45.4kg}{0.29m^2 \ 1000kg/m^3} ≈ 0.5 ft (0.16 m)
 
 Table 4 presents some suggested surcharge depths.
 
