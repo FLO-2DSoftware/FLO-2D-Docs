@@ -21,9 +21,9 @@ Surface and Closed Conduit Flow Exchange*
 
 .. image:: img/Chapter2/Chapte001.jpg
 
-   Nodes represent several features of a storm drain system.
-   One type of node is the inlet which constitutes an inflow point to the pipe system from the surface water.
-   A junction can represent the connection between two pipes with a change of slope or geometry, in this case the junction is not an inlet because it is
+Nodes represent several features of a storm drain system.
+One type of node is the inlet which constitutes an inflow point to the pipe system from the surface water.
+A junction can represent the connection between two pipes with a change of slope or geometry, in this case the junction is not an inlet because it is
    not connected to the surface water system.
    The water surface elevation is determined at each junction for each computational timestep based on the junction geometry and the flow hydraulics.
    Figure 22 is a profile of closed conduit system.
