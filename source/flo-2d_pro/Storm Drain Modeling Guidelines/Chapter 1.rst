@@ -900,7 +900,6 @@ To implement the flow continuity condition, a perturbation equation form is enfo
 
    Σ\left[Q + \frac{∂Q}{∂H}∆H\right] = 0
 
-
 where:
 
     ∆𝐻 = node head that must be made to achieve flow continuity.
@@ -910,8 +909,7 @@ Solving for ∆𝐻:
 .. math::
    :label:
 
-
-    ∆H = \frac {∑Q}{∑∂Q⁄∂H}
+   ∆H = \frac {∑Q}{∑∂Q⁄∂H}
 
 where:
 
