@@ -746,7 +746,6 @@ The flow equation solved for each conduit is given by:
    Q_{t+∆t} = \frac {Q_t + Q∆_{gravity} + Q∆_{inertial}}{1+Q_{friction}+∆Q_{losses}}
 
 The ∆Q in each conduit corresponds to the different force terms expressed as:
-
 .. math::
    :label:
 
@@ -769,15 +768,27 @@ The ∆Q in each conduit corresponds to the different force terms expressed as:
 
 where:
 
-\bar {A} = conduit average cross-sectional flow area
+A̅ = conduit average cross-sectional flow area
 
 \bar {R} = average conduit hydraulic radius
 
 \bar {V} = conduit average flow velocity
 
+where: :math:`\bar{A}` = mean cross-sectional area
 
 
+where::
 
+
+.. _`a̅=`:
+
+a̅=:
+
+| conduit average cross-sectional flow area
+
+.. _`r̅=`:
+
+r̅=:
 
 | average conduit hydraulic radius
 
