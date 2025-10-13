@@ -962,19 +962,19 @@ Orifice Flow:
 
 where:
 
-Q\ :sub:`o` = orifice flow rate at depth H
+    Q\ :sub:`o` = orifice flow rate at depth H
 
-C\ :sub:`d` = discharge coefficient hardcoded to 0.67
+    C\ :sub:`d` = discharge coefficient hardcoded to 0.67
 
-   A = Lh; cross-sectional orifice area, computed from inlet opening length (L) and inlet opening height (h) fields in the SWMMFLO.DAT
+    A = Lh; cross-sectional orifice area, computed from inlet opening length (L) and inlet opening height (h) fields in the SWMMFLO.DAT
 
-g = gravitational acceleration
+    g = gravitational acceleration
 
-H = FLO-2D grid element water depth that contains the inlet structure
+    H = FLO-2D grid element water depth that contains the inlet structure
 
-   The discharges are calculated based on the physical behavior of the inlet as a weir or an orifice for a given timestep and the smaller of the two
-   discharges is used in the surface water exchange to the storm drain system.
-   Using orifice flow accounts for the gutter velocity that would reduce the weir flow discharge.
+The discharges are calculated based on the physical behavior of the inlet as a weir or an orifice for a given timestep and the smaller of the two
+discharges is used in the surface water exchange to the storm drain system.
+Using orifice flow accounts for the gutter velocity that would reduce the weir flow discharge.
 
 Surface Water – Storm Drain Model Integration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
