@@ -750,17 +750,17 @@ The ∆Q in each conduit corresponds to the different force terms expressed as:
 .. math::
    :label:
 
-   ∆Q_{gravity} = g \bar{A} (H1-H2) ∆t/L
+   ∆Q_{gravity} = g\bar{A} (H1-H2) ∆t/L
 
 .. math::
    :label:
 
-   ∆Q_{inertial} = 2 \bar{V}(\ bar{A} - A_t) + \ bar{V}^2 (A2-A1) ∆t/L
+   ∆Q_{inertial} = 2 \bar{V}(\bar{A} - A_t) + \bar{V}^2 (A2-A1) ∆t/L
 
 .. math::
    :label:
 
-   ∆Q_{friction}= \frac{gn^2 |\ bar{V}|∆t} {k^2 \bar{R}^{4/3}}
+   ∆Q_{friction}= \frac{gn^2 |\bar{V}|∆t} {k^2\bar{R}^{4/3}}
 
 .. math::
    :label:
@@ -768,11 +768,11 @@ The ∆Q in each conduit corresponds to the different force terms expressed as:
    ∆Q_{losses} = \frac{∑_i K_i |V_i|∆t}{2L}
 
 where::
-\ bar {A} = conduit average cross-sectional flow area
+\bar {A} = conduit average cross-sectional flow area
 
-\ bar {R} = average conduit hydraulic radius
+\bar {R} = average conduit hydraulic radius
 
-\ bar {V} = conduit average flow velocity
+\bar {V} = conduit average flow velocity
 
 
 
