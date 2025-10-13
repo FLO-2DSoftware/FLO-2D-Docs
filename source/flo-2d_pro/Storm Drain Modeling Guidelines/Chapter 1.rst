@@ -549,26 +549,26 @@ Type 2 Inlet Discharge versus Time*
 *Figure 19.
 Type 2 Inlet Discharge versus Time Using a Clogging Factor of 50% at Time 0.5 hrs*
 
-   It is noted that the Flood Control District of Maricopa County (FCDMC) in Phoenix, Arizona recommends this approach for flooding and drainage studies,
-   but it should not be applied for storm drain design.
-   In a design project the storm drain features are oversized to provide enough capacity for clogging.
+It is noted that the Flood Control District of Maricopa County (FCDMC) in Phoenix, Arizona recommends this approach for flooding and drainage studies,
+but it should not be applied for storm drain design.
+In a design project the storm drain features are oversized to provide enough capacity for clogging.
 
-   Table **2** shows the FCDMC catch basin clogging factors for predicting inlet discharge (FCDMC, 2018).
-   The clogging factor data file can be created in the SWMMFLO.DAT data dialog for all types of inlets.
+Table **2** shows the FCDMC catch basin clogging factors for predicting inlet discharge (FCDMC, 2018).
+The clogging factor data file can be created in the SWMMFLO.DAT data dialog for all types of inlets.
 
-   *Table 2.
-   FCDMC Catch Basin Clogging Factors (FCDMC, 2018)*
+ *Table 2.
+ FCDMC Catch Basin Clogging Factors (FCDMC, 2018)*
 
 .. image:: img/Chapter1/Chapte016.jpg
 
 Reduction of Return Flow to Surface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Flow energy losses are experienced when a conduit or conveyance facility has change in size or geometry.
-   There is contraction in the flow area between the catch basin of an inlet (vertical pipe) and the inlet.
-   The sudden contraction at the inlet from the drop box pipe diameter results in an energy loss in the return flow from the storm drain to the surface
-   water.
-   The energy loss for a contraction in pressure flow can be calculated from the following equation (DOT Urban Drainage Design Manual):
+Flow energy losses are experienced when a conduit or conveyance facility has change in size or geometry.
+There is contraction in the flow area between the catch basin of an inlet (vertical pipe) and the inlet.
+The sudden contraction at the inlet from the drop box pipe diameter results in an energy loss in the return flow from the storm drain to the surface
+water.
+The energy loss for a contraction in pressure flow can be calculated from the following equation (DOT Urban Drainage Design Manual):
 
 .. math::
    :label:
@@ -583,10 +583,9 @@ where:
 
     G = acceleration due to gravity 9.81 m/s\ :sup:`2` (32.2 ft/s\ :sup:`2`)
 
-   *Table 3.
-   Values of K for Contraction.
-   (Dept.
-   of Transportation, 2013)*
+*Table 3.
+Values of K for Contraction.
+(Dept. of Transportation, 2013)*
 
 .. image:: img/Chapter1/Chapte017.jpg
 
@@ -596,12 +595,10 @@ Storm Drain Model Governing Equations
 Unsteady Flow in a Pipe Network
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   The storm drain engine solves the 1-D Saint Venant equations for the conservation of mass and momentum that governs the unsteady flow of water through
-   a network of pipes (Rossman, 2006).
+The storm drain engine solves the 1-D Saint Venant equations for the conservation of mass and momentum that governs the unsteady flow of water through
+a network of pipes (Rossman, 2006).
 
 Continuity Equation:
-
-
 
 Momentum equation for x-direction:
 
