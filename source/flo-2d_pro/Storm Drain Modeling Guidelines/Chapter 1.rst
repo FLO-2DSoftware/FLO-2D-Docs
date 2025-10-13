@@ -454,24 +454,24 @@ This inlet discharge volume is removed from the grid element and the model conti
 Storm Drain Pressure Head Variation Dampening
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   In the original SWMM model, to avoid rapid pressure fluctuation that induces discharge oscillations in the drop boxes, the storm drain engine had a
-   pressure dampening algorithm.
-   This algorithm used the surface area of the lateral conduit connected to the drop box.
-   As the conduit water surface elevation approached the soffit, the algorithm applied a decreasing water surface area.
-   Once the flow reached the soffit, the pressure head dampening method is applied for a distance above the invert of 1.25 times the conduit pipe
-   diameter.
-   The surface area was then exponentially reduced to the drop box diameter as the flow filled the catch basin over the prescribed distance.
-   The justification for this dampening routine is that the pressure head change in one computational timestep may be sufficient to fill a four-foot drop
-   box causing both oscillation and volume conservation error.
-   During a storm this may occur as evidenced by manhole popping or spraying of water from inlets.
+In the original SWMM model, to avoid rapid pressure fluctuation that induces discharge oscillations in the drop boxes, the storm drain engine had a
+pressure dampening algorithm.
+This algorithm used the surface area of the lateral conduit connected to the drop box.
+As the conduit water surface elevation approached the soffit, the algorithm applied a decreasing water surface area.
+Once the flow reached the soffit, the pressure head dampening method is applied for a distance above the invert of 1.25 times the conduit pipe
+diameter.
+The surface area was then exponentially reduced to the drop box diameter as the flow filled the catch basin over the prescribed distance.
+The justification for this dampening routine is that the pressure head change in one computational timestep may be sufficient to fill a four-foot drop
+box causing both oscillation and volume conservation error.
+During a storm this may occur as evidenced by manhole popping or spraying of water from inlets.
 
-   To represent the physical system, the pressure head dampening routine was reviewed and several options to revise the dampening algorithm were
-   evaluated including allowing the pressure head variation up to be exponentially reduced over more effectively to entire drop box to the rim elevation.
-   The Figure 14 through Figure 17 display water profiles and the pressure head versus time for an upstream inlet that has an inflow condition that fills
-   the vertical pipe above the rim elevation.
-   This example shows how the pressure head calculation is affected for three different dampening methods when the pressure head exceeds the soffit
-   elevation.
-   The selected method allows the pressure head to be exponentially reduced over to entire drop box to the RIM elevation.
+To represent the physical system, the pressure head dampening routine was reviewed and several options to revise the dampening algorithm were
+evaluated including allowing the pressure head variation up to be exponentially reduced over more effectively to entire drop box to the rim elevation.
+The Figure 14 through Figure 17 display water profiles and the pressure head versus time for an upstream inlet that has an inflow condition that fills
+the vertical pipe above the rim elevation.
+This example shows how the pressure head calculation is affected for three different dampening methods when the pressure head exceeds the soffit
+elevation.
+The selected method allows the pressure head to be exponentially reduced over to entire drop box to the RIM elevation.
 
 .. image:: img/Chapter1/Chapte022.jpg
 
@@ -506,8 +506,8 @@ Inlet Pressure Head with Dampening up to RIM Elevation*
 Storm Drain Clogging
 ^^^^^^^^^^^^^^^^^^^^
 
-   A clogging factor was created to simulate a reduction in inlet capacity.
-   The SDCLOGGING.DAT file has the following format:
+A clogging factor was created to simulate a reduction in inlet capacity.
+The SDCLOGGING.DAT file has the following format:
 
 .. raw:: html
 
