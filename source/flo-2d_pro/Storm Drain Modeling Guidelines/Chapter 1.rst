@@ -639,8 +639,7 @@ Unsteady flow with backwater effects, flow reversals, pressurized flow with entr
 The momentum equation inertial terms are reduced as flow comes closer to being critical and are ignored when the flow is supercritical based on the
 following options:
 
-    - Damping option (KEEP) - inertial terms of the St.
-      Venant equation solution are included.
+    - Damping option (KEEP) - inertial terms of the St. Venant equation solution are included.
 
     - Ignore option (IGNORE) - inertial terms are ignored.
 
@@ -654,13 +653,19 @@ This parameter damps out the contribution of the inertial terms as the Froude nu
 the Froude number is greater than 1 (supercritical flow).
 The weighting factor 𝜎 varies as:
 
-   σ = 1.0 𝑓𝑜𝑟 𝐹𝑟 < 0.5
+.. raw:: html
 
-   𝜎 = 2.∗ (1.
-   −𝐹𝑟) 𝑓𝑜𝑟 0.5 ≤ 𝐹𝑟 ≤ 1.0
+   <div>
+      <pre>
+         σ = 1.0            𝑓𝑜𝑟 𝐹𝑟 < 0.5
 
-   𝜎 = 0.
-   𝑓𝑜𝑟 𝐹𝑟 > 1.0
+         𝜎 = 2.∗ (1.−𝐹𝑟)    𝑓𝑜𝑟 0.5 ≤ 𝐹𝑟 ≤ 1.0
+
+         𝜎 = 0.            𝑓𝑜𝑟 𝐹𝑟 > 1.0
+      </pre>
+   </div>
+
+
 
    The inertial terms are multiplied by σ when they are added into the solution of the momentum equation for each timestep and conduit.
    The Froude number is calculated at the midpoint depth in the conduit.
