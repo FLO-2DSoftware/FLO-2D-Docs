@@ -350,20 +350,22 @@ The following information is reported to the files:
 
     - Pressure head
 
-    - Rim elevation + Surcharge Elevation • FLO-2D WSE.
+    - Rim elevation + Surcharge Elevation
+
+    - FLO-2D WSE.
 
 The following is an example of the information that is reported to the SDManholePopUp.OUT output file:
 
-MANHOLE: I5-37-27-28
+    MANHOLE: I5-37-27-28
 
-POPPED AT TIME (hrs): 3.93
+    POPPED AT TIME (hrs): 3.93
 
-PRESSURE HEAD: 1374.07 > RIM + SURCH: 1371.44 > FLO-2D WSE: 1370.95
+    PRESSURE HEAD: 1374.07 > RIM + SURCH: 1371.44 > FLO-2D WSE: 1370.95
 
-   Table 1 is an example of the information that is reported to the ManholePop.OUT output file.
+Table 1 is an example of the information that is reported to the ManholePop.OUT output file.
 
-   **Table 1.
-   ManholePop.OUT File.**
+*Table 1.
+ManholePop.OUT File.*
 
 .. list-table::
    :widths: 12 12 12 12 12 12 12 12
@@ -376,7 +378,7 @@ PRESSURE HEAD: 1374.07 > RIM + SURCH: 1371.44 > FLO-2D WSE: 1370.95
      - Manhole ID
      - Popped at time
 
-       s)
+       (hrs)
      - Pressure Head
      - PH RIM + SURCH
      - FLO-2D WSE
