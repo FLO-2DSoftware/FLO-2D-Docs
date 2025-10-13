@@ -767,36 +767,14 @@ The ∆Q in each conduit corresponds to the different force terms expressed as:
 
    ∆Q_{losses} = \frac{∑_i K_i |V_i|∆t}{2L}
 
-
-
-   ∆Q\ :sub:`gravity` = gA̅(H\ :sub:`1` − H\ :sub:`2`) ∆t⁄L
-
-   ∆Q\ :sub:`inertial` = 2V̅(A̅ − A\ :sub:`t`) +V̅\ :sup:`2`\ (A\ :sub:`2` − A\ :sub:`1`)∆t⁄L
-
-   gn\ :sup:`2`\ \|V̅|∆t
-
-∆Qfriction = k\ :sub:`2`\ R̅4⁄\ :sub:`3`
-
-   ∑\ :sub:`i` K\ :sub:`i`\ \|V\ :sub:`i`\ \|∆t
-
-∆Q\ :sub:`losses` =
-
-   2L
-
-.. _`where:`:
-
 where::
+\ bar {A} = conduit average cross-sectional flow area
+
+\ bar {R} = average conduit hydraulic radius
+
+\ bar {V} = conduit average flow velocity
 
 
-.. _`a̅=`:
-
-a̅=:
-
-| conduit average cross-sectional flow area
-
-.. _`r̅=`:
-
-r̅=:
 
 | average conduit hydraulic radius
 
