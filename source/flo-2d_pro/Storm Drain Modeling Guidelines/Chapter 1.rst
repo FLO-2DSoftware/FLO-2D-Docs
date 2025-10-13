@@ -810,11 +810,7 @@ The equation to calculate the head adjustment term for each timestep at each nod
 .. math::
    :label:
 
-
-
-   ∆Vol
-
-   Ht+∆t = Ht + (Astore + ∑ As)t+∆t
+   H_{t+∆t} = Ht + \frac {∆Vol}{(A_{store} + ∑A_s)_{t+∆t}
 
    where ∆Vol is the net volume flowing through the node over the timestep.
    The net volume is computed as:
