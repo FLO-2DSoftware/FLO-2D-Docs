@@ -819,12 +819,11 @@ where ∆Vol is the net volume flowing through the node over the timestep. The n
 
    ∆Vol = 0.5 [(∑Q)_t + (∑Q)_{t+∆t}]∆t
 
-   The conduit surface area (A\ :sub:`store`) depends on the flow condition within the conduit as follows:
+The conduit surface area (A\ :sub:`store`) depends on the flow condition within the conduit as follows:
 
-        1. Under normal conditions the pipe surface area equals half of the conduit length times the average
-
-           of the top width at the end and mid points of the conduit.
-           These widths are evaluated before the next updated timestep using the flow depths y1, y2, and y.
+1. Under normal conditions the pipe surface area equals half of the conduit length times the average of the top width
+ at the end and mid points of the conduit.
+These widths are evaluated before the next updated timestep using the flow depths y1, y2, and y.
 
         2. If the inflow of the conduit to a node is in free-fall (conduit invert elevation is above the water surface of the node), then the conduit does not
            contribute to the node surface area.
