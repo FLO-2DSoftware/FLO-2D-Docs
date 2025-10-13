@@ -677,7 +677,7 @@ The friction slope component S\ :sub:`f` is based on Manning’s equation:
 .. math::
    :label:
 
-   S_f = \frac{n_2V|V|}{k_2R^{\frac{4}{3}}
+   S_f = \frac{n_2V|V|}{k_2R^{\frac{4}{3}}}
 
 where:
 
