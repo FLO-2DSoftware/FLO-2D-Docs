@@ -214,9 +214,7 @@ The smaller of two discharges (weir or orifice) calculated for a grate (gutter) 
 
    If H ≤ h then: Q\ :sub:`w` = CPH\ :sup:`m`
 
-h m
-
-If H > h then: Q\ :sub:`w` = CP (H + :sub:`2`)
+If H > h then: Q\ :sub:`w` = CP (H + h/2)\ :sup:`m`
 
 where:
 
