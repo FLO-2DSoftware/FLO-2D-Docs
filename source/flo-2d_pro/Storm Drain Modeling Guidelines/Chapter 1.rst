@@ -929,33 +929,38 @@ approximation scheme.
 Boundary conditions – FLO-2D inlet discharge
 ''''''''''''''''''''''''''''''''''''''''''''
 
-   Floodplain runoff discharges from the surface layer typically only enters the pipeline system at inlets.
-   Weir and orifice equations are used to calculate an inflow discharge under inlet control.
-   In the original SWMM model there was no inlet control and all the water in the subcatchment was made available to the storm drain system capacity.
-   With inlet control, the inlet discharge is based on the inlet geometry and on the comparison between the FLO-2D water surface elevation and the storm
-   drain pressure head.
-   The inlet discharge is imposed as surface water boundary conditions (BC) and is passed to the storm drain layer for routing.
-   The following equations (Johnson and Fred, 1984) are used:
+Floodplain runoff discharges from the surface layer typically only enters the pipeline system at inlets.
+Weir and orifice equations are used to calculate an inflow discharge under inlet control.
+In the original SWMM model there was no inlet control and all the water in the subcatchment was made available to the storm drain system capacity.
+With inlet control, the inlet discharge is based on the inlet geometry and on the comparison between the FLO-2D water surface elevation and the storm
+drain pressure head.
+The inlet discharge is imposed as surface water boundary conditions (BC) and is passed to the storm drain layer for routing.
+The following equations (Johnson and Fred, 1984) are used:
 
-   Weir Flow:
+Weir Flow:
+
+.. math::
+   :label:
 
    𝑄\ :sub:`𝑤` = 𝐶𝐿𝐻\ :sup:`𝑚`
 
-   where:
+where:
 
-Q\ :sub:`w` = weir discharge
+    Q\ :sub:`w` = weir discharge
 
-   C = weir coefficient, enter in the “Inlet Weir Coeff.” field in the SWMMFLO.DAT
+    C = weir coefficient, enter in the “Inlet Weir Coeff.” field in the SWMMFLO.DAT
 
-L = crest length; enter in the “Length (1 or 2)” field in the SWMMFLO.DAT H = FLO-2D grid element water depth that contains the inlet structure m =
-1.5 for a broad crested weir.
-This is hardcoded.
+    L = crest length; enter in the “Length (1 or 2)” field in the SWMMFLO.DAT
 
-   Orifice Flow:
+    H = FLO-2D grid element water depth that contains the inlet structure
+
+    m = 1.5 for a broad crested weir. This is hardcoded.
+
+Orifice Flow:
 
    𝑄\ :sub:`𝑜` = 𝐶\ :sub:`𝑑`\ 𝐴√2𝑔𝐻
 
-   where:
+where:
 
 Q\ :sub:`o` = orifice flow rate at depth H
 
