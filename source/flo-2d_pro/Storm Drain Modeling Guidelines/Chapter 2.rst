@@ -315,7 +315,9 @@ where:
 
     A\ :sub:`m` = area of the circular manhole opening (πD\ :sup:`2`/4) γ\ :sub:`w` = clear water density 62.4 lb/ft\ :sup:`3` (1000 kg/m\ :sup:`3`)
 
+
 .. image:: img/Chapter2/Chapte013g.jpg
+
 
 *Figure 33.
 Popped Manhole Cover with Pressure Head (Source: istock)*
