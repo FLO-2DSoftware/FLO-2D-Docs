@@ -159,7 +159,7 @@ Flooding Conditions
    The pressure head in the storm drain is correctly represented for this condition.
    For the second condition:
 
-                                                FLO-2D WSE < storm drain pressure head > rim elevation
+                                                FLO-2D WSE < storm drain pressure head > rim elevation:
 
    When the storm drain pressure exceeds the surface water elevation, the water should overflow the inlet and join the surface water to be routed away
    from the inlet and there is no storage volume in the pipe system.
@@ -236,10 +236,10 @@ Manhole under Pressure with Return Flow.*
 Pressure head variability
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   The FLO-2D Storm Drain system for the water exchange between the surface and the storm drain may result in pressure head variability, conduit velocity
-   fluctuations and different return flow results for inlets and manholes under pressure when compared with SWMM models or early FLO-2D storm drain
-   models.
-   The following response can be observed in the FLO-2D storm drain results:
+The FLO-2D Storm Drain system for the water exchange between the surface and the storm drain may result in pressure head variability, conduit velocity
+fluctuations and different return flow results for inlets and manholes under pressure when compared with SWMM models or early FLO-2D storm drain
+models.
+The following response can be observed in the FLO-2D storm drain results:
 
     1. The head on the inlet continuously increases when the PH is less than the FLO-2D WSE even though the head exceeds the rim elevation.
        Since the inlets are flooded, this results in higher storm drain pressure.
