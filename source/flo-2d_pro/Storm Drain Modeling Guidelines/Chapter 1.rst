@@ -718,11 +718,11 @@ where:
 
 h = flow depth (difference between the node head and the pipe invert elevation)
 
-A_{store} = node surface area
+A\ :sub:`store` = node surface area
 
-∑as = surface area contributed by the conduits connected to the node.
+∑As = surface area contributed by the conduits connected to the node.
 
-∑q = net flow at Node J contributed by all connected conduits plus external inflows
+∑Q = net flow at Node J contributed by all connected conduits plus external inflows
 
 
 .. image:: img/Chapter1/Chapte020.jpg
