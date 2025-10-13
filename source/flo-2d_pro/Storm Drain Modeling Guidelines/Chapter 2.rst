@@ -19,7 +19,7 @@ Overview of Inlets and Outfalls
 *Figure 21
 Surface and Closed Conduit Flow Exchange*
 
-.. image:: img\Chapter2\Chapte002.jpg
+.. image:: img\Chapter2\Chapte001.jpg
 
    Nodes represent several features of a storm drain system.
    One type of node is the inlet which constitutes an inflow point to the pipe system from the surface water.
