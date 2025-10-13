@@ -336,7 +336,7 @@ Solution:
 .. math::
    :label:
 
-   A_m = (π{2ft^2}{4}) = 3.14 ft^2(0.29 m^2)
+   A_m = frac\ ({π2ft^2}{4}) = 3.14 ft^2(0.29 m^2)
 
 .. math::
    :label:
