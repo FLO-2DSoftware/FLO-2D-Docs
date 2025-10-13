@@ -760,7 +760,7 @@ The ∆Q in each conduit corresponds to the different force terms expressed as:
 .. math::
    :label:
 
-   ∆Q_{friction}
+   ∆Q_{friction}= \frac{gn^2 |\ bar{V}|∆t} {k^2 \bar{R}^{4/3}}
 
    ∆Q\ :sub:`gravity` = gA̅(H\ :sub:`1` − H\ :sub:`2`) ∆t⁄L
 
