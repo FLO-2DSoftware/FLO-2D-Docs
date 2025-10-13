@@ -152,14 +152,14 @@ Flooding Conditions
 
    There are two pressure conditions that had to be assessed in the revised ponding feature:
 
-   FLO-2D WSE > storm drain pressure head > rim elevation:
+                                                FLO-2D WSE > storm drain pressure head > rim elevation:
 
    The conduit water volume under pressure stays in the pipe and the return volume is assigned to the drop basin pipe based on its flow area.
    No volume is lost from the storm drain system to the surface water and the volume stays in the pipe.
    The pressure head in the storm drain is correctly represented for this condition.
    For the second condition:
 
-   FLO-2D WSE < storm drain pressure head > rim elevation
+                                                FLO-2D WSE < storm drain pressure head > rim elevation
 
    When the storm drain pressure exceeds the surface water elevation, the water should overflow the inlet and join the surface water to be routed away
    from the inlet and there is no storage volume in the pipe system.
