@@ -712,42 +712,17 @@ To calculate the change in pressure head at each node that connects two or more 
    :label:
 
 
-   \frac{∂H}{∂t} = \frac {∑Q}{A_store+∑As}
+   \frac{∂H}{∂t} = \frac {∑Q}{A_{store}+∑As}
 
-where::
+where:
 
+h = flow depth (difference between the node head and the pipe invert elevation)
 
-.. _`h`:
+A_{store} = node surface area
 
-h:
+∑as = surface area contributed by the conduits connected to the node.
 
-=
-
-flow depth (difference between the node head and the pipe invert elevation)
-
-.. _`astore`:
-
-astore:
-
-=
-
-node surface area
-
-.. _`∑as`:
-
-∑as:
-
-=
-
-surface area contributed by the conduits connected to the node.
-
-.. _`∑q`:
-
-∑q:
-
-=
-
-net flow at Node J contributed by all connected conduits plus external inflows
+∑q = net flow at Node J contributed by all connected conduits plus external inflows
 
 
 .. image:: img/Chapter1/Chapte020.jpg
