@@ -774,32 +774,9 @@ where:
 
     :math:`\bar{V}` = conduit average flow velocity
 
+    V\ :sub: 'i' = local flow velocity at location i along the conduit
 
-| conduit average cross-sectional flow area
-
-.. _`r̅=`:
-
-r̅=:
-
-| average conduit hydraulic radius
-
-.. _`v̅=`:
-
-v̅=:
-
-| conduit average flow velocity
-
-.. _`v\:sub:`𝑖`=`:
-
-v\:sub:`𝑖`=:
-
-local flow velocity at location i along the conduit
-
-.. _`k\:sub:`𝑖`=`:
-
-k\:sub:`𝑖`=:
-
-local loss coefficient at location i along the conduit
+    K\ :sub: 'i' = local loss coefficient at location i along the conduit
 
 .. _`h\:sub:`1`=`:
 
