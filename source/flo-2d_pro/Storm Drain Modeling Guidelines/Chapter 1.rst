@@ -433,23 +433,23 @@ Volume Conversion - Square Floodplain Grid Element to Right Triangle at 2% Slope
 
 To calculate flow depth on the storm drain inlet:
 
-IF Volume < VOLCurb:
+    IF Volume < VOLCurb:
 
-   Volume = 0.5 x Curb depth x L\ :sub:`c` x L = 0.5 x Curb depth x Curb depth/0.02 x L
+       Volume = 0.5 x Curb depth x L\ :sub:`c` x L = 0.5 x Curb depth x Curb depth/0.02 x L
 
-   Curb depth = (Volume/(25.
-   x L))\ :sup:`0.5` Flow depth = 0.
+       Curb depth = (Volume/(25.
+       x L))\ :sup:`0.5` Flow depth = 0.
 
-If VOLCurb ≤ Volume:
+    If VOLCurb ≤ Volume:
 
-Volume - VOLCurb = L x L x Flow depth
+        Volume - VOLCurb = L x L x Flow depth
 
-Flow depth = (Volume - 0.01 L\ :sup:`3`)/ L\ :sup:`2`
+        Flow depth = (Volume - 0.01 L\ :sup:`3`)/ L\ :sup:`2`
 
-Curb depth = Curb height + Flow depth
+        Curb depth = Curb height + Flow depth
 
-   The curb depth is used to compute the discharge into the storm drain.
-   This inlet discharge volume is removed from the grid element and the model continues to route the remaining volume down the street.
+The curb depth is used to compute the discharge into the storm drain.
+This inlet discharge volume is removed from the grid element and the model continues to route the remaining volume down the street.
 
 Storm Drain Pressure Head Variation Dampening
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
