@@ -755,7 +755,7 @@ The ∆Q in each conduit corresponds to the different force terms expressed as:
 .. math::
    :label:
 
-   ∆Q_{inertial} = 2 \bar{V}(\bar{A} - A_t) + \bar{V}^2 (A2-A1) ∆t/L
+   ∆Q_{inertial} = 2\bar{V}(\bar{A} - A_t) + \bar{V}^2 (A2-A1) ∆t/L
 
 .. math::
    :label:
@@ -767,12 +767,15 @@ The ∆Q in each conduit corresponds to the different force terms expressed as:
 
    ∆Q_{losses} = \frac{∑_i K_i |V_i|∆t}{2L}
 
-where::
+where:
+
 \bar {A} = conduit average cross-sectional flow area
 
 \bar {R} = average conduit hydraulic radius
 
 \bar {V} = conduit average flow velocity
+
+
 
 
 
