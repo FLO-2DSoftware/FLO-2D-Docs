@@ -895,9 +895,11 @@ To implement the flow continuity condition, a perturbation equation form is enfo
 
     - Flow continuity condition is enforced Min the form of a perturbation equation:
 
-   ∂Q
+.. math::
+   :label:
 
-.. image:: img/Chapter1/Chapte021.jpg
+   Σ[Q + ∂Q ∂H ∆H] = 0
+
 
    where:
 
