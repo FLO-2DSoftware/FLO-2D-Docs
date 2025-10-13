@@ -16,70 +16,10 @@ Overview of Inlets and Outfalls
    The storm drain system is represented by links and nodes where the links are the closed conduits and nodes are junctions and outfalls as shown in
    Figure 21.
 
-**Figure**
+*Figure 21
+Surface and Closed Conduit Flow Exchange*
 
-**21**
-
-**.
-Surface and**
-
-**C**
-
-**losed**
-
-**C**
-
-**onduit**
-
-**F**
-
-**low**
-
-**Exchange**
-
-Inlet
-
-node
-
-Grid Element
-
-Closed Conduit System
-
-FLO
-
--
-
-2
-
-D Water Surface Elevation
-
-Closed Conduit Water Surface Elevation
-
-Runoff
-
-enters
-
-the
-
-closed conduit if ca-
-
-pacity is available
-
-R
-
-e-
-
-turn flow
-
-to the sur-
-
-face can occur
-
-when
-
-the capacity is ex-
-
-ceeded.
+.. image:: img\Chapter2\Chapte002.jpg
 
    Nodes represent several features of a storm drain system.
    One type of node is the inlet which constitutes an inflow point to the pipe system from the surface water.
