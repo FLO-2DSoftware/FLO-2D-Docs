@@ -242,21 +242,19 @@ models.
 The following response can be observed in the FLO-2D storm drain results:
 
     1. The head on the inlet continuously increases when the PH is less than the FLO-2D WSE even though the head exceeds the rim elevation.
-       Since the inlets are flooded, this results in higher storm drain pressure.
-       The volume above the rim is not released to the surface until the PH exceeds the FLO-2D WSE.
+    Since the inlets are flooded, this results in higher storm drain pressure.
+    The volume above the rim is not released to the surface until the PH exceeds the FLO-2D WSE.
 
     2. For underwater inlets, the higher-pressure head pushes more water through the downstream conduits at higher velocity.
 
     3. Higher velocities in downstream conduits may result in higher discharges in various locations in the storm drain with a possible corresponding
-       reduction in the return flow to the surface water for some inlets and manholes.
-       Maintaining continuity in the storm drain system, there may be sufficient head to force the flow to the outfalls instead of overflowing the inlets and
-       manholes.
+    reduction in the return flow to the surface water for some inlets and manholes.
+    Maintaining continuity in the storm drain system, there may be sufficient head to force the flow to the outfalls instead of overflowing the inlets and
+    manholes.
 
-..
-
-   Summarizing, higher upstream pressure head on inlets (higher FLO-2D WSE) may result in a change in the distribution between the return flow from a
-   popped manhole or inlet compared the downstream conduit flow through the outfall nodes.
-   This is a physical process that was not simulated in the original SWMM storm drain engine.
+Summarizing, higher upstream pressure head on inlets (higher FLO-2D WSE) may result in a change in the distribution between the return flow from a
+popped manhole or inlet compared the downstream conduit flow through the outfall nodes.
+This is a physical process that was not simulated in the original SWMM storm drain engine.
 
 Outfall Discharge
 ^^^^^^^^^^^^^^^^^
