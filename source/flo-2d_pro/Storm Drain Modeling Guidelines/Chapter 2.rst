@@ -351,7 +351,7 @@ Solution:
 .. math::
    :label:
 
-   \frac {45.4kg}{0.29m^2 * 1000kg/m^3 ≈ 0.5 ft (0.16
+   \frac {45.4kg}{0.29m^2 * 1000kg/m^3} ≈ 0.5 ft (0.16
 
 Table 4 presents some suggested surcharge depths.
 
