@@ -774,66 +774,27 @@ where:
 
     :math:`\bar{V}` = conduit average flow velocity
 
-    V\ :sub: `i` = local flow velocity at location i along the conduit
+    V\ :sub:`i` = local flow velocity at location i along the conduit
 
-    K\ :sub: `i` = local loss coefficient at location i along the conduit
+    K\ :sub:`i` = local loss coefficient at location i along the conduit
 
-.. _`h\:sub:`1`=`:
+    H\ :sub:`1` = head at upstream node of conduit
 
-h\:sub:`1`=:
+    H\ :sub:`2` = head at downstream node of conduit
 
-head at upstream node of conduit
+    A\ :sub:`1` = cross-sectional area at the upstream end of the conduit
 
-.. _`h\:sub:`2`=`:
+    A\ :sub:`2` = cross-sectional area at the downstream end of the conduit
 
-h\:sub:`2`=:
+    n = Manning roughness coefficient
 
-head at downstream node of conduit
+    L = conduit length
 
-.. _`a\:sub:`1`=`:
+    G = gravitational acceleration
 
-a\:sub:`1`=:
+    t = time
 
-cross-sectional area at the upstream end of the conduit
-
-.. _`a\:sub:`2`=`:
-
-a\:sub:`2`=:
-
-cross-sectional area at the downstream end of the conduit
-
-.. _`n=`:
-
-n=:
-
-Manning roughness coefficient
-
-.. _`l=`:
-
-l=:
-
-conduit length
-
-.. _`g=`:
-
-g=:
-
-gravitational acceleration
-
-.. _`t=`:
-
-t=:
-
-time
-
-.. _`t=`:
-
-t=:
-
-timestep
-
-
-..
+    ∆T = timestep
 
    The average area 𝐴̅, hydraulic radius 𝑅̅, and velocity 𝑉̅ are computed using the heads H1 and H2 at either end of the conduit from which corresponding
    flow depth values y1 and y2 can be derived.
