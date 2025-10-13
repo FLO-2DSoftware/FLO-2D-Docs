@@ -817,9 +817,7 @@ where ∆Vol is the net volume flowing through the node over the timestep. The n
 .. math::
    :label:
 
-   ∆Vol = 0.5 [(∑ Q) + (∑ Q) ]∆t
-
-t t+∆t
+   ∆Vol = 0.5 [(∑Q)_t + (∑Q)_{t+∆t}]∆t
 
    The conduit surface area (A\ :sub:`store`) depends on the flow condition within the conduit as follows:
 
