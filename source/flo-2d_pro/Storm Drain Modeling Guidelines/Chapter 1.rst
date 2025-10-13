@@ -821,35 +821,30 @@ where ∆Vol is the net volume flowing through the node over the timestep. The n
 
 The conduit surface area (A\ :sub:`store`) depends on the flow condition within the conduit as follows:
 
-1. Under normal conditions the pipe surface area equals half of the conduit length times the average of the top width at the end and mid points of the conduit.
+    1. Under normal conditions the pipe surface area equals half of the conduit length times the average of the top width at the end and mid points of the conduit.
+    These widths are evaluated before the next updated timestep using the flow depths y\ :`1`, y\ `2`, and y.
+    2. If the inflow of the conduit to a node is in free-fall (conduit invert elevation is above the water surface of the node), then the conduit does not
+    contribute to the node surface area.
+    3. For conduits with closed shapes such as circular pipes that are greater than 96 percent full, a constant top width equal to the width when 96 percent
+    full is used.
+    This prevents the head adjustment term H\ :sub:`t` from creating numerical instability as the top width and corresponding surface area approach zero
+    when the conduit reaches a full condition.
+    A minimum surface area for A\ :sub:`store` is assigned to all nodes, including junctions that normally have no storage volume, preventing H\ :sub:`t`
+    from becoming unbounded.
+    Under normal conditions A\ :sub:`store` equals half the conduit’s length times the average of the top width at
+    the end- and mid-points of the conduit.
+    These widths are evaluated before the next updated flow solution is found, using the flow depths y1, y2, and y discussed previously.
+    The default value for this minimum area is 12.57 ft\ :sup:`2` which corresponds to the area of a 4-foot diameter manhole.
 
-These widths are evaluated before the next updated timestep using the flow depths y1, y2, and y.
+To calculate the discharge Q and the head H, the equations are solved for each timestep using a method of successive approximations with under-
+relaxation (Rossman, 2005).
+The solution algorithm involves the following steps:
 
-2. If the inflow of the conduit to a node is in free-fall (conduit invert elevation is above the water surface of the node), then the conduit does not
+    1. A first estimate of discharge Q in each conduit at time *t +* Δ\ *t* is calculated by solving for Q\ :sub:`t+∆t` using the heads, areas, and
+       velocities determined at the current time *t*.
 
-contribute to the node surface area.
-
-3. For conduits with closed shapes such as circular pipes that are greater than 96 percent full, a constant top width equal to the width when 96 percent
-full is used.
-This prevents the head adjustment term H\ :sub:`t` from creating numerical instability as the top width and corresponding surface area approach zero
-           when the conduit reaches a full condition.
-           A minimum surface area for A\ :sub:`store` is assigned to all nodes, including junctions that normally have no storage volume, preventing H\ :sub:`t`
-           from becoming unbounded.
-           Under normal conditions A\ :sub:`store` equals half the conduit’s length times the average of the top width at
-
-        the end- and mid-points of the conduit.
-        These widths are evaluated before the next updated flow solution is found, using the flow depths y1, y2, and y discussed previously.
-        The default value for this minimum area is 12.57 ft\ :sup:`2` which corresponds to the area of a 4-foot diameter manhole.
-
-   To calculate the discharge Q and the head H, the equations are solved for each timestep using a method of successive approximations with under-
-   relaxation (Rossman, 2005).
-   The solution algorithm involves the following steps:
-
-1. A first estimate of discharge Q in each conduit at time *t +* Δ\ *t* is calculated by solving for Q\ :sub:`t+∆t` using the heads, areas, and
-   velocities determined at the current time *t*.
-
-2. A first estimate of the head (H) in each conduit at time *t +* Δ\ *t* is calculated by evaluating H\ :sub:`t+∆t` using the discharge Q just computed.
-   The results are denoted as:
+    2. A first estimate of the head (H) in each conduit at time *t +* Δ\ *t* is calculated by evaluating H\ :sub:`t+∆t` using the discharge Q just computed.
+       The results are denoted as:
 
 ..
 
