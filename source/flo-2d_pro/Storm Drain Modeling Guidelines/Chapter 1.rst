@@ -716,13 +716,13 @@ To calculate the change in pressure head at each node that connects two or more 
 
 where:
 
-h = flow depth (difference between the node head and the pipe invert elevation)
+    h = flow depth (difference between the node head and the pipe invert elevation)
 
-A\ :sub:`store` = node surface area
+    A\ :sub:`store` = node surface area
 
-∑As = surface area contributed by the conduits connected to the node.
+    ∑As = surface area contributed by the conduits connected to the node.
 
-∑Q = net flow at Node J contributed by all connected conduits plus external inflows
+    ∑Q = net flow at Node J contributed by all connected conduits plus external inflows
 
 
 .. image:: img/Chapter1/Chapte020.jpg
@@ -733,20 +733,20 @@ Node-Link Representation of a Drainage System (Roesner et al, 1992)*
 Solution Algorithm – How the Model Works
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   The differential form of the continuity and momentum equations for the storm drain component are solved by converting them into an explicit set of
-   finite difference formulas that compute the flow Q in each conduit and head at each node for time T + t.
-   Explicit schemes for these types of solutions are limited to minor steps by strict numerical stability criteria.
-   The following discussion was sourced from the EPA SWMM documentation (Rossman et al, 2005).
+The differential form of the continuity and momentum equations for the storm drain component are solved by converting them into an explicit set of
+finite difference formulas that compute the flow Q in each conduit and head at each node for time T + t.
+Explicit schemes for these types of solutions are limited to minor steps by strict numerical stability criteria.
+The following discussion was sourced from the EPA SWMM documentation (Rossman et al, 2005).
 
-   The flow equation solved for each conduit is given by:
+The flow equation solved for each conduit is given by:
 
-   Qt + ∆Qgravity + ∆Qinertial
+.. math::
+   :label:
 
-   Qt+∆t =
+   Q_{t+∆t} = \frac {Q_t + Q∆_{gravity} + Q∆_{inertial}}{1+Q_{friction}+∆Q_{losses}}
 
-   1 + ∆Qfriction + ∆Qlosses
 
-   The ∆𝑄 in each conduit corresponds to the different force terms expressed as:
+The ∆𝑄 in each conduit corresponds to the different force terms expressed as:
 
    ∆Q\ :sub:`gravity` = gA̅(H\ :sub:`1` − H\ :sub:`2`) ∆t⁄L
 
