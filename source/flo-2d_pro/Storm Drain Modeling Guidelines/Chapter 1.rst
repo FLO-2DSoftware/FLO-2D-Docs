@@ -600,48 +600,58 @@ a network of pipes (Rossman, 2006).
 
 Continuity Equation:
 
+.. math::
+    :label:
+
+    \frac{∂A}{∂t} + \frac{∂Q}{∂x} = 0
+
 Momentum equation for x-direction:
+.. math::
+   :label:
 
-|Chapte019| Q ∂(Q\ :sup:`2`\ ⁄A) ∂
-
-:sub:`∂` gASf + gAh\ :sub:`L` = 0
+   \frac{∂Q}{∂t} + \frac{\frac{∂Q^2}{A}}{∂x} + gA \frac{∂H}{∂x} + gAS_f + gAh_L = 0
 
 where:
 
-x = distance along the conduit t = computational timestep A = cross sectional area of the pipe
+    x = distance along the conduit
 
-Q = pipe discharge
+    t = computational timestep
 
-H = hydraulic head of water in the conduit (sum of WSE plus pressure head)
+    A = cross sectional area of the pipe
 
-S\ :sub:`f` = friction slope or head loss per unit length of pipe h\ :sub:`L` = local energy loss per unit length of pipe g = gravitational
-acceleration
+    Q = pipe discharge
 
-   These equations are solved for the discharge Q and head H in each pipe by setting the initial conditions for H and Q at the beginning of the
-   simulation as well as setting the boundary conditions at the beginning and end of each conduit for all timesteps.
-   For each pipe, the geometry (flow area A) is known as a function of the flow depth y and head H.
-   Unsteady flows are routed through a network of closed conduits.
-   Unsteady flow with backwater effects, flow reversals, pressurized flow with entrance/exit energy losses and other conditions can be simulated
-   (Rossman, 2005).
-   The momentum equation inertial terms are reduced as flow comes closer to being critical and are ignored when the flow is supercritical based on the
-   following options:
+    H = hydraulic head of water in the conduit (sum of WSE plus pressure head)
 
-- Damping option (KEEP) - inertial terms of the St.
-  Venant equation solution are included.
+    S\ :sub:`f` = friction slope or head loss per unit length of pipe
 
-- Ignore option (IGNORE) - inertial terms are ignored.
+    h\ :sub:`L` = local energy loss per unit length of pipe
 
-- Dampen option (DAMPEN) - implements Local Partial Inertial modification (LPI).
+    g = gravitationalacceleration
 
-..
+These equations are solved for the discharge Q and head H in each pipe by setting the initial conditions for H and Q at the beginning of the
+simulation as well as setting the boundary conditions at the beginning and end of each conduit for all timesteps.
+For each pipe, the geometry (flow area A) is known as a function of the flow depth y and head H.
+Unsteady flows are routed through a network of closed conduits.
+Unsteady flow with backwater effects, flow reversals, pressurized flow with entrance/exit energy losses and other conditions can be simulated
+(Rossman, 2005).
+The momentum equation inertial terms are reduced as flow comes closer to being critical and are ignored when the flow is supercritical based on the
+following options:
 
-   For the FLO-2D model the LPI damping option is always applied, this is hardwired in the FLO-2D Storm Drain model.
-   The simulation of unsteady flows with subcritical/supercritical mixed flow regimes is accomplished by neglecting varying portions of the inertial
-   terms in the unsteady momentum equations according to the local Froude number.
-   A weighting factor σ which ranges between 0 and 1 is utilized.
-   This parameter damps out the contribution of the inertial terms as the Froude number Fr increases and approaches 1.0 and ignores them completely when
-   the Froude number is greater than 1 (supercritical flow).
-   The weighting factor 𝜎 varies as:
+    - Damping option (KEEP) - inertial terms of the St.
+      Venant equation solution are included.
+
+    - Ignore option (IGNORE) - inertial terms are ignored.
+
+    - Dampen option (DAMPEN) - implements Local Partial Inertial modification (LPI).
+
+For the FLO-2D model the LPI damping option is always applied, this is hardwired in the FLO-2D Storm Drain model.
+The simulation of unsteady flows with subcritical/supercritical mixed flow regimes is accomplished by neglecting varying portions of the inertial
+terms in the unsteady momentum equations according to the local Froude number.
+A weighting factor σ which ranges between 0 and 1 is utilized.
+This parameter damps out the contribution of the inertial terms as the Froude number Fr increases and approaches 1.0 and ignores them completely when
+the Froude number is greater than 1 (supercritical flow).
+The weighting factor 𝜎 varies as:
 
    σ = 1.0 𝑓𝑜𝑟 𝐹𝑟 < 0.5
 
