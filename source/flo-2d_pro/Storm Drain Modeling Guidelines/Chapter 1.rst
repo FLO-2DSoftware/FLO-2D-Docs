@@ -916,7 +916,7 @@ where:
 .. math::
    :label:
 
-   \frac {∂H}{∂Q} = \frac {−g :math:`\bar{A} ∆t⁄L}{∂H 1 + ∆Q_{friction} + ∆Q_{losses}}
+   \frac {∂H}{∂Q} = \frac {−g \bar{A} ∆t⁄L}{∂H 1 + ∆Q_{friction} + ∆Q_{losses}}
 
 
 \frac {∂H}{∂Q} has a negative sign because when evaluating ∑𝑄 because the flow directed out of a node is
