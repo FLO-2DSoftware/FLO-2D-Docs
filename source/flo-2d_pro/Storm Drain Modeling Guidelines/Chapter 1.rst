@@ -259,70 +259,70 @@ This is a physical process that was not simulated in the original SWMM storm dra
 Outfall Discharge
 ^^^^^^^^^^^^^^^^^
 
-   The FLO-2D plugin will create the SWMMOUTF.DAT containing the outfall nodes that are defined in the SWMM.inp file.
-   The outfall discharge to the surface water can be turned ‘on’ = 1, 2 or ‘off’ = 0 in QGIS.
+The FLO-2D plugin will create the SWMMOUTF.DAT containing the outfall nodes that are defined in the SWMM.inp file.
+The outfall discharge to the surface water can be turned ‘on’ = 1, 2 or ‘off’ = 0 in QGIS.
 
-   On = 1 – Setting the switch to 1 will allow discharge to the grid system.
+On = 1 – Setting the switch to 1 will allow discharge to the grid system.
 
-   On = 2 – Setting the switch to 2 will allow the discharge to the grid system but ignore the underground depth to the outfall node.
-   This switch can be used when the outfall is underground or bubble-up and the discharge is causing numerical instability.
+On = 2 – Setting the switch to 2 will allow the discharge to the grid system but ignore the underground depth to the outfall node.
+This switch can be used when the outfall is underground or bubble-up and the discharge is causing numerical instability.
 
-   Off = 0 – Setting the outfall switch to ‘off’ acts like a sink and water is not exchanged with the grid system.
-   This switch is used along boundaries.
+Off = 0 – Setting the outfall switch to ‘off’ acts like a sink and water is not exchanged with the grid system.
+This switch is used along boundaries.
 
-   The outfall nodes listed in the SWMMOUTF.DAT file should be in the same order as they appear in the SWMM.inp file.
-   When the outfall order is modified in the SWMM.inp, the
+The outfall nodes listed in the SWMMOUTF.DAT file should be in the same order as they appear in the SWMM.inp file.
+When the outfall order is modified in the SWMM.inp, the
 
-   SWMMOUTF.DAT should be modified too.
-   The FLO-2D plugin should automate this but it is a good check to perform.
+SWMMOUTF.DAT should be modified too.
+The FLO-2D plugin should automate this but it is a good check to perform.
 
-   If the outfall switch is ‘on’ and equal to 1 or 2, then a full interaction between the surface grid cell and the outfall feature is calculated, FLO-2D
-   water surface elevation and storm drain pressure head are compared, and the outfall will discharge to the surface water until the FLO-2D water surface
-   elevation is equal to or greater than the pressure head.
-   Potential backflow into the outfall pipe depends on the comparison of the water surface elevation and the outfall pressure head, and on the assignment
-   of a Tide Gate structure in the SWMM.inp file.
-   Outfall discharge from storm drain to the FLO-2D surface water is reported to the SWMMOUTFIN.OUT file.
-   This file lists the grid element (or channel element if applicable) in the first line followed by the hydrograph with time and discharge pairs.
+If the outfall switch is ‘on’ and equal to 1 or 2, then a full interaction between the surface grid cell and the outfall feature is calculated, FLO-2D
+water surface elevation and storm drain pressure head are compared, and the outfall will discharge to the surface water until the FLO-2D water surface
+elevation is equal to or greater than the pressure head.
+Potential backflow into the outfall pipe depends on the comparison of the water surface elevation and the outfall pressure head, and on the assignment
+of a Tide Gate structure in the SWMM.inp file.
+Outfall discharge from storm drain to the FLO-2D surface water is reported to the SWMMOUTFIN.OUT file.
+This file lists the grid element (or channel element if applicable) in the first line followed by the hydrograph with time and discharge pairs.
 
-   The invert elevation of outfalls can be less than the floodplain, channel, or street elevations.
-   This may occur for a ponded surface water condition that is assigned as a ground elevation because it would not contribute to downstream flooding.
-   An outfall invert underground (or underwater) is imposed for this condition (Figure 8).
-   An artificial head equal to the ground elevation is assigned to the outfall node (for the entire simulation) if the outfall discharge to the surface
-   water is turned ‘on’ and set to 1.
-   This artificial head causes the pipe to fill, and the artificial volume is accounted for in the storm drain model.
-   For underground outfalls, a switch equal to 2 can be used, where the artificial head equal to the ground elevation is not assigned to the outfall node
-   and only the FLO-2D WSE is assigned for the entire simulation.
-   When the model runs, the inflow may be added to either the outfall grid element or the upstream storm drain conduit network and the flow can go either
-   in or out of the outfall pipe based on the pressure head.
+The invert elevation of outfalls can be less than the floodplain, channel, or street elevations.
+This may occur for a ponded surface water condition that is assigned as a ground elevation because it would not contribute to downstream flooding.
+An outfall invert underground (or underwater) is imposed for this condition (Figure 8).
+An artificial head equal to the ground elevation is assigned to the outfall node (for the entire simulation) if the outfall discharge to the surface
+water is turned ‘on’ and set to 1.
+This artificial head causes the pipe to fill, and the artificial volume is accounted for in the storm drain model.
+For underground outfalls, a switch equal to 2 can be used, where the artificial head equal to the ground elevation is not assigned to the outfall node
+and only the FLO-2D WSE is assigned for the entire simulation.
+When the model runs, the inflow may be added to either the outfall grid element or the upstream storm drain conduit network and the flow can go either
+in or out of the outfall pipe based on the pressure head.
 
 .. image:: img/Chapter1/Chapte008.jpg
 
 *Figure 8.
 Initial Condition for an Underground (Underwater) Storm Drain Outfall*
 
-   Typically, an outfall has an invert elevation equal to or greater than the floodplain, channel, or street elevations.
-   To account for volume conservation, the storm drain outflow that represents inflow volume to a FLO-2D channel is reported in the CHVOLUME.OUT file.
-   Water will flow in or out of the outfall pipe based on the head comparison.
-   Water can enter the storm drain when the water surface elevation is greater than the invert, but it can also be evacuated from the storm drain if the
-   pressure head is above the water surface elevation.
+Typically, an outfall has an invert elevation equal to or greater than the floodplain, channel, or street elevations.
+To account for volume conservation, the storm drain outflow that represents inflow volume to a FLO-2D channel is reported in the CHVOLUME.OUT file.
+Water will flow in or out of the outfall pipe based on the head comparison.
+Water can enter the storm drain when the water surface elevation is greater than the invert, but it can also be evacuated from the storm drain if the
+pressure head is above the water surface elevation.
 
 Flapgate Option
 ^^^^^^^^^^^^^^^
 
-   A storm drain inlet can be simulated as an outlet with a flapgate to stop the surface water from entering the storm drain system (Type 4 inlet).
-   The flapgate switch in SWMMFLO.DAT has the following settings:
+A storm drain inlet can be simulated as an outlet with a flapgate to stop the surface water from entering the storm drain system (Type 4 inlet).
+The flapgate switch in SWMMFLO.DAT has the following settings:
 
-Feature = 0, No flapgate – horizontal inlet opening
+    Feature = 0, No flapgate – horizontal inlet opening
 
-Feature = 1, No flapgate – vertical inlet opening, see Figure 9.
+    Feature = 1, No flapgate – vertical inlet opening, see Figure 9.
 
-Feature = 2, Flapgate ‘on’ for simulated outlet
+    Feature = 2, Flapgate ‘on’ for simulated outlet
 
-Feature = 3, Turn off the reduction of the discharge in the inlet when drop box capacity is exceeded
+    Feature = 3, Turn off the reduction of the discharge in the inlet when drop box capacity is exceeded
 
-   Sometimes nodes seem like an outfall but need to interact with the storm drain system differently.
-   These can be set up as inlets that will discharge flow from the storm drain to the surface water.
-   Feature equal to 2 set up a flap gate for a simulated outlet.
+Sometimes nodes seem like an outfall but need to interact with the storm drain system differently.
+These can be set up as inlets that will discharge flow from the storm drain to the surface water.
+Feature equal to 2 set up a flap gate for a simulated outlet.
 
 .. image:: img/Chapter1/Chapte009.jpg
 
@@ -332,17 +332,17 @@ Vertical Inlet Opening with No Flap gate.*
 Manhole
 ^^^^^^^
 
-   Manholes function as covered inlets.
-   The manhole cover lift-off (popping) is simulated by assigning the surcharge depth in the SWMMFLO.DAT file (Type 5 inlet).
-   When the cover is in place there is no flow exchange.
-   Discharge exchange between FLO-2D and the manhole junction box is calculated only after the manhole cover has popped.
-   To pop the cover, the storm drain pressure plus surcharge depth must exceed the surface water elevation.
-   Once the cover is off, the surcharge depth is set to 0, the cover stays off and inlet discharge or return flow can be calculated.
-   Flooding occurs at manholes when the pressure head at node is above manhole invert + maximum surface depth + surcharge depth.
+Manholes function as covered inlets.
+The manhole cover lift-off (popping) is simulated by assigning the surcharge depth in the SWMMFLO.DAT file (Type 5 inlet).
+When the cover is in place there is no flow exchange.
+Discharge exchange between FLO-2D and the manhole junction box is calculated only after the manhole cover has popped.
+To pop the cover, the storm drain pressure plus surcharge depth must exceed the surface water elevation.
+Once the cover is off, the surcharge depth is set to 0, the cover stays off and inlet discharge or return flow can be calculated.
+Flooding occurs at manholes when the pressure head at node is above manhole invert + maximum surface depth + surcharge depth.
 
-   SDManholePopUp.OUT and ManholePop.OUT are created when at least one manhole pops in the storm drain system.
-   These files contain the same information, SDManholePopUp.OUT in a narrative format and ManholePop.OUT in columns for plotting.
-   The following information is reported to the files:
+SDManholePopUp.OUT and ManholePop.OUT are created when at least one manhole pops in the storm drain system.
+These files contain the same information, SDManholePopUp.OUT in a narrative format and ManholePop.OUT in columns for plotting.
+The following information is reported to the files:
 
     - Manhole ID.
 
@@ -352,9 +352,7 @@ Manhole
 
     - Rim elevation + Surcharge Elevation • FLO-2D WSE.
 
-..
-
-   The following is an example of the information that is reported to the SDManholePopUp.OUT output file:
+The following is an example of the information that is reported to the SDManholePopUp.OUT output file:
 
 MANHOLE: I5-37-27-28
 
