@@ -755,7 +755,7 @@ The ∆Q in each conduit corresponds to the different force terms expressed as:
 .. math:
    :label:
 
-   ∆Q_{inertial} = 2 \bar{V}(\ bar{A} - A_t
+   ∆Q_{inertial} = 2 \bar{V}(\ bar{A} - A_t) + \ bar{V}^2 (A2-A1) ∆t/L
 
    ∆Q\ :sub:`gravity` = gA̅(H\ :sub:`1` − H\ :sub:`2`) ∆t⁄L
 
