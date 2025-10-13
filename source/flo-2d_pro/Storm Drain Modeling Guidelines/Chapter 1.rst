@@ -609,7 +609,7 @@ Momentum equation for x-direction:
 .. math::
    :label:
 
-   \frac{∂Q}{∂t} + \frac{∂}{∂x}\left(\frac{Q^2}{A}\right) + gA \frac{∂H}{∂x} + gAS_f + gAh_L = 0
+   \frac{∂Q}{∂t} + gA \frac{∂H}{∂x} + gAS_f + gAh_L = 0
 
 where:
 
