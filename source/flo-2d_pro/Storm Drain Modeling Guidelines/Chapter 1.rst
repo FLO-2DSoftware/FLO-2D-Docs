@@ -980,50 +980,48 @@ Using orifice flow accounts for the gutter velocity that would reduce the weir f
 Surface Water – Storm Drain Model Integration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   The FLO-2D model moves around blocks of water on a discretized grid system.
-   Grid elements assigned as inlets/outfalls connect the surface layer with the closed conduit storm drain system.
-   A comparison of the grid element water surface elevation with the pressure head from the closed conduit system node in each cell determines the
-   direction of the flow exchanged between the two systems.
-   The models are fully integrated on a computational timestep basis.
-   The advantages of the FLO-2D storm drain component over the original SWMM model are:
+The FLO-2D model moves around blocks of water on a discretized grid system.
+Grid elements assigned as inlets/outfalls connect the surface layer with the closed conduit storm drain system.
+A comparison of the grid element water surface elevation with the pressure head from the closed conduit system node in each cell determines the
+direction of the flow exchanged between the two systems.
+The models are fully integrated on a computational timestep basis.
+The advantages of the FLO-2D storm drain component over the original SWMM model are:
 
-- Complete surface water hydrology and hydraulics including rainfall runoff, infiltration, and flood routing in channels, streets or unconfined overland
-  flow are simulated by FLO2D surface water model.
+    - Complete surface water hydrology and hydraulics including rainfall runoff, infiltration, and flood routing in channels, streets or unconfined overland
+      flow are simulated by FLO2D surface water model.
 
-- The storm drain component solves the pipe hydraulics and flow routing but integrates the inlet/outlets and outfalls with the surface water at each
-  computational timestep.
+    - The storm drain component solves the pipe hydraulics and flow routing but integrates the inlet/outlets and outfalls with the surface water at each
+      computational timestep.
 
-- FLO-2D computes the storm drain inlet discharge based on the water surface head and the inlet geometry.
-  The original SWMM model did not consider inlet control.
+    - FLO-2D computes the storm drain inlet discharge based on the water surface head and the inlet geometry.
+      The original SWMM model did not consider inlet control.
 
-- Only those junctions set up as inlets/outfalls in the storm drain model are recognized for system exchange.
-  Pipe junctions without an inlet will not receive a surface runoff discharge.
+    - Only those junctions set up as inlets/outfalls in the storm drain model are recognized for system exchange.
+      Pipe junctions without an inlet will not receive a surface runoff discharge.
 
-- The inlet locations digitized in storm drain data files (\*.INP) are automatically read by the FLO-2D QGIS to establish the storm drain inlet
-  connections.
+    - The inlet locations digitized in storm drain data files (\*.INP) are automatically read by the FLO-2D QGIS to establish the storm drain inlet
+      connections.
 
-- Inlets can become outlets if the storm drain pressure head exceeds the grid element water surface elevation at a given node.
-  The potential return flow to the surface water is based on the water surface elevation not the rim elevation as in the original SWMM model.
+    - Inlets can become outlets if the storm drain pressure head exceeds the grid element water surface elevation at a given node.
+      The potential return flow to the surface water is based on the water surface elevation not the rim elevation as in the original SWMM model.
 
-- Manhole covers can pop and allow return flow based on a surcharge depth representing the manhole cover weight.
-  Once popped the manhole surcharge is turned ‘off’ and the manhole functions as an inlet/outlet for the rest of the simulation.
-  This is an improvement on the original SWMM model.
+    - Manhole covers can pop and allow return flow based on a surcharge depth representing the manhole cover weight.
+      Once popped the manhole surcharge is turned ‘off’ and the manhole functions as an inlet/outlet for the rest of the simulation.
+      This is an improvement on the original SWMM model.
 
-- For outfall nodes in the closed conduit system network, pipe discharge can be removed from the storm drain system or returned to the surface water as
-  a user defined option.
-  The outfall can function as an inlet to the storm drain system based on the surface water elevation.
-  A tide gate can be used to prevent inflow to the outfall.
-  The integration of the outfall boundary conditions with surface water represents an enhancement over the original SWMM model.
+    - For outfall nodes in the closed conduit system network, pipe discharge can be removed from the storm drain system or returned to the surface water as
+      a user defined option.
+      The outfall can function as an inlet to the storm drain system based on the surface water elevation.
+      A tide gate can be used to prevent inflow to the outfall.
+      The integration of the outfall boundary conditions with surface water represents an enhancement over the original SWMM model.
 
-..
-
-   To integrate the surface water and storm drain models, the first task is to develop a running FLO-2D surface water flood model.
-   Then the storm drain model can be built with the assigned inlets/manholes/outfalls for surface water exchange.
+To integrate the surface water and storm drain models, the first task is to develop a running FLO-2D surface water flood model.
+Then the storm drain model can be built with the assigned inlets/manholes/outfalls for surface water exchange.
 
 Storm Drain Model Features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Storm drain model data and functions to enable the flow exchange with the FLO-2D model.
+Storm drain model data and functions to enable the flow exchange with the FLO-2D model.
 
 Rain gage
 '''''''''
@@ -1035,180 +1033,180 @@ The model is backward compatible and will run simulations that have a rain gage.
 Subcatchment
 ''''''''''''
 
-   Subcatchments are not used with the FLO-2D system and are not required.
-   The watersheds are represented by the FLO-2D grid elements.
-   Junctions with an ID that starts with ‘I’ will identify the storm drain inlets and collect water from the surface model.
-   The model is backward compatible and the current version of the FLO-2D storm drain model will run simulations that have sub catchments.
+Subcatchments are not used with the FLO-2D system and are not required.
+The watersheds are represented by the FLO-2D grid elements.
+Junctions with an ID that starts with ‘I’ will identify the storm drain inlets and collect water from the surface model.
+The model is backward compatible and the current version of the FLO-2D storm drain model will run simulations that have sub catchments.
 
 Junctions
 '''''''''
 
-   Junctions function as pipe connection nodes.
-   A junction is needed when there is a slope of geometry change in a pipeline.
-   FLO-2D can only exchange flow with those junctions defined as inlets (see Inlets).
-   The junction will not receive FLO-2D surface inflow if it serves as a simple pipe connection.
-   The required input data is:
+Junctions function as pipe connection nodes.
+A junction is needed when there is a slope of geometry change in a pipeline.
+FLO-2D can only exchange flow with those junctions defined as inlets (see Inlets).
+The junction will not receive FLO-2D surface inflow if it serves as a simple pipe connection.
+The required input data is:
 
-- Name
+    - Name
 
-- X and Y Coordinates
+    - X and Y Coordinates
 
-- Invert elevation
+    - Invert elevation
 
-- Maximum depth (invert to rim)
+    - Maximum depth (invert to rim)
 
-- Initial depth (optional)
+    - Initial depth (optional)
 
-- Surcharge Depth (optional)
+    - Surcharge Depth (optional)
 
 Inlets
 ''''''
 
-   Storm drain inlets will exchange flow between the FLO-2D surface water and the storm drain network.
-   An inlet is a junction that captures surface inflow and must be connected to the grid system.
-   The node ID must start with “I” or “i” to be recognized as an inlet.
-   FLO-2D computes surface water inflow to the inlet using inlet geometry and water surface head.
-   Inlets can be assigned to a FLO-2D floodplain, channel, or street grid cell.
-   Manholes are covered inlets that capture flow from the surface when the cover is popped.
-   The manhole ID needs to start with an “I” or “i”.
-   The required inlet data is:
+Storm drain inlets will exchange flow between the FLO-2D surface water and the storm drain network.
+An inlet is a junction that captures surface inflow and must be connected to the grid system.
+The node ID must start with “I” or “i” to be recognized as an inlet.
+FLO-2D computes surface water inflow to the inlet using inlet geometry and water surface head.
+Inlets can be assigned to a FLO-2D floodplain, channel, or street grid cell.
+Manholes are covered inlets that capture flow from the surface when the cover is popped.
+The manhole ID needs to start with an “I” or “i”.
+The required inlet data is:
 
-- Name: Starts with an “I” or “i” to be identified as Inlets
+    - Name: Starts with an “I” or “i” to be identified as Inlets
 
-- X and Y Coordinates
+    - X and Y Coordinates
 
-- Invert elevation
+    - Invert elevation
 
-- Maximum depth (invert to rim)
+    - Maximum depth (invert to rim)
 
-- Initial depth (optional)
+    - Initial depth (optional)
 
 Conduits
 ''''''''
 
-   Conduits convey flow through the storm drain system.
-   Slope is calculated internally based on inlet and outlet node invert elevation.
-   Required input data is:
+Conduits convey flow through the storm drain system.
+Slope is calculated internally based on inlet and outlet node invert elevation.
+Required input data is:
 
-- Conduit name
+    - Conduit name
 
-- Name of connecting feature inlet and outlet
+    - Name of connecting feature inlet and outlet
 
-- Cross-sectional Geometry
+    - Cross-sectional Geometry
 
-- Length - between nodes
+    - Length - between nodes
 
-- Pipe roughness – Manning’s n-value
+    - Pipe roughness – Manning’s n-value
 
 Outfall
 '''''''
 
-   An outfall node is a terminal node of a pipeline with potential boundary conditions.
-   A free outfall can discharge from the storm drain system to a FLO-2D floodplain element, channel, or street cell.
-   An outfall discharging to a channel element must be connected to the channel left bank element.
-   Any other outfall (that is not free) will simply discharge out of the drainage system and off the computational domain.
-   Only one conduit can be connected to an outfall node and there must be at least one outfall node in a pipeline.
-   The required input data is:
+An outfall node is a terminal node of a pipeline with potential boundary conditions.
+A free outfall can discharge from the storm drain system to a FLO-2D floodplain element, channel, or street cell.
+An outfall discharging to a channel element must be connected to the channel left bank element.
+Any other outfall (that is not free) will simply discharge out of the drainage system and off the computational domain.
+Only one conduit can be connected to an outfall node and there must be at least one outfall node in a pipeline.
+The required input data is:
 
-        - Name
+    - Name
 
-        - X and Y Coordinates
+    - X and Y Coordinates
 
-        - Invert elevation
+    - Invert elevation
 
-        - Tide Gate (optional) can be assigned to prevent backflow into the pipes.
+    - Tide Gate (optional) can be assigned to prevent backflow into the pipes.
 
-        - Boundary Condition Types:
+    - Boundary Condition Types:
 
-       - Allow Discharge is ‘off’ - Free Outfalls can discharge the flow from the storm drain system.
-            Flow will not be added to the surface.
+        - Allow Discharge is ‘off’ - Free Outfalls can discharge the flow from the storm drain system.
+          Flow will not be added to the surface.
 
-  - Allow Discharge is ‘on’ - The FLO-2D water surface elevation is imposed on the outfall node.
-    Storm drain water will return to the surface model.
-    This is the only outfall type that allows flow exchange with the surface water.
-    Pressure head is compared to the water surface elevation to define the flow direction.
+        - Allow Discharge is ‘on’ - The FLO-2D water surface elevation is imposed on the outfall node.
+          Storm drain water will return to the surface model.
+          This is the only outfall type that allows flow exchange with the surface water.
+          Pressure head is compared to the water surface elevation to define the flow direction.
 
-  - Normal, Fixed, Tidal and Time Series Outfalls discharges flow off the storm drain system with a boundary condition set up in the SWMM.INP file.
+        - Normal, Fixed, Tidal and Time Series Outfalls discharges flow off the storm drain system with a boundary condition set up in the SWMM.INP file.
 
 Links
 '''''
 
-   Links are defined as features that connect nodes in the storm drain system.
-   The following components are defined as links:
+Links are defined as features that connect nodes in the storm drain system.
+The following components are defined as links:
 
-- Conduits
+    - Conduits
 
-- Pumps
+    - Pumps
 
-- Orifices
+    - Orifices
 
-- Weirs
+    - Weirs
 
-- Outlets
+    - Outlets
 
 Pumps
 '''''
 
-   Pumps are links used to lift water to higher elevations.
-   A pair of nodes can be connected using links as pumps.
-   The flow through a pump is computed as a function of the heads at their end nodes.
-   Pumps can be simulated in FLO-2D as part of the storm drain system or as a hydraulic structure in the surface model.
-   Pumps for the storm drain system can be set up in the FLO-2D QGIS plugin.
-   They must be set up based on the following considerations:
+Pumps are links used to lift water to higher elevations.
+A pair of nodes can be connected using links as pumps.
+The flow through a pump is computed as a function of the heads at their end nodes.
+Pumps can be simulated in FLO-2D as part of the storm drain system or as a hydraulic structure in the surface model.
+Pumps for the storm drain system can be set up in the FLO-2D QGIS plugin.
+They must be set up based on the following considerations:
 
-- The pump curve can specify flow as a function of inlet node volume, inlet node depth, or the head difference between the inlet and outlet nodes.
+    - The pump curve can specify flow as a function of inlet node volume, inlet node depth, or the head difference between the inlet and outlet nodes.
 
-- The pump discharge is limited to the inlet inflow during a given timestep.
-  This will eliminate the possibility of the pump curve being sufficient to drain the inlet node during the time step.
+    - The pump discharge is limited to the inlet inflow during a given timestep.
+      This will eliminate the possibility of the pump curve being sufficient to drain the inlet node during the time step.
 
-- An ideal transfer pump can be specified where the flow rate equals the inflow rate at its inlet node and no curve is required.
-  In this case, the pump must be the only outflow link from its inlet node.
+    - An ideal transfer pump can be specified where the flow rate equals the inflow rate at its inlet node and no curve is required.
+      In this case, the pump must be the only outflow link from its inlet node.
 
-..
+The parameters for a pump in the storm drain system are:
 
-   The parameters for a pump in the storm drain system are:
+    - Names of the inlet and outlet nodes
+    - Pump curve name
+    - Pump Type:
 
-- Names of the inlet and outlet nodes • Pump curve name • Pump Type:
+        - Type1: series of constant flow rates that apply over a corresponding series of volume intervals at the pump’s inlet node.
 
-  - Type1: series of constant flow rates that apply over a corresponding series of volume intervals at the pump’s inlet node.
+        - Type2: like type1 but the fixed flow rates vary over a set of depth intervals at the pump’s inlet node.
 
-  - Type2: like type1 but the fixed flow rates vary over a set of depth intervals at the pump’s inlet node.
+        - Type3: flow is a function of the head difference between the inlet and outlet nodes.
 
-  - Type3: flow is a function of the head difference between the inlet and outlet nodes.
+        - Type 4: variable speed in-line pump where flow varies continuously with inlet node depth.
 
-  - Type 4: variable speed in-line pump where flow varies continuously with inlet node depth.
+    - Initial status ‘on’ or ‘off’ status
 
-- Initial status ‘on’ or ‘off’ status
-
-- Startup and shutoff depths
+    - Startup and shutoff depths
 
 Flow Regulators
 '''''''''''''''
 
-   Flow regulators are devices used to divert flow and can be applied to control releases from storage facilities, prevent surcharging or convey flow to
-   interceptors.
-   They are represented as a link connecting two nodes.
-   The flow regulator discharge is computed as a function of the head at the end nodes.
-   Most of the flow regulators devices control the surface flow, therefore they have been simulated using the surface features, example: a ponded area
-   with a weir structure that drains to the storm drain system.
-   The storm drain model can simulate a regulator as a storage unit with a weir.
-   The ponded area belongs to the surface layer; therefore the correct method is to simulate this using a depressed storage area in the surface grid with
-   a Type 4 inlet connecting the storage facility with the storm drain system.
+Flow regulators are devices used to divert flow and can be applied to control releases from storage facilities, prevent surcharging or convey flow to
+interceptors.
+They are represented as a link connecting two nodes.
+The flow regulator discharge is computed as a function of the head at the end nodes.
+Most of the flow regulators devices control the surface flow, therefore they have been simulated using the surface features, example: a ponded area
+with a weir structure that drains to the storm drain system.
+The storm drain model can simulate a regulator as a storage unit with a weir.
+The ponded area belongs to the surface layer; therefore the correct method is to simulate this using a depressed storage area in the surface grid with
+a Type 4 inlet connecting the storage facility with the storm drain system.
 
-   There are specific configurations where the flow regulators control the storm drain flow.
-   For these cases, the flow regulator feature must be simulated in the storm drain layer.
-   An example is a large catch basin with an opening in the inlet wall (orifice).
-   This component belongs to the storm drain layer and it needs to be modeled as a storage unit with an orifice.
+There are specific configurations where the flow regulators control the storm drain flow.
+For these cases, the flow regulator feature must be simulated in the storm drain layer.
+An example is a large catch basin with an opening in the inlet wall (orifice).
+This component belongs to the storm drain layer and it needs to be modeled as a storage unit with an orifice.
 
 Orifices
 ''''''''
 
-   Orifices are used to model outlet and diversion structures.
-   These outlet orifices should be distinguished from the inlet orifice flow and are typically openings in the wall of a manhole, storage facility, or
-   control gate.
-   They can be either circular or rectangular in shape and can be located either at the bottom or along the side of the upstream node.
-   They can have a flap gate to prevent backflow.
-   Orifice flow is based on the following criteria:
+Orifices are used to model outlet and diversion structures.
+These outlet orifices should be distinguished from the inlet orifice flow and are typically openings in the wall of a manhole, storage facility, or
+control gate.
+They can be either circular or rectangular in shape and can be located either at the bottom or along the side of the upstream node.
+They can have a flap gate to prevent backflow.
+Orifice flow is based on the following criteria:
 
 - When fully submerged the classical orifice equation is used: |Chapte022| .
 
