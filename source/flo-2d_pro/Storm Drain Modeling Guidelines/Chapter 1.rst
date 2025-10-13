@@ -553,7 +553,7 @@ It is noted that the Flood Control District of Maricopa County (FCDMC) in Phoeni
 but it should not be applied for storm drain design.
 In a design project the storm drain features are oversized to provide enough capacity for clogging.
 
-Table **2** shows the FCDMC catch basin clogging factors for predicting inlet discharge (FCDMC, 2018).
+Table 2 shows the FCDMC catch basin clogging factors for predicting inlet discharge (FCDMC, 2018).
 The clogging factor data file can be created in the SWMMFLO.DAT data dialog for all types of inlets.
 
 *Table 2.
