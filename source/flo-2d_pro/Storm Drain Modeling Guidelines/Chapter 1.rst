@@ -1209,7 +1209,7 @@ They can be either circular or rectangular in shape and can be located either at
 They can have a flap gate to prevent backflow.
 Orifice flow is based on the following criteria:
 
-    - When fully submerged the classical orifice equation is used: 𝑄𝑤 = 𝐶\ :sub: `𝑑` 𝐴√2𝑔ℎ.
+    - When fully submerged the classical orifice equation is used: 𝑄_𝑤 = 𝐶_𝑑 𝐴√2𝑔ℎ.
 
     - A partially submerged orifice applies the modified weir equation: 𝑄\ :sub: `𝑤` = 𝐶\ :sub: `𝑑` 𝐴√2𝑔𝐷ℎ𝑓\ sup: `1.5`.
 
