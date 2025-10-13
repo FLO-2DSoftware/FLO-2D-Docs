@@ -817,20 +817,21 @@ where ∆Vol is the net volume flowing through the node over the timestep. The n
 .. math::
    :label:
 
-   ∆Vol = 0.5 [(∑Q)_t + (∑Q)_{t+∆t}]∆t
+   ∆Vol = 0.5 \left[(∑Q)_t + (∑Q)_{t+∆t}\right]∆t
 
 The conduit surface area (A\ :sub:`store`) depends on the flow condition within the conduit as follows:
 
-1. Under normal conditions the pipe surface area equals half of the conduit length times the average of the top width
- at the end and mid points of the conduit.
+1. Under normal conditions the pipe surface area equals half of the conduit length times the average of the top width at the end and mid points of the conduit.
+
 These widths are evaluated before the next updated timestep using the flow depths y1, y2, and y.
 
-        2. If the inflow of the conduit to a node is in free-fall (conduit invert elevation is above the water surface of the node), then the conduit does not
-           contribute to the node surface area.
+2. If the inflow of the conduit to a node is in free-fall (conduit invert elevation is above the water surface of the node), then the conduit does not
 
-        3. For conduits with closed shapes such as circular pipes that are greater than 96 percent full, a constant top width equal to the width when 96 percent
-           full is used.
-           This prevents the head adjustment term H\ :sub:`t` from creating numerical instability as the top width and corresponding surface area approach zero
+contribute to the node surface area.
+
+3. For conduits with closed shapes such as circular pipes that are greater than 96 percent full, a constant top width equal to the width when 96 percent
+full is used.
+This prevents the head adjustment term H\ :sub:`t` from creating numerical instability as the top width and corresponding surface area approach zero
            when the conduit reaches a full condition.
            A minimum surface area for A\ :sub:`store` is assigned to all nodes, including junctions that normally have no storage volume, preventing H\ :sub:`t`
            from becoming unbounded.
