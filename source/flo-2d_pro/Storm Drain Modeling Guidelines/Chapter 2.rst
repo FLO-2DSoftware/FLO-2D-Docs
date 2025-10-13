@@ -163,7 +163,7 @@ Orifice flow can have two potential sag inlet conditions (Johnson and Fred, 1984
 
    If h ≥ H then Q\ :sub:`o` = C\ :sub:`d`\ A√2gH
 
-   If h < H then Q\ :sub:`o` = = C\ :sub:`d` A√2g (H −h/2)
+   If h < H then Q\ :sub:`o` = C\ :sub:`d` A√2g (H −h/2)
 
 where:
 
