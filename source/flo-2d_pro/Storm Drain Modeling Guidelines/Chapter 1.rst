@@ -898,14 +898,14 @@ To implement the flow continuity condition, a perturbation equation form is enfo
 .. math::
    :label:
 
-   Σ[Q + ∂Q ∂H ∆H] = 0
+   Σ\left[Q + \frac{∂Q}{∂H}∆H\right] = 0
 
 
-   where:
+where:
 
 ∆𝐻 = node head that must be made to achieve flow continuity.
 
-   Solving for ∆𝐻:
+Solving for ∆𝐻:
 
    − ∑ Q
 
