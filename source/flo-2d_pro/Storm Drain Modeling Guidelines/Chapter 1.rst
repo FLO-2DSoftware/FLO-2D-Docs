@@ -840,27 +840,27 @@ To calculate the discharge Q and the head H, the equations are solved for each t
 relaxation (Rossman, 2005).
 The solution algorithm involves the following steps:
 
-1. A first estimate of discharge Q in each conduit at time *t +* Δ\ *t* is calculated by solving for Q\ :sub:`t+∆t` using the heads, areas, and
-velocities determined at the current time *t*.
-2. A first estimate of the head (H) in each conduit at time *t +* Δ\ *t* is calculated by evaluating H\ :sub:`t+∆t` using the discharge Q just computed.
-The results are denoted as:
+    1. A first estimate of discharge Q in each conduit at time *t +* Δ\ *t* is calculated by solving for Q\ :sub:`t+∆t` using the heads, areas, and
+    velocities determined at the current time *t*.
+    2. A first estimate of the head (H) in each conduit at time *t +* Δ\ *t* is calculated by evaluating H\ :sub:`t+∆t` using the discharge Q just computed.
+    The results are denoted as:
 
-            Q\ :sub: `last` and H\ :sub: `last`
+                Q\ :sub:`last` and H\ :sub:`last`
 
-3. The equation Q\ :sub:`t+∆t` is solved once again, using the head, area, and velocity based on the Q\ :sub:`last` and H\ :sub:`last` values just
-computed.
-A relaxation factor Ω is used to combine the new flow estimate Q\ :sub:`new` with the previous estimate Q\ :sub:`last` to generate a new Q\ :sub:`new`
-according to the equation:
+    3. The equation Q\ :sub:`t+∆t` is solved once again, using the head, area, and velocity based on the Q\ :sub:`last` and H\ :sub:`last` values just
+    computed.
+    A relaxation factor Ω is used to combine the new flow estimate Q\ :sub:`new` with the previous estimate Q\ :sub:`last` to generate a new Q\ :sub:`new`
+    according to the equation:
 
-            Q\ :sub: `new' = (1−Ω) Q\ :sub: `last` +Ω Q\ :sub: `new`
+                Q\ :sub:`new' = (1−Ω) Q\ :sub:`last` +Ω Q\ :sub:`new`
 
-4. The equation for H\ :sub:`t+∆t`\ is solved again for heads using Q\ :sub:`new`.
-As with discharge, this new solution for head, H\ :sub:`new` is weighted with H\ :sub:`last` to produce an updated estimate for heads:
+    4. The equation for H\ :sub:`t+∆t`\ is solved again for heads using Q\ :sub:`new`.
+    As with discharge, this new solution for head, H\ :sub:`new` is weighted with H\ :sub:`last` to produce an updated estimate for heads:
 
-            H\ :sub: `new` = (1−Ω) H :sub: `last` +Ω H :sub: `new`
+                H\ :sub:`new` = (1−Ω) H :sub:`last` +Ω H :sub:`new`
 
-5. If H\ :sub:`new` is close enough to H\ :sub:`last` then the process stops with Q\ :sub:`new` and H\ :sub:`new` as the solution for time t + Δt.
-   Otherwise H\ :sub:`last` and Q\ :sub:`last` are replaced with H\ :sub:`new` and Q\ :sub:`new`, respectively and the process returns to step 2.
+    5. If H\ :sub:`new` is close enough to H\ :sub:`last` then the process stops with Q\ :sub:`new` and H\ :sub:`new` as the solution for time t + Δt.
+       Otherwise H\ :sub:`last` and Q\ :sub:`last` are replaced with H\ :sub:`new` and Q\ :sub:`new`, respectively and the process returns to step 2.
 
 The procedure uses the following parameters and conditions for this iterative procedure:
 
@@ -870,11 +870,9 @@ The procedure uses the following parameters and conditions for this iterative pr
 
     - Number of trials is limited to four.
 
-..
-
-   The flow depth in conduits that are not surcharged is limited not to exceed the normal flow depth for the discharge at the upstream end of the conduit
-   whenever the flow regime is supercritical.
-   FLO-2D storm drain model uses the water surface slope and Froude number to determine when supercritical flow occurs in a conduit.
+The flow depth in conduits that are not surcharged is limited not to exceed the normal flow depth for the discharge at the upstream end of the conduit
+whenever the flow regime is supercritical.
+FLO-2D storm drain model uses the water surface slope and Froude number to determine when supercritical flow occurs in a conduit.
 
 Surcharge conditions
 ''''''''''''''''''''
@@ -889,15 +887,13 @@ step because only contains flow.
 
 To implement the flow continuity condition, a perturbation equation form is enforced:
 
-- An alternative nodal continuity condition is used where the total rate of outflow from a surcharged node must equal the total rate of inflow Σ𝑄 = 0.
-  This equation only contains flow, and it is insufficient to update nodal heads at the new time step.
+    - An alternative nodal continuity condition is used where the total rate of outflow from a surcharged node must equal the total rate of inflow Σ𝑄 = 0.
+      This equation only contains flow, and it is insufficient to update nodal heads at the new time step.
 
-- Since the flow and head updating equations for the system are not solved simultaneously, there is no guarantee that the condition will hold at the
-  surcharged nodes after a flow solution is reached.
+    - Since the flow and head updating equations for the system are not solved simultaneously, there is no guarantee that the condition will hold at the
+      surcharged nodes after a flow solution is reached.
 
-- Flow continuity condition is enforced Min the form of a perturbation equation:
-
-..
+    - Flow continuity condition is enforced Min the form of a perturbation equation:
 
    ∂Q
 
