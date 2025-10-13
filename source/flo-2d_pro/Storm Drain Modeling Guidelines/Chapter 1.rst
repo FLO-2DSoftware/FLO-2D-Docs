@@ -1209,9 +1209,9 @@ They can be either circular or rectangular in shape and can be located either at
 They can have a flap gate to prevent backflow.
 Orifice flow is based on the following criteria:
 
-    - When fully submerged the classical orifice equation is used: 𝑄_𝑤 = 𝐶_𝑑 𝐴√2𝑔ℎ.
+    - When fully submerged the classical orifice equation is used: 𝑄\ :sub: `w` = 𝐶\ :sub: `d` 𝐴√2𝑔ℎ.
 
-    - A partially submerged orifice applies the modified weir equation: 𝑄\ :sub: `𝑤` = 𝐶\ :sub: `𝑑` 𝐴√2𝑔𝐷ℎ𝑓\ sup: `1.5`.
+    - A partially submerged orifice applies the modified weir equation: 𝑄\ :sub:`𝑤` = 𝐶\ :sub:`𝑑` 𝐴√2𝑔𝐷ℎ𝑓\ sup:`1.5`.
 
     - An orifice surface area contribution to the outlet is based on the equivalent pipe length and the depth of water in the orifice.
 
@@ -1223,7 +1223,7 @@ where:
 
     h = hydraulic head on the orifice
 
-    C\ :sub: `d` = discharge coefficient hardcoded to 0.67
+    C\ :sub:`d` = discharge coefficient hardcoded to 0.67
 
     g = gravitational acceleration
 
@@ -1270,8 +1270,7 @@ where:
     L = the crest length
 
     m = an exponent that depends on the type of weir being modeled: lateral, transverse, side-flow, V-notch, or trapezoidal.
-       Typically, m = 1.5 for a lateral weir.
-       This exponent is hardcoded in the FLO-2D storm drain model.
+       Typically, m = 1.5 for a lateral weir. This exponent is hardcoded in the FLO-2D storm drain model.
 
 The parameters of an orifice in the storm drain system are:
 
