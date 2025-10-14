@@ -115,50 +115,37 @@ Sections that Enclose Data in the SWMM.inp (Rossman, 2005)*
 
 The structure of the SWMM.inp file follows:
 
-- Sections appear in any arbitrary order in the input (\*.inp) file.
-  Section keywords can appear in mixed lower- and upper-case letters.
-  Only the first four characters (plus the open bracket) are used to distinguish one keyword from another (e.g., [DIVIDERS] and [Divi] are equivalent).
-
-- Not all sections must be present on each project.
-
-- Each section can contain one or more lines of data.
-
-- Blank lines may appear anywhere in the file.
-
-- A semicolon (;) can be used to indicate that comment follows, not data.
-  This sometimes generates reading errors in the storm drain code.
-
-- Data items can appear in any column of a line.
-
-- The data is ordered creating a tabular appearance complete with column headings.
-
-- When listing the format of a line of data, mandatory keywords are shown in boldface while optional items appear in parentheses.
-
-- A list of keywords separated by a slash (YES/NO) means that only one of the words should appear in the data line.
-
-- In the [OPTIONS] section, flow units can be selected as either cubic feet per second
-
-(CFS), gallons per minute (GPM), million gallons per day (MGD), cubic meters per second (CMS), liters per second, (LPS), or million liters per day
-(MLD).
-If cubic feet or gallons are chosen for flow units then US units are used for all other quantities.
-If cubic meters or liters are chosen, then metric units apply to all other quantities.
-The default flow units are CFS.
+    - Sections appear in any arbitrary order in the input (\*.inp) file.
+      Section keywords can appear in mixed lower- and upper-case letters.
+      Only the first four characters (plus the open bracket) are used to distinguish one keyword from another (e.g., [DIVIDERS] and [Divi] are equivalent).
+    - Not all sections must be present on each project.
+    - Each section can contain one or more lines of data.
+    - Blank lines may appear anywhere in the file.
+    - A semicolon (;) can be used to indicate that comment follows, not data.
+      This sometimes generates reading errors in the storm drain code.
+    - Data items can appear in any column of a line.
+    - The data is ordered creating a tabular appearance complete with column headings.
+    - When listing the format of a line of data, mandatory keywords are shown in boldface while optional items appear in parentheses.
+    - A list of keywords separated by a slash (YES/NO) means that only one of the words should appear in the data line.
+    - In the [OPTIONS] section, flow units can be selected as either cubic feet per second (CFS), gallons per minute (GPM), million gallons per day (MGD), cubic meters per second (CMS), liters per second, (LPS), or million liters per day
+      (MLD). If cubic feet or gallons are chosen for flow units then US units are used for all other quantities.
+      If cubic meters or liters are chosen, then metric units apply to all other quantities.
+      The default flow units are CFS.
 
 SWMMFLO.DAT
 '''''''''''
 
-   A node must have an ID starting with an ‘I’ to differentiate the inlet from a junction.
-   Surface water discharge is only shared between nodes that have the correct ID assigned in the \*.inp file.
-   Inlets are automatically paired by the QGIS plug-into a corresponding FLO-2D grid element.
-   The SWMMFLO.DAT file contains the inlet geometry as well as the names or numbers that identify inlet paired with the grid cell (Table 6).
+A node must have an ID starting with an ‘I’ to differentiate the inlet from a junction.
+Surface water discharge is only shared between nodes that have the correct ID assigned in the \*.inp file.
+Inlets are automatically paired by the QGIS plug-into a corresponding FLO-2D grid element.
+The SWMMFLO.DAT file contains the inlet geometry as well as the names or numbers that identify inlet paired with the grid cell (Table 6).
 
-   **Table 6.
-   SWMMFLO.DAT Variables**
+*Table 6.
+SWMMFLO.DAT Variables*
 
 .. list-table::
    :widths: 100
    :header-rows: 0
-
 
    * - SWMMFLO.DAT File Variables
 
@@ -166,18 +153,14 @@ SWMMFLO.DAT
        FLAPGATE(JT)CURBHEIGHT(JT)Notes:Multiple Inlets (SWMM_IDEN(JT)) assigned to the same grid cell(SWMM_JT(JT)) constitutes a data error.An Inlet
        (SWMM_IDEN(JT)) assigned to more than one grid cell(SWMM_JT(JT)) constitutes a data error.
 
+The Table 7 outlines the required data in the SWMMFLO.DAT.
 
-..
-
-   The Table 7 outlines the required data in the SWMMFLO.DAT.
-
-   **Table 7.
-   SWMMFLO.DAT Input File Example**
+*Table 7.
+SWMMFLO.DAT Input File Example*
 
 .. list-table::
    :widths: 100
    :header-rows: 0
-
 
    * - **SWMMFLO.DAT**
 
@@ -185,12 +168,11 @@ SWMMFLO.DAT
        3 6 4.4 0 3 0 0D 441072 I22CP1SEMDRHRL 1 12 0 0.417 3 0 0D 440649 I22CP2SEMDRHRL 3 5 3.0 0 3 0 0
 
 
-..
 
-   8 lists the variable descriptions for the SWMMFLO.DAT file:
+Table 8 lists the variable descriptions for the SWMMFLO.DAT file:
 
-   **Table 8.
-   SWMMFLO.DAT Input Variable Descriptions**
+*Table 8.
+SWMMFLO.DAT Input Variable Descriptions*
 
 |Chapte002|
 
