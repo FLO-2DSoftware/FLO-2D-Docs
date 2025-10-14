@@ -187,29 +187,24 @@ SWMMFLO.DAT Input File Example*
 
    <br><br>
 
-
-
 Table 8 lists the variable descriptions for the SWMMFLO.DAT file:
 
 *Table 8.
 SWMMFLO.DAT Input Variable Descriptions*
 
-|Chapte002|
-
 .. list-table::
    :widths: 25 25 25 25
    :header-rows: 0
 
-
-   * - CURBHEIGHT(JT)
-     - r
-     - 0.01- |Chapte003|
-     - Curb height used to calculate discharge on inlets for all INTYPE
+   * - Variable
+     - Format
+     - Range
+     - Description
 
 
 (i) = Integer variable (r) = Real variable (c) = Character
 
-   QGIS plugin creates the SWMMFLO.DAT file, review FLO-2D Plugin User’s Manual and FLO-2D Plugin Technical Reference Manual for more information.
+QGIS plugin creates the SWMMFLO.DAT file, review FLO-2D Plugin User’s Manual and FLO-2D Plugin Technical Reference Manual for more information.
 
 SWMMOUTF.DAT
 ''''''''''''
