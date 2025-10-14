@@ -201,6 +201,104 @@ SWMMFLO.DAT Input Variable Descriptions*
      - Range
      - Description
 
+   * - SWMMCHAR
+     - c
+     - --
+     - Character Line Identifier
+
+   * - SWMM_JT(JT)
+     - i
+     - --
+     - Cell Grid paired with the Inlet
+
+   * - SWMM_IDEN(JT)
+     - c
+     - --
+     - Inlet Name
+
+   * - INTYPE(JT)
+     - i
+     - 1, 2, 3, 4 or 5
+     - Type of inlet:
+
+       1: Curb opening inlet at grade
+
+       2: Curb opening inlet with sag
+
+       3: Grate (gutter) inlet with/without sag
+
+       4: Unique inlet with stage-discharge rating table
+
+       5: Manhole
+
+   * - SWMMlength(JT)
+     - r
+     - 0.01 - ∞
+     - Curb opening length for INTYPE= 1 or 2
+
+       Grate perimeter (not including curb side) for INTYPE= 3
+
+       For INTYPE = 4 (set to 0 – not needed)
+
+       Manhole perimeter for INTYPE = 5
+
+
+   * - SWMMwidth(JT)
+     - r
+     - 0.01 - ∞
+     - For INTYPE = 1 (set to 0 – not needed)
+
+       Curb opening sag width for INTYPE=2
+
+       Grate open area for INTYPE=3
+
+       For INTYPE = 4 (set to 0 – not needed)
+
+       Manhole flow area for INTYPE = 5
+
+   * - SWMMheight(JT)
+     - r
+     - 0.01 - ∞
+     - Curb opening height for INTYPE=1
+
+       Curb opening height for INTYPE=2
+
+       Grate sag height for INTYPE = 3
+
+       For INTYPE = 4 (set to 0 – not needed)
+
+       Surcharge depth for INTYPE=5
+
+   * - SWMMcoeff(JT)
+     - r
+     - 2.8-3.3
+     - Recommended weir coefficients are:
+
+       For INTYPE= 1,3 and 5: Range 2.8 to 3.2
+
+       For INTYPE=2: 2.3
+
+       For INTYPE = 4 (set to 0 – not needed)
+
+
+   * - FLAPGATE(JT)
+     - i
+     - 0, 1, or 2
+     - For INTYPE = 4:
+
+       0 = default, no flap gate, no vertical inlet opening
+
+       1 = vertical inlet opening
+
+       2 = flapgate, controls outlet node discharge
+
+       For a fake outfall INTYPE = 1, 2, 3 and 5 can be 0 or 2
+
+   * - CURBHEIGHT(JT)
+     - r
+     - 0.01 - ∞
+     - Curb height used to calculate discharge on inlets for all INTYPE
+
 
 (i) = Integer variable (r) = Real variable (c) = Character
 
