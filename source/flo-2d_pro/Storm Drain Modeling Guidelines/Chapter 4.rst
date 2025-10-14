@@ -99,13 +99,29 @@ FLO-2D Storm Drain Instructional Comments.*
            - Grid element elevation is reset to the pipe invert elevation at runtime.
 
        The corrected FPE is not revised in the FPLAIN.DAT file.
-       The user must review the  FPRIMELEV.OUT modifications and rename FPLAIN_SDElev.RGH and the  TOPO_SDElev.RGH files to FPLAIN.DAT AND TOPO.DAT files
-       respectively to make the elevation changes permanent.
-       Rim elevations for the inlets located in channel/street cells must be verified and manually revised by the user.
-       ------------------------------------------------------- The discharge and volume that enters the storm drain is based on the inlet geometry and on the
-       relationship between the water surface elevation and the storm drain pressure head.
-       Storm drain inflow discharge is inlet controlled until the system capacity is reached.
+       The user must review the
 
+       FPRIMELEV.OUT modifications and rename FPLAIN_SDElev.RGH and the  TOPO_SDElev.RGH files to FPLAIN.DAT AND
+
+       TOPO.DAT files respectively to .
+
+       make the elevation changes permanent.
+
+       Rim elevations for the inlets located in channel/street
+
+       cells must be verified and manually revised by the user.
+
+       -------------------------------------------------------
+
+       The discharge and volume that enters the storm drain is based on the inlet geometry
+
+       and on the relationship between the water surface elevation and the storm drain
+
+       pressure head. Storm drain inflow discharge is inlet controlled until the system
+
+       capacity is reached.
+
+'''
    * -
      - Inlet conditions:  - Curb opening inlet at grade (no sag) INTYPE=1.
        - Curb opening inlet with sag INTYPE= 2.
