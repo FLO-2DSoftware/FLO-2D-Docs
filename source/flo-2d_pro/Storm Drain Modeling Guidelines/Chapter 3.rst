@@ -457,10 +457,10 @@ SWMMFLORT.DAT Input File Example**
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><i><pre>SWMMOUTF.DAT File Example</pre></i></div>
+        <div><i><pre>SWMMFLORT.DAT File Exampl</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
-    * - **Rating Table**
+    **Rating Table**
     D 153076 I4-85
     N 0.00 0.00
     N 0.70 10.00
