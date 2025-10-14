@@ -638,13 +638,14 @@ SWMMFLODROPBOX.DAT Variables*
 
    * - JT= number of inlets with variable surface area
 
+
        SWMM_JT(JT) SWMMDROPBOX(JT)
 
 
 The Table 7 outlines the required data in the SWMMFLODROPBOX.DAT.
 
-   **Table 16.
-   SWMMFLODROPBOX.DAT Input File Example**
+*Table 16.
+SWMMFLODROPBOX.DAT Input File Example*
 
 .. list-table::
    :widths: 100
@@ -655,10 +656,7 @@ The Table 7 outlines the required data in the SWMMFLODROPBOX.DAT.
 
    * - 452161 50.27451297 50.27451302 28.27450875 19.63
 
-
-..
-
-   Table 8 lists the variable descriptions for the SWMMFLODROPBOX.DAT file:
+Table 8 lists the variable descriptions for the SWMMFLODROPBOX.DAT file:
 
    **Table 17.
    SWMMFLODROPBOX.DAT Input Variable Descriptions**
