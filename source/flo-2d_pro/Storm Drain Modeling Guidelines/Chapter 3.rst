@@ -504,7 +504,7 @@ SWMMFLORT.DAT Input File Example**
      - C
      - D and N
 
-       nd F
+       S and F
      - D: line with the grid cell paired with the INTYPE 4
 
        N: line with the rating table data
@@ -525,12 +525,12 @@ SWMMFLORT.DAT Input File Example**
 
    * - DEPTHSWMMRT(JTSWMM(JT),K)
      - r
-     - 0.00- |Chapte003|
+     - 0.00- ∞
      - Depth (ft or m) for the rating table
 
    * - QSWMMRT(JTSWMM(JT),K)
      - r
-     - 0.00- |Chapte003|
+     - 0.00- ∞
      - Discharge (cfs or cms) for the rating table
 
    * - SWMM_JT(I)
@@ -546,7 +546,7 @@ SWMMFLORT.DAT Input File Example**
 
    * - CDIAMETER(I)
      - r
-     - 0.00- |Chapte003|
+     - 0.00- ∞
      - Circular culvert diameter or box culvert height.
        TYPEC(I) defines the culvert shape (ft or m).
 
