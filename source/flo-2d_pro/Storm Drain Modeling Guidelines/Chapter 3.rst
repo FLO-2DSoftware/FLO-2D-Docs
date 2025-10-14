@@ -718,7 +718,7 @@ Table 18 list the storm drain output files and the description.
 List of the Storm Drain Data Output Files and Description*
 
 .. list-table::
-   :widths: 50 50
+   :widths: 50 50]
    :header-rows: 0
 
 
@@ -730,19 +730,30 @@ List of the Storm Drain Data Output Files and Description*
 
    * - SWMM.OUT
      - Output file in a binary format that contains the storm drain results.
-       This file is like the SWMM.RPT file and it is used by the SWMM GUI to interactively create time series plots and tables, profile plots, and
+       This file is like the SWMM.RPT file and it is used by the SWMM GUI
+
+
+       to interactively create time series plots and tables, profile plots, and
        statistical analyses of the results.
 
    * - SWMMQIN.OUT
      - Reports the inflow and return flow discharge for each storm drain inlet.
-       The reported discharges may be different from those in the SWMM.RPT file since the storm drain results include lateral pipe inflow and outflow.
+       The reported discharges may be different from those in the
+
+
+       SWMM.RPT file since the storm drain results include lateral pipe inflow and outflow.
 
    * - SWMMOUTFIN.OUT
      - This file reports the outfall hydrographs for return flow to the surface water system.
-       This file lists the grid or channel element in the first line followed by the time and discharge pairs.
+       This file lists the grid or channel element in the first line
+
+       followed by the time and discharge pairs.
 
    * - FPRIMELEV.OUT
-     - This output file reports the differences in elevation between the rim/invert elevation in the SWMM.inp file and the FLO-2D grid element elevation.
+     - This output file reports the differences in elevation between the rim/invert elevation in the SWMM.inp file and the FLO-2D grid
+
+
+       element elevation.
        This file should be reviewed to evaluate the elevations representing the inlet reference.
 
    * - StormDrain_ERROR.CHK
