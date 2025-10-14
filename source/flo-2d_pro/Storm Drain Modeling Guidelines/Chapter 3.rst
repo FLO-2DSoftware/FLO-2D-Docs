@@ -791,19 +791,26 @@ List of the Storm Drain Data Output Files and Description*
 
    * - SUMMARY.OUT
      - Volume conservation, run time, and final disposition of the volumes between the model components are reported in this file.
+
        The storm drain volume is reported as:
        1. Storm Drain Inflow in the inflow volume that flows from surface water to storm drain system through inlets and outfalls (compare total w/SWMM.rpt Wet
           Weather Inflow):
-           - SURFACE TO STORM DRAIN SYSTEM THROUGH INLETS: Volume that flows from surface water to storm drain network through the inlets.
-           - SURFACE TO STORM DRAIN THROUGH OUTFALLS: Volume that flows from surface water to storm drain network through the outfalls as backwater.
+           - SURFACE TO STORM DRAIN SYSTEM THROUGH INLETS: Volume that flows from surface water to storm drain network
+
+             through the inlets.
+           - SURFACE TO STORM DRAIN THROUGH OUTFALLS: Volume that flows from surface water to storm drain network through
+
+             the outfalls as backwater.
            - DIRECT INFLOW RECEIVED AT INLETS: volume that enters the system from outside of the domain.
            - TOTAL INFLOW (compare w/SWMM.rpt Wet Weather Inflow).
-       2. Storm Drain Outflow from Outfalls is the volume that leaves the storm drain system through outfalls (compare total w/SWMM.rpt External Outflow):
+       2. Storm Drain Outflow from Outfalls is the volume that leaves the storm drain system through outfalls (compare total w/SWMM.rpt
+
+          External Outflow):
            - STORM DRAIN TO SURFACE THROUGH OUTFALLS: Volume that flows from the storm
-           drain to the surface water through the outfalls.
-           Only those outfalls that were turned ‘on’ in the SWMMOUTF.DAT will discharge the volume back to the surface layer.
+             drain to the surface water through the outfalls.
+             Only those outfalls that were turned ‘on’ in the SWMMOUTF.DAT will discharge the volume back to the surface layer.
            - STORM DRAIN OUTFALL (OFF SYSTEM): Volume that flows off the storm drain through the outfalls.
-           Only those outfalls that were turned ‘off’ in the SWMMOUTF.DAT will discharge the volume off the storm drain system.
+             Only those outfalls that were turned ‘off’ in the SWMMOUTF.DAT will discharge the volume off the storm drain system.
            - TOTAL OUTFLOW (compare w/SWMM.rpt External Outflow)
        3. Storm Drain Return Flow to Surface
            - STORM DRAIN RETURN FLOW TO SURFACE THROUGH INLETS: Volume that returns to the surface water through inlets.
