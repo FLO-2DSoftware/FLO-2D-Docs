@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 
 Chapter 3
----------
+==========
 
 FLO-2D Storm Drain Data Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -9,18 +9,13 @@ FLO-2D Storm Drain Data Files
 Input and Output File - General
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   This chapter describes the input and output data and their format for the FLO-2D storm drain component.
-   The storm drain input data files can be created using any storm water user interface GUI:
+This chapter describes the input and output data and their format for the FLO-2D storm drain component.
+The storm drain input data files can be created using any storm water user interface GUI:
 
-- FLO-2D QGIS plug-in,
-
-- EPA SWMM 5,
-
-- inpPINS,
-
-- Storm and Sanitary Analysis.
-
-..
+    - FLO-2D QGIS plug-in,
+    - EPA SWMM 5,
+    - inpPINS,
+    - Storm and Sanitary Analysis.
 
    The following folders contain the storm drain model system:
 
