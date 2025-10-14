@@ -650,20 +650,22 @@ The Table 7 outlines the required data in the SWMMFLODROPBOX.DAT.
 *Table 16.
 SWMMFLODROPBOX.DAT Input File Example*
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. raw:: html
 
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>           SWMMFLODROPBOX.DAT</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+    <pre>
+    452161 50.27
+    451297 50.27
+    451302 28.27
+    450875 19.63
+    </pre>
+    </div>
 
-   * - SWMMFLODROPBOX.DAT
+.. raw:: html
 
-   * - 452161 50.27
-
-451297 50.27
-
-451302 28.27
-
-450875 19.63
+   <br><br>
 
 Table 8 lists the variable descriptions for the SWMMFLODROPBOX.DAT file:
 
