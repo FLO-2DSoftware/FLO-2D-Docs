@@ -58,7 +58,9 @@ FLO-2D Storm Drain Instructional Comments.*
 
    * - WSE is greater than pipe pressure head
      - Inlet discharge is computed by FLO-2D and exchanged with the storm drain system.
-       FLO-2D will use the grid element water depth (floodplain, channel or street) and the
+       FLO-2D will
+
+       use the grid element water depth (floodplain, channel or street) and the
 
        inlet geometry to calculate the inlet discharge.
 
@@ -94,14 +96,18 @@ FLO-2D Storm Drain Instructional Comments.*
 
            - The channel pipe inlet invert elevation must be reset to the channel
              bed elevation.
+
              Automated runtime changes for this case do not occur.
+
              The user must manually implement the elevation revision.
            - Grid element elevation is reset to the pipe invert elevation at runtime.
 
        The corrected FPE is not revised in the FPLAIN.DAT file.
        The user must review the
 
-       FPRIMELEV.OUT modifications and rename FPLAIN_SDElev.RGH and the  TOPO_SDElev.RGH files to FPLAIN.DAT AND
+       FPRIMELEV.OUT modifications and rename FPLAIN_SDElev.RGH and the  TOPO_SDElev.RGH
+
+       files to FPLAIN.DAT AND
 
        TOPO.DAT files respectively to .
 
