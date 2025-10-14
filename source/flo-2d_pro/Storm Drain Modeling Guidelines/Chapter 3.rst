@@ -629,18 +629,21 @@ If this file exists, the minimum surface area is replaced by the drop box surfac
 *Table 15.
 SWMMFLODROPBOX.DAT Variables*
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. raw:: html
 
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>   SWMMFLO.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+    <pre>
+    JT= number of inlets with variable surface area
 
-   * - SWMMFLO.DAT File Variables
+    SWMM_JT(JT) SWMMDROPBOX(JT)
+    </pre>
+    </div>
 
-   * - JT= number of inlets with variable surface area
+.. raw:: html
 
-
-       SWMM_JT(JT) SWMMDROPBOX(JT)
-
+   <br><br>
 
 The Table 7 outlines the required data in the SWMMFLODROPBOX.DAT.
 
@@ -654,7 +657,13 @@ SWMMFLODROPBOX.DAT Input File Example*
 
    * - SWMMFLODROPBOX.DAT
 
-   * - 452161 50.27451297 50.27451302 28.27450875 19.63
+   * - 452161 50.27
+
+451297 50.27
+
+451302 28.27
+
+450875 19.63
 
 Table 8 lists the variable descriptions for the SWMMFLODROPBOX.DAT file:
 
