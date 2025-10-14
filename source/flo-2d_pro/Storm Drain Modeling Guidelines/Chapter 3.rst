@@ -312,37 +312,49 @@ SWMMOUTF.DAT
 
    QGIS plugin creates the SWMMOUTF.DAT file, review FLO-2D Plugin User’s Manual and FLO-2D Plugin Technical Reference Manual for more information.
 
-The required data in the SWMMOUTF.DAT is shown in Table 9 and Table 10: **Table 9.
-SWMMOUTF.DAT Variables**
+The required data in the SWMMOUTF.DAT is shown in Table 9 and Table 10:
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+*Table 9.
+SWMMOUTF.DAT Variables*
 
+.. raw:: html
 
-   * - SWMMOUTF.DAT File Variables
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>               SWMMOUTF.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+    <pre>
+    Line 1 to Number of Outfalls (JT):
+    OUTF_NAME(JT) OUTF_GRID(JT) OUTF_FLO2DVOL(JT)
+    </pre>
+    </div>
 
-   * - Line 1 to Number of Outfalls (JT):*OUTF_NAME(JT) OUTF_GRID(JT) OUTF_FLO2DVOL(JT)*
+.. raw:: html
 
+   <br><br>
 
-..
+*Table 10.
+SWMMOUTF.DAT Input File Example*
 
-   **Table 10.
-   SWMMOUTF.DAT Input File Example**
+.. raw:: html
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>               SWMMOUTF.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+    <pre>
+    OF1     72565   1
+    OF2     98863   0
+    OF3     97479   1
+    OF4     51882   1
+    OF5     216195  0
+    OF7     382089  1
+    </pre>
+    </div>
 
+.. raw:: html
 
-   * - SWMMOUTF.DAT File Example
+   <br><br>
 
-   * - OF1 72565 1OF2 98863 0OF3 97479 1OF4 51882 1OF5 216195 0OF7 382089 1
-
-
-..
-
-   11 lists the variables and the description for the SWMMOUTF.DAT file:
+Table 11 lists the variables and the description for the SWMMOUTF.DAT file:
 
    **Table 11.
    SWMMOUTF.DAT Input Variable Descriptions**
