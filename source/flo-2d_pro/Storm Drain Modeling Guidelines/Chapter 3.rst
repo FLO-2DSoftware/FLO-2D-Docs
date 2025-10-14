@@ -548,12 +548,14 @@ SWMMFLORT.DAT Input File Example**
      - r
      - 0.00- ∞
      - Circular culvert diameter or box culvert height.
+
        TYPEC(I) defines the culvert shape (ft or m).
 
    * - TYPEC(I)
      - s
      - 0,1
      - Culvert switch.
+
        1 = rectangular 2 = circular
 
    * - TYPEEEN(I)
@@ -569,10 +571,7 @@ SWMMFLORT.DAT Input File Example**
 
        b.
 
-   * -
-     -
-     -
-     - Type of culvert entrances for a PIPE:
+       Type of culvert entrances for a PIPE:
 
        type 1 - square edge with head-
 
@@ -591,7 +590,7 @@ SWMMFLORT.DAT Input File Example**
 
 
 
-   (i) = Integer variable (r) = real variable (c) = character
+\(i) = Integer variable (r) = real variable (c) = character
 
 
 SDCLOGGING.DAT
