@@ -798,14 +798,14 @@ List of the Storm Drain Data Output Files and Description*
 
           (compare total w/SWMM.rpt Wet
           Weather Inflow):
-           - SURFACE TO STORM DRAIN SYSTEM THROUGH INLETS: Volume that flows from surface water to storm drain network
+          - SURFACE TO STORM DRAIN SYSTEM THROUGH INLETS: Volume that flows from surface water to storm drain network
 
-             through the inlets.
-           - SURFACE TO STORM DRAIN THROUGH OUTFALLS: Volume that flows from surface water to storm drain network through
+            through the inlets.
+          - SURFACE TO STORM DRAIN THROUGH OUTFALLS: Volume that flows from surface water to storm drain network through
 
-             the outfalls as backwater.
-           - DIRECT INFLOW RECEIVED AT INLETS: volume that enters the system from outside of the domain.
-           - TOTAL INFLOW (compare w/SWMM.rpt Wet Weather Inflow).
+            the outfalls as backwater.
+          - DIRECT INFLOW RECEIVED AT INLETS: volume that enters the system from outside of the domain.
+          - TOTAL INFLOW (compare w/SWMM.rpt Wet Weather Inflow).
        2. Storm Drain Outflow from Outfalls is the volume that leaves the storm drain system through outfalls (compare total w/SWMM.rpt
 
           External Outflow):
