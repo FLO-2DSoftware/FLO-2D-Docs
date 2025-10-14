@@ -458,10 +458,10 @@ SWMMFLORT.DAT Input File Example**
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><i><pre>SWMMFLORT.DAT File Exampl</pre></i></div>
+        <div><i><pre>SWMMFLORT.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
-    **Rating Table**
+    <b>Rating Table</b>
     D 153076 I4-85
     N 0.00 0.00
     N 0.70 10.00
@@ -476,7 +476,7 @@ SWMMFLORT.DAT Input File Example**
     N 1.56 30.00
     N 1.89 40.00
     N 2.19 50.00
-    **Generalized Culvert Equation**
+    <b>Generalized Culvert Equation</b>
     S 7545 I4-38 1.5
     F 2 1 0
     </pre>
