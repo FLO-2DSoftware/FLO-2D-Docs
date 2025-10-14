@@ -653,7 +653,7 @@ SWMMFLODROPBOX.DAT Input File Example*
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><i><pre>                           SWMMFLODROPBOX.DAT</pre></i></div>
+        <div><i><pre> SWMMFLODROPBOX.DAT</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     452161 50.27
@@ -692,7 +692,7 @@ SWMMFLODROPBOX.DAT Input Variable Descriptions*
    * - SWMMDROPBOX(JT)
      - r
      - 0.01-∞
-     - Surface area (ft2). Diameter drop box (8ft) to a surface area (50.27 ft2)
+     - Surface area (ft\ :sup:`2`). Diameter drop box (8ft) to a surface area (50.27 ft\ :sup:`2`)
 
 SWMM.ini
 ''''''''
