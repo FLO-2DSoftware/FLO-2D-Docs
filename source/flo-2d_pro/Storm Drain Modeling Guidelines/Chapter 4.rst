@@ -347,7 +347,7 @@ When building the storm drain model, the following data assignments in the SWMM.
     3. The ROUTING_STEP is automatically assigned as equal to the FLO-2D Timestep.
        The FLO-2D Timestep is used as the ROUTING_STEP for all conditions including a VARIABLE_STEP equal or different to zero.
 
-.. note:: The WET_STEP and DRY_STEP values are hardcoded to 1 minute.
+       .. note:: The WET_STEP and DRY_STEP values are hardcoded to 1 minute.
 
     4. The REPORT_START_DATE and REPORT_START_TIME are automatically assigned as the start date and time.
 
