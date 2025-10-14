@@ -608,7 +608,7 @@ The SDCLOGGING.DAT file contains the data with the following format:
         <div><i><pre></pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
-    ID   Grid Cell     Inlet ID    Clogging Factor - C\ :sub:`f` (%)    Time for clogging -T\ :sub:`c` (hr)
+    ID   Grid Cell     Inlet ID    Clogging Factor - C_f (%)    Time for clogging -T_c (hr)
     D    2694          I1          25                                   0.50
     D    2409          I2          50                                   3.25
     </pre>
@@ -617,11 +617,6 @@ The SDCLOGGING.DAT file contains the data with the following format:
 .. raw:: html
 
    <br><br>
-
-
-ID Grid Cell Inlet ID Clogging Factor - C\ :sub:`f` (%) Time for clogging -T\ :sub:`c` (hr)
-
-D 2694 I1 25 0.50 D 2409 I2 50 3.25
 
 SWMMFLODROPBOX.DAT
 ''''''''''''''''''
