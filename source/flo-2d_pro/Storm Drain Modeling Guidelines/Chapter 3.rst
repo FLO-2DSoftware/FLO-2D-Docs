@@ -775,15 +775,14 @@ List of the Storm Drain Data Output Files and Description*
 
    * - FPLAIN_SDElev.RGH
      - Changes in elevation (FPRIMELEV.OUT) are reported to the FPLAIN_SDElev.RGH file.
-       Replace the FPLAIN.DAT file to apply the changes to
 
+       Replace the FPLAIN.DAT file to apply the changes to
 
        the next simulation
 
    * - TOPO_SDElev.RGH
      - Changes in elevation (FPRIMELEV.OUT) are reported in the TOPO_SDElev.RGH.
        Replace the TOPO.DAT file to apply the changes to
-
 
        the next simulation.
 
@@ -818,7 +817,7 @@ List of the Storm Drain Data Output Files and Description*
           Total Inflow - Total Outflow - Total Storm Drain Return Flow - Storm Drain System Storage
 
    * - SUMMARY.OUT
-       7. Extracted from Storm Drain File (swmm.RPT):
+     - 7. Extracted from Storm Drain File (swmm.RPT):
            - WET WEATHER INFLOW: Compare with Storm Drain Inflow.
            - EXTERNAL INFLOW: Other node inflows in addition to any surface runoff such as direct inflows as user-defined time series, dry weather inflows that
              are continuous inflows as base flows, and rainfall dependent infiltration/inflow (RDII).
