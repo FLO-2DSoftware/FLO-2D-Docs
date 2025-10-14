@@ -677,7 +677,7 @@ SWMMFLODROPBOX.DAT Input Variable Descriptions*
    :header-rows: 0
 
 
-(i) = Integer variable (r) = Real variable (c) = Character
+\(i) = Integer variable (r) = Real variable (c) = Character
 
    * - Variable
      - Format
