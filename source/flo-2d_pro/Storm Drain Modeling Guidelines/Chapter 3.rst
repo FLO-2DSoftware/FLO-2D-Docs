@@ -433,24 +433,27 @@ This is repeated from 1 to number of storm drain inlets with INTYPE= 4 (Table 12
 *Table 12.
 SWMMFLORT.DAT Variables*
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. raw:: html
 
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>           SWMMFLORT.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+    <pre>
+    Line 1 to Number of INTYPE 4 (JTSWMM(JT)):
+    SWMMCHARRT GRIDCELL SWMMType4ID
+    SWMMCHARRT DEPTHSWMMRT(JTSWMM(JT),K) QSWMMRT(JTSWMM(JT),K)
+    </pre>
+    </div>
 
-   * - SWMMFLORT.DAT File Variables
+.. raw:: html
 
-   * - Line 1 to Number of INTYPE 4 (JTSWMM(JT)):SWMMCHARRT GRIDCELL SWMMType4IDSWMMCHARRT DEPTHSWMMRT(JTSWMM(JT),K) QSWMMRT(JTSWMM(JT),K)
+   <br><br>
 
 
 The required data in the SWMMFLORT.DAT is listed in Table 12 and Table 13.
+
 **Table 13.
 SWMMFLORT.DAT Input File Example**
-
-.. list-table::
-   :widths: 100
-   :header-rows: 0
-
 
    * - SWMMFLORT.DAT File Example
 
