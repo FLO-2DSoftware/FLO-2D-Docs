@@ -697,13 +697,13 @@ SWMMFLODROPBOX.DAT Input Variable Descriptions*
 SWMM.ini
 ''''''''
 
-   After a project is saved in the storm drain GUI, the control settings file SWMM.ini will automatically be generated.
-   This file has the same name as the project file and the extension \*.ini.
-   It contains global settings and model output options such as map display, legend colors and intervals, object default values.
-   If the SWMM.rpt and SWMM.out files are in the folder but the EPA SWMM is not loading the results, the user needs to enable the display of results in
-   the storm drain GUI, the user must set the last two lines in Figure 38 as shown.
+After a project is saved in the storm drain GUI, the control settings file SWMM.ini will automatically be generated.
+This file has the same name as the project file and the extension \*.ini.
+It contains global settings and model output options such as map display, legend colors and intervals, object default values.
+If the SWMM.rpt and SWMM.out files are in the folder but the EPA SWMM is not loading the results, the user needs to enable the display of results in
+the storm drain GUI, the user must set the last two lines in Figure 38 as shown.
 
-   |Chapte004|
+.. image:: img/Chapter3/Chapte004.jpg
 
    **Figure 38.
    SWMM.ini file.**
