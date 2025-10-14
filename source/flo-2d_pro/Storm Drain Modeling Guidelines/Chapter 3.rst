@@ -848,9 +848,9 @@ List of the Storm Drain Data Output Files and Description*
    * - SUMMARY.OUT
      - 7. Extracted from Storm Drain File (swmm.RPT):
            - WET WEATHER INFLOW: Compare with Storm Drain Inflow.
-           - EXTERNAL INFLOW: Other node inflows in addition to any surface runoff such as direct inflows as user-defined time series, dry
+           - EXTERNAL INFLOW: Other node inflows in addition to any surface runoff such as direct inflows as user-defined time series,
 
-             weather inflows that
+             dry weather inflows that
              are continuous inflows as base flows, and rainfall dependent infiltration/inflow (RDII).
            - EXTERNAL OUTFLOW: Compare with Storm Drain Outflow from Outfalls.
            - Return Flow to Surface: Compare with STORM DRAIN RETURN FLOW TO SURFACE THROUGH INLETS.
