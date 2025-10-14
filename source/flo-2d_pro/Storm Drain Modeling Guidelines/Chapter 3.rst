@@ -813,7 +813,9 @@ List of the Storm Drain Data Output Files and Description*
              drain to the surface
 
              water through the outfalls.
-             Only those outfalls that were turned ‘on’ in the SWMMOUTF.DAT will discharge the volume back to the surface layer.
+             Only those outfalls that were turned ‘on’ in the SWMMOUTF.DAT will discharge the volume back
+
+             to the surface layer.
            - STORM DRAIN OUTFALL (OFF SYSTEM): Volume that flows off the storm drain through the outfalls.
 
              Only those outfalls that were turned ‘off’ in the SWMMOUTF.DAT will discharge the volume off the storm drain system.
@@ -858,4 +860,6 @@ List of the Storm Drain Data Output Files and Description*
 
    * - ERROR.CHK
      - This FLO-2D file contains input data error warnings and messages for the surface model.
-       This file should be reviewed for messages after each simulation.
+       This file should be reviewed for messages after
+
+       each simulation.
