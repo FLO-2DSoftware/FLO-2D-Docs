@@ -307,10 +307,10 @@ QGIS plugin creates the SWMMFLO.DAT file, review FLO-2D Plugin User’s Manual a
 SWMMOUTF.DAT
 ''''''''''''
 
-   This file lists the outfall data, including the name of the outfall, the grid paired with the outfall and the switch (0, 1 or 2) that allow the flow
-   to discharge to the surface (1 and 2) or out of the system (0).
+This file lists the outfall data, including the name of the outfall, the grid paired with the outfall and the switch (0, 1 or 2) that allow the flow
+to discharge to the surface (1 and 2) or out of the system (0).
 
-   QGIS plugin creates the SWMMOUTF.DAT file, review FLO-2D Plugin User’s Manual and FLO-2D Plugin Technical Reference Manual for more information.
+QGIS plugin creates the SWMMOUTF.DAT file, review FLO-2D Plugin User’s Manual and FLO-2D Plugin Technical Reference Manual for more information.
 
 The required data in the SWMMOUTF.DAT is shown in Table 9 and Table 10:
 
@@ -356,8 +356,10 @@ SWMMOUTF.DAT Input File Example*
 
 Table 11 lists the variables and the description for the SWMMOUTF.DAT file:
 
-   **Table 11.
-   SWMMOUTF.DAT Input Variable Descriptions**
+*Table 11.
+SWMMOUTF.DAT Input Variable Descriptions*
+
+\(i) = integer variable (r) = real variable (c) = character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -390,55 +392,46 @@ Table 11 lists the variables and the description for the SWMMOUTF.DAT file:
 
        2 is for underground outfalls with no underground elevation being imposed as a boundary condition
 
+SWMMOUTF.DAT file should contain the list of outfalls in the same order as it appears on the SWMM.inp.
+When the outfall order is modified in the SWMM.inp file because an outfall node was added or deleted, the list of outfall nodes in the QGIS plug-in
+should be edited and the SWMMOUTF.DAT file saved.
+The functionality of the outfall nodes is as follows:
 
-..
-
-   (i) = integer variable (r) = real variable (c) = character
-
-   SWMMOUTF.DAT file should contain the list of outfalls in the same order as it appears on the SWMM.inp.
-   When the outfall order is modified in the SWMM.inp file because an outfall node was added or deleted, the list of outfall nodes in the QGIS plug-in
-   should be edited and the SWMMOUTF.DAT file saved.
-   The functionality of the outfall nodes is as follows:
-
-- If the outfall discharge is ‘off’ the outfall will discharge off the complete model system.
-  No discharge is returned from the storm drain to the surface water.
-
-- If the outfall discharge switch is ‘on’ the surface water elevation and storm drain pressure head are compared and the outfall will discharge until
-  WSE is equal or greater than the storm drain head.
-  The outfall flow drains back to the surface water.
-
-- Potential backflow into the outfall pipe will depend on the comparison of the WSEL, the storm drain pressure head and the tide gate assignment.
+    - If the outfall discharge is ‘off’ the outfall will discharge off the complete model system.
+      No discharge is returned from the storm drain to the surface water.
+    - If the outfall discharge switch is ‘on’ the surface water elevation and storm drain pressure head are compared and the outfall will discharge until
+      WSE is equal or greater than the storm drain head.
+      The outfall flow drains back to the surface water.
+    - Potential backflow into the outfall pipe will depend on the comparison of the WSEL, the storm drain pressure head and the tide gate assignment.
 
 SWMMFLORT.DAT
 '''''''''''''
 
-   The SWMMFLORT.DAT file contains a list of the rating table data or the culvert data only for those inlets that are non-typical inlets assigned as Type
-   4 in the storm drain system.
+The SWMMFLORT.DAT file contains a list of the rating table data or the culvert data only for those inlets that are non-typical inlets assigned as Type
+4 in the storm drain system.
 
-   QGIS plugin creates the SWMMFLORT.DAT file by automatically reading the rating table from a file for each inlet type 4.
-   Culvert data can also be added for inlets type 4.
-   The generalized culvert equation with inlet control will be used to calculate the discharge from the surface entering the inlet.
-   For more detailed information review the FLO-2D Plugin User’s Manual and the FLO-2D Plugin Technical Reference Manual.
+QGIS plugin creates the SWMMFLORT.DAT file by automatically reading the rating table from a file for each inlet type 4.
+Culvert data can also be added for inlets type 4.
+The generalized culvert equation with inlet control will be used to calculate the discharge from the surface entering the inlet.
+For more detailed information review the FLO-2D Plugin User’s Manual and the FLO-2D Plugin Technical Reference Manual.
 
-   The rating table is used throughout the simulation without adjustment.
+The rating table is used throughout the simulation without adjustment.
 
-   The structure of a SWMMFLORT.DAT file is:
+The structure of a SWMMFLORT.DAT file is:
 
-   ID Grid Cell
+    ID Grid Cell
 
-   ID Depth Discharge
+    ID Depth Discharge
 
-   ID Depth Discharge
+    ID Depth Discharge
 
-   ID Depth Discharge
+    ID Depth Discharge
 
-   …
+The first pair of numbers should be zero depth and zero discharge.
+This is repeated from 1 to number of storm drain inlets with INTYPE= 4 (Table 12).
 
-   The first pair of numbers should be zero depth and zero discharge.
-   This is repeated from 1 to number of storm drain inlets with INTYPE= 4 (Table 12).
-
-   **Table 12.
-   SWMMFLORT.DAT Variables**
+*Table 12.
+SWMMFLORT.DAT Variables*
 
 .. list-table::
    :widths: 100
