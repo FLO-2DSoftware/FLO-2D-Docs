@@ -485,7 +485,7 @@ SWMMFLORT.DAT Input File Example**
 
    <br><br>
 
-   14 lists the description of the variables for the SWMMFLORT.DAT file.
+14 lists the description of the variables for the SWMMFLORT.DAT file.
 
    **Table 14.
    SWMMFLORT.DAT Input Variable Descriptions**
@@ -590,7 +590,9 @@ SWMMFLORT.DAT Input File Example**
        Use CDIAMETER(I) (ft or m)
 
 
+
    (i) = Integer variable (r) = real variable (c) = character
+
 
 SDCLOGGING.DAT
 ''''''''''''''
