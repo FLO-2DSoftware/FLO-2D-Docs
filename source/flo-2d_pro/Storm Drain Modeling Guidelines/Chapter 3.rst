@@ -705,17 +705,17 @@ the storm drain GUI, the user must set the last two lines in Figure 38 as shown.
 
 .. image:: img/Chapter3/Chapte004.jpg
 
-   **Figure 38.
-   SWMM.ini file.**
+*Figure 38.
+SWMM.ini file.*
 
 Output files
 ^^^^^^^^^^^^
 
-   With the successful completion of a FLO-2D storm drain simulation, the storm drain output files will be created in the simulation folder.
-   Table 18 list the storm drain output files and the description.
+With the successful completion of a FLO-2D storm drain simulation, the storm drain output files will be created in the simulation folder.
+Table 18 list the storm drain output files and the description.
 
-   **Table 18.
-   List of the Storm Drain Data Output Files and Description**
+*Table 18.
+List of the Storm Drain Data Output Files and Description*
 
 .. list-table::
    :widths: 50 50
@@ -806,7 +806,7 @@ Output files
      - 7.
        Extracted from Storm Drain File (swmm.RPT):  - WET WEATHER INFLOW: Compare with Storm Drain Inflow.
        - EXTERNAL INFLOW: Other node inflows in addition to any surface runoff such as direct inflows as user-defined time series, dry weather inflows that
-       are continuous inflows as base flows, and rainfall dependent infiltration/inflow (RDII).
+         are continuous inflows as base flows, and rainfall dependent infiltration/inflow (RDII).
        - EXTERNAL OUTFLOW: Compare with Storm Drain Outflow from Outfalls.
        - Return Flow to Surface: Compare with STORM DRAIN RETURN FLOW TO SURFACE THROUGH INLETS.
        - Total Storm Drain Storage (nodes + links): Sum of the storage.
@@ -820,26 +820,3 @@ Output files
    * - ERROR.CHK
      - This FLO-2D file contains input data error warnings and messages for the surface model.
        This file should be reviewed for messages after each simulation.
-
-
-.. |Chapte002| image:: media\Chapte002.png
-   :width: 6.53333in
-   :height: 7.88333in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 0.22917in
-   :height: 0.11458in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 0.22917in
-   :height: 0.11458in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 0.22917in
-   :height: 0.11458in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 0.22917in
-   :height: 0.11458in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 0.22917in
-   :height: 0.11458in
-.. |Chapte004| image:: media\Chapte004.jpg
-   :width: 3.16875in
-   :height: 3.03097in
