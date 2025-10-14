@@ -420,9 +420,13 @@ The rating table is used throughout the simulation without adjustment.
 The structure of a SWMMFLORT.DAT file is:
 
     ID Grid Cell
+
     ID Depth Discharge
+
     ID Depth Discharge
+
     ID Depth Discharge
+
     ...
 
 
