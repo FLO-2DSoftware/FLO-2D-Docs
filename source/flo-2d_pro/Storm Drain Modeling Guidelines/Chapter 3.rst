@@ -672,12 +672,12 @@ Table 8 lists the variable descriptions for the SWMMFLODROPBOX.DAT file:
 *Table 17.
 SWMMFLODROPBOX.DAT Input Variable Descriptions*
 
+\(i) = Integer variable (r) = Real variable (c) = Character
+
 .. list-table::
    :widths: 25 25 25 25
    :header-rows: 0
 
-
-\(i) = Integer variable (r) = Real variable (c) = Character
 
    * - Variable
      - Format
