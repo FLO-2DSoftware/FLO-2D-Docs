@@ -121,16 +121,25 @@ FLO-2D Storm Drain Instructional Comments.*
 
        capacity is reached.
 
-'''
    * -
-     - Inlet conditions:  - Curb opening inlet at grade (no sag) INTYPE=1.
-       - Curb opening inlet with sag INTYPE= 2.
-       - Grate (gutter) inlet with/without sag INTYPE=3.
-       - Unique inlet with stage - discharge rating table or data for the generalized culvert equation INTYPE=4.
-       - Manhole INTYPE=5.
+     - Inlet conditions:
+        - Curb opening inlet at grade (no sag) INTYPE=1.
+        - Curb opening inlet with sag INTYPE= 2.
+        - Grate (gutter) inlet with/without sag INTYPE=3.
+        - Unique inlet with stage - discharge rating table or data for the generalized
+
+          culvert equation INTYPE=4.
+        - Manhole INTYPE=5.
+
        Weir/orifice equations are used to calculate the discharge for inlets 1 thru 3 and 5.
-       For the rating table option (INTYPE = 4), a relationship between cell flow depth and discharge or the culvert geometry needs to be entered in QGIS.
-       An additional file (SWMMFLORT.DAT) is created for these type of inlets.
+       For the rating table option (INTYPE = 4), a relationship between cell flow depth and
+
+       discharge or the culvert geometry needs to be entered in QGIS.
+       An additional file
+
+       (SWMMFLORT.DAT) is created for these type of inlets.
+
+'''
 
    * - Storm drainpressure isgreater thanthe WSEL
      - Surcharging or return flow is computed from the storm drain to the surface water.
