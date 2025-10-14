@@ -80,11 +80,13 @@ FLO-2D Storm Drain Instructional Comments.*
 
        The last column parameter ‘Feature’ in the SWMMFLO.DAT file has three options:
 
+'''
       1.
        - default, no flapgate, no vertical inlet opening
 
       2.
-       - vertical, inlet opening  3.
+       - vertical, inlet opening
+      3.
        - flapgate (outlet)  ..
        If option 1 is assigned for a vertical inlet opening then there are two cases:
 
