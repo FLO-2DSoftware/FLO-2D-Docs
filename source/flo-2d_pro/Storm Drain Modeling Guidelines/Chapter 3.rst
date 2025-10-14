@@ -487,8 +487,10 @@ SWMMFLORT.DAT Input File Example**
 
 14 lists the description of the variables for the SWMMFLORT.DAT file.
 
-   **Table 14.
-   SWMMFLORT.DAT Input Variable Descriptions**
+*Table 14.
+SWMMFLORT.DAT Input Variable Descriptions*
+
+\(i) = Integer variable (r) = real variable (c) = character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -588,11 +590,6 @@ SWMMFLORT.DAT Input File Example**
 
        Use CDIAMETER(I) (ft or m)
 
-
-
-\(i) = Integer variable (r) = real variable (c) = character
-
-
 SDCLOGGING.DAT
 ''''''''''''''
 
@@ -605,6 +602,23 @@ This option (INTYPE = 1,2,3,4 or 5 in the SWMMFLO.DAT) is assigned by the QGIS i
 
 The SDCLOGGING.DAT file contains the data with the following format:
 
+.. raw:: html
+
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre></pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+    <pre>
+    ID    Grid Cell     Inlet ID    Clogging Factor - Cf (%)    Time for clogging -Tc (hr)
+    D    2694          I1          25                          0.50
+    D    2409          I2          50                          3.25
+    </pre>
+    </div>
+
+.. raw:: html
+
+   <br><br>
+
+
 ID Grid Cell Inlet ID Clogging Factor - C\ :sub:`f` (%) Time for clogging -T\ :sub:`c` (hr)
 
 D 2694 I1 25 0.50 D 2409 I2 50 3.25
@@ -612,13 +626,13 @@ D 2694 I1 25 0.50 D 2409 I2 50 3.25
 SWMMFLODROPBOX.DAT
 ''''''''''''''''''
 
-   A file was created to enter variable dropbox surface area for inlets in the storm drain system.
-   A minimum nodal surface area of 12.566 ft\ :sup:`2` (~4 ft diameter) is hardwired in the SD code for drop box surface areas.
-   A new file named SWMMFLODROPBOX.DAT can be used to enter spatially variable sizes inlet drop boxes.
-   If this file exists, the minimum surface area is replaced by the drop box surface area entered in the file named SWMMFLODROPBOX.DAT.
+A file was created to enter variable dropbox surface area for inlets in the storm drain system.
+A minimum nodal surface area of 12.566 ft\ :sup:`2` (~4 ft diameter) is hardwired in the SD code for drop box surface areas.
+A new file named SWMMFLODROPBOX.DAT can be used to enter spatially variable sizes inlet drop boxes.
+If this file exists, the minimum surface area is replaced by the drop box surface area entered in the file named SWMMFLODROPBOX.DAT.
 
-   **Table 15.
-   SWMMFLODROPBOX.DAT Variables**
+*Table 15.
+SWMMFLODROPBOX.DAT Variables*
 
 .. list-table::
    :widths: 100
