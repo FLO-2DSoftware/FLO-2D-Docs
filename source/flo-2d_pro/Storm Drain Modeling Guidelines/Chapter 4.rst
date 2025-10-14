@@ -132,92 +132,156 @@ FLO-2D Storm Drain Instructional Comments.*
         - Manhole INTYPE=5.
 
        Weir/orifice equations are used to calculate the discharge for inlets 1 thru 3 and 5.
+
        For the rating table option (INTYPE = 4), a relationship between cell flow depth and
 
        discharge or the culvert geometry needs to be entered in QGIS.
+
        An additional file
 
        (SWMMFLORT.DAT) is created for these type of inlets.
 
-'''
+   * - Storm drain pressure is greater than the WSEL
 
-   * - Storm drainpressure isgreater thanthe WSEL
      - Surcharging or return flow is computed from the storm drain to the surface water.
-       ------------------------------------------------------------------------------ Not all return flow or flooding reported in the SWMM.RPT file passes
-       from the storm drain to the surface water since the pressure head must be greater than the WSEL.
-       ------------------------------------------------------------------------------ Return flow volume is distributed over the grid element surface area as
-       an increased incremental flow depth added to the existing cell depth.
-       ------------------------------------------------------------------------------ Inflow to storm drain from the surface water is not allowed in this
-       case.
 
-   * - WSE isgreater thanthe pressurehead and therimelevation
+       ------------------------------------------------------------------------------
+
+       Not all return flow or flooding reported in the SWMM.RPT file passes from the
+
+       storm drain to the surface water since the pressure head must be greater than the WSEL.
+
+       ------------------------------------------------------------------------------
+
+       Return flow volume is distributed over the grid element surface area as
+
+       an increased incremental flow depth added to the existing cell depth.
+
+       ------------------------------------------------------------------------------
+
+       Inflow to storm drain from the surface water is not allowed in this case.
+
+   * - WSE is greater than the pressure head and the rim elevation
+
      - No return flow from the storm drain to the surface water is computed.
-       ------------------------------------------------------------------------------ Volume in the inlet node stays in the pipe and the overflow volume is
+
+       ------------------------------------------------------------------------------
+
+       Volume in the inlet node stays in the pipe and the overflow volume is
+
        set to 0.
-       ------------------------------------------------------------------------------ Inflow to the storm drain from surface water is not computed.
+
+       ------------------------------------------------------------------------------
+
+       Inflow to the storm drain from surface water is not computed.
 
    * - Volumeconservation
-     - Inflow to the storm drain and return volumes (flooding and outfall volumes) to the surface water are compiled and reported by the FLO-2D model.
+
+     - Inflow to the storm drain and return volumes (flooding and outfall volumes)
+
+       to the surface water are compiled and reported by the FLO-2D model.
 
    * - Reportingresults
-     - The FLO-2D file SWMMQIN.OUT reports the inflow and return flow discharge for each inlet from and to surface.
-       This is different from the discharge values reported in the SWMM.RPT file which includes lateral pipe inflow and outflow.
-       SWMMOUTFIN.OUT file lists time and discharge pairs for storm drain outfall hydrographs when they discharge back to the surface water.
 
-   * - Detentionbasin outlet
+     - The FLO-2D file SWMMQIN.OUT reports the inflow and return flow discharge
+
+       for each inlet from and to surface.
+
+       This is different from the discharge values reported in the SWMM.RPT file
+
+       which includes lateral pipe inflow and outflow.
+
+       SWMMOUTFIN.OUT file lists time and discharge pairs for storm drain outfall
+
+       hydrographs when they discharge back to the surface water.
+
+   * - Detention basin outlet
+
      - Flapgates can be used to stop flow from going into the storm drain system.
+
        Flow only goes out of the outlet.
-       The SWMMFLO.DAT file assigns a switch (FEATURE) that can have one of the following values:  1.
-       = default, no flap gate, no vertical inlet opening  2.
-       = vertical inlet opening  3.
-       = flapgate, controls outlet node discharge  4.
-       = turn the computation of the reduction in inlet discharge when drop box capacity is exceeded
+
+       The SWMMFLO.DAT file assigns a switch (FEATURE) that can have one of the
+
+       following values:
+           0. = default, no flap gate, no vertical inlet opening
+
+           1. = vertical inlet opening
+
+           2. = flapgate, controls outlet node discharge
+
+           3. = turn the computation of the reduction in inlet discharge when
+
+           drop box capacity is exceeded
 
    * - FreeOutfalls
+
      - Any type of SWMM outfall can be assigned to the storm drain model.
-       To discharge back to the FLO-2D surface water, the user must set the outfall to type ‘free’.
-       Discharge is based on the surface water elevation and storm drain pressure head.
-       Outfall discharge will occur if:  If the pressure head > WSEL: Outfall discharges to the FLO-2D grid cell.
-       If the pressure head < WSEL: There is no outfall discharge, but depth is equal to WSEL.
+
+       To discharge back to the FLO-2D surface water, the user must set
+
+       the outfall to type ‘free’.
+
+       Discharge is based on the surface water elevation and storm drain
+
+       pressure head.
+
+       Outfall discharge will occur if:
+
+       If the pressure head > WSEL: Outfall discharges to the FLO-2D grid cell.
+
+       If the pressure head < WSEL: There is no outfall discharge, but depth
+
+       is equal to WSEL.
+
        Flow into the outfall depends on tide gate assignment and the WSEL.
+
        This is available only for the ‘free’ type of outfalls.
+
        It does not apply to normal, fixed, tidal or time series type of outfalls.
 
-   * -
-     - When the outfall is not set up as a free outfall connected to the surface.
+       When the outfall is not set up as a free outfall connected to the surface.
+
        The outfall does not discharge to the surface water.
-       For this case, the outfall head is assigned based on the type of outfall node in the SWMM.INP file.
-       The following types can be set up:  a.
-       FREE: minimum between normal and critical depth.
 
-   * -
-     - b.
-       | NORMAL: normal depth.
+       For this case, the outfall head is assigned based on the type of outfall
 
-   * -
-     - c.
-       | FIXED: fixed stage entered in the data.
+       node in the SWMM.INP file.
 
-   * -
-     - d.
-       | TIDAL: head computed from tide stage curve.
+       The following types can be set up:
 
-   * -
-     - e.
-       | TIME SERIES: head computed from the time | series.
+            a. FREE: minimum between normal and critical depth.
+
+            b. NORMAL: normal depth.
+
+            c. FIXED: fixed stage entered in the data.
+
+            d. TIDAL: head computed from tide stage curve.
+
+            e. TIME SERIES: head computed from the time | series.
 
    * - Manholes
+
      - Popping a manhole cover can be simulated.
+
        The surcharge depth is entered in the SWMMFLO.DAT file.
-       The user can define the surcharge depth in the junction properties (SWMM.inp file).
-       When the surcharge depth is set to different values in  SWMMFLO.DAT and in the SWMM.inp file, the model uses the surcharge depth from the SWMMFLO.DAT.
-       - If Pressure Head + Surcharge Depth < WSEL:  - Cover remains in place.
-       - Inflow to the manhole is not allowed.
-       - Return flow will not occur.
-       - If Pressure Head + Surcharge Depth > WSEL:  - Cover is popped.
-       - Surcharge depth is reset to 0.
-       - Inflow to the storm drain is permitted.
-       - Return flow can occur.
+
+       The user can define the surcharge depth in the junction properties
+
+       (SWMM.inp file).
+
+       When the surcharge depth is set to different values in  SWMMFLO.DAT and in
+
+       the SWMM.inp file, the model uses the surcharge depth from the SWMMFLO.DAT.
+           - If Pressure Head + Surcharge Depth < WSEL:
+               - Cover remains in place.
+               - Inflow to the manhole is not allowed.
+               - Return flow will not occur.
+           - If Pressure Head + Surcharge Depth > WSEL:
+               - Cover is popped.
+               - Surcharge depth is reset to 0.
+               - Inflow to the storm drain is permitted.
+               - Return flow can occur.
 
 
 Default Parameters
