@@ -748,10 +748,9 @@ List of the Storm Drain Data Output Files and Description*
 
    * - SWMMOUTFIN.OUT
      - This file reports the outfall hydrographs for return flow to the surface water system.
-       This file lists the grid or channel element in the first line
+       This file lists the grid or channel element in the first
 
-
-       followed by the time and discharge pairs.
+       line followed by the time and discharge pairs.
 
    * - FPRIMELEV.OUT
      - This output file reports the differences in elevation between the rim/invert elevation in the SWMM.inp file and the FLO-2D grid
@@ -766,9 +765,9 @@ List of the Storm Drain Data Output Files and Description*
 
    * - SDManholePopUp.OUT
      - This output file reports the information for the manhole popping in the storm drain system.
-       The information reported is manhole name, time
+       The information reported is manhole name,
 
-       of occurrence, elevation comparison for the popping.
+       time of occurrence, elevation comparison for the popping.
 
    * - ManholePop.OUT
      - This output file reports the information for the manhole popping in the storm drain system in a table.
@@ -790,7 +789,9 @@ List of the Storm Drain Data Output Files and Description*
        the next simulation.
 
    * - UndergOUTFALLS.CHK
-     - This output file reports the underground outfalls, the invert elevation of the outfall, the grid cell elevation, and the difference between them.
+     - This output file reports the underground outfalls, the invert elevation of the outfall, the grid cell elevation, and the difference between
+
+       them.
 
    * - SUMMARY.OUT
      - Volume conservation, run time, and final disposition of the volumes between the model components are reported in this file.
