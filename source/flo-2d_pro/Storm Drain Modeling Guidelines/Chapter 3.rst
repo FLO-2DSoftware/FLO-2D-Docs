@@ -672,61 +672,27 @@ Table 8 lists the variable descriptions for the SWMMFLODROPBOX.DAT file:
 *Table 17.
 SWMMFLODROPBOX.DAT Input Variable Descriptions*
 
-**Variable**
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
 
-**Format**
-
-**Range**
-
-**Description**
-
-SWMM_JT(JT)
-
-i
-
---
-
-Cell Grid paired with the Inlet
-
-SWMMDROPBOX(JT)
-
-r
-
-0.01
-
--
-
-Surface area (ft
-
-:sup:`2`
-
-)
-
-Diameter drop box
-
-(
-
-ft
-
-8
-
-)
-
-to
-
-a surface area
-
-(
-
-50.27
-
-ft
-
-:sup:`2`
-
-)
 
 (i) = Integer variable (r) = Real variable (c) = Character
+
+   * - Variable
+     - Format
+     - Range
+     - Description
+
+   * - SWMM_JT(JT)
+     - i
+     -
+     - Cell Grid paired with the Inlet
+
+   * - SWMMDROPBOX(JT)
+     - r
+     - 0.01-∞
+     - Surface area (ft2). Diameter drop box (8ft) to a surface area (50.27 ft2)
 
 SWMM.ini
 ''''''''
