@@ -6,51 +6,47 @@ Chapter 4
 Guidelines Storm Drain Setup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   To build a FLO-2D project with a storm drain, it is important to create a functional surface model first.
-   This includes the following required components:
+To build a FLO-2D project with a storm drain, it is important to create a functional surface model first.
+This includes the following required components:
 
-- Computational domain
+    - Computational domain
 
-- Grid elevation and roughness
+    - Grid elevation and roughness
 
-- Boundary conditions
+    - Boundary conditions
 
-- Channels and culverts
+    - Channels and culverts
 
-- Wall and buildings
+    - Wall and buildings
 
-..
+Once the surface model is ready, the storm drain can be added to the system using the FLO-2D Plugin.
+For detailed instructions including tutorials and videos, please refer to the FLO-2D Documentation website.
+`https://documentation.flo-2d.com/index.html.
+<https://documentation.flo-2d.com/index.html>`__ The Self-Help Kit outlines the process to set up a model and add a storm drain system to it.
+Three Storm Drain Lessons and the Coastal Tutorial have storm drain systems.
 
-   Once the surface model is ready, the storm drain can be added to the system using the FLO-2D Plugin.
-   For detailed instructions including tutorials and videos, please refer to the FLO-2D Documentation website.
-   `https://documentation.flo-2d.com/index.html.
-   <https://documentation.flo-2d.com/index.html>`__ The Self-Help Kit outlines the process to set up a model and add a storm drain system to it.
-   Three Storm Drain Lessons and the Coastal Tutorial have storm drain systems.
+Specific instructions for creating a storm drain in a FLO-2D urban environment are:
 
-   Specific instructions for creating a storm drain in a FLO-2D urban environment are:
+    - A storm drain inlet/outfall should not be assigned to a completely blocked cell (ARF = 1); A reasonable amount of surface area should be available for
+      the storm drain feature to interact with the surface water.
 
-- A storm drain inlet/outfall should not be assigned to a completely blocked cell (ARF = 1); A reasonable amount of surface area should be available for
-  the storm drain feature to interact with the surface water.
+    - Higher roughness values can be assigned to floodplain elements with storm drain features (inlet or outfalls) to represent the storm drain flow
+      disturbance around the inlet or outfall.
+      This would help surface routing numerical stability.
 
-- Higher roughness values can be assigned to floodplain elements with storm drain features (inlet or outfalls) to represent the storm drain flow
-  disturbance around the inlet or outfall.
-  This would help surface routing numerical stability.
+    - Inlet rim elevations should match the floodplain elevation.
+      For an inlet rating table, the inlet discharge is zero if the floodplain water surface elevation is less than the inlet rim elevation.
 
-- Inlet rim elevations should match the floodplain elevation.
-  For an inlet rating table, the inlet discharge is zero if the floodplain water surface elevation is less than the inlet rim elevation.
+    - Levees and walls may isolate a storm drain feature in the model resulting in oscillating storm drain discharge.
+      A review of the inlet/outfall location may be required.
 
-- Levees and walls may isolate a storm drain feature in the model resulting in oscillating storm drain discharge.
-  A review of the inlet/outfall location may be required.
+    - Storm drain features should not be assigned to surface water inflow or outflow elements.
+      There is an error message generated for this conflict.
 
-- Storm drain features should not be assigned to surface water inflow or outflow elements.
-  There is an error message generated for this conflict.
+Other specific urban guidelines are listed in Table 19.
 
-..
-
-   Other specific urban guidelines are listed in Table 19.
-
-   **Table 19.
-   FLO-2D Storm Drain Instructional Comments.**
+*Table 19.
+FLO-2D Storm Drain Instructional Comments.*
 
 .. list-table::
    :widths: 50 50
@@ -60,27 +56,44 @@ Guidelines Storm Drain Setup
    * -
      - **Guidelines ad Instructional Comments**
 
-   * - WSE isgreater thanpipepressurehead
+   * - WSE is greater than pipe pressure head
      - Inlet discharge is computed by FLO-2D and exchanged with the storm drain system.
-       FLO-2D will use the grid element water depth (floodplain, channel or street) and the inlet geometry to calculate the inlet discharge.
-       Horizontal inlets refer to gutter inlets and vertical inlets are culvert or pipe openings to the surface.
+       FLO-2D will use
+
+       the grid element water depth (floodplain, channel or street) and the inlet geometry to calculate
+
+       the inlet discharge.
+       Horizontal inlets refer to gutter inlets and vertical inlets are culvert or pipe openings to the
+
+       surface.
        Floodplain grid element elevation (FPE) is automatically set to the inlet rim elevation.
        For horizontal inlets changes to FPE are reported to a file named as FPRIMELEV.OUT.
-       For vertical inlets:  - An inlet on a 1-D channel (end of segment) where the channel flow is discharging to the storm drain conduit, the invert
+       For vertical inlets:
+       - An inlet on a 1-D channel (end of segment) where the channel flow is discharging to the storm
+
+       drain conduit, the invert
        elevation should be equal to the channel bed elevation.
-       - If the flow is discharging to a storm drain conduit or culvert in a floodplain swale, the invert elevation should be equal to the cell floodplain
+       - If the flow is discharging to a storm drain conduit or culvert in a floodplain swale, the invert
+
+       elevation should be equal to the cell floodplain
        elevation.
-       ..
-       The last column parameter ‘Feature’ in the SWMMFLO.DAT file has three options:  1.
-       - default, no flapgate, no vertical inlet opening  2.
+
+       The last column parameter ‘Feature’ in the SWMMFLO.DAT file has three options:
+
+      1.
+       - default, no flapgate, no vertical inlet opening
+
+      2.
        - vertical, inlet opening  3.
        - flapgate (outlet)  ..
-       If option 1 is assigned for a vertical inlet opening then there are two cases:  - The channel pipe inlet invert elevation must be reset to the channel
+       If option 1 is assigned for a vertical inlet opening then there are two cases:
+
+       - The channel pipe inlet invert elevation must be reset to the channel
        bed elevation.
        Automated runtime changes for this case do not occur.
        The user must manually implement the elevation revision.
        - Grid element elevation is reset to the pipe invert elevation at runtime.
-       ..
+
        The corrected FPE is not revised in the FPLAIN.DAT file.
        The user must review the  FPRIMELEV.OUT modifications and rename FPLAIN_SDElev.RGH and the  TOPO_SDElev.RGH files to FPLAIN.DAT AND TOPO.DAT files
        respectively to make the elevation changes permanent.
