@@ -292,13 +292,13 @@ Storm Drain Inlet – Channel
 
 .. image:: img/Chapter4/Chapte002.jpg
 
-   **Figure 39.
-   Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet**
+*Figure 39.
+Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet*
 
-|Chapte003|
+.. image:: img/Chapter4/Chapte003.jpg
 
-   **Figure 40.
-   Elevation of a Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet**
+*Figure 40.
+Elevation of a Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet*
 
    Figure 41 shows a storm drain system interfacing with a channel system.
    The direction of the storm drain exchange flows are based on the comparison between the water surface elevation and the pressure head which are a
@@ -308,10 +308,10 @@ Storm Drain Inlet – Channel
 
 - Channel bank elevation = inlet rim elevation (typical design)
 
-|Chapte004|
+.. image:: img/Chapter4/Chapte004.jpg
 
-   **Figure 41.
-   Complex Interaction between a Storm Drain Conduit and 1-D Channel**
+*Figure 41.
+Complex Interaction between a Storm Drain Conduit and 1-D Channel*
 
 Storm Drain Outfall – Channel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -327,10 +327,10 @@ Storm Drain Outfall – Channel
    Figure 42 shows a complex storm drain – channel system where a channel feeds the storm drain as an inlet and flow returns to surface channel
    downstream.
 
-|Chapte005|
+.. image:: img/Chapter4/Chapte005.jpg
 
-   **Figure 42.
-   Complex Flow Exchange between a Storm Drain System and 1-D Channel**
+*Figure 42.
+Complex Flow Exchange between a Storm Drain System and 1-D Channel*
 
    Storm drain outfalls are assigned to the channel left bank element.
    For most cases, the outfall invert elevation would be assigned to the channel element thalweg elevation.
@@ -338,10 +338,10 @@ Storm Drain Outfall – Channel
    to the left bank element.
    The outfall should be correctly paired to the left bank element in the SWMMOUTF.DAT (Figure 43).
 
-|Chapte006|
+.. image:: img/Chapter4/Chapte006.jpg
 
-   **Figure 43.
-   Typical Configuration of a Storm Drain Outfall Discharging to a Natural Channel**
+*Figure 43.
+Typical Configuration of a Storm Drain Outfall Discharging to a Natural Channel*
 
    The Plugin uses coordinates of the different storm drain components from the SWMM.inp file to pair them with the grid elements in the surface layer.
    It is usually not necessary for the outfall coordinates in the SWMM.inp to match the left bank channel element coordinate.
@@ -356,10 +356,10 @@ Storm Drain Outfall – Channel
    This causes the elevation to match the grid elevation instead of the channel elevation.
    Assignment of the outfall to a right bank element, or a channel interior element will generate an error message.
 
-|Chapte007|
+.. image:: img/Chapter4/Chapte007.jpg
 
-   **Figure 44.
-   Outfall Nodes Paired to Interior Channel Elements.**
+*Figure 44.
+Outfall Nodes Paired to Interior Channel Elements.*
 
    The outfall invert elevation can be less than the channel thalweg elevations (underground), and the storm drain would be assumed to be underwater with
    an initial tailwater depth.
