@@ -58,43 +58,45 @@ FLO-2D Storm Drain Instructional Comments.*
 
    * - WSE is greater than pipe pressure head
      - Inlet discharge is computed by FLO-2D and exchanged with the storm drain system.
-       FLO-2D will use
+       FLO-2D will use the grid element water depth (floodplain, channel or street) and the
 
-       the grid element water depth (floodplain, channel or street) and the inlet geometry to calculate
+       inlet geometry to calculate the inlet discharge.
 
-       the inlet discharge.
-       Horizontal inlets refer to gutter inlets and vertical inlets are culvert or pipe openings to the
+       Horizontal inlets refer to gutter inlets and vertical inlets are culvert or pipe openings
 
-       surface.
-       Floodplain grid element elevation (FPE) is automatically set to the inlet rim elevation.
-       For horizontal inlets changes to FPE are reported to a file named as FPRIMELEV.OUT.
+       to the surface. Floodplain grid element elevation (FPE) is automatically set to the inlet
+
+       rim elevation. For horizontal inlets changes
+
+       to FPE are reported to a file named as FPRIMELEV.OUT.
+
        For vertical inlets:
-       - An inlet on a 1-D channel (end of segment) where the channel flow is discharging to the storm
 
-       drain conduit, the invert
-       elevation should be equal to the channel bed elevation.
-       - If the flow is discharging to a storm drain conduit or culvert in a floodplain swale, the invert
+       - An inlet on a 1-D channel (end of segment) where the channel flow is
 
-       elevation should be equal to the cell floodplain
-       elevation.
+         discharging to the storm drain conduit, the invert elevation should be equal to
+
+         the channel bed elevation.
+
+       - If the flow is discharging to a storm drain conduit or culvert in a floodplain
+
+         swale, the invert elevation should be equal to the cell floodplain elevation.
 
        The last column parameter ‘Feature’ in the SWMMFLO.DAT file has three options:
 
-'''
-      1.
-       - default, no flapgate, no vertical inlet opening
+        0. - default, no flapgate, no vertical inlet opening
 
-      2.
-       - vertical, inlet opening
-      3.
-       - flapgate (outlet)  ..
+        1. - vertical, inlet opening
+
+        2. - flapgate (outlet)
+
        If option 1 is assigned for a vertical inlet opening then there are two cases:
 
-       - The channel pipe inlet invert elevation must be reset to the channel
-       bed elevation.
-       Automated runtime changes for this case do not occur.
-       The user must manually implement the elevation revision.
-       - Grid element elevation is reset to the pipe invert elevation at runtime.
+           - The channel pipe inlet invert elevation must be reset to the channel
+             bed elevation.
+             Automated runtime changes for this case do not occur.
+             The user must manually implement the elevation revision.
+           - Grid element elevation is reset to the pipe invert elevation at runtime.
 
        The corrected FPE is not revised in the FPLAIN.DAT file.
        The user must review the  FPRIMELEV.OUT modifications and rename FPLAIN_SDElev.RGH and the  TOPO_SDElev.RGH files to FPLAIN.DAT AND TOPO.DAT files
