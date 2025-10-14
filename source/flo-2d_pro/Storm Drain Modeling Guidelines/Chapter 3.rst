@@ -454,24 +454,36 @@ SWMMFLORT.DAT Input File Example**
 
    * - SWMMFLORT.DAT File Example
 
-* - **Rating Table**
-D 153076 I4-85
-N 0.00 0.00
-N 0.70 10.00
-N 1.12 20.00
-N 1.46 30.00
-N 1.77 40.00
-N 2.06 50.00
-D 199236 I4-196
-N 0.00 0.00
-N 0.79 10.00
-N 1.19 20.00
-N 1.56 30.00
-N 1.89 40.00
-N 2.19 50.00
-**Generalized Culvert Equation**
-S 7545 I4-38 1.5
-F 2 1 0
+.. raw:: html
+
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>SWMMOUTF.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+    <pre>
+    * - **Rating Table**
+    D 153076 I4-85
+    N 0.00 0.00
+    N 0.70 10.00
+    N 1.12 20.00
+    N 1.46 30.00
+    N 1.77 40.00
+    N 2.06 50.00
+    D 199236 I4-196
+    N 0.00 0.00
+    N 0.79 10.00
+    N 1.19 20.00
+    N 1.56 30.00
+    N 1.89 40.00
+    N 2.19 50.00
+    **Generalized Culvert Equation**
+    S 7545 I4-38 1.5
+    F 2 1 0
+    </pre>
+    </div>
+
+.. raw:: html
+
+   <br><br>
 
    14 lists the description of the variables for the SWMMFLORT.DAT file.
 
