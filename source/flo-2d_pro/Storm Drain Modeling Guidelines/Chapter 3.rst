@@ -794,7 +794,9 @@ List of the Storm Drain Data Output Files and Description*
 
        The storm drain volume is reported as:
 
-       1. Storm Drain Inflow in the inflow volume that flows from surface water to storm drain system through inlets and outfalls (compare total w/SWMM.rpt Wet
+       1. Storm Drain Inflow in the inflow volume that flows from surface water to storm drain system through inlets and outfalls
+
+          (compare total w/SWMM.rpt Wet
           Weather Inflow):
            - SURFACE TO STORM DRAIN SYSTEM THROUGH INLETS: Volume that flows from surface water to storm drain network
 
@@ -808,24 +810,34 @@ List of the Storm Drain Data Output Files and Description*
 
           External Outflow):
            - STORM DRAIN TO SURFACE THROUGH OUTFALLS: Volume that flows from the storm
-             drain to the surface water through the outfalls.
+             drain to the surface
+
+             water through the outfalls.
              Only those outfalls that were turned ‘on’ in the SWMMOUTF.DAT will discharge the volume back to the surface layer.
            - STORM DRAIN OUTFALL (OFF SYSTEM): Volume that flows off the storm drain through the outfalls.
+
              Only those outfalls that were turned ‘off’ in the SWMMOUTF.DAT will discharge the volume off the storm drain system.
            - TOTAL OUTFLOW (compare w/SWMM.rpt External Outflow)
        3. Storm Drain Return Flow to Surface
            - STORM DRAIN RETURN FLOW TO SURFACE THROUGH INLETS: Volume that returns to the surface water through inlets.
-           - TOTAL STORM DRAIN RETURN FLOW + OUTFLOW: Volume that returns to the surface water from the storm drain network plus outflow.
+           - TOTAL STORM DRAIN RETURN FLOW + OUTFLOW: Volume that returns to the surface water from the storm drain network
 
-             Return volume is possible when the storm drain pressure head is greater than both the RIM elevation and the FLO-2D water surface elevation in the
+             plus outflow.
+
+             Return volume is possible when the storm drain pressure head is greater than both the RIM elevation and the FLO-2D water
+
+             surface elevation in the
              inlet grid element.
        4. STORM DRAIN SYSTEM STORAGE\ **:** volume in the pipe system at the end of the simulation.
-          This volume is extracted from the swmm.RPT file.
+          This volume is extracted from the
+
+          swmm.RPT file.
        5. STORM DRAIN RETURN FLOW + OUTFLOW + STORAGE
        6. STORM DRAIN MASS BALANCE: mass balance volume conservation calculated as:
-          Total Inflow - Total Outflow - Total Storm Drain Return Flow - Storm
 
-          Drain System Storage
+          Total Inflow - Total Outflow - Total Storm Drain Return Flow
+
+          - Storm Drain System Storage
 
    * - SUMMARY.OUT
      - 7. Extracted from Storm Drain File (swmm.RPT):
