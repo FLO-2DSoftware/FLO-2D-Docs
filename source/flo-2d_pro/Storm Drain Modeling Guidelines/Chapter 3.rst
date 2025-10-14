@@ -455,8 +455,6 @@ The required data in the SWMMFLORT.DAT is listed in Table 12 and Table 13.
 **Table 13.
 SWMMFLORT.DAT Input File Example**
 
-   * - SWMMFLORT.DAT File Example
-
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
