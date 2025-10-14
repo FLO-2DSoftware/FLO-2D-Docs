@@ -290,7 +290,7 @@ Storm Drain Inlet – Channel
 
 - Inlet Elevation = 296.3 ft
 
-|Chapte002|
+.. image:: img/Chapter4/Chapte002.jpg
 
    **Figure 39.
    Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet**
