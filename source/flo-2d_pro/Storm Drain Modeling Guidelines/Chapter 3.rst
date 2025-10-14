@@ -718,7 +718,7 @@ Table 18 list the storm drain output files and the description.
 List of the Storm Drain Data Output Files and Description*
 
 .. list-table::
-   :widths: 50 50]
+   :widths: 50 50
    :header-rows: 0
 
 
@@ -746,6 +746,7 @@ List of the Storm Drain Data Output Files and Description*
    * - SWMMOUTFIN.OUT
      - This file reports the outfall hydrographs for return flow to the surface water system.
        This file lists the grid or channel element in the first line
+
 
        followed by the time and discharge pairs.
 
