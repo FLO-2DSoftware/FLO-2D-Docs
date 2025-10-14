@@ -604,9 +604,8 @@ The SDCLOGGING.DAT file contains the data with the following format:
 
 .. raw:: html
 
-    <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><i><pre></pre></i></div>
-        <hr style="margin:4px 0;border:2px solid black;">
+    <div>
+
     <pre>
     ID   Grid Cell     Inlet ID    Clogging Factor - C<sub>f</sub> (%)    Time for clogging - T<sub>c</sub> (hr)
     D    2694          I1          25                                     0.50
