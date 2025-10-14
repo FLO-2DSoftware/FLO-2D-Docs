@@ -653,7 +653,7 @@ SWMMFLODROPBOX.DAT Input File Example*
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><i><pre>           SWMMFLODROPBOX.DAT</pre></i></div>
+        <div><i><pre>                           SWMMFLODROPBOX.DAT</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     452161 50.27
@@ -669,8 +669,8 @@ SWMMFLODROPBOX.DAT Input File Example*
 
 Table 8 lists the variable descriptions for the SWMMFLODROPBOX.DAT file:
 
-   **Table 17.
-   SWMMFLODROPBOX.DAT Input Variable Descriptions**
+*Table 17.
+SWMMFLODROPBOX.DAT Input Variable Descriptions*
 
 **Variable**
 
