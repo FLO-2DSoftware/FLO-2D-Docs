@@ -143,29 +143,49 @@ The SWMMFLO.DAT file contains the inlet geometry as well as the names or numbers
 *Table 6.
 SWMMFLO.DAT Variables*
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. raw:: html
 
-   * - SWMMFLO.DAT File Variables
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>                           SWMMFLO.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+    <pre>
+    Line 1 to Number of Inlets (JT):
+    SWMMCHAR=‘D’ SWMM_JT(JT) SWMM_IDEN(JT) INTYPE(JT) SWMMlength(JT)
+    SWMMwidth(JT) SWMMheight(JT) SWMMcoeff(JT) FLAPGATE(JT) CURBHEIGHT(JT)
 
-   * - Line 1 to Number of Inlets (JT):SWMMCHAR=‘D’ SWMM_JT(JT) SWMM_IDEN(JT) INTYPE(JT) SWMMlength(JT)SWMMwidth(JT) SWMMheight(JT) SWMMcoeff(JT)
-       FLAPGATE(JT)CURBHEIGHT(JT)Notes:Multiple Inlets (SWMM_IDEN(JT)) assigned to the same grid cell(SWMM_JT(JT)) constitutes a data error.An Inlet
-       (SWMM_IDEN(JT)) assigned to more than one grid cell(SWMM_JT(JT)) constitutes a data error.
+    Notes:
+    Multiple Inlets (SWMM_IDEN(JT)) assigned to the same grid cell (SWMM_JT(JT)) constitutes a data error.
+    An Inlet (SWMM_IDEN(JT)) assigned to more than one grid cell (SWMM_JT(JT)) constitutes a data error.
+    </pre>
+    </div>
+
+.. raw:: html
+
+   <br><br>
 
 The Table 7 outlines the required data in the SWMMFLO.DAT.
 
 *Table 7.
 SWMMFLO.DAT Input File Example*
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. raw:: html
 
-   * - **SWMMFLO.DAT**
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>                           SWMMFLO.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+    <pre>
+    D 452161 I19CP1SEMDRHRL 1 12 0 0.417 3 0 0
+    D 451297 I20CP1SEMDRHRL 1 4.8 0 0.417 3 0 0
+    D 451302 I21CP1SEMDRHRL 1 12 0 0.417 3 0 0
+    D 450875 I21CP2SEMDRHRL 3 6 4.4 0 3 0 0
+    D 441072 I22CP1SEMDRHRL 1 12 0 0.417 3 0 0
+    D 440649 I22CP2SEMDRHRL 3 5 3.0 0 3 0 0
+    </pre>
+    </div>
 
-   * - D 452161 I19CP1SEMDRHRL 1 12 0 0.417 3 0 0D 451297 I20CP1SEMDRHRL 1 4.8 0 0.417 3 0 0D 451302 I21CP1SEMDRHRL 1 12 0 0.417 3 0 0D 450875 I21CP2SEMDRHRL
-       3 6 4.4 0 3 0 0D 441072 I22CP1SEMDRHRL 1 12 0 0.417 3 0 0D 440649 I22CP2SEMDRHRL 3 5 3.0 0 3 0 0
+.. raw:: html
+
+   <br><br>
 
 
 
