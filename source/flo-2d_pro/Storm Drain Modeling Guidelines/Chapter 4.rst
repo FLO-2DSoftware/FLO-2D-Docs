@@ -295,7 +295,7 @@ Storm Drain Inlet – Channel
 *Figure 39.
 Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet*
 
-.. image:: img/Chapter4/Chapte003.jpg
+.. image:: img/Chapter4/Chapte003.png
 
 *Figure 40.
 Elevation of a Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet*
@@ -375,10 +375,10 @@ Outfall Nodes Paired to Interior Channel Elements.*
    of the outfall pipe based on the pressure head (Figure 45).
    To account for volume conservation, the storm drain outflow that represents inflow volume to a FLO-2D channel is reported in the CHVOLUME.OUT file.
 
-|Chapte008|
+.. image:: img/Chapter4/Chapte008.jpg
 
-   **Figure 45.
-   Underground Outfall Condition**
+*Figure 45.
+Underground Outfall Condition*
 
    Water will flow in or out of the outfall pipe based on the relationship between the water surface elevation and pipe pressure head.
    Water can enter the storm drain when the water surface elevation is greater than the pressure head, but it can evacuate from the storm drain if the
@@ -386,10 +386,10 @@ Outfall Nodes Paired to Interior Channel Elements.*
    This behavior can introduce oscillations in the system that can be explained as a respond to the surface water and storm drain pressure interaction
    (Figure 46).
 
-|Chapte009|
+.. image:: img/Chapter4/Chapte009.jpg
 
-   **Figure 46.
-   Inlet and Outfall Pressure Head Variation Cause Pipe Discharge Oscillations**
+*Figure 46.
+Inlet and Outfall Pressure Head Variation Cause Pipe Discharge Oscillations*
 
 Storm Drain Basin
 ^^^^^^^^^^^^^^^^^
@@ -417,10 +417,10 @@ Storm Drain Boundary
    Keep the features on grid but give them the invert and length of the regular system.
    These nodes are not set up as inlets and do not exchange water with the grid/surface model.
 
-|Chapte010|
+.. image:: img/Chapter4/Chapte010.jpg
 
-   **Figure 47.
-   Inflow Boundary at a Node.**
+*Figure 47.
+Inflow Boundary at a Node.*
 
 *Outfall*
 
@@ -430,20 +430,20 @@ Storm Drain Boundary
    The discharge is reported but no water is returned to the surface model.
    In this case, the outfall is Free and Allow Discharge is 0 (do not allow).
 
-|Chapte011|
+.. image:: img/Chapter4/Chapte011.png
 
-   **Figure 48.
-   Standard Outfall at a Boundary.**
+*Figure 48.
+Standard Outfall at a Boundary.*
 
    Some boundaries can change the control of the flow of a conduit crossing a boundary.
    The example in Figure 49 shows an outfall to a dry trapezoidal channel.
    The channel is connected to the canal system by a closed gate.
    If the gate were opened, there would be a downstream control on this system.
 
-|Chapte012|
+.. image:: img/Chapter4/Chapte012.jpg
 
-   **Figure 49.
-   Boundary Crossing with a Control.**
+*Figure 49.
+Boundary Crossing with a Control.*
 
    Sometimes the conduit crossing the system is artificially shortened because the boundary is too close to the node.
    This can change the hydraulics of the water moving down the conduit.
@@ -456,10 +456,10 @@ Storm Drain Walls
 
    If a storm drain inlet is near a wall, an adjustment might be needed to ensure that the inlet is on the correct side of the wall.
 
-|Chapte013|
+.. image:: img/Chapter4/Chapte013.jpg
 
-   **Figure 50.
-   Wall and Inlet Example.**
+*Figure 50.
+Wall and Inlet Example.*
 
 Storage Unit
 ^^^^^^^^^^^^
@@ -467,47 +467,7 @@ Storage Unit
    A storage unit can be used with FLO-2D but at this time, it must be set up using the inp file or the EPA SWMM GUI.
    Set it up with a Junction Node using the FLO-2D Plugin and then convert it to a storage unit using the EPA SWMM GUI (Figure 51).
 
-|Chapte014|
+.. image:: img/Chapter4/Chapte014.jpg
 
-   **Figure 51.
-   Storage Unit Example.**
-
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 6.45778in
-   :height: 3.62083in
-.. |Chapte003| image:: media\Chapte003.png
-   :width: 6.48778in
-   :height: 2.26042in
-.. |Chapte004| image:: media\Chapte004.jpg
-   :width: 6.45347in
-   :height: 6.36417in
-.. |Chapte005| image:: media\Chapte005.jpg
-   :width: 6.17194in
-   :height: 5.07847in
-.. |Chapte006| image:: media\Chapte006.jpg
-   :width: 6.66181in
-   :height: 4.03083in
-.. |Chapte007| image:: media\Chapte007.jpg
-   :width: 4.74097in
-   :height: 2.86514in
-.. |Chapte008| image:: media\Chapte008.jpg
-   :width: 5.00431in
-   :height: 2.08958in
-.. |Chapte009| image:: media\Chapte009.jpg
-   :width: 4.95764in
-   :height: 3.60389in
-.. |Chapte010| image:: media\Chapte010.jpg
-   :width: 6.10625in
-   :height: 5.37097in
-.. |Chapte011| image:: media\Chapte011.png
-   :width: 6.5in
-   :height: 4.19236in
-.. |Chapte012| image:: media\Chapte012.jpg
-   :width: 6.49861in
-   :height: 3.93597in
-.. |Chapte013| image:: media\Chapte013.jpg
-   :width: 6.49875in
-   :height: 2.76042in
-.. |Chapte014| image:: media\Chapte014.jpg
-   :width: 5.70208in
-   :height: 3.69778in
+*Figure 51.
+Storage Unit Example.*
