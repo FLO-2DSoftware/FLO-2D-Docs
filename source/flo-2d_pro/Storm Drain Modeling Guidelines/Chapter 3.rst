@@ -420,12 +420,11 @@ The rating table is used throughout the simulation without adjustment.
 The structure of a SWMMFLORT.DAT file is:
 
     ID Grid Cell
-
     ID Depth Discharge
-
     ID Depth Discharge
-
     ID Depth Discharge
+    ...
+
 
 The first pair of numbers should be zero depth and zero discharge.
 This is repeated from 1 to number of storm drain inlets with INTYPE= 4 (Table 12).
