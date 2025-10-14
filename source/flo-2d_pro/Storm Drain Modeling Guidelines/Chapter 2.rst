@@ -1,13 +1,13 @@
 .. vim: syntax=rst
 
 Chapter 2
-~~~~~~~~~
+==========
 
 FLO-2D Storm Drain Features
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
 Overview of Inlets and Outfalls
-'''''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 FLO-2D storm drain component exchanges discharge between the surface water and the closed conduit system through a series of objects that are
 representations of the physical components in a storm drain system, primarily inlets and outfalls.
@@ -67,7 +67,7 @@ Outfall Discharge Retention Basin*
 Image of Storm Drain System with Outfall Discharging to a Channel*
 
 Storm Drain Inlets
-''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^
 
 FLO-2D can simulate 5 types of inlet geometries.
 Three of them are based on the Hydraulic Design Series No.
@@ -93,7 +93,7 @@ Manholes are modeled as inlets with an additional surcharge depth that represent
 When the surcharge depth is exceeded, the manhole is popped, and the manhole behaves as an inlet type 3.
 
 Inlet Types
-'''''''''''
+^^^^^^^^^^^^^
 
 Type 1 - Curb Opening Inlet at Grade
 
@@ -368,7 +368,7 @@ Table 4 presents some suggested surcharge depths.
 
 
 Storm Drain Outfalls
-''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^
 
 A variety of outfall conditions are available.
 For the outfall to discharge back to the surface water, the boundary condition must be set to ‘free’ in the SWMM.inp file and the ‘allow discharge’
@@ -425,7 +425,7 @@ entire simulation.
 For all free outfall configurations, the discharge to the surface is based on the comparison between PH with FLO-2D surface conditions.
 
 Elevations and Datum
-''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^
 
 The elevation and location of the inlets and outfalls are required to exchange flow with the surface water.
 The floodplain water surface elevation is compared to the storm drain pressure head based on a common reference such as the inlet rim elevation, inlet
@@ -492,7 +492,7 @@ TOPO_SDElev.RGH files and the FPLAIN.DAT AND TOPO.DAT files can be replaced by r
 elevation adjustments to the next simulation.
 
 Conduit Offsets
-'''''''''''''''
+^^^^^^^^^^^^^^^^^^^
 
 The swmm.inp file uses offset heights to connect the conduits to the nodes.
 The inlet and outlet offsets can be zero if there is no offset or any height above zero to set the offset.
