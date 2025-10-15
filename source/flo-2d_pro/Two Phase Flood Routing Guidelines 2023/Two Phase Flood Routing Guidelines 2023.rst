@@ -350,9 +350,7 @@ The coded rules for the two phase flow exchange within a grid element are as fol
    * - Mudflow sediment concentration is   |    The mudflow layer is added toless than 20%                       |    the fluid phase.
 
 
-..
-
-   After each exchange process listed in Table 2, the fluid and mudflow phase volume concentrations are recomputed.
+After each exchange process listed in Table 2, the fluid and mudflow phase volume concentrations are recomputed.
    The Table 2 sediment concentration by volume limits are based on the flow behavior categories in Table 1.
    The lower limit for hyperconcentrated sediment flow is assumed to be 20% concentration by volume, below which conventional sediment transport
    equations for river flow apply.
