@@ -3,15 +3,14 @@
 References
 ~~~~~~~~~~
 
-   FLO-2D Software, Inc.
-   FLO-2D Reference Manual, Nutrioso, AZ.
+FLO-2D Software, Inc.
+FLO-2D Reference Manual, Nutrioso, AZ.
 
 Flood Control District of Maricopa County, 2018.
 Drainage Policy and Standards for Maricopa County, Arizona.
 6\ :sup:`th` Edition, Phoenix, Arizona.
 
-Johnson, F.L., and F.M.
-Fred, 1984.
+Johnson, F.L., and F.M. Fred, 1984.
 Drainage of Highway Pavements (HEC12), Publication FHWA-TS84-202, Centerville, Virginia.
 
 Rossman, L.A., 2005.
