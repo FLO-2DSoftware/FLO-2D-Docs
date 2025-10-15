@@ -681,7 +681,7 @@ sediment size and percent finer than.
 
 .. image:: img/Two050.jpg
 
-.. image:: img/Two012.png
+.. image:: img/Two012.jpg
 
 *Figure 12.
 Sediment Routing by Size Fractions and Bed Armoring.*
