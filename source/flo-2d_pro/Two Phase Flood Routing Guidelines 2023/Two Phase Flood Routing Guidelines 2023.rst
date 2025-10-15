@@ -701,8 +701,6 @@ The data entry method for a simple prescribed breach tailings dam failure is def
 *Figure 14.
 Two phase data entry dialog sediment transport.
 
-|Two015|
-
 Output Files and Reviewing the Results
 ----------------------------------------
 
@@ -765,55 +763,53 @@ Other FLO-2D QGIS plotting options are available for generating shape files or h
 Volume Conservation
 ^^^^^^^^^^^^^^^^^^^^^
 
-   To conduct a review of a FLO-2D simulation of tailings dam failure, the review should begin with volume conservation reported in the SUMMARY.OUT file.
-   There are two primary reported output data in this file to review: 1) The overall fluid and mudflow volume conservation listed in four columns at the
-   start of the file; 2) The sediment volume conservation below the summary disposition of the volumes.
-   Both columns of volume conservation reported should be practically zero.
-   The percent error in the volume conservation in the fourth column should be on the order of 0.000100 of one percent or less.
-   Often the percent error is absolute zero as shown in the example of a partial SUMMARY.OUT file below:
+To conduct a review of a FLO-2D simulation of tailings dam failure, the review should begin with volume conservation reported in the SUMMARY.OUT file.
+There are two primary reported output data in this file to review: 1) The overall fluid and mudflow volume conservation listed in four columns at the
+start of the file; 2) The sediment volume conservation below the summary disposition of the volumes.
+Both columns of volume conservation reported should be practically zero.
+The percent error in the volume conservation in the fourth column should be on the order of 0.000100 of one percent or less.
+Often the percent error is absolute zero as shown in the example of a partial SUMMARY.OUT file below:
 
-|Two016|
+.. image:: img/Two016.jpg
 
-   Later in the file, the sediment volume conservation is reported:
+Later in the file, the sediment volume conservation is reported:
 
-|Two017|
+.. image:: img/Two017.jpg
 
 Numerical Stability
 ^^^^^^^^^^^^^^^^^^^^
 
-   Continuing with the project review, the simulation numerical stability should be verified next.
-   Potential numerical surging in the model is most likely to occur near the tailings breach and may necessitate lowering the Courant number to control
-   computational timesteps.
-   There are four output files that can support the conclusion that the model results are numerically stable:
+Continuing with the project review, the simulation numerical stability should be verified next.
+Potential numerical surging in the model is most likely to occur near the tailings breach and may necessitate lowering the Courant number to control
+computational timesteps.
+There are four output files that can support the conclusion that the model results are numerically stable:
 
-- VELTIMEFP.OUT
+    - VELTIMEFP.OUT
 
-- SUPER.OUT
+    - SUPER.OUT
 
-- ROUGH.OUT
+    - ROUGH.OUT
 
-- TIME.OUT
+    - TIME.OUT
 
-..
+If the maximum velocities reported in VELTIMEFP.OUT (sorted and listed in descending order) are reasonable, then there is no numerical surging in the
+model.
+This can be confirmed with the maximum supercritical Froude numbers listed in SUPER.OUT.
+When the limiting Froude number (global or spatially variable) is exceeded, the revised Manning’s n-values are reported in ROUGH.OUT (sorted in
+descending order).
+If the highest n-value revisions are coincident with the highest reported velocity and Froude numbers, then appropriate adjustments should be made to
+grid element n-values, elevations, or surface area (area and width reduction values – ARF and WRF values).
+Finally, a review of the TIME.OUT file will indicate which grid elements are slowing down the model (forcing smaller timesteps).
+If the culprit cells listed in the
 
-   If the maximum velocities reported in VELTIMEFP.OUT (sorted and listed in descending order) are reasonable, then there is no numerical surging in the
-   model.
-   This can be confirmed with the maximum supercritical Froude numbers listed in SUPER.OUT.
-   When the limiting Froude number (global or spatially variable) is exceeded, the revised Manning’s n-values are reported in ROUGH.OUT (sorted in
-   descending order).
-   If the highest n-value revisions are coincident with the highest reported velocity and Froude numbers, then appropriate adjustments should be made to
-   grid element n-values, elevations, or surface area (area and width reduction values – ARF and WRF values).
-   Finally, a review of the TIME.OUT file will indicate which grid elements are slowing down the model (forcing smaller timesteps).
-   If the culprit cells listed in the
-
-   TIME.OUT file correlate with those listed in the other files (VELTIMEFP.OUT, SUPER.OUT and ROUGH.OUT), then these are grid elements that are the cause
-   of any model numerical instability.
-   The model runs by incrementing and decrementing timesteps, so some grid elements will be listed in the TIME.OUT file, but the cells reported in this
-   file are not sufficient by themselves to demonstrate numerical surging.
-   The post processor programs MAXPLOT, PROFILES and HYDROG are additional resources to review hydrograph spikes or adverse water surface elevations.
-   Appendix C provides some suggestions for addressing numerical instability issues.
-   For further information on numerical instability and troubleshooting refer to the FLO-2D Reference Manual chapter 2 available with the software
-   C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Manuals.
+TIME.OUT file correlate with those listed in the other files (VELTIMEFP.OUT, SUPER.OUT and ROUGH.OUT), then these are grid elements that are the cause
+of any model numerical instability.
+The model runs by incrementing and decrementing timesteps, so some grid elements will be listed in the TIME.OUT file, but the cells reported in this
+file are not sufficient by themselves to demonstrate numerical surging.
+The post processor programs MAXPLOT, PROFILES and HYDROG are additional resources to review hydrograph spikes or adverse water surface elevations.
+Appendix C provides some suggestions for addressing numerical instability issues.
+For further information on numerical instability and troubleshooting refer to the FLO-2D Reference Manual chapter 2 available with the software
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Manuals.
 
 Evacuated Grid Elements
 ^^^^^^^^^^^^^^^^^^^^^^^^
