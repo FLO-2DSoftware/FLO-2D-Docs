@@ -112,11 +112,6 @@ FLO-2D Error Messages*
           the invert elevation should be equal to the swale bed elevation.
 
 
-.. list-table::
-   :widths: 25 75
-   :header-rows: 0
-
-
    * - Type 4 inlet is a vertical inlet,
 
        and it is in a channelcell.
