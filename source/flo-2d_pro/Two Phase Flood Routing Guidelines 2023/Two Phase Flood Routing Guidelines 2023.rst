@@ -636,53 +636,48 @@ as shown below:
 
    <br><br>
 
-..
+The tailings thickness in TAILINGS.DAT overrides the global assignment of tailings elevation or depth in Line R of the INFLOW.DAT file.
+The reservoir roughness at the end of line R enables the reservoir elements n-value to be reassigned to account for potential flow with deep depths
+(see White Paper on “Reservoir Routing and Ponded Flow”).
+The tailings thickness or depth can be determined by the difference between the pre- and post-tailings topography.
+These surfaces can be represented by rasters in the QGIS or any GIS software to compute the tailings depth.
+If only the tailings surface elevation is available either the pre-tailings topography or the tailings depth will have to be estimated.
 
-   The tailings thickness in TAILINGS.DAT overrides the global assignment of tailings elevation or depth in Line R of the INFLOW.DAT file.
-   The reservoir roughness at the end of line R enables the reservoir elements n-value to be reassigned to account for potential flow with deep depths
-   (see White Paper on “Reservoir Routing and Ponded Flow”).
-   The tailings thickness or depth can be determined by the difference between the pre- and post-tailings topography.
-   These surfaces can be represented by rasters in the QGIS or any GIS software to compute the tailings depth.
-   If only the tailings surface elevation is available either the pre-tailings topography or the tailings depth will have to be estimated.
+    - SED.DAT – M lines, and C lines are used.
 
-- SED.DAT – M lines, and C lines are used.
-
-..
-
-   For two phase flow both the sediment transport and mudflow variables have to be assigned in the SED.DAT file.
-   There are no specific data changes to the SED.DAT file other than both the MLine and C-Line are read together in the file.
-   A typical SED.DAT file for two phase flow may be as follows:
+For two phase flow both the sediment transport and mudflow variables have to be assigned in the SED.DAT file.
+There are no specific data changes to the SED.DAT file other than both the MLine and C-Line are read together in the file.
+A typical SED.DAT file for two phase flow may be as follows:
 
    M 0.0538 14.5 2.72 10.4 2.65 0.0
 
-   C 9 0 0.576 3.71 2.65 14700.
-   0.0778 0 7362 E 3.0
+   C 9 0 0.576 3.71 2.65 14700. 0.0778 0 7362
 
-   Refer to the FLO-2D Data Input Manual to review each variable.
-   A few highlights are mentioned below:
+   E 3.0
 
-- The mudflow parameters in LINE M should be listed first;
+Refer to the FLO-2D Data Input Manual to review each variable.
+A few highlights are mentioned below:
 
-- The M-Line primarily includes viscosity and yield stress coefficients and exponents; • The sediment transport capacity equation is entered in the
-  C-line;
+    - The mudflow parameters in LINE M should be listed first;
 
-- Scour limitation is assigned by line E.
+    - The M-Line primarily includes viscosity and yield stress coefficients and exponents; • The sediment transport capacity equation is entered in the
+      C-line;
 
-- At the present time sediment routing by size fractions is not available for two phase flow and is ignored if the data is assigned.
+    - Scour limitation is assigned by line E.
 
-..
+    - At the present time sediment routing by size fractions is not available for two phase flow and is ignored if the data is assigned.
 
-   Typical tolerance values, Courant numbers, limiting Froude number, and overland flow n-values are appropriate - no special values are necessary for a
-   tailings dam breach simulation.
-   Higher n-values at the breach element and immediately downstream to reflect the high breach velocities will improve the model stability.
-   Some recommendations on selecting the sediment transport capacity equation are presented later in the document.
+Typical tolerance values, Courant numbers, limiting Froude number, and overland flow n-values are appropriate - no special values are necessary for a
+tailings dam breach simulation.
+Higher n-values at the breach element and immediately downstream to reflect the high breach velocities will improve the model stability.
+Some recommendations on selecting the sediment transport capacity equation are presented later in the document.
 
-   Sediment routing by size fractions is possible for both overland flow and channel routing.
-   If sediment routing by size fractions is initiated, bed armoring is also simulated.
-   When the upper bed layer (exchange layer) become coarser as the finer sediment is removed, the armoring will limit bed scour (Figure 12).
-   This will enable the bed coarsening or sediment deposition to be tracked in a channel.
-   The SED.DAT file sediment routing by size fraction data is displayed below in blue (lines Z and P) where the P-Line includes the representative
-   sediment size and percent finer than.
+Sediment routing by size fractions is possible for both overland flow and channel routing.
+If sediment routing by size fractions is initiated, bed armoring is also simulated.
+When the upper bed layer (exchange layer) become coarser as the finer sediment is removed, the armoring will limit bed scour (Figure 12).
+This will enable the bed coarsening or sediment deposition to be tracked in a channel.
+The SED.DAT file sediment routing by size fraction data is displayed below in blue (lines Z and P) where the P-Line includes the representative
+sediment size and percent finer than.
 
 |Two012|
 
