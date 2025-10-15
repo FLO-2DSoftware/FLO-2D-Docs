@@ -956,7 +956,7 @@ Various breach simulations were performed with the tailings material sediment co
 10 m.
 The figures below show the breach results for a tailings material that is saturated with a concentration by volume of 40%.
 
-.. image:: img/Two019.jpg
+.. image:: img/Two019.png
 
 *Figure 16.
 Example Project – Reservoir Located on the Right of the Flow Domain.*
@@ -970,46 +970,46 @@ The following two phase flow tailings dam breach scenarios were simulated:
     - Prescribed breach – vertical/horizontal breach rates using the eleven sediment transport equations
 
 Figure 16 shows an example of the predicted maximum depths for the combined fluid and mudflow phases.
-   This example is generated using a prescribed breach rate of 20 m/hr (for both vertical and horizontal) and the Karim-Kennedy sediment transport
-   equation with a tailings concentration by volume of 40%.
-   Figure 17 and Figure 18 depict the maximum overland flow depths for the separate fluid and mudflow phases respectively.
-   The following figures were generated using the FLO-2D MAXPLOT post processor program that was updated for the output files associated with tailings
-   dam two phase flow applications.
+This example is generated using a prescribed breach rate of 20 m/hr (for both vertical and horizontal) and the Karim-Kennedy sediment transport
+equation with a tailings concentration by volume of 40%.
+Figure 17 and Figure 18 depict the maximum overland flow depths for the separate fluid and mudflow phases respectively.
+The following figures were generated using the FLO-2D MAXPLOT post processor program that was updated for the output files associated with tailings
+dam two phase flow applications.
 
-|Two020|
+.. image:: img/Two020.jpg
 
-   Figure 17.
-   Maximum Fluid Phase Flow Depth.
+*Figure 17.
+Maximum Fluid Phase Flow Depth.*
 
-|Two021|
+.. image:: img/Two021.jpg
 
-   Figure 18.
-   Maximum Mudflow Phase Flow Depth.
+*Figure 18.
+Maximum Mudflow Phase Flow Depth.*
 
-   Figure 17 indicates that the fluid phase flows to the grid system boundary, while Figure 18 shows the tailings material (mudflow) only flows about
-   halfway to the boundary.
-   The fluid depth stored in the reservoir is on the order of 3 m in Figure 17 at the start of the simulation.
-   The reservoir tailings thickness ranges from 1 m to 5 m in Figure 18.
+Figure 17 indicates that the fluid phase flows to the grid system boundary, while Figure 18 shows the tailings material (mudflow) only flows about
+halfway to the boundary.
+The fluid depth stored in the reservoir is on the order of 3 m in Figure 17 at the start of the simulation.
+The reservoir tailings thickness ranges from 1 m to 5 m in Figure 18.
 
-   After a 24 hr tailings dam prescribed breach simulation, the final fluid and mudflow depths are shown in Figure 19 and Figure 20 respectively.
+After a 24 hr tailings dam prescribed breach simulation, the final fluid and mudflow depths are shown in Figure 19 and Figure 20 respectively.
 
-|Two022|
+.. image:: img/Two022.jpg
 
-   Figure 19.
-   Final Fluid Phase Flow Depth.
+Figure 19.
+Final Fluid Phase Flow Depth.*
 
-|Two023|
+.. image:: img/Two023.jpg
 
-   Figure 20.
-   Final Mudflow Phase Flow Depth
+*Figure 20.
+Final Mudflow Phase Flow Depth*
 
-   Corresponding to the final fluid and mudflow phase depths are the final fluid and mudflow velocities in Figure 21 and Figure 22 which show that the
-   final mudflow depths in Figure 20 have essentially ceased flowing.
+Corresponding to the final fluid and mudflow phase depths are the final fluid and mudflow velocities in Figure 21 and Figure 22 which show that the
+final mudflow depths in Figure 20 have essentially ceased flowing.
 
-|Two024|
+.. image:: img/Two024.jpg
 
-   Figure 21.
-   Final Fluid Phase Velocity.
+*Figure 21.
+Final Fluid Phase Velocity.*
 
 |Two025|
 
