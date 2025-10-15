@@ -1011,22 +1011,22 @@ final mudflow depths in Figure 20 have essentially ceased flowing.
 *Figure 21.
 Final Fluid Phase Velocity.*
 
-|Two025|
+.. image:: img/Two025.jpg
 
-   Figure 22.
-   Final Mudflow Phase Velocity – Ceased Flowing.
+*Figure 22.
+Final Mudflow Phase Velocity – Ceased Flowing.*
 
-   The maximum sediment concentration by volume regardless of the time of occurrence for the fluid and mudflow phases are shown in Figure 23 and Figure
-   24.
-   Figure 23 indicates that the maximum fluid phase concentration is about 20% by volume while the maximum mudflow phase concentration by volume is
-   between 50% and 56%.
-   The maximum and final mudflow phase concentrations by volume (Figure 24 and Figure 25 respectively) are essentially identical because the mudflow
-   ceased flowing.
+The maximum sediment concentration by volume regardless of the time of occurrence for the fluid and mudflow phases are shown in Figure 23 and Figure
+24.
+Figure 23 indicates that the maximum fluid phase concentration is about 20% by volume while the maximum mudflow phase concentration by volume is
+between 50% and 56%.
+The maximum and final mudflow phase concentrations by volume (Figure 24 and Figure 25 respectively) are essentially identical because the mudflow
+ceased flowing.
 
-|Two026|
+.. image:: img/Two026.jpg
 
-   Figure 23.
-   Fluid Phase Maximum Concentration by Volume.
+*Figure 23.
+Fluid Phase Maximum Concentration by Volume.*
 
 |Two027|
 
