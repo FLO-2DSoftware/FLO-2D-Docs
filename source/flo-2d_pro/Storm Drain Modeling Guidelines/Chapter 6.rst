@@ -9,13 +9,13 @@ Reviewing Storm Drain Model Results
 Introduction
 ''''''''''''
 
-   After a FLO-2D storm drain model is complete, the results can be reviewed with both the FLO2D QGIS program and the SWMM GUI.
-   The QGIS displays the storm drain inflow and return flow hydrographs.
-   A FLO-2D storm drain simulation will generate the following files in Table 22.
-   A complete mapping lesson for an advanced FLO-2D Storm Drain model is available in the FLO2D Documentation site (https://documentation.flo-2d.com/).
+After a FLO-2D storm drain model is complete, the results can be reviewed with both the FLO2D QGIS program and the SWMM GUI.
+The QGIS displays the storm drain inflow and return flow hydrographs.
+A FLO-2D storm drain simulation will generate the following files in Table 22.
+A complete mapping lesson for an advanced FLO-2D Storm Drain model is available in the FLO2D Documentation site (https://documentation.flo-2d.com/).
 
-   **Table 22.
-   FLO-2D Storm Drain Simulation Files**
+*Table 22.
+FLO-2D Storm Drain Simulation Files*
 
 .. list-table::
    :widths: 50 50
@@ -61,79 +61,69 @@ A FLO-2D model was successfully completed if the termination time and date is re
 
 Volume exchange and conservation between the surface water and storm drain is reported in the SUMMARY.OUT file as shown below.
 
-|Chapte003|
+.. image:: img/Chapter6/Chapte003.jpg
 
-   *Storm Drain Inflow:* Reports the volume that represents inflow to the storm drain through the inlets and outfalls.
+*Storm Drain Inflow:* Reports the volume that represents inflow to the storm drain through the inlets and outfalls.
 
-   *Storm Drain Outflow from Outfalls:* Total volume of outfalls that discharge to the FLO-2D surface water and off the system.
+*Storm Drain Outflow from Outfalls:* Total volume of outfalls that discharge to the FLO-2D surface water and off the system.
 
-   *Storm Drain Return Flow to Surface:* Return flow to the surface water through the inlets as pressure flow.
+*Storm Drain Return Flow to Surface:* Return flow to the surface water through the inlets as pressure flow.
 
 Step 2.
 View the Surface Water Data and Results in QGIS
 
-
-   Open the project in the FLO-2D QGIS plug-in and go to the documentation folder to review the Storm drain advance lesson.
+Open the project in the FLO-2D QGIS plug-in and go to the documentation folder to review the Storm drain advance lesson.
 
 Viewing the Storm Drain Output in the SWMM GUI
 ''''''''''''''''''''''''''''''''''''''''''''''
 
-   The SWMM GUI creates the storm drain data input files and graphically displays the results.
-   A
+The SWMM GUI creates the storm drain data input files and graphically displays the results.
+A FLO-2D storm drain simulation will generate output files that are compatible with the SWMM GUI.
+To view the output, first make sure that the following files are present in the project folder:
 
-   FLO-2D storm drain simulation will generate output files that are compatible with the SWMM GUI.
-   To view the output, first make sure that the following files are present in the project folder:
+    - SWMM.ini
 
-- SWMM.ini
+    - SWMM.inp
 
-- SWMM.inp
+    - SWMM.rain
 
-- SWMM.rain
+    - SWMM.RPT
 
-- SWMM.RPT
+    - SWMM.OUT
 
-- SWMM.OUT
-
-..
-
-   The SWMM.RPT file reports the storm drain output data in ASCII format and can be read with any ASCII editor.
-   The SWMM.OUT file is a binary output file with results reported temporally and spatially that can be read by the SWMM GUI.
+The SWMM.RPT file reports the storm drain output data in ASCII format and can be read with any ASCII editor.
+The SWMM.OUT file is a binary output file with results reported temporally and spatially that can be read by the SWMM GUI.
 
 SWMM.ini
 
+The storm drain results are not automatically loaded into the SWMM GUI.
+To load the results, navigate to the project folder directory and open the SWMM.ini file using an ASCII text editor.
 
-   The storm drain results are not automatically loaded into the SWMM GUI.
-   To load the results, navigate to the project folder directory and open the SWMM.ini file using an ASCII text editor.
+The user needs to set ‘Saved = 1” and “Current = 1” as highlighted in Figure 52.
 
-   The user needs to set ‘Saved = 1” and “Current = 1” as highlighted in Figure 52.
+.. image:: img/Chapter6/Chapte004.jpg
 
-|Chapte004|
-
-**Figure 52.
-SWMM.ini File with Required Data to View the Results in the SWMM GUI**
+*Figure 52.
+SWMM.ini File with Required Data to View the Results in the SWMM GUI*
 
 View the Storm Drain Results
 
+Open the SWMM GUI and navigate to the project folder.
+Open the SWMM.inp file from the File >> Open menu.
+This will access the model output and enable the GUI to display the results as shown in Figure 53.
+The SWMM GUI has controls to label and color code the results in a variety of configurations.
 
-   Open the SWMM GUI and navigate to the project folder.
-   Open the SWMM.inp file from the File >> Open menu.
-   This will access the model output and enable the GUI to display the results as shown in Figure 53.
-   The SWMM GUI has controls to label and color code the results in a variety of configurations.
+.. image:: img/Chapter6/Chapte005.jpg
 
-|Chapte005|
+*Figure 53.
+Example Storm Drain Model in the SWMM GUI*
 
-   **Figure 53.
-   Example Storm Drain Model in the SWMM GUI**
-
-   The SWMM GUI has some tools that can assist in the review of the storm drain output.
-   The
-
-   SWMM manual should be used referenced when using the SWMM GUI.
-   The GUI environment is shown in Figure 54 consisting of a main menu, tool bars, study area, and working area.
-   These attributes and some of the options are explained briefly.
+The SWMM GUI has some tools that can assist in the review of the storm drain output.
+The SWMM manual should be used referenced when using the SWMM GUI.
+The GUI environment is shown in Figure 54 consisting of a main menu, tool bars, study area, and working area.
+These attributes and some of the options are explained briefly.
 
 File Menu
-
 
 **Open:** Opens an existing project
 
@@ -143,25 +133,11 @@ File Menu
 
 **Save As:** Saves the project under a different name
 
-**Figure**
 
-**54**
+.. image:: img/Chapter6/Chapte009.jpg
 
-**.**
-
-**SWMM GUI Environment**
-
-Main
-
-Data/Map
-
-Browser
-
-Study Area Map
-
-Status Bar
-
-Toolbars
+*Figure 54
+.SWMM GUI Environment*
 
 Edit Menu
 
@@ -196,18 +172,18 @@ Report Menu
    **Status:** Displays a status report for the last simulation.
    The Bookmark feature enables quick review of the SWMM.RPT file sections (Figure 55).
 
-|Chapte006|
+.. image:: img/Chapter6/Chapte006.jpg
 
-   **Figure 55.
-   Bookmark Interface that Facilitates a Review the SWMM.RPT File**
+*Figure 55.
+Bookmark Interface that Facilitates a Review the SWMM.RPT File*
 
 **Graph:** Command that displays simulation results in graphical form (Figure 56.
 Graph: Time Series).
 
-|Chapte007|
+.. image:: img/Chapter6/Chapte007.jpg
 
-   **Figure 56.
-   Graph: Time Series Table:** Displays simulation results in tabular form\ **.**
+*Figure 56.
+Graph: Time Series Table:** Displays simulation results in tabular form\ *
 
 Tools Menu – Commands that Provide Control Detail
 
@@ -217,10 +193,10 @@ Tools Menu – Commands that Provide Control Detail
 **Map Control Display Options:** Sets appearance options for the Map, such as object size, annotation, flow direction arrows, and background colors
 (Figure 57).
 
-|Chapte008|
+.. image:: img/Chapter6/Chapte008.jpg
 
-   **Figure 57.
-   Map Options**
+*Figure 57.
+Map Options*
 
 Help Menu
 
@@ -433,25 +409,3 @@ Model Checklist
      - SWMM.ini file.
        The SWMM.ini file should be modified to review the results.
 
-
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 6in
-   :height: 0.74236in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 5.63542in
-   :height: 5.65417in
-.. |Chapte004| image:: media\Chapte004.jpg
-   :width: 3.22292in
-   :height: 3.08278in
-.. |Chapte005| image:: media\Chapte005.jpg
-   :width: 6.35208in
-   :height: 4.66639in
-.. |Chapte006| image:: media\Chapte006.jpg
-   :width: 6.54514in
-   :height: 4.10403in
-.. |Chapte007| image:: media\Chapte007.jpg
-   :width: 3.17569in
-   :height: 1.65597in
-.. |Chapte008| image:: media\Chapte008.jpg
-   :width: 2.59917in
-   :height: 2.8375in
