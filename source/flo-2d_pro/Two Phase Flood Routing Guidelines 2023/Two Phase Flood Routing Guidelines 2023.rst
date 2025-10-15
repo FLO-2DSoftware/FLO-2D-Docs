@@ -425,7 +425,7 @@ separate models so that the tailings dam breach discharge hydrograph can be dete
 The discharge volume released through the breach reported in DAMBREACH_VOLUME.OUT can be checked against the volume estimated by the FLO-2D TAILINGS
 DAM BREACH tool.
 
-.. image:: img/Two008.png
+.. image:: img/Two008.jpg
 
 *Figure 8.
 Possible Tailings Dam Configuration Simulated by a FLO-2D Two Phase Flow Dam Breach.*
@@ -441,7 +441,7 @@ It is the simplest FLO-2D option to apply and does not require the assignment of
 In this case, the dam is assumed to comprise of layered homogeneous tailings material, not separate constructed dam core and shell material (Figure
 9).
 
-.. image:: img/Two009.png
+.. image:: img/Two009.jpg
 
 *Figure 9.
 Tailings Stacks Example (source: Google Earth Historical Imagery).*
