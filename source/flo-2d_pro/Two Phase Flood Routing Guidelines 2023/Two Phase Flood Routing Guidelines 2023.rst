@@ -814,108 +814,98 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Manuals.
 Evacuated Grid Elements
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-   With tailings dam breach simulations, scour and deposition may contribute to the evacuation of shallow flow volume from floodplain elements.
-   Small grid elements and tolerance values and a large peak discharge associated with a tailings dam breach failure may cause a cell to be volume
-   evacuated at shallow flow.
-   Small tolerance values (TOL < 0.004 ft or 0.001 m), also referred to as depression storage, results in less volume on a cell for shallow flow.
-   The FLO-2D model exchanges flow with contiguous elements in eight directions so it is possible with shallow flow to completely drain an element of
-   volume if the outflow exceeds the inflow plus storage.
-   Volume conservation error is sometimes related to evacuated elements.
+With tailings dam breach simulations, scour and deposition may contribute to the evacuation of shallow flow volume from floodplain elements.
+Small grid elements and tolerance values and a large peak discharge associated with a tailings dam breach failure may cause a cell to be volume
+evacuated at shallow flow.
+Small tolerance values (TOL < 0.004 ft or 0.001 m), also referred to as depression storage, results in less volume on a cell for shallow flow.
+The FLO-2D model exchanges flow with contiguous elements in eight directions so it is possible with shallow flow to completely drain an element of
+volume if the outflow exceeds the inflow plus storage.
+Volume conservation error is sometimes related to evacuated elements.
 
-   First review the SUMMARY.OUT file to see if there is any volume conservation error.
-   If the EVACUATEDFP.OUT are empty or non-existent, there are no evacuated elements slowing down the model.
-   Review the ROUGH.OUT and TIME.OUT files to determine if the evacuated elements listed in EVACUATEDFP.OUT are impacting the model performance.
-   If this is the case, review these elements in detail in terms of their attributes (n-values, elevations) or components (ARF-values, streets,
-   infiltration, etc.) and make some adjustments.
-   For most projects, a few timesteps of evacuated grid elements can be ignored.
-   The only consequence of the reported evacuated elements are higher n-values and TOL values and a few timestep reductions.
+First review the SUMMARY.OUT file to see if there is any volume conservation error.
+If the EVACUATEDFP.OUT are empty or non-existent, there are no evacuated elements slowing down the model.
+Review the ROUGH.OUT and TIME.OUT files to determine if the evacuated elements listed in EVACUATEDFP.OUT are impacting the model performance.
+If this is the case, review these elements in detail in terms of their attributes (n-values, elevations) or components (ARF-values, streets,
+infiltration, etc.) and make some adjustments.
+For most projects, a few timesteps of evacuated grid elements can be ignored.
+The only consequence of the reported evacuated elements are higher n-values and TOL values and a few timestep reductions.
 
 Scour Limitation
 ^^^^^^^^^^^^^^^^^^^^
 
-   The selection of a given sediment transport equation to simulate the scour and deposition of the fluid phase may not match the project field
-   conditions resulting in some grid elements being predicted to have a large scour depth (hole).
-   This depends on the variables in the equation and whether they are self-adjusting related to slope, velocity, or shear stress.
-   For example, if a scour hole tends to be excessive, the slope into the scoured grid element may be increasingly large, but the slope out of the grid
-   element will decrease resulting in subsequent deposition filling the scour hole.
-   If the equation does not have offsetting functions or parameters, the cell scour could continue unabated with unreasonable results.
-   A global scour depth limitation can be assigned in the SED.DAT file (E-line) such that when the scour depth exceeds the limiting value, the predicted
-   sediment transport out of the grid element will not be considered when distributing the sediment exchange to contiguous elements.
-   A typical scour depth limitation may be 3 to 10 ft (1 to 3 m) depending on depth to bedrock.
+The selection of a given sediment transport equation to simulate the scour and deposition of the fluid phase may not match the project field
+conditions resulting in some grid elements being predicted to have a large scour depth (hole).
+This depends on the variables in the equation and whether they are self-adjusting related to slope, velocity, or shear stress.
+For example, if a scour hole tends to be excessive, the slope into the scoured grid element may be increasingly large, but the slope out of the grid
+element will decrease resulting in subsequent deposition filling the scour hole.
+If the equation does not have offsetting functions or parameters, the cell scour could continue unabated with unreasonable results.
+A global scour depth limitation can be assigned in the SED.DAT file (E-line) such that when the scour depth exceeds the limiting value, the predicted
+sediment transport out of the grid element will not be considered when distributing the sediment exchange to contiguous elements.
+A typical scour depth limitation may be 3 to 10 ft (1 to 3 m) depending on depth to bedrock.
 
 Channel Two Phase Mudflows
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Overland or channel mudflows without a tailings dam breach can be simulated.
-   The only required additional data besides the channel inflow hydrograph with sediment concentrations is the ISEDN switch for the sediment equation or
-   sediment group Line 1 in the CHAN.DAT file.
-   The switch MUD = 2 will initiate the two phase flow.
-   This will enable a mudflow to be simulated in a channel and then diluted by a downstream tributary contributing a water or low sediment concentration
-   inflow.
-   In the example project in Figure 15, the mudflow is introduced into the main channel and a low concentration (water flood) is simulated in the
-   tributary as defined by the following INFLOW.DAT file.
-   The main channel first cell is 7304 entering from the right in Figure 15 and the tributary channel inflow node is 5598 shown entering from the north.
-   The discharge in each channel can vary in time and more than only tributary or overland flow hydrograph can be simulated with the channel.
-   A tailings dam breach inundation area can be simulated with a downstream channel by putting the first upstream channel element near the dam breach.
-   When the tailings debouch onto the floodplain from the breach, they will enter the channel through the channel floodplain interface.
-   Overbank and return flow to the channel will be simulated.
+Overland or channel mudflows without a tailings dam breach can be simulated.
+The only required additional data besides the channel inflow hydrograph with sediment concentrations is the ISEDN switch for the sediment equation or
+sediment group Line 1 in the CHAN.DAT file.
+The switch MUD = 2 will initiate the two phase flow.
+This will enable a mudflow to be simulated in a channel and then diluted by a downstream tributary contributing a water or low sediment concentration
+inflow.
+In the example project in Figure 15, the mudflow is introduced into the main channel and a low concentration (water flood) is simulated in the
+tributary as defined by the following INFLOW.DAT file.
+The main channel first cell is 7304 entering from the right in Figure 15 and the tributary channel inflow node is 5598 shown entering from the north.
+The discharge in each channel can vary in time and more than only tributary or overland flow hydrograph can be simulated with the channel.
+A tailings dam breach inundation area can be simulated with a downstream channel by putting the first upstream channel element near the dam breach.
+When the tailings debouch onto the floodplain from the breach, they will enter the channel through the channel floodplain interface.
+Overbank and return flow to the channel will be simulated.
 
-   |Two018|
+.. image:: img/Two018.jpg
 
-Tributary
+.. image:: img/Two051.jpg
 
-Main Channel
-
-Mixed Flow
-
-Mudflow
-
-Fluid Flow
-
-   Figure 15.
-   Two Phase Mudflow in a Channel with Diluted Tributary Inflow.
+*Figure 15.
+Two Phase Mudflow in a Channel with Diluted Tributary Inflow.*
 
 Two Phase Flow Application - Possible Modeling Scenarios
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   For a two phase flow tailings dam breach project application, the possible breach scenarios include:
+For a two phase flow tailings dam breach project application, the possible breach scenarios include:
 
-- Water failure only: PMP or PMF plus impounded water, or PMP plus impounded water plus inflow flood hydrograph; Use instantaneous breach failure,
-  prescribed rate failure or breach erosion.
-  No two phase flow necessary for this scenario.
+    - Water failure only: PMP or PMF plus impounded water, or PMP plus impounded water plus inflow flood hydrograph; Use instantaneous breach failure,
+      prescribed rate failure or breach erosion.
+      No two phase flow necessary for this scenario.
 
-- Mudflow only: Failure of a completely mixed water and tailings material (a relatively fluid volume stored in the tailings reservoir) that will flow
-  with an instantaneous breach.
-  No fluid layer is assigned.
-  The tailings elevation and the water surface elevation are the same.
+    - Mudflow only: Failure of a completely mixed water and tailings material (a relatively fluid volume stored in the tailings reservoir) that will flow
+      with an instantaneous breach.
+      No fluid layer is assigned.
+      The tailings elevation and the water surface elevation are the same.
 
-- Breach failures that include varying tailings material sediment concentrations by volume; Use instantaneous breach failure, prescribed rates of breach
-  failure, or sediment erosion breach.
+    - Breach failures that include varying tailings material sediment concentrations by volume; Use instantaneous breach failure, prescribed rates of breach
+      failure, or sediment erosion breach.
 
-- Multiple tailing dam failures cascading downstream into one another as instantaneous failures, prescribed rates of breach failure or sediment erosion
-  breach.
+    - Multiple tailing dam failures cascading downstream into one another as instantaneous failures, prescribed rates of breach failure or sediment erosion
+      breach.
 
-..
+       PMP = Probable Maximum Precipitation PMF = Probable Maximum Flood
 
-   PMP = Probable Maximum Precipitation PMF = Probable Maximum Flood
+       The following tailings dam breach scenarios might include these tasks:
 
-   The following tailings dam breach scenarios might include these tasks:
+    - Estimate tailings breach volume with Tailings Dam Tool
 
-- Estimate tailings breach volume with Tailings Dam Tool
+    - Create combined tailings dam and downstream flooding grid system
 
-- Create combined tailings dam and downstream flooding grid system
+    - Assign water surface and tailings elevation in INFLOW.DAT, Line R
 
-- Assign water surface and tailings elevation in INFLOW.DAT, Line R
+    - Assign sediment transport and mudflow parameters in SED.DAT
 
-- Assign sediment transport and mudflow parameters in SED.DAT
+    - Select one or more fluid sediment transport equations
 
-- Select one or more fluid sediment transport equations
+    - Select one or more mudflow samples for varying concentrations by volume
 
-- Select one or more mudflow samples for varying concentrations by volume
+    - Check SUMMARY.OUT to compare water/sediment volume conservation
 
-- Check SUMMARY.OUT to compare water/sediment volume conservation
-
-- Simulate a downstream channel and tributaries to capture the breach discharge
+    - Simulate a downstream channel and tributaries to capture the breach discharge
 
 1. Dam is constructed from borrow material (not tailings) with impounded water
 
