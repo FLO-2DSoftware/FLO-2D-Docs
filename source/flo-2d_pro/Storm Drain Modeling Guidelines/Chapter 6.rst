@@ -270,15 +270,18 @@ The following checklist was prepared to review the storm drain data files:
     ☐ Inlet location. All inlets must be inside the FLO-2D computation domain.
 
     ☐ SWMM hydrology components are eliminated. If an existing SWMM model was ported
+
       to the FLO-2D model, all the hydrology features must be removed including
       subcatchments and rain gage features.
 
     ☐ Pipe lengths. If pipe lengths are less than grid element width reset them to
+
       the grid element width.
 
     ☐ Adverse pipe slope. Check adverse pipe slope for accuracy.
 
     ☐ Inlet elevations. The inlet rim elevation should match the grid element
+
       elevation. Type 4 vertical inlets should go by the invert of the headwall.
       The invert of the headwall should match the grid element elevation.
       For type 4 inlets connected to channels, the channel invert should match the
@@ -286,6 +289,7 @@ The following checklist was prepared to review the storm drain data files:
       match the rim elevation.
 
     ☐ Type 4 – Defined by a Stage-Discharge Rating Table. Rating tables or
+
       generalized culvert equations must be assigned in the SWMMFLORT.DAT file.
 
     ☐ Inlet geometry. Check the size and location.
