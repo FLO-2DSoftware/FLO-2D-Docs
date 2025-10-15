@@ -406,66 +406,62 @@ Simulating a Tailings Dam Failure
 General
 ^^^^^^^^^
 
-   A tailings dam failure can be simulated with or without water storage.
-   It is assumed that any supernatant water storage (Vstorage) rests over the tailings material and the water depth (F) will drain first if the breach
-   failure is progressive from the top of the dam (Figure 8).
-   The dam may be a designed feature constructed of borrow material or it could be created from as stacked layered tailings deposits.
-   In either case, there are four FLO-2D options for simulating the tailings dam breach failure and routing the flood downstream:
+A tailings dam failure can be simulated with or without water storage.
+It is assumed that any supernatant water storage (Vstorage) rests over the tailings material and the water depth (F) will drain first if the breach
+failure is progressive from the top of the dam (Figure 8).
+The dam may be a designed feature constructed of borrow material or it could be created from as stacked layered tailings deposits.
+In either case, there are four FLO-2D options for simulating the tailings dam breach failure and routing the flood downstream:
 
-- Stacked tailings collapse (no water storage); • Dam breach failure with or without water storage:
+    - Stacked tailings collapse (no water storage); • Dam breach failure with or without water storage:
 
-- Instantaneous tailings dam collapse – seismic or static (prescribed failure component);
+    - Instantaneous tailings dam collapse – seismic or static (prescribed failure component);
 
-- Prescribed failure – assign horizontal and vertical failure rates;
+    - Prescribed failure – assign horizontal and vertical failure rates;
 
-- Breach erosion – progressive failure using the dam breach erosion component;
+    - Breach erosion – progressive failure using the dam breach erosion component;
 
-..
+For two phase flow, the tailings dam reservoir and the downstream flood inundation area can be modeled in one flow domain grid system or split into
+separate models so that the tailings dam breach discharge hydrograph can be determined and tested with faster simulations.
+The discharge volume released through the breach reported in DAMBREACH_VOLUME.OUT can be checked against the volume estimated by the FLO-2D TAILINGS
+DAM BREACH tool.
 
-   For two phase flow, the tailings dam reservoir and the downstream flood inundation area can be modeled in one flow domain grid system or split into
-   separate models so that the tailings dam breach discharge hydrograph can be determined and tested with faster simulations.
-   The discharge volume released through the breach reported in DAMBREACH_VOLUME.OUT can be checked against the volume estimated by the FLO-2D TAILINGS
-   DAM BREACH tool.
+.. image:: img/Two008.png
 
-|Two008|
+*Figure 8.
+Possible Tailings Dam Configuration Simulated by a FLO-2D Two Phase Flow Dam Breach.*
 
-   Figure 8.
-   Possible Tailings Dam Configuration Simulated by a FLO-2D Two Phase Flow Dam Breach.
-
-   The four tailings dam failure options are briefly discussed below and additional information regarding dam breach can found in the various webinars,
-   PowerPoint presentations, white papers and other FLO-2D reference documents available from the website.
+The four tailings dam failure options are briefly discussed below and additional information regarding dam breach can found in the various webinars,
+PowerPoint presentations, white papers and other FLO-2D reference documents available from the website.
 
 Stack Layer Tailings Facility Collapse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   The collapse of stacked layer tailings facility is assumed to occur as either a static or seismic failure without any water storage or flood inflow.
-   It is the simplest FLO-2D option to apply and does not require the assignment of dam parameters (using the levee component).
-   In this case, the dam is assumed to comprise of layered homogeneous tailings material, not separate constructed dam core and shell material (Figure
-   9).
+The collapse of stacked layer tailings facility is assumed to occur as either a static or seismic failure without any water storage or flood inflow.
+It is the simplest FLO-2D option to apply and does not require the assignment of dam parameters (using the levee component).
+In this case, the dam is assumed to comprise of layered homogeneous tailings material, not separate constructed dam core and shell material (Figure
+9).
 
-|Two009|
+.. image:: img/Two009.png
 
-   Figure 9.
-   Tailings Stacks Example (source: Google Earth Historical Imagery).
+*Figure 9.
+Tailings Stacks Example (source: Google Earth Historical Imagery).*
 
-   The following assumptions are applied for this tailings failure option:
+The following assumptions are applied for this tailings failure option:
 
-- The tailing facility is constructed in relatively homogeneous horizontal layers;
+    - The tailing facility is constructed in relatively homogeneous horizontal layers;
 
-- The density and fluid property variability of the layers in the vertical direction will not significantly affect the flow properties as failure
-  occurs;
+    - The density and fluid property variability of the layers in the vertical direction will not significantly affect the flow properties as failure
+      occurs;
 
-- In terms of the development of the collapse floodwave and predicting the downstream hydraulics and area of inundation, the actual failure mode is
-  inconsequential;
+    - In terms of the development of the collapse floodwave and predicting the downstream hydraulics and area of inundation, the actual failure mode is
+      inconsequential;
 
-- The tailings material when the model simulation begins is in a failure condition with incipient motion as just being initiated;
+    - The tailings material when the model simulation begins is in a failure condition with incipient motion as just being initiated;
 
-- There is no water storage and no dam is simulated.
+    - There is no water storage and no dam is simulated.
 
-..
-
-   To simulate the collapse, a tailings depth and sediment by volume for each grid element within the tailings facility is required in a file named
-   TAILINGS_CV.DAT in the following format:
+To simulate the collapse, a tailings depth and sediment by volume for each grid element within the tailings facility is required in a file named
+TAILINGS_CV.DAT in the following format:
 
 Grid Element Tailings Depth (ft or m) Concentration by Volume
 
