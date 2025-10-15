@@ -257,55 +257,15 @@ The map browser consists of three panels that control the results display (Figur
 
     - Animator Panel controls the animation of the temporal output and profile plots.
 
-The Themes
+.. image:: img/Chapter6/Chapte011.jpg
 
-P
-
-anel selects
-
-variables
-
-according to
-
-color.
-
-The Time Period Panel
-
-indicates a specific
-
-out-
-
-put
-
-time
-
-to view the re-
-
-sults.
-
-The Animator
-
-Panel controls
-
-an
-
-animated display
-
-of temporal
-
-profile
-
-plots.
-
-Map Browser
-
-   **Figure 59.
-   Map Browser, Time Output Interval to View Results and Animator Controls**
+*Figure 59.
+Map Browser, Time Output Interval to View Results and Animator Controls*
 
 Model Checklist
 '''''''''''''''
 
-   The following checklist was prepared to review the storm drain data files:
+The following checklist was prepared to review the storm drain data files:
 
 .. list-table::
    :widths: 50 50
