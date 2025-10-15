@@ -401,8 +401,6 @@ clogged with sediment.
 Simulating a Tailings Dam Failure
 ----------------------------------
 
-.. _general-1:
-
 General
 ^^^^^^^^^
 
