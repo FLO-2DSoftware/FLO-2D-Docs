@@ -679,7 +679,7 @@ This will enable the bed coarsening or sediment deposition to be tracked in a ch
 The SED.DAT file sediment routing by size fraction data is displayed below in blue (lines Z and P) where the P-Line includes the representative
 sediment size and percent finer than.
 
-.. image:: img/Two050.png
+.. image:: img/Two050.jpg
 
 .. image:: img/Two012.png
 
