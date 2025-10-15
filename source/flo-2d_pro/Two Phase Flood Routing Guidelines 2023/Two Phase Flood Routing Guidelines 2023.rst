@@ -1098,9 +1098,7 @@ Tailings Dam Breach Data Needs.*
    * - Required Data
      -
 
-   * - Tailings dam geometry, tailings
-       thickness and reservoir
-       topography
+   * - Tailings dam geometry, tailings thickness and reservoir topography
      - For constructed dam facilities: Upstream and
        downstream face slopes, core slopes, crest elevation,
        crest length, crest width, tailings surface elevation (for
@@ -1237,38 +1235,38 @@ equations.
 Mudflow Parameters
 ^^^^^^^^^^^^^^^^^^^^
 
-   Some practical guidelines for estimating the mudflow rheological parameters are presented in this section.
-   Mudflow yield stress τ\ :sub:`y` and viscosity η vary principally with sediment concentration.
-   The viscous stresses will not play a role in the flow hydraulics unless the sediment concentration by volume exceeds 20%.
-   If a rheological laboratory analysis of the
+Some practical guidelines for estimating the mudflow rheological parameters are presented in this section.
+Mudflow yield stress τ\ :sub:`y` and viscosity η vary principally with sediment concentration.
+The viscous stresses will not play a role in the flow hydraulics unless the sediment concentration by volume exceeds 20%.
+If a rheological laboratory analysis of the
 
-    *=* \ *1 e* \ *1 Cv* and \ *y =* \ *2 e* \ *2 Cv*
+ *=* \ *1 e* \ *1 Cv* and \ *y =* \ *2 e* \ *2 Cv*
 
-   mudflow site depositional material is available, the following empirical relationships can be used to compute viscosity and yield stress: where α\
-   :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
-   The viscosity and yield stress are functions of the concentration of silts, clays and in some cases, fine sands, but not the larger clastic material
-   rafted along with the flow (See Appendix Table B.1 ).
-   The viscosity of the fluid matrix is also a function of the percent and type of clays and fluid temperature.
-   Very viscous mudflows may appear to be laminar, but laminar flows in nature are extremely rare.
-   Mud floods and virtually all non-flume mudflows are always turbulent.
-   To balance the turbulent/dispersive stresses with the viscous stresses, reasonable values of the laminar flow resistance K and Manning’s n-value can
-   be assumed overland water flow resistance.
+mudflow site depositional material is available, the following empirical relationships can be used to compute viscosity and yield stress: where α\
+:sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
+The viscosity and yield stress are functions of the concentration of silts, clays and in some cases, fine sands, but not the larger clastic material
+rafted along with the flow (See Appendix Table B.1 ).
+The viscosity of the fluid matrix is also a function of the percent and type of clays and fluid temperature.
+Very viscous mudflows may appear to be laminar, but laminar flows in nature are extremely rare.
+Mud floods and virtually all non-flume mudflows are always turbulent.
+To balance the turbulent/dispersive stresses with the viscous stresses, reasonable values of the laminar flow resistance K and Manning’s n-value can
+be assumed overland water flow resistance.
 
-   Most tailings dam with water storage create mudflows with a distinct pattern.
-   Initially, relatively fluid flows may flow through the breach.
-   This may be followed by a surge or frontal wave of mud and debris (40 to 50% concentration by volume).
-   When the peak discharge is released, the average sediment concentration will decrease to the range of 30 to 40% by volume.
-   On the falling limb of the hydrograph, surges of higher sediment concentration may occur.
+Most tailings dam with water storage create mudflows with a distinct pattern.
+Initially, relatively fluid flows may flow through the breach.
+This may be followed by a surge or frontal wave of mud and debris (40 to 50% concentration by volume).
+When the peak discharge is released, the average sediment concentration will decrease to the range of 30 to 40% by volume.
+On the falling limb of the hydrograph, surges of higher sediment concentration may occur.
 
-   For a tailings dam breach, the storage volumes of water and tailings should be estimated along with any rainfall and flood inflow.
-   Several flooding scenarios may be necessary to generate a worst case or conservative flood event.
-   A seismic or static tailings dam breach may involve only a mudflow regime if there is no water storage or rainfall/flood inflow.
-   Conversely, a tailings dam failure with significant water storage may result in a water or very fluid mud flood event.
-   The scour, mixing, and mobilization of the tailings material will define nature of the mud flood or mudflow progression through the breach.
+For a tailings dam breach, the storage volumes of water and tailings should be estimated along with any rainfall and flood inflow.
+Several flooding scenarios may be necessary to generate a worst case or conservative flood event.
+A seismic or static tailings dam breach may involve only a mudflow regime if there is no water storage or rainfall/flood inflow.
+Conversely, a tailings dam failure with significant water storage may result in a water or very fluid mud flood event.
+The scour, mixing, and mobilization of the tailings material will define nature of the mud flood or mudflow progression through the breach.
 
-   Each tailings dam material or layer has geologic and soil conditions that will exhibit unique rheological fluid properties.
-   Where resources are available, it is recommended that viscosity and yield stress as function of concentration be analyzed with a viscometer.
-   For most tailing dam flood hazard delineation projects, it may be outside the scope of work or budget to conduct a laboratory viscometer analysis.
+Each tailings dam material or layer has geologic and soil conditions that will exhibit unique rheological fluid properties.
+Where resources are available, it is recommended that viscosity and yield stress as function of concentration be analyzed with a viscometer.
+For most tailing dam flood hazard delineation projects, it may be outside the scope of work or budget to conduct a laboratory viscometer analysis.
    Nevertheless, there are commercially available viscometers designed to accommodate very viscous samples such as asphalt at low speeds (e.g.,
    Brookfield AMETEK…see website: `https://www.brookfieldengineering.com/products/viscometers)
    <https://www.brookfieldengineering.com/products/viscometers>`__.
