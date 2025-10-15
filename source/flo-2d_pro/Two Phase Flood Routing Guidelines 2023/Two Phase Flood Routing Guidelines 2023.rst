@@ -887,9 +887,9 @@ For a two phase flow tailings dam breach project application, the possible breac
     - Multiple tailing dam failures cascading downstream into one another as instantaneous failures, prescribed rates of breach failure or sediment erosion
       breach.
 
-       PMP = Probable Maximum Precipitation PMF = Probable Maximum Flood
+PMP = Probable Maximum Precipitation PMF = Probable Maximum Flood
 
-       The following tailings dam breach scenarios might include these tasks:
+The following tailings dam breach scenarios might include these tasks:
 
     - Estimate tailings breach volume with Tailings Dam Tool
 
@@ -917,8 +917,7 @@ For a two phase flow tailings dam breach project application, the possible breac
 
        c. Review breach elevation/width with respect to water surface and tailings elevation
 
-   ii.
-   Dam and tailings predicted erosion
+   ii. Dam and tailings predicted erosion
 
        a. Assign dam geometry and sediment parameters
 
@@ -932,52 +931,45 @@ For a two phase flow tailings dam breach project application, the possible breac
 
       a. Assign vertical and horizontal breach rates in LEVEE.DAT
 
-..
+      b. Assign breach vertical/horizontal rates to zero for instantaneous failure to bedrock
 
-   d. Assign breach vertical/horizontal rates to zero for instantaneous failure to bedrock
+      c. Review breach elevation/width with respect to water surface and tailings elevation
 
-   c. Review breach elevation/width with respect to water surface and tailings elevation
+   ii. Dam and tailings predicted erosion
 
-ii.
-Dam and tailings predicted erosion
+      a. Establish a fake dam geometry to match tailings slope
 
-    a. Establish a fake dam geometry to match tailings slope
+      b. Assign tailings thickness
 
-    b. Assign tailings thickness
+      c. Review scour depth and deposition downstream of dam breach
 
-    c. Review scour depth and deposition downstream of dam breach
+A tailings reservoir project as a two phase flow example project is presented.
+In Figure 16 the tailings reservoir is located on the right portion of grid system using levee elements (red lines) to define the reservoir (the levee
+elements defining the reservoir are shown in the insert with the final fluid depths).
+There is second upstream reservoir to simulate a cascading tailings breach failure defined by the red line of levee elements, but no fluid or tailings
+were assigned to the upstream tailings dam for this example.
+When the tailings dam breaches, the fluid phase and the mudflow phase are released with the fluid phase reaches the end of the flow domain.
+Initially the fluid (clear water) races ahead of the mudflow through the breach and immediately begins to scour and entrain sediment from both the top
+of the tailings material (mudflow phase) and the bed downstream of the breach.
+The tailings material thickness is on the order of about 3 to 5 m and the stored water is 3 m above the tailings bed.
+Various breach simulations were performed with the tailings material sediment concentrations of up to 55% by volume and a depth of water from 0 m to
+10 m.
+The figures below show the breach results for a tailings material that is saturated with a concentration by volume of 40%.
 
-..
+.. image:: img/Two019.jpg
 
-   A tailings reservoir project as a two phase flow example project is presented.
-   In Figure 16 the tailings reservoir is located on the right portion of grid system using levee elements (red lines) to define the reservoir (the levee
-   elements defining the reservoir are shown in the insert with the final fluid depths).
-   There is second upstream reservoir to simulate a cascading tailings breach failure defined by the red line of levee elements, but no fluid or tailings
-   were assigned to the upstream tailings dam for this example.
-   When the tailings dam breaches, the fluid phase and the mudflow phase are released with the fluid phase reaches the end of the flow domain.
-   Initially the fluid (clear water) races ahead of the mudflow through the breach and immediately begins to scour and entrain sediment from both the top
-   of the tailings material (mudflow phase) and the bed downstream of the breach.
-   The tailings material thickness is on the order of about 3 to 5 m and the stored water is 3 m above the tailings bed.
-   Various breach simulations were performed with the tailings material sediment concentrations of up to 55% by volume and a depth of water from 0 m to
-   10 m.
-   The figures below show the breach results for a tailings material that is saturated with a concentration by volume of 40%.
+*Figure 16.
+Example Project – Reservoir Located on the Right of the Flow Domain.*
 
-|Two019|
+The following two phase flow tailings dam breach scenarios were simulated:
 
-   Figure 16.
-   Example Project – Reservoir Located on the Right of the Flow Domain.
+    - Instantaneous breach – seismic or static failure
 
-   The following two phase flow tailings dam breach scenarios were simulated:
+    - Breach erosion - dam scour to bedrock
 
-- Instantaneous breach – seismic or static failure
+    - Prescribed breach – vertical/horizontal breach rates using the eleven sediment transport equations
 
-- Breach erosion - dam scour to bedrock
-
-- Prescribed breach – vertical/horizontal breach rates using the eleven sediment transport equations
-
-..
-
-   Figure 16 shows an example of the predicted maximum depths for the combined fluid and mudflow phases.
+Figure 16 shows an example of the predicted maximum depths for the combined fluid and mudflow phases.
    This example is generated using a prescribed breach rate of 20 m/hr (for both vertical and horizontal) and the Karim-Kennedy sediment transport
    equation with a tailings concentration by volume of 40%.
    Figure 17 and Figure 18 depict the maximum overland flow depths for the separate fluid and mudflow phases respectively.
