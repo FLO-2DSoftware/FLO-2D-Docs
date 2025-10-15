@@ -46,7 +46,7 @@ The required data for inlets are (Figure 60):
         o These comparisons are listed in the FPRIMELEV.OUT file.
         o Ideally the elevations in the \*.inp file should match those of the grid system.
 
-.. image:: img/Chapter7/Chapte005.jpg
+.. image:: img/Chapter7/Chapte002.jpg
 
 \ Required
 
@@ -83,7 +83,7 @@ The required data includes (Figure 61):
 
     - Tide gate: Set to ‘NO’ for the outfalls to exchange flows with the surface water.
 
-.. image:: img/Chapter7/Chapte005.jpg
+.. image:: img/Chapter7/Chapte003.jpg
 
 \ Required
 
