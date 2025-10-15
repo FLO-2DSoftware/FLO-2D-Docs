@@ -1058,22 +1058,22 @@ Final Bed Scour or Deposition.*
 *Figure 27.
 Final Bed Scour or Deposition and Mudflow Cessation.*
 
-   If a channel exists downstream of the tailings dam breach, most of the mudflow breach discharge will enter and fill the channel.
-   Figure 28 shows that the floodplain inundation with channel overbank flow is limited compared with the overland flow in Figure 16 thru Figure 18
-   without the channel.
-   The final bed elevation in the channel (red line) in Figure 29 shows that sediment deposition raises the bed elevation throughout most of channel.
-   Yang’s sediment transport equation was used in this FLO-2D simulation.
-   Figure 29 also displays the maximum fluid or mudflow maximum surface that is higher than the top of bank elevation (cyan color).
+If a channel exists downstream of the tailings dam breach, most of the mudflow breach discharge will enter and fill the channel.
+Figure 28 shows that the floodplain inundation with channel overbank flow is limited compared with the overland flow in Figure 16 thru Figure 18
+without the channel.
+The final bed elevation in the channel (red line) in Figure 29 shows that sediment deposition raises the bed elevation throughout most of channel.
+Yang’s sediment transport equation was used in this FLO-2D simulation.
+Figure 29 also displays the maximum fluid or mudflow maximum surface that is higher than the top of bank elevation (cyan color).
 
-|Two031|
+.. image:: img/Two031.jpg
 
-   Figure 28.
-   Maximum Flow Depth Combined Channel and Floodplain Flow.
+*Figure 28.
+Maximum Flow Depth Combined Channel and Floodplain Flow.*
 
-|Two032|
+.. image:: img/Two032.jpg
 
-   Figure 29.
-   Channel Bed and Maximum Fluid/Mudflow Surface Profile (PROFILES Program).
+*Figure 29.
+Channel Bed and Maximum Fluid/Mudflow Surface Profile (PROFILES Program).*
 
 Recommendations
 -----------------
