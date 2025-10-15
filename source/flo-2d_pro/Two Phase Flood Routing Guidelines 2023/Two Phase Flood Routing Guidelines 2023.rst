@@ -259,37 +259,31 @@ Further discussion of the FLO-2D mudflow component is presented in Appendix B.
 Two Phase Flow Component
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   To apply the FLO-2D two phase flow component, the sediment transport and mudflow model components must run concurrently with an interface routine that
-   exchanges sediment between them as depicted in Figure 6.
-   To activate both components in one model simulation, the flood hydraulics for conventional sediment transport is first computed, then the mudflow
-   hydraulics are computed in a second loop.
-   Water and sediment volume conservation is tracked in both components separately on a grid element basis.
-   To accomplish this integration, the following tasks are completed:
+To apply the FLO-2D two phase flow component, the sediment transport and mudflow model components must run concurrently with an interface routine that
+exchanges sediment between them as depicted in Figure 6.
+To activate both components in one model simulation, the flood hydraulics for conventional sediment transport is first computed, then the mudflow
+hydraulics are computed in a second loop.
+Water and sediment volume conservation is tracked in both components separately on a grid element basis.
+To accomplish this integration, the following tasks are completed:
 
-1. The data is read for both components (i.e., the SED.DAT requires both sediment transport and mudflow component data).
+    1. The data is read for both components (i.e., the SED.DAT requires both sediment transport and mudflow component data).
 
-2. For a tailings dam breach, the elevation or depth of the tailings is defined as an input parameter in the INFLOW.DAT file reservoir line (R-line).
+    2. For a tailings dam breach, the elevation or depth of the tailings is defined as an input parameter in the INFLOW.DAT file reservoir line (R-line).
 
-3. The sediment exchange between the fluid and mudflow phases is computed as well as sediment sharing between the fluid and the bed if there is no
-   mudflow.
+    3. The sediment exchange between the fluid and mudflow phases is computed as well as sediment sharing between the fluid and the bed if there is no
+       mudflow.
 
-4. Sediment volume conservation routines for both components are updated.
+    4. Sediment volume conservation routines for both components are updated.
 
-5. Sediment concentration by volume limits for both mudflow and sediment transport components are tested and the sediment exchange when the limits are
-   exceeded is adjusted.
+    5. Sediment concentration by volume limits for both mudflow and sediment transport components are tested and the sediment exchange when the limits are
+       exceeded is adjusted.
 
-Mudflow
+.. image:: img/Two001.jpg
 
-–
+*Figure 6.
+Fluid – Mudflow Two Phase Flow Exchange for a Grid Element.*
 
-Bed Exchange
-
-Flow
-
-   Figure 6.
-   Fluid – Mudflow Two Phase Flow Exchange for a Grid Element.
-
-   The two phase flow computations in the FLO-2D model proceed in the following manner:
+The two phase flow computations in the FLO-2D model proceed in the following manner:
 
 - First the fluid phase loop is completed with a sweep of all the grid elements to establish the fluid hydraulics.
 
