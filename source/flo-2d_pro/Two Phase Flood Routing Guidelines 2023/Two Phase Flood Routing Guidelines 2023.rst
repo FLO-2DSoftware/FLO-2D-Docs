@@ -331,7 +331,7 @@ The coded rules for the two phase flow exchange within a grid element are as fol
 Coded Rules for Two Phase Sediment Exchange*
 
 .. list-table::
-   :widths: 100
+   :widths: 50 50
    :header-rows: 0
 
 
@@ -358,43 +358,41 @@ Coded Rules for Two Phase Sediment Exchange*
      - The mudflow layer is added to the fluid phase.
 
 After each exchange process listed in Table 2, the fluid and mudflow phase volume concentrations are recomputed.
-   The Table 2 sediment concentration by volume limits are based on the flow behavior categories in Table 1.
-   The lower limit for hyperconcentrated sediment flow is assumed to be 20% concentration by volume, below which conventional sediment transport
-   equations for river flow apply.
-   Above this 20% concentration by volume, the flow is computed by the mudflow routing component in the FLO-2D model.
+The Table 2 sediment concentration by volume limits are based on the flow behavior categories in Table 1.
+The lower limit for hyperconcentrated sediment flow is assumed to be 20% concentration by volume, below which conventional sediment transport
+equations for river flow apply.
+Above this 20% concentration by volume, the flow is computed by the mudflow routing component in the FLO-2D model.
 
-   A mudflow concentration of 56% (maximum concentration of uniform spheres) is assumed to constitute the lower limit for a landslide concentration
-   (Table 1).
-   Above this concentration, depending on slope, momentum, viscosity, yield stress (cohesion) and roughness, the mudflow may cease flowing within the
-   grid element and would be identified in the mapped results by zero final velocity.
-   The potential range of high concentrations where mudflows may cease flow is on the order of 56% to 62% (Bagnold’s maximum sediment concentration) by
-   volume.
-   By comparison, the porosity of ground (for sand sized sediment distribution) is typically on the order of 36% to 45% corresponding to a concentration
-   by volume 55% to 64% (with all the pore space filled with water).
-   For dense mudflows or landslides, the sediment concentration by volume must decrease with motion as the particles separate and the interstices fill
-   with water.
+A mudflow concentration of 56% (maximum concentration of uniform spheres) is assumed to constitute the lower limit for a landslide concentration
+(Table 1).
+Above this concentration, depending on slope, momentum, viscosity, yield stress (cohesion) and roughness, the mudflow may cease flowing within the
+grid element and would be identified in the mapped results by zero final velocity.
+The potential range of high concentrations where mudflows may cease flow is on the order of 56% to 62% (Bagnold’s maximum sediment concentration) by
+volume.
+By comparison, the porosity of ground (for sand sized sediment distribution) is typically on the order of 36% to 45% corresponding to a concentration
+by volume 55% to 64% (with all the pore space filled with water).
+For dense mudflows or landslides, the sediment concentration by volume must decrease with motion as the particles separate and the interstices fill
+with water.
 
 Component Availability
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-   At the present time, there are several FLO-2D components that are superfluous to two phase flow modeling.
-   The following components are automatically set to ‘OFF’:
+At the present time, there are several FLO-2D components that are superfluous to two phase flow modeling.
+The following components are automatically set to ‘OFF’:
 
-- Evaporation
+    - Evaporation
 
-- Storm Drain
+    - Storm Drain
 
-- Groundwater
+    - Groundwater
 
-- Multiple Channels (rill and gully flow)
+    - Multiple Channels (rill and gully flow)
 
-..
-
-   The initial focus for the two phase flow compute was to simulate tailings dam breach with water storage.
-   For obvious reasons, tailings dams are not located in a river channel corridor, but FLO-2D can still simulate a mud flood or mudflow with upstream or
-   tributary water flooding from a rainfall event.
-   Significant Infiltration will generally not occur when a mud flood or mud flood progresses downstream because the bed interstitial pore space becomes
-   clogged with sediment.
+The initial focus for the two phase flow compute was to simulate tailings dam breach with water storage.
+For obvious reasons, tailings dams are not located in a river channel corridor, but FLO-2D can still simulate a mud flood or mudflow with upstream or
+tributary water flooding from a rainfall event.
+Significant Infiltration will generally not occur when a mud flood or mud flood progresses downstream because the bed interstitial pore space becomes
+clogged with sediment.
 
 Simulating a Tailings Dam Failure
 ----------------------------------
