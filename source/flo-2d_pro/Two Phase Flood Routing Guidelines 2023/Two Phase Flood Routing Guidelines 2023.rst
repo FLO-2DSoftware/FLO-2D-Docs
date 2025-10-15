@@ -1,7 +1,10 @@
 .. vim: syntax=rst
 
+Two Phase Flood Routing Guidelines 2023
+========================================
+
 Introduction
-============
+-------------
 
    This document describes how to simulate a mudflow or a tailings dam breach failure as either a mudflow or two-phase fluid flow (water and mudflow)
    using the FLO-2D model.
@@ -13,11 +16,10 @@ Introduction
    Please contact FLO-2D Staff *contact@flo-2d.com* to get access to the training packages.
 
 Background
-==========
+-------------
 
 FLO-2D Model
-------------
-
+^^^^^^^^^^^^^
    The FLO-2D model has the following two-dimensional flow routing capabilities related to tailings dam failure:
 
 - Sudden collapse of the tailings stacks;
@@ -39,7 +41,7 @@ FLO-2D Model
    C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation
 
 Need for Two Phase Flow for Tailings Dam Breach
------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    Tailing dam breach failure and the downstream mudflow routing can be simulated with water storage release combined with mudflow floodwave.
    For a more accurate prediction of bed scour and deposition of the tailings material released through the breach, a two phase fluid approach combining
@@ -66,17 +68,17 @@ Need for Two Phase Flow for Tailings Dam Breach
 
    |Two002|
 
-   Figure 1.
-   Ajka Accident Hungary October 2010.
-   (Aljazeera.com)
+*Figure 1.
+Ajka Accident Hungary October 2010.
+(Aljazeera.com)*
 
    |Two003|
 
-   Figure 2.
-   FLO-2D Tailings Dam Tool Opening Control Window.
+*Figure 2.
+FLO-2D Tailings Dam Tool Opening Control Window*
 
 Hyperconcentrated Multi-Phase Sediment Flow
--------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    The physical processes of sediment transport represent a continuum that ranges from particles in clear water to landslides and despite the best
    efforts to characterize, classify and simulate different types of sediment laden events, the delineation between fluid flow and soil mass movement is
@@ -131,10 +133,10 @@ Hyperconcentrated Multi-Phase Sediment Flow
    FLO-2D Two Phase Flow – Fluid with Sediment Transport and Mudflow.
 
 FLO-2D Two Phase Flow Approach
-==============================
+--------------------------------
 
 General
--------
+^^^^^^^^
 
    An important issue for the flood modeler is selecting appropriate project scale to accurately predict the area of inundation.
    For a tailings dam breach project, this depends on the flood hydrology, the tailings volumes, and potential for flow cessation.
@@ -144,7 +146,7 @@ General
    simulation of a large-scale project.
 
 Conventional Sediment Transport
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    Prior to undertaking the two phase flow implementation, the FLO-2D model had the option of simulating either sediment transport or hyperconcentrated
    sediment flow (mudflow) but the application of the two components was exclusive.
@@ -183,7 +185,7 @@ Conventional Sediment Transport
    The various sediment transport equations and recommendations for their application are discussed later in the document.
 
 Hyperconcentrated Sediment Flows – Mud Floods and Mudflows
-----------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    Most tailings dam failure mudflows fall within a range of about 20 to 55 percent sediment concentration by volume.
    When the tailings dam has minimal water storage, mudflows will occur (Figure 5).
@@ -259,7 +261,7 @@ Hyperconcentrated Sediment Flows – Mud Floods and Mudflows
    Further discussion of the FLO-2D mudflow component is presented in Appendix B.
 
 Two Phase Flow Component
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    To apply the FLO-2D two phase flow component, the sediment transport and mudflow model components must run concurrently with an interface routine that
    exchanges sediment between them as depicted in Figure 6.
@@ -316,7 +318,7 @@ Flow
    Workflow for the Two Phase Fluid and Mudflow Routing in the FLO-2D Model.
 
 Assumptions and Limitations
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    There are some practical limitations to the sediment transport and mudflow exchange at the fluidmudflow boundary.
    All the sediment transport equations used in the FLO-2D model were developed for river or flume conditions where the sediment concentration by volume
@@ -380,7 +382,7 @@ Assumptions and Limitations
    with water.
 
 Component Availability
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
    At the present time, there are several FLO-2D components that are superfluous to two phase flow modeling.
    The following components are automatically set to ‘OFF’:
@@ -402,12 +404,12 @@ Component Availability
    clogged with sediment.
 
 Simulating a Tailings Dam Failure
-=================================
+----------------------------------
 
 .. _general-1:
 
 General
--------
+^^^^^^^^^
 
    A tailings dam failure can be simulated with or without water storage.
    It is assumed that any supernatant water storage (Vstorage) rests over the tailings material and the water depth (F) will drain first if the breach
@@ -439,7 +441,7 @@ General
    PowerPoint presentations, white papers and other FLO-2D reference documents available from the website.
 
 Stack Layer Tailings Facility Collapse
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    The collapse of stacked layer tailings facility is assumed to occur as either a static or seismic failure without any water storage or flood inflow.
    It is the simplest FLO-2D option to apply and does not require the assignment of dam parameters (using the levee component).
@@ -519,7 +521,7 @@ Grid Element Tailings Depth (ft or m) Concentration by Volume
    Final Depth Stack Failure.
 
 Tailings Dam Breach Failure
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    If a tailings facility has a dam constructed with core or shell material different from the tailings or if the tailings are deposited to allow water
    storage, then the FLO-2D dam breach component can be applied.
@@ -588,7 +590,7 @@ Tailings Dam Breach Failure
    on dam breach and various PPT slide presentations that available from the FLO-2D website (`www.flo2d.com) <http://www.flo-2d.com/>`__.
 
 2 Phase Flow Data Input
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
    The data input discussed in this section is unique to the two phase flow component and supplements the data required for a typical FLO-2D flood model
    or tailings dam mudflow simulation.
@@ -713,10 +715,10 @@ R 7576 318.75 315.5 0.20
    Two phase data entry dialog sediment transport.
 
 Output Files and Reviewing the Results
-======================================
+----------------------------------------
 
 Output Files
-------------
+^^^^^^^^^^^^^^
 
    Several new output files were created to review the two phase flow results.
    The MAXPLOT post processor program is a simple tool for graphically displaying FLO-2D model output.
@@ -775,7 +777,7 @@ Output Files
    Other FLO-2D QGIS plotting options are available for generating shape files or high-resolution mapping.
 
 Volume Conservation
--------------------
+^^^^^^^^^^^^^^^^^^^^^
 
    To conduct a review of a FLO-2D simulation of tailings dam failure, the review should begin with volume conservation reported in the SUMMARY.OUT file.
    There are two primary reported output data in this file to review: 1) The overall fluid and mudflow volume conservation listed in four columns at the
@@ -791,7 +793,7 @@ Volume Conservation
 |Two017|
 
 Numerical Stability
--------------------
+^^^^^^^^^^^^^^^^^^^^
 
    Continuing with the project review, the simulation numerical stability should be verified next.
    Potential numerical surging in the model is most likely to occur near the tailings breach and may necessitate lowering the Courant number to control
@@ -828,7 +830,7 @@ Numerical Stability
    C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Manuals.
 
 Evacuated Grid Elements
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
    With tailings dam breach simulations, scour and deposition may contribute to the evacuation of shallow flow volume from floodplain elements.
    Small grid elements and tolerance values and a large peak discharge associated with a tailings dam breach failure may cause a cell to be volume
@@ -847,7 +849,7 @@ Evacuated Grid Elements
    The only consequence of the reported evacuated elements are higher n-values and TOL values and a few timestep reductions.
 
 Scour Limitation
-----------------
+^^^^^^^^^^^^^^^^^^^^
 
    The selection of a given sediment transport equation to simulate the scour and deposition of the fluid phase may not match the project field
    conditions resulting in some grid elements being predicted to have a large scour depth (hole).
@@ -860,7 +862,7 @@ Scour Limitation
    A typical scour depth limitation may be 3 to 10 ft (1 to 3 m) depending on depth to bedrock.
 
 Channel Two Phase Mudflows
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    Overland or channel mudflows without a tailings dam breach can be simulated.
    The only required additional data besides the channel inflow hydrograph with sediment concentrations is the ISEDN switch for the sediment equation or
@@ -892,7 +894,7 @@ Fluid Flow
    Two Phase Mudflow in a Channel with Diluted Tributary Inflow.
 
 Two Phase Flow Application - Possible Modeling Scenarios
---------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    For a two phase flow tailings dam breach project application, the possible breach scenarios include:
 
@@ -1110,10 +1112,10 @@ Dam and tailings predicted erosion
    Channel Bed and Maximum Fluid/Mudflow Surface Profile (PROFILES Program).
 
 Recommendations
-===============
+-----------------
 
 Data Collection
----------------
+^^^^^^^^^^^^^^^^^
 
    This tailings dam breach data collection discussion provides an overview of potential data needs to conduct a FLO-2D two phase flow breach simulation.
    The data is cataloged as either required or optional in the following table.
@@ -1199,7 +1201,7 @@ Data Collection
    to simulate the downstream flooding in a second model.
 
 Sediment Transport Approach
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    Of the eleven available sediment transport equations, several are suggested for the first simulations.
    All the equations can be applied in each tailings dam two phase flow breach model.
@@ -1234,7 +1236,7 @@ Sediment Transport Approach
    equations.
 
 Mudflow Parameters
-------------------
+^^^^^^^^^^^^^^^^^^^^
 
    Some practical guidelines for estimating the mudflow rheological parameters are presented in this section.
    Mudflow yield stress τ\ :sub:`y` and viscosity η vary principally with sediment concentration.
@@ -1323,7 +1325,7 @@ Mudflow Parameters
    Determine the worst-case scenario for your project conditions.
 
 Tailings Dam Breach Methods
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    If a tailings dam with water storage breaches, initially the water is released and scours the stationary tailings material in reservoir at the breach
    as the breach expands.
@@ -1464,7 +1466,7 @@ Tailings Dam Breach Methods
    There are also PowerPoint presentations on this subject.
 
 What to Review - Summary
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    After the successful completion of a FLO-2D tailings dam breach two phase flow simulation the following output files and results listed in Table 5
    below should be reviewed.
@@ -1562,7 +1564,7 @@ What to Review - Summary
 
 
 References
-==========
+------------
 
    Amoudry, L.O., 2008.
    “Two-Phase Modeling of Granular Sediment for Sheet Flows and Scour,” Ph.D.
@@ -2082,147 +2084,4 @@ Model Speed and Numerical Stability Adjustments
 
    C-1
 
-.. |Two002| image:: media\Two002.jpg
-   :width: 4.24583in
-   :height: 2.79097in
-.. |Two003| image:: media\Two003.jpg
-   :width: 3.89167in
-   :height: 3.50125in
-.. |Two004| image:: media\Two004.png
-   :width: 6.5in
-   :height: 2.29306in
-.. |Two005| image:: media\Two005.png
-   :width: 5.23583in
-   :height: 2.73611in
-.. |Two006| image:: media\Two006.jpg
-   :width: 5.72694in
-   :height: 2.41806in
-.. |Two007| image:: media\Two007.png
-   :width: 6.5in
-   :height: 7.94792in
-.. |Two008| image:: media\Two008.jpg
-   :width: 6.45in
-   :height: 2.71847in
-.. |Two009| image:: media\Two009.jpg
-   :width: 6.5in
-   :height: 3.37778in
-.. |Two010| image:: media\Two010.jpg
-   :width: 5.65417in
-   :height: 3.99958in
-.. |Two011| image:: media\Two011.jpg
-   :width: 5.65347in
-   :height: 3.99958in
-.. |Two012| image:: media\Two012.png
-   :width: 5.13528in
-   :height: 2.61458in
-.. |Two013| image:: media\Two013.jpg
-   :width: 3.75181in
-   :height: 2.44445in
-.. |Two014| image:: media\Two014.jpg
-   :width: 6.49972in
-   :height: 4.42361in
-.. |Two015| image:: media\Two015.jpg
-   :width: 6.5in
-   :height: 3.79931in
-.. |Two016| image:: media\Two016.jpg
-   :width: 4.54819in
-   :height: 2.54861in
-.. |Two017| image:: media\Two017.jpg
-   :width: 6.5in
-   :height: 0.78403in
-.. |Two018| image:: media\Two018.jpg
-   :width: 4.11056in
-   :height: 2.34028in
-.. |Two019| image:: media\Two019.png
-   :width: 5.56181in
-   :height: 3.20833in
-.. |Two020| image:: media\Two020.jpg
-   :width: 6.09347in
-   :height: 2.50833in
-.. |Two021| image:: media\Two021.jpg
-   :width: 6.14903in
-   :height: 2.64028in
-.. |Two022| image:: media\Two022.jpg
-   :width: 6.4in
-   :height: 2.63111in
-.. |Two023| image:: media\Two023.jpg
-   :width: 6.02153in
-   :height: 2.47292in
-.. |Two024| image:: media\Two024.jpg
-   :width: 5.95514in
-   :height: 2.48958in
-.. |Two025| image:: media\Two025.jpg
-   :width: 4.68819in
-   :height: 2.65611in
-.. |Two026| image:: media\Two026.jpg
-   :width: 6.04125in
-   :height: 2.4875in
-.. |Two027| image:: media\Two027.jpg
-   :width: 6.09931in
-   :height: 2.45278in
-.. |Two028| image:: media\Two028.jpg
-   :width: 6.28472in
-   :height: 2.55556in
-.. |Two029| image:: media\Two029.jpg
-   :width: 6.23889in
-   :height: 2.52153in
-.. |Two030| image:: media\Two030.jpg
-   :width: 6.31847in
-   :height: 2.63542in
-.. |Two031| image:: media\Two031.jpg
-   :width: 6.5in
-   :height: 3.62847in
-.. |Two032| image:: media\Two032.jpg
-   :width: 6.5in
-   :height: 3.09236in
-.. |Two033| image:: media\Two033.jpg
-   :width: 5.84653in
-   :height: 3.17681in
-.. |Two034| image:: media\Two034.jpg
-   :width: 5.82292in
-   :height: 3.04583in
-.. |Two035| image:: media\Two035.jpg
-   :width: 6.5in
-   :height: 3.65417in
-.. |Two036| image:: media\Two036.jpg
-   :width: 6.5in
-   :height: 1.37639in
-.. |Two037| image:: media\Two037.jpg
-   :width: 6.5in
-   :height: 2.6625in
-.. |Two038| image:: media\Two038.jpg
-   :width: 6.5in
-   :height: 2.65208in
-.. |Two039| image:: media\Two039.jpg
-   :width: 6.5in
-   :height: 2.62014in
-.. |Two040| image:: media\Two040.jpg
-   :width: 6.5in
-   :height: 2.66528in
-.. |Two041| image:: media\Two041.jpg
-   :width: 6.5in
-   :height: 2.62639in
-.. |Two042| image:: media\Two042.jpg
-   :width: 6.5in
-   :height: 2.67292in
-.. |Two043| image:: media\Two043.jpg
-   :width: 6.5in
-   :height: 2.63125in
-.. |Two044| image:: media\Two044.jpg
-   :width: 6.5in
-   :height: 2.65417in
-.. |Two045| image:: media\Two045.jpg
-   :width: 6.5in
-   :height: 2.62986in
-.. |Two046| image:: media\Two046.jpg
-   :width: 6.5in
-   :height: 2.65069in
-.. |Two047| image:: media\Two047.jpg
-   :width: 6.5in
-   :height: 2.60694in
-.. |Two048| image:: media\Two048.jpg
-   :width: 6.48958in
-   :height: 3.61458in
-.. |Two049| image:: media\Two049.jpg
-   :width: 6.5in
-   :height: 4.21875in
+
