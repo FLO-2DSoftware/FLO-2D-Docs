@@ -117,8 +117,6 @@ FLO-2D Storm Drain Instructional Comments.*
 
        cells must be verified and manually revised by the user.
 
-       -------------------------------------------------------
-
        The discharge and volume that enters the storm drain is based on the inlet geometry
 
        and on the relationship between the water surface elevation and the storm drain
@@ -151,19 +149,14 @@ FLO-2D Storm Drain Instructional Comments.*
 
      - Surcharging or return flow is computed from the storm drain to the surface water.
 
-       ------------------------------------------------------------------------------
-
        Not all return flow or flooding reported in the SWMM.RPT file passes from the
 
        storm drain to the surface water since the pressure head must be greater than the WSEL.
 
-       ------------------------------------------------------------------------------
 
        Return flow volume is distributed over the grid element surface area as
 
        an increased incremental flow depth added to the existing cell depth.
-
-       ------------------------------------------------------------------------------
 
        Inflow to storm drain from the surface water is not allowed in this case.
 
@@ -171,13 +164,10 @@ FLO-2D Storm Drain Instructional Comments.*
 
      - No return flow from the storm drain to the surface water is computed.
 
-       ------------------------------------------------------------------------------
-
        Volume in the inlet node stays in the pipe and the overflow volume is
 
        set to 0.
 
-       ------------------------------------------------------------------------------
 
        Inflow to the storm drain from surface water is not computed.
 
