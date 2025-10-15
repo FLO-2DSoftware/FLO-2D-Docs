@@ -522,24 +522,24 @@ Final Depth Stack Failure.*
 Tailings Dam Breach Failure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   If a tailings facility has a dam constructed with core or shell material different from the tailings or if the tailings are deposited to allow water
-   storage, then the FLO-2D dam breach component can be applied.
-   In this case, there are several dam breach failure modes in the FLO-2D model: instantaneous failure, prescribed vertical and horizontal breach rates
-   of failure, or the physical process simulation of breach erosion.
-   These tailings dam breach options required that the dam itself be simulated using the FLO-2D levee component to identify a crest elevation, the dam
-   length and possible starting water surface and breach elevations.
+If a tailings facility has a dam constructed with core or shell material different from the tailings or if the tailings are deposited to allow water
+storage, then the FLO-2D dam breach component can be applied.
+In this case, there are several dam breach failure modes in the FLO-2D model: instantaneous failure, prescribed vertical and horizontal breach rates
+of failure, or the physical process simulation of breach erosion.
+These tailings dam breach options required that the dam itself be simulated using the FLO-2D levee component to identify a crest elevation, the dam
+length and possible starting water surface and breach elevations.
 
-   For tailings dam static or seismic breach failure model without water storage, as the breach expands, more tailings mudflow is released and typically
-   based on historic data only a portion of the total stored tailings, on the order of 30% to 50%, flow through the breach.
-   If an instantaneous dam breach option is selected, the failure will simulate the static stack failure discussed in the previous section.
-   If the tailings dam has supernatant fluid in storage or if a hydrologic breach (from rainfall or an off-site flood inflow), then a prescribed breach
-   rate or breach erosion failure option should be applied in the model.
-   In this case, initially the water is released and scours the stationary tailings material in reservoir at the breach as the breach expands.
-   Then the water and sediment mixture with a low concentration scours the moving tailings material as it liquefies (mudflow phase).
-   Finally, the fluid phase continues to scours the downstream bed as the fluid races ahead of the mudflow until the sediment concentration reaches the
-   hyperconcentrated sediment flow level.
-   From the standpoint of identifying the downstream flood hazard, all tailings dam breach methods can be applied to evaluate the worst case:
-   Instantaneous breach, prescribed breach rates and breach erosion.
+For tailings dam static or seismic breach failure model without water storage, as the breach expands, more tailings mudflow is released and typically
+based on historic data only a portion of the total stored tailings, on the order of 30% to 50%, flow through the breach.
+If an instantaneous dam breach option is selected, the failure will simulate the static stack failure discussed in the previous section.
+If the tailings dam has supernatant fluid in storage or if a hydrologic breach (from rainfall or an off-site flood inflow), then a prescribed breach
+rate or breach erosion failure option should be applied in the model.
+In this case, initially the water is released and scours the stationary tailings material in reservoir at the breach as the breach expands.
+Then the water and sediment mixture with a low concentration scours the moving tailings material as it liquefies (mudflow phase).
+Finally, the fluid phase continues to scours the downstream bed as the fluid races ahead of the mudflow until the sediment concentration reaches the
+hyperconcentrated sediment flow level.
+From the standpoint of identifying the downstream flood hazard, all tailings dam breach methods can be applied to evaluate the worst case:
+Instantaneous breach, prescribed breach rates and breach erosion.
 
    *Instantaneous Breach:* Intuitively, collapsing the tailings dam to the base elevation should create the fastest rising frontal wave.
    Assigning more than one breach direction and grid element will intensify the breach wave progressing downstream.
@@ -556,37 +556,33 @@ Tailings Dam Breach Failure
 
    *Breach Erosion:* Computing the tailings dam scour is complicated and the method has the following failure potential:
 
-- Overtopping and development of a breach channel;
+        - Overtopping and development of a breach channel;
 
-- Piping failure;
+        - Piping failure;
 
-- Piping failure, roof collapse and development into a breach channel; • Breach channel enlargement through side slope slumping;
+        - Piping failure, roof collapse and development into a breach channel; • Breach channel enlargement through side slope slumping;
 
-- Breach enlargement by wedge collapse.
+        - Breach enlargement by wedge collapse.
 
-..
+To exercise the above breach sequence the following geometry parameters are required:
 
-   To exercise the above breach sequence the following geometry parameters are required:
+    - Crest elevation
 
-- Crest elevation
+    - Starting water surface elevation (or depth below crest) (ft or m)
 
-- Starting water surface elevation (or depth below crest) (ft or m)
+    - Cumulative duration of inundation at specified elevation prior to breach initiation (hr)
 
-- Cumulative duration of inundation at specified elevation prior to breach initiation (hr)
+    - Maximum breach width (ft or m)
 
-- Maximum breach width (ft or m)
+    - Prescribed initial pipe elevation (ft or m)
 
-- Prescribed initial pipe elevation (ft or m)
+    - Tailwater elevation (ft or m)
 
-- Tailwater elevation (ft or m)
+    - Foundation or base elevation for vertical breach cessation (ft or m)
 
-- Foundation or base elevation for vertical breach cessation (ft or m)
-
-..
-
-   These tailing dam breach options can be simulated with the two phase flow component discussed in detail below.
-   Further discussion of the required data input for a tailings dam breach simulation is presented in the FLO-2D Data Input Manual, several white papers
-   on dam breach and various PPT slide presentations that available from the FLO-2D website (`www.flo2d.com) <http://www.flo-2d.com/>`__.
+These tailing dam breach options can be simulated with the two phase flow component discussed in detail below.
+Further discussion of the required data input for a tailings dam breach simulation is presented in the FLO-2D Data Input Manual, several white papers
+on dam breach and various PPT slide presentations that available from the FLO-2D website (`www.flo2d.com) <http://www.flo-2d.com/>`__.
 
 2 Phase Flow Data Input
 ^^^^^^^^^^^^^^^^^^^^^^^^^
