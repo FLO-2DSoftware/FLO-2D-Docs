@@ -468,8 +468,11 @@ TAILINGS_CV.DAT in the following format:
     <div
     <pre>
     Grid Element    Tailings Depth (ft or m)    Concentration by Volume
+
     14523.          15.2                        0.51
+
     14524.          15.3                        0.49
+
     14525           14.9                        0.52
     </pre>
     </div>
