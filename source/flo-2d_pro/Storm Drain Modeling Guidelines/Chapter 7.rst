@@ -48,10 +48,6 @@ The required data for inlets are (Figure 60):
 
 .. image:: img/Chapter7/Chapte002.jpg
 
-\ Required
-
-   Fields
-
 *Figure 60.
 SWMM GUI Junction Dialog Box Showing the Required Data*
 
@@ -84,10 +80,6 @@ The required data includes (Figure 61):
     - Tide gate: Set to ‘NO’ for the outfalls to exchange flows with the surface water.
 
 .. image:: img/Chapter7/Chapte003.jpg
-
-\ Required
-
-   Fields
 
 *Figure 61.
 SWMM GUI Outfall Dialog Box.*
