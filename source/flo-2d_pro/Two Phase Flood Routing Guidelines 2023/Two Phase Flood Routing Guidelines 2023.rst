@@ -6,73 +6,71 @@ Two Phase Flood Routing Guidelines 2023
 Introduction
 -------------
 
-   This document describes how to simulate a mudflow or a tailings dam breach failure as either a mudflow or two-phase fluid flow (water and mudflow)
-   using the FLO-2D model.
-   Two phase flow mudflows (with or without a tailings dam breach failure) can be simulated as overland flow or channel discharge with the flows being
-   diluted with downstream inflows (e.g. channel tributary inflows).
-   The tailings facility failure can be modeled either as a dam breach with or without a reservoir (supernatant storage or with flood inflow) or as a
-   stack collapse without simulating the dam.
-   These guidelines complement the Tailings Dam Modeling training tutorials that should be used for hand-on exercises.
-   Please contact FLO-2D Staff *contact@flo-2d.com* to get access to the training packages.
+This document describes how to simulate a mudflow or a tailings dam breach failure as either a mudflow or two-phase fluid flow (water and mudflow)
+using the FLO-2D model.
+Two phase flow mudflows (with or without a tailings dam breach failure) can be simulated as overland flow or channel discharge with the flows being
+diluted with downstream inflows (e.g. channel tributary inflows).
+The tailings facility failure can be modeled either as a dam breach with or without a reservoir (supernatant storage or with flood inflow) or as a
+stack collapse without simulating the dam.
+These guidelines complement the Tailings Dam Modeling training tutorials that should be used for hand-on exercises.
+Please contact FLO-2D Staff *contact@flo-2d.com* to get access to the training packages.
 
 Background
 -------------
 
 FLO-2D Model
 ^^^^^^^^^^^^^
-   The FLO-2D model has the following two-dimensional flow routing capabilities related to tailings dam failure:
+The FLO-2D model has the following two-dimensional flow routing capabilities related to tailings dam failure:
 
-- Sudden collapse of the tailings stacks;
+    - Sudden collapse of the tailings stacks;
 
-- Dam breach with prescribed rates of failure or by simulating breach erosion;
+    - Dam breach with prescribed rates of failure or by simulating breach erosion;
 
-- Conventional sediment transport with scour and deposition;
+    - Conventional sediment transport with scour and deposition;
 
-- Hyperconcentrated sediment flow (mudflows and mud floods) with flow cessation and remobilization;
+    - Hyperconcentrated sediment flow (mudflows and mud floods) with flow cessation and remobilization;
 
-- River channel flow (1D) and overbank flooding;
+    - River channel flow (1D) and overbank flooding;
 
-- Urban flooding with street flow and building obstruction.
+    - Urban flooding with street flow and building obstruction.
 
-..
-
-   The FLO-2D Reference Manual, various White Papers and PowerPoint presentations provide additional discussion on the FLO-2D modeling system, sediment
-   transport and mudflows and can be accessed once the software is installed.
-   C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation
+The FLO-2D Reference Manual, various White Papers and PowerPoint presentations provide additional discussion on the FLO-2D modeling system, sediment
+transport and mudflows and can be accessed once the software is installed.
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation
 
 Need for Two Phase Flow for Tailings Dam Breach
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Tailing dam breach failure and the downstream mudflow routing can be simulated with water storage release combined with mudflow floodwave.
-   For a more accurate prediction of bed scour and deposition of the tailings material released through the breach, a two phase fluid approach combining
-   mudflow routing and sediment transport can be applied.
-   Channel mudflow simulation with downstream water inflow is also available in the model.
-   When released the stored water in a tailing dam will race over the tailings and contribute to the flood frontal wave progression scouring both the
-   tailings mudflow and channel or floodplain bed while diluting the initial mudflow release wave.
-   The initial FLO-2D tailings dam breach model only simulated the mudflow.
-   The model now has the capability of simulating the combined supernatant fluid and mudflow release as two phase flow as well as simulating any
-   watershed inflow flooding that may result in a hydrologic tailings dam failure.
+Tailing dam breach failure and the downstream mudflow routing can be simulated with water storage release combined with mudflow floodwave.
+For a more accurate prediction of bed scour and deposition of the tailings material released through the breach, a two phase fluid approach combining
+mudflow routing and sediment transport can be applied.
+Channel mudflow simulation with downstream water inflow is also available in the model.
+When released the stored water in a tailing dam will race over the tailings and contribute to the flood frontal wave progression scouring both the
+tailings mudflow and channel or floodplain bed while diluting the initial mudflow release wave.
+The initial FLO-2D tailings dam breach model only simulated the mudflow.
+The model now has the capability of simulating the combined supernatant fluid and mudflow release as two phase flow as well as simulating any
+watershed inflow flooding that may result in a hydrologic tailings dam failure.
 
-   A tailings dam breach (Figure 1) can be an instantaneous failure to bedrock, a gradual breach expanding by prescribed vertical and horizontal failure
-   rates, or a progressive erosion of the dam material.
-   The instantaneous tailings collapse can be simulated as a stack static failure or as a dam breach.
-   It is possible to simulate the tailings dam breach and downstream flood inundation in one model or divide the tailings dam breach and downstream
-   flooding into separate models by simulating the breach failure in one model and predicting the area of inundation in second model using breach
-   hydrograph as inflow to the second model with the same FLO-2D grid system (or with a different grid system resolution).
-   Dividing the project into two models will permit the breach analysis to be tested and completed, then the flood hazard downstream can be assessed.
-   The FLO-2D predicted tailings dam breach release volume can be estimated using the complimentary pre-processor Tailings Dam Tool (Figure 2).
-   Sediment volume in the breach simulation is conserved and the predicted volume through the breach is reported in the DAMBREACH_VOLUME.OUT file (end of
-   file).
-   The initial tailings dam material reported in SUMMARY.OUT file (bulked volume – minus water volume) and the percentage of the impounded tailings
-   deposited downstream can be compared with that predicted by the Tailings Dam Tool.
+A tailings dam breach (Figure 1) can be an instantaneous failure to bedrock, a gradual breach expanding by prescribed vertical and horizontal failure
+rates, or a progressive erosion of the dam material.
+The instantaneous tailings collapse can be simulated as a stack static failure or as a dam breach.
+It is possible to simulate the tailings dam breach and downstream flood inundation in one model or divide the tailings dam breach and downstream
+flooding into separate models by simulating the breach failure in one model and predicting the area of inundation in second model using breach
+hydrograph as inflow to the second model with the same FLO-2D grid system (or with a different grid system resolution).
+Dividing the project into two models will permit the breach analysis to be tested and completed, then the flood hazard downstream can be assessed.
+The FLO-2D predicted tailings dam breach release volume can be estimated using the complimentary pre-processor Tailings Dam Tool (Figure 2).
+Sediment volume in the breach simulation is conserved and the predicted volume through the breach is reported in the DAMBREACH_VOLUME.OUT file (end of
+file).
+The initial tailings dam material reported in SUMMARY.OUT file (bulked volume – minus water volume) and the percentage of the impounded tailings
+deposited downstream can be compared with that predicted by the Tailings Dam Tool.
 
-   |Two002|
+.. image:: img/Two002.jpg
 
 *Figure 1.
 Ajka Accident Hungary October 2010.
 (Aljazeera.com)*
 
-   |Two003|
+.. image:: img/Two003.jpg
 
 *Figure 2.
 FLO-2D Tailings Dam Tool Opening Control Window*
@@ -80,57 +78,57 @@ FLO-2D Tailings Dam Tool Opening Control Window*
 Hyperconcentrated Multi-Phase Sediment Flow
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   The physical processes of sediment transport represent a continuum that ranges from particles in clear water to landslides and despite the best
-   efforts to characterize, classify and simulate different types of sediment laden events, the delineation between fluid flow and soil mass movement is
-   not strictly definitive.
-   When a tailings dam with water storage fails, initially there is a distinct fluid floodwave that propagates downstream as the water flows over the
-   reservoir tailing material.
-   The fluid phase scours the tailings surface and mudflow mobilizes through the breach.
-   Over a relatively short distance, the fluid and mudflow phases mix and become a more dilute mud flood with some mudflow deposits downstream of the
-   breach.
-   The fluid phase continues in advance of the slower mudflow and may initially scour, then deposit on the downstream bed.
+The physical processes of sediment transport represent a continuum that ranges from particles in clear water to landslides and despite the best
+efforts to characterize, classify and simulate different types of sediment laden events, the delineation between fluid flow and soil mass movement is
+not strictly definitive.
+When a tailings dam with water storage fails, initially there is a distinct fluid floodwave that propagates downstream as the water flows over the
+reservoir tailing material.
+The fluid phase scours the tailings surface and mudflow mobilizes through the breach.
+Over a relatively short distance, the fluid and mudflow phases mix and become a more dilute mud flood with some mudflow deposits downstream of the
+breach.
+The fluid phase continues in advance of the slower mudflow and may initially scour, then deposit on the downstream bed.
 
-   In a multiphase flow (ignoring the gas phase and heat transfer considerations), the liquid and solid phases dynamically interact.
-   Since 1999, there have been a number of attempts to evolve a complete mathematical description of hyperconcentrated sediment flow in which equations
-   of motion (conservation of mass and momentum) are solved in a two phase (sediment and fluid) approach (see Amoudry, 2008 for a partial reference list).
-   Most of the two phase flow research involves significant assumptions and simplifications such as dilute fluids or 1-D flow.
-   The solution for the momentum transfer between the fluid and the sediment particle considers the turbulent fluid forces on the sediment particles
-   while the presence of sediment particles in the flow reduces the turbulence stress intensity.
-   If the fluid viscosity is minimal, the turbulence and dispersive stress from particle inertia and collision dominate.
-   Conversely, when the viscous stresses are dominant the turbulence and sediment dispersive stresses are suppressed.
-   There remains a significant flow regime (mud floods) where the turbulence, dispersive and viscous stresses are balanced rendering a complex miasma of
-   fluid and sediment particles that has three dimensional variability.
-   Following Cheng and Hsu (2014), a typical two phase solution might include Eulerian turbulence averaged two phase flow equations with exchange
-   momentum transfer and particle stress closure to establish a stable sediment bed.
+In a multiphase flow (ignoring the gas phase and heat transfer considerations), the liquid and solid phases dynamically interact.
+Since 1999, there have been a number of attempts to evolve a complete mathematical description of hyperconcentrated sediment flow in which equations
+of motion (conservation of mass and momentum) are solved in a two phase (sediment and fluid) approach (see Amoudry, 2008 for a partial reference list).
+Most of the two phase flow research involves significant assumptions and simplifications such as dilute fluids or 1-D flow.
+The solution for the momentum transfer between the fluid and the sediment particle considers the turbulent fluid forces on the sediment particles
+while the presence of sediment particles in the flow reduces the turbulence stress intensity.
+If the fluid viscosity is minimal, the turbulence and dispersive stress from particle inertia and collision dominate.
+Conversely, when the viscous stresses are dominant the turbulence and sediment dispersive stresses are suppressed.
+There remains a significant flow regime (mud floods) where the turbulence, dispersive and viscous stresses are balanced rendering a complex miasma of
+fluid and sediment particles that has three dimensional variability.
+Following Cheng and Hsu (2014), a typical two phase solution might include Eulerian turbulence averaged two phase flow equations with exchange
+momentum transfer and particle stress closure to establish a stable sediment bed.
 
-   Two phase flow models have been limited to uniform 1-D flows, steady flow cases, dilute suspensions with neglected inertial terms (Keetels, et.
-   al., 2017).
-   For most flood projects, a detailed sediment distribution in complex two phase flow is unnecessary (Garg, 2009).
-   Two phase flow models fall into one of two categories: 1) Homogeneous flow models; and 2) Separated flow models.
-   For the homogeneous model, the two phase flow solution is based on one set of equations of motion.
-   For the separated flow model, each flow phase represents a distinct portion of the flow field with unique hydraulics and interface boundary
-   conditions.
+Two phase flow models have been limited to uniform 1-D flows, steady flow cases, dilute suspensions with neglected inertial terms (Keetels, et.
+al., 2017).
+For most flood projects, a detailed sediment distribution in complex two phase flow is unnecessary (Garg, 2009).
+Two phase flow models fall into one of two categories: 1) Homogeneous flow models; and 2) Separated flow models.
+For the homogeneous model, the two phase flow solution is based on one set of equations of motion.
+For the separated flow model, each flow phase represents a distinct portion of the flow field with unique hydraulics and interface boundary
+conditions.
 
-   Initially the homogeneous flow approach was investigated for implementation in the FLO-2D model.
-   The intent was to establish a sediment transport flow regime for a fluid layer over a mudflow layer and allow sediment exchange between the two layers
-   at the boundary using an advection-diffusion approach.
-   Particle lift and drag along with fluid and particle stresses (turbulent, dispersive, and viscous stresses) would be evaluated in each layer.
-   An uplift function (upward flux or scour) and dropdown function (downward flux or deposition) were considered based on the analysis of Amoudry (2008).
-   In this work, Amoudry selected Van Rijn (1984) for the uplift function.
-   The dropdown function was based on the particle’s immersed weight and drag coefficient with the settling velocity being primarily a function of
-   particle Reynold’s number, sediment volumetric concentration and fluid viscosity.
+Initially the homogeneous flow approach was investigated for implementation in the FLO-2D model.
+The intent was to establish a sediment transport flow regime for a fluid layer over a mudflow layer and allow sediment exchange between the two layers
+at the boundary using an advection-diffusion approach.
+Particle lift and drag along with fluid and particle stresses (turbulent, dispersive, and viscous stresses) would be evaluated in each layer.
+An uplift function (upward flux or scour) and dropdown function (downward flux or deposition) were considered based on the analysis of Amoudry (2008).
+In this work, Amoudry selected Van Rijn (1984) for the uplift function.
+The dropdown function was based on the particle’s immersed weight and drag coefficient with the settling velocity being primarily a function of
+particle Reynold’s number, sediment volumetric concentration and fluid viscosity.
 
-   After the code was written, an extensive testing period revealed that the uplift and dropdown functions for the same hydraulic conditions resulted in
-   bias toward the uplift function.
-   Essentially, it was impossible to achieve a balanced sediment exchange condition that resulted in numerical stability.
-   The homogeneous approach was abandoned for the more simplistic separate flow regime method.
-   In a simplified approach, the FLO-2D model has been structured to exchange sediment between the fluid portion of the flow and the mudflow as shown in
-   Figure 3.
+After the code was written, an extensive testing period revealed that the uplift and dropdown functions for the same hydraulic conditions resulted in
+bias toward the uplift function.
+Essentially, it was impossible to achieve a balanced sediment exchange condition that resulted in numerical stability.
+The homogeneous approach was abandoned for the more simplistic separate flow regime method.
+In a simplified approach, the FLO-2D model has been structured to exchange sediment between the fluid portion of the flow and the mudflow as shown in
+Figure 3.
 
-|Two004|
+.. image:: img/Two004.png
 
-   Figure 3.
-   FLO-2D Two Phase Flow – Fluid with Sediment Transport and Mudflow.
+*Figure 3.
+FLO-2D Two Phase Flow – Fluid with Sediment Transport and Mudflow.*
 
 FLO-2D Two Phase Flow Approach
 --------------------------------
@@ -138,51 +136,51 @@ FLO-2D Two Phase Flow Approach
 General
 ^^^^^^^^
 
-   An important issue for the flood modeler is selecting appropriate project scale to accurately predict the area of inundation.
-   For a tailings dam breach project, this depends on the flood hydrology, the tailings volumes, and potential for flow cessation.
-   This morphological model scale typically consists of 10 ft to 50 ft cell resolution where the flow hydraulics and sediment transport are based on a
-   mean flow behavior.
-   The challenge for the programmer is to develop a realistic model with as much physical resolution as reasonable and still have a relatively fast
-   simulation of a large-scale project.
+An important issue for the flood modeler is selecting appropriate project scale to accurately predict the area of inundation.
+For a tailings dam breach project, this depends on the flood hydrology, the tailings volumes, and potential for flow cessation.
+This morphological model scale typically consists of 10 ft to 50 ft cell resolution where the flow hydraulics and sediment transport are based on a
+mean flow behavior.
+The challenge for the programmer is to develop a realistic model with as much physical resolution as reasonable and still have a relatively fast
+simulation of a large-scale project.
 
 Conventional Sediment Transport
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Prior to undertaking the two phase flow implementation, the FLO-2D model had the option of simulating either sediment transport or hyperconcentrated
-   sediment flow (mudflow) but the application of the two components was exclusive.
-   To address mobile bed conditions in a dilute fluid (typically less than 20 percent concentration by volume), FLO-2D has a sediment transport component
-   that can compute sediment scour or deposition.
-   Within a grid element, sediment transport capacity is computed based on the flow hydraulics.
-   The sediment transport capacity is then compared with the sediment supply and the resulting sediment excess or deficit is uniformly distributed over
-   the grid element surface (or non-uniformly on the channel bed based on shear stress).
-   There are eleven sediment transport capacity equations that can be applied in the FLO-2D.
-   Each sediment transport formula was derived from unique river or flume conditions and the user is encouraged to research the applicability of a
-   selected equation for a particular project.
-   Sediment routing by size fraction and armoring are also options.
-   Sediment continuity is tracked on a grid element basis.
+Prior to undertaking the two phase flow implementation, the FLO-2D model had the option of simulating either sediment transport or hyperconcentrated
+sediment flow (mudflow) but the application of the two components was exclusive.
+To address mobile bed conditions in a dilute fluid (typically less than 20 percent concentration by volume), FLO-2D has a sediment transport component
+that can compute sediment scour or deposition.
+Within a grid element, sediment transport capacity is computed based on the flow hydraulics.
+The sediment transport capacity is then compared with the sediment supply and the resulting sediment excess or deficit is uniformly distributed over
+the grid element surface (or non-uniformly on the channel bed based on shear stress).
+There are eleven sediment transport capacity equations that can be applied in the FLO-2D.
+Each sediment transport formula was derived from unique river or flume conditions and the user is encouraged to research the applicability of a
+selected equation for a particular project.
+Sediment routing by size fraction and armoring are also options.
+Sediment continuity is tracked on a grid element basis.
 
-   The sediment transport computation is uncoupled from the flow hydraulics.
-   Initially the flow hydraulics are computed for all the grid elements for a given timestep and then the sediment transport capacity is computed based
-   on the flow hydraulics for that timestep.
-   This assumes that the change in bed topography resulting from deposition or scour will not have a significant effect on the average flow hydraulics
-   for that timestep (Figure 4).
-   If the scour or deposition is less than 0.10 ft (0.3 m), the sediment storage volume is not distributed on the bed but is accumulated temporarily.
-   Generally, it takes several computational timesteps (~1 second) to store enough sediment so that the resulting deposition or scour will.
-   exceed 0.10 ft (0.03 m).
+The sediment transport computation is uncoupled from the flow hydraulics.
+Initially the flow hydraulics are computed for all the grid elements for a given timestep and then the sediment transport capacity is computed based
+on the flow hydraulics for that timestep.
+This assumes that the change in bed topography resulting from deposition or scour will not have a significant effect on the average flow hydraulics
+for that timestep (Figure 4).
+If the scour or deposition is less than 0.10 ft (0.3 m), the sediment storage volume is not distributed on the bed but is accumulated temporarily.
+Generally, it takes several computational timesteps (~1 second) to store enough sediment so that the resulting deposition or scour will.
+exceed 0.10 ft (0.03 m).
 
-   This justifies the uncoupled sediment transport approach used in FLO-2D.
+This justifies the uncoupled sediment transport approach used in FLO-2D.
 
-|Two005|
+.. image:: img/Two005.png
 
-   Figure 4.
-   FLO-2D Sediment Transport Bed Exchange.
+*Figure 4.
+FLO-2D Sediment Transport Bed Exchange.*
 
-   Using a depth averaged sediment transport equation to estimate sediment transport capacity is an acceptable approach since each of the eleven sediment
-   transport equations have been extensively tested and utilized in FLO-2D projects.
-   Selecting several equations on a given project will define the range of the scour and deposition response.
-   Each equation is used in its original form and although the hydraulic or morphological conditions for which the equation was derived may be exceeded,
-   the extrapolation to higher concentrations or diverse sediment size distributions will not result in model instability because the timesteps are small.
-   The various sediment transport equations and recommendations for their application are discussed later in the document.
+Using a depth averaged sediment transport equation to estimate sediment transport capacity is an acceptable approach since each of the eleven sediment
+transport equations have been extensively tested and utilized in FLO-2D projects.
+Selecting several equations on a given project will define the range of the scour and deposition response.
+Each equation is used in its original form and although the hydraulic or morphological conditions for which the equation was derived may be exceeded,
+the extrapolation to higher concentrations or diverse sediment size distributions will not result in model instability because the timesteps are small.
+The various sediment transport equations and recommendations for their application are discussed later in the document.
 
 Hyperconcentrated Sediment Flows – Mud Floods and Mudflows
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
