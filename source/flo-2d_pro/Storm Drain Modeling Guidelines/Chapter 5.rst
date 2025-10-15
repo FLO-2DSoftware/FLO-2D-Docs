@@ -117,7 +117,9 @@ FLO-2D Error Messages*
    :header-rows: 0
 
 
-   * - Type 4 inlet is a verticalinlet, and it is in a channelcell.
+   * - Type 4 inlet is a vertical inlet,
+
+       and it is in a channelcell.
      - THERE ARE VERTICAL TYPE 4 INLETS ASSIGNED TO CHANNEL ELEMENTS AND THE CHANNEL BED ELEVATION
 
        IS DIFFERENT  THAN THE INVERT ELEVATION.
@@ -133,7 +135,9 @@ FLO-2D Error Messages*
 
           equal to the channel bed elevation.
 
-   * - No elevation differences between surface and stormdrain layers.
+   * - No elevation differences between
+
+       surface and stormdrain layers.
      - NOTE: THERE ARE NO DIFFERENCES BETWEEN FLOODPLAIN GRID AND STORM DRAIN RIM ELEVATIONS.
 
        .. note:: THERE ARE NO DIFFERENCES BETWEEN FLOODPLAIN GRID AND TYPE 4 INVERT INLET ELEVATIONS.
@@ -147,7 +151,9 @@ FLO-2D Error Messages*
 
        ELEMENTS  (PLEASE REVIEW THE FPRIMELEV.OUT FILE)
 
-   * - More than one storm draininlet is assigned to one grid element.
+   * - More than one storm draininlet
+
+       is assigned to one grid element.
 
        Simulation does not start.
      - THERE ARE POTENTIAL DATA ERROR(S) IN FILE SWMM.inp AND  SWMMFLO.DAT.
@@ -159,7 +165,11 @@ FLO-2D Error Messages*
        Simulation does not start.
      - MULTIPLE CELLS ASSIGNED TO ONE INLET
 
-   * - Missing storm drain inlet geometry or inappropriate geometry, simulation does not start.
+   * - Missing storm drain inlet geometry
+
+       or inappropriate geometry,
+
+       simulation does not start.
      - THERE ARE A MISSING OR INAPPROPRIATE STORM DRAIN INLET  GEOMETRY IN FILE: SWMMFLO.DAT.
 
        REVIEW STORM DRAIN  INLET: XX, DRAIN TYPE: IX ON GRID CELL: XXX
@@ -174,7 +184,11 @@ FLO-2D Error Messages*
    * - General Error in SWMM Model.
      - COMPUTATIONAL ERROR IN SWMM MODEL: REVIEW \*.RPT FILE FOR THE ERROR DESCRIPTION
 
-   * - General Error in SWMM Model reported to the ERROR.CHK file and to the STORMDRAIN_ERROR.CHK.
+   * - General Error in SWMM Model reported
+
+       to the ERROR.CHK file and to
+
+       the STORMDRAIN_ERROR.CHK.
      - THERE IS AN ERROR IN THE SWMM MODEL.
 
        PLEASE REVIEW  THE FOLLOWING ERROR CODE IN THE SWMM ERROR LIST OR  CONTACT
