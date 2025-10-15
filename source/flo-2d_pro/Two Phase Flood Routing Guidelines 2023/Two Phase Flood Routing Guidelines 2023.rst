@@ -494,20 +494,20 @@ flow condition.
 
 Additional data input requirements unique to tailings failures include by file name:
 
-- CONT.DAT: MUD = 1, ISED = 0, XCONC = Concentration Adjustment Factor (additive) • SED.DAT: Mudflow M-line is needed, C-line for sediment transport is
-  not required
+    - CONT.DAT: MUD = 1, ISED = 0, XCONC = Concentration Adjustment Factor (additive)
 
-- LEVEE.DAT not required.
+    - SED.DAT: Mudflow M-line is needed, C-line for sediment transport is
+      not required
 
-..
+    - LEVEE.DAT not required.
 
-   When starting a project, performing a stack failure first is the suggested approach.
-   It only requires tailings dam volume, original ground surface, tailings surface or depth, estimated nvalues, a selection of rheologic parameters from
-   Appendix Table B.1, and an estimated tailings concentration by volume C\ :sub:`v` (with the range from 0.4 < C\ :sub:`v` < 0.56).
-   If global mapping of the site is available, a FLO-2D static tailings stack failure can be conducted in a matter of a few hours.
-   The Feijao tailings stack failure in Brumadinho, Brazil is shown in Figure 10 and Figure 11.
-   This simulation was set up with FLO-2D in about 2-hrs.
-   The first model run with no calibration is relatively accurate because the tailings volume modeled is close to the failure volume.
+When starting a project, performing a stack failure first is the suggested approach.
+It only requires tailings dam volume, original ground surface, tailings surface or depth, estimated nvalues, a selection of rheologic parameters from
+Appendix Table B.1, and an estimated tailings concentration by volume C\ :sub:`v` (with the range from 0.4 < C\ :sub:`v` < 0.56).
+If global mapping of the site is available, a FLO-2D static tailings stack failure can be conducted in a matter of a few hours.
+The Feijao tailings stack failure in Brumadinho, Brazil is shown in Figure 10 and Figure 11.
+This simulation was set up with FLO-2D in about 2-hrs.
+The first model run with no calibration is relatively accurate because the tailings volume modeled is close to the failure volume.
 
 |Two010|
 
