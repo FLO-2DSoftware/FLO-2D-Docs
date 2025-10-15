@@ -1240,7 +1240,12 @@ Mudflow yield stress τ\ :sub:`y` and viscosity η vary principally with sedimen
 The viscous stresses will not play a role in the flow hydraulics unless the sediment concentration by volume exceeds 20%.
 If a rheological laboratory analysis of the
 
- *=* \ *1 e* \ *1 Cv* and \ *y =* \ *2 e* \ *2 Cv*
+  and
+= e
+ C
+y 2
+ 2 v
+
 
 mudflow site depositional material is available, the following empirical relationships can be used to compute viscosity and yield stress: where α\
 :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
@@ -1267,189 +1272,202 @@ The scour, mixing, and mobilization of the tailings material will define nature 
 Each tailings dam material or layer has geologic and soil conditions that will exhibit unique rheological fluid properties.
 Where resources are available, it is recommended that viscosity and yield stress as function of concentration be analyzed with a viscometer.
 For most tailing dam flood hazard delineation projects, it may be outside the scope of work or budget to conduct a laboratory viscometer analysis.
-   Nevertheless, there are commercially available viscometers designed to accommodate very viscous samples such as asphalt at low speeds (e.g.,
-   Brookfield AMETEK…see website: `https://www.brookfieldengineering.com/products/viscometers)
-   <https://www.brookfieldengineering.com/products/viscometers>`__.
+Nevertheless, there are commercially available viscometers designed to accommodate very viscous samples such as asphalt at low speeds (e.g.,
+Brookfield AMETEK…see website: `https://www.brookfieldengineering.com/products/viscometers)
+<https://www.brookfieldengineering.com/products/viscometers>`__.
 
-   Typically, these viscometers cost in the range from $4,000 to $6,000.
-   It is necessary to collect an undisturbed mudflow sample deposit and dry and sieve it to extract the fluid matrix.
+Typically, these viscometers cost in the range from $4,000 to $6,000.
+It is necessary to collect an undisturbed mudflow sample deposit and dry and sieve it to extract the fluid matrix.
 
-   In the absence of in-situ sample data, reasonable assumptions can made to estimate the rheological properties as a function of sediment concentration.
-   Fortunately, there have been rheological studies performed identifying that the viscosity and yield stress follow an exponential relationship with
-   sediment concentration by volume.
-   The variability of this data is primarily a function of the type and quantity of clay material in the sample.
-   If rheological laboratory investigations are performed, the data should fall within the banded range given the diverse range of data collected
-   worldwide (Figures B.1 and B.2 in Appendix B).
-   Recommendations for a tailings laboratory investigation are:
+In the absence of in-situ sample data, reasonable assumptions can made to estimate the rheological properties as a function of sediment concentration.
+Fortunately, there have been rheological studies performed identifying that the viscosity and yield stress follow an exponential relationship with
+sediment concentration by volume.
+The variability of this data is primarily a function of the type and quantity of clay material in the sample.
+If rheological laboratory investigations are performed, the data should fall within the banded range given the diverse range of data collected
+worldwide (Figures B.1 and B.2 in Appendix B).
+Recommendations for a tailings laboratory investigation are:
 
-1. Collect undisturbed tailings deposit samples and sieve the samples for the clay-silt/sand split to determine the percentage of fine sediment in the
-   flow material.
-   Additional soil analyses such as the Plastic Index and Liquid Limit may also be informative.
+    1. Collect undisturbed tailings deposit samples and sieve the samples for the clay-silt/sand split to determine the percentage of fine sediment in the
+       flow material.
+       Additional soil analyses such as the Plastic Index and Liquid Limit may also be informative.
 
-2. Starting with a dry deposit sample of the fluid matrix material, re-wet the sample based on accurate measurements of the weight of the sediment sample
-   and the added water to determine concentration by volume.
-   Record the observations by referencing Table 1.
-   By sloshing the rewetted tailings in a container, determine if the mudflow appears to be very viscous or rather dilute.
-   Did the flow behave like wet cement or more like a mud flood?
+    2. Starting with a dry deposit sample of the fluid matrix material, re-wet the sample based on accurate measurements of the weight of the sediment sample
+       and the added water to determine concentration by volume.
+       Record the observations by referencing Table 1.
+       By sloshing the rewetted tailings in a container, determine if the mudflow appears to be very viscous or rather dilute.
+       Did the flow behave like wet cement or more like a mud flood?
 
-3. Using a commercially available viscometer, determine the forces or stress required to initiate motion in the viscometer.
-   This is the yield stress.
-   Run the viscometer at low speeds (up to 10 sec\ :sup:`-1` - rotational speed) to measure the viscosity (line slope of the stress versus rate of strain
-   plot) for the various sediment concentrations by volume.
+    3. Using a commercially available viscometer, determine the forces or stress required to initiate motion in the viscometer.
+       This is the yield stress.
+       Run the viscometer at low speeds (up to 10 sec\ :sup:`-1` - rotational speed) to measure the viscosity (line slope of the stress versus rate of strain
+       plot) for the various sediment concentrations by volume.
 
-4. Regress the viscosity and yield stress data as exponential function of the concentration as noted in the above equations.
+    4. Regress the viscosity and yield stress data as exponential function of the concentration as noted in the above equations.
 
-..
+If a subjective judgment is required to select a set of rheological relationships, the following approach is recommended:
 
-   If a subjective judgment is required to select a set of rheological relationships, the following approach is recommended:
+    1. Observe field or historical tailings dam conditions including depositional characteristics in the tailings deposits.
+       Use available aerial photos.
+       Determine if the tailings deposits appear to be very viscous or rather dilute.
+       Did the flow behave like wet cement or like a fluid muddy flood? Did the inflow to the tailings pond cease immediately or continue flowing over the
+       deposits? Are there frontal wave terminal berms or lateral berm deposits?
 
-1. Observe field or historical tailings dam conditions including depositional characteristics in the tailings deposits.
-   Use available aerial photos.
-   Determine if the tailings deposits appear to be very viscous or rather dilute.
-   Did the flow behave like wet cement or like a fluid muddy flood? Did the inflow to the tailings pond cease immediately or continue flowing over the
-   deposits? Are there frontal wave terminal berms or lateral berm deposits?
+    2. If it is determined that the potential tailings flow could be viscous with a moderate yield stress, select a sample from guidelines tables that will
+       result in a viscosity and yield stress in an appropriate range in guideline figures.
+       Glenwood 4 in Appendix Table B.1 is suggested as a typical type of tailings material that will behave like wet cement.
+       Similarly, if it is assumed that the flow more resembled a mud flood with limited viscosity and yield stress, select parameters corresponding to a
+       Table B.1 sample such as the Aspen Natural Soil.
+       Compute the viscosity and yield stress for several different samples in the B.1 Tables and Figures B.1 and B.2 for a range of concentrations by volume
+       and compare the results in a worksheet table.
 
-2. If it is determined that the potential tailings flow could be viscous with a moderate yield stress, select a sample from guidelines tables that will
-   result in a viscosity and yield stress in an appropriate range in guideline figures.
-   Glenwood 4 in Appendix Table B.1 is suggested as a typical type of tailings material that will behave like wet cement.
-   Similarly, if it is assumed that the flow more resembled a mud flood with limited viscosity and yield stress, select parameters corresponding to a
-   Table B.1 sample such as the Aspen Natural Soil.
-   Compute the viscosity and yield stress for several different samples in the B.1 Tables and Figures B.1 and B.2 for a range of concentrations by volume
-   and compare the results in a worksheet table.
-
-3. Run several FLO-2D mudflow simulations with different sample viscosity and yield stress relationships and analyze the range of flow results such as
-   area of inundation, maximum depths, maximum velocities, peak discharges, etc.
-   Determine the worst-case scenario for your project conditions.
+    3. Run several FLO-2D mudflow simulations with different sample viscosity and yield stress relationships and analyze the range of flow results such as
+       area of inundation, maximum depths, maximum velocities, peak discharges, etc.
+       Determine the worst-case scenario for your project conditions.
 
 Tailings Dam Breach Methods
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   If a tailings dam with water storage breaches, initially the water is released and scours the stationary tailings material in reservoir at the breach
-   as the breach expands.
-   As the fluid supernatant flows through the tailings reservoir to the breach, fluid water and sediment mixture with a low concentration scours the
-   tailings material as it begins moving in the mudflow phase).
-   After the breach, the fluid phase continues to scour the downstream bed as the fluid races ahead of the mudflow until the sediment concentration
-   reaches the hyperconcentrated sediment mud flow level.
-   From the standpoint of identifying the downstream flood hazard, all three breach methods can be applied to evaluate the worst case: Instantaneous
-   breach, prescribed breach rates and breach erosion.
+If a tailings dam with water storage breaches, initially the water is released and scours the stationary tailings material in reservoir at the breach
+as the breach expands.
+As the fluid supernatant flows through the tailings reservoir to the breach, fluid water and sediment mixture with a low concentration scours the
+tailings material as it begins moving in the mudflow phase).
+After the breach, the fluid phase continues to scour the downstream bed as the fluid races ahead of the mudflow until the sediment concentration
+reaches the hyperconcentrated sediment mud flow level.
+From the standpoint of identifying the downstream flood hazard, all three breach methods can be applied to evaluate the worst case: Instantaneous
+breach, prescribed breach rates and breach erosion.
 
-   *Instantaneous Breach:* Intuitively, collapsing the tailings dam to the base elevation should create the fastest rising frontal wave.
-   Assigning more than one breach direction and grid element will intensify the breach wave progressing downstream.
-   The instantaneous breach is initiated by assigning the W-line in the LEVEE.DAT file.
-   Only the breach elevation
+    *Instantaneous Breach:* Intuitively, collapsing the tailings dam to the base elevation should create the fastest rising frontal wave.
+Assigning more than one breach direction and grid element will intensify the breach wave progressing downstream.
+The instantaneous breach is initiated by assigning the W-line in the LEVEE.DAT file.
+Only the breach elevation (slightly lower than the water surface) is necessary to assign to start the instantaneous breach.
 
-   (slightly lower than the water surface) is necessary to assign to start the instantaneous breach.
+    *Prescribed Failure Breach:* A prescribed rate of failure breach is orchestrated by assigning the vertical and horizontal breach rates in the same
+W-line of the LEVEE.DAT file.
+Suggested rates of failure in ft/hr or m/hr are not readily available in the literature.
+A vertical breach rate of 10 ft/hr (3 m/hr) and a horizontal rate of 50 ft/hr (17 m/hr) can be initially applied, but the user is encouraged to
+research potential tailings dam breach rates and experiment with various rates to attempt to maximize the breach peak discharge and timing.
 
-   *Prescribed Failure Breach:* A prescribed rate of failure breach is orchestrated by assigning the vertical and horizontal breach rates in the same
-   W-line of the LEVEE.DAT file.
-   Suggested rates of failure in ft/hr or m/hr are not readily available in the literature.
-   A vertical breach rate of 10 ft/hr (3 m/hr) and a horizontal rate of 50 ft/hr (17 m/hr) can be initially applied, but the user is encouraged to
-   research potential tailings dam breach rates and experiment with various rates to attempt to maximize the breach peak discharge and timing.
+    *Stack Collapse – Instantaneous Static or Seismic Failure:* A collapse of the tailings facility can be simulated without using the prescribed breach
+failure data in the LEVEE.DAT file.
+This is accomplished by assigning tailings depths to the grid elements within tailings facility.
+When the FLO-2D model is run with the levee dam cells removed, the storage tailings begin to move immediately.
 
-   *Stack Collapse – Instantaneous Static or Seismic Failure:* A collapse of the tailings facility can be simulated without using the prescribed breach
-   failure data in the LEVEE.DAT file.
-   This is accomplished by assigning tailings depths to the grid elements within tailings facility.
-   When the FLO-2D model is run with the levee dam cells removed, the storage tailings begin to move immediately.
+To set up a stack failure, the tailings facility is initially assigned a levee dam with appropriate crest elevations encompassing all the tailings
+storage cells (Figure 25).
+The starting water surface and tailings surface (or just tailing surface with no supernatant fluid) are assigned in INFLOW.DAT R-Line:
 
-   To set up a stack failure, the tailings facility is initially assigned a levee dam with appropriate crest elevations encompassing all the tailings
-   storage cells (Figure 25).
-   The starting water surface and tailings surface (or just tailing surface with no supernatant fluid) are assigned in INFLOW.DAT R-Line:
+   R 28776 4506.00 4501.00 0.25
 
-   R 28776 4506.00 4501.00 0.25 where: 28776 is a grid element inside the reservoir
+where: 28776 is a grid element inside the reservoir
 
-4506.00 = water surface elevation
+       4506.00 = water surface elevation
 
-4501.00 = tailings surface elevation
+       4501.00 = tailings surface elevation
 
-0.250 = reservoir n-value
+       0.250 = reservoir n-value
 
-   At this stage, run theFLO-2D model with SIMUL = 0.01 hrs and TOUT = 0.01 hrs and the model will start and stop.
-   Review the SUMMARY.OUT file for the reported volumes and adjust the grid element foundation or bed elevations until the tailing storage volume is
-   matched.
-   A new file is created by this short runtime simulation named TAILINGS_STACK_DEPTH.DAT containing all the grid elements, water depth on the surface of
-   the tailings and tailings depth.
-   If the tailings stack failure is only mudflow and not 2 phase flow, then only the tailings depth will be listed in this file.
-   This file can be imported to QGIS or opened in an ASCII file program editor (WordPad) to revise or contour the tailings depths and this will now
-   constitute the flow source volume.
-   The INFLOW.DAT is no longer necessary and can be renamed to INFLOW1.DAT or some other name.
+At this stage, run theFLO-2D model with SIMUL = 0.01 hrs and TOUT = 0.01 hrs and the model will start and stop.
+Review the SUMMARY.OUT file for the reported volumes and adjust the grid element foundation or bed elevations until the tailing storage volume is
+matched.
+A new file is created by this short runtime simulation named TAILINGS_STACK_DEPTH.DAT containing all the grid elements, water depth on the surface of
+the tailings and tailings depth.
+If the tailings stack failure is only mudflow and not 2 phase flow, then only the tailings depth will be listed in this file.
+This file can be imported to QGIS or opened in an ASCII file program editor (WordPad) to revise or contour the tailings depths and this will now
+constitute the flow source volume.
+The INFLOW.DAT is no longer necessary and can be renamed to INFLOW1.DAT or some other name.
 
-|Two033|
+.. image:: img/Two033.jpg
 
-   Figure 30.
-   A Tailing Facility Created by Surround the Reservoir with Levee Elements.
+*Figure 30.
+A Tailing Facility Created by Surround the Reservoir with Levee Elements.*
 
-   The next step is to make a copy of the original LEVEE.DAT and then remove or delete those levee elements that will represent the tailings failure
-   using QGIS or just by editing the LEVEE.DAT file.
-   If the tailings facility extends across a canyon, the LEVEE.DAT file could be renamed.
-   The deleted levee elements are the cells that would slough away or disintegrate with the static or seismic failure.
-   After removing these cells and creating the breach, reset the SIMUL (simulation time in CONT.DAT) and TOUT (output interval) to the original values
-   for the tailings collapse simulation.
-   Check the mudflow switch in CONT.DAT (MUD = 1 for mudflow or MUD = 2 for 2 phase flow), then run the model.
-   The tailings stack will mobilize at the start of the simulation and begin flow downs slope rapidly (Figures 26 and 27).
+The next step is to make a copy of the original LEVEE.DAT and then remove or delete those levee elements that will represent the tailings failure
+using QGIS or just by editing the LEVEE.DAT file.
+If the tailings facility extends across a canyon, the LEVEE.DAT file could be renamed.
+The deleted levee elements are the cells that would slough away or disintegrate with the static or seismic failure.
+After removing these cells and creating the breach, reset the SIMUL (simulation time in CONT.DAT) and TOUT (output interval) to the original values
+for the tailings collapse simulation.
+Check the mudflow switch in CONT.DAT (MUD = 1 for mudflow or MUD = 2 for 2 phase flow), then run the model.
+The tailings stack will mobilize at the start of the simulation and begin flow downs slope rapidly (Figures 26 and 27).
 
-|Two034|
+.. image:: img/Two034.jpg
 
    Figure 31.
    The Tailings Mudflow is Mobilized at the Start of the Simulation.
 
-|Two035|
+.. image:: img/Two035.jpg
 
-   Figure 32.
-   The Tailings Facility is Draining after 0.45 hrs.
+*Figure 32.
+The Tailings Facility is Draining after 0.45 hrs.*
 
-   *Breach Erosion:* The FLO-2D breach component involves potential overtopping the dam crest, piping erosion through the dam, pipe collapse into a
-   channel, and/or dam collapse as block failure.
-   Computing the tailings dam scour is requires more data and the following dam geometry parameters are required:
+    *Breach Erosion:* The FLO-2D breach component involves potential overtopping the dam crest, piping erosion through the dam, pipe collapse into a
+channel, and/or dam collapse as block failure.
+Computing the tailings dam scour is requires more data and the following dam geometry parameters are required:
 
-- Crest elevation
+    - Crest elevation
 
-- Starting water surface elevation (or depth below crest) (ft or m)
+    - Starting water surface elevation (or depth below crest) (ft or m)
 
-- Cumulative duration of inundation at specified elevation prior to breach initiation (hr)
+    - Cumulative duration of inundation at specified elevation prior to breach initiation (hr)
 
-- Maximum breach width (ft or m)
+    - Maximum breach width (ft or m)
 
-- Prescribed initial pipe elevation (ft or m)
+    - Prescribed initial pipe elevation (ft or m)
 
-- Tailwater elevation (ft or m)
+    - Tailwater elevation (ft or m)
 
-- Foundation or base elevation for vertical breach cessation (ft or m)
+    - Foundation or base elevation for vertical breach cessation (ft or m)
 
-..
+In addition, there are dam shell (and infrequently, a potential dam core) material parameters that are required.
+These parameters have variable levels of sensitivity as presented in Table 4.
 
-   In addition, there are dam shell (and infrequently, a potential dam core) material parameters that are required.
-   These parameters have variable levels of sensitivity as presented in Table 4.
+*Table 4.
+FLO-2D Dam Erosion Sensitive Data Input Parameters*
 
 .. list-table::
-   :widths: 100
+   :widths: 33.3 33.3 33.3
    :header-rows: 0
 
 
-   * - **Table 4.
-       FLO-2D Dam Erosion Sensitive Data Input Parameters**
+   * - **Parameter**
+     - **Sensitivity**
+     - **Range**
 
-   * - **Parameter**           | **Sensitivity**         | **Range**
+   * - Initial breach ratio
+     - low
+     - 1 – 10
 
-   * - Initial breach ratio    | low                     |    1 – 10
+   * - breach slope/pipe elevation
+     - high
+     - Maximize within dam/levee
 
-   * - breach slope/pipe       | high                    | Maximize withinelevation               |                         | dam/levee
+   * - D50
+     - high
+     - 0.025 – 100 mm
 
-   * - D50                     | high                    |    0.025 – 100 mm
+   * - sediment gradation D90/D30
+     - moderate
+     - 2.0 - 50.0|
 
-   * - sediment gradation      | moderate                |    2.0 - 50.0|                         |D90/D30                 |                         |
+   * - cohesive strength
+     - moderate
+     - 100 - 750 lb/ft\ :sup:`2`
 
-   * - cohesive strength       | moderate                |    100 - 750|                         |    lb/ft\ :sup:`2`
+   * - n-value
+     - moderate
+     - 0.035 - 0.25
 
-   * - n-value                 | moderate                | 0.035 - 0.25
+   * - Cvmax
+     - high
+     - 0.45 - 0.55
 
-   * - Cvmax                   | high                    |    0.45 - 0.55
+   * - weir coefficient
+     - moderate
+     - 2.85 – 3.05
 
-   * - weir coefficient        | moderate                |    2.85 – 3.05
-
-   * - internal friction angle | low                     |    20\ :sup:`⁰` -|                         |    40\ :sup:`⁰`
-
-
-..
+   * - internal friction angle
+     - low
+     - 20\ :sup:`⁰` - 40\ :sup:`⁰`
 
    Simulating a tailings dam breach as a water storage reservoir dam failure will probably result in a slower and longer duration failure than an
    instantaneous breach failure.
