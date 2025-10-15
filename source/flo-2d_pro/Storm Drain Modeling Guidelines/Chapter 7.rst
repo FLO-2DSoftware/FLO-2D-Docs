@@ -49,7 +49,9 @@ Inlets
 
 ..
 
-   |Chapte002|\ Required
+.. image:: img/Chapter7/Chapte005.jpg
+
+\ Required
 
    Fields
 
@@ -91,7 +93,9 @@ Outfalls
 
 ..
 
-   |Chapte003|\ Required
+.. image:: img/Chapter7/Chapte005.jpg
+
+\ Required
 
    Fields
 
@@ -130,7 +134,7 @@ SWMMFLO.DAT
    After the SWMM.inp file was edited, the storm drain command can be called from the FLO-2D QGIS Plug-in (Figure 62.
    ) create the additional Storm Drain data files, review FLO-2D Plugin User’s Manual for more details.
 
-   |Chapte004|
+.. image:: img/Chapter7/Chapte005.png
 
    **Figure 62.
    QGIS Plug-in Storm Drain Commands**
@@ -139,20 +143,8 @@ SWMMFLO.DAT
    ) and loads the SWMM inlet nodes and associates them with a FLO-2D grid element.
    At this point, the storm drain geometry can be entered in FLO-2D plug-in.
 
-|Chapte005|
+.. image:: img/Chapter7/Chapte005.png
 
    **Figure 63.
    Reading the SWMM.inp File in QGIS.**
 
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 2.23931in
-   :height: 3.86361in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 1.82278in
-   :height: 3.19028in
-.. |Chapte004| image:: media\Chapte004.jpg
-   :width: 4.48069in
-   :height: 4.17847in
-.. |Chapte005| image:: media\Chapte005.jpg
-   :width: 5.00861in
-   :height: 2.18819in
