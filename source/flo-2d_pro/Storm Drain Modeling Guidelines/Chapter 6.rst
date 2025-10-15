@@ -296,7 +296,7 @@ The following checklist was prepared to review the storm drain data files:
 
     ☐ Outfall discharge. For outfall discharge to the surface water, the outfall must have a
 
-      “free” condition and must be turned “on” in the ``SWMMOUTF.DAT`` file.
+      “free” condition and must be turned “on” in the SWMMOUTF.DAT file.
 
     ☐ Outfall location. Check the outfall location with respect to the grid/channel element
 
@@ -304,14 +304,14 @@ The following checklist was prepared to review the storm drain data files:
 
     ☐ Outfall to the channel. The outfall must be connected to the left bank grid element.
 
-    ☐ Tide gates for outfall nodes should be assigned in the ``SWMM.inp`` file.
+    ☐ Tide gates for outfall nodes should be assigned in the SWMM.inp file.
 
     ☐ Manholes. Check the assigned surcharge depth.
 
-    ☐ Storm drain model simulation completion. Check the ``SUMMARY.OUT`` file last line
+    ☐ Storm drain model simulation completion. Check the SUMMARY.OUT file last line
 
       for the time stamp indicating that the model properly terminated.
 
-    ☐ SWMM.ini file. The ``SWMM.ini`` file should be modified to review the results.
+    ☐ SWMM.ini file. The SWMM.ini file should be modified to review the results.
 
 
