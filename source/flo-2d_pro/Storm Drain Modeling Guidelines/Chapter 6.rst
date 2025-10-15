@@ -151,7 +151,6 @@ Edit Menu
 
  View Menu
 
-
 **Dimensions:** Sets reference coordinates and distance units for a study area
 
 **Backdrop:** Allows a background image to be added, positioned, and viewed.
@@ -168,9 +167,8 @@ Project Menu
 
 Report Menu
 
-
-   **Status:** Displays a status report for the last simulation.
-   The Bookmark feature enables quick review of the SWMM.RPT file sections (Figure 55).
+**Status:** Displays a status report for the last simulation.
+The Bookmark feature enables quick review of the SWMM.RPT file sections (Figure 55).
 
 .. image:: img/Chapter6/Chapte006.jpg
 
@@ -200,7 +198,6 @@ Map Options*
 
 Help Menu
 
-
 **Help Topics:** Displays the Help system’s Table of Contents
 
 **How Do I:** Displays a list of the most common operations
@@ -217,21 +214,19 @@ Provide shortcuts to common operations and includes the standard toolbar.
 
 Map Toolbar and Object Toolbar
 
-
 Data/map browser provides access to all the data objects in a project and controls the mapping themes and time periods viewed on the study area map.
 
 Status Bar
 
+**Auto-length**: Indicates whether the automatic computation of conduit lengths is required.
+It is recommended that the auto-length be turned ‘off” if the data is imported from a GIS database.
 
-   **Auto-length**: Indicates whether the automatic computation of conduit lengths is required.
-   It is recommended that the auto-length be turned ‘off” if the data is imported from a GIS database.
+**Offsets**: Indicate whether the positions of links above the invert of their connecting nodes are expressed as depth above the invert or as an
+offset elevation.
+The FLO-2D component is configured for the depth.
 
-   **Offsets**: Indicate whether the positions of links above the invert of their connecting nodes are expressed as depth above the invert or as an
-   offset elevation.
-   The FLO-2D component is configured for the depth.
-
-   **Flow units**: English or metric.
-   The previously entered data is not automatically adjusted for the unit system if the system is changed.
+**Flow units**: English or metric.
+The previously entered data is not automatically adjusted for the unit system if the system is changed.
 
 **Zoom level:** Zoom level percentage.
 
@@ -239,54 +234,28 @@ Status Bar
 
 Data Browser
 
+The data browser has three sections (Figure 58).
 
-   The data browser has three sections (Figure 58).
+    - A tree box that lists all the storm drain categories of data objects.
 
-- A tree box that lists all the storm drain categories of data objects.
+    - Edit buttons.
 
-- Edit buttons.
+    - A list of individual objects in the selected category.
 
-- A list of individual objects in the selected category.
+.. image:: img/Chapter6/Chapte010.jpg
 
-**Figure**
-
-**58**
-
-**.
-SWMM GUI Data Browser Panel**
-
-List of data
-
-objects
-
-List of
-
-individual
-
-data objects in
-
-the selected cat-
-
-egory
-
-Data Object
-
-Editing
-
-buttons.
-
-Data Browser
+*Figure 58.
+SWMM GUI Data Browser Panel*
 
 Map Browser
 
+The map browser consists of three panels that control the results display (Figure 59).
 
-   The map browser consists of three panels that control the results display (Figure 59).
+    - Themes Panel selects variables according to color on the map.
 
-- Themes Panel selects variables according to color on the map.
+    - Time Period Panel indicates a specific output interval to display results on the map.
 
-- Time Period Panel indicates a specific output interval to display results on the map.
-
-- Animator Panel controls the animation of the temporal output and profile plots.
+    - Animator Panel controls the animation of the temporal output and profile plots.
 
 The Themes
 
