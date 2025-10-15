@@ -351,7 +351,9 @@ Coded Rules for Two Phase Sediment Exchange*
 
        velocity ceases.
        The deposition may occur to the mudflow
-       phase or to the bed if no mudflow exists
+       phase or
+
+       to the bed if no mudflow exists
        (revises bed elevation).
 
    * - Mudflow sediment concentration by volume
