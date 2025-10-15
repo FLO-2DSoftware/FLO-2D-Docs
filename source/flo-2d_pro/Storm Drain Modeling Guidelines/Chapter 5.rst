@@ -106,7 +106,9 @@ FLO-2D Error Messages*
 
        PLEASE REVIEW FPRIMELEV.OUT FILE.
 
-       .. note:: If a floodplain swale is discharging into a storm drain conduit or culvert,
+       .. note::
+          If a floodplain swale is discharging into a storm drain conduit or culvert,
+
           the invert elevation should be equal to the swale bed elevation.
 
 
