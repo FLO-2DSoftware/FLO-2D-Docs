@@ -121,7 +121,7 @@ To use the SWMM.inp to create the SWMMFLO.DAT, the following SWMM components mus
 After the SWMM.inp file was edited, the storm drain command can be called from the FLO-2D QGIS Plug-in (Figure 62.
 ) create the additional Storm Drain data files, review FLO-2D Plugin User’s Manual for more details.
 
-.. image:: img/Chapter7/Chapte004.png
+.. image:: img/Chapter7/Chapte004.jpg
 
 *Figure 62.
 QGIS Plug-in Storm Drain Commands*
@@ -130,7 +130,7 @@ The FLO-2D QGIS Plug-in then locates and reads the SWMM.inp file (Figure 63.)
 and loads the SWMM inlet nodes and associates them with a FLO-2D grid element.
 At this point, the storm drain geometry can be entered in FLO-2D plug-in.
 
-.. image:: img/Chapter7/Chapte005.png
+.. image:: img/Chapter7/Chapte005.jpg
 
 *Figure 63.
 Reading the SWMM.inp File in QGIS.*
