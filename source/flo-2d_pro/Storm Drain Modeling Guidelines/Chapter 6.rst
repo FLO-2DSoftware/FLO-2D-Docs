@@ -136,8 +136,8 @@ File Menu
 
 .. image:: img/Chapter6/Chapte009.jpg
 
-*Figure 54
-.SWMM GUI Environment*
+*Figure 54.
+SWMM GUI Environment*
 
 Edit Menu
 
