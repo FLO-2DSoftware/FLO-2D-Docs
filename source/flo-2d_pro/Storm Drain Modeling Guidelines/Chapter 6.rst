@@ -267,42 +267,29 @@ Model Checklist
 
 The following checklist was prepared to review the storm drain data files:
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+    ☐ Inlet location. All inlets must be inside the FLO-2D computation domain.
 
+    ☐ SWMM hydrology components are eliminated. If an existing SWMM model was ported
+      to the FLO-2D model, all the hydrology features must be removed including
+      subcatchments and rain gage features.
 
-   * - 
-     - Inlet location.
-       All inlets must be inside the FLO-2D computation domain.
+    ☐ Pipe lengths. If pipe lengths are less than grid element width reset them to
+      the grid element width.
 
-   * - 
-     - SWMM hydrology components are eliminated.
-       If an existing SWMM model was ported to the FLO-2D model, all the hydrology features must be removed including subcatchments and rain gage features.
+    ☐ Adverse pipe slope. Check adverse pipe slope for accuracy.
 
-   * - 
-     - Pipe lengths.
-       If pipe lengths are less than grid element width reset them to the grid element width.
+    ☐ Inlet elevations. The inlet rim elevation should match the grid element
+      elevation. Type 4 vertical inlets should go by the invert of the headwall.
+      The invert of the headwall should match the grid element elevation.
+      For type 4 inlets connected to channels, the channel invert should match the
+      invert headwall opening. For Type 4 horizontal inlets, the grid element should
+      match the rim elevation.
 
-   * - 
-     - Adverse pipe slope.
-       Check adverse pipe slope for accuracy.
+    ☐ Type 4 – Defined by a Stage-Discharge Rating Table. Rating tables or
+      generalized culvert equations must be assigned in the SWMMFLORT.DAT file.
 
-   * - 
-     - Inlet elevations.
-       The inlet rim elevation should match the grid element elevation.
-       Type 4 vertical inlets should go by the invert of the headwall.
-       The invert of the headwall should match the grid element elevation.
-       For type 4 inlets connected to channels, the channel invert should match the invert headwall opening.
-       For Type 4 horizontal inlets, the grid element should match the rim elevation.
+    ☐ Inlet geometry. Check the size and location.
 
-   * - 
-     - Type 4 - Defined by a Stage-Discharge Rating Table.
-       Rating tables or generalized culvert equations must be assigned in the SWMMFLORT.DAT file.
-
-   * - 
-     - Inlet geometry.
-       Check the size and location.
 
 
 .. list-table::
