@@ -541,20 +541,18 @@ hyperconcentrated sediment flow level.
 From the standpoint of identifying the downstream flood hazard, all tailings dam breach methods can be applied to evaluate the worst case:
 Instantaneous breach, prescribed breach rates and breach erosion.
 
-   *Instantaneous Breach:* Intuitively, collapsing the tailings dam to the base elevation should create the fastest rising frontal wave.
-   Assigning more than one breach direction and grid element will intensify the breach wave progressing downstream.
-   The instantaneous breach is initiated by assigning the W-line in the LEVEE.DAT file.
-   Only the breach elevation
+    * Instantaneous Breach:* Intuitively, collapsing the tailings dam to the base elevation should create the fastest rising frontal wave.
+Assigning more than one breach direction and grid element will intensify the breach wave progressing downstream.
+The instantaneous breach is initiated by assigning the W-line in the LEVEE.DAT file.
+Only the breach elevation (slightly lower than the water surface) is necessary to assign to start the instantaneous breach.
 
-   (slightly lower than the water surface) is necessary to assign to start the instantaneous breach.
+    *Prescribed Failure Breach:* A prescribed rate of failure breach is orchestrated by assigning the vertical and horizontal breach rates in the same
+W-line of the LEVEE.DAT file.
+Suggested rates of failure in ft/hr or m/hr are not readily available in the literature.
+A vertical breach rate of 10 ft/hr (3 m/hr) and a horizontal rate of 50 ft/hr (17 m/hr) can be initially applied, but the user is encouraged to
+research potential tailings dam breach rates and experiment with various rates to attempt to maximize the breach peak discharge and timing.
 
-   *Prescribed Failure Breach:* A prescribed rate of failure breach is orchestrated by assigning the vertical and horizontal breach rates in the same
-   W-line of the LEVEE.DAT file.
-   Suggested rates of failure in ft/hr or m/hr are not readily available in the literature.
-   A vertical breach rate of 10 ft/hr (3 m/hr) and a horizontal rate of 50 ft/hr (17 m/hr) can be initially applied, but the user is encouraged to
-   research potential tailings dam breach rates and experiment with various rates to attempt to maximize the breach peak discharge and timing.
-
-   *Breach Erosion:* Computing the tailings dam scour is complicated and the method has the following failure potential:
+    *Breach Erosion:* Computing the tailings dam scour is complicated and the method has the following failure potential:
 
         - Overtopping and development of a breach channel;
 
@@ -587,57 +585,56 @@ on dam breach and various PPT slide presentations that available from the FLO-2D
 2 Phase Flow Data Input
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   The data input discussed in this section is unique to the two phase flow component and supplements the data required for a typical FLO-2D flood model
-   or tailings dam mudflow simulation.
-   To initiate FLO-2D two phase flow:
+The data input discussed in this section is unique to the two phase flow component and supplements the data required for a typical FLO-2D flood model
+or tailings dam mudflow simulation.
+To initiate FLO-2D two phase flow:
 
-- CONT.DAT - The MUD switch = 2 instead of 1 Sediment transport switch is 0;
+    - CONT.DAT - The MUD switch = 2 instead of 1 Sediment transport switch is 0;
 
-- CONT.DAT XCONC is set to the average tailings concentration;
+    - CONT.DAT XCONC is set to the average tailings concentration;
 
-- INFLOW.DAT – reservoir node gets a water elevation, tailings elevation and reservoir roughness.
+    - INFLOW.DAT – reservoir node gets a water elevation, tailings elevation and reservoir roughness.
 
-R 7576 318.75 315.5 0.20
+            R  7576    318.75        315.5               0.20
 
-- TAILINGS.DAT – grid element and thickness.
+    - TAILINGS.DAT – grid element and thickness.
 
-..
+The reservoir water surface elevation is assigned to a single grid element inside the reservoir (cell #7576).
+The model will then automatically assign the reservoir starting WS Elevation to all the grid elements with a bed elevation less than the starting WS
+Elevation and the reservoir will be filled with water to start the breach simulation.
 
-   The reservoir water surface elevation is assigned to a single grid element inside the reservoir (cell #7576).
-   The model will then automatically assign the reservoir starting WS Elevation to all the grid elements with a bed elevation less than the starting WS
-   Elevation and the reservoir will be filled with water to start the breach simulation.
+If the Tailings Elevation is less than 100 ft or m, then the tailings elevation becomes a tailings depth F above the reservoir bed elevation and the
+tailings elevation would not be uniform.
+The individual cell tailings thickness can also be assigned in the TAILINGS.DAT file which lists the reservoir grid element and the tailings thickness
+as shown below:
 
-   If the Tailings Elevation is less than 100 ft or m, then the tailings elevation becomes a tailings depth F above the reservoir bed elevation and the
-   tailings elevation would not be uniform.
-   The individual cell tailings thickness can also be assigned in the TAILINGS.DAT file which lists the reservoir grid element and the tailings thickness
-   as shown below:
+.. raw:: html
 
-7127.
-10.00 (= thickness below the cell bed elevation)
+    <div>
+    <pre>
+    7127   10.00 (= thickness below the cell bed elevation)
 
-7128.
-10.00
+    7128   10.00
 
-7129.
-10.00
+    7129   10.00
 
-7130.
-12.25
+    7130   12.25
 
-7188.
-15.00
+    7188   15.00
 
-7189.
-13.25
+    7189   13.25
 
-7190.
-11.95
+    7190   11.95
 
-7191.
-10.00
+    7191   10.00
 
-7192.
-10.00
+    7192   10.00
+    </pre>
+    </div>
+
+.. raw:: html
+
+   <br><br>
 
 ..
 
