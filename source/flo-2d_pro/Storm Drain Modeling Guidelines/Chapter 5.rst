@@ -126,16 +126,17 @@ FLO-2D Error Messages*
 
        PLEASE REVIEW AND REVISE IF NECESSARY.
 
-       *NOTE: If an inlet is assigned to the end of a 1-D channel segment and the channel flow
+       .. note::
+          If an inlet is assigned to the end of a 1-D channel segment and the channel flow
 
-       discharges into the storm drain, the invert elevation should
+          discharges into the storm drain, the invert elevation should
 
-       equal to the channel bed elevation.*
+          equal to the channel bed elevation.
 
-   * - No elevation differencesbetween surface and stormdrain layers.
+   * - No elevation differences between surface and stormdrain layers.
      - NOTE: THERE ARE NO DIFFERENCES BETWEEN FLOODPLAIN GRID AND STORM DRAIN RIM ELEVATIONS.
 
-       *NOTE: THERE ARE NO DIFFERENCES BETWEEN FLOODPLAIN GRID AND TYPE 4 INVERT INLET ELEVATIONS.
+       .. note:: THERE ARE NO DIFFERENCES BETWEEN FLOODPLAIN GRID AND TYPE 4 INVERT INLET ELEVATIONS.
 
        FPRIMELEV.OUT FILE WAS NOT CREATED*.
 
