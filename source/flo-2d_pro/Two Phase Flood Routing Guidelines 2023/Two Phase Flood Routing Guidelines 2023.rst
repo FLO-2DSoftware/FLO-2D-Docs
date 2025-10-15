@@ -197,10 +197,10 @@ Hyperconcentrated Sediment Flows – Mud Floods and Mudflows
    Almost all hyperconcentrated sediment flows are fully turbulent, unsteady and nonuniform and are characterized by surging, flow cessation, blockage
    and roll waves.
 
-|Two006|
+.. image:: img/Two006.jpg
 
-   Figure 5.
-   Tailings Dam Failure Mudflow Merriespruit, Virginia SA Feb 1994 (tailings.info).
+*Figure 5.
+Tailings Dam Failure Mudflow Merriespruit, Virginia SA Feb 1994 (tailings.info).*
 
 .. list-table::
    :widths: 100
@@ -243,20 +243,18 @@ Hyperconcentrated Sediment Flows – Mud Floods and Mudflows
    * - Flood             |                   |                   | and bedload
 
 
-..
-
-   A quadratic solution to the friction slope equation was formulated for the FLO-2D model to estimate the seed mudflow velocity in the momentum equation.
-   The seed velocity represents the flow computed across each grid element boundary using the average flow depth between the elements.
-   Reasonable roughness values are assigned for overland flow resistance and the specific weight of the fluid matrix γ\ :sub:`m`, yield stress τ\
-   :sub:`y` and viscosity η vary principally with sediment concentration.
-   When routing the mud flood or mudflow over a floodplain, the FLO2D model preserves volume conservation for both the water and sediment.
-   For every grid element and timestep, the change in the water and sediment volumes and the corresponding change in sediment concentration are computed.
-   A mudflow may cease flowing at high concentrations and may be remobilized at dilute concentrations, but there is no predicted sediment scour or
-   deposition.
-   At the end of the simulation, the model reports on the amount of water and sediment removed from the study area (outflow) and the volume and location
-   of the water and sediment remaining on the flow domain.
-   The areal extent of mudflow inundation and the maximum flow depths and velocities are a function of the available sediment.
-   Further discussion of the FLO-2D mudflow component is presented in Appendix B.
+A quadratic solution to the friction slope equation was formulated for the FLO-2D model to estimate the seed mudflow velocity in the momentum equation.
+The seed velocity represents the flow computed across each grid element boundary using the average flow depth between the elements.
+Reasonable roughness values are assigned for overland flow resistance and the specific weight of the fluid matrix γ\ :sub:`m`, yield stress τ\
+:sub:`y` and viscosity η vary principally with sediment concentration.
+When routing the mud flood or mudflow over a floodplain, the FLO2D model preserves volume conservation for both the water and sediment.
+For every grid element and timestep, the change in the water and sediment volumes and the corresponding change in sediment concentration are computed.
+A mudflow may cease flowing at high concentrations and may be remobilized at dilute concentrations, but there is no predicted sediment scour or
+deposition.
+At the end of the simulation, the model reports on the amount of water and sediment removed from the study area (outflow) and the volume and location
+of the water and sediment remaining on the flow domain.
+The areal extent of mudflow inundation and the maximum flow depths and velocities are a function of the available sediment.
+Further discussion of the FLO-2D mudflow component is presented in Appendix B.
 
 Two Phase Flow Component
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
