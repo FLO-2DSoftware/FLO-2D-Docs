@@ -327,28 +327,35 @@ When the fluid phase is in direct contact with the ground, bed scour or depositi
 The mudflow phase is assumed to always be under or below the fluid phase.
 The coded rules for the two phase flow exchange within a grid element are as follows:
 
+*Table 2.
+Coded Rules for Two Phase Sediment Exchange*
+
 .. list-table::
    :widths: 100
    :header-rows: 0
 
 
-   * - Table 2.
-       Coded Rules for Two Phase Sediment Exchange
+   * - Flow Condition
+     - Resolution
 
-   * - Flow Condition                   |    Resolution
+   * - Fluid phase sediment transport capacity
+       exceeds supply
+     - Excess capacity (scour) is replenished from the mudflow phase or from the bed if no mudflow phase exists (subject to scour
+       depth limitation).
 
-   * - Fluid phase sediment transport      |    Excess capacity (scour) iscapacity exceeds supply             |    replenished from the mudflow|    phase or
-       from the bed if no|    mudflow phase exists (subject to|    scour depth limitation).
+   * - Supply exceeds the sediment transport capacity
+     - Excess supply is added to the bed as
+       deposition when the flow velocity ceases.
+       The deposition may occur to the mudflow
+       phase or to the bed if no mudflow exists
+       (revises bed elevation).
 
-   * - Supply exceeds the sediment         |    Excess supply is added to thetransport capacity                  |    bed as deposition when the flow|
-       velocity ceases.
-       The deposition|    may occur to the mudflow phase|    or to the bed if no mudflow|    exists (revises bed elevation).
+   * - Mudflow sediment concentration by volume
+       exceeds 56% (60% for channel flow).
+     - The mudflow layer is added to the bed.
 
-   * - Mudflow sediment concentration by   |    The mudflow layer is added tovolume exceeds 56% (60% for channel |    the bed.flow).
-       |
-
-   * - Mudflow sediment concentration is   |    The mudflow layer is added toless than 20%                       |    the fluid phase.
-
+   * - Mudflow sediment concentration is less than 20%
+     - The mudflow layer is added to the fluid phase.
 
 After each exchange process listed in Table 2, the fluid and mudflow phase volume concentrations are recomputed.
    The Table 2 sediment concentration by volume limits are based on the flow behavior categories in Table 1.
