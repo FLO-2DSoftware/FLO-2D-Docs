@@ -469,9 +469,9 @@ TAILINGS_CV.DAT in the following format:
     <pre>
     Grid Element    Tailings Depth (ft or m)    Concentration by Volume
 
-    14523.          15.2                        0.51
+    14523           15.2                        0.51
 
-    14524.          15.3                        0.49
+    14524           15.3                        0.49
 
     14525           14.9                        0.52
     </pre>
@@ -509,15 +509,15 @@ The Feijao tailings stack failure in Brumadinho, Brazil is shown in Figure 10 an
 This simulation was set up with FLO-2D in about 2-hrs.
 The first model run with no calibration is relatively accurate because the tailings volume modeled is close to the failure volume.
 
-|Two010|
+.. image:: img/Two010.jpg
 
-   Figure 10.
-   Max Depth Stack Failure.
+*Figure 10.
+Max Depth Stack Failure.*
 
-|Two011|
+.. image:: img/Two011.jpg
 
-   Figure 11.
-   Final Depth Stack Failure.
+*Figure 11.
+Final Depth Stack Failure.*
 
 Tailings Dam Breach Failure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
