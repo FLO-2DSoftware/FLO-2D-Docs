@@ -541,7 +541,7 @@ hyperconcentrated sediment flow level.
 From the standpoint of identifying the downstream flood hazard, all tailings dam breach methods can be applied to evaluate the worst case:
 Instantaneous breach, prescribed breach rates and breach erosion.
 
-    * Instantaneous Breach:* Intuitively, collapsing the tailings dam to the base elevation should create the fastest rising frontal wave.
+    *Instantaneous Breach:* Intuitively, collapsing the tailings dam to the base elevation should create the fastest rising frontal wave.
 Assigning more than one breach direction and grid element will intensify the breach wave progressing downstream.
 The instantaneous breach is initiated by assigning the W-line in the LEVEE.DAT file.
 Only the breach elevation (slightly lower than the water surface) is necessary to assign to start the instantaneous breach.
@@ -679,27 +679,27 @@ This will enable the bed coarsening or sediment deposition to be tracked in a ch
 The SED.DAT file sediment routing by size fraction data is displayed below in blue (lines Z and P) where the P-Line includes the representative
 sediment size and percent finer than.
 
-|Two012|
+.. image:: img/Two012.png
 
-|Two013|
+*Figure 12.
+Sediment Routing by Size Fractions and Bed Armoring.*
 
-   Figure 12.
-   Sediment Routing by Size Fractions and Bed Armoring.
+.. image:: img/Two013.jpg
 
-   The data is entered using dialog windows in the FLO-2D Plugin v.
-   10.74 or higher for QGIS.
-   Figure 13 and Figure 14 show examples of the dialog boxes.
-   The data entry method for a simple prescribed breach tailings dam failure is defined in a Tailings Dam Two Phase Flow tutorial.
+*Figure 13.
+Two phase data entry dialog mudflow.*
 
-|Two014|
+The data is entered using dialog windows in the FLO-2D Plugin v.
+10.74 or higher for QGIS.
+Figure 13 and Figure 14 show examples of the dialog boxes.
+The data entry method for a simple prescribed breach tailings dam failure is defined in a Tailings Dam Two Phase Flow tutorial.
 
-   Figure 13.
-   Two phase data entry dialog mudflow.
+.. image:: img/Two014.jpg
+
+*Figure 14.
+Two phase data entry dialog sediment transport.
 
 |Two015|
-
-   Figure 14.
-   Two phase data entry dialog sediment transport.
 
 Output Files and Reviewing the Results
 ----------------------------------------
