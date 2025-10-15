@@ -151,7 +151,7 @@ Edit Menu
 
 View Menu
 
-**Dimensions:** Sets reference coordinates and distance units for a study area
+**Dimensions:** Sets reference coordinates and distance units for a study area.
 
 **Backdrop:** Allows a background image to be added, positioned, and viewed.
 
