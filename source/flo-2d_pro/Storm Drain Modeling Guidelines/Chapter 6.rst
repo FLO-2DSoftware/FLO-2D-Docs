@@ -54,12 +54,12 @@ Step 1.
 Review the SUMMARY.OUT File
 
 
-   After a FLO-2D simulation is completed, the SUMMARY.OUT file can be reviewed with an ASCII text editor program.
-   A FLO-2D model was successfully completed if the termination time and date is reported at the end of the SUMMARY.OUT:
+After a FLO-2D simulation is completed, the SUMMARY.OUT file can be reviewed with an ASCII text editor program.
+A FLO-2D model was successfully completed if the termination time and date is reported at the end of the SUMMARY.OUT:
 
-|Chapte002|
+.. image:: img/Chapter6/Chapte002.jpg
 
-   Volume exchange and conservation between the surface water and storm drain is reported in the SUMMARY.OUT file as shown below.
+Volume exchange and conservation between the surface water and storm drain is reported in the SUMMARY.OUT file as shown below.
 
 |Chapte003|
 
