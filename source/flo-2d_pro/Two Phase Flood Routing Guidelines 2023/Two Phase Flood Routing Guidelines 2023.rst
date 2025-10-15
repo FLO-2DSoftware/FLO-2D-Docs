@@ -340,12 +340,16 @@ Coded Rules for Two Phase Sediment Exchange*
 
    * - Fluid phase sediment transport capacity
        exceeds supply
-     - Excess capacity (scour) is replenished from the mudflow phase or from the bed if no mudflow phase exists (subject to scour
+     - Excess capacity (scour) is replenished from the mudflow phase or
+
+       from the bed if no mudflow phase exists (subject to scour
        depth limitation).
 
    * - Supply exceeds the sediment transport capacity
      - Excess supply is added to the bed as
-       deposition when the flow velocity ceases.
+       deposition when the flow
+
+       velocity ceases.
        The deposition may occur to the mudflow
        phase or to the bed if no mudflow exists
        (revises bed elevation).
