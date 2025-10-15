@@ -1188,55 +1188,51 @@ Tailings Dam Breach Data Needs.*
      - If no tailings dam failure is being replicated, the historic
        hydrologic and inundation data is not necessary.
 
-   The following component data is not required for modeling the tailings dam breach.
-   The FLO2D model can simulate these components if the downstream area of inundation of the tailings dam breach flooding is required.
+The following component data is not required for modeling the tailings dam breach.
+The FLO2D model can simulate these components if the downstream area of inundation of the tailings dam breach flooding is required.
 
-- Evaporation
+    - Evaporation
 
-- Storm drain and groundwater
+    - Storm drain and groundwater
 
-- Multiple channels
+    - Multiple channels
 
-..
-
-   To model the downstream area of inundation with these additional components, use the floodplain cross section component (HYCROSS.OUT) to generate the
-   tailings dam breach hydrograph below the dam or use the breach hydrograph (BREACH.OUT or PRESCRIBED_BREACHQ.OUT) as an inflow hydrograph (INFLOW.DAT)
-   to simulate the downstream flooding in a second model.
+To model the downstream area of inundation with these additional components, use the floodplain cross section component (HYCROSS.OUT) to generate the
+tailings dam breach hydrograph below the dam or use the breach hydrograph (BREACH.OUT or PRESCRIBED_BREACHQ.OUT) as an inflow hydrograph (INFLOW.DAT)
+to simulate the downstream flooding in a second model.
 
 Sediment Transport Approach
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Of the eleven available sediment transport equations, several are suggested for the first simulations.
-   All the equations can be applied in each tailings dam two phase flow breach model.
-   For given high flow hydraulics, some equations may generate higher sediment loads than other equations and conversely those same equations may predict
-   lower sediment loads at low flow conditions.
-   The SEDTRAN.OUT file lists the sediment discharge (cfs or cms) for all eleven equations for one selected grid element for each output interval.
-   Comparing the peak sediment loads in the SEDTRAN.OUT file for the grid element downstream of the tailings dam breach in the previous example project,
-   the following conclusions can be drawn:
+Of the eleven available sediment transport equations, several are suggested for the first simulations.
+All the equations can be applied in each tailings dam two phase flow breach model.
+For given high flow hydraulics, some equations may generate higher sediment loads than other equations and conversely those same equations may predict
+lower sediment loads at low flow conditions.
+The SEDTRAN.OUT file lists the sediment discharge (cfs or cms) for all eleven equations for one selected grid element for each output interval.
+Comparing the peak sediment loads in the SEDTRAN.OUT file for the grid element downstream of the tailings dam breach in the previous example project,
+the following conclusions can be drawn:
 
-- Low Peak Sediment Discharge Equations: Laursen, Toffaleti, Karim-Kennedy
+    - Low Peak Sediment Discharge Equations: Laursen, Toffaleti, Karim-Kennedy
 
-- Moderate Peak Sediment Discharge Equations: Zeller-Fullerton, Yang, Ackers-White, MPM-Woo, MPM-Smart, Van Rijn
+    - Moderate Peak Sediment Discharge Equations: Zeller-Fullerton, Yang, Ackers-White, MPM-Woo, MPM-Smart, Van Rijn
 
-- High Peak Sediment Discharge Equations: Engelund-Hansen, Parker, Klingeman & McClean
+    - High Peak Sediment Discharge Equations: Engelund-Hansen, Parker, Klingeman & McClean
 
-..
+There is roughly an order of magnitude difference between these three categories.
+This can be misleading, however, since local conditions such as a steep slope or high depth can result in a large variation in the results (e.g., MPM-
+Smart will generate a large sediment load for a steep slope).
+Some of the equations may stop scouring depending on parameter thresholds.
+Laursen, Toffaleti and Yang’s equations terminate the sediment transport much sooner than the other equations.
+MPM-Smart, Engelund-Hansen and Parker, Klingeman & McClean sustain a high magnitude of sediment transport (orders of magnitude higher than the rest of
+equations) until essentially the end of the discharge in the tracking cell.
+The scour/deposition (bed elevation change) plots for all eleven sediment transport capacity equations applied to the project example are shown in
+Appendix A.
 
-   There is roughly an order of magnitude difference between these three categories.
-   This can be misleading, however, since local conditions such as a steep slope or high depth can result in a large variation in the results (e.g., MPM-
-   Smart will generate a large sediment load for a steep slope).
-   Some of the equations may stop scouring depending on parameter thresholds.
-   Laursen, Toffaleti and Yang’s equations terminate the sediment transport much sooner than the other equations.
-   MPM-Smart, Engelund-Hansen and Parker, Klingeman & McClean sustain a high magnitude of sediment transport (orders of magnitude higher than the rest of
-   equations) until essentially the end of the discharge in the tracking cell.
-   The scour/deposition (bed elevation change) plots for all eleven sediment transport capacity equations applied to the project example are shown in
-   Appendix A.
-
-   It is recommended that initially a moderate sediment transport equation such as Yang’s be applied.
-   Then the SEDTRAN.OUT file can be reviewed for selection of other sediment transport equations to encompass the full range of sediment transport
-   response.
-   The maximum depths and area of inundation should also be reviewed to determine the impact of applying the different sediment transport capacity
-   equations.
+It is recommended that initially a moderate sediment transport equation such as Yang’s be applied.
+Then the SEDTRAN.OUT file can be reviewed for selection of other sediment transport equations to encompass the full range of sediment transport
+response.
+The maximum depths and area of inundation should also be reviewed to determine the impact of applying the different sediment transport capacity
+equations.
 
 Mudflow Parameters
 ^^^^^^^^^^^^^^^^^^^^
