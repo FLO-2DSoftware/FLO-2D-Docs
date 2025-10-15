@@ -57,14 +57,14 @@ FLO-2D Error Messages*
    * - Channel bed elevation.
      - THERE ARE STORM DRAIN INLETS ON CHANNEL GRID ELEMENTS.
 
-       THE CHANNEL BED ELEVATION MIGHT BE DIFFERENT  THAN THE INVERT ELEVATION.
+       THE CHANNEL BED ELEVATION MIGHT BE DIFFERENT THAN THE INVERT ELEVATION.
 
        NO ACTION WAS TAKEN DURING THE SIMULATION.
 
        PLEASE REVIEW AND REVISE IF NECESSARY.
 
    * - Elevations for outfall nodes.
-     - THE STORM DRAIN OUTFALL INVERT ELEVATION SHOULD BE  EQUAL TO OR GREATER THAN
+     - THE STORM DRAIN OUTFALL INVERT ELEVATION SHOULD BE EQUAL TO OR GREATER THAN
 
        THE FLOODPLAIN, CHANNEL, STREET ELEVATION.
 
@@ -76,7 +76,7 @@ FLO-2D Error Messages*
 
        RE-ASSIGN TO THE CHANNEL ELEMENTS IN CHAN.DAT.
 
-   * - Outfall node assigned to aFLO-2D outflow element.
+   * - Outfall node assigned to a FLO-2D outflow element.
      - THERE IS AN OUTFLOW NODE AND A STORM DRAIN OUTFALL ASSIGNED TO THE SAME GRID CELL.
 
    * - Grid element floodplain must be revised.
@@ -106,9 +106,9 @@ FLO-2D Error Messages*
 
        PLEASE REVIEW FPRIMELEV.OUT FILE.
 
-       *NOTE: If a floodplain swale is discharging into a storm drain conduit or culvert,
+       .. note:: If a floodplain swale is discharging into a storm drain conduit or culvert,
 
-       the invert elevation should be equal to the swale bed elevation.*
+                 the invert elevation should be equal to the swale bed elevation.
 
 
 .. list-table::
