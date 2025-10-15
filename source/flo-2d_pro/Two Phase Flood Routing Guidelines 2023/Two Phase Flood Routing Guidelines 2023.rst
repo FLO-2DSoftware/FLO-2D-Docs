@@ -202,13 +202,13 @@ Hyperconcentrated Sediment Flows – Mud Floods and Mudflows
 *Figure 5.
 Tailings Dam Failure Mudflow Merriespruit, Virginia SA Feb 1994 (tailings.info).*
 
+*Table 1.
+Mudflow Behavior as a Function of Sediment Concentration (O’Brien,1986)*
+
 .. list-table::
    :widths: 100
    :header-rows: 0
 
-
-   * - Table 1.
-       Mudflow Behavior as a Function of Sediment Concentration (O’Brien,1986)
 
    * - | Sediment Concentration                | Flow Characteristics+-------------------+-------------------+| by                | by                ||                   |                   ||    Volume         | Weight            |
 
