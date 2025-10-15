@@ -278,7 +278,7 @@ To accomplish this integration, the following tasks are completed:
     5. Sediment concentration by volume limits for both mudflow and sediment transport components are tested and the sediment exchange when the limits are
        exceeded is adjusted.
 
-.. image:: img/Two001.jpg
+    .. image:: img/Two001.jpg
 
 *Figure 6.
 Fluid – Mudflow Two Phase Flow Exchange for a Grid Element.*
