@@ -1425,7 +1425,7 @@ These parameters have variable levels of sensitivity as presented in Table 4.
 FLO-2D Dam Erosion Sensitive Data Input Parameters*
 
 .. list-table::
-   :widths: 33.3 33.3 33.3
+   :widths: 25 25 50
    :header-rows: 0
 
 
@@ -1469,53 +1469,53 @@ FLO-2D Dam Erosion Sensitive Data Input Parameters*
      - low
      - 20\ :sup:`⁰` - 40\ :sup:`⁰`
 
-   Simulating a tailings dam breach as a water storage reservoir dam failure will probably result in a slower and longer duration failure than an
-   instantaneous breach failure.
-   If the tailings dam has significantly more water storage than tailings, it may make sense to model the failure as dam erosion failure.
-   Since this dam breach method requires significant data compilation involving several sensitive and difficult to analyze parameters, there may be no
-   advantage to applying this component over the prescribed breach failure mode, especially if the focus is to maximize the tailings dam breach peak
-   discharge and area of inundation.
-   If the project objective is to replicate an historic event, then the breach erosion component should be considered.
-   For more information, please refer to the FLO-2D White Paper “Simulating Dam Breach Erosion and Reservoir Drainage” available in your help folder and
-   at the FLO-2D website.
-   There are also PowerPoint presentations on this subject.
+Simulating a tailings dam breach as a water storage reservoir dam failure will probably result in a slower and longer duration failure than an
+instantaneous breach failure.
+If the tailings dam has significantly more water storage than tailings, it may make sense to model the failure as dam erosion failure.
+Since this dam breach method requires significant data compilation involving several sensitive and difficult to analyze parameters, there may be no
+advantage to applying this component over the prescribed breach failure mode, especially if the focus is to maximize the tailings dam breach peak
+discharge and area of inundation.
+If the project objective is to replicate an historic event, then the breach erosion component should be considered.
+For more information, please refer to the FLO-2D White Paper “Simulating Dam Breach Erosion and Reservoir Drainage” available in your help folder and
+at the FLO-2D website.
+There are also PowerPoint presentations on this subject.
 
 What to Review - Summary
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   After the successful completion of a FLO-2D tailings dam breach two phase flow simulation the following output files and results listed in Table 5
-   below should be reviewed.
-   For more information on these specific review topics refer to the various appropriate White Papers and
+After the successful completion of a FLO-2D tailings dam breach two phase flow simulation the following output files and results listed in Table 5
+below should be reviewed.
+For more information on these specific review topics refer to the various appropriate White Papers and
 
-   PowerPoint Presentations on troubleshooting available for downloading at the FLO-2D website.
-   Table 5 is presented in a descending order of priority.
-   The SUMMARY.OUT (Figure 33) file reports on the initial tailings and water volumes in the tailings reservoir.
+PowerPoint Presentations on troubleshooting available for downloading at the FLO-2D website.
+Table 5 is presented in a descending order of priority.
+The SUMMARY.OUT (Figure 33) file reports on the initial tailings and water volumes in the tailings reservoir.
 
-|Two036|
+.. image:: img/Two036.jpg
 
-   Figure 33.
-   Summary.out Inflow Volume.
+*Figure 33.
+Summary.out Inflow Volume.*
 
-   The tailings sediment is the bulked tailings minus the tailings water content (113,247 – 67,948.2 = 45,298.
-   8 m3).
-   These volumes can be compared with the tailings material that flows through the breach reported in DAMBREACH_VOLUME.OUT:
+The tailings sediment is the bulked tailings minus the tailings water content (113,247 – 67,948.2 = 45,298.
+8 m3).
+These volumes can be compared with the tailings material that flows through the breach reported in DAMBREACH_VOLUME.OUT:
 
-   TOTAL TAILINGS SEDIMENT VOLUME THROUGH BREACH (AF OR CM): 27250.702
+TOTAL TAILINGS SEDIMENT VOLUME THROUGH BREACH (AF OR CM): 27250.702
 
-   TAILINGS VOLUME LEFT IN RESERVOIR (AF OR CM): 18048.098
+TAILINGS VOLUME LEFT IN RESERVOIR (AF OR CM): 18048.098
 
-   TOTAL SEDIMENT VOLUME: 45298.800
+TOTAL SEDIMENT VOLUME: 45298.800
 
-   For this example, project, the percentage of tailings that flowed through the breach is 27,250.7/45,298.8 = 60%.
-   This should match the volume predicted by the Tailings Dam Tool shown in Figure 2.
+For this example, project, the percentage of tailings that flowed through the breach is 27,250.7/45,298.8 = 60%.
+This should match the volume predicted by the Tailings Dam Tool shown in Figure 2.
+
+*Table 5.
+Post Simulation Review*
 
 .. list-table::
    :widths: 100
    :header-rows: 0
 
-
-   * - Table 5.
-       Post Simulation Review
 
    * - Review Results          | Output Files                    | Resolution
 
