@@ -298,12 +298,6 @@ SWMM Error Numbers.*
    * - 151 / 27
      - A Unit Hydrograph in set xxx has invalid time base
 
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
-
    * - 153 / 28
      - A Unit Hydrograph in set xxx has invalid response ratios
 
