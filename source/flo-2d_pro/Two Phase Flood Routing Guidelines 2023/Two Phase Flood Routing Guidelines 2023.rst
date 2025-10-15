@@ -1096,6 +1096,7 @@ Tailings Dam Breach Data Needs.*
      - Comments
 
    * - Required Data
+     -
 
    * - Tailings dam geometry, tailings
        thickness and reservoir
@@ -1167,6 +1168,7 @@ Tailings Dam Breach Data Needs.*
        locations and crest elevations.
 
    * - Optional Data
+     -
 
    * - Viscosity and yield stress vs.
        sediment concentration by
