@@ -463,13 +463,20 @@ The following assumptions are applied for this tailings failure option:
 To simulate the collapse, a tailings depth and sediment by volume for each grid element within the tailings facility is required in a file named
 TAILINGS_CV.DAT in the following format:
 
-Grid Element Tailings Depth (ft or m) Concentration by Volume
+.. raw:: html
 
-14523.
-15.2 0.51
+    <div
+    <pre>
+    Grid Element    Tailings Depth (ft or m)    Concentration by Volume
+    14523.          15.2                        0.51
+    14524.          15.3                        0.49
+    14525           14.9                        0.52
+    </pre>
+    </div>
 
-14524.
-15.3 0.49 14525 14.9 0.52
+.. raw:: html
+
+   <br><br>
 
 ..
 
