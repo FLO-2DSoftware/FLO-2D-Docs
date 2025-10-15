@@ -149,7 +149,7 @@ Edit Menu
 
 **Group Edit:** Edits a property for the group of objects within selected region.
 
- View Menu
+View Menu
 
 **Dimensions:** Sets reference coordinates and distance units for a study area
 
