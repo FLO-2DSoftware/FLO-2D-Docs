@@ -285,49 +285,47 @@ Fluid – Mudflow Two Phase Flow Exchange for a Grid Element.*
 
 The two phase flow computations in the FLO-2D model proceed in the following manner:
 
-- First the fluid phase loop is completed with a sweep of all the grid elements to establish the fluid hydraulics.
+    - First the fluid phase loop is completed with a sweep of all the grid elements to establish the fluid hydraulics.
 
-- All the grid elements are checked for numerical stability.
+    - All the grid elements are checked for numerical stability.
 
-- The conventional sediment transport is computed with updated volume concentrations.
+    - The conventional sediment transport is computed with updated volume concentrations.
 
-- The mudflow loop of the two phase flow with corresponding numerical stability checks is executed.
+    - The mudflow loop of the two phase flow with corresponding numerical stability checks is executed.
 
-- The sediment is exchanged with the fluid layer as either scour from the mudflow or deposition from the fluid layer to the mudflow.
+    - The sediment is exchanged with the fluid layer as either scour from the mudflow or deposition from the fluid layer to the mudflow.
 
-- All the sediment concentrations and volumes are then updated, and the model resumes the flood routing with an updated timestep.
+    - All the sediment concentrations and volumes are then updated, and the model resumes the flood routing with an updated timestep.
 
-..
+The flow chart in Figure 7 depicts the component interaction within the FLO-2D simulation.
+The sediment transport and mudflow routines are discussed in more detail in the Appendices.
 
-   The flow chart in Figure 7 depicts the component interaction within the FLO-2D simulation.
-   The sediment transport and mudflow routines are discussed in more detail in the Appendices.
+.. image:: img/Two007.png
 
-|Two007|
-
-   Figure 7.
-   Workflow for the Two Phase Fluid and Mudflow Routing in the FLO-2D Model.
+*Figure 7.
+Workflow for the Two Phase Fluid and Mudflow Routing in the FLO-2D Model.*
 
 Assumptions and Limitations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   There are some practical limitations to the sediment transport and mudflow exchange at the fluidmudflow boundary.
-   All the sediment transport equations used in the FLO-2D model were developed for river or flume conditions where the sediment concentration by volume
-   is generally less than 10%.
-   Some equations such as Yang’s, Engelund-Hansen, or the Zeller-Fullerton multiple regression analysis have a theoretical approach to the physical
-   processes of sediment movement.
-   Other equations (Laursen, Karim-Kennedy) are empirically based on data sets from a particular bed condition or size fraction.
-   Each equation should be researched for applicability to a given range of project conditions and sediment size (See the FLO-2D Reference Manual:
-   C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Manuals).
+There are some practical limitations to the sediment transport and mudflow exchange at the fluidmudflow boundary.
+All the sediment transport equations used in the FLO-2D model were developed for river or flume conditions where the sediment concentration by volume
+is generally less than 10%.
+Some equations such as Yang’s, Engelund-Hansen, or the Zeller-Fullerton multiple regression analysis have a theoretical approach to the physical
+processes of sediment movement.
+Other equations (Laursen, Karim-Kennedy) are empirically based on data sets from a particular bed condition or size fraction.
+Each equation should be researched for applicability to a given range of project conditions and sediment size (See the FLO-2D Reference Manual:
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Manuals).
 
-   The two phase flow component computes the sediment transport capacity for sediment concentrations by volume of up to 20% (Table 1).
-   This is an assumed sediment concentration limit for conventional sediment transport because higher concentrations (hyperconcentrated) with high fluid
-   viscosity and frequent particle collisions hinder particle fall velocities and negate the premise on which the original equations were based.
-   At this concentration, fluid motion is no longer described as Newtonian flow (linear relationship between shear stress and rate of strain).
-   If low sediment concentrations are calculated, the mudflow is diluted and is added to the fluid phase.
-   If the mudflow concentration becomes excessive, there is an exchange with the bed material or flow cessation occurs.
-   When the fluid phase is in direct contact with the ground, bed scour or deposition can occur.
-   The mudflow phase is assumed to always be under or below the fluid phase.
-   The coded rules for the two phase flow exchange within a grid element are as follows:
+The two phase flow component computes the sediment transport capacity for sediment concentrations by volume of up to 20% (Table 1).
+This is an assumed sediment concentration limit for conventional sediment transport because higher concentrations (hyperconcentrated) with high fluid
+viscosity and frequent particle collisions hinder particle fall velocities and negate the premise on which the original equations were based.
+At this concentration, fluid motion is no longer described as Newtonian flow (linear relationship between shear stress and rate of strain).
+If low sediment concentrations are calculated, the mudflow is diluted and is added to the fluid phase.
+If the mudflow concentration becomes excessive, there is an exchange with the bed material or flow cessation occurs.
+When the fluid phase is in direct contact with the ground, bed scour or deposition can occur.
+The mudflow phase is assumed to always be under or below the fluid phase.
+The coded rules for the two phase flow exchange within a grid element are as follows:
 
 .. list-table::
    :widths: 100
