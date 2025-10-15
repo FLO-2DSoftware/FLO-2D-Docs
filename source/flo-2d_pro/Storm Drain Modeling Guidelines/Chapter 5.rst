@@ -47,7 +47,7 @@ The most important messages are listed in Table 20.
 FLO-2D Error Messages*
 
 .. list-table::
-   :widths: 50 50
+   :widths: 25 75
    :header-rows: 0
 
 
@@ -112,7 +112,7 @@ FLO-2D Error Messages*
 
 
 .. list-table::
-   :widths: 50 50
+   :widths: 25 75
    :header-rows: 0
 
 
