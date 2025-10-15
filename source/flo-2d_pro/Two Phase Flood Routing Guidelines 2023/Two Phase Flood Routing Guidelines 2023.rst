@@ -1028,35 +1028,35 @@ ceased flowing.
 *Figure 23.
 Fluid Phase Maximum Concentration by Volume.*
 
-|Two027|
+.. image:: img/Two027.jpg
 
-   Figure 24.
-   Mudflow Phase Maximum Concentration by Volume.
+*Figure 24.
+Mudflow Phase Maximum Concentration by Volume.*
 
-|Two028|
+.. image:: img/Two028.jpg
 
-   Figure 25.
-   Mudflow Phase Final Concentration by Volume.
+*Figure 25.
+Mudflow Phase Final Concentration by Volume.*
 
-   The scour and deposition because of the fluid phase being in contact with bed (no mudflow) on a specific grid element is shown in Figure 26.
-   The occurrence of sediment transport in waves is depicted in this figure with alternating scour (blue) and deposition (red) sequences.
-   The added mudflow deposit on the fluid phase scour and deposition is shown in Figure 27.
-   Some tailings material remains in the reservoir as shown both Figure 19 and Figure 27.
+The scour and deposition because of the fluid phase being in contact with bed (no mudflow) on a specific grid element is shown in Figure 26.
+The occurrence of sediment transport in waves is depicted in this figure with alternating scour (blue) and deposition (red) sequences.
+The added mudflow deposit on the fluid phase scour and deposition is shown in Figure 27.
+Some tailings material remains in the reservoir as shown both Figure 19 and Figure 27.
 
-   These MAXPLOT maps are a simple depiction of the FLO-2D results on a grid element basis.
+These MAXPLOT maps are a simple depiction of the FLO-2D results on a grid element basis.
 
-   Higher resolution maps with interpolated flow depth shapefiles can be generated with the FLO2D QGIS plug-in tool or any CADD or GIS software program
-   since the results are written to file with x- and y-coordinates in an ASCII format.
+Higher resolution maps with interpolated flow depth shapefiles can be generated with the FLO2D QGIS plug-in tool or any CADD or GIS software program
+since the results are written to file with x- and y-coordinates in an ASCII format.
 
-|Two029|
+.. image:: img/Two029.jpg
 
-   Figure 26.
-   Final Bed Scour or Deposition.
+*Figure 26.
+Final Bed Scour or Deposition.*
 
-|Two030|
+.. image:: img/Two030.jpg
 
-   Figure 27.
-   Final Bed Scour or Deposition and Mudflow Cessation.
+*Figure 27.
+Final Bed Scour or Deposition and Mudflow Cessation.*
 
    If a channel exists downstream of the tailings dam breach, most of the mudflow breach discharge will enter and fill the channel.
    Figure 28 shows that the floodplain inundation with channel overbank flow is limited compared with the overland flow in Figure 16 thru Figure 18
