@@ -1513,71 +1513,153 @@ This should match the volume predicted by the Tailings Dam Tool shown in Figure 
 Post Simulation Review*
 
 .. list-table::
-   :widths: 100
+   :widths: 25 50 25
    :header-rows: 0
 
 
-   * - Review Results          | Output Files                    | Resolution
+   * - Review Results
+     - Output Files
+     - Resolution
 
-   * - Volume conservation     |    Review SUMMARY.OUT for fluid | Troubleshoot data files|    volume conservation error    | if VC error > 0.0001|    and
-       SEDCONSERV.OUT for       | percent.
-       Various data|    sediment transport volume    | revision options are|    conservation.
-       | available.
+   * - Volume conservation
+     - Review SUMMARY.OUT for fluid
+       volume conservation error and
+       SEDCONSERV.OUT for sediment
+       transport volume conservation.
+     - Troubleshoot data files if VC
+       error > 0.0001 percent.
+       Various data revision options
+       are available.
 
-   * - Numerical stability     |    Review unreasonable maximum  | Reduced timesteps,|                                 | increase n-values,|    velocities.
-       Files:           | adjust elevations|    VELTIMEFP.OUT,               ||                                 ||    SUPER.OUT, ROUGH.OUT,        ||
-       ||    TIME.OUT                     |
+   * - Numerical stability
+     - Review unreasonable maximum
+       velocities. Files: VELTIMEFP.OUT,
+       SUPER.OUT, ROUGH.OUT,
+       TIME.OUT
+     - Reduced timesteps, increase
+       n-values, adjust elevations
 
-   * - Breach hydrograph, peak |    Review                       | Slow the model down|                                 | with lower CourantQ
-       |    xxxx_PRESCRIBED_BREACHQ.OUT, | numbers, increase|    BREACH.OUT for unreasonable  | n-values at breach|    peak discharge and surging.
-       | element and in the|                                 | reservoir.
+   * - Breach hydrograph, peak Q
+     - Review
+       xxxx_PRESCRIBED_BREACHQ.OUT,
+       BREACH.OUT for unreasonable
+       peak discharge and surging.
+     - Slow the model down with
+       lower Courant numbers,
+       increase n-values at breach
+       element and in the reservoir.
 
-   * - Breach tailings volume  |    Review the tailings volume   | Compare with|    thru the breach in the       ||                                 |
-       SUMMARY.OUT file bulked|    DAMBREACH_VOLUME.OUT (end    | inflow volume minus|                                 | water volume (stored|    of file).
-       Should match the   | tailings volume) to|    predicted Tailings Dam Tool  | estimate percentage|    volume.
-       | thru breach.
+   * - Breach tailings volume
+     - Review the tailings volume thru
+       the breach in the
+       DAMBREACH_VOLUME.OUT (end
+       of file). Should match the
+       predicted Tailings Dam Tool
+       volume.
+     - Compare with
+       SUMMARY.OUT file bulked
+       inflow volume minus water
+       volume (stored tailings
+       volume) to estimate
+       percentage thru breach.
 
-   * - Area of inundation,     |    Plot maximum fluid and       | For unreasonablemaximum depth           |    mudflow                      | maximum depths
-       and if|                                 | the area of inundation|    depths DEPFP.OUT and         | is too large/small -|    DEPFPMAX_MUD.OUT in
-       MAXPLOT  | adjust n-values,|    and QGIS.
-       | elevations, and limit|                                 | scour depth.
+   * - Area of inundation,
+       maximum depth
+     - Plot maximum fluid and mudflow
+       depths DEPFP.OUT and
+       DEPFPMAX_MUD.OUT in
+       MAXPLOT and QGIS.
+     - For unreasonable maximum
+       depths and if the area of
+       inundation is too large/small
+       - adjust n-values, elevations,
+       and limit scour depth.
 
-   * - Evacuated grid elements |    Review EVACUATEDFP.OUT for   | Model may terminate -|    the number of cells and      | address problem grid|
-       occurrences.
-       Check for early | elements with elevation|    model termination (does not  | and n-value revisions.|    reach simulation time).
-       | Increase|                                 ||                                 | TOL(i) for that|                                 | element.
+   * - Evacuated grid elements
+     - Review EVACUATEDFP.OUT for
+       the number of cells and
+       occurrences. Check for early
+       model termination (does not
+       reach simulation time).
 
-   * - Final flow              |    Plot final fluid             | Flow should cease anddepths/velocities       |    (FINALDEP.OUT)               | final
-       depths should be|                                 | shallow.
-       If not, run|    and mudflow depths           | the simulation for a|    (FINALDEP_MUD.OUT) and       | longer duration,|    velocities (FINALVEL.OUT
-       and | increase nvalues,|    FINALVEL_MUD.OUT) in         | review scour depths.|    MAXPLOT.
+     - Model may terminate -
+       address problem grid
+       elements with elevation and
+       n-value revisions. Increase
+       TOL(i) for that element.
+
+   * - Final flow
+       depths/velocities
+     - Plot final fluid (FINALDEP.OUT)
+       and mudflow depths
+       (FINALDEP_MUD.OUT) and
+       velocities (FINALVEL.OUT and
+       FINALVEL_MUD.OUT) in
+       MAXPLOT.
+     - Flow should cease and final
+       depths should be shallow. If
+       not, run the simulation for a
+       longer duration, increase nvalues, review scour depths.
+
+   * - Maximum sediment
+       concentrations
+     - Plot maximum fluid/mudflow
+       concentrations (CVFPMAX.OUT
+       and CVFPMAX_MUD.OUT) in
+       MAXPLOT.
+     - Maximum fluid
+       concentrations should be less
+       than 30%; maximum
+       mudflow concentrations <
+       60%. Check surging, slow
+       down model, select an
+       alternate sediment transport
+       equation, review mudflow
+       parameters.
+
+   * - Final sediment
+       concentrations
+     - Plot final mudflow sediment
+       concentrations
+       (FINALCVFP_MUD.OUT) in
+       MAXPLOT.
+     - If there are unreasonable
+       sediment concentrations in
+       final flow depths (ceased
+       flowing), select another
+       sediment transport equation,
+       revise mudflow parameters,
+       slow the model down.
+
+   * - Scour/deposition
+     - Review SEDFP.OUT and plot the
+       final bed elevations in this file in
+       MAXPLOT using the SEDIMENT
+       menu command at the top of the
+       MAXPLOT screen.
+     - If final bed scour depths are
+       excessive, select another
+       equation or assign a
+       reasonable scour depth
+       limitation (E-line in SED.DAT).
+
+   * - Scour/deposition plus
+       mudflow cessation
+     - Plot final bed elevations plus
+       mudflow deposits
+       (FINALDEP_MUD.OUT combines
+       with FINALVEL_MUD.OUT) in
+       MAXPLOT using the SEDIMENT
+       menu command at the top of the
+       MAXPLOT screen.
+     - Review where mudflow has
+       ceased to flow and the final
+       bed elevation change
+       associated with the mudflow
+       deposit. To adjust, edit the
+       mudflow parameters of the
+       tailings material.
        |
-
-   * - Maximum sediment        |    Plot maximum fluid/mudflow   | Maximum fluidconcentrations          |    concentrations (CVFPMAX.OUT  ||    and
-       CVFPMAX_MUD.OUT) in      | concentrations should|    MAXPLOT.
-       | be less than 30%;|                                 | maximum mudflow|                                 | concentrations < 60%.|
-       | Check surging, slow|                                 | down model, select an
-
-   * - |                                 | alternate sediment|                                 | transport equation,|                                 | review mudflow|                                 | parameters.
-
-   * - Final sediment       |    Plot final mudflow sediment  | If there areconcentrations       |    concentrations               | unreasonable sediment|
-       | concentrations in final|    (FINALCVFP_MUD.OUT) in       | flow depths (ceased|    MAXPLOT.
-       | flowing), select|                                 | another sediment|                                 | transport equation,|
-       | revise mudflow|                                 | parameters, slow the|                                 | model down.
-
-   * - Scour/deposition     |    Review SEDFP.OUT and plot    | If final bed scour|    the                          | depths are excessive,|
-       | select another equation|    final bed elevations in this | or assign a reasonable|    file in                      | scour depth limitation|
-       | (E-line in SED.DAT).|    MAXPLOT using the SEDIMENT   ||    menu command at the top of   ||    the MAXPLOT screen.
-       |
-
-   * - Scour/deposition     |    Plot final bed elevations    | Review where mudflowplus mudflow         |    plus                         | has ceased to
-       flow andcessation            |                                 | the final bed elevation|    mudflow deposits             | change associated with|
-       | the mudflow deposit.
-       To|    (FINALDEP_MUD.OUT combines   | adjust, edit the|    with FINALVEL_MUD.OUT) in    | mudflow parameters of|    MAXPLOT using the SEDIMENT   | the
-       tailings material.|    menu command at the top of   ||    the MAXPLOT screen.
-       |
-
-
 References
 ------------
 
