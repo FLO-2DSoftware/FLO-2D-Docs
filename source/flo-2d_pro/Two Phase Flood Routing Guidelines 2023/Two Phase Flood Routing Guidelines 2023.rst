@@ -1693,123 +1693,212 @@ Post Simulation Review*
        n-values, adjust elevations
 
    * - Breach hydrograph, peak Q
+
      - Review
+
        xxxx_PRESCRIBED_BREACHQ.OUT,
+
        BREACH.OUT for unreasonable
+
        peak discharge and surging.
+
      - Slow the model down with
+
        lower Courant numbers,
+
        increase n-values at breach
+
        element and in the reservoir.
 
    * - Breach tailings volume
+
      - Review the tailings volume thru
        the breach in the
+
        DAMBREACH_VOLUME.OUT (end
+
        of file). Should match the
+
        predicted Tailings Dam Tool
        volume.
+
      - Compare with
+
        SUMMARY.OUT file bulked
+
        inflow volume minus water
+
        volume (stored tailings
+
        volume) to estimate
+
        percentage thru breach.
 
    * - Area of inundation,
+
        maximum depth
+
      - Plot maximum fluid and mudflow
+
        depths DEPFP.OUT and
+
        DEPFPMAX_MUD.OUT in
+
        MAXPLOT and QGIS.
+
      - For unreasonable maximum
+
        depths and if the area of
+
        inundation is too large/small
+
        - adjust n-values, elevations,
+
        and limit scour depth.
 
    * - Evacuated grid elements
+
      - Review EVACUATEDFP.OUT for
+
        the number of cells and
+
        occurrences. Check for early
+
        model termination (does not
+
        reach simulation time).
 
      - Model may terminate -
+
        address problem grid
+
        elements with elevation and
+
        n-value revisions. Increase
+
        TOL(i) for that element.
 
    * - Final flow
+
        depths/velocities
+
      - Plot final fluid (FINALDEP.OUT)
+
        and mudflow depths
+
        (FINALDEP_MUD.OUT) and
+
        velocities (FINALVEL.OUT and
        FINALVEL_MUD.OUT) in
-       MAXPLOT.
-     - Flow should cease and final
-       depths should be shallow. If
-       not, run the simulation for a
-       longer duration, increase nvalues, review scour depths.
 
-   * - Maximum sediment
-       concentrations
-     - Plot maximum fluid/mudflow
-       concentrations (CVFPMAX.OUT
-       and CVFPMAX_MUD.OUT) in
        MAXPLOT.
+
+     - Flow should cease and final
+
+       depths should be shallow. If
+
+       not, run the simulation for a
+
+       longer duration, increase nvalues,
+
+       review scour depths.
+
+   * - Maximum sediment concentrations
+
+     - Plot maximum fluid/mudflow
+
+       concentrations (CVFPMAX.OUT
+
+       and CVFPMAX_MUD.OUT) in
+
+       MAXPLOT.
+
      - Maximum fluid
+
        concentrations should be less
        than 30%; maximum
+
        mudflow concentrations <
+
        60%. Check surging, slow
        down model, select an
+
        alternate sediment transport
+
        equation, review mudflow
        parameters.
 
    * - Final sediment
        concentrations
+
      - Plot final mudflow sediment
        concentrations
+
        (FINALCVFP_MUD.OUT) in
        MAXPLOT.
+
      - If there are unreasonable
+
        sediment concentrations in
+
        final flow depths (ceased
+
        flowing), select another
+
        sediment transport equation,
+
        revise mudflow parameters,
+
        slow the model down.
 
    * - Scour/deposition
+
      - Review SEDFP.OUT and plot the
+
        final bed elevations in this file in
+
        MAXPLOT using the SEDIMENT
+
        menu command at the top of the
        MAXPLOT screen.
+
      - If final bed scour depths are
+
        excessive, select another
+
        equation or assign a
+
        reasonable scour depth
+
        limitation (E-line in SED.DAT).
 
    * - Scour/deposition plus
+
        mudflow cessation
+
      - Plot final bed elevations plus
+
        mudflow deposits
+
        (FINALDEP_MUD.OUT combines
+
        with FINALVEL_MUD.OUT) in
+
        MAXPLOT using the SEDIMENT
+
        menu command at the top of the
        MAXPLOT screen.
+
      - Review where mudflow has
+
        ceased to flow and the final
+
        bed elevation change
+
        associated with the mudflow
+
        deposit. To adjust, edit the
+
        mudflow parameters of the
        tailings material.
        |
