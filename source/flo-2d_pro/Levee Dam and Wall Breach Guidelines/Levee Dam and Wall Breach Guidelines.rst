@@ -1253,94 +1253,89 @@ Other parameters that can affect the breach erosion include:
 
 The breach parameter sensitivity is outlined in the following table:
 
-.. image:: img/Levee015.jpg
-
 *Table 3.
 Breach Parameter Sensitivity.*
+
+.. image:: img/Levee015.jpg
 
 Breach Modeling Approach
 ------------------------
 
 The following steps are recommended for developing a FLO-2D dam breach simulation:
 
-- Select a grid elements size that results in a peak discharge divided the surface area of one grid element **less than 10 cfs/sq ft.
-  (or 3 cms/sq m)**.
-  Roughly estimate dam breach peak discharge before establishing the grid system.
+    - Select a grid elements size that results in a peak discharge divided the surface area of one grid element **less than 10 cfs/sq ft.
+      (or 3 cms/sq m)**.
+      Roughly estimate dam breach peak discharge before establishing the grid system.
 
-- Using the GDS or QGIS levee editor, assign the dam embankment crest.
-  Tie the levee elements representing the crest to the grid elements representing the canyon walls.
-  **Assign the embankment (levee elements) to the grid elements representing the reservoir elements so that the levee element is filled with reservoir
-  water.** Straight line levees are easier to work with than diagonal levees.
+    - Using the GDS or QGIS levee editor, assign the dam embankment crest.
+      Tie the levee elements representing the crest to the grid elements representing the canyon walls.
+      **Assign the embankment (levee elements) to the grid elements representing the reservoir elements so that the levee element is filled with reservoir
+      water.** Straight line levees are easier to work with than diagonal levees.
 
-- Assign the starting water surface to one reservoir element.
-  Run the model for a short during to determine if there is any leakage outside the reservoir by plotting the maximum flow depths in MAXPLOT, Mapper or
-  QGIS.
+    - Assign the starting water surface to one reservoir element.
+      Run the model for a short during to determine if there is any leakage outside the reservoir by plotting the maximum flow depths in MAXPLOT, Mapper or
+      QGIS.
 
-- After the first FLO-2D simulation, rename TOPO_RES.BAC to TOPO.DAT and MANNINGS_N_RES.BAC to MANNINGS_N.DAT and delete FPLAIN.DAT to assign the dead
-  pool to the reservoir topography.
-  FPLAIN.DAT will be recreated automatically on the next model run.
+    - After the first FLO-2D simulation, rename TOPO_RES.BAC to TOPO.DAT and MANNINGS_N_RES.BAC to MANNINGS_N.DAT and delete FPLAIN.DAT to assign the dead
+      pool to the reservoir topography.
+      FPLAIN.DAT will be recreated automatically on the next model run.
 
-- Assign outflow nodes across the canyon or dam breach potential flow area near the dam.
-  This will allow shorter simulation times while testing the dam breach parameters.
+    - Assign outflow nodes across the canyon or dam breach potential flow area near the dam.
+      This will allow shorter simulation times while testing the dam breach parameters.
 
-- Downstream grid element n-values should be assigned in the range from 0.1 to 0.2 representing the severe turbulence for the first 1000 ft (300 m) or
-  more below the dam.
+    - Downstream grid element n-values should be assigned in the range from 0.1 to 0.2 representing the severe turbulence for the first 1000 ft (300 m) or
+      more below the dam.
 
-- Reservoir grid element n-values will be automatically assigning a value of 0.25 when the reservoir starting water surface option is used regardless of
-  the initial n-value assignment.
-  Higher n-values can
+    - Reservoir grid element n-values will be automatically assigning a value of 0.25 when the reservoir starting water surface option is used regardless of
+      the initial n-value assignment.
+      Higher n-values can be assigned. If a reservoir starting water surface is not assigned than it is recommended that the reservoir elements be manually assigned n-values of 0.25 or
+      higher.
 
-..
+    - The grid element that is selected for the initial breach should be assigned a floodplain elevation that represents the dam foundation.
+      No breach erosion will occur below this elevation.
 
-   be assigned.
-   If a reservoir starting water surface is not assigned than it is recommended that the reservoir elements be manually assigned n-values of 0.25 or
-   higher.
+    - The dam grid elements (levee elements) that will fail during the breach and one row of grid elements upstream should be assigned the same elevation to
+      reduce the potential for numerical instability.
+      The same approach can be used for the downstream elements below the dam, but they can be lower than the dam foundation in a successive series of three
+      to five rows of elements.
 
-- The grid element that is selected for the initial breach should be assigned a floodplain elevation that represents the dam foundation.
-  No breach erosion will occur below this elevation.
+    - Assign realistic values to the dam parameters representing field or design dam geometry and embankment material.
+      The following parameters requires some engineering judgment:
 
-- The dam grid elements (levee elements) that will fail during the breach and one row of grid elements upstream should be assigned the same elevation to
-  reduce the potential for numerical instability.
-  The same approach can be used for the downstream elements below the dam, but they can be lower than the dam foundation in a successive series of three
-  to five rows of elements.
+          - Weir coefficient: 2.65 to 3.05 Higher values will result in a higher peak discharge which may be more conservative in terms of assessing the flood
+            hazard.
 
-- Assign realistic values to the dam parameters representing field or design dam geometry and embankment material.
-  The following parameters requires some engineering judgment:
+          - Initial Breach Width to Depth Ratio (BRATIO): 0.5 to 4.0.
+            Suggested value is 2.0.
+            For the purpose of initial pipe geometry, this parameter is inconsequential, but it is also used to distribution the breach erosion scour to the bed
+            and sides of the breach trapezoidal channel.
+            A higher value of BRATIO will widen faster and reduce the vertical erosion of the bed.
 
-  - Weir coefficient: 2.65 to 3.05 Higher values will result in a higher peak discharge which may be more conservative in terms of assessing the flood
-    hazard.
+          - The maximum sediment concentration by volume should assigned a value of 0.5 or 0.55 which will limit the initial breach sediment concentration to that
+            representing a viscous mudflow.
 
-  - Initial Breach Width to Depth Ratio (BRATIO): 0.5 to 4.0.
-    Suggested value is 2.0.
-    For the purpose of initial pipe geometry, this parameter is inconsequential, but it is also used to distribution the breach erosion scour to the bed
-    and sides of the breach trapezoidal channel.
-    A higher value of BRATIO will widen faster and reduce the vertical erosion of the bed.
+          - The dam core and shell n-values can be assigned in the range from 0.065 to 0.25.
+            These values affect the breach pipe and channel hydraulics and low n-values can result in very fast erosion.
+            The breach turbulence and steep slope require high n-values to avoid unrealistic scour.
 
-  - The maximum sediment concentration by volume should assigned a value of 0.5 or 0.55 which will limit the initial breach sediment concentration to that
-    representing a viscous mudflow.
+          - If the specified initial breach elevation in the BREACH.DAT file is less than 10.0 ft (3.0 m), then the initial piping breach elevation is assumed to
+            be the dam or levee crest elevation minus the assigned breach elevation (Initial Breach Elevation = Levee Crest – BRBOTTOMEL).
 
-  - The dam core and shell n-values can be assigned in the range from 0.065 to 0.25.
-    These values affect the breach pipe and channel hydraulics and low n-values can result in very fast erosion.
-    The breach turbulence and steep slope require high n-values to avoid unrealistic scour.
-
-  - If the specified initial breach elevation in the BREACH.DAT file is less than 10.0 ft (3.0 m), then the initial piping breach elevation is assumed to
-    be the dam or levee crest elevation minus the assigned breach elevation (Initial Breach Elevation = Levee Crest – BRBOTTOMEL).
-
-- Note that the breach discharge is computed if the upstream water surface elevation exceeds the upstream breach pipe or channel bottom elevation plus
-  the tolerance value (TOL ~ 0.1 ft or 0.3 m).
+    - Note that the breach discharge is computed if the upstream water surface elevation exceeds the upstream breach pipe or channel bottom elevation plus
+      the tolerance value (TOL ~ 0.1 ft or 0.3 m).
 
 The corresponding output data from the BREACH.OUT file for the dam breach hydrograph shown in Figure 22 is presented in the following table with the
 maximum sediment concentration by volume outlined in red.
 
-   |Levee016|
+.. image:: img/Levee016.jpg
 
-   **Figure 22.
-   Example of the Large Dam Breach Hydrograph.**
+*Figure 22.
+Example of the Large Dam Breach Hydrograph.*
 
-   **Table 4.
-   Breach Output File Example.**
+*Table 4.
+Breach Output File Example.**
 
-|Levee017|
+.. image:: img/Levee017.jpg
 
 Reservoir Routing
 --------------------------------------------------------
