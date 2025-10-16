@@ -683,7 +683,7 @@ The failure criteria can be defined using the grid element elevation + a fail he
 Wall Collapse Height.
 (FCDMC).
 
-.. image:: img/Levee029.png
+.. image:: img/Levee029.jpg
 
 *Figure 19.
 Wall Collapse Height.(FCDMC).*
@@ -700,7 +700,7 @@ Table 2. Wall Failure Guidelines
 Wall Failure Guidelines*
 
 .. list-table::
-   :widths: 100
+   :widths: 40 60
    :header-rows: 0
 
 
@@ -756,30 +756,47 @@ Wall Failure Guidelines*
 
        Failure Data
      - Wall failure is defined by flow direction, water surface elevation to initiate failure,
+
        cumulative duration that the failure elevation is exceeded before initiating failure
+
        (typically zero), failure base elevation (typically zero), maximum breach width
+
        (typically zero), and vertical and horizontal rates of breach widening (typically both
+
        are zero).
+
        The initial breach width = 1.0 ft (0.3 m) is hardwired.
-If failure elevation = 0, the collapse begins immediately when the wall is overtopped.
-Otherwise, the wall failure is initiated when the water surface exceeds the assigned
-failure elevation. If the failure elevation is less than 10 ft (3 m), the failure elevation
-is the distance below the crest elevation. In this case, the failure elevation = crest
-elevation - failure elevation. If the failure data has been globally assigned, the
-breach initiation can occur for all the grid element sides with walls when the water
-surface exceeds the global failure elevation.
-If the failure duration time = 0, breach failure initiates immediately.
-If the wall is to fail at an appropriate distance below the crest after being inundated
-for a reasonable duration, assign values to both the failure elevation and failure duration time.
-If the failure base elevation = 0, the final wall failure elevation is equal to the
-floodplain grid element elevation on the opposite side of the wall.
-For a progressive wall failure, assign the vertical and horizontal rates.
-If the vertical and horizontal rates of failure are zero, the levee (wall) fails
-instantaneously for the entire grid element side width.
-If the maximum failure width is longer than the grid element side, the breach
-will extend into adjacent grid elements until the maximum failure width is
-equaled or the wall ends. For instantaneous failure, every grid element side
-levee that will collapse must be assigned.
+
+       If failure elevation = 0, the collapse begins immediately when the wall is overtopped.
+
+       Otherwise, the wall failure is initiated when the water surface exceeds the assigned
+
+       failure elevation. If the failure elevation is less than 10 ft (3 m), the failure elevation
+
+       is the distance below the crest elevation. In this case, the failure elevation = crest
+
+       elevation - failure elevation. If the failure data has been globally assigned, the
+
+       breach initiation can occur for all the grid element sides with walls when the water
+
+       surface exceeds the global failure elevation.
+
+       If the failure duration time = 0, breach failure initiates immediately.
+
+       If the wall is to fail at an appropriate distance below the crest after being inundated
+
+       for a reasonable duration, assign values to both the failure elevation and failure duration time.
+
+       If the failure base elevation = 0, the final wall failure elevation is equal to the
+
+       floodplain grid element elevation on the opposite side of the wall.
+       For a progressive wall failure, assign the vertical and horizontal rates.
+       If the vertical and horizontal rates of failure are zero, the levee (wall) fails
+       instantaneously for the entire grid element side width.
+       If the maximum failure width is longer than the grid element side, the breach
+       will extend into adjacent grid elements until the maximum failure width is
+       equaled or the wall ends. For instantaneous failure, every grid element side
+       levee that will collapse must be assigned.
 
    * - Wall
 Overtopping
