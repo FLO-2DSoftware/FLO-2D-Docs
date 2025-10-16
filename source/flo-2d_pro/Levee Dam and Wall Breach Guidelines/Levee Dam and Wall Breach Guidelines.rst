@@ -1,7 +1,10 @@
 .. vim: syntax=rst
 
+Levee Dam and Wall Breach Guidelines
+======================================
+
 Levee Overview
-==============
+--------------------------------------------------------
 
 The FLO-2D levee component confines flow on the floodplain surface by blocking one or more of the eight flow directions.
 The FLO-2D model conserves volume and this includes volume stored by the levee component and water routed through a levee breach.
@@ -37,11 +40,13 @@ When the levee or wall fails using the prescribed rate of failure controls, the 
 contiguous grid elements is based on the levee breach hydraulic calculations.
 If the levee failure is instantaneous, the hydraulic structure flow is also terminated and the model reverts to overland flow calculations.
 
-   **Figure 1.
-   Levees are Displayed in Red and the Channel in Blue in the GDS Program.**
+.. image:: img/Levee001.jpg
+
+*Figure 1.
+Levees are Displayed in Red and the Channel in Blue in the GDS Program.*
 
 Levee and Dam Breach Failure
-============================
+--------------------------------------------------------
 
 General
 -------
@@ -70,15 +75,15 @@ Additional output files that define the breach hazard include the time-to-peak, 
 These results can be mapped to aid in determining evacuation or emergency access routes.
 Examples of area of inundation mapping from a levee and dam breach are shown in Figure 2 and Figure 3.
 
-**Figure**
+.. image:: img/Levee022.jpg
 
-**2**
+*Figure 2
+Example of Levee Breach Urban Flooding.*
 
-**.
-Example of Levee Breach Urban Flooding.**
+.. image:: img/Levee023.jpg
 
-   **Figure 3.
-   Example of a Proposed Domestic Water Supply Reservoir Breach Failure.**
+*Figure 3.
+Example of a Proposed Domestic Water Supply Reservoir Breach Failure.*
 
 Prescribed Levee and Dam Failure
 --------------------------------
@@ -96,23 +101,23 @@ Additional breach failure variables such as initial failure elevation if differe
 can be assigned to add detail to multiple levee failure locations.
 The highlights of spatially variable levee failure are:
 
-- Levee failure can occur anywhere on the grid system based on overtopping or the water surface elevation reaching a specified distance below the crest
-  elevation for an assigned duration.
+    - Levee failure can occur anywhere on the grid system based on overtopping or the water surface elevation reaching a specified distance below the crest
+      elevation for an assigned duration.
 
-- Multiple levee breaches can occur and expand in various locations simultaneously.
+    - Multiple levee breaches can occur and expand in various locations simultaneously.
 
-- Levee breach expansion with prescribed horizontal or vertical rates.
+    - Levee breach expansion with prescribed horizontal or vertical rates.
 
-- Failure can occur from either side of the levee (river side and land side).
+    - Failure can occur from either side of the levee (river side and land side).
 
-- Based on water surface elevation, flow through the levee breach can occur in either direction.
-  As landside ponding equilibrates with the river water surface elevation, the beach flow may alternate directions.
+    - Based on water surface elevation, flow through the levee breach can occur in either direction.
+      As landside ponding equilibrates with the river water surface elevation, the beach flow may alternate directions.
 
-- Levees may overtop or breach into detention basins or channel retention facilities.
-  Basin pumps then can be integrated with FLO-2D levee breach analyses.
+    - Levees may overtop or breach into detention basins or channel retention facilities.
+      Basin pumps then can be integrated with FLO-2D levee breach analyses.
 
-- By setting the prescribed breach failure rates equal to zero, an instantaneous collapse of the levee or wall can be simulated for a specified maximum
-  width or the side width of the grid element.
+    - By setting the prescribed breach failure rates equal to zero, an instantaneous collapse of the levee or wall can be simulated for a specified maximum
+      width or the side width of the grid element.
 
 Unless the levee or wall failure is instantaneous, the failure mechanism, initial breach width and the first thirty minutes or so of breach widening
 are generally inconsequential to the downstream flooding.
@@ -135,10 +140,10 @@ HBR = HBRorig \* (τcalc/τmax)
 This will slow the rate of breach widening as the flow depth and velocity decrease or as the tailwater to headwater equilibrates.
 A typical rate of breach width decrease is shown in Figure 4.
 
-|Levee002|
+.. image:: img/Levee002.jpg
 
-   **Figure 4.
-   Prescribed Breach Horizontal Rate Decrease with Decreasing Shear Stress.**
+*Figure 4.
+Prescribed Breach Horizontal Rate Decrease with Decreasing Shear Stress.*
 
 Levee and Dam Predicted Breach Erosion
 --------------------------------------
@@ -152,13 +157,13 @@ The primary hydraulic mechanisms of dam or levee breach failure are overtopping,
 These physical processes were simulated in the original NWS model and were retained in the FLO-2D model.
 In FLO-2D a dam or levee breach can fail as follows:
 
-- Overtopping and development of a breach channel on the downstream face of the dam or levee; • Piping failure;
+    - Overtopping and development of a breach channel on the downstream face of the dam or levee; • Piping failure;
 
-- Piping failure and roof collapse and development into a breach channel;
+    - Piping failure and roof collapse and development into a breach channel;
 
-- Breach channel enlargement through side slope slumping;
+    - Breach channel enlargement through side slope slumping;
 
-- Breach enlargement by wedge collapse.
+    - Breach enlargement by wedge collapse.
 
 The user has the option to specify the breach element and elevation or to assign global parameters and the model will locate the initial levee breach
 failure element based on the water surface elevation and duration of inundation.
@@ -181,33 +186,33 @@ One of the reasons for selecting the NWS BREACH model for the FLO-2D model templ
 mathematically represent the physical process of dam breach failure.
 As a result, the FLO-2D breach model includes the following features:
 
-- The embankment can have an impervious core and a non-cohesive shell with different materials;
+    - The embankment can have an impervious core and a non-cohesive shell with different materials;
 
-- Embankment material properties include sediment size, specific weight, cohesive strength, internal friction angle, porosity and Manning’s n-value;
+    - Embankment material properties include sediment size, specific weight, cohesive strength, internal friction angle, porosity and Manning’s n-value;
 
-- Breach channel initiation through piping failure;
+    - Breach channel initiation through piping failure;
 
-- Enlargement of the breach through sudden structural collapse or slope instability;
+    - Enlargement of the breach through sudden structural collapse or slope instability;
 
-- Riprap material or grass on the downstream face;
+    - Riprap material or grass on the downstream face;
 
-- Sediment transport for different size sediment in the embankment core or shell.
+    - Sediment transport for different size sediment in the embankment core or shell.
 
 The following assumptions are hardcoded into the FLO-2D breach model:
 
-- Initial breach width to depth ratio (BRATIO) – if the assigned breach width to depth ratio is 0.0 (in the BREACH.DAT file), then BRATIO = 2.
+    - Initial breach width to depth ratio (BRATIO) – if the assigned breach width to depth ratio is 0.0 (in the BREACH.DAT file), then BRATIO = 2.
 
-- The initial piping width is assumed to be 1.0ft (0.30m).
+    - The initial piping width is assumed to be 1.0ft (0.30m).
 
-- The minimum and maximum Manning’s n-values permitted for the breach flow resistance are 0.02 and 0.25, respectively.
+    - The minimum and maximum Manning’s n-values permitted for the breach flow resistance are 0.02 and 0.25, respectively.
 
-- The pipe outlet at the toe of the dam or levee is the downstream grid element floodplain elevation plus 1 ft (0.3 m).
+    - The pipe outlet at the toe of the dam or levee is the downstream grid element floodplain elevation plus 1 ft (0.3 m).
 
-- After the specified breach initiation condition is reached, the breach discharge is computed if the upstream water surface elevation exceeds the
-  upstream breach pipe or channel bottom elevation plus a tolerance value of 0.1 ft or 0.3 m.
+    - After the specified breach initiation condition is reached, the breach discharge is computed if the upstream water surface elevation exceeds the
+      upstream breach pipe or channel bottom elevation plus a tolerance value of 0.1 ft or 0.3 m.
 
-- If the specified initial breach elevation in the BREACH.DAT file is less than 10.0 ft (3.0 m), then the initial piping breach elevation is assumed to
-  be the dam or levee crest elevation minus the assigned breach elevation (Initial Breach Elevation = Levee Crest – BRBOTTOMEL).
+    - If the specified initial breach elevation in the BREACH.DAT file is less than 10.0 ft (3.0 m), then the initial piping breach elevation is assumed to
+      be the dam or levee crest elevation minus the assigned breach elevation (Initial Breach Elevation = Levee Crest – BRBOTTOMEL).
 
 Pipe Breach
 -----------
@@ -222,12 +227,10 @@ The sediment discharge is assumed to erode uniformly from the walls, bed and the
 When the pipe opening height is larger than the height of the material remaining in the embankment above the pipe, the roof of the pipe collapses and
 channel flow ensues through the breach.
 
-**Figure**
+.. image:: img/Levee024.jpg
 
-**5**
-
-**.
-Pipe Breach Failure.**
+*Figure 5
+Pipe Breach Failure.*
 
 Overtopping and Channel Breach
 ------------------------------
@@ -240,13 +243,10 @@ If the stability criteria are exceeded, the sides of the channel slump into the 
 The breach continues to widen until the top width of the channel equals the specified maximum width of failure, the dam crest length or the available
 connected levee grids.
 
-**Figure**
+.. image:: img/Levee025.jpg
 
-**6**
-
-**.**
-
-**Overtopping and Channel Breach Erosion.**
+*Figure 6
+Overtopping and Channel Breach Erosion.*
 
 Dam Collapse
 ------------
@@ -258,13 +258,13 @@ cohesion that resist sliding.
 When the dam collapse occurs, it is assumed that the breach enlargement ceases until all the wedge material is transported downstream.
 A flow chart of the basic computation scheme for the breach component is shown in Figure 7.
 
-   |Levee003|
+.. image:: img/Levee003.jpg
 
-   **Figure 7.
-   Breach Schematic Flow Chart.**
+*Figure 7.
+Breach Schematic Flow Chart.*
 
 Levee Overtopping without Failure
-=================================
+--------------------------------------------------------
 
 Levee overtopping can occur without breach failure.
 Floodplain features such as roadway or railroad embankments, concrete walls and levees with riprap can be overtopped without erosion or failing.
@@ -272,10 +272,10 @@ The discharge from levee overtopping is shared between two cells with the levee 
 In Figure 8, the levee crest width is L\ :sub:`r`, the headwater depth is H\ :sub:`r`, the tailwater depth is h\ :sub:`t`, the ratio of tailwater to
 headwater is given by d\ :sub:`t`/d\ :sub:`h` based on the highest grid element floodplain elevation.
 
-|Levee004|
+.. image:: img/Levee004.jpg
 
-   **Figure 8.
-   Levee Overtopping Definition.**
+*Figure 8.
+Levee Overtopping Definition.*
 
 The flow can occur in either direction and the discharge Q is computed using the conventional broad-crested weir equation:
 
@@ -299,48 +299,46 @@ If the water surface elevation on both sides of the levee is greater than 3 ft (
 flow routing routine.
 These modifications to the broadcrested weir equation may the discharge transitions more gradual and reduce the potential for numerical stability.
 
-|Levee005|
+.. image:: img/Levee005.jpg
 
-   **Figure 9.
-   Schematic of the Levee Overtopping Flow.**
+*Figure 9.
+Schematic of the Levee Overtopping Flow.*
 
-|Levee006|
+.. image:: img/Levee006.jpg
 
-   **Figure 10.
-   Levee Overtopping Tailwater Submergence.**
+*Figure 10.
+Levee Overtopping Tailwater Submergence.*
 
 Prescribed Levee Breach Input Data
-==================================
+--------------------------------------------------------
 
 The prescribed breach failure is recommended over the breach erosion failure because the physical process of sediment scour in hyperconcentrated
 sediment flows is poorly understood and simplistically mathematically represented.
 The prescribed levee failure is shown schematically in Figure 11.
 
-|Levee007|
+.. image:: img/Levee007.jpg
 
-   **Figure 11.
-   Prescribed Levee Failure Definition.**
+*Figure 11.
+Prescribed Levee Failure Definition.*
 
 The prescribed breach failure data can be entered in the GDS (select the grid cell and go to *Grid|Assign Parameters to selection|Levee*) as shown in
 Figure 12.
 The required data includes:
 
-- Elevation of the prescribed failure if different from the levee crest
+    - Elevation of the prescribed failure if different from the levee crest
 
-- Duration of saturation prior to breach initiation
+    - Duration of saturation prior to breach initiation
 
-- Breach base elevation if different from the floodplain elevation
+    - Breach base elevation if different from the floodplain elevation
 
-- Maximum breach width
+    - Maximum breach width
 
-- Vertical and horizontal rates of breach expansion
+    - Vertical and horizontal rates of breach expansion
 
-**Figure**
+.. image:: img/Levee026.jpg
 
-**12**
-
-**.
-GDS Prescribed Breach Dialog Box.**
+*Figure 12
+GDS Prescribed Breach Dialog Box.*
 
 Maximum
 ~~~~~~~
@@ -350,10 +348,10 @@ Multiple failure can occur simultaneously in the levee system.
 The levee failure will initiate when the water surface exceeds an assigned elevation for a given duration.
 The duration of inundation or saturation is based on the cumulative time above the prescribed levee elevation (Figure 13).
 
-|Levee008|
+.. image:: img/Levee027.jpg
 
-   **Figure 13.
-   Prescribed Levee Breach Initiates When the Assigned Duration is Exceeded.**
+*Figure 13.
+Prescribed Levee Breach Initiates When the Assigned Duration is Exceeded.*
 
 During a prescribed levee breach simulation, there are a number of data variables that may be assigned to control the levee overtopping and breach
 discharges for a range of flows and failure conditions.
@@ -459,7 +457,7 @@ Table 1 outlines the potential controls.
 
 
 Urban Wall Failure (Collapse)
-=============================
+--------------------------------------------------------
 
 Simulating flood confinement by urban walls in the FLO-2D model is accomplished with the levee component by blocking one or more of the eight flow
 directions.
@@ -853,7 +851,7 @@ elevations that are higher that the wall failure elevation but with insufficient
 These conditions are resolved are runtime in the model but should be avoided in the data files.
 
 Predicted Breach Erosion Input Data
-===================================
+--------------------------------------------------------
 
 The dam breach erosion component provides an opportunity to simulate the physical processes of breach widening through scour.
 Nine out of the eleven sediment transport equations in the FLO-2D can be used to compute the breach erosion including:
@@ -1082,7 +1080,7 @@ maximum sediment concentration by volume outlined in red.
 |Levee017|
 
 Reservoir Routing
-=================
+--------------------------------------------------------
 
 Deep water slow velocity movement in reservoir, detention basins or other ponded features in a twodimension model represents a unique condition for
 flood routing.
@@ -1381,7 +1379,7 @@ Table 6. Numerical Surging Troubleshooting
 
 
 Dam Breach Floodwave Reporting for Hazard Mapping
-=================================================
+--------------------------------------------------------
 
 To address the California Office of Emergency Services requirements for dam breach area of inundation and hazard maps, the following output data is
 generated during a FLO-2D model simulation.
@@ -1442,7 +1440,7 @@ If no levee or dam breach is simulated with the FLO-2D model, the FLOODWAVETIME.
 to the commencement of the flood model (hour 0.0).
 
 Levee Fragility Curves
-======================
+--------------------------------------------------------
 
 Introduction Levee fragility curves can be used in the Central Valley flood studies to develop flood hazard maps with the FLO-2D model.
 An algorithm using the Corps’ levee fragility curves has been coded in the FLO-2D model to automatically predict levee breach failure anywhere in the
@@ -1596,7 +1594,7 @@ levee failure corresponding with the actual floodwave progression.
 This represents a significant step in accurate hazard mapping.
 
 References
-==========
+--------------------------------------------------------
 
 Fread, D.L., 1998.
 “Breach: An Erosional Model for Earthen Dam Failures,” National Weather Service, NOAA, Silver Spring, Maryland.
@@ -1617,63 +1615,3 @@ Army Corps of Engineers, 2002.
 Published by The Reclamation Board State of California and the U.S.
 Army Corps of Engineers, Sacramento District, Sacramento, California.
 
-.. |Levee002| image:: media\Levee002.jpg
-   :width: 5.51458in
-   :height: 2.63542in
-.. |Levee003| image:: media\Levee003.png
-   :width: 6.51in
-   :height: 8.33667in
-.. |Levee004| image:: media\Levee004.jpg
-   :width: 4.76736in
-   :height: 2.12694in
-.. |Levee005| image:: media\Levee005.jpg
-   :width: 5.43819in
-   :height: 2.99972in
-.. |Levee006| image:: media\Levee006.jpg
-   :width: 4.97708in
-   :height: 2.99972in
-.. |Levee007| image:: media\Levee007.jpg
-   :width: 3.75278in
-   :height: 1.91458in
-.. |Levee008| image:: media\Levee008.jpg
-   :width: 5.06806in
-   :height: 2.99986in
-.. |Levee009| image:: media\Levee009.png
-   :width: 6.11236in
-   :height: 2.87014in
-.. |Levee010| image:: media\Levee010.jpg
-   :width: 3.97014in
-   :height: 2.11528in
-.. |Levee011| image:: media\Levee011.jpg
-   :width: 4.33611in
-   :height: 2.13472in
-.. |Levee012| image:: media\Levee012.jpg
-   :width: 3.41625in
-   :height: 4.60278in
-.. |Levee013| image:: media\Levee013.png
-   :width: 7.01528in
-   :height: 1.19785in
-.. |Levee014| image:: media\Levee014.jpg
-   :width: 3.57153in
-   :height: 3.95347in
-.. |Levee015| image:: media\Levee015.jpg
-   :width: 4.69444in
-   :height: 2.45042in
-.. |Levee016| image:: media\Levee016.jpg
-   :width: 4.41361in
-   :height: 3.27014in
-.. |Levee017| image:: media\Levee017.jpg
-   :width: 4.45556in
-   :height: 3.31042in
-.. |Levee018| image:: media\Levee018.jpg
-   :width: 6.38125in
-   :height: 1.92694in
-.. |Levee019| image:: media\Levee019.jpg
-   :width: 4.53028in
-   :height: 1.81597in
-.. |Levee020| image:: media\Levee020.jpg
-   :width: 4.87306in
-   :height: 4.97986in
-.. |Levee021| image:: media\Levee021.jpg
-   :width: 6.69306in
-   :height: 2.15833in
