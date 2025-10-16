@@ -512,7 +512,7 @@ The highly variable nature of the sediment concentration gives rise to unsteady 
 replicated with any degree of certainty.
 When assigning sediment concentrations to a flood hydrograph the following guidelines are suggested:
 
-        - The average sediment concentration should reflect the estimated water and sediment volumes for the design storm.
+    - The average sediment concentration should reflect the estimated water and sediment volumes for the design storm.
 
     - The sediment volume should not exceed the estimated maximum potential sediment yield observed for the basin.
 
@@ -529,7 +529,7 @@ The effects of bulking a flood hydrograph with high concentrations of sediment a
 In the following figure the 100-year design storm water flood and mudflow are shown for watershed near Colorado Springs, Colorado.
 The average sediment concentration is approximately 35% by volume with a peak concentration of 47% by volume.
 
- .. image:: img/Simula006.jpg
+ .. image:: img/Simula010.jpg
 
 *Figure 5.
 Upstream Water and Mudflow Hydrograph.*
