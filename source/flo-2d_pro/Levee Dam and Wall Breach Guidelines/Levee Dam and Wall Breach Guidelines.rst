@@ -1207,33 +1207,32 @@ Sediment conservation was implemented for both pipe and channel scour computatio
 If the volume of eroded sediment does not match the breach hole volume, the breach pipe or channel geometry is adjusted to account for the difference.
 The downstream breach flood hydrograph is automatically bulked (BF) for the levee or dam sediment concentration by volume C\ :sub:`v`:
 
-BF = 1./(1.
-– C\ :sub:`v`)
+BF = 1./(1.– C\ :sub:`v`)
 
 Breach Erosion Parameter Sensitivity
 ------------------------------------
 
 The primary breach erosion parameters are:
 
-- Embankment geometry – side slopes, crest width and length
+    - Embankment geometry – side slopes, crest width and length
 
-- Pipe breach elevation and width/depth ratio
+    - Pipe breach elevation and width/depth ratio
 
-- Embankment sediment size: core, shell and riprap material
+    - Embankment sediment size: core, shell and riprap material
 
-- Embankment sediment parameters – unit weight, porosity, cohesive strength
+    - Embankment sediment parameters – unit weight, porosity, cohesive strength
 
-- Roughness n-values for shell and core
+    - Roughness n-values for shell and core
 
-- Grass on downstream face
+    - Grass on downstream face
 
 The data can be entered in the GDS as shown in Figure 21.
 The breach erosion parameter data can be entered for either a global levee failure or for specific levee grid element(s) representing.
 
-|Levee014|
+.. image:: img/Levee014.jpg
 
-   **Figure 21.
-   GDS Dialog Box for Entering the Breach Erosion Data.**
+*Figure 21.
+GDS Dialog Box for Entering the Breach Erosion Data.*
 
 The objective of the levee or dam breach erosion component is to create a fast expanding breach resulting in a high peak discharge and a rapid
 reservoir evacuation.
@@ -1244,20 +1243,20 @@ The maximum sediment concentration C\ :sub:`vmax` predicted by the equation will
 The breach velocity down the pipe or channel is a function of the assigned roughness n-value and slope and this affects the sediment discharge.
 Other parameters that can affect the breach erosion include:
 
-- Critical shear stress (Cv) which is a function of cohesive strength and the plasticity index of the embankment materials.
-  The critical shear stress varies with clay content.
+    - Critical shear stress (Cv) which is a function of cohesive strength and the plasticity index of the embankment materials.
+      The critical shear stress varies with clay content.
 
-- Embankment cohesive strength is used in the computation of channel side slope slump and dam wedge collapse and blow out.
-  This parameter is an important variable for the rate of increase in breach width.
+    - Embankment cohesive strength is used in the computation of channel side slope slump and dam wedge collapse and blow out.
+      This parameter is an important variable for the rate of increase in breach width.
 
-- Sediment gradient D\ :sub:`90`/D\ :sub:`30`:Q\ :sub:`s` ~ (D\ :sub:`90`/D\ :sub:`30`)\ :sup:`0.2`
+    - Sediment gradient D\ :sub:`90`/D\ :sub:`30`:Q\ :sub:`s` ~ (D\ :sub:`90`/D\ :sub:`30`)\ :sup:`0.2`
 
 The breach parameter sensitivity is outlined in the following table:
 
-   **Table 3.
-   Breach Parameter Sensitivity.**
+.. image:: img/Levee015.jpg
 
-|Levee015|
+*Table 3.
+Breach Parameter Sensitivity.*
 
 Breach Modeling Approach
 ------------------------
