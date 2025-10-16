@@ -7,4 +7,5 @@ FLO-2D Pro Resource Center
    data_input_manual
    Channel Modeling Guidelines 2023/index
    Storm Drain Modeling Guidelines/index
-   Two Phase Flood Routing Guidelines 2023/Two Phase Flood Routing Guidelines 2023
+   FLO-2D Hydraulic Structure Guidelines/Hydraulic Structures Guidelines
+..   Two Phase Flood Routing Guidelines 2023/Two Phase Flood Routing Guidelines 2023
