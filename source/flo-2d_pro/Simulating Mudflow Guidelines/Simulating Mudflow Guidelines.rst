@@ -306,25 +306,6 @@ Resistance Parameters for LaminarFlow\ :sup:`1`*
 
 .. image:: img/Simula009.jpg
 
-   * - Surface                                | Range of K
-
-   * - Concrete/asphalt                       | 24 -108
-
-   * - Bare sand                              | 30 - 120
-
-   * - Graded surface                         | 90 - 400
-
-   * - Bare clay - loam soil, eroded          | 100 - 500
-
-   * - Sparse vegetation                      | 1,000 - 4,000
-
-   * - Short prairie grass                    | 3,000 - 10,000
-
-   * - Bluegrass sod                          | 7,000 - 50,000
-
-   * - :sup:`1` Woolhiser (1975)
-
-
 The flow resistance n\ :sub:`td` of the turbulent and dispersive shear stress components are combined into an equivalent Manning’s n-value for the
 flow:
 
