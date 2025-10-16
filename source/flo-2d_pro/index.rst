@@ -9,4 +9,5 @@ FLO-2D Pro Resource Center
    Storm Drain Modeling Guidelines/index
    Hydraulic Structures Guidelines/Hydraulic Structures Guidelines
    Levee Dam and Wall Breach Guidelines/Levee Dam and Wall Breach Guidelines
+   Simulating Mudflow Guidelines/Simulating Mudflow Guidelines
 
