@@ -1,9 +1,10 @@
 .. vim: syntax=rst
 
-**Simulating Mudflow Guidelines**
+Simulating Mudflow Guidelines
+==============================
 
 Introduction
-============
+-------------
 
 There is a continuum in the physics of flowing water and sediment that ranges from clear water flow to landslides and despite our best efforts to
 characterize, classify and catalog different types of flow events, the delineation between fluid flow and soil mass movement is not definitive.
@@ -53,7 +54,7 @@ material, whereas the area on inundation by the fluid flow is dependent on the f
 The following discussion considers the fluid motion of hyperconcentrated sediment flows referred to as mudflows or mud floods.
 
 Flow Classification
-===================
+---------------------
 
 The vast majority of hyperconcentrated sediment flows that occur worldwide fall within a range of about 20 to 55 percent concentration by volume and
 most are associated with rainfall runoff.
@@ -137,7 +138,7 @@ As the landslides morph into mudflows, internal deformation becomes more promine
 Landslides require an initial failure surface and a factor of safety that has been reduced to one.
 
 Fluid Property Definitions
-==========================
+------------------------------
 
 There are several important sediment concentration relationships that help to define the nature of hyperconcentrated sediment flows.
 These relationships relate the sediment concentration by volume, sediment concentration by weight, the sediment density, the mudflow mixture density
@@ -187,7 +188,7 @@ Figure 1.
 Classification of Hyperconcentrated Sediment Flows
 
 Physical Processes of Hyperconcentrated Sediment Flows
-======================================================
+-------------------------------------------------------
 
 Hyperconcentrated sediment flows involve the complex interaction of fluid and sediment processes such as turbulence, viscous shear, fluid-sediment
 particle momentum exchange, and sediment particle collision.
@@ -510,7 +511,7 @@ The areal extent of mudflow inundation and the maximum flow depths and velocitie
    Yield Stress of Mudflow Samples Versus Volumetric Concentration
 
 Practical Guidelines for Analyzing the Potential for Hyperconcentrated Sediment Flows
-=====================================================================================
+---------------------------------------------------------------------------------------
 
 There are several simple guidelines that can be checked to determine the potential for a watershed to generate a mudflow.
 In addition, modeling hyperconcentrated sediment flows requires reasonable assumptions for the variables that control the physical flows processes.
@@ -658,7 +659,7 @@ The key to accurate simulation is the selection of the sediment concentration by
 A balance should be sought between the assigned sediment concentration and the estimated potential sediment yield.
 
 Guidelines for the Selection of Rheological Parameters
-======================================================
+-------------------------------------------------------
 
 Each mudflow alluvial fan or tailings dam area or region has geology and soil conditions that will generate unique rheological fluid properties.
 Where resources are available, it is recommended that viscosity and yield stress as function of concentration be analyzed with a viscometer.
@@ -721,7 +722,7 @@ B. If no field data is available and only a subjective interpretation of the mud
    Determine the worst case scenario for you project conditions.
 
 Dispersion Stress Considerations
-================================
+------------------------------------
 
 For flows with high concentrations of non-cohesive sediment particles and relatively low viscosities and yield stresses, turbulence will dominate and
 dispersive stress can play a role in slowing down the velocity.
@@ -951,22 +952,3 @@ Thomas, D.G., 1963.
 Part I: physical properties and laminar transport characteristics,” Ind.
 Eng.
 Chem., 55(110, 18-29.
-
-.. |Simula002| image:: media\Simula002.jpg
-   :width: 5.10417in
-   :height: 3.70833in
-.. |Simula003| image:: media\Simula003.jpg
-   :width: 5.26042in
-   :height: 3.1875in
-.. |Simula004| image:: media\Simula004.jpg
-   :width: 6.48958in
-   :height: 3.61458in
-.. |Simula005| image:: media\Simula005.jpg
-   :width: 6.5in
-   :height: 4.21875in
-.. |Simula006| image:: media\Simula006.png
-   :width: 5.14667in
-   :height: 4.10667in
-.. |Simula007| image:: media\Simula007.png
-   :width: 5.87in
-   :height: 4.17667in
