@@ -357,9 +357,15 @@ The specific weight of the fluid matrix γm, yield stress τy and viscosity η v
 Unless a rheological analysis of the mudflow site depositional material is available, the following empirical relationships can be used to compute
 viscosity and yield stress: and
 
- *=* \ *1 e* \ *1 Cv*
+.. math::
+   :label:
 
-   \ *y =* \ *2 e* \ *2 Cv*
+   \eta = \alpha_1 \, e^{\beta_1 C_v}
+
+.. math::
+   :label:
+
+   \tau_y = \alpha_2 \, e^{\beta_2 C_v}
 
 where α\ :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
 The viscosity and yield stress are shown to be functions of the volumetric sediment concentration C\ :sub:`v` of silts, clays and in some cases, fine
