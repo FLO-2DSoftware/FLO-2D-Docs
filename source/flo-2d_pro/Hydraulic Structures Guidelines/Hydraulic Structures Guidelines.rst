@@ -422,16 +422,18 @@ Hydraulic Structure Troubleshooting*
 
    * - Combined Hydraulic Structure and Levee Breach
      - Hydraulic structures may be used to allow flow to go through a levee
-       connecting contiguous grid elements.
+       connecting contiguous grid
+
+       elements.
 
        This might simulate a drainage hole in a block wall or a culvert through a highway
 
        embankment.
 
        While the levee or wall is intact, the
-       flow is based on the hydraulic structure rating table or curve which includes the
+       flow is based on the hydraulic structure rating table or
 
-       flow over the embankment.
+       curve which includes the flow over the embankment.
 
        If the rating table is poorly matched with the upstream inflow conditions, surging may ensue.
 
@@ -508,7 +510,9 @@ Hydraulic Structure Troubleshooting*
 
        smaller Courant number), varying the n-values or adjust the topography to make it more uniform.
 
-       Review the HYDROSTRUCT.OUT file for surging. High velocities may be eliminated with increasing nvalues.
+       Review the HYDROSTRUCT.OUT file for surging.
+
+       High velocities may be eliminated with increasing nvalues.
 
        Some high velocities may be associated with the initial floodwave movement upstream by creating
 
