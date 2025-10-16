@@ -575,7 +575,7 @@ The use of a hydraulic structure in contiguous grid elements separated by a wall
 represented by the hydraulic structure rating table for that flow direction.
 When the wall fails instantaneously, the hydraulic structure flow is also terminated, and the model reverts to overland flow calculations.
 
-.. image:: img/Levee009.jpg
+.. image:: img/Levee009.png
 
 *Figure 14.
 Wall Collapse. (FCDMC, 2018).*
@@ -607,20 +607,20 @@ Additional wall failure variables such as initial failure elevation if different
 can be assigned to add detail to multiple levee failure locations.
 Wall failure highlights are:
 
-- Wall failure can occur anywhere on the grid system based on overtopping or if the water surface elevation reaches a specified distance below the crest
-  elevation.
+    - Wall failure can occur anywhere on the grid system based on overtopping or if the water surface elevation reaches a specified distance below the crest
+      elevation.
 
-- Multiple wall failure can occur in various locations simultaneously.
+    - Multiple wall failure can occur in various locations simultaneously.
 
-- Wall failure expansion can be based on prescribed horizontal or vertical rates.
+    - Wall failure expansion can be based on prescribed horizontal or vertical rates.
 
-- Failure can occur from either side of the wall.
+    - Failure can occur from either side of the wall.
 
-- Based on water surface elevation, flow through the breach can occur in either direction.
-  As ponding equilibrates on each side of the wall, flow through the wall may alternate directions.
+    - Based on water surface elevation, flow through the breach can occur in either direction.
+      As ponding equilibrates on each side of the wall, flow through the wall may alternate directions.
 
-- By setting the breach failure rates equal to zero, an instantaneous collapse of the wall will be simulated for a specified maximum width or the side
-  width of the grid element.
+    - By setting the breach failure rates equal to zero, an instantaneous collapse of the wall will be simulated for a specified maximum width or the side
+      width of the grid element.
 
 Wall Overtopping without Failure
 --------------------------------
@@ -631,10 +631,10 @@ In Figure 16 the overtopping discharge Q is computed using the conventional broa
 
 Q = CLH\ :sub:`d`\ :sup:`1.5`
 
-|Levee010|
+.. image:: img/Levee010.jpg
 
-   **Figure 16.
-   Levee Overtopping Definition.**
+*Figure 16.
+Levee Overtopping Definition.**
 
 where C is the broadcrested weir coefficient (3.09 in English units, typical coefficient for the broadcrested weir); L is the length of the wall crest
 (side of the grid element) and H\ :sub:`d` is the headwater on the wall.
@@ -648,10 +648,10 @@ When the water surface elevation on both sides of the wall is greater than 3 ft 
 flow routing routine.
 These modifications make the discharge transition more gradual and reduce the potential for numerical stability.
 
-   |Levee011|
+.. image:: img/Levee011.jpg
 
-   **Figure 17.
-   Levee Overtopping Tailwater Submergence.**
+*Figure 17.
+Levee Overtopping Tailwater Submergence.*
 
 Wall Collapse
 -------------
@@ -659,33 +659,34 @@ Wall Collapse
 Wall collapse data can be entered in either the QGIS or GDS (Figure 18 in red box).
 The required data includes:
 
-- Failure side (1 of 8 flow directions)
+    - Failure side (1 of 8 flow directions)
 
-- Global failure – failure criteria applies to all wall elements and directions o (negative failure grid element in LEVEE.DAT)
+    - Global failure – failure criteria applies to all wall elements and directions o (negative failure grid element in LEVEE.DAT)
 
-- Failure elevation if different from the levee crest (0 = failure at overtopping)
+    - Failure elevation if different from the levee crest (0 = failure at overtopping)
 
-- Cumulative duration at failure elevation (allows saturation; set to zero)
+    - Cumulative duration at failure elevation (allows saturation; set to zero)
 
-- Fail to base elevation if different from the floodplain elevation
+    - Fail to base elevation if different from the floodplain elevation
 
-- Maximum failure width (default to grid element side)
+    - Maximum failure width (default to grid element side)
 
-- Vertical and horizontal rates of breach expansion (0 = instantaneous collapse)
+    - Vertical and horizontal rates of breach expansion (0 = instantaneous collapse)
 
-|Levee012|
+.. image:: img/Levee012.jpg
 
 **Figure 18.
-QGIS Prescribed Wall Breach Dialog Box.**
+QGIS Prescribed Wall Breach Dialog Box.*
 
 Failure will initiate when the water surface exceeds an assigned elevation and duration.
 The failure criteria can be defined using the grid element elevation + a fail height as shown in Figure 19.
 Wall Collapse Height.
 (FCDMC).
 
-   **Figure 19.
-   Wall Collapse Height.
-   (FCDMC)**
+.. image:: img/Levee013.png
+
+*Figure 19.
+Wall Collapse Height.(FCDMC).*
 
 Wall Failure Guidelines
 -----------------------
