@@ -377,6 +377,7 @@ Hydraulic Structure Troubleshooting*
        node.
 
        The hydraulic structure rating table must have increasing stage with increasing discharge.
+
        This generates an error message.
 
        The first pair of rating table data must be stage = 0.
@@ -390,32 +391,42 @@ Hydraulic Structure Troubleshooting*
 
    * - Hydraulic Structure Discharge Instability Issues
      - Discharge surging is noted in the HYDROSTRUCT.OUT file.
-       Rating table or curve needs adjustment.
+       Rating table or curve
+
+       needs adjustment.
 
        For shallow flows, a warning message is written
-       to ERROR.CHK if the rating table discharge is unreasonable.
+       to ERROR.CHK if the rating table discharge is
+
+       unreasonable.
 
        For flow depths less than 1 ft, the velocity is greater than 5 fps.
 
        A warning message is
-       generated if the downstream water surface becomes higher than the upstream inflow
+       generated if the downstream water surface becomes higher than the upstream
 
-       node water surface with
+       inflow node water surface with
        INOUTCONT = 0 indicating that
+
        there is potential for upstream flow through the structure.
 
-       If the rating table is
-       adjusted using the SUBFACTOR for submergence, a warning message indicates the modification
+       If the rating table is adjusted using the SUBFACTOR for submergence,
+
+       a warning message indicates the modification
 
        was made to better match the flow conditions.
 
-       A message is written that indicates that the revised table values were written to the REVISED_RATING_TABLE.OUT file.
+       A message is written that indicates that the revised table values were written to
+
+       the REVISED_RATING_TABLE.OUT file.
 
    * - Combined Hydraulic Structure and Levee Breach
      - Hydraulic structures may be used to allow flow to go through a levee
        connecting contiguous grid elements.
 
-       This might simulate a drainage hole in a block wall or a culvert through a highway embankment.
+       This might simulate a drainage hole in a block wall or a culvert through a highway
+
+       embankment.
 
        While the levee or wall is intact, the
        flow is based on the hydraulic structure rating table or curve which includes the
@@ -460,28 +471,32 @@ Hydraulic Structure Troubleshooting*
 
        If the instability issue cannot be resolved, it may be possible to move the hydraulic structure
 
-       to the next grid element without a loss of accuracy or mapping resolution for the maximum water surface elevation.
+       to the next grid element without a loss of accuracy or mapping resolution for the maximum
+
+       water surface elevation.
 
        It might also be possible to eliminate the levee and replace it with WRF value.
 
        The model automatically adjusts the hydraulic structure rating table and writes the revised
 
-       table pairs to an output file. If instability persists, review the revised rating table and make further adjustments.
+       table pairs to an output file. If instability persists, review the revised rating table and make
+
+       further adjustments.
 
        Typically the instability is related to the lower flows and there are insufficient rating table pairs to define
 
-       the rating table for the lower discharges. Review the HYDROSTRUCT.OUT file to determine if there is numerical
+       the rating table for the lower discharges. Review the HYDROSTRUCT.OUT file to determine
 
-       instability in the rating table or curve.
+       if there is numerical instability in the rating table or curve.
 
        Downstream ponding or time-stage water surface controls may result in upstream flow through structure.
 
        Set the INOUTCONT = 1 in the HYSTRUC.DAT file to allow upstream flow.
 
    * - Time-Stage Backwater Downstream of Hydraulic Structures
-     - Time-stage elements that control the water surface elevation downstream of a hydraulic structure are generally
+     - Time-stage elements that control the water surface elevation downstream of a hydraulic structure are
 
-       not a problem. Numerical instability are usually associated with the time-stage elements
+       generally not a problem. Numerical instability are usually associated with the time-stage elements
 
        by having the water surface stage be less than ground elevation or having contiguous timestage
 
@@ -495,10 +510,10 @@ Hydraulic Structure Troubleshooting*
 
        Review the HYDROSTRUCT.OUT file for surging. High velocities may be eliminated with increasing nvalues.
 
-       Some high velocities may be associated with the initial floodwave movement upstream by creating an instantaneous
+       Some high velocities may be associated with the initial floodwave movement upstream by creating
 
-       wall of water in the TIME-STAGE pairs. Have the water stage gradually increase above the ground or bed elevation,
+       an instantaneous wall of water in the TIME-STAGE pairs. Have the water stage gradually increase
 
-       similar to the actual physical condition. Consider that a channel near the ocean may have to filled before assigning
+       above the ground or bed elevation, similar to the actual physical condition. Consider that a
 
-       the tidal stage or storm surge.
+       channel near the ocean may have to filled before assigning the tidal stage or storm surge.
