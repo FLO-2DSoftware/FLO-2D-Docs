@@ -272,8 +272,7 @@ A discussion of these stresses and their role in hyperconcentrated sediment flow
 
 .. image:: img/Simula003.jpg
 
-Figure 2. Shear Stress as a Function of Shear Rate for Fluid Deformation Models
--------------------------------------------------------------------------------
+*Figure 2. Shear Stress as a Function of Shear Rate for Fluid Deformation Models.*
 
 A mudflow model that incorporates only the Bingham stresses and ignores the inertial stresses assumes that the simulated mudflow is viscous.
 This assumption is not universally appropriate because all mud floods and some mudflows are turbulent with velocities as high as 25 fps (8 m/s).
@@ -301,8 +300,10 @@ slope S\ :sub:`td`.
 The viscous and turbulent-dispersive slope terms are written in terms of depth-averaged velocity V.
 The viscous slope can be written as:
 
-K  V S\ :sub:`v` = 8 \ :sub:`m` h\ :sub:`2`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. math::
+   :label:
+
+   S_v = \frac{K \, \eta}{8 \, \gamma_m} \, \frac{V}{h^2}
 
 where γ\ :sub:`m` is the specific weight of the sediment mixture.
 The resistance parameter K for laminar flow equals 24 for smooth wide rectangular channels but increases significantly (~ 50,000) with roughness and
