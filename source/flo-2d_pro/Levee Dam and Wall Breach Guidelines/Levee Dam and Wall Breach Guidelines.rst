@@ -573,14 +573,10 @@ When the wall fails instantaneously, the hydraulic structure flow is also termin
 *Figure 14.
 Wall Collapse. (FCDMC, 2018).*
 
-.. image:: img/Levee009.jpg
+.. image:: img/Levee028.jpg
 
-**Figure**
-
-**15**
-
-**.
-Walls are Displayed by the Thin Red Lines.**
+*Figure 15
+Walls are Displayed by the Thin Red Lines.*
 
 Wall Failure Modes
 ------------------
