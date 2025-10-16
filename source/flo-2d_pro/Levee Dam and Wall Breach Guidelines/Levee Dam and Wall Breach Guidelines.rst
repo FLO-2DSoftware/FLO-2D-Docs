@@ -1768,7 +1768,7 @@ The Corps of Engineers use a levee failure risk model that incorporates the prob
 surface elevation.
 This model is known as a levee fragility curve (Figure 26).
 
-|Levee020|
+.. image:: img/Levee020.jpg
 
 Figure 26. Example of Levee Fragility Curves for Typical Sacramento River Basin Levees. (From the Corps of Engineers, Comprehensive
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
