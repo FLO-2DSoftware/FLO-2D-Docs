@@ -1436,8 +1436,10 @@ The FPLAIN.DAT file will be regenerated with the next simulation.
 The reservoir flow depth for these elements for the reservoir routing is the water surface elevation minus the dead pool elevation.
 The dead pool represents permanent storage that does not contribute to downstream flooding.
 
-   **Figure 25.
-   Reservoir Starting Water Surface Elevation Node Shown in Blue-Green.**
+.. image:: img/Levee031.jpg
+
+*Figure 25.
+Reservoir Starting Water Surface Elevation Node Shown in Blue-Green.*
 
 Filling a Basin or Reservoir during the Simulation
 --------------------------------------------------
