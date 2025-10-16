@@ -361,7 +361,7 @@ Table 1 outlines the potential controls.
 Prescribed Breach Failure Controls and Guidelines**
 
 .. list-table::
-   :widths: 50 50
+   :widths: 20 80
    :header-rows: 0
 
 
@@ -425,19 +425,18 @@ levee that will collapse must be assigned.
 
    * - Levee Overtopping Discharge
      - The flow depth on the levee crest must exceed a hardcoded tolerance value
-equal to 0.1 ft (0.3 m) to enable the overtopping discharge to be computed.
-Flow over the levee is computed using the conventional broadcrested weir
-equation with a variable weir coefficient that depends on the headwater depth.
-The headwater depth depends on whether one or both of the water surface
-elevations are greater than the crest. If the headwater depth > 3ft, then the
-17
-weir coefficient is 3.09. If the headwater depth < 3., the weir coefficient can
-range between 2.5 and 3.09.
-If the ratio of the tailwater to the headwater is greater than 0.8, then the
-discharge is multiplied by a submergence factor that is less than 1.0 based on
-the submergence curves (Figure 8).
-The overtopping discharge in all possible directions including the peak discharge
-are reported in the LEVOVERTOP.OUT file.
+       equal to 0.1 ft (0.3 m) to enable the overtopping discharge to be computed.
+       Flow over the levee is computed using the conventional broadcrested weir
+       equation with a variable weir coefficient that depends on the headwater depth.
+       The headwater depth depends on whether one or both of the water surface
+       elevations are greater than the crest. If the headwater depth > 3ft, then the 17
+       weir coefficient is 3.09. If the headwater depth < 3., the weir coefficient can
+       range between 2.5 and 3.09.
+       If the ratio of the tailwater to the headwater is greater than 0.8, then the
+       discharge is multiplied by a submergence factor that is less than 1.0 based on
+       the submergence curves (Figure 8).
+       The overtopping discharge in all possible directions including the peak discharge
+       are reported in the LEVOVERTOP.OUT file.
 
    * - Levee Breach Discharge
      - The flow depth on the levee breach must exceed a tolerance value of 0.1 ft (0.3
