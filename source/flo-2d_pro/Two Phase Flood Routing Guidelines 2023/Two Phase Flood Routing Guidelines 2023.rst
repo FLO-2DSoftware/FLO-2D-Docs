@@ -6,6 +6,10 @@ Two Phase Flood Routing Guidelines 2023
 Introduction
 -------------
 
+.. |Contact-Form| raw:: html
+
+   <a href="https://flo-2d.com/contact/" target="_blank">Contact Form</a>
+
 This document describes how to simulate a mudflow or a tailings dam breach failure as either a mudflow or two-phase fluid flow (water and mudflow)
 using the FLO-2D model.
 Two phase flow mudflows (with or without a tailings dam breach failure) can be simulated as overland flow or channel discharge with the flows being
@@ -13,7 +17,7 @@ diluted with downstream inflows (e.g. channel tributary inflows).
 The tailings facility failure can be modeled either as a dam breach with or without a reservoir (supernatant storage or with flood inflow) or as a
 stack collapse without simulating the dam.
 These guidelines complement the Tailings Dam Modeling training tutorials that should be used for hand-on exercises.
-Please contact FLO-2D Staff *contact@flo-2d.com* to get access to the training packages.
+Please contact FLO-2D Staff via |Contact-Form| to get access to the training packages.
 
 Background
 -------------
