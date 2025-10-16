@@ -116,7 +116,7 @@ When the levee or wall fails the hydraulic structure flow is terminated and the 
 If the breach failure is instantaneous, the hydraulic structure flow is ceased and the flow reverts to overland flow.
 
 Guidelines
-==========
+------------
 
 Hydraulic structures pass flow across a grid element boundary and can connect two floodplain elements, two channel elements or a floodplain to channel
 element combination.
