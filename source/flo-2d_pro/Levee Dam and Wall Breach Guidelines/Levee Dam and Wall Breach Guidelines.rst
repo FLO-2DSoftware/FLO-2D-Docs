@@ -1770,10 +1770,10 @@ This model is known as a levee fragility curve (Figure 26).
 
 .. image:: img/Levee020.jpg
 
-Figure 26. Example of Levee Fragility Curves for Typical Sacramento River Basin Levees. (From the Corps of Engineers, Comprehensive
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Figure 26.
+Example of Levee Fragility Curves for Typical Sacramento River Basin Levees. (From the Corps of Engineers, Comprehensive
 
-   **Study, 2002)**
+                                                                    Study, 2002)**
 
 The levee fragility curves specify the relationship between the probability of levee failure and the water surface elevation (or likely failure stage)
 below the levee crest.
@@ -1880,11 +1880,11 @@ FLO-2D Levee Breach Simulation in Progress Using Levee Fragility Curves (Right: 
 
 Levee Breaches Expanding)
 
-|Levee021|
+.. image:: img/Levee021.jpg
 
-   **Figure 27.
-   FLO-2D Levee Breach Simulation in Progress Using Levee Fragility Curves.
-   (Right: Levee Simultaneously Breaching in 2 Locations; Left: Levee Breach Expanding.)**
+*Figure 27.
+FLO-2D Levee Breach Simulation in Progress Using Levee Fragility Curves.
+(Right: Levee Simultaneously Breaching in 2 Locations; Left: Levee Breach Expanding.)*
 
 Benefits of Using the Levee Fragility Curves for Flood Hazard Mapping
 ---------------------------------------------------------------------
