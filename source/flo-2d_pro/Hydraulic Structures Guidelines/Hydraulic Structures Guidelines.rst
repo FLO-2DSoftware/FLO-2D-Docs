@@ -56,7 +56,7 @@ Flow blockage by debris can be simulated by setting the discharge equal to zero 
 This blockage option may useful in simulating worst case mud and debris flow scenarios where bridges or culverts are located on alluvial fans.
 Blockage forces all the discharge to flow overland on the fan or floodplain surface.
 
-|Hydrau003|
+.. image:: img/Hydrau003.jpg
 
 *Figure 2.
 Levees are Depicted in Red and the River in Blue in the GDS Program*
@@ -66,6 +66,8 @@ This will enable the cumulative storm drain discharge at the outlet to be assess
 It is possible to assign a limiting conveyance capacity for the outlet node (Figure 3).
 This will curtail the inflow in subsequent downstream inlets.
 Once the conveyance capacity is exceeded, the discharge to the remaining downstream inlet nodes is zero.
+
+.. image:: img/Hydrau001.jpg
 
 *Figure 3.
 Multiple Storm Drain Inlets to a Single Outlet with a Conveyance Capacity Limit*
@@ -101,7 +103,7 @@ The data required for the generalized culvert equations include (Figure 4):
 
     - Roughness
 
-   |Hydrau004|
+.. image:: img/Hydrau004.jpg
 
 *Figure 4.
 GDS Dialog Box for Entering the Generalized Culvert Data*
