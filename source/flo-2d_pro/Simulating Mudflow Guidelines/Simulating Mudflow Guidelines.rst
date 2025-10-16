@@ -204,6 +204,38 @@ Sediment concentration in a given flood event can vary dramatically and as a res
 flow surges.
 
 The shear stress in hyperconcentrated sediment flows can be determined from the summation of the five shear stress components.
+The total shear stress :math:`\tau` depends on the cohesive yield stress :math:`\tau_c`,
+the Mohr–Coulomb shear stress :math:`\tau_{mc}`, the viscous shear stress :math:`\tau_v`
+(:math:`\eta \, dv/dy`), the turbulent shear stress :math:`\tau_t`, and the dispersive shear stress :math:`\tau_d`.
+
+.. math::
+   :label:
+
+   \tau = \tau_c + \tau_{mc} + \tau_v + \tau_t + \tau_d
+
+When written in terms of the shear rate (:math:`dv/dy`), the following quadratic rheological model can be defined (O’Brien and Julien, 1985):
+
+.. math::
+   :label:
+
+   \tau = \tau_y + \eta \left( \frac{dv}{dy} \right) + C \left( \frac{dv}{dy} \right)^2
+
+where
+
+.. math::
+   :label:
+
+   \tau_y = \tau_c + \tau_{mc}
+
+and
+
+.. math::
+   :label:
+
+   C = \rho_m \, l^2 + f \left( \rho_m, C_v \right) \, d_s^2
+
+
+The shear stress in hyperconcentrated sediment flows can be determined from the summation of the five shear stress components.
 The total shear stress τ depends on the cohesive yield stress τ\ :sub:`c`, the Mohr-Coulomb shear τ\ :sub:`mc`, the viscous shear stress τ\ :sub:`v`
 ( dv/dy), the turbulent shear stress τt, and the dispersive shear stress τd.
 
