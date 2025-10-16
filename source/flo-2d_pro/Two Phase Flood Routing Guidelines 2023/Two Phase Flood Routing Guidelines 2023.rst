@@ -2145,7 +2145,7 @@ Rigid bed elements can be used to simulate a concrete apron in a channel below a
 The scour depth limitation is a control that can be invoked for sediment routing.
 
 Appendix A – References
-~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 Ackers, P.
 and W.R.
