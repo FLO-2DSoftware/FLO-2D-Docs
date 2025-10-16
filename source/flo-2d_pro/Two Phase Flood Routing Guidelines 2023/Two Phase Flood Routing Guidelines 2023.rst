@@ -2302,13 +2302,13 @@ If other viscosity and yield stress relationships are applied, it is recommended
 in Figures B.1 and B.2.
 Data that falls outside the ranges in these figures may not yield representative flow results.
 
+*TABLE B.1.
+YIELD STRESS AND VISCOSITY AS A FUNCTION OF SEDIMENTCONCENTRATION.*
+
 .. list-table::
    :widths: 100
    :header-rows: 0
 
-
-   * - TABLE B.1.
-       YIELD STRESS AND VISCOSITY AS A FUNCTION OF SEDIMENTCONCENTRATION
 
    * - Source              | Yield Stress \ :sub:`y` =            | Viscosity  = \ *e*\ :sup:`Cv`| \ *e*\ :sup:`Cv`
        |+-------------------+-------------------+-------------------+-------------------|                  |                  |                  | 
@@ -2358,67 +2358,61 @@ Data that falls outside the ranges in these figures may not yield representative
 
    * - :sup:`\*`\ See O’Brien (1986) for the references.
 
+    *Conversion:* Shear Stress: 1 Pascal (PA) = 10 dynes/cm\ :sup:`2`
 
-..
+        Viscosity: 1 PAs = 10 dynes-sec/cm\ :sup:`2` = 10 poises
 
-   *Conversion:* Shear Stress: 1 Pascal (PA) = 10 dynes/cm\ :sup:`2`
+When routing the mud flood or mudflow progression from the tailings dam over the floodplain, the FLO-2D model preserves continuity for both the water
+and sediment.
+For every grid element and timestep, the change in the water and sediment volumes and the corresponding change in sediment concentration are computed.
+At the end of the simulation, the model reports (SUMMARY.OUT) on the amount of water and sediment removed from the study area (outflow) and the amount
+and location of the water and sediment remaining on the floodplain.
+This total sediment volume should be reviewed to determine if this represents the tailings volume that flowed through the breach.
+The areal extent of mudflow inundation and the maximum flow depths and velocities are a function of the available sediment.
 
-Viscosity: 1 PAs = 10 dynes-sec/cm\ :sup:`2` = 10 poises
+.. image:: img/Two048.jpg
 
-   When routing the mud flood or mudflow progression from the tailings dam over the floodplain, the FLO-2D model preserves continuity for both the water
-   and sediment.
-   For every grid element and timestep, the change in the water and sediment volumes and the corresponding change in sediment concentration are computed.
-   At the end of the simulation, the model reports (SUMMARY.OUT) on the amount of water and sediment removed from the study area (outflow) and the amount
-   and location of the water and sediment remaining on the floodplain.
-   This total sediment volume should be reviewed to determine if this represents the tailings volume that flowed through the breach.
-   The areal extent of mudflow inundation and the maximum flow depths and velocities are a function of the available sediment.
+*Figure B.1.
+Dynamic Viscosity of Mudflow Samples vs Volumetric Concentration.*
 
-|Two048|
+(From FLO-2D White Paper ‘Simulating Mudflow Guidelines’ after O’Brien and Julien, 1988)
 
-   Figure B.1.
-   Dynamic Viscosity of Mudflow Samples vs Volumetric Concentration
+.. image:: img/Two049.jpg
 
-   (From FLO-2D White Paper ‘Simulating Mudflow Guidelines’ after O’Brien and Julien, 1988)
+Figure B.2.
+Yield Stress of Mudflow Samples Versus Volumetric Concentration
 
-|Two049|
-
-   Figure B.2.
-   Yield Stress of Mudflow Samples Versus Volumetric Concentration
-
-   (From FLO-2D White Paper ‘Simulating Mudflow Guidelines’ after O’Brien and Julien, 1988)
+(From FLO-2D White Paper ‘Simulating Mudflow Guidelines’ after O’Brien and Julien, 1988)
 
 Appendix C.
 Model Speed and Numerical Stability Adjustments
 
-   Use the default Courant number (0.6) and TIME_ACCEL (0.1) for the initial simulation and then review the VELTIMEFP.OUT file that reports the maximum
-   velocities in descending order to determine if there are any unreasonable velocities.
-   Finally, verify the model stability by reviewing the SUPER.OUT file for high maximum Froude numbers.
-   Review the troubleshooting and numerical stability PowerPoint presentations in the FLO-2D help folder for more detailed information.
-   The following approach is suggested for adjusting slow down the model to eliminate numerical instability:
+Use the default Courant number (0.6) and TIME_ACCEL (0.1) for the initial simulation and then review the VELTIMEFP.OUT file that reports the maximum
+velocities in descending order to determine if there are any unreasonable velocities.
+Finally, verify the model stability by reviewing the SUPER.OUT file for high maximum Froude numbers.
+Review the troubleshooting and numerical stability PowerPoint presentations in the FLO-2D help folder for more detailed information.
+The following approach is suggested for adjusting slow down the model to eliminate numerical instability:
 
-1. If the model has no numerical surging or unreasonable maximum velocities and it is desired to have the model run faster, increase the TIME_ACCEL
-   parameter from 0.1 to 0.2 and run the model again.
-   If the model runs faster and the results still do not indicate any numerical instability, then increase TIME_ACCEL to 0.25.
-   Some numerical instability may begin to appear in VELTIMFP.OUT when TIME_ACCEL is 0.3 or higher.
+    1. If the model has no numerical surging or unreasonable maximum velocities and it is desired to have the model run faster, increase the TIME_ACCEL
+       parameter from 0.1 to 0.2 and run the model again.
+       If the model runs faster and the results still do not indicate any numerical instability, then increase TIME_ACCEL to 0.25.
+       Some numerical instability may begin to appear in VELTIMFP.OUT when TIME_ACCEL is 0.3 or higher.
 
-2. When unreasonable velocities or Froude numbers are noted, decrease the TIME_ACCEL by 0.05.
-   Review the model runtime at the end of the SUMMARY.OUT file and do the various numerical instability checks.
-   At this point, a pattern will probably be apparent and the optimum Courant number and TIME_ACCEL parameter can be achieved.
-   If the model becomes numerically stable with the decreased TIME_ACCEL, it may be possible to increase the Courant number to achieve a slightly faster
-   model.
+    2. When unreasonable velocities or Froude numbers are noted, decrease the TIME_ACCEL by 0.05.
+       Review the model runtime at the end of the SUMMARY.OUT file and do the various numerical instability checks.
+       At this point, a pattern will probably be apparent and the optimum Courant number and TIME_ACCEL parameter can be achieved.
+       If the model becomes numerically stable with the decreased TIME_ACCEL, it may be possible to increase the Courant number to achieve a slightly faster
+       model.
 
-3. If the model has some initial numerical instability, leave the TIME_ACCEL at the default value of 0.1 and decrease the Courant Number from 0.6 to 0.5
-   to 0.4 over several runs until the numerical instability is eliminated.
-   Data adjustments to eliminate numerical surging might include increasing n-values using the limiting Froude number and the ROUGH.OUT file.
-   Depressed grid elements, deep ponded water or steep slopes may also contribute to unreasonably high maximum velocities.
+    3. If the model has some initial numerical instability, leave the TIME_ACCEL at the default value of 0.1 and decrease the Courant Number from 0.6 to 0.5
+       to 0.4 over several runs until the numerical instability is eliminated.
+       Data adjustments to eliminate numerical surging might include increasing n-values using the limiting Froude number and the ROUGH.OUT file.
+       Depressed grid elements, deep ponded water or steep slopes may also contribute to unreasonably high maximum velocities.
 
-4. Following each flood simulation, the TIME.OUT file should be reviewed to determine which of the grid elements are frequently exceeding the Courant
-   timestep and contributing to a slow model speed.
-   For those grid elements with excessive timestep decrements, adjustments can be made to the node attributes such as topography, roughness, available
-   surface area (area reduction values ARFs) or width reduction values (WRFs).
+    4. Following each flood simulation, the TIME.OUT file should be reviewed to determine which of the grid elements are frequently exceeding the Courant
+       timestep and contributing to a slow model speed.
+       For those grid elements with excessive timestep decrements, adjustments can be made to the node attributes such as topography, roughness, available
+       surface area (area reduction values ARFs) or width reduction values (WRFs).
 
-..
-
-   C-1
 
 
