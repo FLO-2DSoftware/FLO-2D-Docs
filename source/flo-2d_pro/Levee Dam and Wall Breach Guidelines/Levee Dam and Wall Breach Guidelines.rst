@@ -492,12 +492,14 @@ Prescribed Breach Failure Controls and Guidelines**
        the submergence curves (Figure 8).
 
        The overtopping discharge in all possible directions including the peak discharge
+
        are reported in the LEVOVERTOP.OUT file.
 
    * - Levee Breach Discharge
      - The flow depth on the levee breach must exceed a tolerance value of 0.1 ft (0.3m) for
 
        the breach discharge to be computed. The flow depth is based on the
+
        highest water surface and the levee breach elevation.
 
        Breach discharge is computed with a broadcrested weir equation with a variable
@@ -566,11 +568,12 @@ The use of a hydraulic structure in contiguous grid elements separated by a wall
 represented by the hydraulic structure rating table for that flow direction.
 When the wall fails instantaneously, the hydraulic structure flow is also terminated, and the model reverts to overland flow calculations.
 
-|Levee009|
+.. image:: img/Levee009.jpg
 
-   **Figure 14.
-   Wall Collapse.
-   (FCDMC, 2018)**
+*Figure 14.
+Wall Collapse. (FCDMC, 2018).*
+
+.. image:: img/Levee009.jpg
 
 **Figure**
 
