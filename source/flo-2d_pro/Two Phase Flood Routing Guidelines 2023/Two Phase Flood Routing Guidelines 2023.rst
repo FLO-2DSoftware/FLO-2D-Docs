@@ -208,77 +208,80 @@ Tailings Dam Failure Mudflow Merriespruit, Virginia SA Feb 1994 (tailings.info).
 
 .. raw:: html
 
-    <table style="width:100%; border-collapse:collapse; text-align:center; font-size:90%;">
-      <caption><b>Table 1. Mudflow Behavior as a Function of Sediment Concentration (O’Brien, 1986)</b></caption>
-      <tr style="background-color:#f2f2f2;">
-        <th colspan="2">Sediment Concentration</th>
-        <th>Flow Characteristics</th>
+    <table style="width:100%; border-collapse: collapse; text-align: left; font-size: 90%; border: 1px solid black;">
+      <caption style="caption-side: top; text-align: center; font-weight: bold; padding: 4px;">
+        Table 1. Mudflow Behavior as a Function of Sediment Concentration (O’Brien, 1986)
+      </caption>
+
+      <tr>
+        <th colspan="2" style="border: 1px solid black; text-align: center;">Sediment Concentration</th>
+        <th style="border: 1px solid black; text-align: center;">Flow Characteristics</th>
       </tr>
       <tr>
-        <th>by Volume</th>
-        <th>by Weight</th>
-        <th></th>
+        <th style="border: 1px solid black; text-align: center;">by Volume</th>
+        <th style="border: 1px solid black; text-align: center;">by Weight</th>
+        <th style="border: 1px solid black; text-align: center;"></th>
       </tr>
 
-      <tr style="background-color:#d9ead3;">
-        <td colspan="3"><b>Landslide</b></td>
+      <tr>
+        <td colspan="3" style="border: 1px solid black; font-weight: bold;">Landslide</td>
       </tr>
       <tr>
-        <td>0.65 - 0.80</td>
-        <td>0.83 - 0.91</td>
-        <td>Will not flow; failure by block sliding</td>
+        <td style="border: 1px solid black;">0.65 - 0.80</td>
+        <td style="border: 1px solid black;">0.83 - 0.91</td>
+        <td style="border: 1px solid black;">Will not flow; failure by block sliding</td>
       </tr>
       <tr>
-        <td>0.55 - 0.65</td>
-        <td>0.76 - 0.83</td>
-        <td>Block sliding failure with internal deformation during the slide; slow creep prior to failure</td>
+        <td style="border: 1px solid black;">0.55 - 0.65</td>
+        <td style="border: 1px solid black;">0.76 - 0.83</td>
+        <td style="border: 1px solid black;">Block sliding failure with internal deformation during the slide; slow creep prior to failure</td>
       </tr>
 
-      <tr style="background-color:#d9ead3;">
-        <td colspan="3"><b>Mudflow</b></td>
+      <tr>
+        <td colspan="3" style="border: 1px solid black; font-weight: bold;">Mudflow</td>
       </tr>
       <tr>
-        <td>0.48 - 0.55</td>
-        <td>0.72 - 0.76</td>
-        <td>Flow evident; slow creep sustained mudflow; plastic deformation under its own weight; cohesive; will not spread on level surface</td>
+        <td style="border: 1px solid black;">0.48 - 0.55</td>
+        <td style="border: 1px solid black;">0.72 - 0.76</td>
+        <td style="border: 1px solid black;">Flow evident; slow creep sustained mudflow; plastic deformation under its own weight; cohesive; will not spread on level surface</td>
       </tr>
       <tr>
-        <td>0.45 - 0.48</td>
-        <td>0.69 - 0.72</td>
-        <td>Flow spreading on level surface; cohesive flow; some mixing</td>
+        <td style="border: 1px solid black;">0.45 - 0.48</td>
+        <td style="border: 1px solid black;">0.69 - 0.72</td>
+        <td style="border: 1px solid black;">Flow spreading on level surface; cohesive flow; some mixing</td>
       </tr>
 
-      <tr style="background-color:#d9ead3;">
-        <td colspan="3"><b>Mud Flood</b></td>
+      <tr>
+        <td colspan="3" style="border: 1px solid black; font-weight: bold;">Mud Flood</td>
       </tr>
       <tr>
-        <td>0.40 - 0.45</td>
-        <td>0.65 - 0.69</td>
-        <td>Flow mixes easily; shows fluid properties in deformation; spreads on horizontal surface but maintains an inclined surface; large particle (boulder) setting; waves appear but dissipate rapidly</td>
+        <td style="border: 1px solid black;">0.40 - 0.45</td>
+        <td style="border: 1px solid black;">0.65 - 0.69</td>
+        <td style="border: 1px solid black;">Flow mixes easily; shows fluid properties in deformation; spreads on horizontal surface but maintains an inclined fluid surface; large particle (boulder) setting; waves appear but dissipate rapidly</td>
       </tr>
       <tr>
-        <td>0.35 - 0.40</td>
-        <td>0.59 - 0.65</td>
-        <td>Marked settling of gravels and cobbles; spreading nearly complete on horizontal surface; liquid surface with two fluid phases appears; waves travel on surface</td>
+        <td style="border: 1px solid black;">0.35 - 0.40</td>
+        <td style="border: 1px solid black;">0.59 - 0.65</td>
+        <td style="border: 1px solid black;">Marked settling of gravels and cobbles; spreading nearly complete on horizontal surface; liquid surface with two fluid phases appears; waves travel on surface</td>
       </tr>
       <tr>
-        <td>0.30 - 0.35</td>
-        <td>0.54 - 0.59</td>
-        <td>Separation of water on surface; waves travel easily; most sand and gravel has settled out and moves as bedload</td>
+        <td style="border: 1px solid black;">0.30 - 0.35</td>
+        <td style="border: 1px solid black;">0.54 - 0.59</td>
+        <td style="border: 1px solid black;">Separation of water on surface; waves travel easily; most sand and gravel has settled out and moves as bedload</td>
       </tr>
       <tr>
-        <td>0.20 - 0.30</td>
-        <td>0.41 - 0.54</td>
-        <td>Distinct wave action; fluid surface; all particles resting on bed in quiescent fluid condition</td>
+        <td style="border: 1px solid black;">0.20 - 0.30</td>
+        <td style="border: 1px solid black;">0.41 - 0.54</td>
+        <td style="border: 1px solid black;">Distinct wave action; fluid surface; all particles resting on bed in quiescent fluid condition</td>
       </tr>
 
-      <tr style="background-color:#d9ead3;">
-        <td colspan="3"><b>Water</b></td>
+      <tr>
+        <td colspan="3" style="border: 1px solid black; font-weight: bold;">Water</td>
       </tr>
       <tr>
-        <td>&lt; 0.20</td>
-        <td>&lt; 0.41</td>
-        <td>Water flood with conventional suspended load</td>
+        <td style="border: 1px solid black;">&lt; 0.20</td>
+        <td style="border: 1px solid black;">&lt; 0.41</td>
+        <td style="border: 1px solid black;">Water flood with conventional suspended load</td>
       </tr>
     </table>
 
