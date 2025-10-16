@@ -676,7 +676,7 @@ The required data includes:
 .. image:: img/Levee012.jpg
 
 *Figure 18.
-QGIS Prescribed Wall Breach Dialog Box.
+QGIS Prescribed Wall Breach Dialog Box.*
 
 Failure will initiate when the water surface exceeds an assigned elevation and duration.
 The failure criteria can be defined using the grid element elevation + a fail height as shown in Figure 19.
@@ -1771,9 +1771,7 @@ This model is known as a levee fragility curve (Figure 26).
 .. image:: img/Levee020.jpg
 
 *Figure 26.
-Example of Levee Fragility Curves for Typical Sacramento River Basin Levees. (From the Corps of Engineers, Comprehensive
-
-                                                                    Study, 2002)**
+Example of Levee Fragility Curves for Typical Sacramento River Basin Levees. (From the Corps of Engineers, Comprehensive Study, 2002)*
 
 The levee fragility curves specify the relationship between the probability of levee failure and the water surface elevation (or likely failure stage)
 below the levee crest.
