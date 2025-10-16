@@ -27,11 +27,11 @@ Fluid motion is considered to be Newtonian when the shear stress is a linear fun
 nonlinear and is more complex.
 NonNewtonian fluids may be divided into three categories:
 
-- Fluids with a non-linear relationship between shear stress and shear rate;
+    - Fluids with a non-linear relationship between shear stress and shear rate;
 
-- Fluids in which the shear stress not only depends on shear rate but is also a function of the time of shearing;
+    - Fluids in which the shear stress not only depends on shear rate but is also a function of the time of shearing;
 
-- Fluids that are viscoelastic and exhibit characteristics of both elastic solids and viscous fluids.
+    - Fluids that are viscoelastic and exhibit characteristics of both elastic solids and viscous fluids.
 
 Sediment particle motion that exhibits pore water pressure or significant dispersive stress falls into the category of bulk solids movement as either
 landslides or granular flows and should not be considered as fluid motion.
@@ -88,42 +88,7 @@ High fluid matrix density can increase the buoyancy of large sediment particles 
 often being transported near the flow surface.
 The yield stress, is a measure of the internal fluid resistance to flow and will effect both flow initiation and cessation.
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
-
-
-   * - Table 1.
-       Mudflow Behavior as a Function of Sediment Concentration
-
-   * - | Sediment                                | Flow Characteristics|                                         || Concentration                           |+--------------------+--------------------+| by                 |    by Weight       ||                    |                    || Volume             |                    |
-
-   * - Landslide          | 0.65 - 0.80        | 0.83 - 0.91        |    Will not flow; failure by block|                    |                    |
-       sliding+--------------------+--------------------+-----------------------------------------| 0.55 - 0.65        | 0.76 - 0.83        |    Block
-       sliding failure with internal|                    |                    |    deformation during the slide; slow|                    |
-       |    creep prior to failure
-
-   * - Mudflow            | 0.48 - 0.55        | 0.72 - 0.76        |    Flow evident; slow creep sustained|                    |                    |
-       mudflow; plastic deformation under|                    |                    |    its own weight; cohesive; will not|                    |
-       |    spread on level surface+--------------------+--------------------+-----------------------------------------| 0.45 - 0.48        | 0.69 - 0.72
-       |    Flow spreading on level surface;|                    |                    |    cohesive flow; some mixing
-
-   * - Mud Flood          | 0.40 - 0.45        | 0.65 - 0.69        |    Flow mixes easily; shows fluid|                    |                    |
-       properties in deformation; spreads|                    |                    |    on horizontal surface but maintains|                    |
-       |    an inclined fluid surface; large|                    |                    |    particle (boulder) setting; waves|                    |
-       |    appear but dissipate rapidly+--------------------+--------------------+-----------------------------------------| 0.35 - 0.40        | 0.59 -
-       0.65        |    Marked settling of gravels and|                    |                    |    cobbles; spreading nearly complete|                    |
-       |    on horizontal surface; liquid|                    |                    |    surface with two fluid phases|                    |
-       |    appears; waves travel on surface+--------------------+--------------------+-----------------------------------------| 0.30 - 0.35        | 0.54 -
-       0.59        |    Separation of water on surface;|                    |                    |    waves travel easily; most sand and|
-       |                    |    gravel has settled out and moves as|                    |                    |
-       bedload+--------------------+--------------------+-----------------------------------------| 0.20 - 0.30        | 0.41 - 0.54        |    Distinct
-       wave action; fluid surface;|                    |                    |    all particles resting on bed in|                    |                    |
-       quiescent fluid condition
-
-   * - Water Flood     | < 0.20             | < 0.41             |    Water flood with conventional|                    |                    |    suspended
-       load and bedload
-
+.. image:: img/Simula001.jpg
 
 Granular flows are unique flow phenomena comprising principally of non-cohesive sediment particles with only a limited water volume.
 Granular flows are also referred to as dispersive flows because particle momentum is transferred by collision similar to billiard ball contact.
