@@ -1395,48 +1395,7 @@ where:
 *Table 5.
 Muskingum – Cunge Variable Definitions.*
 
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
-
-
-   * - d/side
-     - S\ :sub:`f`   | B            | a1
-     - b1
-     - c1
-
-   * - < 1.0
-     - < 0.000001    |              | ---------------+--------------+-------------- > 0.000001    | 0.45         | 0.
-     - V = 0.
-     --------
-     -
-
-   * - > 1.0
-     - < 0.000001    |              |
-     - V = 0.
-     -
-
-   * -
-     - 0.000001 <    | 1.55         | 0.5 S\ :sub:`f` < |              | 0.0002        |              |
-     - 0.0004
-     - 1.0
-
-   * -
-     - 0.0002 <      | 1.55         | 0.5 S\ :sub:`f` < |              | 0.01          |              |
-     - 0.0004
-     - 30.
-
-   * -
-     - 0.01 <        | 1.25         | -0.5 S\ :sub:`f` < |              | 0.1           |              |
-     - -0.0004
-     - -30.
-
-   * -
-     - S\ :sub:`f` > | 0.667        | 0.
-       0.10          |              |
-     - 0.
-     - 0.
-
+.. image:: img/Levee031.jpg
 
 Applying this equation in its slightly different forms in different depth and friction slope regimes will predict reasonable flow velocities where
 both grid elements sharing flow are reservoir elements with a starting water surface elevation and the average depth between the grid elements is
