@@ -550,16 +550,14 @@ The altered hydrograph shape results in a modified peak discharge that would exc
 *Figure 6.
 Channel Outflow Hydrographs*
 
-Surface Conditions: Topography, buildings, obstructions, channels and vegetation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Surface Conditions: Topography, buildings, obstructions, channels and vegetation*
 
 Topography effects local flow depth, velocity and deposition (or scour).
 Flow depositional features such as natural levees and berms are primarily a function of topography and flow resistance.
 Reduction in slope can induce mudflow cessation or particle settling that will effect sediment concentration.
 Buildings and flow obstructions (flood walls) can alter the flow path, or initiate flow cessation.
 
-Fluid and sediment properties
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Fluid and sediment properties*
 
 Fluid properties vary with sediment concentration.
 Fluid properties such as viscosity, yield stress, and density affect turbulence, flow momentum and energy dissipation.
@@ -689,10 +687,10 @@ In Table 4, when the concentration by volume exceeds 0.531, the dispersive contr
 This factor can be used to increase the turbulence Manning’s n-value in the quadratic rheologic model when the sediment concentration by volume
 exceeds 53%.
 
-.. image:: img/Simula006.jpg
-
 *Table 4.
 Dispersive – Turbulent Ratio*
+
+.. image:: img/Simula006.jpg
 
 **References**
 
