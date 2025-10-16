@@ -1451,10 +1451,10 @@ elevation (Figure 24).
 This can also be accomplished by opening an INFLOW.DAT file in an ASCII format text editor and assign an R-line with a grid element number and
 starting water surface elevation: R 3565 1435.00 0.25
 
-|Levee019|
+.. image:: img/Levee019.jpg
 
-   **Figure 24.
-   Reservoir Starting Water Surface Elevation Assignment.**
+*Figure 24.
+Reservoir Starting Water Surface Elevation Assignment.*
 
 When the model starts, it will assign this elevation to every contiguous grid element with a ground elevation that is less than the starting water
 surface elevation in an expanding sequence.
