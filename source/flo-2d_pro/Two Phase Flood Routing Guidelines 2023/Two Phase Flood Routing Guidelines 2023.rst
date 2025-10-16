@@ -2325,52 +2325,53 @@ YIELD STRESS AND VISCOSITY AS A FUNCTION OF SEDIMENTCONCENTRATION.*
      - 0.0538
      - 14.5
 
-\
    * - Aspen Natural Soil
-0.152
-18.7
-0.00136
-28.4
+     - 0.152
+     - 18.7
+     - 0.00136
+     - 28.4
 
    * - Aspen Mine Fill
-0.0473
-21.1
-0.128
-12.0
+     - 0.0473
+     - 21.1
+     - 0.128
+     - 12.0
 
    * - Aspen Watershed
-0.0383
-19.6
-0.000495
-27.1
+     - 0.0383
+     - 19.6
+     - 0.000495
+     - 27.1
 
    * - Aspen Mine
-0.291
-14.3
-0.000201
-33.1Source Area
+     - 0.291
+     - 14.3
+     - 0.000201
+     - 33.1Source Area
 
    * - Glenwood 1
-0.0345
-20.1
-0.00283
-23.0
+     - 0.0345
+     - 20.1
+     - 0.00283
+     - 23.0
 
    * - Glenwood 2
-0.0765
-16.9
-0.648
-6.20
+     - 0.0765
+     - 16.9
+     - 0.648
+     - 6.20
 
    * - Glenwood 3
-0.000707
-29.8
-0.00632
-19.9
+     - 0.000707
+     - 29.8
+     - 0.00632
+     - 19.9
 
    * - Glenwood 4
-0.00172           | 29.5
-0.000602          | 33.1
+     - 0.00172
+     - 29.5
+     - 0.000602
+     - 33.1
 
    * - Relationships Available from the Literature
      -
@@ -2378,63 +2379,64 @@ YIELD STRESS AND VISCOSITY AS A FUNCTION OF SEDIMENTCONCENTRATION.*
      -
 
    * - Iida
--
--
-0.0000373
-36.6(1938)\ :sup:`\*`
+     -
+     -
+     - 0.0000373
+     - 36.6(1938)\ :sup:`\*`
 
    * - Dai et al. (1980)
-2.60
-17.48
-0.00750
-14.39
+     - 2.60
+     - 17.48
+     - 0.00750
+     - 14.39
 
    * - Kang and Zhang (1980)
-1.75
-7.82
-0.0405
-8.29(1980)
+     - 1.75
+     - 7.82
+     - 0.0405
+     - 8.29(1980)
 
-   * - Qian et al. (1980)  |
-0.00136
-21.2
--
+   * - Qian et al. (1980)
+     - 0.00136
+     - 21.2
+     -
+     -
 
    * -
-0.050
-15.48
--
--
+     - 0.050
+     - 15.48
+     -
+     -
 
    * - Chien and Ma (1958)
-0.0588
-19.1-32.7
--
--
+     - 0.0588
+     - 19.1-32.7
+     -
+     -
 
    * - Fei (1981)
-0.166
-25.6
--
--|
+     - 0.166
+     - 25.6
+     -
+     -
 
-* -
-  - 0.00470
-22.2
--
--
+   * -
+     - 0.00470
+     - 22.2
+     -
+     -
 
-- * *:sup:`\*`\ See O’Brien (1986) for the references.
--
--
--
--
+   * - *:sup:`\*`\ See O’Brien (1986) for the references.
+     -
+     -
+     -
+     -
 
 
 
-    *Conversion:* Shear Stress: 1 Pascal (PA) = 10 dynes/cm\ :sup:`2`
+                *Conversion:* Shear Stress: 1 Pascal (PA) = 10 dynes/cm\ :sup:`2`
 
-        Viscosity: 1 PAs = 10 dynes-sec/cm\ :sup:`2` = 10 poises
+                    Viscosity: 1 PAs = 10 dynes-sec/cm\ :sup:`2` = 10 poises
 
 When routing the mud flood or mudflow progression from the tailings dam over the floodplain, the FLO-2D model preserves continuity for both the water
 and sediment.
