@@ -379,7 +379,7 @@ Less viscous flows (mud floods) are always turbulent.
 *TABLE 3.
 YIELD STRESS AND VISCOSITY AS A FUNCTION OF SEDIMENT CONCENTRATION*
 
-.. image:: img/Simula007.jpg
+.. image:: img/Simula008.jpg
 
 *Conversion:* Shear Stress: 1 Pascal (PA) = 10 dynes/cm\ :sup:`2`
 
@@ -512,7 +512,7 @@ The highly variable nature of the sediment concentration gives rise to unsteady 
 replicated with any degree of certainty.
 When assigning sediment concentrations to a flood hydrograph the following guidelines are suggested:
 
-    - The average sediment concentration should reflect the estimated water and sediment volumes for the design storm.
+        - The average sediment concentration should reflect the estimated water and sediment volumes for the design storm.
 
     - The sediment volume should not exceed the estimated maximum potential sediment yield observed for the basin.
 
