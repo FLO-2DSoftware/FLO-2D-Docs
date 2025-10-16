@@ -187,9 +187,7 @@ A pump is also a hydraulic structure that may produce a discharge for a given st
 .. image:: img/Hydrau007.jpg
 
 *Figure 6.
-If INOUTCONT = 0, the Discharge Q is a Function of the Headwater Depth H\ :sub:`w` Regardless of the*
-
-   Tailwater T\ :sub:`w`
+If INOUTCONT = 0, the Discharge Q is a Function of the Headwater Depth H\ :sub:`w` Regardless of the Tailwater T\ :sub:`w`*
 
 If a structure spans more than one channel element in a channel segment as shown in Figure 6 above, split the channel into two segments and assign the
 inlet node at the end of the first segment and the outlet node at the start of the second segment.
