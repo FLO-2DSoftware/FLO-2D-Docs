@@ -1349,10 +1349,10 @@ Ponded flow is essentially frictionless flow with a velocity profile that may be
 (Figure 23 right).
 Average depth integrated velocities are likely to be less than 1 fps (0.30 mps).
 
-|Levee018|
+.. image:: img/Levee018.jpg
 
-   **Figure 23.
-   Logarithm Velocity and Ponded Velocity Profile**
+*Figure 23.
+Logarithm Velocity and Ponded Velocity Profile.*
 
 In flow through a reservoir, the momentum terms are negligibly small and the water surface slope is also small and this leads to numerical instability
 in the routing algorithm solution to the free surface open channel flow equations.
