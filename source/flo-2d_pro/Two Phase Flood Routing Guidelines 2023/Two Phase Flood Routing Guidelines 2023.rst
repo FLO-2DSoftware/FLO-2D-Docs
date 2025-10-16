@@ -1531,8 +1531,8 @@ The tailings stack will mobilize at the start of the simulation and begin flow d
 
 .. image:: img/Two034.jpg
 
-   Figure 31.
-   The Tailings Mudflow is Mobilized at the Start of the Simulation.
+*Figure 31.
+The Tailings Mudflow is Mobilized at the Start of the Simulation.*
 
 .. image:: img/Two035.jpg
 
