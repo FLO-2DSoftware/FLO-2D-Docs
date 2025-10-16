@@ -226,7 +226,9 @@ Hydraulic Structure Rating Table Options*
 
        submergence criteria as defined by
 
-       (initially the SUBFACTOR = 1.0)   IF DELTA > 0.975, SUBFACTOR = SUBFACTOR – 0.01 IF DELTA < 0.975, SUBFACTOR = SUBFACTOR
+       (initially the SUBFACTOR = 1.0)   IF DELTA > 0.975, SUBFACTOR = SUBFACTOR – 0.01 IF DELTA < 0.975,
+
+       SUBFACTOR = SUBFACTOR
        + 0.015 IF DELTA
 
        > 1, SUBFACTOR = SUBFACTOR - 0.01\* DELTA
@@ -243,6 +245,7 @@ Hydraulic Structure Rating Table Options*
 
    * - INOUTCONT = 1, 2
      - For bridges joining contiguous grid elements, the rating table is turned off for flow depths less than one
+
        foot or when the SUBFACTOR is less than 0.02.
 
        This would occur for inflow and outflow WSEL that are nearly equilibrated.
