@@ -1400,11 +1400,6 @@ Muskingum – Cunge Variable Definitions.*
    :header-rows: 0
 
 
-   * -
-     - **Muskingum – Cunge Variable Definitions**
-     -
-     -
-
    * - d/side
      - S\ :sub:`f`   | B            | a1
      - b1
