@@ -545,7 +545,7 @@ outflow, the design mudflow discharge would be significantly underestimated.
 This is because the hydrograph shape has been altered by the flood routing resulting in a steeper, slower moving rising limb.
 The altered hydrograph shape results in a modified peak discharge that would exceed the bulked water hydrograph.
 
-.. image:: img/Simula007.jpg
+.. image:: img/Simula011.jpg
 
 *Figure 6.
 Channel Outflow Hydrographs*
