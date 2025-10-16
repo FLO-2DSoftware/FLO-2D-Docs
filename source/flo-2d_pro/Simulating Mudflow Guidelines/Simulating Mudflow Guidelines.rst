@@ -234,54 +234,32 @@ and
 
    C = \rho_m \, l^2 + f \left( \rho_m, C_v \right) \, d_s^2
 
+In these equations, :math:`\eta` is the dynamic viscosity; :math:`\tau_c` is the cohesive yield strength;
+the Mohr–Coulomb stress :math:`\tau_{mc} = p_s \tan \phi` depends on the intergranular pressure :math:`p_s`
+and the angle of repose :math:`\phi` of the material;
+:math:`C` denotes the inertial shear stress coefficient, which depends on the mass density of the mixture
+:math:`\rho_m`, the Prandtl mixing length :math:`l`, the sediment size :math:`d_s`, and a function of the volumetric
+sediment concentration :math:`C_v`.
 
-The shear stress in hyperconcentrated sediment flows can be determined from the summation of the five shear stress components.
-The total shear stress τ depends on the cohesive yield stress τ\ :sub:`c`, the Mohr-Coulomb shear τ\ :sub:`mc`, the viscous shear stress τ\ :sub:`v`
-( dv/dy), the turbulent shear stress τt, and the dispersive shear stress τd.
+Bagnold (1954) defined the function relationship :math:`f(\rho_m, C_v)` as:
 
- *=* \ *c +* \ *mc +* \ *v +* \ *t +* \ *d*
+.. math::
+   :label:
 
-When written in terms of the shear rate (dv/dy) the following quadratic rheological model can be defined (O'Brien and Julien, 1985):
+   f(\rho_m, C_v) = a_i \, \rho_m \left[ \left( \frac{C^*}{C_v} \right)^{1/3} - 1 \right]^{-2}
 
-   *2*
-
- *dv*\   *dv*\ 
-
-    *=* \ *y +*   *dy*\ \ :sub:`` *+ C* \ :sub:`` *dy*\ \ :sub:``
-
-:sub:``
-
-where
-
-\ *y =* \ *c +* \ *mc*
-
-and
-
-   *C =* \ *m l\ 2 + f (*\ \ *m , C\ v ) d\ 2\ s*
-
-In these equations, η is the dynamic viscosity; τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τmc = pstanφ depends on the
-intergranular pressure ps and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which depends on the mass
-density of the mixture ρ\ :sub:`m`, the Prandtl mixing length l, the sediment size d\ :sub:`s` and a function of the volumetric sediment concentration
-C\ :sub:`v`.
-Bagnold (1954) defined the function relationship f(ρ\ :sub:`m`, C\ :sub:`v`) as: where a\ :sub:`i` (~ 0.01) is an empirical coefficient and C\
-:sub:`\*` is the maximum static volume concentration
-
-*1/3* :sup:`−2`
-
-   *f(*\ \ *m , C\ v ) = a\ i* \ *m* \ *C\**  *- 1*\ 
-
- 
-
-\ :sub:``\ \ *Cv*  
-
+where :math:`a_i` (~0.01) is an empirical coefficient and :math:`C^*` is the maximum static volume concentration
 for the sediment particles.
-It should be noted that Takahashi (1979) found that the coefficient a\ :sub:`i` may vary over several orders of magnitude.
-Egashira et al.
-(1989) revised this relationship and suggested the following:
 
-   *f(*\ \ *s , C\ v ) =*   *6*  *1/3*\ sin *2* \ *I* \ *s (1- e2n ) Cv1/3*
+It should be noted that Takahashi (1979) found that the coefficient :math:`a_i` may vary over several orders
+of magnitude. Egashira et al. (1989) revised this relationship and suggested the following:
 
-   *12* 
+.. math::
+   :label:
+
+   f(\rho_s, C_v) = \frac{\pi}{12}
+   \left( \frac{6}{\pi} \right)^{1/3}
+   \sin^2 \alpha_I \, \rho_s (1 - e_n^2) \, C_v^{1/3}
 
 where the energy restitution coefficient e\ :sub:`n` after impact ranges 0.70 < e\ :sub:`n` < 0.85 for sands, α\ :sub:`I` is the average particle
 impact angle and ρ\ :sub:`s` is the mass density of sediment particles.
