@@ -675,8 +675,8 @@ The required data includes:
 
 .. image:: img/Levee012.jpg
 
-**Figure 18.
-QGIS Prescribed Wall Breach Dialog Box.*
+*Figure 18.
+QGIS Prescribed Wall Breach Dialog Box.
 
 Failure will initiate when the water surface exceeds an assigned elevation and duration.
 The failure criteria can be defined using the grid element elevation + a fail height as shown in Figure 19.
