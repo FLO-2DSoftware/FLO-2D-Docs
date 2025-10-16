@@ -1379,6 +1379,11 @@ Mudflow yield stress τ\ :sub:`y` and viscosity η vary principally with sedimen
 The viscous stresses will not play a role in the flow hydraulics unless the sediment concentration by volume exceeds 20%.
 If a rheological laboratory analysis of the
 
+.. math::
+
+   \eta = \alpha_1 e^{\beta_1 c_v} \quad \text{and} \quad \tau_y = \alpha_2 e^{\beta_2 c_v}
+
+
   and
 = e
  C
