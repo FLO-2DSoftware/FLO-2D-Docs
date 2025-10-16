@@ -320,19 +320,20 @@ Resistance Parameters for LaminarFlow\ :sup:`1`*
 The flow resistance n\ :sub:`td` of the turbulent and dispersive shear stress components are combined into an equivalent Manning’s n-value for the
 flow:
 
-   *= n\ td2 V 2*
+.. math::
+   :label:
 
-*St d 4/3*
-
-   *h*
+   S_{td} = \frac{n_{td}^2 \, V^2}{h^{4/3}}
 
 At very high concentrations, the dispersive stress arising from sediment particle contact increases the flow resistance n\ :sub:`td` by transferring
 more momentum flux to the boundary.
 To estimate this increase in flow resistance, the conventional turbulent flow resistance n-value n\ :sub:`t` is increased by an exponential function
 of the sediment concentration C\ :sub:`v`.
 
- ntd = nt b emCv
- ~~~~~~~~~~~~~~~
+.. math::
+   :label:
+
+   n_{td} = n_t \, b \, e^{m C_v}
 
 where: n\ :sub:`t` is the turbulent n-value, b is a coefficient (0.0538) and m is an exponent (6.0896).
 This equation was based on unpublished paper by Julien and O’Brien (1998) that relates the dispersive and turbulent resistance in hyperconcentrated
@@ -340,9 +341,12 @@ sediment flows as function of the ratio of the flow depth to the sediment grain 
 
 The friction slope components can then be combined in the following form:
 
-   *S f =*  *y + 8K*   *V2 + n\ td24 V\ 3 2*
+.. math::
+   :label:
 
-    *h m h h / m*
+   S_f = \frac{\tau_y}{\gamma_m \, h}
+   + \frac{K \, \eta \, V}{8 \, \gamma_m \, h^2}
+   + \frac{n_{td}^2 \, V^2}{h^{4/3}}
 
 A quadratic equation solution to the above friction slope equation has been formulated in the FLO-2D model to estimate the velocity for use in the
 momentum equation.
