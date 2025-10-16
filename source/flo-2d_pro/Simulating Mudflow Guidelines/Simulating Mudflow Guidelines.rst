@@ -301,12 +301,10 @@ In Table 2 for Kentucky Blue Grass with a slope of 0.01, K was estimated at 10,0
 A value of K = 2,285 was calibrated on the Rudd Creek, Utah mudflow for a residential area and has been used effectively for most urban studies.
 For laminar and transitional flows, turbulence is suppressed and the laminar flow resistance parameter K becomes important.
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+*Table 2
+Resistance Parameters for LaminarFlow\ :sup:`1`*
 
-
-   * - Table 2 Resistance Parameters for LaminarFlow\ :sup:`1`
+.. image:: img/Simula009.jpg
 
    * - Surface                                | Range of K
 
