@@ -1058,15 +1058,15 @@ Earlier versions of the FLO-2D model ignored the ground or water surface elevati
 potential static pressure failure.
 Error and warning messages were established for these elevation conditions.
 
-.. image:: img/Levee013.jpg
+.. image:: img/Levee013.png
 
 *Figure 20.
 Levee or Wall Configuration with Uneven Ground Elevations.*
 
-- If the ground elevations on each side of the wall are different by more than 0.5 ft, the cell with the higher elevation are set to lower grid element
-  elevation.
+    - If the ground elevations on each side of the wall are different by more than 0.5 ft, the cell with the higher elevation are set to lower grid element
+      elevation.
 
-- If the failure elevation is lower than either ground elevation, the failure elevation is reset to 3 ft above the lowest ground elevation.
+    - If the failure elevation is lower than either ground elevation, the failure elevation is reset to 3 ft above the lowest ground elevation.
 
 In previous model versions it was assumed that the ground elevation was essentially the same on both sides of the wall, so that when the water surface
 reached the failure elevation, the wall would collapse under the static pressure head on one side of the wall.
@@ -1074,12 +1074,12 @@ The wall would then be removed, and the water would flow across the cell boundar
 In the current model, failure will ensue when the difference in the water surface elevation is greater than the failure elevation.
 The levee/wall failure criteria was simplified as follows:
 
-- Water surface elevation must be greater than the prescribed levee failure elevation plus a tolerance value of 0.1 ft or 0.03 m.
+    - Water surface elevation must be greater than the prescribed levee failure elevation plus a tolerance value of 0.1 ft or 0.03 m.
 
-- Water surface elevation on the upstream side (storage side) of the levee must be higher than the downstream water surface elevation
+    - Water surface elevation on the upstream side (storage side) of the levee must be higher than the downstream water surface elevation
 
-- The water surface elevation minus the ground elevation (flow depth) on the upstream side must be greater than the water surface elevation minus the
-  ground elevation (flow depth) on the downstream side of the dam or levee.
+    - The water surface elevation minus the ground elevation (flow depth) on the upstream side must be greater than the water surface elevation minus the
+      ground elevation (flow depth) on the downstream side of the dam or levee.
 
 The additional criteria that the difference in the water surface elevations across the wall must exceed the failure elevation minus the ground
 elevation to assess the wall stability was removed.
@@ -1088,13 +1088,13 @@ It is left up to the user to evaluate or assume that the levee will fail if the 
 The following options are available to assess the relationship between the wall crest elevation, the wall failure elevation and the floodplain ground
 elevation:
 
-- DEPRESSDEPTH (in CONT.DAT) = 0.0 to 10.0 ft; Identifies the wall with a crest elevation lower than DEPRESSDEPTH in LOW_LEVEE_CREST_ELEVATIONS.OUT
-  file.
+    - DEPRESSDEPTH (in CONT.DAT) = 0.0 to 10.0 ft; Identifies the wall with a crest elevation lower than DEPRESSDEPTH in LOW_LEVEE_CREST_ELEVATIONS.OUT
+      file.
 
-- DEPRESSDEPTH = -1.0 to - 10.0 ft; Assesses the side of the wall where the crest elevation is assigned to determine if the levee height is lower than
-  the DEPRESSDEPTH value.
+    - DEPRESSDEPTH = -1.0 to - 10.0 ft; Assesses the side of the wall where the crest elevation is assigned to determine if the levee height is lower than
+      the DEPRESSDEPTH value.
 
-- DEPRESSDEPTH = -101.0 to -110.0 ft; Assesses both sides of the wall to determine if the height is lower than DEPRESSDEPTH (1 ft to 10 ft).
+    - DEPRESSDEPTH = -101.0 to -110.0 ft; Assesses both sides of the wall to determine if the height is lower than DEPRESSDEPTH (1 ft to 10 ft).
 
 Summary
 -------
@@ -1123,23 +1123,23 @@ Predicted Breach Erosion Input Data
 The dam breach erosion component provides an opportunity to simulate the physical processes of breach widening through scour.
 Nine out of the eleven sediment transport equations in the FLO-2D can be used to compute the breach erosion including:
 
-- Zeller-Fullerton
+    - Zeller-Fullerton
 
-- Yang
+    - Yang
 
-- Engelund & Hansen
+    - Engelund & Hansen
 
-- Ackers & White
+    - Ackers & White
 
-- Laursen
+    - Laursen
 
-- MPM-Smart
+    - MPM-Smart
 
-- Karim-Kennedy
+    - Karim-Kennedy
 
-- Parker, Klingeman & McLean
+    - Parker, Klingeman & McLean
 
-- Van Rijn
+    - Van Rijn
 
 See the FLO-2D Reference Manual for a description of each equation.
 The different sediment transport capacity equations predict a range of erosion rates that effect the breach discharge hydrograph timing and peak.
@@ -1159,49 +1159,46 @@ The steep slope generates sediment concentration in the hyper-concentrated flow 
 To maximize the breach rate, assign the pipe inlet near the maximum water surface (Figure 4).
 A brief description of the pipe breach erosion computational sequence follows:
 
-- If upstream water surface > pipe elevation – piping failure initiates;
+    - If upstream water surface > pipe elevation – piping failure initiates;
 
-- User specifies initial pipe elevation with outlet fixed 1 ft above downstream embankment toe.
-  This enables the steepest slope, which should approximate the most conservative case.
-  The erosion pivots around the embankment toe;
+    - User specifies initial pipe elevation with outlet fixed 1 ft above downstream embankment toe.
+      This enables the steepest slope, which should approximate the most conservative case.
+      The erosion pivots around the embankment toe;
 
-- With pipe enlargement or collapse – channel breach flow ensues;
+    - With pipe enlargement or collapse – channel breach flow ensues;
 
-- For both pipe and channel breach flow, the discharge is controlled by weir or pipe flow, and the hydraulics computed by open channel flow;
+    - For both pipe and channel breach flow, the discharge is controlled by weir or pipe flow, and the hydraulics computed by open channel flow;
 
-- Tailwater submergence is evaluated as previously discussed;
+    - Tailwater submergence is evaluated as previously discussed;
 
-- Sediment scour volume is computed based on the selected equation;
+    - Sediment scour volume is computed based on the selected equation;
 
-- The model removes the eroded sediment volume from the pipe geometry uniformly to widen the breach;
+    - The model removes the eroded sediment volume from the pipe geometry uniformly to widen the breach;
 
-- Weir flow versus pipe flow is based on the head of the weir.
-  If the head is greater than 1.5 times the pipe diameter, then pipe flow is computed using the Darcy-Weisbach equation with a pipe friction factor
-  computed from the user selected n-value.
+    - Weir flow versus pipe flow is based on the head of the weir.
+      If the head is greater than 1.5 times the pipe diameter, then pipe flow is computed using the Darcy-Weisbach equation with a pipe friction factor
+      computed from the user selected n-value.
 
-- The pipe flow routine checks for laminar-turbulent flow using Reynold’s number and uses the appropriate flow regime equation to compute the velocity.
+    - The pipe flow routine checks for laminar-turbulent flow using Reynold’s number and uses the appropriate flow regime equation to compute the velocity.
 
 Channel flow will occur if the dam or levee is overtopped or if the pipe roof collapses (Figure 5).
 The channel breach computational sequence is outlined as follows:
 
-- For the overtopped condition, breach discharge initiates as channel flow using the broadcrested weir equation through a hardcoded width of 1.0 ft and
-  the downstream face slope;
+    - For the overtopped condition, breach discharge initiates as channel flow using the broadcrested weir equation through a hardcoded width of 1.0 ft and
+      the downstream face slope;
 
-- The overtopping channel breach flow combines with any overtopping discharge over the levee or dam grid element side with the breach;
+    - The overtopping channel breach flow combines with any overtopping discharge over the levee or dam grid element side with the breach;
 
-- The channel breach discharge is predicted by weir flow and the channel hydraulics down the steep
+    - The channel breach discharge is predicted by weir flow and the channel hydraulics down the steep
+      slope are computed as open channel flow using Manning’s equation;
 
-..
+    - The sediment scour volume is removed uniformly from the bottom and sides of the channel to widen the breach;
 
-   slope are computed as open channel flow using Manning’s equation;
+    - The breach geometry transitions to a trapezoidal channel when the side slopes collapse;
 
-- The sediment scour volume is removed uniformly from the bottom and sides of the channel to widen the breach;
+    - The breach scour will eventually include erosion of the upstream face;
 
-- The breach geometry transitions to a trapezoidal channel when the side slopes collapse;
-
-- The breach scour will eventually include erosion of the upstream face;
-
-- The breach channel slope erodes parallel to the downstream face.
+    - The breach channel slope erodes parallel to the downstream face.
 
 The FLO-2D breach erosion component integrates breach discharge with two-dimensional downstream flooding.
 The erosion is based on the breach flow hydraulics, the reservoir water surface and tailwater elevations.
