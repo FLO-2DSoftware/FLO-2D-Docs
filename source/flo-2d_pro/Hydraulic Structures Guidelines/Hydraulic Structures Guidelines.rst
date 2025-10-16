@@ -148,7 +148,7 @@ When a rate table accelerates flow through hydraulic structure in the model, it 
 the outflow node storage.
 This changes the relationship between the headwater and tailwater can result in numerical surging through the structure (Figure 5).
 
-|Hydrau005|
+.. image:: img/Hydrau005.jpg
 
 *Figure 5.
 Hydraulic Structure Numerical Surging*
@@ -159,7 +159,7 @@ This occurs when the user is primarily interested in the 100-year event or bankf
 portion of the rating table.
 In the following table, the user may be interested in discharges over 20,000 cfs, but what is the discharge at one foot?
 
-   |Hydrau006|
+.. image:: img/Hydrau006.jpg
 
 *Table 1.
 Stage Discharge Relationship for a Bridge*
@@ -184,7 +184,7 @@ In this case, the discharge Q is evaluate by the upstream headwater depth H\ :su
 headwater surface elevation (Figure 6).
 A pump is also a hydraulic structure that may produce a discharge for a given stage.
 
-|Hydrau007|
+.. image:: img/Hydrau007.jpg
 
 *Figure 6.
 If INOUTCONT = 0, the Discharge Q is a Function of the Headwater Depth H\ :sub:`w` Regardless of the*
