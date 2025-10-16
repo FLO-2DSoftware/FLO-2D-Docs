@@ -696,119 +696,58 @@ Dispersive – Turbulent Ratio*
 
 Bagnold, R.A., 1954.
 "Experiments on a gravity-free dispersion of large solid spheres in a Newtonian fluid under shear," *Proc.
-of the Royal Society of London*, Series A, V.
-249, 235-297.
+of the Royal Society of London*, Series A, V. 249, 235-297.
 
 Chen, C.L., 1976.
 "Urban storm runoff inlet hydrograph study." Prepared for the Dept.
 of Transportation, PRWG 106-2, Utah State University, Logan Utah.
 
-Egashira, S., K.
-Ashida, H.
-Yajima, and J.
-Takahama, 1989.
+Egashira, S., K. Ashida, H. Yajima, and J. Takahama, 1989.
 "Constitutive equations of debris flow," Annuals of the Disaster Prevention Research Institute, Kyoto Univ., No.
 32B-2, 487-501.
 
 Einstein, H.A., 1950.
-"The bed-load function for sediment transportation in open channel flows," USDA Tech.
-Bull.
-No.
-1026.
+"The bed-load function for sediment transportation in open channel flows," USDA Tech. Bull. No. 1026.
 
-Happel, J.
-and H.
-Brenner, 1965.
-*Low Reynolds Number Hydrodynamics*.
-Prentice-Hall, Englewood Cliffs, NJ.
+Happel, J. and H. Brenner, 1965. *Low Reynolds Number Hydrodynamics*. Prentice-Hall, Englewood Cliffs, NJ.
 
-Hashimoto, H., 1997.
-“A comparison between gravity flows of dry sand and sand-water mixtures,” *Recent Developments on Debris Flows*, Springer,
-A. Armanini and M.
-Michiue (eds.), NY, NY.
+Hashimoto, H., 1997. “A comparison between gravity flows of dry sand and sand-water mixtures,” *Recent Developments on Debris Flows*, Springer,
+A. Armanini and M. Michiue (eds.), NY, NY.
 
-Johnson, A., 1970.
-*Physical Processes in Geology.* San Francisco: Freeman, Cooper & Co.
+Johnson, A., 1970. *Physical Processes in Geology.* San Francisco: Freeman, Cooper & Co.
 
-Julien, P.Y.
-and J.S.
-O’Brien, 1997.
-On the importance of mud and debris flow Rheology in structural design,” *Proceedings of the First International Conference on Debris-Flow Hazards
-Mitigation,* ASCE, NY.
+Julien, P.Y. and J.S. O’Brien, 1997. On the importance of mud and debris flow Rheology in structural design,” *Proceedings of the
+First International Conference on Debris-Flow Hazards Mitigation,* ASCE, NY.
 
-Julien, P.Y.
-and J.S.
-O’Brien, 1998.
-“Dispersive and turbulent stresses in hyperconcentrated sediment flows,” Unpublished paper.
+Julien, P.Y. and J.S. O’Brien, 1998. “Dispersive and turbulent stresses in hyperconcentrated sediment flows,” Unpublished paper.
 
-Julien, P.Y.
-and Y.Q.
-Lan, 1991.
-“On the rheology of hyperconcentrations”, *J.
-of Hyd.
-Eng*., ASCE, 117(3), 346-353.
+Julien, P.Y. and Y.Q. Lan, 1991. “On the rheology of hyperconcentrations”, *J. of Hyd. Eng*., ASCE, 117(3), 346-353.
 
-Major, J.
-and T.C.
-Pierson, 1992.
-“Debris flow rheology: experimental analysis of finegrained slurries,” *Water Resources Research*, 28(3), 841-857.
+Major, J. and T.C. Pierson, 1992. “Debris flow rheology: experimental analysis of finegrained slurries,”
+*Water Resources Research*, 28(3), 841-857.
 
 National Research Council, 1982.
 “Selecting a methodology for delineating mudslide hazard areas for the National Flood Insurance Program.” National Academy of Sciences report by the
 advisory Board on the Built Environment, Washington, D.C.
 
-O'Brien, J.S., 1986.
-"Physical processes, rheology and modeling of mudflows," Doctoral dissertation, Colorado State University, Fort Collins, Colorado.
+O'Brien, J.S., 1986. "Physical processes, rheology and modeling of mudflows," Doctoral dissertation, Colorado State University, Fort Collins, Colorado.
 
-O'Brien, J.S.
-and P.Y.
-Julien, 1985.
-"Physical processes of hyperconcentrated sediment flows," Proc.
-of the ASCE Specialty Conf.
-on the Delineation of Landslides, Floods,
+O'Brien, J.S. and P.Y. Julien, 1985. "Physical processes of hyperconcentrated sediment flows," Proc. of the ASCE Specialty Conf.
+on the Delineation of Landslides, Floods, and Debris Flow Hazards in Utah, Utah Water Research Laboratory, Series UWRL/g85/03, 260-279.
 
-   and Debris Flow Hazards in Utah, Utah Water Research Laboratory, Series UWRL/g85/03, 260-279.
+O'Brien, J.S. and P.Y. Julien, 1987. Discussion on "Mountain torrent erosion," By K. Ashida in *Sediment Transport in Gravel-Bed Rivers*, John Wiley & Sons, 537-539.
 
-O'Brien, J.S.
-and P.Y.
-Julien, 1987.
-Discussion on "Mountain torrent erosion," By K.
+O'Brien, J.S. and P.Y. Julien, 1988. "Laboratory analysis of mudflow properties," *J. of Hyd. Eng.*, ASCE, 114(8), 877-887.
 
-   Ashida in *Sediment Transport in Gravel-Bed Rivers*, John Wiley & Sons, 537-539.
-
-O'Brien, J.S.
-and P.Y.
-Julien, 1988.
-"Laboratory analysis of mudflow properties," *J.
-of Hyd.
-Eng.*, ASCE, 114(8), 877-887.
-
-O’Brien, J.S.
-and P.Y.
-Julien, 1997.
+O’Brien, J.S. and P.Y. Julien, 1997.
 “On the importance of mudflow routing”, *Proceedings of the First International Conference on Debris-Flow Hazards Mitigation,* ASCE, NY.
 
-O'Brien, J.S., P.Y.
-Julien and W.T.
-Fullerton, 1993.
-"Two-dimensional water flood and mudflow simulation," *J.
-of Hyd.
-Eng*., ASCE, 119(2), 244-259.
+O'Brien, J.S., P.Y. Julien and W.T. Fullerton, 1993. "Two-dimensional water flood and mudflow simulation," *J. of Hyd. Eng*., ASCE, 119(2), 244-259.
 
-Pacific Southwest Inter-Agency Committee, 1968.
-“Factors affecting sediment yield and measures for the reduction of erosion and sediment yield,” USDA-NRCS, Denver, CO.
+Pacific Southwest Inter-Agency Committee, 1968. “Factors affecting sediment yield and measures for the reduction of erosion and sediment yield,” USDA-NRCS, Denver, CO.
 
-Savage, S.B., 1979.
-“Gravity flow of cohesionless granular materials in chutes and channels,” *J.
-Fluid Mechanics* 92 (1), 53-96.
+Savage, S.B., 1979. “Gravity flow of cohesionless granular materials in chutes and channels,” *J. Fluid Mechanics* 92 (1), 53-96.
 
-Takahashi, T., 1979.
-“Debris flow on prismatic open channel flow,” *J.
-of the Hyd.
-Div*., ASCE, 106(3), 381 - 396.
+Takahashi, T., 1979. “Debris flow on prismatic open channel flow,” *J. of the Hyd. Div*., ASCE, 106(3), 381 - 396.
 
-Thomas, D.G., 1963.
-“Non-Newtonian suspensions.
-Part I: physical properties and laminar transport characteristics,” Ind.
-Eng.
-Chem., 55(110, 18-29.
+Thomas, D.G., 1963. “Non-Newtonian suspensions. Part I: physical properties and laminar transport characteristics,” Ind. Eng. Chem., 55(110, 18-29.
