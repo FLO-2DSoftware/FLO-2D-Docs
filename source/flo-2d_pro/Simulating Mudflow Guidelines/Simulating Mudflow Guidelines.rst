@@ -88,6 +88,9 @@ High fluid matrix density can increase the buoyancy of large sediment particles 
 often being transported near the flow surface.
 The yield stress, is a measure of the internal fluid resistance to flow and will effect both flow initiation and cessation.
 
+*Table 1.
+Mudflow Behavior as a Function of Sediment Concentration*
+
 .. image:: img/Simula001.jpg
 
 Granular flows are unique flow phenomena comprising principally of non-cohesive sediment particles with only a limited water volume.
