@@ -790,54 +790,90 @@ Wall Failure Guidelines*
        If the failure base elevation = 0, the final wall failure elevation is equal to the
 
        floodplain grid element elevation on the opposite side of the wall.
+
        For a progressive wall failure, assign the vertical and horizontal rates.
+
        If the vertical and horizontal rates of failure are zero, the levee (wall) fails
+
        instantaneously for the entire grid element side width.
+
        If the maximum failure width is longer than the grid element side, the breach
+
        will extend into adjacent grid elements until the maximum failure width is
+
        equaled or the wall ends. For instantaneous failure, every grid element side
+
        levee that will collapse must be assigned.
 
-   * - Wall
-Overtopping
-Discharge
+   * - Wall Overtopping Discharge
      - The flow depth on the wall must exceed a hardcoded tolerance value equal to 0.1 ft
-(0.03 m) to enable the overtopping discharge to be computed.
-Flow over the wall is computed using the broadcrested weir equation with a variable
-weir coefficient that depends on the headwater depth. The headwater depth
-depends on whether one or both of the water surface elevations are greater than
-the crest. If the headwater depth > 3 ft (1.0 m), then the weir coefficient is 3.09. If
-the headwater depth < 3 ft (1.0 m), the coefficient can range from 2.5 and 3.09.
-If the ratio of the tailwater to the headwater is greater than 0.8, then the discharge is
-multiplied by a submergence factor that is less than 1.0 based on the submergence
-curves (Figure 3).
-The overtopping discharge in all possible directions including the peak discharge are
-reported in the LEVOVERTOP.OUT file.
 
-   * - Wall Breach
-Discharge
+       (0.03 m) to enable the overtopping discharge to be computed.
+
+       Flow over the wall is computed using the broadcrested weir equation with a variable
+
+       weir coefficient that depends on the headwater depth. The headwater depth
+
+       depends on whether one or both of the water surface elevations are greater than
+
+       the crest. If the headwater depth > 3 ft (1.0 m), then the weir coefficient is 3.09. If
+
+       the headwater depth < 3 ft (1.0 m), the coefficient can range from 2.5 and 3.09.
+
+       If the ratio of the tailwater to the headwater is greater than 0.8, then the discharge is
+
+       multiplied by a submergence factor that is less than 1.0 based on the submergence
+
+       curves (Figure 3).
+
+       The overtopping discharge in all possible directions including the peak discharge are
+
+       reported in the LEVOVERTOP.OUT file.
+
+   * - Wall Breach Discharge
      - The flow depth on the wall breach must exceed a tolerance value of 0.1 ft (0.03 m)
-for the breach discharge to be computed. The flow depth is based on the highest
-water surface and the wall failure elevation.
-Breach discharge is computed with a broadcrested weir equation with a variable
-coefficient that depends on the headwater depth above the breach elevation. The
-headwater depth depends on whether one or both of the water surface elevations
-are greater than the breach elevation. If the headwater depth > 3 ft (1.0 m), then the
-levee weir coefficient = 3.09. If the headwater depth < 3 ft (1.0 m), the weir
-coefficient can range between 2.5 and 3.09.
-If the ratio of the tailwater to headwater above the breach elevation is greater than
-0.8, then the discharge is multiplied by a submergence factor (> 1.0) based on the
-submergence curves.
-If the wall fails instantaneously to the base elevation, the flow is computed by the
-overland flow routine using the side width of the grid system.
-If the wall breach progressively widens and extends to other contiguous element
-sides, the discharge is based on the computed breach width using the horizontal
-breach rate.
-When the vertical breach has reached the wall base elevation, the maximum shear
-stress on the breach is computed. Subsequently the original horizontal breach rate
-is reduced by the ratio of the current shear stress to the maximum shear stress on
-the breach.
-The breach discharge and breach geometry is reported in the LEVEE.OUT file.
+
+       for the breach discharge to be computed. The flow depth is based on the highest
+
+       water surface and the wall failure elevation.
+
+       Breach discharge is computed with a broadcrested weir equation with a variable
+
+       coefficient that depends on the headwater depth above the breach elevation. The
+
+       headwater depth depends on whether one or both of the water surface elevations
+
+       are greater than the breach elevation. If the headwater depth > 3 ft (1.0 m), then the
+
+       levee weir coefficient = 3.09. If the headwater depth < 3 ft (1.0 m), the weir
+
+       coefficient can range between 2.5 and 3.09.
+
+       If the ratio of the tailwater to headwater above the breach elevation is greater than
+
+       0.8, then the discharge is multiplied by a submergence factor (> 1.0) based on the
+
+       submergence curves.
+
+       If the wall fails instantaneously to the base elevation, the flow is computed by the
+
+       overland flow routine using the side width of the grid system.
+
+       If the wall breach progressively widens and extends to other contiguous element
+
+       sides, the discharge is based on the computed breach width using the horizontal
+
+       breach rate.
+
+       When the vertical breach has reached the wall base elevation, the maximum shear
+
+       stress on the breach is computed. Subsequently the original horizontal breach rate
+
+       is reduced by the ratio of the current shear stress to the maximum shear stress on
+
+       the breach.
+
+       The breach discharge and breach geometry is reported in the LEVEE.OUT file.
 
 Wall Failure Troubleshooting
 ----------------------------
