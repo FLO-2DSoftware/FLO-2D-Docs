@@ -361,7 +361,7 @@ Table 1 outlines the potential controls.
 Prescribed Breach Failure Controls and Guidelines**
 
 .. list-table::
-   :widths: 20 80
+   :widths: 50 50
    :header-rows: 0
 
 
@@ -443,6 +443,7 @@ Prescribed Breach Failure Controls and Guidelines**
        has been globally assigned, the breach initiation can occur for all the grid
 
        element sides with levees when the water surface exceeds the global failure
+
        elevation.
 
        If the failure duration time = 0., breach failure initiates immediately.
@@ -450,6 +451,7 @@ Prescribed Breach Failure Controls and Guidelines**
        If the levee is to fail at an appropriate distance below the crest after being
 
        inundated for a reasonable duration, assign values to both the failure elevation
+
        and failure duration time.
 
        If the failure base elevation = 0., the final levee breach elevation is equal to the
@@ -484,11 +486,13 @@ Prescribed Breach Failure Controls and Guidelines**
        elevations are greater than the crest. If the headwater depth > 3ft, then the 17
 
        weir coefficient is 3.09. If the headwater depth < 3., the weir coefficient can
+
        range between 2.5 and 3.09.
 
        If the ratio of the tailwater to the headwater is greater than 0.8, then the
 
        discharge is multiplied by a submergence factor that is less than 1.0 based on
+
        the submergence curves (Figure 8).
 
        The overtopping discharge in all possible directions including the peak discharge
@@ -511,6 +515,7 @@ Prescribed Breach Failure Controls and Guidelines**
        elevations are greater than the breach elevation. If the headwater depth > 3 ft,
 
        then the levee weir coefficient = 3.09. If the headwater depth < 3., the weir
+
        coefficient can range between 2.5 and 3.09.
 
        If the ratio of the tailwater to the headwater above the breach elevation is
@@ -526,6 +531,7 @@ Prescribed Breach Failure Controls and Guidelines**
        If the levee breach progressively widens and extends to other contiguous levee
 
        element sides, the discharge is based on the computed breach width using the
+
        horizontal breach rate.
 
        When the vertical breach has reached the levee base elevation, the maximum
@@ -533,6 +539,7 @@ Prescribed Breach Failure Controls and Guidelines**
        shear stress on the breach is computed. Subsequently the original horizontal
 
        breach rate is reduced by the ratio of the current shear stress to the maximum
+
        shear stress on the breach (Figure 12).
 
        The breach discharge and breach geometry is reported in the LEVEE.OUT file.
