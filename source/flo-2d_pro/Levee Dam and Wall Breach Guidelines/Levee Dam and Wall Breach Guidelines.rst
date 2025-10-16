@@ -1436,7 +1436,7 @@ The FPLAIN.DAT file will be regenerated with the next simulation.
 The reservoir flow depth for these elements for the reservoir routing is the water surface elevation minus the dead pool elevation.
 The dead pool represents permanent storage that does not contribute to downstream flooding.
 
-.. image:: img/Levee031.jpg
+.. image:: img/Levee032.jpg
 
 *Figure 25.
 Reservoir Starting Water Surface Elevation Node Shown in Blue-Green.*
@@ -1450,14 +1450,14 @@ To initiate the above revision to the Manning’s regression equation, simply as
 detention basin or reservoir.
 These guidelines will help make the basin filling simulation more computationally stable:
 
-- Assign high n-values (~0.100 to 0.200) to the storage basin site using RESERVOIRN parameter line R in INFLOW.DAT.
+    - Assign high n-values (~0.100 to 0.200) to the storage basin site using RESERVOIRN parameter line R in INFLOW.DAT.
 
-- Slow the model down using a smaller Courant number for the floodplain.
-  Decrease the Courant number in 0.10 increments to a minimum of 0.05
+    - Slow the model down using a smaller Courant number for the floodplain.
+      Decrease the Courant number in 0.10 increments to a minimum of 0.05
 
-- Assign spatially variable limiting Froude numbers in the basin elements.
-  Use a small limiting Froude of 0.2 or lower to automatically adjust the n-values.
-  Review and accept the new n-values in ROUGH.OUT at the end of the simulation.
+    - Assign spatially variable limiting Froude numbers in the basin elements.
+      Use a small limiting Froude of 0.2 or lower to automatically adjust the n-values.
+      Review and accept the new n-values in ROUGH.OUT at the end of the simulation.
 
 While applying the DEPTOL stability parameter may improve the model stability, a lower Courant number should be enough to ensure consistently low
 velocities in the reservoir.
@@ -1482,121 +1482,211 @@ Combined levee breach with hydraulic structures or other features can also cause
 element.
 Evidence of numerical surging in breach discharge includes:
 
-- High maximum velocities (VELTIMEFP.OUT);
+    - High maximum velocities (VELTIMEFP.OUT);
 
-- Rapidly varying discharges (BREACH.OUT, LEVEE.OUT, or in the floodplain cross section hydrographs);
+    - Rapidly varying discharges (BREACH.OUT, LEVEE.OUT, or in the floodplain cross section hydrographs);
 
-- High or variable maximum water surface elevations.
+    - High or variable maximum water surface elevations.
 
-Table 6. Numerical Surging Troubleshooting
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Table 6.
+Numerical Surging Troubleshooting.*
 
 .. list-table::
-   :widths: 50 50
+   :widths: 30 70
    :header-rows: 0
 
-
-   * -
-     - **Numerical Surging Troubleshooting**
 
    * - **Condition**
      - **Resolution**
 
-   * - Levee BreachHigh Velocities
-     - Review the floodplain elevations and n-values on each side of the levee.
-       The elevations need to represent the floodplain elevation and not depressions associated with channels or elevated topography as a result of levee
-       crest elevations.
-       Increase the n-values to reduce unreasonable velocities.
-       ------------------------------------------------------------------- Revise the breach parameters.
-       Reduce the vertical and horizontal breach rates or modify the breach erosion variables.
-       ------------------------------------------------------------------- Tailwater may the cause of numerical surging.
-       Most tailwater conditions are accounted for in the FLO-2D model.
-       Review the potential tailwater conditions to determine if breach submergence is appropriate.
-       Increase the n-values associated with the downstream elements to reduce high velocities near the breach.
-       ------------------------------------------------------------------- Downstream water surface controls may artificially lower the water surface
-       elevation near the breach.
-       This may include outflow node time-stage relationships, flow constrictions, hydraulic structure rating tables, tidal affects or main channel flow.
-       Variable downstream controls require specific needs.
-       ------------------------------------------------------------------- Numerical surging or high maximum velocities may be the result of limited storage
-       area.
-       Reduce or eliminate surface area reduction (ARF-values) in the levee elements which may leave very little surface area for storage.
+   * - Levee Breach High Velocities
+     - Review the floodplain elevations and n-values on each side of the levee. The
 
-   * - CombinedHydraulicStructure andLevee Breach
-     - Hydraulic structures may be used to allow flow to go through a levee connecting contiguous grid elements.
-       This might simulate a drainage hole in a block wall or a culvert through a highway embankment.
-       While the levee or wall is intact the flow based on the hydraulic structure rating table or curve must include the flow over the embankment.
-       If the rating table is poorly matched with the upstream inflow conditions, surging may ensue.
-       The rating table or curve must be modified.
-       Refer to the companion Hydraulic Structure Guidelines document for more details.
-       ------------------------------------------------------------------- If the levee or wall containing the hydraulic structure is breached (not an
-       instantaneous failure), the hydraulic structure flow is terminated and breach flow is computed.
-       Numerical surging should be addressed by increasing nvalues or adjusting the topography.
-       See the above section.
-       ------------------------------------------------------------------- If the levee or wall fails instantaneously (collapses or topples), the hydraulic
-       structure flow is terminated and the flow is computed as overland flow, not breach flow.
-       If numerical surging is observed increase the n-values or review the topography.
-       ------------------------------------------------------------------- If the combined hydraulic structure and levee (or levee breaching) routine is
-       causing either volume conservation error or numerical instability, follow this protocol:  4.
-       Turn off the hydraulic structures in CONT.DAT and run the model until the problem occurs.
-       5.
-       Turn off the levees in CONT.DAT and run the model only until the time that the problem occurs.
-       6.
-       If the problem is in the hydraulic structures, isolate the structures that appear to be the problem.
+       elevations need to represent the floodplain elevation and not depressions
+
+       associated with channels or elevated topography as a result of levee crest
+
+       elevations. Increase the n-values to reduce unreasonable velocities.
+
+       Revise the breach parameters. Reduce the vertical and horizontal breach rates
+
+       or modify the breach erosion variables.
+
+       Tailwater may the cause of numerical surging. Most tailwater conditions are
+
+       accounted for in the FLO-2D model. Review the potential tailwater conditions to
+
+       determine if breach submergence is appropriate. Increase the n-values
+
+       associated with the downstream elements to reduce high velocities near the
+
+       breach.
+
+       Downstream water surface controls may artificially lower the water surface
+
+       elevation near the breach. This may include outflow node time-stage
+
+       relationships, flow constrictions, hydraulic structure rating tables, tidal affects or
+
+       main channel flow. Variable downstream controls require specific needs.
+
+       Numerical surging or high maximum velocities may be the result of limited
+
+       storage area. Reduce or eliminate surface area reduction (ARF-values) in the
+
+       levee elements which may leave very little surface area for storage.
+
+   * - Combined Hydraulic Structure
+
+       and Levee Breach
+     - Hydraulic structures may be used to allow flow to go through a levee connecting
+
+       contiguous grid elements. This might simulate a drainage hole in a block wall or
+
+       a culvert through a highway embankment. While the levee or wall is intact the
+
+       flow based on the hydraulic structure rating table or curve must include the flow
+
+       over the embankment. If the rating table is poorly matched with the upstream
+
+       inflow conditions, surging may ensue. The rating table or curve must be
+
+       modified. Refer to the companion Hydraulic Structure Guidelines document for
+
+       more details.
+
+       If the levee or wall containing the hydraulic structure is breached (not an
+
+       instantaneous failure), the hydraulic structure flow is terminated and breach
+
+       flow is computed. Numerical surging should be addressed by increasing nvalues or
+
+       adjusting the topography. See the above section.
+
+       If the levee or wall fails instantaneously (collapses or topples), the hydraulic
+
+       structure flow is terminated and the flow is computed as overland flow, not
+
+       breach flow. If numerical surging is observed increase the n-values or review
+
+       the topography.
+
+       If the combined hydraulic structure and levee (or levee breaching) routine is
+
+       causing either volume conservation error or numerical instability, follow this
+
+       protocol:
+
+       4. Turn off the hydraulic structures in CONT.DAT and run the model until the
+
+          problem occurs.
+
+       5. Turn off the levees in CONT.DAT and run the model only until the time that
+
+          the problem occurs.
+
+       6. If the problem is in the hydraulic structures, isolate the structures that
+
+          appear to be the problem.
+
+       41
+
+       To isolate a hydraulic structure with numerical instability, put a simple inflow
+
+       hydrograph (for steady flow) several grid elements upstream of the structure.
+
+       Put a line of outflow elements downstream of the structure and turn off all the
+
+       other inflow hydrographs and rainfall. Make sure that the steady flow discharge
+
+       through the structure matches the assigned stage or depth.
 
    * -
-     - 40                                     |
+     - If the instability issue cannot be resolved, it may be possible to move the
 
+       hydraulic structure to the next grid element without a loss of accuracy or
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+       mapping resolution for the maximum water surface elevation. It might also be
 
+       possible to eliminate the levee and replace it with WRF value.
 
-   * -
-     - To isolate a hydraulic structure with numerical instability, put a simple inflow hydrograph (for steady flow) several grid elements upstream of the
-       structure.
-       Put a line of outflow elements downstream of the structure and turn off all the other inflow hydrographs and rainfall.
-       Make sure that the steady flow discharge through the structure matches the assigned stage or depth.
+       The model automatically adjusts the hydraulic structure rating table and writes
 
-   * -
-     - If the instability issue cannot be resolved, it may be possible to move the ------------------------------------------------- hydraulic structure to
-       the next grid element without a loss of accuracy or  mapping resolution for the maximum water surface elevation.
-       It might also be possible to eliminate the levee and replace it with WRF value.
-       ------------------------------------------------- The model automatically adjusts the hydraulic structure rating table and writes the revised table
-       pairs to an output file.
-       If instability persists, review the revised rating table and make further adjustments.
-       Typically the instability is related to the lower flows and there are insufficient rating table pairs to define the rating table for the lower
-       discharges.
-       Review the HYDROSTRUCT.OUT file to determine if there is numerical instability in the rating table or curve.
-       ------------------------------------------------- Downstream ponding or time-stage water surface controls may result in upstream flow through
-       structure.
-       Set the INOUTCONT = 1 in the HYSTRUC.DAT file to allow upstream flow.
+       the revised table pairs to an output file. If instability persists, review the revised
 
-   * - LeveeOvertoppingDischarge
-     - Revision to the model that have been incorporated to reduce or eliminate surging associated with overtopping discharges include:  - Adding tailwater
-       submergence criteria;  - Reverting to overland flow when the water surfaces are much higher than the crest;  - Assigning the appropriate reference
-       elevation to establish headwater and tailwater depths.
-       ..
-       If surging as observed by high velocities, rapidly varying depths or large variation in water surface elevation in ponded conditions, check the
-       floodplain elevations for accuracy on each side of the levee, and increase the n-values in both cells.
-       If there are shallow depths on one side of the levee and deep depths on the other with flow over the crest, equilibrating the grid element elevations
-       should eliminate surging.
-       ------------------------------------------------- Some numerical surging can be eliminated by forcing smaller timesteps.
-       Reduce the floodplain Courant number.
-       If ponding is associated with surging flow, and reducing the Courant number and increasing n-values doesn’t alleviate the problem, use a DEPTOL = 0.05
-       or 0.10 in TOLER.DAT to force smaller timesteps.
+       rating table and make further adjustments. Typically the instability is related to
 
-   * - Time StageLevee Breaches
-     - Time-stage elements that control the water surface elevation near a levee system are generally not a problem.
-       Numerical instability are usually associated with the time-stage elements by have the water surface stage be less than ground elevation or having
-       contiguous time-stage elements with non-uniform ground elevations.
-       ------------------------------------------------- If the ponded water contained by the levee has a highly variable water surface elevation (in a
-       reservoir scenario or from the time-stage ocean simulation), slow down the timesteps (use a smaller Courant number), varying the n-values or adjust
-       the topography to make it more uniform.
-       ------------------------------------------------- Review the LEVEE.OUT file for surging.
-       High velocities can be eliminated with increasing n-values.
-       Some high velocities may be associated with the initial levee or dam failure.
+       the lower flows and there are insufficient rating table pairs to define the rating
 
+       table for the lower discharges. Review the HYDROSTRUCT.OUT file to determine
+
+       if there is numerical instability in the rating table or curve.
+
+       Downstream ponding or time-stage water surface controls may result in
+
+       upstream flow through structure. Set the INOUTCONT = 1 in the HYSTRUC.DAT
+
+       file to allow upstream flow.
+
+   * - Levee Overtopping Discharge
+     - Revision to the model that have been incorporated to reduce or eliminate
+
+       surging associated with overtopping discharges include:
+
+            • Adding tailwater submergence criteria;
+
+            • Reverting to overland flow when the water surfaces are much higher than
+
+            the crest;
+
+            • Assigning the appropriate reference elevation to establish headwater and
+
+            tailwater depths.
+
+       If surging as observed by high velocities, rapidly varying depths or large variation
+
+       in water surface elevation in ponded conditions, check the floodplain elevations
+
+       for accuracy on each side of the levee, and increase the n-values in both cells. If
+
+       there are shallow depths on one side of the levee and deep depths on the other
+
+       with flow over the crest, equilibrating the grid element elevations should
+
+       eliminate surging.
+
+       Some numerical surging can be eliminated by forcing smaller timesteps. Reduce
+
+       the floodplain Courant number. If ponding is associated with surging flow, and
+
+       reducing the Courant number and increasing n-values doesn’t alleviate the
+
+       problem, use a DEPTOL = 0.05 or 0.10 in TOLER.DAT to force smaller timesteps.
+
+   * - Time Stage Levee Breaches
+     - Time-stage elements that control the water surface elevation near a levee
+
+       system are generally not a problem. Numerical instability are usually associated
+
+       with the time-stage elements by have the water surface stage be less than
+
+       ground elevation or having contiguous time-stage elements with non-uniform
+
+       ground elevations.
+
+       If the ponded water contained by the levee has a highly variable water surface
+
+       elevation (in a reservoir scenario or from the time-stage ocean simulation), slow
+
+       down the timesteps (use a smaller Courant number), varying the n-values or
+
+       adjust the topography to make it more uniform.
+
+       Review the LEVEE.OUT file for surging. High velocities can be eliminated with
+
+       increasing n-values. Some high velocities may be associated with the initial
+
+       levee or dam failure.
 
 Dam Breach Floodwave Reporting for Hazard Mapping
 --------------------------------------------------------
