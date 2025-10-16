@@ -459,7 +459,9 @@ Hydraulic Structure Troubleshooting*
 
             - Turn off the hydraulic structures in CONT.DAT and run the model until the problem occurred.
 
-            - Turn off the levees in CONT.DAT and run the model only until the time that the problem surfaced.
+            - Turn off the levees in CONT.DAT and run the model only until the time that the
+
+              problem surfaced.
 
             - If the problem is in the hydraulic structures, isolate the structures that appear to be the problem.
 
@@ -467,9 +469,9 @@ Hydraulic Structure Troubleshooting*
 
        grid elements upstream of the structure. Put a line of outflow elements downstream of the structure
 
-       and turn off all the other inflow hydrographs and rainfall. Make sure that the steady flow discharge through
+       and turn off all the other inflow hydrographs and rainfall. Make sure that the steady flow discharge
 
-       the structure matches the assigned stage or depth.
+       through the structure matches the assigned stage or depth.
 
        If the instability issue cannot be resolved, it may be possible to move the hydraulic structure
 
@@ -485,13 +487,15 @@ Hydraulic Structure Troubleshooting*
 
        further adjustments.
 
-       Typically the instability is related to the lower flows and there are insufficient rating table pairs to define
+       Typically the instability is related to the lower flows and there are insufficient rating table pairs
 
-       the rating table for the lower discharges. Review the HYDROSTRUCT.OUT file to determine
+       to define the rating table for the lower discharges. Review the HYDROSTRUCT.OUT file to determine
 
        if there is numerical instability in the rating table or curve.
 
-       Downstream ponding or time-stage water surface controls may result in upstream flow through structure.
+       Downstream ponding or time-stage water surface controls may result in upstream flow
+
+       through structure.
 
        Set the INOUTCONT = 1 in the HYSTRUC.DAT file to allow upstream flow.
 
