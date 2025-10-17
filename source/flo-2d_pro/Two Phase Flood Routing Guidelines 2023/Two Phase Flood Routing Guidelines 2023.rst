@@ -957,9 +957,7 @@ Example Project – Reservoir Located on the Right of the Flow Domain.*
 The following two phase flow tailings dam breach scenarios were simulated:
 
     - Instantaneous breach – seismic or static failure
-
     - Breach erosion - dam scour to bedrock
-
     - Prescribed breach – vertical/horizontal breach rates using the eleven sediment transport equations
 
 Figure 16 shows an example of the predicted maximum depths for the combined fluid and mudflow phases.
@@ -1076,6 +1074,22 @@ Data Collection
 
 This tailings dam breach data collection discussion provides an overview of potential data needs to conduct a FLO-2D two phase flow breach simulation.
 The data is cataloged as either required or optional in the following table.
+
+.. raw:: html
+
+    <div style="overflow-x:auto;">
+    <table border="1" cellspacing="0" cellpadding="6" style="border-collapse:collapse; width:100%; font-family:Arial, sans-serif; font-size:14px;">
+        <caption><b>Table 3. Tailings Dam Breach Data Needs</caption>
+        <tbody>
+            <tr>
+                <td rowspan="2"><b>Landslide</b></td>
+                <td>0.65 - 0.80</td>
+                <td>0.83 - 0.91</td>
+                <td>Will not flow; failure by block sliding</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
 
 *Table 3.
 Tailings Dam Breach Data Needs.*
