@@ -205,7 +205,7 @@ Tailings Dam Failure Mudflow Merriespruit, Virginia SA Feb 1994 (tailings.info).
 
     <div style="overflow-x:auto;">
     <table border="1" cellspacing="0" cellpadding="6" style="border-collapse:collapse; width:100%; font-family:Arial, sans-serif; font-size:14px;">
-        <caption><b>Table 1. Mudflow Behavior as a Function of Sediment Concentration (O’Brien, 1986)</b></caption>
+        <caption>Table 1. Mudflow Behavior as a Function of Sediment Concentration (O’Brien, 1986)</caption>
         <thead>
             <tr>
                 <th rowspan="2"> </th>
@@ -221,7 +221,7 @@ Tailings Dam Failure Mudflow Merriespruit, Virginia SA Feb 1994 (tailings.info).
             <tr>
                 <td rowspan="2"><b>Landslide</b></td>
                 <td>0.65 - 0.80</td>
-                <td>0.83 - 0.91</td>
+                <td style="white-space: nowrap; text-align:center;">0.83 - 0.91</td>
                 <td>Will not flow; failure by block sliding</td>
             </tr>
             <tr>
