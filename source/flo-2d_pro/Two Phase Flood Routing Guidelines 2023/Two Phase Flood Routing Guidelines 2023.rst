@@ -604,16 +604,18 @@ The data input discussed in this section is unique to the two phase flow compone
 or tailings dam mudflow simulation.
 To initiate FLO-2D two phase flow:
 
-    - CONT.DAT - The MUD switch = 2 instead of 1 Sediment transport switch is 0;
-    - CONT.DAT XCONC is set to the average tailings concentration;
+    - CONT.DAT - The MUD switch = 2 instead of 1; Sediment transport switch is 0.
+    - CONT.DAT XCONC is set to the average tailings concentration.
     - INFLOW.DAT – reservoir node gets a water elevation, tailings elevation and reservoir roughness.
 
-       .. raw:: html
+      .. raw:: html
+
           <div>
-               <pre>R  7576    318.75        315.5               0.20</pre>
+              <pre>R  7576    318.75        315.5               0.20</pre>
           </div>
 
     - TAILINGS.DAT – grid element and thickness.
+
 
 The reservoir water surface elevation is assigned to a single grid element inside the reservoir (cell #7576).
 The model will then automatically assign the reservoir starting WS Elevation to all the grid elements with a bed elevation less than the starting WS
