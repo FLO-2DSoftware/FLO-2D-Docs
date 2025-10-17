@@ -1082,12 +1082,10 @@ The data is cataloged as either required or optional in the following table.
         <caption><b>Table 3. Tailings Dam Breach Data Needs</caption>
         <tbody>
             <tr>
-                <td rowspan="2"><b>Landslide</b></td>
-                <td>0.65 - 0.80</td>
-                <td>0.83 - 0.91</td>
-                <td>Will not flow; failure by block sliding</td>
+                <td>Data</td>
+                <td>Comments</td>
             </tr>
-            <tr>Required Data</tr>
+            <tr><td>Required Data</td></tr>
         </tbody>
     </table>
     </div>
