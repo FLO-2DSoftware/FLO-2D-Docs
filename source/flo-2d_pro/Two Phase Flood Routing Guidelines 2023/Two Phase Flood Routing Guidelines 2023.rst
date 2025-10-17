@@ -421,11 +421,8 @@ At the present time, there are several FLO-2D components that are superfluous to
 The following components are automatically set to ‘OFF’:
 
     - Evaporation
-
     - Storm Drain
-
     - Groundwater
-
     - Multiple Channels (rill and gully flow)
 
 The initial focus for the two phase flow compute was to simulate tailings dam breach with water storage.
@@ -446,12 +443,10 @@ failure is progressive from the top of the dam (Figure 8).
 The dam may be a designed feature constructed of borrow material or it could be created from as stacked layered tailings deposits.
 In either case, there are four FLO-2D options for simulating the tailings dam breach failure and routing the flood downstream:
 
-    - Stacked tailings collapse (no water storage); • Dam breach failure with or without water storage:
-
+    - Stacked tailings collapse (no water storage);
+    - Dam breach failure with or without water storage:
     - Instantaneous tailings dam collapse – seismic or static (prescribed failure component);
-
     - Prescribed failure – assign horizontal and vertical failure rates;
-
     - Breach erosion – progressive failure using the dam breach erosion component;
 
 For two phase flow, the tailings dam reservoir and the downstream flood inundation area can be modeled in one flow domain grid system or split into
@@ -483,15 +478,11 @@ Tailings Stacks Example (source: Google Earth Historical Imagery).*
 The following assumptions are applied for this tailings failure option:
 
     - The tailing facility is constructed in relatively homogeneous horizontal layers;
-
     - The density and fluid property variability of the layers in the vertical direction will not significantly affect the flow properties as failure
       occurs;
-
     - In terms of the development of the collapse floodwave and predicting the downstream hydraulics and area of inundation, the actual failure mode is
       inconsequential;
-
     - The tailings material when the model simulation begins is in a failure condition with incipient motion as just being initiated;
-
     - There is no water storage and no dam is simulated.
 
 To simulate the collapse, a tailings depth and sediment by volume for each grid element within the tailings facility is required in a file named
