@@ -579,7 +579,8 @@ research potential tailings dam breach rates and experiment with various rates t
 
     - Overtopping and development of a breach channel;
     - Piping failure;
-    - Piping failure, roof collapse and development into a breach channel; • Breach channel enlargement through side slope slumping;
+    - Piping failure, roof collapse and development into a breach channel;
+    - Breach channel enlargement through side slope slumping;
     - Breach enlargement by wedge collapse.
 
 To exercise the above breach sequence the following geometry parameters are required:
