@@ -393,42 +393,9 @@ The coded rules for the two phase flow exchange within a grid element are as fol
     </table>
     </div>
 
+.. raw:: html
 
-*Table 2.
-Coded Rules for Two Phase Sediment Exchange*
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
-
-   * - Flow Condition
-     - Resolution
-
-   * - Fluid phase sediment transport capacity
-       exceeds supply
-     - Excess capacity (scour) is replenished from the mudflow phase or
-
-       from the bed if no mudflow phase exists (subject to scour
-       depth limitation).
-
-   * - Supply exceeds the sediment transport capacity
-     - Excess supply is added to the bed as
-       deposition when the flow
-
-       velocity ceases.
-       The deposition may occur to the mudflow
-       phase or
-
-       to the bed if no mudflow exists
-       (revises bed elevation).
-
-   * - Mudflow sediment concentration by volume
-       exceeds 56% (60% for channel flow).
-     - The mudflow layer is added to the bed.
-
-   * - Mudflow sediment concentration is less than 20%
-     - The mudflow layer is added to the fluid phase.
+   <br><br>
 
 After each exchange process listed in Table 2, the fluid and mudflow phase volume concentrations are recomputed.
 The Table 2 sediment concentration by volume limits are based on the flow behavior categories in Table 1.
