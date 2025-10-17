@@ -753,7 +753,8 @@ some of which are listed below:
     - DEPCH.OUT: Maximum channel flow depth.
     - DEPCHFINAL.OUT: Final channel flow depth at the end of the simulation.
     - DEPTH.OUT: Combined maximum channel and floodplain flow depth.
-    - IMPACT.OUT: Maximum impact pressure • SPECENERGY.OUT: Maximum specific energy.
+    - IMPACT.OUT: Maximum impact pressure
+    - SPECENERGY.OUT: Maximum specific energy.
     - STATICPRES.OUT: Maximum static pressure.
 
 There are several additional output files and not all files are for graphical display.
@@ -875,41 +876,33 @@ For a two phase flow tailings dam breach project application, the possible breac
     - Water failure only: PMP or PMF plus impounded water, or PMP plus impounded water plus inflow flood hydrograph; Use instantaneous breach failure,
       prescribed rate failure or breach erosion.
       No two phase flow necessary for this scenario.
-
     - Mudflow only: Failure of a completely mixed water and tailings material (a relatively fluid volume stored in the tailings reservoir) that will flow
       with an instantaneous breach.
       No fluid layer is assigned.
       The tailings elevation and the water surface elevation are the same.
-
     - Breach failures that include varying tailings material sediment concentrations by volume; Use instantaneous breach failure, prescribed rates of breach
       failure, or sediment erosion breach.
-
     - Multiple tailing dam failures cascading downstream into one another as instantaneous failures, prescribed rates of breach failure or sediment erosion
       breach.
 
-PMP = Probable Maximum Precipitation PMF = Probable Maximum Flood
+PMP = Probable Maximum Precipitation
+
+PMF = Probable Maximum Flood
 
 The following tailings dam breach scenarios might include these tasks:
 
     - Estimate tailings breach volume with Tailings Dam Tool
-
     - Create combined tailings dam and downstream flooding grid system
-
     - Assign water surface and tailings elevation in INFLOW.DAT, Line R
-
     - Assign sediment transport and mudflow parameters in SED.DAT
-
     - Select one or more fluid sediment transport equations
-
     - Select one or more mudflow samples for varying concentrations by volume
-
     - Check SUMMARY.OUT to compare water/sediment volume conservation
-
     - Simulate a downstream channel and tributaries to capture the breach discharge
 
 1. Dam is constructed from borrow material (not tailings) with impounded water
 
-   i.  Prescribed failure with vertical and horizontal rates
+   \i.  Prescribed failure with vertical and horizontal rates
 
        a. Assign vertical and horizontal breach rates in LEVEE.DAT
 
@@ -917,7 +910,7 @@ The following tailings dam breach scenarios might include these tasks:
 
        c. Review breach elevation/width with respect to water surface and tailings elevation
 
-   ii. Dam and tailings predicted erosion
+   \ii. Dam and tailings predicted erosion
 
        a. Assign dam geometry and sediment parameters
 
@@ -927,7 +920,7 @@ The following tailings dam breach scenarios might include these tasks:
 
 2. The dam is created by tailing deposits
 
-   i. Prescribed failure with vertical and horizontal rates
+   \i. Prescribed failure with vertical and horizontal rates
 
       a. Assign vertical and horizontal breach rates in LEVEE.DAT
 
@@ -935,7 +928,7 @@ The following tailings dam breach scenarios might include these tasks:
 
       c. Review breach elevation/width with respect to water surface and tailings elevation
 
-   ii. Dam and tailings predicted erosion
+   \ii. Dam and tailings predicted erosion
 
       a. Establish a fake dam geometry to match tailings slope
 
