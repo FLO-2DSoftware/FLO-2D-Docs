@@ -368,8 +368,8 @@ The coded rules for the two phase flow exchange within a grid element are as fol
         <caption>Table 2. Coded Rules for Two Phase Sediment Exchange</caption>
         <thead>
             <tr>
-                <th colspan="2">Flow Condition</th>
-                <th rowspan="2">Resolution</th>
+                <th>Flow Condition</th>
+                <th>Resolution</th>
             </tr>
         </thead>
         <tbody>
