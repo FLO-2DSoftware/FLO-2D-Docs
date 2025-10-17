@@ -520,10 +520,8 @@ flow condition.
 Additional data input requirements unique to tailings failures include by file name:
 
     - CONT.DAT: MUD = 1, ISED = 0, XCONC = Concentration Adjustment Factor (additive)
-
     - SED.DAT: Mudflow M-line is needed, C-line for sediment transport is
       not required
-
     - LEVEE.DAT not required.
 
 When starting a project, performing a stack failure first is the suggested approach.
@@ -566,41 +564,32 @@ hyperconcentrated sediment flow level.
 From the standpoint of identifying the downstream flood hazard, all tailings dam breach methods can be applied to evaluate the worst case:
 Instantaneous breach, prescribed breach rates and breach erosion.
 
-    *Instantaneous Breach:* Intuitively, collapsing the tailings dam to the base elevation should create the fastest rising frontal wave.
+*Instantaneous Breach:* Intuitively, collapsing the tailings dam to the base elevation should create the fastest rising frontal wave.
 Assigning more than one breach direction and grid element will intensify the breach wave progressing downstream.
 The instantaneous breach is initiated by assigning the W-line in the LEVEE.DAT file.
 Only the breach elevation (slightly lower than the water surface) is necessary to assign to start the instantaneous breach.
 
-    *Prescribed Failure Breach:* A prescribed rate of failure breach is orchestrated by assigning the vertical and horizontal breach rates in the same
+*Prescribed Failure Breach:* A prescribed rate of failure breach is orchestrated by assigning the vertical and horizontal breach rates in the same
 W-line of the LEVEE.DAT file.
 Suggested rates of failure in ft/hr or m/hr are not readily available in the literature.
 A vertical breach rate of 10 ft/hr (3 m/hr) and a horizontal rate of 50 ft/hr (17 m/hr) can be initially applied, but the user is encouraged to
 research potential tailings dam breach rates and experiment with various rates to attempt to maximize the breach peak discharge and timing.
 
-    *Breach Erosion:* Computing the tailings dam scour is complicated and the method has the following failure potential:
+*Breach Erosion:* Computing the tailings dam scour is complicated and the method has the following failure potential:
 
-        - Overtopping and development of a breach channel;
-
-        - Piping failure;
-
-        - Piping failure, roof collapse and development into a breach channel; • Breach channel enlargement through side slope slumping;
-
-        - Breach enlargement by wedge collapse.
+    - Overtopping and development of a breach channel;
+    - Piping failure;
+    - Piping failure, roof collapse and development into a breach channel; • Breach channel enlargement through side slope slumping;
+    - Breach enlargement by wedge collapse.
 
 To exercise the above breach sequence the following geometry parameters are required:
 
     - Crest elevation
-
     - Starting water surface elevation (or depth below crest) (ft or m)
-
     - Cumulative duration of inundation at specified elevation prior to breach initiation (hr)
-
     - Maximum breach width (ft or m)
-
     - Prescribed initial pipe elevation (ft or m)
-
     - Tailwater elevation (ft or m)
-
     - Foundation or base elevation for vertical breach cessation (ft or m)
 
 These tailing dam breach options can be simulated with the two phase flow component discussed in detail below.
