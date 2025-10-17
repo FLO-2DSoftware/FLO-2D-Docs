@@ -375,7 +375,6 @@ The coded rules for the two phase flow exchange within a grid element are as fol
         </thead>
         <tbody>
             <tr>
-                <td rowspan="2"></td>
                 <td style="white-space: nowrap; text-align:center;">0.83 - 0.91</td>
                 <td>Will not flow; failure by block sliding</td>
             </tr>
