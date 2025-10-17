@@ -263,112 +263,14 @@ Tailings Dam Failure Mudflow Merriespruit, Virginia SA Feb 1994 (tailings.info).
                 <td>Distinct wave action; fluid surface; all particles resting on bed in quiescent fluid condition</td>
             </tr>
             <tr>
-                <td><b>Water</b></td>
+                <td><b>Water FLood</b></td>
                 <td>&lt; 0.20</td>
                 <td>&lt; 0.41</td>
-                <td>Water flood with conventional suspended load</td>
+                <td>Water flood with conventional suspended load and bedload</td>
             </tr>
         </tbody>
     </table>
     </div>
-
-
-
-.. list-table:: Mudflow Behavior as a Function of Sediment Concentration (O’Brien, 1986)
-   :header-rows: 2
-   :widths: 10 10 80
-   :align: center
-
-   * - **Sediment Concentration**
-     -
-     - **Flow Characteristics**
-   * - **by Volume**
-     - **by Weight**
-     -
-
-   * - **Landslide**
-     -
-     -
-   * - 0.65 - 0.80
-     - 0.83 - 0.91
-     - Will not flow; failure by block sliding
-   * - 0.55 - 0.65
-     - 0.76 - 0.83
-     - Block sliding failure with internal deformation during the slide; slow creep prior to failure
-
-   * - **Mudflow**
-     -
-     -
-   * - 0.48 - 0.55
-     - 0.72 - 0.76
-     - Flow evident; slow creep sustained mudflow; plastic deformation under its own weight; cohesive; will not spread on level surface
-   * - 0.45 - 0.48
-     - 0.69 - 0.72
-     - Flow spreading on level surface; cohesive flow; some mixing
-
-   * - **Mud Flood**
-     -
-     -
-   * - 0.40 - 0.45
-     - 0.65 - 0.69
-     - Flow mixes easily; shows fluid properties in deformation; spreads on horizontal surface but maintains an inclined fluid surface; large particle (boulder) setting; waves appear but dissipate rapidly
-   * - 0.35 - 0.40
-     - 0.59 - 0.65
-     - Marked settling of gravels and cobbles; spreading nearly complete on horizontal surface; liquid surface with two fluid phases appears; waves travel on surface
-   * - 0.30 - 0.35
-     - 0.54 - 0.59
-     - Separation of water on surface; waves travel easily; most sand and gravel has settled out and moves as bedload
-   * - 0.20 - 0.30
-     - 0.41 - 0.54
-     - Distinct wave action; fluid surface; all particles resting on bed in quiescent fluid condition
-
-   * - **Water**
-     - < 0.41
-     - Water flood with conventional suspended load
-
-
-
-
-*Table 1.
-Mudflow Behavior as a Function of Sediment Concentration (O’Brien,1986)*
-
-.. list-table::
-   :widths: 100
-   :header-rows: 0
-
-
-   * - | Sediment Concentration                | Flow Characteristics+-------------------+-------------------+| by                | by                ||                   |                   ||    Volume         | Weight            |
-
-   * - Landslid e        | 0.65 -            | 0.83 -            |    Will not flow; failure by block|                   |                   |    sliding|
-       0.80              | 0.91              |+-------------------+-------------------+-----------------------------------------| 0.55 -            | 0.76 -
-       |    Block sliding failure with internal|                   |                   |    deformation during the slide; slow| 0.65              | 0.83
-       |    creep prior to failure
-
-   * - Mudflo w          | 0.48 -            | 0.72 -            |    Flow evident; slow creep sustained|                   |                   |    mudflow;
-       plastic deformation under| 0.55              | 0.76              |    its own weight; cohesive; will not|                   |                   |
-       spread on level surface+-------------------+-------------------+-----------------------------------------| 0.45 -            | 0.69 -            |
-       Flow spreading on level surface;|                   |                   |    cohesive flow; some mixing| 0.48              | 0.72              |
-
-   * - Mud               | 0.40 -            | 0.65 -            |    Flow mixes easily; shows fluid|                   |                   |    properties
-       in deformation; spreadsFlood             | 0.45              | 0.69              |    on horizontal surface but maintains|                   |
-       |    an inclined fluid surface; large|                   |                   |    particle (boulder) setting; waves|                   |
-       |    appear but dissipate rapidly+-------------------+-------------------+-----------------------------------------| 0.35 -            | 0.59 -
-       |    Marked settling of gravels and|                   |                   |    cobbles; spreading nearly complete| 0.40              | 0.65
-       |    on horizontal surface; liquid|                   |                   |    surface with two fluid phases|                   |                   |
-       appears; waves travel on surface+-------------------+-------------------+-----------------------------------------| 0.30 -            | 0.54 -
-       |    Separation of water on surface;|                   |                   |    waves travel easily; most sand and| 0.35              | 0.59
-       |    gravel has settled out and moves as|                   |                   |
-       bedload+-------------------+-------------------+-----------------------------------------| 0.20 -            | 0.41 -            |    Distinct wave
-       action; fluid surface;|                   |                   |    all particles resting on bed in| 0.30              | 0.54              |
-       quiescent fluid condition
-
-   * - Water          | < 0.20            | < 0.41            |    Water flood with conventional|                   |                   |    suspended load
-
-   * - Table 1.
-       Mudflow Behavior as a Function of Sediment Concentration (O’Brien,1986)
-
-   * - Flood             |                   |                   | and bedload
-
 
 A quadratic solution to the friction slope equation was formulated for the FLO-2D model to estimate the seed mudflow velocity in the momentum equation.
 The seed velocity represents the flow computed across each grid element boundary using the average flow depth between the elements.
