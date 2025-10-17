@@ -616,7 +616,6 @@ To initiate FLO-2D two phase flow:
 
     - TAILINGS.DAT – grid element and thickness.
 
-
 The reservoir water surface elevation is assigned to a single grid element inside the reservoir (cell #7576).
 The model will then automatically assign the reservoir starting WS Elevation to all the grid elements with a bed elevation less than the starting WS
 Elevation and the reservoir will be filled with water to start the breach simulation.
@@ -631,21 +630,13 @@ as shown below:
     <div>
     <pre>
     7127   10.00 (= thickness below the cell bed elevation)
-
     7128   10.00
-
     7129   10.00
-
     7130   12.25
-
     7188   15.00
-
     7189   13.25
-
     7190   11.95
-
     7191   10.00
-
     7192   10.00
     </pre>
     </div>
