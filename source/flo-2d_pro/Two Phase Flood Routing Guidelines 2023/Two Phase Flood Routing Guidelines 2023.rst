@@ -727,7 +727,7 @@ These output files have the format:
 .. raw:: html
 
     <div>
-        <pre>                                           Cell No. X-Coordinate Y-Coordinate Variable</pre>
+        <pre>   Cell No.       X-Coordinate        Y-Coordinate Variable</pre>
     </div>
 
 
