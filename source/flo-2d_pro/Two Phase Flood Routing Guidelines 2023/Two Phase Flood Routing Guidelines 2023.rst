@@ -608,10 +608,10 @@ To initiate FLO-2D two phase flow:
     - CONT.DAT XCONC is set to the average tailings concentration;
     - INFLOW.DAT – reservoir node gets a water elevation, tailings elevation and reservoir roughness.
 
-    .. raw:: html
-       <div>
+.. raw:: html
+   <div>
            <pre>R  7576    318.75        315.5               0.20</pre>
-       </div>
+   </div>
 
     - TAILINGS.DAT – grid element and thickness.
 
