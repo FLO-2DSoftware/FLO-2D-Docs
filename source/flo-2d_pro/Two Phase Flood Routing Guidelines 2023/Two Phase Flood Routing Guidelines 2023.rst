@@ -673,12 +673,10 @@ Refer to the FLO-2D Data Input Manual to review each variable.
 A few highlights are mentioned below:
 
     - The mudflow parameters in LINE M should be listed first;
-
-    - The M-Line primarily includes viscosity and yield stress coefficients and exponents; • The sediment transport capacity equation is entered in the
+    - The M-Line primarily includes viscosity and yield stress coefficients and exponents;
+    - The sediment transport capacity equation is entered in the
       C-line;
-
     - Scour limitation is assigned by line E.
-
     - At the present time sediment routing by size fractions is not available for two phase flow and is ignored if the data is assigned.
 
 Typical tolerance values, Courant numbers, limiting Froude number, and overland flow n-values are appropriate - no special values are necessary for a
