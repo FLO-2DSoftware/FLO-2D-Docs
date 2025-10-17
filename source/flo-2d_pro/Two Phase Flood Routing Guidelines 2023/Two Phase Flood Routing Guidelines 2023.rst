@@ -360,6 +360,30 @@ When the fluid phase is in direct contact with the ground, bed scour or depositi
 The mudflow phase is assumed to always be under or below the fluid phase.
 The coded rules for the two phase flow exchange within a grid element are as follows:
 
+
+.. raw:: html
+
+    <div style="overflow-x:auto;">
+    <table border="1" cellspacing="0" cellpadding="6" style="border-collapse:collapse; width:100%; font-family:Arial, sans-serif; font-size:14px;">
+        <caption>Table 2. Coded Rules for Two Phase Sediment Exchange</caption>
+        <thead>
+            <tr>
+                <th rowspan="2"> </th>
+                <th colspan="2">Flow Condition</th>
+                <th rowspan="2">Resolution</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2"></td>
+                <td style="white-space: nowrap; text-align:center;">0.83 - 0.91</td>
+                <td>Will not flow; failure by block sliding</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+
 *Table 2.
 Coded Rules for Two Phase Sediment Exchange*
 
