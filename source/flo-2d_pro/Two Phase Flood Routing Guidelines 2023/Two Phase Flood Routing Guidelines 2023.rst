@@ -375,7 +375,7 @@ The coded rules for the two phase flow exchange within a grid element are as fol
         <tbody>
             <tr>
                 <td>Fluid phase sediment transport capacity exceeds supply</td>
-                <td>Excess capacity (scour) is replenished from the mudflow phase or from the bed if no mudflow phase exists (subject to scour depth limitation).</td>
+                <td>Excess capacity (scour) is replenished from the mudflow phase or <br> from the bed if no mudflow phase exists (subject to scour depth limitation).</td>
             </tr>
             <tr>
                 <td>Supply exceeds the sediment transport capacity</td>
