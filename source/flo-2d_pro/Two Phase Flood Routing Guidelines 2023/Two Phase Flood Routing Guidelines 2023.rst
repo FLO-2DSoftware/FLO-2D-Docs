@@ -724,7 +724,12 @@ The MAXPLOT post processor program is a simple tool for graphically displaying F
 It has been updated to include the new two phase flow output files.
 These output files have the format:
 
-Cell No. X-Coordinate Y-Coordinate Variable
+.. raw:: html
+
+    <div>
+        <pre>                                           Cell No. X-Coordinate Y-Coordinate Variable</pre>
+    </div>
+
 
 The variables are listed below in the following files (both existing and new files):
 
