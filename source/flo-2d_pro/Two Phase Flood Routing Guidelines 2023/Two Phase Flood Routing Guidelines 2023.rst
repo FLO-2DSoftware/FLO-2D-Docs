@@ -27,15 +27,10 @@ FLO-2D Model
 The FLO-2D model has the following two-dimensional flow routing capabilities related to tailings dam failure:
 
     - Sudden collapse of the tailings stacks;
-
     - Dam breach with prescribed rates of failure or by simulating breach erosion;
-
     - Conventional sediment transport with scour and deposition;
-
     - Hyperconcentrated sediment flow (mudflows and mud floods) with flow cessation and remobilization;
-
     - River channel flow (1D) and overbank flooding;
-
     - Urban flooding with street flow and building obstruction.
 
 The FLO-2D Reference Manual, various White Papers and PowerPoint presentations provide additional discussion on the FLO-2D modeling system, sediment
@@ -189,17 +184,17 @@ The various sediment transport equations and recommendations for their applicati
 Hyperconcentrated Sediment Flows – Mud Floods and Mudflows
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Most tailings dam failure mudflows fall within a range of about 20 to 55 percent sediment concentration by volume.
-   When the tailings dam has minimal water storage, mudflows will occur (Figure 5).
-   If the tailings dam has a significant water storage, the resulting breach flooding may be characterized as a water flood with high bedload and
-   suspended loads (less than 20% concentration by volume).
-   At higher sediment concentrations, a fluid mud flood of 20% to 45% concentration by volume would occur.
-   Mud floods may be difficult to discern from water floods because they typically have a similar flow behavior.
-   The fluid properties of mud floods, however, are definitively different from water floods with much higher viscosity and density.
-   Table 1 lists the four different categories of hyperconcentrated sediment flows and their flow characteristics.
-   This table was developed from actual mudflow deposits analyzed in the laboratory (O’Brien, 1986).
-   Almost all hyperconcentrated sediment flows are fully turbulent, unsteady and nonuniform and are characterized by surging, flow cessation, blockage
-   and roll waves.
+Most tailings dam failure mudflows fall within a range of about 20 to 55 percent sediment concentration by volume.
+When the tailings dam has minimal water storage, mudflows will occur (Figure 5).
+If the tailings dam has a significant water storage, the resulting breach flooding may be characterized as a water flood with high bedload and
+suspended loads (less than 20% concentration by volume).
+At higher sediment concentrations, a fluid mud flood of 20% to 45% concentration by volume would occur.
+Mud floods may be difficult to discern from water floods because they typically have a similar flow behavior.
+The fluid properties of mud floods, however, are definitively different from water floods with much higher viscosity and density.
+Table 1 lists the four different categories of hyperconcentrated sediment flows and their flow characteristics.
+This table was developed from actual mudflow deposits analyzed in the laboratory (O’Brien, 1986).
+Almost all hyperconcentrated sediment flows are fully turbulent, unsteady and nonuniform and are characterized by surging, flow cessation, blockage
+and roll waves.
 
 .. image:: img/Two006.jpg
 
@@ -208,82 +203,75 @@ Tailings Dam Failure Mudflow Merriespruit, Virginia SA Feb 1994 (tailings.info).
 
 .. raw:: html
 
-    <table style="width:100%; border-collapse: collapse; text-align: left; font-size: 90%; border: 1px solid black;">
-      <caption style="caption-side: top; text-align: center; font-weight: bold; padding: 4px;">
-        Table 1. Mudflow Behavior as a Function of Sediment Concentration (O’Brien, 1986)
-      </caption>
-
-      <tr>
-        <th colspan="2" style="border: 1px solid black; text-align: center;">Sediment Concentration</th>
-        <th style="border: 1px solid black; text-align: center;">Flow Characteristics</th>
-      </tr>
-      <tr>
-        <th style="border: 1px solid black; text-align: center;">by Volume</th>
-        <th style="border: 1px solid black; text-align: center;">by Weight</th>
-        <th style="border: 1px solid black; text-align: center;"></th>
-      </tr>
-
-      <tr>
-        <td colspan="3" style="border: 1px solid black; font-weight: bold;">Landslide</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid black;">0.65 - 0.80</td>
-        <td style="border: 1px solid black;">0.83 - 0.91</td>
-        <td style="border: 1px solid black;">Will not flow; failure by block sliding</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid black;">0.55 - 0.65</td>
-        <td style="border: 1px solid black;">0.76 - 0.83</td>
-        <td style="border: 1px solid black;">Block sliding failure with internal deformation during the slide; slow creep prior to failure</td>
-      </tr>
-
-      <tr>
-        <td colspan="3" style="border: 1px solid black; font-weight: bold;">Mudflow</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid black;">0.48 - 0.55</td>
-        <td style="border: 1px solid black;">0.72 - 0.76</td>
-        <td style="border: 1px solid black;">Flow evident; slow creep sustained mudflow; plastic deformation under its own weight; cohesive; will not spread on level surface</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid black;">0.45 - 0.48</td>
-        <td style="border: 1px solid black;">0.69 - 0.72</td>
-        <td style="border: 1px solid black;">Flow spreading on level surface; cohesive flow; some mixing</td>
-      </tr>
-
-      <tr>
-        <td colspan="3" style="border: 1px solid black; font-weight: bold;">Mud Flood</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid black;">0.40 - 0.45</td>
-        <td style="border: 1px solid black;">0.65 - 0.69</td>
-        <td style="border: 1px solid black;">Flow mixes easily; shows fluid properties in deformation; spreads on horizontal surface but maintains an inclined fluid surface; large particle (boulder) setting; waves appear but dissipate rapidly</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid black;">0.35 - 0.40</td>
-        <td style="border: 1px solid black;">0.59 - 0.65</td>
-        <td style="border: 1px solid black;">Marked settling of gravels and cobbles; spreading nearly complete on horizontal surface; liquid surface with two fluid phases appears; waves travel on surface</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid black;">0.30 - 0.35</td>
-        <td style="border: 1px solid black;">0.54 - 0.59</td>
-        <td style="border: 1px solid black;">Separation of water on surface; waves travel easily; most sand and gravel has settled out and moves as bedload</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid black;">0.20 - 0.30</td>
-        <td style="border: 1px solid black;">0.41 - 0.54</td>
-        <td style="border: 1px solid black;">Distinct wave action; fluid surface; all particles resting on bed in quiescent fluid condition</td>
-      </tr>
-
-      <tr>
-        <td colspan="3" style="border: 1px solid black; font-weight: bold;">Water</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid black;">&lt; 0.20</td>
-        <td style="border: 1px solid black;">&lt; 0.41</td>
-        <td style="border: 1px solid black;">Water flood with conventional suspended load</td>
-      </tr>
+    <div style="overflow-x:auto;">
+    <table border="1" cellspacing="0" cellpadding="6" style="border-collapse:collapse; width:100%; font-family:Arial, sans-serif; font-size:14px;">
+        <caption><b>Table 1. Mudflow Behavior as a Function of Sediment Concentration (O’Brien, 1986)</b></caption>
+        <thead>
+            <tr>
+                <th rowspan="2"> </th>
+                <th colspan="2">Sediment Concentration</th>
+                <th rowspan="2">Flow Characteristics</th>
+            </tr>
+            <tr>
+                <th>by Volume</th>
+                <th>by Weight</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2"><b>Landslide</b></td>
+                <td>0.65 - 0.80</td>
+                <td>0.83 - 0.91</td>
+                <td>Will not flow; failure by block sliding</td>
+            </tr>
+            <tr>
+                <td>0.55 - 0.65</td>
+                <td>0.76 - 0.83</td>
+                <td>Block sliding failure with internal deformation during the slide; slow creep prior to failure</td>
+            </tr>
+            <tr>
+                <td rowspan="2"><b>Mudflow</b></td>
+                <td>0.48 - 0.55</td>
+                <td>0.72 - 0.76</td>
+                <td>Flow evident; slow creep sustained mudflow; plastic deformation under its own weight; cohesive; will not spread on level surface</td>
+            </tr>
+            <tr>
+                <td>0.45 - 0.48</td>
+                <td>0.69 - 0.72</td>
+                <td>Flow spreading on level surface; cohesive flow; some mixing</td>
+            </tr>
+            <tr>
+                <td rowspan="3"><b>Mud Flood</b></td>
+                <td>0.40 - 0.45</td>
+                <td>0.65 - 0.69</td>
+                <td>Flow mixes easily; shows fluid properties in deformation; spreads on horizontal surface but maintains an inclined fluid surface; large particle (boulder) setting; waves appear but dissipate rapidly</td>
+            </tr>
+            <tr>
+                <td>0.35 - 0.40</td>
+                <td>0.59 - 0.65</td>
+                <td>Marked settling of gravels and cobbles; spreading nearly complete on horizontal surface; liquid surface with two fluid phases appears; waves travel on surface</td>
+            </tr>
+            <tr>
+                <td>0.30 - 0.35</td>
+                <td>0.54 - 0.59</td>
+                <td>Separation of water on surface; waves travel easily; most sand and gravel has settled out and moves as bedload</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>0.20 - 0.30</td>
+                <td>0.41 - 0.54</td>
+                <td>Distinct wave action; fluid surface; all particles resting on bed in quiescent fluid condition</td>
+            </tr>
+            <tr>
+                <td><b>Water</b></td>
+                <td>&lt; 0.20</td>
+                <td>&lt; 0.41</td>
+                <td>Water flood with conventional suspended load</td>
+            </tr>
+        </tbody>
     </table>
+    </div>
+
 
 
 .. list-table:: Mudflow Behavior as a Function of Sediment Concentration (O’Brien, 1986)
