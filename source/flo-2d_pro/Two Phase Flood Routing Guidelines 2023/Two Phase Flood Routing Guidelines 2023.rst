@@ -1078,17 +1078,35 @@ The data is cataloged as either required or optional in the following table.
 .. raw:: html
 
     <div style="overflow-x:auto;">
-    <table border="1" cellspacing="0" cellpadding="6" style="border-collapse:collapse; width:100%; font-family:Arial, sans-serif; font-size:14px;">
-        <caption><b>Table 3. Tailings Dam Breach Data Needs</caption>
+    <table border="1" cellspacing="0" cellpadding="6"
+           style="border-collapse:collapse; width:100%; font-family:Arial, sans-serif; font-size:14px;">
+        <caption><b>Table 3. Tailings Dam Breach Data Needs</b></caption>
+        <thead>
+            <tr>
+                <th style="width:30%;">Data</th>
+                <th colspan="2">Comments</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th colspan="2">Required Data</th>
+            </tr>
+        </thead>
         <tbody>
             <tr>
-                <td>Data</td>
-                <td>Comments</td>
+                <td>Tailings dam geometry, tailings thickness and reservoir topography</td>
+                <td colspan="2">
+                    <p><i>For constructed dam facilities:</i> Upstream and downstream face slopes, core slopes, crest elevation, crest length, crest width, tailings surface elevation (for existing or design conditions), original bed or bedrock elevations. (See BREACH.DAT file required data for breach erosion component.)</p>
+                    <p><i>For tailings deposit dams:</i> Existing or tailings slope geometry and thickness, bed or bedrock elevations.</p>
+                </td>
             </tr>
-            <tr><td>Required Data</td></tr>
+            <tr>
+                <td>Downstream area of inundation digital terrain and roughness</td>
+                <td colspan="2">Area of inundation topography and land use for a typical FLO-2D flood model.</td>
+            </tr>
         </tbody>
     </table>
     </div>
+
 
 *Table 3.
 Tailings Dam Breach Data Needs.*
