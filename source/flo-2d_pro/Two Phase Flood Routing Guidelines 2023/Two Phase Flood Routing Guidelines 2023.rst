@@ -734,43 +734,26 @@ These output files have the format:
 The variables are listed below in the following files (both existing and new files):
 
     - CVTFPMAX.OUT: Maximum fluid phase sediment concentration by volume Cv.
-
     - CVTFPMAX_MUD.OUT: Maximum mudflow phase sediment concentration by volume.
-
     - DEPFP.OUT: Combined maximum fluid and mudflow phase flow depths.
-
     - DEPFPMAX_MUD.OUT: Maximum mudflow phase flow depth.
-
     - DEPTHMAX.OUT: Maximum fluid phase flow depth.
-
     - FINALDEP.OUT: Final fluid phase flow depth at the completion of the simulation.
-
     - FINALDEP_MUD.OUT: Final mudflow phase flow depth at the simulation completion.
-
-    - FINALDEP_COMBO.OUT: Final combined fluid and mudflow phase flow depths
-      - end of simulation.
-
+    - FINALDEP_COMBO.OUT: Final combined fluid and mudflow phase flow depths- end of simulation.
     - FINALVEL.OUT and FINALDIR.OUT: Final velocity and direction (1 of 8) for the fluid phase.
-
     - FINALVEL_MUD.OUT and FINALDIR_MUD.OUT: Final velocity and direction for the mudflow phase.
-
     - VELFP.OUT and VELDIREC.OUT: Maximum velocity and direction for the fluid phase.
-
     - VELFP_MUD.OUT and VELDIREC_MUD.OUT: Maximum velocity/direction for the mudflow phase.
-
     - VELRESMAX.OUT and VELRESMAX_MUD.OUT: These two files have a different format… Cell # X-Coord Y-Coord Max Vel Max Vel X-component Max Vel Y-component
 
 The above files compliment the previously available output files in the same format that can be plotted with the original MAXPLOT or Mapper programs
 some of which are listed below:
 
     - DEPCH.OUT: Maximum channel flow depth.
-
     - DEPCHFINAL.OUT: Final channel flow depth at the end of the simulation.
-
     - DEPTH.OUT: Combined maximum channel and floodplain flow depth.
-
     - IMPACT.OUT: Maximum impact pressure • SPECENERGY.OUT: Maximum specific energy.
-
     - STATICPRES.OUT: Maximum static pressure.
 
 There are several additional output files and not all files are for graphical display.
