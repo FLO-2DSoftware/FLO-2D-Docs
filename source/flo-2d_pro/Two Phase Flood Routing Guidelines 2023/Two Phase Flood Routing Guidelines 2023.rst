@@ -374,8 +374,20 @@ The coded rules for the two phase flow exchange within a grid element are as fol
         </thead>
         <tbody>
             <tr>
-                <td>Will not flow; failure by block sliding</td>
-                <td>Will not flow; failure by block sliding</td>
+                <td>Fluid phase sediment transport capacity exceeds supply</td>
+                <td>Excess capacity (scour) is replenished from the mudflow phase or from the bed if no mudflow phase exists (subject to scour depth limitation).</td>
+            </tr>
+            <tr>
+                <td>Supply exceeds the sediment transport capacity</td>
+                <td>Excess supply is added to the bed as deposition when the flow velocity ceases. The deposition may occur to the mudflow phase or to the bed if no mudflow exists (revises bed elevation).</td>
+            </tr>
+            <tr>
+                <td>Mudflow sediment concentration by volume exceeds 56% (60% for channel flow).</td>
+                <td>he mudflow layer is added to the bed.</td>
+            </tr>
+            <tr>
+                <td>Mudflow sediment concentration is less than 20%</td>
+                <td>The mudflow layer is added to the fluid phase.</td>
             </tr>
         </tbody>
     </table>
