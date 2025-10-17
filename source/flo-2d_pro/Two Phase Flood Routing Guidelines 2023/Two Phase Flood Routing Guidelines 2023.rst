@@ -1087,6 +1087,7 @@ The data is cataloged as either required or optional in the following table.
                 <td>0.83 - 0.91</td>
                 <td>Will not flow; failure by block sliding</td>
             </tr>
+            <tr>Required Data</tr>
         </tbody>
     </table>
     </div>
