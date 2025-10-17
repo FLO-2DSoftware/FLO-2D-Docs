@@ -660,13 +660,11 @@ A typical SED.DAT file for two phase flow may be as follows:
 
     .. raw:: html
        <div>
-       <pre>
-       M 0.0538 14.5 2.72 10.4 2.65 0.0
-
-       C 9 0 0.576 3.71 2.65 14700. 0.0778 0 7362
-
-       E 3.0
-       </pre>
+           <pre>
+               M 0.0538 14.5 2.72 10.4 2.65 0.0
+               C 9 0 0.576 3.71 2.65 14700. 0.0778 0 7362
+               E 3.0
+           </pre>
        </div>
 
 Refer to the FLO-2D Data Input Manual to review each variable.
