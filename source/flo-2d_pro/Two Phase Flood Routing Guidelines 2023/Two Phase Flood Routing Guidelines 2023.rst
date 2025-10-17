@@ -1103,6 +1103,89 @@ The data is cataloged as either required or optional in the following table.
                 <td>Downstream area of inundation digital terrain and roughness</td>
                 <td colspan="2">Area of inundation topography and land use for a typical FLO-2D flood model.</td>
             </tr>
+            <tr>
+                <td>Tailings dam material</td>
+                <td colspan="2">For constructed dam using breach erosion component:
+                Core and shell D50 sediment size, size gradation
+                coefficient, porosity, cohesive strength, dry specific
+                weight, Manning’s roughness, angle of internal friction,
+                and other data (See BREACH.DAT file description in the
+                Data Input Manual).
+                For tailings deposit dams or prescribed breach failure:
+                Prescribed vertical/horizontal rate of failure, failure
+                elevation, maximum failure width, duration of inundation
+                prior to failure.
+                </td>
+            </tr>
+            <tr>
+                <td>Tailings material: size fraction,
+                viscosity, yield stress, soil
+                moisture content or
+                concentration by volume</td>
+                <td colspan="2">Dry weight of sediment, porosity, viscosity and yield
+                stress as a function of concentration. Laboratory data or
+                existing relationships (see FLO-2D white paper:
+                ‘Simulating Mudflow Guidelines’</td>
+            </tr>
+            <tr>
+                <td>Downstream area of inundation bed material</td>
+                <td colspan="2">Bed material size fraction or D50, sediment transport
+                equation, size gradation coefficient, specific dry weight,
+                percent fine sediment (see SED.DAT file line C required
+                data in Data Input Manual).</td>
+            </tr>
+            <tr>
+                <td>Hydrology: Reservoir storage</td>
+                <td colspan="2">Stage-volume curves or tables; normal operating
+                conditions; spillway and outflow works; and stage
+                discharge relationships.</td>
+            </tr>
+            <tr>
+                <td>Hydrology: Rainfall and flood
+                inflow </td>
+                <td colspan="2">Design event rainfall frequency, duration, temporal
+                distribution; flood inflow hydrographs; historic event
+                data for calibration and replication. </td>
+            </tr>
+            <tr>
+                <td>Channel cross sections</td>
+                <td colspan="2">If a downstream channel exists in the area of inundation,
+                cross section geometry and n-values are necessary</td>
+            </tr>
+            <tr>
+                <td>Hydraulic structures</td>
+                <td colspan="2">Bridge, culvert, weir stage-discharge data.</td>
+            </tr>
+            <tr>
+                <td>Urban detail</td>
+                <td colspan="2">Area and width reduction factors, levee and berm
+                locations and crest elevations. </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">Optional Data</td>
+            </tr>
+            <tr>
+                <td>Viscosity and yield stress vs.
+                sediment concentration by
+                volume – lab data
+                </td>
+                <td colspan="2">Ideally, the tailings material viscosity and yield stress
+                data are obtained with a laboratory viscometer; but lack
+                of budget and time may preclude this. Instead, existing
+                relationships found in the FLO-2D white paper:
+                ‘Simulating Mudflow Guidelines’ can be applied.</td>
+            </tr>
+            <tr>
+                <td>Tailings dam geometry and material data</td>
+                <td colspan="2">If breach erosion is not model for the dam failure, this
+                data is not necessary.</td>
+            </tr>
+            <tr>
+                <td>Historical data </td>
+                <td colspan="2">If no tailings dam failure is being replicated, the historic
+                hydrologic and inundation data is not necessary.</td>
+            </tr>
         </tbody>
     </table>
     </div>
