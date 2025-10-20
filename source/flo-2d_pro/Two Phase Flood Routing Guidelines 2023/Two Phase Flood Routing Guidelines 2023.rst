@@ -1406,22 +1406,16 @@ The Tailings Mudflow is Mobilized at the Start of the Simulation.*
 *Figure 32.
 The Tailings Facility is Draining after 0.45 hrs.*
 
-    *Breach Erosion:* The FLO-2D breach component involves potential overtopping the dam crest, piping erosion through the dam, pipe collapse into a
+*Breach Erosion:* The FLO-2D breach component involves potential overtopping the dam crest, piping erosion through the dam, pipe collapse into a
 channel, and/or dam collapse as block failure.
 Computing the tailings dam scour is requires more data and the following dam geometry parameters are required:
 
     - Crest elevation
-
     - Starting water surface elevation (or depth below crest) (ft or m)
-
     - Cumulative duration of inundation at specified elevation prior to breach initiation (hr)
-
     - Maximum breach width (ft or m)
-
     - Prescribed initial pipe elevation (ft or m)
-
     - Tailwater elevation (ft or m)
-
     - Foundation or base elevation for vertical breach cessation (ft or m)
 
 In addition, there are dam shell (and infrequently, a potential dam core) material parameters that are required.
