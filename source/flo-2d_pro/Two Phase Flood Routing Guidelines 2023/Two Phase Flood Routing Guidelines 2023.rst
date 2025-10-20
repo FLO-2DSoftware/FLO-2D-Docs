@@ -1337,18 +1337,18 @@ reaches the hyperconcentrated sediment mud flow level.
 From the standpoint of identifying the downstream flood hazard, all three breach methods can be applied to evaluate the worst case: Instantaneous
 breach, prescribed breach rates and breach erosion.
 
-    *Instantaneous Breach:* Intuitively, collapsing the tailings dam to the base elevation should create the fastest rising frontal wave.
+*Instantaneous Breach:* Intuitively, collapsing the tailings dam to the base elevation should create the fastest rising frontal wave.
 Assigning more than one breach direction and grid element will intensify the breach wave progressing downstream.
 The instantaneous breach is initiated by assigning the W-line in the LEVEE.DAT file.
 Only the breach elevation (slightly lower than the water surface) is necessary to assign to start the instantaneous breach.
 
-    *Prescribed Failure Breach:* A prescribed rate of failure breach is orchestrated by assigning the vertical and horizontal breach rates in the same
+*Prescribed Failure Breach:* A prescribed rate of failure breach is orchestrated by assigning the vertical and horizontal breach rates in the same
 W-line of the LEVEE.DAT file.
 Suggested rates of failure in ft/hr or m/hr are not readily available in the literature.
 A vertical breach rate of 10 ft/hr (3 m/hr) and a horizontal rate of 50 ft/hr (17 m/hr) can be initially applied, but the user is encouraged to
 research potential tailings dam breach rates and experiment with various rates to attempt to maximize the breach peak discharge and timing.
 
-    *Stack Collapse – Instantaneous Static or Seismic Failure:* A collapse of the tailings facility can be simulated without using the prescribed breach
+*Stack Collapse – Instantaneous Static or Seismic Failure:* A collapse of the tailings facility can be simulated without using the prescribed breach
 failure data in the LEVEE.DAT file.
 This is accomplished by assigning tailings depths to the grid elements within tailings facility.
 When the FLO-2D model is run with the levee dam cells removed, the storage tailings begin to move immediately.
