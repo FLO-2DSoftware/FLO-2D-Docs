@@ -1364,6 +1364,7 @@ The starting water surface and tailings surface (or just tailing surface with no
     </div>
 
 where:
+
     28776 is a grid element inside the reservoir
 
     4506.00 = water surface elevation
@@ -1838,7 +1839,7 @@ The Ackers-White approach tends to overestimate the fine sand transport (Julien,
 *Figure A.1.
 Plot of Final Scour/Deposition for the Ackers-White Equation*
 
-    *Engelund-Hansen Method.* Bagnold’s stream power concept was applied with the similarity principle to derive a sediment transport function.
+*Engelund-Hansen Method.* Bagnold’s stream power concept was applied with the similarity principle to derive a sediment transport function.
 The method involves the energy slope, velocity, bed shear stress, median particle diameter, specific weight of sediment and water, and gravitational
 acceleration.
 In accordance with the similarity principle, the method should be applied only to flow over dune bed forms, but Engelund and Hansen (1967) determined
@@ -1849,7 +1850,7 @@ that it could be effectively used in both dune bed forms and upper regime sedime
 *Figure A.2.
 Plot of Final Scour/Deposition for the Engelund-Hansen Equation.*
 
-    *Karim-Kennedy Equation.* The simplified Karim-Kennedy equation (F.
+*Karim-Kennedy Equation.* The simplified Karim-Kennedy equation (F.
 Karim, 1998) is a nonlinear multiple regression equation based on velocity, bed form, sediment size and friction factor using a large number of river
 flume data sets.
 The data includes sediment sizes ranging from 0.08 mm to 0.40 mm (river) and 0.18 mm to 29 mm (flume), slope ranging from 0.0008 to 0.0017 (river) and
@@ -1862,7 +1863,7 @@ It will yield results similar to Laursen’s and Toffaleti’s equations (lower 
 *Figure A.3.
 Plot of Final Scour/Deposition for the Karim-Kennedy Equation.*
 
-    *Laursen’s Transport Function.* The Laursen (1958) formula was developed for sediments with a specific gravity of 2.65 and had good agreement with
+*Laursen’s Transport Function.* The Laursen (1958) formula was developed for sediments with a specific gravity of 2.65 and had good agreement with
 field data from small rivers such as the Niobrara River near Cody, Nebraska.
 For larger rivers the correlation between measured data and predicted sediment transport was poor (Graf, 1971).
 This set of equations involved a functional relationship between the flow hydraulics and sediment discharge.
@@ -1876,7 +1877,7 @@ The critical tractive force in the sediment concentration equation is given by t
 *Figure A.4.
 Plot of Final Scour/Deposition for the Laursen Equation.*
 
-    *MPM-Smart Equation.* This is a modified form of the Meyer-Peter-Mueller (MPM) bedload sediment transport equation (Smart, 1984) for steep channels
+*MPM-Smart Equation.* This is a modified form of the Meyer-Peter-Mueller (MPM) bedload sediment transport equation (Smart, 1984) for steep channels
 ranging from 3% to 20%.
 The original MPM equation underestimated sediment transport capacity because of deficiencies in the roughness values.
 This equation can be used for sediment sizes greater than 0.4 mm.
@@ -1888,7 +1889,7 @@ It will generate sediment transport rates approaching that computed by the Engel
 *Figure A.5.
 Plot of Final Scour/Deposition for the MPM-Smart Equation.*
 
-    *MPM-Woo Relationship.* For computing the bed material load in steep sloped, sand bed channels such as arroyos, washes and alluvial fans, Mussetter,
+*MPM-Woo Relationship.* For computing the bed material load in steep sloped, sand bed channels such as arroyos, washes and alluvial fans, Mussetter,
 et al.
 (1994) linked Woo’s relationship for computing the suspended sediment concentration with the MPM bedload equation.
 Woo et al.
@@ -1907,7 +1908,7 @@ the other sediment transport equations may be applicable.
 *Figure A.6.
 Plot of Final Scour/Deposition for the MPM-Woo Equation.*
 
-    *Parker, Klingeman and McLean (1982).* This equation was derived primarily for gravel or sandy bed material load.
+*Parker, Klingeman and McLean (1982).* This equation was derived primarily for gravel or sandy bed material load.
 It was based on Milhous (1973, 1982) sediment transport measurements at Oak Creek, Oregon.
 At low flows the equation generates sediment load that is entirely bedload.
 For higher flows approaching bankfull discharge, the predicted bed material load is presumed to be mixed suspended and bedload for the smaller
@@ -1920,7 +1921,7 @@ total bed load.
 *Figure A.7.
 Plot of Final Scour/Deposition for the Parker, Klingeman and McClean Equation.*
 
-    *Toffaleti’s Approach.* Toffaleti (1969) develop a procedure to calculate the total sediment load by estimating the unmeasured load.
+*Toffaleti’s Approach.* Toffaleti (1969) develop a procedure to calculate the total sediment load by estimating the unmeasured load.
 Following the Einstein approach, the bed material load is given by the sum of the bedload discharge and the suspended load in three separate zones.
 Toffaleti computed the bedload concentration from his empirical equation for the lower zone suspended load discharge and then computed the bedload.
 The Toffaleti approach requires the average velocity in the water column, hydraulic radius, water temperature, stream width, D\ :sub:`65` sediment
@@ -1933,7 +1934,7 @@ This equation has several empirical and poorly defined coefficients that may giv
 *Figure A.8.
 Plot of Final Scour/Deposition for the Toffaleti Equation.*
 
-    *Van Rijn.* This equation predicts the total sediment discharge assuming a parabolic distribution of suspended sediment in the lower half of the flow
+*Van Rijn.* This equation predicts the total sediment discharge assuming a parabolic distribution of suspended sediment in the lower half of the flow
 and a uniform distribution in the upper half of the flow.
 The uniform sediment distribution in upper flow portion is based on the maximum value of the parabolic distribution from the lower flow.
 The bedload discharge and suspended load is computed separately and added together to derive the total sediment load.
@@ -1944,7 +1945,7 @@ For a discussion between measured and predicted data for the equation using labo
 *Figure A.9.
 Plot of Final Scour/Deposition for the Van Rijn Equation.*
 
-    *Yang’s Method.* Yang (1973) determined that the total sediment concentration was a function of the potential energy dissipation per unit weight of
+*Yang’s Method.* Yang (1973) determined that the total sediment concentration was a function of the potential energy dissipation per unit weight of
 water (stream power) and the stream power was expressed as a function of velocity and slope.
 In this equation, the total sediment concentration is expressed as a series of dimensionless regression relationships.
 The equations were based on measured field and flume data with sediment particles ranging from 0.137 mm to 1.71 mm and flows depths from 0.037 ft to
@@ -1957,7 +1958,7 @@ Yang’s equations can be applied to sand and gravel.
 *Figure A.10.
 Plot of Final Scour/Deposition for the Yang’s Equation.*
 
-    *Zeller-Fullerton Equation.* Zeller-Fullerton is a multiple regression sediment transport equation for a range of channel bed and alluvial floodplain
+*Zeller-Fullerton Equation.* Zeller-Fullerton is a multiple regression sediment transport equation for a range of channel bed and alluvial floodplain
 conditions.
 This empirical equation is a computer-generated solution of the MPMuller bed-load equation combined with Einstein’s suspended load to generate a bed
 material load (Zeller and Fullerton, 1983).
@@ -1980,15 +1981,10 @@ In summary, Yang (1996) made several recommendations for the application of tota
 These recommendations for natural rivers are:
 
     - Use Zeller and Fullerton equation when the bedload is a significant portion of the total load.
-
     - Use Toffaleti’s method or the Karim-Kennedy equation for large sand-bed rivers.
-
     - Use Yang’s equation for sand and gravel transport in natural rivers.
-
     - Use Ackers-White or Engelund-Hansen for subcritical flow in lower sediment transport regime.
-
     - Use Laursen’s formula for shallow rivers with silt and fine sand.
-
     - Use MPM-Woo’s or MPM-Smart for steep slope, arroyo sand bed channels and alluvial fans.
 
 Yang (1996) reported that ASCE ranked the equations (not including Toffaleti, MPM-Woo, Karin-Kennedy) in 1982 based on 40 field tests and 165 flume
