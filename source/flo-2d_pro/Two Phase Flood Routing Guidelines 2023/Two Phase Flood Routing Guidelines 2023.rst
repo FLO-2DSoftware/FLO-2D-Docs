@@ -711,7 +711,7 @@ The data entry method for a simple prescribed breach tailings dam failure is def
 .. image:: img/Two014.jpg
 
 *Figure 14.
-Two phase data entry dialog sediment transport.
+Two phase data entry dialog sediment transport.*
 
 Output Files and Reviewing the Results
 ----------------------------------------
@@ -1190,116 +1190,15 @@ The data is cataloged as either required or optional in the following table.
     </table>
     </div>
 
+.. raw:: html
 
-*Table 3.
-Tailings Dam Breach Data Needs.*
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
-
-   * - Data
-     - Comments
-
-   * - Required Data
-     -
-
-   * - Tailings dam geometry, tailings thickness and reservoir topography
-     - For constructed dam facilities: Upstream and
-       downstream face slopes, core slopes, crest elevation,
-       crest length, crest width, tailings surface elevation (for
-       existing or design conditions), original bed or bedrock
-       elevations. (See BREACH.DAT file required data for
-       breach erosion component).
-       For tailings deposit dams: Existing or tailings slope
-       geometry and thickness, bed or bedrock elevations.
-
-   * - Downstream area of inundation
-       digital terrain and roughness
-     - Area of inundation topography and landuse for a typical
-       FLO-2D flood model.
-
-   * - Tailings dam material
-     - For constructed dam using breach erosion component:
-       Core and shell D50 sediment size, size gradation
-       coefficient, porosity, cohesive strength, dry specific
-       weight, Manning’s roughness, angle of internal friction,
-       and other data (See BREACH.DAT file description in the
-       Data Input Manual).
-       For tailings deposit dams or prescribed breach failure:
-       Prescribed vertical/horizontal rate of failure, failure
-       elevation, maximum failure width, duration of inundation
-       prior to failure.
-
-   * - Tailings material: size fraction,
-       viscosity, yield stress, soil
-       moisture content or
-       concentration by volume
-     - Dry weight of sediment, porosity, viscosity and yield
-       stress as a function of concentration. Laboratory data or
-       existing relationships (see FLO-2D white paper:
-       ‘Simulating Mudflow Guidelines’
-
-   * - Downstream area of inundation
-       bed material
-     - Bed material size fraction or D50, sediment transport
-       equation, size gradation coefficient, specific dry weight,
-       percent fine sediment (see SED.DAT file line C required
-       data in Data Input Manual).
-
-   * - Hydrology: Reservoir storage
-     - Stage-volume curves or tables; normal operating
-       conditions; spillway and outflow works; and stage
-       discharge relationships.
-
-   * - Hydrology: Rainfall and flood
-       inflow
-     - Design event rainfall frequency, duration, temporal
-       distribution; flood inflow hydrographs; historic event
-       data for calibration and replication.
-
-   * - Channel cross sections
-     - If a downstream channel exists in the area of inundation,
-       38
-       cross section geometry and n-values are necessary
-
-
-   * - Hydraulic structures
-     - Bridge, culvert, weir stage-discharge data.
-
-   * - Urban detail
-     - Area and width reduction factors, levee and berm
-       locations and crest elevations.
-
-   * - Optional Data
-     -
-
-   * - Viscosity and yield stress vs.
-       sediment concentration by
-       volume – lab data
-     - Ideally, the tailings material viscosity and yield stress
-       data are obtained with a laboratory viscometer; but lack
-       of budget and time may preclude this. Instead, existing
-       relationships found in the FLO-2D white paper:
-      ‘Simulating Mudflow Guidelines’ can be applied.
-
-   * - Tailings dam geometry and
-       material data
-     - If breach erosion is not model for the dam failure, this
-       data is not necessary.
-
-   * - Historical data
-     - If no tailings dam failure is being replicated, the historic
-       hydrologic and inundation data is not necessary.
+   <br><br>
 
 The following component data is not required for modeling the tailings dam breach.
 The FLO2D model can simulate these components if the downstream area of inundation of the tailings dam breach flooding is required.
 
     - Evaporation
-
     - Storm drain and groundwater
-
     - Multiple channels
 
 To model the downstream area of inundation with these additional components, use the floodplain cross section component (HYCROSS.OUT) to generate the
@@ -1318,9 +1217,7 @@ Comparing the peak sediment loads in the SEDTRAN.OUT file for the grid element d
 the following conclusions can be drawn:
 
     - Low Peak Sediment Discharge Equations: Laursen, Toffaleti, Karim-Kennedy
-
     - Moderate Peak Sediment Discharge Equations: Zeller-Fullerton, Yang, Ackers-White, MPM-Woo, MPM-Smart, Van Rijn
-
     - High Peak Sediment Discharge Equations: Engelund-Hansen, Parker, Klingeman & McClean
 
 There is roughly an order of magnitude difference between these three categories.
