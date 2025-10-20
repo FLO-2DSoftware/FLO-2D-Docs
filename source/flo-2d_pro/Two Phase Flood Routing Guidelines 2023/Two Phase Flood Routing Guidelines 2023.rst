@@ -1357,15 +1357,20 @@ To set up a stack failure, the tailings facility is initially assigned a levee d
 storage cells (Figure 25).
 The starting water surface and tailings surface (or just tailing surface with no supernatant fluid) are assigned in INFLOW.DAT R-Line:
 
-   R 28776 4506.00 4501.00 0.25
+.. raw:: html
 
-where: 28776 is a grid element inside the reservoir
+    <div>
+    <pre>R 28776 4506.00 4501.00 0.25</pre>
+    </div>
 
-       4506.00 = water surface elevation
+where:
+    28776 is a grid element inside the reservoir
 
-       4501.00 = tailings surface elevation
+    4506.00 = water surface elevation
 
-       0.250 = reservoir n-value
+    4501.00 = tailings surface elevation
+
+    0.250 = reservoir n-value
 
 At this stage, run theFLO-2D model with SIMUL = 0.01 hrs and TOUT = 0.01 hrs and the model will start and stop.
 Review the SUMMARY.OUT file for the reported volumes and adjust the grid element foundation or bed elevations until the tailing storage volume is
