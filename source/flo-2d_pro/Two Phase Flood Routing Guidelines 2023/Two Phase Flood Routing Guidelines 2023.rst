@@ -2159,138 +2159,49 @@ If other viscosity and yield stress relationships are applied, it is recommended
 in Figures B.1 and B.2.
 Data that falls outside the ranges in these figures may not yield representative flow results.
 
-*TABLE B.1.
-YIELD STRESS AND VISCOSITY AS A FUNCTION OF SEDIMENTCONCENTRATION.*
+.. raw:: html
 
-.. list-table::
-   :widths: 20 20 20 20 20
-   :header-rows: 0
+   <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; text-align: center; width: 100%;">
+     <caption><b>TABLE B.1. YIELD STRESS AND VISCOSITY AS A FUNCTION OF SEDIMENT CONCENTRATION</b></caption>
+     <thead>
+       <tr>
+         <th rowspan="2">Source</th>
+         <th colspan="2">Yield Stress τ<sub>y</sub> = α e<sup>βC<sub>V</sub></sup></th>
+         <th colspan="2">Viscosity η = α e<sup>βC<sub>V</sub></sup></th>
+       </tr>
+       <tr>
+         <th>α</th>
+         <th>β</th>
+         <th>α</th>
+         <th>β</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr><td colspan="5" style="text-align:left;"><b>Field Data</b></td></tr>
+       <tr><td>Aspen Pit 1</td><td>0.181</td><td>25.7</td><td>0.0360</td><td>22.1</td></tr>
+       <tr><td>Aspen Pit 2</td><td>2.72</td><td>10.4</td><td>0.0538</td><td>14.5</td></tr>
+       <tr><td>Aspen Natural Soil</td><td>0.152</td><td>18.7</td><td>0.00136</td><td>28.4</td></tr>
+       <tr><td>Aspen Mine Fill</td><td>0.0473</td><td>21.1</td><td>0.128</td><td>12.0</td></tr>
+       <tr><td>Aspen Watershed</td><td>0.0383</td><td>19.6</td><td>0.000495</td><td>27.1</td></tr>
+       <tr><td>Aspen Mine Source Area</td><td>0.291</td><td>14.3</td><td>0.000201</td><td>33.1</td></tr>
+       <tr><td>Glenwood 1</td><td>0.0345</td><td>20.1</td><td>0.00283</td><td>23.0</td></tr>
+       <tr><td>Glenwood 2</td><td>0.0765</td><td>16.9</td><td>0.648</td><td>6.20</td></tr>
+       <tr><td>Glenwood 3</td><td>0.000707</td><td>29.8</td><td>0.00632</td><td>19.9</td></tr>
+       <tr><td>Glenwood 4</td><td>0.00172</td><td>29.5</td><td>0.000602</td><td>33.1</td></tr>
 
+       <tr><td colspan="5" style="text-align:left;"><b>Relationships Available from the Literature</b></td></tr>
+       <tr><td>Iida (1938)<sup>*</sup></td><td>-</td><td>-</td><td>0.0000373</td><td>36.6</td></tr>
+       <tr><td>Dai et al. (1980)</td><td>2.60</td><td>17.48</td><td>0.00750</td><td>14.39</td></tr>
+       <tr><td>Kang and Zhang (1980)</td><td>1.75</td><td>7.82</td><td>0.0405</td><td>8.29</td></tr>
+       <tr><td>Qian et al. (1980)</td><td>0.00136</td><td>21.2</td><td>-</td><td>-</td></tr>
+       <tr><td>Chien and Ma (1958)</td><td>0.050</td><td>15.48</td><td>-</td><td>-</td></tr>
+       <tr><td></td><td>0.0588</td><td>19.1–32.7</td><td>-</td><td>-</td></tr>
+       <tr><td></td><td>0.166</td><td>25.6</td><td>-</td><td>-</td></tr>
+       <tr><td>Fei (1981)</td><td>0.00470</td><td>22.2</td><td>-</td><td>-</td></tr>
+     </tbody>
+   </table>
 
-   * - Field Data
-     -
-     -
-     -
-     -
-
-   * - Aspen Pit 1
-     - 0.181
-     - 25.7
-     - 0.0360
-     - 22.1
-
-   * - Aspen Pit 2
-     - 2.72
-     - 10.4
-     - 0.0538
-     - 14.5
-
-   * - Aspen Natural Soil
-     - 0.152
-     - 18.7
-     - 0.00136
-     - 28.4
-
-   * - Aspen Mine Fill
-     - 0.0473
-     - 21.1
-     - 0.128
-     - 12.0
-
-   * - Aspen Watershed
-     - 0.0383
-     - 19.6
-     - 0.000495
-     - 27.1
-
-   * - Aspen Mine
-     - 0.291
-     - 14.3
-     - 0.000201
-     - 33.1Source Area
-
-   * - Glenwood 1
-     - 0.0345
-     - 20.1
-     - 0.00283
-     - 23.0
-
-   * - Glenwood 2
-     - 0.0765
-     - 16.9
-     - 0.648
-     - 6.20
-
-   * - Glenwood 3
-     - 0.000707
-     - 29.8
-     - 0.00632
-     - 19.9
-
-   * - Glenwood 4
-     - 0.00172
-     - 29.5
-     - 0.000602
-     - 33.1
-
-   * - Relationships Available from the Literature
-     -
-     -
-     -
-
-   * - Iida
-     -
-     -
-     - 0.0000373
-     - 36.6(1938)\ :sup:`\*`
-
-   * - Dai et al. (1980)
-     - 2.60
-     - 17.48
-     - 0.00750
-     - 14.39
-
-   * - Kang and Zhang (1980)
-     - 1.75
-     - 7.82
-     - 0.0405
-     - 8.29(1980)
-
-   * - Qian et al. (1980)
-     - 0.00136
-     - 21.2
-     -
-     -
-
-   * -
-     - 0.050
-     - 15.48
-     -
-     -
-
-   * - Chien and Ma (1958)
-     - 0.0588
-     - 19.1-32.7
-     -
-     -
-
-   * - Fei (1981)
-     - 0.166
-     - 25.6
-     -
-     -
-
-   * -
-     - 0.00470
-     - 22.2
-     -
-     -
-
-   * - *:sup:`\*`\ See O’Brien (1986) for the references.
-     -
-     -
-     -
-     -
+   <p style="font-size: 0.9em;"><sup>*</sup>See O’Brien (1986) for the references.</p>
 
 
 
