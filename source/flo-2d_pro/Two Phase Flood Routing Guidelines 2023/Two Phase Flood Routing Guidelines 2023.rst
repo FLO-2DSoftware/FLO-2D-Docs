@@ -2118,8 +2118,8 @@ Li and P.
 F.
 Lagasse, eds., Colorado State University and ASCE.
 
-Appendix B.
-Tailings Dam Mudflows
+Appendix B. Tailings Dam Mudflows
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Very viscous, hyperconcentrated sediment flows are referred to as mudflows.
 Mudflows are nonhomogeneous, nonNewtonian, transient flood events whose fluid properties can change significantly as they flow down steep canyons and
@@ -2232,6 +2232,7 @@ Yield Stress of Mudflow Samples Versus Volumetric Concentration
 (From FLO-2D White Paper ‘Simulating Mudflow Guidelines’ after O’Brien and Julien, 1988)
 
 Appendix C.
+^^^^^^^^^^^^^^^
 Model Speed and Numerical Stability Adjustments
 
 Use the default Courant number (0.6) and TIME_ACCEL (0.1) for the initial simulation and then review the VELTIMEFP.OUT file that reports the maximum
