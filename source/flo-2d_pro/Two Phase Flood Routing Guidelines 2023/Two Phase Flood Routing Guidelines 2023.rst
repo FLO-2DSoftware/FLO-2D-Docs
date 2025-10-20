@@ -1162,8 +1162,8 @@ The data is cataloged as either required or optional in the following table.
                 locations and crest elevations. </td>
             </tr>
             <tr>
-                <td></td>
-                <td colspan="2">Optional Data</td>
+                <th></th>
+                <th colspan="2">Optional Data</th>
             </tr>
             <tr>
                 <td>Viscosity and yield stress vs.
