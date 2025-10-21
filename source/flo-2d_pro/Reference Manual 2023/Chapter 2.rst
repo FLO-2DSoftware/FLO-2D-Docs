@@ -15,11 +15,16 @@ A discussion of the governing equations follows.
 
 The constitutive fluid motion equations include the continuity equation and the momentum equation:
 
-\ *h +*  *h V = i*
+.. math::
 
-\ *t* \ *x*
+    \frac{\partial h}{\partial t} + \frac{\partial hV}{\partial x} = i
 
-   *S f = S\ o -* :sup:`\ h` *- V* :sup:`\ V` *- 1* :sup:`\ V` \ *x g* \ *x g* \ *t*
+.. math::
+
+    S_f = S_o
+    - \frac{\partial h}{\partial x}
+    - \frac{V}{g} \frac{\partial V}{\partial x}
+    - \frac{1}{g} \frac{\partial V}{\partial t}
 
 where h is the flow depth and V is the depth-averaged velocity in one of the eight flow directions x.
 The excess rainfall intensity (i) may be nonzero on the flow surface.
