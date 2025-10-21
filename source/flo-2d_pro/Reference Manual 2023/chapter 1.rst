@@ -1,7 +1,10 @@
 .. vim: syntax=rst
 
-**Chapter 1.
-INTRODUCTION**
+Chapter 1
+============
+
+INTRODUCTION
+---------------
 
 This Reference Manual discusses the physical processes of flooding.
 It is designed to acquaint the user with the model theory, finite difference algorithms, model components, modeling assumptions and limitations, and
