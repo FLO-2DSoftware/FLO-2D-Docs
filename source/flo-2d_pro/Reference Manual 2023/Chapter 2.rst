@@ -362,17 +362,17 @@ Unreasonable maximum velocities are easy to identify because the VELTIM_x.OUT fi
 The first several reported maximum velocities should not be significantly greater than the rest of the file as in the case of node 4887 in the
 VELTIMFP.OUT file below.
 
-|Chapte004|
+.. image:: img/Chapter2/Chapte004.jpg
 
-   *Figure 7.
-   Numerical Surging in a Channel Element Hydrograph.*
+*Figure 7.
+Numerical Surging in a Channel Element Hydrograph.*
 
-|Chapte005|
+.. image:: img/Chapter2/Chapte005.jpg
 
-   *Figure 8.
-   File Sample VELTIMFP.OUT.*
+*Figure 8.
+File Sample VELTIMFP.OUT.*
 
-   Using the Courant Number and Timestep Accelerator Parameter
+Using the Courant Number and Timestep Accelerator Parameter
 
 The global Courant Number is assigned in the TOLER.DAT file line 2 as follows:
 
@@ -472,10 +472,10 @@ The FLO-2D model has an explicit numerical scheme that exchanges flow with conti
 shallow flows to completely drain an element of volume if the outflow exceeds the inflow plus storage.
 This may occur more frequently with hydraulic structure inflow nodes.
 
-|Chapte006|
+.. image:: img/Chapter2/Chapte003.jpg
 
-   *Figure 9.
-   TOL Definition.*
+*Figure 9.
+TOL Definition.*
 
 Grid Element Depression Storage that Must Be Filled Before Volume is Exchanged with Another Element
 
@@ -679,18 +679,3 @@ will be fully developed turbulent flow.
 In lieu of using multiple mean velocity equations, one for deeper flow and one for shallow flow, it is necessary to compensate for overpredicting the
 velocity using Manning’s equation by assigning higher shallow n-values or using depth variable n-values or both.
 
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 1.24375in
-   :height: 1.06201in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 8.69792in
-   :height: 5.85417in
-.. |Chapte004| image:: media\Chapte004.jpg
-   :width: 6.5in
-   :height: 2.76528in
-.. |Chapte005| image:: media\Chapte005.jpg
-   :width: 3.84556in
-   :height: 3.65069in
-.. |Chapte006| image:: media\Chapte006.jpg
-   :width: 6.48958in
-   :height: 2.67708in
