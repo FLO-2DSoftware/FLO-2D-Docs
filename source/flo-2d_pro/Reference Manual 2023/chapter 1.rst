@@ -39,8 +39,6 @@ seconds).
 Typical applications have grid elements that range from 10 ft (3 m) to 500 ft (130 m) on a side and the number of grid elements is limited only by the
 computer resources and runtime.
 
-1 Chapter 1
-
 1.2 Modeling the Hydrologic System with FLO-2D
 ----------------------------------------------
 
@@ -86,8 +84,6 @@ The inflow volume dictates the area of inundation and will control model calibra
 *Figure 1.
 Physical Processes Simulated by FLO-2D.*
 
-   3 Chapter 1
-
 .. image:: img/Chapter1/Chapte003.jpg
 
 *Figure 2.
@@ -124,8 +120,6 @@ losses in the system.
 The user can specify the temporal and spatial output detail including the outflow hydrograph locations, the output time intervals and the graphical
 display of the flood progression over the grid system.
 After the preliminary FLO-2D runs, the user can apply the output options to determine required level of output detail.
-
-5 Chapter 1
 
 .. image:: img/Chapter1/Chapte004.png
 
