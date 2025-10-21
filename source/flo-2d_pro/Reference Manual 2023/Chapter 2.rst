@@ -124,10 +124,10 @@ This simplifies and reduces the number of steps in the solution algorithm.
 Each direction is visited only once during a sweep of the grid system domain and involves two grid elements whereas a grid element index requires each
 grid element to be visited (Figure 4).
 
-   |Chapte002|
+.. image:: img/Chapter2/Chapte002.jpg
 
-   *Figure 4.
-   Flow Direction.*
+*Figure 4.
+Flow Direction.*
 
 Flow Direction is the Computational Index not the Grid Element Number.
 To summarize, the solution algorithm incorporates the following steps:
@@ -136,8 +136,6 @@ To summarize, the solution algorithm incorporates the following steps:
 
 2. The flow depth d\ :sub:`x` for computing the velocity across a grid boundary for the next timestep (i+1) is estimated from the previous timestep i
    using a linear estimate (the average depth between two elements).
-
-..
 
    *dix+1 = dix + dix*\ +1
 
