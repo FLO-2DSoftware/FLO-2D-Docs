@@ -44,6 +44,20 @@ Understanding, the relative magnitude of the acceleration components to the bed 
 Henderson (1966) computed the relative magnitude of momentum equation terms for a moderately steep alluvial channel and a fast-rising hydrograph as
 follows:
 
+.. raw:: html
+
+    <div>
+    <pre>
+                            Bed          Pressure     Convective          Local
+                            Slope        Gradient     Acceleration        Acceleration
+
+    Momentum Equation Term: S\ :sub:`o`  ∂h/∂x        V∂V/g∂x             ∂V/g∂t
+
+    Magnitude (ft/mi)       26           0.5          0.12 - 0.25         0.05
+
+    </pre>
+    </div>
+
 Bed Pressure Convective Local
 
 Slope Gradient Acceleration Acceleration
