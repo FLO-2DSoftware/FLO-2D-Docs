@@ -127,7 +127,7 @@ After the preliminary FLO-2D runs, the user can apply the output options to dete
 
 5 Chapter 1
 
-.. image:: img/Chapter1/Chapte004.jpg
+.. image:: img/Chapter1/Chapte004.png
 
 *Figure 3.
 FLO-2D Flow Chart.*
