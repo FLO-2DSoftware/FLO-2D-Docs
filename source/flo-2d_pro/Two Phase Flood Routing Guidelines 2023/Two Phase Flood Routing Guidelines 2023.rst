@@ -786,11 +786,8 @@ computational timesteps.
 There are four output files that can support the conclusion that the model results are numerically stable:
 
     - VELTIMEFP.OUT
-
     - SUPER.OUT
-
     - ROUGH.OUT
-
     - TIME.OUT
 
 If the maximum velocities reported in VELTIMEFP.OUT (sorted and listed in descending order) are reasonable, then there is no numerical surging in the
