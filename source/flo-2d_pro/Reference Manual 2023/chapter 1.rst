@@ -88,10 +88,10 @@ Physical Processes Simulated by FLO-2D.*
 
    3 Chapter 1
 
-|Chapte003|
+.. image:: img/Chapter1/Chapte003.jpg
 
-   *Figure 2.
-   Channel – Floodplain Interface.*
+*Figure 2.
+Channel – Floodplain Interface.*
 
 1.3 Getting Started on a Project – A Brief Overview
 ---------------------------------------------------
@@ -127,17 +127,8 @@ After the preliminary FLO-2D runs, the user can apply the output options to dete
 
 5 Chapter 1
 
-|Chapte004|
+.. image:: img/Chapter1/Chapte004.jpg
 
-   *Figure 3.
-   FLO-2D Flow Chart.*
+*Figure 3.
+FLO-2D Flow Chart.*
 
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 8.5725in
-   :height: 5.71667in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 9.04167in
-   :height: 5.6875in
-.. |Chapte004| image:: media\Chapte004.png
-   :width: 6.56in
-   :height: 8.21in
