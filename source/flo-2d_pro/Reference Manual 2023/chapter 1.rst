@@ -81,7 +81,7 @@ This reveals the ultimate disposition of inflow volume either as a loss to the s
 channel storage, or as outflow off the grid system.
 The inflow volume dictates the area of inundation and will control model calibration to available post flood data if replicating an historical storm.
 
-|Chapte002|
+.. image:: img/Chapte002.jpg
 
    *Figure 1.
    Physical Processes Simulated by FLO-2D.*
