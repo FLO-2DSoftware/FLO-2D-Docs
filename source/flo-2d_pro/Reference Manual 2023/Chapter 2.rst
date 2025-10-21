@@ -170,10 +170,10 @@ To summarize, the solution algorithm incorporates the following steps:
 
 7. The simulation progresses with increasing timesteps using a timestep algorithm until the stability criteria are exceeded again.
 
-|Chapte003|
+.. image:: img/Chapter2/Chapte003.jpg
 
-   *Figure 5.
-   Discharge Flux across Grid Element Boundaries.*
+*Figure 5.
+Discharge Flux across Grid Element Boundaries.*
 
 To accomplish the discharge exchange between grid elements based on the flow direction, the model sets up an array of side connections at runtime as
 shown in Figure 6.
@@ -199,66 +199,10 @@ All the inflow volume, outflow volume, change in storage or loss from the grid s
 conservation is computed.
 Results are written to the output files or to the screen at user specified output time intervals.
 
-Channel, Overland
+.. image:: img/Chapter2/Chapte001.jpg
 
-or Street
-
-**FLO**
-
-**-**
-
-**2**
-
-**D Timestep**
-
-**Incrementing and Decrementing Scheme**
-
-Incremental
-
-Depth Criteria
-
-Compute New
-
-Flow Depth
-
-Reset Hydraulics, Restart
-
-Routing
-
-Increase Timestep
-
-Decrease Timestep.
-
-If minimum timestep is
-
-(
-
-insufficient for stability 3
-
-consecutive times, the user is
-
-prompted to decrease the
-
-minimum timestep).
-
-Update Hydraulics and
-
-Continue with Flood
-
-Numerical Stability
-
-Criteria Satisfied
-
-Yes
-
-No
-
-Yes
-
-No
-
-   *Figure 6.
-   FLO-2D Stability Criteria Flow Chart.*
+*Figure 6.
+FLO-2D Stability Criteria Flow Chart.*
 
 The FLO-2D flood routing scheme proceeds on the basis that the timestep is sufficiently small to insure numerical stability (i.e.
 no numerical surging).
