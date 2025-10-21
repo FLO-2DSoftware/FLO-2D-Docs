@@ -1465,7 +1465,7 @@ If computed high velocities persist in the basin, increase the n-values and set 
 At the end of the simulation, if the basin has stored water without inflow or outflow, the grid element water surfaces should be relatively flat.
 
 Levee Breach Numerical Instability
-==================================
+--------------------------------------------
 
 Levee and dam breaches often result in a very high discharge, velocity and flow depth.
 It is important when the focus of the project is the levee or dam breach inundation to select an appropriate grid size.
