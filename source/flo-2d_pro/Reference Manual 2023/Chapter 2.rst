@@ -58,14 +58,6 @@ follows:
     </pre>
     </div>
 
-Bed Pressure Convective Local
-
-Slope Gradient Acceleration Acceleration
-
-Momentum Equation Term: S\ :sub:`o` ∂h/∂x V∂V/g∂x ∂V/g∂t
-
-Magnitude (ft/mi) 26 0.5 0.12 - 0.25 0.05
-
 This illustrates that the application of the kinematic wave (S\ :sub:`o` = S\ :sub:`f`) on moderately steep slopes with relatively steady, uniform
 flow is sufficient to model floodwave progression and the contribution of the pressure gradient and the acceleration terms can be neglected.
 The addition of the pressure gradient term to create the diffusive wave equation will enhance overland flow simulation with complex topography.
@@ -126,15 +118,20 @@ the grid element is multiplied by the timestep to determine the net change in th
 This net change in volume is then divided by the available surface area (A\ :sub:`surf` = storage area) on the grid element to obtain the increase or
 decrease in flow depth ∆h for the timestep.
 
-    *Q\ i+\ x 1 = Q\ n + Q\ e + Q\ s + Q\ w + Q\ ne + Q\ se + Q\ sw + Q\ nw* = *Asurf* ∆h/∆t
+.. math::
+
+    \sum Q_{x}^{i+1}
+    = Q_{n} + Q_{e} + Q_{s} + Q_{w}
+    + Q_{ne} + Q_{se} + Q_{sw} + Q_{nw}
+    = A_{surf} \, \frac{\Delta h}{\Delta t}
 
 where:
 
-   Q\ :sub:`x` = discharge across one boundary
+    :math:`Q_x` = discharge across one boundary
 
-A\ :sub:`surf` = surface area of one grid element
+    :math:`A_{surf}` = surface area of one grid element
 
-∆h/∆t = change in flow depth in a grid element during one timestep
+    :math:`\Delta h / \Delta t` = change in flow depth in a grid element during one timestep
 
 The channel routing integration is performed in essentially the same manner except that the flow depth is a function of the channel cross-section
 geometry and there are usually only one upstream and one downstream channel grid element for sharing discharge.
