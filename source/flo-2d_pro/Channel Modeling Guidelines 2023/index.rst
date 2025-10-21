@@ -1,4 +1,4 @@
-Channel Modeling Guidelines
+Reference Manual
 ============================
 
 .. toctree::
