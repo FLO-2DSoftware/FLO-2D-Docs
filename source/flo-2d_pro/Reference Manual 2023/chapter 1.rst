@@ -83,8 +83,8 @@ The inflow volume dictates the area of inundation and will control model calibra
 
 .. image:: img/Chapte002.jpg
 
-   *Figure 1.
-   Physical Processes Simulated by FLO-2D.*
+*Figure 1.
+Physical Processes Simulated by FLO-2D.*
 
    3 Chapter 1
 
