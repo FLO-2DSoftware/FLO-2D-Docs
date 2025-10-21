@@ -1,8 +1,9 @@
-Reference Manual
+Channel Modeling Guidelines
 ============================
 
 .. toctree::
    :maxdepth: 1
 
-   chapter 1
-
+   Chapter 1
+   Chapter 2
+   Chapter 3
