@@ -615,7 +615,7 @@ For essentially steady and uniform flow, the Manning’s n value is defined woul
 .. math::
     :label:
 
-    n = (0.262/F_r) d^{0.17} S^{o \ 0.5}
+    n = (0.262/Fr) d^{0.17} S^{o \ 0.5}
 
 indicating that the flow roughness is inversely proportional the Froude number.
 By assuming a reasonable limiting Froude number, the n value can be estimated from the normal depth and slope for a given flow discharge.
@@ -673,9 +673,15 @@ The equilibrium sand bed morphology tends to minimize the Froude number (Jia, 19
 
 The limiting Froude number for mobile bed conditions can be approximated by (Grant, 1997):
 
-   Fr = 3.85 S\ :sup:`0.33` gravel bed (τ :sup:`\*`\ :sub:`cr` = 0.03)
+.. math::
+    :label:
 
-   Fr = 5.18 S\ :sup:`0.11` sand bed (τ :sup:`\*`\ :sub:`cr` = 0.06)
+    Fr = 3.85 S^{0.33} gravel bed (τ \ ^* \ _cr = 0.03)
+
+.. math::
+    :label:
+
+   Fr = 5.18 S^{0.11} sand bed (τ \ * \ _cr = 0.06)
 
 Roughness n-values include many factors: n = n1 + n2 + n3 + n4 + …such as friction drag, vegetation, expansion/contraction, bed forms, flow in bends,
 unsteady and non-uniform flow.
