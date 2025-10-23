@@ -194,7 +194,10 @@ To summarize, the solution algorithm incorporates the following steps:
       and the change in volume (net discharge x timestep) is distributed over the available storage area within the grid or channel element to determine an
       incremental increase in the flow depth.
 
-\ *d\ i\ x\ +1 =* \ *Q\ i\ x\ +1*\ \ *t /Asurf*
+       .. math::
+          :label:
+
+          Δd^{i + 1}_x = \frac{Δd^{i + 1}_x \ Δt}{Asurf}
 
    where ΔQ\ :sub:`x` is the net change in discharge in the eight floodplain directions for the grid element for the timestep Δt between time i and i + 1.
    See Figure 5.
