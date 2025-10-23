@@ -152,7 +152,7 @@ In the FLO-2D model the Courant number limits the timestep Δt by:
 .. math::
     :label:
 
-    Δt = frac{C Δx}{(V + c)}
+    Δt = \frac{C Δx}{(V + c)}
 
 where:
 
