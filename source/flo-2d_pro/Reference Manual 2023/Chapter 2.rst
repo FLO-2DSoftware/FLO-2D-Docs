@@ -194,13 +194,13 @@ To summarize, the solution algorithm incorporates the following steps:
       and the change in volume (net discharge x timestep) is distributed over the available storage area within the grid or channel element to determine an
       incremental increase in the flow depth.
 
-       .. math::
-          :label:
+      .. math::
+         :label:
 
-          Δd^{i + 1}_x = \frac{Δd^{i + 1}_x \ Δt}{A_{surf}}
+         Δd^{i + 1}_x = \frac{Δd^{i + 1}_x \ Δt}{A_{surf}}
 
-       where ΔQ\ :sub:`x` is the net change in discharge in the eight floodplain directions for the grid element for the timestep Δt between time i and i + 1.
-       See Figure 5.
+      where ΔQ\ :sub:`x` is the net change in discharge in the eight floodplain directions for the grid element for the timestep Δt between time i and i + 1.
+      See Figure 5.
 
     6. The numerical stability criteria are then checked for the new flow depth.
        If the Courant number stability criteria is exceeded, the timestep is reduced to the Courant number computed timestep, all the previous timestep
@@ -218,11 +218,9 @@ shown in Figure 6.
 These flow directions are only accessed once during a timestep instead of the dual visitation required by searching for contiguous elements.
 This approach facilitates additional parallel processing for model speedup and has the additional benefits of:
 
-- Reducing the required discharge computations by about 40% increasing model speed.
-
-- Ignoring completely blocked sides.
-
-- Eliminating NOFLOC assignment for channels.
+    - Reducing the required discharge computations by about 40% increasing model speed.
+    - Ignoring completely blocked sides.
+    - Eliminating NOFLOC assignment for channels.
 
 In this computation sequence, the grid system inflow discharge and rainfall are computed first, and then the channel flow is computed.
 Next, if streets are being simulated, the street discharge is computed and finally, overland flow in 8-directions is determined (Figure 6).
