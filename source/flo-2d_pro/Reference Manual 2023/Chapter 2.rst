@@ -320,7 +320,7 @@ If the timestep is greater than 1 second, then the timestep increment is:
 .. math::
    :label:
 
-   DSEC = DSEC + \frac{TIME_{\_ACCEL}*0.0085}{XFAST}
+   DSEC = DSEC + \frac{TIME\_ACCEL * 0.0085}{XFAST}
 
 where:
 
