@@ -16,10 +16,12 @@ A discussion of the governing equations follows.
 The constitutive fluid motion equations include the continuity equation and the momentum equation:
 
 .. math::
+   :label:
 
     \frac{\partial h}{\partial t} + \frac{\partial hV}{\partial x} = i
 
 .. math::
+   :label:
 
     S_f = S_o
     - \frac{\partial h}{\partial x}
@@ -93,8 +95,7 @@ The full dynamic wave equation is a second order, non-linear, partial differenti
 To solve the equation for the flow velocity at a grid element boundary, initially the flow velocity is calculated with the diffusive wave equation
 using the average water surface slope (bed slope plus pressure head gradient).
 This velocity is then used as a first estimate (or a seed) in the second order Newton-Raphson tangent method to determine the roots of the full
-dynamic wave equation (James, et.
-al., 1977).
+dynamic wave equation (James, et. al., 1977).
 Manning’s equation is applied to compute the friction slope.
 If the Newton-Raphson solution fails to converge after 3 iterations, the algorithm defaults to the diffusive wave solution.
 
@@ -103,14 +104,31 @@ previous timestep.
 The convective acceleration term is evaluated as the difference in the flow velocity across the grid element from the previous timestep.
 For example, the local acceleration term (1/g*∂V/∂t) for grid element 251 in the east (2) direction converts to:
 
-∆(V\ :sub:`t` – V\ :sub:`t-1`)\ :sub:`251` ∕(g \* ∆t)
+.. math::
+   :label:
 
-   where V\ :sub:`t` is the velocity in the east direction for grid element 251 at time t, V\ :sub:`t-1` is the velocity at the previous timestep (t-1)
-   in the east direction, ∆t is the timestep in seconds, and g is the acceleration due to gravity.
-   A similar construct for the convective acceleration term (V\ :sub:`x`/g*∂V/∂x) can be made where V\ :sub:`2` is the velocity in the east direction and
-   V\ :sub:`4` is the velocity in the west direction for grid element 251:
+   \fract{∆(V_t - V_{t-1})_{251}}{g \ * \ ∆t}
 
-V\ :sub:`2` \* ∆(V\ :sub:`2` – V\ :sub:`4`)\ :sub:`251` ∕(g \* ∆x)
+where:
+
+    V\ :sub:`t` is the velocity in the east direction for grid element 251 at time t,
+
+    V\ :sub:`t-1` is the velocity at the previous timestep (t-1) in the east direction,
+
+    ∆t is the timestep in seconds
+
+    g is the acceleration due to gravity.
+
+A similar construct for the convective acceleration term (V\ :sub:`x`/g*∂V/∂x) can be made where:
+
+    V\ :sub:`2` is the velocity in the east direction and
+
+    V\ :sub:`4` is the velocity in the west direction for grid element 251:
+
+.. math::
+   :label:
+
+   V_2 \ * \ \frac{∆(V_2 - V_4)_{251}}{g \ * \ ∆x}
 
 The discharge across the grid element boundary is computed by multiplying the velocity times the cross-sectional flow area.
 After the discharge is computed for all eight directions, the net change in discharge (sum of the discharge in the eight flow directions) in or out of
