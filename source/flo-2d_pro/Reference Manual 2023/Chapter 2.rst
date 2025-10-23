@@ -171,7 +171,7 @@ To summarize, the solution algorithm incorporates the following steps:
        .. math::
           :label:
 
-       d^{i+1}_x = d^i_x + d^i_{x +1}
+          d^{i+1}_x = d^i_x + d^i_{x +1}
 
     3. The flow direction first velocity overland, 1-D channel or street estimate is computed using the diffusive wave equation.
        The only unknown diffusive wave equation variable is the velocity.
@@ -184,12 +184,15 @@ To summarize, the solution algorithm incorporates the following steps:
     5. The discharge Q across the boundary is computed by multiplying the velocity by the cross-sectional flow area.
        For overland flow, the flow width is adjusted by the width reduction factors (WRFs).
 
-   The incremental discharge for the timestep across the eight boundaries (or upstream and downstream channel elements) are summed:
+       The incremental discharge for the timestep across the eight boundaries (or upstream and downstream channel elements) are summed:
 
-   \ *Q\ i\ x\ +1\ =Q\ n + Q\ e + Q\ s + Q\ w + Q\ ne + Q\ se + Q\ sw + Q\ nw*
+       .. math::
+          :label:
 
-   and the change in volume (net discharge x timestep) is distributed over the available storage area within the grid or channel element to determine an
-   incremental increase in the flow depth.
+          Δ\ *Q\ i\ x\ +1\ =Q\ n + Q\ e + Q\ s + Q\ w + Q\ ne + Q\ se + Q\ sw + Q\ nw*
+
+      and the change in volume (net discharge x timestep) is distributed over the available storage area within the grid or channel element to determine an
+      incremental increase in the flow depth.
 
 \ *d\ i\ x\ +1 =* \ *Q\ i\ x\ +1*\ \ *t /Asurf*
 
