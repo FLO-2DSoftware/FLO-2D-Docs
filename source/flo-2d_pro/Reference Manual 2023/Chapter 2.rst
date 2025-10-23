@@ -556,20 +556,15 @@ The concept was to review the EVACUATEDxx.OUT files and adjust those evacuated e
 
 Several codes revisions were made to simplify and automate the model response to evacuated elements including:
 
-- The separate computational loop for evaluating the evacuated cells was eliminated.
-
-- The limitation on the number of times (1,000) that evacuated elements were encountered was eliminated.
-  The number of times each floodplain or channel element is now evacuated is listed in the EVACUATEDxx.OUT files.
-
-- Evacuated element n-values are increased by 0.001 to a limit of 0.250 for both the floodplain and channel.
-
-- The model terminates the current timestep loop and reduces the timestep by 1 percent.
-
-- The evacuated channel element TOL value is increased to 0.2 ft (0.067) if TOL is less than 0.2 ft (0.067 m) and increases the TOL by 0.02 ft (0.006 m)
-  if greater than 0.2 up to a maximum value of 0.4 ft (0.122 m).
-
-- The floodplain evacuated element TOL value is increased to 0.1 ft (0.03) if TOL is less than 0.1 ft (0.03 m) and increases the TOL to 0.25 ft (0.076
-  m) if greater than 0.1 ft (0.03 m).
+    - The separate computational loop for evaluating the evacuated cells was eliminated.
+    - The limitation on the number of times (1,000) that evacuated elements were encountered was eliminated.
+      The number of times each floodplain or channel element is now evacuated is listed in the EVACUATEDxx.OUT files.
+    - Evacuated element n-values are increased by 0.001 to a limit of 0.250 for both the floodplain and channel.
+    - The model terminates the current timestep loop and reduces the timestep by 1 percent.
+    - The evacuated channel element TOL value is increased to 0.2 ft (0.067) if TOL is less than 0.2 ft (0.067 m) and increases the TOL by 0.02 ft (0.006 m)
+      if greater than 0.2 up to a maximum value of 0.4 ft (0.122 m).
+    - The floodplain evacuated element TOL value is increased to 0.1 ft (0.03) if TOL is less than 0.1 ft (0.03 m) and increases the TOL to 0.25 ft (0.076
+      m) if greater than 0.1 ft (0.03 m).
 
 The focus is to adjust the flood hydraulics and the depression storage rather than the timestep for evacuated elements at shallow flows.
 
@@ -594,13 +589,20 @@ the model.
 It is even more important when considering mobile bed channels such as alluvial fans or high bedload rivers.
 The dimensionless Froude number Fr is given by:
 
-Fr = α :sup:`0.5` V/(gd)\ :sup:`0.5`
+.. math::
+    :label:
 
-Where:
+    Fr = \frac{α^{0.5} V}{(gd)^0.5}
 
-   V = depth averaged flow velocity G = acceleration due to gravity d = depth of flow above the thalweg α = kinetic energy correction factor (involving
-   the fluid density and specific weight).
-   Typically α is assumed to be 1.
+where:
+
+    V = depth averaged flow velocity
+
+    G = acceleration due to gravity
+
+    d = depth of flow above the thalweg
+
+    α = kinetic energy correction factor (involving the fluid density and specific weight).Typically α is assumed to be 1.
 
 The Froude number helps to define the influence of gravity on the flow pattern.
 A low wave will propagate in free surface flow (open channel) depending only on the gravitational acceleration and the flow depth.
@@ -610,7 +612,10 @@ the relationship between the velocity and flow depth.
 
 For essentially steady and uniform flow, the Manning’s n value is defined would be defined by:
 
-n = (0.262/Fr) d0.17 So 0.5
+.. math::
+    :label:
+
+    n = (0.262/Fr) d^{0.17} S^{o \ 0.5}
 
 indicating that the flow roughness is inversely proportional the Froude number.
 By assuming a reasonable limiting Froude number, the n value can be estimated from the normal depth and slope for a given flow discharge.
