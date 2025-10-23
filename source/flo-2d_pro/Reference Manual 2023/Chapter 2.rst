@@ -730,7 +730,7 @@ Flows are considered hydraulically rough if the grain size or roughness element 
 .. math::
     :label:
 
-    δ = frac{11.6 ν}{u_*}
+    δ = \frac{11.6 ν}{u_*}
 
 where
 
@@ -752,7 +752,7 @@ which will correspond to the Manning-Stickler fixed bed roughness as function of
 .. math::
     :label:
 
-    n = frac{D^{\frac{1}{6}}}{21.1}
+    n = \frac{D^{\frac{1}{6}}}{21.1}
 
 For lower a submergence value (R/k\ :sub:`s` < 100), the logarithmic form of the resistance equation should be used (Julien, 1995).
 For flow transporting sediment in suspension, the flow will be primarily turbulent if
