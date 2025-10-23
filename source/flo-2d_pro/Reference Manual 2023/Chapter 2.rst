@@ -623,26 +623,38 @@ In the FLO-2D model, the suggested n-value is based on either bankfull discharge
 (roughness is fully submerged).
 Suggested typical limiting Froude numbers are defined in Table 1.
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+.. raw:: html
 
+    <table border="1" cellspacing="0" cellpadding="6" style="border-collapse: collapse; width: 100%;">
+        <thead>
+            <tr>
+                <th colspan="3" style="text-align:center;">Table 1. Range of Values Limiting Froude.</th>
+            </tr>
+            <tr>
+                <th>Tool</th>
+                <th>Flat or Mild Slope (large rivers and floodplains)</th>
+                <th>Steep Slope (alluvial fans and watersheds)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Channels</td>
+                <td style="text-align:center;">0.4 – 0.6</td>
+                <td style="text-align:center;">0.7 – 1.05</td>
+            </tr>
+            <tr>
+                <td>Overland flow</td>
+                <td style="text-align:center;">0.5 – 0.8</td>
+                <td style="text-align:center;">0.7 – 0.95</td>
+            </tr>
+            <tr>
+                <td>Streets</td>
+                <td style="text-align:center;">0.9 – 1.2</td>
+                <td style="text-align:center;">1.1 – 1.5</td>
+            </tr>
+        </tbody>
+    </table>
 
-   * -
-     - **Table 1.
-       Range of Values Limiting Froude.**
-
-   * - **Tool**
-     - **Flat or Mild Slope (large    | **Steep Slope (alluvial fans rivers and floodplains)**      | and watersheds)**
-
-   * - Channels
-     - 0.4 – 0.6                      | 0.7 – 1.05
-
-   * - Overlandflow
-     - 0.5 – 0.8                      | 0.7 – 0.95 |
-
-   * - Streets
-     - 0.9 – 1.2                      | 1.1 – 1.5
 
 
 Similar values are also reported in the CVFED FLO-2D Application Guide.
