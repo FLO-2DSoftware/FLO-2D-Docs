@@ -199,8 +199,8 @@ To summarize, the solution algorithm incorporates the following steps:
 
           Δd^{i + 1}_x = \frac{Δd^{i + 1}_x \ Δt}{Asurf}
 
-   where ΔQ\ :sub:`x` is the net change in discharge in the eight floodplain directions for the grid element for the timestep Δt between time i and i + 1.
-   See Figure 5.
+       where ΔQ\ :sub:`x` is the net change in discharge in the eight floodplain directions for the grid element for the timestep Δt between time i and i + 1.
+       See Figure 5.
 
 6. The numerical stability criteria are then checked for the new flow depth.
    If the Courant number stability criteria is exceeded, the timestep is reduced to the Courant number computed timestep, all the previous timestep
