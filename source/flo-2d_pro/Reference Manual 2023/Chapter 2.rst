@@ -255,14 +255,21 @@ in one timestep Δt (Fletcher, 1990).
 FLO-2D uses the CFL condition for the floodplain, channel and street routing.
 The timestep Δt is limited by:
 
-   Δt = C Δx / (βV + c)
+.. math::
+   :label:
 
-   where:
+   Δt = \frac{C Δx}{(βV + c)}
 
-   C is the Courant number (C ≤ 1.0)
+where:
 
-   Δx is the square grid element width or channel length V is the computed average cross-section velocity β is a coefficient (5/3 for a wide channel) c
-   is the computed wave celerity
+    C is the Courant number (C ≤ 1.0)
+
+    Δx is the square grid element width or channel length
+
+    V is the computed average cross-section velocity
+
+    β is a coefficient (5/3 for a wide channel)
+    c is the computed wave celerity
 
 While the coefficient C can vary from 0.2 to 1.0 depending on the type of explicit routing algorithm, a default value of 0.6 is recommended in the
 FLO-2D model.
