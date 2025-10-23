@@ -697,9 +697,20 @@ For practical purposes natural uniform flow is also turbulent implying that a st
 boundary layer is fully developed.
 There a number of uniform flow mean velocity equations for open channels and Manning’s equation is the best known of these:
 
-V = 1.486/n R\ :sup:`2/3` S\ :sup:`1/2`
+.. math::
+    :label:
 
-where V = velocity, R = hydraulic radius, S = friction slope, n = Manning’s roughness coefficient.
+    V = 1.486/n R^{2/3} S^{1/2}
+
+where
+
+    V = velocity,
+
+    R = hydraulic radius,
+
+    S = friction slope,
+
+    n = Manning’s roughness coefficient.
 
 The hydraulic radius exponent value (0.667) has been known to vary over a range from about 0.59 to 0.85 depending primarily on channel geometry and
 roughness (Chow, 1959).
