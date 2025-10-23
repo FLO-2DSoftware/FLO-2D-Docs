@@ -219,23 +219,38 @@ A small grid element size can also result in a huge number of grid elements for 
 inflow discharge flux.
 The table below gives a general idea of the model speed in relationship to the number of grid elements.
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. raw:: html
 
+    <table border="1" cellspacing="0" cellpadding="6" style="border-collapse: collapse; width: 100%;">
+        <thead>
+            <tr>
+                <th colspan="2" style="text-align:center;">Table 2. Grid System Size vs Model Speed.</th>
+            </tr>
+            <tr>
+                <th>Number of Cells</th>
+                <th>Model Simulation Speed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt; 500,000</td>
+                <td>Fast ~ minutes - 1 hrs</td>
+            </tr>
+            <tr>
+                <td>500,000 - 1,000,000</td>
+                <td>Moderate ~ 1 - 4 hours</td>
+            </tr>
+            <tr>
+                <td>1,000,000 - 2,000,000</td>
+                <td>Slow ~ 4 - 8 hours</td>
+            </tr>
+            <tr>
+                <td>&gt; 2,000,000</td>
+                <td>&gt; 8 hrs (overnight)</td>
+            </tr>
+        </tbody>
+    </table>
 
-   * - **Table 2.
-       Grid System Size vs Model Speed.**
-
-   * - Number of Cells                     | Model Simulation Speed
-
-   * - < 500,000                           | Fast ~ minutes - 1 hrs
-
-   * - 500,000 - 1,000,000                 | Moderate ~ 1 - 4 hours
-
-   * - 1,000,000 - 2,000,000               | Slow ~ 4 - 8 hours
-
-   * - > 2,000,000                         | > 8 hrs (overnight)
 
 
 There are several other factors that contribute to the model speed regardless of the number of grid elements including model components for channels
