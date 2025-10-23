@@ -397,7 +397,10 @@ less than 1.0.
 The FLO-2D default Courant number is 0.6 which will provide a numerically stable model for most applications.
 Rearranging the CFL relationship, the model computes the Courant timestep Δt as:
 
-Δt = C Δx / (V + c)
+.. math::
+    :label:
+
+    Δt = \frac{C Δx}{(V + c)}
 
 Numerical instability occurs when the computational timestep is too large or the rate of change in the timestep is too large and too much volume
 enters or leaves a grid element (discharge flux).
