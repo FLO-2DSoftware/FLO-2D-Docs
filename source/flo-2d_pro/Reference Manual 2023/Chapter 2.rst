@@ -700,7 +700,7 @@ There a number of uniform flow mean velocity equations for open channels and Man
 .. math::
     :label:
 
-    V = 1.486/n R^{2/3} S^{1/2}
+    V = \frac{1.486}{n} R^{\frac{2}{3}} S^{\frac{1}{2}}
 
 where
 
