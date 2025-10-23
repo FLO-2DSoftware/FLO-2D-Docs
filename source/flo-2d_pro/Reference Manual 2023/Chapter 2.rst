@@ -189,7 +189,7 @@ To summarize, the solution algorithm incorporates the following steps:
        .. math::
           :label:
 
-          Δ\ *Q\ i\ x\ +1\ =Q\ n + Q\ e + Q\ s + Q\ w + Q\ ne + Q\ se + Q\ sw + Q\ nw*
+          ΔQ^{i + 1}_x = Q_n + Q_e + Q_s + Q_w + Q_{ne} + Q_{se} + Q_{sw} + Q_{nw}
 
       and the change in volume (net discharge x timestep) is distributed over the available storage area within the grid or channel element to determine an
       incremental increase in the flow depth.
