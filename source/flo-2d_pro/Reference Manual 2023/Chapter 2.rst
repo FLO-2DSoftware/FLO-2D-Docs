@@ -163,25 +163,26 @@ Flow Direction.*
 Flow Direction is the Computational Index not the Grid Element Number.
 To summarize, the solution algorithm incorporates the following steps:
 
-1. For a given flow direction location in the grid system, the average flow geometry, roughness and slope between two grid elements are computed.
+    1. For a given flow direction location in the grid system, the average flow geometry, roughness and slope between two grid elements are computed.
 
-2. The flow depth d\ :sub:`x` for computing the velocity across a grid boundary for the next timestep (i+1) is estimated from the previous timestep i
-   using a linear estimate (the average depth between two elements).
+    2. The flow depth d\ :sub:`x` for computing the velocity across a grid boundary for the next timestep (i+1) is estimated from the previous timestep i
+       using a linear estimate (the average depth between two elements).
 
-   *dix+1 = dix + dix*\ +1
+       .. math::
+          :label:
 
-3. The flow direction first velocity overland, 1-D channel or street estimate is computed using the diffusive wave equation.
-   The only unknown diffusive wave equation variable is the velocity.
+       d^{i+1}_x = d^i_x + d^i_{x +1}
 
-4. The predicted diffusive wave velocity for the current timestep is used as a seed in the Newton-Raphson method to solve the full dynamic wave equation
-   for the velocity.
-   It should be noted that for hyperconcentrated sediment flows such as mud and debris flows, the velocity calculations include the additional viscous
-   and yield stress terms.
+    3. The flow direction first velocity overland, 1-D channel or street estimate is computed using the diffusive wave equation.
+       The only unknown diffusive wave equation variable is the velocity.
 
-5. The discharge Q across the boundary is computed by multiplying the velocity by the cross-sectional flow area.
-   For overland flow, the flow width is adjusted by the width reduction factors (WRFs).
+    4. The predicted diffusive wave velocity for the current timestep is used as a seed in the Newton-Raphson method to solve the full dynamic wave equation
+       for the velocity.
+       It should be noted that for hyperconcentrated sediment flows such as mud and debris flows, the velocity calculations include the additional viscous
+       and yield stress terms.
 
-..
+    5. The discharge Q across the boundary is computed by multiplying the velocity by the cross-sectional flow area.
+       For overland flow, the flow width is adjusted by the width reduction factors (WRFs).
 
    The incremental discharge for the timestep across the eight boundaries (or upstream and downstream channel elements) are summed:
 
