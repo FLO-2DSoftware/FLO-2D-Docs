@@ -149,7 +149,10 @@ The timestep for the selected spatial spacing and the Courant number are not sma
 system.
 In the FLO-2D model the Courant number limits the timestep Δt by:
 
-Δt = C Δx / (V + c)
+.. math::
+    :label:
+
+    Δt = frac{C Δx}{(V + c)}
 
 where:
 
@@ -159,7 +162,12 @@ where:
 
    c = floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the flow depth above the thalweg
 
-   Rearranging the Courant number timestep equation to: V + c = C Δx /Δt
+   Rearranging the Courant number timestep equation to:
+
+.. math::
+    :label:
+
+    V + c = frac{C Δx}{Δt}
 
 results in a formula that relates the progression of the floodwave (V + c) to the discretized model in space and time.
 The Courant number C can vary from 0.1 to 1.0, and a value of 1.0 will enable the model to have the largest possible timestep.
@@ -172,10 +180,10 @@ The first constraint is the discharge flux into a grid element.
 Discretizing the inflow hydrograph to a model for the computational timestep ∆t can result in a slug of discharge ∆Q to the inflow node on the rising
 limb of the hydrograph that could be severe (*Figure* 11).
 
-|Chapte003|
+.. image:: img/Chapter3/Chapte003.jpg
 
-   *Figure 11.
-   Discharge Hydrograph.*
+*Figure 11.
+Discharge Hydrograph.*
 
 Steep rising hydrographs and small grid elements can result in slow models.
 Very small timesteps may be required for a sufficiently small inflow volume to avoid numerical instability.
