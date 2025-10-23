@@ -167,7 +167,7 @@ where:
 .. math::
     :label:
 
-    V + c = frac{C Δx}{Δt}
+    V + c = \frac{C Δx}{Δt}
 
 results in a formula that relates the progression of the floodwave (V + c) to the discretized model in space and time.
 The Courant number C can vary from 0.1 to 1.0, and a value of 1.0 will enable the model to have the largest possible timestep.
