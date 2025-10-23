@@ -615,7 +615,7 @@ For essentially steady and uniform flow, the Manning’s n value is defined woul
 .. math::
     :label:
 
-    n = (0.262/Fr) d^{0.17} S^{o \ 0.5}
+    n = (0.262/F_r) d^{0.17} S^{o \ 0.5}
 
 indicating that the flow roughness is inversely proportional the Froude number.
 By assuming a reasonable limiting Froude number, the n value can be estimated from the normal depth and slope for a given flow discharge.
@@ -654,8 +654,6 @@ Suggested typical limiting Froude numbers are defined in Table 1.
             </tr>
         </tbody>
     </table>
-
-
 
 Similar values are also reported in the CVFED FLO-2D Application Guide.
 If the limiting Froude number is exceeded, the grid element n-value increases by 0.001 for the next timestep.
