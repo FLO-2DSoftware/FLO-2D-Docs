@@ -370,17 +370,24 @@ one timestep Δt.
 If the model computational timestep exceeds the Courant relationship timestep, the stability criteria is exceeded and a timestep decrement occurs.
 Mathematically the Courant relationship is given by:
 
-V + c = C Δx /Δt
+.. math::
+   :label:
+
+   V + c = \frac{C Δx}{Δt}
 
 where:
 
-C = Courant Number (C ≤ 1.0)
+    C = Courant Number (C ≤ 1.0)
 
-   Δx = FLO-2D square grid element width (distance between node centers)
+    Δx = FLO-2D square grid element width (distance between node centers)
 
-   V = depth averaged velocity
+    V = depth averaged velocity
 
-   c = floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the flow depth above the thalweg.
+    c = floodwave celerity = (gd)\ :sup:`0.5` where:
+
+                                                   g is gravitation acceleration
+
+                                                   d is the flow depth above the thalweg.
 
 This equation relates the progression of the floodwave (V + c) to the discretized model in space and time.
 The Courant number C can vary from 0.1 to 1.0, and a value of 1.0 will enable the model to have the largest possible timestep.
