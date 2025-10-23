@@ -727,24 +727,40 @@ The displacement thickness is generally 1/8 (rough) to 1/10 (smooth) of the turb
 If the flow is very shallow roughness elements may protrude through the laminar sublayer and into the flow.
 Flows are considered hydraulically rough if the grain size or roughness element is greater than 6 times the laminar boundary layer:
 
-δ = 11.6 ν/u\ :sub:`\*`
+.. math::
+    :label:
 
-where ν = kinematic viscosity and u\ :sub:`\*` = shear velocity
+    δ = 11.6 ν/u_*
+
+where
+
+    ν = kinematic viscosity
+
+    u\ :sub:`\*` = shear velocity
 
 The applicability of Manning’s equation to a given flow condition depends on the relative submergence of the roughness elements (R/k\ :sub:`s`) where
 k\ :sub:`s` is the effective roughness height.
 In general, Manning’s equation is appropriate for a relative submergence (Julien, 1995):
 
-R/k\ :sub:`s` > 100
+.. math::
+    :label:
+
+    R/k_s > 100
 
 which will correspond to the Manning-Stickler fixed bed roughness as function of sediment size D relationship (Simons and Senturk, 1976):
 
-n = D\ :sup:`1/6`/21.1
+.. math::
+    :label:
+
+    n = D^{\frac{1}{6}}/21.1
 
 For lower a submergence value (R/k\ :sub:`s` < 100), the logarithmic form of the resistance equation should be used (Julien, 1995).
 For flow transporting sediment in suspension, the flow will be primarily turbulent if
 
-R/k\ :sub:`s` > 70
+.. math::
+    :label:
+
+    R/k_s > 70
 
 Typical roughness height for grain size bed material can range from 0.0015 ft for rough concrete to 0.01 ft for coarse sand or uniform earth channels.
 In this case Manning’s equation for a coarse sand plane bed would be applicable to about 0.7 ft.
