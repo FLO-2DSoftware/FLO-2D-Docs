@@ -107,7 +107,7 @@ For example, the local acceleration term (1/g*∂V/∂t) for grid element 251 in
 .. math::
    :label:
 
-   \frac{∆(V_t - V_{t-1})_{251}}{g \ * \ ∆t}
+   \frac{∆(V_t - V_{t-1})_{251}}{(g \ * \ ∆t)}
 
 where:
 
@@ -128,7 +128,7 @@ A similar construct for the convective acceleration term (V\ :sub:`x`/g*∂V/∂
 .. math::
    :label:
 
-   V_2 \ * \ \frac{∆(V_2 - V_4)_{251}}{g \ * \ ∆x}
+   V_2 \ * \ \frac{∆(V_2 - V_4)_{251}}{(g \ * \ ∆x)}
 
 The discharge across the grid element boundary is computed by multiplying the velocity times the cross-sectional flow area.
 After the discharge is computed for all eight directions, the net change in discharge (sum of the discharge in the eight flow directions) in or out of
