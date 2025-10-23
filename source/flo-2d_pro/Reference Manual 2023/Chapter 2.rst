@@ -107,7 +107,7 @@ For example, the local acceleration term (1/g*∂V/∂t) for grid element 251 in
 .. math::
    :label:
 
-   \fract{∆(V_t - V_{t-1})_{251}}{g \ * \ ∆t}
+   \frac{∆(V_t - V_{t-1})_{251}}{g \ * \ ∆t}
 
 where:
 
