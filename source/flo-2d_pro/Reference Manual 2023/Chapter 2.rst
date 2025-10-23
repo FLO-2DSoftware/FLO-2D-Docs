@@ -320,7 +320,7 @@ If the timestep is greater than 1 second, then the timestep increment is:
 .. math::
    :label:
 
-   DSEC = DSEC + \frac{TIME_{ACCEL}*0.0085}{XFAST}
+   DSEC = DSEC + \frac{TIME_{_ACCEL}*0.0085}{XFAST}
 
 where:
 
@@ -435,7 +435,6 @@ The global Courant Number is assigned in the TOLER.DAT file line 2 as follows:
     Line 3.         T       0.1                     (TIME_ACCEL; referred to as ‘timestep accelerator’)
     </pre>
     </div>
-
 
 where C is a line character identifier and the Courant number for floodplain, channel and street are entered.
 The Courant number should only be assigned for those components that are used.
