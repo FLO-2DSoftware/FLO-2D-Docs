@@ -730,7 +730,7 @@ Flows are considered hydraulically rough if the grain size or roughness element 
 .. math::
     :label:
 
-    δ = 11.6 ν/u_*
+    δ = frac{11.6 ν}{u_*}
 
 where
 
@@ -745,14 +745,14 @@ In general, Manning’s equation is appropriate for a relative submergence (Juli
 .. math::
     :label:
 
-    R/k_s > 100
+    \frac{R}{k_s} > 100
 
 which will correspond to the Manning-Stickler fixed bed roughness as function of sediment size D relationship (Simons and Senturk, 1976):
 
 .. math::
     :label:
 
-    n = D^{\frac{1}{6}}/21.1
+    n = frac{D^{\frac{1}{6}}}{21.1}
 
 For lower a submergence value (R/k\ :sub:`s` < 100), the logarithmic form of the resistance equation should be used (Julien, 1995).
 For flow transporting sediment in suspension, the flow will be primarily turbulent if
@@ -760,7 +760,7 @@ For flow transporting sediment in suspension, the flow will be primarily turbule
 .. math::
     :label:
 
-    R/k_s > 70
+    \frac{R}{k_s} > 70
 
 Typical roughness height for grain size bed material can range from 0.0015 ft for rough concrete to 0.01 ft for coarse sand or uniform earth channels.
 In this case Manning’s equation for a coarse sand plane bed would be applicable to about 0.7 ft.
