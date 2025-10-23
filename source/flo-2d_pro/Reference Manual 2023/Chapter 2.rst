@@ -407,11 +407,7 @@ enters or leaves a grid element (discharge flux).
 The corresponding change in flow depth can result in a high velocity (or Froude number) with the discharge causing a rapid fluctuation in the grid
 element water surface elevation (surging).
 Numerical surging may cause spikes in the discharge hydrograph (Figure 7), adverse water surface slope in the downstream direction or unreasonable
-maximum velocities
-
-(VELTIMEFP.OUT (Figure 8) for the floodplain or VELTIMC.OUT for channels) or Froude numbers
-
-(SUPER.OUT).
+maximum velocities (VELTIMEFP.OUT (Figure 8) for the floodplain or VELTIMC.OUT for channels) or Froude numbers (SUPER.OUT).
 Unreasonable maximum velocities are easy to identify because the VELTIM_x.OUT files are sorted in descending order.
 The first several reported maximum velocities should not be significantly greater than the rest of the file as in the case of node 4887 in the
 VELTIMFP.OUT file below.
@@ -430,14 +426,16 @@ Using the Courant Number and Timestep Accelerator Parameter
 
 The global Courant Number is assigned in the TOLER.DAT file line 2 as follows:
 
-Line 1.
-0.1  (TOL; the DEPTOL parameter is not required)
+.. raw:: html
 
-Line 2.
-C 0.6 0.5 0.5 (floodplain, channel and street COURANT numbers)
+    <div>
+    <pre>
+    Line 1.         0.1     0.0                     (TOL; the DEPTOL parameter is not required)
+    Line 2.         C       0.6     0.5     0.5     (floodplain, channel and street COURANT numbers)
+    Line 3.         T       0.1                     (TIME_ACCEL; referred to as ‘timestep accelerator’)
+    </pre>
+    </div>
 
-Line 3.
-T 0.1 (TIME_ACCEL; referred to as ‘timestep accelerator’)
 
 where C is a line character identifier and the Courant number for floodplain, channel and street are entered.
 The Courant number should only be assigned for those components that are used.
