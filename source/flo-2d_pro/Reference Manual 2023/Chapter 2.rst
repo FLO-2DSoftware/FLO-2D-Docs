@@ -592,7 +592,7 @@ The dimensionless Froude number Fr is given by:
 .. math::
     :label:
 
-    Fr = \frac{α^{0.5} V}{(gd)^0.5}
+    Fr = \frac{α^{0.5} V}{(gd)^{0.5}}
 
 where:
 
