@@ -202,11 +202,11 @@ To summarize, the solution algorithm incorporates the following steps:
        where ΔQ\ :sub:`x` is the net change in discharge in the eight floodplain directions for the grid element for the timestep Δt between time i and i + 1.
        See Figure 5.
 
-6. The numerical stability criteria are then checked for the new flow depth.
-   If the Courant number stability criteria is exceeded, the timestep is reduced to the Courant number computed timestep, all the previous timestep
-   computations are discarded and the velocity computations begin again with the first computational flow direction.
+    6. The numerical stability criteria are then checked for the new flow depth.
+       If the Courant number stability criteria is exceeded, the timestep is reduced to the Courant number computed timestep, all the previous timestep
+       computations are discarded and the velocity computations begin again with the first computational flow direction.
 
-7. The simulation progresses with increasing timesteps using a timestep algorithm until the stability criteria are exceeded again.
+    7. The simulation progresses with increasing timesteps using a timestep algorithm until the stability criteria are exceeded again.
 
 .. image:: img/Chapter2/Chapte003.jpg
 
