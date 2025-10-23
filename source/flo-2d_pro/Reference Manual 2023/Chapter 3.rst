@@ -283,13 +283,10 @@ urban model.
 It is necessary to balance the cell size with the discharge flux.
 Consider the following:
 
-- Model runtime;
-
-- Model accuracy and detail;
-
-- The time it takes to prepare and edit the model components;
-
-- The number of required simulations.
+    - Model runtime;
+    - Model accuracy and detail;
+    - The time it takes to prepare and edit the model components;
+    - The number of required simulations.
 
 Selecting a small grid element size less than 15 ft or 5 m for large projects is not recommended.
 Typically, the DTM data resolution does not justify using grid elements that small and further accuracy is lost when the results are mapped.
@@ -303,14 +300,24 @@ It the grid cell size is reduced by half the number of grid elements in model is
 
 The constitutive fluid motion equations in the FLO-2D are the continuity equation and the momentum equation:
 
-\ *h +*  *h V = i*
+.. math::
+    :label:
 
-\ *t* \ *x*
+    \frac{∂h}{∂t} + \frac{∂hV}{∂x} = i
 
-   *S f = S\ o -* :sup:`\ h` *- V* :sup:`\ V` *- 1* :sup:`\ V` \ *x g* \ *x g* \ *t*
+.. math::
+    :label:
 
-where h is the flow depth and V is the depth-averaged velocity in one of the eight flow directions x for a computational timestep ∂t and g is the
-gravitational acceleration.
+    S_f = S_o - \frac{∂h}{∂x} - \frac{V}{g} \frac{∂V}{∂x} - \frac{1}{g} \frac{∂V}{∂t}
+
+where:
+
+    h is the flow depth
+
+    V is the depth-averaged velocity in one of the eight flow directions x for a computational timestep ∂t
+
+    g is the gravitational acceleration.
+
 The excess rainfall intensity (i) may be nonzero on the flow surface.
 The friction slope component S\ :sub:`f` is based on Manning’s equation.
 The other terms include the bed slope (S\ :sub:`o`) pressure gradient and convective and local acceleration terms.
@@ -318,8 +325,7 @@ The two unknown variables are velocity and flow depth.
 The discharge Q is given by Q = VA where A is the cross-section flow area.
 
 Open channel (or floodplain) uniform flow is characterized by a constant depth, velocity, flow area and discharge such that the bed slope, water
-surface slope and energy grade line are all parallel (i.e.
-S\ :sub:`f` = S\ :sub:`o` for uniform flow).
+surface slope and energy grade line are all parallel (i.e. S\ :sub:`f` = S\ :sub:`o` for uniform flow).
 Often uniform flow accompanied by a steady flow condition (such as flume flow).
 Unsteady, uniform flow would not occur naturally.
 For practical purposes natural uniform flow is almost always turbulent implying that a stable velocity distribution has been attained and the
