@@ -317,19 +317,20 @@ criteria, the timestep is incremented by the TIME_ACCEL (default 1.0) + 0.001.
 If the timestep was 0.5, then the next timestep would be increased to 0.501 seconds.
 If the timestep is greater than 1 second, then the timestep increment is:
 
-DSEC = DSEC + TIME_ACCEL*0.0085/XFAST
+.. math::
+   :label:
 
-   where:
+   DSEC = DSEC + TIME_ACCEL*0.0085/XFAST
 
-   DSEC = computational timestep in seconds
+where:
 
-   TIME_ACCEL = user defined parameter ranging from 0.1 to 10.0 with a default value of 1.0
+    DSEC = computational timestep in seconds
 
-   XFAST = XFAST + 0.001 for each successfully completed timestep loop when DSEC >
+    TIME_ACCEL = user defined parameter ranging from 0.1 to 10.0 with a default value of 1.0
 
-   1.0 second.
+    XFAST = XFAST + 0.001 for each successfully completed timestep loop when DSEC > 1.0 second.
 
-   XFAST resets to 1.0 each time the DSEC timestep is decremented.
+    XFAST resets to 1.0 each time the DSEC timestep is decremented.
 
 This algorithm increases the timestep uniformly until the timestep DSEC is greater than 1 second.
 When DSEC > 1.0, successive increases in DSEC result in a larger value of XFAST which begins to slow down the timestep rate of change.
