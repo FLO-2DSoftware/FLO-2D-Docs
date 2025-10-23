@@ -681,7 +681,7 @@ The limiting Froude number for mobile bed conditions can be approximated by (Gra
 .. math::
     :label:
 
-    Fr = 5.18 S^{0.11} sand \ bed (τ \ * \ _{cr} = 0.06)
+    Fr = 5.18 S^{0.11} sand \ bed (τ \ ^* \ _{cr} = 0.06)
 
 Roughness n-values include many factors: n = n1 + n2 + n3 + n4 + …such as friction drag, vegetation, expansion/contraction, bed forms, flow in bends,
 unsteady and non-uniform flow.
