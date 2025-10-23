@@ -69,22 +69,19 @@ power function of the depth.
 It is possible to compute reasonable or accurate water surface elevations in a ponded water condition with FLO-2D, but high Manning’s n-values should
 be applied to keep the depth integrated flow velocity below 1 fps (0.33 mps).
 
-|Chapte002|
+.. image:: img/Chapter3/Chapte002.jpg
 
-   *Figure 10.
-   Vertical Velocity Profiles.*
+*Figure 10.
+Vertical Velocity Profiles.*
 
    Basic Assumptions
 
 The inherent assumptions in a FLO-2D simulation are:
 
-- Steady flow for the duration of the timestep;
-
-- Hydrostatic pressure distribution;
-
-- Hydraulic roughness is based on steady, uniform turbulent flow resistance;
-
-- A channel element is represented by uniform channel geometry and roughness.
+    - Steady flow for the duration of the timestep;
+    - Hydrostatic pressure distribution;
+    - Hydraulic roughness is based on steady, uniform turbulent flow resistance;
+    - A channel element is represented by uniform channel geometry and roughness.
 
 These assumptions are self-explanatory, but they remind us that the flow conditions between grid elements are being averaged.
 For more information on reservoir routing and ponded flow, look at the Levee, Dam, and Wall Breach Guidelines.
