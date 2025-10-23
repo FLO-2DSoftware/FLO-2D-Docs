@@ -138,10 +138,7 @@ decrease in flow depth ∆h for the timestep.
 
 .. math::
 
-    \sum Q_{x}^{i+1}
-    = Q_{n} + Q_{e} + Q_{s} + Q_{w}
-    + Q_{ne} + Q_{se} + Q_{sw} + Q_{nw}
-    = A_{surf} \, \frac{\Delta h}{\Delta t}
+    \sum Q_{x}^{i+1} = Q_{n} + Q_{e} + Q_{s} + Q_{w} + Q_{ne} + Q_{se} + Q_{sw} + Q_{nw} = A_{surf} \, \frac{\Delta h}{\Delta t}
 
 where:
 
