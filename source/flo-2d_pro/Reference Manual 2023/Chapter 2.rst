@@ -197,7 +197,7 @@ To summarize, the solution algorithm incorporates the following steps:
        .. math::
           :label:
 
-          Δd^{i + 1}_x = \frac{Δd^{i + 1}_x \ Δt}{Asurf}
+          Δd^{i + 1}_x = \frac{Δd^{i + 1}_x \ Δt}{A_{surf}}
 
        where ΔQ\ :sub:`x` is the net change in discharge in the eight floodplain directions for the grid element for the timestep Δt between time i and i + 1.
        See Figure 5.
