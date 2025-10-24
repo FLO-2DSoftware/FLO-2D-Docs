@@ -875,11 +875,12 @@ be implemented for the channel inflow node.
 The channel inflow cross-section can be expanded, and its bank elevations raised to convey the inflow hydrograph peak discharge without overbank flow.
 This modification can be made in the PROFILES processor program or in QGIS (Figure 17 and Figure 18).
 
+.. image:: img/Chapter/Chapte021.png
 
 *Figure 17.
 Original upstream channel cross-section.*
 
-
+.. image:: img/Chapter/Chapte022.png
 
 *Figure 18.
 Revised channel cross-section to contain the peak discharge*
