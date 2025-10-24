@@ -559,20 +559,23 @@ For example, at 1 ft (0.3 m), the computed roughness will be approximately 1.3 t
 Using the depth integrated roughness may reduce unexpected high Froude numbers.
 As the flow depth increases from a dry bed condition, the following rules apply:
 
-0.0 < SHALLOWN < 0.1 SHALLOWN = 0.1
+.. raw:: html
+    <div>
+    <pre>
+    0.0 < SHALLOWN < 0.1                                SHALLOWN = 0.1
+    0.0 < flow depth < 0.2 ft (0.06 m)                  n = SHALLOWN value
+    0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m)      n = SHALLOWN/2.
+    0.5 ft (0.15 m) < flow depth < 3 ft (1 m)           n = n<sub>b</sub> <sub>*</sub> 1.5 <sub>*</sub> e<sup>-(0.4 depth/dmax)</sub>
+    3 ft (1 m) < flow depth                             n = assigned value in MANNINGS_N.DAT
+    </pre>
+    </div>
 
-0.0 < flow depth < 0.2 ft (0.06 m) n = SHALLOWN value
-
-0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m) n = SHALLOWN/2.
-
-0.5 ft (0.15 m) < flow depth < 3 ft (1 m) n = n\ :sub:`b` \*1.5 \* e\ :sup:`-(0.4 depth/dmax)`
-
-   3 ft (1 m) < flow depth n = assigned value in MANNINGS_N.DAT **Courant Number n-value Adjustments:** When the Courant number timestep is exceeded for
-   a given cell, the model makes an n-value adjustment for the next computation routing loop through grid system.
-   This an artificial intelligence approach to enable the model to avoid numerical instability at sensitive grid elements as the floodwave progression
-   continues downstream.
-   The Courant number n-value adjustments are based on the number of times (N) that a specific grid element has consecutive timestep decrements as
-   follows:
+**Courant Number n-value Adjustments:** When the Courant number timestep is exceeded for
+a given cell, the model makes an n-value adjustment for the next computation routing loop through grid system.
+This an artificial intelligence approach to enable the model to avoid numerical instability at sensitive grid elements as the floodwave progression
+continues downstream.
+The Courant number n-value adjustments are based on the number of times (N) that a specific grid element has consecutive timestep decrements as
+follows:
 
 .. list-table::
    :widths: 50 50
