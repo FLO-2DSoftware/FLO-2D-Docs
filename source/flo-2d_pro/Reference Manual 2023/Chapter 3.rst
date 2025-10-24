@@ -486,7 +486,10 @@ which will correspond to the Manning-Stickler fixed bed roughness as function of
 For lower a submergence value (R/k\ :sub:`s` < 100), the logarithmic form of the resistance equation should be used (Julien, 1995).
 For flow transporting sediment in suspension, the flow will be primarily turbulent if
 
-R/k\ :sub:`s` > 70
+.. math::
+    :label:
+
+    \frac{R}{k_s} > 70
 
 Typical roughness height for grain size bed material can range from 0.0015 ft for rough concrete to 0.01 ft for coarse sand or uniform earth channels.
 In this case Manning’s equation for a coarse sand plane bed would be applicable to about 0.7 ft.
