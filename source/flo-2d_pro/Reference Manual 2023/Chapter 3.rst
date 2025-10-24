@@ -459,7 +459,7 @@ Flows are considered hydraulically rough if the grain size or roughness element 
 .. math::
     :label:
 
-    δ = 11.6 \frac{ν}{u_*}
+    δ = 11.6 \frac{ν}{u^*}
 
 where:
 
