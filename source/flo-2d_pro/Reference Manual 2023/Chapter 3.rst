@@ -429,7 +429,10 @@ Numerical surging may cause spikes in the discharge hydrograph, adverse water su
 velocities or Froude numbers [F\ :sub:`r` = V/(gh)\ :sup:`1/2`].
 Substituting the Froude number F\ :sub:`r` for the velocity, the relationship between the Courant number and the Froude number is:
 
-C = c (F\ :sub:`r` + 1)/ Δx /Δt
+.. math::
+    :label:
+
+    C = c (F_r + 1)\frac {Δx}{Δt}
 
 It is demonstrated with these equations that there is a unique relationship between discharge, n-value, Froude number and numerical stability (Courant
 number) with varying flow depths.
