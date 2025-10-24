@@ -908,10 +908,10 @@ This may occur from overbank flow circumventing the end of the channel or from r
 In this additional channel inflow is unwanted, block the cells in green in Figure 20 with an ARF = 1 assignment or by adjusting elevations so the flow
 cannot reach the green cells.
 
-|Chapte007|
+.. image:: img/Chapter3/Chapte007.jpg
 
-   *Figure 20.
-   Block the inflow to the interior channel elements.*
+*Figure 20.
+Block the inflow to the interior channel elements.*
 
  Inflow Nodes Summary
  ~~~~~~~~~~~~~~~~~~~~
