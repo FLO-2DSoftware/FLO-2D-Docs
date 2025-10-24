@@ -1128,7 +1128,7 @@ Some of the MAPPER Pro features include:
 
 The MAPPER Pro features and functions are described in its own manual.
 
-.. image:: img/Chapter3/Chapte025.png
+.. image:: img/Chapter3/Chapte025.jpg
 
 *Figure 33.
 MAPPER PRO Plot of Maximum Depths.*
