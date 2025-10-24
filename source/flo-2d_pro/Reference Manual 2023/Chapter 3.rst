@@ -945,26 +945,22 @@ If a portion of the grid system is isolated by outflow nodes and there is flow o
 distorted the normal depth calculations and the outflow volume will not be conserved (Figure 21).
 This flow condition should be avoided by having discharge to the outflow node from only one side or direction.
 
-   |Chapte008|
+.. image:: img/Chapter3/Chapte008.jpg
 
-   *Figure 21.
-   Discharge to outflow nodes from both sides.*
+*Figure 21.
+Discharge to outflow nodes from both sides.*
 
 Other outflow guidelines include:
 
-- Outflow elements should not be modified with ARF’s or WRF’s, levees, streets, etc.
+    - Outflow elements should not be modified with ARF’s or WRF’s, levees, streets, etc.
+    - Do not double up outflow nodes or isolate outflow nodes with no connection to upstream inflow (Figure 22).
+    - Channel outflow can also be established by a stage-discharge.
+      This option can be used when channel outflow occurs at a hydraulic structure or when a known stage-discharge relationship is available.
 
-- Do not double up outflow nodes or isolate outflow nodes with no connection to upstream inflow (Figure 22).
+.. image:: img/Chapter3/Chapte009.png
 
-- Channel outflow can also be established by a stage-discharge.
-  This option can be used when channel outflow occurs at a hydraulic structure or when a known stage-discharge relationship is available.
-
-|Chapte009|
-
-   *Figure 22.
-   Outflow node assignment and stacked nodes.*
-
-(acceptable – left; unacceptable – right)
+*Figure 22.
+Outflow node assignment and stacked nodes. (acceptable – left; unacceptable – right)*
 
 Incorrect outflow nodes are outlined in red and should be removed.
 
