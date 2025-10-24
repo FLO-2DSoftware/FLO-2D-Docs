@@ -1067,10 +1067,10 @@ The grid element results for floodplain, channel and street flow can be reviewed
 generated in MAPPER Pro.
 Flood mapping can also be generated with the FLO-2D plug-in (Figure 28) and shape files for export can be generated.
 
-|Chapte014|
+.. image:: img/Chapter3/Chapte014.jpg
 
-   *Figure 28.
-   QGIS Mesh Tool for FLO-2D Model Mapping.*
+*Figure 28.
+QGIS Mesh Tool for FLO-2D Model Mapping.*
 
 Graphical displays are provided in the HYDROG, PROFILES, MAXPLOT and MAPPER Pro postprocessor programs.
 HYDROG will plot the hydrograph for every channel element.
@@ -1085,27 +1085,27 @@ A typical maximum depth plot is shown in Figure 30.
 Even sediment transport results can be plotted as shown in Figure 31.
 A discussion using MAXPLOT is presented in the Data Input Manual.
 
-|Chapte015|
+.. image:: img/Chapter3/Chapte015.jpg
 
-   *Figure 29.
-   MAXPLOT Mapping Controls.*
+*Figure 29.
+MAXPLOT Mapping Controls.*
 
-|Chapte016|
+.. image:: img/Chapter3/Chapte016.jpg
 
-   *Figure 30.
-   MAXPLOT Floodplain Maximum Flow Depths (Based on Grid Element).*
+*Figure 30.
+MAXPLOT Floodplain Maximum Flow Depths (Based on Grid Element).*
 
-|Chapte017|
+.. image:: img/Chapter3/Chapte017.jpg
 
-   *Figure 31.
-   MAXPLOT Maximum Scour Depths (Based on Grid Element).*
+*Figure 31.
+MAXPLOT Maximum Scour Depths (Based on Grid Element).*
 
 FLO-2D Map Crafter and FLO-2D Rasterizor (Figure 32) are plugins for QGIS used to create and import Rasterized data of FLO-2D results.
 
-|Chapte018|
+.. image:: img/Chapter3/Chapte018.png
 
-   *Figure 32.
-   FLO-2D Map Crafter and Rasterizor.*
+*Figure 32.
+FLO-2D Map Crafter and Rasterizor.*
 
 MAPPER Pro creates high resolution color contour plots.
 Several map combinations can be created: grid element or DTM point plots, line contour maps and shaded contour maps.
@@ -1116,30 +1116,22 @@ When the user activates the feature, MAPPER Pro will subtract each DTM ground po
 The resultant DTM point flow depths can then be interpolated and plotted as color contours (Figure 33).
 Some of the MAPPER Pro features include:
 
-- Multiple geo-referenced aerial photos in various graphic formats can be imported such as TIFF, BMP, JPG, etc.
-
-- Multiple layer capability including control of layer properties is available.
-
-- Cut and view flow depth and topography profiles.
-
-- Flood animation.
-  The floodwave progression over the grid system can be viewed.
-
-- Sediment transport maximum deposition and scour can be plotted.
-
-- Maximum flow velocity vectors can be viewed.
-
-- Hazard maps based on flood intensity and frequency can be created.
-
-- GIS shape files (\*.shp) are automatically built with any plotted results.
-  This GIS shape files can then be imported into other GIS programs.
+    - Multiple geo-referenced aerial photos in various graphic formats can be imported such as TIFF, BMP, JPG, etc.
+    - Multiple layer capability including control of layer properties is available.
+    - Cut and view flow depth and topography profiles.
+    - Flood animation. The floodwave progression over the grid system can be viewed.
+    - Sediment transport maximum deposition and scour can be plotted.
+    - Maximum flow velocity vectors can be viewed.
+    - Hazard maps based on flood intensity and frequency can be created.
+    - GIS shape files (\*.shp) are automatically built with any plotted results.
+      This GIS shape files can then be imported into other GIS programs.
 
 The MAPPER Pro features and functions are described in its own manual.
 
-|Chapte019|
+.. image:: img/Chapter3/Chapte025.png
 
-   *Figure 33.
-   MAPPER PRO Plot of Maximum Depths.*
+*Figure 33.
+MAPPER PRO Plot of Maximum Depths.*
 
 3.9 Data Output Options
 -----------------------
