@@ -456,9 +456,16 @@ The displacement thickness is generally 1/8 (rough) to 1/10 (smooth) of the turb
 If the flow is very shallow, roughness elements may protrude through the laminar sublayer and into the flow.
 Flows are considered hydraulically rough if the grain size or roughness element is greater than 6 times the laminar boundary layer:
 
-δ = 11.6 ν/u\ :sub:`\*`
+.. math::
+    :label:
 
-where ν = kinematic viscosity and u\ :sub:`\*` = shear velocity
+    δ = 11.6 \frac{ν}{u_*}
+
+where:
+
+    ν = kinematic viscosity
+
+    u\ :sub:`\*` = shear velocity
 
 The applicability of Manning’s equation to a given flow condition depends on the relative submergence of the roughness elements (R/k\ :sub:`s`) where
 k\ :sub:`s` is the effective roughness height.
