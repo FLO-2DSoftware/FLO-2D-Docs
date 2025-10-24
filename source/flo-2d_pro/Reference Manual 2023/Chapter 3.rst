@@ -332,14 +332,32 @@ For practical purposes natural uniform flow is almost always turbulent implying 
 turbulent boundary layer is fully developed.
 There a number of uniform flow mean velocity equations for open channels and Manning’s equation is the best known of these:
 
-V = 1.486/n R2/3 Sf1/2
+.. math::
+    :label:
 
-where R = hydraulic radius, S\ :sub:`f` = friction slope, n = Manning’s roughness coefficient.
+    V = \frac{1.486}{n} R^{\frac{2}{3}} S_f^{\frac{1}{2}}
+
+where:
+
+    R = hydraulic radius,
+
+    S\ :sub:`f` = friction slope,
+
+    n = Manning’s roughness coefficient.
+
 For wide cross-section flow the hydraulic radius approaches the flow depth and the flow area can be expressed as a power function of the flow depth:
 
-A = a h\ :sup:`b`
+.. math::
+    :label:
 
-where a and b are a regressed coefficient and exponent respectively.
+    A = a h^b
+
+where:
+
+    a = regressed coefficient
+
+    b = exponent
+
 The hydraulic radius exponent value (0.667) in Manning’s equation has been known to vary over a range from about 0.59 to 0.85 depending primarily on
 cross-section geometry and roughness (Chow, 1959).
 The roughness coefficient or Manning’s n-value varies with a number of factors including but not limited to bed friction, bed form,
