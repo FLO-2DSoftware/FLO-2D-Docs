@@ -577,23 +577,15 @@ continues downstream.
 The Courant number n-value adjustments are based on the number of times (N) that a specific grid element has consecutive timestep decrements as
 follows:
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
-
-   * - 3 < N ≤ 5
-     - n-value increased by 0.005
-
-   * - 6 < N ≤ 10
-     - n-value increased by 0.002
-
-   * - 11 < N
-     - n-value increased by 0.001
-
-   * - If n-value > 0.2
-     - n-value = 0.2
-
+.. raw:: html
+    <div>
+    <pre>
+    3 < N ≤ 5           n-value increased by 0.005
+    6 < N ≤ 10          n-value increased by 0.002
+    11 < N              n-value increased by 0.001
+    If n-value > 0.2    n-value = 0.2
+    </pre>
+    </div>
 
 The n-value adjustments based on exceeding the Courant number timestep are turned ‘off’ or not applied during a model simulation if AMANN = -99 in
 CONT.DAT.
