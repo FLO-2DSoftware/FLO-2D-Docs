@@ -566,7 +566,7 @@ As the flow depth increases from a dry bed condition, the following rules apply:
     0.0 < SHALLOWN < 0.1                                SHALLOWN = 0.1
     0.0 < flow depth < 0.2 ft (0.06 m)                  n = SHALLOWN value
     0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m)      n = SHALLOWN/2.
-    0.5 ft (0.15 m) < flow depth < 3 ft (1 m)           n = n<sub>b</sub> <sub>*</sub> 1.5 <sub>*</sub> e<sup>-(0.4 depth/dmax)</sub>
+    0.5 ft (0.15 m) < flow depth < 3 ft (1 m)           n = n<sub>b</sub> <sub>*</sub> 1.5 <sub>*</sub> e<sup>-(0.4 depth/dmax)</sup>
     3 ft (1 m) < flow depth                             n = assigned value in MANNINGS_N.DAT
     </pre>
     </div>
