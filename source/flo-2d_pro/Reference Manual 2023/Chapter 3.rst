@@ -610,7 +610,6 @@ Typical upper limits for Froude numbers include:
     </pre>
     </div>
 
-
 There are exceptions to this general range of limiting Froude numbers, but the user has the option of assigning a global overland limiting Froude
 number (FROUDL in CONT.DAT), a channel limiting Froude number by reach, or a spatially variable floodplain limiting Froude number (FPFROUDE.DAT).
 
@@ -619,9 +618,15 @@ As the flow accelerates to critical depth, more sediment is entrained and the hy
 erosion.
 The flow is forced to stay around critical flow conditions by incipient motion thresholds which define the limiting Froude (Grant, 1997):
 
-F\ :sub:`r` = 3.85 S\ :sub:`o`\ :sup:`0.33` gravel bed (τ\ :sup:`\*`\ :sub:`cr` = 0.03)
+.. math::
+    :label:
 
-F\ :sub:`r` = 5.18 S\ :sub:`o`\ :sup:`0.11` sand bed (τ\ :sup:`\*`\ :sub:`cr` = 0.06)
+    F_r = 3.85 \ S_o^{0.33} \ gravel \ bed (τ^* \ ^{cr} = 0.03)
+
+.. math::
+    :label:
+
+    F_r = 5.18 \ S_o^{0.11} \ sand \ bed (τ^*\ ^{cr} = 0.06)
 
 where: τ\ :sup:`\*`\ :sub:`cr` is the critical shear stress for incipient motion for different size bed material.
 
