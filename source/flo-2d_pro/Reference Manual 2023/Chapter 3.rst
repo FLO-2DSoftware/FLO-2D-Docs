@@ -782,13 +782,10 @@ A given project may be limited in areal scope to an urban area, downstream of a 
 flood hydrographs.
 This may include any number of off-site flood hydrographs:
 
-- A FLO-2D watershed rainfall-runoff model upstream hydrograph;
-
-- A flood hydrograph from any other external model such as HEC-1 or HEC-HMS;
-
-- A large upstream river hydrograph;
-
-- Any small urban area off-site flood hydrograph;
+    - A FLO-2D watershed rainfall-runoff model upstream hydrograph;
+    - A flood hydrograph from any other external model such as HEC-1 or HEC-HMS;
+    - A large upstream river hydrograph;
+    - Any small urban area off-site flood hydrograph;
 
 A typical INFLOW.DAT file (Figure 13) mudflow inflow hydrograph with both water discharge and sediment concentration is shown in Figure 14 along with
 the data format (see the Data Input Manual for the variable description).
