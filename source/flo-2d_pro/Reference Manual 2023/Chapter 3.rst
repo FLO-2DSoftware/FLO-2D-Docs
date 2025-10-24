@@ -638,13 +638,16 @@ When the limiting Froude number for a given grid element is exceeded, the n-valu
 
 Percent increase over the original n-value incremental increase in n-value (additive)
 
-0.2 > % increase 0.0005
+.. raw:: html
 
-0.2 < % increase < 0.5 0.0002
-
-0.5 < % increase < 1.0 0.0001
-
-1.0 < % increase < 2.0 0.00005
+    <div>
+    <pre>
+    0.2 > % increase                                    0.0005
+    0.2 < % increase < 0.5                              0.0002
+    0.5 < % increase < 1.0                              0.0001
+    1.0 < % increase < 2.0                              0.00005
+    </pre>
+    </div>
 
 When the limiting Froude number is no longer exceeded the n-value is reduced by -0.0002 until the initially assigned n-value is reached.
 The maximum n-values (if different from the originally assigned n-value) are reported to the ROUGH.OUT file.
