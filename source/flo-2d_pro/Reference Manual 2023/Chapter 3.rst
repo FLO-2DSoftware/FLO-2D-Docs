@@ -1007,20 +1007,20 @@ onto the QGIS GUI display as shown in Figure 23.
 It consists of a set of layers that represent the FLO-2D spatial and time variable data.
 The data is stored in a geopackage in SQLite format.
 
-|Chapte010|
+.. image:: img/Chapter3/Chapte010.jpg
 
-   *Figure 23.
-   FLO-2D Plugin Working Environment.*
+*Figure 23.
+FLO-2D Plugin Working Environment.*
 
 The plug-in package includes a toolbar for building the project geographical system and will have control icons for editing the various FLO-2D
 component data files.
 Figure 24 shows toolbar.
 The FLO-2D plug-in is had detailed user manual maintained online and accessed via the help button on the right side of the toolbar.
 
-|Chapte011|
+.. image:: img/Chapter3/Chapte011.jpg
 
-   *Figure 24.
-   Toolbar FLO-2D Plugin.*
+*Figure 24.
+Toolbar FLO-2D Plugin.*
 
 The editable data is accessed via User Layers.
 The user will import, digitize, or compute spatial data through these layers.
@@ -1033,19 +1033,19 @@ positioning or assignment.
 This enables the computational domain to be modified at any time and the FLO-2D components like levees, channels and all other data can be then
 updated automatically.
 
-   |Chapte012|
+.. image:: img/Chapter3/Chapte012.jpg
 
-   *Figure 25.
-   User and Schematic Layer Structure.*
+*Figure 25.
+User and Schematic Layer Structure.*
 
 A table editor plotting graph is docked to the bottom of the project environment (Figure 26).
 The data can be editing or replaced as required.
 These editors have redo functionality and copy paste and import from comma separated values or MS Excel.
 
-|Chapte013|
+.. image:: img/Chapter3/Chapte013.jpg
 
-   *Figure 26.
-   FLO-2D Table Editor.*
+*Figure 26.
+FLO-2D Table Editor.*
 
 The docked panel on the right is a control panel
 
