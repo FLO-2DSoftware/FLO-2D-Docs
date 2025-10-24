@@ -471,11 +471,17 @@ The applicability of Manning’s equation to a given flow condition depends on t
 k\ :sub:`s` is the effective roughness height.
 In general, Manning’s equation is appropriate for a relative submergence (Julien, 1995):
 
-R/k\ :sub:`s` > 100
+.. math::
+    :label:
+
+    \frac{R}{k_s} > 100
 
 which will correspond to the Manning-Stickler fixed bed roughness as function of sediment size D relationship (Simons and Senturk, 1976):
 
-n = D\ :sup:`1/6`/21.1
+.. math::
+    :label:
+
+    n = \frac{D^{\frac{1}{6}}}{21.1}
 
 For lower a submergence value (R/k\ :sub:`s` < 100), the logarithmic form of the resistance equation should be used (Julien, 1995).
 For flow transporting sediment in suspension, the flow will be primarily turbulent if
