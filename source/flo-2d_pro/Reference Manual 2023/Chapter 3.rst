@@ -513,13 +513,13 @@ Overpredicting the velocity may result in unreasonable Froude numbers or exceedi
 The FLO-2D model can adjust n-values during a simulation to maintain a reasonable maximum Froude and improve numerical stability.
 There are four n-value adjustment tools:
 
-1. Global and spatially variable shallow n-value;
+    1. Global and spatially variable shallow n-value;
 
-2. Depth integrated n-value;
+    2. Depth integrated n-value;
 
-3. Courant number n-value adjustments;
+    3. Courant number n-value adjustments;
 
-4. Limiting Froude number n-value adjustments.
+    4. Limiting Froude number n-value adjustments.
 
 **SHALLOW n-values:** If shallow flow has low n-values that result in unreasonably high velocities, the existing water volume stored on the grid
 element can be evacuated in one timestep.
@@ -534,10 +534,18 @@ flow in fields.
 **Depth Integrated n-values:** To improve the timing of the floodwave progression through the grid system, a depth variable roughness can be assigned.
 The equation for the grid element roughness n\ :sub:`d` as function of flow depth is:
 
-nd = nb \*1.5 \* e –(0.4 depth/dmax)
+.. math::
+    :label:
 
-   n\ :sub:`b` = bankfull discharge roughness depth = computed model flow depth dmax = flow depth for drowning the roughness elements and vegetation
-   (hardwired 3 ft or 1 m)
+    n_d = n_b \ ^* \ 1.5 \ * e^{–(0.4 \frac{depth}{dmax})}
+
+where:
+
+    n\ :sub:`b` = bankfull discharge roughness
+
+    depth = computed model flow depth
+
+    dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
 This equation prescribes that the variable depth floodplain roughness is equal to the assigned flow roughness for the complete submergence of all
 roughness (assumed to be 3 ft or 1 m) and it is applied by the model as a default condition.
