@@ -1047,35 +1047,14 @@ These editors have redo functionality and copy paste and import from comma separ
 *Figure 26.
 FLO-2D Table Editor.*
 
-The docked panel on the right is a control panel
+The docked panel on the right is a control panel (Figure 27) for digitizing and entering data. The
+boundary conditions, channel cross sections, and rainfall and other FLO-2D components can
+all generated from this area.
 
-(
+.. image:: img/Chapter3/Chapte024.png
 
-Figure
-
-27
-
-)
-
-for digitizing and entering data.
-The
-
-boundary conditions, channel cross sections,
-
-and rainfall and other FLO
-
--
-
-2
-
-D components can
-
-all generated from this are
-
-a.
-
-   *Figure 27.
-   Control Panel for Various FLO-2D Components.*
+*Figure 27.
+Control Panel for Various FLO-2D Components.*
 
 3.8 Graphical Output Options
 ----------------------------
