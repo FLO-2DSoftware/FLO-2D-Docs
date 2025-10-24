@@ -797,56 +797,10 @@ the data format (see the Data Input Manual for the variable description).
 *Figure 13.
 INFLOW.DAT File Example.*
 
-0.00
-0.05
-0.10
-0.15
-0.20
-0.25
-0.30
-0.35
-0.40
-0
-500
-1000
-1500
-2000
-2500
-3000
-3500
-4000
-4500
-5000
-0
+.. image:: img/Chapter3/Chapte020.png
 
-5
-
-10
-
-15
-
-20
-
-25
-
-30
-
-35
-
-40
-
-Discharge (cfs)
-
-Time (hrs)
-
-Discharge
-
-Sediment Concentration
-
-Concentration by Volume
-
-   *Figure 14.
-   Typical Inflow Flood Hydrograph with Mudflow Sediment Concentration by Volume.*
+*Figure 14.
+Typical Inflow Flood Hydrograph with Mudflow Sediment Concentration by Volume.*
 
 Project managers may request small grid elements on a project inferring that small cells will result in a more accurate model.
 The area of inundation, however, is primarily a function of inflow flood volume or rainfall and discretizing the inflow hydrograph for the
