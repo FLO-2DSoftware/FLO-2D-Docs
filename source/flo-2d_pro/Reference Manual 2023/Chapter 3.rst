@@ -365,7 +365,10 @@ expansion/contraction, vegetation, obstructions, and flow depth.
 
 The discharge Q is a function of three variables, flow area slope and roughness when computing a solution to the equations of motion:
 
-Q = f (A\ :sup:`~2.0`, S\ :sub:`o`\ :sup:`0.5`, 1/n)
+.. math::
+    :label:
+
+    Q = f (A^{~2.0}, S_o^{0.5}, \frac{1}{n})
 
 Since the discharge is function of the square root of the slope, the rate of change in the discharge is not overly sensitive to change in slope.
 Similarly, the discharge is only inversely proportional to the roughness coefficient.
