@@ -560,6 +560,7 @@ Using the depth integrated roughness may reduce unexpected high Froude numbers.
 As the flow depth increases from a dry bed condition, the following rules apply:
 
 .. raw:: html
+
     <div>
     <pre>
     0.0 < SHALLOWN < 0.1                                SHALLOWN = 0.1
@@ -578,6 +579,7 @@ The Courant number n-value adjustments are based on the number of times (N) that
 follows:
 
 .. raw:: html
+
     <div>
     <pre>
     3 < N ≤ 5           n-value increased by 0.005
