@@ -879,12 +879,10 @@ This modification can be made in the PROFILES processor program or in QGIS (Figu
 *Figure 17.
 Original upstream channel cross-section.*
 
-(~ 150 ft wide x 7 ft deep)
 
-   *Figure 18.
-   Revised channel cross-section to contain the peak discharge*
 
-(~ 180 ft wide x 15 ft deep)
+*Figure 18.
+Revised channel cross-section to contain the peak discharge*
 
 The channel cross-section in Figure 17 was expanded from 150 ft to 180 ft wide and 7 ft deep to 15 ft deep.
 Once the channel inflow node cross-section has been expanded to contain the inflow peak discharge, the downstream cross-sections for five to ten
