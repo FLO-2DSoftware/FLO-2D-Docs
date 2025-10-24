@@ -746,6 +746,8 @@ element.
 Stage-time relationships provide opportunity to simulate coastal flooding related to ocean storm surge, hurricane surges or tsunamis (Figure 12).
 In addition, the backwater effects of tidal variation on river and estuary flooding can be modeled.
 
+.. image:: img/Chapter3/Chapte019.png
+
 *Figure 12.
 Tsunami Wave Progression Overland in an Urban Area (Waikiki Beach, Hawaii).*
 
@@ -790,51 +792,31 @@ This may include any number of off-site flood hydrographs:
 A typical INFLOW.DAT file (Figure 13) mudflow inflow hydrograph with both water discharge and sediment concentration is shown in Figure 14 along with
 the data format (see the Data Input Manual for the variable description).
 
-|Chapte004|
+.. image:: img/Chapter3/Chapte004.png
 
-   *Figure 13.
-   INFLOW.DAT File Example.*
+*Figure 13.
+INFLOW.DAT File Example.*
 
 0.00
-
 0.05
-
 0.10
-
 0.15
-
 0.20
-
 0.25
-
 0.30
-
 0.35
-
 0.40
-
 0
-
 500
-
 1000
-
 1500
-
 2000
-
 2500
-
 3000
-
 3500
-
 4000
-
 4500
-
 5000
-
 0
 
 5
