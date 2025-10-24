@@ -599,22 +599,16 @@ It is the ratio of flow velocity to the floodwave celerity and relates the flow 
 There is an upper limit to the Froude number for both channel and overland flow for various conditions that should not be exceeded.
 Typical upper limits for Froude numbers include:
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+.. raw:: html
 
-
-   * - Major rivers: 0.3 – 0.6
-     - (not a steep watershed river)
-
-   * - Floodplain: 0.5 – 0.8
-     - (grasslands, fields, not a urban environment)
-
-   * - Alluvial fans: 0.9 –1.1
-     - (steep slope, sediment transport mobile bed)
-
-   * - Street flow: 1.1 – 1.5
-     - (uniform slope and pavement conditions)
+    <div>
+    <pre>
+    Major rivers: 0.3 – 0.6      (not a steep watershed river)
+    Floodplain: 0.5 – 0.8        (grasslands, fields, not a urban environment)
+    Alluvial fans: 0.9 –1.1      (steep slope, sediment transport mobile bed)
+    Street flow: 1.1 – 1.5       (uniform slope and pavement conditions)
+    </pre>
+    </div>
 
 
 There are exceptions to this general range of limiting Froude numbers, but the user has the option of assigning a global overland limiting Froude
