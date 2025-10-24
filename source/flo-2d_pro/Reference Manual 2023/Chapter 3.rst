@@ -389,10 +389,24 @@ If the model computational timestep exceeds the Courant relationship timestep, t
 decrement occurs.
 Mathematically the Courant relationship is given by:
 
-V + c = C Δx /Δt
+.. math::
+    :label:
 
-Where C = Courant Number (C ≤ 1.0); Δx = FLO-2D square grid element width (distance between node centers); V = depth averaged velocity; and c =
-floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the flow depth above the thalweg.
+    V + c = \frac{ C Δx }{Δt}
+
+where
+
+    C = Courant Number (C ≤ 1.0);
+
+    Δx = FLO-2D square grid element width (distance between node centers);
+
+    V = depth averaged velocity;
+
+    c = floodwave celerity = (gd)\ :sup:`0.5` where:
+
+        g is gravitation acceleration
+
+        d is the flow depth above the thalweg.
 
 This equation relates the progression of the floodwave (V + c) to the discretized model in space and time.
 The Courant number C can vary from 0.1 to 1.0, and a value of 1.0 will enable the model to have the largest possible timestep.
@@ -402,7 +416,10 @@ less than 1.0.
 The FLO-2D default Courant number is 0.6 which will provide a numerically stable model for most applications.
 Rearranging the CFL relationship, the model computes the Courant timestep Δt as:
 
-Δt = C Δx / (V + c)
+.. math::
+    :label:
+
+    Δt = \frac{C Δx}{(V + c)}
 
 Numerical instability occurs when the computational timestep is too large or the rate of change in the timestep is too large and too much volume
 enters or leaves a grid element (discharge flux).
