@@ -54,53 +54,45 @@ The assignment of overland flow roughness must account for vegetation, surface i
 It is also a function of flow depth.
 Typical overland flow roughness values (Manning’s n coefficients) are shown in Table 3.
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. raw:: html
 
+   <table border="1" cellspacing="0" cellpadding="6" style="border-collapse: collapse; width: 100%;">
+     <caption style="text-align: left; font-weight: bold;">
+       Table 3. Overland Flow Manning's n Roughness Values.<sup>1</sup>
+     </caption>
+     <thead>
+       <tr>
+         <th style="text-align: left;">Surface</th>
+         <th style="text-align: left;">n-value</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr><td>Dense turf</td><td>0.17 - 0.80</td></tr>
+       <tr><td>Bermuda and dense grass, dense vegetation</td><td>0.17 - 0.48</td></tr>
+       <tr><td>Shrubs and forest litter, pasture</td><td>0.30 - 0.40</td></tr>
+       <tr><td>Average grass cover</td><td>0.20 - 0.40</td></tr>
+       <tr><td>Poor grass cover on rough surface</td><td>0.20 - 0.30</td></tr>
+       <tr><td>Short prairie grass</td><td>0.10 - 0.20</td></tr>
+       <tr><td>Sparse vegetation</td><td>0.05 - 0.13</td></tr>
 
-   * - **Table 3.
-       Overland Flow Manning's n Roughness Values.\ 1**
+       <tr><td colspan="2"><strong>Sparse rangeland with debris</strong></td></tr>
+       <tr><td>&nbsp;&nbsp;&nbsp;0% cover</td><td>0.09 - 0.34</td></tr>
+       <tr><td>&nbsp;&nbsp;&nbsp;20% cover</td><td>0.05 - 0.25</td></tr>
 
-   * - Surface                                                |    n-value
+       <tr><td colspan="2"><strong>Plowed or tilled fields</strong></td></tr>
+       <tr><td>&nbsp;&nbsp;&nbsp;Fallow - no residue</td><td>0.008 - 0.012</td></tr>
+       <tr><td>&nbsp;&nbsp;&nbsp;Conventional tillage</td><td>0.06 - 0.22</td></tr>
+       <tr><td>&nbsp;&nbsp;&nbsp;Chisel plow</td><td>0.06 - 0.16</td></tr>
+       <tr><td>&nbsp;&nbsp;&nbsp;Fall disking</td><td>0.30 - 0.50</td></tr>
+       <tr><td>&nbsp;&nbsp;&nbsp;No till - no residue</td><td>0.04 - 0.10</td></tr>
+       <tr><td>&nbsp;&nbsp;&nbsp;No till (20 - 40% residue cover)</td><td>0.07 - 0.17</td></tr>
+       <tr><td>&nbsp;&nbsp;&nbsp;No till (60 - 100% residue cover)</td><td>0.17 - 0.47</td></tr>
 
-   * - Dense turf                                             |    0.17 - 0.80
-
-   * - Bermuda and dense grass, dense vegetation              |    0.17 - 0.48
-
-   * - Shrubs and forest litter, pasture                      |    0.30 - 0.40
-
-   * - Average grass cover                                    |    0.20 - 0.40
-
-   * - Poor grass cover on rough surface                      |    0.20 - 0.30
-
-   * - Short prairie grass                                    |    0.10 - 0.20
-
-   * - Sparse vegetation                                      |    0.05 - 0.13
-
-   * - Sparse rangeland with debris                           |    0.09 - 0.34|0% cover                                               |    0.05 - 0.25|20 %
-       cover                                             |
-
-   * - Plowed or tilled fields                                |    0.008 - 0.012|Fallow - no residue                                    |    0.06 - 0.22 0.06
-       - 0.16 0.30 -|    0.50 0.04 - 0.10 0.07 - 0.17Conventional tillage                                   ||    0.17 - 0.47Chisel plow
-       ||Fall disking                                           ||No till - no residue                                   ||No till (20 - 40% residue cover)
-       ||No till (60 - 100% residue cover)                      |
-
-   * - Open ground with debris                                |    0.10 - 0.20
-
-   * - Shallow glow on asphalt or concrete (0.25" to 1.0")    |    0.10 - 0.15
-
-   * - Fallow fields                                          |    0.08 - 0.12
-
-   * - Open ground, no debris                                 |    0.04 - 0.10
-
-   * - Asphalt or concrete                                    |    0.02 - 0.05
-
-   * - :sup:`1`\ Adapted from COE, HEC-1 Manual, 1990 and the COE, Technical Engineering and DesignGuide, No.
-       19, 1997 with modifications.
-
-
-..
+       <tr><td>Open ground with debris</td><td>0.10 - 0.20</td></tr>
+       <tr><td>Shallow flow on asphalt or concrete (0.25&quot; to 1.0&quot;)</td><td>0.10 - 0.15</td></tr>
+       <tr><td>Fallow fields</td><td>0.08 - 0.12</td></tr>
+       <tr><td>Open ground, no debris</td><td>0.04 - 0.10</td></tr>
+       <tr><t
 
    |Chapte002|
 
