@@ -6,70 +6,53 @@ Chapter 4. MODEL COMPONENTS
  4.1 Model Features
  ------------------
 
-   The primary FLO-2D flood routing features and attributes are:
+The primary FLO-2D flood routing features and attributes are:
 
-- Floodwave attenuation can be analyzed with hydrograph routing.
+    - Floodwave attenuation can be analyzed with hydrograph routing.
+    - Overland flow on unconfined surfaces is modeled in eight directions.
+    - Floodplain flows can be simulated over complex topography and roughness including split flow, shallow flow and flow in multiple channels.
+    - Channel, street and overland flow and the flow exchange is calculated.
+    - Channel flow is routed with either a rectangular, trapezoidal, or natural cross-section data.
+    - The flow regime can vary between subcritical and supercritical.
+    - Flow over adverse slopes and backwater effects can be simulated.
+    - Rainfall, infiltration losses and runoff on the alluvial fan or floodplain can be modeled.
+    - Bed scour and deposition can be modeled using one of eleven sediment transport equations.
+    - Viscous mudflows can be simulated.
+    - The effects of flow obstructions such as buildings, walls and levees that limit storage or modify flow paths can be modeled.
+    - The outflow from bridges and culverts is estimated by user defined rating curves.
+    - The number of floodplain and channel elements is unlimited.
+    - The exchange of surface water and storm drain flows can be simulated.
+    - The exchange of surface water and groundwater can be simulated using a runtime interface with the MODFLOW groundwater model.
+    - Dam and levee breach can be simulated with either a prescribe breach rate or breach erosion.
 
-- Overland flow on unconfined surfaces is modeled in eight directions.
-
-- Floodplain flows can be simulated over complex topography and roughness including split flow, shallow flow and flow in multiple channels.
-
-- Channel, street and overland flow and the flow exchange is calculated.
-
-- Channel flow is routed with either a rectangular, trapezoidal, or natural cross-section data.
-
-- The flow regime can vary between subcritical and supercritical.
-
-- Flow over adverse slopes and backwater effects can be simulated.
-
-- Rainfall, infiltration losses and runoff on the alluvial fan or floodplain can be modeled.
-
-- Bed scour and deposition can be modeled using one of eleven sediment transport equations.
-
-- Viscous mudflows can be simulated.
-
-- The effects of flow obstructions such as buildings, walls and levees that limit storage or modify flow paths can be modeled.
-
-- The outflow from bridges and culverts is estimated by user defined rating curves.
-
-- The number of floodplain and channel elements is unlimited.
-
-- The exchange of surface water and storm drain flows can be simulated.
-
-- The exchange of surface water and groundwater can be simulated using a runtime interface with the MODFLOW groundwater model.
-
-- Dam and levee breach can be simulated with either a prescribe breach rate or breach erosion.
-
-..
-
-   Data file preparation and computer run times vary according to the number and size of the grid elements, the inflow discharge flux and the duration of
-   the inflow flood hydrograph being simulated.
-   Most flood simulations can be accurately performed with square grid elements ranging from 20 ft (8 m) to 500 ft (130 m).
-   Projects have been undertaken with grid elements as small as 10 ft (3 m).
-   It is important to balance the project detail and the number of model components applied with the mapping resolution and anticipated level of accuracy
-   in the results.
-   It is often more valuable from a project perspective to have a model that runs quickly enabling many simulation scenarios to be performed from which
-   the user can learn about how the flood project responds to mitigation or sensitivity.
-   Model component selection should focus on those physical features that will significantly affect the volume distribution and area of inundation.
-   A brief description of the FLO-2D components follows.
+Data file preparation and computer run times vary according to the number and size of the grid elements, the inflow discharge flux and the duration of
+the inflow flood hydrograph being simulated.
+Most flood simulations can be accurately performed with square grid elements ranging from 20 ft (8 m) to 500 ft (130 m).
+Projects have been undertaken with grid elements as small as 10 ft (3 m).
+It is important to balance the project detail and the number of model components applied with the mapping resolution and anticipated level of accuracy
+in the results.
+It is often more valuable from a project perspective to have a model that runs quickly enabling many simulation scenarios to be performed from which
+the user can learn about how the flood project responds to mitigation or sensitivity.
+Model component selection should focus on those physical features that will significantly affect the volume distribution and area of inundation.
+A brief description of the FLO-2D components follows.
 
  4.2 Overland Flow
  -----------------
 
-   The simplest FLO-2D model is overland flow on an alluvial fan or floodplain.
-   Typical overland flow as reflects the water surface elevation, roughness and 8-direction flow path.
-   The floodplain element attributes can be modified to add detail to the predicted area of inundation.
-   The grid element surface storage area or flow path can be adjusted for buildings or other obstructions.
-   Using the area reduction factors (ARFs), a grid element can be completely removed from receiving any inflow.
-   Any of the eight flow directions can be partially or completely blocked to represent flow obstruction.
-   Rainfall and infiltration losses can add or subtract from the flow volume on the floodplain surface.
-   Overland flow components are shown in a flow chart in Figure 34.
+The simplest FLO-2D model is overland flow on an alluvial fan or floodplain.
+Typical overland flow as reflects the water surface elevation, roughness and 8-direction flow path.
+The floodplain element attributes can be modified to add detail to the predicted area of inundation.
+The grid element surface storage area or flow path can be adjusted for buildings or other obstructions.
+Using the area reduction factors (ARFs), a grid element can be completely removed from receiving any inflow.
+Any of the eight flow directions can be partially or completely blocked to represent flow obstruction.
+Rainfall and infiltration losses can add or subtract from the flow volume on the floodplain surface.
+Overland flow components are shown in a flow chart in Figure 34.
 
-   Overland flow velocities and depths vary with topography and the grid element roughness.
-   Spatial variation in floodplain roughness can be assigned through the GDS pre-processor program.
-   The assignment of overland flow roughness must account for vegetation, surface irregularity, non-uniform, and unsteady flow.
-   It is also a function of flow depth.
-   Typical overland flow roughness values (Manning’s n coefficients) are shown in Table 3.
+Overland flow velocities and depths vary with topography and the grid element roughness.
+Spatial variation in floodplain roughness can be assigned through the GDS pre-processor program.
+The assignment of overland flow roughness must account for vegetation, surface irregularity, non-uniform, and unsteady flow.
+It is also a function of flow depth.
+Typical overland flow roughness values (Manning’s n coefficients) are shown in Table 3.
 
 .. list-table::
    :widths: 100
