@@ -895,10 +895,10 @@ The channel cross-sections for the elements in-between the two interpolated book
 Overbank flooding will then occur somewhere downstream of the channel inflow node.
 The channel hydraulic results in this interpolated reach are considered outside the project area.
 
-   *Figure 19.
-   Upstream channel elements with expanded cross-sections.*
+.. image:: img/Chapter3/Chapte023.png
 
-(outlined in red)
+*Figure 19.
+Upstream channel elements with expanded cross-sections. (outlined in red)*
 
 Channel inflow directly to the upstream channel interior elements from the floodplain surface is an option (see the White Paper entitled ‘Channel
 Termination Inflow Guidelines’.
