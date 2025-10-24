@@ -621,12 +621,12 @@ The flow is forced to stay around critical flow conditions by incipient motion t
 .. math::
     :label:
 
-    F_r = 3.85 \ S_o^{0.33} \ gravel \ bed (τ^* \ _{cr} = 0.03)
+    F_r = 3.85 \ S_o^{0.33} \ gravel \ bed (τ^*_{cr} = 0.03)
 
 .. math::
     :label:
 
-    F_r = 5.18 \ S_o^{0.11} \ sand \ bed (τ^*\ _{cr} = 0.06)
+    F_r = 5.18 \ S_o^{0.11} \ sand \ bed (τ^*_{cr} = 0.06)
 
 where: τ\ :sup:`\*`\ :sub:`cr` is the critical shear stress for incipient motion for different size bed material.
 
