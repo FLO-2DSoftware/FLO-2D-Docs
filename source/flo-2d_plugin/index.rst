@@ -5,4 +5,4 @@ FLO-2D Plugin Gila
    :maxdepth: 3
 
    user_manual/index.rst
-   technical_reference_manual
+   technical_reference_manual/technical_reference_manual
