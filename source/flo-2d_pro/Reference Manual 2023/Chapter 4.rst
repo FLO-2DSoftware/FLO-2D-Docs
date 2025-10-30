@@ -121,6 +121,7 @@ It will also assign minimum curb elevations to the floodplain elevations outside
 2) Draw a polyline and interpolate the elevations using the profile tool.
 For more street editing options and details see the GDS manual or the street editing white paper.
 
+
 .. image:: img/Chapter4/Chapte001.png
 
 *Figure 35.
@@ -149,6 +150,8 @@ The unique attributes of this routine to improve shallow flow runoff are:
     - If a grid element has a rating table, the cell elevation will be equal to the lowest DTM point used in the calculation of the rating table.
 
 For a complete discussion of this grid element rating table stage-volume tool, refer to the GDS manual.
+
+.. image:: img/Chapter4/Chapte049.png
 
 *Figure 36.
 Stage-Volume Rating Table for Assigning Flow Depths.*
