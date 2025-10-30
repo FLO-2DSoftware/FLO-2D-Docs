@@ -954,54 +954,105 @@ Green-Ampt Infiltration - Soil Suction.*
 
 
    * - Classification
-(in)\ :sup:`1`
-(in)\ :sup:`2`
-(in)\ :sup:`3`
+     - (in)\ :sup:`1`
+     - (in)\ :sup:`2`
+     - (in)\ :sup:`3`
 
    * - sand and loamy sand
-2.4
-1.9-2.4
+     - 2.4
+     - 1.9-2.4
+     -
 
    * - sandy loam
-4.3
-4.3
+     - 4.3
+     - 4.3
+     -
 
    * - Loam
-3.5
-3.5
+     - 3.5
+     - 3.5
+     -
 
    * - silty loam
-6.6             6.6
+     - 6.6
+     - 6.6
+     -
 
-   * - Silt                   |    7.5             |                    |
+   * - Silt
+     - 7.5
+     -
+     -
 
-   * - sandy clay loam        |    8.6             |    8.6             |
+   * - sandy clay loam
+     - 8.6
+     - 8.6
+     -
 
-   * - clay loam              |    8.2             |    8.2             |
+   * - clay loam
+     - 8.2
+     - 8.2
+     -
 
-   * - silty clay loam        |    10.8            |    10.8            |
+   * - silty clay loam
+     - 10.8
+     - 10.8
+     -
 
-   * - sandy clay             |    9.4             |    9.4             |
 
-   * - silty clay             |    11.5            |    11.5            |
+   * - sandy clay
+     - 9.4
+     - 9.4
+     -
 
-   * - Clay                   |    12.4            |    12.5            |
+   * - silty clay
+     - 11.5
+     - 11.5
+     -
 
-   * - Nickel gravel-sand     |                    |                    | 2.0 - 4.5loam                   |                    |                    |
+   * - Clay
+     - 12.4
+     - 12.5
+     -
 
-   * - Ida silt loam          |                    |                    | 2.0 - 3.5
+   * - Nickel gravel-sand loam
+     -
+     -
+     - 2.0 - 4.5
 
-   * - Poudre fine sand       |                    |                    | 2.0 - 4.5
+   * - Ida silt loam
+     -
+     -
+     - 2.0 - 3.5
 
-   * - Plainfield sand        |                    |                    |    3.5 - 5.0
+   * - Poudre fine sand
+     -
+     -
+     - 2.0 - 4.5
 
-   * - Yolo light clay        |                    |                    |    5.5 - 10.0
+   * - Plainfield sand
+     -
+     -
+     - 3.5 - 5.0
 
-   * - Columbia sandy loam    |                    |                    |    8.0 - 9.5
+   * - Yolo light clay
+     -
+     -
+     - 5.5 - 10.0
 
-   * - Guelph loam            |                    |                    |    8.0 - 13.0
+   * - Columbia sandy loam
+     -
+     -
+     - 8.0 - 9.5
 
-   * - Muren fine clay        |                    |                    |    15.0 - 20.0
+   * - Guelph loam
+     -
+     -
+     - 8.0 - 13.0
+
+   * - Muren fine clay
+     -
+     -
+     - 15.0 - 20.0
 
    * - :sup:`1`\ Maricopa County Drainage Design Manual, 1992.
 
@@ -1009,12 +1060,13 @@ Green-Ampt Infiltration - Soil Suction.*
 
        :sup:`3`\ W.T. Fullerton, Masters Thesis, CSU, 1983.
 
+     -
+     -
+     -
 
-..
-
-   The volumetric moisture deficiency is evaluated as the difference between the initial and final soil saturation conditions (See Table 8).
-   Depression storage is an initial loss from the surface flow (TOL value).
-   This is the amount of water stored in small surface depressions that does not become part of the overland runoff or infiltration.
+The volumetric moisture deficiency is evaluated as the difference between the initial and final soil saturation conditions (See Table 8).
+Depression storage is an initial loss from the surface flow (TOL value).
+This is the amount of water stored in small surface depressions that does not become part of the overland runoff or infiltration.
 
 .. list-table::
    :widths: 100
