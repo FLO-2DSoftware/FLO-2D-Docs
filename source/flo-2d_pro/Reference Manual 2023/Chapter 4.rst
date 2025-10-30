@@ -555,48 +555,48 @@ viii.Add other FLO-2D model components and details such as channels, buildings a
 4.9 Street Flow
 ---------------
 
-   Street flow as shallow flow in rectangular channels with a curb height using the same routing algorithm as for the 1-D rectangular channels.
-   The flow direction, street width and roughness are specified for each street section within an element.
-   Street and overland flow exchanges are computed in the channel-floodplain flow exchange subroutine.
-   When the curb height is exceeded, the discharge to floodplain portion of the grid element is computed.
-   Return flow to the streets is also simulated.
+Street flow as shallow flow in rectangular channels with a curb height using the same routing algorithm as for the 1-D rectangular channels.
+The flow direction, street width and roughness are specified for each street section within an element.
+Street and overland flow exchanges are computed in the channel-floodplain flow exchange subroutine.
+When the curb height is exceeded, the discharge to floodplain portion of the grid element is computed.
+Return flow to the streets is also simulated.
 
-   Streets are assumed to emanate from the center of the grid element to the boundary in the eight flow directions (Figure 46).
-   An east-west street across a grid element would be assigned two street sections.
-   Each section has a length of one-half the grid element side or diagonal.
-   A grid element may contain one or more streets and the streets may intersect.
-   Street roughness values, street widths, elevations and curb heights can be modified on a grid element or street section basis in the GDS program.
+Streets are assumed to emanate from the center of the grid element to the boundary in the eight flow directions (Figure 46).
+An east-west street across a grid element would be assigned two street sections.
+Each section has a length of one-half the grid element side or diagonal.
+A grid element may contain one or more streets and the streets may intersect.
+Street roughness values, street widths, elevations and curb heights can be modified on a grid element or street section basis in the GDS program.
 
 .. image:: img/Chapter4/Chapte106.png
 
 *Figure 46.
 Streets Depicted in Green in the GDS Program.*
 
- 4.10 Floodplain Storage Modification and Flow Obstruction
- ---------------------------------------------------------
+4.10 Floodplain Storage Modification and Flow Obstruction
+---------------------------------------------------------
 
-   One of the unique features the FLO-2D model is its ability to simulate flow conditions associated with flow obstructions or loss of flood storage.
-   Area reduction factors (ARFs) and width reduction factors (WRFs) are coefficients that modify the individual grid element surface area storage and
-   flow width.
-   ARFs can be used to reduce the flood volume storage on grid elements due to buildings or topography.
-   WRFs can be assigned to any of the eight flow directions in a grid element and can partially or completely obstruct flow paths in all eight directions
-   simulating floodwalls, buildings or berms.
+One of the unique features the FLO-2D model is its ability to simulate flow conditions associated with flow obstructions or loss of flood storage.
+Area reduction factors (ARFs) and width reduction factors (WRFs) are coefficients that modify the individual grid element surface area storage and
+flow width.
+ARFs can be used to reduce the flood volume storage on grid elements due to buildings or topography.
+WRFs can be assigned to any of the eight flow directions in a grid element and can partially or completely obstruct flow paths in all eight directions
+simulating floodwalls, buildings or berms.
 
-   These factors can greatly enhance the detail of the flood simulation through an urban area.
-   Area reduction factors are specified as a percentage of the total grid element surface area (less than or equal to 1.0).
-   Width reduction factors are specified as a percentage of the grid element side (less than or equal to 1.0).
-   For example, a wall might obstruct 40% of the flow width of a grid element side and a building could cover 75% of the same grid element.
+These factors can greatly enhance the detail of the flood simulation through an urban area.
+Area reduction factors are specified as a percentage of the total grid element surface area (less than or equal to 1.0).
+Width reduction factors are specified as a percentage of the grid element side (less than or equal to 1.0).
+For example, a wall might obstruct 40% of the flow width of a grid element side and a building could cover 75% of the same grid element.
 
-   It is usually sufficient to estimate the area or width reduction on a map by visual inspection without measurement.
-   Visualizing the area or width reduction can be facilitated by plotting the grid system over an imported image in the GDS to locate the buildings and
-   obstructions with respect to the grid system (Figure 47).
-   The easiest method to assign ARF and WRF factors is to interpolate GIS shapefiles of buildings or other features automatically in the GDS or QGIS.
-   It is possible to specify individual grid elements that are totally blocked from receiving any flow in the ARF.DAT file (gray elements in Figure 48).
+It is usually sufficient to estimate the area or width reduction on a map by visual inspection without measurement.
+Visualizing the area or width reduction can be facilitated by plotting the grid system over an imported image in the GDS to locate the buildings and
+obstructions with respect to the grid system (Figure 47).
+The easiest method to assign ARF and WRF factors is to interpolate GIS shapefiles of buildings or other features automatically in the GDS or QGIS.
+It is possible to specify individual grid elements that are totally blocked from receiving any flow in the ARF.DAT file (gray elements in Figure 48).
 
-   It is possible to specify individual grid elements that are totally blocked from receiving any flow in the ARF.DAT file (yellow elements in Figure 49).
-   These totally blocked cells do not require any WRF value assignment.
-   To avoid having grid elements with small or negligible surface area (almost totally blocked), any cells with assigned ARF that leave only a small
-   percentage of the grid element are reset at model runtime to ARF = 1 (blocked) according to criteria outlined in Table 4.
+It is possible to specify individual grid elements that are totally blocked from receiving any flow in the ARF.DAT file (yellow elements in Figure 49).
+These totally blocked cells do not require any WRF value assignment.
+To avoid having grid elements with small or negligible surface area (almost totally blocked), any cells with assigned ARF that leave only a small
+percentage of the grid element are reset at model runtime to ARF = 1 (blocked) according to criteria outlined in Table 4.
 
 .. list-table::
    :widths: 100
