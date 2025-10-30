@@ -787,42 +787,41 @@ Initial Abstraction.*
      - 0.02 - 0.44
 
    * - :sup:`1`\ Maricopa County Drainage Design Manual, 1992.
+
        :sup:`2`\ W.
        T.Fullerton, Masters Thesis, CSU, 1983.
      -
 
 Green-Ampt Infiltration
 
-   The Green-Ampt (1911) equation was selected to compute infiltration losses in the FLO-2D model because it is sensitive to rainfall intensity.
-   When the rainfall exceeds the potential infiltration, then runoff is generated.
-   The infiltration continues after the rainfall has ceased until all the available water has runoff or has been infiltrated.
-   The Green-Ampt equation is based on the following assumptions:
+The Green-Ampt (1911) equation was selected to compute infiltration losses in the FLO-2D model because it is sensitive to rainfall intensity.
+When the rainfall exceeds the potential infiltration, then runoff is generated.
+The infiltration continues after the rainfall has ceased until all the available water has runoff or has been infiltrated.
+The Green-Ampt equation is based on the following assumptions:
 
-- Air displacement from the soil has a negligible effect on the infiltration process;
+    - Air displacement from the soil has a negligible effect on the infiltration process;
 
-- Infiltration is a vertical process represented by a distinct piston wetting front;
+    - Infiltration is a vertical process represented by a distinct piston wetting front;
 
-- Soil compaction due to raindrop impact is insignificant;
+    - Soil compaction due to raindrop impact is insignificant;
 
-- Hysteresis effects of the saturation and desaturation process are negligible;
+    - Hysteresis effects of the saturation and desaturation process are negligible;
 
-- Flow depth has limited effect on the infiltration processes.
+    - Flow depth has limited effect on the infiltration processes.
 
-..
+A derivation of the Green-Ampt infiltration method can be found in Fullerton (1983).
+To utilize the Green-Ampt model, hydraulic conductivity, soil suction, volumetric moisture deficiency, soil storage depth and the percent impervious
+area must be specified.
 
-   A derivation of the Green-Ampt infiltration method can be found in Fullerton (1983).
-   To utilize the Green-Ampt model, hydraulic conductivity, soil suction, volumetric moisture deficiency, soil storage depth and the percent impervious
-   area must be specified.
+Typical hydraulic conductivity, porosity and soil suction parameters are presented in Table 6 and Table 7.
 
-   Typical hydraulic conductivity, porosity and soil suction parameters are presented in Table 6 and Table 7.
+*Table 6.
+Green-Ampt Infiltration - Hydraulic Conductivity and Porosity.*
 
 .. list-table::
    :widths: 100
    :header-rows: 0
 
-
-   * - **Table 6.
-       Green-Ampt Infiltration - Hydraulic Conductivity and Porosity.**
 
    * - Classification    | (in/hr)\ :sup:`1` | (in/hr)\ :sup:`2` | (in/hr)\ :sup:`3`   | Porosity\ :sup:`4`
 
