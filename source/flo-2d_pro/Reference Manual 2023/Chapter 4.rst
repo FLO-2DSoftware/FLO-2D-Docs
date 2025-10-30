@@ -2500,122 +2500,121 @@ In this case, the volume per grid element must be calculated.
 Any grid element with a centroid inside a TOL Spatial polygon will be added to the data file.
 LID_VOLUME.DAT is the required data file so if QGIS writes the data to TOL_SPATIAL.DAT, rename that file.
 
-|Chapte026|
+.. image:: img/Chapter4/Chapte026.jpg
 
-   *Figure 77.
-   LID Volume Tool.*
+*Figure 77.
+LID Volume Tool.*
 
-   *TOL Spatial Method*
+*TOL Spatial Method*
 
-   The primary difference in the LID spatially TOL spatial method is that the surface storage is represented with a depth instead of a volume.
-   It also has a water surface that contiguous grid element must consider when establishing flow patterns and discharge exchange.
-   It may cause flow to go around an LID element instead of through it.
+The primary difference in the LID spatially TOL spatial method is that the surface storage is represented with a depth instead of a volume.
+It also has a water surface that contiguous grid element must consider when establishing flow patterns and discharge exchange.
+It may cause flow to go around an LID element instead of through it.
 
-   There has been no change in how the TOL value is applied in the model code.
-   The TOL depression storage must be filled before flow is exchanged with a neighbor grid element (Figure 78).
-   Flow depth less than or equal to the TOL value will remain on the grid element after the simulation is complete.
-   The typical range for TOL when used for depression storage only is:
+There has been no change in how the TOL value is applied in the model code.
+The TOL depression storage must be filled before flow is exchanged with a neighbor grid element (Figure 78).
+Flow depth less than or equal to the TOL value will remain on the grid element after the simulation is complete.
+The typical range for TOL when used for depression storage only is:
 
 0.004 < TOL <= 0.1
 
-   The range for spatially variable TOL assignment when LID is added to depression storage for flow depths that may reach 5.0 ft (1.5 m) or higher.
+The range for spatially variable TOL assignment when LID is added to depression storage for flow depths that may reach 5.0 ft (1.5 m) or higher.
 
-|Chapte027|
+.. image:: img/Chapter4/Chapte027.png
 
-   *Figure 78.
-   Global TOL.*
+*Figure 78.
+Global TOL.*
 
-   The global assignment of the TOL value (TOLGLOBAL) is still required in the first line (first parameter) in the TOLER.DAT.
-   At the start of a FLO-2D model, the TOLGLOBAL value is assigned to all the grid elements.
-   This value is superseded by the spatially variable TOL(i) assignment for each grid element listed in the file TOLSPATIAL.DAT (Figure 79).
-   This file has the same format as the LID_VOLUME.DAT file.
+The global assignment of the TOL value (TOLGLOBAL) is still required in the first line (first parameter) in the TOLER.DAT.
+At the start of a FLO-2D model, the TOLGLOBAL value is assigned to all the grid elements.
+This value is superseded by the spatially variable TOL(i) assignment for each grid element listed in the file TOLSPATIAL.DAT (Figure 79).
+This file has the same format as the LID_VOLUME.DAT file.
 
-|Chapte028|
+.. image:: img/Chapter4/Chapte028.jpg
 
-   *Figure 79.
-   Spatially Variable TOL Value Format in TOLSPATIAL.DAT.*
+*Figure 79.
+Spatially Variable TOL Value Format in TOLSPATIAL.DAT.*
 
-   The grid element TOL values can be assigned by polygon selection (Figure 80) by shape file polygon in the QGIS.
-   The data is saved to TOLSPATIAL.DAT file with grid element number and a TOL value in the two columns (Figure 79).
-   If there are multiple LID techniques being applied to a given element, then guidelines or a reference table could be developed to assess a composite
-   LID TOL value.
+The grid element TOL values can be assigned by polygon selection (Figure 80) by shape file polygon in the QGIS.
+The data is saved to TOLSPATIAL.DAT file with grid element number and a TOL value in the two columns (Figure 79).
+If there are multiple LID techniques being applied to a given element, then guidelines or a reference table could be developed to assess a composite
+LID TOL value.
 
-   |Chapte029|
+.. image:: img/Chapter4/Chapte029.jpg
 
-   *Figure 80.
-   FLO-2D Plugin Spatially Variable TOL Assignment.*
+*Figure 80.
+FLO-2D Plugin Spatially Variable TOL Assignment.*
 
 Test Case and Results
 ^^^^^^^^^^^^^^^^^^^^^
 
-   A FLO-2D model project was created with four areas of sink storage volume.
-   The model has 4 inches of total rainfall distributed in a 2 hr storm.
-   displays areas of retention with the volume (ft3) identified.
-   This is volume that simulated flow into a cistern or pervious pavement or was stored in a garden pond.
+A FLO-2D model project was created with four areas of sink storage volume.
+The model has 4 inches of total rainfall distributed in a 2 hr storm.
+displays areas of retention with the volume (ft3) identified.
+This is volume that simulated flow into a cistern or pervious pavement or was stored in a garden pond.
 
-   |Chapte030|
+.. image:: img/Chapter4/Chapte030.jpg
 
-   *Figure 81.
-   LID Retention Volume and Depth Grid Elements.*
+*Figure 81.
+LID Retention Volume and Depth Grid Elements.*
 
-   The FLO-2D graphic display of rainfall on grid are shown on Figure 82
-   - Figure 84.
-     The early results show no depth on grid for the LID cases.
+The FLO-2D graphic display of rainfall on grid are shown on Figure 82 - Figure 84.
+The early results show no depth on grid for the LID cases.
 
-|Chapte031|
+.. image:: img/Chapter4/Chapte031.jpg
 
-   *Figure 82.
-   Early Rainfall No LID.*
+*Figure 82.
+Early Rainfall No LID.*
 
-|Chapte032|
+.. image:: img/Chapter4/Chapte032.jpg
 
-   *Figure 83.
-   Early Rainfall with LID Volume.*
+*Figure 83.
+Early Rainfall with LID Volume.*
 
-|Chapte033|
+.. image:: img/Chapter4/Chapte033.jpg
 
-   *Figure 84.
-   Early Rainfall with TOL Spatial Depth.*
+*Figure 84.
+Early Rainfall with TOL Spatial Depth.*
 
-   The SUMMARY.OUT (Figure 85) file reveals that about 1.4 acre-ft were retained in LID storage out of a total of 73.6 acre-ft of rainfall volume on the
-   project area.
-   It is also noted that the TOL volume changed for the TOL Spatial Volume.
+The SUMMARY.OUT (Figure 85) file reveals that about 1.4 acre-ft were retained in LID storage out of a total of 73.6 acre-ft of rainfall volume on the
+project area.
+It is also noted that the TOL volume changed for the TOL Spatial Volume.
 
-|Chapte034|
+.. image:: img/Chapter4/Chapte034.jpg
 
-   *Figure 85.
-   Examples of SUMMARY.OUT File Test Cases.*
+*Figure 85.
+Examples of SUMMARY.OUT File Test Cases.*
 
-   Two methods for analyzing LID designs are available in the FLO-2D model: 1) A storage retention volume method; and 2) A surface retention depth method
-   using spatially variable TOL values.
-   Both methods are activated by a data file with the same format: LID_VOLUME.DAT and TOLSPATIAL.DAT respectively.
-   No other triggers, switches or data modifications are necessary.
+Two methods for analyzing LID designs are available in the FLO-2D model: 1) A storage retention volume method; and 2) A surface retention depth method
+using spatially variable TOL values.
+Both methods are activated by a data file with the same format: LID_VOLUME.DAT and TOLSPATIAL.DAT respectively.
+No other triggers, switches or data modifications are necessary.
 
-   The primary difference between the two methods is that the volume retention represents a sink, and the surface storage method inputs the volume as a
-   flow depth and water surface elevation that is assimilated during the flood routing.
-   The surface storage method may result in flow going around the LID element if the water surface is high.
-   This method might be used for surface features that create ponding and the user may need to convert volume storage to a flow depth by dividing by the
-   surface area.
-   Both methods would have to be tested to determine the impacts on infiltration, storm drain capacity or downstream flooding.
+The primary difference between the two methods is that the volume retention represents a sink, and the surface storage method inputs the volume as a
+flow depth and water surface elevation that is assimilated during the flood routing.
+The surface storage method may result in flow going around the LID element if the water surface is high.
+This method might be used for surface features that create ponding and the user may need to convert volume storage to a flow depth by dividing by the
+surface area.
+Both methods would have to be tested to determine the impacts on infiltration, storm drain capacity or downstream flooding.
 
- 4.23 Building Rainfall Runoff
- -----------------------------
+4.23 Building Rainfall Runoff
+-----------------------------
 
-   Building Runoff
+Building Runoff
 
-   It is a FLO-2D model option to simulate rainfall runoff from buildings.
-   Buildings are represented by Area Reduction Factors (ARFs) and Width Reduction Factors (WRFs) in the FLO2D model.
-   ARF values remove surface area from potential water storage on a grid element.
-   WRF values block flow directions between contiguous grid elements.
-   The WRF values are not utilized in estimating rainfall runoff from buildings.
-   Figure 86 displays buildings on a FLO-2D model with 25 ft grid elements.
-   In this figure, the buildings may occupy a portion of a grid element, the entire grid element, or multiple grid elements.
-   The ARF and WRF values can be assigned automatically using shape file interpolation with the FLO-2D Plugin.
+It is a FLO-2D model option to simulate rainfall runoff from buildings.
+Buildings are represented by Area Reduction Factors (ARFs) and Width Reduction Factors (WRFs) in the FLO2D model.
+ARF values remove surface area from potential water storage on a grid element.
+WRF values block flow directions between contiguous grid elements.
+The WRF values are not utilized in estimating rainfall runoff from buildings.
+Figure 86 displays buildings on a FLO-2D model with 25 ft grid elements.
+In this figure, the buildings may occupy a portion of a grid element, the entire grid element, or multiple grid elements.
+The ARF and WRF values can be assigned automatically using shape file interpolation with the FLO-2D Plugin.
 
-|Chapte035|
+.. image:: img/Chapter4/Chapte035.jpg
 
-   *Figure 86.
-   Buildings on a 25 ft Grid System (red lines indicate walls represented as levees).*
+*Figure 86.
+Buildings on a 25 ft Grid System (red lines indicate walls represented as levees).*
 
    There are two options to simulating rainfall runoff from buildings.
    For the first option, the user assigns the building ARF values.
