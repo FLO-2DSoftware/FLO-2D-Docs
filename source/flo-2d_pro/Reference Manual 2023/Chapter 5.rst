@@ -111,6 +111,8 @@ It is the most robust and detailed urban flood model available with the capabili
 hydraulic structures (culverts, bridges and weirs), rainfall, infiltration, building roof runoff, building collapses and LID components.
 Area drainage master plans in the Phoenix area are being completed with FLO-2D using grid systems on the order of 1.8 million elements.
 Urban grid element size is typically 20 ft, however, ten foot elements have been used with high resolution topographic data sets (Figure 130).
+\
+.. image:: img/Chapter5/Chapte011.png
 
 *Figure 130.
 Urban flooding with Street Flow and Building Obstruction (1 million 10 ft elements)*
@@ -125,15 +127,15 @@ Figure 132 shows velocity vector and flow depth results in an urban area with th
 Typically, the storm drain capacity is minor compared to the 100-year flood volume, the relations between return period flooding and the storm drain
 effectiveness can be tested for the more frequent events.
 
-|Chapte002|
+.. image:: img/Chapter5/Chapte002.png
 
-   *Figure 131.
-   Urban Model with Streets, Buildings and Storm Drains*
+*Figure 131.
+Urban Model with Streets, Buildings and Storm Drains*
 
-|Chapte003|
+.. image:: img/Chapter5/Chapte003.png
 
-   *Figure 132.
-   Urban Model Results with Storm Drains*
+*Figure 132.
+Urban Model Results with Storm Drains*
 
 5.5 Coastal Flooding
 --------------------
