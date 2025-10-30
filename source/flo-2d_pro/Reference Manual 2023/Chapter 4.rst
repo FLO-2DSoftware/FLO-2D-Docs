@@ -1763,7 +1763,7 @@ To define all the shear stress terms for use in the FLO-2D model, the following 
 By analogy, from the work of Meyer-Peter and Müller (1948) and Einstein (1950), the shear stress relationship is depth integrated and rewritten in the
 following form as a dimensionless slope:
 
-*S f = S y + S v + S t d*
+                                                        *S f = S y + S v + S t d*
 
 where the total friction slope S\ :sub:`f` is the sum of the yield slope S\ :sub:`y`, the viscous slope S\ :sub:`v`, and the turbulent-dispersive
 slope S\ :sub:`td`.
@@ -1869,107 +1869,57 @@ The viscosity (poises) and yield stress (dynes/cm\ :sup:`2`) are shown to be exp
 :sub:`v` of silts and clays (and in some cases, fine sands) and do not include larger clastic material rafted along with the flow (Table 13 and Figure
 59 and Figure 60).
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+*Table 13.
+Yield Stress and Viscosity as a Function of Sediment Concentration.*
 
+.. image:: img/Chapter4/Chapte114.png
 
-   * - **Table 13.
-       Yield Stress and Viscosity as a Function of Sediment Concentration.**
-
-   * - **Source**       |    \ :sub:`y` = \ *e*\ :sup:`Cv`   |  = \ *e*\ :sup:`Cv` (poises)|    (dynes/cm\ :sup:`2`)
-       |+-------------------+-------------------+-------------------+-------------------|                  |                  |                  | 
-
-   * - **Field Data**
-
-   * - Aspen Pit 1         |    0.181          |    25.7           |    0.0360         | 22.1
-
-   * - Aspen Pit 2         |    2.72           |    10.4           |    0.0538         | 14.5
-
-   * - Aspen Natural Soil  |    0.152          |    18.7           |    0.00136        | 28.4
-
-   * - Aspen Mine Fill     |    0.0473         |    21.1           |    0.128          | 12.0
-
-   * - Aspen Watershed     |    0.0383         |    19.6           |    0.000495       | 27.1
-
-   * - Aspen Mine Source   |    0.291          |    14.3           |    0.000201       | 33.1Area                |                   |                   |
-       |
-
-   * - Glenwood 1          |    0.0345         |    20.1           |    0.00283        | 23.0
-
-   * - Glenwood 2          |    0.0765         |    16.9           |    0.648          | 6.20
-
-   * - Glenwood 3          |    0.000707       |    29.8           |    0.00632        | 19.9
-
-   * - Glenwood 4          |    0.00172        |    29.5           |    0.000602       |    33.1
-
-   * - **Relationships Available from the Literature**                              |
-
-   * - Iida                |    -              |    -              |    0.0000373      |    36.6(1938)\ :sup:`\*`   |                   |                   |
-       |
-
-   * - Dai et al.
-       (1980)   |    2.60           |    17.48          |    0.00750        |    14.39
-
-   * - Kang and Zhang      |    1.75           |    7.82           |    0.0405         |    8.29(1980)              |                   |                   |
-       |
-
-   * - Qian et al.
-       (1980)  |    0.00136        |    21.2           |    -              |
-       -+-------------------+-------------------+-------------------+-------------------|    0.050          |    15.48          |    -              |    -
-
-   * - Chien and Ma (1958) |    0.0588         |    19.1-32.7      |    -              |    -
-
-   * - Fei (1981)          |    0.166          |    25.6           |    -              |
-       -+-------------------+-------------------+-------------------+-------------------|    0.00470        |    22.2           |    -              |    -
-
-   * - :sup:`\*`\ See O’Brien (1986) for the references.
-       ||*Conversion:* Shear Stress: 1 Pascal (PA) = 10 dynes/cm\ :sup:`2`               ||Viscosity: 1 PAs = 10 dynes-sec/cm\ :sup:`2` = 10 poises
-       |
-
+.. image:: img/Chapter4/Chapte115.png
 
 *Figure 59.
 Dynamic Viscosity of Mudflow Samples versus Volumetric Concentration.*
 
-   *Figure 60.
-   Yield Stress of Mudflow Samples versus Volumetric Concentration.*
+.. image:: img/Chapter4/Chapte116.png
 
-   The viscosity of the fluid matrix is also a function of the type and percentage of silts and clays and the fluid temperature.
-   Very viscous mudflows have high sediment concentrations and correspondingly high yield stresses and may result in laminar flow although laminar flows
-   in nature are extremely rare.
-   Less viscous flows (mud floods) are always turbulent.
+*Figure 60.
+Yield Stress of Mudflow Samples versus Volumetric Concentration.*
 
-   For a mudflow event, the average sediment concentration generally ranges between 20% and
+The viscosity of the fluid matrix is also a function of the type and percentage of silts and clays and the fluid temperature.
+Very viscous mudflows have high sediment concentrations and correspondingly high yield stresses and may result in laminar flow although laminar flows
+in nature are extremely rare.
+Less viscous flows (mud floods) are always turbulent.
 
-   35% by volume with peak concentrations approaching 50% (Table 13 and Figure 59 and Figure 60).
-   Large flood events such as the 100-year flood may contain too much water to produce a viscous mudflow event.
-   Smaller rainfall events such as the 10-year or 25-year return period storm may have a greater propensity to create viscous mudflows.
-   Most watersheds with a history of mudflow events and will gradually develop a sediment supply in the channel bed such that small storms may generate
-   mudflow surges.
-   Most rainfall induced mudflows follow a pattern of flood response.
-   Initially clear water flows from the basin rainfall-runoff may arrive at the fan apex.
-   This may be followed by a surge or frontal wave of mud and debris (40 to 50% concentration by volume).
-   When the peak arrives, the average sediment concentration generally decreases to the range of 30 to 40% by volume.
-   On the falling limb of the hydrograph, surges of higher sediment concentration may occur.
+For a mudflow event, the average sediment concentration generally ranges between 20% and
 
-   To simulate mudflows with the FLO-2D model, the MUD switch in the CONT.DAT must be turned on (MUD = 1) and the viscosity and yield stress variables in
-   SED.DAT file must be specified (Line M).
-   It is recommended that the viscosity and yield stress exponents and coefficients from Table 9 be selected for inclusion in the SED.DAT file.
-   The field sample Glenwood 4, for example, creates a very viscous mudflow.
-   A volumetric sediment concentration or a sediment volume must then be assigned to the water discharge for a timestep in the discretized inflow
-   hydrograph in the INFLOW.DAT file.
-   The inflow sediment volume may represent channel scour, bank erosion or hillslope failure.
-   The incremental sediment volume is tracked through the routing simulation and reported as a total sediment volume in the summary volume conservation
-   tables.
-   This total sediment volume should be reviewed to determine if it is a reasonable sediment supply or yield from the watershed.
+35% by volume with peak concentrations approaching 50% (Table 13 and Figure 59 and Figure 60).
+Large flood events such as the 100-year flood may contain too much water to produce a viscous mudflow event.
+Smaller rainfall events such as the 10-year or 25-year return period storm may have a greater propensity to create viscous mudflows.
+Most watersheds with a history of mudflow events and will gradually develop a sediment supply in the channel bed such that small storms may generate
+mudflow surges.
+Most rainfall induced mudflows follow a pattern of flood response.
+Initially clear water flows from the basin rainfall-runoff may arrive at the fan apex.
+This may be followed by a surge or frontal wave of mud and debris (40 to 50% concentration by volume).
+When the peak arrives, the average sediment concentration generally decreases to the range of 30 to 40% by volume.
+On the falling limb of the hydrograph, surges of higher sediment concentration may occur.
 
-   When routing the mud flood or mudflow over an alluvial fan or floodplain, the FLO-2D model preserves continuity for both the water and sediment.
-   For every grid element and timestep, the change in the water and sediment volumes and the corresponding change in sediment concentration are computed.
-   At the end of the simulation, the model reports on the amount of water and sediment removed from the study area (outflow) and the amount and location
-   of the water and sediment remaining on the fan or in the channel (storage).
-   The areal extent of mudflow inundation and the maximum flow depths and velocities are a function of the available sediment volume and concentration
-   which can be varied in the FLO-2D simulations.
-   For further discussion on model hyperconcentrated sediment flows, refer to the FLO-2D white paper document *“Simulating Mudflows Guidelines”*.
+To simulate mudflows with the FLO-2D model, the MUD switch in the CONT.DAT must be turned on (MUD = 1) and the viscosity and yield stress variables in
+SED.DAT file must be specified (Line M).
+It is recommended that the viscosity and yield stress exponents and coefficients from Table 9 be selected for inclusion in the SED.DAT file.
+The field sample Glenwood 4, for example, creates a very viscous mudflow.
+A volumetric sediment concentration or a sediment volume must then be assigned to the water discharge for a timestep in the discretized inflow
+hydrograph in the INFLOW.DAT file.
+The inflow sediment volume may represent channel scour, bank erosion or hillslope failure.
+The incremental sediment volume is tracked through the routing simulation and reported as a total sediment volume in the summary volume conservation
+tables.
+This total sediment volume should be reviewed to determine if it is a reasonable sediment supply or yield from the watershed.
+
+When routing the mud flood or mudflow over an alluvial fan or floodplain, the FLO-2D model preserves continuity for both the water and sediment.
+For every grid element and timestep, the change in the water and sediment volumes and the corresponding change in sediment concentration are computed.
+At the end of the simulation, the model reports on the amount of water and sediment removed from the study area (outflow) and the amount and location
+of the water and sediment remaining on the fan or in the channel (storage).
+The areal extent of mudflow inundation and the maximum flow depths and velocities are a function of the available sediment volume and concentration
+which can be varied in the FLO-2D simulations.
+For further discussion on model hyperconcentrated sediment flows, refer to the FLO-2D white paper document *“Simulating Mudflows Guidelines”*.
 
  4.17 Specific Energy, Impact and Static Pressure
  ------------------------------------------------
