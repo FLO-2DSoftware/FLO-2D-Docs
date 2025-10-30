@@ -2152,25 +2152,25 @@ Vulnerability Curve for Mobile Homes (BOR, 1988).*
 *Figure 68.
 Vulnerability Curves for Buildings with a Foundation (BOR, 1988).*
 
-   In the work of Pilotti et al (2016), a conservative approach was taken to generate the depth for a given flood velocity that would cause the building
-   to collapse.
-   This line is expressed as a polynomial equation with depth as a function of velocity which predicts the maximum flow depth (threshold depth) above
-   which the building is presumed to fail (Figure 69).
+In the work of Pilotti et al (2016), a conservative approach was taken to generate the depth for a given flood velocity that would cause the building
+to collapse.
+This line is expressed as a polynomial equation with depth as a function of velocity which predicts the maximum flow depth (threshold depth) above
+which the building is presumed to fail (Figure 69).
 
-   |Chapte019|
+.. image:: img/Chapter4/Chapte019.jpg
 
-   *Figure 69.
-   Vulnerability Curve for a Masonry Building (Pilotti et al., 2016).*
+*Figure 69.
+Vulnerability Curve for a Masonry Building (Pilotti et al., 2016).*
 
-   Plotting all three vulnerability curves (including the 2 BOR curves) on the same graph reveals that a masonry building is predicted to be less
-   susceptible to collapse (Figure 70).
-   The three vulnerability curves have been interpreted as poor or highly susceptible to flood collapse (mobile homes), moderate for buildings with
-   foundations, and good for building with more substantial construction.
-   A fourth curve (Clausen & Clark, 1990) was recommended by Pilotti et al.
-   (2016) (Figure 70 black lines).
-   According to Clausen & Clark (1990) building collapse is not predicted for a velocity less than 6 fps.
-   The Clausen & Clark black lines in Figure 70 constitute a range of hydraulic values depending on construction materials and methods, but only the
-   lower curve is applied in the FLO-2D model.
+Plotting all three vulnerability curves (including the 2 BOR curves) on the same graph reveals that a masonry building is predicted to be less
+susceptible to collapse (Figure 70).
+The three vulnerability curves have been interpreted as poor or highly susceptible to flood collapse (mobile homes), moderate for buildings with
+foundations, and good for building with more substantial construction.
+A fourth curve (Clausen & Clark, 1990) was recommended by Pilotti et al.
+(2016) (Figure 70 black lines).
+According to Clausen & Clark (1990) building collapse is not predicted for a velocity less than 6 fps.
+The Clausen & Clark black lines in Figure 70 constitute a range of hydraulic values depending on construction materials and methods, but only the
+lower curve is applied in the FLO-2D model.
 
 0.00
 
