@@ -77,7 +77,8 @@ Overland Flow Manning's n Roughness Values.\ :sup: `1`*
        <tr><td>Poor grass cover on rough surface</td><td>0.20 - 0.30</td></tr>
        <tr><td>Short prairie grass</td><td>0.10 - 0.20</td></tr>
        <tr><td>Sparse vegetation</td><td>0.05 - 0.13</td></tr>
-]
+    ]
+
        <tr><td colspan="2"><strong>Sparse rangeland with debris</strong></td></tr>
        <tr><td>&nbsp;&nbsp;&nbsp;0% cover</td><td>0.09 - 0.34</td></tr>
        <tr><td>&nbsp;&nbsp;&nbsp;20% cover</td><td>0.05 - 0.25</td></tr>
@@ -939,24 +940,38 @@ Green-Ampt Infiltration - Hydraulic Conductivity and Porosity.*
 
        :sup:`4`\ COE Technical Engineering and Design Guide, No.19, 1997
      -
+     -
+     -
+     -
+
 
 *Table 7.
 Green-Ampt Infiltration - Soil Suction.*
 
 .. list-table::
-   :widths: 100
+   :widths: 40 20 20 20
    :header-rows: 0
 
 
-   * - Classification      |    (in)\ :sup:`1`  |    (in)\ :sup:`2`  |    (in)\ :sup:`3`
+   * - Classification
+(in)\ :sup:`1`
+(in)\ :sup:`2`
+(in)\ :sup:`3`
 
-   * - sand and loamy sand    |    2.4             |    1.9-2.4         |
+   * - sand and loamy sand
+2.4
+1.9-2.4
 
-   * - sandy loam             |    4.3             |    4.3             |
+   * - sandy loam
+4.3
+4.3
 
-   * - Loam                   |    3.5             |    3.5             |
+   * - Loam
+3.5
+3.5
 
-   * - silty loam             |    6.6             |    6.6             |
+   * - silty loam
+6.6             6.6
 
    * - Silt                   |    7.5             |                    |
 
@@ -988,10 +1003,11 @@ Green-Ampt Infiltration - Soil Suction.*
 
    * - Muren fine clay        |                    |                    |    15.0 - 20.0
 
-   * - :sup:`1`\ Maricopa County Drainage Design Manual, 1992.:sup:`2`\ James, W.P., Warinner, J., Reedy, M., Water Resources Bulletin Vol.
-       28,1992.:sup:`3`\ W.
-       T.
-       Fullerton, Masters Thesis, CSU, 1983.
+   * - :sup:`1`\ Maricopa County Drainage Design Manual, 1992.
+
+       :sup:`2`\ James, W.P., Warinner, J., Reedy, M., Water Resources Bulletin Vol.28,1992.
+
+       :sup:`3`\ W.T. Fullerton, Masters Thesis, CSU, 1983.
 
 
 ..
