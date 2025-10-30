@@ -2053,146 +2053,30 @@ The primary objective in creating the FLO-2D floodway routine was to automate th
 the HEC-RAS floodway delineation.
 Nevertheless, some judgment may still be required when delineating the final floodway boundary.
 
-FLO
+.. image:: img/Chapter4/Chapte117.png
 
--
+*Figure 61.
+Floodway Schematic Flow Chart.*
 
-D Simulation for
+.. image:: img/Chapter4/Chapte014.jpg
 
-2
+*Figure 62.
+Flood Delineation Comparison*
 
-Existing Conditions
+.. image:: img/Chapter4/Chapte014.jpg
 
-**FLO**
+*Figure 63.
+Floodway Delineation Comparison.*
 
-**-**
+4.19 Groundwater – Surface Water Modeling
+-----------------------------------------
 
-**D Floodway Scheme**
-
-**2**
-
-Is the floodway
-
-element w.s.
-
-e. >
-
-base max.
-w.s.e.
-+
-
-ENCROACH?
-
-Set IFLOODWAY = 1 and set
-
-ENCROACH = 1 ft (0.3 m) in
-
-CONT.DAT
-
-Do not share
-
-discharge with other
-
-floodplain elements
-
-Yes
-
-No
-
-Rerun the model
-
-Share flow with other non
-
--
-
-floodway
-
-elements and do not share flow with
-
-floodway elements.
-
-Add ENCROACH to maximum
-
-floodplain water surface elevation in
-
-base run.
-Assign floodway elements.
-
-Does the model have
-
-a river channel?
-
-Assign bank elements as
-
-floodway
-
-elements.
-Share discharge with
-
-other channel elements.
-Compute
-
-overbank flow.
-
-Share discharge
-
-with other floodway
-
-elements.
-
-Yes
-
-Share discharge with
-
-other floodplain
-
-elements
-
-No
-
-Yes
-
-Yes
-
-Continue the flood
-
-simulation using the
-
-floodway elements.
-
-No
-
-No
-
-Flow enters inflow
-
-node.
-Is the grid
-
-element a floodway
-
-   *Figure 61.
-   Floodway Schematic Flow Chart.*
-
-|Chapte014|
-
-   *Figure 62.
-   Flood Delineation Comparison*
-
-|Chapte015|
-
-   *Figure 63.
-   Floodway Delineation Comparison.*
-
- 4.19 Groundwater – Surface Water Modeling
- -----------------------------------------
-
-   The FLO-2D flood routing model is linked with the USGS MODFLOW-2005 Groundwater Flow Process (GWF) package to simulate integrated surface – subsurface
-   water exchange which can occur in any direction, as unsteady and spatially distributed flow.
-   The models are fully coupled allowing groundwater recharge and river recharge from groundwater simultaneously.
-   At any time in the simulation, water may be infiltrating from the surface water to the groundwater on one portion of the project while on other areas
-   the opposite may occur.
-   The model timesteps are synchronized as follows:
+The FLO-2D flood routing model is linked with the USGS MODFLOW-2005 Groundwater Flow Process (GWF) package to simulate integrated surface – subsurface
+water exchange which can occur in any direction, as unsteady and spatially distributed flow.
+The models are fully coupled allowing groundwater recharge and river recharge from groundwater simultaneously.
+At any time in the simulation, water may be infiltrating from the surface water to the groundwater on one portion of the project while on other areas
+the opposite may occur.
+The model timesteps are synchronized as follows:
 
 - The MODFLOW simulation is divided into a series of stress periods during which specific parameters (e.g. variable heads) are constant.
 
