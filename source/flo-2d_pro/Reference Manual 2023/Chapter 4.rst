@@ -2157,7 +2157,7 @@ to collapse.
 This line is expressed as a polynomial equation with depth as a function of velocity which predicts the maximum flow depth (threshold depth) above
 which the building is presumed to fail (Figure 69).
 
-.. image:: img/Chapter4/Chapte019.jpg
+.. image:: img/Chapter4/Chapte019.png
 
 *Figure 69.
 Vulnerability Curve for a Masonry Building (Pilotti et al., 2016).*
