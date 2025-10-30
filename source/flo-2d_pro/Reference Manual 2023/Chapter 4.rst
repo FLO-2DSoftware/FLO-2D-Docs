@@ -1937,7 +1937,7 @@ To conservatively estimate the impact pressure, the equation for water taken fro
 
 .. math::
 
-   P\ :sub:`i` = k ρ\ :sub:`f` V\ :sup:`2`
+   P_i = k\, \rho_f\, V^{2}
 
 where P\ :sub:`i` is the impact pressure, coefficient k is 1.28 for both English and SI units, ρ\ :sub:`f` = water density and V is the maximum
 velocity regardless of direction.
@@ -1948,7 +1948,7 @@ This relationship is given by,
 
 .. math::
 
-   k = 1.261 e\ :sup:`Cw`
+   k = 1.261\, e^{C_w}
 
 where Cw = sediment concentration by weight.
 The impact pressure is reported in the file IMPACT.OUT.
@@ -1960,7 +1960,7 @@ The maximum static pressure is written to the STATICPRESS.OUT file.
 
 .. math::
 
-   P\ :sub:`s` = γ ĥ
+   P_s = \gamma\, \hat{h}
 
 4.18 Floodway Delineation
 -------------------------
