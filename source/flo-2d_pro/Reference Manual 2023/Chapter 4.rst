@@ -1683,9 +1683,9 @@ In should be noted that the sediment transport and mudflow components **cannot**
 
 The shear stress in hyperconcentrated sediment flows, including those described as debris flows, mudflows, and mud floods, can be calculated from the
 summation of five shear stress components.
-The total shear stress τ depends on the cohesive yield stress τ\ :sub:`c`, the Mohr-
-
-Coulomb shear :math:`\tau_{mc}`, the viscous shear stress :math:`\tau_v` (:math:`\eta\, \dfrac{dv}{dy}`), the turbulent shear stress :math:`\tau_t`, and the dispersive shear stress :math:`\tau_d`.
+The total shear stress τ depends on the cohesive yield stress τ\ :sub:`c`, the Mohr-Coulomb shear :math:`\tau_{mc}`, the
+viscous shear stress :math:`\tau_v` (:math:`\eta\, \dv/dy`), the turbulent shear stress :math:`\tau_t`, and the
+dispersive shear stress :math:`\tau_d`.
 
 .. math::
 
