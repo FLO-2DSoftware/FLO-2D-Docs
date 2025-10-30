@@ -2196,14 +2196,20 @@ In the first method, the vulnerability curves (1-poor, 2-moderate, 3-good and 4-
 In the file, Line 1 is a global vulnerability curve assignment which is superseded by the individual grid element vulnerability curves.
 If a building consists of multiple grid elements, each element must have a vulnerability curve assignment to collapse the entire building.
 The global vulnerability curve value could be zero.
-    A portion of a typical BUILDING_COLLAPSE.DAT file is follows:
+A portion of a typical BUILDING_COLLAPSE.DAT file is follows:
 
 0            Global Vulnerability Curve
+
  2
+
  6756 1
+
  6756 1             Grid element vulnerability curve (poor)
+
  6756 2             Grid element vulnerability curve (moderate)
+
  6756 3             Grid element vulnerability curve (good)
+
  6756 4             Grid element Clausen and Clark
 
 Assigning a nonzero value to the global vulnerability curve would initiate potential building failure for any of the buildings in the model.
