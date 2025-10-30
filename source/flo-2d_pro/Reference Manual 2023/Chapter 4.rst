@@ -3459,83 +3459,93 @@ where:
 
     A\ :sub:`2` = flow area at cross-section 2 (Figure 124 downstream end of bridge)
 
-   ∆h = y\ :sub:`1` – y\ :sub:`2` y\ :sub:`1` depth upstream of bridge – y\ :sub:`2` depth at downstream end of bridge h\ :sub:`f` = frictional loss
+    ∆h = y\ :sub:`1` – y\ :sub:`2` y\ :sub:`1` depth upstream of bridge – y\ :sub:`2` depth at downstream end of bridge
 
-   α\ :sub:`1` = energy coefficient at cross-section 1 V\ :sub:`1` = depth averaged velocity at cross-section 1 g = gravitational acceleration
+    h\ :sub:`f` = frictional loss
 
-   C = C\ :sub:`c` / (α\ :sub:`2` + k\ :sub:`e` + k\ :sub:`p`)\ :sup:`0.5`; C\ :sub:`c` = coefficient of contraction, α\ :sub:`2` = energy coefficient at
-   cross-section 2, k\ :sub:`e` = eddy loss coefficient, k\ :sub:`p` = non-hydrostatic pressure coefficient
+    α\ :sub:`1` = energy coefficient at cross-section 1
 
-   The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959, p.
-   490) in English units:
+    V\ :sub:`1` = depth averaged velocity at cross-section 1
 
-Q = 8.02 C A\ :sub:`2` (∆h/β)\ :sup:`0.5` (1)
+    g = gravitational acceleration
 
-   where:
+    C = C\ :sub:`c` / (α\ :sub:`2` + k\ :sub:`e` + k\ :sub:`p`)\ :sup:`0.5`;
 
-β = 1 - α\ :sub:`1` C\ :sup:`2` (A\ :sub:`2` /A\ :sub:`1`)\ :sup:`2` + 2gC\ :sup:`2` (A\ :sub:`2`/K\ :sub:`2`)\ :sup:`2` (L\ :sub:`B` +L\ :sub:`1-2`
-K\ :sub:`2`/K\ :sub:`1`);
+    C\ :sub:`c` = coefficient of contraction,
 
-   L\ :sub:`B` = length of contracted reach
+    α\ :sub:`2` = energy coefficient at cross-section 2,
 
-   L\ :sub:`1-2` = length of the reach from cross-section 1 to cross-section 2 (Figure 124)
+    k\ :sub:`e` = eddy loss coefficient,
 
-   K\ :sub:`1` and K\ :sub:`2` = conveyance at cross-sections 1 and 2; K\ :sub:`1` = 1.486/n A\ :sub:`1` R\ :sub:`1`\ :sup:`0.67`; K\ :sub:`2` = 1.486/n
-   A\ :sub:`2` R\ :sub:`2`\ 0.67
+    k\ :sub:`p` = non-hydrostatic pressure coefficient
 
-   n = Manning’s n-value through the contracted reach
+The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959, p.
+490) in English units:
 
-   A\ :sub:`1`, R\ :sub:`1` and A\ :sub:`2`, R\ :sub:`2` are the cross-section flow areas and hydraulic radiuses respectively (Figure 124).
+        Q = 8.02 C A\ :sub:`2` (∆h/β)\ :sup:`0.5` (1)
 
-   *Figure 124.
-   Conceptual Bridge Plan and Profile with River Cross-sections.*
+where:
 
-   To apply this free surface flow equation, the type of bridge opening (one of four) must be selected, and the bridge parameters and coefficients must
-   be determined.
-   The USGS figures for the four bridge types used to determine the coefficients are presented in the Appendix as reproduced from Hamill (1999).
-   The relationships between the bridge parameters in Appendix figures that are used to evaluate the coefficients are hardcoded into the FLO-2D model in
-   tabular form for linear interpolation.
-   Conceptually, the role of the bridge coefficients is to represent a resistance to flow that will decrease the discharge like the Manning’s n roughness
-   coefficient with the exception that a decrease in the bridge coefficients will have the same effect as an increase in the Manning’s n-value.
+        β = 1 - α\ :sub:`1` C\ :sup:`2` (A\ :sub:`2` /A\ :sub:`1`)\ :sup:`2` + 2gC\ :sup:`2` (A\ :sub:`2`/K\ :sub:`2`)\ :sup:`2` (L\ :sub:`B` +L\ :sub:`1-2`
+    K\ :sub:`2`/K\ :sub:`1`);
 
-   The USGS bridge discharge method embodies several assumptions both theoretically and practically to simplify the required data.
-   The following assumptions have been acknowledged as potentially limiting the accuracy of the modeling approach.
+    L\ :sub:`B` = length of contracted reach
 
-i.   Two cross-sections will be used to represent the bridge.
-   If there is no 1-D FLO-2D channel, the cross-sections still required data (BRIDGE_XSEC.DAT file).
-   For a 1-D channel, the bridge cross-sections can be represented by existing channel cross-sections with the first cross-section being the bridge
-   inflow node channel cross-section.
-   This cross-section should represent essentially normal depth upstream of the bridge (beyond backwater effects).
-   The length between the two cross-sections (UPLENGTH12 – L\ :sub:`1-2` in Figure 124) can be adjusted and can be longer than a grid element side length
-   if the cell size is too short to extend to the normal flow depth conditions.
+    L\ :sub:`1-2` = length of the reach from cross-section 1 to cross-section 2 (Figure 124)
 
-ii.
-The bridge flow will be exchanged between the upstream inflow and downstream outflow elements (INFLONOD or OUTFLONOD in HYSTRUC.DAT file) for either
-the channel or floodplain.
-Conceptually the bridge will be located between these two elements and share discharge between them.
-The inflow and outflow nodes don’t have to be contiguous.
-The bridge cross-section will constitute the boundary between these elements.
+    K\ :sub:`1` and K\ :sub:`2` = conveyance at cross-sections 1 and 2; K\ :sub:`1` = 1.486/n A\ :sub:`1` R\ :sub:`1`\ :sup:`0.67`; K\ :sub:`2` = 1.486/n
+    A\ :sub:`2` R\ :sub:`2`\ 0.67
 
-iii.
-If there is widespread floodplain flooding, the upstream cross-section should be limited to the 1-D channel top of banks.
-For a bridge on the floodplain with no channel, the cross-section should be limited to a perceived channel width or the bridge opening width.
-The cross-section should not encompass the entire valley floodplain.
-iv.
-The flow depth at the bridge is defined by the upstream inflow element water surface elevation and the bridge cross-section thalweg in cross-section 2
-(Figure 124).
-This is not entirely accurate, since the water surface will vary from the upstream cross-section to the bridge cross-section, but water surface
-elevation at the bridge is not computed directly by the model.
-Given the potential of backwater effects, however, the impact of the variable water surface elevation on the flow depth will not be significant.
+    n = Manning’s n-value through the contracted reach
 
-v.   The water surface head difference will be assessed from the upstream inflow node headwater and the downstream outflow node tailwater.
+    A\ :sub:`1`, R\ :sub:`1` and A\ :sub:`2`, R\ :sub:`2` are the cross-section flow areas and hydraulic radiuses respectively (Figure 124).
 
-vi.
-The bridge will assume to have the same constriction coefficients and losses regardless of whether the flow is upstream or downstream.
+.. image:: img/Chapter4/Chapte137.png
 
-vii.
-A velocity coefficient of α\ :sub:`1` = 1.3 is assumed and hardcoded for natural streams from Chow (1959, p.
-28) representing an average of lower values (α\ :sub:`1` ~ 1.1) for large uniform prismatic and higher values for small nonuniform natural channels
-(ranging up to 1.5).
+*Figure 124.
+Conceptual Bridge Plan and Profile with River Cross-sections.*
+
+To apply this free surface flow equation, the type of bridge opening (one of four) must be selected, and the bridge parameters and coefficients must
+be determined.
+The USGS figures for the four bridge types used to determine the coefficients are presented in the Appendix as reproduced from Hamill (1999).
+The relationships between the bridge parameters in Appendix figures that are used to evaluate the coefficients are hardcoded into the FLO-2D model in
+tabular form for linear interpolation.
+Conceptually, the role of the bridge coefficients is to represent a resistance to flow that will decrease the discharge like the Manning’s n roughness
+coefficient with the exception that a decrease in the bridge coefficients will have the same effect as an increase in the Manning’s n-value.
+
+The USGS bridge discharge method embodies several assumptions both theoretically and practically to simplify the required data.
+The following assumptions have been acknowledged as potentially limiting the accuracy of the modeling approach.
+
+    i. Two cross-sections will be used to represent the bridge.
+       If there is no 1-D FLO-2D channel, the cross-sections still required data (BRIDGE_XSEC.DAT file).
+       For a 1-D channel, the bridge cross-sections can be represented by existing channel cross-sections with the first cross-section being the bridge
+       inflow node channel cross-section.
+       This cross-section should represent essentially normal depth upstream of the bridge (beyond backwater effects).
+       The length between the two cross-sections (UPLENGTH12 – L\ :sub:`1-2` in Figure 124) can be adjusted and can be longer than a grid element side length
+       if the cell size is too short to extend to the normal flow depth conditions.
+
+    ii. The bridge flow will be exchanged between the upstream inflow and downstream outflow elements (INFLONOD or OUTFLONOD in HYSTRUC.DAT file) for either
+        the channel or floodplain.
+        Conceptually the bridge will be located between these two elements and share discharge between them.
+        The inflow and outflow nodes don’t have to be contiguous.
+        The bridge cross-section will constitute the boundary between these elements.
+
+    iii. If there is widespread floodplain flooding, the upstream cross-section should be limited to the 1-D channel top of banks.
+         For a bridge on the floodplain with no channel, the cross-section should be limited to a perceived channel width or the bridge opening width.
+         The cross-section should not encompass the entire valley floodplain.
+    iv. The flow depth at the bridge is defined by the upstream inflow element water surface elevation and the bridge cross-section thalweg in cross-section 2
+        (Figure 124).
+        This is not entirely accurate, since the water surface will vary from the upstream cross-section to the bridge cross-section, but water surface
+        elevation at the bridge is not computed directly by the model.
+        Given the potential of backwater effects, however, the impact of the variable water surface elevation on the flow depth will not be significant.
+
+    v.   The water surface head difference will be assessed from the upstream inflow node headwater and the downstream outflow node tailwater.
+
+    vi.  The bridge will assume to have the same constriction coefficients and losses regardless of whether the flow is upstream or downstream.
+
+    vii. A velocity coefficient of α\ :sub:`1` = 1.3 is assumed and hardcoded for natural streams from Chow (1959, p.
+         28) representing an average of lower values (α\ :sub:`1` ~ 1.1) for large uniform prismatic and higher values for small nonuniform natural channels
+         (ranging up to 1.5).
 
 Sluice Gate Flow
 ^^^^^^^^^^^^^^^^
