@@ -2137,12 +2137,12 @@ The final product is a set of vulnerability curves based on a maximum depth for 
 This method is similar to BOR (1988) vulnerability curves for mobile homes and buildings with a foundation (Figure 67 and Figure 68).
 Other building types and potential failure mechanisms could be considered to generate a series of vulnerability curves.
 
-.. image:: img/Chapter4/Chapte120.png
+.. image:: img/Chapter4/Chapte123.png
 
 *Figure 66.
 Vulnerability Curves. (Pilotti et al., 2016).*
 
-.. image:: img/Chapter4/Chapte121.png
+.. image:: img/Chapter4/Chapte125.png
 
 *Figure 67.
 Vulnerability Curve for Mobile Homes (BOR, 1988).*
