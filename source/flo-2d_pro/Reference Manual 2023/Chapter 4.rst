@@ -54,9 +54,12 @@ The assignment of overland flow roughness must account for vegetation, surface i
 It is also a function of flow depth.
 Typical overland flow roughness values (Manning’s n coefficients) are shown in Table 3.
 
+*Table 3.
+Overland Flow Manning's n Roughness Values.\ :sup: `1`*
+
 .. raw:: html
 
-   <table border="1" cellspacing="0" cellpadding="6" style="border-collapse: collapse; width: 100%;">
+     <table border="1" cellspacing="0" cellpadding="6" style="border-collapse: collapse; width: 100%;">
      <caption style="text-align: left; font-weight: bold;">
        Table 3. Overland Flow Manning's n Roughness Values.<sup>1</sup>
      </caption>
@@ -383,12 +386,12 @@ and the rectangular breach transitions to a trapezoidal channel (Figure 43).
 The scour of the trapezoidal bed and sides can be non-uniform and controlled by user input.
 The breach continues to widen, and the breach width will expand to other grid elements if necessary.
 
-.. image:: img/Chapter4/Chapte004.png
+.. image:: img/Chapter4/Chapte004.jpg
 
 *Figure 42.
 Dam Breach Piping Failure.*
 
-.. image:: img/Chapter4/Chapte005.png
+.. image:: img/Chapter4/Chapte005.jpg
 
 *Figure 43.
 Dam Breach Channel Development.*
