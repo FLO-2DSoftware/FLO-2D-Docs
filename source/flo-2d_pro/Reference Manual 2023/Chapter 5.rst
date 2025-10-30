@@ -490,220 +490,30 @@ outflow nodes, but the sole purpose of this effort would be to match the over de
 At this discharge, however, since the channel conveyance capacity is only about 5,000 cfs, most of the stage would reflect the floodplain conditions
 not the bridge.
 
-4848
+.. image:: img/Chapter5/Chapte012.png
 
-4850
+*Figure 139.
+Los Lunas Bridge Stage-Discharge Relationship Cross-section 1.*
 
-4852
+.. image:: img/Chapter5/Chapte013.png
 
-4854
+*Figure 140.
+Los Lunas Bridge Stage-Discharge Relationship Cross-section 2.*
 
-4856
+.. image:: img/Chapter5/Chapte014.png
 
-4858
+*Figure 141.
+Los Lunas Bridge Stage-Discharge Relationship Cross-section 3.*
 
-4860
+.. image:: img/Chapter5/Chapte015.png
 
-4862
+*Figure 142.
+Los Lunas Bridge Stage-Discharge Relationship Cross-section 4.*
 
-4864
+.. image:: img/Chapter5/Chapte016.png
 
-0
-
-10000
-
-20000
-
-30000
-
-40000
-
-50000
-
-Elevation
-
-Discharge (cfs)
-
-Cross Section 1 645 ft Upstream of Bridge
-
-'HEC-RAS'
-
-FLO-2D
-
-   *Figure 139.
-   Los Lunas Bridge Stage-Discharge Relationship Cross-section 1.*
-
-4848
-
-4850
-
-4852
-
-4854
-
-4856
-
-4858
-
-4860
-
-4862
-
-4864
-
-0
-
-10000
-
-20000
-
-30000
-
-40000
-
-50000
-
-Elevation
-
-Discharge (cfs)
-
-Cross Secion 2 45 ft Upstream of Bridge
-
-'HEC-RAS'
-
-FLO-2D
-
-   *Figure 140.
-   Los Lunas Bridge Stage-Discharge Relationship Cross-section 2.*
-
-4846
-
-4848
-
-4850
-
-4852
-
-4854
-
-4856
-
-4858
-
-4860
-
-4862
-
-0
-
-10000
-
-20000
-
-30000
-
-40000
-
-50000
-
-Elevation
-
-Discharge (cfs)
-
-Cross Section 3 45 ft Downstream of Bridge
-
-'HEC-RAS'
-
-FLO-2D
-
-   *Figure 141.
-   Los Lunas Bridge Stage-Discharge Relationship Cross-section 3.*
-
-4846
-
-4848
-
-4850
-
-4852
-
-4854
-
-4856
-
-4858
-
-4860
-
-4862
-
-0
-
-10000
-
-20000
-
-30000
-
-40000
-
-50000
-
-Elevation
-
-Discharge (cfs)
-
-Cross Section 4 955 ft Downstream of Bridge
-
-'HEC-RAS'
-
-FLO-2D
-
-   *Figure 142.
-   Los Lunas Bridge Stage-Discharge Relationship Cross-section 4.*
-
-4846
-
-4848
-
-4850
-
-4852
-
-4854
-
-4856
-
-4858
-
-4860
-
-4862
-
-0
-
-10000
-
-20000
-
-30000
-
-40000
-
-50000
-
-Elevation
-
-Discharge (cfs)
-
-Cross Section 5 1255 ft Downstream of Bridge
-
-'HEC-RAS'
-
-FLO-2D
-
-   *Figure 143.
-   Los Lunas Bridge Stage-Discharge Relationship Cross-section 5.*
+*Figure 143.
+Los Lunas Bridge Stage-Discharge Relationship Cross-section 5.*
 
 Downstream of the bridge, the FLO-2D and HEC-RAS stages do not match very well, particularly at the higher flows.
 This is because the FLO-2D model outflow node water surface elevation did not match the HEC-RAS water surface near cross-section 5.
@@ -711,10 +521,12 @@ The FLO-2D channel outflow node pulls down the in-channel water surface, but muc
 Since the downstream water surface elevations were not important and did not affect the upstream stage-discharge, the additional effort required to
 match the model downstream stages was not considered.
 
-   *Figure 144.
-   FLO-2D Maximum Depth for a Discharge of 45,000 cfs.*
+.. image:: img/Chapter5/Chapte017.png
 
-   Discussion
+*Figure 144.
+FLO-2D Maximum Depth for a Discharge of 45,000 cfs.*
+
+Discussion
 
 The objective of the applying the FLO-2D and HEC-RAS bridge routines to the Los Lunas Bridge reach of the Rio Grande is to compare the prediction of
 the stage for various discharges.
