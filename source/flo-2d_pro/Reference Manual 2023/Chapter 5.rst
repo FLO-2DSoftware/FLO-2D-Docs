@@ -145,19 +145,19 @@ Storm surge inundation in urban areas requires detailed modeling of features coa
 The impact on coastal urban storm drain systems with ocean outfalls from combined sea level rise and storm surge can be simulated with a FLO-2D model.
 Urban coastal flooding is controlled by:
 
-- Volume of ocean water coming inland, flood volume and volume conservation
+    - Volume of ocean water coming inland, flood volume and volume conservation
 
-- Sediment bulking (add 20% volume)
+    - Sediment bulking (add 20% volume)
 
-- Flood mitigation – sea walls and levees
+    - Flood mitigation – sea walls and levees
 
-- Loss of storage due to buildings
+    - Loss of storage due to buildings
 
-- Street flow to urban outlying areas
+    - Street flow to urban outlying areas
 
-- Channel flow and storage
+    - Channel flow and storage
 
-- Loss of storm drain capacity with sea level rise
+    - Loss of storm drain capacity with sea level rise
 
 To simulate storm surges a time-stage relationship at the shoreline grid elements is required.
 
@@ -165,62 +165,68 @@ This table can include high tides as a well as multiple surge waves.
 A time-stage relationship (Table 15) can also be used to simulate a short duration tsunami event.
 A typical time-stage relationship is shown below.
 
+*Table 15.
+Stage Time Relationship.*
+
 .. list-table::
-   :widths: 100
+   :widths: 50 50
    :header-rows: 0
 
 
-   * - **Table 15.
-       Stage Time Relationship.**
+   * - **Time (hrs)**
+     - **Stage (ft)**
 
-   * - **Time (hrs)**                                 | **Stage (ft)**
+   * - 0.0
+     - 0.43
 
-   * - 0.0                                            | 0.43
+   * - 5.0
+     - 0.75
 
-   * - 5.0                                            | 0.75
+   * - 11.0
+     - 1.29
 
-   * - 11.0                                           | 1.29
+   * - 16.0
+     - 6.63
 
-   * - 16.0                                           | 6.63
+   * - 24.0
+     - 0.38
 
-   * - 24.0                                           | 0.38
-
-   * - 36.0                                           | 0.62
-
+   * - 36.0
+     - 0.62
 
 In addition to the time-stage relationship, the model features that may define a coastal flood model are:
 
-- Rainfall
+    - Rainfall
 
-- Streets
+    - Streets
 
-- Storm drain system
+    - Storm drain system
 
-- Levees or flood walls
+    - Levees or flood walls
 
-- Estuary channels and drainage canals
+    - Estuary channels and drainage canals
 
-- Roughness
+    - Roughness
 
-- Hydraulic structures (culverts and bridges)
+    - Hydraulic structures (culverts and bridges)
 
-- Buildings
+    - Buildings
 
 A FLO-2D storm surge model was prepared for the Florida Keys using the ocean time-stage relationship associated with 2005 Hurricane Wilma (Figure 133).
 Using these area of inundation results, the products associated with coastal flood models include:
 
-- Prediction of the overland progression of the hurricane surge through urban area.
+    - Prediction of the overland progression of the hurricane surge through urban area.
 
-- Risk/hazard assessment on urban development and infrastructure (storm drain system).
+    - Risk/hazard assessment on urban development and infrastructure (storm drain system).
 
-- Estimate groundwater level rise and its impact on drainage and utilities.
+    - Estimate groundwater level rise and its impact on drainage and utilities.
 
-- Automatically estimate storm surge damage and mitigation costs.
+    - Automatically estimate storm surge damage and mitigation costs.
 
-|Chapte004|
+.. image:: img/Chapter5/Chapte004.png
 
-   *Figure 133.
-   Hurricane Wilma 2005 Predicted Storm Surge in the Florida Keys*
+*Figure 133.
+Hurricane Wilma 2005 Predicted Storm Surge in the Florida Keys*
 
 5.6 Model Results – What Constitutes a Successful Flood Simulation?
 -------------------------------------------------------------------
@@ -228,11 +234,11 @@ Using these area of inundation results, the products associated with coastal flo
 When a FLO-2D simulation is completed, how do you know if the simulation was successful or accurate? There are three keys to a successful project
 application:
 
-- Volume conservation
+    - Volume conservation
 
-- Area of inundation
+    - Area of inundation
 
-- Maximum velocities and numerical surging
+    - Maximum velocities and numerical surging
 
 Volume must be conserved for both the overland flow and channel flow.
 If the storage plus outflow volume was not conserved on the order of 0.0001 percent or better of the inflow volume, then it will be necessary to
@@ -284,7 +290,7 @@ the bridge that results in an upstream backwater effect.
 This will enable the accurate analysis of bridge constricted floodplain and river reaches that exhibit non-uniform and unsteady flow conditions.
 For additional description and details of the FLO-2D bridge routine refer to the FLO-2D Reference Manual Bridge Section.
 
-   Bridge Flow Modeling
+Bridge Flow Modeling
 
 There are three basic flow conditions through a bridge: free surface flow, pressure flow and pressure flow plus deck overtopping flow.
 Pressure flow, which occurs when the deck or superstructure is submerged, is defined as either sluice gate or orifice flow.
@@ -316,15 +322,15 @@ If the bridge has guard rails or debris, the selected weir coefficient should be
 Typically, overtopping flow is shallow, but for a long bridge the overflow discharge can be significant.
 An assumption of weir flow to represent over deck discharge can only be an approximation because of a number of factors that are not limited to:
 
-- Tailwater submergence;
+    - Tailwater submergence;
 
-- Variable deck elevation;
+    - Variable deck elevation;
 
-- Unsteady flow conditions;
+    - Unsteady flow conditions;
 
-- Guardrail supports causing blockage and spatially variable flow;
+    - Guardrail supports causing blockage and spatially variable flow;
 
-- Debris blockage.
+    - Debris blockage.
 
 The bridge discharge computations will be performed inside the FLO-2D routing algorithm for the floodplain and 1-D channel components in conjunction
 with the existing hydraulic structure routine.
@@ -332,7 +338,7 @@ The model will identify the flow condition, compute the appropriate discharge an
 For details on the computation methods and equations for free surface, pressure flow and weir flow refer the companion White Paper on the FLO-2D
 ‘Bridge Hydraulics Component’.
 
-   A Comparison of Bridge Flow Modeling between FLO-2D and HEC-RAS Model Development
+A Comparison of Bridge Flow Modeling between FLO-2D and HEC-RAS Model Development
 
 A FLO-2D model of the Middle Rio Grande valley was prepared for the Corps of Engineers in the early 2000’s from Cochiti Dam to Elephant Butte
 Reservoir in New Mexico (~ 170 miles).
