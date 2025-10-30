@@ -122,7 +122,7 @@ It will also assign minimum curb elevations to the floodplain elevations outside
 For more street editing options and details see the GDS manual or the street editing white paper.
 
 
-.. image:: img/Chapter4/Chapte001.png
+.. image:: img/Chapter4/Chapte100.png
 
 *Figure 35.
 Editing Grid Elements to Represent Streets.*
