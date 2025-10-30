@@ -2178,59 +2178,41 @@ lower curve is applied in the FLO-2D model.
 Vulnerability Curves for Building Subject to Collapse.*
 
 The vulnerability curves for the BOR mobile homes and buildings with foundations were regressed by digitizing Figure 67 for the delineation between
-   the High Danger and the
+the High Danger and the
 
-   Judgment Zones.
-   These curves should be considered as general guidelines for the potential for a building to collapse during a flood event.
-   More research could define a series of vulnerability curves for different types of construction.
+Judgment Zones.
+These curves should be considered as general guidelines for the potential for a building to collapse during a flood event.
+More research could define a series of vulnerability curves for different types of construction.
 
-   Implementation of the Building Collapse in the FLO-2D Model
+Implementation of the Building Collapse in the FLO-2D Model
 
-   The polynomial equations relating the threshold depth for a building collapse as function of velocity for the four vulnerability curves shown in
-   Figure 68 has been implemented in the FLO2D model.
-   There are two methods for initiating the building collapse routine: 1) Create the BUILDING_COLLAPSE.DAT file consisting of the grid element; and 2)
-   Assigning negative ARF values.
-   In the first method, the vulnerability curves (1-poor, 2-moderate, 3-good and 4-Clausen
+The polynomial equations relating the threshold depth for a building collapse as function of velocity for the four vulnerability curves shown in
+Figure 68 has been implemented in the FLO2D model.
+There are two methods for initiating the building collapse routine: 1) Create the BUILDING_COLLAPSE.DAT file consisting of the grid element; and 2)
+Assigning negative ARF values.
+In the first method, the vulnerability curves (1-poor, 2-moderate, 3-good and 4-Clausen
 
-   & Clark upper curve) from Figure 68 includes a global curve and spatial variable curve assignments.
-   In the file, Line 1 is a global vulnerability curve assignment which is superseded by the individual grid element vulnerability curves.
-   If a building consists of multiple grid elements, each element must have a vulnerability curve assignment to collapse the entire building.
-   The global vulnerability curve value could be zero.
-   A portion of a typical BUILDING_COLLAPSE.DAT file is follows:
+& Clark upper curve) from Figure 68 includes a global curve and spatial variable curve assignments.
+In the file, Line 1 is a global vulnerability curve assignment which is superseded by the individual grid element vulnerability curves.
+If a building consists of multiple grid elements, each element must have a vulnerability curve assignment to collapse the entire building.
+The global vulnerability curve value could be zero.
+    A portion of a typical BUILDING_COLLAPSE.DAT file is follows:
 
-0 Global Vulnerability Curve
+0            Global Vulnerability Curve
+ 2
+ 6756 1
+ 6756 1             Grid element vulnerability curve (poor)
+ 6756 2             Grid element vulnerability curve (moderate)
+ 6756 3             Grid element vulnerability curve (good)
+ 6756 4             Grid element Clausen and Clark
 
-   2
+Assigning a nonzero value to the global vulnerability curve would initiate potential building failure for any of the buildings in the model.
 
-   6756 1
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
-
-   * - 6756 1
-     - Grid element vulnerability curve (poor)
-
-   * - 6756 2
-     - Grid element vulnerability curve (moderate)
-
-   * - 6756 3
-     - Grid element vulnerability curve (good)
-
-   * - 6756 4
-     - Grid element Clausen and Clark
-
-
-..
-
-   Assigning a nonzero value to the global vulnerability curve would initiate potential building failure for any of the buildings in the model.
-
-   The building collapse routine can also be activated by assigning a negative value to a completely blocked ARF value or to partially blocked ARF values
-   as shown in the list below from an ARF.DAT file.
-   The grid elements in red are assigned a negative value to assess the potential for collapse.
-   This can be done in the FLO-2D graphical editor QGIS.
-   For this case, the upper Clausen & Clark (1990) is applied.
+The building collapse routine can also be activated by assigning a negative value to a completely blocked ARF value or to partially blocked ARF values
+as shown in the list below from an ARF.DAT file.
+The grid elements in red are assigned a negative value to assess the potential for collapse.
+This can be done in the FLO-2D graphical editor QGIS.
+For this case, the upper Clausen & Clark (1990) is applied.
 
    ARF.DAT File Example
 
