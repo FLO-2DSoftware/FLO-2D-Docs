@@ -1132,101 +1132,86 @@ Green-Ampt Infiltration Volumetric Moisture Deficiency.*
 Infiltration Depth Limitation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   An optional infiltration soil depth storage limit can be assigned globally (last parameter in line 1 of the INFIL.DAT file) or as a spatially variable
-   parameter for each grid element.
-   When the wetting front reaches the storage depth limitation for a floodplain grid element, the infiltration is ceased.
-   This infiltration volume limit can be quickly filled in an alluvial fan distributary channel or in other areas of concentrated flow resulting in
-   increased runoff.
-   It can also affect the time to peak discharge.
-   For channels, the infiltration is not stopped, but when the waterfront reaches the infiltration storage depth, the hydraulic conductivity is reduced
-   exponentially.
-   In this case, the infiltration is assumed to continue under a saturated condition that feeds the groundwater system.
-   The limiting soil depth is assigned as the soil depth below the ground surface.
-   The actual available storage is the soil depth times the porosity times the soil moisture deficit.
-   In other words, a portion of available pore space is occupied by the moisture in the soil at the start of the simulation.
-   As an example, the user may define a storage depth limit of 10 ft with a porosity of 40 percent (or 0.40) and a soil moisture deficient of 30% (0.30).
-   The available volumetric storage in the soil for this case is 1.2 ft per square foot of surface area (10 x 0.4 x 0.3).
-   If instead the volumetric soil moisture deficit (12% or 0.12) is given, the result is the same 1.2 ft.
-   This represents a solid depth of water that can be infiltrated.
-   Once this accumulated water depth (1.2 ft) is infiltrated, the infiltration stops for that grid element.
-   The spatially variable soil depth limit by grid element is assigned as the last parameter in line F of INFIL.DAT.
+An optional infiltration soil depth storage limit can be assigned globally (last parameter in line 1 of the INFIL.DAT file) or as a spatially variable
+parameter for each grid element.
+When the wetting front reaches the storage depth limitation for a floodplain grid element, the infiltration is ceased.
+This infiltration volume limit can be quickly filled in an alluvial fan distributary channel or in other areas of concentrated flow resulting in
+increased runoff.
+It can also affect the time to peak discharge.
+For channels, the infiltration is not stopped, but when the waterfront reaches the infiltration storage depth, the hydraulic conductivity is reduced
+exponentially.
+In this case, the infiltration is assumed to continue under a saturated condition that feeds the groundwater system.
+The limiting soil depth is assigned as the soil depth below the ground surface.
+The actual available storage is the soil depth times the porosity times the soil moisture deficit.
+In other words, a portion of available pore space is occupied by the moisture in the soil at the start of the simulation.
+As an example, the user may define a storage depth limit of 10 ft with a porosity of 40 percent (or 0.40) and a soil moisture deficient of 30% (0.30).
+The available volumetric storage in the soil for this case is 1.2 ft per square foot of surface area (10 x 0.4 x 0.3).
+If instead the volumetric soil moisture deficit (12% or 0.12) is given, the result is the same 1.2 ft.
+This represents a solid depth of water that can be infiltrated.
+Once this accumulated water depth (1.2 ft) is infiltrated, the infiltration stops for that grid element.
+The spatially variable soil depth limit by grid element is assigned as the last parameter in line F of INFIL.DAT.
 
 Channel Infiltration
 ~~~~~~~~~~~~~~~~~~~~
 
-   For channel infiltration, the surface area of a natural channel is used to approximate the wetted perimeter to compute the infiltration volume.
-   In addition to the depth limit for saturated hydraulic conductivity, an exponential decrement of the hydraulic conductivity can be applied for long
-   duration flow losses such as irrigation releases from dams.
-   Instead of stopping the infiltration when the wetting front reaches the limiting 2 infiltration depth, the hydraulic conductivity is reduced
-   exponentially using the same form as the Horton equation described below.
-   The time is referenced to when the wetting front reaches the assigned limiting depth and the decay coefficient is hardwired to a value of 0.00005
-   which enables the final hydraulic conductivity to be reaches in about 16 hours after the wetting front reaches the limiting soil depth.
-   The global limiting depth in line 1 of INFIL.DAT must be assigned and Line R for each channel reach must have the initial and final hydraulic
-   conductivity and the limiting soil depth.
+For channel infiltration, the surface area of a natural channel is used to approximate the wetted perimeter to compute the infiltration volume.
+In addition to the depth limit for saturated hydraulic conductivity, an exponential decrement of the hydraulic conductivity can be applied for long
+duration flow losses such as irrigation releases from dams.
+Instead of stopping the infiltration when the wetting front reaches the limiting 2 infiltration depth, the hydraulic conductivity is reduced
+exponentially using the same form as the Horton equation described below.
+The time is referenced to when the wetting front reaches the assigned limiting depth and the decay coefficient is hardwired to a value of 0.00005
+which enables the final hydraulic conductivity to be reaches in about 16 hours after the wetting front reaches the limiting soil depth.
+The global limiting depth in line 1 of INFIL.DAT must be assigned and Line R for each channel reach must have the initial and final hydraulic
+conductivity and the limiting soil depth.
 
-   SCS Curve Number Infiltration
+SCS Curve Number Infiltration
 
-   The SCS runoff curve number (CN) loss method is a function of the total rainfall depth and the empirical curve number parameter which ranges from 1 to
-   100.
-   The SCS rainfall loss is a function of hydrologic soil type, land use and treatment, surface condition and antecedent moisture condition.
-   The method was developed on 24-hour hydrograph data on mild slope eastern rural watersheds in the United States.
-   Runoff curve numbers have been calibrated or estimated for a wide range of urban areas, agricultural lands, and semi-arid range lands.
-   The SCS CN method does not account for variation in rainfall intensity.
-   It was developed for predicting rainfall runoff from ungauged watersheds and its attractiveness lies in its simplicity.
+The SCS runoff curve number (CN) loss method is a function of the total rainfall depth and the empirical curve number parameter which ranges from 1 to
+100.
+The SCS rainfall loss is a function of hydrologic soil type, land use and treatment, surface condition and antecedent moisture condition.
+The method was developed on 24-hour hydrograph data on mild slope eastern rural watersheds in the United States.
+Runoff curve numbers have been calibrated or estimated for a wide range of urban areas, agricultural lands, and semi-arid range lands.
+The SCS CN method does not account for variation in rainfall intensity.
+It was developed for predicting rainfall runoff from ungauged watersheds and its attractiveness lies in its simplicity.
 
-   For large basins (especially semi-arid basins) which have unique or variable infiltration characteristics such as channels, the CN method tends to
-   over-predict runoff (Ponce, 1989).
+For large basins (especially semi-arid basins) which have unique or variable infiltration characteristics such as channels, the CN method tends to
+over-predict runoff (Ponce, 1989).
 
-   The SCS curve number parameters can be assigned graphically with the FLO-2D Plugin for QGIS to allow for spatially variable rainfall runoff.
-   Shape files can used to interpolate SCS-CNs from ground cover and soil attributes.
-   The SCS-CN method can be combined with the Green-Ampt infiltration method to compute both rainfall-runoff and overland flow transmission losses.
-   For this case, the SCS-CN method will be applied to grid elements with rainfall occurring and the Green-Ampt method will compute infiltration for grid
-   elements that do not have rainfall during the timestep.
-   This will enable transmission losses to be computed with Green-Ampt on alluvial fans and floodplains while the SCS-CN method is used to compute the
-   rainfall loss in the watershed basin.
+The SCS curve number parameters can be assigned graphically with the FLO-2D Plugin for QGIS to allow for spatially variable rainfall runoff.
+Shape files can used to interpolate SCS-CNs from ground cover and soil attributes.
+The SCS-CN method can be combined with the Green-Ampt infiltration method to compute both rainfall-runoff and overland flow transmission losses.
+For this case, the SCS-CN method will be applied to grid elements with rainfall occurring and the Green-Ampt method will compute infiltration for grid
+elements that do not have rainfall during the timestep.
+This will enable transmission losses to be computed with Green-Ampt on alluvial fans and floodplains while the SCS-CN method is used to compute the
+rainfall loss in the watershed basin.
 
-   Horton Infiltration
+Horton Infiltration
 
-   The Horton infiltration method is promoted by several agencies including the Urban Drainage and Flood Control District (UDFCD) in Denver, Colorado.
-   The UDFCD Drainage Criteria Manual (2008) suggests that the model represents a reasonable balance between simplicity and infiltration processes in
-   urban watersheds where the runoff is not sensitive to soil parameters.
-   This Horton equation is defined by:
+The Horton infiltration method is promoted by several agencies including the Urban Drainage and Flood Control District (UDFCD) in Denver, Colorado.
+The UDFCD Drainage Criteria Manual (2008) suggests that the model represents a reasonable balance between simplicity and infiltration processes in
+urban watersheds where the runoff is not sensitive to soil parameters.
+This Horton equation is defined by:
 
    *f = f\ o + (f\ i - f\ o) e\ -at*
 
-   where:
+where:
 
-   *f* = infiltration rate at any time *t* after the rainfall begins (in/hr) *f\ i* = initial infiltration rate (in/hr) *f\ o* = final infiltration rate
-   (in/hr) *a* = decay coefficient (1/seconds)
+     *f* = infiltration rate at any time *t* after the rainfall begins (in/hr) *f\ i* = initial infiltration rate (in/hr) *f\ o* = final infiltration rate
+     (in/hr) *a* = decay coefficient (1/seconds)
 
-   *t* = time from the rainfall initiation (seconds)
+     *t* = time from the rainfall initiation (seconds)
 
-   This equation simulates initial high infiltration early in the storm and decays to a steady rate with soil saturation.
-   The parameters depend on soil conditions and vegetative cover.
-   The UDFCD (2008) has recommended Horton parameters based on the NRCS hydrologic soil groups (Table 9).
+This equation simulates initial high infiltration early in the storm and decays to a steady rate with soil saturation.
+The parameters depend on soil conditions and vegetative cover.
+The UDFCD (2008) has recommended Horton parameters based on the NRCS hydrologic soil groups (Table 9).
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+*Table 9.
+Horton Infiltration Parameters.*
 
+.. image:: img/Chapter4/Chapte109.png
 
-   * - **Table 9.
-       Horton Infiltration Parameters.**
-
-   * - NRCS Soil Group    | Infiltration (in/hr)                    | Decay Coeff.
-       (*a*)+--------------------+--------------------+| Initial (*f\ i*)   |    Final (*f\ o*)  |
-
-   * - A                  | 5.0                | 1.0                |    0.0007
-
-   * - B                  | 4.5                | 0.6                |    0.0018
-
-   * - C                  | 3.0                | 0.5                |    0.0018
-
-   * - D                  | 3.0                | 0.5                |    0.0018
-
-
- 4.13 Evaporation
- ----------------
+4.13 Evaporation
+----------------
 
    Open water surface evaporation losses for long duration floods in large river systems can be simulated.
    This component was implemented for the 173-mile Middle Rio Grande model from Cochiti Dam to Elephant Butte Reservoir in New Mexico.
