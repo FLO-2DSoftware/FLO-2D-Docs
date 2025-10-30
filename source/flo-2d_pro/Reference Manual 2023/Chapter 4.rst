@@ -2479,57 +2479,26 @@ Either rainfall or flood inflow to the grid element will fill the sink volume.
 The sink volume can be assigned in the QGIS using a shapefile or polygon to select a cell or cells.
 The volume (ft\ :sup:`3` or m\ :sup:`3`) is saved in a LID_VOLUME.DAT file in the following format:
 
-Grid Element Volume
+Grid Element     Volume
 
-.. _`14821`:
+14821            60.0
 
-14821:
+14822            70.0
 
-60.0
+14823            70.0
 
-.. _`14822`:
+17601            40.0
 
-14822:
+17602            40.0
 
-70.0
+18258            100.0
 
-.. _`14823`:
+18325            100.0
 
-14823:
-
-70.0
-
-.. _`17601`:
-
-17601:
-
-40.0
-
-.. _`17602`:
-
-17602:
-
-40.0
-
-.. _`18258`:
-
-18258:
-
-100.0
-
-.. _`18325`:
-
-18325:
-
-100.0
-
-
-..
-
-   The LID Volume method is assigned in QGIS using the Tol Spatial Tool.
-   In this case, the volume per grid element must be calculated.
-   Any grid element with a centroid inside a TOL Spatial polygon will be added to the data file.
-   LID_VOLUME.DAT is the required data file so if QGIS writes the data to TOL_SPATIAL.DAT, rename that file.
+The LID Volume method is assigned in QGIS using the Tol Spatial Tool.
+In this case, the volume per grid element must be calculated.
+Any grid element with a centroid inside a TOL Spatial polygon will be added to the data file.
+LID_VOLUME.DAT is the required data file so if QGIS writes the data to TOL_SPATIAL.DAT, rename that file.
 
 |Chapte026|
 
