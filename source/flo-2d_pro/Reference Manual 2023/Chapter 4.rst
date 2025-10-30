@@ -1068,39 +1068,65 @@ The volumetric moisture deficiency is evaluated as the difference between the in
 Depression storage is an initial loss from the surface flow (TOL value).
 This is the amount of water stored in small surface depressions that does not become part of the overland runoff or infiltration.
 
+*Table 8.
+Green-Ampt Infiltration Volumetric Moisture Deficiency.*
+
 .. list-table::
-   :widths: 100
+   :widths: 50 25 25
    :header-rows: 0
 
 
-   * - **Table 8.
-       Green-Ampt Infiltration Volumetric Moisture Deficiency.**
+   * - Classification
+     - Dry (% Diff)
+     - Normal (% Diff)
 
-   * - Classification        |    Dry (% Diff)         |    Normal|                         ||                         |    (% Diff)
+   * - sand and loamy sand\ :sup:`1`
+     - 35
+     - 30
 
-   * - sand and loamy           |    35                   |    30sand\ :sup:`1`           |                         |
+   * - sandy loam
+     - 35
+     - 25
 
-   * - sandy loam               |    35                   |    25
+   * - loam
+     - 35
+     - 25
 
-   * - loam                     |    35                   |    25
+   * - silty loam
+     - 40
+     - 25
 
-   * - silty loam               |    40                   |    25
+   * - silt
+     - 35
+     - 15
 
-   * - silt                     |    35                   |    15
+   * - sandy clay loam
+     - 25
+     - 15
 
-   * - sandy clay loam          |    25                   |    15
+   * - clay loam
+     - 25
+     - 15
 
-   * - clay loam                |    25                   |    15
+   * - silty clay loam
+     - 30
+     - 15
 
-   * - silty clay loam          |    30                   |    15
+   * - sandy clay
+     - 20
+     - 10
 
-   * - sandy clay               |    20                   |    10
+   * - silty clay
+     - 20
+     - 10
 
-   * - silty clay               |    20                   |    10
-
-   * - Clay                     |    15                   |    5
+   * - Clay
+     - 15
+     - 5
 
    * - :sup:`1`\ Maricopa County Drainage Design Manual, 1992.
+     -
+     -
 
 
 Infiltration Depth Limitation
