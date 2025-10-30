@@ -2616,172 +2616,186 @@ The ARF and WRF values can be assigned automatically using shape file interpolat
 *Figure 86.
 Buildings on a 25 ft Grid System (red lines indicate walls represented as levees).*
 
-   There are two options to simulating rainfall runoff from buildings.
-   For the first option, the user assigns the building ARF values.
-   The building may be completely blocked (ARF =1.) or partially blocked (ARF < 1.).
-   When the rainfall occurs on a grid element with a partial ARF value, the rainfall on the entire grid element (including the portion with the assigned
-   building ARF value) is accumulated on the remaining grid element surface area not covered by the building.
-   The building portion of grid element surface area is considered impervious and sheds rainfall but does not store water.
-   This accumulated rainfall depth (> TOL value) is then available for routing to contiguous grid elements.
-   If the grid element surface area is totally blocked and has no storage (ARF = 1.), then there is no rainfall runoff from this grid element.
-   In this case, it is assumed that the rainfall goes to the building downspout, into the storm drain system and off the model.
-   For this option: IRAINBUILDING = 0 (RAIN.DAT file, line 1, second variable).
+There are two options to simulating rainfall runoff from buildings.
+For the first option, the user assigns the building ARF values.
+The building may be completely blocked (ARF =1.) or partially blocked (ARF < 1.).
+When the rainfall occurs on a grid element with a partial ARF value, the rainfall on the entire grid element (including the portion with the assigned
+building ARF value) is accumulated on the remaining grid element surface area not covered by the building.
+The building portion of grid element surface area is considered impervious and sheds rainfall but does not store water.
+This accumulated rainfall depth (> TOL value) is then available for routing to contiguous grid elements.
+If the grid element surface area is totally blocked and has no storage (ARF = 1.), then there is no rainfall runoff from this grid element.
+In this case, it is assumed that the rainfall goes to the building downspout, into the storm drain system and off the model.
+For this option: IRAINBUILDING = 0 (RAIN.DAT file, line 1, second variable).
 
-   For the second option, the rainfall on completely blocked cells constitutes runoff from the building to the surface area.
-   Rainfall on the totally blocked grid elements (ARF = 1) is assumed to be routed through the building drain system to the surface area.
-   The rainfall is accumulated on the grid element surface area and is passed to contiguous grid elements within the building and is then exchanged with
-   cells outside the building as runoff.
-   Figure 87 shows the same buildings in Figure 86 represented by the ARF values.
-   The gray grid elements are completely blocked (ARF =1) and the yellow elements are partially blocked (ARF < 1).
-   The rainfall on an interior grid element (e.g. red block of elements in Figure 87), is routed to the building boundary based on grid element elevation
-   (ground topography) and roughness (Manning’s nvalue).
-   This option is assumed to be representative of the shallow flow on a building roof being routed through the building’s drainage system to the
-   downspout.
-   The user can control the drainage direction by adjusting the grid element elevations inside the building.
-   This option requires that IRAINBUILDING = 1 in the RAIN.DAT file (line 1, second variable) be assigned.
-   Totally blocked elements are gray (ARF = 1) and Partially Blocked elements are in varying shades of yellow.
+For the second option, the rainfall on completely blocked cells constitutes runoff from the building to the surface area.
+Rainfall on the totally blocked grid elements (ARF = 1) is assumed to be routed through the building drain system to the surface area.
+The rainfall is accumulated on the grid element surface area and is passed to contiguous grid elements within the building and is then exchanged with
+cells outside the building as runoff.
+Figure 87 shows the same buildings in Figure 86 represented by the ARF values.
+The gray grid elements are completely blocked (ARF =1) and the yellow elements are partially blocked (ARF < 1).
+The rainfall on an interior grid element (e.g. red block of elements in Figure 87), is routed to the building boundary based on grid element elevation
+(ground topography) and roughness (Manning’s nvalue).
+This option is assumed to be representative of the shallow flow on a building roof being routed through the building’s drainage system to the
+downspout.
+The user can control the drainage direction by adjusting the grid element elevations inside the building.
+This option requires that IRAINBUILDING = 1 in the RAIN.DAT file (line 1, second variable) be assigned.
+Totally blocked elements are gray (ARF = 1) and Partially Blocked elements are in varying shades of yellow.
 
-   *Figure 87.
-   Assigned ARF Values to the Buildings.*
+.. image:: img/Chapter4/Chapte127.png
 
-   There are several assumptions for the rainfall runoff from the buildings:
+*Figure 87.
+Assigned ARF Values to the Buildings.*
 
-- When IRAINBUILDING = 1, the rainfall runoff will only be routed between completely blocked elements within the building.
+There are several assumptions for the rainfall runoff from the buildings:
 
-- The routing is based on the internal building topography (grid element elevation).
+    - When IRAINBUILDING = 1, the rainfall runoff will only be routed between completely blocked elements within the building.
 
-- The flow roughness (Manning’s n-value) for the completely blocked buildings is 0.03 (hard coded in the model).
+    - The routing is based on the internal building topography (grid element elevation).
 
-- Based on the eight potential flow directions, the flow width for a blocked element (ARF = 1) is 0.41412 \* grid element side (i.e.
-  WRF = 0.).
+    - The flow roughness (Manning’s n-value) for the completely blocked buildings is 0.03 (hard coded in the model).
 
-- The flow from inside the building to outside of the building is based on a hard-coded head difference in the water surface elevation of 0.5 ft (0.15
-  m).
-  The actual water surface and ground elevations across the building walls are ignored in the flow computation.
+    - Based on the eight potential flow directions, the flow width for a blocked element (ARF = 1) is 0.41412 \* grid element side (i.e.
+      WRF = 0.).
 
-- The flow can only be exchanged from inside to outside the building.
-  No flow is permitted from outside to inside the building.
+    - The flow from inside the building to outside of the building is based on a hard-coded head difference in the water surface elevation of 0.5 ft (0.15
+      m).
+      The actual water surface and ground elevations across the building walls are ignored in the flow computation.
 
-- The flow depth must exceed a TOL = 0.0042 for flow to be exchanged between interior building elements.
-  This represents ponded water storage and is hard coded in the model.
+    - The flow can only be exchanged from inside to outside the building.
+      No flow is permitted from outside to inside the building.
 
-..
+    - The flow depth must exceed a TOL = 0.0042 for flow to be exchanged between interior building elements.
+      This represents ponded water storage and is hard coded in the model.
 
-   The following example project (Figure 88) has a large building on a steep alluvial fan slope to the north (top of the page).
-   To simulate runoff from the building to the fan surface IRAINBUILDING = 1.
+The following example project (Figure 88) has a large building on a steep alluvial fan slope to the north (top of the page).
+To simulate runoff from the building to the fan surface IRAINBUILDING = 1.
 
-|Chapte036|
+.. image:: img/Chapter4/Chapte036.jpg
 
-   *Figure 88.
-   Location of a Large Building.*
+*Figure 88.
+Location of a Large Building.*
 
-   The rainfall results in flooding on the alluvial fan with the floodwave moving from south to north (towards the top of the page).
-   The building is in a swale and takes a direct hit from the flooding.
-   Figure 89 shows the flooding (maximum depths - dark blue grid elements) piling up on the upstream side of the building (south side of the building)
-   and flowing to the west to get around the building.
-   Along the building south wall, the predicted interior maximum depths are less than the tolerance value (gray cells).
+The rainfall results in flooding on the alluvial fan with the floodwave moving from south to north (towards the top of the page).
+The building is in a swale and takes a direct hit from the flooding.
+Figure 89 shows the flooding (maximum depths - dark blue grid elements) piling up on the upstream side of the building (south side of the building)
+and flowing to the west to get around the building.
+Along the building south wall, the predicted interior maximum depths are less than the tolerance value (gray cells).
 
-   *Figure 89.
-   Maximum Flow Depths Inside the Building.*
+.. image:: img/Chapter4/Chapte128.png
 
-   The rainfall runoff flows inside the building to reach the north wall and is debouched from the building.
-   The building is outlined in red.
-   Figure 90 shows the maximum velocities on the alluvial fan and indicates that the flow is moving inside the building.
-   The flow is routed in the building interior based on the topography and roughness until it reaches the north side and then crosses to the outside of
-   the building (Figure 91).
-   This example illustrates that the flooding outside the building will progress around the building and the rainfall runoff on the building roof leaves
-   the building.
-   It possible for the flow to leave the building in any direction.
-   The building is outlined in red.
+*Figure 89.
+Maximum Flow Depths Inside the Building.*
 
-   *Figure 90.
-   Maximum Flow Velocities on the Alluvial Fan.*
+The rainfall runoff flows inside the building to reach the north wall and is debouched from the building.
+The building is outlined in red.
+Figure 90 shows the maximum velocities on the alluvial fan and indicates that the flow is moving inside the building.
+The flow is routed in the building interior based on the topography and roughness until it reaches the north side and then crosses to the outside of
+the building (Figure 91).
+This example illustrates that the flooding outside the building will progress around the building and the rainfall runoff on the building roof leaves
+the building.
+It possible for the flow to leave the building in any direction.
+The building is outlined in red.
 
-   *Figure 91.
-   Maximum Flow Velocities.*
+.. image:: img/Chapter4/Chapte129.png
 
-   Downspout
+*Figure 90.
+Maximum Flow Velocities on the Alluvial Fan.*
 
-   The building location selected for this project is shown in Figure 92.
-   The red lines in these figures are levees and represent a parapet wall surrounding the entire building roof.
-   On the project building, the levee elements encompass the blocked building (ARF = 1) elements.
-   The completely blocked elements represent the building roof.
-   The roof grid element elevations are usually assigned a ground elevation.
-   These building elevations can be edited to represent the roof.
-   The roof elements can be selected together and assigned a uniform elevation representing a flat roof (Figure 92).
-   The parapet wall is simulated by selecting the appropriate grid elements and assigning the levee grid element direction and crest (wall elevation) as
-   shown in the Figure 94 levee edit dialog box.
-   Attention must be paid to the selection of all the potential levee obstruction flow directions to completely contain the rainfall storage on the
-   building roof.
-   The parapet wall is shown as the red levee in Figure 92 representing the roof boundary.
-   The roof elevation was assigned as approximately 20 ft higher than the ground elevation.
-   This data is enough to simulate rainfall storage on a flat roof.
-   This is one of the test simulations.
+.. image:: img/Chapter4/Chapte130.png
 
-   *Figure 92.
-   Project Building Location (in blue oval).*
+*Figure 91.
+Maximum Flow Velocities.*
 
-   *Figure 93.
-   Building Roof Element Elevation Editing.*
+Downspout
 
-|Chapte037|
+The building location selected for this project is shown in Figure 92.
+The red lines in these figures are levees and represent a parapet wall surrounding the entire building roof.
+On the project building, the levee elements encompass the blocked building (ARF = 1) elements.
+The completely blocked elements represent the building roof.
+The roof grid element elevations are usually assigned a ground elevation.
+These building elevations can be edited to represent the roof.
+The roof elements can be selected together and assigned a uniform elevation representing a flat roof (Figure 92).
+The parapet wall is simulated by selecting the appropriate grid elements and assigning the levee grid element direction and crest (wall elevation) as
+shown in the Figure 94 levee edit dialog box.
+Attention must be paid to the selection of all the potential levee obstruction flow directions to completely contain the rainfall storage on the
+building roof.
+The parapet wall is shown as the red levee in Figure 92 representing the roof boundary.
+The roof elevation was assigned as approximately 20 ft higher than the ground elevation.
+This data is enough to simulate rainfall storage on a flat roof.
+This is one of the test simulations.
 
-   *Figure 94.
-   Grid Element Levee Crest Elevation Editing.*
+.. image:: img/Chapter4/Chapte131.png
+
+*Figure 92.
+Project Building Location (in blue oval).*
+
+.. image:: img/Chapter4/Chapte132.png
+
+*Figure 93.
+Building Roof Element Elevation Editing.*
+
+.. image:: img/Chapter4/Chapte037.jpg
+
+*Figure 94.
+Grid Element Levee Crest Elevation Editing.*
 
 Adjust Roof Slope
 ^^^^^^^^^^^^^^^^^
 
-   A sloped roof can be established by modifying the roof elevations.
-   Individual grid element elevations can be edited by double clicking a given cell and using the elevation field (Figure 95).
-   Grid element elevations can be reset in corners and along the roof borders to establish some cornerstone elevations for further editing.
+A sloped roof can be established by modifying the roof elevations.
+Individual grid element elevations can be edited by double clicking a given cell and using the elevation field (Figure 95).
+Grid element elevations can be reset in corners and along the roof borders to establish some cornerstone elevations for further editing.
 
-   *Figure 95.
-   Grid Element Elevation Editing.*
+.. image:: img/Chapter4/Chapte133.png
 
-   To establish a sloped roof, select a line of grid elements between two cornerstone elements with known roof elevations, then choose the street
-   elevation editor (Figure 96).
+*Figure 95.
+Grid Element Elevation Editing.*
 
-|Chapte038|
+To establish a sloped roof, select a line of grid elements between two cornerstone elements with known roof elevations, then choose the street
+elevation editor (Figure 96).
 
-   *Figure 96.
-   Roof Element Elevation Editing Command.*
+.. image:: img/Chapter4/Chapte038.jpg
 
-   Select the *Elevation Adjustments Tab* shown in Figure 97 below.
-   This will activate a dialog box window which will enable a linear slope interpolation between the two selected cornerstone elements (Figure 98).
-   Figure 99 displays the roof element elevations prior to interpolation.
+*Figure 96.
+Roof Element Elevation Editing Command.*
 
-   |Chapte039|
+Select the *Elevation Adjustments Tab* shown in Figure 97 below.
+This will activate a dialog box window which will enable a linear slope interpolation between the two selected cornerstone elements (Figure 98).
+Figure 99 displays the roof element elevations prior to interpolation.
 
-   *Figure 97.
-   Roof Element Elevation Editing Tab.*
+.. image:: img/Chapter4/Chapte039.jpg
+
+*Figure 97.
+Roof Element Elevation Editing Tab.*
+
+.. image:: img/Chapter4/Chapte135.png
 
 *Figure 98.
 Selecting the Two Cornerstone Grid Elements to Interpolate the Roof Slope.*
 
-|Chapte040|
+.. image:: img/Chapter4/Chapte040.jpg
 
-   *Figure 99.
-   Graphic Display of the Roof Element Elevations Between the Two Cornerstone Cells.*
+*Figure 99.
+Graphic Display of the Roof Element Elevations Between the Two Cornerstone Cells.*
 
-   The *Assign* button will complete the interpolation of the roof cell elevations between the cornerstone elements and save the results as shown in
-   Figure 100.
+The *Assign* button will complete the interpolation of the roof cell elevations between the cornerstone elements and save the results as shown in
+Figure 100.
 
-|Chapte041|
+.. image:: img/Chapter4/Chapte041.jpg
 
-   *Figure 100.
-   Completed Roof Element Elevation Slope Interpolation.*
+*Figure 100.
+Completed Roof Element Elevation Slope Interpolation.*
 
 Downspout Hydraulics
 ^^^^^^^^^^^^^^^^^^^^
 
-   The downspout discharge can be simulated as a hydraulic structure identifying the inlet node on the roof and the outlet node on the ground and
-   assigning an inlet control rating table.
-   The inlet control rating table can be based on orifice flow using the equation:
+The downspout discharge can be simulated as a hydraulic structure identifying the inlet node on the roof and the outlet node on the ground and
+assigning an inlet control rating table.
+The inlet control rating table can be based on orifice flow using the equation:
 
 Q = C \* A \* (2.*g*DEPTH)\ :sup:`0.5`
 
-   where:
+where:
 
 C = coefficient that ranges from 0.62 to 0.72
 
