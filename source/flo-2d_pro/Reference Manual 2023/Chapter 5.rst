@@ -68,8 +68,10 @@ Spatially variable rainfall may inundate areas outside the primary flood path.
 It is possible to model detention basins using either the grid element elevation or levees to define the basin storage area.
 An appropriate grid element size should be selected to generate enough interior elements to adequately simulate the basin.
 
-   *Figure 129.
-   Unconfined Alluvial Fan Flooding*
+.. image:: img/Chapter5/Chapte010.png
+
+*Figure 129.
+Unconfined Alluvial Fan Flooding*
 
 5.3 Watershed Rainfall Runoff Simulation
 ----------------------------------------
