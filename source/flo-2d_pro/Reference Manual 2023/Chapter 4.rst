@@ -241,8 +241,8 @@ The cross-section interpolation is based a weighted flow area adjustment to achi
 The user has several other options for setting up the channel data file including grouping the channel elements into segments, specifying initial flow
 depths, identifying contiguous channel elements that do not share discharge, assigning limiting Froude numbers and depth variable nvalue adjustments.
 
- 4.4 Channel-Floodplain Interface
- --------------------------------
+4.4 Channel-Floodplain Interface
+--------------------------------
 
 Channel flow is exchanged with the floodplain grid elements in a separate routine after the channel, street and floodplain flow subroutines have been
 completed (see the Flow Chart in Figure 3).
@@ -262,8 +262,8 @@ velocity.
 Overbank discharge or return flow to the channel is computed using the floodplain assigned roughness.
 The overland flow can enter a previously dry channel.
 
- 4.5 Levees
- ----------
+4.5 Levees
+----------
 
 The FLO-2D levee component confines flow on the floodplain surface by blocking one of the eight flow directions.
 Levees are designated at the grid element boundaries (Figure 38).
@@ -275,6 +275,8 @@ When the flow depth exceeds the levee height, the discharge over the levee is co
 Weir flow occurs until the tailwater depth is 85% of the headwater depth above and then at higher flows, the water is exchanged across the levees
 using the difference in water surface elevation.
 Levee overtopping will not cause levee failure unless the failure or breach option is invoked.
+
+.. image:: img/Chapter4/Chapte101.png
 
 *Figure 38.
 Levees are Depicted in Red and the River in Blue in the GDS Program.*
