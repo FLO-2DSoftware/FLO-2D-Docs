@@ -21,8 +21,10 @@ This length should be compared to channel centerline distance of model project r
 Finally, predicted water surface elevations are based on the channel roughness values and calibrating the model roughness with known discharges and
 surveyed water surfaces will finalize the channel flood routing accuracy.
 
-   *Figure 128.
-   Middle Rio Grande and Rio Chama Confluence Model.*
+.. image:: img/Chapter5/Chapte001.png
+
+*Figure 128.
+Middle Rio Grande and Rio Chama Confluence Model.*
 
 When preparing a channel simulation, the available cross-sections are distributed to the various channel elements based on reaches with similar
 geomorphic features.
