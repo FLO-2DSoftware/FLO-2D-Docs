@@ -1754,7 +1754,7 @@ If d/D\ :sub:`i` > 100, inertial forces dominate.
 In the range 30 < d/D\ :sub:`i` < 100 both forces play an important role in the momentum exchange.
 It should be noted that sediment concentration is a critical factor that is not accounted for in this criterion.
 
-.. image:: img/Chapter4/Chapte112.png
+.. image:: img/Chapter4/Chapte113.png
 
 *Figure 58.
 Shear Stress as a Function of Shear Rate for Fluid Deformation Models.*
