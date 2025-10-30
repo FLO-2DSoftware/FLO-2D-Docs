@@ -598,6 +598,7 @@ These totally blocked cells do not require any WRF value assignment.
 To avoid having grid elements with small or negligible surface area (almost totally blocked), any cells with assigned ARF that leave only a small
 percentage of the grid element are reset at model runtime to ARF = 1 (blocked) according to criteria outlined in Table 4.
 
+
 *Table 4.
 Maximum Allowable ARF Values.*
 
@@ -617,6 +618,7 @@ Maximum Allowable ARF Values.*
 
    * - 20 > Cell Side
      - 0.85
+
 
 A grid element of 10 ft will thereby have at least 15 square ft of surface area.
 
