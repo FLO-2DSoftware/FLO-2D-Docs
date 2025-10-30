@@ -1770,16 +1770,18 @@ following form as a dimensionless slope:
    The viscous and turbulent-dispersive slope terms are written in terms of depth- averaged velocity V.
    The viscous slope can be written as:
 
-*S\ v = 8K*  :sup:``\ *m V\ h\ 2*
+.. math::
 
-   where γ\ :sub:`m` is the specific weight of the sediment mixture.
-   The resistance parameter K for laminar flow equals 24 for smooth wide rectangular channels but increases significantly (~ 50,000) with roughness and
-   irregular cross-section geometry.
+   S_v = \frac{K\, \eta}{8\, \gamma_m} \frac{V}{h^{2}}
 
-   In Table 12 for Kentucky Blue Grass with a slope of 0.01, K was estimated at 10,000 (Chen, 1976).
-   A value of K = 2,285 was calibrated on the Rudd Creek, Utah mudflow for a residential area and has been used effectively for most urban studies.
-   For laminar and transitional flows, turbulence is suppressed and the laminar flow resistance parameter K becomes important.
-   In the FLO-2D model if K = 0 in the SED.DAT file, the value of K is automatically computed from the Manning’s n-value.
+where γ\ :sub:`m` is the specific weight of the sediment mixture.
+The resistance parameter K for laminar flow equals 24 for smooth wide rectangular channels but increases significantly (~ 50,000) with roughness and
+irregular cross-section geometry.
+
+In Table 12 for Kentucky Blue Grass with a slope of 0.01, K was estimated at 10,000 (Chen, 1976).
+A value of K = 2,285 was calibrated on the Rudd Creek, Utah mudflow for a residential area and has been used effectively for most urban studies.
+For laminar and transitional flows, turbulence is suppressed and the laminar flow resistance parameter K becomes important.
+In the FLO-2D model if K = 0 in the SED.DAT file, the value of K is automatically computed from the Manning’s n-value.
 
 .. list-table::
    :widths: 100
