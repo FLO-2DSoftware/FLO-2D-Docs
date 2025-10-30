@@ -1639,77 +1639,81 @@ O'Brien (1986) designed a one-dimensional mudflow model for watershed channels t
 In 1986, MacArthur and Schamber presented a two-dimensional finite element model for application to simplified overland topography (Corps, 1988).
 The fluid properties were modeled as a Bingham fluid whose shear stress is a function of the fluid viscosity and yield strength.
 
-.. image:: img/Chapter4/Chapte111.png
-
 *Table 11.
 Mudflow Behavior as a Function of Sediment Concentration.*
 
-   Takahashi and Tsujimoto (1985) proposed a two-dimensional finite difference model for debris flows based a dilatant fluid model coupled with Coulomb
-   flow resistance.
-   The dilatant fluid model was derived from Bagnold's dispersive stress theory (1954) that describes the stress resulting from the collision of sediment
-   particles.
-   Later, Takahashi and Nakagawa (1989) modified the debris flow model to include turbulence.
+.. image:: img/Chapter4/Chapte111.png
 
-   O'Brien and Julien (1988), Julien and Lan (1991), and Major and Pierson (1992) investigated mudflows with high concentrations of fine sediment in the
-   fluid matrix.
-   These studies showed that mudflows behave as Bingham fluids with low shear rates (<10 s\ :sup:`-1`).
-   In fluid matrices with low sediment concentrations, turbulent stresses dominate in the core flow.
-   High concentrations of non-cohesive particles combined with low concentrations of fine particles are required to generate dispersive stress.
-   The quadratic shear stress model proposed by O'Brien and Julien (1985) describes the continuum of flow regimes from viscous to turbulent/dispersive
-   flow.
+Takahashi and Tsujimoto (1985) proposed a two-dimensional finite difference model for debris flows based a dilatant fluid model coupled with Coulomb
+flow resistance.
+The dilatant fluid model was derived from Bagnold's dispersive stress theory (1954) that describes the stress resulting from the collision of sediment
+particles.
+Later, Takahashi and Nakagawa (1989) modified the debris flow model to include turbulence.
 
-   Hyperconcentrated sediment flows involve the complex interaction of fluid and sediment processes including turbulence, viscous shear, fluid-sediment
-   particle momentum exchange, and sediment particle collision.
-   Sediment particles can collide, grind, and rotate in their movement past each other.
-   Fine sediment cohesion controls the nonNewtonian behavior of the fluid matrix.
-   This cohesion contributes to the yield stress τ\ :sub:`y` which must be exceeded by an applied stress to initiate fluid motion.
-   By combining the yield stress and viscous stress components, the well-known Bingham rheological model is prescribed.
+O'Brien and Julien (1988), Julien and Lan (1991), and Major and Pierson (1992) investigated mudflows with high concentrations of fine sediment in the
+fluid matrix.
+These studies showed that mudflows behave as Bingham fluids with low shear rates (<10 s\ :sup:`-1`).
+In fluid matrices with low sediment concentrations, turbulent stresses dominate in the core flow.
+High concentrations of non-cohesive particles combined with low concentrations of fine particles are required to generate dispersive stress.
+The quadratic shear stress model proposed by O'Brien and Julien (1985) describes the continuum of flow regimes from viscous to turbulent/dispersive
+flow.
 
-   For large rates of shear such as might occur on steep alluvial fans (10 s\ :sup:`-1` to 50 s\ :sup:`-1`), turbulent stresses may be generated.
-   In turbulent flow an additional shear stress component, the dispersive stress, can arise from the collision of sediment particles.
-   Dispersive stress occurs when non-cohesive sediment particles dominate the flow and the percentage of cohesive fine sediment (silts and clays) is
-   small.
-   With increasing high concentrations of fine sediment, fluid turbulence and particle impact will be suppressed, and viscous flow will occur.
-   Sediment concentration in each flood event can vary dramatically and as a result viscous and turbulent stresses may alternately dominate, producing
-   flow surges.
+Hyperconcentrated sediment flows involve the complex interaction of fluid and sediment processes including turbulence, viscous shear, fluid-sediment
+particle momentum exchange, and sediment particle collision.
+Sediment particles can collide, grind, and rotate in their movement past each other.
+Fine sediment cohesion controls the nonNewtonian behavior of the fluid matrix.
+This cohesion contributes to the yield stress τ\ :sub:`y` which must be exceeded by an applied stress to initiate fluid motion.
+By combining the yield stress and viscous stress components, the well-known Bingham rheological model is prescribed.
 
-   FLO-2D routes mudflows as a fluid continuum by predicting viscous fluid motion as function of sediment concentration.
-   A quadratic rheologic model for predicting viscous and yield stresses as function of sediment concentration is employed and sediment continuity is
-   observed.
-   As sediment concentration changes for a given grid element, dilution effects, mudflow cessation and the remobilization of deposits are simulated.
-   Mudflows are dominated by viscous and dispersive stresses and constitute a very different phenomenon than those processes of suspended sediment load
-   and bedload in conventional sediment transport.
-   In should be noted that the sediment transport and mudflow components **cannot** be used together in a FLO-2D simulation.
+For large rates of shear such as might occur on steep alluvial fans (10 s\ :sup:`-1` to 50 s\ :sup:`-1`), turbulent stresses may be generated.
+In turbulent flow an additional shear stress component, the dispersive stress, can arise from the collision of sediment particles.
+Dispersive stress occurs when non-cohesive sediment particles dominate the flow and the percentage of cohesive fine sediment (silts and clays) is
+small.
+With increasing high concentrations of fine sediment, fluid turbulence and particle impact will be suppressed, and viscous flow will occur.
+Sediment concentration in each flood event can vary dramatically and as a result viscous and turbulent stresses may alternately dominate, producing
+flow surges.
 
-   The shear stress in hyperconcentrated sediment flows, including those described as debris flows, mudflows, and mud floods, can be calculated from the
-   summation of five shear stress components.
-   The total shear stress τ depends on the cohesive yield stress τ\ :sub:`c`, the Mohr-
+FLO-2D routes mudflows as a fluid continuum by predicting viscous fluid motion as function of sediment concentration.
+A quadratic rheologic model for predicting viscous and yield stresses as function of sediment concentration is employed and sediment continuity is
+observed.
+As sediment concentration changes for a given grid element, dilution effects, mudflow cessation and the remobilization of deposits are simulated.
+Mudflows are dominated by viscous and dispersive stresses and constitute a very different phenomenon than those processes of suspended sediment load
+and bedload in conventional sediment transport.
+In should be noted that the sediment transport and mudflow components **cannot** be used together in a FLO-2D simulation.
 
-   Coulomb shear τ\ :sub:`mc`, the viscous shear stress τ\ :sub:`v` ( dv/dy), the turbulent shear stress τ\ :sub:`t`, and the dispersive shear stress τ\
-   :sub:`d`.
+The shear stress in hyperconcentrated sediment flows, including those described as debris flows, mudflows, and mud floods, can be calculated from the
+summation of five shear stress components.
+The total shear stress τ depends on the cohesive yield stress τ\ :sub:`c`, the Mohr-
 
- *=* \ *c +* \ *mc +* \ *v +* \ *t +* \ :sub:`d`
+Coulomb shear :math:`\tau_{mc}`, the viscous shear stress :math:`\tau_v` (:math:`\eta\, \dfrac{dv}{dy}`), the turbulent shear stress :math:`\tau_t`, and the dispersive shear stress :math:`\tau_d`.
 
-   When written in terms of shear rates (dv/dy), the following quadratic rheological model can be defined (O'Brien and Julien, 1985):
+.. math::
 
-   *2*
+   \tau = \tau_c + \tau_{mc} + \tau_v + \tau_l + \tau_d
 
-    *dv*\   *dv*\   *=* \ *y +*   *dy*\ \ :sub:`` *+ C* \ :sub:`` *dy*\ \ :sub:``
+When written in terms of shear rates :math:`\left(\dfrac{dv}{dy}\right)`, the following quadratic rheological model can be defined (O’Brien and Julien, 1985):
 
-   where
+.. math::
 
-C = \ :sub:`m` l\ :sup:`2` + f (\ :sub:`m`, C\ :sub:`v` ) d\ :sup:`2`\ :sub:`s`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   \tau = \tau_y + \eta \left( \frac{dv}{dy} \right) + C \left( \frac{dv}{dy} \right)^{2}
 
-   and
+where
 
-\ *y =* \ *c +* \ *mc*
+.. math::
 
-   In these equations η is the dynamic viscosity; τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ
-   depends on the intergranular pressure p\ :sub:`s` and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which
-   depends on the mass density of the mixture ρ\ :sub:`m`, the Prandtl mixing length l, the sediment size d\ :sub:`s` and a function of the volumetric
-   sediment concentration C\ :sub:`v`.
-   Bagnold (1954) defined the functional relationship f(ρ\ :sub:`m`, C\ :sub:`v`) in the above equation as:
+   C = \rho_m \, l^{2} + f\!\left( \rho_m,\, C_v \right) d_s^{2}
+
+and
+
+.. math::
+
+   \tau_y = \tau_c + \tau_{mc}
+
+In these equations η is the dynamic viscosity; τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ
+depends on the intergranular pressure p\ :sub:`s` and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which
+depends on the mass density of the mixture ρ\ :sub:`m`, the Prandtl mixing length l, the sediment size d\ :sub:`s` and a function of the volumetric
+sediment concentration C\ :sub:`v`.
+Bagnold (1954) defined the functional relationship f(ρ\ :sub:`m`, C\ :sub:`v`) in the above equation as:
 
  *1/3*
 
