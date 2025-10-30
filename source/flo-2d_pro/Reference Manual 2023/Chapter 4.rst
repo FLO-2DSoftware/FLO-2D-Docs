@@ -2172,72 +2172,10 @@ According to Clausen & Clark (1990) building collapse is not predicted for a vel
 The Clausen & Clark black lines in Figure 70 constitute a range of hydraulic values depending on construction materials and methods, but only the
 lower curve is applied in the FLO-2D model.
 
-0.00
+.. image:: img/Chapter4/Chapte123.png
 
-2.00
-
-4.00
-
-6.00
-
-8.00
-
-10.00
-
-12.00
-
-14.00
-
-16.00
-
-18.00
-
-0.00
-
-5.00
-
-10.00
-
-15.00
-
-20.00
-
-25.00
-
-30.00
-
-**D**
-
-**e**
-
-**p**
-
-**t**
-
-**h**
-
-**(**
-
-**f**
-
-**t**
-
-**)**
-
-**Velocity (fps)**
-
-poor
-
-moderate
-
-good
-
-Clausen & Clark G
-
-Clausen & Clark R
-
-   *Figure 70.
-   Vulnerability Curves for Building Subject to Collapse.*
+*Figure 70.
+Vulnerability Curves for Building Subject to Collapse.*
 
    The vulnerability curves for the BOR mobile homes and buildings with foundations were regressed by digitizing Figure 67 for the delineation between
    the High Danger and the
