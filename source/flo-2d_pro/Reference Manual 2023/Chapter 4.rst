@@ -94,7 +94,7 @@ Typical overland flow roughness values (Manning’s n coefficients) are shown in
        <tr><td>Open ground, no debris</td><td>0.04 - 0.10</td></tr>
        <tr><t
 
-   |Chapte002|
+.. image:: img/Chapter4/Chapte002.png
 
 *Figure 34.
 Overland Flow Routing Subroutine Flow Chart.*
@@ -163,73 +163,70 @@ The resulting water surface elevations can be accurately predicted but will disp
  4.3 Channel Flow
  ----------------
 
-   The full channel guidelines are in the Manuals folder.
-   Channel flow is simulated as onedimensional in the downstream direction.
-   Average flow hydraulics of velocity and depth define the discharge between channel grid elements.
-   Secondary currents, dispersion and super elevation in channel bends are not modeled with the 1-D channel component.
-   The governing equations of continuity and momentum were presented in Section 2.1.
+The full channel guidelines are in the Manuals folder.
+Channel flow is simulated as onedimensional in the downstream direction.
+Average flow hydraulics of velocity and depth define the discharge between channel grid elements.
+Secondary currents, dispersion and super elevation in channel bends are not modeled with the 1-D channel component.
+The governing equations of continuity and momentum were presented in Section 2.1.
 
-   River channel flow is simulated with either rectangular or trapezoidal or surveyed cross-sections and is routed with the dynamic wave momentum
-   equation.
-   The channels are represented in the CHAN.DAT by a grid element, cross-section geometry that defines the relationship between the thalweg elevation and
-   the bank elevations, average cross-section roughness, and the length of channel within the grid element.
-   Channel slope is computed as the difference between the channel element thalweg elevation divided by the half the sum of the channel lengths within
-   the channel elements.
-   Channel elements must be contiguous to be able to share discharge.
-   A tributary confluence is assigned by select the two channel element pairs (tributary and main channel) in the CHAN.DAT file.
+River channel flow is simulated with either rectangular or trapezoidal or surveyed cross-sections and is routed with the dynamic wave momentum
+equation.
+The channels are represented in the CHAN.DAT by a grid element, cross-section geometry that defines the relationship between the thalweg elevation and
+the bank elevations, average cross-section roughness, and the length of channel within the grid element.
+Channel slope is computed as the difference between the channel element thalweg elevation divided by the half the sum of the channel lengths within
+the channel elements.
+Channel elements must be contiguous to be able to share discharge.
+A tributary confluence is assigned by select the two channel element pairs (tributary and main channel) in the CHAN.DAT file.
 
-   The channel width can be larger than the grid element and may encompass several elements (Figure 37).
-   If the channel width is greater than the grid element width, the model extends the channel into neighboring grid elements.
-   A channel may be 1,000 ft (300 m) wide and the grid element only 300 ft (100 m) square.
-   The model also makes sure that there is sufficient floodplain surface area after assigning the right bank.
-   The channel interacts with the bank elements to share discharge to the floodplain.
-   Each bank can have a unique elevation.
-   If the two bank elevations are different in the CHAN.DAT file, the model automatically splits the channel into two elements even if the channel would
-   fit into one grid element.
+The channel width can be larger than the grid element and may encompass several elements (Figure 37).
+If the channel width is greater than the grid element width, the model extends the channel into neighboring grid elements.
+A channel may be 1,000 ft (300 m) wide and the grid element only 300 ft (100 m) square.
+The model also makes sure that there is sufficient floodplain surface area after assigning the right bank.
+The channel interacts with the bank elements to share discharge to the floodplain.
+Each bank can have a unique elevation.
+If the two bank elevations are different in the CHAN.DAT file, the model automatically splits the channel into two elements even if the channel would
+fit into one grid element.
 
-   *Figure 37.
-   Channel Extension Over Several Grid Elements.*
+*Figure 37.
+Channel Extension Over Several Grid Elements.*
 
-   There are three options for establishing the bank elevation in relationship to the channel bed elevation (thalweg) and the floodplain elevation in the
-   CHAN.DAT file:
+There are three options for establishing the bank elevation in relationship to the channel bed elevation (thalweg) and the floodplain elevation in the
+CHAN.DAT file:
 
-1. The channel grid element bed elevation is determined by subtracting the assigned channel thalweg depth from the floodplain elevation.
-   This is appropriate for rectangular and trapezoidal cross-sections.
+    1. The channel grid element bed elevation is determined by subtracting the assigned channel thalweg depth from the floodplain elevation.
+       This is appropriate for rectangular and trapezoidal cross-sections.
 
-2. A bank elevation is assigned in the CHAN.DAT file and the channel bed elevation is computed by subtracting the channel depth from the lowest bank
-   elevation.
-   This is appropriated for rectangular and trapezoidal cross-sections.
+    2. A bank elevation is assigned in the CHAN.DAT file and the channel bed elevation is computed by subtracting the channel depth from the lowest bank
+       elevation.
+       This is appropriated for rectangular and trapezoidal cross-sections.
 
-3. A surveyed cross-section data set is assigned in XSEC.DAT and the model automatically assigns the top-of-bank elevation.
+    3. A surveyed cross-section data set is assigned in XSEC.DAT and the model automatically assigns the top-of-bank elevation.
 
-..
+When using cross-section data for the channel geometry, option 3 should be applied.
 
-   When using cross-section data for the channel geometry, option 3 should be applied.
+In river simulations, the important components include channel routing, the channel-floodplain interaction, hydraulic structures, and levees.
+These components are described in more detail in the following sections.
+The basic procedure for creating a FLO-2D river simulation is as follows:
 
-   In river simulations, the important components include channel routing, the channel-floodplain interaction, hydraulic structures, and levees.
-   These components are described in more detail in the following sections.
-   The basic procedure for creating a FLO-2D river simulation is as follows:
+*Select Channel Cross-sections.* Surveyed river cross-sections should be spaced to represent a uniform river reach that may encompass several channel
+elements, say 5 to 10 elements.
+Georeferenced surveyed cross-section station and elevation data can be entered directly into the model data files or the data can be defined by
+setting the highest bank to an arbitrary elevation.
+For channel design purposes, a rectangular or trapezoidal cross-section may be selected.
+To use surveyed cross-section data, an XSEC.DAT file must be created with all cross-section station and elevation data.
+The cross-sections are then assigned to a channel element in the CHAN.DAT.
+The relationship between the flow depth and channel geometry (flow area and wetted perimeter) is based on an interpolation of depth and flow area
+between vertical slices that constitute a channel geometry rating table for each cross-section.
+The cross-section data in the XSEC.DAT file can be automatically assigned from HEC-RAS file using the GDS.
+*Locate the Channel Element with Respect to the Grid System.* Using the GDS and an aerial photo, the channels can be assigned to a grid element.
+For channel flow to occur through a reach of river, the channel elements must be neighbors.
 
-   *Select Channel Cross-sections.* Surveyed river cross-sections should be spaced to represent a uniform river reach that may encompass several channel
-   elements, say 5 to 10 elements.
-   Georeferenced surveyed cross-section station and elevation data can be entered directly into the model data files or the data can be defined by
-   setting the highest bank to an arbitrary elevation.
-   For channel design purposes, a rectangular or trapezoidal cross-section may be selected.
-   To use surveyed cross-section data, an XSEC.DAT file must be created with all cross-section station and elevation data.
-   The cross-sections are then assigned to a channel element in the CHAN.DAT.
-   The relationship between the flow depth and channel geometry (flow area and wetted perimeter) is based on an interpolation of depth and flow area
-   between vertical slices that constitute a channel geometry rating table for each cross-section.
-   The cross-section data in the XSEC.DAT file can be automatically assigned from HEC-RAS file using the GDS.
-
-   *Locate the Channel Element with Respect to the Grid System.* Using the GDS and an aerial photo, the channels can be assigned to a grid element.
-   For channel flow to occur through a reach of river, the channel elements must be neighbors.
-
-   *Adjust the Channel Bed Slope and Interpolate the Cross-sections.* Each channel element is assigned a cross-section in the CHAN.DAT file.
-   Typically, there are only a few cross-sections and many channel elements, so each cross-section will be assigned to several channel elements.
-   When the cross-sections have all been assigned the channel profile looks like a staircase because the channel elements with the same cross-section
-   have identical bed elevations.
-   The channel slope and cross-section shape can then be interpolated by using a command in the GDS, QGIS Plug-in or in the PROFILES program that adjusts
-   and assigns a cross-section with a linear bed slope for each channel element.
+*Adjust the Channel Bed Slope and Interpolate the Cross-sections.* Each channel element is assigned a cross-section in the CHAN.DAT file.
+Typically, there are only a few cross-sections and many channel elements, so each cross-section will be assigned to several channel elements.
+When the cross-sections have all been assigned the channel profile looks like a staircase because the channel elements with the same cross-section
+have identical bed elevations.
+The channel slope and cross-section shape can then be interpolated by using a command in the GDS, QGIS Plug-in or in the PROFILES program that adjusts
+and assigns a cross-section with a linear bed slope for each channel element.
    The cross-section interpolation is based a weighted flow area adjustment to achieve a more uniform rate of change in the flow area.
 
    The user has several other options for setting up the channel data file including grouping the channel elements into segments, specifying initial flow
