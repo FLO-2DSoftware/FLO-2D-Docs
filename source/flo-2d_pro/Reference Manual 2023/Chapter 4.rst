@@ -328,8 +328,12 @@ time.
 Additional output files that define the breach hazard include the time-to-flow-depth output files that report the time to the maximum flow depth, the
 time to one-foot flow depth and time to two-foot flow depth, and deflood time which are useful for delineating evacuation routes.
 
+.. image:: img/Chapter4/Chapte102.png
+
 *Figure 40.
 Example of Levee Breach Urban Flooding.*
+
+.. image:: img/Chapter4/Chapte103.png
 
 *Figure 41.
 Example of a Proposed Domestic Water Supply Reservoir Breach Failure.*
