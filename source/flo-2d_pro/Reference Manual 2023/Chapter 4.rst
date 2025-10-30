@@ -525,6 +525,8 @@ The general approach to the applying the storm drain component is:
 
     - User defines the storm drain geometry in the GDS dialog box.
 
+.. image:: img/Chapter4/Chapte105.png
+
 *Figure 45.
 Storm Drain Layout in the GDS with a Background Image.*
 
@@ -565,8 +567,10 @@ viii.Add other FLO-2D model components and details such as channels, buildings a
    A grid element may contain one or more streets and the streets may intersect.
    Street roughness values, street widths, elevations and curb heights can be modified on a grid element or street section basis in the GDS program.
 
-   *Figure 46.
-   Streets Depicted in Green in the GDS Program.*
+.. image:: img/Chapter4/Chapte106.png
+
+*Figure 46.
+Streets Depicted in Green in the GDS Program.*
 
  4.10 Floodplain Storage Modification and Flow Obstruction
  ---------------------------------------------------------
