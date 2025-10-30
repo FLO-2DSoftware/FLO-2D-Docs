@@ -2078,35 +2078,31 @@ At any time in the simulation, water may be infiltrating from the surface water 
 the opposite may occur.
 The model timesteps are synchronized as follows:
 
-- The MODFLOW simulation is divided into a series of stress periods during which specific parameters (e.g. variable heads) are constant.
+    - The MODFLOW simulation is divided into a series of stress periods during which specific parameters (e.g. variable heads) are constant.
 
-- Each stress period, in turn, is divided into a series of computational timesteps.
+    - Each stress period, in turn, is divided into a series of computational timesteps.
 
-- FLO-2D model timesteps are smaller than the MODFLOW model timesteps, so several FLO-2D computational sweeps are performed to match the MODFLOW model
-  simulation time.
+    - FLO-2D model timesteps are smaller than the MODFLOW model timesteps, so several FLO-2D computational sweeps are performed to match the MODFLOW model
+      simulation time.
 
-..
+Infiltrated floodplain water predicted by FLO-2D is exchanged to the groundwater cells below.
 
-   Infiltrated floodplain water predicted by FLO-2D is exchanged to the groundwater cells below.
+If the groundwater is lower than the channel bed elevation, the infiltration volume is passed to the corresponding MODFLOW grid element.
+If the groundwater is higher than the channel water surface elevation, the exchange flow will enter the river.
 
-   If the groundwater is lower than the channel bed elevation, the infiltration volume is passed to the corresponding MODFLOW grid element.
-   If the groundwater is higher than the channel water surface elevation, the exchange flow will enter the river.
+The GDS creates the data for the integration of the models.
+It will generate a subset of the required variables for groundwater simulation (Figure 64).
+Refer the MODFLO-2D manual for more details.
 
-   The GDS creates the data for the integration of the models.
-   It will generate a subset of the required variables for groundwater simulation (Figure 64).
-   Refer the MODFLO-2D manual for more details.
+.. image:: img/Chapter4/Chapte118.png
 
-Head Comparison for
+*Figure 64.
+GDS Data Entry for a MODFLOW Groundwater Simulation.*
 
-Island
+4.20 Building Collapse
+----------------------
 
-   *Figure 64.
-   GDS Data Entry for a MODFLOW Groundwater Simulation.*
-
- 4.20 Building Collapse
- ----------------------
-
-   In the FLO-2D model, the loss of flood storage due to buildings is simulated with area reduction factors (ARF values) that reduce the surface area of
+In the FLO-2D model, the loss of flood storage due to buildings is simulated with area reduction factors (ARF values) that reduce the surface area of
    a grid element (percentage).
    A grid element may be totally blocked (ARF = 1) or partially blocked (ARF < 1).
    A group of grid elements together may constitute a large building such as a school or mall (Figure 65 a and b).
