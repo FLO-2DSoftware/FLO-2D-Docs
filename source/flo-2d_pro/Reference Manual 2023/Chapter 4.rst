@@ -2453,12 +2453,12 @@ retained flow depth (TOL value).
 
 .. image:: img/Chapter4/Chapte024.png
 
-   *Figure 75.
-   Low Impact Development Water Retention.*
+*Figure 75.
+Low Impact Development Water Retention.*
 
-   (Seattle Public Utilities, Rainwise Program,
+(Seattle Public Utilities, Rainwise Program,
 
-   http://www.seattle.gov/util/MyServices/DrainageSewer/Projects/GreenStormwaterInfrastructure/Rain Wise)
+http://www.seattle.gov/util/MyServices/DrainageSewer/Projects/GreenStormwaterInfrastructure/Rain Wise)
 
 .. image:: img/Chapter4/Chapte025.jpg
 
