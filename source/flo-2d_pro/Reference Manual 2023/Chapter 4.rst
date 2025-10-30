@@ -3736,7 +3736,7 @@ All the Appendix figures were digitized and are hardcoded into the model.
 Bridge Parameters (B-Lines in HYSTRUC.DAT)**
 
 .. list-table::
-   :widths: 25 25 25 25
+   :widths: 20 20 20 40
    :header-rows: 0
 
 
