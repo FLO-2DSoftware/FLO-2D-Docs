@@ -1921,137 +1921,137 @@ The areal extent of mudflow inundation and the maximum flow depths and velocitie
 which can be varied in the FLO-2D simulations.
 For further discussion on model hyperconcentrated sediment flows, refer to the FLO-2D white paper document *“Simulating Mudflows Guidelines”*.
 
- 4.17 Specific Energy, Impact and Static Pressure
- ------------------------------------------------
+4.17 Specific Energy, Impact and Static Pressure
+------------------------------------------------
 
-   For overland flow, the specific energy, impact pressure and static pressure are computed and reported to a file on an output interval basis.
-   MAPPER Pro and MAXPLOT can graphically display these parameters with spatial variability.
+For overland flow, the specific energy, impact pressure and static pressure are computed and reported to a file on an output interval basis.
+MAPPER Pro and MAXPLOT can graphically display these parameters with spatial variability.
 
-   The specific energy is computed by adding the flow depth velocity head (V\ :sup:`2`/2g) to the flow depth.
-   The maximum specific energy is reported to the file SPECENERGY.OUT by grid element.
+The specific energy is computed by adding the flow depth velocity head (V\ :sup:`2`/2g) to the flow depth.
+The maximum specific energy is reported to the file SPECENERGY.OUT by grid element.
 
-   The impact pressure P\ :sub:`i` for a floodplain grid element is reported as a force per unit length (impact pressure x flow depth).
-   The user can then multiply the impact pressure by the structure length within the grid element to get a maximum impact force on the structure.
-   Impact force is a function of fluid density, structure materials, angle of impact, and several other variables.
-   To conservatively estimate the impact pressure, the equation for water taken from Deng (1996):
+The impact pressure P\ :sub:`i` for a floodplain grid element is reported as a force per unit length (impact pressure x flow depth).
+The user can then multiply the impact pressure by the structure length within the grid element to get a maximum impact force on the structure.
+Impact force is a function of fluid density, structure materials, angle of impact, and several other variables.
+To conservatively estimate the impact pressure, the equation for water taken from Deng (1996):
 
-P\ :sub:`i` = k ρ\ :sub:`f` V\ :sup:`2`
+.. math::
 
-   where P\ :sub:`i` is the impact pressure, coefficient k is 1.28 for both English and SI units, ρ\ :sub:`f` = water density and V is the maximum
-   velocity regardless of direction.
-   For hyperconcentrated sediment flows such as mud floods and mudflows, the fluid density ρ\ :sub:`f` and coefficient k is a function of sediment
-   concentration by volume.
-   The coefficient k is based on a regressed relationship as a function of sediment concentration from the data presented in Deng (1996).
-   This relationship is given by,
+   P\ :sub:`i` = k ρ\ :sub:`f` V\ :sup:`2`
 
-k = 1.261 e\ :sup:`Cw`
+where P\ :sub:`i` is the impact pressure, coefficient k is 1.28 for both English and SI units, ρ\ :sub:`f` = water density and V is the maximum
+velocity regardless of direction.
+For hyperconcentrated sediment flows such as mud floods and mudflows, the fluid density ρ\ :sub:`f` and coefficient k is a function of sediment
+concentration by volume.
+The coefficient k is based on a regressed relationship as a function of sediment concentration from the data presented in Deng (1996).
+This relationship is given by,
 
-   where Cw = sediment concentration by weight.
-   The impact pressure is reported in the file IMPACT.OUT.
+.. math::
 
-   The static pressure P\ :sub:`s` for each grid element is also expressed as a force per unit length.
-   It is given by the maximum flow depth to the center of gravity ĥ times the specific weight of the fluid.
-   The static pressure is then multiplied by the flow depth to compute the static force per unit length of structure (assumes surface area A = l x d).
-   The maximum static pressure is written to the STATICPRESS.OUT file.
+   k = 1.261 e\ :sup:`Cw`
 
-P\ :sub:`s` = γ ĥ
+where Cw = sediment concentration by weight.
+The impact pressure is reported in the file IMPACT.OUT.
 
- 4.18 Floodway Delineation
- -------------------------
+The static pressure P\ :sub:`s` for each grid element is also expressed as a force per unit length.
+It is given by the maximum flow depth to the center of gravity ĥ times the specific weight of the fluid.
+The static pressure is then multiplied by the flow depth to compute the static force per unit length of structure (assumes surface area A = l x d).
+The maximum static pressure is written to the STATICPRESS.OUT file.
 
-   The floodplain management concept of the floodway delineation is to reserve an unobstructed area of flood conveyance passage while allowing for
-   potential utilization of the floodplain.
-   In the United States FEMA procedures outline a method for designating a floodway using the Corps of Engineers HEC-RAS model.
-   Floodway boundaries are designed to accommodate a 100yr flood within acceptable limits.
-   The floodplain areas that can be eliminated from potential flood storage without violating the floodway criteria can be considered for potential
-   development.
-   The general guidelines for floodway delineation are:
+.. math::
 
-- The floodway is based on the 100-yr flood.
+   P\ :sub:`s` = γ ĥ
 
-- The floodplain is divided into floodway and floodway fringe zones.
-  It is generally assumed that all the flood conveyance in the floodway fringe is eliminated.
+4.18 Floodway Delineation
+-------------------------
 
-- The floodway will pass the 100-yr flood without raising the water surface elevation more than 1 ft (0.3 m) above the maximum floodplain water surface.
+The floodplain management concept of the floodway delineation is to reserve an unobstructed area of flood conveyance passage while allowing for
+potential utilization of the floodplain.
+In the United States FEMA procedures outline a method for designating a floodway using the Corps of Engineers HEC-RAS model.
+Floodway boundaries are designed to accommodate a 100yr flood within acceptable limits.
+The floodplain areas that can be eliminated from potential flood storage without violating the floodway criteria can be considered for potential
+development.
+The general guidelines for floodway delineation are:
 
-- The floodway is determined by means of equal reduction of conveyance on both sides of the channel.
+    - The floodway is based on the 100-yr flood.
 
-..
+    - The floodplain is divided into floodway and floodway fringe zones.
+      It is generally assumed that all the flood conveyance in the floodway fringe is eliminated.
 
-   The above guidelines are convenient artifacts of the single discharge, steady flow HEC-RAS model but do not reflect reality.
-   Flooding in the floodway fringe is never eliminated.
-   If development is allowed in the floodway or along the floodway fringe, flood volume will be forced into other areas of the floodway fringe or
-   downstream even if the water surface is raised less than 1 ft.
-   Furthermore, the assumption that equal reduction of conveyance on both sides of the channels is also not true because floodplain water surface
-   elevations are always different on each side of the river.
-   Equal conveyance reduction is an oversimplification related to steady flow, uniform water surface in HEC-RAS results.
-   In the Rio Grande floodplain for example, the measured water surface may be several feet higher on one side of the river than the other and even
-   several feet higher at the riverbank than near the levee over a 1,000 ft (300 m) from the river.
+    - The floodway will pass the 100-yr flood without raising the water surface elevation more than 1 ft (0.3 m) above the maximum floodplain water surface.
 
-   The HEC-RAS procedure to delineate a floodway to apply encroachment criteria using one or more options and make reasonable adjustments until
-   acceptable results are obtained both from a flood hydraulics standpoint and from a floodplain management perspective.
-   Floodway determination is difficult for several flooding conditions including streams with a mild slope and large floodplain; rivers with split flow
-   or levee overflow; alluvial fans with unconfined flooding and mobile boundaries; high velocity channels; and developed floodplain areas with
-   ineffective flow areas.
-   One of primary concerns is that the floodway encroachment procedure using HECRAS ignores the effects of floodwave attenuation and potential increase
-   in water surface elevation in the downstream floodway fringe zone.
-   Physically constricting the conveyance flow area with a floodway would have the effect of forcing more flood volume downstream.
-   Using a single discharge model to delineate a floodway can underestimate the potential impacts of increased downstream flooding as development
-   encroaches on the upstream floodplain fringe.
-   The application of an encroachment depth will also increase the channel conveyance and storage.
-   This may offset some of the volume getting forced downstream by the floodway encroachment.
+    - The floodway is determined by means of equal reduction of conveyance on both sides of the channel.
 
-   The floodway routine in the FLO-2D model is automated.
-   Since FLO-2D is a flood routing model, the floodway component can address all the physical process issues associated with the HEC-RAS floodway
-   encroachment scheme.
-   To delineate a floodway for a FLO-2D flood simulation, first it is necessary to complete a base flood simulation to define the water surface for the
-   existing conditions.
-   An output file (FLOODWAY.OUT) is generated that lists the maximum water surface elevations for each floodplain grid element.
-   The user then sets the floodway switch in the CONT.DAT to “on” and assigns the encroachment depth (ENCROACH in CONT.DAT).
-   Typically, one foot (0.3 m) is assigned as the encroachment depth.
-   The FLO-2D floodway simulation is then run.
-   At runtime, the model will add the encroachment depth to the maximum water surface elevation in the FLOODWAY.OUT file to compute an encroachment water
-   surface elevation for a given grid element that must be exceeded in order for the model to exchange the discharge with other grid elements.
-   As the overbank flooding ensues, the model confines the flood to those floodplain grid elements whose encroachment water surface elevation is not
-   exceeded.
-   This forces more water volume downstream increasing the floodplain inundation in response to the upstream confined floodway conveyance.
-   The result is a mapped area of the floodway and floodway fringe that reflects the redistribution of the flood volume in the system.
-   The procedure for performing the floodway simulation is as follows:
+The above guidelines are convenient artifacts of the single discharge, steady flow HEC-RAS model but do not reflect reality.
+Flooding in the floodway fringe is never eliminated.
+If development is allowed in the floodway or along the floodway fringe, flood volume will be forced into other areas of the floodway fringe or
+downstream even if the water surface is raised less than 1 ft.
+Furthermore, the assumption that equal reduction of conveyance on both sides of the channels is also not true because floodplain water surface
+elevations are always different on each side of the river.
+Equal conveyance reduction is an oversimplification related to steady flow, uniform water surface in HEC-RAS results.
+In the Rio Grande floodplain for example, the measured water surface may be several feet higher on one side of the river than the other and even
+several feet higher at the riverbank than near the levee over a 1,000 ft (300 m) from the river.
 
-- Complete a base run FLO-2D floodwall simulation.
+The HEC-RAS procedure to delineate a floodway to apply encroachment criteria using one or more options and make reasonable adjustments until
+acceptable results are obtained both from a flood hydraulics standpoint and from a floodplain management perspective.
+Floodway determination is difficult for several flooding conditions including streams with a mild slope and large floodplain; rivers with split flow
+or levee overflow; alluvial fans with unconfined flooding and mobile boundaries; high velocity channels; and developed floodplain areas with
+ineffective flow areas.
+One of primary concerns is that the floodway encroachment procedure using HECRAS ignores the effects of floodwave attenuation and potential increase
+in water surface elevation in the downstream floodway fringe zone.
+Physically constricting the conveyance flow area with a floodway would have the effect of forcing more flood volume downstream.
+Using a single discharge model to delineate a floodway can underestimate the potential impacts of increased downstream flooding as development
+encroaches on the upstream floodplain fringe.
+The application of an encroachment depth will also increase the channel conveyance and storage.
+This may offset some of the volume getting forced downstream by the floodway encroachment.
 
-- Set IFLOODWAY = 1 or “on” and ENCROACH = ~ 1 ft (0.3 m) in CONT.DAT.
+The floodway routine in the FLO-2D model is automated.
+Since FLO-2D is a flood routing model, the floodway component can address all the physical process issues associated with the HEC-RAS floodway
+encroachment scheme.
+To delineate a floodway for a FLO-2D flood simulation, first it is necessary to complete a base flood simulation to define the water surface for the
+existing conditions.
+An output file (FLOODWAY.OUT) is generated that lists the maximum water surface elevations for each floodplain grid element.
+The user then sets the floodway switch in the CONT.DAT to “on” and assigns the encroachment depth (ENCROACH in CONT.DAT).
+Typically, one foot (0.3 m) is assigned as the encroachment depth.
+The FLO-2D floodway simulation is then run.
+At runtime, the model will add the encroachment depth to the maximum water surface elevation in the FLOODWAY.OUT file to compute an encroachment water
+surface elevation for a given grid element that must be exceeded in order for the model to exchange the discharge with other grid elements.
+As the overbank flooding ensues, the model confines the flood to those floodplain grid elements whose encroachment water surface elevation is not
+exceeded.
+This forces more water volume downstream increasing the floodplain inundation in response to the upstream confined floodway conveyance.
+The result is a mapped area of the floodway and floodway fringe that reflects the redistribution of the flood volume in the system.
+The procedure for performing the floodway simulation is as follows:
 
-- Run the floodway simulation with FLO-2D.
+    - Complete a base run FLO-2D floodwall simulation.
 
-..
+    - Set IFLOODWAY = 1 or “on” and ENCROACH = ~ 1 ft (0.3 m) in CONT.DAT.
 
-   The FLO-2D floodway rules for sharing discharge are:
+    - Run the floodway simulation with FLO-2D.
 
-1. The FLO-2D Model defines floodway elements as floodplain elements with flow depth > ENCROACH value in the base run.
-   Channel bank elements are automatically assigned as floodway elements.
+The FLO-2D floodway rules for sharing discharge are:
 
-2. If the two floodplain elements sharing discharge are non-floodway elements, flow is shared between the elements (allows for rainfall runoff).
+    1. The FLO-2D Model defines floodway elements as floodplain elements with flow depth > ENCROACH value in the base run.
+       Channel bank elements are automatically assigned as floodway elements.
 
-3. If both floodplain elements are floodway elements, then flow is shared between them.
+    2. If the two floodplain elements sharing discharge are non-floodway elements, flow is shared between the elements (allows for rainfall runoff).
 
-4. If one floodplain element is a floodway element and the other is not, flow is not shared until the predicted water surface exceeds the base flood
-   simulation maximum water surface elevation plus the ENCROACH value.
-   When this occurs, the non-floodway element is re-assigned to be a floodway element.
+    3. If both floodplain elements are floodway elements, then flow is shared between them.
 
-..
+    4. If one floodplain element is a floodway element and the other is not, flow is not shared until the predicted water surface exceeds the base flood
+       simulation maximum water surface elevation plus the ENCROACH value.
+       When this occurs, the non-floodway element is re-assigned to be a floodway element.
 
-   In this manner, the flow first fills the floodway element until the maximum water surface plus the encroachment depth is exceeded.
-   Then the flow spills over into other floodplain grid elements.
-   The floodway is expanded automatically away from the channel banks or the center of the unconfined conveyance area as the floodway elements are filled.
-   The floodway schematic flow chart is shown in Figure 61 and an example of a floodway delineation for overland flow without a channel is shown in
-   Figure 62.
-   Figure 63 shows a floodway delineation for a flooding from a small channel.
-   Using MAPPER Pro, the floodway can be displayed a shaded contour, a contour line plot, or as a single contour outline only the floodway area.
+In this manner, the flow first fills the floodway element until the maximum water surface plus the encroachment depth is exceeded.
+Then the flow spills over into other floodplain grid elements.
+The floodway is expanded automatically away from the channel banks or the center of the unconfined conveyance area as the floodway elements are filled.
+The floodway schematic flow chart is shown in Figure 61 and an example of a floodway delineation for overland flow without a channel is shown in
+Figure 62.
+Figure 63 shows a floodway delineation for a flooding from a small channel.
+Using MAPPER Pro, the floodway can be displayed a shaded contour, a contour line plot, or as a single contour outline only the floodway area.
 
-   The primary objective in creating the FLO-2D floodway routine was to automate the floodway routine and remove the subjectivity that is necessary with
-   the HEC-RAS floodway delineation.
-   Nevertheless, some judgment may still be required when delineating the final floodway boundary.
+The primary objective in creating the FLO-2D floodway routine was to automate the floodway routine and remove the subjectivity that is necessary with
+the HEC-RAS floodway delineation.
+Nevertheless, some judgment may still be required when delineating the final floodway boundary.
 
 FLO
 
