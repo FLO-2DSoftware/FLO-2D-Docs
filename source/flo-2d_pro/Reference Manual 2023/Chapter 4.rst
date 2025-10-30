@@ -2260,196 +2260,192 @@ For this case, the upper Clausen & Clark (1990) is applied.
 
    185 0.00 0.00 0.00 0.00 0.20 0.00 0.00 0.00 1.00
 
-   A portion of building or the entire building can be assigned the collapse trigger (negative ARF value).
-   For a complete collapse of the building that encompasses several elements, all the designated building cells must be assigned a negative ARF value.
-   When the flow depth exceeds the tolerance value (TOL), the predicted flow velocity upstream of the building is used in the building collapse equation
-   to predict the threshold collapse depth.
-   In Figure 71, the building (shown in red) encompasses the entire grid element, and the flooding is coming from the North direction (top of the page).
-   The velocity used to compute the building collapse threshold depth is shown by the red arrow as the velocity from grid element 222 to grid element 221.
-   If the flood flow depth exceeds the threshold depth for grid element 221, the ARF value in the building element is reset to zero (ARF = 0.0) for the
-   next computational timestep and the flow can go through the building element.
-   The negative ARF values in the ARF.DAT file can be combined during the same simulation with those in the BUILDING_COLLAPSE.DAT file.
+A portion of building or the entire building can be assigned the collapse trigger (negative ARF value).
+For a complete collapse of the building that encompasses several elements, all the designated building cells must be assigned a negative ARF value.
+When the flow depth exceeds the tolerance value (TOL), the predicted flow velocity upstream of the building is used in the building collapse equation
+to predict the threshold collapse depth.
+In Figure 71, the building (shown in red) encompasses the entire grid element, and the flooding is coming from the North direction (top of the page).
+The velocity used to compute the building collapse threshold depth is shown by the red arrow as the velocity from grid element 222 to grid element 221.
+If the flood flow depth exceeds the threshold depth for grid element 221, the ARF value in the building element is reset to zero (ARF = 0.0) for the
+next computational timestep and the flow can go through the building element.
+The negative ARF values in the ARF.DAT file can be combined during the same simulation with those in the BUILDING_COLLAPSE.DAT file.
 
-|Chapte020|
+.. image:: img/Chapter4/Chapte020.jpg
 
-   *Figure 71.
-   Building (red square) is Flooded from the North Direction.*
+*Figure 71.
+Building (red square) is Flooded from the North Direction.*
 
-   A conservative approach is taken to predict the potential collapse of buildings.
-   Based on vulnerability curves of depth versus velocity, when the computed threshold depth is exceeded by flood flow depth associated with a predicted
-   velocity, the building area reduction factor ARF value is reset to zero enabling the flow to go through the grid element and fill it with flood
-   storage.
-   The building collapse routine is triggered by assigning grid element building vulnerability curves in BUILDING_COLLAPSE.DAT or by assigning a negative
-   ARF values for either a totally blocked or partially blocked grid element.
-   In the future other building vulnerability curves to cover an expanded matrix of building types can be considered.
+A conservative approach is taken to predict the potential collapse of buildings.
+Based on vulnerability curves of depth versus velocity, when the computed threshold depth is exceeded by flood flow depth associated with a predicted
+velocity, the building area reduction factor ARF value is reset to zero enabling the flow to go through the grid element and fill it with flood
+storage.
+The building collapse routine is triggered by assigning grid element building vulnerability curves in BUILDING_COLLAPSE.DAT or by assigning a negative
+ARF values for either a totally blocked or partially blocked grid element.
+In the future other building vulnerability curves to cover an expanded matrix of building types can be considered.
 
- 4.21 Predicting Alluvial Fan Channel Avulsion
- ---------------------------------------------
+4.21 Predicting Alluvial Fan Channel Avulsion
+---------------------------------------------
 
-   Avulsion of alluvial fan channels depicts the rapid abandonment of one channel and the formation of a new channel with a steeper slope.
-   Fuller (2012) defines avulsion as the process by which flow is diverted from an existing channel to a new water course.
-   Channel avulsion is generally in response to two factors: 1) Sediment deposition or channel aggradation; and 2) Availability of a steeper slope in an
-   alternative downslope direction (Schumm, 1977).
-   Channel avulsion can also occur with the headcutting of an incised channel (sometimes referred to as channel piracy).
-   A more extensive discussion of alluvial channel avulsion is presented in Fuller (2012).
+Avulsion of alluvial fan channels depicts the rapid abandonment of one channel and the formation of a new channel with a steeper slope.
+Fuller (2012) defines avulsion as the process by which flow is diverted from an existing channel to a new water course.
+Channel avulsion is generally in response to two factors: 1) Sediment deposition or channel aggradation; and 2) Availability of a steeper slope in an
+alternative downslope direction (Schumm, 1977).
+Channel avulsion can also occur with the headcutting of an incised channel (sometimes referred to as channel piracy).
+A more extensive discussion of alluvial channel avulsion is presented in Fuller (2012).
 
-   Channel avulsion involves complex sediment transport processes that are difficult to predict with a flood routing model.
-   The physical process of sediment scour and deposition by size fraction is impossible to predict with any accuracy on a channel reach basis, in part,
-   because of the unknown volumes of different sediment sizes in the upstream watershed.
-   Alluvial fan channel avulsion is often associated with hyperconcentrated sediment flows (mud and debris flow) frontal waves and surges.
-   These frontal waves, surges, or just high concentrations of coarse sediment deposit in channel at constrictions, break-in-slopes, or other channel
-   variations and partially fill or plug the channel, forcing the flow overbank and initiating the scour or incision of a new channel down a steeper
-   slope.
+Channel avulsion involves complex sediment transport processes that are difficult to predict with a flood routing model.
+The physical process of sediment scour and deposition by size fraction is impossible to predict with any accuracy on a channel reach basis, in part,
+because of the unknown volumes of different sediment sizes in the upstream watershed.
+Alluvial fan channel avulsion is often associated with hyperconcentrated sediment flows (mud and debris flow) frontal waves and surges.
+These frontal waves, surges, or just high concentrations of coarse sediment deposit in channel at constrictions, break-in-slopes, or other channel
+variations and partially fill or plug the channel, forcing the flow overbank and initiating the scour or incision of a new channel down a steeper
+slope.
 
-   The area of inundation for alluvial fan flooding has been predicted by the FEMA FAN probabilistic model (FEMA, 2003) using an avulsion method
-   modification.
-   This is a simplistic model that has several limitations and is not recommended for studies or mapping where a realistic evaluation of the potential
-   area of inundation or fan flood hydraulics is required.
-   This model, however, has been used by FEMA to generate Flood Insurance Study (FIS) maps with alluvial fan flood hazard zones.
+The area of inundation for alluvial fan flooding has been predicted by the FEMA FAN probabilistic model (FEMA, 2003) using an avulsion method
+modification.
+This is a simplistic model that has several limitations and is not recommended for studies or mapping where a realistic evaluation of the potential
+area of inundation or fan flood hydraulics is required.
+This model, however, has been used by FEMA to generate Flood Insurance Study (FIS) maps with alluvial fan flood hazard zones.
 
-   The Flood Control District of Maricopa County (FCDMC) requested a simplified avulsion routine be implemented in the FLO-2D model.
-   Several FLO-2D model enhancements have been supported by the FCDMC.
-   It was proposed that alluvial fan avulsion routine be developed for the FLO-2D model to assess the channel conveyance capacity on the area of
-   inundation.
-   The FCDMC outlined a methodology to guide the channel avulsion development.
+The Flood Control District of Maricopa County (FCDMC) requested a simplified avulsion routine be implemented in the FLO-2D model.
+Several FLO-2D model enhancements have been supported by the FCDMC.
+It was proposed that alluvial fan avulsion routine be developed for the FLO-2D model to assess the channel conveyance capacity on the area of
+inundation.
+The FCDMC outlined a methodology to guide the channel avulsion development.
 
-   FCDMC Simplified Channel Avulsion Approach
+FCDMC Simplified Channel Avulsion Approach
 
-   The FCDMC proposed simplified channel avulsion analysis was presented as having three parts.
-   Part 1 was the channel overtopping assessment; Part 2 was the channel avulsion assessment and Part 3 was to delineate the flood hazard associated with
-   the channel avulsion.
-   To summarize FCDMC channel avulsion concept, the focus is to simulate channels from a fan apex area that have the potential to overtop and avulse at
-   predicted locations resulting an altered area of inundation.
-   FCDMC provide the following brief outline to accomplish this.
+The FCDMC proposed simplified channel avulsion analysis was presented as having three parts.
+Part 1 was the channel overtopping assessment; Part 2 was the channel avulsion assessment and Part 3 was to delineate the flood hazard associated with
+the channel avulsion.
+To summarize FCDMC channel avulsion concept, the focus is to simulate channels from a fan apex area that have the potential to overtop and avulse at
+predicted locations resulting an altered area of inundation.
+FCDMC provide the following brief outline to accomplish this.
 
-   The FCDMC delineated different distributary channels starting with the primary or feeder channel at an alluvial fan apex (Figure 72).
-   The first part of the analysis is to identify the locations for channel overtopping along the feeder channel and the first-level branch channels for
-   100-year flood where the point of avulsion is the first-level bifurcation point.
-   The FLO-2D model will be used to estimate the channel overtopping locations.
+The FCDMC delineated different distributary channels starting with the primary or feeder channel at an alluvial fan apex (Figure 72).
+The first part of the analysis is to identify the locations for channel overtopping along the feeder channel and the first-level branch channels for
+100-year flood where the point of avulsion is the first-level bifurcation point.
+The FLO-2D model will be used to estimate the channel overtopping locations.
 
-|Chapte021|
+.. image:: img/Chapter4/Chapte021.png
 
-   *Figure 72.
-   Alluvial Fan Distributary Channel Definition for Avulsion Analysis (from FCDMC, 2014).*
+*Figure 72.
+Alluvial Fan Distributary Channel Definition for Avulsion Analysis (from FCDMC, 2014).*
 
-   In the conceptual outline, FCDMC acknowledges the dependency of channel avulsion on sediment deposition indicating major channel avulsion usually
-   occurs during a large flood after previous small floods fill the channel with sediment deposits on the order of 1 to 2 ft.
-   Often sediment deposition has propensity to occur in bends, upstream of constrictions or break-inslope, or in the presence of obstructions or
-   increased roughness.
-   While the role of sediment transport in channel avulsion is understood and could be simulated with the FLO-2D model, the FCDMC proposed to undertake a
-   simpler approach to avoid the complexity associated with predicting sediment deposition.
-   FCDMC avulsion model concept was to:
+In the conceptual outline, FCDMC acknowledges the dependency of channel avulsion on sediment deposition indicating major channel avulsion usually
+occurs during a large flood after previous small floods fill the channel with sediment deposits on the order of 1 to 2 ft.
+Often sediment deposition has propensity to occur in bends, upstream of constrictions or break-inslope, or in the presence of obstructions or
+increased roughness.
+While the role of sediment transport in channel avulsion is understood and could be simulated with the FLO-2D model, the FCDMC proposed to undertake a
+simpler approach to avoid the complexity associated with predicting sediment deposition.
+FCDMC avulsion model concept was to:
 
-a. Build a 25-ft or smaller grid system for the 100-year flood and run the model where the grid element size would essentially constitute the channel
-   cross-section.
+    a. Build a 25-ft or smaller grid system for the 100-year flood and run the model where the grid element size would essentially constitute the channel
+       cross-section.
 
-b. Modify the channel topography (cross-section) to account for the sediment deposition.
+    b. Modify the channel topography (cross-section) to account for the sediment deposition.
 
-c. Run the FLO-2D model and identify the channel overtopping locations.
+    c. Run the FLO-2D model and identify the channel overtopping locations.
 
-d. Predict the peak discharge at each overtopping location.
-   This would provide the basis for the secondary channel.
+    d. Predict the peak discharge at each overtopping location.
+       This would provide the basis for the secondary channel.
 
-..
+To estimate the channel width and depth based on the peak discharge, FCDMC propose to apply channel width and depth estimates based on empirical
+regime theory shown in Figure 73 and Figure 74 (USACE, 1994).
+FCDMC indicates that if the channel depth is greater than or equal to 2 feet, then the newly formed channel is a major channel avulsion and the area
+of inundation is an active alluvial fan area.
+By assigning a representative sediment size fraction for the alluvial fan and the estimated peak discharge, Figure 73 and Figure 74 (provided FCDMC),
+can be used to estimate the channel width and depth.
 
-   To estimate the channel width and depth based on the peak discharge, FCDMC propose to apply channel width and depth estimates based on empirical
-   regime theory shown in Figure 73 and Figure 74 (USACE, 1994).
-   FCDMC indicates that if the channel depth is greater than or equal to 2 feet, then the newly formed channel is a major channel avulsion and the area
-   of inundation is an active alluvial fan area.
-   By assigning a representative sediment size fraction for the alluvial fan and the estimated peak discharge, Figure 73 and Figure 74 (provided FCDMC),
-   can be used to estimate the channel width and depth.
+.. image:: img/Chapter4/Chapte022.png
 
-   |Chapte022|
+*Figure 73.
+Channel Forming Depth versus Channel Forming Discharge (from USACE, 1994).*
 
-   *Figure 73.
-   Channel Forming Depth versus Channel Forming Discharge (from USACE, 1994).*
+.. image:: img/Chapter4/Chapte023.jpg
 
-   |Chapte023|
+*Figure 74.
+Channel Forming or Bank Full Discharge (from USACE, 1994).*
 
-   *Figure 74.
-   Channel Forming or Bank Full Discharge (from USACE, 1994).*
+The final task is to assess the area of inundation.
+It was observed by FCDMC that since the newly formed channel caused by avulsion will impact a new area of the fan, further channel avulsion downstream
+may occur downstream, and this may require several model iterations to delineate the entire fan area of inundation.
 
-   The final task is to assess the area of inundation.
-   It was observed by FCDMC that since the newly formed channel caused by avulsion will impact a new area of the fan, further channel avulsion downstream
-   may occur downstream, and this may require several model iterations to delineate the entire fan area of inundation.
-
-   Implementing the FCDMC Channel Avulsion Approach into FLO-2D
+Implementing the FCDMC Channel Avulsion Approach into FLO-2D
 
 Concepts and Assumptions
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-   The original recommendation was to use small FLO-2D grid elements to represent the channel.
-   This approach has several limitations:
+The original recommendation was to use small FLO-2D grid elements to represent the channel.
+This approach has several limitations:
 
-- The premise of channel avulsions is based on a loss of channel conveyance capacity.
+    - The premise of channel avulsions is based on a loss of channel conveyance capacity.
 
-- The channel will have unique width to depth ratios and roughness which would be obscured by the uniform floodplain elements.
+    - The channel will have unique width to depth ratios and roughness which would be obscured by the uniform floodplain elements.
 
-- Overbank flooding cannot be simply assessed using depressed floodplain elements because of the multi-directional flow.
+    - Overbank flooding cannot be simply assessed using depressed floodplain elements because of the multi-directional flow.
 
-..
+The proposed avulsion method is based on computed widths and depths from Figure 73 and Figure 74 or the avulsed channels that cannot be simply
+represented by the floodplain element geometry.
+Using the floodplain elements on steep slopes does not limit the unconfined flow in the FLO-2D model to a singular direction because the upstream
+element water surface elevation may exceed the downstream cell elevations allowing the flow to distribute to all the downstream contiguous elements.
+It was apparent that to mimic channel avulsion, it is necessary to simulate channel flow in the FLO-2D model.
+It is fortunate, however, that the FLO2D model has a distributary channel component referred to as “multiple channels”.
 
-   The proposed avulsion method is based on computed widths and depths from Figure 73 and Figure 74 or the avulsed channels that cannot be simply
-   represented by the floodplain element geometry.
-   Using the floodplain elements on steep slopes does not limit the unconfined flow in the FLO-2D model to a singular direction because the upstream
-   element water surface elevation may exceed the downstream cell elevations allowing the flow to distribute to all the downstream contiguous elements.
-   It was apparent that to mimic channel avulsion, it is necessary to simulate channel flow in the FLO-2D model.
-   It is fortunate, however, that the FLO2D model has a distributary channel component referred to as “multiple channels”.
+The purpose of the multiple channel flow component is to simulate the overland flow in small channels rather than as overland sheet flow.
+Overland flow is often conveyed in small channels, even though they occupy only a fraction of the potential flow area.
+This is referred to as rill and gully flow.
+Schumm, et al.
+1984, distinguish between rills and gullies as follows.
+Rills are an ephemeral small (smallest) channel formed by runoff and may be seasonal in nature and the result of overland flow.
+A gully is relatively deep channel formed by recent erosion where no previously defined channel existed.
+On alluvial fans, these two types of channels typically form the distributary system downstream of the fan apex and can have the same physical
+processes associated with avulsion, albeit to different scales.
+These channels should be distinguished from the entrenched or incised primary channel near the fan apex leading out of the watershed canyon mouth.
 
-   The purpose of the multiple channel flow component is to simulate the overland flow in small channels rather than as overland sheet flow.
-   Overland flow is often conveyed in small channels, even though they occupy only a fraction of the potential flow area.
-   This is referred to as rill and gully flow.
-   Schumm, et al.
-   1984, distinguish between rills and gullies as follows.
-   Rills are an ephemeral small (smallest) channel formed by runoff and may be seasonal in nature and the result of overland flow.
-   A gully is relatively deep channel formed by recent erosion where no previously defined channel existed.
-   On alluvial fans, these two types of channels typically form the distributary system downstream of the fan apex and can have the same physical
-   processes associated with avulsion, albeit to different scales.
-   These channels should be distinguished from the entrenched or incised primary channel near the fan apex leading out of the watershed canyon mouth.
+Simulating rill and gully distribute flow concentrates the discharge and may improve the timing of the runoff routing.
+The multiple channel routine calculates overland flow as sheet flow within the grid element and flow between the grid elements is computed as rill and
+gully flow.
+No overland sheet flow is exchanged between grid elements if both elements have assigned multiple channels.
+The gully geometry is defined by a maximum depth, width, and flow roughness.
+The multiple channel attributes can be spatially variable on the grid system and can be edited with the GDS program.
 
-   Simulating rill and gully distribute flow concentrates the discharge and may improve the timing of the runoff routing.
-   The multiple channel routine calculates overland flow as sheet flow within the grid element and flow between the grid elements is computed as rill and
-   gully flow.
-   No overland sheet flow is exchanged between grid elements if both elements have assigned multiple channels.
-   The gully geometry is defined by a maximum depth, width, and flow roughness.
-   The multiple channel attributes can be spatially variable on the grid system and can be edited with the GDS program.
+If the gully flow exceeds the specified gully depth, the multiple channel can be expanded by a specified incremental width.
+This channel widening process assumes these gullies are alluvial channels and will widen to accept more flow as the flow reaches bankfull discharge.
+There is no gully overbank discharge to the overland surface area within the grid element.
+The gully will continue to widen until the gully width exceeds the width of the grid element, then the flow routing between grid elements will revert
+to sheet flow.
+This enables the grid element to be overwhelmed by flood flows.
+During the falling limb of the hydrograph when the flow depth is less than 1 ft (0.3 m), the gully width will decrease to confine the discharge until
+the original width is again attained.
+The user can assign the range of slope where the multiple channel widening is computed.
 
-   If the gully flow exceeds the specified gully depth, the multiple channel can be expanded by a specified incremental width.
-   This channel widening process assumes these gullies are alluvial channels and will widen to accept more flow as the flow reaches bankfull discharge.
-   There is no gully overbank discharge to the overland surface area within the grid element.
-   The gully will continue to widen until the gully width exceeds the width of the grid element, then the flow routing between grid elements will revert
-   to sheet flow.
-   This enables the grid element to be overwhelmed by flood flows.
-   During the falling limb of the hydrograph when the flow depth is less than 1 ft (0.3 m), the gully width will decrease to confine the discharge until
-   the original width is again attained.
-   The user can assign the range of slope where the multiple channel widening is computed.
+4.22 Low Impact Development (LID) Modeling
+------------------------------------------
 
- 4.22 Low Impact Development (LID) Modeling
- ------------------------------------------
+Low impact development (LID) flood retention can be assessed with the FLO-2D model using a sink volume assignment or a spatially variable tolerance
+value (TOL) on individual cells.
+Sink volume is runoff or flood storage that never leaves the grid element and is assigned in the LID_VOLUME.DAT file by the user in ft\ :sup:`3` or m\
+:sup:`3`.
+Until the sink volume is filled there is **no flow** depth on the grid element.
+The TOL parameter was originally designed to represent a flow depth below which no discharge is shared between two grid elements.
+The primary difference between the two methods is that the TOL approach leaves a flow depth whereas the sink volume method does not.
+For a large flood event, typically a TOL value of 0.1 ft (0.03 m) is assigned so that there is no exchange discharge for negligible depths.
+For hydrology models, the TOL parameter represents the physical process of depression storage.
+Depression storage TOL is a shallow depth that remains on the grid system after the rainfall had ceased and is a portion of the initial abstraction
+(depression storage + interception) that must be filled for runoff to initiate.
+The initial abstraction cannot be more than the TOL value.
 
-   Low impact development (LID) flood retention can be assessed with the FLO-2D model using a sink volume assignment or a spatially variable tolerance
-   value (TOL) on individual cells.
-   Sink volume is runoff or flood storage that never leaves the grid element and is assigned in the LID_VOLUME.DAT file by the user in ft\ :sup:`3` or m\
-   :sup:`3`.
-   Until the sink volume is filled there is **no flow** depth on the grid element.
-   The TOL parameter was originally designed to represent a flow depth below which no discharge is shared between two grid elements.
-   The primary difference between the two methods is that the TOL approach leaves a flow depth whereas the sink volume method does not.
-   For a large flood event, typically a TOL value of 0.1 ft (0.03 m) is assigned so that there is no exchange discharge for negligible depths.
-   For hydrology models, the TOL parameter represents the physical process of depression storage.
-   Depression storage TOL is a shallow depth that remains on the grid system after the rainfall had ceased and is a portion of the initial abstraction
-   (depression storage + interception) that must be filled for runoff to initiate.
-   The initial abstraction cannot be more than the TOL value.
+The concept of LID is that a new residential or commercial site development would be required to design flood retention storage into the site
+construction.
+This may include bioretention, green roofs, rain gardens, permeable pavement, drainage disconnection, swales, and on-site storage (Figure 75).
+Sink volume or TOL values would be assigned to represent the composite LID techniques on a given grid element (Figure 76).
+Depending on the site development, multiple grid elements may represent an individual house lot or a commercial parking lot.
+Different grid elements may represent different LID techniques.
+The volume of on-site retention storage can be directly assigned in the LID_VOLUME.DAT file or assessed by multiplying the lot surface area by the
+retained flow depth (TOL value).
 
-   The concept of LID is that a new residential or commercial site development would be required to design flood retention storage into the site
-   construction.
-   This may include bioretention, green roofs, rain gardens, permeable pavement, drainage disconnection, swales, and on-site storage (Figure 75).
-   Sink volume or TOL values would be assigned to represent the composite LID techniques on a given grid element (Figure 76).
-   Depending on the site development, multiple grid elements may represent an individual house lot or a commercial parking lot.
-   Different grid elements may represent different LID techniques.
-   The volume of on-site retention storage can be directly assigned in the LID_VOLUME.DAT file or assessed by multiplying the lot surface area by the
-   retained flow depth (TOL value).
-
-|Chapte024|
+.. image:: img/Chapter4/Chapte024.png
 
    *Figure 75.
    Low Impact Development Water Retention.*
@@ -2458,25 +2454,24 @@ Concepts and Assumptions
 
    http://www.seattle.gov/util/MyServices/DrainageSewer/Projects/GreenStormwaterInfrastructure/Rain Wise)
 
-   |Chapte025|
+.. image:: img/Chapter4/Chapte025.jpg
 
-   *Figure 76.
-   FLO-2D Grid Element LID Concept – Spatially Variable TOL Elements (brown).*
+*Figure 76.
+FLO-2D Grid Element LID Concept – Spatially Variable TOL Elements (brown).*
 
 (http://www.lowimpactdevelopment.org)
 
-   FLO-2D Model LID Tools
+FLO-2D Model LID Tools
 
-   *LID Sink Volume Method*
+*LID Sink Volume Method*
+The sink volume can be evaluated by the flood retention feature (e.g., pond or cistern volume).
+The volume may be dictated by site development specification or regulation.
+In any case, once the flood retention volume is known, it can be assigned directly to the grid element or divided over several grid elements.
+No overland flow in or out of the LID cell will occur until the sink volume is exceeded.
+Either rainfall or flood inflow to the grid element will fill the sink volume.
 
-   The sink volume can be evaluated by the flood retention feature (e.g., pond or cistern volume).
-   The volume may be dictated by site development specification or regulation.
-   In any case, once the flood retention volume is known, it can be assigned directly to the grid element or divided over several grid elements.
-   No overland flow in or out of the LID cell will occur until the sink volume is exceeded.
-   Either rainfall or flood inflow to the grid element will fill the sink volume.
-
-   The sink volume can be assigned in the QGIS using a shapefile or polygon to select a cell or cells.
-   The volume (ft\ :sup:`3` or m\ :sup:`3`) is saved in a LID_VOLUME.DAT file in the following format:
+The sink volume can be assigned in the QGIS using a shapefile or polygon to select a cell or cells.
+The volume (ft\ :sup:`3` or m\ :sup:`3`) is saved in a LID_VOLUME.DAT file in the following format:
 
 Grid Element Volume
 
