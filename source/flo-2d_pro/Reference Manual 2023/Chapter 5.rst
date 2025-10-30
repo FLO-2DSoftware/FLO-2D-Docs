@@ -223,7 +223,7 @@ Using these area of inundation results, the products associated with coastal flo
 
     - Automatically estimate storm surge damage and mitigation costs.
 
-.. image:: img/Chapter5/Chapte004.png
+.. image:: img/Chapter5/Chapte004.jpg
 
 *Figure 133.
 Hurricane Wilma 2005 Predicted Storm Surge in the Florida Keys*
@@ -362,34 +362,34 @@ A discharge of 20,000 cfs will not overtop any of the bridges in the Middle Rio 
 All the bridges were reviewed, and the Los Lunas Bridge was selected to review the computed discharge hydraulics with both HEC-RAS and FLO-2D models
 (Figure 134 and Figure 135).
 
-|Chapte005|
+.. image:: img/Chapter5/Chapte005.jpg
 
-   *Figure 134.
-   Plan View of the Los Lunas Bridge.*
+*Figure 134.
+Plan View of the Los Lunas Bridge.*
 
-|Chapte006|
+.. image:: img/Chapter5/Chapte006.jpg
 
-   *Figure 135.
-   View Downstream through Los Lunas Bridge (Wolf Engineering).*
+*Figure 135.
+View Downstream through Los Lunas Bridge (Wolf Engineering).*
 
 The Los Lunas Bridge spans a most of the Rio Grande active floodplain between the levees and has 16 sets of bridge pilings as shown in Figure 135.
 The HEC-RAS model of the bridge include 2 upstream cross-sections and 3 downstream cross-sections (Figure 136).
 The bridge deck is about 90 ft wide.
 
-|Chapte007|
+.. image:: img/Chapter5/Chapte007.jpg
 
-   *Figure 136.
-   HEC-RAS Cross-sections and Stationing (Wolf Engineering).*
+*Figure 136.
+HEC-RAS Cross-sections and Stationing (Wolf Engineering).*
 
 The bridge geometry and cross-section plots are shown in Figure 137 with the blocked areas due to the approach roadway and bridge decking.
 Both the deck soffit and roadway are curved with a difference of 1 ft between the minimum and maximum elevations.
 The low chord and weir were represented by an average elevation.
 The split channel with the island can be viewed in bridge cross-section and in Figure 134.
 
-|Chapte008|
+.. image:: img/Chapter5/Chapte008.jpg
 
-   *Figure 137.
-   Los Lunas HEC-RAS Bridge*
+*Figure 137.
+Los Lunas HEC-RAS Bridge*
 
 The original FLO-2D model rating table had 40 stage-discharge pairs ranging from 10 to 20,000 cfs.
 For this comparison, the HEC-RAS Los Lunas bridge model was run with only 7 discharges ranging from 100 cfs to 45,000 cfs (Figure 138).
@@ -399,51 +399,50 @@ The seven steady flow discharges used in the two models were:
 
 100 cfs 1,000 cfs 2,500 cfs 5,000 cfs, 10,000 cfs, 20,000 cfs, 45,000 cfs
 
-|Chapte009|
+.. image:: img/Chapter5/Chapte009.png
 
-   *Figure 138.
-   Los Lunas Bridge HEC-RAS Water Surface Elevations.*
+*Figure 138.
+Los Lunas Bridge HEC-RAS Water Surface Elevations.*
 
 The FLO-2D was run with the seven discharges assigned to an inflow channel element about 16 channel elements upstream of the bridge.
 Outflow nodes were assigned to a channel element about 9 channel elements downstream of the bridge and to the channel element just upstream of the
 inflow node.
 The inflow hydrograph to achieve steady was assigned as follows:
 
-Time (hrs) Q (cfs)
+        Time (hrs)  Q (cfs)
 
-0.0 0.0
+        0.0         0.0
 
-   2.0 1,000 100.
-   1,000
+        2.0         1,000
+
+        100.        1,000
 
 The FLO-2D model was run for a simulation time of 6 hrs which was sufficient to achieve steady discharge at the bridge.
 The model was also setup with the following data and assumptions:
 
-- Identical channel n-values (0.032);
+    - Identical channel n-values (0.032);
 
-- Spatially variable overbank FLO-2D n-values that did not match the HEC-RAS model;
+    - Spatially variable overbank FLO-2D n-values that did not match the HEC-RAS model;
 
-- The upstream channel and bridge cross-sections in the HEC-RAS model;
+    - The upstream channel and bridge cross-sections in the HEC-RAS model;
 
-- The rest of the channel cross-sections were the original ones in the FLO-2D model;
+    - The rest of the channel cross-sections were the original ones in the FLO-2D model;
 
-- Type 1 bridge configuration with no abutment or embankment slopes (vertical);
+    - Type 1 bridge configuration with no abutment or embankment slopes (vertical);
 
-- Average low chord and deck elevations as determined from Figure 4;
+    - Average low chord and deck elevations as determined from Figure 4;
 
-- Deck length, bridge opening, and bridge width were determining from the HEC-RAS cross-section;
+    - Deck length, bridge opening, and bridge width were determining from the HEC-RAS cross-section;
 
-- Pile width was the sum of the 16 sets of individual pile widths;
+    - Pile width was the sum of the 16 sets of individual pile widths;
 
-- No flow angle of attach with the bridge;
+    - No flow angle of attach with the bridge;
 
-- No coefficient variation for Froude number which ranges from 0.2 to 0.3;
+    - No coefficient variation for Froude number which ranges from 0.2 to 0.3;
 
-- No assignment for overall free surface flow discharge coefficient (to be computed).
+    - No assignment for overall free surface flow discharge coefficient (to be computed).
 
-..
-
-   Model Comparison Results
+Model Comparison Results
 
 The focus of comparing the HEC-RAS and FLO-2D models for the seven discharges is the predicted water surface elevations which, if equivalent, would
 indicate that the model hydraulics (depth, velocity, flow area) match well.
@@ -454,21 +453,21 @@ The BRIDGE_DISCHARGE.OUT and HYDROSTRUCT.OUT files verified that the steady stat
 channel conveyance capacity of about 5,000 cfs.
 The only FLO-2D model revisions were:
 
-- Adjustments were made to several channel element Mannings n-values.
-  These n-value revisions were less than 0.005.
+    - Adjustments were made to several channel element Mannings n-values.
+      These n-value revisions were less than 0.005.
 
-- Outflow nodes were added upstream and downstream of the bridge to having to use the entire Rio Grande model.
+    - Outflow nodes were added upstream and downstream of the bridge to having to use the entire Rio Grande model.
 
 No attempt was made to accommodate the HEC-RAS model 1-D constraints with respect to the floodplain conditions including roadway approach, levee
 overtopping, or flow upstream or downstream past the outflow nodes.
 The following FLO-2D limitations were noted with respect to the overbank floodplain discharge:
 
-- Floodplain storage was not filled to match the HEC-RAS 1-D steady flow inundation.
-  No floodplain outflow nodes were assigned, and floodplain flow bypassed the channel outflow nodes both upstream and downstream.
+    - Floodplain storage was not filled to match the HEC-RAS 1-D steady flow inundation.
+      No floodplain outflow nodes were assigned, and floodplain flow bypassed the channel outflow nodes both upstream and downstream.
 
-- Overbank flow upstream re-entered the channel and flowed upstream in the channel.
+    - Overbank flow upstream re-entered the channel and flowed upstream in the channel.
 
-- Downstream overbank flow bypassed the outflow node and re-entered the channel.
+    - Downstream overbank flow bypassed the outflow node and re-entered the channel.
 
 Of the three flow regimes, free surface flow, pressure flow and weir flow plus pressure flow, the most critical comparison is for the free surface
 flow regime water surface elevation because this computation is the most complex and detailed.
