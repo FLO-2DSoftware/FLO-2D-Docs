@@ -227,97 +227,95 @@ When the cross-sections have all been assigned the channel profile looks like a 
 have identical bed elevations.
 The channel slope and cross-section shape can then be interpolated by using a command in the GDS, QGIS Plug-in or in the PROFILES program that adjusts
 and assigns a cross-section with a linear bed slope for each channel element.
-   The cross-section interpolation is based a weighted flow area adjustment to achieve a more uniform rate of change in the flow area.
+The cross-section interpolation is based a weighted flow area adjustment to achieve a more uniform rate of change in the flow area.
 
-   The user has several other options for setting up the channel data file including grouping the channel elements into segments, specifying initial flow
-   depths, identifying contiguous channel elements that do not share discharge, assigning limiting Froude numbers and depth variable nvalue adjustments.
+The user has several other options for setting up the channel data file including grouping the channel elements into segments, specifying initial flow
+depths, identifying contiguous channel elements that do not share discharge, assigning limiting Froude numbers and depth variable nvalue adjustments.
 
  4.4 Channel-Floodplain Interface
  --------------------------------
 
-   Channel flow is exchanged with the floodplain grid elements in a separate routine after the channel, street and floodplain flow subroutines have been
-   completed (see the Flow Chart in Figure 3).
-   When the channel conveyance capacity is exceeded, an overbank discharge is computed.
-   If the channel flow is less than bankfull discharge and there is no flow on the floodplain, then the channel-floodplain interface routine is not
-   called.
-   The channel-floodplain flow exchange is limited by the available exchange volume in the channel or by the available storage volume on the floodplain.
-   The interface routine is internal to the model and there are no data requirements for its application.
-   This subroutine also computes the flow exchange between the street and the floodplain.
+Channel flow is exchanged with the floodplain grid elements in a separate routine after the channel, street and floodplain flow subroutines have been
+completed (see the Flow Chart in Figure 3).
+When the channel conveyance capacity is exceeded, an overbank discharge is computed.
+If the channel flow is less than bankfull discharge and there is no flow on the floodplain, then the channel-floodplain interface routine is not
+called.
+The channel-floodplain flow exchange is limited by the available exchange volume in the channel or by the available storage volume on the floodplain.
+The interface routine is internal to the model and there are no data requirements for its application.
+This subroutine also computes the flow exchange between the street and the floodplain.
 
-   The channel-floodplain exchange is computed for each channel bank element and is based on the potential water surface elevation difference between the
-   channel and the floodplain grid element containing either channel bank (Figure 2).
-   The velocity of either the channel overbank or the return flow to the channel is computed using the diffusive wave momentum equation.
-   It is assumed that the overbank flow velocity is relatively small and thus the acceleration terms are negligible.
-   For return flow to the channel, if the channel water surface is less than the bank elevation, the bank elevation is used to compute the return flow
-   velocity.
-   Overbank discharge or return flow to the channel is computed using the floodplain assigned roughness.
-   The overland flow can enter a previously dry channel.
+The channel-floodplain exchange is computed for each channel bank element and is based on the potential water surface elevation difference between the
+channel and the floodplain grid element containing either channel bank (Figure 2).
+The velocity of either the channel overbank or the return flow to the channel is computed using the diffusive wave momentum equation.
+It is assumed that the overbank flow velocity is relatively small and thus the acceleration terms are negligible.
+For return flow to the channel, if the channel water surface is less than the bank elevation, the bank elevation is used to compute the return flow
+velocity.
+Overbank discharge or return flow to the channel is computed using the floodplain assigned roughness.
+The overland flow can enter a previously dry channel.
 
  4.5 Levees
  ----------
 
-   The FLO-2D levee component confines flow on the floodplain surface by blocking one of the eight flow directions.
-   Levees are designated at the grid element boundaries (Figure 38).
-   If a levee runs through the center of a grid element, the model levee position is represented by one or more of the eight grid element boundaries.
-   Levees often follow the boundaries along a series of consecutive elements.
-   A levee crest elevation can be assigned for each of the eight flow directions in each grid element.
-   The model will predict levee overtopping.
-   When the flow depth exceeds the levee height, the discharge over the levee is computed using the broad crested weir flow equation.
-   Weir flow occurs until the tailwater depth is 85% of the headwater depth above and then at higher flows, the water is exchanged across the levees
-   using the difference in water surface elevation.
-   Levee overtopping will not cause levee failure unless the failure or breach option is invoked.
+The FLO-2D levee component confines flow on the floodplain surface by blocking one of the eight flow directions.
+Levees are designated at the grid element boundaries (Figure 38).
+If a levee runs through the center of a grid element, the model levee position is represented by one or more of the eight grid element boundaries.
+Levees often follow the boundaries along a series of consecutive elements.
+A levee crest elevation can be assigned for each of the eight flow directions in each grid element.
+The model will predict levee overtopping.
+When the flow depth exceeds the levee height, the discharge over the levee is computed using the broad crested weir flow equation.
+Weir flow occurs until the tailwater depth is 85% of the headwater depth above and then at higher flows, the water is exchanged across the levees
+using the difference in water surface elevation.
+Levee overtopping will not cause levee failure unless the failure or breach option is invoked.
 
-   *Figure 38.
-   Levees are Depicted in Red and the River in Blue in the GDS Program.*
+*Figure 38.
+Levees are Depicted in Red and the River in Blue in the GDS Program.*
 
-   The levee output files include LEVEE.OUT, LEVOVERTOP.OUT and LEVEEDEFIC.OUT.
-   LEVEE.OUT contains the levee elements that failed.
-   Failure width, failure elevation, discharge from the levee breach and the time of failure occurrence are listed.
-   A discharge hydrograph overtopping the levee element is reported in LEVOVERTOP.OUT.
-   The discharge is combined for all the levee directions that are being overtopped.
-   Finally, the LEVEEDIFIC.OUT file lists the levee elements with loss of freeboard during the flood event.
-   Five levels of freeboard deficit are reported:
+The levee output files include LEVEE.OUT, LEVOVERTOP.OUT and LEVEEDEFIC.OUT.
+LEVEE.OUT contains the levee elements that failed.
+Failure width, failure elevation, discharge from the levee breach and the time of failure occurrence are listed.
+A discharge hydrograph overtopping the levee element is reported in LEVOVERTOP.OUT.
+The discharge is combined for all the levee directions that are being overtopped.
+Finally, the LEVEEDIFIC.OUT file lists the levee elements with loss of freeboard during the flood event.
+Five levels of freeboard deficit are reported:
 
-1. = freeboard > 3 ft (0.9 m)
+    1. = freeboard > 3 ft (0.9 m)
 
-2. = 2 ft (0.6 m) < freeboard < 3 ft (0.9 m)
+    2. = 2 ft (0.6 m) < freeboard < 3 ft (0.9 m)
 
-3. = 1 ft (0.3 m) < freeboard < 2 ft (0.6 m)
+    3. = 1 ft (0.3 m) < freeboard < 2 ft (0.6 m)
 
-4. = freeboard < 1 ft (0.3 m)
+    4. = freeboard < 1 ft (0.3 m)
 
-5. = levee is overtopped by flow.
+    5. = levee is overtopped by flow.
 
-..
+The levee deficit can be displayed graphically in both MAPPER Pro and MAXPLOT (Figure 39).
 
-   The levee deficit can be displayed graphically in both MAPPER Pro and MAXPLOT (Figure 39).
+.. image:: img/Chapter4/Chapte003.png
 
-|Chapte003|
+*Figure 39.
+Levee Freeboard Deficit Plot Using MAXPLOT.*
 
-   *Figure 39.
-   Levee Freeboard Deficit Plot Using MAXPLOT.*
+4.6 Levee and Dam Breach Failures
+---------------------------------
 
- 4.6 Levee and Dam Breach Failures
- ---------------------------------
+Breach Options
 
-   Breach Options
-
-   There are two FLO-2D user defined dam and levee breach options to predict the breach hydrograph: 1) Breach erosion (Figure 40); and 2) Prescribed
-   failure rates (Figure 41).
-   The prescribed breach method uses assigned vertical and horizontal failure rates.
-   The breach erosion option predicts the physical process of sediment scour of the breach opening.
-   In both breach methods, the breach computational timestep is the flood routing timestep.
-   FLO-2D computes the discharge through the breach, the change in upstream storage, the tailwater and backwater effects, and the downstream flood
-   routing.
-   Each failure option generates a series of output files to analyze the dam breach.
-   The model reports the time of breach or overtopping, the breach hydrograph, peak discharge through the breach, and breach parameters as a function of
-   time.
-   Additional output files to define the dam failure flood hazard include the timeto-flow-depth output files that report the time to the maximum flow
-   depth, the time to onefoot flow depth and time to two-foot flow depth which are useful for delineating evacuation and emergency access routes.
-   The model reports the time of breach or overtopping, the breach hydrograph, peak discharge through the breach, and breach parameters as a function of
-   time.
-   Additional output files that define the breach hazard include the time-to-flow-depth output files that report the time to the maximum flow depth, the
-   time to one-foot flow depth and time to two-foot flow depth, and deflood time which are useful for delineating evacuation routes.
+There are two FLO-2D user defined dam and levee breach options to predict the breach hydrograph: 1) Breach erosion (Figure 40); and 2) Prescribed
+failure rates (Figure 41).
+The prescribed breach method uses assigned vertical and horizontal failure rates.
+The breach erosion option predicts the physical process of sediment scour of the breach opening.
+In both breach methods, the breach computational timestep is the flood routing timestep.
+FLO-2D computes the discharge through the breach, the change in upstream storage, the tailwater and backwater effects, and the downstream flood
+routing.
+Each failure option generates a series of output files to analyze the dam breach.
+The model reports the time of breach or overtopping, the breach hydrograph, peak discharge through the breach, and breach parameters as a function of
+time.
+Additional output files to define the dam failure flood hazard include the timeto-flow-depth output files that report the time to the maximum flow
+depth, the time to onefoot flow depth and time to two-foot flow depth which are useful for delineating evacuation and emergency access routes.
+The model reports the time of breach or overtopping, the breach hydrograph, peak discharge through the breach, and breach parameters as a function of
+time.
+Additional output files that define the breach hazard include the time-to-flow-depth output files that report the time to the maximum flow depth, the
+time to one-foot flow depth and time to two-foot flow depth, and deflood time which are useful for delineating evacuation routes.
 
    *Figure 40.
    Example of Levee Breach Urban Flooding.*
