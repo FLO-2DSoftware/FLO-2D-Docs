@@ -127,7 +127,7 @@ Figure 132 shows velocity vector and flow depth results in an urban area with th
 Typically, the storm drain capacity is minor compared to the 100-year flood volume, the relations between return period flooding and the storm drain
 effectiveness can be tested for the more frequent events.
 
-.. image:: img/Chapter5/Chapte002.png
+.. image:: img/Chapter5/Chapte002.jpg
 
 *Figure 131.
 Urban Model with Streets, Buildings and Storm Drains*
