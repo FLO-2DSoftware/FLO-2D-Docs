@@ -739,41 +739,57 @@ Initial Abstraction.*
      - Abstraction (inches)
 
    * - Natural\ :sup:`1`
+
        Desert and rangeland
+
        Hillslopes Sonoran desert
+
        Mountain with vegetation
 
      - 0.35
+
        0.15
+
        0.25
 
+   * - Developed – Residential\ :sup:`1`
 
+       Lawns
 
+       Desert landscape
 
+       Pavement
 
-   * - Developed – Residential\ :sup:`1`        |    0.20 0.10|Lawns                                    | 0.05|Desert landscape
-       ||Pavement                                 |
+     - 0.20
 
-   * - Agricultural fields and pasture       | 0.50
+       0.10
 
-   * - Conifers\ :sup:`2`                    | 0.01 - 0.36
+       0.05
 
-   * - Hardwoods\ :sup:`2`                   | 0.001 - 0.08
+   * - Agricultural fields and pasture
+     - 0.50
 
-   * - Shrubs\ :sup:`2`                      | 0.01 - 0.08
+   * - Conifers\ :sup:`2`
+     - 0.01 - 0.36
 
-   * - Grass\ :sup:`2`                       | 0.04 - 0.06
+   * - Hardwoods\ :sup:`2`
+     - 0.001 - 0.08
 
-   * - Forest floor\ :sup:`2`                | 0.02 - 0.44
+   * - Shrubs\ :sup:`2`
+     - 0.01 - 0.08
+
+   * - Grass\ :sup:`2`
+     - 0.04 - 0.06
+
+   * - Forest floor\ :sup:`2`
+     - 0.02 - 0.44
 
    * - :sup:`1`\ Maricopa County Drainage Design Manual, 1992.
        :sup:`2`\ W.
        T.Fullerton, Masters Thesis, CSU, 1983.
+     -
 
-
-..
-
-   Green-Ampt Infiltration
+Green-Ampt Infiltration
 
    The Green-Ampt (1911) equation was selected to compute infiltration losses in the FLO-2D model because it is sensitive to rainfall intensity.
    When the rainfall exceeds the potential infiltration, then runoff is generated.
