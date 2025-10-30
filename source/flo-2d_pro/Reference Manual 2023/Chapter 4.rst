@@ -3748,52 +3748,72 @@ Bridge Parameters (B-Lines in HYSTRUC.DAT)**
    * - STRUCHAR
      - c
      - B
-     - Character identifier for the bridge routine
+     - Character identifier for the bridge
+
+       routine
 
    * - IBTYPE
      - i
      - 1 – 4
-     - Type of bridge configuration (see Appendix figures)
+     - Type of bridge configuration (see
+
+       Appendix figures)
 
    * - COEFF\*
      - r
      - 0.1 - 1.0
-     - Overall bridge discharge coefficient – assigned or computed (default = 0.)
+     - Overall bridge discharge coefficient –
+
+       assigned or computed (default = 0.)
 
    * - C_PRIME_USER\*
      - r
      - 0.5 - 1.0
-     - Baseline bridge discharge coefficient to be adjusted with detail coefficients
+     - Baseline bridge discharge coefficient
+
+       to be adjusted with detail coefficients
 
    * - KF_COEF\*
      - r
      - 0.9 - 1.1
-     - Froude number coefficient – assigned or computed (= 0.)
+     - Froude number coefficient – assigned
+
+       or computed (= 0.)
 
    * - KWW_COEF\*
      - r
      - 1.0 - 1.13
-     - Wingwall coefficient – assigned or computed (= 0.)
+     - Wingwall coefficient – assigned or
+
+       computed (= 0.)
 
    * - KPHI_COEF\*
      - r
      - 0.7 - 1.0
-     - Flow angle with bridge coefficient – assigned or computed (= 0.)
+     - Flow angle with bridge coefficient –
+
+       assigned or computed (= 0.)
 
    * - KY_COEF\*
      - r
      - 0.85 - 1.0
-     - Coefficient associated with sloping embankments and vertical abutments (= 0.)
+     - Coefficient associated with sloping
+
+       embankments and vertical abutments (= 0.)
 
    * - KX_COEF\*
      - r
      - 1.0 - 1.13
-     - Coefficient associated with sloping abutments – assigned or computed (= 0.)
+     - Coefficient associated with sloping
+
+       abutments – assigned or computed (= 0.)
 
    * - KJ_COEF\*
      - r
      - 0.6 - 1.0
-     - Coefficient associated with pier and piles – assigned or computer (= 0.)
+     - Coefficient associated with pier and
+
+       piles – assigned or computer (= 0.)
 
    * - BOPENING
      - r
@@ -3805,27 +3825,37 @@ Bridge Parameters (B-Lines in HYSTRUC.DAT)**
    * - BLENGTH
      - r
      - 0.0 - ∞
-     - Bridge length from upstream edge to downstream abutment (ft or m)
+     - Bridge length from upstream edge
+
+       to downstream abutment (ft or m)
 
    * - BN_VALUE
      - r
      - 0.030 - 0.200
-     - Bridge reach n-value (typical channel n-value for the bridge cross-section)
+     - Bridge reach n-value (typical channel
+
+       n-value for the bridge cross-section)
 
    * - UPLENGTH12
      - r
      - 0.0 - ∞
-     - Distance to upstream cross-section unaffected by bridge backwater (ft or m)
+     - Distance to upstream cross-section
+
+       unaffected by bridge backwater (ft or m)
 
    * - LOWCHORD
      - r
      - 0.0 - ∞
-     - Average elevation of the low chord (ft or m).
+     - Average elevation of the low chord
+
+       (ft or m).
 
    * - DECKHT
      - r
      - 0.0 - ∞
-     - Average elevation of the top of the deck railing for overtop flow (ft or m)
+     - Average elevation of the top of the deck
+
+       railing for overtop flow (ft or m)
 
    * - DECKLENGTH
      - r
@@ -3835,50 +3865,74 @@ Bridge Parameters (B-Lines in HYSTRUC.DAT)**
    * - PIERWIDTH
      - r
      - 0.0 - ∞
-     - Combined pier or pile cross-section width (flow blockage width in ft or m)
+     - Combined pier or pile cross-section
+
+       width (flow blockage width in ft or m)
 
    * - SLUICECOEFADJ
      - r
      - 0.0 - 2.0
-     - Adjustment factor to raise or lower the sluice gate coefficient which is 0.33 for Y\ :sub:`u`/Z = 1.0
+     - Adjustment factor to raise or lower the
+
+       sluice gate coefficient which is 0.33
+
+       for Y\ :sub:`u`/Z = 1.0
 
    * - ORIFICECOEFADJ
      - r
      - 0.0 - 2.0
-     - Adjustment factor to raise or lower the orifice flow coefficient which is 0.80 for Y\ :sub:`u`/Z = 1.0
+     - Adjustment factor to raise or lower
+
+       the orifice flow coefficient which
+
+       is 0.80 for Y\ :sub:`u`/Z = 1.0
 
    * - COEFFWEIRB
      - r
      - 2.65 - 3.21
-     - Weir coefficient for flow over the bridge deck.
+     - Weir coefficient for flow over the bridge
+
+       deck.
        For metric: COEFFWIERB x 0.552
 
    * - WINGWALL_ANGLE
      - r
      - 30⁰ - 60⁰
-     - Angle the wingwall makes with the abutment perpendicular to the flow
+     - Angle the wingwall makes with the
+
+       abutment perpendicular to the flow
 
    * - PHI_ANGLE
      - r
      - 0⁰ - 45⁰
-     - Angle the flow makes with the bridge alignment perpendicular to the flow
+     - Angle the flow makes with the bridge
+
+       alignment perpendicular to the flow
 
    * - LBTOEABUT
      - r
      - ELEVATION
-     - Toe elevation of the left abutment (ft or m)
+     - Toe elevation of the left abutment
+
+       (ft or m)
 
    * - RBTOEABUT
      - r
      - ELEVATION
-     - Toe elevation of the right abutment (ft or m)
+     - Toe elevation of the right abutment
+
+       (ft or m)
 
    * -
      -
      -
      -
 
-   * - \* If the coefficient is assigned 1.0, that bridge coefficient is either not important or has no effect.
+   * - \* If the coefficient is assigned
+
+       1.0, that bridge coefficient is either
+
+       not important or has no effect.
      -
      -
      -
