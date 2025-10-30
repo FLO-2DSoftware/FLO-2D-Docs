@@ -96,28 +96,26 @@ Typical overland flow roughness values (Manning’s n coefficients) are shown in
 
    |Chapte002|
 
-   *Figure 34.
-   Overland Flow Routing Subroutine Flow Chart.*
+*Figure 34.
+Overland Flow Routing Subroutine Flow Chart.*
 
-   Streets serving as conveyance features are important for distributing the flow to other project areas.
-   Streets can be modeled either as 1-D rectangular channels or as impervious grid elements with low n-values.
-   If the two or more grid elements fit inside a street because the grid elements are 10 ft square or less, then assigning appropriate elevations and
-   n-values to the grid elements will enable street flow.
-   These street elements can be assigned with shape files either with QGIS plug-in tool or with the GDS (Figure 35).
-   To make the floodplain elements represent the street:
+Streets serving as conveyance features are important for distributing the flow to other project areas.
+Streets can be modeled either as 1-D rectangular channels or as impervious grid elements with low n-values.
+If the two or more grid elements fit inside a street because the grid elements are 10 ft square or less, then assigning appropriate elevations and
+n-values to the grid elements will enable street flow.
+These street elements can be assigned with shape files either with QGIS plug-in tool or with the GDS (Figure 35).
+To make the floodplain elements represent the street:
 
-- Assign n-values in an acceptable range for street irregularities, breaks-in-slope, unsteady and non-uniform flow (0.02 to 0.035);
+    - Assign n-values in an acceptable range for street irregularities, breaks-in-slope, unsteady and non-uniform flow (0.02 to 0.035);
 
-- Select a spatially variable limiting Froude number in the range from 1.5 to 2.5;
+    - Select a spatially variable limiting Froude number in the range from 1.5 to 2.5;
 
-- Review and adjust the street profile.
+    - Review and adjust the street profile.
 
-..
-
-   To adjust the street profile, there are two GDS tools: 1) Interpolate elevations downslope and for the street crown.
-   It will also assign minimum curb elevations to the floodplain elevations outside the street.
-   2) Draw a polyline and interpolate the elevations using the profile tool.
-   For more street editing options and details see the GDS manual or the street editing white paper.
+To adjust the street profile, there are two GDS tools: 1) Interpolate elevations downslope and for the street crown.
+It will also assign minimum curb elevations to the floodplain elevations outside the street.
+2) Draw a polyline and interpolate the elevations using the profile tool.
+For more street editing options and details see the GDS manual or the street editing white paper.
 
 **Storm Drains**
 
