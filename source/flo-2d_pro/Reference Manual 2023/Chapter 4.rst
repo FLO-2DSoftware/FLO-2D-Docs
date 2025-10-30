@@ -1747,19 +1747,21 @@ the turbulent stresses.
 If the flow is controlled primarily by the viscous stress, it will result in lower velocities.
 Conversely, if the viscosity and yield stresses are small, the turbulent stress will dominate, and the velocities will be higher.
 
-   To delineate the role of turbulent and dispersive forces in sand and water mixtures, Hashimoto (1997) developed simplified criteria involving only
-   flow depth d and sediment size D\ :sub:`i`.
-   When d/D\ :sub:`i` < 30, the intergranular forces are dominant.
-   If d/D\ :sub:`i` > 100, inertial forces dominate.
-   In the range 30 < d/D\ :sub:`i` < 100 both forces play an important role in the momentum exchange.
-   It should be noted that sediment concentration is a critical factor that is not accounted for in this criterion.
+To delineate the role of turbulent and dispersive forces in sand and water mixtures, Hashimoto (1997) developed simplified criteria involving only
+flow depth d and sediment size D\ :sub:`i`.
+When d/D\ :sub:`i` < 30, the intergranular forces are dominant.
+If d/D\ :sub:`i` > 100, inertial forces dominate.
+In the range 30 < d/D\ :sub:`i` < 100 both forces play an important role in the momentum exchange.
+It should be noted that sediment concentration is a critical factor that is not accounted for in this criterion.
 
-   *Figure 58.
-   Shear Stress as a Function of Shear Rate for Fluid Deformation Models.*
+.. image:: img/Chapter4/Chapte111.png
 
-   To define all the shear stress terms for use in the FLO-2D model, the following approach was taken.
-   By analogy, from the work of Meyer-Peter and Müller (1948) and Einstein (1950), the shear stress relationship is depth integrated and rewritten in the
-   following form as a dimensionless slope:
+*Figure 58.
+Shear Stress as a Function of Shear Rate for Fluid Deformation Models.*
+
+To define all the shear stress terms for use in the FLO-2D model, the following approach was taken.
+By analogy, from the work of Meyer-Peter and Müller (1948) and Einstein (1950), the shear stress relationship is depth integrated and rewritten in the
+following form as a dimensionless slope:
 
 *S f = S y + S v + S t d*
 
