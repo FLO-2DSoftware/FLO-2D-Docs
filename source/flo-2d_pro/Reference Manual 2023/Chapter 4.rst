@@ -2768,7 +2768,7 @@ Figure 99 displays the roof element elevations prior to interpolation.
 *Figure 97.
 Roof Element Elevation Editing Tab.*
 
-.. image:: img/Chapter4/Chapte135.png
+.. image:: img/Chapter4/Chapte134.png
 
 *Figure 98.
 Selecting the Two Cornerstone Grid Elements to Interpolate the Roof Slope.*
