@@ -2177,7 +2177,7 @@ lower curve is applied in the FLO-2D model.
 *Figure 70.
 Vulnerability Curves for Building Subject to Collapse.*
 
-   The vulnerability curves for the BOR mobile homes and buildings with foundations were regressed by digitizing Figure 67 for the delineation between
+The vulnerability curves for the BOR mobile homes and buildings with foundations were regressed by digitizing Figure 67 for the delineation between
    the High Danger and the
 
    Judgment Zones.
