@@ -119,48 +119,46 @@ For more street editing options and details see the GDS manual or the street edi
 
 **Storm Drains**
 
-   *Figure 35.
-   Editing Grid Elements to Represent Streets.*
+*Figure 35.
+Editing Grid Elements to Represent Streets.*
 
-   Some of the floodplain or watershed depression storage defined by the DTM point data set is lost in the upscale averaging of the discretized FLO-2D
-   grid surface.
-   This depression storage accuracy can be retained by generating a depth-volume storage rating table for each grid element.
-   The GDS will automatically create the rating table if there are sufficient DTM points for a rating table (e.g. a threshold of 20 points or more are
-   required depending on the topographic setting of the domain).
-   An OUTRC.DAT file lists the potential storage for each cell.
-   The algorithm divides the grid element in subcells where the storage volume is calculated as a function of the stage above the lowest DTM point
-   (Figure 36).
-   At runtime the FLO-2D model will compute a flow depth based on the storage volume from the rating table.
-   As the cell depression volume fills and eventually spills to other grid elements, the storage retention is infiltrated.
-   The unique attributes of this routine to improve shallow flow runoff are:
+Some of the floodplain or watershed depression storage defined by the DTM point data set is lost in the upscale averaging of the discretized FLO-2D
+grid surface.
+This depression storage accuracy can be retained by generating a depth-volume storage rating table for each grid element.
+The GDS will automatically create the rating table if there are sufficient DTM points for a rating table (e.g. a threshold of 20 points or more are
+required depending on the topographic setting of the domain).
+An OUTRC.DAT file lists the potential storage for each cell.
+The algorithm divides the grid element in subcells where the storage volume is calculated as a function of the stage above the lowest DTM point
+(Figure 36).
+At runtime the FLO-2D model will compute a flow depth based on the storage volume from the rating table.
+As the cell depression volume fills and eventually spills to other grid elements, the storage retention is infiltrated.
+The unique attributes of this routine to improve shallow flow runoff are:
 
-- At runtime, the flow depth is based on the stage-volume rating table until the cell is filled.
+    - At runtime, the flow depth is based on the stage-volume rating table until the cell is filled.
 
-- A minimum number of DTM points within each grid element are required to assign the storage rating table; otherwise the model uses the TOL value for
-  the depression storage.
+    - A minimum number of DTM points within each grid element are required to assign the storage rating table; otherwise the model uses the TOL value for
+      the depression storage.
 
-- The rating table is created only for those grid cells that do not contain a street or channel or that have an area reduction factor (ARF) less than
-  0.5.
+    - The rating table is created only for those grid cells that do not contain a street or channel or that have an area reduction factor (ARF) less than
+      0.5.
 
-- If a grid element has a rating table, the cell elevation will be equal to the lowest DTM point used in the calculation of the rating table.
+    - If a grid element has a rating table, the cell elevation will be equal to the lowest DTM point used in the calculation of the rating table.
 
-..
+For a complete discussion of this grid element rating table stage-volume tool, refer to the GDS manual.
 
-   For a complete discussion of this grid element rating table stage-volume tool, refer to the GDS manual.
+*Figure 36.
+Stage-Volume Rating Table for Assigning Flow Depths.*
 
-   *Figure 36.
-   Stage-Volume Rating Table for Assigning Flow Depths.*
-
-   Some FLO-2D projects have been modeled using grid elements inside of the channel.
-   In this case, the channel component is not used and instead the FLO-2D grid system is draped over the channel portion of the topography.
-   While these projects have been conducted with some success, there are several modeling concerns that should be addressed.
-   The FLO-2D model was developed to be able to exchange 1-D channel overbank discharge with the floodplain grid elements.
-   For this reason, the model works well on large flood events and large grid elements.
-   When small grid elements are used inside of a channel with confined flow and large discharges and flow depths, the model may run slow.
-   In addition, there will be zero water surface slope between some grid elements.
-   It should be noted that the application of the Manning’s equation for uniform open channel flow to compute the friction slope is no longer valid as
-   the depth average velocity approaches zero (ponded flow condition).
-   The resulting water surface elevations can be accurately predicted but will display some variation across the channel.
+Some FLO-2D projects have been modeled using grid elements inside of the channel.
+In this case, the channel component is not used and instead the FLO-2D grid system is draped over the channel portion of the topography.
+While these projects have been conducted with some success, there are several modeling concerns that should be addressed.
+The FLO-2D model was developed to be able to exchange 1-D channel overbank discharge with the floodplain grid elements.
+For this reason, the model works well on large flood events and large grid elements.
+When small grid elements are used inside of a channel with confined flow and large discharges and flow depths, the model may run slow.
+In addition, there will be zero water surface slope between some grid elements.
+It should be noted that the application of the Manning’s equation for uniform open channel flow to compute the friction slope is no longer valid as
+the depth average velocity approaches zero (ponded flow condition).
+The resulting water surface elevations can be accurately predicted but will display some variation across the channel.
 
  4.3 Channel Flow
  ----------------
