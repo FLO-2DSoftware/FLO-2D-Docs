@@ -819,62 +819,133 @@ Typical hydraulic conductivity, porosity and soil suction parameters are present
 Green-Ampt Infiltration - Hydraulic Conductivity and Porosity.*
 
 .. list-table::
-   :widths: 100
+   :widths: 40 15 15 15 15
    :header-rows: 0
 
 
-   * - Classification    | (in/hr)\ :sup:`1` | (in/hr)\ :sup:`2` | (in/hr)\ :sup:`3`   | Porosity\ :sup:`4`
+   * - Classification
+     - (in/hr)\ :sup:`1`
+     - (in/hr)\ :sup:`2`
+     - (in/hr)\ :sup:`3`
+     - Porosity\ :sup:`4`
 
-   * - sand and loamy    | 1.20              | 1.21 - 4.14       | 2.41 - 8.27         | 0.437sand              |                   |                   |
-       |
+   * - sand and loamy
+     - 1.20
+     - 1.21 - 4.14
+     - 2.41 - 8.27
+     - 0.437sand
 
-   * - sandy loam        | 0.40              | 0.51              | 1.02                | 0.437
+   * - sandy loam
+     - 0.40
+     - 0.51
+     - 1.02
+     - 0.437
 
-   * - loam              | 0.25              | 0.26              | 0.52                | 0.463
+   * - loam
+     - 0.25
+     - 0.26
+     - 0.52
+     - 0.463
 
-   * - silty loam        | 0.15              | 0.14              | 0.27                | 0.501
+   * - silty loam
+     - 0.15
+     - 0.14
+     - 0.27
+     - 0.501
 
-   * - silt              | 0.10              |                   |                     |
+   * - silt
+     - 0.10
+     -
+     -
+     -
 
-   * - sandy clay loam   | 0.06              | 0.09              | 0.17                | 0.398
+   * - sandy clay loam
+     - 0.06
+     - 0.09
+     - 0.17
+     - 0.398
 
-   * - clay loam         | 0.04              | 0.05              | 0.09                | 0.464
+   * - clay loam
+     - 0.04
+     - 0.05
+     - 0.09
+     - 0.464
 
-   * - silty clay loam   | 0.04              | 0.03              | 0.06                | 0.471
+   * - silty clay loam
+     - 0.04
+     - 0.03
+     - 0.06
+     - 0.471
 
-   * - sandy clay        | 0.02              | 0.03              | 0.05                | 0.430
+   * - sandy clay
+     - 0.02
+     - 0.03
+     - 0.05
+     - 0.430
 
-   * - silty clay        | 0.02              | 0.02              | 0.04                | 0.479
+   * - silty clay
+     - 0.02
+     - 0.02
+     - 0.04
+     - 0.479
 
-   * - clay              | 0.01              | 0.01              | 0.02                | 0.475
+   * - clay
+     - 0.01
+     - 0.01
+     - 0.02
+     - 0.475
 
-   * - very slow         |                   |                   | < 0.06\ :sup:`3`    |
+   * - very slow
+     -
+     -
+     - < 0.06\ :sup:`3`
+     -
 
-   * - slow              |                   |                   | 0.06-.20\ :sup:`3`  |
+   * - slow
+     -
+     -
+     - 0.06-.20\ :sup:`3`
+     -
 
-   * - moderately slow   |                   |                   | 0.20-0.63\ :sup:`3` |
+   * - moderately slow
+     -
+     -
+     - 0.20-0.63\ :sup:`3`
+     -
 
-   * - moderate          |                   |                   | 0.63-2.0\ :sup:`3`  |
+   * - moderate
+     -
+     -
+     - 0.63-2.0\ :sup:`3`
+     -
 
-   * - rapid             |                   |                   | 2.0-6.3\ :sup:`3`   |
+   * - rapid
+     -
+     -
+     - 2.0-6.3\ :sup:`3`
+     -
 
-   * - very rapid        |                   |                   | > 6.3\ :sup:`3`     |
+   * - very rapid
+     -
+     -
+     - > 6.3\ :sup:`3`
+     -
 
-   * - :sup:`1`\ Maricopa County Drainage Design Manual, 1992.:sup:`2`\ James, et.
-       al., Water Resources Bulletin Vol.
-       28, 1992.:sup:`3`\ W.
-       T.
-       Fullerton, Masters Thesis, CSU, 1983.:sup:`4`\ COE Technical Engineering and Design Guide, No.
-       19, 1997
+   * - :sup:`1`\ Maricopa County Drainage Design Manual, 1992.
 
+       :sup:`2`\ James, et.al., Water Resources Bulletin Vol.28, 1992.
+
+       :sup:`3`\ W.T. Fullerton, Masters Thesis, CSU, 1983.
+
+       :sup:`4`\ COE Technical Engineering and Design Guide, No.19, 1997
+
+*Table 7.
+Green-Ampt Infiltration - Soil Suction.*
 
 .. list-table::
    :widths: 100
    :header-rows: 0
 
-
-   * - **Table 7.
-       Green-Ampt Infiltration - Soil Suction.**
 
    * - Classification      |    (in)\ :sup:`1`  |    (in)\ :sup:`2`  |    (in)\ :sup:`3`
 
