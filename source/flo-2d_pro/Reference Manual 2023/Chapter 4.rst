@@ -447,103 +447,94 @@ A hydraulic structure can control the discharge between channel or floodplain gr
 several grid elements.
 For example, a culvert under an interstate highway may span several grid elements.
 
-   A hydraulic structure rating curve equation specifies discharge as a function of the headwater depth h:
+A hydraulic structure rating curve equation specifies discharge as a function of the headwater depth h:
 
-Q = a h\ :sup:`b`
+                    Q = a h\ :sup:`b`
 
-   where: (a) is a regression coefficient and (b) is a regression exponent.
-   More than one power regression relationship may be used for a hydraulic structure by specifying the maximum depth for which the relationship is valid.
-   For example, one depth relationship can represent culvert inlet control and a second relationship can be used for the outlet control.
-   In the case of bridge flow, blockage can be simulated with a second regression that has a zero coefficient for the height of the bridge low chord.
+where: (a) is a regression coefficient and (b) is a regression exponent.
 
-   By specifying a hydraulic structure rating table, the model interpolates between the depth and discharge increments to calculate the discharge.
-   A typical rating curve will start with zero depth and zero discharge and increase in non-uniform increments to the maximum expected discharge or
-   higher.
-   The rating table may be more accurate than the regression relationship if the regression is nonlinear on a log-log plot of the depth and discharge.
-   Flow blockage by debris can be simulated by setting the discharge equal to zero corresponding to a prescribed depth.
-   This blockage option may useful in simulating worst case mud and debris flow scenarios where bridges or culverts are located on alluvial fans.
-   Simulating blockage of a channel bridge or culvert can force all the discharge to flow overland.
+More than one power regression relationship may be used for a hydraulic structure by specifying the maximum depth for which the relationship is valid.
+For example, one depth relationship can represent culvert inlet control and a second relationship can be used for the outlet control.
+In the case of bridge flow, blockage can be simulated with a second regression that has a zero coefficient for the height of the bridge low chord.
 
-   In a simplified storm drain approach, multiple inflow nodes can be assigned to the same outflow element.
-   This will enable the cumulative storm drain discharge at the outlet to be assessed without conduit flow routing.
-   It is possible to assign a limiting conveyance capacity for the outlet node and this will limit the inlet discharge in a successive downstream inflow
-   to the conduit.
-   When the conveyance capacity is exceeded, the discharge in the first inlet to exceed the capacity and the inflow to the remaining downstream inlet
-   nodes is zero.
-   The actual storm drain component engine should be used for a detailed analysis of a storm drain system (see the Storm Drain Section below).
-   Refer to the White Paper Guidelines on Hydraulic Structures for additional details including pump simulation.
+By specifying a hydraulic structure rating table, the model interpolates between the depth and discharge increments to calculate the discharge.
+A typical rating curve will start with zero depth and zero discharge and increase in non-uniform increments to the maximum expected discharge or
+higher.
+The rating table may be more accurate than the regression relationship if the regression is nonlinear on a log-log plot of the depth and discharge.
+Flow blockage by debris can be simulated by setting the discharge equal to zero corresponding to a prescribed depth.
+This blockage option may useful in simulating worst case mud and debris flow scenarios where bridges or culverts are located on alluvial fans.
+Simulating blockage of a channel bridge or culvert can force all the discharge to flow overland.
 
-   Generalized culvert equations for inlet and outlet control are available for the hydraulic structures.
-   Equations to compute culvert discharge for round and rectangular culverts by evaluating inlet and outlet control have been implemented.
-   The culvert discharge will be computed using equations based on experimental and theoretical results from the U.S.
-   Department of Transportation procedures (Hydraulic Design of Highway Culverts; Publication Number FHWA-NHI-01-0260 revised May 2005) and these can
-   replace the FLO-2D model rating table or curve methods.
-   The equations include options for box and pipe culverts and will consider different entrance types for box culverts (wing wall flare 30 to 75 degrees,
-   wing wall flare 90 or 15 degrees and wing wall flare 0 degrees) and three entrance types for pipe culverts (square edge with headwall, socket end with
-   headwall and socket end projecting).
-   The highlights of this component are:
+In a simplified storm drain approach, multiple inflow nodes can be assigned to the same outflow element.
+This will enable the cumulative storm drain discharge at the outlet to be assessed without conduit flow routing.
+It is possible to assign a limiting conveyance capacity for the outlet node and this will limit the inlet discharge in a successive downstream inflow
+to the conduit.
+When the conveyance capacity is exceeded, the discharge in the first inlet to exceed the capacity and the inflow to the remaining downstream inlet
+nodes is zero.
+The actual storm drain component engine should be used for a detailed analysis of a storm drain system (see the Storm Drain Section below).
+Refer to the White Paper Guidelines on Hydraulic Structures for additional details including pump simulation.
 
-- Computes discharge through box or circular pipe culverts for various entrance conditions.
+Generalized culvert equations for inlet and outlet control are available for the hydraulic structures.
+Equations to compute culvert discharge for round and rectangular culverts by evaluating inlet and outlet control have been implemented.
+The culvert discharge will be computed using equations based on experimental and theoretical results from the U.S.
+Department of Transportation procedures (Hydraulic Design of Highway Culverts; Publication Number FHWA-NHI-01-0260 revised May 2005) and these can
+replace the FLO-2D model rating table or curve methods.
+The equations include options for box and pipe culverts and will consider different entrance types for box culverts (wing wall flare 30 to 75 degrees,
+wing wall flare 90 or 15 degrees and wing wall flare 0 degrees) and three entrance types for pipe culverts (square edge with headwall, socket end with
+headwall and socket end projecting).
+The highlights of this component are:
 
-- Computes both inlet and outlet control and the transition between them.
+    - Computes discharge through box or circular pipe culverts for various entrance conditions.
 
-- No rating curves or tables required.
+    - Computes both inlet and outlet control and the transition between them.
 
- 4.8 Storm Drain Modeling
- ------------------------
+    - No rating curves or tables required.
 
-   The full storm drain guidelines are available in the Manuals folder.
-   The FLO-2D surface water model has a dynamic exchange with the storm drain system.
-   FLO-2D will compute the surface water depth or elevations at storm drain cells and will compute the discharge inflow to the storm drain system based
-   on inlet geometry and water surface head.
-   The storm drain engine will then route the flow in the pipe network and compute potential return flow to the surface water system (Figure 45).
-   Storm drain engine was originally based on the EPA SWMM Model 5.0, but through extensive code enhancements, the FLO-2D storm drain engine represents a
-   completely new model.
-   The general approach to the applying the storm drain component is:
+4.8 Storm Drain Modeling
+------------------------
 
-- Storm Drain GUI interface (SWMM GUI) is called by the GDS to locate and develop the storm drain system.
+The full storm drain guidelines are available in the Manuals folder.
+The FLO-2D surface water model has a dynamic exchange with the storm drain system.
+FLO-2D will compute the surface water depth or elevations at storm drain cells and will compute the discharge inflow to the storm drain system based
+on inlet geometry and water surface head.
+The storm drain engine will then route the flow in the pipe network and compute potential return flow to the surface water system (Figure 45).
+Storm drain engine was originally based on the EPA SWMM Model 5.0, but through extensive code enhancements, the FLO-2D storm drain engine represents a
+completely new model.
+The general approach to the applying the storm drain component is:
 
-- GDS automatically develops the required SWMMFLO.DAT based on the SWMM.inp data file.
+    - Storm Drain GUI interface (SWMM GUI) is called by the GDS to locate and develop the storm drain system.
 
-- User defines the storm drain geometry in the GDS dialog box.
+    - GDS automatically develops the required SWMMFLO.DAT based on the SWMM.inp data file.
 
-..
+    - User defines the storm drain geometry in the GDS dialog box.
 
-   *Figure 45.
-   Storm Drain Layout in the GDS with a Background Image.*
+*Figure 45.
+Storm Drain Layout in the GDS with a Background Image.*
 
-   The surface water routing model and storm drain model share the same computational timestep.
-   FLO-2D is the host model, and computes inlet discharge based on the type of inlet and either weir or orifice flow.
-   The storm drain model accepts the inlet discharge and performs the conduit routing and the potential return flow to the surface water through either
-   inlets, outfalls or popped manhole covers.
+The surface water routing model and storm drain model share the same computational timestep.
+FLO-2D is the host model, and computes inlet discharge based on the type of inlet and either weir or orifice flow.
+The storm drain model accepts the inlet discharge and performs the conduit routing and the potential return flow to the surface water through either
+inlets, outfalls or popped manhole covers.
 
-   The FLO-2D Storm Drain Guidelines manual is a companion reference document that describes the model integration and explains the data input.
-   The basic storm drain model development procedure is:
+The FLO-2D Storm Drain Guidelines manual is a companion reference document that describes the model integration and explains the data input.
+The basic storm drain model development procedure is:
 
 i.   Develop and run a basic FLO-2D overland flow model.
 
-ii.
-Open the GDS and call the Storm Drain model GUI (SWMM GUI).
+ii.  Open the GDS and call the Storm Drain model GUI (SWMM GUI).
 
-iii.
-Develop a storm drain network with the provided SWMM GUI or one of any number of other associated external SWMM software GUIs.
-iv.
-GDS automatically creates the required FLO-2D interface data file when the GUI is closed and sets the storm drain switch to “ON”.
+iii. Develop a storm drain network with the provided SWMM GUI or one of any number of other associated external SWMM software GUIs.
+iv.  GDS automatically creates the required FLO-2D interface data file when the GUI is closed and sets the storm drain switch to “ON”.
 
-v.  Assign the storm drain inlet geometry and coefficients in the GDS dialog box.
+v.   Assign the storm drain inlet geometry and coefficients in the GDS dialog box.
 
-vi.
-Run FLO-2D model with the storm drain component.
-vii.
-Review the results in the SWMM.rpt file and graphically in the SWMM GUI.
+vi.  Run FLO-2D model with the storm drain component.
+vii. Review the results in the SWMM.rpt file and graphically in the SWMM GUI.
 
-..
+viii.Add other FLO-2D model components and details such as channels, buildings and levees.
 
-   viii.
-   Add other FLO-2D model components and details such as channels, buildings and levees.
-
- 4.9 Street Flow
- ---------------
+4.9 Street Flow
+---------------
 
    Street flow as shallow flow in rectangular channels with a curb height using the same routing algorithm as for the 1-D rectangular channels.
    The flow direction, street width and roughness are specified for each street section within an element.
