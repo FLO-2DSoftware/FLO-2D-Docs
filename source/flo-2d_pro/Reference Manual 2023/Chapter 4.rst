@@ -171,7 +171,7 @@ The resulting water surface elevations can be accurately predicted but will disp
  ----------------
 
 The full channel guidelines are in the Manuals folder.
-Channel flow is simulated as onedimensional in the downstream direction.
+Channel flow is simulated as one-dimensional in the downstream direction.
 Average flow hydraulics of velocity and depth define the discharge between channel grid elements.
 Secondary currents, dispersion and super elevation in channel bends are not modeled with the 1-D channel component.
 The governing equations of continuity and momentum were presented in Section 2.1.
@@ -193,6 +193,8 @@ The channel interacts with the bank elements to share discharge to the floodplai
 Each bank can have a unique elevation.
 If the two bank elevations are different in the CHAN.DAT file, the model automatically splits the channel into two elements even if the channel would
 fit into one grid element.
+
+.. image:: img/Chapter4/Chapte1.png
 
 *Figure 37.
 Channel Extension Over Several Grid Elements.*
