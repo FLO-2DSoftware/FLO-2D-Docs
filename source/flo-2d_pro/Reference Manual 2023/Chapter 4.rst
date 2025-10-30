@@ -2797,17 +2797,17 @@ Q = C \* A \* (2.*g*DEPTH)\ :sup:`0.5`
 
 where:
 
-C = coefficient that ranges from 0.62 to 0.72
+    C = coefficient that ranges from 0.62 to 0.72
 
-A = flow area of the opening
+    A = flow area of the opening
 
-g = acceleration due to gravity (32.2 fps or 9.81 m/s)
+    g = acceleration due to gravity (32.2 fps or 9.81 m/s)
 
-DEPTH = flow depth on orifice (cell flow depth)
+    DEPTH = flow depth on orifice (cell flow depth)
 
-   The hydraulic structure data file is organized as follows:
+The hydraulic structure data file is organized as follows:
 
-   HYSTRUC.DAT file example
+HYSTRUC.DAT file example
 
 S. Downspoutname 0 1 22365 21991 0 0 0 0
 
