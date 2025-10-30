@@ -436,6 +436,8 @@ The dam geometry parameters (Figure 44) associated with a breach erosion failure
 
         Maximum Breach Width
 
+.. image:: img/Chapter4/Chapte104.png
+
 *Figure 44.
 Breach Failure Geometry. (Teton Dam Failure 1976 USBR).*
 
