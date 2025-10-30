@@ -2809,142 +2809,182 @@ The hydraulic structure data file is organized as follows:
 
 HYSTRUC.DAT file example
 
-S. Downspoutname 0 1 22365 21991 0 0 0 0
+S Downspoutname 0 1 22365 21991 0 0 0 0
 
-T. 0 0
+ T     0     0
 
-..
+ T     0.25 1.0
 
-   T 0.25 1.0
+ T     0.5  2.0
 
-   T 0.5 2.0
+ T     1    3.5
 
-   T 1 3.5
+ T     5    5.5
 
-   T 5 5.5
+In the S-line above, the data includes a downspout name, floodplain or channel element (floodplain = 0), rating curve or table (rating table = 1),
+inlet and outlet cell number, and 4 additional controls that not required.
+The rating table assignment should begin with zero depth and zero discharge and the remaining T-lines are depth and discharge can be based on the
+above orifice equation.
+This data can be entered graphically in the GDS.
 
-   In the S-line above, the data includes a downspout name, floodplain or channel element (floodplain = 0), rating curve or table (rating table = 1),
-   inlet and outlet cell number, and 4 additional controls that not required.
-   The rating table assignment should begin with zero depth and zero discharge and the remaining T-lines are depth and discharge can be based on the
-   above orifice equation.
-   This data can be entered graphically in the GDS.
+.. image:: img/Chapter4/Chapte042.jpg
 
-   |Chapte042|
+*Figure 101.
+Downspout Hydraulic Structure as Brown Elements in the Upper Right Corner.*
 
-   *Figure 101.
-   Downspout Hydraulic Structure as Brown Elements in the Upper Right Corner.*
+The hydraulic structure editor dialog window for the downspout inlet and outlets shown in Figure 101 is displayed in Figure 102.
+Note that the downspout inlet and outlet elements do not have to be contiguous.
+Any number of downspouts can be simulated in any location on the building roof.
 
-   The hydraulic structure editor dialog window for the downspout inlet and outlets shown in Figure 101 is displayed in Figure 102.
-   Note that the downspout inlet and outlet elements do not have to be contiguous.
-   Any number of downspouts can be simulated in any location on the building roof.
+.. image:: img/Chapter4/Chapte043.jpg
 
-|Chapte043|
-
-   *Figure 102.
-   Hydraulic Structure Dialog Box with Entered Downspout Data.*
+*Figure 102.
+Hydraulic Structure Dialog Box with Entered Downspout Data.*
 
 Verification Testing of the Building Roof Runoff Enhancements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   The building runoff enhancements were tested in two projects.
-   Since both projects showed an identical response on different scales, only the results of the small scale, more detailed project will be presented.
-   Several tests were developed to verify the roof runoff computations.
-   These include:
+The building runoff enhancements were tested in two projects.
+Since both projects showed an identical response on different scales, only the results of the small scale, more detailed project will be presented.
+Several tests were developed to verify the roof runoff computations.
+These include:
 
-- Rainfall accumulation on a flat roof
+    - Rainfall accumulation on a flat roof
 
-- Rainfall runoff movement on sloped roof
+    - Rainfall runoff movement on sloped roof
 
-- Parapet wall overtopping
+    - Parapet wall overtopping
 
-- Downspout discharge to the ground
+    - Downspout discharge to the ground
 
-..
+In the first test, three inches of rain is applied to the project in two hours.
+The project has buildings, walls, infiltration and storm drains.
+To focus on the building with the assigned downspout, the storm drain component was turned off.
+Only the building discussed in this document will be reviewed.
+The simulation was terminated after the rainfall ended after two hours.
+The flat roof elevation was 1280.00 and after 2 hours, the computed final roof flow depths results in a uniform water surface elevation of 1280.25 on
+all the elements since there is no outlet (Figure 103) using the FLO-2D Maxplot map program).
 
-   In the first test, three inches of rain is applied to the project in two hours.
-   The project has buildings, walls, infiltration and storm drains.
-   To focus on the building with the assigned downspout, the storm drain component was turned off.
-   Only the building discussed in this document will be reviewed.
-   The simulation was terminated after the rainfall ended after two hours.
-   The flat roof elevation was 1280.00 and after 2 hours, the computed final roof flow depths results in a uniform water surface elevation of 1280.25 on
-   all the elements since there is no outlet (Figure 103) using the FLO-2D Maxplot map program).
+The sloped roof test is designed to predict the rainfall runoff flow to the downspout.
+The downspout is in grid element 22365 (upper right corner of the building NE) and the entire roof slopes to this location.
+Most of the roof has a slope of 0.001 or 0.02 ft per 20 ft grid element.
 
-   The sloped roof test is designed to predict the rainfall runoff flow to the downspout.
-   The downspout is in grid element 22365 (upper right corner of the building NE) and the entire roof slopes to this location.
-   Most of the roof has a slope of 0.001 or 0.02 ft per 20 ft grid element.
+The slope in the final few grid elements in the NE corner of the roof are a little steeper.
+In this case, the parapet walls are one foot high and since the maximum water surface elevation does not exceed 1281, there is no flow overtopping the
+parapet walls.
+The maximum water surface elevation is shown in Figure 104.
+Note that all the roof maximum water surface elevations are equal, but the maximum flow depths vary with the roof elevation and the deepest depth is
+predicted at the downspout element.
+The downspout outlet element 21990 has the same water surface elevation and small depth in both simulations.
 
-   The slope in the final few grid elements in the NE corner of the roof are a little steeper.
-   In this case, the parapet walls are one foot high and since the maximum water surface elevation does not exceed 1281, there is no flow overtopping the
-   parapet walls.
-   The maximum water surface elevation is shown in Figure 104.
-   Note that all the roof maximum water surface elevations are equal, but the maximum flow depths vary with the roof elevation and the deepest depth is
-   predicted at the downspout element.
-   The downspout outlet element 21990 has the same water surface elevation and small depth in both simulations.
+.. image:: img/Chapter4/Chapte044.png
 
-|Chapte044|
+*Figure 103.
+Total Rainfall (3 inches) Accumulated on a Flat Roof.*
 
-   *Figure 103.
-   Total Rainfall (3 inches) Accumulated on a Flat Roof.*
+Cells 22365 and 21990 will be the downspout inlet and outlet respectively
 
-   Cells 22365 and 21990 will be the downspout inlet and outlet respectively
+.. image:: img/Chapter4/Chapte135.png
 
-   *Figure 104.
-   Maximum Flow Depth and Water Surface Elevation on a Sloped Roof.*
+*Figure 104.
+Maximum Flow Depth and Water Surface Elevation on a Sloped Roof.*
 
-   (Compare the Inlet and Outlet Maximum WS Elevations)
+(Compare the Inlet and Outlet Maximum WS Elevations)
 
-   In the third simulation, the parapet wall was lowered by 0.75 ft to 1280.25 in the LEVEE.DAT file for the downspout inlet grid element 22365.
-   During the simulation the maximum water surface elevation exceeds the parapet wall elevation for the downspout inlet element (22365 NE flow direction
-   5) and overtops the wall (Figure 105).
-   Compare this grid element maximum water surface elevation and flow depth in Figure 104 and note that they are lower because the parapet wall is
-   overtopped and some rainfall storage is discharged to the ground.
-   Any number of parapet wall cells (levee elements and the blocked direction) can be overtopped.
+In the third simulation, the parapet wall was lowered by 0.75 ft to 1280.25 in the LEVEE.DAT file for the downspout inlet grid element 22365.
+During the simulation the maximum water surface elevation exceeds the parapet wall elevation for the downspout inlet element (22365 NE flow direction
+5) and overtops the wall (Figure 105).
+Compare this grid element maximum water surface elevation and flow depth in Figure 104 and note that they are lower because the parapet wall is
+overtopped and some rainfall storage is discharged to the ground.
+Any number of parapet wall cells (levee elements and the blocked direction) can be overtopped.
 
-   *Figure 105.
-   Maximum Flow Depth (Sloped Roof with Parapet wall Being Overtopped).*
+.. image:: img/Chapter4/Chapte136.png
 
-   The overtopping discharge is reported below from the file LEVOVERTOP.OUT.
-   The discharge is reported as negative representing flow out of the grid element.
+*Figure 105.
+Maximum Flow Depth (Sloped Roof with Parapet wall Being Overtopped).*
 
-   LEVEE OVERTOPPING DISCHARGE (CFS OR CMS): POSITIVE DISCHARGE REPRESENTS INFLOW TO NODE
+The overtopping discharge is reported below from the file LEVOVERTOP.OUT.
+The discharge is reported as negative representing flow out of the grid element.
 
-   LEVEE ELEMENTS WITH NO OVERTOP DISCHARGE ARE NOT REPORTED
+LEVEE OVERTOPPING DISCHARGE (CFS OR CMS): POSITIVE DISCHARGE REPRESENTS INFLOW TO NODE
 
-   DISCHARGE IS REPORTED BY DIRECTION
+LEVEE ELEMENTS WITH NO OVERTOP DISCHARGE ARE NOT REPORTED
 
-   GRID ELEMENT TIME TOTAL DISCHARGE N E S W NE SE SW NW
+DISCHARGE IS REPORTED BY DIRECTION
 
-   22365 3.30 -0.02 0.00 0.00 0.00 0.00 -0.02 0.00 0.00 0.00
+GRID ELEMENT TIME TOTAL DISCHARGE N E S W NE SE SW NW
 
-   3.40 -0.06 0.00 0.00 0.00 0.00 -0.06 0.00 0.00 0.00 3.50 -0.09 0.00 0.00 0.00 0.00 -0.09 0.00 0.00 0.00 3.60 -0.17 0.00 0.00 0.00 0.00 -0.17 0.00 0.00
-   0.00 3.70 -0.23 0.00 0.00 0.00 0.00 -0.23 0.00 0.00 0.00 3.80 -0.36 0.00 0.00 0.00 0.00 -0.36 0.00 0.00 0.00 3.90 -0.54 0.00 0.00 0.00 0.00 -0.54 0.00
-   0.00 0.00 4.00 -0.70 0.00 0.00 0.00 0.00 -0.70 0.00 0.00 0.00 4.10 -0.69 0.00 0.00 0.00 0.00 -0.69 0.00 0.00 0.00 4.20 -0.72 0.00 0.00 0.00 0.00 -0.72
-   0.00 0.00 0.00 4.30 -0.74 0.00 0.00 0.00 0.00 -0.74 0.00 0.00 0.00 4.40 -0.75 0.00 0.00 0.00 0.00 -0.75 0.00 0.00 0.00 4.50 -0.75 0.00 0.00 0.00 0.00
-   -0.75 0.00 0.00 0.00 4.60 -0.75 0.00 0.00 0.00 0.00 -0.75 0.00 0.00 0.00 4.70 -0.76 0.00 0.00 0.00 0.00 -0.76 0.00 0.00 0.00 4.80 -0.78 0.00 0.00 0.00
-   0.00 -0.78 0.00 0.00 0.00
+22365  3.30 -0.02 0.00 0.00 0.00 0.00 -0.02 0.00 0.00 0.00
 
-   4.90 -0.78 0.00 0.00 0.00 0.00 -0.78 0.00 0.00 0.00
+       3.40 -0.06 0.00 0.00 0.00 0.00 -0.06 0.00 0.00 0.00
 
-   PEAK Q 4.92 -0.79
+       3.50 -0.09 0.00 0.00 0.00 0.00 -0.09 0.00 0.00 0.00
 
-   5.00 -0.78 0.00 0.00 0.00 0.00 -0.78 0.00 0.00 0.00 5.10 -0.77 0.00 0.00 0.00 0.00 -0.77 0.00 0.00 0.00 5.20 -0.74 0.00 0.00 0.00 0.00 -0.74 0.00 0.00
-   0.00 5.30 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00 0.00 0.00 5.40 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00 0.00 0.00 5.50 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00
-   0.00 0.00 5.60 -0.70 0.00 0.00 0.00 0.00 -0.70 0.00 0.00 0.00 5.70 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00 0.00 0.00 5.80 -0.68 0.00 0.00 0.00 0.00 -0.68
-   0.00 0.00 0.00 5.90 -0.66 0.00 0.00 0.00 0.00 -0.66 0.00 0.00 0.00
+       3.60 -0.17 0.00 0.00 0.00 0.00 -0.17 0.00 0.00 0.00
 
-   6.00 -0.65 0.00 0.00 0.00 0.00 -0.65 0.00 0.00 0.00
+       3.70 -0.23 0.00 0.00 0.00 0.00 -0.23 0.00 0.00 0.00
 
-   The final test simulation combines the sloped roof with a downspout in grid element 22365.
-   The inlet (red oval) maximum water surface is lowered by the downspout water discharge as shown in Figure 106.
-   The downspout outlet element 21990 (blue oval) has an increased maximum water surface when compared with Figure 104 and Figure 105.
+       3.80 -0.36 0.00 0.00 0.00 0.00 -0.36 0.00 0.00 0.00
 
-   *Figure 106.
-   Maximum Flow Depth and Water Surface Elevation.
-   (Sloped Roof with a Downspout).*
+       3.90 -0.54 0.00 0.00 0.00 0.00 -0.54 0.00 0.00 0.00
 
-   The discharge out of the downspout is reported below from the HYDROSTRUCT.OUT file.
+       4.00 -0.70 0.00 0.00 0.00 0.00 -0.70 0.00 0.00 0.00
 
-   STRUCTURE OUTFLOW DISCHARGE
+       4.10 -0.69 0.00 0.00 0.00 0.00 -0.69 0.00 0.00 0.00
+
+       4.20 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00 0.00 0.00
+
+       4.30 -0.74 0.00 0.00 0.00 0.00 -0.74 0.00 0.00 0.00
+
+       4.40 -0.75 0.00 0.00 0.00 0.00 -0.75 0.00 0.00 0.00
+
+       4.50 -0.75 0.00 0.00 0.00 0.00 -0.75 0.00 0.00 0.00
+
+       4.60 -0.75 0.00 0.00 0.00 0.00 -0.75 0.00 0.00 0.00
+
+       4.70 -0.76 0.00 0.00 0.00 0.00 -0.76 0.00 0.00 0.00
+
+       4.80 -0.78 0.00 0.00 0.00 0.00 -0.78 0.00 0.00 0.00
+
+       4.90 -0.78 0.00 0.00 0.00 0.00 -0.78 0.00 0.00 0.00
+
+PEAK Q    4.92  -0.79
+
+       5.00 -0.78 0.00 0.00 0.00 0.00 -0.78 0.00 0.00 0.00
+
+       5.10 -0.77 0.00 0.00 0.00 0.00 -0.77 0.00 0.00 0.00
+
+       5.20 -0.74 0.00 0.00 0.00 0.00 -0.74 0.00 0.00 0.00
+
+       5.30 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00 0.00 0.00
+
+       5.40 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00 0.00 0.00
+
+       5.50 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00 0.00 0.00
+
+       5.60 -0.70 0.00 0.00 0.00 0.00 -0.70 0.00 0.00 0.00
+
+       5.70 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00 0.00 0.00
+
+       5.80 -0.68 0.00 0.00 0.00 0.00 -0.68 0.00 0.00 0.00
+
+       5.90 -0.66 0.00 0.00 0.00 0.00 -0.66 0.00 0.00 0.00
+
+       6.00 -0.65 0.00 0.00 0.00 0.00 -0.65 0.00 0.00 0.00
+
+The final test simulation combines the sloped roof with a downspout in grid element 22365.
+The inlet (red oval) maximum water surface is lowered by the downspout water discharge as shown in Figure 106.
+The downspout outlet element 21990 (blue oval) has an increased maximum water surface when compared with Figure 104 and Figure 105.
+
+.. image:: img/Chapter4/Chapte137.png
+
+*Figure 106.
+Maximum Flow Depth and Water Surface Elevation.
+(Sloped Roof with a Downspout).*
+
+The discharge out of the downspout is reported below from the HYDROSTRUCT.OUT file.
+
+STRUCTURE OUTFLOW DISCHARGE
 
    INFLOW AND OUTFLOW DISCHARGE MAY BE DIFFERENT IF STRUCTURE IS A LONG CULVERT OR IF OUTFLOW
 
