@@ -3940,22 +3940,22 @@ To assist in understanding the free surface bridge flow routine, some specific d
 Notes on the bridge configuration data:
 
 i.   ITYPE = 1-4 bridge configurations representing the type of constriction I through IV depending on abutment type shown in the Appendix figures.
-   The bridge type will be used to assign the various coefficients.
-   Refer also to Figures 17-16 through 17-23 beginning on page 480 of Chow (1959) or Figure 4.4 through 4.13 beginning on page 113 of Hamill (1999).
-   These two sets of figures are essentially the same but Hamill (1999) has a little more detail in some of the figures and for that reason, Hamill’s
-   (1999) figures has been reproduced in the Appendix.
+     The bridge type will be used to assign the various coefficients.
+     Refer also to Figures 17-16 through 17-23 beginning on page 480 of Chow (1959) or Figure 4.4 through 4.13 beginning on page 113 of Hamill (1999).
+     These two sets of figures are essentially the same but Hamill (1999) has a little more detail in some of the figures and for that reason, Hamill’s
+     (1999) figures has been reproduced in the Appendix.
 
-ii. The various coefficients are estimated from a linear interpolation between two points on the lines representing the bridge parameters and coefficient
-data in the Appendix plots.
-Typically, the lines in Appendix figures were divided into 8 to 12 segments to generate the digital data set.
+ii.  The various coefficients are estimated from a linear interpolation between two points on the lines representing the bridge parameters and coefficient
+     data in the Appendix plots.
+     Typically, the lines in Appendix figures were divided into 8 to 12 segments to generate the digital data set.
 
 iii. The bridge opening (BOPENING) is the width of the contracted cross-section between the top of banks.
 
 iv.  L\ :sub:`1-2` = distance upstream of the surveyed constricted cross-section (UPLENGTH12).
      This cross-section should be located upstream of the backwater effects of the bridge (up to several lengths of the bridge opening width).
 
-v. Refer to the Appendix figures for parameter definition such as the radius of the leading edge of the Type I abutment, length of the wingwall chamfer
-      for various three chamfer angles (30\ :sup:`o`, 45\ :sup:`o` and 60\ :sup:`o`), angle of bridge with respect to the flow, and angle of wingwall.
+v.   Refer to the Appendix figures for parameter definition such as the radius of the leading edge of the Type I abutment, length of the wingwall chamfer
+     for various three chamfer angles (30\ :sup:`o`, 45\ :sup:`o` and 60\ :sup:`o`), angle of bridge with respect to the flow, and angle of wingwall.
 
 Comments on the bridge coefficients:
 
