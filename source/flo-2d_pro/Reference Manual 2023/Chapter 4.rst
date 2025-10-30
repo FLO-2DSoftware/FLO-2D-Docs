@@ -3500,7 +3500,7 @@ where:
 
     A\ :sub:`1`, R\ :sub:`1` and A\ :sub:`2`, R\ :sub:`2` are the cross-section flow areas and hydraulic radiuses respectively (Figure 124).
 
-.. image:: img/Chapter4/Chapte137.png
+.. image:: img/Chapter4/Chapte138.png
 
 *Figure 124.
 Conceptual Bridge Plan and Profile with River Cross-sections.*
