@@ -3,37 +3,20 @@
 REFERENCES
 ==========
 
-Ackers, P.
-and W.R.
-White, 1973.
-“Sediment Transport: New Approach and Analysis,” J.
-of Hyd., ASCE, V.
-99, no.
-HY11, pp.
-2041-2060.
+Ackers, P. and W.R. White, 1973. “Sediment Transport: New Approach and Analysis,” J. of Hyd., ASCE, V. 99, no. HY11, pp. 2041-2060.
 
-Bagnold, R.A., 1954.
-"Experiments on a gravity-free dispersion of large solid spheres in a Newtonian fluid under shear," Proc.
-of the Royal Society of London, Series A, V.
-249, 235297.
+Bagnold, R.A., 1954. "Experiments on a gravity-free dispersion of large solid spheres in a Newtonian fluid under shear," Proc. of the Royal Society of London,
 
-Bureau of Reclamation, 1988.
-“Downstream Hazard Classification Guidelines”, ACER Technical Memorandum No.
-11, Denver, Colorado.
+Series A, V.249, 235297.
 
-Chen, C.L., 1976.
-"Urban storm runoff inlet hydrograph study." Prepared for the Dept.
-of Transportation, PRWG 106-2, Utah State University, Logan Utah.
+Bureau of Reclamation, 1988. “Downstream Hazard Classification Guidelines”, ACER Technical Memorandum No. 11, Denver, Colorado.
 
-Chow, V.T., 1959.
-Open-Channel Hydraulics, McGraw-Hill, NY.
+Chen, C.L., 1976. "Urban storm runoff inlet hydrograph study." Prepared for the Dept. of Transportation, PRWG 106-2, Utah State University, Logan Utah.
 
-Clausen, L., P.
-Clark, 1990.
-“The development of criteria for predicting dam break flood damages using modeling of historical dam failures,” Proc.
-Intl.
-Conf.
-on River Flood Hydraulics, W.
+Chow, V.T., 1959. Open-Channel Hydraulics, McGraw-Hill, NY.
+
+Clausen, L., P. Clark, 1990. “The development of criteria for predicting dam break flood damages using modeling of historical dam failures,” Proc. Intl. Conf. on
+River Flood Hydraulics, W.
 White (ed.), Wiley U.K., 369-380.
 
 Cunge, J.A., F.M.
@@ -81,10 +64,10 @@ FHWA-HIF-12-018.
 
 Federal Emergency Management Agency, 2003, “Guidelines and Specifications for Flood Hazard
 
-   Mapping Partners, Appendix G: Guidance for Alluvial Fan Flooding Analysis and
+Mapping Partners, Appendix G: Guidance for Alluvial Fan Flooding Analysis and
 
-   Mapping.” Fletcher, C.A.J., 1990.
-   *Computational Techniques for Fluid Dynamics, Volume I*, 2\ :sup:`nd` ed., Springer-Velag, New York.
+Mapping.” Fletcher, C.A.J., 1990.
+*Computational Techniques for Fluid Dynamics, Volume I*, 2\ :sup:`nd` ed., Springer-Velag, New York.
 
 FLO-2D, 2018.
 “Levee, Dam, and Wall Breach Guidelines.” Build No 18.
@@ -123,8 +106,7 @@ Hamill, L., 1999.
 
 Hashimoto, H., 1997.
 “A comparison between gravity flows of dry sand and sand-water mixtures,” *Recent Developments on Debris Flows*, Springer,
-A. Armanini and M.
-   Michiue (eds.), NY, NY.
+A. Armanini and M. Michiue (eds.), NY, NY.
 
 Henderson, F.
 M., 1966.
@@ -282,11 +264,9 @@ Div., ASCE.
 544-571.
 
 Pilotti, M., Melanesi, L., Ransi, R., 2016.
-“People and buildings vulnerability to floods in
-
-   Mountain Areas,” 13\ :sup:`th` Congress, Interpraevent Conf.
-   Proc., Lucerne, Switzerland, p.
-   791-8.
+“People and buildings vulnerability to floods in Mountain Areas,” 13\ :sup:`th` Congress, Interpraevent Conf.
+Proc., Lucerne, Switzerland, p.
+791-8.
 
 Ponce, S.M., 1989.
 *Engineering Hydrology*, Prentice Hall, Englewood Cliffs, New Jersey.
@@ -312,9 +292,7 @@ MacArthur, 1985.
 of the ASCE Spec.
 Conf.
 on Hydraulics and Hydrology in the Small Computer Age, V.
-2, 1334-
-
-   39.
+2, 1334-39.
 
 Schumm, S.A., 1977.
 *The Fluvial System*, John Wiley & Sons, Inc., New York, NY.
@@ -437,7 +415,4 @@ Fullerton, 1983.
 “A Theoretically Derived Sediment Transport Equation for Sand-Bed Channels in Arid Regions,” Proceedings of the D.
 B.
 Simons Symposium on Erosion and Sedimentation,
-R. M.
-   Li and P.
-   F.
-   Lagasse, eds., Colorado State University and ASCE.
+R. M. Li and P. F. Lagasse, eds., Colorado State University and ASCE.
