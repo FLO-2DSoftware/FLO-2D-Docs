@@ -1406,7 +1406,7 @@ The inflow node will have an assigned water inflow hydrograph.
 To avoid excessive scour downstream of the inflow node additional rigid grid elements can be assigned (R-lines in the SED.DAT file).
 These may be positioned for an alluvial fan simulation so that sediment transport equilibrium is achieved at or near the apex.
 
-.. image:: img/Chapter4/Chapte013.jpg
+.. image:: img/Chapter4/Chapte013.png
 
 *Figure 56.
 Inflow Node Locations.*
