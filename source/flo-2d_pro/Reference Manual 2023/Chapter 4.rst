@@ -1715,40 +1715,37 @@ depends on the mass density of the mixture ρ\ :sub:`m`, the Prandtl mixing leng
 sediment concentration C\ :sub:`v`.
 Bagnold (1954) defined the functional relationship f(ρ\ :sub:`m`, C\ :sub:`v`) in the above equation as:
 
- *1/3*
+.. math::
 
-   *f(*\ \ *m , Cv ) = ai* \ *m* \ *C\**  *- 1*\ 
+   f(\rho_m, C_v) = a_i\, \rho_m \left[ \left( \frac{C^{*}}{C_v} \right)^{1/3} - 1 \right]
 
-\ :sub:``\ \ *Cv*  
+where :math:`a_i` (∼ :math:`0.01`) is an empirical coefficient and :math:`C^{*}` is the maximum static volume concentration for the sediment particles. It should be noted that Takahashi (1979) found that the coefficient :math:`a_i` may vary over several orders of magnitude. Egashira et al. (1989) revised this relationship and suggested the following:
 
-   where a\ :sub:`i` (~ 0.01) is an empirical coefficient and C\ :sub:`\*` is the maximum static volume concentration for the sediment particles.
-   It should be noted that Takahashi (1979) found that the coefficient a\ :sub:`i` may vary over several orders of magnitude.
-   Egashira et al.
-   (1989) revised this relationship and suggested the following:
+.. math::
 
-   *1/3*
+   f(\rho_s, C_v) =
+   \left( \frac{\pi}{12} \right)^{1/3}
+   \left( \frac{6}{\pi} \right)^{1/3}
+   \sin^{2}\!\alpha_I \,
+   \rho_s \left( 1 - e_n^{2} \right) C_v^{1/3}
 
-*f(*\ \ *s , C\ v ) =* :sup:`` :sup:``\  :sup:`6 `\  sin\ *2* \ *I* \ *s (1- e\ n\ 2 ) C\ v\ 1/3*
+where the energy restitution coefficient e\ :sub:`n` after impact ranges 0.70 < e\ :sub:`n` < 0.85 for sands, α\ :sub:`I` is the average particle
+impact angle and ρ\ :sub:`s` is the mass density of sediment particles.
 
-*12* 
+The first two stress terms in the above quadratic rheological model are referred to as the Bingham shear stresses (Figure 58).
+The sum of the yield stress and viscous stress define the total shear stress of a cohesive mudflow in a viscous flow regime.
+The last term is the sum of the dispersive and turbulent shear stresses and defines an inertial flow regime for a mud flood.
+This term is a function of the square of the velocity gradient.
+A discussion of these stresses and their role in hyperconcentrated sediment flows can be found in Julien and O'Brien (1987, 1993).
 
-   where the energy restitution coefficient e\ :sub:`n` after impact ranges 0.70 < e\ :sub:`n` < 0.85 for sands, α\ :sub:`I` is the average particle
-   impact angle and ρ\ :sub:`s` is the mass density of sediment particles.
-
-   The first two stress terms in the above quadratic rheological model are referred to as the Bingham shear stresses (Figure 58).
-   The sum of the yield stress and viscous stress define the total shear stress of a cohesive mudflow in a viscous flow regime.
-   The last term is the sum of the dispersive and turbulent shear stresses and defines an inertial flow regime for a mud flood.
-   This term is a function of the square of the velocity gradient.
-   A discussion of these stresses and their role in hyperconcentrated sediment flows can be found in Julien and O'Brien (1987, 1993).
-
-   A mudflow model that incorporates only the Bingham stresses and ignores the inertial stresses assumes that the simulated flow is dominated by viscous
-   stresses.
-   This assumption is not universally appropriate because all mud floods and some mudflows are very turbulent with velocities as high as 25 fps (8 m/s).
-   Even mudflows with concentrations up to 40% by volume can be highly turbulent (O'Brien, 1986).
-   Depending on the fluid matrix properties, the viscosity and yield stresses for high sediment concentrations can still be relatively small compared to
-   the turbulent stresses.
-   If the flow is controlled primarily by the viscous stress, it will result in lower velocities.
-   Conversely, if the viscosity and yield stresses are small, the turbulent stress will dominate, and the velocities will be higher.
+A mudflow model that incorporates only the Bingham stresses and ignores the inertial stresses assumes that the simulated flow is dominated by viscous
+stresses.
+This assumption is not universally appropriate because all mud floods and some mudflows are very turbulent with velocities as high as 25 fps (8 m/s).
+Even mudflows with concentrations up to 40% by volume can be highly turbulent (O'Brien, 1986).
+Depending on the fluid matrix properties, the viscosity and yield stresses for high sediment concentrations can still be relatively small compared to
+the turbulent stresses.
+If the flow is controlled primarily by the viscous stress, it will result in lower velocities.
+Conversely, if the viscosity and yield stresses are small, the turbulent stress will dominate, and the velocities will be higher.
 
    To delineate the role of turbulent and dispersive forces in sand and water mixtures, Hashimoto (1997) developed simplified criteria involving only
    flow depth d and sediment size D\ :sub:`i`.
