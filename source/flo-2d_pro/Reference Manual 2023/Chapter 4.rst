@@ -2103,7 +2103,7 @@ GDS Data Entry for a MODFLOW Groundwater Simulation.*
 ----------------------
 
 In the FLO-2D model, the loss of flood storage due to buildings is simulated with area reduction factors (ARF values) that reduce the surface area of
-   a grid element (percentage).
+a grid element (percentage).
    A grid element may be totally blocked (ARF = 1) or partially blocked (ARF < 1).
    A group of grid elements together may constitute a large building such as a school or mall (Figure 65 a and b).
    In Figure 65 the grey grid elements represent total blockage while the yellow elements are partially blocked.
