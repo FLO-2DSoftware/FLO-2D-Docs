@@ -432,10 +432,7 @@ HY10, pp.
 Yang, C.T., 1996.
 Sediment Transport, Theory and Practice,” McGraw-Hill, New York, N.Y.
 
-Zeller, M.
-E.
-and W.
-T.
+Zeller, M.E. and W.T.
 Fullerton, 1983.
 “A Theoretically Derived Sediment Transport Equation for Sand-Bed Channels in Arid Regions,” Proceedings of the D.
 B.
