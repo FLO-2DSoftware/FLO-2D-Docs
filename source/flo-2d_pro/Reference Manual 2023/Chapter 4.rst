@@ -2114,45 +2114,43 @@ The flood flow will go around a totally blocked building.
 *Figure 65.
 Buildings with a FLO-2D Grid System and ARF Values Representing Buildings.*
 
-   During a flood event or a mud/debris flow, it is possible that a building could collapse and be removed.
-   There are number of ways for this to happen.
-   The flood dynamic forces or static pressure could simply knock the structure over, push it off the foundation, or rip it apart.
-   Scour and erosion could undermine the structure resulting a collapse into the flow.
-   Large rocks could impact the structure.
-   The integrity of the building structure could be compromised by getting wet.
-   In any case, the flooding could destroy the building and allow the flow to go through the previously occupied grid element(s).
+During a flood event or a mud/debris flow, it is possible that a building could collapse and be removed.
+There are number of ways for this to happen.
+The flood dynamic forces or static pressure could simply knock the structure over, push it off the foundation, or rip it apart.
+Scour and erosion could undermine the structure resulting a collapse into the flow.
+Large rocks could impact the structure.
+The integrity of the building structure could be compromised by getting wet.
+In any case, the flooding could destroy the building and allow the flow to go through the previously occupied grid element(s).
 
-   To predict the collapse of the building during flooding vulnerability curves can be applied.
-   An approach to predicting building collapse was undertaken by Pilotti, et al.
-   (2016) that is like the Bureau of Reclamation (BOR, 1988) application of vulnerability curves for people, vehicles and structures.
-   Pilotti (2016) considered a masonry building constructed with materials such as brick or stone bound together by mortar.
-   These types of building walls have low tensile strength and support the roof or upper story load.
-   During a flood the collapse of a wall can result in the entire destruction of the building.
+To predict the collapse of the building during flooding vulnerability curves can be applied.
+An approach to predicting building collapse was undertaken by Pilotti, et al.
+(2016) that is like the Bureau of Reclamation (BOR, 1988) application of vulnerability curves for people, vehicles and structures.
+Pilotti (2016) considered a masonry building constructed with materials such as brick or stone bound together by mortar.
+These types of building walls have low tensile strength and support the roof or upper story load.
+During a flood the collapse of a wall can result in the entire destruction of the building.
 
-   Building Vulnerability
+Building Vulnerability
 
-   Pilotti et al.
-   (2016) provides a rigorous mathematical formulation of the approach which includes the computation of the dynamic forces and pressures on a building
-   cell, the axial loading, the maximum bending moment and the resistive forces.
-   The final product is a set of vulnerability curves based on a maximum depth for a given velocity above which the building will fail (Figure 66).
-   This method is similar to BOR (1988) vulnerability curves for mobile homes and buildings with a foundation (Figure 67 and Figure 68).
-   Other building types and potential failure mechanisms could be considered to generate a series of vulnerability curves.
+Pilotti et al. (2016) provides a rigorous mathematical formulation of the approach which includes the computation of the dynamic forces and pressures on a building
+cell, the axial loading, the maximum bending moment and the resistive forces.
+The final product is a set of vulnerability curves based on a maximum depth for a given velocity above which the building will fail (Figure 66).
+This method is similar to BOR (1988) vulnerability curves for mobile homes and buildings with a foundation (Figure 67 and Figure 68).
+Other building types and potential failure mechanisms could be considered to generate a series of vulnerability curves.
 
-|Chapte016|
+.. image:: img/Chapter4/Chapte016.jpg
 
-   *Figure 66.
-   Vulnerability Curves.
-   (Pilotti et al., 2016).*
+*Figure 66.
+Vulnerability Curves. (Pilotti et al., 2016).*
 
-|Chapte017|
+.. image:: img/Chapter4/Chapte017.jpg
 
-   *Figure 67.
-   Vulnerability Curve for Mobile Homes (BOR, 1988).*
+*Figure 67.
+Vulnerability Curve for Mobile Homes (BOR, 1988).*
 
-|Chapte018|
+.. image:: img/Chapter4/Chapte018.jpg
 
-   *Figure 68.
-   Vulnerability Curves for Buildings with a Foundation (BOR, 1988).*
+*Figure 68.
+Vulnerability Curves for Buildings with a Foundation (BOR, 1988).*
 
    In the work of Pilotti et al (2016), a conservative approach was taken to generate the depth for a given flood velocity that would cause the building
    to collapse.
