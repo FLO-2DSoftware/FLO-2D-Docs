@@ -1585,56 +1585,59 @@ and the bulking factor.
 When examining parameters related to mudflows, it is important to identify the sediment concentration as a measure of weight or volume.
 The sediment concentration by volume C\ :sub:`v` is given by:
 
-        C\ :sub:`v` = volume of the sediment/(volume of water plus sediment) C\ :sub:`v` is related to the sediment concentration by weight C\ :sub:`w` by:
+        C\ :sub:`v` = volume of the sediment/(volume of water plus sediment)
 
-C\ :sub:`v` = C\ :sub:`w`\ γ/ {γ\ :sub:`s` - C\ :sub:`w`\ (γ\ :sub:`s` - γ)}
+C\ :sub:`v` is related to the sediment concentration by weight C\ :sub:`w` by:
 
-   where γ = specific weight of the water and γ\ :sub:`s` = specific weight of the sediment.
-   The sediment concentration can also be expressed in parts per million (ppm) by multiplying the concentration by weight C\ :sub:`w` by 10\ :sup:`6`.
-   The specific weight of the mudflow mixture γ\ :sub:`m` is a function of the sediment concentration by volume:
+                                             C\ :sub:`v` = C\ :sub:`w`\ γ/ {γ\ :sub:`s` - C\ :sub:`w`\ (γ\ :sub:`s` - γ)}
 
-γ\ :sub:`m` = γ + C\ :sub:`v`\ (γ\ :sub:`s` - γ)
+where γ = specific weight of the water and γ\ :sub:`s` = specific weight of the sediment.
+The sediment concentration can also be expressed in parts per million (ppm) by multiplying the concentration by weight C\ :sub:`w` by 10\ :sup:`6`.
+The specific weight of the mudflow mixture γ\ :sub:`m` is a function of the sediment concentration by volume:
 
-   Similarly the density of the mudflow mixture ρ\ :sub:`m` is given by:
+                                             γ\ :sub:`m` = γ + C\ :sub:`v`\ (γ\ :sub:`s` - γ)
 
-ρ\ :sub:`m` = ρ + C\ :sub:`v` (ρ\ :sub:`s` - ρ)
+Similarly the density of the mudflow mixture ρ\ :sub:`m` is given by:
 
-   and
+                                             ρ\ :sub:`m` = ρ + C\ :sub:`v` (ρ\ :sub:`s` - ρ)
 
-ρ\ :sub:`m` = γ\ :sub:`m` /g
+          and
 
-   where g is gravitational acceleration.
-   Finally, the total mixture volume of water and sediment can be determined by multiplying the water volume by the bulking factor.
-   The bulking factor is simply:
+                                             ρ\ :sub:`m` = γ\ :sub:`m` /g
 
-BF = 1/(1 - C\ :sub:`v`)
+where g is gravitational acceleration.
+Finally, the total mixture volume of water and sediment can be determined by multiplying the water volume by the bulking factor.
+The bulking factor is simply:
 
-   The bulking factor is 2.0 for a sediment concentration by volume of 50%.
-   A sediment concentration of 7% by volume for a conventional river bedload and suspended results in a bulking factor of 1.075 indicating that the flood
-   volume is 7.5% greater than if the flood was only water.
+                                            BF = 1/(1 - C\ :sub:`v`)
 
-   These basic relationships will be valuable when analyzing mudflow simulations.
-   Most mudflow studies require estimates of the sediment concentration by volume and the bulking factor to describe the magnitude of the event.
-   Average and peak sediment concentrations for the flood hydrograph are important variables for mitigation design.
+The bulking factor is 2.0 for a sediment concentration by volume of 50%.
+A sediment concentration of 7% by volume for a conventional river bedload and suspended results in a bulking factor of 1.075 indicating that the flood
+volume is 7.5% greater than if the flood was only water.
 
-   The full range of sediment flows span from water flooding to mud floods, mudflows and landslides.
-   The distinction between these flood events depends on sediment concentration measured either by weight or volume (Figure 57).
-   Sediment concentration by volume expressed as a percentage is the most used measure.
-   Table 11 lists the four different categories of hyperconcentrated sediment flows and their dominant flow characteristics.
-   This Table 11 was developed from the laboratory data using actual mudflow deposits.
-   Some variation in the delineation of the different flow classifications should be expected based on the sample geology.
+These basic relationships will be valuable when analyzing mudflow simulations.
+Most mudflow studies require estimates of the sediment concentration by volume and the bulking factor to describe the magnitude of the event.
+Average and peak sediment concentrations for the flood hydrograph are important variables for mitigation design.
 
-   *Figure 57.
-   Classification of Hyperconcentrated Sediment Flows.*
+The full range of sediment flows span from water flooding to mud floods, mudflows and landslides.
+The distinction between these flood events depends on sediment concentration measured either by weight or volume (Figure 57).
+Sediment concentration by volume expressed as a percentage is the most used measure.
+Table 11 lists the four different categories of hyperconcentrated sediment flows and their dominant flow characteristics.
+This Table 11 was developed from the laboratory data using actual mudflow deposits.
+Some variation in the delineation of the different flow classifications should be expected based on the sample geology.
 
-   Initial attempts to simulate debris flows were accomplished with one-dimensional flow routing models.
-   DeLeon and Jeppson (1982) modeled laminar water flows with enhanced friction factors.
-   Spatially varied, steady-state Newtonian flow was assumed, and flow cessation could not be simulated.
-   Schamber and MacArthur (1985) created a one-dimensional finite element model for mudflows using the Bingham rheological model to evaluate the shear
-   stresses of a nonNewtonian fluid.
-   O'Brien (1986) designed a one-dimensional mudflow model for watershed channels that also utilized the Bingham model.
-   In 1986, MacArthur and Schamber presented a two-dimensional finite element model for application to simplified overland topography (Corps, 1988).
-   The fluid properties were modeled as a Bingham fluid whose shear stress is a function of the fluid viscosity and yield strength.
+.. image:: img/Chapter4/Chapte110.png
+*Figure 57.
+Classification of Hyperconcentrated Sediment Flows.*
+
+Initial attempts to simulate debris flows were accomplished with one-dimensional flow routing models.
+DeLeon and Jeppson (1982) modeled laminar water flows with enhanced friction factors.
+Spatially varied, steady-state Newtonian flow was assumed, and flow cessation could not be simulated.
+Schamber and MacArthur (1985) created a one-dimensional finite element model for mudflows using the Bingham rheological model to evaluate the shear
+stresses of a nonNewtonian fluid.
+O'Brien (1986) designed a one-dimensional mudflow model for watershed channels that also utilized the Bingham model.
+In 1986, MacArthur and Schamber presented a two-dimensional finite element model for application to simplified overland topography (Corps, 1988).
+The fluid properties were modeled as a Bingham fluid whose shear stress is a function of the fluid viscosity and yield strength.
 
 .. list-table::
    :widths: 100
