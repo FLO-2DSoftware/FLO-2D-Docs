@@ -2063,7 +2063,7 @@ Floodway Schematic Flow Chart.*
 *Figure 62.
 Flood Delineation Comparison*
 
-.. image:: img/Chapter4/Chapte014.jpg
+.. image:: img/Chapter4/Chapte015.jpg
 
 *Figure 63.
 Floodway Delineation Comparison.*
