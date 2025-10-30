@@ -938,6 +938,7 @@ Green-Ampt Infiltration - Hydraulic Conductivity and Porosity.*
        :sup:`3`\ W.T. Fullerton, Masters Thesis, CSU, 1983.
 
        :sup:`4`\ COE Technical Engineering and Design Guide, No.19, 1997
+     -
 
 *Table 7.
 Green-Ampt Infiltration - Soil Suction.*
