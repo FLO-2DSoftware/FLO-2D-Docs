@@ -1639,43 +1639,10 @@ O'Brien (1986) designed a one-dimensional mudflow model for watershed channels t
 In 1986, MacArthur and Schamber presented a two-dimensional finite element model for application to simplified overland topography (Corps, 1988).
 The fluid properties were modeled as a Bingham fluid whose shear stress is a function of the fluid viscosity and yield strength.
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. image:: img/Chapter4/Chapte111.png
 
-
-   * - **Table 11.
-       Mudflow Behavior as a Function of Sediment Concentration.**
-
-   * - |    Sediment Concentration               | Flow Characteristics+--------------------+--------------------+|    by Volume       |    by Weight       |
-
-   * - Landslide          |    0.65 - 0.80     |    0.83 - 0.91     | Will not flow; failure by block|                    |                    |
-       sliding+--------------------+--------------------+---------------------------------------|    0.55 - 0.65     |    0.76 - 0.83     | Block sliding
-       failure with internal|                    |                    | deformation during the slide; slow|                    |                    | creep
-       prior to failure
-
-   * - Mudflow            |    0.48 - 0.55     |    0.72 - 0.76     | Flow evident; slow creep sustained|                    |                    | mudflow;
-       plastic deformation under|                    |                    | its own weight; cohesive; will not|                    |                    |
-       spread on level surface+--------------------+--------------------+---------------------------------------|    0.45 - 0.48     |    0.69 - 0.72     |
-       Flow spreading on level surface;|                    |                    | cohesive flow; some mixing
-
-   * - Mud Flood       |    0.40 - 0.45     |    0.65 - 0.69     | Flow mixes easily; shows fluid|                    |                    | properties in
-       deformation; spreads on|                    |                    | horizontal surface but maintains an|                    |                    |
-       inclined fluid surface; large|                    |                    | particle (boulder) setting; waves|                    |                    |
-       appear but dissipate rapidly+--------------------+--------------------+---------------------------------------|    0.35 - 0.40     |    0.59 - 0.65
-       | Marked settling of gravels and|                    |                    | cobbles; spreading nearly complete on|                    |
-       | horizontal surface; liquid surface|                    |                    | with two fluid phases appears; waves|                    |
-       | travel on surface+--------------------+--------------------+---------------------------------------|    0.30 - 0.35     |    0.54 - 0.59     |
-       Separation of water on surface; waves|                    |                    | travel easily; most sand and gravel|                    |
-       | has settled out and moves as bedload+--------------------+--------------------+---------------------------------------|    0.20 - 0.30     |    0.41
-       - 0.54     | Distinct wave action; fluid surface;|                    |                    | all particles resting on bed in|                    |
-       | quiescent fluid condition
-
-   * - Water              | < 0.20             | < 0.41             | Water flood with conventional|                    |                    | suspended load
-       and bedloadFlood              |                    |                    |
-
-
-..
+*Table 11.
+Mudflow Behavior as a Function of Sediment Concentration.*
 
    Takahashi and Tsujimoto (1985) proposed a two-dimensional finite difference model for debris flows based a dilatant fluid model coupled with Coulomb
    flow resistance.
