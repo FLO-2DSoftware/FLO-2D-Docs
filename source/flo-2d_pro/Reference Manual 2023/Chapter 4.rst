@@ -77,7 +77,7 @@ Overland Flow Manning's n Roughness Values.\ :sup: `1`*
        <tr><td>Poor grass cover on rough surface</td><td>0.20 - 0.30</td></tr>
        <tr><td>Short prairie grass</td><td>0.10 - 0.20</td></tr>
        <tr><td>Sparse vegetation</td><td>0.05 - 0.13</td></tr>
-
+]
        <tr><td colspan="2"><strong>Sparse rangeland with debris</strong></td></tr>
        <tr><td>&nbsp;&nbsp;&nbsp;0% cover</td><td>0.09 - 0.34</td></tr>
        <tr><td>&nbsp;&nbsp;&nbsp;20% cover</td><td>0.05 - 0.25</td></tr>
@@ -96,6 +96,7 @@ Overland Flow Manning's n Roughness Values.\ :sup: `1`*
        <tr><td>Fallow fields</td><td>0.08 - 0.12</td></tr>
        <tr><td>Open ground, no debris</td><td>0.04 - 0.10</td></tr>
        <tr><t
+
 
 .. image:: img/Chapter4/Chapte002.png
 
