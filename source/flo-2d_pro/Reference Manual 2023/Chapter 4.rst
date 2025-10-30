@@ -121,7 +121,7 @@ It will also assign minimum curb elevations to the floodplain elevations outside
 2) Draw a polyline and interpolate the elevations using the profile tool.
 For more street editing options and details see the GDS manual or the street editing white paper.
 
-**Storm Drains**
+.. image:: img/Chapter4/Chapte001.png
 
 *Figure 35.
 Editing Grid Elements to Represent Streets.*
