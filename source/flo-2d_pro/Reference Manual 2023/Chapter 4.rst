@@ -194,7 +194,7 @@ Each bank can have a unique elevation.
 If the two bank elevations are different in the CHAN.DAT file, the model automatically splits the channel into two elements even if the channel would
 fit into one grid element.
 
-.. image:: img/Chapter4/Chapte1.png
+.. image:: img/Chapter4/Chapte001.png
 
 *Figure 37.
 Channel Extension Over Several Grid Elements.*
