@@ -738,27 +738,3 @@ There may not be a smooth transition between the two types of flow representatio
 An adjustment factor to raise or lower the computed sluice gate or orifice coefficient is available as data input parameter.
 The user has complete control of all the coefficients utilized in the bridge routine for all flow regimes.
 
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 6.06111in
-   :height: 2.95806in
-.. |Chapte003| image:: media\Chapte003.png
-   :width: 6.43264in
-   :height: 4.26528in
-.. |Chapte004| image:: media\Chapte004.jpg
-   :width: 4.96042in
-   :height: 2.60694in
-.. |Chapte005| image:: media\Chapte005.jpg
-   :width: 5.58167in
-   :height: 3.89167in
-.. |Chapte006| image:: media\Chapte006.jpg
-   :width: 4.48819in
-   :height: 3.3575in
-.. |Chapte007| image:: media\Chapte007.jpg
-   :width: 4.93819in
-   :height: 3.77069in
-.. |Chapte008| image:: media\Chapte008.jpg
-   :width: 6.45764in
-   :height: 4.68736in
-.. |Chapte009| image:: media\Chapte009.png
-   :width: 6.5in
-   :height: 2.77361in
