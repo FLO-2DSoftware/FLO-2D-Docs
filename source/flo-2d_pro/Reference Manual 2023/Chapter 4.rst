@@ -620,185 +620,136 @@ Maximum Allowable ARF Values.*
 
 A grid element of 10 ft will thereby have at least 15 square ft of surface area.
 
-|Chapte006|
+.. image:: img/Chapter4/Chapte006.jpg
 
-   *Figure 47.
-   ARF Assignments for Buildings with Walls, Storm Drain and Background Image.*
+*Figure 47.
+ARF Assignments for Buildings with Walls, Storm Drain and Background Image.*
 
-|Chapte007|
+.. image:: img/Chapter4/Chapte007.jpg
 
-   *Figure 48.
-   Color Depiction of ARF and WRF Factors.*
+*Figure 48.
+Color Depiction of ARF and WRF Factors.*
 
-   Two building options are rainfall runoff from building roofs and building collapse.
-   Rainfall can collect on building roofs using levees to represent parapet walls and be routed to downspouts represented by hydraulic structure rating
-   curves (Figure 49 and Figure 50).
+Two building options are rainfall runoff from building roofs and building collapse.
+Rainfall can collect on building roofs using levees to represent parapet walls and be routed to downspouts represented by hydraulic structure rating
+curves (Figure 49 and Figure 50).
 
-   |Chapte008|
+.. image:: img/Chapter4/Chapte008.jpg
 
-   *Figure 49.
-   Roof Rainfall Runoff Routed to a Downspout.*
+*Figure 49.
+Roof Rainfall Runoff Routed to a Downspout.*
 
-|Chapte009|
+.. image:: img/Chapter4/Chapte009.jpg
 
-   *Figure 50.
-   Roof Downspout and Parapet Walls for Roof Storage.*
+*Figure 50.
+Roof Downspout and Parapet Walls for Roof Storage.*
 
-   A conservative approach is taken to predict the potential collapse of buildings.
-   Based on vulnerability curves of depth versus velocity (Figure 51), when the computed threshold depth is exceeded by flood flow depth associated with
-   a predicted velocity, the building area reduction factor ARF value is reset to zero enabling the flow to go through the grid element and fill it with
-   flood storage.
-   The building collapse routine is triggered by assigning grid element building vulnerability curves in BUILDING_COLLAPSE.DAT or by assigning a negative
-   ARF values for either a totally blocked or partially blocked grid element.
+A conservative approach is taken to predict the potential collapse of buildings.
+Based on vulnerability curves of depth versus velocity (Figure 51), when the computed threshold depth is exceeded by flood flow depth associated with
+a predicted velocity, the building area reduction factor ARF value is reset to zero enabling the flow to go through the grid element and fill it with
+flood storage.
+The building collapse routine is triggered by assigning grid element building vulnerability curves in BUILDING_COLLAPSE.DAT or by assigning a negative
+ARF values for either a totally blocked or partially blocked grid element.
 
-0.00
+.. image:: img/Chapter4/Chapte108.png
 
-2.00
+*Figure 51.
+Building Collapse Vulnerability Curves.*
 
-4.00
+4.11 Rainfall Runoff
+--------------------
 
-6.00
+Rainfall runoff can be routed to the channel system and then the river flood hydraulics can be computed in the same flood simulation.
+The watershed hydrology and the river routing can also be modeled separately with FLO-2D.
+Rainfall on the alluvial fan or floodplain can make a significant contribution to the total flood volume.
+Some fan or floodplain surface areas are similar in size to the upstream watershed areas.
+In these cases, the excess rainfall may be equivalent to the volume of the inflow hydrograph from the upstream watershed.
+The fan rainfall/runoff may precede or lag the arrival of the floodwave from the upstream watershed.
 
-8.00
+The storm rainfall is discretized as a cumulative percent of the total.
+This discretization of the storm hyetograph is established through local rainfall data, the NOAA Atlas or through regional drainage criteria that
+defines storm duration, intensity, and distribution.
+The rainfall can be uniform or spatially variable over the grid system.
+Often in a FLO-2D simulation the first upstream flood inflow hydrograph timestep corresponds to the first rainfall incremental timestep.
+By altering the storm time distribution on the fan or floodplain, the rainfall can lag or precede the rainfall in the upstream basin depending on the
+direction of the storm movement over the basin.
+The storm can also have a different total rainfall than that occurring in the upstream basin.
 
-10.00
+There are several options to simulate variable rainfall including a moving storm, spatially variable depth area reduction assignment, or even grid-
+based rain gage data from an actual storm event.
+Storms can be spatially varied over the grid system with areas of intense or light rainfall.
+Storms can also move over the grid system by assigning storm speed and direction.
+A rainfall distribution can be selected from several predefined distributions.
 
-12.00
+Historical storms can be assigned to the entire grid system.
+If calibrated or adjusted NextGeneration Radar (NEXRAD) data is available, the NEXRAD pixel rainfall for a given time interval can be automatically
+interpolated to the FLO-2D grid system using the GDS.
+Each grid element will be assigned a rainfall total for the NEXRAD time interval, and the rainfall is then interpolated by the model for each
+computational timestep.
+The result is spatially and temporally variable rainfall-runoff from the grid system.
+An example of the application of NEXRAD rainfall on an alluvial fan and watershed near Tucson, Arizona is shown in Figure 52.
 
-14.00
+You can accomplish the same result with gridded network data from a system of rain gages.
+After the GDS interpolation, each FLO-2D grid element will have a rainfall hyetograph to represent the storm.
+This is the ultimate temporal and spatial discretization of a storm event, and the resulting flood replication has proven to be very accurate.
 
-16.00
+As previously discussed, runoff from building roofs is another rainfall feature.
+Setting IRAINBUILDING = 1 in RAIN.DAT will enable the rainfall on the surface area reduced portion of the grid element identified as a building (area
+reduction factor - ARF value) to be contributed to the surface water on a grid element (Figure 52).
+The roof runoff in dense urban areas can constitute a significant percentage of the total storm volume when it is added directly to the ground surface
+volume.
+The building ARF values are in addition to the RTIMP impervious surface infiltration assignment.
 
-18.00
+.. image:: img/Chapter4/Chapte107.png
 
-0.00
+*Figure 52.
+Flooding Replicated from NEXRAD Data near Tucson, Arizona.*
 
-5.00
+4.12 Infiltration and Abstraction
+---------------------------------
 
-10.00
+Precipitation losses, abstraction (interception) and infiltration are simulated in the FLO-2D model.
+Infiltration is simulated using either the Green-Ampt infiltration model, the SCS curve number method, or the Horton model.
+The infiltration parameters can be globally assigned or have grid system spatial variation.
+Typically, unique hydraulic conductivity and soil suction values for each grid element define the spatially variation.
+No infiltration is calculated for assigned streets, buildings or impervious surfaces in the grid elements.
+Channel infiltration can also be simulated.
+Although channel bed and bank seepage are usually only minor portion of the total infiltration losses in the system, it can affect the floodwave
+progression in an ephemeral channel.
+The surface area of a natural channel is used to approximate the wetted perimeter to compute the infiltration volume.
 
-15.00
+Abstraction
 
-20.00
+Precipitation losses, initial abstraction (interception and depression storage) and infiltration, are simulated in the FLO-2D model.
+The initial abstraction is filled prior to simulating infiltration and typical initial abstraction values are presented in Table 5.
+Surface depression storage (TOL parameter in TOLER.DAT) is an initial loss (a portion of the initial abstraction) from the potential surface flow.
+This is the volume of water stored in small surface depressions (puddles) that does not become part of the overland runoff or infiltration.
+The assignment of initial abstraction should consider the depression storage represented by the TOL value and be appropriately reduced.
+The TOL parameter can be spatially variable with a unique value assigned to each grid element.
 
-25.00
-
-30.00
-
-**D**
-
-**e**
-
-**p**
-
-**t**
-
-**h**
-
-**(**
-
-**f**
-
-**t**
-
-**)**
-
-**Velocity (fps)**
-
-poor
-
-moderate
-
-good
-
-Clausen & Clark G
-
-Clausen & Clark R
-
-   *Figure 51.
-   Building Collapse Vulnerability Curves.*
-
- 4.11 Rainfall Runoff
- --------------------
-
-   Rainfall runoff can be routed to the channel system and then the river flood hydraulics can be computed in the same flood simulation.
-   The watershed hydrology and the river routing can also be modeled separately with FLO-2D.
-   Rainfall on the alluvial fan or floodplain can make a significant contribution to the total flood volume.
-   Some fan or floodplain surface areas are similar in size to the upstream watershed areas.
-   In these cases, the excess rainfall may be equivalent to the volume of the inflow hydrograph from the upstream watershed.
-   The fan rainfall/runoff may precede or lag the arrival of the floodwave from the upstream watershed.
-
-   The storm rainfall is discretized as a cumulative percent of the total.
-   This discretization of the storm hyetograph is established through local rainfall data, the NOAA Atlas or through regional drainage criteria that
-   defines storm duration, intensity, and distribution.
-   The rainfall can be uniform or spatially variable over the grid system.
-   Often in a FLO-2D simulation the first upstream flood inflow hydrograph timestep corresponds to the first rainfall incremental timestep.
-   By altering the storm time distribution on the fan or floodplain, the rainfall can lag or precede the rainfall in the upstream basin depending on the
-   direction of the storm movement over the basin.
-   The storm can also have a different total rainfall than that occurring in the upstream basin.
-
-   There are several options to simulate variable rainfall including a moving storm, spatially variable depth area reduction assignment, or even grid-
-   based rain gage data from an actual storm event.
-   Storms can be spatially varied over the grid system with areas of intense or light rainfall.
-   Storms can also move over the grid system by assigning storm speed and direction.
-   A rainfall distribution can be selected from several predefined distributions.
-
-   Historical storms can be assigned to the entire grid system.
-   If calibrated or adjusted NextGeneration Radar (NEXRAD) data is available, the NEXRAD pixel rainfall for a given time interval can be automatically
-   interpolated to the FLO-2D grid system using the GDS.
-   Each grid element will be assigned a rainfall total for the NEXRAD time interval, and the rainfall is then interpolated by the model for each
-   computational timestep.
-   The result is spatially and temporally variable rainfall-runoff from the grid system.
-   An example of the application of NEXRAD rainfall on an alluvial fan and watershed near Tucson, Arizona is shown in Figure 52.
-
-   You can accomplish the same result with gridded network data from a system of rain gages.
-   After the GDS interpolation, each FLO-2D grid element will have a rainfall hyetograph to represent the storm.
-   This is the ultimate temporal and spatial discretization of a storm event, and the resulting flood replication has proven to be very accurate.
-
-   As previously discussed, runoff from building roofs is another rainfall feature.
-   Setting IRAINBUILDING = 1 in RAIN.DAT will enable the rainfall on the surface area reduced portion of the grid element identified as a building (area
-   reduction factor - ARF value) to be contributed to the surface water on a grid element (Figure 52).
-   The roof runoff in dense urban areas can constitute a significant percentage of the total storm volume when it is added directly to the ground surface
-   volume.
-   The building ARF values are in addition to the RTIMP impervious surface infiltration assignment.
-
-   *Figure 52.
-   Flooding Replicated from NEXRAD Data near Tucson, Arizona.*
-
- 4.12 Infiltration and Abstraction
- ---------------------------------
-
-   Precipitation losses, abstraction (interception) and infiltration are simulated in the FLO-2D model.
-   Infiltration is simulated using either the Green-Ampt infiltration model, the SCS curve number method, or the Horton model.
-   The infiltration parameters can be globally assigned or have grid system spatial variation.
-   Typically, unique hydraulic conductivity and soil suction values for each grid element define the spatially variation.
-   No infiltration is calculated for assigned streets, buildings or impervious surfaces in the grid elements.
-   Channel infiltration can also be simulated.
-   Although channel bed and bank seepage are usually only minor portion of the total infiltration losses in the system, it can affect the floodwave
-   progression in an ephemeral channel.
-   The surface area of a natural channel is used to approximate the wetted perimeter to compute the infiltration volume.
-
-   Abstraction
-
-   Precipitation losses, initial abstraction (interception and depression storage) and infiltration, are simulated in the FLO-2D model.
-   The initial abstraction is filled prior to simulating infiltration and typical initial abstraction values are presented in Table 5.
-   Surface depression storage (TOL parameter in TOLER.DAT) is an initial loss (a portion of the initial abstraction) from the potential surface flow.
-   This is the volume of water stored in small surface depressions (puddles) that does not become part of the overland runoff or infiltration.
-   The assignment of initial abstraction should consider the depression storage represented by the TOL value and be appropriately reduced.
-   The TOL parameter can be spatially variable with a unique value assigned to each grid element.
+*Table 5.
+Initial Abstraction.*
 
 .. list-table::
-   :widths: 100
+   :widths: 50 50
    :header-rows: 0
 
 
-   * - **Table 5.
-       Initial Abstraction.**
+   * - Surface Cover
+     - Abstraction (inches)
 
-   * - Surface Cover                            |    Abstraction (inches)
+   * - Natural\ :sup:`1`
+       Desert and rangeland
+       Hillslopes Sonoran desert
+       Mountain with vegetation
 
-   * - Natural\ :sup:`1`                        |    0.35 0.15|Desert and rangeland                     | 0.25|Hillslopes Sonoran desert
-       ||Mountain with vegetation                 |
+     - 0.35
+       0.15
+       0.25
+
+
+
+
 
    * - Developed – Residential\ :sup:`1`        |    0.20 0.10|Lawns                                    | 0.05|Desert landscape
        ||Pavement                                 |
@@ -1119,7 +1070,7 @@ Channel Infiltration
    The gully geometry is defined by a maximum depth, width and flow roughness.
    The multiple channel attributes can be spatially variable on the grid system and can be assigned or edited graphically with the GDS or QGIS programs.
 
-|Chapte010|
+.. image:: img/Chapter4/Chapte010.jpg
 
    *Figure 53.
    Gully on an Alluvial Fan where Overland Sheet Flow is Minimal.*
