@@ -1754,7 +1754,7 @@ If d/D\ :sub:`i` > 100, inertial forces dominate.
 In the range 30 < d/D\ :sub:`i` < 100 both forces play an important role in the momentum exchange.
 It should be noted that sediment concentration is a critical factor that is not accounted for in this criterion.
 
-.. image:: img/Chapter4/Chapte111.png
+.. image:: img/Chapter4/Chapte112.png
 
 *Figure 58.
 Shear Stress as a Function of Shear Rate for Fluid Deformation Models.*
@@ -1765,10 +1765,10 @@ following form as a dimensionless slope:
 
 *S f = S y + S v + S t d*
 
-   where the total friction slope S\ :sub:`f` is the sum of the yield slope S\ :sub:`y`, the viscous slope S\ :sub:`v`, and the turbulent-dispersive
-   slope S\ :sub:`td`.
-   The viscous and turbulent-dispersive slope terms are written in terms of depth- averaged velocity V.
-   The viscous slope can be written as:
+where the total friction slope S\ :sub:`f` is the sum of the yield slope S\ :sub:`y`, the viscous slope S\ :sub:`v`, and the turbulent-dispersive
+slope S\ :sub:`td`.
+The viscous and turbulent-dispersive slope terms are written in terms of depth- averaged velocity V.
+The viscous slope can be written as:
 
 .. math::
 
@@ -1783,79 +1783,91 @@ A value of K = 2,285 was calibrated on the Rudd Creek, Utah mudflow for a reside
 For laminar and transitional flows, turbulence is suppressed and the laminar flow resistance parameter K becomes important.
 In the FLO-2D model if K = 0 in the SED.DAT file, the value of K is automatically computed from the Manning’s n-value.
 
+*Table 12.
+Resistance Parameters for LaminarFlow.\ 1*
+
 .. list-table::
-   :widths: 100
+   :widths: 50 50
    :header-rows: 0
 
 
-   * - **Table 12.
-       Resistance Parameters for LaminarFlow.\ 1**
+   * - Surface
+     - Range of K
 
-   * - Surface                                | Range of K
+   * - Concrete/asphalt
+     - 24 -108
 
-   * - Concrete/asphalt                       | 24 -108
+   * - Bare sand
+     - 30 - 120
 
-   * - Bare sand                              | 30 - 120
+   * - Graded surface
+     - 90 - 400
 
-   * - Graded surface                         | 90 - 400
+   * - Bare clay - loam soil, eroded
+     - 100 - 500
 
-   * - Bare clay - loam soil, eroded          | 100 - 500
+   * - Sparse vegetation
+     - 1,000 - 4,000
 
-   * - Sparse vegetation                      | 1,000 - 4,000
+   * - Short prairie grass
+     - 3,000 - 10,000
 
-   * - Short prairie grass                    | 3,000 - 10,000
-
-   * - Bluegrass sod                          | 7,000 - 50,000
+   * - Bluegrass sod
+     - 7,000 - 50,000
 
    * - :sup:`1` Woolhiser (1975)
+     -
 
+The flow resistance n\ :sub:`td` of the turbulent and dispersive shear stress components are combined into an equivalent Manning’s n-value for the
+flow:
 
-..
+.. math::
 
-   The flow resistance n\ :sub:`td` of the turbulent and dispersive shear stress components are combined into an equivalent Manning’s n-value for the
-   flow:
+   S_{td} = \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}
 
-*St d = n\ td24 /V\ 3 2*
+At very high concentrations, the dispersive stress arising from sediment particle contact increases the flow resistance n\ :sub:`td` by transferring
+more momentum flux to the boundary.
+To estimate this increase in flow resistance, the conventional turbulent flow resistance n-value n\ :sub:`t` is increased by an exponential function
+of the sediment concentration C\ :sub:`v`:
 
-*h*
+.. math::
 
-   At very high concentrations, the dispersive stress arising from sediment particle contact increases the flow resistance n\ :sub:`td` by transferring
-   more momentum flux to the boundary.
-   To estimate this increase in flow resistance, the conventional turbulent flow resistance n-value n\ :sub:`t` is increased by an exponential function
-   of the sediment concentration C\ :sub:`v`:
+   n_{td} = n_t \, b \, e^{m C_v}
 
-   *ntd = nt b emCv*
+where: n\ :sub:`t` is the turbulent n-value and b is a coefficient (0.0538) and m is an exponent (6.0896).
+This equation was based on unpublished paper by Julien and O’Brien (1998) that relates the dispersive and turbulent resistance in hyperconcentrated
+sediment flows as function of the ratio of the flow depth to the sediment grain size.
+The friction slope components can then be combined in the following form:
 
-   where: n\ :sub:`t` is the turbulent n-value and b is a coefficient (0.0538) and m is an exponent (6.0896).
-   This equation was based on unpublished paper by Julien and O’Brien (1998) that relates the dispersive and turbulent resistance in hyperconcentrated
-   sediment flows as function of the ratio of the flow depth to the sediment grain size.
-   The friction slope components can then be combined in the following form:
+.. math::
 
-   *=*  *y\ h + 8K*  \ *m hV\ 2 + n\ tdh\ 2\ 4 /\ V\ 3 2*
+   S_f = \frac{\tau_y}{\gamma_m\, h}
+         + \frac{K\, \eta\, V}{8\, \gamma_m\, h^{2}}
+         + \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}
 
-   *S f*
+A quadratic equation solution to the friction slope equation has been formulated in the FLO-2D model to estimate the velocity for use in the momentum
+equation.
+The estimated velocity represents the flow velocity computed across the floodplain or channel element boundary using the average flow depth between
+the elements.
+Reasonable values of K and Manning’s nvalue can be assumed for the channel and overland flow resistance.
+The specific weight of the fluid matrix γ\ :sub:`m`, yield stress τ\ :sub:`y` and viscosity η vary principally with sediment concentration.
+Unless a rheological analysis of the mudflow site material is available, the following empirical relationships can be used to compute viscosity and
+yield stress:
 
-   \ *m*
+.. math::
 
-   A quadratic equation solution to the friction slope equation has been formulated in the FLO-2D model to estimate the velocity for use in the momentum
-   equation.
-   The estimated velocity represents the flow velocity computed across the floodplain or channel element boundary using the average flow depth between
-   the elements.
-   Reasonable values of K and Manning’s nvalue can be assumed for the channel and overland flow resistance.
-   The specific weight of the fluid matrix γ\ :sub:`m`, yield stress τ\ :sub:`y` and viscosity η vary principally with sediment concentration.
-   Unless a rheological analysis of the mudflow site material is available, the following empirical relationships can be used to compute viscosity and
-   yield stress:
-
-\ *y =* \ *2 e* \ *2 Cv*
+   \tau_y = \alpha_2 \, e^{\beta_2 C_v}
 
 and
 
- *=* \ *1 e* \ *1 Cv*
+.. math::
 
-   where α\ :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
-   The viscosity (poises) and yield stress (dynes/cm\ :sup:`2`) are shown to be exponential functions of the volumetric sediment concentration C\
-   :sub:`v` of silts and clays (and in some cases, fine sands) and do not include larger clastic material rafted along with the flow (Table 13 and Figure
-   59 and Figure 60).
+   \eta = \alpha_1 \, e^{\beta_1 C_v}
+
+where α\ :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
+The viscosity (poises) and yield stress (dynes/cm\ :sup:`2`) are shown to be exponential functions of the volumetric sediment concentration C\
+:sub:`v` of silts and clays (and in some cases, fine sands) and do not include larger clastic material rafted along with the flow (Table 13 and Figure
+59 and Figure 60).
 
 .. list-table::
    :widths: 100
