@@ -317,140 +317,135 @@ time.
 Additional output files that define the breach hazard include the time-to-flow-depth output files that report the time to the maximum flow depth, the
 time to one-foot flow depth and time to two-foot flow depth, and deflood time which are useful for delineating evacuation routes.
 
-   *Figure 40.
-   Example of Levee Breach Urban Flooding.*
+*Figure 40.
+Example of Levee Breach Urban Flooding.*
 
-   *Figure 41.
-   Example of a Proposed Domestic Water Supply Reservoir Breach Failure.*
+*Figure 41.
+Example of a Proposed Domestic Water Supply Reservoir Breach Failure.*
 
-   Prescribed Breach
+Prescribed Breach
 
-   For the prescribed levee failure routine, the breach can enlarge vertically or horizontally.
-   The initial breach width and depth is hardwired as 1 ft (0.3 m).
-   Rates of breach expansion (ft/hr or m/hr) can be specified for both the horizontal and vertical failure modes.
-   Breach discharge is based on the breach width and the difference in water surface elevations on each side of the levee.
-   A final levee base elevation that is higher than the floodplain elevation can also be specified.
-   The levee failure can occur for the entire grid element width for a given flow direction and then the breach can grow to contiguous levee elements.
-   The prescribed levee breach can be assigned to globally predict levee failure anywhere in the grid system based on the computed water surface
-   elevation.
-   Additional breach failure variables such as initial failure elevation if different from overtopping failure and duration of saturation before failure
-   can be assigned to add detail to multiple levee failure locations.
-   For prescribed breaches you can:
+For the prescribed levee failure routine, the breach can enlarge vertically or horizontally.
+The initial breach width and depth is hardwired as 1 ft (0.3 m).
+Rates of breach expansion (ft/hr or m/hr) can be specified for both the horizontal and vertical failure modes.
+Breach discharge is based on the breach width and the difference in water surface elevations on each side of the levee.
+A final levee base elevation that is higher than the floodplain elevation can also be specified.
+The levee failure can occur for the entire grid element width for a given flow direction and then the breach can grow to contiguous levee elements.
+The prescribed levee breach can be assigned to globally predict levee failure anywhere in the grid system based on the computed water surface
+elevation.
+Additional breach failure variables such as initial failure elevation if different from overtopping failure and duration of saturation before failure
+can be assigned to add detail to multiple levee failure locations.
+For prescribed breaches you can:
 
-- Determine the location of levee failure anywhere in the levee system based on overtopping or based on the water surface elevation reaching a
-  prescribed elevation or distance below the crest elevation for an assigned duration.
+    - Determine the location of levee failure anywhere in the levee system based on overtopping or based on the water surface elevation reaching a
+      prescribed elevation or distance below the crest elevation for an assigned duration.
 
-- Initiate multiple levee breach failures in various locations that proceed simultaneously.
+    - Initiate multiple levee breach failures in various locations that proceed simultaneously.
 
-- Levee failure proceeds with prescribed vertical and horizontal erosion rates that will slow based on the breach shear stress.
+    - Levee failure proceeds with prescribed vertical and horizontal erosion rates that will slow based on the breach shear stress.
 
-..
+Erosion Breach
 
-   Erosion Breach
+The breach erosion component was added to the FLO-2D model to combine the downstream unconfined flood routing with a realistic physical process-based
+assessment of the dam failure.
+The basis for the FLO-2D model was National Weather Service BREACH model developed by Fread in 1988.
+More information on the breach model development is available in the FLO-2D Reference Manual.
+In FLO-2D, a dam can fail as follows:
 
-   The breach erosion component was added to the FLO-2D model to combine the downstream unconfined flood routing with a realistic physical process-based
-   assessment of the dam failure.
-   The basis for the FLO-2D model was National Weather Service BREACH model developed by Fread in 1988.
-   More information on the breach model development is available in the FLO-2D Reference Manual.
-   In FLO-2D, a dam can fail as follows:
+    - Overtopping and development of a breach channel;
 
-- Overtopping and development of a breach channel;
+    - Piping failure;
 
-- Piping failure;
+    - Piping failure and roof collapse and development into a breach channel;
 
-- Piping failure and roof collapse and development into a breach channel;
+    - Breach channel enlargement through side slope slumping;
 
-- Breach channel enlargement through side slope slumping;
+    - Breach enlargement by wedge collapse.
 
-- Breach enlargement by wedge collapse.
+The user has the option to specify the breach element and breach elevation or to assign global parameters and the model will locate breach failure
+element based on the water surface elevation and duration of inundation.
+During an inflow flood simulation, the reservoir fills until the water surface elevation is higher than the crest and overtops it initiating a breach
+channel.
+The user can also assign a prescribed breach elevation.
+If the water elevation exceeds the breach elevation for a given duration, piping is initiated (with or without an inflow flood).
+Once the pipe roof collapses, then the discharge is computed through the ensuing breach channel.
 
-..
+If the user specifies a breach elevation, then piping will be initiated first.
+The breach discharge is computed as weir flow with a user specified weir coefficient.
+The discharge is then used to compute velocity and depth in a rectangular pipe.
+Using the pipe hydraulics and dam embankment material data, sediment transport capacity is computed using one of nine other sediment transport
+capacity equations in the FLO-2D model.
+Sediment is uniformly eroded from the walls, bed, and roof of the pipe (Figure 42).
+When the pipe height is larger than the material remaining in the embankment above, the roof of the pipe collapses and breach channel flow ensues.
+The channel discharge is also calculated by the weir equation and like the pipe failure the walls and bed of the rectangular channel are scoured.
+As the channel width and depth increases, the slope stability is checked and if the stability criteria are exceeded, the sides of the channel slump
+and the rectangular breach transitions to a trapezoidal channel (Figure 43).
+The scour of the trapezoidal bed and sides can be non-uniform and controlled by user input.
+The breach continues to widen, and the breach width will expand to other grid elements if necessary.
 
-   The user has the option to specify the breach element and breach elevation or to assign global parameters and the model will locate breach failure
-   element based on the water surface elevation and duration of inundation.
-   During an inflow flood simulation, the reservoir fills until the water surface elevation is higher than the crest and overtops it initiating a breach
-   channel.
-   The user can also assign a prescribed breach elevation.
-   If the water elevation exceeds the breach elevation for a given duration, piping is initiated (with or without an inflow flood).
-   Once the pipe roof collapses, then the discharge is computed through the ensuing breach channel.
+.. image:: img/Chapter4/Chapte004.png
 
-   If the user specifies a breach elevation, then piping will be initiated first.
-   The breach discharge is computed as weir flow with a user specified weir coefficient.
-   The discharge is then used to compute velocity and depth in a rectangular pipe.
-   Using the pipe hydraulics and dam embankment material data, sediment transport capacity is computed using one of nine other sediment transport
-   capacity equations in the FLO-2D model.
-   Sediment is uniformly eroded from the walls, bed, and roof of the pipe (Figure 42).
-   When the pipe height is larger than the material remaining in the embankment above, the roof of the pipe collapses and breach channel flow ensues.
-   The channel discharge is also calculated by the weir equation and like the pipe failure the walls and bed of the rectangular channel are scoured.
-   As the channel width and depth increases, the slope stability is checked and if the stability criteria are exceeded, the sides of the channel slump
-   and the rectangular breach transitions to a trapezoidal channel (Figure 43).
-   The scour of the trapezoidal bed and sides can be non-uniform and controlled by user input.
-   The breach continues to widen, and the breach width will expand to other grid elements if necessary.
+*Figure 42.
+Dam Breach Piping Failure.*
 
-|Chapte004|
+.. image:: img/Chapter4/Chapte005.png
 
-   *Figure 42.
-   Dam Breach Piping Failure.*
+*Figure 43.
+Dam Breach Channel Development.*
 
-|Chapte005|
+The dam geometry parameters (Figure 44) associated with a breach erosion failure are:
 
-   *Figure 43.
-   Dam Breach Channel Development.*
+    - Crest Elevation
 
-   The dam geometry parameters (Figure 44) associated with a breach erosion failure are:
+    - Starting Water Surface Elevation (or depth below crest) (ft or m)
 
-- Crest Elevation
+    - Cumulative Duration of Inundation at Specified Elevation Prior to Breach Initiation (hr)
 
-- Starting Water Surface Elevation (or depth below crest) (ft or m)
+    - Maximum Breach Width (ft or m)
 
-- Cumulative Duration of Inundation at Specified Elevation Prior to Breach Initiation (hr)
+    - Prescribed Initial Pipe Elevation (ft or m)
 
-- Maximum Breach Width (ft or m)
+    - Tailwater Elevation (ft or m)
 
-- Prescribed Initial Pipe Elevation (ft or m)
+    - Foundation or Base Elevation for Vertical Breach Cessation (ft or m) These parameters are defined in Figure 44.
 
-- Tailwater Elevation (ft or m)
+        Crest Elevation
 
-- Foundation or Base Elevation for Vertical Breach Cessation (ft or m) These parameters are defined in Figure 44.
+        Starting Water Surface
 
-Crest Elevation
+        Prescribed Pipe
 
-Starting Water Surface
+        Dam Foundation
 
-Prescribed Pipe
+        Tailwater Elevation
 
-Dam Foundation
+        Maximum Breach Width
 
-Tailwater Elevation
+*Figure 44.
+Breach Failure Geometry. (Teton Dam Failure 1976 USBR).*
 
-Maximum Breach Width
+Reservoir water is discharged through the breach and downstream by the FLO-2D routing algorithms using volume conservation that tracks the storage
+along with the discharge in and out of every grid element based on the computational timesteps.
+Sediment eroded from the dam is also conserved and matched to the breach hole size conservation and the water discharge through the breach is bulked
+by the eroded sediment.
+Routing water through the breach continues until the water surface elevation no longer exceeds the prescribed breach bottom elevation or until all the
+reservoir water is gone.
+Tailwater submergence of the weir flow will reduce the breach discharge.
 
-   *Figure 44.
-   Breach Failure Geometry.
-   (Teton Dam Failure 1976 USBR).*
+A comprehensive guide to modeling the breach of levees, dams and walls is outlined in the manual Levee, Dam, and Wall Breach Guidelines (FLO-2D,
+2018).
 
-   Reservoir water is discharged through the breach and downstream by the FLO-2D routing algorithms using volume conservation that tracks the storage
-   along with the discharge in and out of every grid element based on the computational timesteps.
-   Sediment eroded from the dam is also conserved and matched to the breach hole size conservation and the water discharge through the breach is bulked
-   by the eroded sediment.
-   Routing water through the breach continues until the water surface elevation no longer exceeds the prescribed breach bottom elevation or until all the
-   reservoir water is gone.
-   Tailwater submergence of the weir flow will reduce the breach discharge.
+4.7 Hydraulic Structures
+------------------------
 
-   A comprehensive guide to modeling the breach of levees, dams and walls is outlined in the manual Levee, Dam, and Wall Breach Guidelines (FLO-2D,
-   2018).
-
- 4.7 Hydraulic Structures
- ------------------------
-
-   The full hydraulic structures guidelines are in the Handouts folder.
-   Hydraulic structures are simulated by specifying either discharge rating curves or rating tables.
-   Hydraulic structures can include bridges, culverts, weirs, spillways or any hydraulic facility that controls conveyance and whose discharge can be
-   specified by a rating curve or tables.
-   Backwater effects upstream of bridges or culverts as well as blockage of a culvert or overtopping of a bridge can be simulated.
-   A hydraulic structure can control the discharge between channel or floodplain grid elements that do not have to be contiguous but may be separated by
-   several grid elements.
-   For example, a culvert under an interstate highway may span several grid elements.
+The full hydraulic structures guidelines are in the Handouts folder.
+Hydraulic structures are simulated by specifying either discharge rating curves or rating tables.
+Hydraulic structures can include bridges, culverts, weirs, spillways or any hydraulic facility that controls conveyance and whose discharge can be
+specified by a rating curve or tables.
+Backwater effects upstream of bridges or culverts as well as blockage of a culvert or overtopping of a bridge can be simulated.
+A hydraulic structure can control the discharge between channel or floodplain grid elements that do not have to be contiguous but may be separated by
+several grid elements.
+For example, a culvert under an interstate highway may span several grid elements.
 
    A hydraulic structure rating curve equation specifies discharge as a function of the headwater depth h:
 
