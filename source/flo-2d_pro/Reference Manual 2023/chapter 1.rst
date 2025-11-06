@@ -1,10 +1,7 @@
 .. vim: syntax=rst
 
-Chapter 1
-============
-
-INTRODUCTION
----------------
+Chapter 1: INTRODUCTION
+========================
 
 This Reference Manual discusses the physical processes of flooding.
 It is designed to acquaint the user with the model theory, finite difference algorithms, model components, modeling assumptions and limitations, and
@@ -12,7 +9,7 @@ potential flood scenarios.
 A reference list is provided for further reading.
 
 1.1 Evolution of the FLO-2D Model
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------
 
 The first version of the FLO-2D model was called MUDFLOW.
 It was initiated in 1988 to conduct a Federal Emergency Management Agency (FEMA) flood insurance study (FIS) of an urbanized alluvial fan in Colorado.
@@ -125,4 +122,3 @@ After the preliminary FLO-2D runs, the user can apply the output options to dete
 
 *Figure 3.
 FLO-2D Flow Chart.*
-
