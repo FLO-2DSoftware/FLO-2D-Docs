@@ -1,3 +1,6 @@
+PREVIEW
+==========
+
 .. vim: syntax=rst
 
    *A few comments on modeling free surface flows…*
