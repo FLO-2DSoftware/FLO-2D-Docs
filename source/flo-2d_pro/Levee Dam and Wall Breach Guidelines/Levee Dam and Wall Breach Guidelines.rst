@@ -4,7 +4,7 @@ Levee Dam and Wall Breach Guidelines
 ======================================
 
 Levee Overview
---------------------------------------------------------
+----------------
 
 The FLO-2D levee component confines flow on the floodplain surface by blocking one or more of the eight flow directions.
 The FLO-2D model conserves volume and this includes volume stored by the levee component and water routed through a levee breach.
@@ -692,9 +692,6 @@ Wall Failure Guidelines
 -----------------------
 
 The following table presents the wall failure guidelines, controls and data checks.
-
-Table 2. Wall Failure Guidelines
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *Table 2.
 Wall Failure Guidelines*
