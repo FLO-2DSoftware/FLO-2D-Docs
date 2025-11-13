@@ -434,8 +434,7 @@ In addition, modeling hyperconcentrated sediment flows requires reasonable assum
 These variables include the volume of water and sediment, sediment concentration, physical surface conditions, fluid and sediment properties.
 These guidelines, variables and how to estimate and apply them will be briefly discussed.
 
- *Watershed inspection*
- ----------------------
+*Watershed inspection*
 
 The first check involves a watershed inspection for loose boulders, debris in the basin channel.
 This usually requires an on-ground inspection.
