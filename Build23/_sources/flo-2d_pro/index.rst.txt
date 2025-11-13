@@ -1,10 +1,14 @@
-FLO-2D Pro
-==========
+FLO-2D Pro Resource Center
+==========================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: FLO-2D Pro
+   :maxdepth: 1
 
    data_input_manual
-   channel_modeling_guidelines
-   storm_drain_modeling_guidelines
+   Channel Modeling Guidelines 2023/index
+   Storm Drain Modeling Guidelines/index
+   Hydraulic Structures Guidelines/Hydraulic Structures Guidelines
+   Levee Dam and Wall Breach Guidelines/Levee Dam and Wall Breach Guidelines
+   Simulating Mudflow Guidelines/Simulating Mudflow Guidelines
+   Two Phase Flood Routing Guidelines 2023/Two Phase Flood Routing Guidelines 2023
+   Reference Manual 2023/index

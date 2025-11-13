@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Storm Drain Editor &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Create Storm Drain" href="Create%20Storm%20Drain.html" />
+    <link rel="prev" title="Horton" href="../infiltration-editor/Horton.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Plugin Gila</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">User Manual</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin-features/index.html">Plugin Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Widgets</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/index.html">Grid Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pre-processing-tools/Pre-Processing%20Tools.html">Pre-Processing Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../profile-tool/Profile%20Tool.html">Profile Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cross-sections-editor/Cross%20Sections%20Editor.html">Cross Sections Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary-condition-editor/index.html">Boundary Condition Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../initial-condition-editor/Initial%20Condition%20Editor.html">Initial Condition Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rain-editor/Rain%20Editor.html">Rain Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../schematized-channel-editor/Schematized%20Channel%20Editor.html">Schematized Channel Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hydraulic-structure-editor/Hydraulic%20Structure%20Editor.html">Structures Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../street-editor/Street%20Editor.html">Street Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../floodplain-cross-section-editor/Floodplain%20Cross%20Section%20Editor.html">Floodplain Cross Section Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../infiltration-editor/index.html">Infiltration Editor</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Storm Drain Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../levees-breach-editor/Levees%20Breach%20Editor.html">Levees Breach Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiple-channels-editor/Multiple%20Channel%20Editor.html">Multiple Channels Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../post-development-grid-modification/index.html">Grid Modification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/technical_reference_manual.html">Technical Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Plugin Gila</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">User Manual</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Widgets</a></li>
+      <li class="breadcrumb-item active">Storm Drain Editor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="storm-drain-editor">
+<h1>Storm Drain Editor<a class="headerlink" href="#storm-drain-editor" title="Link to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The Storm Drain Editor widget has several functions to prepare the data that integrates the FLO-2D surface water model
+with the storm drain model.  This document will show different methodologies to set up a storm drain system and
+to connect it to the grid elements.</p>
+<p>The widget has functions that are outlined in red in the following image.  Each of these blocks is covered in
+different sections that can be selected on the left side content table.</p>
+<img alt="../../../../_images/Storm002.png" src="../../../../_images/Storm002.png" />
+</section>
+<section id="storm-drain-resources">
+<h2>Storm Drain Resources<a class="headerlink" href="#storm-drain-resources" title="Link to this heading"></a></h2>
+<p>FLO-2D incorporates a modified version of the EPA SWMM 5.0 engine to manage its storm drain modeling, which is both
+complex and detailed. Below are some resources to assist in developing effective modeling practices.</p>
+<ol class="arabic">
+<li><p>Start with an advanced tutorial. This will give a good example of a real storm drain model.</p>
+<p><a href ="https://www.youtube.com/watch?v=Q4G6GtgAM2M&list=PLkT3KNZwX6zkkfrM5Pcdvt7WqZuHWYU4c&pp=gAQBiAQB" target="_blank">Storm Drain Tutorial</a></p>
+</li>
+</ol>
+<ol class="arabic" start="2">
+<li><p>FLO-2D Storm drain guidelines are installed with FLO-2D Software.</p>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\flo_help\Manuals\FLO-2D Storm Drain Manual 2023.pdf</p>
+</li>
+<li><p>EPA SWMM Documentation 5.0 is installed with EPA SWMM.</p>
+<p>C:\Program Files (x86)\EPA SWMM 5.0\epaswmm5.chm</p>
+</li>
+<li><p>Open SWMM Documentation and Forum is an excellent resource for general storm drain modeling questions.</p>
+<p><a href ="https://www.openswmm.org/" target="_blank">Open SWMM</a></p>
+</li>
+</ol>
+<ol class="arabic" start="5">
+<li><p>ChatGPT is an excellent quick reference but be careful because it often uses the wrong version of a software when it
+provides help.</p>
+<p><a href ="https://chat.openai.com/" target="_blank">Chat GPT 3.5</a></p>
+</li>
+</ol>
+<ol class="arabic" start="6">
+<li><p>Use the contact form if these resources do not provide a solution to a FLO-2D storm drain modeling problem.</p>
+<p><a href ="https://flo-2d.com/contact/" target="_blank">Contact FLO-2D Support</a></p>
+</li>
+</ol>
+</section>
+<section id="storm-drain-units">
+<h2>Storm Drain Units<a class="headerlink" href="#storm-drain-units" title="Link to this heading"></a></h2>
+<p>FLO-2D uses the following units for storm drain modeling.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Parameter</strong></p></th>
+<th class="head"><p><strong>Units (Imperial)</strong></p></th>
+<th class="head"><p><strong>Units (Metric)</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Discharge</p></td>
+<td><p>cubic feet per second
+(cfs)</p></td>
+<td><p>cubic meters per second
+(cms)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Volume</p></td>
+<td><p>cubic feet (ft³)</p></td>
+<td><p>cubic meters (m³)</p></td>
+</tr>
+<tr class="row-even"><td><p>Depth</p></td>
+<td><p>feet (ft)</p></td>
+<td><p>meters (m)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Area</p></td>
+<td><p>square feet (ft²)</p></td>
+<td><p>square meters (m²)</p></td>
+</tr>
+<tr class="row-even"><td><p>Elevation</p></td>
+<td><p>feet (ft)</p></td>
+<td><p>meters (m)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Velocity</p></td>
+<td><p>feet per second (ft/s)</p></td>
+<td><p>meters per second (m/s)</p></td>
+</tr>
+<tr class="row-even"><td><p>Time</p></td>
+<td><p>hours (hr)</p></td>
+<td><p>hours (hr)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Date</p></td>
+<td><p>MM/DD/YYYY</p></td>
+<td><p>MM/DD/YYYY</p></td>
+</tr>
+<tr class="row-even"><td><p>Time Series</p></td>
+<td><p>HH:MM</p></td>
+<td><p>HH:MM</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../infiltration-editor/Horton.html" class="btn btn-neutral float-left" title="Horton" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Create%20Storm%20Drain.html" class="btn btn-neutral float-right" title="Create Storm Drain" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build23
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../../../Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

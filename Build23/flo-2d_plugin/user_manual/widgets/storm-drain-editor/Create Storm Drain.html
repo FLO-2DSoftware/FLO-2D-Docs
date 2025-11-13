@@ -1,0 +1,471 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Storm Drain &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Processors Group" href="Processors%20Group.html" />
+    <link rel="prev" title="Storm Drain Editor" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Plugin Gila</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">User Manual</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin-features/index.html">Plugin Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Widgets</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/index.html">Grid Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pre-processing-tools/Pre-Processing%20Tools.html">Pre-Processing Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../profile-tool/Profile%20Tool.html">Profile Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cross-sections-editor/Cross%20Sections%20Editor.html">Cross Sections Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary-condition-editor/index.html">Boundary Condition Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../initial-condition-editor/Initial%20Condition%20Editor.html">Initial Condition Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rain-editor/Rain%20Editor.html">Rain Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../schematized-channel-editor/Schematized%20Channel%20Editor.html">Schematized Channel Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hydraulic-structure-editor/Hydraulic%20Structure%20Editor.html">Structures Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../street-editor/Street%20Editor.html">Street Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../floodplain-cross-section-editor/Floodplain%20Cross%20Section%20Editor.html">Floodplain Cross Section Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../infiltration-editor/index.html">Infiltration Editor</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Storm Drain Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../levees-breach-editor/Levees%20Breach%20Editor.html">Levees Breach Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiple-channels-editor/Multiple%20Channel%20Editor.html">Multiple Channels Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../post-development-grid-modification/index.html">Grid Modification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/technical_reference_manual.html">Technical Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Plugin Gila</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">User Manual</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Widgets</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Storm Drain Editor</a></li>
+      <li class="breadcrumb-item active">Create Storm Drain</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Create Storm Drain.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="create-storm-drain">
+<h1>Create Storm Drain<a class="headerlink" href="#create-storm-drain" title="Link to this heading"></a></h1>
+<p>A storm drain network for FLO-2D is defined by vector layers.  These can be external shapefiles or they can be part of the
+geopackage.  Vector layers contain point or line geometries that connect the data to the map.  They also have
+properties that define the storm drain data.</p>
+<section id="create-storm-drain-system">
+<h2>Create Storm Drain System<a class="headerlink" href="#create-storm-drain-system" title="Link to this heading"></a></h2>
+<p>In the latest plugin version, the Storm Drain System can be created from scratch. By using the Storm Drain layers in the User Layers,
+it is possible to create all Storm Drain elements. To begin creating the system, use the QGIS ‘Toggle Editing’ button.</p>
+<img alt="../../../../_images/Storm032.png" src="../../../../_images/Storm032.png" />
+<img alt="../../../../_images/editorpencil.png" src="../../../../_images/editorpencil.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The recommended  sequence is to start with the point layers (Storm Drain Inlets/Junctions, Storm Drain Outfalls,
+Storm Drain Storage Units) and then move to the line layers (Storm Drain Conduits, Storm Drain Pumps,
+Storm Drain Orifices, Storm Drain Weirs).</p>
+</div>
+<section id="storm-drain-point-layers">
+<h3>Storm Drain Point Layers<a class="headerlink" href="#storm-drain-point-layers" title="Link to this heading"></a></h3>
+<p>All Storm Drain Point Layers (Storm Drain Inlets/Junctions, Storm Drain Outfalls, Storm Drain Storage Units) are created in the same manner.
+To keep the instructions concise, detailed steps will be provided for creating Inlets/Junctions.
+The same process applies to the other Storm Drain point layers.</p>
+<ol class="arabic simple">
+<li><p>Select the Storm Drain Inlets/Junctions layer and click on the QGIS ‘Toggle Editing’ button.</p></li>
+<li><p>Add the Inlets/Junctions on the computational domain.</p></li>
+</ol>
+<img alt="../../../../_images/Storm033.png" src="../../../../_images/Storm033.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The Properties Dialog Form does not appear when creating the Storm Drain layers.
+The properties must be added or modified after the editing is finished.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Finish editing.</p></li>
+<li><p>Select the FLO-2D Info Tool and click on the created Inlet/Junction.</p></li>
+</ol>
+<img alt="../../../../_images/floinfo.png" src="../../../../_images/floinfo.png" />
+<img alt="../../../../_images/Storm034.png" src="../../../../_images/Storm034.png" />
+<ol class="arabic simple" start="5">
+<li><p>On the Inlet/Junction properties docked widget, modify the properties.</p></li>
+</ol>
+<img alt="../../../../_images/Storm035.png" src="../../../../_images/Storm035.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The properties modified on the Inlet/Junction properties docket widget are automatically updated on the attribute table.</p>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Another way to modify the properties is by right-clicking on the Storm Drain Inlets/Junctions layer and selecting “Open Attribute Table.”</p></li>
+</ol>
+<img alt="../../../../_images/Storm036.png" src="../../../../_images/Storm036.png" />
+<img alt="../../../../_images/Storm037.png" src="../../../../_images/Storm037.png" />
+</section>
+<section id="storm-drain-line-layers">
+<h3>Storm Drain Line Layers<a class="headerlink" href="#storm-drain-line-layers" title="Link to this heading"></a></h3>
+<p>All Storm Drain Line Layers (Storm Drain Conduits, Storm Drain Pumps, Storm Drain Orifices, Storm Drain Weirs) are created in the same manner.
+To keep the instructions concise, detailed steps will be provided for creating Conduits.
+The same process applies to the other Storm Drain line layers.</p>
+<ol class="arabic simple">
+<li><p>Select the Storm Drain Conduits layer and click on the QGIS ‘Toggle Editing’ button.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Enable the snapping tool to facilitate snapping to the Storm Drain point layers.</p>
+<img alt="../../../../_images/snapping.png" src="../../../../_images/snapping.png" />
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Add a conduit by left-clicking on the upstream node, then left-click to add any vertices in-between nodes,
+and finish by right-clicking on the downstream node. You can add as many conduits as needed.</p></li>
+</ol>
+<img alt="../../../../_images/Storm038.png" src="../../../../_images/Storm038.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The Properties Dialog Form does not appear when creating the Storm Drain layers.
+The properties must be added or modified after the editing is finished.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Finish editing.</p></li>
+<li><p>Select the FLO-2D Info Tool and click on the created Conduit.</p></li>
+</ol>
+<img alt="../../../../_images/floinfo.png" src="../../../../_images/floinfo.png" />
+<img alt="../../../../_images/Storm039.png" src="../../../../_images/Storm039.png" />
+<ol class="arabic simple" start="5">
+<li><p>On the Conduit properties docked widget, modify the properties.</p></li>
+</ol>
+<img alt="../../../../_images/Storm040.png" src="../../../../_images/Storm040.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The properties modified on the Conduit properties docket widget are automatically updated on the attribute table.</p>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Another way to modify the properties is by right-clicking on the Storm Drain Conduits layer and selecting “Open Attribute Table.”</p></li>
+</ol>
+<img alt="../../../../_images/Storm041.png" src="../../../../_images/Storm041.png" />
+<img alt="../../../../_images/Storm042.png" src="../../../../_images/Storm042.png" />
+</section>
+</section>
+<section id="create-storm-drain-system-from-inp">
+<h2>Create Storm Drain System from INP<a class="headerlink" href="#create-storm-drain-system-from-inp" title="Link to this heading"></a></h2>
+<p>The Storm Drain system can be imported from an existing *.INP file developed in the SWMM GUI or any other software.</p>
+<ol class="arabic simple">
+<li><p>Select “Import from INP” on the toolbar.</p></li>
+</ol>
+<img alt="../../../../_images/importexport006.png" src="../../../../_images/importexport006.png" />
+<ol class="arabic simple" start="2">
+<li><p>On the dialog box, select the *.INP file.</p></li>
+</ol>
+<img alt="../../../../_images/Storm043.png" src="../../../../_images/Storm043.png" />
+<ol class="arabic simple" start="3">
+<li><p>A message about replacing or completing the Storm Drain User Data will appear.
+Select ‘Keep existing and complete’ if there is already data in your Storm Drain layers.
+Otherwise, select ‘Create New Storm Drains’ to delete all existing data on the Storm Drain layers and
+add a new Storm Drain system with the data from the *.INP file.</p></li>
+</ol>
+<img alt="../../../../_images/Storm044.png" src="../../../../_images/Storm044.png" />
+<ol class="arabic simple" start="4">
+<li><p>A message will appear showing information related to the *.INP data just added. Click OK.</p></li>
+</ol>
+<img alt="../../../../_images/Storm045.png" src="../../../../_images/Storm045.png" />
+<ol class="arabic simple" start="5">
+<li><p>The Storm Drain Options will appear. The Storm Drain Options dialog is explained on its own section. Adjust the desired variables and click OK.</p></li>
+</ol>
+<img alt="../../../../_images/Storm046.png" src="../../../../_images/Storm046.png" />
+<p>The *.INP is imported to the project.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Once the *.INP file is imported into the geopackage layers, you can modify the shapefiles as needed.</p>
+</div>
+</section>
+<section id="create-storm-drain-system-from-shapefiles">
+<h2>Create Storm Drain System from Shapefiles<a class="headerlink" href="#create-storm-drain-system-from-shapefiles" title="Link to this heading"></a></h2>
+<p>The Storm Drain system can be created from external shapefiles representing the Storm Drain System. The ‘Select components from shapefile layer’ processor is used to assign data to the
+Storm Drain User Layers.</p>
+<img alt="../../../../_images/storm002d.png" src="../../../../_images/storm002d.png" />
+<section id="input-layer-descriptions">
+<h3>Input Layer Descriptions<a class="headerlink" href="#input-layer-descriptions" title="Link to this heading"></a></h3>
+<p>Points are Nodes</p>
+<ul class="simple">
+<li><p>Inlets and Junctions - a point layer that contains the inlets nodes, manholes, and junctions.</p></li>
+<li><p>Outfalls - a point layer that contains the outfalls.</p></li>
+<li><p>Storage Units - a point layer that contains storage units. (Not required)</p></li>
+</ul>
+<p>Polylines are Links</p>
+<ul class="simple">
+<li><p>Conduits - a line layer that contains the conduits system.</p></li>
+<li><p>Pumps - a line layer that contains the pump system. (Not required)</p></li>
+<li><p>Orifices - a line layer that contains the orifices system. (Not required)</p></li>
+<li><p>Weirs -  a line layer that contains the weirs system. (Not Required)</p></li>
+</ul>
+<p>The following data must be available in the vector layers to create the storm drain data
+files:</p>
+<ul class="simple">
+<li><p>SWMM.INP</p></li>
+<li><p>SWMMFLO.DAT</p></li>
+<li><p>SWMMOUTF.DAT</p></li>
+<li><p>SWMMFLORT.DAT</p></li>
+<li><p>SDCLOGGING.DAT</p></li>
+<li><p>SWMMFLODROPBOX.DAT</p></li>
+</ul>
+</section>
+<section id="external-shapefiles">
+<h3>External Shapefiles<a class="headerlink" href="#external-shapefiles" title="Link to this heading"></a></h3>
+<p>The external shapefiles must include points and lines.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Most editing work should be done in these layers. When the Assign button is clicked,
+the fields will be saved to a table so they are committed to memory
+when the project is reloaded.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Load the shapefiles or geopackage layers onto the map.</p></li>
+</ol>
+<img alt="../../../../_images/Storm004.png" src="../../../../_images/Storm004.png" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When the project is saved, the Storm Drain layers will be committed to the Geopackage. This means that
+the edits to the layers will be made to the geopackage not the shapefiles.</p>
+</div>
+</section>
+<section id="inlets-and-junctions">
+<h3>Inlets and Junctions<a class="headerlink" href="#inlets-and-junctions" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Inlets and Junctions - a point layer that contains the inlets nodes, manholes, and junctions. This figure shows
+the fields that are used for storm drain modeling.</p></li>
+</ol>
+<img alt="../../../../_images/sdtable001.png" src="../../../../_images/sdtable001.png" />
+<ol class="arabic simple" start="2">
+<li><p>This is a sample of the attributes table for the Inlet/Junctions shapefile.</p></li>
+</ol>
+<img alt="../../../../_images/Storm007.png" src="../../../../_images/Storm007.png" />
+<ol class="arabic simple" start="3">
+<li><p>The fields from the attribute table are selected using the Select Components from Shapefile dialog box.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The plugin uses search terms to auto fill fields once you select the layer.  Double check the
+the fields to make sure they are assigned to the correct field.</p>
+</div>
+<img alt="../../../../_images/field001.png" src="../../../../_images/field001.png" />
+</section>
+<section id="outfalls">
+<h3>Outfalls<a class="headerlink" href="#outfalls" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Outfalls - a point layer that contains the outfalls.</p></li>
+</ol>
+<img alt="../../../../_images/sdtable002.png" src="../../../../_images/sdtable002.png" />
+<ol class="arabic simple" start="2">
+<li><p>This is a sample of the attributes table for the outfall shapefile.</p></li>
+</ol>
+<img alt="../../../../_images/Storm012.png" src="../../../../_images/Storm012.png" />
+<ol class="arabic simple" start="3">
+<li><p>The fields from the attribute table are selected using the Select Components from Shapefile dialog box.</p></li>
+</ol>
+<img alt="../../../../_images/field002.png" src="../../../../_images/field002.png" />
+</section>
+<section id="storage-units">
+<h3>Storage Units<a class="headerlink" href="#storage-units" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Storage Units - a point layer that contains storage units data. (Not required)</p></li>
+</ol>
+<img alt="../../../../_images/sdtable003.png" src="../../../../_images/sdtable003.png" />
+<ol class="arabic simple" start="2">
+<li><p>This is a sample of the attributes table for the storage unit shapefile.</p></li>
+</ol>
+<img alt="../../../../_images/Storm012a.png" src="../../../../_images/Storm012a.png" />
+<ol class="arabic simple" start="3">
+<li><p>The fields from the attribute table are selected using the Select Components from Shapefile dialog box.</p></li>
+</ol>
+<img alt="../../../../_images/field003.png" src="../../../../_images/field003.png" />
+</section>
+<section id="conduits">
+<h3>Conduits<a class="headerlink" href="#conduits" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Conduits - a line layer that contains the conduits system.</p></li>
+</ol>
+<img alt="../../../../_images/sdtable004.png" src="../../../../_images/sdtable004.png" />
+<ol class="arabic simple" start="2">
+<li><p>This is a sample of the attributes table for the conduit shapefile.</p></li>
+</ol>
+<img alt="../../../../_images/Storm010.png" src="../../../../_images/Storm010.png" />
+<ol class="arabic simple" start="3">
+<li><p>The fields from the attribute table are selected using the Select Components from Shapefile dialog box.</p></li>
+</ol>
+<img alt="../../../../_images/field004.png" src="../../../../_images/field004.png" />
+</section>
+<section id="pumps">
+<h3>Pumps<a class="headerlink" href="#pumps" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Pumps - a line layer that contains the pump system. (Not required)</p></li>
+</ol>
+<img alt="../../../../_images/sdtable005.png" src="../../../../_images/sdtable005.png" />
+<ol class="arabic simple" start="2">
+<li><p>This is a sample of the attributes table for the conduit shapefile.</p></li>
+</ol>
+<img alt="../../../../_images/Storm010a.png" src="../../../../_images/Storm010a.png" />
+<ol class="arabic simple" start="3">
+<li><p>The fields from the attribute table are selected using the Select Components from Shapefile dialog box.</p></li>
+</ol>
+<img alt="../../../../_images/field005.png" src="../../../../_images/field005.png" />
+</section>
+<section id="orifices">
+<h3>Orifices<a class="headerlink" href="#orifices" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Orifices - a line layer that contains the orifices system. (Not required)</p></li>
+</ol>
+<img alt="../../../../_images/sdtable006.png" src="../../../../_images/sdtable006.png" />
+<ol class="arabic simple" start="2">
+<li><p>This is a sample of the attributes table for the conduit shapefile.</p></li>
+</ol>
+<img alt="../../../../_images/Storm010b.png" src="../../../../_images/Storm010b.png" />
+<ol class="arabic simple" start="3">
+<li><p>The fields from the attribute table are selected using the Select Components from Shapefile dialog box.</p></li>
+</ol>
+<img alt="../../../../_images/field006.png" src="../../../../_images/field006.png" />
+</section>
+<section id="weirs">
+<h3>Weirs<a class="headerlink" href="#weirs" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Weirs -  a line layer that contains the weirs system. (Not Required)</p></li>
+</ol>
+<img alt="../../../../_images/sdtable007.png" src="../../../../_images/sdtable007.png" />
+<ol class="arabic simple" start="2">
+<li><p>This is a sample of the attributes table for the conduit shapefile.</p></li>
+</ol>
+<img alt="../../../../_images/Storm010c.png" src="../../../../_images/Storm010c.png" />
+<ol class="arabic simple" start="3">
+<li><p>The fields from the attribute table are selected using the Select Components from Shapefile dialog box.</p></li>
+</ol>
+<img alt="../../../../_images/field007.png" src="../../../../_images/field007.png" />
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Storm Drain Editor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Processors%20Group.html" class="btn btn-neutral float-right" title="Processors Group" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build23
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../../../Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Create Storm Drain.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="Create Storm Drain.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

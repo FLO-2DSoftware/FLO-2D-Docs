@@ -1,0 +1,855 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 5 &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Chapter 6" href="Chapter%206.html" />
+    <link rel="prev" title="Chapter 4" href="Chapter%204.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Channel%20Modeling%20Guidelines%202023/index.html">Channel Modeling Guidelines</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Storm Drain Modeling Guidelines</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Chapter%201.html">Chapter 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">Chapter 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%203.html">Chapter 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%204.html">Chapter 4</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Chapter 5</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%206.html">Chapter 6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%207.html">Chapter 7</a></li>
+<li class="toctree-l3"><a class="reference internal" href="References.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/Hydraulic%20Structures%20Guidelines.html">FLO-2D Hydraulic Structure Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/Levee%20Dam%20and%20Wall%20Breach%20Guidelines.html">Levee Dam and Wall Breach Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines/Simulating%20Mudflow%20Guidelines.html">Simulating Mudflow Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Flood%20Routing%20Guidelines%202023/Two%20Phase%20Flood%20Routing%20Guidelines%202023.html">Two Phase Flood Routing Guidelines 2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual%202023/index.html">Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin Gila</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Storm Drain Modeling Guidelines</a></li>
+      <li class="breadcrumb-item active">Chapter 5</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/flo-2d_pro/Storm Drain Modeling Guidelines/Chapter 5.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chapter-5">
+<h1>Chapter 5<a class="headerlink" href="#chapter-5" title="Link to this heading"></a></h1>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h3>
+<p>When a FLO-2D storm drain model ends prematurely, it is probable that an error statement is written to the ERROR.CHK or to the STORMDRAIN_ERROR.CHK
+files as well as to the report file (SWMM.RPT).
+Even for successful simulations, the ERROR.CHK and STORMDRAIN_ERROR.CHK should be reviewed for warning messages.
+All the potential errors that may be encountered cannot be anticipated, but some suggestions to reduce the conflicts and have a better understanding
+of how to improve the storm drain model are presented:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Number of inlets (SWMMFLO.DAT) should be equal to the number of nodes with an ID that starts with “I” (SWMM.inp).
+The QGIS plugin identify the inlets automatically.
+If a storm drain feature is added or deleted, the storm drain files need to be recreated to include the change.</p></li>
+<li><p>The SWMMOUTF.DAT file should be created through the QGIS plug-in, if the storm drain system has outfalls defined.
+If the number of outfalls is modified, the user must recreate the SWMMOUTF.DAT.</p></li>
+<li><p>Outfall to a channel must be assigned to the left bank channel element.</p></li>
+<li><p>The SWMMFLORT.DAT file needs to be created if Type 4 inlet rating tables or culvert conditions were assigned.</p></li>
+<li><p>The inlet rim elevation must be equal to the FLO-2D grid element floodplain elevation for horizontal inlets.
+Cell elevation is adjusted to the rim elevation at runtime and a warning message is generated.
+The user must make the adjustment permanent in FPLAIN.DAT and TOPO.DAT by deleting the files and renaming FPLAIN_SDElev.RGH and TOPO_SDElev.RGH as
+FPLAIN.DAT and TOPO.DAT.</p></li>
+<li><p>The path names of FLO-2D storm drain files are recommended to be less than 254 characters.
+Paths names approaching that number of characters may cause the storm drain model to crash.
+The filenames and paths are defined as character pointers in the storm drain model so there is no text length issue but there are several opening and
+write statements in the output files that include format specifiers that could trigger this problem.
+If this problem is reported in the output *.CHK files, then run the model in a folder with a short path and a simplified name.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="flo-2d-error-messages">
+<h3>FLO-2D Error Messages<a class="headerlink" href="#flo-2d-error-messages" title="Link to this heading"></a></h3>
+<p>Error/warning messages are listed in the ERROR.CHK file.
+The most important messages are listed in Table 20.</p>
+<p><em>Table 20.
+FLO-2D Error Messages</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Issue</strong></p></td>
+<td><p><strong>Message in ERROR.CHK</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Channel bed elevation.</p></td>
+<td><p>THERE ARE STORM DRAIN INLETS ON CHANNEL GRID ELEMENTS.</p>
+<p>THE CHANNEL BED ELEVATION MIGHT BE DIFFERENT THAN THE INVERT ELEVATION.</p>
+<p>NO ACTION WAS TAKEN DURING THE SIMULATION.</p>
+<p>PLEASE REVIEW AND REVISE IF NECESSARY.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Elevations for outfall nodes.</p></td>
+<td><p>THE STORM DRAIN OUTFALL INVERT ELEVATION SHOULD BE EQUAL TO OR GREATER THAN</p>
+<p>THE FLOODPLAIN, CHANNEL, STREET ELEVATION.</p>
+<p>NO ACTION IS TAKEN.
+PLEASE REVIEW AND REVISE IF NECESSARY.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Outfall node in channel interior element.</p></td>
+<td><p>THE FOLLOWING STORM DRAIN OUTFALL NODES ARE IN CHANNEL INTERIOR ELEMENTS,</p>
+<p>RE-ASSIGN TO THE CHANNEL ELEMENTS IN CHAN.DAT.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Outfall node assigned to a FLO-2D outflow element.</p></td>
+<td><p>THERE IS AN OUTFLOW NODE AND A STORM DRAIN OUTFALL ASSIGNED TO THE SAME GRID CELL.</p></td>
+</tr>
+<tr class="row-even"><td><p>Grid element floodplain must be revised.</p></td>
+<td><p>THE GRID ELEMENT FLOODPLAIN WAS REVISED DURING THE  SIMULATION TO THE</p>
+<p>STORM DRAIN INLET</p>
+<p>RIM ELEVATIONS FOR THE FOLLOWING GRID ELEMENTS (PLEASE REVIEW</p>
+<p>AND REVISE FPRIMELEV.OUT FILE IF NECESSARY).</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Horizontal type 4 storm drain inlet elevations.</p></td>
+<td><p>THE HORIZONTAL TYPE 4 STORM DRAIN INLET ELEVATIONS  WERE REVISED</p>
+<p>DURING THE SIMULATION</p>
+<p>TO THE STORM  DRAIN INLET RIM ELEVATIONS FOR THE FOLLOWING GRID</p>
+<p>ELEMENTS (PLEASE REVIEW AND REVISE FPRIMELEV.OUT FILE IF NECESSARY).</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Type 4 inlet is a vertical inlet, and it is in a floodplain cell.</p></td>
+<td><p>THE GRID ELEMENT ELEVATIONS IN “FLOODPLAIN  SWALES” WERE REVISED</p>
+<p>DURING THE SIMULATION</p>
+<p>TO THE TYPE 4 VERTICAL INLET INVERT ELEVATIONS.</p>
+<p>PLEASE REVIEW FPRIMELEV.OUT FILE.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a floodplain swale is discharging into a storm drain conduit or culvert,</p>
+<p>the invert elevation should be equal to the swale bed elevation.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Type 4 inlet is a vertical inlet,</p>
+<p>and it is in a channelcell.</p>
+</td>
+<td><p>THERE ARE VERTICAL TYPE 4 INLETS ASSIGNED TO CHANNEL ELEMENTS AND THE CHANNEL</p>
+<p>BED ELEVATION IS DIFFERENT  THAN THE INVERT ELEVATION.</p>
+<p>NO ACTION WAS TAKEN DURING THE SIMULATION.</p>
+<p>PLEASE REVIEW AND REVISE IF NECESSARY.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If an inlet is assigned to the end of a 1-D channel segment and the channel flow</p>
+<p>discharges into the storm drain, the invert elevation should</p>
+<p>equal to the channel bed elevation.</p>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>No elevation differences between</p>
+<p>surface and stormdrain layers.</p>
+</td>
+<td><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>THERE ARE NO DIFFERENCES BETWEEN FLOODPLAIN GRID AND STORM</p>
+<p>DRAIN RIM ELEVATIONS.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>THERE ARE NO DIFFERENCES BETWEEN FLOODPLAIN GRID AND TYPE 4 INVERT INLET</p>
+<p>ELEVATIONS. FPRIMELEV.OUT FILE WAS NOT CREATED*.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Elevations are revised.</p></td>
+<td><p>THE GRID ELEMENT FLOODPLAIN OR STREET ELEVATIONS WERE  REVISED DURING</p>
+<p>SIMULATION TO THE STORM DRAIN INLET RIM ELEVATIONS FOR THE FOLLOWING GRID</p>
+<p>ELEMENTS  (PLEASE REVIEW THE FPRIMELEV.OUT FILE)</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>More than one storm drain inlet</p>
+<p>is assigned to one grid element.</p>
+<p>Simulation does not start.</p>
+</td>
+<td><p>THERE ARE POTENTIAL DATA ERROR(S) IN FILE SWMM.inp AND  SWMMFLO.DAT.</p>
+<p>MULTIPLE INLETS ASSIGNED TO ONE GRID CELL</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Multiple cells are assigned to one inlet.</p>
+<p>Simulation does not start.</p>
+</td>
+<td><p>MULTIPLE CELLS ASSIGNED TO ONE INLET</p></td>
+</tr>
+<tr class="row-even"><td><p>Missing storm drain inlet geometry</p>
+<p>or inappropriate geometry,</p>
+<p>simulation does not start.</p>
+</td>
+<td><p>THERE ARE A MISSING OR INAPPROPRIATE STORM DRAIN INLET  GEOMETRY IN FILE:</p>
+<p>SWMMFLO.DAT.</p>
+<p>REVIEW STORM DRAIN  INLET: XX, DRAIN TYPE: IX ON GRID CELL: XXX</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Missed or inappropriate geometry.</p></td>
+<td><p>‘LENGTH MUST BE GREATER THAN ZERO’  ‘WIDTH OR HEIGHT MUST BE GREATER THAN ZERO’</p>
+<p>‘PERIMETER MUST BE GREATER THAN ZERO’  ‘TYPICAL WEIR COEFFICIENT:</p>
+<p>2.3’  ‘TYPICAL WEIR COEFFICIENT RANGE: 2.8 - 3.2’</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>General Error in SWMM Model.</p></td>
+<td><p>COMPUTATIONAL ERROR IN SWMM MODEL: REVIEW *.RPT FILE FOR THE ERROR DESCRIPTION</p></td>
+</tr>
+<tr class="row-odd"><td><p>General Error in SWMM Model reported</p>
+<p>to the ERROR.CHK file and to</p>
+<p>the STORMDRAIN_ERROR.CHK.</p>
+</td>
+<td><p>THERE IS AN ERROR IN THE SWMM MODEL.</p>
+<p>PLEASE REVIEW  THE FOLLOWING ERROR CODE IN THE SWMM ERROR LIST OR  CONTACT</p>
+<p>THE FLO-2D TEAM FOR SUPPORT  Error Code: XXX.</p>
+<p>(See Table 21 below.)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="swmm-error-messages">
+<h3>SWMM error messages<a class="headerlink" href="#swmm-error-messages" title="Link to this heading"></a></h3>
+<p>Table 21 lists the errors reported by SWMM (Rossman, 2005) to the SWMM.RPT file as well as to the STOMRDRAIN_ERROR.CHK file.
+Some of these errors may not be relevant to the FLO-2D storm drain model.
+The internal error code is reported in SWMM.RPT.
+If the end user needs help with a code, provide this code to the FLO-2D team along with the swmm.inp file and any other relevant file.</p>
+<p><em>Table 21.
+SWMM Error Numbers.</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Storm Drain EngineError Number /Internal Error</p></td>
+<td><p>Description of the error</p></td>
+</tr>
+<tr class="row-even"><td><p>101 / 0</p></td>
+<td><p>Memory allocation error</p></td>
+</tr>
+<tr class="row-odd"><td><p>103 / 2</p></td>
+<td><p>Cannot solve KW equations for Link</p></td>
+</tr>
+<tr class="row-even"><td><p>105 / 3</p></td>
+<td><p>Cannot open ODE solver</p></td>
+</tr>
+<tr class="row-odd"><td><p>107 / 4</p></td>
+<td><p>Cannot compute a valid time step</p></td>
+</tr>
+<tr class="row-even"><td><p>108 / 5</p></td>
+<td><p>Ambiguous outlet ID name for subcatchment</p></td>
+</tr>
+<tr class="row-odd"><td><p>109 / 6</p></td>
+<td><p>Invalid parameter values for aquifer</p></td>
+</tr>
+<tr class="row-even"><td><p>110 / 7</p></td>
+<td><p>Ground elevation is below water table for Subcatchment</p></td>
+</tr>
+<tr class="row-odd"><td><p>111 / 8</p></td>
+<td><p>Invalid length for conduit</p></td>
+</tr>
+<tr class="row-even"><td><p>112 / 9</p></td>
+<td><p>Elevation drop exceeds length for conduit</p></td>
+</tr>
+<tr class="row-odd"><td><p>113 / 10</p></td>
+<td><p>Invalid roughness for conduit</p></td>
+</tr>
+<tr class="row-even"><td><p>114 / 11</p></td>
+<td><p>Invalid number of barrels for conduit</p></td>
+</tr>
+<tr class="row-odd"><td><p>115 / 12</p></td>
+<td><p>Adverse slope for conduit</p></td>
+</tr>
+<tr class="row-even"><td><p>117 / 13</p></td>
+<td><p>No cross section defined for link</p></td>
+</tr>
+<tr class="row-odd"><td><p>119 / 14</p></td>
+<td><p>Invalid cross section for link</p></td>
+</tr>
+<tr class="row-even"><td><p>121 / 15</p></td>
+<td><p>Missing or invalid pump curve assigned to pump</p></td>
+</tr>
+<tr class="row-odd"><td><p>131 / 16</p></td>
+<td><p>The following links form cyclic loops in the drainage system</p></td>
+</tr>
+<tr class="row-even"><td><p>133 / 17</p></td>
+<td><p>Node xxx has more than one outlet link</p></td>
+</tr>
+<tr class="row-odd"><td><p>134 / 18</p></td>
+<td><p>Node has illegal DUMMY link connections</p></td>
+</tr>
+<tr class="row-even"><td><p>135 / 19</p></td>
+<td><p>Divider xxx does not have two outlet links</p></td>
+</tr>
+<tr class="row-odd"><td><p>136 / 20</p></td>
+<td><p>Divider xxx has invalid diversion link</p></td>
+</tr>
+<tr class="row-even"><td><p>137 / 21</p></td>
+<td><p>Weir Divider xxx has invalid parameters</p></td>
+</tr>
+<tr class="row-odd"><td><p>138 / 22</p></td>
+<td><p>Node xxx has initial depth greater than maximum depth</p></td>
+</tr>
+<tr class="row-even"><td><p>139 / 23</p></td>
+<td><p>Regulator xxx is the outlet of a non-storage node</p></td>
+</tr>
+<tr class="row-odd"><td><p>141 / 24</p></td>
+<td><p>Outfall xxx has more than 1 inlet link or an outlet link</p></td>
+</tr>
+<tr class="row-even"><td><p>143 / 25</p></td>
+<td><p>Regulator xxx has invalid cross-section shape</p></td>
+</tr>
+<tr class="row-odd"><td><p>145 / 26</p></td>
+<td><p>Drainage system has no acceptable outlet nodes</p></td>
+</tr>
+<tr class="row-even"><td><p>151 / 27</p></td>
+<td><p>A Unit Hydrograph in set xxx has invalid time base</p></td>
+</tr>
+<tr class="row-odd"><td><p>153 / 28</p></td>
+<td><p>A Unit Hydrograph in set xxx has invalid response ratios</p></td>
+</tr>
+<tr class="row-even"><td><p>155 / 29</p></td>
+<td><p>Invalid sewer area for RDII at node</p></td>
+</tr>
+<tr class="row-odd"><td><p>156 / 30</p></td>
+<td><p>Inconsistent data file name for rain gage</p></td>
+</tr>
+<tr class="row-even"><td><p>157 /31</p></td>
+<td><p>Inconsistent rainfall format for rain gage</p></td>
+</tr>
+<tr class="row-odd"><td><p>158 / 32</p></td>
+<td><p>Time series for rain gage xxx is used by another object</p></td>
+</tr>
+<tr class="row-even"><td><p>159 / 33</p></td>
+<td><p>Recording interval &gt; time series interval for Rain Gage</p></td>
+</tr>
+<tr class="row-odd"><td><p>161 / 34</p></td>
+<td><p>Cyclic dependency in treatment functions at node</p></td>
+</tr>
+<tr class="row-even"><td><p>171 / 35</p></td>
+<td><p>Curve xxx has invalid or out of sequence data</p></td>
+</tr>
+<tr class="row-odd"><td><p>173 / 36</p></td>
+<td><p>Time series xxx has its data out of sequence</p></td>
+</tr>
+<tr class="row-even"><td><p>181 / 37</p></td>
+<td><p>Invalid snow melt climatology parameters</p></td>
+</tr>
+<tr class="row-odd"><td><p>182 / 38</p></td>
+<td><p>Invalid parameters for snowpack</p></td>
+</tr>
+<tr class="row-even"><td><p>183 / 39</p></td>
+<td><p>No type specified for LID</p></td>
+</tr>
+<tr class="row-odd"><td><p>184 / 40</p></td>
+<td><p>Missing layer for LID</p></td>
+</tr>
+<tr class="row-even"><td><p>185 / 41</p></td>
+<td><p>Invalid parameter value for LID</p></td>
+</tr>
+<tr class="row-odd"><td><p>186 / 42</p></td>
+<td><p>Invalid parameter value for LID placed in subcatchment</p></td>
+</tr>
+<tr class="row-even"><td><p>187 / 43</p></td>
+<td><p>LID area exceeds total area for subcatchment</p></td>
+</tr>
+<tr class="row-odd"><td><p>188 / 44</p></td>
+<td><p>LID capture area exceeds impervious area for subcatchment</p></td>
+</tr>
+<tr class="row-even"><td><p>191 /45</p></td>
+<td><p>Simulation start date comes after ending date</p></td>
+</tr>
+<tr class="row-odd"><td><p>193 / 46</p></td>
+<td><p>Report start date comes after ending date</p></td>
+</tr>
+<tr class="row-even"><td><p>195 / 47</p></td>
+<td><p>Reporting time step or duration is less than routing time step</p></td>
+</tr>
+<tr class="row-odd"><td><p>200 / 48</p></td>
+<td><p>One or more errors in input file</p></td>
+</tr>
+<tr class="row-even"><td><p>201 / 49</p></td>
+<td><p>Too many characters in input line</p></td>
+</tr>
+<tr class="row-odd"><td><p>203 / 50</p></td>
+<td><p>Too few items</p></td>
+</tr>
+<tr class="row-even"><td><p>205 / 51</p></td>
+<td><p>Invalid keyword xxx</p></td>
+</tr>
+<tr class="row-odd"><td><p>207 / 52</p></td>
+<td><p>Duplicate ID name xxx</p></td>
+</tr>
+<tr class="row-even"><td><p>209 / 53</p></td>
+<td><p>Undefined object xxx</p></td>
+</tr>
+<tr class="row-odd"><td><p>211 / 54</p></td>
+<td><p>Invalid number xxx</p></td>
+</tr>
+<tr class="row-even"><td><p>213 / 55</p></td>
+<td><p>Invalid date/time xxx</p></td>
+</tr>
+<tr class="row-odd"><td><p>217 / 56</p></td>
+<td><p>Control rule clause out of sequence</p></td>
+</tr>
+<tr class="row-even"><td><p>219 / 57</p></td>
+<td><p>Data provided for unidentified transect</p></td>
+</tr>
+<tr class="row-odd"><td><p>221 / 58</p></td>
+<td><p>Transect station out of sequence</p></td>
+</tr>
+<tr class="row-even"><td><p>223 / 59</p></td>
+<td><p>Transect xxx has too few stations</p></td>
+</tr>
+<tr class="row-odd"><td><p>225 / 60</p></td>
+<td><p>Transect xxx has too many stations</p></td>
+</tr>
+<tr class="row-even"><td><p>227 / 61</p></td>
+<td><p>Transect xxx has no Manning’s n</p></td>
+</tr>
+<tr class="row-odd"><td><p>229 / 62</p></td>
+<td><p>Transect xxx has invalid overbank locations</p></td>
+</tr>
+<tr class="row-even"><td><p>231 / 63</p></td>
+<td><p>Transect xxx has no depth</p></td>
+</tr>
+<tr class="row-odd"><td><p>233 / 64</p></td>
+<td><p>Invalid treatment function expression</p></td>
+</tr>
+<tr class="row-even"><td><p>301 / 65</p></td>
+<td><p>Files share same names</p></td>
+</tr>
+<tr class="row-odd"><td><p>303 / 66</p></td>
+<td><p>Cannot open input file</p></td>
+</tr>
+<tr class="row-even"><td><p>305 / 67</p></td>
+<td><p>Cannot open report file</p></td>
+</tr>
+<tr class="row-odd"><td><p>307 / 68</p></td>
+<td><p>Cannot open binary results file</p></td>
+</tr>
+<tr class="row-even"><td><p>309 / 69</p></td>
+<td><p>Error writing to binary results file</p></td>
+</tr>
+<tr class="row-odd"><td><p>311 / 70</p></td>
+<td><p>Error reading from binary results file</p></td>
+</tr>
+<tr class="row-even"><td><p>313 / 71</p></td>
+<td><p>Cannot open scratch rainfall interface file</p></td>
+</tr>
+<tr class="row-odd"><td><p>315 / 72</p></td>
+<td><p>Cannot open rainfall interface file</p></td>
+</tr>
+<tr class="row-even"><td><p>317 / 73</p></td>
+<td><p>Cannot open rainfall data file</p></td>
+</tr>
+<tr class="row-odd"><td><p>318 / 74</p></td>
+<td><p>Date out of sequence in rainfall data file</p></td>
+</tr>
+<tr class="row-even"><td><p>319 / 75</p></td>
+<td><p>Invalid format for rainfall interface file</p></td>
+</tr>
+<tr class="row-odd"><td><p>321 / 76</p></td>
+<td><p>No data in rainfall interface file for gage</p></td>
+</tr>
+<tr class="row-even"><td><p>323 / 77</p></td>
+<td><p>Cannot open runoff interface file</p></td>
+</tr>
+<tr class="row-odd"><td><p>325 / 78</p></td>
+<td><p>Incompatible data found in runoff interface file</p></td>
+</tr>
+<tr class="row-even"><td><p>327 / 79</p></td>
+<td><p>Attempting to read beyond end of runoff interface file</p></td>
+</tr>
+<tr class="row-odd"><td><p>329 / 80</p></td>
+<td><p>Error in reading from runoff interface file</p></td>
+</tr>
+<tr class="row-even"><td><p>330 / 81</p></td>
+<td><p>Hotstart interface files have same names</p></td>
+</tr>
+<tr class="row-odd"><td><p>331 / 82</p></td>
+<td><p>Cannot open hotstart interface file</p></td>
+</tr>
+<tr class="row-even"><td><p>333 / 83</p></td>
+<td><p>Incompatible data found in hotstart interface file</p></td>
+</tr>
+<tr class="row-odd"><td><p>335 / 84</p></td>
+<td><p>Error in reading from hotstart interface file</p></td>
+</tr>
+<tr class="row-even"><td><p>336 / 85</p></td>
+<td><p>No climate file specified for evaporation and/or wind speed</p></td>
+</tr>
+<tr class="row-odd"><td><p>337 / 86</p></td>
+<td><p>Cannot open climate file</p></td>
+</tr>
+<tr class="row-even"><td><p>338 / 87</p></td>
+<td><p>Error in reading from climate file</p></td>
+</tr>
+<tr class="row-odd"><td><p>339 / 88</p></td>
+<td><p>Attempt to read beyond end of climate file</p></td>
+</tr>
+<tr class="row-even"><td><p>341 / 89</p></td>
+<td><p>Cannot open scratch RDII interface file</p></td>
+</tr>
+<tr class="row-odd"><td><p>343 / 90</p></td>
+<td><p>Cannot open RDII interface file</p></td>
+</tr>
+<tr class="row-even"><td><p>345 / 91</p></td>
+<td><p>Invalid format for RDII interface file</p></td>
+</tr>
+<tr class="row-odd"><td><p>351 / 92</p></td>
+<td><p>Cannot open routing interface file</p></td>
+</tr>
+<tr class="row-even"><td><p>353 / 93</p></td>
+<td><p>Invalid format for routing interface file</p></td>
+</tr>
+<tr class="row-odd"><td><p>355 / 94</p></td>
+<td><p>Mismatched names in routing interface file</p></td>
+</tr>
+<tr class="row-even"><td><p>357 / 95</p></td>
+<td><p>Inflows and outflows interface files have same name</p></td>
+</tr>
+<tr class="row-odd"><td><p>361 / 96</p></td>
+<td><p>Could not open external file used for time series</p></td>
+</tr>
+<tr class="row-even"><td><p>363 / 97</p></td>
+<td><p>Invalid data in external file used for time series</p></td>
+</tr>
+<tr class="row-odd"><td><p>401 / 98</p></td>
+<td><p>General system error</p></td>
+</tr>
+<tr class="row-even"><td><p>402 / 99</p></td>
+<td><p>Cannot open new project while current project still open</p></td>
+</tr>
+<tr class="row-odd"><td><p>403 / 100</p></td>
+<td><p>Project not open or last run not ended</p></td>
+</tr>
+<tr class="row-even"><td><p>405 / 101</p></td>
+<td><p>Amount of output produced will exceed maximum file size; either reduce Ending Date or increase</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="dynamic-link-library-vc2005-con-dll">
+<h3>Dynamic Link Library VC2005-CON.DLL<a class="headerlink" href="#dynamic-link-library-vc2005-con-dll" title="Link to this heading"></a></h3>
+<p>VC2005-CON.dll is the dynamic link library (engine) that runs the storm drain system in the FLO2D model.
+When updating FLOPRO.exe, it is necessary to update VC2005-CON.dll.
+An out-ofdate DLL library may cause a crash error or inconsistent results.
+The VC2005-CON.dll file (based on the file date) should be current in the following directories:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>C:\Program Files (x86)\FLO-2D PRO</p></li>
+</ul>
+</div></blockquote>
+<p>The versions of the FLO-2D and the Storm Drain versions are reported in the STORMDRAIN_ERROR.CHK file, see example below.</p>
+<blockquote>
+<div><p>*** FLO-2D Pro Model - Build No.20.07.22 ***</p>
+<p>*** Storm Drain Model - Build No.20.07.22 ***</p>
+</div></blockquote>
+</section>
+<section id="volume-conservation-and-numerical-instability">
+<h3>Volume Conservation and Numerical Instability<a class="headerlink" href="#volume-conservation-and-numerical-instability" title="Link to this heading"></a></h3>
+<p>When a model run is completed, volume conservation is reported in the SWMM.RPT file under Flow Routing Continuity.
+The FLO-2D model volume conservation results are written in the SUMMARY.OUT file.
+Volume conservation represents the difference between the inflow volume and the outflow plus storage volumes for the system.
+The storm drain system should be reviewed if the mass continuity error in SWMM.RPT exceeds some reasonable level, such as plus or minus 1 percent.
+The original SWMM model might have volume conservation errors as high as 10 percent and this should not occur with the FLO-2D storm drain model.
+Excessive volume conservation error is primarily the result of short conduit lengths.
+It is recommended that the minimum pipe length be at least the size of the FLO-2D grid element side.
+The volume conservation errors, and numerical instabilities may be reduced or eliminated by:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Increasing pipe roughness n-values.</p></li>
+<li><p>Reviewing the selection of reporting timestep (REPORT_STEP) in the SWMM.inp file and the simulation time (TOUT) in the CONT.DAT file.</p></li>
+<li><p>Reviewing the system connectivity for adverse slopes and incorrect inlet geometry.</p></li>
+</ul>
+</div></blockquote>
+<p>Reviewing the interaction of key features between the surface and the storm drain models.</p>
+<p>The most common sources of numerical instability are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Short conduits.</p></li>
+<li><p>Conflicting or poor system connectivity in the pipe network.</p></li>
+</ul>
+</div></blockquote>
+<p>Discharge oscillations at inlets primarily occur when the pipe system is under pressure (full capacity).
+In the original SWMM model, when the pipe pressure exceeded the rim elevation, the inlet inflow discharge ceased and the water in the pipe could
+either be lost to ‘flooding’ or stored in artificial ‘ponding’ to be returned to the pipe when capacity became available.
+The artificial ponding routine was removed from the FLO-2D storm drain component.</p>
+<p>For a given water surface elevation condition, the storm drain can receive inflow or discharge overflow to the surface water based on the pipe
+capacity.
+If the pipe is full, there is no inflow discharge for that computational timestep.
+As the water flows through or out of the storm drain and pipe capacity becomes available, inlet inflow can occur.
+The model will only allow inlet inflow if there is available capacity.
+There is zero inflow if the storm drain system is full regardless of the surface water elevation above the rim.</p>
+<section id="high-flow-instability-indices-hfii">
+<h4>High Flow Instability Indices (HFII)<a class="headerlink" href="#high-flow-instability-indices-hfii" title="Link to this heading"></a></h4>
+<p>The SWMM.RPT file lists those nodes of the drainage network that have the largest flow continuity errors.
+The following is an example from a SWMM.RPT file:</p>
+<blockquote>
+<div><p>High Flow Instability Indexes</p>
+<p>******************************</p>
+<p>\*</p>
+<p>Link C9 (9)</p>
+<p>Link C8 (8)</p>
+<p>Link C10 (7)</p>
+<p>Link C7 (6)</p>
+<p>Link C6 (6)</p>
+</div></blockquote>
+<p>To improve the volume conservation error, the links listed on the HFII table must be reviewed.
+Fixing the top 5 listed HFII links usually result in a more stable model.
+The index is the number of flow turns that exists in a link during the simulation.
+A flow turn occurs when the difference between a new and old flow results in a perturbation which is defined as a significant flow difference or a
+change in flow direction.</p>
+</section>
+<section id="timestep-and-conduit-length">
+<h4>Timestep and Conduit Length<a class="headerlink" href="#timestep-and-conduit-length" title="Link to this heading"></a></h4>
+<p>Like the Courant criteria used on the FLO-2D surface water model, stability issues can arise if the timestep is greater than about two times the
+travel time through a pipe.
+This would be comparable to the wave celerity being equal to about 1.5 times the average flow velocity V in the pipe.
+To improve a model with numerical stability issues:</p>
+<blockquote>
+<div><ul>
+<li><p>A minimum conduit length of 20ft or the FLO-2D grid element side length is recommended.
+Pipes shorter than 20 ft are reported as a warning message in STORMDRAIN_ERROR.CHK.</p></li>
+<li><p>Dynamic wave routing numerical stability requires that the timestep be less than the time it takes for a dynamic wave (flow velocity plus wave
+celerity) to travel through the shortest conduit in the storm drain system.
+A maximum timestep of 1 second is sufficient for most storm drain simulations.
+The FLO-2D timesteps are used for both the surface water and the storm drain model and they are small enough for the storm drain solution to converge.
+A timestep calculation of a short pipe is:</p>
+<blockquote>
+<div><p>Conduit length ∆x = 20 ft</p>
+<p>Average conduit velocity V = 7.30 fps</p>
+<p>COURANTFP from CONT.DAT C = 0.6</p>
+<p>Wave celerity c = 1.5 x V</p>
+<p>Applying the Courant equation:</p>
+<p>∆t = C ∆x/(V + c) = 0.6 (20 ft) / (7.3 fps + 1.5 x 7.3 fps) = 0.66 seconds</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="unstable-results">
+<h4>Unstable Results<a class="headerlink" href="#unstable-results" title="Link to this heading"></a></h4>
+<p>Oscillations that grow in time are a form of numerical instability.
+The solution is not converging, and the following issues should be reviewed:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A pipe is short relative to other adjacent pipes.
+A longer pipe length is recommended.
+A careful check of the storm drain connections in all contiguous connections of the unstable pipe should be completed prior to pipe length
+adjustments.</p></li>
+<li><p>Excessive discharges in adjacent downstream pipe elements generate an excessive decrease in the upstream water surface.</p></li>
+<li><p>A node dries on each timestep despite an increasing inflow.
+This is the result of excessive discharges in adjacent downstream pipe elements.</p></li>
+<li><p>Excessive velocities (over 20 ft/sec) and discharges grow without limit.
+Increase the pipe length or the pipe roughness.</p></li>
+<li><p>There is a large continuity error.
+If the continuity error exceeds ± 10%, the user should check the pipe results for zero flow or oscillating flow.
+This may indicate an improperly connected system.</p></li>
+</ul>
+</div></blockquote>
+<p>In general, excessive discharge or pressure head oscillations that grows in time should be eliminated.
+There are physical system configurations that might generate some oscillations, but these will usually decay over time.
+Other modifications to reduce storm drain numerical instability include:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Increasing pipe roughness.</p></li>
+<li><p>Decreasing pipe slope.</p></li>
+<li><p>Increasing or adjusting pipe geometry.</p></li>
+<li><p>Eliminating a junction between two short pipe sections.</p></li>
+<li><p>Reducing or eliminating connections to isolate the unstable portion of the pipe network.</p></li>
+</ul>
+</div></blockquote>
+<p>Conservatively high n-values (0.1 and higher) have been used to reduce pipe network instability.
+Uncertainty associated with pipe material, obstructions, debris, pipe bends, junction entrance and exit losses, and unsteady flow may warrant the
+application of conservative n-values.</p>
+<p>The numerical stability will improve with n-values higher than those typically assigned to straight pipes with uniform geometry in a steady flow
+condition.
+To save time, there are two checks that can be made prior starting a complete simulation:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Perform a short test run to confirm that the system passes internal checks.</p></li>
+<li><p>Review the node inverts to make sure that they are at same elevation as the invert of the lowest pipe entering or leaving the junction otherwise
+errors in the pipe hydraulics can occur.</p></li>
+</ol>
+</div></blockquote>
+<p>For complex models, it is sometimes difficult to differentiate between oscillations that are produced by a numerical instability and those real
+oscillations that represent rapid discharge flux linked to inlets, junctions, conduits, and outfall.
+Resolving potential error sources requires an understanding of the project and model application.
+Troubleshooting storm drain instability during the initial phase of a project can be accomplished with test runs.
+To summarize, the following are some of the methods for reducing storm drain conduit routing instability:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Conservatively high n-values (up to 0.100) can be used to reduce pipe network dynamic instability.
+For a complex project, local conservative pipe n-values can reduce oscillations in return flows.</p></li>
+<li><p>Eliminate short conduits in the simulation.
+Conduits should be longer than 20 ft (6 m) or at least the length of a FLO-2D grid element.
+A careful check of the storm drain connections in all contiguous connections of the unstable pipe should be completed prior to pipe length
+adjustments.</p></li>
+<li><p>Investigate flooded or surcharged inlets.
+Storm drain systems may have local conditions that may be explained by analyzing the actual physical behavior of the system.
+For flooded or surcharge inlets or junctions displaying oscillations, upstream inlets should be examined to determine where the oscillations
+originate.</p></li>
+<li><p>Review the system connectivity.
+Search for adverse slopes and incorrect inlet geometry.</p></li>
+<li><p>Review the SWMM.rpt file for critical timestep elements and check the highest flow instability indexes (HFII).
+This index is normalized with respect to the expected number of flow reversals (turns) that would occur for a purely random series of values and can
+range from 0 to 150.
+Inflow and flooding hydrographs for the HFII elements should be checked for oscillations.
+Check upstream and downstream plots (flow, depth, velocity, Froude No., and capacity) of the links having the highest HFII’s numbers.</p></li>
+<li><p>Check for oscillations or instabilities associated with pumps.</p></li>
+<li><p>If an instability or oscillation cannot be explained as a physical response of the system, then try to isolate the problem by changing roughness in
+contiguous links or by removing sections of the storm drain system.</p></li>
+<li><p>Reduce the reporting timestep (30 s or smaller) when oscillations are identified to have a more complete picture of the dynamic behavior of the
+system.</p></li>
+</ol>
+</div></blockquote>
+<p>The storm drain dynamic wave routing uses an explicit scheme numerical solution that may fluctuate or oscillate.
+In the original SWWM model, most volume conservation errors were associated with numerical surging and typically volume conservation errors of 10% or
+more were acceptable.
+If the volume conservation error exceeds 1 % in the FLO-2D storm drain system, the model can be improved.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Chapter%204.html" class="btn btn-neutral float-left" title="Chapter 4" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Chapter%206.html" class="btn btn-neutral float-right" title="Chapter 6" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build23
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/flo-2d_pro/Storm Drain Modeling Guidelines/Chapter 5.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="Chapter 5.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mud and Sediment Transport (SED.DAT) &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Convert Schematic Layers to User Layers" href="Schematic%20to%20User%20Converter.html" />
+    <link rel="prev" title="Set Control Parameters (CONT.DAT)" href="Control%20Variables.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Plugin Gila</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">User Manual</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin-features/index.html">Plugin Features</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Toolbar</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../flo-2d-import-export/index.html">FLO-2D Import Export</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../flo-2d-project/index.html">FLO-2D Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../run-flo-2d-pro/index.html">Run FLO-2D Pro</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">FLO-2D Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../flo-2d-info-tool/index.html">FLO-2D Info Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../flo-2d-project-review/index.html">FLO-2D Project Review</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../flo-2d-help/Help.html">Help</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../widgets/index.html">Widgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../post-development-grid-modification/index.html">Grid Modification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/technical_reference_manual.html">Technical Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Plugin Gila</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">User Manual</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Toolbar</a></li>
+          <li class="breadcrumb-item"><a href="index.html">FLO-2D Parameters</a></li>
+      <li class="breadcrumb-item active">Mud and Sediment Transport (SED.DAT)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/flo-2d_plugin/user_manual/toolbar/flo-2d-parameters/Mud and Sediment Transport Tool.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mud-and-sediment-transport-sed-dat">
+<h1>Mud and Sediment Transport (SED.DAT)<a class="headerlink" href="#mud-and-sediment-transport-sed-dat" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Mudflow, sediment transport, and two phase flow are complex topics, find resources in the FLO-2D
+Documentation Folder</p>
+<ul class="simple">
+<li><p>Data Input Manual</p></li>
+<li><p>FLO-2D Pro Reference Manual</p></li>
+<li><p>Simulating Mudflow Guidelines</p></li>
+<li><p>Two Phase Flood Routing Guidelines</p></li>
+</ul>
+</div>
+<ol class="arabic simple">
+<li><p>Click on the Mud and Sediment Transport (SED.DAT).</p></li>
+</ol>
+<img alt="../../../../_images/control002.png" src="../../../../_images/control002.png" />
+<section id="mudflow-modeling">
+<h2>Mudflow Modeling<a class="headerlink" href="#mudflow-modeling" title="Link to this heading"></a></h2>
+<p>Very viscous, hyperconcentrated sediment flows are generally referred to as either mud or debris flows.
+Mudflows are non-homogeneous, nonNewtonian, transient flood events whose fluid properties change significantly
+as they flow down steep watershed channels or across alluvial fans.
+Mudflow behavior is a function of the fluid matrix properties, channel geometry, slope, and roughness.
+The fluid matrix consists of water and fine sediments.
+At sufficiently high concentrations, the fine sediments alter the properties of the fluid including density,
+viscosity, and yield stress.</p>
+<ol class="arabic simple" start="2">
+<li><p>Select the Mud / Debris Transport.</p></li>
+</ol>
+<img alt="../../../../_images/control002.png" src="../../../../_images/control002.png" />
+<img alt="../../../../_images/mud002.png" src="../../../../_images/mud002.png" />
+<p>Hyperconcentrated Sediment Flow Parameters</p>
+<ul class="simple">
+<li><p>Mudflow specific gravity is the density of mudflow divided by the density of water.</p></li>
+<li><p>Laminar flow resistance is used for laminar and transitional flows when turbulence is suppressed and the laminar flow
+resistance parameter K becomes important. In the FLO-2D model if K = 0 in the SED.DAT file, the value of K is
+automatically computed from the Manning’s n-value.</p></li>
+<li><p>Viscosity and Yield Stress as function of Sediment Concentration. Existing relationships can be found in the FLO-2D
+white paper: “Simulating Mudflow Guidelines”.</p></li>
+</ul>
+<p>Debris Basin Parameters</p>
+<ul class="simple">
+<li><p>Debris basin cell is the grid element with the debris basin.</p></li>
+<li><p>Debris basin volume in ft3 or m3.</p></li>
+</ul>
+<p>In the Control Variables, the Mud/Debris/Sediment switch under Physical Processes must be set to Mud/Debris for a Mudflow simulation.</p>
+<img alt="../../../../_images/mud007.png" src="../../../../_images/mud007.png" />
+<p>When exported, the CONT.DAT file must have the MUD switch set to 1 for a Mudflow simulation.</p>
+<img alt="../../../../_images/mud008.png" src="../../../../_images/mud008.png" />
+</section>
+<section id="sediment-transport">
+<h2>Sediment Transport<a class="headerlink" href="#sediment-transport" title="Link to this heading"></a></h2>
+<p>FLO-2D has a sediment transport component that can compute sediment scour or deposition.
+Within a grid element, sediment transport capacity is computed for either channel, street or overland flow based on the flow hydraulics.
+The sediment transport capacity is then compared with the sediment supply and the resulting sediment excess or deficit is uniformly distributed over the grid element potential flow surface using the bed porosity based on the dry weight of sediment.</p>
+<ol class="arabic simple" start="2">
+<li><p>Select the Sediment Transport.</p></li>
+</ol>
+<img alt="../../../../_images/mud005.png" src="../../../../_images/mud005.png" />
+<img alt="../../../../_images/mud003.png" src="../../../../_images/mud003.png" />
+<ul class="simple">
+<li><p>Sediment transport equations. FLO-2D has eleven sediment transport capacity equations. Each sediment transport formula was derived from unique river or flume conditions and the user is encouraged to research the applicability of a selected equation for a particular project.</p></li>
+<li><p>Specific gravity is the density of sediment divided by the density of water.</p></li>
+<li><p>D50 (mm) is the sediment size in millimeters for sediment routing.</p></li>
+<li><p>SEDTRAN.OUT Node is the grid element (channel or floodplain) for which the sediment transport capacity for all the sediment transport equations will be listed by output interval TOUT in the SEDTRAN.OUT file. Note that only one equation is used in the actual sediment routing calculations, but the results of all equations are presented in SEDTRAN.OUT.</p></li>
+<li><p>Global fine sediment volume concentration for overland, channel and streets. It is used only in Woo-MPM sediment transport equation.</p></li>
+<li><p>Dry specific weight of the sediment in lb/ft3 or N/m3</p></li>
+<li><p>Gradation coeff. is a non-dimensional sediment gradation coefficient for the sediment transport routine.</p></li>
+<li><p>Max. scour depth is the maximum allowable scour depth (ft or m) for all floodplain elements.</p></li>
+<li><p>Use Size Fraction. If checked, the sediment routing will be performed by size fraction.</p></li>
+<li><p>Use Sediment Supply Ration Curve. If checked, a sediment rating curve will be used to define the sediment supply to a channel reach or floodplain area.</p></li>
+<li><p>Rigid Bed Nodes. If added, the floodplain or channel grid elements will have a rigid bed.</p></li>
+</ul>
+<p>In the Control Variables, the Mud/Debris/Sediment switch under Physical Processes must be set to Sediment Transport for a Sediment Transport simulation.</p>
+<img alt="../../../../_images/mud011.png" src="../../../../_images/mud011.png" />
+<p>When exported, the CONT.DAT file must have the ISED switch set to 1 for a Sediment Transport simulation.</p>
+<img alt="../../../../_images/mud012.png" src="../../../../_images/mud012.png" />
+</section>
+<section id="two-phase">
+<h2>Two Phase<a class="headerlink" href="#two-phase" title="Link to this heading"></a></h2>
+<p>To apply the FLO-2D two-phase flow component, the sediment transport and mudflow model components must run concurrently, exchanging sediment between them.
+The flood hydraulics for conventional sediment transport is first computed and then the mudflow hydraulics are computed in a second loop.
+Water and sediment volume conservation is tracked in both components separately on a grid element basis.</p>
+<ol class="arabic simple" start="2">
+<li><p>Select the Two-phase.</p></li>
+</ol>
+<img alt="../../../../_images/mud006.png" src="../../../../_images/mud006.png" />
+<p>In the Control Variables, the Mud/Debris/Sediment switch under Physical Processes must be set to Two Phase for a Two Phase simulation.</p>
+<img alt="../../../../_images/mud009.png" src="../../../../_images/mud009.png" />
+<p>When exported, the CONT.DAT file must have the MUD switch set to 2 for a Two Phase simulation.</p>
+<img alt="../../../../_images/mud010.png" src="../../../../_images/mud010.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Control%20Variables.html" class="btn btn-neutral float-left" title="Set Control Parameters (CONT.DAT)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Schematic%20to%20User%20Converter.html" class="btn btn-neutral float-right" title="Convert Schematic Layers to User Layers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build23
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../../../Build25/flo-2d_plugin/user_manual/toolbar/flo-2d-parameters/Mud and Sediment Transport Tool.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="Mud and Sediment Transport Tool.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

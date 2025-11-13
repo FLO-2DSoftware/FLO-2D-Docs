@@ -1,0 +1,528 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 3 &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Storm Drain Modeling Guidelines" href="../Storm%20Drain%20Modeling%20Guidelines/index.html" />
+    <link rel="prev" title="Chapter 2" href="Chapter%202.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Channel Modeling Guidelines</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Chapter%201.html">Chapter 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">Chapter 2</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Chapter 3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#channel-review-and-troubleshooting">Channel Review and Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Storm%20Drain%20Modeling%20Guidelines/index.html">Storm Drain Modeling Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/Hydraulic%20Structures%20Guidelines.html">FLO-2D Hydraulic Structure Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/Levee%20Dam%20and%20Wall%20Breach%20Guidelines.html">Levee Dam and Wall Breach Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines/Simulating%20Mudflow%20Guidelines.html">Simulating Mudflow Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Flood%20Routing%20Guidelines%202023/Two%20Phase%20Flood%20Routing%20Guidelines%202023.html">Two Phase Flood Routing Guidelines 2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual%202023/index.html">Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin Gila</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Channel Modeling Guidelines</a></li>
+      <li class="breadcrumb-item active">Chapter 3</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/flo-2d_pro/Channel Modeling Guidelines 2023/Chapter 3.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chapter-3">
+<h1>Chapter 3<a class="headerlink" href="#chapter-3" title="Link to this heading"></a></h1>
+<section id="channel-review-and-troubleshooting">
+<h2>Channel Review and Troubleshooting<a class="headerlink" href="#channel-review-and-troubleshooting" title="Link to this heading"></a></h2>
+<p>This section of the manual discusses how to review and troubleshoot channel data and results using the Reviewer’s Checklist.
+It covers issues such as boundary conditions, check files, volume conservation, instability, and data errors.
+The Reviewer’s checklist is an Excel workbook that lists every *.dat and *.out file required for a FLO-2D Project review.
+This section will focus on the Channels tab as shown in Figure 73.</p>
+<img alt="../../_images/Chapte0022.jpg" src="../../_images/Chapte0022.jpg" />
+<p><em>Figure 73.
+Reviewer’s checklist.</em></p>
+<section id="documentation">
+<h3>13.1 Documentation<a class="headerlink" href="#documentation" title="Link to this heading"></a></h3>
+<p>Documenting the 1D channel process will help reviewers understand why specific conditions are applied.
+If returning to an old project, good documentation helps future reviewers to understand the complete system.</p>
+</section>
+<section id="boundary-conditions">
+<h3>13.2 Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Link to this heading"></a></h3>
+<p>Are the boundary nodes defined correctly? Channel boundaries need to be assigned with a single boundary point.
+Return to the inflow section for more details regarding channel inflow boundary.</p>
+<p>Figure 74 and Figure 75 show examples of the upstream and downstream boundary points and nodes.
+The points are user data, and the nodes are Schematized data.</p>
+<img alt="../../_images/Chapte0031.png" src="../../_images/Chapte0031.png" />
+<p><em>Figure 74.
+Upstream Channel Boundary with an Inflow Node.</em></p>
+<img alt="../../_images/Chapte0041.png" src="../../_images/Chapte0041.png" />
+<p><em>Figure 75.
+Downstream Channel Boundary with an Outflow Node.</em></p>
+</section>
+<section id="cross-sections">
+<h3>13.3 Cross Sections<a class="headerlink" href="#cross-sections" title="Link to this heading"></a></h3>
+<p>Check the cross section placement.
+Note any locations where more cross sections are required such as the top half of Figure 76.
+The bottom half shows a channel with good cross section placement to represent the transition from an urban channel to a natural channel.</p>
+<img alt="../../_images/Chapte005.png" src="../../_images/Chapte005.png" />
+<p><em>Figure 76.
+Cross Sections wih a Bad Transition and a Good Transition.</em></p>
+<p>Check each cross section plot for accuracy using the cross section geometry table and plot as shown in Figure 77.</p>
+<img alt="../../_images/Chapte0062.jpg" src="../../_images/Chapte0062.jpg" />
+<p><em>Figure 77.
+Review a Cross Section Shape.</em></p>
+</section>
+<section id="profiles">
+<h3>13.4 Profiles<a class="headerlink" href="#profiles" title="Link to this heading"></a></h3>
+<p>Click the Profile button and then click the left bank channel line with the FLO-2D plugin to scan each channel profile.
+Figure 78 shows how to check the profile.</p>
+<img alt="../../_images/Chapte0072.jpg" src="../../_images/Chapte0072.jpg" />
+<p><em>Figure 78.
+Check Chanel Profile.</em></p>
+<p>Check for unreasonable breaks in slope or bank elevations.
+Figure 79 shows some channel profiles.</p>
+<img alt="../../_images/Chapte0081.png" src="../../_images/Chapte0081.png" />
+<p><em>Figure 79.
+Channel Profile Examples.</em></p>
+</section>
+<section id="transitions">
+<h3>13.5 Transitions<a class="headerlink" href="#transitions" title="Link to this heading"></a></h3>
+<p>Review the change in cross section area, width, and wetted perimeter for each cross section.
+Check for changes in these values that indicate the channel is transitioning too quickly for the model to remain numerically stable.
+Find this in the XSECAREA.OUT file (Figure 80) or by using the Profiles.exe program.</p>
+<img alt="../../_images/Chapte0091.png" src="../../_images/Chapte0091.png" />
+<p><em>Figure 80.
+XSECAREA.OUT Example.</em></p>
+</section>
+<section id="alignment">
+<h3>13.6 Alignment<a class="headerlink" href="#alignment" title="Link to this heading"></a></h3>
+<p>Review the channel alignment (Figure 81).
+Check for left or right bank cells that are more than one grid element width off.
+Make sure the banks are inside levees.
+Make sure the banks do not share with any components that have a high conflict rating.
+The advanced channel lesson has a good section on how to align channels to the banks correctly.</p>
+<img alt="../../_images/Chapte010.jpg" src="../../_images/Chapte010.jpg" />
+<p><em>Figure 81.
+Channel with Good Alignment.</em></p>
+</section>
+<section id="volume-conservation">
+<h3>13.11 Volume Conservation<a class="headerlink" href="#volume-conservation" title="Link to this heading"></a></h3>
+<p>Check summary.out (Figure 82) and chvolume.out (Figure 83) for volume errors.
+Volume Conservation (VC) errors exist if the Percent of Inflow column is higher than 0.001 percent.</p>
+<p>If VC errors occur, review the Channel Optimization training videos and the Channel Guidelines document.</p>
+<img alt="../../_images/Chapte0111.jpg" src="../../_images/Chapte0111.jpg" />
+<p><em>Figure 82.
+Summary.out Example.</em></p>
+<p>If summary.out has a volume error but chvolume.out does not, the error is on the floodplain and not attributed to the channel data.</p>
+<img alt="../../_images/Chapte0122.jpg" src="../../_images/Chapte0122.jpg" />
+<p><em>Figure 83.
+CHVolume.out Example.</em></p>
+</section>
+<section id="velocities">
+<h3>13.13 Velocities<a class="headerlink" href="#velocities" title="Link to this heading"></a></h3>
+<p>Check the maximum velocities sorted by high to low in the veltimec.out (Figure 84).
+If the velocities are unreasonable, look for simple problems.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Steep slope o Drop structure or a naturally occurring steep channel slope can result in naturally high velocities.
+o Bad cross section data resulting in bad bedslope can result in unnaturally high velocities.
+o Test data against an Open Channel Flow Calculator.</p></li>
+<li><p>Numerical instability.</p>
+<ul>
+<li><p>If the time of occurrence is not near the peak, this could indicate instability.
+o If the grid element listed is close to an inflow node, the velocity could be unnaturally high.
+Fix this by ramping the inflow over 0.5 hours.
+If water is added to a cross section too quickly, it can become unstable.</p></li>
+<li><p>If the grid element is close to a storm drain outfall or culvert, review the transition to make sure it matches the physical system.
+Increase the roughness around connected component.
+Lower the Channel Courant to 0.4, 0.3, or 0.2.</p></li>
+<li><p>If applied corrections do not help, consider the grid element size.
+o Review the Channel Optimization video and Channel Guidelines for more ideas.</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<img alt="../../_images/Chapte0132.jpg" src="../../_images/Chapte0132.jpg" />
+<p><em>Figure 84.
+Veltimec.out Example.</em></p>
+</section>
+<section id="timestep">
+<h3>13.14. Timestep<a class="headerlink" href="#timestep" title="Link to this heading"></a></h3>
+<p>Check for changes to the timestep that exceed one thousand corrections or an order of magnitude higher than the other channel elements that are listed
+in Time.out (Figure 85).
+This channel is not responsible for timestep decrements.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Observation by K O’Brien. If channel elements are listed in TIME.OUT,correcting the cross section
+might push the issue downstream.Channels have a high impact on the timestep
+decrement if they are steep or if the grid element size is small.
+If an unreasonable number of timestep decrements result because of a channel node, it may not be fixable.
+This is OK so long as the channel is stable and volume conservation is observed.</p>
+</div>
+<img alt="../../_images/Chapte0142.jpg" src="../../_images/Chapte0142.jpg" />
+<p><em>Figure 85.
+Time.out Example.</em></p>
+</section>
+<section id="interior-nodes">
+<h3>13.15. Interior Nodes<a class="headerlink" href="#interior-nodes" title="Link to this heading"></a></h3>
+<p>Interior channel nodes are nodes that are removed from the project domain.
+They cannot transfer flow.
+Do not assign anything to these nodes.
+This short segment shows how to load these nodes into QGIS for an inspection.
+The main purpose of this illustration is to show users how to perform a table join.
+Table joins are a very helpful tool for many different types of data analysis.</p>
+<p>Load the file CHAN_INTERIOR_NODES.OUT (Figure 86) as a delimited text file into QGIS (Figure 87).</p>
+<img alt="../../_images/Chapte0152.jpg" src="../../_images/Chapte0152.jpg" />
+<p><em>Figure 86.
+Chan_Interior_Nodes.out Example.</em></p>
+<img alt="../../_images/Chapte0161.jpg" src="../../_images/Chapte0161.jpg" />
+<p><em>Figure 87.
+Load Delimited Text.</em></p>
+<p>Join the new data to the Grid layer (Figure 88).</p>
+<img alt="../../_images/Chapte0172.jpg" src="../../_images/Chapte0172.jpg" />
+<p><em>Figure 88.
+Join Delimited Text to Grid.</em></p>
+<p>Add a symbology rule to the Grid layer (Figure 89).</p>
+<img alt="../../_images/Chapte0181.jpg" src="../../_images/Chapte0181.jpg" />
+<p><em>Figure 89.
+Rule-based Grid Symbology.</em></p>
+<p>Review the interior grid elements (Figure 90).</p>
+<img alt="../../_images/Chapte0192.jpg" src="../../_images/Chapte0192.jpg" />
+<p><em>Figure 90.
+Interior Channel Nodes Example.</em></p>
+</section>
+<section id="check-files">
+<h3>13.16. Check files<a class="headerlink" href="#check-files" title="Link to this heading"></a></h3>
+<p>ChanBankEl.chk (Figure 91) lists the differences between the channel cross section and the left or right bank grid elevation.
+If major elevation differences are listed, please review them, and see if corrections are required.</p>
+<img alt="../../_images/Chapte020.jpg" src="../../_images/Chapte020.jpg" />
+<p><em>Figure 91.
+ChanBankEl.chk Example.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The raw file is not easy to review.
+It is better to open the file with the Debug tool.</p>
+</div>
+<p>Create a new group called Debug (Figure 92).
+Select the Group and run the debug tool.</p>
+<img alt="../../_images/Chapte0212.jpg" src="../../_images/Chapte0212.jpg" />
+<p><em>Figure 92.
+Create Debug Group.</em></p>
+<p>Click the Load Debug tool (Figure 93) and click OK to load the debug data.</p>
+<img alt="../../_images/Chapte0221.jpg" src="../../_images/Chapte0221.jpg" />
+<p><em>Figure 93.
+Import Debug Data Tool.</em></p>
+<p>Data location: QGIS Tutorials/QGIS Lesson 2/Lesson 2/Advanced Debug Run (Figure 94).</p>
+<img alt="../../_images/Chapte0231.jpg" src="../../_images/Chapte0231.jpg" />
+<p><em>Figure 94.
+Example Debug Output Files.</em></p>
+<p>Click Yes to load both extra error check files (Figure 95).</p>
+<img alt="../../_images/Chapte0242.jpg" src="../../_images/Chapte0242.jpg" />
+<p><em>Figure 95.
+Additional Debug Files Loaded.</em></p>
+<p>Double click the Channel Bank Elevation Differences layer and set the symbology properties (Figure 96).</p>
+<img alt="../../_images/Chapte0251.jpg" src="../../_images/Chapte0251.jpg" />
+<p><em>Figure 96.
+Style Channel Bank Elevation Difference.</em></p>
+<p>Review the map for problems that should be fixed.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grouped positive points mean the channel is embedded below the floodplain.
+Check cross sections.</p></li>
+<li><p>Grouped negative points mean a channel is perched above the floodplain.
+Floodplain to channel flow exchange is blocked.
+Check cross section data.</p></li>
+<li><p>All the points in the following image are OK because they will be automatically corrected when flopro.exe runs (Figure 97).</p></li>
+</ul>
+</div></blockquote>
+<img alt="../../_images/Chapte0262.jpg" src="../../_images/Chapte0262.jpg" />
+<p><em>Figure 97.
+Channel Bank Difference Example.</em></p>
+<p><strong>channel.chk</strong> This file is usually empty.
+It contains messages related to channel extensions though other channel bank elements or levees or when the channel needs to be wider.</p>
+</section>
+<section id="convergence">
+<h3>13.17 Convergence<a class="headerlink" href="#convergence" title="Link to this heading"></a></h3>
+<p>The convergence for the channel is reported in Channel_Convergence.out (Figure 98).
+When this file is written, some channel elements are not converging.
+This description will discuss ways to correct this issue.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following file example is from another project.
+The AdvancedChannel training module did not write the file because no convergence issues
+existed.Let’s pretend that the grid element listed is 35368.
+This is one from the training module so it can be inspected.</p>
+</div>
+<img alt="../../_images/Chapte0271.jpg" src="../../_images/Chapte0271.jpg" />
+<p><em>Figure 98.
+Channel_Convergence.out Example.</em></p>
+<p>Type 35368 into the FLO-2D grid info box (Figure 99) and click the eye button.</p>
+<img alt="../../_images/Chapte0281.jpg" src="../../_images/Chapte0281.jpg" />
+<p><em>Figure 99.
+Grid Info Tool.</em></p>
+<p>Assume that this channel element and cross section are not able to converge for depths greater than</p>
+<p>1ft.
+This means that the calculated velocity is invalid, and the solution velocity is estimated from the diffusive wave equation.
+It is not typical to see problematic channel elements in clear water studies.
+If they are present, use the same techniques discussed in Channel Optimization video and the Channel Guidelines.</p>
+<p>Corrective measures include:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Increasing the roughness around inflow nodes, structures, and outfalls.</p></li>
+<li><p>Using shallow n adjustments.</p></li>
+<li><p>Improving transitional cross sections with better interpolations.</p></li>
+<li><p>Fixing bedslope problems.</p></li>
+<li><p>Correct tributary/split transitional areas to match the physical system.</p></li>
+<li><p>Applying correct tailwater conditions around hydraulic structures where backwater or reverse flow occurs.</p></li>
+<li><p>Applying channel termination areas correctly.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="super-critical">
+<h3>13.18 Super Critical<a class="headerlink" href="#super-critical" title="Link to this heading"></a></h3>
+<p>The super critical output file (Figure 100) will print the time and number of timesteps that a specific node or cross section is super critical.
+The file only exists if a super critical flow is reported.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following image is from another project.</p>
+</div>
+<img alt="../../_images/Chapte0291.jpg" src="../../_images/Chapte0291.jpg" />
+<p><em>Figure 100.
+Super.out Example.</em></p>
+<p>It is OK to have super critical channel cross sections.
+If the file reported grid elements that should not be super critical, check the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Check overly steep bedslope between cross sections.</p></li>
+<li><p>Increasing the roughness.</p></li>
+<li><p>Using shallow n adjustments.</p></li>
+<li><p>Improving transitional cross sections with better interpolations.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="overbank-flow">
+<h3>13.19 Overbank flow<a class="headerlink" href="#overbank-flow" title="Link to this heading"></a></h3>
+<p>If there is no overbank flow, OVERBANK.OUT will be empty or it will not exist.
+If the Overbank file does exist, it will report the volume that is transferred out of the channel for the bank elements.</p>
+</section>
+<section id="stability">
+<h3>13.20 Stability<a class="headerlink" href="#stability" title="Link to this heading"></a></h3>
+<p>If there is no channel instability, CHANSTABILITY.OUT will be empty or it will not exist.
+It isn’t a commonly reported file for clear water simulations.
+It may be written for sediment transport or mudflow in channels.</p>
+</section>
+<section id="evacuated">
+<h3>13.21 Evacuated<a class="headerlink" href="#evacuated" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following evacuatedchan.out file is from a different project.</p>
+</div>
+<p>EVACUATEDCHAN.OUT file (Figure 101) is written when all the water is taken from a cross section in a single timestep.
+A V-shaped channel might result in evacuated timesteps.
+JS O’Brien has modified the channel flow so they do not share flow until 0.1ft or 0.03m of depth.
+This has eliminated most evacuated channel reporting.</p>
+<img alt="../../_images/Chapte0301.jpg" src="../../_images/Chapte0301.jpg" />
+<p><em>Figure 101.
+EvacuatedChan.out Example.</em></p>
+</section>
+<section id="drain-time">
+<h3>13.22 Drain Time<a class="headerlink" href="#drain-time" title="Link to this heading"></a></h3>
+<p>Check to see if the channel finished draining the project (Figure 102).
+If there is no tidal or baseline flow, the hydrograph at the end of the channel should be close to zero or the channel depth should be close to zero.
+There are many ways to check this.
+Here are two easy ones.</p>
+<p>HYDROG.EXE shows that the hydrograph at the end of the channel should be about finished.
+This one still has some residual rainfall.</p>
+<img alt="../../_images/Chapte0311.jpg" src="../../_images/Chapte0311.jpg" />
+<p><em>Figure 102.
+Channel Hydrograph Hydrog Example.</em></p>
+<p>PROFILES.EXE show that the flow channel is almost empty (Figure 103).</p>
+<img alt="../../_images/Chapte0321.jpg" src="../../_images/Chapte0321.jpg" />
+<p><em>Figure 103.
+Channel Profile Example.</em></p>
+</section>
+<section id="xsecarea">
+<h3>13.23 XSECAREA<a class="headerlink" href="#xsecarea" title="Link to this heading"></a></h3>
+<p>This is about the same as the Transitions above.
+It specifically asks the user to check this data for bad cross sections.</p>
+<p>Review the change in cross section area, width, and wetted perimeter for each cross section (Figure</p>
+<p>104).
+Check for changes in these values that indicate the channel is transitioning too quickly for the model to remain numerically stable.
+Find this in the XSECAREA.OUT file or by using the Profiles.exe program.</p>
+<img alt="../../_images/Chapte0091.png" src="../../_images/Chapte0091.png" />
+<p><em>Figure 104.
+XsecArea.out Example.</em></p>
+</section>
+<section id="chanmax">
+<h3>13.24 CHANMAX<a class="headerlink" href="#chanmax" title="Link to this heading"></a></h3>
+<p>CHANMAX.OUT (Figure 105) is a useful file that lists the maximum discharge, maximum water surface elevation, and respective times for each of those.
+Review this file for anomalies.
+Instability and volume conservation error can sometimes be traced back to cross sections with discharge values that are too high or discharge values
+that do not align with the water surface elevation and the time.</p>
+<img alt="../../_images/Chapte033.jpg" src="../../_images/Chapte033.jpg" />
+<p><em>Figure 105.
+ChanMax.out Example.</em></p>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<p>Chow, V.T., 1959.
+Open-Channel Hydraulics, McGraw-Hill Book Company, NY.</p>
+<p>Grant, G.E., 1997.
+“Critical flow constraints flow hydraulics in mobile-bed streams: A new hypothesis,” Water Resources Research, Vol.33, No.2, 349-358.</p>
+<p>Jia, Y., 1990.
+“Minimum Froude Number and the Equilibrium of Alluvial Sand Rivers,” Earth Surface Processes and Landforms, John Wiley &amp; Sons, London, Vol.
+15, 199-200.</p>
+<p>Julien, P.Y., 1995.
+<em>Erosion and Sedimentation</em>, Cambridge University Press, NY.</p>
+<p>Simons, D.B.
+and F.
+Senturk, 1976.
+<em>Sediment Transport Technology</em>, Water Resources Publications, Ft.
+Collins, CO.</p>
+<p>U.S.
+Department of Transportation, Federal Highway Administration, 2005.
+“Hydraulic Design of Highway Culverts,” Pub.
+No.
+FHWA-NHI-01-020, National Technical Information Service, Springfield, VA.</p>
+<p>91 References</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Chapter%202.html" class="btn btn-neutral float-left" title="Chapter 2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Storm%20Drain%20Modeling%20Guidelines/index.html" class="btn btn-neutral float-right" title="Storm Drain Modeling Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build23
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="Chapter 3.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,582 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 2 &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"tex": {"tags": "none", "useLabelIds": true}, "options": {"displayAlign": "right"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Chapter 3" href="Chapter%203.html" />
+    <link rel="prev" title="Chapter 1" href="Chapter%201.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Channel%20Modeling%20Guidelines%202023/index.html">Channel Modeling Guidelines</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Storm Drain Modeling Guidelines</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Chapter%201.html">Chapter 1</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Chapter 2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#flo-2d-storm-drain-features">FLO-2D Storm Drain Features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%203.html">Chapter 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%204.html">Chapter 4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%205.html">Chapter 5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%206.html">Chapter 6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%207.html">Chapter 7</a></li>
+<li class="toctree-l3"><a class="reference internal" href="References.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/Hydraulic%20Structures%20Guidelines.html">FLO-2D Hydraulic Structure Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/Levee%20Dam%20and%20Wall%20Breach%20Guidelines.html">Levee Dam and Wall Breach Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines/Simulating%20Mudflow%20Guidelines.html">Simulating Mudflow Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Flood%20Routing%20Guidelines%202023/Two%20Phase%20Flood%20Routing%20Guidelines%202023.html">Two Phase Flood Routing Guidelines 2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual%202023/index.html">Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin Gila</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Storm Drain Modeling Guidelines</a></li>
+      <li class="breadcrumb-item active">Chapter 2</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/flo-2d_pro/Storm Drain Modeling Guidelines/Chapter 2.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chapter-2">
+<h1>Chapter 2<a class="headerlink" href="#chapter-2" title="Link to this heading"></a></h1>
+<section id="flo-2d-storm-drain-features">
+<h2>FLO-2D Storm Drain Features<a class="headerlink" href="#flo-2d-storm-drain-features" title="Link to this heading"></a></h2>
+<section id="overview-of-inlets-and-outfalls">
+<h3>Overview of Inlets and Outfalls<a class="headerlink" href="#overview-of-inlets-and-outfalls" title="Link to this heading"></a></h3>
+<p>FLO-2D storm drain component exchanges discharge between the surface water and the closed conduit system through a series of objects that are
+representations of the physical components in a storm drain system, primarily inlets and outfalls.
+The flow exchange can occur bi-directionally capturing surface water runoff when the conduits have capacity and returning flow to the surface water
+when the pipe system capacity is exceeded.
+The storm drain system is represented by links and nodes where the links are the closed conduits and nodes are junctions and outfalls as shown in
+Figure 21.</p>
+<img alt="../../_images/Chapte0011.jpg" src="../../_images/Chapte0011.jpg" />
+<p><em>Figure 21
+Surface and Closed Conduit Flow Exchange</em></p>
+<p>Nodes represent several features of a storm drain system.
+One type of node is the inlet which constitutes an inflow point to the pipe system from the surface water.
+A junction can represent the connection between two pipes with a change of slope or geometry, in this case the junction is not an inlet because it is
+not connected to the surface water system.
+The water surface elevation is determined at each junction for each computational timestep based on the junction geometry and the flow hydraulics.
+Figure 22 is a profile of closed conduit system.
+The figure displays a peak water surface elevation for the 100-year return period storm.</p>
+<img alt="../../_images/Chapte0028.jpg" src="../../_images/Chapte0028.jpg" />
+<p><em>Figure 22.
+Profile of Typical Closed Conduit System</em></p>
+<p>Inlets are nodes that collect surface water from the FLO-2D grid element.
+Only one inlet can be assigned to one FLO-2D grid cell.
+Storm drain inlets are depicted by the QGIS as blue in Figure 23.</p>
+<img alt="../../_images/Chapte0035.jpg" src="../../_images/Chapte0035.jpg" />
+<p><em>Figure 23.
+Storm Drain System in QGIS.
+Inlets are blue and outfalls are green.</em></p>
+<p>Outfalls are nodes located at the terminus of a pipe network and discharge flow out the storm drain system.
+A variety of outfall boundary conditions can be assigned including a fixed stage elevation, critical or normal flow depth, tidal stages, tide gates,
+timed controlled gates and time varying stage in the INP file, none of these outfalls will discharge flow back to the surface.
+The outfall can return discharge to the FLO-2D surface water in channel, street, or floodplains elements.
+If the outfall discharges to a channel element, the downstream boundary is the channel water depth.
+If the outfall discharge is returned to the surface water, the water surface is the downstream boundary condition.
+For the outfalls to interact with the FLO-2D surface model they need to be assigned as a “free” outfall type.
+An outfall to a retention basin is shown in Figure 24.
+The boundary condition for this outfall would vary with the basin water surface, in other words the FLO-2D WSE calculated from the surface model will
+be assigned as a boundary condition to the free outfall.
+In Figure 25 the pipe outfall discharges into a channel and may have a potential backwater condition.</p>
+<img alt="../../_images/Chapte0044.jpg" src="../../_images/Chapte0044.jpg" />
+<p><em>Figure 24.
+Outfall Discharge Retention Basin</em></p>
+<img alt="../../_images/Chapte0056.jpg" src="../../_images/Chapte0056.jpg" />
+<p><em>Figure 25.
+Image of Storm Drain System with Outfall Discharging to a Channel</em></p>
+</section>
+<section id="storm-drain-inlets">
+<h3>Storm Drain Inlets<a class="headerlink" href="#storm-drain-inlets" title="Link to this heading"></a></h3>
+<p>FLO-2D can simulate 5 types of inlet geometries.
+Three of them are based on the Hydraulic Design Series No.
+4 (HDS4) (Johnson and Fred, 1984).
+Inlets are designated as one of four types: (1) curb-opening inlets, (2) grate inlets, (3) slotted drains and (4) combination inlets.
+For curb and grate inlets, the inlet geometry is assigned, and the discharge is computed using either weir or orifice equations when there is
+available storm drain capacity.
+For slotted drains, combination inlets and other non-typical inlets, a rating table must be generated with discharge as a function of headwater depth
+(Figure 26 and Figure 27).</p>
+<img alt="../../_images/Chapte0065.jpg" src="../../_images/Chapte0065.jpg" />
+<p><em>Figure 26.
+Combination Curb Opening Inlet with Sag and a Grate</em></p>
+<img alt="../../_images/Chapte0076.jpg" src="../../_images/Chapte0076.jpg" />
+<p><em>Figure 27.
+Combination of a Curb Opening at Grade with a Grate</em></p>
+<p>The manhole is a special inlet type that represents a service access point to the storm drain system.
+Manholes are modeled as inlets with an additional surcharge depth that represents the equivalent pressure required to displace the cover.
+When the surcharge depth is exceeded, the manhole is popped, and the manhole behaves as an inlet type 3.</p>
+</section>
+<section id="inlet-types">
+<h3>Inlet Types<a class="headerlink" href="#inlet-types" title="Link to this heading"></a></h3>
+<p>Type 1 - Curb Opening Inlet at Grade</p>
+<p>The following are the input parameters for a Type 1 inlet (Figure 28):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)</p></li>
+<li><p>Curb opening length (L)</p></li>
+<li><p>Curb opening height (h)</p></li>
+</ul>
+</div></blockquote>
+<img alt="../../_images/Chapte0183.jpg" src="../../_images/Chapte0183.jpg" />
+<p><em>Figure 28 Curb Opening at Grade (Type 1 inlet)</em></p>
+<p>The discharge is based on the flow depth in the F    LO-2D grid cell and the inlet geometry:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The inlet opening height (h), referred to as “Height” column 7 of the SWMMFLO.DAT.</p></li>
+<li><p>The inlet opening length (L) specified as “Length,” column 5 of the SWMMFLO.DAT.</p></li>
+</ul>
+</div></blockquote>
+<p>The discharge is calculated using the weir and orifice equations as follows:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>If h ≤ H &lt; 1.4h, then:</p></li>
+</ol>
+<p>If Q<sub>w</sub> ≤ Q<sub>o</sub>, discharge= Q<sub>w</sub> Weir Equation Controls</p>
+<p>If Q<sub>w</sub> &gt; Q<sub>o</sub>, discharge= Q<sub>o</sub> Orifice Equation Controls</p>
+<ol class="arabic simple" start="2">
+<li><p>If H &lt; h, discharge= Q<sub>w</sub></p></li>
+<li><p>If H ≥ 1.4h, discharge= Q<sub>o</sub></p></li>
+</ol>
+</div></blockquote>
+<p>Type 2 - Curb Opening Inlet with Sag</p>
+<p>The following are the input parameters for a Type 2 inlet (Figure 29):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Weir coefficient: 2.30 (1.25 metric)</p></li>
+<li><p>Curb opening length (L)</p></li>
+<li><p>Curb opening height (h)</p></li>
+<li><p>Curb opening sag width (W)</p></li>
+</ul>
+</div></blockquote>
+<img alt="../../_images/Chapte0193.jpg" src="../../_images/Chapte0193.jpg" />
+<p><em>Figure 29.
+Curb Opening with Sag (Type 2 Inlet, Johnson, and Fred, 1984)</em></p>
+<p>Conservatively, the weir or orifice discharge, whichever is smaller, is used for the curb opening with sag.
+The inlet elevation is assumed to be equivalent to the grid element elevation.
+For weir flow (Johnson and Fred, 1984):</p>
+<blockquote>
+<div><p>Q<sub>w</sub> = C(L + 1.8W)H<sup>m</sup></p>
+</div></blockquote>
+<p>where:</p>
+<blockquote>
+<div><p>Q<sub>w</sub> = weir flow rate at depth H</p>
+<p>C = weir coefficient, ‘Inlet Weir Coefficient.’ field in SWMMFLO.DAT L = curb opening length, ‘Length’ field in SWMMFLO.DAT.</p>
+<p>W = curb opening sag width, ‘Width’ field in SWMMFLO.DAT.</p>
+<p>H = FLO-2D inlet element flow depth m = 1.5 exponent for a horizontal weir (hardcoded)</p>
+</div></blockquote>
+<p>Orifice flow can have two potential sag inlet conditions (Johnson and Fred, 1984):</p>
+<blockquote>
+<div><p>If h ≥ H then Q<sub>o</sub> = C<sub>d</sub>A√2gH</p>
+<p>If h &lt; H then Q<sub>o</sub> = C<sub>d</sub> A√2g (H −h/2)</p>
+</div></blockquote>
+<p>where:</p>
+<blockquote>
+<div><p>Q<sub>o</sub> = orifice flow rate at depth H</p>
+<p>C<sub>d</sub> = discharge coefficient hardcoded to 0.67 A = orifice area Area= L x h g = gravitational acceleration</p>
+<p>H = FLO-2D grid element water depth that contains the inlet structure.</p>
+<p>h = curb opening height of the orifice.</p>
+</div></blockquote>
+<p>Type 2 inlet discharge is determined from the following criteria:</p>
+<blockquote>
+<div><p>If h ≤ H &lt; 1.4h, then:</p>
+</div></blockquote>
+<p>If Q<sub>w</sub> ≤ Q<sub>o</sub>, discharge= Q<sub>w</sub></p>
+<p>If Q<sub>w</sub> &gt; Q<sub>o</sub>, discharge= Q<sub>o</sub></p>
+<blockquote>
+<div><p>If H &lt; h, discharge= Q<sub>w</sub></p>
+<p>If H ≥ 1.4h, discharge= Q<sub>o</sub></p>
+</div></blockquote>
+<p>Type 3 - Grate (Gutter) Inlet with/without Sag</p>
+<p>The following are the input parameters for a Type 3 inlet (Figure 30):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)</p></li>
+<li><p>Grate perimeter (not including curb side)</p></li>
+<li><p>Grate open area</p></li>
+<li><p>Grate sag height (zero for at grade)</p></li>
+</ul>
+</div></blockquote>
+<p><em>Note: Orifice flow coefficient = 0.67 (hardcoded) for all cases.</em></p>
+<img alt="../../_images/Chapte0093.jpg" src="../../_images/Chapte0093.jpg" />
+<p><em>Figure 30.
+Grate Inlet in a Street (Type 3 Inlet, Johnson, and Fred, 1984)</em></p>
+<p>The smaller of two discharges (weir or orifice) calculated for a grate (gutter) inlet with/without sag is applied for the inlet discharge computation
+(Johnson and Fred, 1984):</p>
+<p><em>Weir Flow:</em></p>
+<blockquote>
+<div><p>If H ≤ h then: Q<sub>w</sub> = CPH<sup>m</sup></p>
+</div></blockquote>
+<p>If H &gt; h then: Q<sub>w</sub> = CP (H + h/2)<sup>m</sup></p>
+<p>where:</p>
+<blockquote>
+<div><p>Q<sub>w</sub> = weir flow rate at depth H</p>
+<p>C = weir coefficient, ‘Inlet Weir Coeff.’ field in SWMMFLO.DAT</p>
+<p>P = Grate perimeter ‘Perimeter’ field in SWMMFLO.DAT H = FLO-2D inlet element flow depth m = 1.5 horizontal weir exponent (hardcoded).</p>
+<p>h = sag height from the ‘Sag Height’ field of SWMMFLO.DAT.</p>
+</div></blockquote>
+<p><em>Orifice Flow:</em></p>
+<p>If H ≤ h then: Q<sub>o</sub> = C<sub>d</sub>A√2gH</p>
+<p>If H &gt; h then: Q<sub>o</sub> = C<sub>d</sub> A√2g (H + h/2)</p>
+<p>where:</p>
+<blockquote>
+<div><p>Q<sub>o</sub> = orifice discharge at depth H</p>
+<p>C<sub>d</sub> = discharge coefficient (hardcoded to 0.67)</p>
+<p>A = orifice area ‘Area’ field in SWMMFLO.DAT</p>
+<p>g = gravitational acceleration</p>
+<p>H = FLO-2D inlet element flow depth</p>
+<p>h = sag height from the ‘Sag Height’ field of SWMMFLO.DAT.</p>
+</div></blockquote>
+<p>The discharge is determined using the following criteria for Type 3:</p>
+<p>If 0.75 ≤ H &lt; 1.8, then:</p>
+<p>If Q<sub>w</sub> ≤ Q<sub>o</sub>, discharge= Q<sub>w</sub></p>
+<p>If Q<sub>w</sub> &gt; Q<sub>o</sub>, discharge= Q<sub>o</sub></p>
+<p>If H &lt; 0.75, discharge= Q<sub>w</sub> If H ≥ 1.8, discharge= Q<sub>o</sub></p>
+<p>Type 4 – Unique Inlet with Stage-Discharge Rating Table</p>
+<p>Inlets that cannot be represented by Types 1, 2 or 3 can have an inflow discharge defined by a rating table.
+Some storm drain inlets may include entrance types like that of a culvert with a vertical opening (Figure 31.).
+In this case the rim elevation would be ignored as the flows are exchanged based on the invert elevation.</p>
+<img alt="../../_images/Chapte0115.jpg" src="../../_images/Chapte0115.jpg" />
+<p><em>Figure 31
+Storm Drain Vertical Inlet with a Culvert Entrance</em></p>
+<p>The following are the input parameters for a Type 4 inlet that are entered in the SWMMFLORT.DAT file:</p>
+<p>Stage (depth) above inlet (ft or m) Discharge (cfs or cms)</p>
+<p><em>Note: The stage-discharge data is assigned in pairs with the first pair being: 0.0.</em></p>
+<p>Type 5 – Manhole</p>
+<p>Manholes are a special case of inlets.
+Storm drains under high pressure during flooding can result in the manhole covers being popped off (Figure 32.
+and Figure 33).
+The FLO-2D storm drain component can simulate covers popping through the application of a surcharge depth.
+Once the manhole cover popped, it remains off and the manhole becomes a Type 3 inlet.</p>
+<img alt="../../_images/Chapte0125.jpg" src="../../_images/Chapte0125.jpg" />
+<p><em>Figure 32.
+Popped Manhole Cover (source: istock)</em></p>
+<p>The required manhole input parameters are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)</p></li>
+<li><p>Manhole perimeter (manhole cover shapes can vary)</p></li>
+<li><p>Manhole flow area (ft<sup>2</sup> or m<sup>2</sup>)</p></li>
+<li><p>Surcharge depth (ft or m).</p></li>
+</ul>
+</div></blockquote>
+<p>A manhole is assumed to be level without sag and column 7 in the SWMMFLO.DAT is used to define the surcharge depth (ft or m).
+The surcharge depth can be estimated by the user as the equivalent depth that the pressure must overcome to pop the cover.
+The pressure force must exceed the manhole cover weight represented as the equivalent weight of the volume of water that is above the manhole rim
+elevation.
+Manhole covers are typically circular but can be found in other shapes.</p>
+<p>The water depth (head) that represents the manhole cover weight can be estimated by:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-2-0">
+<span class="eqno">(32)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-2-0" title="Link to this equation"></a></span>\[d_s = \frac {w_m} {A_m γ_w}\]</div>
+<p>where:</p>
+<blockquote>
+<div><p>d<sub>s</sub> = surcharge depth that pops the manhole cover w<sub>m</sub> = weight of the manhole cover</p>
+<p>A<sub>m</sub> = area of the circular manhole opening (πD<sup>2</sup>/4) γ<sub>w</sub> = clear water density 62.4 lb/ft<sup>3</sup> (1000 kg/m<sup>3</sup>)</p>
+</div></blockquote>
+<img alt="../../_images/Chapte0135.jpg" src="../../_images/Chapte0135.jpg" />
+<p><em>Figure 33.
+Popped Manhole Cover with Pressure Head (Source: istock)</em></p>
+<p>To calculate the surcharge depth for manhole cover shown in Figure 32., the observed head of water is approximately 1.0 feet (0.3 meter).
+The manhole cover weight and diameter must be known.
+Assuming a diameter of 2 ft (0.61 m) and a weight of 100 pounds, what surcharge depth d<sub>s</sub> had to be exceeded to pop the cover?</p>
+<p>Solution:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-2-1">
+<span class="eqno">(33)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-2-1" title="Link to this equation"></a></span>\[w_m = 100 lb (45.4 kg)\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-2-2">
+<span class="eqno">(34)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-2-2" title="Link to this equation"></a></span>\[A_m = frac\ ({π2ft^2}{4}) = 3.14 ft^2(0.29 m^2)\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-2-3">
+<span class="eqno">(35)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-2-3" title="Link to this equation"></a></span>\[d_s = \frac {w_m} {A_m γ_w} = \frac {100lb}{3.14ft^2 \ 62.4lb/ft^3} ≈ \frac {45.4kg}{0.29m^2 \ 1000kg/m^3} ≈ 0.5 ft (0.16 m)\]</div>
+<p>Table 4 presents some suggested surcharge depths.</p>
+<blockquote>
+<div><p><strong>Table 4.
+Manhole Cover Surcharge Depths</strong></p>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Manhole Cover Representative Weight</p></td>
+<td><p>Surcharge Depth (ft)  (assuming 2 ft diameter)</p></td>
+</tr>
+<tr class="row-even"><td><p>85 to 300 lb manhole cover unbolted</p></td>
+<td><p>0.4 to 1.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>100 lb to 150 lb rubber cover with plastic bolts</p></td>
+<td><p>0.5 to 0.75</p></td>
+</tr>
+<tr class="row-even"><td><p>2,400 lb parked car with one wheel on coverunbolted (~600 lb + 300 lb)</p></td>
+<td><p>4.6 or greater</p></td>
+</tr>
+<tr class="row-odd"><td><p>5,000 lb steel bolted manhole cover (est.)</p></td>
+<td><p>25.5 or greater</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="storm-drain-outfalls">
+<h3>Storm Drain Outfalls<a class="headerlink" href="#storm-drain-outfalls" title="Link to this heading"></a></h3>
+<p>A variety of outfall conditions are available.
+For the outfall to discharge back to the surface water, the boundary condition must be set to ‘free’ in the SWMM.inp file and the ‘allow discharge’
+switch set ON in the SWMMOUTF.DAT file.
+Flow into the outfall can occur based on the water surface elevation but may be restricted by a tide gate assignment.
+Normal, fixed, tidal or time series type of SWMM outfalls will discharge the flow off the storm drain system and water surface elevations will not be
+imposed to outfall conditions.
+In Figure 34, the outfall has a free flow condition but when the river is high, the outfall may be submerged.
+The location and elevation of the outfall can be assigned in the QGIS.</p>
+<img alt="../../_images/Chapte0156.jpg" src="../../_images/Chapte0156.jpg" />
+<p><em>Figure 34.
+Storm Drain Free Outfall Condition (source: istock)</em></p>
+<p>During the simulation FLO-2D compares the downstream water surface elevations with the storm drain pressure head to control the flow in or out of the
+outlet.
+This may result in backwater pressure on the pipe network.
+In the case of ponded flow as in detention or retention basins, the outfall might be submerged but still have sufficient pressure to discharge out of
+the storm drain network (Figure 35).
+When the retention basin water surface is high enough, water can enter the outfall and flow upstream in the pipe.</p>
+<img alt="../../_images/Chapte0164.jpg" src="../../_images/Chapte0164.jpg" />
+<p><em>Figure 35.
+Outfall Discharging into a Retention Basin</em></p>
+<p>The discharge at the outfall is controlled as follows:</p>
+<p>If storm drain pressure head &gt; WSE, then outfall discharges to the surface water cell</p>
+<p>If storm drain pressure head &lt; WSE, then there is no outfall discharge and the outfall node depth = WSE – outfall invert elevation.</p>
+<p>Tide gates can be assigned in the SWMM.inp file to stop the flow from going into the storm drain system through the outfall.
+Flow could leave the storm drain system but not enter it.</p>
+<p>Storm drain outfalls should be assigned to the channel left bank element to discharge to the channel.
+The outfall coordinates in the SWMM.inp file need to be the left bank channel element coordinates, QGIS will automatically assign the outfall node to
+the left bank element.
+The SWMMOUTF.OUT file can be reviewed to ensure that the outfall is correctly paired to the left bank element.</p>
+<p>Typically, the outfall invert elevation would be assigned to the channel element thalweg elevation.
+Assignment of the outfall to the right bank elevation, or channel interior elements would generate an error message.
+The outfall invert elevation can be higher than the thalweg elevation.
+If the outfall invert elevation is lower than the thalweg elevation (underground), then the storm drain would be assumed to be underwater, if the
+switch OUTF_FLO2DVOL in the SWMMOUTF.DAT is equal to 1, the ground elevation plus the FLO-2D WSE will be assigned as a boundary condition for the
+entire simulation.</p>
+<p>If the outfall invert elevation is lower than the thalweg or floodplain elevation (underground outfall) but the switch OUTF_FLO2DVOL in the
+SWMMOUTF.DAT is set to 2, then the storm drain outfall would be connected to the surface layer at ground elevation.
+No initial underwater tailwater depth (ground depth) condition is imposed, only the FLO-2D water depth will be imposed as a condition during the
+entire simulation.</p>
+<p>For all free outfall configurations, the discharge to the surface is based on the comparison between PH with FLO-2D surface conditions.</p>
+</section>
+<section id="elevations-and-datum">
+<h3>Elevations and Datum<a class="headerlink" href="#elevations-and-datum" title="Link to this heading"></a></h3>
+<p>The elevation and location of the inlets and outfalls are required to exchange flow with the surface water.
+The floodplain water surface elevation is compared to the storm drain pressure head based on a common reference such as the inlet rim elevation, inlet
+invert elevation (Vertical Type 4 Inlets) or the outfall invert elevation.
+It is possible that the elevations of the closed conduit system may have a different datum than that applied to the FLO-2D surface topography.
+The elevation of each inlet rim and outfall invert should be reviewed especially for unique conditions such as combination inlets (Figure 36).</p>
+<img alt="../../_images/Chapte0175.jpg" src="../../_images/Chapte0175.jpg" />
+<p><em>Figure 36.
+Diagram of a Combination Inlet Rim Elevation.</em></p>
+<p>For curb opening inlets at grade (Type 1), curb opening inlets with sag (Type 2), grates with or without sag (Type 3) and manholes (Type 5), the
+FLO-2D model computes the rim elevation at the node by adding the maximum depth in the SWMM.inp file to the invert elevation.
+The model compares the rim elevation with the grid element elevation and reports the differences in the FPRIMELEV.OUT.
+If the rim elevation and floodplain elevations are different, the model reassigns the floodplain elevation to the rim elevation based on the
+assumption that the rim elevation was surveyed and the grid element elevation was interpolated.
+The model uses the rim elevation as the reference to determine the water surface elevation and inlet flow depth.</p>
+<p>A Type 4 inlet with a defined rating table or the generalized culvert equation can represent any inlet not defined by Types 1 through 3.
+The rating table reference elevation must correlate with the inlet rim or invert elevation.
+If the Type 4 inlet is a horizontal inlet (feature = 0 in the SWMMFLO.DAT file), then the floodplain elevation is automatically reset to the rim
+elevation.</p>
+<p>Typically, inlets have horizontal inlets, but some inlets such as culverts have vertical openings.
+For vertical inlets, the water surface elevations are compared at the node, but the rim elevation is ignored.
+Vertical inlets have unique constraints:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>For an inlet on a channel (channel flow is discharging to the storm drain conduit), the invert elevation should be set to the channel bed elevation.
+If the Type 4 inlet is a vertical inlet and it is in a channel cell, the ‘Feature’ column must be equal to 1 in the SWMMFLO.DAT file and the floodplain elevation is not
+modified.</p></li>
+<li><p>For a floodplain swale where the flow is discharging to a storm drain conduit or culvert, the floodplain grid element elevation should match the pipe
+invert elevation.
+If the Type 4 inlet is a vertical inlet and it is in a floodplain cell, the ‘Feature’ column must be equal to 1 in the SWMMFLO.DAT file and the
+floodplain elevation equal to the pipe invert elevation otherwise the floodplain elevation is modified at runtime.</p></li>
+<li><p>The ‘Feature’ column in the QGIS Components inlets/junctions dialog window (SWMMFLO.DAT file) has three options:</p>
+<ol class="arabic" start="0">
+<li><ul class="simple">
+<li><p>default, no flapgate, no vertical inlet opening</p></li>
+</ul>
+</li>
+<li><ul class="simple">
+<li><p>vertical inlet opening</p></li>
+</ul>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Channel pipe inlet invert elevation = channel bed elevation</p></li>
+<li><p>Floodplain grid element elevation = pipe invert elevation</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><ul class="simple">
+<li><p>flapgate (outfall)</p></li>
+</ul>
+</li>
+<li><ul class="simple">
+<li><p>Turn off the adjustment of discharge during runtime for those inlets with drop box capacity exceeded.</p></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>Revised floodplain elevations are not changed in the FPLAIN.DAT file.
+These modifications are only implemented at runtime.
+For permanent floodplain revisions, the user must adjust the elevations in FPLAIN.DAT to match the modifications in FPRIMELEV.OUT.
+Rim elevations for the inlets located in channel or street cells are not checked and must be verified by the user.</p></li>
+<li><p>Unique inlet conditions such as those with unusual shape openings are simulated with a rating table or the generalized culvert equation (Type 4
+inlets).</p></li>
+</ol>
+</div></blockquote>
+<p>All runtime changes in the floodplain elevation are reported in FPRIMELEV.OUT and Stormdrain_error.chk files.
+They are reported to the FPLAIN_SDElev.RGH and TOPO_SDElev.RGH,</p>
+<p>TOPO_SDElev.RGH files and the FPLAIN.DAT AND TOPO.DAT files can be replaced by renaming the *.RGH files as *.DAT files to apply the storm drain
+elevation adjustments to the next simulation.</p>
+</section>
+<section id="conduit-offsets">
+<h3>Conduit Offsets<a class="headerlink" href="#conduit-offsets" title="Link to this heading"></a></h3>
+<p>The swmm.inp file uses offset heights to connect the conduits to the nodes.
+The inlet and outlet offsets can be zero if there is no offset or any height above zero to set the offset.</p>
+<img alt="../../_images/Chapte0182.png" src="../../_images/Chapte0182.png" />
+<p><em>Figure 37.
+Offsets in a Pipe System. Blue rectangles are the nodes that connect pipes.</em></p>
+<p>Pipe 1 and pipe 2 show the offsets in the pipe system.
+Pipe 3 shows no offset in Figure 37.
+An inlet offset and an outlet offset can be defined at each pipe in the SWMM.INP data file.
+An offset is the depth of conduit invert above node invert at inlet begin or start.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Chapter%201.html" class="btn btn-neutral float-left" title="Chapter 1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Chapter%203.html" class="btn btn-neutral float-right" title="Chapter 3" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build23
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/flo-2d_pro/Storm Drain Modeling Guidelines/Chapter 2.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="Chapter 2.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

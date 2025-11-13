@@ -1,0 +1,1217 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 1 &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"tex": {"tags": "none", "useLabelIds": true}, "options": {"displayAlign": "right"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Chapter 2" href="Chapter%202.html" />
+    <link rel="prev" title="Storm Drain Modeling Guidelines" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Channel%20Modeling%20Guidelines%202023/index.html">Channel Modeling Guidelines</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Storm Drain Modeling Guidelines</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Chapter 1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#flo-2d-storm-drain-overview">FLO-2D Storm Drain Overview</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">Chapter 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%203.html">Chapter 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%204.html">Chapter 4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%205.html">Chapter 5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%206.html">Chapter 6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%207.html">Chapter 7</a></li>
+<li class="toctree-l3"><a class="reference internal" href="References.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/Hydraulic%20Structures%20Guidelines.html">FLO-2D Hydraulic Structure Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/Levee%20Dam%20and%20Wall%20Breach%20Guidelines.html">Levee Dam and Wall Breach Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines/Simulating%20Mudflow%20Guidelines.html">Simulating Mudflow Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Flood%20Routing%20Guidelines%202023/Two%20Phase%20Flood%20Routing%20Guidelines%202023.html">Two Phase Flood Routing Guidelines 2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual%202023/index.html">Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin Gila</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Storm Drain Modeling Guidelines</a></li>
+      <li class="breadcrumb-item active">Chapter 1</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/flo-2d_pro/Storm Drain Modeling Guidelines/Chapter 1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chapter-1">
+<h1>Chapter 1<a class="headerlink" href="#chapter-1" title="Link to this heading"></a></h1>
+<section id="flo-2d-storm-drain-overview">
+<h2>FLO-2D Storm Drain Overview<a class="headerlink" href="#flo-2d-storm-drain-overview" title="Link to this heading"></a></h2>
+<p>The FLO-2D PRO two-dimensional flood routing model was integrated with the Environmental Protection Agency (EPA) Storm Water Management Model (SWMM)
+Version 5.0.022 in 2013.
+The FLO-2D storm drain engine has evolved into a completely new and unique model component.
+The FLO-2D storm drain engine simulates the exchange of surface water flow with a storm drain system as a flow continuum (one body of water).
+As two-dimensional flood modeling has advanced in the urban setting, the original SWMM interaction between the surface and the storm drain system is
+too basic to capture the physical processes of the system.
+A FLO-2D storm drain system represents a significant advancement in storm drain detail, accuracy, and speed.</p>
+<p>In the coupled model system FLO-2D hosts the closed conduit storm drain system and both models run simultaneously.
+FLO-2D calculates all hydrologic and hydraulic flood routing while the closed conduit component computes the storm drain hydraulics.
+The integration process involves allowing both systems to share data on a computational timestep controlled by the FLO-2D surface water engine.
+The storm drain inlet discharge and the potential return flow to the surface is a function of the water surface elevation (WSE) and the storm drain
+pressure requiring seamless sharing of data.
+Both data sets must have the same coordinate system.
+The FLO-2D model will compute the storm drain inflow discharge based on the predicted grid element headwater depth and inlet geometry type.
+This inlet-controlled discharge will then be routed as storm drain conduit discharge.
+The storm drain return flow to the surface water system is exchanged through storm drain inlets/outlets and outfalls.
+The complete conceptualized flood routing system is shown in Figure 1.</p>
+<img alt="../../_images/Chapte0027.jpg" src="../../_images/Chapte0027.jpg" />
+<p><em>Figure 1.
+Conceptualized FLO-2D Model System with a Storm Drain Component.</em></p>
+<p>The FLO-2D storm drain component can be visualized in layers.
+The surficial layer represents all the surface water flood movement which is connected to the subsurface pipe layer through the pipe junctions defined
+as inlets (or outfalls).
+Figure 2 illustrates the layered system.</p>
+<img alt="../../_images/Chapte0213.jpg" src="../../_images/Chapte0213.jpg" />
+<p><em>Figure 2.
+Volume Exchange between the Surface Water and Storm Drain System</em></p>
+<p>The FLO-2D storm drain component can be applied to a variety of different storm water projects including:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Assessment of the storm drain capacity.</p></li>
+<li><p>Storm drain response to floods events.</p></li>
+<li><p>Design and mitigation.</p></li>
+<li><p>Urban surface features (levees, walls, streets, channels) and their impact on the storm drain system.</p></li>
+<li><p>Assessment of the reduction in capacity to collect, convey and discharge stormwater flows to low lying coastal areas due to sea level rise and high
+tides.</p></li>
+</ul>
+</div></blockquote>
+<p>The FLO-2D storm drain system can be developed using the FLO-2D plugin for QGIS and the EPA SWMM Graphical User Interface (GUI) or other storm drain
+software.
+The EPA SWMM GUI (Build 5.0.022) is installed with FLO-2D.
+Once the storm drain system is built and the run switch is set, the flow into and through the pipe system is simulated automatically when the FLO-2D
+model is started.
+Following a successful simulation, the storm drain results can be reviewed in QGIS or in the EPA SWMM GUI.
+Figure 3 shows an example of a storm drain integrated with a surface model on a QGIS map.</p>
+<img alt="../../_images/Chapte0034.jpg" src="../../_images/Chapte0034.jpg" />
+<p><em>Figure 3.
+A Typical Storm Drain System as Viewed in QGIS .*</em></p>
+<section id="flo-2d-storm-drain-model-overview">
+<h3>FLO-2D Storm Drain Model Overview<a class="headerlink" href="#flo-2d-storm-drain-model-overview" title="Link to this heading"></a></h3>
+<p>The enhancements to the original SWMM model are extensive.
+Some of the enhancements are related to the water surface head on the storm drain system.
+The original SWMM model did not predict or utilize surface water elevation.
+The FLO-2D model computes the storm drain inlet inflow discharge based on the inlet geometry and the head on the inlet and shares the discharge with
+the storm drain engine.
+The inlet and outfall exchange with the surface water including return flow to the storm drain system are based on the comparison between the water
+surface elevation and the hydraulic head not just the rim elevation.
+There are several enhancements to the outfall functions.
+Finally, there have been several enhancements made to both model codes that include timestep management, inlet geometry, manhole covers, storm drain
+return flows, reporting output, and feature options.</p>
+<section id="computational-timesteps">
+<h4>Computational Timesteps<a class="headerlink" href="#computational-timesteps" title="Link to this heading"></a></h4>
+<p>A timestep synchronization method is used in the FLO-2D Storm Drain Model.
+The surface water and the storm drain systems communicate at each FLO-2D computational timestep.
+The storm drain system uses the FLO-2D computational timestep for the water volume exchange as well as for the flow routing through the pipe system.
+With the frequent water volume exchange at each FLO-2D computational timestep, any inconsistency between the volumes leaving the surface water and
+entering the storm drain system are eliminated.
+The storm drain routing timestep is set up as the FLO-2D timestep for the dynamic wave solution throughout the simulation for all conditions,
+regardless user sets up a fixed timestep or a variable timestep.</p>
+<p>The FLO-2D timesteps are small enough for the storm drain solution to converge.
+For all conditions, the computed variable timestep is equal to the FLO-2D computational timestep.</p>
+</section>
+<section id="inlet-geometry">
+<h4>Inlet Geometry<a class="headerlink" href="#inlet-geometry" title="Link to this heading"></a></h4>
+<p>In the original SWMM model, pipe discharge was based on the system conveyance capacity, ignoring the inlets discharge capacity (control).
+The FLO-2D storm drain model computes the storm drain inlet discharge based on the storm drain inlet geometry and the predicted water surface
+elevations.
+An inlet can be assigned to a floodplain, channel, or street element.
+Three inlet options represent typical storm drain inlet designs.
+A fourth option enables a stage-discharge rating table or the use of the generalized culvert equation for a unique inlet condition (INTYPE= 4) and a
+fifth option will simulate a manhole (INTYPE=5).</p>
+</section>
+<section id="flooding-conditions">
+<h4>Flooding Conditions<a class="headerlink" href="#flooding-conditions" title="Link to this heading"></a></h4>
+<p>The EPA SWMM5 model introduced a ponding feature to enhance the flooding approach used by the EPA SWMM 4 model.
+The purpose of this feature was to emulate surface water that would both keep the excess storm drain water under pressure and return flow to the
+system when storage capacity became available.
+The ponding feature is activated when the inlet storm drain pressure head exceeds rim elevation.
+Two overflow conditions were evaluated by the SWMM model when the pressure head exceeds the rim elevation:</p>
+<p><em>Flooding</em>: Excess volume in the storm drain overflows and is lost because there is no inlet temporary storage.
+Hydraulic head at the node will not rise above the inlet rim + surcharge depth.
+This approach is a simplification that ignores the additional surface water head that may force more water to move through the pipe system.</p>
+<p><em>Ponding</em>: This routine was created to represent a surface water layer in the EPA SWMM 5 model.
+Inlet overflow is stored at the node until such time when the pressure head is reduced below the rim elevation and the stored volume is released back
+to the storm drain system.
+In this case, the overflow volume is never lost from the storm drain system.
+Ponded nodes do not contribute any volume to the surface water and in the flow routing continuity report any remaining ponded volume at the end of the
+simulation is reported as Final Stored Volume.
+The ponded volume continues to increase with more inlet overflow (return flow).
+To enable return flow, the catch basin pressure head must exceed the rim elevation plus surcharge depth (manhole cover).
+The rate of the rise in the pressure head depends on multiple factors including the available ponded area.
+There is no maximum ponded volume.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The global ponding options were off and none of the nodes could store volume.
+The flooding option was applied for this case.</p></li>
+<li><p>The Allow Ponding option was selected, and those nonzero ponded area nodes would receive ponded water.
+Nodes with a zero-ponded area would receive flooding water.</p></li>
+</ul>
+</div></blockquote>
+<p>When an inlet is flooded, the computed depth will decrease to the rim elevation and the overflow lost from the system is considered excess inflow into
+the node.
+For a ponded node, the depth is based on volume divided by the ponded area.
+The smaller the assigned ponded area, the higher the water rises and drains.
+The ponded area affects how quickly ponded water reenters the storm drain system because it defines the pressure head at node.
+The program accounts for the ponded volume so the pressure head can be computed for the next time step.</p>
+<p>EPA SWMM5 ponded routine represents an unrealistic condition where the storm drain water under pressure exceeding the rim elevation is accumulated at
+an inlet but does not return to the surface water to flow away from the inlet.
+This is because the SWMM model cannot route surface water.
+Since the FLO-2D model routes the surface water and predicts flood hydraulics, the SWMM ponding feature was modified.
+Consideration was given to the fact that no inflow should occur during flooding conditions in the storm drain.
+If the inflow to inlet is ceased at the moment there is no storm drain capacity, discharge oscillations can physically occur.
+This is an actual response of the storm drain system to the surface water.</p>
+<p>There are two pressure conditions that had to be assessed in the revised ponding feature:</p>
+<blockquote>
+<div><p>FLO-2D WSE &gt; storm drain pressure head &gt; rim elevation:</p>
+</div></blockquote>
+<p>The conduit water volume under pressure stays in the pipe and the return volume is assigned to the drop basin pipe based on its flow area.
+No volume is lost from the storm drain system to the surface water and the volume stays in the pipe.
+The pressure head in the storm drain is correctly represented for this condition.
+For the second condition:</p>
+<blockquote>
+<div><p>FLO-2D WSE &lt; storm drain pressure head &gt; rim elevation:</p>
+</div></blockquote>
+<p>When the storm drain pressure exceeds the surface water elevation, the water should overflow the inlet and join the surface water to be routed away
+from the inlet and there is no storage volume in the pipe system.</p>
+<p>Surface Water – Storm Drain Exchange Conditions:</p>
+<blockquote>
+<div><p>When the storm drain capacity is exceeded and is under pressure, the return flooding volume becomes part of the surface water in the FLO-2D model if
+the pressure head exceeds the FLO2D water surface elevation.
+When an inlet has orifice flow and the flow depth is higher than the curb height, water is pouring into the storm drain conduit.
+As the storm drain fills and the pipe water surface approaches the inlet rim elevation there is a rapid increase in pressure head in the catch basin.
+When this occurs, oscillations may be noted in the storm drain pressure and discharge plots.
+The current interaction between the surface water and storm drain system is described above.
+The conditions that control the inlet flow direction are described below and shown from Figure 4 through Figure 7:</p>
+</div></blockquote>
+<p>Storm drain pressure head &lt; rim elevation:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Inflow discharge is passed from FLO-2D to the storm drain.</p></li>
+<li><p>The conduit is not full.</p></li>
+<li><p>No return flow.</p></li>
+</ul>
+</div></blockquote>
+<img alt="../../_images/Chapte0044.png" src="../../_images/Chapte0044.png" />
+<p><em>Figure 4.
+Inlet No Return Flow.</em></p>
+<p>FLO-2D WSE &gt; Storm drain pressure head&gt; rim elevation:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>No inflow discharge is passed from FLO-2D.</p></li>
+<li><p>The conduit capacity is full.</p></li>
+<li><p>No return flow.</p></li>
+</ul>
+</div></blockquote>
+<img alt="../../_images/Chapte0051.png" src="../../_images/Chapte0051.png" />
+<p><em>Figure 5.
+No Return Flow No Inlet Flow</em></p>
+<p>Storm drain pressure head &gt; FLO-2D WSE &gt; rim elevation:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>No inflow discharge is passed from FLO-2D surface to storm drain.</p></li>
+<li><p>The conduit capacity is full.</p></li>
+<li><p>Return flow is exchanged to the surface.</p></li>
+<li><p>Water leaves the storm drain system and it is added to the surface grid cell.</p></li>
+</ul>
+</div></blockquote>
+<img alt="../../_images/Chapte0061.png" src="../../_images/Chapte0061.png" />
+<p><em>Figure 6.
+Inlet with Return Flow</em></p>
+<section id="pressure-head-and-manholes">
+<h5>Pressure head and manholes<a class="headerlink" href="#pressure-head-and-manholes" title="Link to this heading"></a></h5>
+<p>Flooding will occur at manholes when the pressure head exceeds manhole rim elevation plus surcharge depth plus FLO-2D water depth (see Figure 7).</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Conduit capacity is full.</p></li>
+<li><p>Pressure head greater than water surface elevation.</p></li>
+<li><p>Return flow to system.</p></li>
+<li><p>Manhole cap is removed, and the manhole converts to a type 3 inlet that collects discharge from the surface.</p></li>
+</ul>
+</div></blockquote>
+<img alt="../../_images/Chapte007.png" src="../../_images/Chapte007.png" />
+<p><em>Figure 7.
+Manhole under Pressure with Return Flow.</em></p>
+</section>
+</section>
+<section id="pressure-head-variability">
+<h4>Pressure head variability<a class="headerlink" href="#pressure-head-variability" title="Link to this heading"></a></h4>
+<p>The FLO-2D Storm Drain system for the water exchange between the surface and the storm drain may result in pressure head variability, conduit velocity
+fluctuations and different return flow results for inlets and manholes under pressure when compared with SWMM models or early FLO-2D storm drain
+models.
+The following response can be observed in the FLO-2D storm drain results:</p>
+<blockquote>
+<div><p>1. The head on the inlet continuously increases when the PH is less than the FLO-2D WSE even though the head exceeds the rim elevation.
+Since the inlets are flooded, this results in higher storm drain pressure.
+The volume above the rim is not released to the surface until the PH exceeds the FLO-2D WSE.</p>
+<ol class="arabic simple" start="2">
+<li><p>For underwater inlets, the higher-pressure head pushes more water through the downstream conduits at higher velocity.</p></li>
+</ol>
+<p>3. Higher velocities in downstream conduits may result in higher discharges in various locations in the storm drain with a possible corresponding
+reduction in the return flow to the surface water for some inlets and manholes.
+Maintaining continuity in the storm drain system, there may be sufficient head to force the flow to the outfalls instead of overflowing the inlets and
+manholes.</p>
+</div></blockquote>
+<p>Summarizing, higher upstream pressure head on inlets (higher FLO-2D WSE) may result in a change in the distribution between the return flow from a
+popped manhole or inlet compared the downstream conduit flow through the outfall nodes.
+This is a physical process that was not simulated in the original SWMM storm drain engine.</p>
+</section>
+<section id="outfall-discharge">
+<h4>Outfall Discharge<a class="headerlink" href="#outfall-discharge" title="Link to this heading"></a></h4>
+<p>The FLO-2D plugin will create the SWMMOUTF.DAT containing the outfall nodes that are defined in the SWMM.inp file.
+The outfall discharge to the surface water can be turned ‘on’ = 1, 2 or ‘off’ = 0 in QGIS.</p>
+<p>On = 1 – Setting the switch to 1 will allow discharge to the grid system.</p>
+<p>On = 2 – Setting the switch to 2 will allow the discharge to the grid system but ignore the underground depth to the outfall node.
+This switch can be used when the outfall is underground or bubble-up and the discharge is causing numerical instability.</p>
+<p>Off = 0 – Setting the outfall switch to ‘off’ acts like a sink and water is not exchanged with the grid system.
+This switch is used along boundaries.</p>
+<p>The outfall nodes listed in the SWMMOUTF.DAT file should be in the same order as they appear in the SWMM.inp file.
+When the outfall order is modified in the SWMM.inp, the</p>
+<p>SWMMOUTF.DAT should be modified too.
+The FLO-2D plugin should automate this but it is a good check to perform.</p>
+<p>If the outfall switch is ‘on’ and equal to 1 or 2, then a full interaction between the surface grid cell and the outfall feature is calculated, FLO-2D
+water surface elevation and storm drain pressure head are compared, and the outfall will discharge to the surface water until the FLO-2D water surface
+elevation is equal to or greater than the pressure head.
+Potential backflow into the outfall pipe depends on the comparison of the water surface elevation and the outfall pressure head, and on the assignment
+of a Tide Gate structure in the SWMM.inp file.
+Outfall discharge from storm drain to the FLO-2D surface water is reported to the SWMMOUTFIN.OUT file.
+This file lists the grid element (or channel element if applicable) in the first line followed by the hydrograph with time and discharge pairs.</p>
+<p>The invert elevation of outfalls can be less than the floodplain, channel, or street elevations.
+This may occur for a ponded surface water condition that is assigned as a ground elevation because it would not contribute to downstream flooding.
+An outfall invert underground (or underwater) is imposed for this condition (Figure 8).
+An artificial head equal to the ground elevation is assigned to the outfall node (for the entire simulation) if the outfall discharge to the surface
+water is turned ‘on’ and set to 1.
+This artificial head causes the pipe to fill, and the artificial volume is accounted for in the storm drain model.
+For underground outfalls, a switch equal to 2 can be used, where the artificial head equal to the ground elevation is not assigned to the outfall node
+and only the FLO-2D WSE is assigned for the entire simulation.
+When the model runs, the inflow may be added to either the outfall grid element or the upstream storm drain conduit network and the flow can go either
+in or out of the outfall pipe based on the pressure head.</p>
+<img alt="../../_images/Chapte0084.jpg" src="../../_images/Chapte0084.jpg" />
+<p><em>Figure 8.
+Initial Condition for an Underground (Underwater) Storm Drain Outfall</em></p>
+<p>Typically, an outfall has an invert elevation equal to or greater than the floodplain, channel, or street elevations.
+To account for volume conservation, the storm drain outflow that represents inflow volume to a FLO-2D channel is reported in the CHVOLUME.OUT file.
+Water will flow in or out of the outfall pipe based on the head comparison.
+Water can enter the storm drain when the water surface elevation is greater than the invert, but it can also be evacuated from the storm drain if the
+pressure head is above the water surface elevation.</p>
+</section>
+<section id="flapgate-option">
+<h4>Flapgate Option<a class="headerlink" href="#flapgate-option" title="Link to this heading"></a></h4>
+<p>A storm drain inlet can be simulated as an outlet with a flapgate to stop the surface water from entering the storm drain system (Type 4 inlet).
+The flapgate switch in SWMMFLO.DAT has the following settings:</p>
+<blockquote>
+<div><p>Feature = 0, No flapgate – horizontal inlet opening</p>
+<p>Feature = 1, No flapgate – vertical inlet opening, see Figure 9.</p>
+<p>Feature = 2, Flapgate ‘on’ for simulated outlet</p>
+<p>Feature = 3, Turn off the reduction of the discharge in the inlet when drop box capacity is exceeded</p>
+</div></blockquote>
+<p>Sometimes nodes seem like an outfall but need to interact with the storm drain system differently.
+These can be set up as inlets that will discharge flow from the storm drain to the surface water.
+Feature equal to 2 set up a flap gate for a simulated outlet.</p>
+<img alt="../../_images/Chapte0092.jpg" src="../../_images/Chapte0092.jpg" />
+<p><em>Figure 9.
+Vertical Inlet Opening with No Flap gate.</em></p>
+</section>
+<section id="manhole">
+<h4>Manhole<a class="headerlink" href="#manhole" title="Link to this heading"></a></h4>
+<p>Manholes function as covered inlets.
+The manhole cover lift-off (popping) is simulated by assigning the surcharge depth in the SWMMFLO.DAT file (Type 5 inlet).
+When the cover is in place there is no flow exchange.
+Discharge exchange between FLO-2D and the manhole junction box is calculated only after the manhole cover has popped.
+To pop the cover, the storm drain pressure plus surcharge depth must exceed the surface water elevation.
+Once the cover is off, the surcharge depth is set to 0, the cover stays off and inlet discharge or return flow can be calculated.
+Flooding occurs at manholes when the pressure head at node is above manhole invert + maximum surface depth + surcharge depth.</p>
+<p>SDManholePopUp.OUT and ManholePop.OUT are created when at least one manhole pops in the storm drain system.
+These files contain the same information, SDManholePopUp.OUT in a narrative format and ManholePop.OUT in columns for plotting.
+The following information is reported to the files:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Manhole ID.</p></li>
+<li><p>Time of occurrence</p></li>
+<li><p>Pressure head</p></li>
+<li><p>Rim elevation + Surcharge Elevation</p></li>
+<li><p>FLO-2D WSE.</p></li>
+</ul>
+</div></blockquote>
+<p>The following is an example of the information that is reported to the SDManholePopUp.OUT output file:</p>
+<blockquote>
+<div><p>MANHOLE: I5-37-27-28</p>
+<p>POPPED AT TIME (hrs): 3.93</p>
+<p>PRESSURE HEAD: 1374.07 &gt; RIM + SURCH: 1371.44 &gt; FLO-2D WSE: 1370.95</p>
+</div></blockquote>
+<p>Table 1 is an example of the information that is reported to the ManholePop.OUT output file.</p>
+<p><em>Table 1.
+ManholePop.OUT File.</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>X Coord</p></td>
+<td><p>Y Coord</p></td>
+<td><p>Grid</p></td>
+<td><p>Manhole ID</p></td>
+<td><p>Popped at time</p>
+<p>(hrs)</p>
+</td>
+<td><p>Pressure Head</p></td>
+<td><p>PH RIM + SURCH</p></td>
+<td><p>FLO-2D WSE</p></td>
+</tr>
+<tr class="row-even"><td><p>705202.50</p></td>
+<td><p>954517.50</p></td>
+<td><p>439087</p></td>
+<td><p>IM5-349</p></td>
+<td><p>0.00</p></td>
+<td><p>1482.03</p></td>
+<td><p>1480.12</p></td>
+<td><p>1479.44</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="curb-inlet-flow-adjustment">
+<h4>Curb Inlet Flow Adjustment<a class="headerlink" href="#curb-inlet-flow-adjustment" title="Link to this heading"></a></h4>
+<p>For each timestep, the FLO-2D grid element water surface elevation (flow depth) is used to calculate the discharge that passes through the inlets
+using the weir and orifice equations as well as the geometry of the inlets defined by the user in the SWMMFLO.DAT file.
+This uniform water surface elevation over the grid element does not take into consideration a street cross slope and thus will under-predict the flow
+into the drain.
+Using an assumed 2% street cross slope results in a higher depth (more head) on the storm drain inlet (see Figure 10 and Figure 11).
+The curb height can be entered in the SWMMFLO.DAT file to make this adjustment automatically for each inlet.
+The curb inlet flow assignment is the same concept as the Street Gutter Flow feature (requires GUTTER.DAT file) that can be applied to gutters in
+streets without storm drain inlets.</p>
+<img alt="../../_images/Chapte0103.jpg" src="../../_images/Chapte0103.jpg" />
+<p><em>Figure 10.
+Curb Inlet Water Depth Profile Adjustment</em></p>
+<p>Definitions:</p>
+<blockquote>
+<div><p>Grid depth = flow depth on conventional grid element</p>
+<p>Curb depth = depth on the storm drain</p>
+<p>Flow depth = flow depth above the curb height</p>
+<p>L<sub>c</sub> = length of street away from curb that is inundated by the curb depth</p>
+<p>Volume = total water volume on a grid element = side L x side L x Grid Depth</p>
+<p>VOLCurb = volume equal to the curb height =</p>
+<blockquote>
+<div><p>1/2 base (L) x height (0.02 x L) x side L = 0.5 x 0.02 x L<sup>3</sup> = 0.01 L<sup>3</sup></p>
+</div></blockquote>
+</div></blockquote>
+<img alt="../../_images/Chapte0243.jpg" src="../../_images/Chapte0243.jpg" />
+<p><em>Figure 11.
+Volume Conversion - Square Floodplain Grid Element to Right Triangle at 2% Slope.</em></p>
+<p>To calculate flow depth on the storm drain inlet:</p>
+<blockquote>
+<div><p>IF Volume &lt; VOLCurb:</p>
+<blockquote>
+<div><p>Volume = 0.5 x Curb depth x L<sub>c</sub> x L = 0.5 x Curb depth x Curb depth/0.02 x L</p>
+<p>Curb depth = (Volume/(25.
+x L))<sup>0.5</sup> Flow depth = 0.</p>
+</div></blockquote>
+<p>If VOLCurb ≤ Volume:</p>
+<blockquote>
+<div><p>Volume - VOLCurb = L x L x Flow depth</p>
+<p>Flow depth = (Volume - 0.01 L<sup>3</sup>)/ L<sup>2</sup></p>
+<p>Curb depth = Curb height + Flow depth</p>
+</div></blockquote>
+</div></blockquote>
+<p>The curb depth is used to compute the discharge into the storm drain.
+This inlet discharge volume is removed from the grid element and the model continues to route the remaining volume down the street.</p>
+</section>
+<section id="storm-drain-pressure-head-variation-dampening">
+<h4>Storm Drain Pressure Head Variation Dampening<a class="headerlink" href="#storm-drain-pressure-head-variation-dampening" title="Link to this heading"></a></h4>
+<p>In the original SWMM model, to avoid rapid pressure fluctuation that induces discharge oscillations in the drop boxes, the storm drain engine had a
+pressure dampening algorithm.
+This algorithm used the surface area of the lateral conduit connected to the drop box.
+As the conduit water surface elevation approached the soffit, the algorithm applied a decreasing water surface area.
+Once the flow reached the soffit, the pressure head dampening method is applied for a distance above the invert of 1.25 times the conduit pipe
+diameter.
+The surface area was then exponentially reduced to the drop box diameter as the flow filled the catch basin over the prescribed distance.
+The justification for this dampening routine is that the pressure head change in one computational timestep may be sufficient to fill a four-foot drop
+box causing both oscillation and volume conservation error.
+During a storm this may occur as evidenced by manhole popping or spraying of water from inlets.</p>
+<p>To represent the physical system, the pressure head dampening routine was reviewed and several options to revise the dampening algorithm were
+evaluated including allowing the pressure head variation up to be exponentially reduced over more effectively to entire drop box to the rim elevation.
+The Figure 14 through Figure 17 display water profiles and the pressure head versus time for an upstream inlet that has an inflow condition that fills
+the vertical pipe above the rim elevation.
+This example shows how the pressure head calculation is affected for three different dampening methods when the pressure head exceeds the soffit
+elevation.
+The selected method allows the pressure head to be exponentially reduced over to entire drop box to the RIM elevation.</p>
+<img alt="../../_images/Chapte0222.jpg" src="../../_images/Chapte0222.jpg" />
+<p><em>Figure 12
+Water Elevation Profile at 03:17:00.</em></p>
+<img alt="../../_images/Chapte0114.jpg" src="../../_images/Chapte0114.jpg" />
+<p><em>Figure 13.
+Inlet Pressure Head - No Pressure Head Dampening is Applied</em></p>
+<img alt="../../_images/Chapte0233.jpg" src="../../_images/Chapte0233.jpg" />
+<p><em>Figure 14
+Water Elevation Profile at 03:18:00.</em></p>
+<img alt="../../_images/Chapte0124.jpg" src="../../_images/Chapte0124.jpg" />
+<p><em>Figure 15.
+Inlet Pressure Head with Dampening up to 1.25 Times the Lateral Pipe Diameter.</em></p>
+<img alt="../../_images/Chapte0254.jpg" src="../../_images/Chapte0254.jpg" />
+<p><em>Figure 16
+Water Elevation Profile at 03:18:00.*</em></p>
+<img alt="../../_images/Chapte0134.jpg" src="../../_images/Chapte0134.jpg" />
+<p><em>Figure 17.
+Inlet Pressure Head with Dampening up to RIM Elevation</em></p>
+</section>
+<section id="storm-drain-clogging">
+<h4>Storm Drain Clogging<a class="headerlink" href="#storm-drain-clogging" title="Link to this heading"></a></h4>
+<p>A clogging factor was created to simulate a reduction in inlet capacity.
+The SDCLOGGING.DAT file has the following format:</p>
+<div>
+<pre>
+ID      Grid Cell       Inlet ID        Clogging Factor -C<sub>f</sub>(%)      Time for Clogging -T<sub>c</sub>(hr)
+D         2694            l1                     25                           0.50
+D         2409            l2                     50                           3.25
+</pre>
+</div><p>The inlet discharge calculated using either the orifice or weir equations is subject to a blockage reduction that is specified by the user.
+The inlet discharge is calculated and then reduced using the clogging factor in the following equation:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-0">
+<span class="eqno">(13)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-0" title="Link to this equation"></a></span>\[Q_R = (1-C_f) \ Q_c\]</div>
+<p>where:</p>
+<blockquote>
+<div><p>Q<sub>R</sub> = reduced inflow discharge</p>
+<p>C<sub>f</sub> = clogging factor</p>
+<p>Q<sub>c</sub>= calculated discharge using the orifice/weir equations.</p>
+</div></blockquote>
+<p>This methodology is recommended for single inlets by entities such as the Colorado Department of Transportation and the cities of Denver and Las Vegas.
+Figure 18 and Figure 19 show the reduced discharge for a Type 2 inlet using a clogging factor of 50% at time 0.5 hrs.</p>
+<img alt="../../_images/Chapte0145.jpg" src="../../_images/Chapte0145.jpg" />
+<p><em>Figure 18.
+Type 2 Inlet Discharge versus Time</em></p>
+<img alt="../../_images/Chapte0155.jpg" src="../../_images/Chapte0155.jpg" />
+<p><em>Figure 19.
+Type 2 Inlet Discharge versus Time Using a Clogging Factor of 50% at Time 0.5 hrs</em></p>
+<p>It is noted that the Flood Control District of Maricopa County (FCDMC) in Phoenix, Arizona recommends this approach for flooding and drainage studies,
+but it should not be applied for storm drain design.
+In a design project the storm drain features are oversized to provide enough capacity for clogging.</p>
+<p>Table 2 shows the FCDMC catch basin clogging factors for predicting inlet discharge (FCDMC, 2018).
+The clogging factor data file can be created in the SWMMFLO.DAT data dialog for all types of inlets.</p>
+<p><em>Table 2.
+FCDMC Catch Basin Clogging Factors (FCDMC, 2018)</em></p>
+<img alt="../../_images/Chapte0163.jpg" src="../../_images/Chapte0163.jpg" />
+</section>
+<section id="reduction-of-return-flow-to-surface">
+<h4>Reduction of Return Flow to Surface<a class="headerlink" href="#reduction-of-return-flow-to-surface" title="Link to this heading"></a></h4>
+<p>Flow energy losses are experienced when a conduit or conveyance facility has change in size or geometry.
+There is contraction in the flow area between the catch basin of an inlet (vertical pipe) and the inlet.
+The sudden contraction at the inlet from the drop box pipe diameter results in an energy loss in the return flow from the storm drain to the surface
+water.
+The energy loss for a contraction in pressure flow can be calculated from the following equation (DOT Urban Drainage Design Manual):</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-1">
+<span class="eqno">(14)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-1" title="Link to this equation"></a></span>\[H_c = K_c(\frac{V_2 \ ^2}{2g})\]</div>
+<p>where:</p>
+<blockquote>
+<div><p>K<sub>c</sub> = contraction coefficient (see Table 3)</p>
+<p>V = velocity downstream of transition</p>
+<p>G = acceleration due to gravity 9.81 m/s<sup>2</sup> (32.2 ft/s<sup>2</sup>)</p>
+</div></blockquote>
+<p><em>Table 3.
+Values of K for Contraction.
+(Dept. of Transportation, 2013)</em></p>
+<img alt="../../_images/Chapte0174.jpg" src="../../_images/Chapte0174.jpg" />
+</section>
+</section>
+<section id="storm-drain-model-governing-equations">
+<h3>Storm Drain Model Governing Equations<a class="headerlink" href="#storm-drain-model-governing-equations" title="Link to this heading"></a></h3>
+<section id="unsteady-flow-in-a-pipe-network">
+<h4>Unsteady Flow in a Pipe Network<a class="headerlink" href="#unsteady-flow-in-a-pipe-network" title="Link to this heading"></a></h4>
+<p>The storm drain engine solves the 1-D Saint Venant equations for the conservation of mass and momentum that governs the unsteady flow of water through
+a network of pipes (Rossman, 2006).</p>
+<p>Continuity Equation:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-2">
+<span class="eqno">(15)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-2" title="Link to this equation"></a></span>\[\frac{∂A}{∂t} + \frac{∂Q}{∂x} = 0\]</div>
+<p>Momentum equation for x-direction:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-3">
+<span class="eqno">(16)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-3" title="Link to this equation"></a></span>\[\frac{∂Q}{∂t} + \frac{∂ (Q^2/A)}{∂x} + gA \frac{∂H}{∂x} + gAS_f + gAh_L = 0\]</div>
+<p>where:</p>
+<blockquote>
+<div><p>x = distance along the conduit</p>
+<p>t = computational timestep</p>
+<p>A = cross sectional area of the pipe</p>
+<p>Q = pipe discharge</p>
+<p>H = hydraulic head of water in the conduit (sum of WSE plus pressure head)</p>
+<p>S<sub>f</sub> = friction slope or head loss per unit length of pipe</p>
+<p>h<sub>L</sub> = local energy loss per unit length of pipe</p>
+<p>g = gravitationalacceleration</p>
+</div></blockquote>
+<p>These equations are solved for the discharge Q and head H in each pipe by setting the initial conditions for H and Q at the beginning of the
+simulation as well as setting the boundary conditions at the beginning and end of each conduit for all timesteps.
+For each pipe, the geometry (flow area A) is known as a function of the flow depth y and head H.
+Unsteady flows are routed through a network of closed conduits.
+Unsteady flow with backwater effects, flow reversals, pressurized flow with entrance/exit energy losses and other conditions can be simulated
+(Rossman, 2005).
+The momentum equation inertial terms are reduced as flow comes closer to being critical and are ignored when the flow is supercritical based on the
+following options:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Damping option (KEEP) - inertial terms of the St. Venant equation solution are included.</p></li>
+<li><p>Ignore option (IGNORE) - inertial terms are ignored.</p></li>
+<li><p>Dampen option (DAMPEN) - implements Local Partial Inertial modification (LPI).</p></li>
+</ul>
+</div></blockquote>
+<p>For the FLO-2D model the LPI damping option is always applied, this is hardwired in the FLO-2D Storm Drain model.
+The simulation of unsteady flows with subcritical/supercritical mixed flow regimes is accomplished by neglecting varying portions of the inertial
+terms in the unsteady momentum equations according to the local Froude number.
+A weighting factor σ which ranges between 0 and 1 is utilized.
+This parameter damps out the contribution of the inertial terms as the Froude number Fr increases and approaches 1.0 and ignores them completely when
+the Froude number is greater than 1 (supercritical flow).
+The weighting factor 𝜎 varies as:</p>
+<div>
+   <pre>
+                                     σ = 1.0            𝑓𝑜𝑟 𝐹𝑟 < 0.5
+
+                                     𝜎 = 2.∗ (1.−𝐹𝑟)    𝑓𝑜𝑟 0.5 ≤ 𝐹𝑟 ≤ 1.0
+
+                                     𝜎 = 0.            𝑓𝑜𝑟 𝐹𝑟 > 1.0
+   </pre>
+</div><p>The inertial terms are multiplied by σ when they are added into the solution of the momentum equation for each timestep and conduit.
+The Froude number is calculated at the midpoint depth in the conduit.
+This solution (DAMPEN) produces more stable results around the critical stage of the flow but retains the essential accuracy of the fully dynamic
+solution at sub-critical flow conditions.</p>
+<p>The friction slope component S<sub>f</sub> is based on Manning’s equation:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-4">
+<span class="eqno">(17)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-4" title="Link to this equation"></a></span>\[S_f = \frac{n_2V|V|}{k_2R^{\frac{4}{3}}}\]</div>
+<p>where:</p>
+<blockquote>
+<div><p>n = Manning roughness coefficient</p>
+<p>V = average flow velocity (Q⁄A)</p>
+<p>R = hydraulic radius</p>
+<p>k = 1.486 for English units or 1.0 for metric units</p>
+</div></blockquote>
+<p>The local head loss term h<sub>L</sub> is caused by an energy loss that is proportional to the velocity head and it can be expressed as:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-5">
+<span class="eqno">(18)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-5" title="Link to this equation"></a></span>\[h_L = \frac {KV^2}{2gL}\]</div>
+<p>where:</p>
+<blockquote>
+<div><p>K = loss coefficient for each pipe</p>
+<p>V = velocity</p>
+<p>L = conduit length</p>
+<p>g = gravitational acceleration</p>
+</div></blockquote>
+<p>To calculate the change in pressure head at each node that connects two or more conduits an additional equation is necessary (Figure 20):</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-6">
+<span class="eqno">(19)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-6" title="Link to this equation"></a></span>\[\frac{∂H}{∂t} = \frac {∑Q}{A_{store}+∑As}\]</div>
+<p>where:</p>
+<blockquote>
+<div><p>h = flow depth (difference between the node head and the pipe invert elevation)</p>
+<p>A<sub>store</sub> = node surface area</p>
+<p>∑As = surface area contributed by the conduits connected to the node.</p>
+<p>∑Q = net flow at Node J contributed by all connected conduits plus external inflows</p>
+</div></blockquote>
+<img alt="../../_images/Chapte0202.jpg" src="../../_images/Chapte0202.jpg" />
+<p><em>Figure 20.
+Node-Link Representation of a Drainage System (Roesner et al, 1992)</em></p>
+</section>
+<section id="solution-algorithm-how-the-model-works">
+<h4>Solution Algorithm – How the Model Works<a class="headerlink" href="#solution-algorithm-how-the-model-works" title="Link to this heading"></a></h4>
+<p>The differential form of the continuity and momentum equations for the storm drain component are solved by converting them into an explicit set of
+finite difference formulas that compute the flow Q in each conduit and head at each node for time T + t.
+Explicit schemes for these types of solutions are limited to minor steps by strict numerical stability criteria.
+The following discussion was sourced from the EPA SWMM documentation (Rossman et al, 2005).</p>
+<p>The flow equation solved for each conduit is given by:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-7">
+<span class="eqno">(20)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-7" title="Link to this equation"></a></span>\[Q_{t+∆t} = \frac {Q_t + Q∆_{gravity} + Q∆_{inertial}}{1+Q_{friction}+∆Q_{losses}}\]</div>
+<p>The ∆Q in each conduit corresponds to the different force terms expressed as:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-8">
+<span class="eqno">(21)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-8" title="Link to this equation"></a></span>\[∆Q_{gravity} = g\bar{A} (H1-H2) ∆t/L\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-9">
+<span class="eqno">(22)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-9" title="Link to this equation"></a></span>\[∆Q_{inertial} = 2\bar{V}(\bar{A} - A_t) + \bar{V}^2 (A2-A1) ∆t/L\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-10">
+<span class="eqno">(23)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-10" title="Link to this equation"></a></span>\[∆Q_{friction}= \frac{gn^2 |\bar{V}|∆t} {k^2\bar{R}^{4/3}}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-11">
+<span class="eqno">(24)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-11" title="Link to this equation"></a></span>\[∆Q_{losses} = \frac{∑_i K_i |V_i|∆t}{2L}\]</div>
+<p>where:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(\bar{A}\)</span> = conduit average cross-sectional flow area</p>
+<p><span class="math notranslate nohighlight">\(\bar{R}\)</span> = average conduit hydraulic radius</p>
+<p><span class="math notranslate nohighlight">\(\bar{V}\)</span> = conduit average flow velocity</p>
+<p>V<sub>i</sub> = local flow velocity at location i along the conduit</p>
+<p>K<sub>i</sub> = local loss coefficient at location i along the conduit</p>
+<p>H<sub>1</sub> = head at upstream node of conduit</p>
+<p>H<sub>2</sub> = head at downstream node of conduit</p>
+<p>A<sub>1</sub> = cross-sectional area at the upstream end of the conduit</p>
+<p>A<sub>2</sub> = cross-sectional area at the downstream end of the conduit</p>
+<p>n = Manning roughness coefficient</p>
+<p>L = conduit length</p>
+<p>G = gravitational acceleration</p>
+<p>t = time</p>
+<p>∆T = timestep</p>
+</div></blockquote>
+<p>The average area <span class="math notranslate nohighlight">\(\bar{A}\)</span>, hydraulic radius <span class="math notranslate nohighlight">\(\bar{R}\)</span>, and velocity <span class="math notranslate nohighlight">\(\bar{V}\)</span> are computed using the heads H1 and H2 at either end of the conduit from which corresponding
+flow depth values y<sub>1</sub> and y<sub>2</sub> can be derived.
+An average depth <em>y</em> is then computed by averaging these values and is used with the cross-section geometry of the conduit to compute <span class="math notranslate nohighlight">\(\bar{A}\)</span> and <span class="math notranslate nohighlight">\(\bar{R}\)</span>.
+The average velocity <span class="math notranslate nohighlight">\(\bar{V}\)</span> is determined by dividing the most current discharge by the average flow area.
+A limitation on this velocity is coded to prevent unbounded frictional flow adjustments.
+Consequently, the velocity cannot be higher than 50 ft/sec.</p>
+<p>For a conduit with free fall discharge into either of its end nodes, the depth at the end of the conduit for the node below the invert elevation of
+the conduit is set equal to the smaller of the critical depth and the normal flow depth for the conduit flow.
+The equation to calculate the head adjustment term for each timestep at each node is:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-12">
+<span class="eqno">(25)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-12" title="Link to this equation"></a></span>\[H_{t+∆t} = H_t + \frac {∆Vol}{(A_{store} + ∑A_s)_{t+∆t}}\]</div>
+<p>where ∆Vol is the net volume flowing through the node over the timestep. The net volume is computed as:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-13">
+<span class="eqno">(26)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-13" title="Link to this equation"></a></span>\[∆Vol = 0.5 \left[(∑Q)_t + (∑Q)_{t+∆t}\right]∆t\]</div>
+<p>The conduit surface area (A<sub>store</sub>) depends on the flow condition within the conduit as follows:</p>
+<blockquote>
+<div><p>1. Under normal conditions the pipe surface area equals half of the conduit length times the average of the top width at the end and mid points of the conduit.
+These widths are evaluated before the next updated timestep using the flow depths y<sub>1</sub>, y<sub>2</sub>, and y.
+2. If the inflow of the conduit to a node is in free-fall (conduit invert elevation is above the water surface of the node), then the conduit does not
+contribute to the node surface area.
+3. For conduits with closed shapes such as circular pipes that are greater than 96 percent full, a constant top width equal to the width when 96 percent
+full is used.
+This prevents the head adjustment term H<sub>t</sub> from creating numerical instability as the top width and corresponding surface area approach zero
+when the conduit reaches a full condition.
+A minimum surface area for A<sub>store</sub> is assigned to all nodes, including junctions that normally have no storage volume, preventing H<sub>t</sub>
+from becoming unbounded.
+Under normal conditions A<sub>store</sub> equals half the conduit’s length times the average of the top width at
+the end- and mid-points of the conduit.
+These widths are evaluated before the next updated flow solution is found, using the flow depths y<sub>1</sub>, y<sub>2</sub>, and y discussed previously.
+The default value for this minimum area is 12.57 ft<sup>2</sup> which corresponds to the area of a 4-foot diameter manhole.</p>
+</div></blockquote>
+<p>To calculate the discharge Q and the head H, the equations are solved for each timestep using a method of successive approximations with under-
+relaxation (Rossman, 2005).
+The solution algorithm involves the following steps:</p>
+<blockquote>
+<div><p>1. A first estimate of discharge Q in each conduit at time <em>t +</em> Δ<em>t</em> is calculated by solving for Q<sub>t+∆t</sub> using the heads, areas, and
+velocities determined at the current time <em>t</em>.
+2. A first estimate of the head (H) in each conduit at time <em>t +</em> Δ<em>t</em> is calculated by evaluating H<sub>t+∆t</sub> using the discharge Q just computed.
+The results are denoted as:</p>
+<blockquote>
+<div><p>Q<sub>last</sub> and H<sub>last</sub></p>
+</div></blockquote>
+<p>3. The equation Q<sub>t+∆t</sub> is solved once again, using the head, area, and velocity based on the Q<sub>last</sub> and H<sub>last</sub> values just
+computed.
+A relaxation factor Ω is used to combine the new flow estimate Q<sub>new</sub> with the previous estimate Q<sub>last</sub> to generate a new Q<sub>new</sub>
+according to the equation:</p>
+<blockquote>
+<div><p>Q<sub>new</sub> = (1−Ω) Q<sub>last</sub> +Ω Q<sub>new</sub></p>
+</div></blockquote>
+<p>4. The equation for H<sub>t+∆t</sub>is solved again for heads using Q<sub>new</sub>.
+As with discharge, this new solution for head, H<sub>new</sub> is weighted with H<sub>last</sub> to produce an updated estimate for heads:</p>
+<blockquote>
+<div><p>H<sub>new</sub> = (1−Ω) H <sub>last</sub> +Ω H <sub>new</sub></p>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>If H<sub>new</sub> is close enough to H<sub>last</sub> then the process stops with Q<sub>new</sub> and H<sub>new</sub> as the solution for time t + Δt.
+Otherwise H<sub>last</sub> and Q<sub>last</sub> are replaced with H<sub>new</sub> and Q<sub>new</sub>, respectively and the process returns to step 2.</p></li>
+</ol>
+</div></blockquote>
+<p>The procedure uses the following parameters and conditions for this iterative procedure:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A constant relaxation factor Ω is equal to 0.5.</p></li>
+<li><p>A convergence tolerance of 0.005 feet on nodal heads.</p></li>
+<li><p>Number of trials is limited to four.</p></li>
+</ul>
+</div></blockquote>
+<p>The flow depth in conduits that are not surcharged is limited not to exceed the normal flow depth for the discharge at the upstream end of the conduit
+whenever the flow regime is supercritical.
+FLO-2D storm drain model uses the water surface slope and Froude number to determine when supercritical flow occurs in a conduit.</p>
+<section id="surcharge-conditions">
+<h5>Surcharge conditions<a class="headerlink" href="#surcharge-conditions" title="Link to this heading"></a></h5>
+<p>A node is defined to be in a surcharged condition when its water level exceeds the crown of the highest conduit connected to it.
+Under this condition the surface area of any closed conduit would be zero and the equation for the change in the pressure head would no longer be
+applicable.</p>
+<p>An additional criterion is needed to calculate the nodal continuity condition.
+The total rate of outflow from a surcharged node must equal the total rate of inflow equation is insufficient to update nodal heads at the new time
+step because only contains flow.</p>
+<p>To implement the flow continuity condition, a perturbation equation form is enforced:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>An alternative nodal continuity condition is used where the total rate of outflow from a surcharged node must equal the total rate of inflow Σ𝑄 = 0.
+This equation only contains flow, and it is insufficient to update nodal heads at the new time step.</p></li>
+<li><p>Since the flow and head updating equations for the system are not solved simultaneously, there is no guarantee that the condition will hold at the
+surcharged nodes after a flow solution is reached.</p></li>
+<li><p>Flow continuity condition is enforced Min the form of a perturbation equation:</p></li>
+</ul>
+</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-14">
+<span class="eqno">(27)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-14" title="Link to this equation"></a></span>\[Σ\left[Q + \frac{∂Q}{∂H}∆H\right] = 0\]</div>
+<p>where:</p>
+<blockquote>
+<div><p>∆𝐻 = node head that must be made to achieve flow continuity.</p>
+</div></blockquote>
+<p>Solving for ∆𝐻:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-15">
+<span class="eqno">(28)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-15" title="Link to this equation"></a></span>\[∆H = \frac {∑Q}{∑∂Q⁄∂H}\]</div>
+<p>where:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-16">
+<span class="eqno">(29)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-16" title="Link to this equation"></a></span>\[\frac {∂H}{∂Q} = \frac {−g \bar{A} ∆t⁄L}{∂H 1 + ∆Q_{friction} + ∆Q_{losses}}\]</div>
+<p>frac {∂H}{∂Q} has a negative sign because when evaluating ∑𝑄 because the flow directed out of a node is
+considered negative while flow into the node is positive.
+If surcharge (return flow to the surface water) is computed, the pressure head is considered in the total node adjustment for the successive
+approximation scheme.</p>
+</section>
+<section id="boundary-conditions-flo-2d-inlet-discharge">
+<h5>Boundary conditions – FLO-2D inlet discharge<a class="headerlink" href="#boundary-conditions-flo-2d-inlet-discharge" title="Link to this heading"></a></h5>
+<p>Floodplain runoff discharges from the surface layer typically only enters the pipeline system at inlets.
+Weir and orifice equations are used to calculate an inflow discharge under inlet control.
+In the original SWMM model there was no inlet control and all the water in the subcatchment was made available to the storm drain system capacity.
+With inlet control, the inlet discharge is based on the inlet geometry and on the comparison between the FLO-2D water surface elevation and the storm
+drain pressure head.
+The inlet discharge is imposed as surface water boundary conditions (BC) and is passed to the storm drain layer for routing.
+The following equations (Johnson and Fred, 1984) are used:</p>
+<p>Weir Flow:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-17">
+<span class="eqno">(30)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-17" title="Link to this equation"></a></span>\[𝑄_w = 𝐶𝐿𝐻^m\]</div>
+<p>where:</p>
+<blockquote>
+<div><p>Q<sub>w</sub> = weir discharge</p>
+<p>C = weir coefficient, enter in the “Inlet Weir Coeff.” field in the SWMMFLO.DAT</p>
+<p>L = crest length; enter in the “Length (1 or 2)” field in the SWMMFLO.DAT</p>
+<p>H = FLO-2D grid element water depth that contains the inlet structure</p>
+<p>m = 1.5 for a broad crested weir. This is hardcoded.</p>
+</div></blockquote>
+<p>Orifice Flow:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-18">
+<span class="eqno">(31)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-18" title="Link to this equation"></a></span>\[𝑄_𝑜 = 𝐶_𝑑\ 𝐴√2𝑔𝐻\]</div>
+<p>where:</p>
+<blockquote>
+<div><p>Q<sub>o</sub> = orifice flow rate at depth H</p>
+<p>C<sub>d</sub> = discharge coefficient hardcoded to 0.67</p>
+<p>A = Lh; cross-sectional orifice area, computed from inlet opening length (L) and inlet opening height (h) fields in the SWMMFLO.DAT</p>
+<p>g = gravitational acceleration</p>
+<p>H = FLO-2D grid element water depth that contains the inlet structure</p>
+</div></blockquote>
+<p>The discharges are calculated based on the physical behavior of the inlet as a weir or an orifice for a given timestep and the smaller of the two
+discharges is used in the surface water exchange to the storm drain system.
+Using orifice flow accounts for the gutter velocity that would reduce the weir flow discharge.</p>
+</section>
+</section>
+</section>
+<section id="surface-water-storm-drain-model-integration">
+<h3>Surface Water – Storm Drain Model Integration<a class="headerlink" href="#surface-water-storm-drain-model-integration" title="Link to this heading"></a></h3>
+<p>The FLO-2D model moves around blocks of water on a discretized grid system.
+Grid elements assigned as inlets/outfalls connect the surface layer with the closed conduit storm drain system.
+A comparison of the grid element water surface elevation with the pressure head from the closed conduit system node in each cell determines the
+direction of the flow exchanged between the two systems.
+The models are fully integrated on a computational timestep basis.
+The advantages of the FLO-2D storm drain component over the original SWMM model are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Complete surface water hydrology and hydraulics including rainfall runoff, infiltration, and flood routing in channels, streets or unconfined overland
+flow are simulated by FLO2D surface water model.</p></li>
+<li><p>The storm drain component solves the pipe hydraulics and flow routing but integrates the inlet/outlets and outfalls with the surface water at each
+computational timestep.</p></li>
+<li><p>FLO-2D computes the storm drain inlet discharge based on the water surface head and the inlet geometry.
+The original SWMM model did not consider inlet control.</p></li>
+<li><p>Only those junctions set up as inlets/outfalls in the storm drain model are recognized for system exchange.
+Pipe junctions without an inlet will not receive a surface runoff discharge.</p></li>
+<li><p>The inlet locations digitized in storm drain data files (*.INP) are automatically read by the FLO-2D QGIS to establish the storm drain inlet
+connections.</p></li>
+<li><p>Inlets can become outlets if the storm drain pressure head exceeds the grid element water surface elevation at a given node.
+The potential return flow to the surface water is based on the water surface elevation not the rim elevation as in the original SWMM model.</p></li>
+<li><p>Manhole covers can pop and allow return flow based on a surcharge depth representing the manhole cover weight.
+Once popped the manhole surcharge is turned ‘off’ and the manhole functions as an inlet/outlet for the rest of the simulation.
+This is an improvement on the original SWMM model.</p></li>
+<li><p>For outfall nodes in the closed conduit system network, pipe discharge can be removed from the storm drain system or returned to the surface water as
+a user defined option.
+The outfall can function as an inlet to the storm drain system based on the surface water elevation.
+A tide gate can be used to prevent inflow to the outfall.
+The integration of the outfall boundary conditions with surface water represents an enhancement over the original SWMM model.</p></li>
+</ul>
+</div></blockquote>
+<p>To integrate the surface water and storm drain models, the first task is to develop a running FLO-2D surface water flood model.
+Then the storm drain model can be built with the assigned inlets/manholes/outfalls for surface water exchange.</p>
+<section id="storm-drain-model-features">
+<h4>Storm Drain Model Features<a class="headerlink" href="#storm-drain-model-features" title="Link to this heading"></a></h4>
+<p>Storm drain model data and functions to enable the flow exchange with the FLO-2D model.</p>
+<section id="rain-gage">
+<h5>Rain gage<a class="headerlink" href="#rain-gage" title="Link to this heading"></a></h5>
+<p>Rain gages are not required in the FLO-2D storm drain model.
+The FLO-2D surface model simulates hydrology.
+The model is backward compatible and will run simulations that have a rain gage.</p>
+</section>
+<section id="subcatchment">
+<h5>Subcatchment<a class="headerlink" href="#subcatchment" title="Link to this heading"></a></h5>
+<p>Subcatchments are not used with the FLO-2D system and are not required.
+The watersheds are represented by the FLO-2D grid elements.
+Junctions with an ID that starts with ‘I’ will identify the storm drain inlets and collect water from the surface model.
+The model is backward compatible and the current version of the FLO-2D storm drain model will run simulations that have sub catchments.</p>
+</section>
+<section id="junctions">
+<h5>Junctions<a class="headerlink" href="#junctions" title="Link to this heading"></a></h5>
+<p>Junctions function as pipe connection nodes.
+A junction is needed when there is a slope of geometry change in a pipeline.
+FLO-2D can only exchange flow with those junctions defined as inlets (see Inlets).
+The junction will not receive FLO-2D surface inflow if it serves as a simple pipe connection.
+The required input data is:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Name</p></li>
+<li><p>X and Y Coordinates</p></li>
+<li><p>Invert elevation</p></li>
+<li><p>Maximum depth (invert to rim)</p></li>
+<li><p>Initial depth (optional)</p></li>
+<li><p>Surcharge Depth (optional)</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="inlets">
+<h5>Inlets<a class="headerlink" href="#inlets" title="Link to this heading"></a></h5>
+<p>Storm drain inlets will exchange flow between the FLO-2D surface water and the storm drain network.
+An inlet is a junction that captures surface inflow and must be connected to the grid system.
+The node ID must start with “I” or “i” to be recognized as an inlet.
+FLO-2D computes surface water inflow to the inlet using inlet geometry and water surface head.
+Inlets can be assigned to a FLO-2D floodplain, channel, or street grid cell.
+Manholes are covered inlets that capture flow from the surface when the cover is popped.
+The manhole ID needs to start with an “I” or “i”.
+The required inlet data is:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Name: Starts with an “I” or “i” to be identified as Inlets</p></li>
+<li><p>X and Y Coordinates</p></li>
+<li><p>Invert elevation</p></li>
+<li><p>Maximum depth (invert to rim)</p></li>
+<li><p>Initial depth (optional)</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="conduits">
+<h5>Conduits<a class="headerlink" href="#conduits" title="Link to this heading"></a></h5>
+<p>Conduits convey flow through the storm drain system.
+Slope is calculated internally based on inlet and outlet node invert elevation.
+Required input data is:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Conduit name</p></li>
+<li><p>Name of connecting feature inlet and outlet</p></li>
+<li><p>Cross-sectional Geometry</p></li>
+<li><p>Length - between nodes</p></li>
+<li><p>Pipe roughness – Manning’s n-value</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="outfall">
+<h5>Outfall<a class="headerlink" href="#outfall" title="Link to this heading"></a></h5>
+<p>An outfall node is a terminal node of a pipeline with potential boundary conditions.
+A free outfall can discharge from the storm drain system to a FLO-2D floodplain element, channel, or street cell.
+An outfall discharging to a channel element must be connected to the channel left bank element.
+Any other outfall (that is not free) will simply discharge out of the drainage system and off the computational domain.
+Only one conduit can be connected to an outfall node and there must be at least one outfall node in a pipeline.
+The required input data is:</p>
+<blockquote>
+<div><ul>
+<li><p>Name</p></li>
+<li><p>X and Y Coordinates</p></li>
+<li><p>Invert elevation</p></li>
+<li><p>Tide Gate (optional) can be assigned to prevent backflow into the pipes.</p></li>
+<li><p>Boundary Condition Types:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Allow Discharge is ‘off’ - Free Outfalls can discharge the flow from the storm drain system.
+Flow will not be added to the surface.</p></li>
+<li><p>Allow Discharge is ‘on’ - The FLO-2D water surface elevation is imposed on the outfall node.
+Storm drain water will return to the surface model.
+This is the only outfall type that allows flow exchange with the surface water.
+Pressure head is compared to the water surface elevation to define the flow direction.</p></li>
+<li><p>Normal, Fixed, Tidal and Time Series Outfalls discharges flow off the storm drain system with a boundary condition set up in the SWMM.INP file.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="links">
+<h5>Links<a class="headerlink" href="#links" title="Link to this heading"></a></h5>
+<p>Links are defined as features that connect nodes in the storm drain system.
+The following components are defined as links:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Conduits</p></li>
+<li><p>Pumps</p></li>
+<li><p>Orifices</p></li>
+<li><p>Weirs</p></li>
+<li><p>Outlets</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="pumps">
+<h5>Pumps<a class="headerlink" href="#pumps" title="Link to this heading"></a></h5>
+<p>Pumps are links used to lift water to higher elevations.
+A pair of nodes can be connected using links as pumps.
+The flow through a pump is computed as a function of the heads at their end nodes.
+Pumps can be simulated in FLO-2D as part of the storm drain system or as a hydraulic structure in the surface model.
+Pumps for the storm drain system can be set up in the FLO-2D QGIS plugin.
+They must be set up based on the following considerations:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The pump curve can specify flow as a function of inlet node volume, inlet node depth, or the head difference between the inlet and outlet nodes.</p></li>
+<li><p>The pump discharge is limited to the inlet inflow during a given timestep.
+This will eliminate the possibility of the pump curve being sufficient to drain the inlet node during the time step.</p></li>
+<li><p>An ideal transfer pump can be specified where the flow rate equals the inflow rate at its inlet node and no curve is required.
+In this case, the pump must be the only outflow link from its inlet node.</p></li>
+</ul>
+</div></blockquote>
+<p>The parameters for a pump in the storm drain system are:</p>
+<blockquote>
+<div><ul>
+<li><p>Names of the inlet and outlet nodes</p></li>
+<li><p>Pump curve name</p></li>
+<li><p>Pump Type:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Type1: series of constant flow rates that apply over a corresponding series of volume intervals at the pump’s inlet node.</p></li>
+<li><p>Type2: like type1 but the fixed flow rates vary over a set of depth intervals at the pump’s inlet node.</p></li>
+<li><p>Type3: flow is a function of the head difference between the inlet and outlet nodes.</p></li>
+<li><p>Type 4: variable speed in-line pump where flow varies continuously with inlet node depth.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Initial status ‘on’ or ‘off’ status</p></li>
+<li><p>Startup and shutoff depths</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="flow-regulators">
+<h5>Flow Regulators<a class="headerlink" href="#flow-regulators" title="Link to this heading"></a></h5>
+<p>Flow regulators are devices used to divert flow and can be applied to control releases from storage facilities, prevent surcharging or convey flow to
+interceptors.
+They are represented as a link connecting two nodes.
+The flow regulator discharge is computed as a function of the head at the end nodes.
+Most of the flow regulators devices control the surface flow, therefore they have been simulated using the surface features, example: a ponded area
+with a weir structure that drains to the storm drain system.
+The storm drain model can simulate a regulator as a storage unit with a weir.
+The ponded area belongs to the surface layer; therefore the correct method is to simulate this using a depressed storage area in the surface grid with
+a Type 4 inlet connecting the storage facility with the storm drain system.</p>
+<p>There are specific configurations where the flow regulators control the storm drain flow.
+For these cases, the flow regulator feature must be simulated in the storm drain layer.
+An example is a large catch basin with an opening in the inlet wall (orifice).
+This component belongs to the storm drain layer and it needs to be modeled as a storage unit with an orifice.</p>
+</section>
+<section id="orifices">
+<h5>Orifices<a class="headerlink" href="#orifices" title="Link to this heading"></a></h5>
+<p>Orifices are used to model outlet and diversion structures.
+These outlet orifices should be distinguished from the inlet orifice flow and are typically openings in the wall of a manhole, storage facility, or
+control gate.
+They can be either circular or rectangular in shape and can be located either at the bottom or along the side of the upstream node.
+They can have a flap gate to prevent backflow.
+Orifice flow is based on the following criteria:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>When fully submerged the classical orifice equation is used: 𝑄<sub>w</sub> = 𝐶<sub>d</sub> 𝐴√2𝑔ℎ.</p></li>
+<li><p>A partially submerged orifice applies the modified weir equation: 𝑄<sub>𝑤</sub> = 𝐶<sub>𝑑</sub> 𝐴√2𝑔𝐷ℎ𝑓<sup>1.5</sup>.</p></li>
+<li><p>An orifice surface area contribution to the outlet is based on the equivalent pipe length and the depth of water in the orifice.</p></li>
+</ul>
+</div></blockquote>
+<p>where:</p>
+<blockquote>
+<div><p>A = orifice open area (may be an irregular shape)</p>
+<p>D = height of the full orifice opening</p>
+<p>h = hydraulic head on the orifice</p>
+<p>C<sub>d</sub> = discharge coefficient hardcoded to 0.67</p>
+<p>g = gravitational acceleration</p>
+<p><em>f</em> = fraction of the orifice that is submerged</p>
+</div></blockquote>
+<p>The parameters of an orifice in the storm drain system are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Names of the inlet and outlet nodes</p></li>
+<li><p>Type: located in the side or bottom through which fluid is flowing.</p></li>
+<li><p>Shape: opening is a circular or rectangular geometry.</p></li>
+<li><p>Geometry: height and width of orifice when fully opened.</p></li>
+<li><p>Inlet offset is the depth of bottom of the orifice opening from inlet node invert.</p></li>
+<li><p>Discharge coefficient.</p></li>
+<li><p>Flap Gate: select YES to prevent backflow.
+Default option is NO.</p></li>
+<li><p>Time to Open/Close: the time to open or close a gated orifice.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="weirs">
+<h5>Weirs<a class="headerlink" href="#weirs" title="Link to this heading"></a></h5>
+<p>A weir is an unrestricted overflow opening oriented either transversely or parallel to the flow direction.
+Weirs can be a link connecting two nodes where the weir itself is placed at the upstream node.
+A flapgate can be included to prevent backflow.
+The weir calculations are based on the following criteria:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>When the weir becomes completely submerged, the model switches to the orifice equation to predict flow as a function of the head.</p></li>
+<li><p>Weirs do not contribute any surface area to their end nodes.</p></li>
+<li><p>The general weir equation 𝑄 = 𝐶 𝐿 ℎ<sup>𝑚</sup> is used to compute the discharge as a function of head <em>h</em> across the weir when the weir is not fully
+submerged.</p></li>
+</ul>
+</div></blockquote>
+<p>where:</p>
+<blockquote>
+<div><p>C = the weir coefficient</p>
+<p>L = the crest length</p>
+<p>m = an exponent that depends on the type of weir being modeled: lateral, transverse, side-flow, V-notch, or trapezoidal.
+Typically, m = 1.5 for a lateral weir. This exponent is hardcoded in the FLO-2D storm drain model.</p>
+</div></blockquote>
+<p>The parameters of an orifice in the storm drain system are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Names of the inlet and outlet nodes</p></li>
+<li><p>Type: transverse, side flow, v-notch and trapezoidal.</p></li>
+<li><p>Height: vertical heigh of weir opening.</p></li>
+<li><p>Length: horizontal length of weir crest or crown for v-notch weir.</p></li>
+<li><p>Side slope, width to height of trapezoidal weir side walls.</p></li>
+<li><p>Inlet offset depth of bottom of the weir opening from inlet node invert.</p></li>
+<li><p>Discharge coefficient for central portion of weir.</p></li>
+<li><p>Flap Gate: select YES if weir contains a flap gate to prevent backflow.
+The default option is NO.</p></li>
+<li><p>Number of end contractions.</p></li>
+<li><p>End of discharge coefficient: discharge coefficient of flow through the triangular ends of a trapezoidal weir.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="outlets">
+<h5>Outlets<a class="headerlink" href="#outlets" title="Link to this heading"></a></h5>
+<p>Outlets are used to control discharge from storage units or to simulate special stage-discharge relationships that cannot be characterized by pumps,
+orifices, and weirs.
+They can have a flapgate that restricts the flow to only one direction.
+This option does not discharge to the FLO-2D surface water system.</p>
+</section>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Storm Drain Modeling Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Chapter%202.html" class="btn btn-neutral float-right" title="Chapter 2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build23
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/flo-2d_pro/Storm Drain Modeling Guidelines/Chapter 1.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="Chapter 1.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

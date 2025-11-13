@@ -1,0 +1,577 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FLO-2D Hydraulic Structure Guidelines &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Levee Dam and Wall Breach Guidelines" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/Levee%20Dam%20and%20Wall%20Breach%20Guidelines.html" />
+    <link rel="prev" title="References" href="../Storm%20Drain%20Modeling%20Guidelines/References.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Channel%20Modeling%20Guidelines%202023/index.html">Channel Modeling Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Storm%20Drain%20Modeling%20Guidelines/index.html">Storm Drain Modeling Guidelines</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">FLO-2D Hydraulic Structure Guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#guidelines">Guidelines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modeling-pumps">Modeling Pumps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#numerical-instability">Numerical Instability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hydraulic-structure-troubleshooting">Hydraulic Structure Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/Levee%20Dam%20and%20Wall%20Breach%20Guidelines.html">Levee Dam and Wall Breach Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines/Simulating%20Mudflow%20Guidelines.html">Simulating Mudflow Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Flood%20Routing%20Guidelines%202023/Two%20Phase%20Flood%20Routing%20Guidelines%202023.html">Two Phase Flood Routing Guidelines 2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual%202023/index.html">Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin Gila</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center</a></li>
+      <li class="breadcrumb-item active">FLO-2D Hydraulic Structure Guidelines</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/flo-2d_pro/Hydraulic Structures Guidelines/Hydraulic Structures Guidelines.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="flo-2d-hydraulic-structure-guidelines">
+<h1>FLO-2D Hydraulic Structure Guidelines<a class="headerlink" href="#flo-2d-hydraulic-structure-guidelines" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Hydraulic structures can include bridges, culverts, weirs, spillways, pumps or any facility that controls the water surface elevation and whose
+discharge can be specifying by a rating curve or tables, or generalized culvert equations.
+Backwater effects upstream of bridges or culverts as well as blockage of a culvert or overtopping of a bridge can be simulated.
+A hydraulic structure can control the discharge between either contiguous channel or floodplain grid elements or cells that may be separated by
+several grid elements.
+For example, a culvert under an interstate highway may span several grid elements.
+In addition, flow can be exchanged between a floodplain element and channel element.
+A hydraulic structure rating curve equation specifies discharge as a function of the headwater depth h:</p>
+<blockquote>
+<div><p>Q = a h<sup>b</sup></p>
+</div></blockquote>
+<p>where: (a) is a regression coefficient and (b) is a regression exponent.
+More than one power regression relationship may be used for a hydraulic structure by specifying the maximum depth for which the relationship is valid.
+For example, one depth relationship can represent normal flow through a bridge and a second relationship can be used to simulate blockage with a zero
+coefficient for the height of the bridge low chord.
+Flow can also reverse and go upstream through a hydraulic structure.
+Hydraulic structures may include:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Broadcrested weir such as a berm or embankment (Figure 1);</p></li>
+<li><p>Sharp crested weir such as a wall;</p></li>
+<li><p>Channel side retention basin control weirs;</p></li>
+<li><p>Spillways or outlet works from a dam (e.g. Ogee Weir);</p></li>
+<li><p>Culverts;</p></li>
+<li><p>Bridges;</p></li>
+<li><p>Detention basin pumps;</p></li>
+<li><p>Highway dip crossings;</p></li>
+<li><p>Pumps</p></li>
+</ul>
+</div></blockquote>
+<img alt="../../_images/Hydrau002.jpg" src="../../_images/Hydrau002.jpg" />
+<p><em>Figure 1.
+Broadcrested Weir Equation for Modeling Hydraulic Structure Flow Over an Embankment</em></p>
+<p>By specifying a hydraulic structure rating table, the model interpolates between the depth and discharge increments to calculate the discharge.
+A typical rating curve will start with zero depth and zero discharge and increase in non-uniform increments to the maximum expected discharge or
+higher.
+In general, the rating table will be more accurate than the regression equation if the curve is nonlinear on a log-log plot of the depth and discharge.
+The rating table must be based on a reference elevation (Figure 2).
+Flow blockage by debris can be simulated by setting the discharge equal to zero corresponding to a prescribed depth.
+This blockage option may useful in simulating worst case mud and debris flow scenarios where bridges or culverts are located on alluvial fans.
+Blockage forces all the discharge to flow overland on the fan or floodplain surface.</p>
+<img alt="../../_images/Hydrau003.jpg" src="../../_images/Hydrau003.jpg" />
+<p><em>Figure 2.
+Levees are Depicted in Red and the River in Blue in the GDS Program</em></p>
+<p>For a simplified storm drain system, multiple inflow nodes can be assigned to the same outflow element.
+This will enable the cumulative storm drain discharge at the outlet to be assessed without conduit flow routing.
+It is possible to assign a limiting conveyance capacity for the outlet node (Figure 3).
+This will curtail the inflow in subsequent downstream inlets.
+Once the conveyance capacity is exceeded, the discharge to the remaining downstream inlet nodes is zero.</p>
+<img alt="../../_images/Hydrau001.jpg" src="../../_images/Hydrau001.jpg" />
+<p><em>Figure 3.
+Multiple Storm Drain Inlets to a Single Outlet with a Conveyance Capacity Limit</em></p>
+<p>Generalized equations for inlet and outlet control for round or rectangular culverts are available in the Pro model.
+The culvert discharge will be computed using equations based on experimental and theoretical results from the U.S.
+Department of Transportation procedures (Hydraulic Design of Highway Culverts; Publication Number FHWA-NHI-01-0260 revised May, 2005).
+This approach will replace the original model rating table or curve methods.
+The equations include options for box and pipe culverts and take into account different entrance types for box culverts (wingall flare 30 to 75
+degrees, wingall flare 90 or 15 degrees and wingall flare 0 degrees) and three entrance types for pipe culverts (square edge with headwall, socket end
+with headwall and socket end projecting).
+The highlights of this new component are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Computes discharge through box or circular pipe culverts for various entrance conditions.</p></li>
+<li><p>Computes both inlet and outlet control and the transition between them.</p></li>
+<li><p>No rating curves or tables required.</p></li>
+</ul>
+</div></blockquote>
+<p>The data required for the generalized culvert equations include (Figure 4):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Length</p></li>
+<li><p>Diameter</p></li>
+<li><p>Rectangular Width</p></li>
+<li><p>Type – Box or Pipe</p></li>
+<li><p>Entrance Type (3)</p></li>
+<li><p>Entrance Loss Coefficient</p></li>
+<li><p>Roughness</p></li>
+</ul>
+</div></blockquote>
+<img alt="../../_images/Hydrau004.jpg" src="../../_images/Hydrau004.jpg" />
+<p><em>Figure 4.
+GDS Dialog Box for Entering the Generalized Culvert Data</em></p>
+<p>Hydraulic structures may be used to allow flow to go through a levee.
+This might simulate a drainage hole in a block wall or a culvert through a highway embankment.
+The use of hydraulic structure in contiguous grid elements separated by a levee will preclude the discharge overtopping the levee or wall and the
+rating table or curve should represent flow through the structure and over the embankment.
+When the levee or wall fails the hydraulic structure flow is terminated and the flow between the contiguous grid elements is base on the levee breach.
+If the breach failure is instantaneous, the hydraulic structure flow is ceased and the flow reverts to overland flow.</p>
+</section>
+<section id="guidelines">
+<h2>Guidelines<a class="headerlink" href="#guidelines" title="Link to this heading"></a></h2>
+<p>Hydraulic structures pass flow across a grid element boundary and can connect two floodplain elements, two channel elements or a floodplain to channel
+element combination.
+The inflow and outflow elements of the hydraulic structure do not have to be contiguous.
+For example, several floodplain elements representing a highway embankment can separate the inflow and outflow cells of a culvert.
+If a two channel elements are joined by a hydraulic structure that are not contiguous, the intevening channel elements should no longer be designated
+as channel elements in the CHAN.DAT file.
+In this case the XSEC.DAT and CHANBANK.DAT should also be edited to remove the extra channel elements.
+For the floodplain (inflow) to channel (outflow) hydraulic connection, the channel element (left bank) must be listed in the CHAN.DAT file.
+It doesn’t matter if the inflow element is on the opposite of the river.</p>
+<p>It is recommended that hydraulic structure inflow and outflow nodes be assigned to grid elements away from the project outflow nodes or grid system
+boundary to avoid water surface control or flow containment issues.
+It is also suggested that streets and ARF/WRF values be removed or left out of the inflow and outflow hydraulic structure elements.
+An warning or error message will be generated in the ERROR.CHK file if the conflicts are encountered.</p>
+<p>Most hydraulic structures represent a hydraulic control.
+The flow is constricted through the structure or the entrance effects are less efficient than the normal depth flow reaching the structure from
+upstream.
+The flow decelerates through the structure and creates a backwater effect.
+This generally occurs over the entire range of flow to bankfull discharge.
+What can go wrong with a hydraulic structure rating table? When the hydraulic structure has a mismatched upstream depth or stage with the discharge
+through the structure this can cause surging in the either the inflow or outflow structure nodes.
+It is rare when a structure accelerates flow though it, but some steep box culverts or bridges with concrete aprons may result in higher velocities
+than those approaching the structure.
+In most cases, however, a rating table that accelerates flow through the structure is the result of low roughness or friction factors assigned to
+generate the table, lack of entrance coefficients, or inappropriate slope.
+When a rate table accelerates flow through hydraulic structure in the model, it pulls down the inflow node the water surface and conversely increases
+the outflow node storage.
+This changes the relationship between the headwater and tailwater can result in numerical surging through the structure (Figure 5).</p>
+<img alt="../../_images/Hydrau005.jpg" src="../../_images/Hydrau005.jpg" />
+<p><em>Figure 5.
+Hydraulic Structure Numerical Surging</em></p>
+<p>It is possible to completely evacuate the hydraulic structure inflow node if the rating table poorly matches the upstream flow conditions at shallow
+depths.
+This occurs when the user is primarily interested in the 100-year event or bankfull discharges and neglets to assign sufficient detail to the lower
+portion of the rating table.
+In the following table, the user may be interested in discharges over 20,000 cfs, but what is the discharge at one foot?</p>
+<img alt="../../_images/Hydrau006.jpg" src="../../_images/Hydrau006.jpg" />
+<p><em>Table 1.
+Stage Discharge Relationship for a Bridge</em></p>
+<p>The discharge at 1 ft in the above table is 1,000 cfs.
+In almost any natural river channel, it is impossible to have discharge of 1,000 cfs with a depth of 1 ft above the thalweg.
+Typically the flow velocity would be on the order of 1 to 2 fps which would mean that the channel width would have to be 500 to 1,000 ft wide at 1 ft
+of depth.
+It is more reasonable for the discharge to be 100 to 300 cfs at one ft deep.
+More detail is necessary in the rating table so that numerically the water surface is not pulled down to accelerate the flow through the bridge.</p>
+<p>Backwater, tidal control, river confluence and ponding downstream of hydraulic structures create a unique problem for numerical models.
+Hydraulic structure stage discharge tools and manuals such as HEC-RAS, culvert tables and other references establish discharge as a function of
+headwater depth or stage based on the assumption of steady, uniform flow.
+Flow conditions can significantly deviate steady flow when routing a flood event.
+The tailwater might be influenced by ocean levels or flood backwater effects from river constrictions.
+Two flow conditions that might will alter the floodwave routing are submergence and upstream flow.
+If it is reasonable certain that there is no potential for upstream flow, set the parameter</p>
+<p>INOUTCONT = 0 in Line S of HYSTRUC.DAT.
+In this case, the discharge Q is evaluate by the upstream headwater depth H<sub>w</sub> regardless if the tailwater T<sub>w</sub> surface exceeds the
+headwater surface elevation (Figure 6).
+A pump is also a hydraulic structure that may produce a discharge for a given stage.</p>
+<img alt="../../_images/Hydrau007.jpg" src="../../_images/Hydrau007.jpg" />
+<p><em>Figure 6.
+If INOUTCONT = 0, the Discharge Q is a Function of the Headwater Depth H:sub:`w` Regardless of the Tailwater T:sub:`w`</em></p>
+<p>If a structure spans more than one channel element in a channel segment as shown in Figure 6 above, split the channel into two segments and assign the
+inlet node at the end of the first segment and the outlet node at the start of the second segment.
+As the tailwater increases in relation to the headwater, backwater or submergence may ensue and eventually flow may go upstream through a hydraulic
+structure (Figure 7).
+The effects of the relationship between the structure headwater and tailwater is controlled by the</p>
+<p>INOUTCONT parameter (0, 1, or 2) in the HYSTRUC.DAT file (Table 1).
+If INOUTCONT =2, headwater depth H<sub>w</sub> and tailwater T<sub>w</sub> can switch with submergence to allow flow to go upstream.
+The INOUTCONT parameter does not apply to the generalized culvert equations.</p>
+<p><em>Table 1.
+Hydraulic Structure Rating Table Options</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Control</strong></p></td>
+<td><p><strong>Significance</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>INOUTCONT = 0</p></td>
+<td><p>Simulates downstream flow through a structure or pump flow where the discharge is solely a function of the
+headwater depth Hw.</p></td>
+</tr>
+<tr class="row-odd"><td><p>INOUTCONT = 1</p></td>
+<td><p>Adjusts the rating table with a submergence factor as the tailwater approaches the headwater.
+As tailwater water surface</p>
+<p>approaches the upstream headwater surface elevation.</p>
+<p>No upstream flow through the structure is permitted.</p>
+<p>The potential submergence is given by Q = Q * SUBFACTOR; where SUBFACTOR is computed by the model based on HY-8</p>
+<p>submergence criteria as defined by</p>
+<p>(initially the SUBFACTOR = 1.0)   IF DELTA &gt; 0.975, SUBFACTOR = SUBFACTOR – 0.01 IF DELTA &lt; 0.975,</p>
+<p>SUBFACTOR = SUBFACTOR
++ 0.015 IF DELTA</p>
+<p>&gt; 1, SUBFACTOR = SUBFACTOR - 0.01* DELTA</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>INOUTCONT = 2</p></td>
+<td><p>Upstream flow through the structure is computed with the rating table adjustment when the tailwater surface
+exceeds the headwater surface.</p>
+<p>The headwater depth Hw and tailwater Tw can switch with submergence to allow flow to go upstream.</p>
+<p>For upstream discharge through the bridge or culvert, the outflow node must have upstream flow into it from</p>
+<p>the downstream channel| element.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>INOUTCONT = 1, 2</p></td>
+<td><p>For bridges joining contiguous grid elements, the rating table is turned off for flow depths less than one</p>
+<p>foot or when the SUBFACTOR is less than 0.02.</p>
+<p>This would occur for inflow and outflow WSEL that are nearly equilibrated.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="modeling-pumps">
+<h2>Modeling Pumps<a class="headerlink" href="#modeling-pumps" title="Link to this heading"></a></h2>
+<p>The hydraulic structure rating table can be applied to simulate pump discharge by entering the stage (head) discharge relationship that is usually
+included with the pump manual.
+The head will be based on the invert elevation of the pump inlet that may be assigned to reference elevation in the S-Line of the HYSTRUC.DAT file.
+Generally, the pump will operate according to the stage-discharge relationship regardless of the tailwater condition or the higher elevation ground
+elevation of the outfall (outflow node).
+To simulate a pump, set INOUTCONT = 0 to model the discharge solely as function of the inflow node stage.</p>
+</section>
+<section id="numerical-instability">
+<h2>Numerical Instability<a class="headerlink" href="#numerical-instability" title="Link to this heading"></a></h2>
+<p>Hydraulic structures create an artificial control on the water surface elevation.
+This may cause a mismatch of the depth and discharge over a range flows resulting in surging upstream or downstream of the structure.
+Numerical instability can result in volume conservation problems, hydraulic structure discharge surging and slow simulation times.
+Most of the following hydraulic structure modeling problems and data issues are now checked automatically by the model and are listed in the ERROR.CHK
+at the termination of a simulation.
+At the outset, it might be expedient to run the model for a very short simulation time (SIMUL = 0.01 hr, TOUT = 0.01 hr).
+The model will start and stop in a minute or so and the ERROR.CHK file can be reviewed.
+This will allow the user to address any significant issues before proceeding with model development.</p>
+<p>Virtually all the hydraulic structure runtime problems stem from a poor match of the rating table with the upstream flow conditions.
+This is primarily due to the underestimated roughness through the structure when developing the rating table using outside software such as culvert
+program or the HEC-RAS bridge routine based on a steady flow assumptions for both the headwater and tailwater conditions.
+When the tailwater elevation deviates from the expected headwater-discharge condition in the rating table, instability may ensue if the flow
+accelerates through the structure or if the tailwater varies with large fluctuations of the discharge.
+High maximum velocities (VELTIMEFP.OUT), rapidly varying discharges (HYDROSTRUCT.OUT), high or variable maximum water surface elevations are all
+evidence of numerical surging.</p>
+</section>
+<section id="hydraulic-structure-troubleshooting">
+<h2>Hydraulic Structure Troubleshooting<a class="headerlink" href="#hydraulic-structure-troubleshooting" title="Link to this heading"></a></h2>
+<p>General – Warning and Error Messages</p>
+<p>Hydraulic structures can be a source of channel numerical instability when the rating curve or table discharge does not match the upstream flow.
+This occurs more frequently for low flow conditions.
+While FLO-2D can accurately replicate backwater effects, accelerating flow through a hydraulic structure is uncommon and will typically only occur
+with a concrete apron or channel.
+A rating curve or table that accelerates the flow through the bridge or culvert will pull down the water surface elevation in the inlet node.
+This will cause surging as the inlet node headwater drops until the discharge through the structure is low enough that the upstream flow will
+replenish the volume in the inlet node and start the surge cycle again.</p>
+<p>Warning Messages are written to the ERROR.CHK file for the following structure issues:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Adverse slope between the structure inlet and outlet nodes;</p></li>
+<li><p>Inlet or outlet nodes that also contain levee, streets or ARF’s;</p></li>
+<li><p>Rating tables with a non-zero first pair of stage-discharge values (must be 0.
+and 0.);</p></li>
+<li><p>The rate of increase in the rating table values is unreasonably high.</p></li>
+</ul>
+</div></blockquote>
+<p>Error Messages are written to the ERROR.CHK file for the following conditions:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Reference elevation is lower than the inflow or outflow grid elevations.</p></li>
+<li><p>Grid system Inflow or outflow nodes are also assigned as hydraulic structures.</p></li>
+<li><p>Assignment of a channel element to more than one hydraulic structure inlet node.</p></li>
+<li><p>Rating table must have increasing stage and Q.</p></li>
+</ul>
+</div></blockquote>
+<p>The most frequent problem with application of the hydraulic structure routine is a rating table that is mismatched with an upstream flow condition.
+This occurs when the discharge through the structure defined by the rating curve or table is greater than the upstream inflow to the structure.
+This condition distorts the upstream water surface primarily by accelerating flow through the structure and pulling down the inlet headwater.
+Review the HYDROSTRUCT.OUT and HYCHAN.OUT files (use HYDROG program) for surging.
+High maximum velocities (VELTIMEC.OUT), rapidly varying discharges (HYDROSTRUCT.OUT), high or variable maximum water surface elevations are all
+evidence of numerical surging.</p>
+<p>If surging is noted in the hydraulic structure hydrograph or the channel hydrographs near the inlet, the rating table or curve will probably need
+adjustment.
+The following conditions should be reviewed:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Shallow flows less than 1 ft in depth with velocity &gt; 5 fps.
+Warning message</p></li>
+<li><p>Downstream WSEL &gt; upstream WSEL with INOUTCONT &lt; 2 (potential upstream flow thru the structure).
+Warning message.</p></li>
+</ul>
+</div></blockquote>
+<p>Rating table adjusted with SUBFACTOR.
+Warning message and revised table values are written to <strong>REVISED_RATING_TABLE.OUT</strong> file.
+The revisions listed in this file can be used to adjust the hydraulic structure rating table prior to the next simulation.
+Table 2 is a list of possible hydraulic structure issues and fixes.</p>
+<p><em>Table 2.
+Hydraulic Structure Troubleshooting</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Task</strong></p></td>
+<td><p><strong>Model Data or Flow Condition</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Hydraulic Structure Data</p></td>
+<td><p>Adverse slope from inflow to outflow node.
+Adjust the floodplain or channel elevations.</p>
+<p>This is warning message
+in ERROR.CHK.</p>
+<p>Reference elevation is lower than the inlet or outlet generates an error
+message.</p>
+<p>Model checks if the inflow or outflow node is a channel element when assigned to a
+channel.</p>
+<p>This creates an error message.</p>
+<p>The model identifies if the hydraulic structures are</p>
+<p>contiguous and the discharge is shared only the rating table or curve.</p>
+<p>Notification is made if the hydraulic structures have levee, streets or ARF values in the either the</p>
+<p>inflow or outflow elements.</p>
+<p>The model recognizes the need for long culvert data if its
+missing.</p>
+<p>An error message appears for the assignment of a grid element to more than one inflow
+node.</p>
+<p>The hydraulic structure rating table must have increasing stage with increasing discharge.</p>
+<p>This generates an error message.</p>
+<p>The first pair of rating table data must be stage = 0.
+and discharge = 0.This creates a warning message.</p>
+<p>An error message is reported for multiple outflow nodes without
+a corresponding D-line.</p>
+<p>A warning message will indicate if the rate of increase in the rating
+table is unreasonable.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Hydraulic Structure Discharge Instability Issues</p></td>
+<td><p>Discharge surging is noted in the HYDROSTRUCT.OUT file.
+Rating table or curve</p>
+<p>needs adjustment.</p>
+<p>For shallow flows, a warning message is written
+to ERROR.CHK if the rating table discharge is</p>
+<p>unreasonable.</p>
+<p>For flow depths less than 1 ft, the velocity is greater than 5 fps.</p>
+<p>A warning message is
+generated if the downstream water surface becomes higher than the upstream</p>
+<p>inflow node water surface with
+INOUTCONT = 0 indicating that</p>
+<p>there is potential for upstream flow through the structure.</p>
+<p>If the rating table is adjusted using the SUBFACTOR for submergence,</p>
+<p>a warning message indicates the modification</p>
+<p>was made to better match the flow conditions.</p>
+<p>A message is written that indicates that the revised table values were written to</p>
+<p>the REVISED_RATING_TABLE.OUT file.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Combined Hydraulic Structure and Levee Breach</p></td>
+<td><p>Hydraulic structures may be used to allow flow to go through a levee
+connecting contiguous grid</p>
+<p>elements.</p>
+<p>This might simulate a drainage hole in a block wall or a culvert through a highway</p>
+<p>embankment.</p>
+<p>While the levee or wall is intact, the
+flow is based on the hydraulic structure rating table or</p>
+<p>curve which includes the flow over the embankment.</p>
+<p>If the rating table is poorly matched with the upstream inflow conditions, surging may ensue.</p>
+<p>The rating table or curve must be modified.</p>
+<p>If the levee or wall failures, the hydraulic structure rating table or curve flow is bypassed,</p>
+<p>and breach flow will be computed.</p>
+<p>Numerical surging should be added by increasing the n-values or adjusting the topography since</p>
+<p>the broadcrested weir equation is used to compute the discharge.</p>
+<p>If the levee or wall fails instantaneously (collapses or topples), the hydraulic structure flow</p>
+<p>is terminated and the flow is computed as overland flow, not breach flow. If numerical surging is</p>
+<p>observed increase the n-values or review the topography.</p>
+<p>If the combine hydraulic structure and levee (or levee breaching) is causing either volume</p>
+<p>conservation or numerical instability, follow this protocal:</p>
+<blockquote>
+<div><ul>
+<li><p>Turn off the hydraulic structures in CONT.DAT and run the model until the problem occurred.</p></li>
+<li><p>Turn off the levees in CONT.DAT and run the model only until the time that the</p>
+<p>problem surfaced.</p>
+</li>
+<li><p>If the problem is in the hydraulic structures, isolate the structures that appear to be the problem.</p></li>
+</ul>
+</div></blockquote>
+<p>To isolate a hydraulic structure, put a simple inflow hydrograph (for steady flow) several</p>
+<p>grid elements upstream of the structure. Put a line of outflow elements downstream of the structure</p>
+<p>and turn off all the other inflow hydrographs and rainfall. Make sure that the steady flow discharge</p>
+<p>through the structure matches the assigned stage or depth.</p>
+<p>If the instability issue cannot be resolved, it may be possible to move the hydraulic structure</p>
+<p>to the next grid element without a loss of accuracy or mapping resolution for the maximum</p>
+<p>water surface elevation.</p>
+<p>It might also be possible to eliminate the levee and replace it with WRF value.</p>
+<p>The model automatically adjusts the hydraulic structure rating table and writes the revised</p>
+<p>table pairs to an output file. If instability persists, review the revised rating table and make</p>
+<p>further adjustments.</p>
+<p>Typically the instability is related to the lower flows and there are insufficient rating table pairs</p>
+<p>to define the rating table for the lower discharges. Review the HYDROSTRUCT.OUT file to determine</p>
+<p>if there is numerical instability in the rating table or curve.</p>
+<p>Downstream ponding or time-stage water surface controls may result in upstream flow</p>
+<p>through structure.</p>
+<p>Set the INOUTCONT = 1 in the HYSTRUC.DAT file to allow upstream flow.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Time-Stage Backwater Downstream of Hydraulic Structures</p></td>
+<td><p>Time-stage elements that control the water surface elevation downstream of a hydraulic structure are</p>
+<p>generally not a problem. Numerical instability are usually associated with the time-stage elements</p>
+<p>by having the water surface stage be less than ground elevation or having contiguous timestage</p>
+<p>elements with non-uniform ground elevations.</p>
+<p>If the water downstream is ponded and has a highly variable water surface elevation</p>
+<p>(in a reservoir scenario or from the time-stage ocean simulation), slow down the timesteps (use a</p>
+<p>smaller Courant number), varying the n-values or adjust the topography to make it more uniform.</p>
+<p>Review the HYDROSTRUCT.OUT file for surging.</p>
+<p>High velocities may be eliminated with increasing nvalues.</p>
+<p>Some high velocities may be associated with the initial floodwave movement upstream by creating</p>
+<p>an instantaneous wall of water in the TIME-STAGE pairs. Have the water stage gradually increase</p>
+<p>above the ground or bed elevation, similar to the actual physical condition. Consider that a</p>
+<p>channel near the ocean may have to filled before assigning the tidal stage or storm surge.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Storm%20Drain%20Modeling%20Guidelines/References.html" class="btn btn-neutral float-left" title="References" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/Levee%20Dam%20and%20Wall%20Breach%20Guidelines.html" class="btn btn-neutral float-right" title="Levee Dam and Wall Breach Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build23
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/flo-2d_pro/Hydraulic Structures Guidelines/Hydraulic Structures Guidelines.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="Hydraulic Structures Guidelines.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

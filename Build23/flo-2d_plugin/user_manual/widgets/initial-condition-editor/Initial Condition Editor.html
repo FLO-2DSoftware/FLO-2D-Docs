@@ -1,0 +1,506 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Initial Condition Editor &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+      <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+      <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+      <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Rain Editor" href="../rain-editor/Rain%20Editor.html" />
+    <link rel="prev" title="Outflow Editor" href="../boundary-condition-editor/Outflow.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Plugin Gila</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">User Manual</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin-features/index.html">Plugin Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Widgets</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/index.html">Grid Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pre-processing-tools/Pre-Processing%20Tools.html">Pre-Processing Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../profile-tool/Profile%20Tool.html">Profile Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cross-sections-editor/Cross%20Sections%20Editor.html">Cross Sections Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary-condition-editor/index.html">Boundary Condition Editor</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Initial Condition Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rain-editor/Rain%20Editor.html">Rain Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../schematized-channel-editor/Schematized%20Channel%20Editor.html">Schematized Channel Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hydraulic-structure-editor/Hydraulic%20Structure%20Editor.html">Structures Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../street-editor/Street%20Editor.html">Street Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../floodplain-cross-section-editor/Floodplain%20Cross%20Section%20Editor.html">Floodplain Cross Section Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../infiltration-editor/index.html">Infiltration Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../storm-drain-editor/index.html">Storm Drain Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../levees-breach-editor/Levees%20Breach%20Editor.html">Levees Breach Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiple-channels-editor/Multiple%20Channel%20Editor.html">Multiple Channels Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../post-development-grid-modification/index.html">Grid Modification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/technical_reference_manual.html">Technical Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Plugin Gila</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">User Manual</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Widgets</a></li>
+      <li class="breadcrumb-item active">Initial Condition Editor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/flo-2d_plugin/user_manual/widgets/initial-condition-editor/Initial Condition Editor.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="initial-condition-editor">
+<h1>Initial Condition Editor<a class="headerlink" href="#initial-condition-editor" title="Link to this heading"></a></h1>
+<p>The Initial Condition Editor is used to set the FLO-2D Initial conditions. This editor is used to set the following
+initial conditions:</p>
+<ul class="simple">
+<li><p>Reservoirs</p></li>
+<li><p>Channel Initial Depth</p></li>
+<li><p>Tailings Stack</p></li>
+</ul>
+<img alt="../../../../_images/initialconditions.png" src="../../../../_images/initialconditions.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The available groups depend on the simulation settings. The previous image illustrates a two-phase simulation,
+where both a clear water reservoir and a tailings reservoir can be modeled simultaneously.
+However, if the simulation is set to clear water only, only the water reservoir will be displayed to the user.
+Conversely, if the simulation is set to mudflow, only the tailings group will be shown.</p>
+</div>
+<section id="initial-condition-outline">
+<h2>Initial Condition Outline<a class="headerlink" href="#initial-condition-outline" title="Link to this heading"></a></h2>
+<p>The Initial Condition Editor is a tool designed to generate the .DAT files required for different types of simulations.
+Depending on the configuration of the switches, the editor exports specific files customized to the selected simulation type.</p>
+<p>The flow chart below outlines the logic for exporting .DAT files based on the switches’ selection:</p>
+<pre  class="mermaid">
+        graph TD
+
+     E[INFLOW.DAT] --&gt; |Clear Water|A[MUD = 0 &lt;br/&gt; ISED = 0]
+     E[INFLOW.DAT] --&gt; |Mudflow|B[MUD = 1 &lt;br/&gt; ISED = 0]
+     E[INFLOW.DAT] --&gt; |Sediment Transport|C[MUD = 0 &lt;br/&gt; ISED = 1]
+     E[INFLOW.DAT] --&gt; |Two-Phase|D[MUD = 2 &lt;br/&gt; ISED = 0]
+
+     I[TAILINGS.DAT] --&gt; |Mudflow XCON = 0|B[MUD = 1 &lt;br/&gt; ISED = 0]
+
+     G[TAILINGS_CV.DAT] --&gt; |Mudflow XCON = 0|B[MUD = 1 &lt;br/&gt; ISED = 0]
+
+     H[TAILINGS_STACK_DEPTH.DAT] --&gt;  |Two-Phase|D[MUD = 2 &lt;br/&gt; ISED = 0]
+    </pre></section>
+<section id="reservoirs-overview">
+<h2>Reservoirs Overview<a class="headerlink" href="#reservoirs-overview" title="Link to this heading"></a></h2>
+<p>The reservoir node is used to assign the water surface elevation for a reservoir or pond by specifying a single
+reservoir node elevation. The FLO-2D engine model will find a reservoir node in INFLOW.DAT and assign the fill elevation to any collected grid
+elements that have a lower elevation behind a levee.</p>
+<p>The reservoir group is shown in the situations shown on the flow chart bellow:</p>
+<pre  class="mermaid">
+        graph TD
+
+     A[Reservoir Group] --&gt; |Clear Water|B[MUD = 0 &lt;br/&gt; ISED = 0]
+     A[Reservoir Group] --&gt; |Sediment Transport|C[MUD = 0 &lt;br/&gt; ISED = 1]
+     A[Reservoir Group] --&gt; |Two-Phase|D[MUD = 2 &lt;br/&gt; ISED = 0]
+    </pre><section id="create-a-reservoir-node">
+<h3>Create a Reservoir Node<a class="headerlink" href="#create-a-reservoir-node" title="Link to this heading"></a></h3>
+<p>The reservoir data is written to the INFLOW.DAT file.</p>
+<ol class="arabic simple">
+<li><p>Click the
+Reservoir button.</p></li>
+</ol>
+<img alt="../../../../_images/Initia002.png" src="../../../../_images/Initia002.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click a grid element
+within the reservoir.</p></li>
+</ol>
+<img alt="../../../../_images/Initia006.png" src="../../../../_images/Initia006.png" />
+<ol class="arabic simple" start="3">
+<li><p>Set the
+name and elevation.</p></li>
+</ol>
+<img alt="../../../../_images/Initia005.png" src="../../../../_images/Initia005.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click again on the
+Reservoir button to finish the editing.
+It is grey when on editing mode.</p></li>
+</ol>
+<img alt="../../../../_images/Initia003.png" src="../../../../_images/Initia003.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click Schematize
+to save the data to the schematic layers.</p></li>
+</ol>
+<img alt="../../../../_images/Initia004.png" src="../../../../_images/Initia004.png" />
+<ol class="arabic simple" start="6">
+<li><p>Run a fill test with graphics mode on for 0.01 hours to see if the reservoir leaks.  Quick run works well for this.</p></li>
+</ol>
+<img alt="../../../../_images/filltest.png" src="../../../../_images/filltest.png" />
+</section>
+<section id="reservoir-troubleshooting">
+<h3>Reservoir Troubleshooting<a class="headerlink" href="#reservoir-troubleshooting" title="Link to this heading"></a></h3>
+<p>The most common issue encountered with this tool is low reservoir bank elevation surrounding the reservoir.
+If the confining reservoir bank element is lower than the reservoir elevation, the water will spill out of the cell.
+Check the reservoir containment by running the FLO-2D simulation for short duration of 0.01 hours.
+The reservoir will be filled and display any leaks in the maximum depth output files.</p>
+</section>
+</section>
+<section id="tailings-overview">
+<h2>Tailings Overview<a class="headerlink" href="#tailings-overview" title="Link to this heading"></a></h2>
+<p>The tailings node is used to assign the mudflow surface elevation for a reservoir by specifying a single
+tailings node elevation. The FLO-2D engine model will find the tailings reservoir node in INFLOW.DAT and
+assign the fill elevation to any collected grid elements that have a lower elevation behind a levee.</p>
+<p>The tailings polygon is used to assign the mudflow depth for a tailings reservoir by specifying a
+tailings surface elevation. The difference between the assigned tailings surface elevation and the grid elevation
+will be the depth considered on the TAILINGS.DAT, TAILINGS_CV.DAT, and TAILINGS_STACK_DEPTH.DAT.</p>
+<p>The tailings group is shown in the situations shown on the flow chart bellow:</p>
+<pre  class="mermaid">
+        graph TD
+
+     A[Tailings Group] --&gt; |Mudflow|C[MUD = 1 &lt;br/&gt; ISED = 0]
+     A[Tailings Group] --&gt; |Two-Phase|D[MUD = 2 &lt;br/&gt; ISED = 0]
+    </pre><section id="create-a-tailings-node">
+<h3>Create a Tailings Node<a class="headerlink" href="#create-a-tailings-node" title="Link to this heading"></a></h3>
+<p>The tailings reservoir data is written to the INFLOW.DAT file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is possible to assign either reservoirs (tailings or water) or tailings polygons, but not both simultaneously.
+The FLO-2D engine can only read either the INFLOW.DAT file or the TAILINGS_*.DAT files.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Click the
+Tailings Reservoir button.</p></li>
+</ol>
+<img alt="../../../../_images/Initia013.png" src="../../../../_images/Initia013.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click a grid element
+within the reservoir.</p></li>
+</ol>
+<img alt="../../../../_images/Initia006.png" src="../../../../_images/Initia006.png" />
+<ol class="arabic simple" start="3">
+<li><p>Set the
+name and elevation.</p></li>
+</ol>
+<img alt="../../../../_images/Initia014.png" src="../../../../_images/Initia014.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click again on the Tailings
+Reservoir button to finish the editing.
+It is grey when on editing mode.</p></li>
+</ol>
+<img alt="../../../../_images/Initia015.png" src="../../../../_images/Initia015.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click Schematize
+to save the data to the schematic layers.</p></li>
+</ol>
+<img alt="../../../../_images/Initia016.png" src="../../../../_images/Initia016.png" />
+<ol class="arabic simple" start="6">
+<li><p>Run a fill test with graphics mode on for 0.01 hours to see if the tailings reservoir leaks.  Quick run works well for this.</p></li>
+</ol>
+<img alt="../../../../_images/filltest.png" src="../../../../_images/filltest.png" />
+</section>
+<section id="tailings-reservoir-troubleshooting">
+<h3>Tailings Reservoir Troubleshooting<a class="headerlink" href="#tailings-reservoir-troubleshooting" title="Link to this heading"></a></h3>
+<p>The most common issue encountered with this tool is the same as the clear water reservoir: low reservoir bank elevation surrounding the reservoir.
+If the confining reservoir bank element is lower than the reservoir elevation, the water will spill out of the cell.
+Check the reservoir containment by running the FLO-2D simulation for short duration of 0.01 hours.
+The reservoir will be filled and display any leaks in the maximum depth output files.</p>
+</section>
+<section id="create-a-tailings-polygon">
+<h3>Create a Tailings Polygon<a class="headerlink" href="#create-a-tailings-polygon" title="Link to this heading"></a></h3>
+<p>The tailings polygon data is written to the TAILINGS.DAT, TAILINGS_CV.DAT, or TAILING_STACK_DEPTH.DAT file depending on
+how the editor is set.</p>
+<section id="tailings-dat">
+<h4>TAILINGS.DAT<a class="headerlink" href="#tailings-dat" title="Link to this heading"></a></h4>
+<p>This file is used for simulating tailings dam material with no uniform depth.</p>
+<ol class="arabic simple">
+<li><p>Click the
+Tailings Polygon button.</p></li>
+</ol>
+<img alt="../../../../_images/Initia017.png" src="../../../../_images/Initia017.png" />
+<ol class="arabic simple" start="2">
+<li><p>Draw a polygon representing the tailings area and click again on the Tailings Polygon to finish the editing.
+Add information to <strong>only</strong> the tailings_surf_elev.</p></li>
+</ol>
+<img alt="../../../../_images/Initia018.png" src="../../../../_images/Initia018.png" />
+<ol class="arabic simple" start="3">
+<li><p>Check the non-schematized Tailings Polygon.</p></li>
+</ol>
+<img alt="../../../../_images/Initia019.png" src="../../../../_images/Initia019.png" />
+<ol class="arabic simple" start="4">
+<li><p>Hit the schematize buttton.</p></li>
+</ol>
+<img alt="../../../../_images/Initia020.png" src="../../../../_images/Initia020.png" />
+<ol class="arabic simple" start="5">
+<li><p>Check the schematized Tailings Polygon.</p></li>
+</ol>
+<img alt="../../../../_images/Initia021.png" src="../../../../_images/Initia021.png" />
+<ol class="arabic simple" start="6">
+<li><p>The Tailings Stack will start to move as soon as the simulation starts.
+Run a test with graphics mode on for 0.01 hours to check it.
+Quick run works well for this.</p></li>
+</ol>
+<img alt="../../../../_images/Initia023.png" src="../../../../_images/Initia023.png" />
+</section>
+<section id="tailings-cv-dat">
+<h4>TAILINGS_CV.DAT<a class="headerlink" href="#tailings-cv-dat" title="Link to this heading"></a></h4>
+<p>This file is used for simulating tailings dam material with no uniform depth and assigns sediment concentrations
+to each FLO-2D grid cell.</p>
+<ol class="arabic simple">
+<li><p>Click the
+Tailings Polygon button.</p></li>
+</ol>
+<img alt="../../../../_images/Initia017.png" src="../../../../_images/Initia017.png" />
+<ol class="arabic simple" start="2">
+<li><p>Draw a polygon representing the tailings area and click again on the Tailings Polygon to finish the editing.
+Add information to the <strong>tailings_surf_elev</strong> and <strong>concentration</strong>.</p></li>
+</ol>
+<img alt="../../../../_images/Initia022.png" src="../../../../_images/Initia022.png" />
+<ol class="arabic simple" start="3">
+<li><p>Check the non-schematized Tailings Polygon.</p></li>
+</ol>
+<img alt="../../../../_images/Initia019.png" src="../../../../_images/Initia019.png" />
+<ol class="arabic simple" start="4">
+<li><p>Hit the schematize buttton.</p></li>
+</ol>
+<img alt="../../../../_images/Initia020.png" src="../../../../_images/Initia020.png" />
+<ol class="arabic simple" start="5">
+<li><p>Check the schematized Tailings Polygon.</p></li>
+</ol>
+<img alt="../../../../_images/Initia021.png" src="../../../../_images/Initia021.png" />
+<ol class="arabic simple" start="6">
+<li><p>The Tailings Stack will start to move as soon as the simulation starts.
+Run a test with graphics mode on for 0.01 hours to check it.
+Quick run works well for this.</p></li>
+</ol>
+<img alt="../../../../_images/Initia023.png" src="../../../../_images/Initia023.png" />
+</section>
+<section id="tailing-stack-depth-dat">
+<h4>TAILING_STACK_DEPTH.DAT<a class="headerlink" href="#tailing-stack-depth-dat" title="Link to this heading"></a></h4>
+<p>This file is used for simulating two-phase tailings dam material with no uniform depth.</p>
+<ol class="arabic simple">
+<li><p>Click the
+Tailings Polygon button.</p></li>
+</ol>
+<img alt="../../../../_images/Initia017.png" src="../../../../_images/Initia017.png" />
+<ol class="arabic simple" start="2">
+<li><p>Draw a polygon representing the tailings area and click again on the Tailings Polygon to finish the editing.
+Add information to the <strong>tailings_surf_elev</strong> and <strong>water_surf_elev</strong>.</p></li>
+</ol>
+<img alt="../../../../_images/Initia024.png" src="../../../../_images/Initia024.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The water surface elevation must always be greater than the tailings surface elevation.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Check the non-schematized Tailings Polygon.</p></li>
+</ol>
+<img alt="../../../../_images/Initia019.png" src="../../../../_images/Initia019.png" />
+<ol class="arabic simple" start="4">
+<li><p>Hit the schematize buttton.</p></li>
+</ol>
+<img alt="../../../../_images/Initia020.png" src="../../../../_images/Initia020.png" />
+<ol class="arabic simple" start="5">
+<li><p>Check the schematized Tailings Polygon.</p></li>
+</ol>
+<img alt="../../../../_images/Initia021.png" src="../../../../_images/Initia021.png" />
+<ol class="arabic simple" start="6">
+<li><p>The Tailings Stack will start to move as soon as the simulation starts.
+Run a test with graphics mode on for 0.01 hours to check it.
+Quick run works well for this.</p></li>
+</ol>
+<img alt="../../../../_images/Initia025.png" src="../../../../_images/Initia025.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the TAILINGS_STACK_DEPTH.DAT file is located in the same folder as the other .DAT files, the
+INFLOW.DAT is not required. Make sure to turn off LEVEE on CONT.DAT.</p>
+<pre  class="mermaid">
+        graph TD
+     A[Tailings Dam Failure] --&gt; B[Static?]
+     A --&gt; C[Hydrologic?]
+     A --&gt; D[Seismic?]
+     C --&gt; E[Developing]
+     D --&gt; E
+     E --&gt; F[Test and Review]
+     F --&gt; G[Is it successful?]
+     G --&gt;|Yes| H[Implement]
+     G --&gt;|No| I[Iterate]
+     I --&gt; C
+     H --&gt; J[Finish]
+    </pre></div>
+</section>
+</section>
+</section>
+<section id="elevation-correction">
+<h2>Elevation Correction<a class="headerlink" href="#elevation-correction" title="Link to this heading"></a></h2>
+<p>Before filling a reservoir, it is usually necessary to cut the ground or water elevation from the grid.  This can be
+performed with raster cut tools or Civil 3D surface editor tools.</p>
+<p>Example 1 - The Digital Elevation Model (DEM) for this reservoir includes the dam and water surface.</p>
+<img alt="../../../../_images/Prepro002.png" src="../../../../_images/Prepro002.png" />
+<p>Example 2 - The DEM for this basin includes the dam but not the water.</p>
+<img alt="../../../../_images/Elevat0041.png" src="../../../../_images/Elevat0041.png" />
+<p>It is necessary to remove the dam or reservoir elevation from the grid system so it can be filled with water and
+tailings using the initial condition reservoir node.</p>
+<p>There are several tools available for performing this task.</p>
+<ol class="arabic simple">
+<li><p>The FLO-2D plugin has an elevation raster processing
+tool that can cut a dam and reservoir or tailings storage facility from a raster.
+<a class="reference external" href="../pre-processing-tools/Pre-Processing%20Tools.html">PreProcessing Tool</a>.</p></li>
+<li><p>The Elevation Correction Tool can remove dam elevation directly from the grid.
+<a class="reference external" href="../grid-tools/Elevation%20Correction%20Tool.html#tin-from-points-and-polygon/">Grid Elevation Correction Tool</a>.</p></li>
+<li><p>The QGIS Serval Plugin also has a nice cut and fill tool that is an elegantly simple way to cut and fill any raster.
+Load that plugin using the Plugin Manager.</p></li>
+<li><p>Once the grid elevation is corrected, the project is ready for a reservoir node.</p></li>
+</ol>
+</section>
+<section id="channel-segment-initial-depth">
+<h2>Channel Segment Initial Depth<a class="headerlink" href="#channel-segment-initial-depth" title="Link to this heading"></a></h2>
+<p>Use this option to set an initial depth in any channel segment.
+The water depth will be assigned to every channel cross section within the segment at runtime.
+The initial condition will be written to the CHANNEL.DAT file.</p>
+<img alt="../../../../_images/Initia007.png" src="../../../../_images/Initia007.png" />
+<ol class="arabic simple">
+<li><p>Select
+the channel segment.</p></li>
+<li><p>Set the
+initial depth.</p></li>
+<li><p>Click
+Schematize to save the data to the schematic layers.</p></li>
+</ol>
+<img alt="../../../../_images/Initia004.png" src="../../../../_images/Initia004.png" />
+</section>
+<section id="channel-initial-troubleshooting">
+<h2>Channel Initial Troubleshooting<a class="headerlink" href="#channel-initial-troubleshooting" title="Link to this heading"></a></h2>
+<p>The simplicity of this tool makes it simple to adjust.
+It is not necessary to use the tool here because the variable can also be set in the Schematized Channels Editor.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../boundary-condition-editor/Outflow.html" class="btn btn-neutral float-left" title="Outflow Editor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../rain-editor/Rain%20Editor.html" class="btn btn-neutral float-right" title="Rain Editor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build23
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../../../Build25/flo-2d_plugin/user_manual/widgets/initial-condition-editor/Initial Condition Editor.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="Initial Condition Editor.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

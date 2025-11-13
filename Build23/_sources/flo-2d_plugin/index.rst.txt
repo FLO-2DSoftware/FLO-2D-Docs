@@ -1,9 +1,8 @@
-FLO-2D Plugin
-=============
+FLO-2D Plugin Gila
+====================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: FLO-2D Plugin
+   :maxdepth: 3
 
-   user_manual
-   technical_reference_manual
+   user_manual/index.rst
+   technical_reference_manual/technical_reference_manual

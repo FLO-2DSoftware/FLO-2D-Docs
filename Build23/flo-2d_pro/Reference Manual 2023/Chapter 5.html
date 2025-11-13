@@ -1,0 +1,646 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 5. Flo-2d Project Applications &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="REFERENCES" href="REFERENCES.html" />
+    <link rel="prev" title="Chapter 4. MODEL COMPONENTS" href="Chapter%204.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Channel%20Modeling%20Guidelines%202023/index.html">Channel Modeling Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Storm%20Drain%20Modeling%20Guidelines/index.html">Storm Drain Modeling Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/Hydraulic%20Structures%20Guidelines.html">FLO-2D Hydraulic Structure Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/Levee%20Dam%20and%20Wall%20Breach%20Guidelines.html">Levee Dam and Wall Breach Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines/Simulating%20Mudflow%20Guidelines.html">Simulating Mudflow Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Flood%20Routing%20Guidelines%202023/Two%20Phase%20Flood%20Routing%20Guidelines%202023.html">Two Phase Flood Routing Guidelines 2023</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Reference Manual</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Preview.html">PREVIEW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chapter%201.html">Chapter 1: INTRODUCTION</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">Chapter 2. FLO-2D MODEL THEORY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%203.html">Chapter 3. FLO-2D MODEL SYSTEM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%204.html">Chapter 4. MODEL COMPONENTS</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Chapter 5. Flo-2d Project Applications</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#river-applications">5.1 River Applications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unconfined-floodplain-and-alluvial-fan-flooding">5.2 Unconfined Floodplain and Alluvial Fan Flooding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#watershed-rainfall-runoff-simulation">5.3 Watershed Rainfall Runoff Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#urban-flooding">5.4 Urban Flooding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coastal-flooding">5.5 Coastal Flooding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#model-results-what-constitutes-a-successful-flood-simulation">5.6 Model Results – What Constitutes a Successful Flood Simulation?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flo-2d-bridge-routine-comparison-with-hec-ras">5.7 FLO-2D Bridge Routine Comparison with HEC-RAS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="REFERENCES.html">REFERENCES</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin Gila</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Reference Manual</a></li>
+      <li class="breadcrumb-item active">Chapter 5. Flo-2d Project Applications</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/flo-2d_pro/Reference Manual 2023/Chapter 5.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chapter-5-flo-2d-project-applications">
+<h1>Chapter 5. Flo-2d Project Applications<a class="headerlink" href="#chapter-5-flo-2d-project-applications" title="Link to this heading"></a></h1>
+<p>The FLO-2D website <a class="reference external" href="https://flo-2d.com">https://flo-2d.com</a> has numerous webinars, video animations of predicted flooding, PowerPoint presentations and various documents
+that highlight FLO-2D model project applications.
+The five primary projects applications of the FLO-2D model are river projects, unconfined floodplain and alluvial fans models, watershed and
+rainfall/runoff analyses, urban and storm drain simulations, and coastal flooding.</p>
+<section id="river-applications">
+<h2>5.1 River Applications<a class="headerlink" href="#river-applications" title="Link to this heading"></a></h2>
+<p>Simulating river flow is one of the more common applications of the FLO-2D model (Figure 128).
+The key to simulating river flooding is correctly assessing the relationship between the flood volume in the channel and the volume distributed on the
+floodplain.
+There are several key factors that help to define an accurate relationship between channel volume and geometry.
+The surveyed channel cross-sections should be appropriately spaced to facilitate transitions between wide and narrow cross-sections in the model.
+The channel volume is dependent on a good estimate of the total channel length (sum of the channel element lengths).
+This length should be compared to channel centerline distance of model project reach.
+Finally, predicted water surface elevations are based on the channel roughness values and calibrating the model roughness with known discharges and
+surveyed water surfaces will finalize the channel flood routing accuracy.</p>
+<img alt="../../_images/Chapte0011.png" src="../../_images/Chapte0011.png" />
+<p><em>Figure 128.
+Middle Rio Grande and Rio Chama Confluence Model.</em></p>
+<p>When preparing a channel simulation, the available cross-sections are distributed to the various channel elements based on reaches with similar
+geomorphic features.
+The bed elevation is then adjusted between channel elements with surveyed cross-sections.
+The n-values are estimated from knowledge of the bed material, bed forms, vegetation, or channel planform.</p>
+<p>The n-values may also serve to correct any mismatched channel flow area and slope.
+Roughness values can also be adjusted by specifying a maximum Froude number.
+Using this approach, the relationship between the channel flow area, bed slope and n-value can be adjusted to better represent the physical system,
+calibrate the water surface elevations, eliminate any numerical surging, and speed-up the simulation.</p>
+<p>The two most important FLO-2D results are the channel hydrograph at a downstream location and the floodplain area of inundation.
+Typically, if the area of inundation is correct, then the channel flow depths and water surface elevations will be relatively accurate.
+Replicating the channel hydrograph and the floodplain inundation while conserving volume is a good indication that the volume distribution between the
+channel and the floodplain is reasonable.</p>
+<p>Flood routing details related to channel flow include simulating hydraulic structures, levees, infiltration, and sediment transport.
+Hydraulic structures may include bridges, culverts, weirs, diversions, or any other channel hydraulic control.
+Levees are usually setback from the river on the floodplain but can control the water surface in the channel if the flood is confined.
+Channel infiltration is based solely on hydraulic conductivity and represents average bed and bank seepage conditions.
+Bed scour or deposition associated with a mobile analysis is non-uniformly distributed on the channel cross-section.
+Mudflows can also be routed in channels.</p>
+</section>
+<section id="unconfined-floodplain-and-alluvial-fan-flooding">
+<h2>5.2 Unconfined Floodplain and Alluvial Fan Flooding<a class="headerlink" href="#unconfined-floodplain-and-alluvial-fan-flooding" title="Link to this heading"></a></h2>
+<p>The primary focus of an unconfined flood simulation is how the volume is distributed over the floodplain surface.
+The flood volume controls the area of inundation (Figure 129).
+FLO-2D can simulate an unconfined floodwave progression over a dry flow domain without specifying any boundary criteria.
+No hot starts or prescribed water surface elevations are required.</p>
+<p>Important flood routing details include topography, rainfall spatial variation in infiltration and roughness, flow obstructions, levees, hydraulic
+structures, streets.
+The timing of the floodwave progression over the floodplain can be improved with rills and gullies.
+Street flow may control shallow flooding distribution in urban areas.
+Buildings and walls that obstruct flow paths and or eliminate floodplain storage.
+The levee routine can be used to simulate berms, elevated roadway or railroad embankments or other topographic features to confine the flow on the
+floodplain.
+Hydraulic conveyance facilities such as culverts may control local water surface elevations.
+Spatially variable rainfall may inundate areas outside the primary flood path.
+It is possible to model detention basins using either the grid element elevation or levees to define the basin storage area.
+An appropriate grid element size should be selected to generate enough interior elements to adequately simulate the basin.</p>
+<img alt="../../_images/Chapte0102.png" src="../../_images/Chapte0102.png" />
+<p><em>Figure 129.
+Unconfined Alluvial Fan Flooding</em></p>
+</section>
+<section id="watershed-rainfall-runoff-simulation">
+<h2>5.3 Watershed Rainfall Runoff Simulation<a class="headerlink" href="#watershed-rainfall-runoff-simulation" title="Link to this heading"></a></h2>
+<p>FLO-2D can used as a watershed model to predict rainfall runoff using one of three infiltration loss methods.
+The model can generate a flood hydrograph at a point of concentration as inflow to a downstream flood model.
+Rainfall runoff can result in sheet flow or concentrated in rills and gullies using the multiple channel component which will reduce the travel time
+associated with sheet flow.
+It is possible to simulate rainfall while routing a flood overland and have the rainfall occur directly to the water surface without abstraction.
+Spatially variable rainfall distribution using real time rain gage or NEXRAD data can also be modeled.
+The GDS will reformat the rain gage data for real time storm runoff and flood simulation.
+Basin water course depressions created in the grid elevation because of the lack of DTM data on the channel bed can be smoothed out with the GDS
+smoothing tool.
+This will eliminate potential flood storage associated with artificial depressions.</p>
+<p>Using the FLO-2D model to cover the watershed and urban areas avoids the need to create separate models with generated hydrographs from the upper
+basin constitute the inflow to the urban model.
+The watershed-urban interface will be more accurate as a single model since the inflow will not all be concentrated at a few points.
+Runoff will occur as sheet flow all along the interface.</p>
+<p>The watershed can also be a source of sediment supply for the urban project area for either sediment transport modeling or mud and debris flows.
+Sediment supply for conventional bedload and suspended analysis can be generated in the upper basin by simply applying one of the eleven sediment
+transport formulas.
+For mudflows there are two methods for loading the hydrograph with sediment.
+A sediment concentration by volume is assigned to a discretized time interval of the inflow hydrograph.
+A second method is to load the inflow hydrograph with a volume of sediment.
+In this manner, spatially differential sediment loading in a watershed channel can be simulated.
+Once the hydrograph is bulked with sediment, the mudflow is routed as a water and sediment continuum over the hydrograph.
+The bulked sediment hydrograph is tracked through system conserving volume for both water and sediment.
+Flow cessation and flow dilution are possible outcomes of the mudflow routing.</p>
+</section>
+<section id="urban-flooding">
+<h2>5.4 Urban Flooding<a class="headerlink" href="#urban-flooding" title="Link to this heading"></a></h2>
+<p>One of the primary applications of the FLO-2D model is urban flood hazard delineation.
+It is the most robust and detailed urban flood model available with the capability to model buildings, street flow, walls and berms, storm drains,
+hydraulic structures (culverts, bridges and weirs), rainfall, infiltration, building roof runoff, building collapses and LID components.
+Area drainage master plans in the Phoenix area are being completed with FLO-2D using grid systems on the order of 1.8 million elements.
+Urban grid element size is typically 20 ft, however, ten foot elements have been used with high resolution topographic data sets (Figure 130).
+.. image:: img/Chapter5/Chapte011.png</p>
+<p><em>Figure 130.
+Urban flooding with Street Flow and Building Obstruction (1 million 10 ft elements)</em></p>
+<p>A critical component of the urban flood model is the storm drain.
+The FLO-2D storm drain component is fully integrated with the surface water system including channels and detention basins (Figure 131).
+The detail in FLO-2D surface water and storm drain interface exceeds that of any other storm drain model.
+The FLO-2D model computes the storm drain inlet discharge based on the inlet geometry and the water surface elevation using weir and orifice control.
+The user can select from five types of storm drain inlets.
+The inlet and outfall exchange with the surface water (including return flow) are based on the water surface head not just the rim elevation.
+Figure 132 shows velocity vector and flow depth results in an urban area with the integrated storm drain system.
+Typically, the storm drain capacity is minor compared to the 100-year flood volume, the relations between return period flooding and the storm drain
+effectiveness can be tested for the more frequent events.</p>
+<img alt="../../_images/Chapte0025.jpg" src="../../_images/Chapte0025.jpg" />
+<p><em>Figure 131.
+Urban Model with Streets, Buildings and Storm Drains</em></p>
+<img alt="../../_images/Chapte0033.png" src="../../_images/Chapte0033.png" />
+<p><em>Figure 132.
+Urban Model Results with Storm Drains</em></p>
+</section>
+<section id="coastal-flooding">
+<h2>5.5 Coastal Flooding<a class="headerlink" href="#coastal-flooding" title="Link to this heading"></a></h2>
+<p>FLO-2D can predict accurate ocean hurricane surge flooding for sea level scenarios including spatially variable hurricane rainfall.
+Storm surge inundation in urban areas requires detailed modeling of features coastal berms, walls, buildings, streets and channels.
+The impact on coastal urban storm drain systems with ocean outfalls from combined sea level rise and storm surge can be simulated with a FLO-2D model.
+Urban coastal flooding is controlled by:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Volume of ocean water coming inland, flood volume and volume conservation</p></li>
+<li><p>Sediment bulking (add 20% volume)</p></li>
+<li><p>Flood mitigation – sea walls and levees</p></li>
+<li><p>Loss of storage due to buildings</p></li>
+<li><p>Street flow to urban outlying areas</p></li>
+<li><p>Channel flow and storage</p></li>
+<li><p>Loss of storm drain capacity with sea level rise</p></li>
+</ul>
+</div></blockquote>
+<p>To simulate storm surges a time-stage relationship at the shoreline grid elements is required.</p>
+<p>This table can include high tides as a well as multiple surge waves.
+A time-stage relationship (Table 15) can also be used to simulate a short duration tsunami event.
+A typical time-stage relationship is shown below.</p>
+<p><em>Table 15.
+Stage Time Relationship.</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Time (hrs)</strong></p></td>
+<td><p><strong>Stage (ft)</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>0.0</p></td>
+<td><p>0.43</p></td>
+</tr>
+<tr class="row-odd"><td><p>5.0</p></td>
+<td><p>0.75</p></td>
+</tr>
+<tr class="row-even"><td><p>11.0</p></td>
+<td><p>1.29</p></td>
+</tr>
+<tr class="row-odd"><td><p>16.0</p></td>
+<td><p>6.63</p></td>
+</tr>
+<tr class="row-even"><td><p>24.0</p></td>
+<td><p>0.38</p></td>
+</tr>
+<tr class="row-odd"><td><p>36.0</p></td>
+<td><p>0.62</p></td>
+</tr>
+</tbody>
+</table>
+<p>In addition to the time-stage relationship, the model features that may define a coastal flood model are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Rainfall</p></li>
+<li><p>Streets</p></li>
+<li><p>Storm drain system</p></li>
+<li><p>Levees or flood walls</p></li>
+<li><p>Estuary channels and drainage canals</p></li>
+<li><p>Roughness</p></li>
+<li><p>Hydraulic structures (culverts and bridges)</p></li>
+<li><p>Buildings</p></li>
+</ul>
+</div></blockquote>
+<p>A FLO-2D storm surge model was prepared for the Florida Keys using the ocean time-stage relationship associated with 2005 Hurricane Wilma (Figure 133).
+Using these area of inundation results, the products associated with coastal flood models include:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Prediction of the overland progression of the hurricane surge through urban area.</p></li>
+<li><p>Risk/hazard assessment on urban development and infrastructure (storm drain system).</p></li>
+<li><p>Estimate groundwater level rise and its impact on drainage and utilities.</p></li>
+<li><p>Automatically estimate storm surge damage and mitigation costs.</p></li>
+</ul>
+</div></blockquote>
+<img alt="../../_images/Chapte0043.jpg" src="../../_images/Chapte0043.jpg" />
+<p><em>Figure 133.
+Hurricane Wilma 2005 Predicted Storm Surge in the Florida Keys</em></p>
+</section>
+<section id="model-results-what-constitutes-a-successful-flood-simulation">
+<h2>5.6 Model Results – What Constitutes a Successful Flood Simulation?<a class="headerlink" href="#model-results-what-constitutes-a-successful-flood-simulation" title="Link to this heading"></a></h2>
+<p>When a FLO-2D simulation is completed, how do you know if the simulation was successful or accurate? There are three keys to a successful project
+application:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Volume conservation</p></li>
+<li><p>Area of inundation</p></li>
+<li><p>Maximum velocities and numerical surging</p></li>
+</ul>
+</div></blockquote>
+<p>Volume must be conserved for both the overland flow and channel flow.
+If the storage plus outflow volume was not conserved on the order of 0.0001 percent or better of the inflow volume, then it will be necessary to
+conduct a detailed review and determine where the volume conservation error occurred.
+If the volume was conserved, then the area of inundation can be quickly reviewed in either MAXPLOT or MAPPER Pro programs.
+If the area of inundation seems reasonable and the flood appears to have progressed completely through the system, then the maximum velocities in the
+channel, on the floodplain or in the streets should be reviewed for numerical surging.
+There are numerous webinars and Power Point presentations on project review and troubleshooting at the FLO-2D website.
+The Data Input Manual has discussions on troubleshooting numerical surging and how to resolve it with applications of the limiting Froude number.</p>
+<p>Once the FLO-2D flood simulation is providing reasonable results, you can fine tune the model and speed it up.
+Review the TIME.OUT file to determine which channel, floodplain or street elements are causing the most timestep reductions.
+Model speed may not be critical if the simulation is accurate with respect to volume conservation, discharge surging and area of inundation.</p>
+</section>
+<section id="flo-2d-bridge-routine-comparison-with-hec-ras">
+<h2>5.7 FLO-2D Bridge Routine Comparison with HEC-RAS<a class="headerlink" href="#flo-2d-bridge-routine-comparison-with-hec-ras" title="Link to this heading"></a></h2>
+<p>The objective of the FLO-2D bridge routine is to compute the discharge through the bridge based on the physical configuration and features of the
+bridge.
+The component enables the user to compute the bridge discharge without using an external program to generate a stagedischarge rating curve or table as
+required in the past for the FLO-2D model.
+Three classes of flow regime are computed: Free surface flow for discharge below the bridge low chord;</p>
+<p>Pressure flow when the discharge is above the low chord but below the bridge deck; and Combined pressure and weir flow as the discharge goes over the
+bridge.
+The pressure flow and weir flow computations are relatively straight forward.
+The pressure flow will be either sluice gate flow or orifice flow, whichever is smaller.
+The free surface flow is more complex with a number of multiplicative coefficients that represent the various bridge features and flow conditions.
+The bridge discharge is shared between two grid elements (channel or floodplain) that do not have to be contiguous.</p>
+<p>Most bridge design and flood conveyance analysis have been performed with a 1-D HEC-RAS model where a discharge (peak Q) is prescribed, and the water
+surface elevation is computed.
+In a two-dimensional flood routing model, the opposite is required, the upstream and downstream flow depths and water surface elevations are known and
+the discharge through the bridge is computed.
+Matching HEC-RAS or other models with bridge components may not be exact because of the computational approach (e.g. solution to the 1-D energy
+equation vs flood routing with the full-dynamic wave momentum equation) and because the FLO-2D bridge routine has more detail for both free surface
+flow and pressure flow.
+Ultimately, bridge flow control with coefficient adjustments, however, should provide a suitable correlation between the models.
+Unless there is an opportunity to calibrate the bridge coefficients to a field data set, it should not be assumed that the HEC-RAS or other bridge
+routines are necessarily more accurate.</p>
+<p>The objective in applying the FLO-2D bridge routine is not to provide a detailed flow field through bridge and predict scour around piers but rather
+to accurately assess the relationship between upstream/downstream water surface elevations of the two grid elements linked by the bridge and compute
+the discharge passing between them.
+In this manner, the flow can be assessed as one-dimensional with no variation in water surface elevation in the bridge channel cross-section.
+The average flow velocity through the bridge is depth integrated.
+The primary result of the FLO-2D bridge routine for unsteady flow is to assess the deviation from the approximate normal depth flow condition through
+the bridge that results in an upstream backwater effect.
+This will enable the accurate analysis of bridge constricted floodplain and river reaches that exhibit non-uniform and unsteady flow conditions.
+For additional description and details of the FLO-2D bridge routine refer to the FLO-2D Reference Manual Bridge Section.</p>
+<p>Bridge Flow Modeling</p>
+<p>There are three basic flow conditions through a bridge: free surface flow, pressure flow and pressure flow plus deck overtopping flow.
+Pressure flow, which occurs when the deck or superstructure is submerged, is defined as either sluice gate or orifice flow.
+Flow through a bridge constriction is a function of the upstream headwater and downstream tailwater elevations (water surface slope), the extent of
+the constriction (cross-section variation), the bridge geometry (flow area, wetted perimeter, low chord, etc.) and various site factors such as
+vegetation encroachment, bed scour, and riprap.
+The flow may be subcritical or supercritical although supercritical flow may be limited to a bridge with a concrete apron or bedrock substrate.
+Subcritical flow is the most prevalent flow regime as bridge constrictions typically reduce upstream velocities and cause backwater effects as opposed
+to flow acceleration through the bridge.</p>
+<p>Free surface flow is the most common flow since the bridge is designed to pass a selected design flood below the bridge soffit.
+Sluice gate flow occurs when the upstream opening is submerged but the downstream water surface elevation is below the low chord.
+For this case, the discharge thru the bridge depends on the upstream water surface elevation and the bridge geometry and the downstream water surface
+elevation is irrelevant.
+The transition between sluice gate flow and orifice flow is unique to the bridge and maybe temporally variable with scour, deposition or debris
+blockage.
+Sluice gate flow may persist until the upstream flow depth is 1.5 times or greater than the depth to the low chord.</p>
+<p>Once the bridge inlet has been permanently submerged, a rapid increase in upstream water surface may occur resulting in submergence of both the
+upstream and downstream openings and the bridge cross-section flowing full.
+This is defined as drowned orifice flow and can only happen when both upstream and downstream water surface elevations exceed 1.1 times the height of
+the bridge opening.
+Since the downstream water prevents efficient flow through the bridge, upstream flooding can quickly ensue.
+In this case, the discharge control is a combination of the structure features and channel characteristics.</p>
+<p>When the flow begins to overtop the bridge, the discharge is the sum of the pressure flow plus the deck overflow.
+This is typically modeled as broad crested weir flow with a coefficient in the range of 2.65 to 3.21.
+If the bridge has guard rails or debris, the selected weir coefficient should be conservatively low.
+Typically, overtopping flow is shallow, but for a long bridge the overflow discharge can be significant.
+An assumption of weir flow to represent over deck discharge can only be an approximation because of a number of factors that are not limited to:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Tailwater submergence;</p></li>
+<li><p>Variable deck elevation;</p></li>
+<li><p>Unsteady flow conditions;</p></li>
+<li><p>Guardrail supports causing blockage and spatially variable flow;</p></li>
+<li><p>Debris blockage.</p></li>
+</ul>
+</div></blockquote>
+<p>The bridge discharge computations will be performed inside the FLO-2D routing algorithm for the floodplain and 1-D channel components in conjunction
+with the existing hydraulic structure routine.
+The model will identify the flow condition, compute the appropriate discharge and exchange the discharge volume between the inflow and outflow nodes.
+For details on the computation methods and equations for free surface, pressure flow and weir flow refer the companion White Paper on the FLO-2D
+‘Bridge Hydraulics Component’.</p>
+<p>A Comparison of Bridge Flow Modeling between FLO-2D and HEC-RAS Model Development</p>
+<p>A FLO-2D model of the Middle Rio Grande valley was prepared for the Corps of Engineers in the early 2000’s from Cochiti Dam to Elephant Butte
+Reservoir in New Mexico (~ 170 miles).
+This model was expanded and enhanced with smaller grid elements (250 ft), more spatial levee detail and was calibrated with field data during a 2005
+prescribed release of the outlet works capacity.
+The data collection included discharge measurements, water surface elevation surveys, field reconnaissance of floodplain inundation, and flown aerial
+imagery.
+The model was then applied to 30 years of historical spring releases to support the application of the Corps’ Upper Rio Grande Water Operation Model.
+The Rio Grande FLO-2D model is still in use today.
+Riada Engineering and Wolf Engineering collaborated on developing this Rio Grande FLO-2D model for the Corps.</p>
+<p>All the Middle Rio Grande bridges and diversions were modeled with rating tables.
+The rating tables were generated with HEC-RAS using 2 to 3 cross-sections upstream and downstream of the bridge.
+The HEC-RAS bridge models were obtained and reviewed to locate a bridge that could be simulated for all three types of flow with the primary emphasis
+on the free surface and pressure flow.
+The original HEC-RAS model was applied for discharges up to 20,000 cfs.
+The maximum outlet discharge from Cochiti Dam is only 7,000 cfs without spillway release.
+The pre-history Rio Grande prior to management experienced flows in excess of 100,000 cfs, but since Cochiti Dam is a flood control facility,
+discharges over 7,000 cfs depend on tributary inflows.
+A discharge of 20,000 cfs will not overtop any of the bridges in the Middle Rio Grande.
+All the bridges were reviewed, and the Los Lunas Bridge was selected to review the computed discharge hydraulics with both HEC-RAS and FLO-2D models
+(Figure 134 and Figure 135).</p>
+<img alt="../../_images/Chapte0055.jpg" src="../../_images/Chapte0055.jpg" />
+<p><em>Figure 134.
+Plan View of the Los Lunas Bridge.</em></p>
+<img alt="../../_images/Chapte0064.jpg" src="../../_images/Chapte0064.jpg" />
+<p><em>Figure 135.
+View Downstream through Los Lunas Bridge (Wolf Engineering).</em></p>
+<p>The Los Lunas Bridge spans a most of the Rio Grande active floodplain between the levees and has 16 sets of bridge pilings as shown in Figure 135.
+The HEC-RAS model of the bridge include 2 upstream cross-sections and 3 downstream cross-sections (Figure 136).
+The bridge deck is about 90 ft wide.</p>
+<img alt="../../_images/Chapte0075.jpg" src="../../_images/Chapte0075.jpg" />
+<p><em>Figure 136.
+HEC-RAS Cross-sections and Stationing (Wolf Engineering).</em></p>
+<p>The bridge geometry and cross-section plots are shown in Figure 137 with the blocked areas due to the approach roadway and bridge decking.
+Both the deck soffit and roadway are curved with a difference of 1 ft between the minimum and maximum elevations.
+The low chord and weir were represented by an average elevation.
+The split channel with the island can be viewed in bridge cross-section and in Figure 134.</p>
+<img alt="../../_images/Chapte0083.jpg" src="../../_images/Chapte0083.jpg" />
+<p><em>Figure 137.
+Los Lunas HEC-RAS Bridge</em></p>
+<p>The original FLO-2D model rating table had 40 stage-discharge pairs ranging from 10 to 20,000 cfs.
+For this comparison, the HEC-RAS Los Lunas bridge model was run with only 7 discharges ranging from 100 cfs to 45,000 cfs (Figure 138).
+The vertical lines in the active channel area below the bridge soffit are the rows of piles.
+At 45,000 cfs the bridge deck was barely overtopped in the HEC-RAS model (blues horizontal lines in Figure 138).
+The seven steady flow discharges used in the two models were:</p>
+<p>100 cfs 1,000 cfs 2,500 cfs 5,000 cfs, 10,000 cfs, 20,000 cfs, 45,000 cfs</p>
+<img alt="../../_images/Chapte0093.png" src="../../_images/Chapte0093.png" />
+<p><em>Figure 138.
+Los Lunas Bridge HEC-RAS Water Surface Elevations.</em></p>
+<p>The FLO-2D was run with the seven discharges assigned to an inflow channel element about 16 channel elements upstream of the bridge.
+Outflow nodes were assigned to a channel element about 9 channel elements downstream of the bridge and to the channel element just upstream of the
+inflow node.
+The inflow hydrograph to achieve steady was assigned as follows:</p>
+<blockquote>
+<div><p>Time (hrs)  Q (cfs)</p>
+<p>0.0         0.0</p>
+<p>2.0         1,000</p>
+<ol class="arabic simple" start="100">
+<li><p>1,000</p></li>
+</ol>
+</div></blockquote>
+<p>The FLO-2D model was run for a simulation time of 6 hrs which was sufficient to achieve steady discharge at the bridge.
+The model was also setup with the following data and assumptions:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Identical channel n-values (0.032);</p></li>
+<li><p>Spatially variable overbank FLO-2D n-values that did not match the HEC-RAS model;</p></li>
+<li><p>The upstream channel and bridge cross-sections in the HEC-RAS model;</p></li>
+<li><p>The rest of the channel cross-sections were the original ones in the FLO-2D model;</p></li>
+<li><p>Type 1 bridge configuration with no abutment or embankment slopes (vertical);</p></li>
+<li><p>Average low chord and deck elevations as determined from Figure 4;</p></li>
+<li><p>Deck length, bridge opening, and bridge width were determining from the HEC-RAS cross-section;</p></li>
+<li><p>Pile width was the sum of the 16 sets of individual pile widths;</p></li>
+<li><p>No flow angle of attach with the bridge;</p></li>
+<li><p>No coefficient variation for Froude number which ranges from 0.2 to 0.3;</p></li>
+<li><p>No assignment for overall free surface flow discharge coefficient (to be computed).</p></li>
+</ul>
+</div></blockquote>
+<p>Model Comparison Results</p>
+<p>The focus of comparing the HEC-RAS and FLO-2D models for the seven discharges is the predicted water surface elevations which, if equivalent, would
+indicate that the model hydraulics (depth, velocity, flow area) match well.
+The most important comparison are the model’s predicted upstream backwater elevations.
+The HEC-RAS computed water surfaces elevations are shown in Figure 139.
+The FLO-2D predicted water surface elevations were extracted from the CHANMAX.OUT file but could also be read from the HYCHAN.OUT file.
+The BRIDGE_DISCHARGE.OUT and HYDROSTRUCT.OUT files verified that the steady state discharges matched exactly for those flows which were less than the
+channel conveyance capacity of about 5,000 cfs.
+The only FLO-2D model revisions were:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Adjustments were made to several channel element Mannings n-values.
+These n-value revisions were less than 0.005.</p></li>
+<li><p>Outflow nodes were added upstream and downstream of the bridge to having to use the entire Rio Grande model.</p></li>
+</ul>
+</div></blockquote>
+<p>No attempt was made to accommodate the HEC-RAS model 1-D constraints with respect to the floodplain conditions including roadway approach, levee
+overtopping, or flow upstream or downstream past the outflow nodes.
+The following FLO-2D limitations were noted with respect to the overbank floodplain discharge:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Floodplain storage was not filled to match the HEC-RAS 1-D steady flow inundation.
+No floodplain outflow nodes were assigned, and floodplain flow bypassed the channel outflow nodes both upstream and downstream.</p></li>
+<li><p>Overbank flow upstream re-entered the channel and flowed upstream in the channel.</p></li>
+<li><p>Downstream overbank flow bypassed the outflow node and re-entered the channel.</p></li>
+</ul>
+</div></blockquote>
+<p>Of the three flow regimes, free surface flow, pressure flow and weir flow plus pressure flow, the most critical comparison is for the free surface
+flow regime water surface elevation because this computation is the most complex and detailed.
+It is also the most frequent flow through the bridge and should include the bridge design flow.
+Most bridges are not constructed to convey the design discharge as pressure or weir flow.
+It should be noted that the pressure flow and weir flow involve a single equation and calibration is relatively straight forward with only a
+coefficient adjustment.
+Conversely, predicting free surface flow requires a number of combined coefficients that represent various features of the bridge or specific flow
+conditions.</p>
+<p>The comparison with the HEC-RAS stages for the discharges ranging from 100 cfs to 45,000 cfs for the five cross-sections upstream and downstream of
+Los Lunas Bridge are shown in Figure 139.
+Pressure flow begins at about 18,000 cfs.
+Figure 140 and Figure 141 indicate that the FLO2D predicted stage upstream of the bridge at and below the low chord matches the HEC-RAS stage exactly.
+This upstream reach with the backwater effect was the most critical aspect of the comparison.
+For flows greater than the low chord HEC-RAS predicts a higher stage because FLO-2D cannot fill the overbank floodplain storage area to HEC-RAS level
+because the discharge overtops the levees and flows beyond the cross-sections both upstream and downstream (Figure 144).
+The FLO-2D model could be manipulated to confine the 45,000 cfs with a longer duration inflow hydrograph and spatial constraints and floodplain
+outflow nodes, but the sole purpose of this effort would be to match the over deck flow stage.
+At this discharge, however, since the channel conveyance capacity is only about 5,000 cfs, most of the stage would reflect the floodplain conditions
+not the bridge.</p>
+<img alt="../../_images/Chapte0121.png" src="../../_images/Chapte0121.png" />
+<p><em>Figure 139.
+Los Lunas Bridge Stage-Discharge Relationship Cross-section 1.</em></p>
+<img alt="../../_images/Chapte0131.png" src="../../_images/Chapte0131.png" />
+<p><em>Figure 140.
+Los Lunas Bridge Stage-Discharge Relationship Cross-section 2.</em></p>
+<img alt="../../_images/Chapte014.png" src="../../_images/Chapte014.png" />
+<p><em>Figure 141.
+Los Lunas Bridge Stage-Discharge Relationship Cross-section 3.</em></p>
+<img alt="../../_images/Chapte015.png" src="../../_images/Chapte015.png" />
+<p><em>Figure 142.
+Los Lunas Bridge Stage-Discharge Relationship Cross-section 4.</em></p>
+<img alt="../../_images/Chapte0161.png" src="../../_images/Chapte0161.png" />
+<p><em>Figure 143.
+Los Lunas Bridge Stage-Discharge Relationship Cross-section 5.</em></p>
+<p>Downstream of the bridge, the FLO-2D and HEC-RAS stages do not match very well, particularly at the higher flows.
+This is because the FLO-2D model outflow node water surface elevation did not match the HEC-RAS water surface near cross-section 5.
+The FLO-2D channel outflow node pulls down the in-channel water surface, but much of the water is also overbank on the floodplain at that location.
+Since the downstream water surface elevations were not important and did not affect the upstream stage-discharge, the additional effort required to
+match the model downstream stages was not considered.</p>
+<img alt="../../_images/Chapte017.png" src="../../_images/Chapte017.png" />
+<p><em>Figure 144.
+FLO-2D Maximum Depth for a Discharge of 45,000 cfs.</em></p>
+<p>Discussion</p>
+<p>The objective of the applying the FLO-2D and HEC-RAS bridge routines to the Los Lunas Bridge reach of the Rio Grande is to compare the prediction of
+the stage for various discharges.
+The HEC-RAS bridge routine involves an energy equation solution for a 1-D steady discharge step backwater condition and FLO-2D provides a 2-D full
+dynamic wave momentum equation model solution for routing flood flows.
+HEC-RAS presumes that the discharge covers the entire floodplain with a single water surface elevation and FLO-2D has a channel floodplain interface
+to spatially distribute the flow in 2-dimensions on the floodplain.
+The focus of the comparison of the two models was on the bridge and upstream cross-section water surface elevations due to the backwater effects.</p>
+<p>The FLO-2D model matched the HEC-RAS predicted stages for all the upstream water surface elevations below the low chord of the bridge.
+For higher discharges, the FLO-2D model under predicted the HEC-RAS stages because the floodplain area of inundation was not filled.
+The FLO-2D duration was too short and the floodplain attributes in terms of the levee and spatial extent of the flooding were different from the 1-D
+HEC-RAS model.
+In the FLO-2D model, most of the discharge over 5,000 cfs was on the floodplain and the flow moved past the inflow and outflow nodes both upstream and
+downstream as shown in Figure 124.
+It was also noted that the FLO-2D channel outflow conditions did not match the HEC-RAS model downstream boundary conditions, but this was less
+important than the floodplain flow bypassing the channel outflow node.</p>
+<p>Matching HEC-RAS or other models with bridge components may not be exact because of the differences computational approach and because of the FLO-2D
+spatially variability of the floodplain flow distribution.
+Ultimately, the bridge free surface flow control with coefficient adjustments, however, provided a suitable correlation between the models.</p>
+<p>The FLO-2D bridge routine enables the user to compute the discharge through bridges without using an external program to generate a stage-discharge
+rating curve or table.
+The routine will compute the discharge for three classes of flow regime, free surface flow for discharge below the bridge low chord, pressure flow
+when the discharge is above the low chord but below the bridge deck and combined pressure and weir flow as the discharge goes over the bridge.
+The pressure flow and weir flow computations are relatively straight forward.
+The free surface flow is more complex with a number of multiplicative coefficients that represent the various features of the bridge and their effects
+on the flow.
+The pressure flow will be either sluice gate flow or orifice flow, whichever is smaller.
+There may not be a smooth transition between the two types of flow representation and some adjustment of the coefficients may be necessary.
+An adjustment factor to raise or lower the computed sluice gate or orifice coefficient is available as data input parameter.
+The user has complete control of all the coefficients utilized in the bridge routine for all flow regimes.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Chapter%204.html" class="btn btn-neutral float-left" title="Chapter 4. MODEL COMPONENTS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="REFERENCES.html" class="btn btn-neutral float-right" title="REFERENCES" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build23
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="Chapter 5.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

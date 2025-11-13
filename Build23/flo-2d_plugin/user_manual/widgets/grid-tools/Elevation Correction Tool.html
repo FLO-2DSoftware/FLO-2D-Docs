@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5. Correct Grid Elevation &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="6. Grid Roughness from Vector" href="Roughness%20from%20Vector.html" />
+    <link rel="prev" title="4. Grid Elevation from LiDAR" href="Elevation%20from%20LiDAR%20xyz.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Plugin Gila</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">User Manual</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin-features/index.html">Plugin Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Widgets</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Grid Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pre-processing-tools/Pre-Processing%20Tools.html">Pre-Processing Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../profile-tool/Profile%20Tool.html">Profile Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cross-sections-editor/Cross%20Sections%20Editor.html">Cross Sections Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary-condition-editor/index.html">Boundary Condition Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../initial-condition-editor/Initial%20Condition%20Editor.html">Initial Condition Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rain-editor/Rain%20Editor.html">Rain Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../schematized-channel-editor/Schematized%20Channel%20Editor.html">Schematized Channel Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hydraulic-structure-editor/Hydraulic%20Structure%20Editor.html">Structures Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../street-editor/Street%20Editor.html">Street Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../floodplain-cross-section-editor/Floodplain%20Cross%20Section%20Editor.html">Floodplain Cross Section Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../infiltration-editor/index.html">Infiltration Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../storm-drain-editor/index.html">Storm Drain Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../levees-breach-editor/Levees%20Breach%20Editor.html">Levees Breach Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiple-channels-editor/Multiple%20Channel%20Editor.html">Multiple Channels Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../post-development-grid-modification/index.html">Grid Modification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/technical_reference_manual.html">Technical Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Plugin Gila</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">User Manual</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Widgets</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Grid Tools</a></li>
+      <li class="breadcrumb-item active">5. Correct Grid Elevation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/flo-2d_plugin/user_manual/widgets/grid-tools/Elevation Correction Tool.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="correct-grid-elevation">
+<h1>5. Correct Grid Elevation<a class="headerlink" href="#correct-grid-elevation" title="Link to this heading"></a></h1>
+<p>This tool is used to correct elevation data for polygons, points or polylines.</p>
+<img alt="../../../../_images/Elevat002.png" src="../../../../_images/Elevat002.png" />
+<p>The correction datasets are set up in the User Layers group.</p>
+<ul class="simple">
+<li><p>Elevation Polygons</p></li>
+<li><p>Elevation Points</p></li>
+<li><p>Rasters</p></li>
+</ul>
+<section id="users-layers-mode">
+<h2>Users Layers Mode<a class="headerlink" href="#users-layers-mode" title="Link to this heading"></a></h2>
+<p>There are multiple options in this tool.
+The following sections will show how to use each option in the Users Layers Mode tab.</p>
+</section>
+<section id="tin-from-points-and-polygon-tc-6">
+<h2>Tin from Points and Polygon - TC 6<a class="headerlink" href="#tin-from-points-and-polygon-tc-6" title="Link to this heading"></a></h2>
+<p>Open a short YouTube Video: <a class="reference external" href="https://youtu.be/nCkEkSeaG-I">https://youtu.be/nCkEkSeaG-I</a></p>
+<ol class="arabic simple">
+<li><p>The first option is to edit the elevation on the grid using elevation points that are contained within a polygon boundary.</p></li>
+</ol>
+<img alt="../../../../_images/Elevat003.png" src="../../../../_images/Elevat003.png" />
+<ol class="arabic simple" start="2">
+<li><p>The tool creates a triangulated irregular network (TIN) that is confined to the elevation polygon layer.
+The TIN elevation is read from the Elevation Points layer.
+The elevation is assigned to the grid from the TIN as a correction to the grid elevation.
+Only grids with a centroid inside the polygon are adjusted.
+In this example, a section of the dam is removed from the grid element elevation so the dam can be breached.
+Most of the dam is left in place so the volume displacement is still occurring.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The elevation image in this example is not the grid element.
+It is a hillshade of the raw raster data.
+The tool corrects the grid elevation only.</p>
+</div>
+<img alt="../../../../_images/Elevat004.png" src="../../../../_images/Elevat004.png" />
+<ol class="arabic simple" start="3">
+<li><p>Here is a before and after image of the calculation.  The tool removed the dam from the grid elevation.
+It interpolated the grid elevations based on the point and a TIN.</p></li>
+</ol>
+<img alt="../../../../_images/Elevat005.png" src="../../../../_images/Elevat005.png" />
+</section>
+<section id="tin-from-polygon-boundary-tc-7">
+<h2>Tin from Polygon Boundary - TC 7<a class="headerlink" href="#tin-from-polygon-boundary-tc-7" title="Link to this heading"></a></h2>
+<p>Open a short YouTube Video: <a class="reference external" href="https://youtu.be/5rvnX7c1GCk">https://youtu.be/5rvnX7c1GCk</a></p>
+<ol class="arabic simple">
+<li><p>The second option is to build a TIN from the grid element elevation surrounding a polygon.
+This will assess the elevation where the polygon intersects the grid and interpolate that elevation to the TIN.</p></li>
+</ol>
+<img alt="../../../../_images/Elevat006.png" src="../../../../_images/Elevat006.png" />
+<ol class="arabic simple" start="2">
+<li><p>This option is used when a Cut or Fill correction is required.
+For example, to fill a channel with elevation data along the bank, cover the channel with an elevation polygon and apply the correction.</p></li>
+</ol>
+<img alt="../../../../_images/Elevat007.png" src="../../../../_images/Elevat007.png" />
+</section>
+<section id="elevation-polygon-attributes-tc-8">
+<h2>Elevation Polygon Attributes - TC 8<a class="headerlink" href="#elevation-polygon-attributes-tc-8" title="Link to this heading"></a></h2>
+<p>Open a short YouTube Video: <a class="reference external" href="https://youtu.be/Q2UetAd78Jw">https://youtu.be/Q2UetAd78Jw</a></p>
+<ol class="arabic simple">
+<li><p>This option is used when a single known elevation correction is required.</p></li>
+</ol>
+<img alt="../../../../_images/Elevat008.png" src="../../../../_images/Elevat008.png" />
+<ol class="arabic simple" start="2">
+<li><p>In this example, the invert elevation at the headwall inlet is incorrect.
+The polygon has a new elevation assigned that will be applied directly to the grid layer.
+In this case the correction is applied to centroid of the cell and the selected polygon only.</p></li>
+</ol>
+<img alt="../../../../_images/Elevat009.png" src="../../../../_images/Elevat009.png" />
+</section>
+<section id="grid-statistics-blocked-areas-tc-9">
+<h2>Grid Statistics Blocked Areas - TC 9<a class="headerlink" href="#grid-statistics-blocked-areas-tc-9" title="Link to this heading"></a></h2>
+<p>Open a short YouTube Video: <a class="reference external" href="https://youtu.be/Vql0HYwMf8Q">https://youtu.be/Vql0HYwMf8Q</a></p>
+<ol class="arabic simple">
+<li><p>In this case, the correction is applied by analyzing the statistics of the elevations within the Blocked Areas Polygons.
+The mean, max or min elevation of the combined cell centroids within the polygon are applied as a general condition to all of the cells centroids
+within the polygon.</p></li>
+</ol>
+<img alt="../../../../_images/Elevat010.png" src="../../../../_images/Elevat010.png" />
+<img alt="../../../../_images/Elevat011.png" src="../../../../_images/Elevat011.png" />
+</section>
+<section id="external-layer-tab">
+<h2>External Layer Tab<a class="headerlink" href="#external-layer-tab" title="Link to this heading"></a></h2>
+<p>This section will review each option in the External Layers Mode tab:</p>
+</section>
+<section id="correction-options">
+<h2>Correction Options<a class="headerlink" href="#correction-options" title="Link to this heading"></a></h2>
+<p>There are several grid element correction options available in this tool.</p>
+<ul class="simple">
+<li><p>Select any polygon layer.</p></li>
+<li><p>Select any polyline layer.</p></li>
+<li><p>Define the geometric predicate.
+Grid centroid or grid element within the polygon.</p></li>
+<li><p>Take the elevation and correction from an attribute table.</p></li>
+<li><p>Take the zonal statistics from the grid elements within the polygons.</p></li>
+<li><p>Take the zonal statistics from raster pixels within a polygon.</p></li>
+<li><p>Take the zonal statistics from raster pixels within a grid element selected by a polygon.</p></li>
+<li><p>Use only selected features or all features.</p></li>
+</ul>
+<img alt="../../../../_images/Elevat012.png" src="../../../../_images/Elevat012.png" />
+</section>
+<section id="geometric-predicate-tc-10">
+<h2>Geometric Predicate - TC 10<a class="headerlink" href="#geometric-predicate-tc-10" title="Link to this heading"></a></h2>
+<p>Open a short YouTube Video: <a class="reference external" href="https://youtu.be/frQlvM6I0_k">https://youtu.be/frQlvM6I0_k</a></p>
+<p>This method will apply a elevation to each grid element within the polygon from the elevation field of the polygon.</p>
+<ol class="arabic simple">
+<li><p>Load or create a polygon layer with an elevation and a correction field.
+In this example, the Elevation Polygon layer was used.
+It isn’t’ an external layer but it still works.</p></li>
+<li><p>Click the Elevation Correction Tool and click Correct Grid Elevation</p></li>
+</ol>
+<img alt="../../../../_images/Elevat013.png" src="../../../../_images/Elevat013.png" />
+<ol class="arabic simple" start="3">
+<li><p>Set up the Correct Grid Dialog as shown below and click OK.</p></li>
+</ol>
+<img alt="../../../../_images/Elevat014.png" src="../../../../_images/Elevat014.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click ok to complete the process.</p></li>
+<li><p>The following figure shows the result of the processing.
+The polygon had an elevation attribute of 1400 and a correction attribute of 1401.</p></li>
+</ol>
+<img alt="../../../../_images/Elevat015.png" src="../../../../_images/Elevat015.png" />
+</section>
+<section id="grid-statistics-in-polygons-tc-11">
+<h2>Grid Statistics in Polygons - TC 11<a class="headerlink" href="#grid-statistics-in-polygons-tc-11" title="Link to this heading"></a></h2>
+<p>Open a short YouTube Video: <a class="reference external" href="https://youtu.be/V9mLuptocMQ">https://youtu.be/V9mLuptocMQ</a></p>
+<p>This method will set a min, mean or max by calculating the statistics from the grid layer within the elevation
+correction polygon.</p>
+<ol class="arabic simple">
+<li><p>Build a polygon around the grid elements to be modified.</p></li>
+<li><p>Set up the tool as shown in the following image.</p></li>
+</ol>
+<img alt="flo-2d_plugin/img/gridtools/Elevation-Correction-from-Polygons/Elev001.png" src="flo-2d_plugin/img/gridtools/Elevation-Correction-from-Polygons/Elev001.png" />
+<ol class="arabic simple" start="4">
+<li><p>Run the calculator and then plot the elevation to see the correction.</p></li>
+</ol>
+<img alt="flo-2d_plugin/img/gridtools/Elevation-Correction-from-Polygons/Elev002.png" src="flo-2d_plugin/img/gridtools/Elevation-Correction-from-Polygons/Elev002.png" />
+</section>
+<section id="raster-statistics-in-polygons-tc-12">
+<h2>Raster Statistics in Polygons - TC 12<a class="headerlink" href="#raster-statistics-in-polygons-tc-12" title="Link to this heading"></a></h2>
+<p>Open a short YouTube Video: <a class="reference external" href="https://youtu.be/6SmdYjZV310">https://youtu.be/6SmdYjZV310</a></p>
+<p>This method will apply zonal statistics to a raster within a polygon to calculate the min, max or mean of an area.</p>
+<ol class="arabic simple">
+<li><p>Import an elevation raster and a create a polygon for the area that needs a correction.</p></li>
+<li><p>Click the Elevation Correction Tool and click Correct Grid Elevation</p></li>
+</ol>
+<img alt="../../../../_images/Elevat013.png" src="../../../../_images/Elevat013.png" />
+<ol class="arabic simple" start="3">
+<li><p>Set up the Correct Grid Dialog as shown below and click OK.</p></li>
+</ol>
+<img alt="../../../../_images/Elevat016.png" src="../../../../_images/Elevat016.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click ok to complete the process.</p></li>
+<li><p>The following figure shows the result of the processing.
+The raster within the polygon had an elevation of 1409.44.
+This was applied to every cell within the polygon.</p></li>
+<li><p>The figure below shows the change in elevation.</p></li>
+</ol>
+<img alt="../../../../_images/Elevat017.png" src="../../../../_images/Elevat017.png" />
+</section>
+<section id="polyline-elevation-correction-tc-13">
+<h2>Polyline Elevation Correction - TC 13<a class="headerlink" href="#polyline-elevation-correction-tc-13" title="Link to this heading"></a></h2>
+<p>Open a short YouTube Video: <a class="reference external" href="https://youtu.be/H-vfxOwJano">https://youtu.be/H-vfxOwJano</a></p>
+<p>This method will apply zonal statistics to a raster within individual grid elements that are intersected by a polyline
+with a buffer of width provided by an attribute field</p>
+<ol class="arabic simple">
+<li><p>Set up a polyline with a buffer that is approximately the width of a grid element or the width of a physical feature
+that is covered by the polyline.</p></li>
+</ol>
+<img alt="../../../../_images/Elevat018.png" src="../../../../_images/Elevat018.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click the Elevation Correction Tool and click Correct Grid Elevation</p></li>
+</ol>
+<img alt="../../../../_images/Elevat013.png" src="../../../../_images/Elevat013.png" />
+<ol class="arabic simple" start="4">
+<li><p>Set up the Correct Grid Dialog as shown below and click OK.</p></li>
+</ol>
+<img alt="../../../../_images/Elevat019.png" src="../../../../_images/Elevat019.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click ok to complete the process.</p></li>
+<li><p>The following figure shows the result of the processing.
+The raster within the polygon had an elevation of 1409.44.
+This was applied to every cell within the polygon.</p></li>
+<li><p>The figure below shows the change in elevation.</p></li>
+</ol>
+<img alt="../../../../_images/Elevat020.png" src="../../../../_images/Elevat020.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Elevation%20from%20LiDAR%20xyz.html" class="btn btn-neutral float-left" title="4. Grid Elevation from LiDAR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Roughness%20from%20Vector.html" class="btn btn-neutral float-right" title="6. Grid Roughness from Vector" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build23
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../../../Build25/flo-2d_plugin/user_manual/widgets/grid-tools/Elevation Correction Tool.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="Elevation Correction Tool.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

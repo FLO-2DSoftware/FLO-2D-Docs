@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outflow Editor &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Initial Condition Editor" href="../initial-condition-editor/Initial%20Condition%20Editor.html" />
+    <link rel="prev" title="Inflow Editor" href="Inflow.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Plugin Gila</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">User Manual</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin-features/index.html">Plugin Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Widgets</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/index.html">Grid Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pre-processing-tools/Pre-Processing%20Tools.html">Pre-Processing Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../profile-tool/Profile%20Tool.html">Profile Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cross-sections-editor/Cross%20Sections%20Editor.html">Cross Sections Editor</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Boundary Condition Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../initial-condition-editor/Initial%20Condition%20Editor.html">Initial Condition Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rain-editor/Rain%20Editor.html">Rain Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../schematized-channel-editor/Schematized%20Channel%20Editor.html">Schematized Channel Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hydraulic-structure-editor/Hydraulic%20Structure%20Editor.html">Structures Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../street-editor/Street%20Editor.html">Street Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../floodplain-cross-section-editor/Floodplain%20Cross%20Section%20Editor.html">Floodplain Cross Section Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../infiltration-editor/index.html">Infiltration Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../storm-drain-editor/index.html">Storm Drain Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../levees-breach-editor/Levees%20Breach%20Editor.html">Levees Breach Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiple-channels-editor/Multiple%20Channel%20Editor.html">Multiple Channels Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../post-development-grid-modification/index.html">Grid Modification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/technical_reference_manual.html">Technical Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Plugin Gila</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">User Manual</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Widgets</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Boundary Condition Editor</a></li>
+      <li class="breadcrumb-item active">Outflow Editor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/flo-2d_plugin/user_manual/widgets/boundary-condition-editor/Outflow.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="outflow-editor">
+<h1>Outflow Editor<a class="headerlink" href="#outflow-editor" title="Link to this heading"></a></h1>
+<p>Boundary outflow conditions include:</p>
+<ul class="simple">
+<li><p>Normal Depth Control</p></li>
+<li><p>Time Stage Control</p></li>
+<li><p>Discharge Stage Control</p></li>
+<li><p>Multiple Domain Exchange</p></li>
+</ul>
+<p>These conditions define how the channel or floodplain discharge enters or leaves the FLO-2D model domain.</p>
+<img alt="../../../../_images/newbc003.png" src="../../../../_images/newbc003.png" />
+<section id="normal">
+<h2>Normal<a class="headerlink" href="#normal" title="Link to this heading"></a></h2>
+<section id="outflow-floodplain">
+<h3>Outflow Floodplain<a class="headerlink" href="#outflow-floodplain" title="Link to this heading"></a></h3>
+<p>Normal depth boundary</p>
+<p>This is an outflow condition where the flow leaves the domain without effecting the upstream water surface elevation,
+select the outflow nodes along the downstream boundary or along the edge of a grid system.</p>
+<ol class="arabic simple">
+<li><p>Click the
+Add Polygon BC button</p></li>
+</ol>
+<img alt="../../../../_images/newbc022.png" src="../../../../_images/newbc022.png" />
+<ol class="arabic simple" start="2">
+<li><p>Digitize a polygon that covers the desired boundary extent.
+Right click the last vertex to close the polygon.</p></li>
+<li><p>Set the type to
+Outflow and click OK.</p></li>
+</ol>
+<img alt="../../../../_images/newbc024.png" src="../../../../_images/newbc024.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click again the toggled Add Polygon BC button to save the feature and activate the editor.</p></li>
+</ol>
+<img alt="../../../../_images/newbc023.png" src="../../../../_images/newbc023.png" />
+<ol class="arabic simple" start="5">
+<li><p>Name the boundary and set the outflow type to 1.
+Floodplain outflow (no hydrograph).</p></li>
+</ol>
+<img alt="../../../../_images/newbc025.png" src="../../../../_images/newbc025.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click the Schematize button (shown below) to complete the boundary.</p></li>
+</ol>
+<img alt="../../../../_images/newbc026.png" src="../../../../_images/newbc026.png" />
+<ol class="arabic simple" start="7">
+<li><p>The Add Polygon BC button will identify cells at the grid boundary and designate them as outflow cells.</p></li>
+</ol>
+<img alt="../../../../_images/newbc027.png" src="../../../../_images/newbc027.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It is possible to set the Outflow Boundary Conditions to the whole grid boundary cells faster using the
+Add Outflow Boundary Condition to the whole grid boundary cells button.</p>
+<img alt="../../../../_images/newbc028.png" src="../../../../_images/newbc028.png" />
+<p>The algorithm in this button is more efficient than the Add Polygon BC. However, This boundary method applies a
+normal depth boundary to every grid element on the outer edge of the computational domain.</p>
+<p>A line is added to the center of the cells on the boundary of the grid.</p>
+<img alt="../../../../_images/newbc029.png" src="../../../../_images/newbc029.png" />
+<p>Modification of the line is possible as needed.</p>
+<img alt="../../../../_images/newbc021.png" src="../../../../_images/newbc021.png" />
+<p>When the schematize button is clicked,
+the whole boundary grid cells are defined as normal depth.</p>
+</div>
+</section>
+<section id="outflow-channel">
+<h3>Outflow Channel<a class="headerlink" href="#outflow-channel" title="Link to this heading"></a></h3>
+<p>For channel outflow at a normal depth condition, use the channel outflow node on the downstream boundary
+or channel segment terminus.</p>
+<ol class="arabic simple">
+<li><p>Click add a
+point boundary</p></li>
+</ol>
+<img alt="../../../../_images/newbc030.png" src="../../../../_images/newbc030.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the last left bank channel node.</p></li>
+</ol>
+<img alt="../../../../_images/newbc031.png" src="../../../../_images/newbc031.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click again the toggled Add Point BC button to save the feature and activate the editor.</p></li>
+</ol>
+<img alt="../../../../_images/newbc032.png" src="../../../../_images/newbc032.png" />
+<ol class="arabic simple" start="4">
+<li><p>Name the
+feature and set the outflow condition
+for the channel to 3. Floodplain and channel outflow (no hydrograph).</p></li>
+</ol>
+<img alt="../../../../_images/newbc033.png" src="../../../../_images/newbc033.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>One point is required.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Click the Schematize button.</p></li>
+</ol>
+<img alt="../../../../_images/newbc034.png" src="../../../../_images/newbc034.png" />
+</section>
+</section>
+<section id="time-stage-control">
+<h2>Time Stage Control<a class="headerlink" href="#time-stage-control" title="Link to this heading"></a></h2>
+<section id="outflow-with-time-stage-hydrograph-for-floodplain">
+<h3>Outflow with Time – Stage Hydrograph for Floodplain<a class="headerlink" href="#outflow-with-time-stage-hydrograph-for-floodplain" title="Link to this heading"></a></h3>
+<p>To represent variable time-stage boundary conditions such as:</p>
+<ul class="simple">
+<li><p>Tides</p></li>
+<li><p>Storm surge</p></li>
+<li><p>Tsunamis</p></li>
+<li><p>Flooding from a large river</p></li>
+</ul>
+<p>The time–stage relationship can be synchronized with rainfall and upstream watershed flooding.
+Select the outflow nodes along the downstream boundary with a polygon.</p>
+<ol class="arabic simple">
+<li><p>Click
+the Add Polygon BC button.</p></li>
+</ol>
+<img alt="../../../../_images/newbc022.png" src="../../../../_images/newbc022.png" />
+<ol class="arabic simple" start="2">
+<li><p>Digitize the
+polygon across the boundary.</p></li>
+<li><p>Click again the toggled Add Point BC button to save the feature and activate the editor.</p></li>
+<li><p>Name the boundary, set the boundary conditions, name and fill the
+Time Series table.</p></li>
+</ol>
+<img alt="../../../../_images/newbc037.png" src="../../../../_images/newbc037.png" />
+<img alt="../../../../_images/newbc038.png" src="../../../../_images/newbc038.png" />
+<ol class="arabic simple" start="6">
+<li><p>In the figure below,
+there are two sets of outflow nodes. The Normal Depth nodes allow water that exceeds the
+Stage to cross the outflow boundary.
+This allows rainfall accumulation or inflow hydrograph accumulation to leave the boundary. The Stage –
+Time nodes apply a water surface elevation.
+This water can fill the downstream area up to the stage.</p></li>
+</ol>
+<img alt="../../../../_images/newbc039.png" src="../../../../_images/newbc039.png" />
+</section>
+<section id="outflow-with-time-stage-hydrograph-for-channel">
+<h3>Outflow with Time – Stage Hydrograph for Channel<a class="headerlink" href="#outflow-with-time-stage-hydrograph-for-channel" title="Link to this heading"></a></h3>
+<p>Like the time-stage condition for the floodplain select this option to represent ocean tide, storm surge,
+tsunamis, or flooding from a large river
+control in a channel terminus.
+The time – stage relationship can be synchronized to rainfall and watershed flooding.</p>
+<ol class="arabic simple">
+<li><p>Select the standard
+outflow node at the end of the channel.</p></li>
+<li><p>Set the time-stage
+node one element upstream.</p></li>
+<li><p>Click again the toggled Add Point BC button to save the feature and activate the editor.</p></li>
+<li><p>Name the boundary
+and set the boundary conditions.</p></li>
+<li><p>Name and
+fill the Time Series table.</p></li>
+</ol>
+<img alt="../../../../_images/newbc040.png" src="../../../../_images/newbc040.png" />
+<img alt="../../../../_images/bounda017.png" src="../../../../_images/bounda017.png" />
+</section>
+<section id="time-stage-for-floodplain-and-free-floodplain-and-channel">
+<h3>Time-Stage for Floodplain and Free Floodplain and Channel<a class="headerlink" href="#time-stage-for-floodplain-and-free-floodplain-and-channel" title="Link to this heading"></a></h3>
+<p>Use this option to set the stage of a downstream elevation control.
+This node will allow water to collect on the boundary until it can exceed the stage at the boundary.
+It can be used for two purposes.</p>
+<p>Anytime there is a control on the boundary that releases water at a known stage.</p>
+<p>Set the elevation for matching the water surface elevation of an existing FEMA map.</p>
+<ol class="arabic simple">
+<li><p>Set this up with the
+same method described in the previous two sections.</p></li>
+</ol>
+<img alt="../../../../_images/newbc041.png" src="../../../../_images/newbc041.png" />
+</section>
+<section id="time-stage-for-channel-and-free-floodplain-and-channel">
+<h3>Time-Stage for Channel and Free Floodplain and Channel<a class="headerlink" href="#time-stage-for-channel-and-free-floodplain-and-channel" title="Link to this heading"></a></h3>
+<p>This option is the same as option 7 with the condition that the stage – time table is assigned to the channel instead of the floodplain.</p>
+<ol class="arabic simple">
+<li><p>Set this up with
+the same method described in the previous two sections.</p></li>
+</ol>
+<img alt="../../../../_images/newbc042.png" src="../../../../_images/newbc042.png" />
+</section>
+</section>
+<section id="discharge-stage-control">
+<h2>Discharge Stage Control<a class="headerlink" href="#discharge-stage-control" title="Link to this heading"></a></h2>
+<section id="channel-stage-discharge-parameters">
+<h3>Channel Stage-Discharge Parameters<a class="headerlink" href="#channel-stage-discharge-parameters" title="Link to this heading"></a></h3>
+<p>This outflow option defines the discharge from a channel based on the stage using rating curve.
+Several rating curves can be assigned for multiple limiting depths.
+This system is used when there is a control or a gage at the channel with a known stage-discharge relationship.</p>
+<ol class="arabic simple">
+<li><p>Select the
+stage-discharge node at the end of a channel segment.</p></li>
+<li><p>Click again the toggled Add Point BC button to save the feature and activate the editor</p></li>
+<li><p>Name the boundary
+and set the boundary conditions.</p></li>
+<li><p>Name and fill the
+Q(h) parameters table.</p></li>
+</ol>
+<img alt="../../../../_images/newbc043.png" src="../../../../_images/newbc043.png" />
+<img alt="../../../../_images/newbc044.png" src="../../../../_images/newbc044.png" />
+</section>
+<section id="channel-stage-discharge-q-h-table">
+<h3>Channel Stage-Discharge (Q(h) table)<a class="headerlink" href="#channel-stage-discharge-q-h-table" title="Link to this heading"></a></h3>
+<p>The final outflow option is used to define the downstream boundary with a stage-discharge table.</p>
+<ol class="arabic simple">
+<li><p>Select the stage-discharge
+node at the channel terminus.</p></li>
+<li><p>Click again the toggled Add Point BC button to save the feature and activate the editor</p></li>
+<li><p>Name the boundary and set
+the boundary conditions.</p></li>
+<li><p>Name and fill the Q(h)
+table.</p></li>
+</ol>
+<img alt="../../../../_images/newbc045.png" src="../../../../_images/newbc045.png" />
+<img alt="../../../../_images/newbc046.png" src="../../../../_images/newbc046.png" />
+</section>
+</section>
+<section id="multiple-domain-system">
+<h2>Multiple Domain System<a class="headerlink" href="#multiple-domain-system" title="Link to this heading"></a></h2>
+<p>Use this option with any floodplain boundary that will transfer flow between two domains.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See <a class="reference external" href="https://flo-2d.com/product/multiple-domain-interfacing/">Multiple Domain Interfacing Training Package</a>.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Click the Add Polygon BC button.</p></li>
+</ol>
+<img alt="../../../../_images/newbc022.png" src="../../../../_images/newbc022.png" />
+<ol class="arabic simple" start="2">
+<li><p>Draw a polygonn through the desired outflow nodes.</p></li>
+</ol>
+<img alt="../../../../_images/newbc024.png" src="../../../../_images/newbc024.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click again the toggled Add Point BC button to save the feature and activate the editor.</p></li>
+<li><p>Name the boundary condition
+and set the boundary Outflow type conditions as Outflow with Hydrograph.</p></li>
+</ol>
+<img alt="../../../../_images/newbc035.png" src="../../../../_images/newbc035.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click the Schematize button.</p></li>
+</ol>
+<img alt="../../../../_images/newbc036.png" src="../../../../_images/newbc036.png" />
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>The most common problems
+with creating outflow.dat data is caused by
+creating conflicts by putting other components in the outflow grid elements.</p></li>
+<li><p>The schematic layers and tables will reset each time the Schematize tool is used.
+This could cause overwriting of imported data.
+Convert the Boundary Conditions to User Layers for projects that are imported into QGIS before performing the schematization process.</p></li>
+<li><p>If the data does not export correctly, check the tables.
+The tables can be edited directly or can be copied into an OUTFLOW.DAT file.</p></li>
+<li><p>Saving and restarting might
+resolve some issues with the GeoPackage but check the layers attributes prior to restarting QGIS.</p></li>
+<li><p>If a Python Table Update error appears,
+Delete the QGIS folder from AppData/Roaming and rebuild the QGIS Profile.</p></li>
+</ol>
+<img alt="../../../../_images/Bounda022.png" src="../../../../_images/Bounda022.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Inflow.html" class="btn btn-neutral float-left" title="Inflow Editor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../initial-condition-editor/Initial%20Condition%20Editor.html" class="btn btn-neutral float-right" title="Initial Condition Editor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build23
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../../../Build25/flo-2d_plugin/user_manual/widgets/boundary-condition-editor/Outflow.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="Outflow.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Import SWMM.INP &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Export to SWMM.INP" href="Export%20swmm.html" />
+    <link rel="prev" title="Export to HDF5" href="Export%20to%20HDF5.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Plugin Gila</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">User Manual</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin-features/index.html">Plugin Features</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Toolbar</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">FLO-2D Import Export</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../flo-2d-project/index.html">FLO-2D Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../run-flo-2d-pro/index.html">Run FLO-2D Pro</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../flo-2d-parameters/index.html">FLO-2D Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../flo-2d-info-tool/index.html">FLO-2D Info Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../flo-2d-project-review/index.html">FLO-2D Project Review</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../flo-2d-help/Help.html">Help</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../widgets/index.html">Widgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../post-development-grid-modification/index.html">Grid Modification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/technical_reference_manual.html">Technical Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Plugin Gila</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">User Manual</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Toolbar</a></li>
+          <li class="breadcrumb-item"><a href="index.html">FLO-2D Import Export</a></li>
+      <li class="breadcrumb-item active">Import SWMM.INP</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/flo-2d_plugin/user_manual/toolbar/flo-2d-import-export/Import swmm.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="import-swmm-inp">
+<h1>Import SWMM.INP<a class="headerlink" href="#import-swmm-inp" title="Link to this heading"></a></h1>
+<ol class="arabic simple">
+<li><p>An existing SWMM.inp project can be imported in a FLO-2D Surface System.</p></li>
+</ol>
+<img alt="../../../../_images/importexport006.png" src="../../../../_images/importexport006.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click on Import SWMM.inp and browse the project folder that contains the file.</p></li>
+</ol>
+<img alt="../../../../_images/importswmm002.png" src="../../../../_images/importswmm002.png" />
+<ol class="arabic simple" start="3">
+<li><p>If a storm drain already exists, the swmm.inp file will update the current project.  This is a way to easily
+modify the swmm.inp file and then update it.</p></li>
+</ol>
+<blockquote>
+<div><p>3a. Answer yes to the dialog box will update the inp data.</p>
+<p>3b. Answer no will rebuild the storm drain network.</p>
+<img alt="../../../../_images/importswmm003.png" src="../../../../_images/importswmm003.png" />
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>If the project does not have a storm drain, the import tool will build the storm drain network.</p></li>
+</ol>
+<blockquote>
+<div><p>4a. In this case, the storm drain is imported but the FLO-2D data is not loaded.  It will be necessary to build the
+data that goes in swmmflo.dat, swmmflort.dat, and swmmoutf.dat.  That process will be covered in an advanced
+tutorial.</p>
+<blockquote>
+<div><img alt="../../../../_images/importswmm004.png" src="../../../../_images/importswmm004.png" />
+</div></blockquote>
+</div></blockquote>
+<p>QGIS FLO-2D layers will be filled up with the data from the following *.INP groups:</p>
+<ul class="simple">
+<li><p>Inlets/Junctions</p></li>
+<li><p>Outfalls</p></li>
+<li><p>Storage Units</p></li>
+<li><p>Conduits</p></li>
+<li><p>Cross sections</p></li>
+<li><p>Losses</p></li>
+<li><p>Coordinates</p></li>
+<li><p>Vertices</p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Export%20to%20HDF5.html" class="btn btn-neutral float-left" title="Export to HDF5" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Export%20swmm.html" class="btn btn-neutral float-right" title="Export to SWMM.INP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build23
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../../../Build25/flo-2d_plugin/user_manual/toolbar/flo-2d-import-export/Import swmm.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="Import swmm.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

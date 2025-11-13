@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid Modification &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Technical Reference Manual" href="../../technical_reference_manual/technical_reference_manual.html" />
+    <link rel="prev" title="Multiple Channels Editor" href="../widgets/multiple-channels-editor/Multiple%20Channel%20Editor.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">FLO-2D Plugin Gila</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">User Manual</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../plugin-features/index.html">Plugin Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../toolbar/index.html">Toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../widgets/index.html">Widgets</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Grid Modification</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#computational-domain-layer">1. Computational Domain Layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grid">2. Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interpolate-elevation">3. Interpolate Elevation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#roughness">4. Roughness</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#buildings">5. Buildings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extra-grid-features">6. Extra Grid features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#infiltration">7. Infiltration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hydraulic-structures">8. Hydraulic Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#levees">9. Levees</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#boundary-conditions">10. Boundary Conditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rain">11. Rain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#channels">12. Channels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#floodplain-cross-sections">13. Floodplain cross sections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#storm-drain">Storm Drain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flo-2d-pro">FLO-2D Pro</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../technical_reference_manual/technical_reference_manual.html">Technical Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Plugin Gila</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">User Manual</a></li>
+      <li class="breadcrumb-item active">Grid Modification</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/flo-2d_plugin/user_manual/post-development-grid-modification/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="grid-modification">
+<h1>Grid Modification<a class="headerlink" href="#grid-modification" title="Link to this heading"></a></h1>
+<p>This section outlines a process to port data after the domain has been changed or the grid elements size has been
+changed but a project has many components developed.  This scenario occurs when an old project is revisited or a new
+project is extended to a larger area or clipped to a smaller area.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The process will be outlined based on the available layers and procedures in the QGIS FLO-2D Plugin order.</p>
+</div>
+<section id="computational-domain-layer">
+<h2>1. Computational Domain Layer<a class="headerlink" href="#computational-domain-layer" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Update polygon to cover complete project extent.</p></li>
+<li><p>Set cell size.</p></li>
+</ul>
+</section>
+<section id="grid">
+<h2>2. Grid<a class="headerlink" href="#grid" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Create the grid.</p></li>
+</ul>
+</section>
+<section id="interpolate-elevation">
+<h2>3. Interpolate Elevation<a class="headerlink" href="#interpolate-elevation" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Import full coverage raster.</p>
+<ul>
+<li><p>If a new area is needed, it is easy to create a mosaic of the two rasters.</p></li>
+<li><p>Export the grid layer as a raster and use a mosaic tool to combine the two rasters.</p></li>
+<li><p>It is a good idea to use the new grid element resolution and alignment as the extent and size for the raster.</p></li>
+</ul>
+</li>
+<li><p>Sample full coverage raster with the Sampling grid elevation from raster layer.</p></li>
+</ul>
+</section>
+<section id="roughness">
+<h2>4. Roughness<a class="headerlink" href="#roughness" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Recalculate from a full coverage shapefile/raster.</p></li>
+<li><p>If shapefile is not available,</p>
+<ul>
+<li><p>Export the old grid and intersect it with roughness polygons for the new grid.</p></li>
+<li><p>Use a Dissolve tool to simplify the shapefile so it combines like polygons with the same n-value.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="buildings">
+<h2>5. Buildings<a class="headerlink" href="#buildings" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Recalculate from Blocked Areas layer.</p></li>
+<li><p>It may be necessary to add buildings from additional area.</p></li>
+<li><p>The open street map downloader can download buildings.  See the Building section of the Self Help Training for more
+info.</p></li>
+</ul>
+</section>
+<section id="extra-grid-features">
+<h2>6. Extra Grid features<a class="headerlink" href="#extra-grid-features" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Run separate tools for Spatial Tol, Spatial Froude, Spatial Shallow n, and Gutters.</p></li>
+</ul>
+</section>
+<section id="infiltration">
+<h2>7. Infiltration<a class="headerlink" href="#infiltration" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Recalculate from external layers.</p></li>
+<li><p>It may be necessary to add infiltration areas to the infiltration shapefile.</p>
+<ul>
+<li><p>If extra data is needed, intersect the new data into the Soil and Landuse shapefiles.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="hydraulic-structures">
+<h2>8. Hydraulic Structures<a class="headerlink" href="#hydraulic-structures" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Copy polyline features from Structures Schematic Layer.</p></li>
+<li><p>Paste into Structures User Layer.</p></li>
+<li><p>Run structures schematize tool to refresh data.</p></li>
+<li><p>Add new structures using the editor tool and table editor after refreshing the data.</p></li>
+<li><p>Rerun schematize tool to add new data to final Schematic Layer.</p></li>
+</ul>
+</section>
+<section id="levees">
+<h2>9. Levees<a class="headerlink" href="#levees" title="Link to this heading"></a></h2>
+<ul>
+<li><p>If User Layers Levee Lines are available, use them to recalculate the levees.</p></li>
+<li><p>If Levee Lines User Layer is not present, use this simple process to copy them from the Schematized Levees.</p>
+<ul class="simple">
+<li><p>Create levee lines the center of the levee.
+This is just the standard create levee polyline using the editor add polyline process.</p></li>
+<li><p>Make certain these lines cross the Schematic Levees frequently.</p></li>
+<li><p>Intersect the Levee Lines Layer and Levees Layer to generate a point file with crest elevation.</p></li>
+<li><p>Copy that to the Elevation Points Layer.</p></li>
+<li><p>Run the Levee Calc tool with Levee Lines and Points.</p></li>
+<li><p>The idea is to intersect the schema lines and get the crest elevation for the points layer.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This does not work for walls.</p>
+</div>
+</li>
+<li><p>Walls</p>
+<ul class="simple">
+<li><p>Recalculate walls from wall data.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="boundary-conditions">
+<h2>10. Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Run schematize button.</p></li>
+<li><p>The downstream boundary might need to be edited or repositioned.</p></li>
+</ul>
+</section>
+<section id="rain">
+<h2>11. Rain<a class="headerlink" href="#rain" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Rerun depth Area Reduction sampler if used.</p></li>
+<li><p>Save and export data.</p></li>
+</ul>
+</section>
+<section id="channels">
+<h2>12. Channels<a class="headerlink" href="#channels" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Rerun schematize.</p></li>
+<li><p>Export .DAT files.</p></li>
+<li><p>Run Interpolator.</p></li>
+<li><p>Import interpolated channels.</p></li>
+<li><p>It may be necessary to make left and right bank alignment corrections.</p></li>
+</ul>
+</section>
+<section id="floodplain-cross-sections">
+<h2>13. Floodplain cross sections<a class="headerlink" href="#floodplain-cross-sections" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Rerun schematize.</p></li>
+<li><p>It may be necessary to add new cross sections.</p></li>
+</ul>
+</section>
+<section id="storm-drain">
+<h2>Storm Drain<a class="headerlink" href="#storm-drain" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Add new data to the storm drain shapefiles.</p></li>
+<li><p>Rerun storm drain calculator tool to convert to the FLO-2D User layers.</p></li>
+<li><p>Run schematize.</p></li>
+<li><p>Export swmm.inp.</p></li>
+</ul>
+</section>
+<section id="flo-2d-pro">
+<h2>FLO-2D Pro<a class="headerlink" href="#flo-2d-pro" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Export Data</p></li>
+<li><p>Run Model</p>
+<ul>
+<li><p>It is probably wise to export the data and test run at more convenient points along this outline.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../widgets/multiple-channels-editor/Multiple%20Channel%20Editor.html" class="btn btn-neutral float-left" title="Multiple Channels Editor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../technical_reference_manual/technical_reference_manual.html" class="btn btn-neutral float-right" title="Technical Reference Manual" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build23
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../../Build25/flo-2d_plugin/user_manual/post-development-grid-modification/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
