@@ -3,8 +3,8 @@
 Chapter 4. MODEL COMPONENTS
 ===========================
 
- 4.1 Model Features
- ------------------
+4.1 Model Features
+-------------------
 
 The primary FLO-2D flood routing features and attributes are:
 
@@ -36,8 +36,8 @@ the user can learn about how the flood project responds to mitigation or sensiti
 Model component selection should focus on those physical features that will significantly affect the volume distribution and area of inundation.
 A brief description of the FLO-2D components follows.
 
- 4.2 Overland Flow
- -----------------
+4.2 Overland Flow
+------------------
 
 The simplest FLO-2D model is overland flow on an alluvial fan or floodplain.
 Typical overland flow as reflects the water surface elevation, roughness and 8-direction flow path.
@@ -168,8 +168,8 @@ It should be noted that the application of the Manning’s equation for uniform 
 the depth average velocity approaches zero (ponded flow condition).
 The resulting water surface elevations can be accurately predicted but will display some variation across the channel.
 
- 4.3 Channel Flow
- ----------------
+4.3 Channel Flow
+-----------------
 
 The full channel guidelines are in the Manuals folder.
 Channel flow is simulated as one-dimensional in the downstream direction.
@@ -1627,6 +1627,7 @@ This Table 11 was developed from the laboratory data using actual mudflow deposi
 Some variation in the delineation of the different flow classifications should be expected based on the sample geology.
 
 .. image:: img/Chapter4/Chapte110.png
+
 *Figure 57.
 Classification of Hyperconcentrated Sediment Flows.*
 
@@ -2380,7 +2381,7 @@ may occur downstream, and this may require several model iterations to delineate
 Implementing the FCDMC Channel Avulsion Approach into FLO-2D
 
 Concepts and Assumptions
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The original recommendation was to use small FLO-2D grid elements to represent the channel.
 This approach has several limitations:
@@ -2546,7 +2547,7 @@ LID TOL value.
 FLO-2D Plugin Spatially Variable TOL Assignment.*
 
 Test Case and Results
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A FLO-2D model project was created with four areas of sink storage volume.
 The model has 4 inches of total rainfall distributed in a 2 hr storm.
@@ -2740,7 +2741,7 @@ Building Roof Element Elevation Editing.*
 Grid Element Levee Crest Elevation Editing.*
 
 Adjust Roof Slope
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A sloped roof can be established by modifying the roof elevations.
 Individual grid element elevations can be edited by double clicking a given cell and using the elevation field (Figure 95).
@@ -2787,7 +2788,7 @@ Figure 100.
 Completed Roof Element Elevation Slope Interpolation.*
 
 Downspout Hydraulics
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The downspout discharge can be simulated as a hydraulic structure identifying the inlet node on the roof and the outlet node on the ground and
 assigning an inlet control rating table.
@@ -2842,7 +2843,7 @@ Any number of downspouts can be simulated in any location on the building roof.
 Hydraulic Structure Dialog Box with Entered Downspout Data.*
 
 Verification Testing of the Building Roof Runoff Enhancements
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The building runoff enhancements were tested in two projects.
 Since both projects showed an identical response on different scales, only the results of the small scale, more detailed project will be presented.
@@ -3433,8 +3434,7 @@ still assigned, and the two bridge cross-sections are required.
 FLO-2D Model Bridge Inflow and Outflow Elements Separated Grid Elements.*
 
 Free Surface Flow
-^^^^^^^^^^^^^^^^^
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The most frequent discharge through a bridge is subcritical low flow or free surface flow.
 Typically, the bridge constricts the channel with abutments and piers, has higher flow resistance, and increases the wetted perimeter resulting in a
 departure from upstream normal flow depth condition (backwater effect.
@@ -3486,8 +3486,7 @@ The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959, p.
 
 where:
 
-        β = 1 - α\ :sub:`1` C\ :sup:`2` (A\ :sub:`2` /A\ :sub:`1`)\ :sup:`2` + 2gC\ :sup:`2` (A\ :sub:`2`/K\ :sub:`2`)\ :sup:`2` (L\ :sub:`B` +L\ :sub:`1-2`
-    K\ :sub:`2`/K\ :sub:`1`);
+        β = 1 - α\ :sub:`1` C\ :sup:`2` (A\ :sub:`2` /A\ :sub:`1`)\ :sup:`2` + 2gC\ :sup:`2` (A\ :sub:`2`/K\ :sub:`2`)\ :sup:`2` (L\ :sub:`B` +L\ :sub:`1-2`K\ :sub:`2`/K\ :sub:`1`);
 
     L\ :sub:`B` = length of contracted reach
 
@@ -3548,7 +3547,7 @@ The following assumptions have been acknowledged as potentially limiting the acc
          (ranging up to 1.5).
 
 Sluice Gate Flow
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once the water surface level reaches the low chord or soffit of the bridge, the water surface control switches from the channel to the bridge and the
 discharge mimics a sluice gate flow (Figure 3b).
@@ -3614,7 +3613,7 @@ with a correlation coefficient R\ :sup:`2` = 0.61.
 This equation is used in the FLO-2D model.
 
 Orifice Flow
-^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Orifice flow is defined by a pressure flow condition through the bridge where both the upstream and downstream water surface elevations are above the
 low chord (Y\ :sub:`u` > Z, Y\ :sub:`d` > Z) indicating a drowned opening (Figure 3d).
@@ -3652,7 +3651,7 @@ This equation is used in the FLO-2D model and results in a coefficient variabili
 This is compared with the sluice gate flow discharge coefficient, which ranges from about 0.4 to 0.5 as shown in Figure 126.
 
 Pressure Flow Plus Weir Flow
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once the flow is above the deck, then the total discharge through bridge Q\ :sub:`T` is the sum of the pressure flow (sluice gate or orifice flow)
 plus the weir flow over the bridge deck:
@@ -3702,7 +3701,7 @@ Then the free surface, pressure flow or weir flow equations compute the bridge d
 elements by the model’s routing algorithm.
 
 Data Requirements and Parameter Definition
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Two lines of data in the HYSTRUC.DAT file (B-lines) and two cross-sections are required for each bridge being simulated.
 The original S-Line in HYSTRUC.DAT identifies the bridge inflow and outflow nodes and its association with the either the channel or the floodplain.
