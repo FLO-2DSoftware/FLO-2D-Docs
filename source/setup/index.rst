@@ -1,4 +1,4 @@
-sphinSetup
+Setup
 =====
 
 .. toctree::
