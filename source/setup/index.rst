@@ -1,5 +1,5 @@
-Setup
-=====
+FLO-2D Installation & Setup
+============================
 
 .. toctree::
    :maxdepth: 2
