@@ -2,7 +2,7 @@ Widgets
 =========
 
 .. toctree::
-   :hidden:
+   :maxdepth: 1
 
    pre-processing-tools/Pre-Processing Tools
    grid-tools/Create a Grid
