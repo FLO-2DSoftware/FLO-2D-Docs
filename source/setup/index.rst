@@ -2,7 +2,7 @@ FLO-2D Installation & Setup
 ============================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption:
 
    flo-2d_pro_setup
