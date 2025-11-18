@@ -2,8 +2,7 @@ Tutorials
 =========
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Tutorials
+   :maxdepth: 1
 
    self_help_kit
    dam_breach_modeling
