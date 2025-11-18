@@ -1,4 +1,4 @@
-FLO-2D Plugin v0.10.115
+User Manual
 ========================
 
 .. toctree::
