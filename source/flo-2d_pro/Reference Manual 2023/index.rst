@@ -1,5 +1,5 @@
-Reference Manual
-=================
+FLO-2D Pro Reference Manual 2023
+==========================================
 
 .. toctree::
    :maxdepth: 1
