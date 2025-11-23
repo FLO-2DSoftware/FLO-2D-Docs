@@ -317,14 +317,13 @@ There are several mean velocity equations for open channel uniform flow and Mann
 
 where:
 
-    V = 
-       velocity
-    R = 
-       hydraulic radius
-    S = 
-       friction slope
-    n = 
-       Manning’s roughness coefficient.
+    V = velocity
+
+    R = hydraulic radius
+
+    S = friction slope
+
+    n = Manning’s roughness coefficient.
 
 The hydraulic radius exponent value (0.667) has been known to vary over a range from about 0.59 to 0.85 depending primarily on channel geometry and
 roughness (Chow, 1959).
@@ -414,22 +413,24 @@ The depth integrated roughness is given by the equation:
 .. math::
    :label:
 
+ .. math::
+   :label:
+
    n_d = n_b r_c e^{-r2 \frac{depth}{dmax}}
 
 where:
 
-    depth =
-       flow depth
-    dmax =
-       bankfull depth
-    n_b =
-       bankfull n-value
-    n_d =
-       n-value at the flow depth
-    r2 =
-       ROUGHADJ factor (0.2 – 0.4)
-    r_c =
-       1./e – (r2)
+    depth = flow depth
+
+    d\ :sub:`max` = bankfull depth
+
+    n\ :sub:`b` = bankfull n-value
+
+    n\ :sub:`d` = n-value at the flow depth
+
+    r2 = ROUGHADJ factor (0.2 – 0.4)
+
+    r\ :sub:`c` = 1./e – (r2)
 
 The bankfull n-value is defined as the n-value for a depth of 3 ft or 1 m for overland or floodplain and the ROUGHADJ default value is 0.4.
 The ROUGHADJ factor can be higher ranging up to 1.0 or more, but a typical range is from 0.2 to 0.4.
@@ -545,9 +546,9 @@ where:
 
     c = floodwave celerity = (gd)\ :sup:`0.5` where;
 
-        g is gravitation acceleration
+        g = gravitation acceleration
 
-        d is the flow depth
+        d = flow depth
 
 The Courant Number C can vary from 0.0 to 1.0 (recommended range 0.2 to 0.6), and a value of 1.0 in FLO-2D would enable the model to have the largest
 possible timestep.
@@ -699,7 +700,7 @@ where:
 
     V = velocity
 
-    ]S = bed slope.
+    S = bed slope.
 
 Recommended limiting Froude numbers are:
 

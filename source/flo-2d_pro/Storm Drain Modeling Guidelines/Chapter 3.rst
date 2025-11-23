@@ -1,10 +1,7 @@
 .. vim: syntax=rst
 
-Chapter 3
-==========
-
-FLO-2D Storm Drain Data Files
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Chapter 3 - FLO-2D Storm Drain Data Files
+==========================================
 
 Input and Output File - General
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

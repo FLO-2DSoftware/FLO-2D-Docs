@@ -1,10 +1,7 @@
 .. vim: syntax=rst
 
-Chapter 1
-==========
-
-FLO-2D Storm Drain Overview
-----------------------------------
+Chapter 1 - FLO-2D Storm Drain Overview
+==========================================
 
 The FLO-2D PRO two-dimensional flood routing model was integrated with the Environmental Protection Agency (EPA) Storm Water Management Model (SWMM)
 Version 5.0.022 in 2013.

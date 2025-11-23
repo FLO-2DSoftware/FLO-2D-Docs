@@ -1,13 +1,10 @@
 .. vim: syntax=rst
 
-Chapter 7
-~~~~~~~~~
-
-Porting a SWMM Model to the FLO-2D Storm Drain System
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Chapter 7 - Porting SWMM Data Files to a FLO-2D Storm Drain Model
+===========================================================================
 
 Introduction
-''''''''''''
+^^^^^^^^^^^^^^^^
 
 This chapter describes the porting procedure to modify and adapt the input data for a ‘standalone’ EPA SWMM Version 5.0.022 to the FLO-2D Pro storm
 drain model.

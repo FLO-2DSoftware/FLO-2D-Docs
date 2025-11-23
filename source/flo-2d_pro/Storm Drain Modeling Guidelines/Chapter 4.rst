@@ -1,10 +1,7 @@
 .. vim: syntax=rst
 
-Chapter 4
----------
-
-Guidelines Storm Drain Setup
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Chapter 4 - Guidelines Storm Drain Setup
+============================================
 
 To build a FLO-2D project with a storm drain, it is important to create a functional surface model first.
 This includes the following required components:
