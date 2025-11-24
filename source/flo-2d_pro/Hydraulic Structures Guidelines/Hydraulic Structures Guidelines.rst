@@ -170,7 +170,8 @@ When a rate table accelerates flow through hydraulic structure in the model, it 
 the outflow node storage.
 This changes the relationship between the headwater and tailwater can result in numerical surging through the structure (Figure 5).
 
-.. image:: img/Hydrau005.jpg
+.. image:: img/Hydrau005.png
+.. image:: img/Hydrau006.png
 
 *Figure 5.
 Hydraulic Structure Numerical Surging*
