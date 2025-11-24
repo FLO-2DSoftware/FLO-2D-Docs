@@ -61,7 +61,7 @@ Figure 3 shows an example of a storm drain integrated with a surface model on a 
 .. image:: img/Chapter1/Chapte003.jpg
 
 *Figure 3.
-A Typical Storm Drain System as Viewed in QGIS .**
+A Typical Storm Drain System as Viewed in QGIS .*
 
 FLO-2D Storm Drain Model Overview
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -493,7 +493,7 @@ Inlet Pressure Head with Dampening up to 1.25 Times the Lateral Pipe Diameter.*
 .. image:: img/Chapter1/Chapte025.jpg
 
 *Figure 16
-Water Elevation Profile at 03:18:00.**
+Water Elevation Profile at 03:18:00.*
 
 .. image:: img/Chapter1/Chapte013.jpg
 
