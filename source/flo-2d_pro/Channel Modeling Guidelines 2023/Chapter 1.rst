@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 
-Chapter 1
-==========
+Chapter 1 - Channel Overview
+================================
 
 This document supplements the FLO-2D Reference Manual, Data Input Manual and training materials such as the webinars and videos, lessons and short
 course PowerPoint presentations.
@@ -95,7 +95,7 @@ depths, identifying contiguous channel elements that do not share discharge, and
 adjustments.
 For data file example refer to the FLO-2D Data Input Manual.
 
-   *Rectangular*
+   **Rectangular**
 
 The rectangular channel geometry is defined by width, depth, and length of channel inside the grid element (Figure 2).
 
@@ -106,7 +106,7 @@ Rectangular Channel Geometry.*
 
 *Note: The channel bank elevations can be entered directly in the CHAN.DAT file for both rectangular and trapezoidal channels.*
 
-   *Trapezoidal*
+   **Trapezoidal**
 
 Similarly, the trapezoidal channels are defined by bottom width, channel depth and side slopes (ratio of horizontal to vertical) (Figure 3).
 Again, the channel length is the length inside the grid element.
@@ -128,7 +128,7 @@ Similar channel geometry is typically assigned by segment in CHAN.DAT.
 In urban areas, there may be a rectangular concrete channel that transitions to a natural cross-section.
 Trapezoidal tributaries represented by one segment can join a mainstem channel segment that has natural cross-section geometry.
 
-   *Natural*
+   **Natural**
 
 Actual river natural cross-sections can be modeled if the station and elevation data is available (Figure 4).
 Geo-referenced cross-section station and elevation data can be obtained by survey (land or bathymetry) or by cutting cross-sections from a digital
@@ -413,6 +413,9 @@ The depth integrated roughness is given by the equation:
 .. math::
    :label:
 
+ .. math::
+   :label:
+
    n_d = n_b r_c e^{-r2 \frac{depth}{dmax}}
 
 where:
@@ -543,9 +546,9 @@ where:
 
     c = floodwave celerity = (gd)\ :sup:`0.5` where;
 
-        g is gravitation acceleration
+        g = gravitation acceleration
 
-        d is the flow depth
+        d = flow depth
 
 The Courant Number C can vary from 0.0 to 1.0 (recommended range 0.2 to 0.6), and a value of 1.0 in FLO-2D would enable the model to have the largest
 possible timestep.
@@ -697,7 +700,7 @@ where:
 
     V = velocity
 
-    ]S = bed slope.
+    S = bed slope.
 
 Recommended limiting Froude numbers are:
 
