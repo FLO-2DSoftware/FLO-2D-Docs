@@ -1,7 +1,22 @@
 .. vim: syntax=rst
 
-FLO-2D Hydraulic Structure Guidelines
+Hydraulic Structure Guidelines
 ======================================
+
+Additional Resources
+---------------------
+
+Data, tutorials and examples related to hydraulic structures can be found in the following locations:
+
+    - FLO-2D Data Input Manual: HYSTRUC.DAT
+    
+    - FLO-2D Gila 1.0 User Manual Structures Editor
+
+    - Basic and Advanced Culverts: Self Help Lesson 2 and 6
+
+    - Bridge Tutorial: Advanced Module 3
+
+    - Example Projects: Rio Grande Riverine, and Urban
 
 Overview
 ---------
@@ -17,11 +32,16 @@ A hydraulic structure rating curve equation specifies discharge as a function of
 
    Q = a h\ :sup:`b`
 
-where: (a) is a regression coefficient and (b) is a regression exponent.
+where: 
+   a = regression coefficient 
+
+   b = regression exponent.
+
 More than one power regression relationship may be used for a hydraulic structure by specifying the maximum depth for which the relationship is valid.
 For example, one depth relationship can represent normal flow through a bridge and a second relationship can be used to simulate blockage with a zero
 coefficient for the height of the bridge low chord.
 Flow can also reverse and go upstream through a hydraulic structure.
+
 Hydraulic structures may include:
 
     - Broadcrested weir such as a berm or embankment (Figure 1);
@@ -50,6 +70,7 @@ Broadcrested Weir Equation for Modeling Hydraulic Structure Flow Over an Embankm
 By specifying a hydraulic structure rating table, the model interpolates between the depth and discharge increments to calculate the discharge.
 A typical rating curve will start with zero depth and zero discharge and increase in non-uniform increments to the maximum expected discharge or
 higher.
+
 In general, the rating table will be more accurate than the regression equation if the curve is nonlinear on a log-log plot of the depth and discharge.
 The rating table must be based on a reference elevation (Figure 2).
 Flow blockage by debris can be simulated by setting the discharge equal to zero corresponding to a prescribed depth.
@@ -59,7 +80,7 @@ Blockage forces all the discharge to flow overland on the fan or floodplain surf
 .. image:: img/Hydrau003.jpg
 
 *Figure 2.
-Levees are Depicted in Red and the River in Blue in the GDS Program*
+Levees are Depicted in Red and the River in Blue*
 
 For a simplified storm drain system, multiple inflow nodes can be assigned to the same outflow element.
 This will enable the cumulative storm drain discharge at the outlet to be assessed without conduit flow routing.
@@ -103,10 +124,11 @@ The data required for the generalized culvert equations include (Figure 4):
 
     - Roughness
 
-.. image:: img/Hydrau004.jpg
+.. image:: img/Hydrau005.png
+.. image:: img/Hydrau006.png  
 
 *Figure 4.
-GDS Dialog Box for Entering the Generalized Culvert Data*
+Generalized Culvert Data*
 
 Hydraulic structures may be used to allow flow to go through a levee.
 This might simulate a drainage hole in a block wall or a culvert through a highway embankment.
