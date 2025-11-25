@@ -475,7 +475,7 @@ ARF GDS / QGIS Comparison.*
    This makes the GDS WRFs look more conservative, but it isn’t necessary.
    GDS on the left and QGIS on the right (Figure 21).
 
-.. image:: ../img/technical_reference_manual/FLO022.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual021.jpg
 
 *Figure 21.
 WRF Redundancy GDS / QGIS Comparison.*
@@ -484,7 +484,7 @@ WRF Redundancy GDS / QGIS Comparison.*
    The GDS WRF on the left is calculated as 0.98.
    The QGIS WRF on the right is calculated at 0.44 and that is more accurate (Figure 22).
 
-.. image:: ../img/technical_reference_manual/FLO023.png
+.. image:: ../img/technical_reference_manual/tech_ref_manual022.png
 
 *Figure 22.
 WRF Calculator GDS / QGIS Comparison.*
@@ -495,7 +495,7 @@ Rainfall Interpolation Tool
 The *Rainfall Interpolation Tool* uses rainfall depth rasters like those provided by NOAA Atlas 14.
 The original raster resolution is on the order of 2000 by 2000 ft pixels (**Error! R eference source not found.**).
 
-.. image:: ../img/technical_reference_manual/FLO024.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual023.jpg
 
 *Figure 23.
 Rainfall 24hr 100yr NOAA Atlas 14.*
@@ -529,8 +529,10 @@ A rainfall reduction value is calculated for each element in the grid system usi
 
    RAIN\ :sub:`max` = The maximum rainfall for the raster in the project area.
 
-**Figure 24.
-Warped Rainfall Raster.**
+.. image:: ../img/technical_reference_manual/tech_ref_manual024.jpg
+
+*Figure 24.
+Warped Rainfall Raster.*
 
 Real-time Rainfall Sampling Tool (NEXRAD Data)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -550,7 +552,7 @@ grid files to import.
 There is one file for every 5 to 15 minutes of rainfall.
 Figure 25 shows the layout of a \*.asc file and a group of files.
 
-.. image:: ../img/technical_reference_manual/FLO025.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual025.jpg
 
 *Figure 25.
 NEXRAD Rainfall \*.ASC File Example.*
@@ -565,7 +567,7 @@ RAINCELL.DAT file or a binary RAINCELL.HDF5 file.
 These files contain the entire rainfall event.
 Figure 26 shows an example of the rainfall data file.
 
-.. image:: ../img/technical_reference_manual/FLO026.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual026.jpg
 
 *Figure 26.
 RAINCELL.DAT.*
@@ -615,7 +617,7 @@ The Calculate Green and Ampt Method intersects the landuse and soils polygons to
 from the external layers.
 Figure 27 shows the Compute Green-Ampt dialog for the FCDMC Method 2023.
 
-.. image:: ../img/technical_reference_manual/image28.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual027.jpg
 
 *Figure 27.
 Compute Green-Ampt dialog (FCDMC Method 2023)*
@@ -629,7 +631,7 @@ XKSAT
 XKXAT is the hydraulic conductivity in in/hr or mm/hr of the soil layer.
 Figure 28 shows the hydraulic conductivity of the soil layer.
 
-.. image:: ../img/technical_reference_manual/FLO027.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual028.jpg
 
 *Figure 28.
 Soil layer with XKSAT.*
@@ -653,7 +655,7 @@ The soil polygon is intersected with the grid polygon to provide the A\ :sub:`i`
 
 PSIF is the wetting front capillary suction in or mm of the soil layer (Figure 29).
 
-.. image:: ../img/technical_reference_manual/FLO028.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual029.jpg
 
 *Figure 29.
 Soil Layer with PSIF.*
@@ -680,7 +682,7 @@ DTHETA
 DTHETA is the soil moisture deficit.
 It ranges in value from zero to the effective porosity of the soil (Figure 30).
 
-.. image:: ../img/technical_reference_manual/FLO029.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual030.jpg
 
 *Figure 30.
 Soil Layer with DTHETA.*
