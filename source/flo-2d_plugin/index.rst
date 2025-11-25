@@ -1,5 +1,5 @@
-FLO-2D Plugin Gila
-====================
+FLO-2D Plugin Gila v1.0.0: Documentation
+========================================
 
 .. toctree::
    :maxdepth: 3
