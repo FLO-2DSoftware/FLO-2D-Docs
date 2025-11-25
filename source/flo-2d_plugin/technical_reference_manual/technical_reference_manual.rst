@@ -1884,7 +1884,6 @@ buildings_stats
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -1893,93 +1892,53 @@ buildings_stats
      - INTEGER
      - Unit fid is unique and not associated with the grid id.
 
+   * - **building_id **
+     - INTEGER
+     - ID of a unique building
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
+   * - **grnd_elev_avg**
+     - REAL
+     - Average elevation of the cells within the building footprint.
 
+   * - **grnd_elev_min**
+     - REAL
+     - Min elevation of the cells within the building footprint.
+
+   * - **grnd_elev_max**
+     - REAL
+     - Max elevation of the cells within the building footprint.
+
+   * - **floor_avg**
+     - REAL
+     - Average floor elevation.
+
+   * - **floor_min**
+     - REAL
+     - Min floor elevation.
+
+   * - **floor_max**
+     - REAL
+     - Max floor elevation.
 
    * - **water_elev_afb**
-     - REAL
+     - INTEGER
      - Average water surface elevation of the cells surrounding the building footprint.
-
-
-**building_id** INTEGER ID of a unique building.
-
-.. _`grnd_elev_avg`:
-
-grnd_elev_avg:
-
-REAL
-
-Average elevation of the cells within the building footprint.
-
-
-Min elevation of the cells
-
-**grnd_elev_min** REAL within the building foot-
-
-   print.
-
-.. _`grnd_elev_max`:
-
-grnd_elev_max:
-
-REAL
-
-Max elevation of the cells within the building footprint.
-
-.. _`floor_avg`:
-
-floor_avg:
-
-REAL
-
-Average floor elevation.
-
-.. _`floor_min`:
-
-floor_min:
-
-REAL
-
-Min floor elevation.
-
-
-**floor_max** REAL Max floor elevation.
-
-.. list-table::
-   :widths: 20 20 20 20 20
-   :header-rows: 0
-
 
    * - **water_elev_max**
      - REAL
      - Max water surface elevation of the cells surrounding the building footprint.
-     -
-     -
 
    * - **depth_afg**
-     -
      - REAL
-     - Average depth of th around the building
-     - cells ootprint.
+     - Average depth of th cells around the building  footprint.
 
+   * - **depth_min**
+     - REAL
+     - Average depth of the cells around the building footprint
 
-REAL Average depth of the cells
-
-**depth_min** around the building foot-
-
-   print.
-
-.. _`geom`:
-
-geom:
-
-POLYGON
-
-Polygon of the building footprint.
-
+   * - **geom**
+     - POLYGON
+     - Polygon of the building footprint.
 
 bridge_xs
 ^^^^^^^^^^^^^^
