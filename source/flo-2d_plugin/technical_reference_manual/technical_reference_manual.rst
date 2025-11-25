@@ -1587,12 +1587,11 @@ breach_fragility_curves
      - REAL
      - Levee fragility failure probability.
 
+   * - **prdepth**
+     - REAL
+     - The distance below levee crest paired with the failure probability.
 
-The distance below levee
 
-**prdepth** REAL crest paired with the fail-
-
-ure probability.
 
 .. _`gzu`:
 
