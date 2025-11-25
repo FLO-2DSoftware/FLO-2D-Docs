@@ -1121,9 +1121,7 @@ Figure 43 shows the *Storm Drain* dialog box.
 *Figure 43.
 Storm Drain Dialog Box.*
 
-QGIS can be used to create the storm drain shapefiles for Inlets/Junctions, Outfalls and
-
-Conduits.
+QGIS can be used to create the storm drain shapefiles for Inlets/Junctions, Outfalls and Conduits.
 These shapefiles contain all the required data to fill the Storm Drain data files (see FLO-2D Plugin User’s Manual and FLO-2D Storm Drain Manual for
 more information about the required data for each component).
 If the storm drain shapefiles exist, they can be imported into the QGIS project.
@@ -1135,7 +1133,7 @@ If the storm drain shapefiles do not exist, they can be digitized into *Storm Dr
 Storm Drain Shapefiles.*
 
 Storm Drain Components
-
+~~~~~~~~~~~~~~~~~~~~~~
 The Storm Drain Configuration Tool (Figure 45), is the main processing tool for storm drain development.
 The algorithms copy features and attributes from shapefiles into the storm drain tables and layers.
 This organizes the data in a manner that is ideal for the swmm.inp, SWMMFLO.DAT, and SWMMOUTF.DAT data files.
@@ -1163,6 +1161,7 @@ Changes to these dialog boxes automatically update the storm drain arrays.
 Review Attributes from Storm Drain Table.*
 
 Digitizing Storm Drain Features
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Storm Drain features can be created in QGIS for the development of the INP file.
 Point layer shapefiles must be created for Inlets/Junctions and outfalls.
@@ -1181,6 +1180,7 @@ SWMMFLO.DAT file, SWMMOUTF.DAT File and SWMMFLORT.DAT file will be created when 
 The Storm Drain component needs to be turned ON in the FLO-2D Control and Tolerance Variables.
 
 Importing existing \*.INP file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 An existing \*.INP file can be imported with the buttons in Figure 48 once the FLO-2D surface model has been already created.
 The *Storm Drain Editor* has an option to Import SWMM.inp that can be used to read an existing \*.INP file.
@@ -1195,6 +1195,7 @@ The storm drain features will be read from the \*.INP file and the *Inlets/Junct
 *Storm Drain Editor* will be completed.
 
 Auto assign nodes
+~~~~~~~~~~~~~~~~~
 
 The auto assign tool (Figure 49) scans the polyline data and finds the nodes at the upstream and downstream end.
 The node names fields from the Link tables are filled automatically.
@@ -1218,6 +1219,7 @@ Figure 50 shows the nodes next to each end of the link and the flow direction is
 Link Node and Flow Direction.*
 
 Rating Tables and Pump Curves
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The rating table and pump curve tools (Figure 51) can import or build tabular data for type 4 inlets and pumps.
 These tools are connected to the table and plotting windows shown in Figure 52.
@@ -1251,23 +1253,17 @@ The process to generate a Hazus raster is outlined in the User’s Manual.
 It requires the use of several general QGIS tools for importing, intersecting, calculating, and rasterizing data.
 The requirements and calculations are outlined below for each layer.
 
-- **Building** **layer** – This layer is used to define the building locations and set the building ID.
-
-- **Depth** **and water surface data** – FLO-2D results imported as text files.
-
-- **Assign water surface and depth** – This calculation process uses a simple Join feature to write the results into the Grid layer.
-
-- **Intersect buildings layer** – This QGIS process splits the building polygons into separate polygons for each grid element.
-
-- **Homogenize the building intersection layer** – This process joins the split buildings to the grid elevation, depth and water elevation data and
-  calculates statistics for the building.
-
-- **Join building statistics to building polygons** – This QGIS process writes the stats back to the Buildings layer.
-
-- **Rasterize** – This QGIS process rasterizes building depth and water surface data for Hazus.
+    - **Building** **layer** – This layer is used to define the building locations and set the building ID.
+    - **Depth** **and water surface data** – FLO-2D results imported as text files.
+    - **Assign water surface and depth** – This calculation process uses a simple Join feature to write the results into the Grid layer.
+    - **Intersect buildings layer** – This QGIS process splits the building polygons into separate polygons for each grid element.
+    - **Homogenize the building intersection layer** – This process joins the split buildings to the grid elevation, depth and water elevation data and
+      calculates statistics for the building.
+    - **Join building statistics to building polygons** – This QGIS process writes the stats back to the Buildings layer.
+    - **Rasterize** – This QGIS process rasterizes building depth and water surface data for Hazus.
 
 References
-------------
+-----------
 
 Library of Congress, 2017.
 Geopackage Encoding Standard (OGC), version 1.0, https://www.loc.gov/preservation/digital/formats/fdd/fdd000419.shtml
