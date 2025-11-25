@@ -1892,7 +1892,7 @@ buildings_stats
      - INTEGER
      - Unit fid is unique and not associated with the grid id.
 
-   * - **building_id **
+   * - **building_id**
      - INTEGER
      - ID of a unique building
 
