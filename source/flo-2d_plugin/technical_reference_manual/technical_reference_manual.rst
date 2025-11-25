@@ -376,7 +376,7 @@ The Levee Tool evaluates the ground elevation on each side of the levee and appl
 The failure elevation is calculated by adding the failure depth to the highest elevation on either side of the grid element.
 This condition can be seen on the right-hand side of Figure 15.
 
-.. image:: ../img/technical_reference_manual/FLO016.jpg
+.. image:: ../img/technical_reference_manual/FLO016.png
 
 *Figure 15.
 Grid Element Elevation and Wall Failure.*
