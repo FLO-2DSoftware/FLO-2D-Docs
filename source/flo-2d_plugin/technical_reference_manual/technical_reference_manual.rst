@@ -686,7 +686,7 @@ DTHETA represents the soil moisture capacity for the start of a rainfall event.
 The initial soil conditions vary with respect to landuse categories like irrigation or ponded water conditions.
 Initial saturation is part of the landuse data (see Figure 31).
 
-.. image:: ../img/technical_reference_manual/tech_ref_manual031.png
+.. image:: ../img/technical_reference_manual/tech_ref_manual031.jpg
 
 *Figure 31.
 Landuse with Initial Saturation Condition.*
@@ -694,7 +694,7 @@ Landuse with Initial Saturation Condition.*
 As a result, DTHETA is split into individual parts that represent the DTHETA (wet, dry or normal).
 DTHETA\ :sub:`wet` is zero, DTHETA\ :sub:`dry` and DTHETA\ :sub:`normal` are calculated for the soil layers for individual soil groups (Figure 32).
 
-.. image:: ../img/technical_reference_manual/tech_ref_manual032.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual032.png
 
 *Figure 32.
 DTHETA Dry and Normal.*
