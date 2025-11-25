@@ -511,23 +511,20 @@ The new raster has these properties:
 The new raster (figure 24) is sampled to the grid using the centroid.
 Raster statistics determine the maximum rainfall value (RAIN\ :sub:`max`).
 The final RAIN\ :sub:`arf` variable is calculated as a ratio of the local rain depth to the max rain depth.
-A rainfall reduction value is calculated for each element in the grid system using Eq.
-1.
+A rainfall reduction value is calculated for each element in the grid system using Eq.1.
 
-   𝑅𝐴𝐼𝑁\ :sub:`𝑔𝑟𝑖𝑑`
+.. math::
+    :label:
 
-𝑅𝐴𝐼𝑁\ :sub:`𝑎𝑟𝑓` = Eq.
-1
+    𝑅𝐴𝐼𝑁_{arf} = \frac{𝑅𝐴𝐼𝑁_{grid}}{𝑅𝐴𝐼𝑁_{max}}
 
-   𝑅𝐴𝐼𝑁\ :sub:`𝑚𝑎𝑥`
+where:
 
-   Where:
+    RAIN\ :sub:`arf` = A spatially reduced rainfall value
 
-   RAIN\ :sub:`arf` = A spatially reduced rainfall value
+    RAIN\ :sub:`grid` = The rainfall sampled from the centroid of the grid element.
 
-   RAIN\ :sub:`grid` = The rainfall sampled from the centroid of the grid element.
-
-   RAIN\ :sub:`max` = The maximum rainfall for the raster in the project area.
+    RAIN\ :sub:`max` = The maximum rainfall for the raster in the project area.
 
 .. image:: ../img/technical_reference_manual/tech_ref_manual024.jpg
 
