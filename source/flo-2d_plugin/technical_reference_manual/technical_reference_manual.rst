@@ -1334,7 +1334,7 @@ The ARF_WRF layer stores the data written to the ARF.DAT file.
      - Unique id not related to the grid element.
 
 
-   * - *grid_fid (igd / ittawf)**
+   * - **grid_fid (igd / ittawf)**
      - INTEGER
      - Grid element id of the cell.
 
@@ -1381,10 +1381,6 @@ The ARF_WRF layer stores the data written to the ARF.DAT file.
    * - **geom**
      - POINT
      - A point layer but the style of the layer is set up to look like blocked cells with 8 direction blockage.
-
-
-
-
 
 breach
 ^^^^^^^^
