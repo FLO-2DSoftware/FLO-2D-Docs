@@ -7140,7 +7140,7 @@ The feature is a point geometry that is assigned to the grid element closest to 
 
 
 tailing_cells
-=============
+^^^^^^^^^^^^^^^^^
 
 Table of data that stores the rating tables for individual inlets.
 This data is imported and exported from SWMMFLORT.DAT.
@@ -7169,7 +7169,7 @@ This data is imported and exported from SWMMFLORT.DAT.
 
 
 tolspatial
-==========
+^^^^^^^^^^^^^^^^^
 
 Table of data that stores the depth assigned to individual polygons.
 
@@ -7196,7 +7196,7 @@ Table of data that stores the depth assigned to individual polygons.
 
 
 tolspatial_cells
-================
+^^^^^^^^^^^^^^^^^
 
 Table of values that join the tolspatial polygons to grid elements.
 
@@ -7227,7 +7227,7 @@ Id of the grid element spatially joined to the tolspatial polygon.
 
 
 trigger_control
-===============
+^^^^^^^^^^^^^^^^^
 
 Table of data that lists a layer and sets a repaint control switch that is linked to the schematization buttons so that the layer is repainted when
 the layers are schematized.
@@ -7255,7 +7255,7 @@ the layers are schematized.
 
 
 user_1d_domain
-==============
+^^^^^^^^^^^^^^^^^
 
 Table of data assigned for a 1d layer.
 This table is not currently used by the plugin.
@@ -7278,7 +7278,7 @@ Unit fid is unique and not associated with the grid id.
    D layer.
 
 user_bc_lines
-=============
+^^^^^^^^^^^^^^^^^
 
 Table of data for the boundary control polylines in the user layers.
 Polyline features that define an inflow or outflow boundary control.
@@ -7306,7 +7306,7 @@ Polyline features that define an inflow or outflow boundary control.
 
 
 user_bc_points
-==============
+^^^^^^^^^^^^^^^^^
 
 Table of data for the boundary control points in the user layers.
 Point features that define an inflow or outflow boundary control.
@@ -7335,7 +7335,7 @@ This data is schematized to the BC Cells layer.
 
 
 user_bc_polygons
-================
+^^^^^^^^^^^^^^^^^
 
 Table of data for the boundary control polygons in the user layers.
 Polygon features that define an inflow or outflow boundary control.
@@ -7364,7 +7364,7 @@ This data is schematized to the BC Cells layer.
 
 
 user_blocked_areas
-==================
+^^^^^^^^^^^^^^^^^^
 
 Blocked areas table data for the Blocked Areas layer in the User Layer.
 This layer is used to calculate the Area and Width Reduction Factors.
@@ -7410,7 +7410,7 @@ Polygons that represent buildings or other blocked features.
 
 
 user_chan_n
-===========
+^^^^^^^^^^^^^^^^^
 
 Table of data that joins a natural cross section to a channel element.
 The data is saved and schematized to the Channel Tables.
@@ -7457,7 +7457,7 @@ Id of a channel cross section to join the data from the cross-section table to t
 **xsecname** TEXT Cross section name.
 
 user_chan_r
-===========
+^^^^^^^^^^^^^^^^^
 
 Table of data that stores channel geometry and joins a rectangular cross section to a channel element.
 The data is saved and schematized to the Channel Tables.
@@ -7504,7 +7504,7 @@ This table is edited by many processes:
 **fcd** REAL Cross-section depth.
 
 user_chan_t
-===========
+^^^^^^^^^^^^^^^^^
 
 Table of data that stores channel geometry and joins a trapezoidal cross section to a channel element.
 The data is saved and schematized to the Channel Tables.
@@ -7559,7 +7559,7 @@ This table is edited by many processes:
 **zr** REAL Right bank side slope.
 
 user_chan_v
-===========
+^^^^^^^^^^^^^^^^^
 
 Table of data that stores channel geometry and joins a variable cross section to a channel element.
 The data is saved and schematized to the Channel Tables.
@@ -7664,7 +7664,7 @@ This table is edited by many processes:
    ble top width
 
 user_effective_impervious_area
-==============================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A polygon layer of data that is intersected to the grid when infiltration calculator FCDMC method is used.
 The EFF \* 0.01 is multiplied by the RTIMP.
@@ -7696,7 +7696,7 @@ Correction value + will add
 **geom** POLYGON elevation correction and – will subtract correction.
 
 user_elevation_points
-=====================
+^^^^^^^^^^^^^^^^^^^^^
 
 Table of data assigned to the Elevation Points layer.
 This layer is used to define elevation of levee crests or correct elevations for specific grid elements.
@@ -7742,7 +7742,7 @@ Data processing is saved to the Levee and Grid layers.
 
 
 user_elevation_polygons
-=======================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Table of data assigned to the Elevation Polygons layer.
 This layer is used to define elevation of levee crests or correct elevations for specific grid elements.
@@ -7789,7 +7789,7 @@ Data processing is saved to the Levee and Grid layers.
 
 
 user_fpxsec
-===========
+^^^^^^^^^^^^^^^^^
 
 Table of data for the floodplain cross section user layer.
 This data is schematized to the Floodplain Cross Sections and Floodplain Cross Sections Cells layers.
@@ -7819,7 +7819,7 @@ This data is schematized to the Floodplain Cross Sections and Floodplain Cross S
 **geom** LINESTRING Geometry polyline.
 
 user_infiltration_areas
-=======================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Table of data for the infiltration user layer.
 This is a polygon layer digitized by the user to define spatially Green-Ampt, SCS curve number or Horton infiltration.
@@ -7925,7 +7925,7 @@ Notes.
 variable infiltration areas.
 
 user_left_bank
-==============
+^^^^^^^^^^^^^^^^^
 
 Data table for the left bank line.
 This data is schematized to the Channel Segments layer.
@@ -7977,7 +7977,7 @@ This data is schematized to the Channel Segments layer.
 
 
 user_levee_lines
-================
+^^^^^^^^^^^^^^^^^
 
 Table of variables for the levee lines in the user layer.
 It is also coupled to the Elevation Points layer to create 3-D center lines of levee data.
@@ -8047,7 +8047,7 @@ Horizontal failure rate.
 **geom** LINESTRING Multiline geometry.
 
 user_model_boundary
-===================
+^^^^^^^^^^^^^^^^^^^
 
 Table of data assigned to the Computational Domain layer.
 Computational domain layer is used to outline the project boundary and set the cell size.
@@ -8081,7 +8081,7 @@ The numbering is by column top to bottom.
 
 
 user_noexchange_chan_areas
-==========================
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 User polygon areas applied to left banks as no exchange channel cells.
 
@@ -8108,7 +8108,7 @@ User polygon areas applied to left banks as no exchange channel cells.
 
 
 user_reservoirs
-===============
+^^^^^^^^^^^^^^^^^
 
 Table of values that stores the data to be assigned as a reservoir node.
 This data is schematized to the Reservoirs layer.
@@ -8162,7 +8162,7 @@ A point feature represent-
    banks of the reservoir.
 
 user_right_bank
-===============
+^^^^^^^^^^^^^^^^^
 
 A layer that can be used to create a right bank defined by a polyline.
 
@@ -8195,7 +8195,7 @@ Polyline feature used to in-
 .. _user_right_bank-1:
 
 user_right_bank
-===============
+^^^^^^^^^^^^^^^^^
 
 Data table for the right bank line.
 This data is schematized to the Channel Segments layer.
@@ -8225,7 +8225,7 @@ This data is schematized to the Channel Segments layer.
 **geom** LINESTRING Geometry is a polyline.
 
 user_roughness
-==============
+^^^^^^^^^^^^^^^^^
 
 Table of data assigned to the Roughness layer.
 This layer can be used to set the roughness variable to individual cells or blocks of cells in the grid layer.
@@ -8261,7 +8261,7 @@ Polygon features of spa-
    data.
 
 user_spatial_froude
-===================
+^^^^^^^^^^^^^^^^^^^
 
 A layer used to create spatially variable limiting Froude polygons.
 
@@ -8292,7 +8292,7 @@ Polygon features of spa-
    **geom** POLYGON tially variable roughness data.
 
 user_spatial_shallown
-=====================
+^^^^^^^^^^^^^^^^^^^^^
 
 A layer used to create spatially variable shallow n polygons.
 
@@ -8323,7 +8323,7 @@ Polygon features of spa-
    **geom** POLYGON tially variable spatial shallow n data.
 
 user_spatial_tolerance
-======================
+^^^^^^^^^^^^^^^^^^^^^^
 
 A layer used to create spatially variable tolerance or LID polygons.
 
@@ -8354,7 +8354,7 @@ Polygon features of spa-
    **geom** POLYGON tially variable spatial shallow n data.
 
 user_streets
-============
+^^^^^^^^^^^^
 
 Table of data used to define the global data of street segments.
 This data is schematized to the Streets layer.
@@ -8404,7 +8404,7 @@ This data is schematized to the Streets layer.
    single street segment.
 
 user_struct
-===========
+^^^^^^^^^^^^^^^^^
 
 Table of data used to define hydraulic structure polylines.
 The polylines sole purpose is to define the inlet node and outlet node.
@@ -8431,7 +8431,7 @@ Unit fid is unique and not associated with the grid id.
    It does not reflect the exact location of the structure.
 
 user_swmm_conduits
-==================
+^^^^^^^^^^^^^^^^^^
 
 The user layer that stores storm drain conduit data.
 This data is written to the schematic layers.
@@ -8587,7 +8587,7 @@ Notes
 **geom** LINESTRING polyline geometry.
 
 user_swmm_nodes
-===============
+^^^^^^^^^^^^^^^
 
 The user layer that stores storm drain inlet, junction and outfall data.
 This data is written to the schematic layers.
@@ -8857,7 +8857,7 @@ TEXT
 **geom** POINT
 
 user_swmm_orifices
-==================
+^^^^^^^^^^^^^^^^^^
 
 The user layer that stores storm drain orifice data.
 This data is written to the schematic layers.
@@ -8928,7 +8928,7 @@ Polyline geometry.
 
 
 user_swmm_pumps
-===============
+^^^^^^^^^^^^^^^
 
 The user layer that stores storm drain pump data.
 This data is written to the schematic layers.
@@ -8980,7 +8980,7 @@ This data is written to the schematic layers.
 
 
 user_swmm_weirs
-===============
+^^^^^^^^^^^^^^^
 
 The user layer that stores storm drain weirs.
 This data is written to the schematic layers.
@@ -9067,7 +9067,7 @@ Polyline geometry.
 
 
 user_xsec_n_data
-================
+^^^^^^^^^^^^^^^^
 
 User cross section data including cross section number and station elevation pairs.
 
@@ -9096,7 +9096,7 @@ User cross section data including cross section number and station elevation pai
 **yi** REAL Cross section elevation.
 
 user_xsections
-==============
+^^^^^^^^^^^^^^
 
 Table of data assigned to Cross Sections layer.
 These cross sections are schematized to the Channel Cross Sections layer.
@@ -9218,7 +9218,7 @@ This data is imported from and exported to the WSURF.DAT file.
    face elevation.
 
 xsec_n_data
-===========
+^^^^^^^^^^^
 
 Cross section data for the schematic data.
 This data is written to the XSEC.DAT file when the project is exported.
