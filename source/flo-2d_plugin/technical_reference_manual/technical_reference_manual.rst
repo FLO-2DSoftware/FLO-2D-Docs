@@ -137,7 +137,7 @@ The Number Units and Coordinate Reference System (CRS) are established when the 
 Tool.
 The grid alignment is generally set to the extent of the computational domain, but it can be aligned to the raster as well as shown in Figure 4.
 
-.. image:: ../img/technical_reference_manual/FLO005.png
+.. image:: ../img/technical_reference_manual/tech_ref_manual04.png
 
 *Figure 4.
 Grid Element Alignment.*
@@ -158,7 +158,7 @@ The warp will transform the new raster into the grid coordinate system.
 If the elevation layer has the wrong units i.e., meters vs ft, convert the raster to the correct units with the raster calculator before running the
 elevation from raster processing tool.
 
-.. image:: ../img/technical_reference_manual/FLO006.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual05.jpg
 
 *Figure 5.
 Raster Elevation Dialog Box.*
@@ -173,7 +173,7 @@ Elevation from LiDAR
 The *Elevation from LiDAR* calculator uses a direct average of the points within each cell.
 (Figure 6).
 
-.. image:: ../img/technical_reference_manual/FLO007.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual06.jpg
 
 *Figure 6.
 Point Elevation Dialog Box.*
@@ -186,14 +186,14 @@ Point Elevation Dialog Box.*
    Please remember that there are many excellent LiDAR processing tools available, and this tool is fast and accurate so long as there aren’t too many
    very large buildings, overpasses, or bridges.
 
-.. image:: ../img/technical_reference_manual/FLO008.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual07.jpg
 
 *Figure 7.
 Interpolate Empty Cells Dialog.*
 
 Figure 8 shows the elevation interpolation before the missing cell correction, after the missing cell correction and the raster warp.
 
-.. image:: ../img/technical_reference_manual/FLO009.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual08.jpg
 
 *Figure 8.
 Results Test Case 5.*
@@ -218,7 +218,7 @@ The following User Layer corrections are available (Figure 6):
     - Elevation polygons attributes
     - Grid statistics within blocked areas
 
-.. image:: ../img/technical_reference_manual/FLO010.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual09.jpg
 
 *Figure 9.
 Correct Elevation Dialog Box.*
@@ -259,7 +259,7 @@ The grid element correction from *External Layers Mode* offers several methods t
 that can be imported into the FLO-2D Project in QGIS (Figure 10).
 The tool uses the same correction calculations discussed above in the *User Layers Mode* but applies them to imported polygon layers.
 
-.. image:: ../img/technical_reference_manual/FLO011.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual010.jpg
 
 *Figure 10.
 Correct Grid Elevation Dialog Box.*
