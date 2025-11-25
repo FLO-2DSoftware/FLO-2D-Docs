@@ -1592,40 +1592,6 @@ breach_fragility_curves
      - The distance below levee crest paired with the failure probability.
 
 
-
-.. _`gzu`:
-
-gzu:
-
-REAL
-
-Upstream face slope.
-
-.. _`gzd`:
-
-gzd:
-
-REAL
-
-Downstream face slope.
-
-.. _`gzc`:
-
-gzc:
-
-REAL
-
-Upstream and downstream core slope.
-
-.. _`gcrestwidth`:
-
-gcrestwidth:
-
-REAL
-
-Crest width of the dam or levee.
-
-
 breach_global
 ^^^^^^^^^^^^^^
 
@@ -1642,37 +1608,37 @@ breach_global
      - INTEGER
      - Unit fid is unique and not associated with the grid id.
 
+   * - **ibreachsedeqn**
+     - INTEGER
+     - Unit fid is unique and not associated with the grid id.
 
-..
+   * - **gbratio**
+     - REAL
+     - The ratio of the initial breach width to breach depth.
 
-   Breach sediment transport **ibreachsedeqn** INTEGER
+   * - **gweircoef**
+     - REAL
+     - Weir coefficient
 
-   equation.
+   * - **gbreachtime**
+     - REAL
+     - Time to start of erosion from when pipe elevation is reached.
 
-.. _`gbratio`:
+   * - **gzu**
+     - REAL
+     - Upstream face slope.
 
-gbratio:
+   * - **gzd**
+     - REAL
+     - Downstream face slope.
 
-REAL
+   * - **gzc**
+     - REAL
+     - Upstream and downstream core slope.
 
-The ratio of the initial breach width to breach depth.
-
-
-**gweircoef** REAL Weir coefficient.
-
-.. _`gbreachtime`:
-
-gbreachtime:
-
-REAL
-
-Time to start of erosion from when pipe elevation is reached.
-
-
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
-
+   * - **gcrestwidth**
+     - REAL
+     - Crest width of the dam or levee.
 
    * - **gcrestlength**
      - REAL
@@ -1722,96 +1688,53 @@ Time to start of erosion from when pipe elevation is reached.
      - REAL
      - Mean sediment size shell.
 
+   * - **gpors**
+     - REAL
+     - The porosity of the shell.
 
-**gpors** REAL The porosity of the shell.
+   * - **guws**
+     - REAL
+     - Unit weight shell.
 
-.. _`guws`:
+   * - **gcns**
+     - REAL
+     - Manning’s n shell.
 
-guws:
+   * - **gafrs**
+     - REAL
+     - Angle of internal friction shell.
 
-REAL
+   * - **gcohs**
+     - REAL
+     - Cohesive strength shell.
 
-Unit weight shell.
+   * - **ggrasslength**
+     - REAL
+     - Sediment gradient shell.
 
-.. _`gcns`:
+   * - **gunfcs**
+     - REAL
+     - Average grass length on downstream face.
 
-gcns:
+   * - **ggrasscond**
+     - REAL
+     - Condition of grass. Poor or Good.
 
-REAL
+   * - **ggrassvmaxp**
+     - REAL
+     - Maximum permissible velocity for grass lined downstream face.
 
-Manning’s n shell.
+   * - **gsedconmax**
+     - REAL
+     - Maximum sediment concentration.
 
-.. _`gafrs`:
+   * - **d50df**
+     - REAL
+     - Mean sediment size of the downstream upper one foot face.
 
-gafrs:
-
-REAL
-
-Angle of internal friction shell.
-
-.. _`gcohs`:
-
-gcohs:
-
-REAL
-
-Cohesive strength shell.
-
-.. _`gunfcs`:
-
-gunfcs:
-
-REAL
-
-Sediment gradient shell.
-
-.. _`ggrasslength`:
-
-ggrasslength:
-
-REAL
-
-Average grass length on downstream face.
-
-.. _`ggrasscond`:
-
-ggrasscond:
-
-REAL
-
-Condition of grass.
-Poor or Good.
-
-.. _`ggrassvmaxp`:
-
-ggrassvmaxp:
-
-REAL
-
-Maximum permissible velocity for grass lined downstream face.
-
-.. _`gsedconmax`:
-
-gsedconmax:
-
-REAL
-
-Maximum sediment concentration.
-
-
-Mean sediment size of the
-
-**d50df** REAL downstream upper one
-
-   foot face.
-
-.. _`gunfcdf`:
-
-gunfcdf:
-
-REAL
-
-Sediment gradient of the downstream upper one foot face.
+   * - **gunfcdf**
+     - REAL
+     - Sediment gradient of the downstream upper one foot face.
 
 
 bridge_variables
