@@ -2041,52 +2041,39 @@ chan_confluences
 Table of data associated with the Channel Confluences layer in the Schematic Layers group.
 This table identifies the connecting channel cells and identifies if a confluence cell is a tributary or main channel element.
 
-**Field Name Field Type Description**
-
-.. _`fid`:
-
-fid:
-
-INTEGER
-
-Unit fid is unique and not associated with the grid id, confluence or the channel id.
-
-.. _`conf_fid`:
-
-conf_fid:
-
-| INTEGER |
-
-Id of confluence pair.
-
-.. _`type`:
-
-type:
-
-| TEXT
-
-Tributary or Main.
-
-.. _`chan_elem_fid(iiconflo2)`:
-
-chan_elem_fid(iiconflo2):
-
-onflo1,**    | INTEGER | | |
-
-Left or right bank id of the channel cell being connected.
-
-.. _`notes`:
-
-notes:
-
-| TEXT
-
-Notes.
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
 
-Point associated with the
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-**geom** POINT channel cell for a tributary or main element.
+   * - **fid**
+     - INTEGER
+     - Unit fid is unique and not associated with the grid id, confluence or the channel id.
+
+   * - **conf_fid**
+     - INTEGER
+     - Id of confluence pair.
+
+   * - **type**
+     - TEXT
+     - Tributary or Main.
+
+   * - **chan_elem_fid(iconflo1, iconflo2)**
+     - INTEGER
+     - Left or right bank id of the channel cell being connected.
+
+   * - **notes**
+     - TEXT
+     - Notes
+
+   * - **geom**
+     - POINT
+     - Point associated with the channel cell for a tributary or main element.
+
 
 chan_elems
 ^^^^^^^^^^
