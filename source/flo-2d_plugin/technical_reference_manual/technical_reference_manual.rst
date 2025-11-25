@@ -851,16 +851,23 @@ Green-Ampt dialog (FCDMC Method 2018)*
 For each grid element, compute wetting front capillary suction PSIF according to the following regressions as a function of *XKSAT* (Generated from
 Figure 4.3 of the Maricopa County Drainage Design Manual, 2018).
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+.. raw:: html
 
+   <table style="border-collapse: collapse; width: 100%;">
+     <tr>
+       <th style="border: 1px solid #000; padding: 4px;">XKSAT (in/hr)</th>
+       <th style="border: 1px solid #000; padding: 4px;">PSIF (in)</th>
+     </tr>
+     <tr>
+       <td style="border: 1px solid #000; padding: 4px;">
+         <pre>0.01 ≤ XKSAT ≤ 1.2</pre>
+       </td>
+       <td style="border: 1px solid #000; padding: 4px;">
+         <pre>PSIF = EXP(0.9813 - 0.439*Ln(XKSAT) + 0.0051(Ln(XKSAT))^2 + 0.0060(Ln(XKSAT))^3)</pre>
+       </td>
+     </tr>
+   </table>
 
-   * - XKSAT (in/hr)
-     - PSIF (in)
-
-   * - 0.01  XKSAT  1.2
-     - PSIF=EXP(0.9813-  0.439*Ln(XKSAT)+0.0051(Ln(xksat))\ :sup:`2`\ +0.0060(Ln(XKSAT))\ :sup:`3`)
 
 
 For each grid element, compute volumetric soil moisture deficiency *(DTHETA)* according to the following table.
