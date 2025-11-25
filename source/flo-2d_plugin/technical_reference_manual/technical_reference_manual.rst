@@ -710,9 +710,9 @@ The general calculations are as follows:
 
     where:
 
-       *DTHETA\ i* is taken from the intersected landsoil DTHETA\ :sub:`parts`.
+       DTHETA\ :sub:`i` is taken from the intersected landsoil DTHETA\ :sub:`parts`.
 
-       *A\ i* is the subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* is the grid element area.
+       A\ :sub:`i` is the subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* is the grid element area.
 
        If a grid element is within by a “wet” or “saturated” polygon, the DTHETA for that grid = 0.
 
@@ -795,10 +795,8 @@ The general calculations are as follows:
     *Figure 35.
     Landuse with Vegetative Cover.*
 
-    It is used to adjust *XKSAT* (Eq.
-    2) as a function of the vegetation cover VC (Eq.8) from the landuse table when XSAT < 0.4 in/hr.
-    This requires a computation of the ratio of the hydraulic conductivity for the vegetative cover to the bare ground hydraulic conductivity (Eq.
-    9):
+    It is used to adjust *XKSAT* (Eq.2) as a function of the vegetation cover VC (Eq.8) from the landuse table when XSAT < 0.4 in/hr.
+    This requires a computation of the ratio of the hydraulic conductivity for the vegetative cover to the bare ground hydraulic conductivity (Eq.9):
 
     .. math::
        :label:
@@ -825,8 +823,7 @@ The general calculations are as follows:
     *Figure 36.
     Landuse with Initial Abstraction.*
 
-    The intersection between the landuse and grid element gives an area weighted average for the initial abstraction (Eq.
-    10):
+    The intersection between the landuse and grid element gives an area weighted average for the initial abstraction (Eq.10):
 
     .. math::
        :label:
@@ -835,7 +832,7 @@ The general calculations are as follows:
 
     where:
 
-        *IA\ i* is the initial abstraction in the subarea *A\ i* intercepted by the element
+        IA\ :sub:`i is the initial abstraction in the subarea *A\ i* intercepted by the element
         and is based on the 3\ :sup:`rd` column of the landuse table.
         The intercepted subareas are computed using the landuse shape file and
         *IABSTR* is added to the INFIL.DAT file for each element.
