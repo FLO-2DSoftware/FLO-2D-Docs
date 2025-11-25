@@ -2225,8 +2225,9 @@ Table that stores the data that links natural cross-sections to left bank elemen
      - INTEGER
      - Natural cross section number.
 
-
-**xsecname** TEXT Cross section name.
+   * - **xsecname**
+     - TEXT
+     - Cross section name.
 
 chan_r
 ^^^^^^
