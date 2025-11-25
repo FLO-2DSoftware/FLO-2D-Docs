@@ -642,14 +642,13 @@ The general calculations are as follows:
 
        {\overline{XKSAT}}_{grid} = 10\ \hat{}\ \left( \frac{\Sigma A_{i}*log({XKSAT}_{i})}{A_{ge}} \right)
 
-    Where:
+    where:
 
        *XKSAT\ i* is obtained from the soil attribute table.
 
        *A\ i* is the subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* is the grid element area.
 
     **PSIF**
-
 
     PSIF is the wetting front capillary suction in or mm of the soil layer (Figure 29).
 
@@ -666,7 +665,7 @@ The general calculations are as follows:
 
        {\overline{PSIF}}_{grid} = 10\ \hat{}\ \left ( \frac{\Sigma A_{i}*log({PSIF}_{i})}{A_{ge}} \right)
 
-    Where:
+    where:
 
        *PSIF\ i* is obtained from the soil attribute table.
 
@@ -709,7 +708,7 @@ The general calculations are as follows:
 
        {\overline{DTHETA}}_{\mathbf{grid}} = \left( \frac{\Sigma A_{i}*{DTHETA}_{i}}{A_{ge}} \right)
 
-    Where:
+    where:
 
        *DTHETA\ i* is taken from the intersected landsoil DTHETA\ :sub:`parts`.
 
