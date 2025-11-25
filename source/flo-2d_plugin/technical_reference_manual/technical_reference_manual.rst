@@ -1434,207 +1434,109 @@ It can be edited in the Breach layer of the Schematic Layers group.
      - REAL
      - Maximum breach width at the top of the breach.
 
-
-..
-
-   68 QGIS Plugin Technical Manual
-
-.. _`brbottomel`:
-
-brbottomel:
-
-REAL
-
-Minimum erosion elevation of the breach.
-
-.. _`weircoef`:
-
-weircoef:
-
-REAL
-
-Weir coefficient.
-
-.. _`d50c`:
-
-d50c:
-
-REAL
-
-Mean sediment size core.
-
-.. _`porc`:
-
-porc:
-
-REAL
-
-The porosity of the core material.
-
-.. _`uwc`:
-
-uwc:
-
-REAL
-
-Unit weight core.
-
-.. _`cnc`:
-
-cnc:
-
-REAL
-
-Manning’s n core.
-
-.. _`afrc`:
-
-afrc:
-
-REAL
-
-Angle of internal friction core.
-
-.. _`cohc`:
-
-cohc:
-
-REAL
-
-Cohesive strength core.
-
-.. _`unfcc`:
-
-unfcc:
-
-REAL
-
-Sediment gradient core.
-
-.. _`d50s`:
-
-d50s:
-
-REAL
-
-Mean sediment size shell.
-
-.. _`pors`:
-
-pors:
-
-REAL
-
-The porosity of the shell.
-
-.. _`uws`:
-
-uws:
-
-REAL
-
-Unit weight shell.
-
-
-**cns** REAL Manning’s n shell.
-
-.. _`afrs`:
-
-afrs:
-
-REAL
-
-Angle of internal friction shell.
-
-.. _`cohs`:
-
-cohs:
-
-REAL
-
-Cohesive strength shell.
-
-.. _`unfcs`:
-
-unfcs:
-
-REAL
-
-Sediment gradient shell.
-
-.. _`bratio`:
-
-bratio:
-
-REAL
-
-The ratio of initial breach width to depth.
-
-.. _`grasslength`:
-
-grasslength:
-
-REAL
-
-Average grass length on downstream face.
-
-
-..
-
-   The condition of the grass.
-   **grasscond** REAL
-
-   Poor or Good.
-
-.. _`grassvmaxp`:
-
-grassvmaxp:
-
-REAL
-
-Maximum permissible velocity for the the grasslined downstream face.
-
-
-..
-
-   Maximum sediment con\ **sedconmax** REAL
-
-   centration.
-
-.. _`d50df`:
-
-d50df:
-
-REAL
-
-Mean sediment size of the downstream upper one foot face.
-
-
-Sediment gradient of the
-
-**unfcdf** REAL downstream upper one
-
-   foot face.
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
-
-   * - **breachtime** REAL
-     - Length of time between the initial breach condition
-
-   * - 70                      |    QGIS Plugin Technical Manual
-     -
-
-
-..
-
-   and the start of the breach.
-
-   Breach layer is a point **geom** POINT
-
-   layer.
+   * - **brbottomel**
+     - REAL
+     - Minimum erosion elevation of the breach.
+
+   * - **weircoef**
+     - REAL
+     - Weir coefficient.
+
+   * - **d50c**
+     - REAL
+     - Mean sediment size core.
+
+   * - **porc**
+     - REAL
+     - The porosity of the core material.
+
+   * - **uwc**
+     - REAL
+     - Unit weight core.
+
+   * - **cnc**
+     - REAL
+     - Manning’s n core.
+
+   * - **afrc**
+     - REAL
+     - Angle of internal friction core.
+
+   * - **unfcc**
+     - REAL
+     - Cohesive strength core.
+
+   * - **cohc**
+     - REAL
+     - Sediment gradient core.
+
+   * - **d50s**
+     - REAL
+     - Mean sediment size shell.
+
+   * - **pors**
+     - REAL
+     - The porosity of the shell.
+
+   * - **uws**
+     - REAL
+     - Unit weight shell.
+
+   * - **cns**
+     - REAL
+     - Manning’s n shell.
+
+   * - **afrs**
+     - REAL
+     - Angle of internal friction shell.
+
+   * - **cohs**
+     - REAL
+     - Cohesive strength shell.
+
+   * - **unfcs**
+     - REAL
+     - Sediment gradient shell.
+
+   * - **bratio**
+     - REAL
+     - The ratio of initial breach width to depth.
+
+   * - **grasslength**
+     - REAL
+     - Average grass length on downstream face.
+
+   * - **grasslength**
+     - REAL
+     - Average grass length on downstream face.
+
+   * - **grasscond**
+     - REAL
+     - The condition of the grass. Poor or Good.
+
+   * - **grassvmaxp**
+     - REAL
+     - Maximum permissible velocity for the the grasslined downstream face.
+
+   * - **sedconmax**
+     - REAL
+     - Maximum sediment concentration.
+
+   * - **d50df**
+     - REAL
+     - Mean sediment size of the downstream upper one foot face.
+
+   * - **unfcdf**
+     - REAL
+     - Sediment gradient of the downstream upper one foot face.
+
+   * - **breachtime**
+     - REAL
+     - Length of time between the initial breach condition and the start of the breach.
+
+   * - **geom**
+     - POINT
+     - Breach layer is a point layer.
 
 breach_cells
 ^^^^^^^^^^^^^
