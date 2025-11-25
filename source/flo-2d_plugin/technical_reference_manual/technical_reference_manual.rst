@@ -34,7 +34,7 @@ FLO-2D uses \*.dat or \*.hdf5 files.
 These files are exported from the \*.gpkg database.
 Figure 1 shows the layout of the layers and tables in QGIS that are used by the FLO-2D Plugin.
 
-.. image:: ../img/technical_reference_manual/FLO002.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual01.jpg
 
 *Figure 1.
 Overview of the QGIS Layout and Layer Structure.*
@@ -59,13 +59,13 @@ FLO-2D Plugin
 ---------------
 
 Python Plugin
-^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 The FLO-2D Plugin is built with python code.
 The code is open source and available for any programmer to review or edit.
 The code is stored in the flo2d directory of the qgis/python/plugins folder (Figure 2).
 
-.. image:: ../img/technical_reference_manual/FLO003.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual02.jpg
 
 *Figure 2.
 Plugin Folder.*
@@ -128,7 +128,7 @@ The cells of the grid are individual polygons ordered by row and column.
 Only polygons that intersect the *Computation Domain* layer are created.
 The default numbering system is in order of row and then column (Figure 3).
 
-.. image:: ../img/technical_reference_manual/FLO004.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual03.jpg
 
 *Figure 3.
 Grid Numbering Scheme.*
