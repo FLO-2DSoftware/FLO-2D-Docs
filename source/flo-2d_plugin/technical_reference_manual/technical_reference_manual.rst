@@ -2974,7 +2974,7 @@ Coefficient top width (depth 2) c11.
 
 ..
 
-   Exponent top width (depth **c22** REAL2) c22.
+Exponent top width (depth **c22** REAL2) c22.
 
 chan_wsel
 ^^^^^^^^^
