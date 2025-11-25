@@ -2182,12 +2182,9 @@ They are Schematic_tools.py and flo2dobjects.py.
      - INTEGER
      - Id of the downstream cross section.
 
-   * - **up_lo_dist_left** | REAL|||
+   * - **up_lo_dist_left**
+     - REAL
      - Distance from upstream cross section to current cross section.
-     - |          |
-       |          |
-       |          |
-       |          |
 
    * - **up_lo_dist_right**
      - REAL
@@ -2196,7 +2193,6 @@ They are Schematic_tools.py and flo2dobjects.py.
    * - **up_dist_left**    | REAL
      - Distance from left ban
      - to center.
-       |          |
 
    * - **up_dist_right**
      - REAL
