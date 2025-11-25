@@ -625,8 +625,8 @@ This method follows the guidelines in the FCDMC Hydrology Manual from 2023 (FCDM
 The difference between this method and the 2018 method is the Log Average of PSIF.
 The general calculations are as follows:
 
-    XKSAT
-    ```````
+    **XKSAT**
+
     XKXAT is the hydraulic conductivity in in/hr or mm/hr of the soil layer.
     Figure 28 shows the hydraulic conductivity of the soil layer.
 
@@ -648,8 +648,8 @@ The general calculations are as follows:
 
        *A\ i* is the subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* is the grid element area.
 
-    PSIF
-    ```````
+    **PSIF**
+
 
     PSIF is the wetting front capillary suction in or mm of the soil layer (Figure 29).
 
@@ -672,8 +672,8 @@ The general calculations are as follows:
 
        *A\ i* is subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* the grid element area.
 
-    DTHETA
-    ````````
+    **DTHETA**
+
     DTHETA is the soil moisture deficit.
     It ranges in value from zero to the effective porosity of the soil (Figure 30).
 
@@ -717,8 +717,8 @@ The general calculations are as follows:
 
        If a grid element is within by a “wet” or “saturated” polygon, the DTHETA for that grid = 0.
 
-    RTIMP
-    ```````
+    **RTIMP**
+
     RTIMP is the percent impervious of the landuse (paved surfaces, buildings) and the soil (rockout).
     Figure 33 shows the rock out percentages for the landuse layer.
 
@@ -731,9 +731,12 @@ The general calculations are as follows:
     RTIMP\ :sub:`natural`.
     The RTIMP\ :sub:`max` is given by Eq.5.
 
-    𝑅𝑇𝐼𝑀𝑃𝑚𝑎𝑥 = 𝑚𝑎𝑥(𝑅𝑇𝐼𝑀𝑃𝑙𝑎𝑛𝑑,𝑅𝑇𝐼𝑀𝑃𝑛𝑎𝑡𝑢𝑟𝑎𝑙) Eq.5
+    .. math::
+       :label:
 
-       Where:
+       {RTI MP}_{\max} = \max({RTIMP}_{land,\ }{RTIMP}_{natural})
+
+    where:
 
        RTIMP\ :sub:`max` is the maximum impervious value of the intersection between the landuse data and the soil data.
 
@@ -742,17 +745,15 @@ The general calculations are as follows:
        RTIMP\ :sub:`natural` is percent impervious of the rock outcrop.
 
     RTIMP\ :sub:`grid` is the intersection of the land_soil and the grid.
-    This is an area weighted average impervious decimal calculation (Eq.
-    6) for each grid element.
+    This is an area weighted average impervious decimal calculation (Eq.6) for each grid element.
 
-       (𝛴𝑅𝑇𝐼𝑀𝑃𝑚𝑎𝑥 ∗ (𝐴𝑖))
+    .. math::
+       :label:
 
-    𝐴\ :sub:`𝑔𝑒` Eq.
-    6
+       {RTIMP}_{grid} = \ \frac{\left( \frac{\Sigma{RTIMP}_{\max}*(A_{i})}{A_{ge}} \right)}{100}
 
-       𝑅𝑇𝐼𝑀𝑃\ :sub:`𝑔𝑟𝑖𝑑`
 
-       Where:
+    where:
 
        RTIMP\ :sub:`grid` is the final decimal percent impervious for each grid element.
        RTIMP\ :sub:`max` is the maximum impervious polygon intersected from the land_soil intersection.
@@ -762,13 +763,14 @@ The general calculations are as follows:
        A\ :sub:`ge` is the area of the grid element.
 
     RTIMP\ :sub:`final` is an intersection of the EFF Areas layer and the Grid.
-    Any centroid within an EFF polygon is applied to an EFF or effectiveness of the impervious field (Eq.
-    7).
+    Any centroid within an EFF polygon is applied to an EFF or effectiveness of the impervious field (Eq.7).
 
-    𝑅𝑇𝐼𝑀𝑃\ :sub:`𝑓𝑖𝑛𝑎𝑙` = (𝑅𝑇𝐼𝑀𝑃\ :sub:`𝑔𝑟𝑖𝑑` ∗ (𝐸𝐹𝐹 ∗ .01)) Eq.
-    7
+    .. math::
+       :label:
 
-       Where:
+       {RTIMP }_{final} = \ \left( {RTIMP}_{grid}*(EFF*.01) \right)
+
+    where:
 
        RTIMP\ :sub:`final` is the effective imperviousness of the grid element.
 
@@ -784,8 +786,7 @@ The general calculations are as follows:
     *Figure 34.
     Example INFIL.DAT file.*
 
-    VC
-    ````
+    **VC**
 
     VC is the vegetative cover related to the topsoil horizon.
     Figure 35 shows the vegetative cover of the landuse layer.
@@ -796,28 +797,26 @@ The general calculations are as follows:
     Landuse with Vegetative Cover.*
 
     It is used to adjust *XKSAT* (Eq.
-    2) as a function of the vegetation cover VC (Eq.
-    8) from the landuse table when XSAT < 0.4 in/hr.
+    2) as a function of the vegetation cover VC (Eq.8) from the landuse table when XSAT < 0.4 in/hr.
     This requires a computation of the ratio of the hydraulic conductivity for the vegetative cover to the bare ground hydraulic conductivity (Eq.
     9):
 
-    𝐶\ :sub:`𝐾` = (𝑉𝐶\ :sup:`𝐾 − 10)`) + 1 Eq.
-    8
+    .. math::
+       :label:
 
-       90
+       C_{K} = \left( \frac{{VC}_{K} - 10)}{90} \right) + 1
 
-    𝑋𝐾𝑆𝐴𝑇𝐶 = 𝑋𝐾𝑆𝐴𝑇 ∑ 𝑃𝑘𝐶𝑘 Eq.
-    9
+    .. math::
+       :label:
 
-       𝑘
+       XKSATC = XKSAT\ \sum_{k}^{}{P_{k}C_{k}}
 
-       Where:
+    where:
 
-    P\ :sub:`k` is the percentage of the area within the grid element corresponding to C\ :sub:`k` and XKSATC for each grid element is written in the
-    INFIL.DAT file.
+        P\ :sub:`k` is the percentage of the area within the grid element corresponding to C\ :sub:`k` and XKSATC for each grid element is written in the
+        INFIL.DAT file.
 
-    IA
-    ``
+    **IA**
 
     IA is the initial abstraction for each grid element.
     Figure 36 shows the initial abstraction for the landuse layer.
@@ -830,20 +829,17 @@ The general calculations are as follows:
     The intersection between the landuse and grid element gives an area weighted average for the initial abstraction (Eq.
     10):
 
-    𝐼𝐴𝐵𝑆𝑇𝑅
+    .. math::
+       :label:
 
-    Eq.
-    10
+       IABSTR\  = \left( \frac{\sum_{}^{}{A_{i}({IA}_{i})}}{A_{GE}} \right)
 
-       𝐴𝐺𝐸
+    where:
 
-       where:
-
-           *IA\ i* is the initial abstraction in the subarea *A\ i* intercepted by the element and is based on the 3\ :sup:`rd` column of the landuse table.
-
-           The intercepted subareas are computed using the landuse shape file and
-
-       *IABSTR* is added to the INFIL.DAT file for each element.
+        *IA\ i* is the initial abstraction in the subarea *A\ i* intercepted by the element
+        and is based on the 3\ :sup:`rd` column of the landuse table.
+        The intercepted subareas are computed using the landuse shape file and
+        *IABSTR* is added to the INFIL.DAT file for each element.
 
 *Green and Ampt (FCDMC Method 2018)*
 ''''''''''''''''''''''''''''''''''''
