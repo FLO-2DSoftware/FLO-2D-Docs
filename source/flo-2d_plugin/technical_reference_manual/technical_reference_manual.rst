@@ -2491,7 +2491,7 @@ Polygon geometry.
 
 
 chan
-====
+^^^^
 
 Table for the Channel Segments (left banks) layer in the Schematic Layers group.
 This layer stores the data that is written to the chanbank.dat for each channel segment control line.
@@ -2547,7 +2547,7 @@ Channel are written in order from rank = 1 to n number of segments.
 **geom** LINESTRING Polyline.
 
 chan_confluences
-^^^^^^^^^^^^^^^^
+]^^^^^^^^^^^^^^^^
 
 Table of data associated with the Channel Confluences layer in the Schematic Layers group.
 This table identifies the connecting channel cells and identifies if a confluence cell is a tributary or main channel element.
@@ -2597,9 +2597,7 @@ Notes.
 
 Point associated with the
 
-**geom** POINT channel cell for a tributary
-
-   or main element.
+**geom** POINT channel cell for a tributary or main element.
 
 chan_elems
 ^^^^^^^^^^
@@ -2976,9 +2974,7 @@ Coefficient top width (depth 2) c11.
 
 ..
 
-   Exponent top width (depth **c22** REAL
-
-   2) c22.
+   Exponent top width (depth **c22** REAL2) c22.
 
 chan_wsel
 ^^^^^^^^^
