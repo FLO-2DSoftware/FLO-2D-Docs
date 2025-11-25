@@ -886,9 +886,8 @@ The specific table used for DTHETA depends on the *saturation* field of the soil
        <th style="border: 1px solid #000; padding: 4px;">DTHETA DRY</th>
      </tr>
      <tr>
-       <td>0.01 ≤ XKSAT ≤ 0.15</td>
-       <td style="border: 1px solid #000; padding: 4px;">DTHETA =EXP(-0.2394 + 0.3616 Ln(XKSAT))
-</td>
+       <td style="border: 1px solid #000; padding: 4px;">0.01 ≤ XKSAT ≤ 0.15</td>
+       <td style="border: 1px solid #000; padding: 4px;">DTHETA =EXP(-0.2394 + 0.3616 Ln(XKSAT))</td>
      </tr>
    </table>
 
