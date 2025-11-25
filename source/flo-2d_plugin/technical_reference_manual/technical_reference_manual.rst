@@ -2031,11 +2031,12 @@ Channel are written in order from rank = 1 to n number of segments.
      - INTEGER
      - Rank order in the chan.dat file.
 
-
-**geom** LINESTRING Polyline.
+   * - **geom**
+     - LINESTRING
+     - Polyline
 
 chan_confluences
-]^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 Table of data associated with the Channel Confluences layer in the Schematic Layers group.
 This table identifies the connecting channel cells and identifies if a confluence cell is a tributary or main channel element.
