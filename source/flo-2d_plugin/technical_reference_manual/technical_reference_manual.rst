@@ -2263,8 +2263,9 @@ The table that stores the cross-section data for rectangular cross sections and 
      - REAL
      - Channel width.
 
-
-**fcd** REAL Channel depth.
+   * - **fcd**
+     - REAL
+     - Channel depth.
 
 chan_t
 ^^^^^^
@@ -2274,7 +2275,6 @@ The table that stores the cross-section data for trapezoidal cross sections and 
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
@@ -2308,8 +2308,9 @@ The table that stores the cross-section data for trapezoidal cross sections and 
      - REAL
      - Left bank slope.
 
-
-**zr** REAL Right bank slope.
+   * - **zr**
+     - REAL
+     - Right bank slope.
 
 chan_v
 ^^^^^^
