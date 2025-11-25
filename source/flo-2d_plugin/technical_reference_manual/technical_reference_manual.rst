@@ -904,35 +904,46 @@ The specific table used for DTHETA depends on the *saturation* field of the soil
 
     <br>
 
-
 *Saturation = NORMAL*
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+.. raw:: html
 
+   <table style="border-collapse: collapse; width: 75%;">
+     <tr>
+       <th style="border: 1px solid #000; padding: 2px;">XKSAT (in/hr)</th>
+       <th style="border: 1px solid #000; padding: 2px;">DTHETA NORMAL</th>
+     </tr>
+     <tr>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>0.01 ≤ XKSAT ≤ 0.02</pre></td>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>DTHETA = EXP(1.6094 + Ln(XKSAT)</pre></td>
+     </tr>
+     <tr>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>0.02 ≤ XKSAT ≤ 0.25</pre></td>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>DTHETA = EXP(-0.0142 + 0.5850 Ln(XKSAT))</pre></td>
+     </tr>
 
-   * - XKSAT (in/hr)
-     - DTHETA NORMAL
+     <tr>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>0.02 ≤ XKSAT ≤ 0.04</pre></td>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>DTHETA = 0.15</pre></td>
+     </tr>
+     <tr>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>0.04 ≤ XKSAT ≤ 0.15</pre></td>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>DTHETA = EXP(1.0038 + 1.2599 Ln(XKSAT))</pre></td>
+     </tr>
+     <tr>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>0.15 ≤ XKSAT ≤ 0.4</pre></td>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>DTHETA = 0.25</pre></td>
+     </tr>
 
-   * - 0.01  XKSAT 0.02
-     - DTHETA = EXP(1.6094 + Ln(XKSAT))
+     <tr>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>0.4 ≤ XKSAT ≤ 1.2</pre></td>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>DTHETA = EXP(-1.2342 + 0.1660 Ln(XKSAT))</pre></td>
+     </tr>
+   </table>
 
-   * - 0.02  XKSAT 0.04
-     - DTHETA = EXP(-0.0142 + 0.5850 Ln(XKSAT))
+.. raw:: html
 
-   * - 0.04  XKSAT 0.1
-     - DTHETA = 0.15
-
-   * - 0.1  XKSAT 0.15
-     - DTHETA = EXP(1.0038 + 1.2599 Ln(XKSAT))
-
-   * - 0.15  XKSAT 0.4
-     - DTHETA = 0.25
-
-   * - 0.4  XKSAT  1.2
-     - DTHETA = EXP(-1.2342 + 0.1660 Ln(XKSAT))
-
+    <br>
 
 *Saturation = WET or SATURATED*
 
