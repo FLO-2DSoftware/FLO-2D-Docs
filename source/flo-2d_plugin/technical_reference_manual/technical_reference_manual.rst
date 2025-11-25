@@ -343,11 +343,12 @@ The shapefile must have polyline geometry and should have the following attribut
       This field is required but can be NULL.
       If NULL, the wall elevation is calculated from the correction field and described in correction as an elevation.
     - **Correction** – Elevation correction (ft or m) (real) Null correction is OK.
-      - The correction field is ignored if it is NULL.
-        If Elevation is not NULL and Correction is positive, it will be added to the elevation of the wall.
-      - If Elevation is not NULL and Correction is negative, it will be subtracted from the elevation of the wall.
-      - If Elevation is NULL and Correction is filled, the Correction is used as a wall height and is applied to a wall elevation calculation using the grid
-        max grid element + the wall height.
+
+        - The correction field is ignored if it is NULL.
+          If Elevation is not NULL and Correction is positive, it will be added to the elevation of the wall.
+        - If Elevation is not NULL and Correction is negative, it will be subtracted from the elevation of the wall.
+        - If Elevation is NULL and Correction is filled, the Correction is used as a wall height and is applied to a wall elevation calculation using the grid
+          max grid element + the wall height.
 
 Figure 14 shows the relationship between a NULL elevation field and a wall height applied to the correction field.
 
