@@ -526,7 +526,7 @@ where:
 
     RAIN\ :sub:`max` = The maximum rainfall for the raster in the project area.
 
-.. image:: ../img/technical_reference_manual/tech_ref_manual024.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual024.png
 
 *Figure 24.
 Warped Rainfall Raster.*
