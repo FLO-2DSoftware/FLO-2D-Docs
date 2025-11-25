@@ -1334,69 +1334,37 @@ The ARF_WRF layer stores the data written to the ARF.DAT file.
      - Unique id not related to the grid element.
 
 
-**grid_fid (igd / ittawf)** INTEGER Grid element id of the cell.
-
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
-
+   * - *grid_fid (igd / ittawf)**
+     - INTEGER
+     - Grid element id of the cell.
 
    * - **area_fid**
      - INTEGER
-     -
      - Id of the blocked areas layer in the User Layers group.
 
    * - **arf**
      - REAL
-     -
-     - | Area reduction
-       | factor.
+     - Area reduction factor.
 
    * - **wrf1**
      - REAL
-     -
-     - | Width reduction
-       | factor north.
+     - Width reduction factor north.
 
    * - **wrf2**
      - REAL
-     -
-     - | Width reduction
-       | factor east.
+     - Width reduction factor east.
 
    * - **wrf3**
      - REAL
-     -
-     - | Width reduction
-       | factor south.
+     - Width reduction factor south.
 
-
-..
-
-   Width reduction factor **wrf4** REAL
-
-   west.
-
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
-
+   * - **wrf4**
+     - REAL
+     - Width reduction factor west.
 
    * - **wrf5**
      - REAL
-     -
      - Width reduction factor northeast.
-
-   * - 66
-     - QGIS Plugin Technical Manual
-     -
-     -
-
-
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
-
 
    * - **wrf6**
      - REAL
@@ -1406,20 +1374,16 @@ The ARF_WRF layer stores the data written to the ARF.DAT file.
      - REAL
      - Width reduction factor southwest.
 
+   * - **wrf8**
+     - REAL
+     - Width reduction factor northwest.
 
-..
+   * - **geom**
+     - POINT
+     - A point layer but the style of the layer is set up to look like blocked cells with 8 direction blockage.
 
-   Width reduction factor **wrf8** REAL
 
-northwest.
 
-.. _`geom`:
-
-geom:
-
-POINT
-
-A point layer but the style of the layer is set up to look like blocked cells with 8 direction blockage.
 
 
 breach
