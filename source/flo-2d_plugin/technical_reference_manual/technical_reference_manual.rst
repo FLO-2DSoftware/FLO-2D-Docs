@@ -832,7 +832,7 @@ The general calculations are as follows:
 
     where:
 
-        IA\ :sub:`i is the initial abstraction in the subarea *A\ i* intercepted by the element
+        IA\ :sub:`i` is the initial abstraction in the subarea *A\ i* intercepted by the element
         and is based on the 3\ :sup:`rd` column of the landuse table.
         The intercepted subareas are computed using the landuse shape file and
         *IABSTR* is added to the INFIL.DAT file for each element.
