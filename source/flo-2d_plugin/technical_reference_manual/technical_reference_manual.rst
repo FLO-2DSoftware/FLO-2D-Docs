@@ -947,7 +947,20 @@ The specific table used for DTHETA depends on the *saturation* field of the soil
 
 *Saturation = WET or SATURATED*
 
-   DTHETA = 0 for all XKSAT
+.. raw:: html
+
+   <table style="border-collapse: collapse; width: 75%;">
+     <tr>
+       <td style="border: 1px solid #000; padding: 4px;">
+         <pre>DTHETA = 0 for all XKSAT</pre>
+       </td>
+     </tr>
+   </table>
+
+.. raw:: html
+
+    <br>
+
 
 *Moving Window Optimization*
 
