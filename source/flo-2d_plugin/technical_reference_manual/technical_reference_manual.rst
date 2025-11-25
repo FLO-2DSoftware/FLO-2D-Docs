@@ -9247,7 +9247,7 @@ Appendix B FLO-2D Plugin Error Codes
 -------------------------------------
 
 Errors
-~~~~~~
+^^^^^^
 
 .. list-table::
    :widths: 100
@@ -9782,7 +9782,7 @@ Interpolation of channel n-values failed!
 
 
 Warnings
-~~~~~~~~
+^^^^^^^^
 
 .. list-table::
    :widths: 100
@@ -10155,7 +10155,7 @@ Warnings
 
 
 Info Dialogs
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 .. list-table::
    :widths: 100
@@ -10333,7 +10333,7 @@ Info Dialogs
 
 
 Bar Warning
-~~~~~~~~~~~
+^^^^^^^^^^^
 
 .. list-table::
    :widths: 100
@@ -10817,7 +10817,7 @@ There is no grid! Please create it before running tool.
 
 
 Bar Error
-~~~~~~~~~
+^^^^^^^^^
 
 .. list-table::
    :widths: 50 50
@@ -10847,7 +10847,7 @@ Bar Error
 
 
 Bar Info
-~~~~~~~~
+^^^^^^^^
 
 .. list-table::
    :widths: 50 50
