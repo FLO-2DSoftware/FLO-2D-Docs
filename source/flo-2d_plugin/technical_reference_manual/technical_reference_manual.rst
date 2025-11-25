@@ -644,9 +644,9 @@ The general calculations are as follows:
 
     where:
 
-       *XKSAT\ i* is obtained from the soil attribute table.
+       *XKSAT\ :sub:`i`* is obtained from the soil attribute table.
 
-       *A\ i* is the subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* is the grid element area.
+       *A\ :sub:`i`* is the subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* is the grid element area.
 
     **PSIF**
 
@@ -667,9 +667,9 @@ The general calculations are as follows:
 
     where:
 
-       *PSIF\ i* is obtained from the soil attribute table.
+       *PSIF\ :sub:`i`* is obtained from the soil attribute table.
 
-       *A\ i* is subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* the grid element area.
+       *A\ :sub:`i`* is subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* the grid element area.
 
     **DTHETA**
 
