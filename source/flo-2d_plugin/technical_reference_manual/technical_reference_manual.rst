@@ -70,8 +70,8 @@ The code is stored in the flo2d directory of the qgis/python/plugins folder (Fig
 
 .. image:: ../img/technical_reference_manual/FLO003.jpg
 
-**Figure 2.
-Plugin Folder.**
+*Figure 2.
+Plugin Folder.*
 
 The code can be viewed, queried and edited with any text editor including UltraEdit, Notepad++ or Textpad.
 The files include the following:
@@ -145,17 +145,17 @@ The default numbering system is in order of row and then column (Figure 3).
 
 .. image:: ../img/technical_reference_manual/FLO004.jpg
 
-**Figure 3.
-Grid Numbering Scheme.**
+*Figure 3.
+Grid Numbering Scheme.*
 
 The Number Units and Coordinate Reference System (CRS) are established when the project GeoPackage is developed using the *FLO-2D Plugin Settings*
 Tool.
 The grid alignment is generally set to the extent of the computational domain, but it can be aligned to the raster as well as shown in Figure 4.
 
-.. image:: ../img/technical_reference_manual/FLO005.jpg
+.. image:: ../img/technical_reference_manual/FLO005.png
 
-**Figure 4.
-Grid Element Alignment.**
+*Figure 4.
+Grid Element Alignment.*
 
 Elevation from Raster
 ---------------------
@@ -175,8 +175,8 @@ elevation from raster processing tool.
 
 .. image:: ../img/technical_reference_manual/FLO006.jpg
 
-**Figure 5.
-Raster Elevation Dialog Box.**
+*Figure 5.
+Raster Elevation Dialog Box.*
 
 The GDAL warp method is modified so that only the raw input resolution of the raster is applied.
 This is the most accurate method for the GDAL warp.
@@ -190,8 +190,8 @@ The *Elevation from LiDAR* calculator uses a direct average of the points within
 
 .. image:: ../img/technical_reference_manual/FLO007.jpg
 
-**Figure 6.
-Point Elevation Dialog Box.**
+*Figure 6.
+Point Elevation Dialog Box.*
 
    If a cell does not contain a point, the cell elevation is averaged from nearest neighbors (Figure 7).
    The search distance is important if the LiDAR data is filtered from buildings, overpasses, or bridges.
@@ -203,15 +203,15 @@ Point Elevation Dialog Box.**
 
 .. image:: ../img/technical_reference_manual/FLO008.jpg
 
-**Figure 7.
-Interpolate Empty Cells Dialog.**
+*Figure 7.
+Interpolate Empty Cells Dialog.*
 
 Figure 8 shows the elevation interpolation before the missing cell correction, after the missing cell correction and the raster warp.
 
 .. image:: ../img/technical_reference_manual/FLO009.jpg
 
-**Figure 8.
-Results Test Case 5.**
+*Figure 8.
+Results Test Case 5.*
 
 Elevation Adjustment Tool
 -------------------------
@@ -237,8 +237,8 @@ The following User Layer corrections are available (Figure 6):
 
 .. image:: ../img/technical_reference_manual/FLO010.jpg
 
-**Figure 9.
-Correct Elevation Dialog Box.**
+*Figure 9.
+Correct Elevation Dialog Box.*
 
 TIN (based on elevation points and polygons)
 
@@ -274,8 +274,8 @@ The tool uses the same correction calculations discussed above in the *User Laye
 
 .. image:: ../img/technical_reference_manual/FLO011.jpg
 
-**Figure 10.
-Correct Grid Elevation Dialog Box.**
+*Figure 10.
+Correct Grid Elevation Dialog Box.*
 
 The **polygon layer** is any polygon layer in the layers list.
 It can be a layer that is part of the geopackage or an imported shapefile layer.
@@ -290,8 +290,8 @@ The polyline layer is essentially a polygon with the line as a center.
 
 .. image:: ../img/technical_reference_manual/FLO012.jpg
 
-**Figure 11.
-Polyline with Buffer.**
+*Figure 11.
+Polyline with Buffer.*
 
 The **geometric predicate** is the intersection method that identifies which grid elements will be adjusted.
 **Grids within polygons** means the polygon must cover the whole grid element for the grid element to be corrected.
@@ -318,8 +318,8 @@ The *Levee* *Elevation Tool* sees the grid as a set of octagonal sides at a spec
 
 .. image:: ../img/technical_reference_manual/FLO013.jpg
 
-**Figure 12.
-Grid Centroid and Octagonal Sides.**
+*Figure 12.
+Grid Centroid and Octagonal Sides.*
 
 The *Levee Elevation Tool* uses polylines (*Levee Lines*) and crest elevation points (*Elevation Points*) to calculate and digitize the sides of the
 grid to the *Levees* layer as “cutoff directions”.
@@ -329,8 +329,8 @@ Figure 13.
 
 .. image:: ../img/technical_reference_manual/FLO014.jpg
 
-**Figure 13.
-Levee Cutoff Directions.**
+*Figure 13.
+Levee Cutoff Directions.*
 
 Walls
 -----
@@ -371,8 +371,8 @@ Figure 14 shows the relationship between a NULL elevation field and a wall heigh
 
 .. image:: ../img/technical_reference_manual/FLO015.jpg
 
-**Figure 14.
-Wall Height vs Wall Elevation.**
+*Figure 14.
+Wall Height vs Wall Elevation.*
 
 Wall Failure
 
@@ -398,8 +398,8 @@ This condition can be seen on the right-hand side of Figure 15.
 
 .. image:: ../img/technical_reference_manual/FLO016.jpg
 
-   **Figure 15.
-   Grid Element Elevation and Wall Failure.**
+*Figure 15.
+Grid Element Elevation and Wall Failure.*
 
 Moving Window Optimization
 
@@ -413,8 +413,8 @@ Each box in the figure is isolated and calculated individually.
 
 .. image:: ../img/technical_reference_manual/FLO017.jpg
 
-**Figure 16.
-Levee and Wall Moving Window Example.**
+*Figure 16.
+Levee and Wall Moving Window Example.*
 
 The final step is to identify and remove duplicates.
 The levee tables are sorted and scanned for additional duplicates which are removed.
@@ -453,8 +453,8 @@ element ID.
 
 .. image:: ../img/technical_reference_manual/FLO018.jpg
 
-**Figure 17.
-Spatially Variable Data.**
+*Figure 17.
+Spatially Variable Data.*
 
 Area and Width Reduction Factor
 -------------------------------
@@ -469,8 +469,8 @@ Figure 18 shows an ARF that would have a value of 4.74 / 9.29 = 0.51.
 
 .. image:: ../img/technical_reference_manual/FLO019.jpg
 
-**Figure 18.
-Area Reduction Intersection.**
+*Figure 18.
+Area Reduction Intersection.*
 
 The WRF calculator intersects the *Blocked Areas* polygon to grid element.
 It is different in that it intersects the building to the octagonal side of the grid.
@@ -480,8 +480,8 @@ The octagonal sides are intersected to the polygons in the *Blocked Areas* layer
 
 .. image:: ../img/technical_reference_manual/FLO020.jpg
 
-**Figure 19.
-Area and Width Reduction Factors.**
+*Figure 19.
+Area and Width Reduction Factors.*
 
 The QGIS and GDS have slight differences in calculators.
 
@@ -489,10 +489,10 @@ The QGIS and GDS have slight differences in calculators.
    This can be seen in the following image.
    GDS left ARF = 0.94 and QGIS Right ARF = 1 (Figure 20).
 
-.. image:: ../img/technical_reference_manual/FLO021.jpg
+.. image:: ../img/technical_reference_manual/FLO021.png
 
-**Figure 20.
-ARF GDS / QGIS Comparison.**
+*Figure 20.
+ARF GDS / QGIS Comparison.*
 
 2. The GDS inserts redundant WRFs for cells that would otherwise be empty.
    This makes the GDS WRFs look more conservative, but it isn’t necessary.
@@ -500,17 +500,17 @@ ARF GDS / QGIS Comparison.**
 
 .. image:: ../img/technical_reference_manual/FLO022.jpg
 
-**Figure 21.
-WRF Redundancy GDS / QGIS Comparison.**
+*Figure 21.
+WRF Redundancy GDS / QGIS Comparison.*
 
 3. QGIS calculator is more accurate on cells that have partial WRFs.
    The GDS WRF on the left is calculated as 0.98.
    The QGIS WRF on the right is calculated at 0.44 and that is more accurate (Figure 22).
 
-.. image:: ../img/technical_reference_manual/FLO023.jpg
+.. image:: ../img/technical_reference_manual/FLO023.png
 
-**Figure 22.
-WRF Calculator GDS / QGIS Comparison.**
+*Figure 22.
+WRF Calculator GDS / QGIS Comparison.*
 
 Rainfall Interpolation Tool
 ---------------------------
@@ -520,8 +520,8 @@ The original raster resolution is on the order of 2000 by 2000 ft pixels (**Erro
 
 .. image:: ../img/technical_reference_manual/FLO024.jpg
 
-**Figure 23.
-Rainfall 24hr 100yr NOAA Atlas 14.**
+*Figure 23.
+Rainfall 24hr 100yr NOAA Atlas 14.*
 
 The interpolation processor performs a GDAL *Warp* function to build a rastername_interp.tif.
 The new raster has these properties:
@@ -578,8 +578,8 @@ Figure 25 shows the layout of a \*.asc file and a group of files.
 
 .. image:: ../img/technical_reference_manual/FLO025.jpg
 
-**Figure 25.
-NEXRAD Rainfall \*.ASC File Example.**
+*Figure 25.
+NEXRAD Rainfall \*.ASC File Example.*
 
 The \*.asc files are read as rasters in alphabetical order.
 Each raster file is warped to the grid and sampled at the centroid as described in the previous section.
@@ -593,8 +593,8 @@ Figure 26 shows an example of the rainfall data file.
 
 .. image:: ../img/technical_reference_manual/FLO026.jpg
 
-**Figure 26.
-RAINCELL.DAT.**
+*Figure 26.
+RAINCELL.DAT.*
 
 Infiltration Development Tools
 ------------------------------
@@ -660,8 +660,8 @@ Figure 28 shows the hydraulic conductivity of the soil layer.
 
 .. image:: ../img/technical_reference_manual/FLO027.jpg
 
-**Figure 28.
-Soil layer with XKSAT.**
+*Figure 28.
+Soil layer with XKSAT.*
 
 The area weighted log average is calculated for each grid element from the soil layer (Eq.
 2).
@@ -684,8 +684,8 @@ PSIF is the wetting front capillary suction in or mm of the soil layer (Figure 2
 
 .. image:: ../img/technical_reference_manual/FLO028.jpg
 
-**Figure 29.
-Soil Layer with PSIF.**
+*Figure 29.
+Soil Layer with PSIF.*
 
 The area weighted log average is calculated for each grid element from the soil layer (Eq.
 3).
@@ -711,25 +711,25 @@ It ranges in value from zero to the effective porosity of the soil (Figure 30).
 
 .. image:: ../img/technical_reference_manual/FLO029.jpg
 
-**Figure 30.
-Soil Layer with DTHETA.**
+*Figure 30.
+Soil Layer with DTHETA.*
 
 DTHETA represents the soil moisture capacity for the start of a rainfall event.
 The initial soil conditions vary with respect to landuse categories like irrigation or ponded water conditions.
 Initial saturation is part of the landuse data (see Figure 31).
 
-.. image:: ../img/technical_reference_manual/FLO030.jpg
+.. image:: ../img/technical_reference_manual/FLO030.png
 
-**Figure 31.
-Landuse with Initial Saturation Condition.**
+*Figure 31.
+Landuse with Initial Saturation Condition.*
 
 As a result, DTHETA is split into individual parts that represent the DTHETA (wet, dry or normal).
 DTHETA\ :sub:`wet` is zero, DTHETA\ :sub:`dry` and DTHETA\ :sub:`normal` are calculated for the soil layers for individual soil groups (Figure 32).
 
 .. image:: ../img/technical_reference_manual/FLO031.jpg
 
-**Figure 32.
-DTHETA Dry and Normal.**
+*Figure 32.
+DTHETA Dry and Normal.*
 
 After the soil layer is intersected with the landuse, DTHETA\ :sub:`parts` attributes are filled.
 
@@ -757,8 +757,8 @@ Figure 33 shows the rock out percentages for the landuse layer.
 
 .. image:: ../img/technical_reference_manual/FLO032.jpg
 
-**Figure 33.
-Landuse with Rockout Percentages.**
+*Figure 33.
+Landuse with Rockout Percentages.*
 
 Intersecting the landuse with the soil combines the data into a single layer (land_soil) of polygon features with attributes of RTIMP\ :sub:`land` and
 RTIMP\ :sub:`natural`.
@@ -785,7 +785,7 @@ This is an area weighted average impervious decimal calculation (Eq.
 𝐴\ :sub:`𝑔𝑒` Eq.
 6
 
-   𝑅𝑇𝐼𝑀𝑃\ :sub:`𝑔𝑟𝑖𝑑` .. image:: ../img/technical_reference_manual/FLO033.jpg
+   𝑅𝑇𝐼𝑀𝑃\ :sub:`𝑔𝑟𝑖𝑑`
 
    Where:
 
@@ -816,8 +816,8 @@ More information on how FLO-2D uses the Green-Ampt method to calculate rainfall 
 
 .. image:: ../img/technical_reference_manual/FLO034.jpg
 
-**Figure 34.
-Example INFIL.DAT file.**
+*Figure 34.
+Example INFIL.DAT file.*
 
 *VC*
 
@@ -826,8 +826,8 @@ Figure 35 shows the vegetative cover of the landuse layer.
 
 .. image:: ../img/technical_reference_manual/FLO035.jpg
 
-**Figure 35.
-Landuse with Vegetative Cover.**
+*Figure 35.
+Landuse with Vegetative Cover.*
 
 It is used to adjust *XKSAT* (Eq.
 2) as a function of the vegetation cover VC (Eq.
@@ -857,13 +857,15 @@ Figure 36 shows the initial abstraction for the landuse layer.
 
 .. image:: ../img/technical_reference_manual/FLO036.jpg
 
-**Figure 36.
-Landuse with Initial Abstraction.**
+*Figure 36.
+Landuse with Initial Abstraction.*
 
 The intersection between the landuse and grid element gives an area weighted average for the initial abstraction (Eq.
 10):
 
-𝐼𝐴𝐵𝑆𝑇𝑅 .. image:: ../img/technical_reference_manual/FLO037.jpg Eq.
+𝐼𝐴𝐵𝑆𝑇𝑅
+
+Eq.
 10
 
    𝐴𝐺𝐸
@@ -1022,8 +1024,8 @@ Figure 38 shows a sample of the two separate layers.
 
 .. image:: ../img/technical_reference_manual/FLO039.jpg
 
-**Figure 38.
-Left Bank Layers.**
+*Figure 38.
+Left Bank Layers.*
 
 Cross Section Layers
 
@@ -1036,8 +1038,8 @@ Where the area is defined by a coefficient, depth, and exponent.
 
 .. image:: ../img/technical_reference_manual/FLO040.jpg
 
-**Figure 39.
-Cross Section User Layer.**
+*Figure 39.
+Cross Section User Layer.*
 
 Right Banks
 
@@ -1074,8 +1076,8 @@ This system can import channel geometry, full cross sections, bank to bank cross
 
 .. image:: ../img/technical_reference_manual/FLO041.jpg
 
-**Figure 40.
-HEC-RAS Import.**
+*Figure 40.
+HEC-RAS Import.*
 
 Upon import, the HEC-RAS channels are saved to the *User Layers* (Figure 40).
 The data is saved to the left bank and cross section layers.
@@ -1088,8 +1090,8 @@ The cross section names are extracted from the river mile field (Figure 41).
 
 .. image:: ../img/technical_reference_manual/FLO042.jpg
 
-**Figure 41.
-Channel Cross Sections.**
+*Figure 41.
+Channel Cross Sections.*
 
 Storm Drain Development Tools
 -----------------------------
@@ -1107,8 +1109,8 @@ calculators.
 
 .. image:: ../img/technical_reference_manual/FLO043.jpg
 
-**Figure 42.
-Storm Drain Layout in QGIS.**
+*Figure 42.
+Storm Drain Layout in QGIS.*
 
 The Storm Drain data files (SWMM.INP and \*.DAT files) can be developed from scratch in the FLO-2D *Plugin Storm Drain Editor* by assigning the data
 from shapefiles to the storm drain features.
@@ -1116,8 +1118,8 @@ Figure 43 shows the *Storm Drain* dialog box.
 
 .. image:: ../img/technical_reference_manual/FLO044.jpg
 
-**Figure 43.
-Storm Drain Dialog Box.**
+*Figure 43.
+Storm Drain Dialog Box.*
 
 QGIS can be used to create the storm drain shapefiles for Inlets/Junctions, Outfalls and
 
@@ -1129,8 +1131,8 @@ If the storm drain shapefiles do not exist, they can be digitized into *Storm Dr
 
 .. image:: ../img/technical_reference_manual/FLO045.jpg
 
-**Figure 44.
-Storm Drain Shapefiles.**
+*Figure 44.
+Storm Drain Shapefiles.*
 
 Storm Drain Components
 
@@ -1140,16 +1142,16 @@ This organizes the data in a manner that is ideal for the swmm.inp, SWMMFLO.DAT,
 
 .. image:: ../img/technical_reference_manual/FLO046.jpg
 
-   **Figure 45.
-   Select Components from Shapefile Layer: Inlet/Junctions.**
+*Figure 45.
+Select Components from Shapefile Layer: Inlet/Junctions.*
 
 The data layout and organization prevent array allocation errors between FLO-2D engine and the storm drain engine.
 The features are written in the correct order from between swmm.inp and SWMMFLO.DAT.
 
 .. image:: ../img/technical_reference_manual/FLO047.jpg
 
-**Figure 46.
-Data Organization Inlets.**
+*Figure 46.
+Data Organization Inlets.*
 
 The finished tables can be validated and edited with the node and link dialog boxes (Figure 47).
 These boxes highlight and pan/zoom to the current feature and allow extra data to be assigned.
@@ -1157,8 +1159,8 @@ Changes to these dialog boxes automatically update the storm drain arrays.
 
 .. image:: ../img/technical_reference_manual/FLO048.jpg
 
-**Figure 47.
-Review Attributes from Storm Drain Table.**
+*Figure 47.
+Review Attributes from Storm Drain Table.*
 
 Digitizing Storm Drain Features
 
@@ -1186,8 +1188,8 @@ Storm drain systems created using other software can be imported if the format i
 
 .. image:: ../img/technical_reference_manual/FLO049.jpg
 
-**Figure 48.
-Import Export SWMM.INP Options.**
+*Figure 48.
+Import Export SWMM.INP Options.*
 
 The storm drain features will be read from the \*.INP file and the *Inlets/Junctions, Outfalls* and *Conduits* tables in the components section in the
 *Storm Drain Editor* will be completed.
@@ -1199,8 +1201,8 @@ The node names fields from the Link tables are filled automatically.
 
 .. image:: ../img/technical_reference_manual/FLO050.jpg
 
-**Figure 49.
-Auto Assign Tool.**
+*Figure 49.
+Auto Assign Tool.*
 
 The algorithm uses a loop to read the xy coordinate of each end of the polyline using the xat,yat vertex(1) and xat,yat vertex (-1).
 This calls the first and last vertex of each line.
@@ -1212,8 +1214,8 @@ Figure 50 shows the nodes next to each end of the link and the flow direction is
 
 .. image:: ../img/technical_reference_manual/FLO051.jpg
 
-**Figure 50.
-Link Node and Flow Direction.**
+*Figure 50.
+Link Node and Flow Direction.*
 
 Rating Tables and Pump Curves
 
@@ -1223,13 +1225,13 @@ These tools facilitate data assignment by automatically finding node names or li
 
 .. image:: ../img/technical_reference_manual/FLO052.jpg
 
-**Figure 51.
-Rating Tables and Pump Curves.**
+*Figure 51.
+Rating Tables and Pump Curves.*
 
 .. image:: ../img/technical_reference_manual/FLO053.jpg
 
-**Figure 52.
-Table Editor and Plotting Window.**
+*Figure 52.
+Table Editor and Plotting Window.*
 
 Hazus tools
 -----------
@@ -1242,8 +1244,8 @@ Figure 53 shows the tool requirements.
 
 .. image:: ../img/technical_reference_manual/FLO054.jpg
 
-**Figure 53.
-Hazus Tool.**
+*Figure 53.
+Hazus Tool.*
 
 The process to generate a Hazus raster is outlined in the User’s Manual.
 It requires the use of several general QGIS tools for importing, intersecting, calculating, and rasterizing data.
@@ -2022,9 +2024,9 @@ kww_coef:
 
 REAL
 
-.. _`kphi_coef.. image:: ../img/technical_reference_manual/real.jpg||`:
+.. _`kphi_coef
 
-kphi_coef.. image:: ../img/technical_reference_manual/real.jpg||:
+kphi_coef
 
 Flow angle with bridge coefficient assigned or computed (= 0.) "KY_COEF"
 
@@ -8728,9 +8730,9 @@ TEXT
 
 Outfall type: free, fixed stage, tidal, time series.
 
-.. _`tidal_curve.. image:: ../img/technical_reference_manual/text.jpg|`:
+.. _`tidal_curve
 
-tidal_curve.. image:: ../img/technical_reference_manual/text.jpg|:
+tidal_curve
 
 Tidal curve name or id to link the node to a tide table.
 
