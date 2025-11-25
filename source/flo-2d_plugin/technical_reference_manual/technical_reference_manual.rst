@@ -963,6 +963,7 @@ The specific table used for DTHETA depends on the *saturation* field of the soil
 
 
 *Moving Window Optimization*
+''''''''''''''''''''''''''''
 
 The moving window code is used to speed up the Green-Ampt infiltration calculator.
 This window is a geometric bounding box that samples a small set of grid elements at a time.
@@ -971,7 +972,8 @@ The polygons are clipped to the window to eliminate duplicate calculations.
 
 .. image:: ../img/technical_reference_manual/tech_ref_manual055.jpg
 
-SCS Curve
+*SCS Curve*
+'''''''''''
 
 There are two methods for assigning spatially variable SCS data.
 The Schematize method assigns data directly to the grid from polygons digitized to the *Infiltration Areas* layer.
@@ -982,16 +984,15 @@ It can also calculate the Pima County method from a combined layer with soil, co
 Each method intersects the infiltration polygons to the grid and assigns an area weighted average to each grid element.
 The calculator method requires polygon layers with no geometric deficiencies and therefore is not as desirable as the Schematize method.
 
-Horton
+*Horton*
+''''''''
 
 The Schematize Method assigns data directly to the grid from polygons digitized to the Infiltration Areas layer.
 The required data fields are:
 
-- fhorti – Initial infiltration rate
-
-- fhortf – Final infiltration rate
-
-- deca – Decay coefficient
+    - fhorti – Initial infiltration rate
+    - fhortf – Final infiltration rate
+    - deca – Decay coefficient
 
 The schematize method intersects the Horton polygons to the grid and assigns the variables using an area weighted average.
 
