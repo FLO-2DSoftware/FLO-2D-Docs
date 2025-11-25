@@ -635,16 +635,14 @@ Figure 28 shows the hydraulic conductivity of the soil layer.
 *Figure 28.
 Soil layer with XKSAT.*
 
-The area weighted log average is calculated for each grid element from the soil layer (Eq.
-2).
-The soil polygon is intersected with the grid polygon to provide the A\ :sub:`i`.
+The area weighted log average is calculated for each grid element from the soil layer (Eq.2).
 
-̅𝑋𝐾𝑆𝐴𝑇̅̅̅̅̅̅̅̅̅𝑔𝑟𝑖𝑑 = 10 ^ (𝛴𝐴𝑖 ∗ log (𝑋𝐾𝑆𝐴𝑇𝑖)) Eq.
-2
+.. math::
+   :label:
 
-   𝐴𝑔𝑒
+   {\overline{XKSAT}}_{grid} = 10\ \hat{}\ \left( \frac{\Sigma A_{i}*log({XKSAT}_{i})}{A_{ge}} \right)
 
-   Where:
+Where:
 
    *XKSAT\ i* is obtained from the soil attribute table.
 
