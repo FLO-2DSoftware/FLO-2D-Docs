@@ -275,7 +275,7 @@ If the buffer width is less than the width of one grid element, the grid element
 The polyline can be placed at the center of a feature that needs an adjustment like the ones in Figure 11.
 The polyline layer is essentially a polygon with the line as a center.
 
-.. image:: ../img/technical_reference_manual/FLO012.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual011.jpg
 
 *Figure 11.
 Polyline with Buffer.*
@@ -303,7 +303,7 @@ Levee Tool
 
 The *Levee* *Elevation Tool* sees the grid as a set of octagonal sides at a specified distance from the node (Figure 12).
 
-.. image:: ../img/technical_reference_manual/FLO013.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual012.jpg
 
 *Figure 12.
 Grid Centroid and Octagonal Sides.*
@@ -314,7 +314,7 @@ The tool uses a combination of polyline to polygon intersection and point to poi
 It intersects each side of the octagon with the *Levee Line* and a buffer to create individual polylines for each levee cutoff direction as shown in
 Figure 13.
 
-.. image:: ../img/technical_reference_manual/FLO014.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual013.jpg
 
 *Figure 13.
 Levee Cutoff Directions.*
@@ -352,7 +352,7 @@ The shapefile must have polyline geometry and should have the following attribut
 
 Figure 14 shows the relationship between a NULL elevation field and a wall height applied to the correction field.
 
-.. image:: ../img/technical_reference_manual/FLO015.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual014.jpg
 
 *Figure 14.
 Wall Height vs Wall Elevation.*
@@ -376,7 +376,7 @@ The Levee Tool evaluates the ground elevation on each side of the levee and appl
 The failure elevation is calculated by adding the failure depth to the highest elevation on either side of the grid element.
 This condition can be seen on the right-hand side of Figure 15.
 
-.. image:: ../img/technical_reference_manual/FLO016.png
+.. image:: ../img/technical_reference_manual/tech_ref_manual015.png
 
 *Figure 15.
 Grid Element Elevation and Wall Failure.*
@@ -392,7 +392,7 @@ The levee lines are clipped to the window to eliminate duplicate calculations.
 Figure 16 shows an example of a grid system split into a bounding box.
 Each box in the figure is isolated and calculated individually.
 
-.. image:: ../img/technical_reference_manual/FLO017.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual016.jpg
 
 *Figure 16.
 Levee and Wall Moving Window Example.*
@@ -428,7 +428,7 @@ In some instances, the intersection is not necessary.
 A point sample that represents the center of each grid element is used to sample the polygon and extract the data of a known point based on the grid
 element ID.
 
-.. image:: ../img/technical_reference_manual/FLO018.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual017.jpg
 
 *Figure 17.
 Spatially Variable Data.*
@@ -444,7 +444,7 @@ If the blockage is greater than 0.9, the ARF is reset to 1.
 If the area of the building is a percentage of the grid, then the value is assessed and written to the ARF attribute.
 Figure 18 shows an ARF that would have a value of 4.74 / 9.29 = 0.51.
 
-.. image:: ../img/technical_reference_manual/FLO019.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual018.jpg
 
 *Figure 18.
 Area Reduction Intersection.*
@@ -455,7 +455,7 @@ The WRF calculator uses the grid centroid, half width and a Lambda function (Pyt
 The Lambda function defines the position of the octagon sides.
 The octagonal sides are intersected to the polygons in the *Blocked Areas* layer to calculate the width reduction factor (Figure 19).
 
-.. image:: ../img/technical_reference_manual/FLO020.jpg
+.. image:: ../img/technical_reference_manual/tech_ref_manual019.jpg
 
 *Figure 19.
 Area and Width Reduction Factors.*
@@ -466,7 +466,7 @@ The QGIS and GDS have slight differences in calculators.
    This can be seen in the following image.
    GDS left ARF = 0.94 and QGIS Right ARF = 1 (Figure 20).
 
-.. image:: ../img/technical_reference_manual/FLO021.png
+.. image:: ../img/technical_reference_manual/tech_ref_manual020.png
 
 *Figure 20.
 ARF GDS / QGIS Comparison.*
