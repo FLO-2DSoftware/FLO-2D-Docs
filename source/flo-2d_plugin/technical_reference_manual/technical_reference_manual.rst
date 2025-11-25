@@ -2362,8 +2362,14 @@ The table that stores the cross-section data for variable area regression cross 
      - REAL
      - Exponent wetted perimeter b2.
 
+   * - **c1**
+     - REAL
+     - Coefficient top width c1.
 
-**c1** REAL Coefficient top width c1.
+
+
+
+
 
 .. _`c2`:
 
