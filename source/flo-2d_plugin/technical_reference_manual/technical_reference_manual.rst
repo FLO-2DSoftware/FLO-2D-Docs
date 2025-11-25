@@ -2045,7 +2045,6 @@ This table identifies the connecting channel cells and identifies if a confluenc
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -2082,93 +2081,70 @@ Table associated with all Channel Cross Sections layer in the Schematic Layers g
 This table uses several id fields to link the cross sections to the correct channel segment, left bank element, right bank element and station or
 geometry data.
 
-**Field Name Field Type Description**
-
 .. list-table::
    :widths: 25 25 25 25
    :header-rows: 0
 
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
    * - **id**
      - INTEGER
-     -
      - Unit fid is unique and not associated with the grid id, seg id, xsec id.
 
    * - **Fid (leftbank)**
      - INTEGER
-     -
      - Left bank grid element id.
 
    * - **seg_fid**
      - INTEGER
-     -
      - Segment id from chan layer.
 
    * - **nr_in_seg**
      - INTEGER
-     -
      - Rank of channel element in segment.
 
    * - **Rbankgrid(rightbank)**
      - INTEGER
-     -
      - Right bank grid element id.
 
    * - **fcn**
      - REAL
-     -
      - Manning’s n number of channel cross section.
 
    * - **xlen**
      - REAL
-     -
      - Length of channel element.
 
    * - **type**
      - TEXT
-     -
      - Geometry type.
        R, T, N, V
 
    * - **notes**
      - TEXT
-     -
      - Notes.
 
+   * - **user_xs_fid (nxsecnum)**
+     - INTEGER
+     - Cross-section id links each polyline to the cross-section data table.
 
-Cross section id links each
+   * - **interpolated**
+     - INTEGER
+     - Interpolated cross section. 0 non interpolated 1 interpolated.
 
-**user_xs_fid (nxsecnum)** INTEGER polyline to the cross
+   * - **max_water_elev**
+     - REAL
+     - Maximum water elevation imported from hychan.out.
 
-section data table.
+   * - **peak_discharge**
+     - REAL
+     - Peak q imported from hychan.out.
 
-.. _`interpolated`:
-
-interpolated:
-
-INTEGER
-
-Interpolated cross section.
-0 non interpolated 1 interpolated.
-
-.. _`max_water_elev`:
-
-max_water_elev:
-
-| REAL | |
-
-Maximum water elevation imported from hychan.out
-
-.. _`peak_discharge`:
-
-peak_discharge:
-
-| REAL |
-
-Peak q imported from hychan.out
-
-
-**geom** LINESTRING Polyline.
+   * - **geom**
+     - LINESTRING
+     - Polyline.
 
 chan_elems_interp
 ^^^^^^^^^^^^^^^^^
