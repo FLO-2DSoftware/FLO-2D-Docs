@@ -882,21 +882,21 @@ The specific table used for DTHETA depends on the *saturation* field of the soil
 
    <table style="border-collapse: collapse; width: 75%;">
      <tr>
-       <th style="border: 1px solid #000; padding: 4px;">XKSAT (in/hr)</th>
-       <th style="border: 1px solid #000; padding: 4px;">DTHETA DRY</th>
+       <th style="border: 1px solid #000; padding: 2px;">XKSAT (in/hr)</th>
+       <th style="border: 1px solid #000; padding: 2px;">DTHETA DRY</th>
      </tr>
      <tr>
-       <td style="border: 1px solid #000; padding: 4px;"><pre>0.01 ≤ XKSAT ≤ 0.15</pre></td>
-       <td style="border: 1px solid #000; padding: 4px;"><pre>DTHETA =EXP(-0.2394 + 0.3616 Ln(XKSAT))</pre></td>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>0.01 ≤ XKSAT ≤ 0.15</pre></td>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>DTHETA =EXP(-0.2394 + 0.3616 Ln(XKSAT))</pre></td>
      </tr>
      <tr>
-       <td style="border: 1px solid #000; padding: 4px;"><pre>0.15 ≤ XKSAT ≤ 0.25</pre></td>
-       <td style="border: 1px solid #000; padding: 4px;"><pre>DTHETA =EXP(-1.4122 - 0.2614 Ln(XKSAT))</pre></td>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>0.15 ≤ XKSAT ≤ 0.25</pre></td>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>DTHETA =EXP(-1.4122 - 0.2614 Ln(XKSAT))</pre></td>
      </tr>
 
      <tr>
-       <td style="border: 1px solid #000; padding: 4px;"><pre>0.25 ≤ XKSAT ≤ 1.2</pre></td>
-       <td style="border: 1px solid #000; padding: 4px;"><pre>DTHETA = 0.35</pre></td>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>0.25 ≤ XKSAT ≤ 1.2</pre></td>
+       <td style="border: 1px solid #000; padding: 2px;"><pre>DTHETA = 0.35</pre></td>
      </tr>
    </table>
 
