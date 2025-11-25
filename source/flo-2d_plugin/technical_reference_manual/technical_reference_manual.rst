@@ -1791,7 +1791,7 @@ bridge_variables
      - REAL
      - Coefficient associated with pier and piles assigned or computer (= 0.).
 
-  * - **BOPENING**
+   * - **BOPENING**
      - REAL
      - Bridge opening width (ft or REAL**BOPENING** m). See Figure 7.
 
@@ -1850,6 +1850,7 @@ bridge_variables
    * - **RBTOEABUT**
      - REAL
      - Toe elevation of the right abutment (ft or m)
+
 
 buildings_areas
 ^^^^^^^^^^^^^^^^
