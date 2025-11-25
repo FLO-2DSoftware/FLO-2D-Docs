@@ -1004,6 +1004,7 @@ A channel is composed of three polyline layers for the banks and cross sections 
 The channel layers are defined by intersecting the left banks to the grid at the nearest centroid to the left bank.
 
 Left Bank Layers
+~~~~~~~~~~~~~~~~~
 
 The *Left Bank User Layer* defines the geographical position of the left bank.
 The Plugin uses this polyline layer to intersect and connect the left bank grid elements.
@@ -1022,6 +1023,7 @@ Figure 38 shows a sample of the two separate layers.
 Left Bank Layers.*
 
 Cross Section Layers
+~~~~~~~~~~~~~~~~~~~~
 
 The *Channel Cross Section User Layer* is used to define the channel geometry and the position of the right bank (Figure 39).
 The data requirement is station elevation data from the left top of bank to the right top of bank.
@@ -1036,11 +1038,13 @@ Where the area is defined by a coefficient, depth, and exponent.
 Cross Section User Layer.*
 
 Right Banks
+~~~~~~~~~~~
 
 The Standard schematization button will produce a right bank according to the position of the cross sections.
 It works somewhat similar to the left bank but will allow for more than one cross section to be assigned to a right bank.
 
 Bank Elevation
+~~~~~~~~~~~~~~
 
 The plugin uses two methods to define bank elevation.
 The first is to assign the bank elevation in the cross section data.
@@ -1056,6 +1060,7 @@ When no data is assigned, *the Left Bank Elevation* and *Right Bank Elevation* i
 The model uses the grid element elevation in lieu of the missing data.
 
 Interpolation
+~~~~~~~~~~~~~
 
 The Plugin uses the same interpolator that the PROFILES program uses.
 It is an external App that is installed into the FLO-2D Pro subdirectory along with the FLO-2D software.
@@ -1063,6 +1068,7 @@ The Plugin exports the CHAN.DAT, CHANBANK.DAT, and XSEC.DAT and executes the int
 The data is reloaded into the Plugin *Schematic Layers* with the interpolation dialog box.
 
 Import HEC-RAS
+~~~~~~~~~~~~~~
 
 The *Import HEC-RAS* tool is used to import channel data from HEC-RAS geometry files.
 The RAS project must be georeferenced and in the same coordinate system as the GeoPackage.
