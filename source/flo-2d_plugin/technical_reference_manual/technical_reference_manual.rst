@@ -209,16 +209,14 @@ and bank elevation corrections.
 The *Grid Elevation Adjustment* tool uses several unique processes to redefine baseline elevation data.
 
 User Layers Mode
+~~~~~~~~~~~~~~~~~~
 
 The following User Layer corrections are available (Figure 6):
 
-- TIN (based on elevation points and polygons)
-
-- TIN (based on elevation polygon boundaries)
-
-- Elevation polygons attributes
-
-- Grid statistics within blocked areas
+    - TIN (based on elevation points and polygons)
+    - TIN (based on elevation polygon boundaries)
+    - Elevation polygons attributes
+    - Grid statistics within blocked areas
 
 .. image:: ../img/technical_reference_manual/FLO010.jpg
 
@@ -226,6 +224,7 @@ The following User Layer corrections are available (Figure 6):
 Correct Elevation Dialog Box.*
 
 TIN (based on elevation points and polygons)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This method uses a set of elevation points surrounded by triangular irregular network (TIN).
 The TIN generator is derived from the QgsTINInterpolator feature class that is built in to the QGIS processor libraries.
@@ -233,6 +232,7 @@ The TIN generator uses the x y coordinates of the elevation correction polygon a
 The TIN is finally intersected to the grid and the new elevations are assigned to each grid element covered by the TIN.
 
 TIN (based on elevation polygon boundaries)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This method uses a polygon boundary to define a TIN.
 The TIN generator is derived from the QgsTINInterpolator feature class that is built in to the QGIS processor libraries.
@@ -241,18 +241,20 @@ The elevations along the boundary of the polygon are used to fill or cut the dat
 The TIN is finally intersected to the grid and the new elevations are assigned to each grid element covered by the TIN.
 
 Elevation Polygons Attributes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This method intersects the polygon layer to the grid and assigns the elevation or the elevation correction that is defined in the *Polygon Attribute
 Elevation* or *Correction* fields.
 
 Grid Statistics within Blocked Areas
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This method intersects the polygon to the grid and calculates the elevation statistics of min, max and mean for each cell within the polygon.
 The user can select the statistic to use as the final grid element elevation assignment.
 Each cell within the polygon will be assigned the same elevation.
 
 External Layers Mode
-
+~~~~~~~~~~~~~~~~~~~~~
 The grid element correction from *External Layers Mode* offers several methods to correct or edit elevations in the *Grid* layer from polygon layers
 that can be imported into the FLO-2D Project in QGIS (Figure 10).
 The tool uses the same correction calculations discussed above in the *User Layers Mode* but applies them to imported polygon layers.
@@ -318,7 +320,7 @@ Figure 13.
 Levee Cutoff Directions.*
 
 Walls
------
+^^^^^^
 
 The wall calculator is a tool that is used to add polyline data to the Levee Lines (User Layer).
 This data can represent any levee like feature but was specifically designed to create urban wall features.
@@ -330,27 +332,22 @@ This represents a wall that may prevent flooding in a neighborhood or walls that
 The depth and velocity vector maps can help identify walls that are hydraulically significant.
 
 Wall Polyline Properties
-
+~~~~~~~~~~~~~~~~~~~~~~~~
 Walls that have the potential for failure due to collapse should also be identified.
 The shapefile must have polyline geometry and should have the following attributes:
 
-- **Name** – Feature name (string).
-  The Name field is required by the dialog box, but the values can be null.
-
-- **Elevation** – Crest elevation (ft or m) (real).
-  For walls, this is the top elevation of the wall.
-  This field is required but can be NULL.
-  If NULL, the wall elevation is calculated from the correction field and described in correction as an elevation.
-
-- **Correction** – Elevation correction (ft or m) (real) Null correction is OK.
-
-  - The correction field is ignored if it is NULL.
-    If Elevation is not NULL and Correction is positive, it will be added to the elevation of the wall.
-
-  - If Elevation is not NULL and Correction is negative, it will be subtracted from the elevation of the wall.
-
-  - If Elevation is NULL and Correction is filled, the Correction is used as a wall height and is applied to a wall elevation calculation using the grid
-    max grid element + the wall height.
+    - **Name** – Feature name (string).
+      The Name field is required by the dialog box, but the values can be null.
+    - **Elevation** – Crest elevation (ft or m) (real).
+      For walls, this is the top elevation of the wall.
+      This field is required but can be NULL.
+      If NULL, the wall elevation is calculated from the correction field and described in correction as an elevation.
+    - **Correction** – Elevation correction (ft or m) (real) Null correction is OK.
+      - The correction field is ignored if it is NULL.
+        If Elevation is not NULL and Correction is positive, it will be added to the elevation of the wall.
+      - If Elevation is not NULL and Correction is negative, it will be subtracted from the elevation of the wall.
+      - If Elevation is NULL and Correction is filled, the Correction is used as a wall height and is applied to a wall elevation calculation using the grid
+        max grid element + the wall height.
 
 Figure 14 shows the relationship between a NULL elevation field and a wall height applied to the correction field.
 
@@ -360,19 +357,16 @@ Figure 14 shows the relationship between a NULL elevation field and a wall heigh
 Wall Height vs Wall Elevation.*
 
 Wall Failure
+~~~~~~~~~~~~~
 
 The wall calculator is used to assign failure data to the levee polylines.
 The data required for wall failure is as follows:
 
-- Fail Elevation or Fail Depth
-
-- Duration (0 default else, duration water is on levee before failure starts)
-
-- Maximum Width (0 for wall collapse)
-
-- Vertical Fail Rate (0 for wall collapse)
-
-- Horizontal Fail Rate (0 for wall collapse)
+    - Fail Elevation or Fail Depth
+    - Duration (0 default else, duration water is on levee before failure starts)
+    - Maximum Width (0 for wall collapse)
+    - Vertical Fail Rate (0 for wall collapse)
+    - Horizontal Fail Rate (0 for wall collapse)
 
 When a failure depth option is selected, the failure elevation is calculated from the failure depth variable.
 Once the wall failure is assigned to the Levee Lines (User Layer), the Levee Tool will set up the walls and failure for individual grid elements.
@@ -387,6 +381,7 @@ This condition can be seen on the right-hand side of Figure 15.
 Grid Element Elevation and Wall Failure.*
 
 Moving Window Optimization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Walls are typically used on large projects and the calculation process can result in too much data for a computer to process.
 To optimize the plugin, a moving window analysis is used.
@@ -416,15 +411,11 @@ Spatially Variable Data Processing
 The plugin processes data for several spatially variable data sets.
 These include:
 
-- Manning’s n-value
-
-- Spatial Tol (LID)
-
-- Spatial Limiting Froude
-
-- Spatial Shallow n-value
-
-- Gutters
+    - Manning’s n-value
+    - Spatial Tol (LID)
+    - Spatial Limiting Froude
+    - Spatial Shallow n-value
+    - Gutters
 
 To assign spatially variable data, the Plugin uses a combination of intersecting polygons to the grid and uses the centroid to point sample data to
 the grid.
@@ -442,7 +433,7 @@ element ID.
 Spatially Variable Data.*
 
 Area and Width Reduction Factor
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The calculator intersects the polygons in the *Blocked Areas* (buildings) layer to the polygons in the *Grid* layer and uses the centroid to set up
 the ARF/WRF table of variables.
@@ -511,13 +502,10 @@ Rainfall 24hr 100yr NOAA Atlas 14.*
 The interpolation processor performs a GDAL *Warp* function to build a rastername_interp.tif.
 The new raster has these properties:
 
-- Reprojected CRS = Project CRS.
-
-- Pixel size = grid element size.
-
-- Clipped to Grid layer extent.
-
-- Aligned to the grid.
+    - Reprojected CRS = Project CRS.
+    - Pixel size = grid element size.
+    - Clipped to Grid layer extent.
+    - Aligned to the grid.
 
 The new raster (figure 24) is sampled to the grid using the centroid.
 Raster statistics determine the maximum rainfall value (RAIN\ :sub:`max`).
@@ -593,6 +581,7 @@ processing.
 Individual calculations are addressed below for each infiltration type.
 
 Green and Ampt
+~~~~~~~~~~~~~~~
 
 There are various methods for assigning spatially variable Green and Ampt data.
 The Schematize method assigns data directly to the grid from polygons digitized to the *Infiltration Areas* layer.
@@ -604,19 +593,13 @@ The Schematize Method samples the Infiltration Areas polygons from the grid cent
 Ampt fields.
 These fields are the fields that are written to the INFIL.DAT file:
 
-- green_char – green ampt character
-
-- hydc – hydraulic conductivity
-
-- soils – soil suction
-
-- dtheta – soil moisture deficit
-
-- abstrinf – initial abstraction
-
-- rtimpf – impervious percentage
-
-- soildepth – soil depth
+    - green_char – green ampt character
+    - hydc – hydraulic conductivity
+    - soils – soil suction
+    - dtheta – soil moisture deficit
+    - abstrinf – initial abstraction
+    - rtimpf – impervious percentage
+    - soildepth – soil depth
 
 The attribute data is written to the infil_cells_green table.
 The widget uses the poly2grid processor.
@@ -631,8 +614,10 @@ The Calculate Green and Ampt Method intersects the landuse and soils polygons to
 from the external layers.
 Figure 27 shows the Compute Green-Ampt dialog for the FCDMC Method 2023.
 
-**Figure 27.
-Compute Green-Ampt dialog (FCDMC Method 2023)**
+.. image:: ../img/technical_reference_manual/image28.jpg
+
+*Figure 27.
+Compute Green-Ampt dialog (FCDMC Method 2023)*
 
 This method follows the guidelines in the FCDMC Hydrology Manual from 2023 (FCDMC, 2023).
 The difference between this method and the 2018 method is the Log Average of PSIF.
@@ -9270,7 +9255,7 @@ This data is written to the XSEC.DAT file when the project is exported.
 **yi** REAL Cross section elevation.
 
 Appendix B FLO-2D Plugin Error Codes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------
 
 Errors
 ~~~~~~
