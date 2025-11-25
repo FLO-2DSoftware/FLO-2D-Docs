@@ -2082,7 +2082,7 @@ This table uses several id fields to link the cross sections to the correct chan
 geometry data.
 
 .. list-table::
-   :widths: 25 25 25 25
+   :widths: 33 33 33
    :header-rows: 0
 
    * - **Field Name**
