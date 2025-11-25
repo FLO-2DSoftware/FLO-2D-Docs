@@ -2752,7 +2752,7 @@ They are Schematic_tools.py and flo2dobjects.py.
 
 
 chan_n
-======
+^^^^^^
 
 Table that stores the data that links natural cross-sections to left bank elements.
 
@@ -2781,7 +2781,7 @@ Table that stores the data that links natural cross-sections to left bank elemen
 **xsecname** TEXT Cross section name.
 
 chan_r
-======
+^^^^^^
 
 The table that stores the cross-section data for rectangular cross sections and links them to left bank elements.
 
@@ -2818,7 +2818,7 @@ The table that stores the cross-section data for rectangular cross sections and 
 **fcd** REAL Channel depth.
 
 chan_t
-======
+^^^^^^
 
 The table that stores the cross-section data for trapezoidal cross sections and links them to left bank elements.
 
@@ -3092,7 +3092,7 @@ The table that stores the data for the generalized culvert equations and linked 
 **multibarrels** INTEGER Multiple barrels.
 
 evapor
-======
+^^^^^^
 
 The table that stores the start time and date for the Evaporation group.
 
@@ -3238,7 +3238,7 @@ A table of cells that are written to the froudefp.dat when the project is export
 
 
 fpxsec
-======
+^^^^^^
 
 Table for the Floodplain Cross Sections layer in the Schematic Layers group.
 Stores the order of cross sections listed in fpxsec.dat.
@@ -3717,7 +3717,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 **max_y** DOUBLE
 
 grid
-====
+^^^^
 
 Table for the Grid layer in the Schematic Layers group.
 Used to store the grid element number, n_value and elevation.
@@ -3908,7 +3908,7 @@ It is exported to intersected to the gutter_cells table when the gutter calculat
 **geom** POLYLINE Polyline geometry type.
 
 infil
-=====
+^^^^^
 
 Table of global infiltration parameters for Green-Ampt, SCS, and Horton.
 
@@ -4272,7 +4272,7 @@ Data is not available to view via a table.
 
 
 inflow
-======
+^^^^^^
 
 Table for Inflow layer stored in the Tables group.
 Data is stored when the boundary condition schematize button is pushed.
@@ -4582,7 +4582,7 @@ Not editable.
 
 
 mud
-===
+^^^
 
 Table of data for the sed.dat file mudflow line.
 Data is imported into this table when GDS import is used.
@@ -4684,7 +4684,7 @@ Data is for the SED.DAT file.
 
 
 mult
-====
+^^^^
 
 The table that stores the data imported from the GDS import.
 Hidden table not editable.
@@ -5253,7 +5253,7 @@ Data is imported and exported for outflow.dat.
 charge outflow condition.
 
 rain
-====
+^^^^
 
 Table of global and control rain data.
 Data is imported and exported to the rain.dat file.
@@ -5553,7 +5553,7 @@ This data is imported and exported to the hystruc.dat file.
 
 
 rbank
-=====
+^^^^^
 
 Table of data linked to the Right Bank layer of the Schematic Layers group.
 
@@ -5906,7 +5906,7 @@ INTEGER
 **nodeno** INTEGER
 
 sed
-===
+^^^
 
 A table of values that define like groups of sediment transport data.
 This data is written to the SED.DAT file.
@@ -6579,7 +6579,7 @@ Table of street names for individual street segments.
 
 
 struct
-======
+^^^^^^
 
 Table of values assigned to the polyline features of the hydraulic structures layer.
 This data is imported and exported to HYSTRUC.DAT.
@@ -9135,7 +9135,7 @@ A polyline that represents
    tion.
 
 wstime
-======
+^^^^^^
 
 Table of data assigned to the Calibration Data layers.
 This data is imported from and exported to the WSTIME.DAT file.
@@ -9180,7 +9180,7 @@ This data is imported from and exported to the WSTIME.DAT file.
 
 
 wsurf
-=====
+^^^^^
 
 Table of data assigned to the Calibration Data layers.
 This data is imported from and exported to the WSURF.DAT file.
