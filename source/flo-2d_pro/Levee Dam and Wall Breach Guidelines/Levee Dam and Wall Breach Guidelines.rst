@@ -3,7 +3,18 @@
 Levee Dam and Wall Breach Guidelines
 ======================================
 
-Levee Overview
+Additional Resources
+----------------------
+
+Data, tutorials and examples related to hydraulic structures can be found in the following locations:
+
+    - FLO-2D Data Input Manual: LEVEE.DAT and BREACH.DAT sections
+    - FLO-2D Gila 1.0 User Manual Levee Editor and Levee Breach Editor
+    - Walls Tutorials Self Help Lesson 4
+    - Dam Breach Tutorials and Tailings Dam Tutorials
+    - Example Projects: Rio Grande Riverine
+
+Overview
 ----------------
 
 The FLO-2D levee component confines flow on the floodplain surface by blocking one or more of the eight flow directions.
@@ -1381,19 +1392,23 @@ This approach, however, still generated unreasonably high velocities for very de
 To effective model the slow velocities in reservoirs, a new friction slope equation was developed that kept the same form as Manning’s equation for
 velocity V but applied a flow depth d variable exponent b that was a function of both depth and slope.
 
-                        V = 1.486/n d\ :sup:`b` S\ :sub:`f`\ :sup:`0.5` (in English units)
+.. math::
 
-where:
+   V = \frac{1.486}{n}\, d^{b}\, S_f^{0.5}
 
-      V = flow velocity d = flow depth
+(English units)
 
+::
+  
+  where:
+
+      V = flow velocity 
+      d = flow depth
       n = Manning’s friction coefficient
-
       S\ :sub:`f` = friction slope
-
       b = exponent = f(depth, S\ :sub:`f`)
 
-                        b = 0.4973 – 0.000543 \* d – 30.71 S\ :sub:`f`
+        b = 0.4973 – 0.000543 \* d – 30.71 S\ :sub:`f`
 
       a1, b1, c1 = coefficients given in the following table:
 
