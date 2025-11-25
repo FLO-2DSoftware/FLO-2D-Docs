@@ -657,18 +657,15 @@ PSIF is the wetting front capillary suction in or mm of the soil layer (Figure 2
 *Figure 29.
 Soil Layer with PSIF.*
 
-The area weighted log average is calculated for each grid element from the soil layer (Eq.
-3).
+The area weighted log average is calculated for each grid element from the soil layer (Eq.3).
 The soil polygon is intersected with the grid polygon to provide the A\ :sub:`i`.
 
-   𝛴𝐴\ :sup:`𝑖` ∗ log (𝑃𝑆𝐼𝐹\ :sup:`𝑖`)
+.. math::
+   :label:
 
-̅𝑃𝑆𝐼𝐹̅̅̅̅̅̅\ :sub:`𝑔𝑟𝑖𝑑` = 10 ^ () Eq.
-3
+   {\overline{PSIF}}_{grid} = 10\ \hat{}\ \left ( \frac{\Sigma A_{i}*log({PSIF}_{i})}{A_{ge}} \right)
 
-   𝐴𝑔𝑒
-
-   Where:
+Where:
 
    *PSIF\ i* is obtained from the soil attribute table.
 
@@ -704,15 +701,14 @@ DTHETA Dry and Normal.*
 After the soil layer is intersected with the landuse, DTHETA\ :sub:`parts` attributes are filled.
 
 DTHETA\ :sub:`wet`, DTHETA\ :sub:`normal`, and DTHETA\ :sub:`dry` attributes are filled for individual parts.
-Once DTHETA\ :sub:`parts` is complete, DTHETA\ :sub:`grid` is calculated using a weighted average for each grid element (Eq.
-4).
+Once DTHETA\ :sub:`parts` is complete, DTHETA\ :sub:`grid` is calculated using a weighted average for each grid element (Eq.4).
 
-̅𝐷𝑇𝐻𝐸𝑇𝐴̅̅̅̅̅̅̅̅̅̅̅𝒈𝒓𝒊𝒅 = (𝛴𝐴\ :sub:`𝑖` ∗ 𝐷𝑇𝐻𝐸𝑇𝐴\ :sub:`𝑖`) Eq.
-4
+.. math::
+   :label:
 
-   𝐴𝑔𝑒
+   {\overline{DTHETA}}_{\mathbf{grid}} = \left( \frac{\Sigma A_{i}*{DTHETA}_{i}}{A_{ge}} \right)
 
-   Where:
+Where:
 
    *DTHETA\ i* is taken from the intersected landsoil DTHETA\ :sub:`parts`.
 
