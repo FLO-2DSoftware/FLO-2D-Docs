@@ -588,6 +588,7 @@ The Schematize method assigns data directly to the grid from polygons digitized 
 The calculator calculates data from external soils and landuse layers.
 
 *Schematize Method*
+'''''''''''''''''''
 
 The Schematize Method samples the Infiltration Areas polygons from the grid centroid and assigns the infiltration values that are written in the Green
 Ampt fields.
@@ -609,6 +610,7 @@ Any grid element that does not contain a polygon is not written to the table.
 That infiltration data will default to the Global Infiltration parameters.
 
 *Green and Ampt (FCDMC Method 2023)*
+''''''''''''''''''''''''''''''''''''
 
 The Calculate Green and Ampt Method intersects the landuse and soils polygons to the grid polygons and calculates a spatially variable infiltration
 from the external layers.
@@ -623,8 +625,7 @@ This method follows the guidelines in the FCDMC Hydrology Manual from 2023 (FCDM
 The difference between this method and the 2018 method is the Log Average of PSIF.
 The general calculations are as follows:
 
-XKSAT
-'''''
+*XKSAT*
 
 XKXAT is the hydraulic conductivity in in/hr or mm/hr of the soil layer.
 Figure 28 shows the hydraulic conductivity of the soil layer.
@@ -649,8 +650,7 @@ The soil polygon is intersected with the grid polygon to provide the A\ :sub:`i`
 
    *A\ i* is the subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* is the grid element area.
 
-PSIF
-''''
+*PSIF*
 
 PSIF is the wetting front capillary suction in or mm of the soil layer (Figure 29).
 
@@ -676,8 +676,7 @@ The soil polygon is intersected with the grid polygon to provide the A\ :sub:`i`
 
    *A\ i* is subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* the grid element area.
 
-DTHETA
-''''''
+*DTHETA*
 
 DTHETA is the soil moisture deficit.
 It ranges in value from zero to the effective porosity of the soil (Figure 30).
@@ -723,8 +722,7 @@ Once DTHETA\ :sub:`parts` is complete, DTHETA\ :sub:`grid` is calculated using a
 
    If a grid element is within by a “wet” or “saturated” polygon, the DTHETA for that grid = 0.
 
-RTIMP
-'''''
+*RTIMP*
 
 RTIMP is the percent impervious of the landuse (paved surfaces, buildings) and the soil (rockout).
 Figure 33 shows the rock out percentages for the landuse layer.
@@ -793,8 +791,7 @@ More information on how FLO-2D uses the Green-Ampt method to calculate rainfall 
 *Figure 34.
 Example INFIL.DAT file.*
 
-VC
-''
+*VC*
 
 VC is the vegetative cover related to the topsoil horizon.
 Figure 35 shows the vegetative cover of the landuse layer.
@@ -825,8 +822,7 @@ This requires a computation of the ratio of the hydraulic conductivity for the v
 P\ :sub:`k` is the percentage of the area within the grid element corresponding to C\ :sub:`k` and XKSATC for each grid element is written in the
 INFIL.DAT file.
 
-IA
-''
+*IA*
 
 IA is the initial abstraction for each grid element.
 Figure 36 shows the initial abstraction for the landuse layer.
@@ -855,6 +851,7 @@ Eq.
    *IABSTR* is added to the INFIL.DAT file for each element.
 
 *Green and Ampt (FCDMC Method 2018)*
+''''''''''''''''''''''''''''''''''''
 
 The 2018 method for Green-Ampt uses a different calculator for PSIF and DTHETA.
 Figure 37 shows the Compute Green-Ampt dialog for the FCDMC Method 2018.
