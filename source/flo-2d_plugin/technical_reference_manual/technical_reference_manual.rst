@@ -1736,14 +1736,12 @@ breach_global
      - REAL
      - Sediment gradient of the downstream upper one foot face.
 
-
 bridge_variables
 ^^^^^^^^^^^^^^^^
 
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
