@@ -853,7 +853,7 @@ Figure 4.3 of the Maricopa County Drainage Design Manual, 2018).
 
 .. raw:: html
 
-   <table style="border-collapse: collapse; width: 100%;">
+   <table style="border-collapse: collapse; width: 90%;">
      <tr>
        <th style="border: 1px solid #000; padding: 4px;">XKSAT (in/hr)</th>
        <th style="border: 1px solid #000; padding: 4px;">PSIF (in)</th>
