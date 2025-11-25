@@ -4,7 +4,7 @@ Technical Reference Manual
 ==========================
 
 Overview
-========
+------------
 
 The FLO-2D Plugin for QGIS is a tool to develop, format, analyze, and display data used by the FLO-2D Flood Model.
 The Plugin can import project data, generate data and export appropriately formatted FLO-2D data input files for a FLO-2D Project.
@@ -14,13 +14,12 @@ outlines the data structure and presents tutorials for the Plugin.
 It does not address the functionality and use of the FLO-2D model which has a separate set of reference manuals.
 
 Data File Structure
-===================
-
+----------------------
 The FLO-2D QGIS Plugin uses native QGIS layers to display FLO-2D project data.
 Several aspects of the Plugin file structure are fundamental to understanding project data organization and workflows.
 
 GeoPackage File
----------------
+^^^^^^^^^^^^^^^^
 
 All FLO-2D project data is stored in an SQLite database conforming to the GeoPackage specification.
 The GeoPackage specification is a product of the Open Geospatial Consortium (OGC) and stores spatial data in a non-proprietary database format.
@@ -35,15 +34,13 @@ FLO-2D uses \*.dat or \*.hdf5 files.
 These files are exported from the \*.gpkg database.
 Figure 1 shows the layout of the layers and tables in QGIS that are used by the FLO-2D Plugin.
 
-Overview
-
 .. image:: ../img/technical_reference_manual/FLO002.jpg
 
 *Figure 1.
 Overview of the QGIS Layout and Layer Structure.*
 
 Project Metadata
-----------------
+^^^^^^^^^^^^^^^^^
 
 Non-spatial project metadata, such as data in the CONT.DAT and TOLER.DAT files, as well as the project spatial reference, are stored in tables within
 the project GeoPackage file.
@@ -51,7 +48,7 @@ While the project spatial reference is not a spatial dataset, the spatial projec
 coordinate projection and changes to the selected spatial projection will require regeneration of the project GeoPackage.
 
 Project Spatial Data
---------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 Project spatial data is stored within the project GeoPackage file.
 All input datasets are assumed to have the same spatial coordinate reference system (CRS) as assigned to the FLO-2D project.
@@ -59,10 +56,10 @@ Datasets in other spatial reference systems should first be projected into the F
 the FLO-2D QGIS Plugin tools.
 
 FLO-2D Plugin
-=============
+---------------
 
 Python Plugin
--------------
+^^^^^^^^^^^^^^^^^^^^^
 
 The FLO-2D Plugin is built with python code.
 The code is open source and available for any programmer to review or edit.
@@ -91,7 +88,6 @@ The files include the following:
 The plugin is organized into utility-based directories for plugin files that perform specific functions.
 For example, there is a folder for the toolbar and one for the sidebar widgets.
 
-FLO-2D Plugin
 
 The plugin code is built with Pycharm, and Eclipse.
 The python formatting module Black is used to format the code.
@@ -134,7 +130,7 @@ The processes include:
 - HAZUS development tools
 
 Grid System
------------
+^^^^^^^^^^^^
 
 The grid system is defined by using the extent of the *Computational Domain* to generate a grid system boundary.
 The code generates a bounding box using the x (max, min), and y (max, min) of the computational domain polygon.
@@ -158,7 +154,7 @@ The grid alignment is generally set to the extent of the computational domain, b
 Grid Element Alignment.*
 
 Elevation from Raster
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 The *Elevation from Raster* calculator uses the alignment and cell size of the grid system to set the origin and raster resolution of the *Warp* tool.
 The `Geospatial Data Abstraction Library (GDAL) Warp <https://gdal.org/programs/gdalwarp.html>`__ tool is used by the FLO-2D Plugin to generate a
@@ -183,7 +179,7 @@ This is the most accurate method for the GDAL warp.
 It is slower than using the ORV data.
 
 Elevation from LiDAR
---------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 The *Elevation from LiDAR* calculator uses a direct average of the points within each cell.
 (Figure 6).
@@ -214,7 +210,7 @@ Figure 8 shows the elevation interpolation before the missing cell correction, a
 Results Test Case 5.*
 
 Elevation Adjustment Tool
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The *Grid Element Adjustment* tool is used to make modifications and corrections to the grid element elevations without having to manipulate the
 original elevation dataset.
@@ -312,7 +308,7 @@ If **statistics per grid cell** is checked, the raster zonal statistics will be 
 The checkbox should be used in most cases unless a single elevation is desired for a group of cells.
 
 Levee Tool
-----------
+^^^^^^^^^^^
 
 The *Levee* *Elevation Tool* sees the grid as a set of octagonal sides at a specified distance from the node (Figure 12).
 
@@ -426,7 +422,7 @@ They are not typically the same crest elevation.
 The plugin will identify redundant levees and delete the levee with the lower crest elevation.
 
 Spatially Variable Data Processing
-----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The plugin processes data for several spatially variable data sets.
 These include:
@@ -457,7 +453,7 @@ element ID.
 Spatially Variable Data.*
 
 Area and Width Reduction Factor
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The calculator intersects the polygons in the *Blocked Areas* (buildings) layer to the polygons in the *Grid* layer and uses the centroid to set up
 the ARF/WRF table of variables.
@@ -513,7 +509,7 @@ WRF Redundancy GDS / QGIS Comparison.*
 WRF Calculator GDS / QGIS Comparison.*
 
 Rainfall Interpolation Tool
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The *Rainfall Interpolation Tool* uses rainfall depth rasters like those provided by NOAA Atlas 14.
 The original raster resolution is on the order of 2000 by 2000 ft pixels (**Error! R eference source not found.**).
@@ -559,7 +555,7 @@ A rainfall reduction value is calculated for each element in the grid system usi
 Warped Rainfall Raster.**
 
 Real-time Rainfall Sampling Tool (NEXRAD Data)
-----------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Interpolated rainfall data from NEXRAD is an estimation of a rainfall event over a particular region using data from the NEXRAD radar network.
 NEXRAD (Next-Generation Radar) is a network of over 150 high-resolution Doppler weather radars operated by the National Oceanic and Atmospheric
@@ -597,7 +593,7 @@ Figure 26 shows an example of the rainfall data file.
 RAINCELL.DAT.*
 
 Infiltration Development Tools
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The *Infiltration Editor* is used to assign infiltration data globally or spatially from polygon layers.
 The Infiltration calculators can use embedded layers for infiltration or imported layers.
@@ -1003,7 +999,7 @@ The required data fields are:
 The schematize method intersects the Horton polygons to the grid and assigns the variables using an area weighted average.
 
 Channel Development Tools
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The channel development tools use several methods and calculators for channel development.
 A channel is composed of three polyline layers for the banks and cross sections and a point layer for confluences.
@@ -1094,7 +1090,7 @@ The cross section names are extracted from the river mile field (Figure 41).
 Channel Cross Sections.*
 
 Storm Drain Development Tools
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The FLO-2D surface water model has a dynamic exchange with the storm drain system.
 FLO-2D calculates the surface water depth at grid cells.
@@ -1234,7 +1230,7 @@ Rating Tables and Pump Curves.*
 Table Editor and Plotting Window.*
 
 Hazus tools
------------
+^^^^^^^^^^^^
 
 The *Hazus* tool will generate a raster maximum depth file that can be used as an input for the FEMA Hazus program.
 The required layers include building shape files, grid cell elevations, grid cell depth and water surface elevations.
@@ -9285,7 +9281,7 @@ This data is written to the XSEC.DAT file when the project is exported.
 **yi** REAL Cross section elevation.
 
 Appendix B FLO-2D Plugin Error Codes
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Errors
 ~~~~~~
