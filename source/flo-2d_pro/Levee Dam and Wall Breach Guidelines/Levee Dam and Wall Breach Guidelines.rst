@@ -279,10 +279,18 @@ Levee Overtopping Definition.*
 
 The flow can occur in either direction and the discharge Q is computed using the conventional broad-crested weir equation:
 
-Q = CLH\ :sub:`d`\ :sup:`1.5`
+.. math::
 
-where: C is the broadcrested weir coefficient (3.09 in English units, average typical coefficient for the broadcrested weir); L is the length of the
-levee crest and H\ :sub:`d` is the headwater on the levee (Figure 9).
+   Q = C\,L\,H_d^{1.5}
+
+
+::
+
+where:
+  C = broadcrested weir coefficient (3.09 in English units, typical average coefficient);
+  L = length of the levee crest;
+  H:sub:`d` = the headwater on the levee (Figure 9).
+
 The headwater depth must exceed a tolerance value = 0.1 ft (0.3 m) for discharge to occur.
 This is to accommodate non-uniform crest elevations and minute discharges that will not impact the flooding.
 Typically, if the flow is greater than about 0.1 ft, the discharge will be significant.
@@ -1787,43 +1795,27 @@ The levee fragility curves are read directly by the FLO-2D model in a discretize
 The first column is the curve reference name; the second column is the probability of failure (x-axis Figure 1); and third column is the distance
 below the levee crest in feet or meters (y-axis).
 
-FS1 0.03 6.0
+::
 
-FS1 0.15 3.5
-
-FS1 0.50 2.5
-
-FS1 0.85 1.0
-
-FS1 0.95 0.0
-
-FS2 0.03 9.0
-
-FS2 0.15 5.5
-
-FS2 0.50 4.0
-
-FS2 0.85 2.0
-
-FS2 0.98 0.0
-
-FS3 0.03 12.0
-
-FS3 0.15 9.0
-
-FS3 0.50 6.5
-
-FS3 0.85 4.0
-
-FS3 1.00 0.0
-
-FS4 0.15 15.0
-
-FS4 0.50 9.0
-
-FS4 0.85 6.0
-
-FS4 1.00 0.0
+  FS1 0.03 6.0
+  FS1 0.15 3.5
+  FS1 0.50 2.5
+  FS1 0.85 1.0
+  FS1 0.95 0.0
+  FS2 0.03 9.0
+  FS2 0.15 5.5
+  FS2 0.50 4.0
+  FS2 0.85 2.0
+  FS2 0.98 0.0
+  FS3 0.03 12.0
+  FS3 0.15 9.0
+  FS3 0.50 6.5
+  FS3 0.85 4.0
+  FS3 1.00 0.0
+  FS4 0.15 15.0
+  FS4 0.50 9.0
+  FS4 0.85 6.0
+  FS4 1.00 0.0
 
 Application of the Levee Fragility Curves in the FLO-2D Model
 -------------------------------------------------------------
@@ -1844,18 +1836,14 @@ Global Levee Data: Line ID, Fragility Curve ID, Probability of Failure (eg.
 0.50) Individual Levee Data: Line ID, Grid Element, Fragility Curve ID, Probability of Failure
 
 Example:
-
-C FS3 0.5
-
-P 3450 FS1 0.5
-
-P 3558 FS1 0.9
-
-P 3559 FS2 0.7
-
-P 3669 FS3 0.5
-
-P 3670 FS4 0.5
+::
+  
+  C FS3 0.5
+  P 3450 FS1 0.5
+  P 3558 FS1 0.9
+  P 3559 FS2 0.7
+  P 3669 FS3 0.5
+  P 3670 FS4 0.5
 
 This data assignment enables the user to specify either global fragility curve data for the entire levee system or individual levee grid elements or
 reaches of levee fragility curves in the FLO-2D model in a spatially variable analysis.
