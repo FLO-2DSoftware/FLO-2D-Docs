@@ -626,7 +626,7 @@ The difference between this method and the 2018 method is the Log Average of PSI
 The general calculations are as follows:
 
 *XKSAT*
-
+```````
 XKXAT is the hydraulic conductivity in in/hr or mm/hr of the soil layer.
 Figure 28 shows the hydraulic conductivity of the soil layer.
 
@@ -649,6 +649,7 @@ Where:
    *A\ i* is the subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* is the grid element area.
 
 *PSIF*
+```````
 
 PSIF is the wetting front capillary suction in or mm of the soil layer (Figure 29).
 
@@ -672,7 +673,7 @@ Where:
    *A\ i* is subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* the grid element area.
 
 *DTHETA*
-
+````````
 DTHETA is the soil moisture deficit.
 It ranges in value from zero to the effective porosity of the soil (Figure 30).
 
@@ -717,7 +718,7 @@ Where:
    If a grid element is within by a “wet” or “saturated” polygon, the DTHETA for that grid = 0.
 
 *RTIMP*
-
+```````
 RTIMP is the percent impervious of the landuse (paved surfaces, buildings) and the soil (rockout).
 Figure 33 shows the rock out percentages for the landuse layer.
 
@@ -728,11 +729,9 @@ Landuse with Rockout Percentages.*
 
 Intersecting the landuse with the soil combines the data into a single layer (land_soil) of polygon features with attributes of RTIMP\ :sub:`land` and
 RTIMP\ :sub:`natural`.
-The RTIMP\ :sub:`max` is given by Eq.
-5.
+The RTIMP\ :sub:`max` is given by Eq.5.
 
-𝑅𝑇𝐼𝑀𝑃𝑚𝑎𝑥 = 𝑚𝑎𝑥(𝑅𝑇𝐼𝑀𝑃𝑙𝑎𝑛𝑑,𝑅𝑇𝐼𝑀𝑃𝑛𝑎𝑡𝑢𝑟𝑎𝑙) Eq.
-5
+𝑅𝑇𝐼𝑀𝑃𝑚𝑎𝑥 = 𝑚𝑎𝑥(𝑅𝑇𝐼𝑀𝑃𝑙𝑎𝑛𝑑,𝑅𝑇𝐼𝑀𝑃𝑛𝑎𝑡𝑢𝑟𝑎𝑙) Eq.5
 
    Where:
 
@@ -786,6 +785,7 @@ More information on how FLO-2D uses the Green-Ampt method to calculate rainfall 
 Example INFIL.DAT file.*
 
 *VC*
+````
 
 VC is the vegetative cover related to the topsoil horizon.
 Figure 35 shows the vegetative cover of the landuse layer.
@@ -817,6 +817,7 @@ P\ :sub:`k` is the percentage of the area within the grid element corresponding 
 INFIL.DAT file.
 
 *IA*
+````
 
 IA is the initial abstraction for each grid element.
 Figure 36 shows the initial abstraction for the landuse layer.
