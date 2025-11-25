@@ -286,10 +286,10 @@ The flow can occur in either direction and the discharge Q is computed using the
 
 ::
 
-where:
-  C = broadcrested weir coefficient (3.09 in English units, typical average coefficient);
-  L = length of the levee crest;
-  H:sub:`d` = the headwater on the levee (Figure 9).
+  where:
+    C = broadcrested weir coefficient (3.09 in English units, typical average coefficient);
+    L = length of the levee crest;
+    H:sub:`d` = the headwater on the levee (Figure 9).
 
 The headwater depth must exceed a tolerance value = 0.1 ft (0.3 m) for discharge to occur.
 This is to accommodate non-uniform crest elevations and minute discharges that will not impact the flooding.
