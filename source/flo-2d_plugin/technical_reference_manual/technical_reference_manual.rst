@@ -1749,238 +1749,109 @@ bridge_variables
      - **Field Type**
      - **Description**
 
-   * - **fid**
+   * - **struct_fid**
      - INTEGER
-     - Unit fid is unique and not associated with the grid id.
-
-
-structure fid for which the
-
-INTEGER data are defined "IBTYPE" IN-
-
-**struct_fid** TEGER
-
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
-
+     - structure fid for which the data are defined "IBTYPE" INTEGER.
 
    * - **IBTYPE**
-     -
      - INTEGER
-     - Type of bridge configuration
+     - Type of bridge configuration (see Appendix figures).
 
-       (see Appendix figures) "COEFF"
+   * - **COEFF**
+     - REAL
+     - Overall bridge discharge coefficient assigned or computed (default = 0.).
 
+   * - **C_PRIME_USER**
+     - REAL
+     - Baseline bridge discharge coefficient to be adjusted with detail coefficients.
 
-..
+   * - **KF_COE**
+     - REAL
+     - Froude number coefficient assigned or computed (= 0.).
 
-   Overall bridge discharge coefficient assigned or com-
+   * - **KWW_COEF**
+     - REAL
+     - Wingwall coefficient assigned or computed (= 0.).
 
-   REAL
+   * - **KPHI_COEF**
+     - REAL
+     - Flow angle with bridge coefficient assigned or computed (= 0.).
 
-puted (default = 0.)
+   * - **KY_COEF**
+     - REAL
+     - Coefficient associated with sloping embankments and vertical abutments (= 0.).
 
-**COEFF** "C_PRIME_USER"
+   * - **KX_COEF**
+     - REAL
+     - Coefficient associated with sloping abutments assigned or computed (= 0.).
 
-.. _`c_prime_user`:
-
-c_prime_user:
-
-REAL
-
-Baseline bridge discharge coefficient to be adjusted with detail coefficients "KF_COEF"
-
-
-Froude number coefficient
-
-REAL assigned or computed (= 0.)
-
-**KF_COEF** "KWW_COEF"
-
-.. _`kww_coef`:
-
-kww_coef:
-
-REAL
-
-.. _`kphi_coef
-
-kphi_coef
-
-Flow angle with bridge coefficient assigned or computed (= 0.) "KY_COEF"
-
-.. _`ky_coef|`:
-
-ky_coef|:
-
-REAL
-
-
-..
-
-   Coefficient associated with sloping abutments assigned
-
-   REAL
-
-or computed (= 0.)
-
-**KX_COEF** "KJ_COEF"
-
-.. list-table::
-   :widths: 20 20 20 20 20
-   :header-rows: 0
-
+   * - **KX_COEF**
+     - REAL
+     - Coefficient associated with sloping abutments assigned or computed (= 0.).
 
    * - **KJ_COEF**
-     -
-     -
      - REAL
-     - Coefficient associated with pier and piles assigned or computer (= 0.) "BOPENING"
+     - Coefficient associated with pier and piles assigned or computer (= 0.).
 
-
-..
-
-   Bridge opening width (ft or REAL
-
-**BOPENING** m).
-See Figure 7.
-"BLENGTH"
-
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
-
+  * - **BOPENING**
+     - REAL
+     - Bridge opening width (ft or REAL**BOPENING** m). See Figure 7.
 
    * - **BLENGTH**
-     -
      - REAL
-     - Bridge length from upstream edge to downstream abutment (ft or m) "BN_VALUE"
+     - Bridge length from upstream edge to downstream abutment (ft or m).
 
+   * - **BN_VALUE**
+     - REAL
+     - Bridge reach n-value (typical channel n-value for the bridge cross section).
 
-..
+   * - **UPLENGTH12**
+     - REAL
+     - Distance to upstream cross section unaffected by bridge backwater (ft or m).
 
-   Bridge reach n-value (typical channel n-value for the
-
-   REAL
-
-bridge cross section) "UP-
-
-**BN_VALUE** LENGTH12"
-
-.. _`uplength12`:
-
-uplength12:
-
-REAL
-
-Distance to upstream cross section unaffected by bridge backwater (ft or m)
-
-"LOWCHORD"
-
-
-..
-
-   Average elevation of the low REAL
-
-**LOWCHORD** chord (ft or m).
-"DECKHT"
-
-.. list-table::
-   :widths: 16 16 16 16 16 16
-   :header-rows: 0
-
+   * - **LOWCHORD**
+     - REAL
+     - Average elevation of the low chord (ft or m).
 
    * - **DECKHT**
-     -
-     -
-     -
      - REAL
-     - Average elevation of the top of the deck railing for overtop flow (ft or m) "DECKLENGTH"
+     - Average elevation of the top of the deck railing for overtop flow (ft or m).
 
-
-..
-
-   Deck weir length (ft or m).
-   REAL
-
-**DECKLENGTH** "PIERWIDTH"
-
-.. list-table::
-   :widths: 20 20 20 20 20
-   :header-rows: 0
-
+   * - **DECKLENGTH**
+     - REAL
+     - Deck weir length (ft or m).
 
    * - **PIERWIDTH**
-     -
-     -
      - REAL
-     - Combined pier or pile cross section width (flow blockage width in ft or m) "SLUICECOEFADJ"
+     - Combined pier or pile cross section width (flow blockage width in ft or m).
 
-
-..
-
-   Adjustment factor to raise or lower the sluice gate coeffi-
-
-   REAL
-
-cient which is 0.33 for Yu/Z =
-
-**SLUICECOEFADJ** 1.0 "ORIFICECOEFADJ"
-
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
-
+   * - **SLUICECOEFADJ**
+     - REAL
+     - Adjustment factor to raise or lower the sluice gate coefficient which is 0.33 for Yu/Z = 1.0.
 
    * - **ORIFICECOEFADJ**
-     -
      - REAL
-     - Adjustment factor to raise or lower the orifice flow coefficient which is 0.80 for Yu/Z =
+     - Adjustment factor to raise or lower the orifice flow coefficient which is 0.80 for Yu/Z = 1.0.
 
-       1.0 "COEFFWEIRB"
+   * - **COEFFWEIRB**
+     - REAL
+     - Weir coefficient for flow over the bridge deck. For metric: COEFFWIERB x 0.552.
 
+   * - **WINGWALL_ANGLE**
+     - REAL
+     - Angle the wingwall makes with the abutment perpendicular to the flow.
 
-..
+   * - **PHI_ANGLE**
+     - REAL
+     - Angle the flow makes with the bridge alignment perpendicular to the flow.
 
-   Weir coefficient for flow over the bridge deck.
-   For metric: REAL
+   * - **LBTOEABUT**
+     - REAL
+     - Toe elevation of the left abutment (ft or m).
 
-COEFFWIERB x 0.552
-
-**COEFFWEIRB** WINGWALL_ANGLE
-
-.. _`wingwall_angle`:
-
-wingwall_angle:
-
-REAL
-
-Angle the wingwall makes with the abutment perpendicular to the flow PHI_ANGLE
-
-
-..
-
-   Angle the flow makes with the bridge alignment perpen-
-
-   REAL
-
-dicular to the flow
-
-**PHI_ANGLE** LBTOEABUT
-
-.. _`lbtoeabut`:
-
-lbtoeabut:
-
-REAL
-
-Toe elevation of the left abutment (ft or m)
-
-
-..
-
-   Toe elevation of the right REAL **RBTOEABUT** abutment (ft or m)
+   * - **RBTOEABUT**
+     - REAL
+     - Toe elevation of the right abutment (ft or m)
 
 buildings_areas
 ^^^^^^^^^^^^^^^^
