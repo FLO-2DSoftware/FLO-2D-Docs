@@ -878,22 +878,23 @@ The specific table used for DTHETA depends on the *saturation* field of the soil
 
 *Saturation = DRY*
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+.. raw:: html
 
+   <table style="border-collapse: collapse; width: 75%;">
+     <tr>
+       <th style="border: 1px solid #000; padding: 4px;">XKSAT (in/hr)</th>
+       <th style="border: 1px solid #000; padding: 4px;">DTHETA DRY</th>
+     </tr>
+     <tr>
+       <td>0.01 ≤ XKSAT ≤ 0.15</td>
+       <td style="border: 1px solid #000; padding: 4px;">DTHETA =EXP(-0.2394 + 0.3616 Ln(XKSAT))
+</td>
+     </tr>
+   </table>
 
-   * - XKSAT (in/hr)
-     - DTHETA DRY
+.. raw:: html
 
-   * - 0.01  XKSAT  0.15
-     - DTHETA =EXP(-0.2394 + 0.3616 Ln(XKSAT))
-
-   * - 0.15  XKSAT  0.25
-     - DTHETA =EXP(-1.4122 - 0.2614 Ln(XKSAT))
-
-   * - 0.25  XKSAT  1.2
-     - DTHETA = 0.35
+    <br>
 
 
 *Saturation = NORMAL*
