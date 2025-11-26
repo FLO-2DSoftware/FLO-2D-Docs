@@ -3568,7 +3568,6 @@ Data is stored when the boundary condition schematize button is pushed.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -3593,23 +3592,18 @@ Data is stored when the boundary condition schematize button is pushed.
      - INTEGER
      - Inflow or outflow.
 
+   * - **note**
+     - TEXT
+     - Note.
 
-**note** TEXT Note.
+   * - **geom_type**
+     - TEXT
+     - The field that identifies if the inflow source was from a point, line or polygon.
 
-.. _`geom_type`:
+   * - **bc_fid**
+     - INTEGER
+     - Id linking the inflow data to the BC layer.
 
-geom_type:
-
-TEXT
-
-The field that identifies if the inflow source was from a point, line or polygon.
-
-
-..
-
-   Id linking the inflow data **bc_fid** INTEGER
-
-   to the BC layer.
 
 inflow_cells
 ^^^^^^^^^^^^
