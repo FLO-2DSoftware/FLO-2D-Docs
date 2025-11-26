@@ -8030,7 +8030,6 @@ This data is imported from and exported to the WSURF.DAT file.
      - Point of known water surface elevation.
 
 
-
 xsec_n_data
 ^^^^^^^^^^^
 
@@ -8040,7 +8039,6 @@ This data is written to the XSEC.DAT file when the project is exported.
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
@@ -8058,8 +8056,10 @@ This data is written to the XSEC.DAT file when the project is exported.
      - REAL
      - Cross section station.
 
+   * - **yi**
+     - REAL
+     - Cross section elevation.
 
-**yi** REAL Cross section elevation.
 
 Appendix B FLO-2D Plugin Error Codes
 -------------------------------------
