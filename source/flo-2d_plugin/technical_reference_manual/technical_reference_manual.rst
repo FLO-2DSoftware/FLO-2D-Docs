@@ -4055,7 +4055,6 @@ Data is for the mult.dat file.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4088,8 +4087,9 @@ Data is for the mult.dat file.
      - INTEGER
      - Number of mult channels in a grid.
 
-
-**xnmult** REAL Channel n-value.
+   * - **xnmult**
+     - REAL
+     - Channel n-value.
 
 mult_lines
 ^^^^^^^^^^
@@ -4100,7 +4100,6 @@ Data is for the mult.dat file.
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
@@ -4126,8 +4125,9 @@ Data is for the mult.dat file.
      - REAL
      - Channel n-value.
 
-
-**geom** POLYLINE
+   * - **geom**
+     - POLYLINE
+     -
 
 noexchange_chan_cells
 ^^^^^^^^^^^^^^^^^^^^^
