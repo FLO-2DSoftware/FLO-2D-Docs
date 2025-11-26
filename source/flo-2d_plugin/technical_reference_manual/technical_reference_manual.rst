@@ -3119,8 +3119,9 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
      - DOUBLE
      -
 
-
-**max_y** DOUBLE
+   * - **max_y**
+     - DOUBLE
+     -
 
 grid
 ^^^^
@@ -3132,7 +3133,6 @@ Data saved to topo.dat and mannings.dat.
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
@@ -3166,10 +3166,10 @@ Data saved to topo.dat and mannings.dat.
      - REAL
      - Imported flow depth.
 
+   * - **geom**
+     - POLYGON
+     - Polygons define the grid system based on the cells size.
 
-Polygons define the grid
-
-   **geom** POLYGON system based on the cells size.
 
 gutter_areas
 ^^^^^^^^^^^^
