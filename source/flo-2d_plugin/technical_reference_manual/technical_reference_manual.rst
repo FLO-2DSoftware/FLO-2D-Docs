@@ -6524,18 +6524,14 @@ This table is edited by many processes:
      - INTEGER
      - Id of a cross-section feature to join to channel feature.
 
+   * - **nxsecnum**
+     - INTEGER
+     - Id of a channel cross section to join the data from the cross-section table to the channel element.
 
+   * - **xsecname**
+     - TEXT
+     - Cross section name.
 
-.. _`nxsecnum`:
-
-nxsecnum:
-
-INTEGER
-
-Id of a channel cross section to join the data from the cross-section table to the channel element.
-
-
-**xsecname** TEXT Cross section name.
 
 user_chan_r
 ^^^^^^^^^^^
