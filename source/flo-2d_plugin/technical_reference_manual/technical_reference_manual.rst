@@ -8624,12 +8624,16 @@ Warnings
    * - **WARNING**
      - 010219.0742
      - Import channels failed!. Check CHAN.DAT and CHANBANK.DAT files.
-     - Maybe the number of left and righ bank cells are different.
+     - Maybe the number of left and righ bank cells
+
+       are different.
 
    * - **WARNING**
      - 010219.0742
      - Import channels failed!. Check CHAN.DAT and CHANBANK.DAT files.
-     - Maybe the number of left and righ bank cells are different.
+     - Maybe the number of left and righ bank cells
+
+       are different.
 
    * - **WARNING**
      - 060319.1613
@@ -8744,7 +8748,7 @@ Warnings
    * - **WARNING**
      - 060319.1657
      - The following inlets/junctions are outside the computational domain!
-     - + outside_inlets
+     - outside_inlets
 
    * - **WARNING**
      - 060319.1658
@@ -8796,7 +8800,7 @@ Warnings
 
        Change the feature attribute value in Computational Domain layer or
 
-       default cell size in the project settings.'
+       default cell size in the project settings.
      -
 
    * - **WARNING**
@@ -8894,7 +8898,9 @@ Warnings
    * - **WARNING**
      - 060319.1727
      - Cell size must be positive.
-     - Change the feature attribute value in Computational Domain layer.
+     - Change the feature attribute value in Computational
+
+       Domain layer.
 
    * - **WARNING**
      - 060319.1728
@@ -8921,7 +8927,7 @@ Warnings
    * - **WARNING**
      - 060319.1732
      - The following conduit inlets were not found!
-     - + conduit_inlets_not_found
+     - conduit_inlets_not_found
 
    * - **WARNING**
      - 060319.1733
