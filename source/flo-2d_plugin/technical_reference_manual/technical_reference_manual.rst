@@ -4017,7 +4017,6 @@ Data is for the mult.dat file.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4040,17 +4039,11 @@ Data is for the mult.dat file.
 
    * - **xnmult**
      - REAL
-     - Individual Manning’s
-       n.
+     - Individual Manning’s n.
 
-
-..
-
-   Feature polygon repre-
-
-**geom** POLYGON senting individual multiple
-
-   channel areas.
+   * - **geom**
+     - POLYGON
+     - Feature polygon representing individual multiple channel areas.
 
 mult_cells
 ^^^^^^^^^^
