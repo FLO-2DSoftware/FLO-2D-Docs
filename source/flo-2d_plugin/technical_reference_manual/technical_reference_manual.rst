@@ -8071,9 +8071,9 @@ Errors
    :widths: 33 33 33
    :header-rows: 0
 
-   * - **Type**
-     - **Code**
-     - **Message Details**
+    * - **Type**
+      - **Code**
+      - **Message Details**
 
     * - **ERROR**
       - 110618.1828
