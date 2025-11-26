@@ -8469,9 +8469,15 @@ Errors
    * - **ERROR**
      - 60319.161
      - Creating Storm Drain Nodes layer failed!
-     - Please check your SWMM input data.
+     - Please check your SWMM
 
-       Are the nodes coordinates inside the computational domain?
+       input data.
+
+       Are the nodes coordinates
+
+       inside the computational
+
+       domain?
 
    * - **ERROR**
      - 50618.1804
