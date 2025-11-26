@@ -7411,23 +7411,25 @@ All other data is stored in Hydraulic Structures tables.
 These tables are not visible to the user.
 They are edited via the Structure Editor widget.
 
-**Field Name Field Type Description**
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
-.. _`fid`:
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-fid:
+   * - **fid**
+     - INTEGER
+     - Unit fid is unique and not associated with the grid id.
 
-INTEGER
+   * - **geom**
+     - LINESTRING
+     - Polyline used to define a straight line between the inlet and outlet of a hydraulic structure.
 
-Unit fid is unique and not associated with the grid id.
+       It does not reflect the exact location of the structure.
 
 
-..
-
-   Polyline used to define a straight line between the inlet and outlet of a hy\ **geom** LINESTRING
-
-   draulic structure.
-   It does not reflect the exact location of the structure.
 
 user_swmm_conduits
 ^^^^^^^^^^^^^^^^^^
