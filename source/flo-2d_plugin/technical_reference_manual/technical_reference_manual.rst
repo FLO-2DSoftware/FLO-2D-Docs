@@ -8759,8 +8759,7 @@ Warnings
    * - **WARNING**
      - 060319.1700
      - The following outfalls are outside the computational domain!
-     - +
-       outside_outfalls
+     - outside_outfalls
 
    * - **WARNING**
      - 060319.1701
@@ -8774,7 +8773,7 @@ Warnings
 
    * - **WARNING**
      - 060319.1703
-     - + str(no_in_out) + ""
+     - str(no_in_out) + ""
        conduits have no inlet
        and/or outlet!
      -
@@ -8927,16 +8926,15 @@ Warnings
    * - **WARNING**
      - 060319.1733
      - The following conduit outlets were not found!
-     - +
-       conduit_outlets_not_found
+     - conduit_outlets_not_found
 
    * - **WARNING**
      - 060319.1734
-     - + str(no_in_out_conduits)
-       + "" conduits have no
-       inlet and/or outlet! The
-       value '?' was assigned to
-       them.
+     - str(no_in_out_conduits) + "" conduits have no
+
+       inlet and/or outlet!
+
+       The value '?' was assigned to them.
      -
 
    * - **WARNING**
