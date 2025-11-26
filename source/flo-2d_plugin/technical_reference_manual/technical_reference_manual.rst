@@ -8477,19 +8477,27 @@ Warnings
 ^^^^^^^^
 
 .. list-table::
-   :widths: 100
+   :widths: 33 33 33
    :header-rows: 0
 
+   * - **Type**
+     - **Code**
+     - **Message Details**
 
-   * - **Type Code Message Details**
+   * - **WARNING**
+     - 060319.1831
+     - Levee user lines required!
 
-   * - **WARNING**     |    060319.1831     |    Levee user lines required!   |
+   * - **WARNING**
+     - 060319.1806
+     - Assigning values aborted! Please check your crest elevation source layers.
 
-   * - **WARNING**     |    060319.1806     |    Assigning values aborted!    ||                    |    Please check your crest      ||                    |
-       elevation source layers.
-       |
+   * - **WARNING**
+     - 060319.1808
+     - File DEPFP.OUT is needed for the Hazus flooding analysis.
 
-   * - **WARNING**     |    060319.1808     |    File DEPFP.OUT is needed for | + project_dir)|                    |    the Hazus flooding analysis.
+
+   * - **WARNING**     |        |     | + project_dir)|                    |
        ||                    |    It is not in the current     ||                    |    project directory:\\n        |
 
    * - **WARNING**     |    060319.1810     |    Please choose at least one   ||                    |    conversion source!           |
