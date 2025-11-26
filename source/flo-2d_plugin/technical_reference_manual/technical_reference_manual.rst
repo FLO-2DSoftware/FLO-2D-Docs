@@ -5075,16 +5075,22 @@ rtree_grid_geom_rowid
 
 RSTLNE.
 
-**Field Name Field Type Description**
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
-.. _`rowid`:
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-rowid:
+   * - **rowid**
+     - INTEGER
+     -
 
-INTEGER
+   * - **nodeno**
+     - INTEGER
+     -
 
-
-**nodeno** INTEGER
 
 sed
 ^^^
