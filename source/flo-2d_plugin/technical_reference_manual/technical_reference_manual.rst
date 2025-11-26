@@ -9018,70 +9018,95 @@ Info Dialogs
 ^^^^^^^^^^^^
 
 .. list-table::
-   :widths: 100
-   :header-rows: 0
-
-
-   * - **Type Details**
-
-   * - **show_info**                       |    ("Files read by this project:\\n\\n" + self.files_used +|    "\\n\\nFiles not found or empty:\\n\\n" +|
-       self.files_not_used)
-
-   * - **show_info**                       |    ("Files exported:\\n\\n" + self.files_used)
-
-   * - **show_info**                       |    ('Values assigned to the Schematic Levees layer!')
-
-   * - **show_info**                       |    ('Converting User Layers to Schematic Layers finished!)
-
-   * - **show_info**                       |    ('gutter globals is empty')show_info,('gutter globals||    filled')show_info,('head')show_info,"('globals
-       width%,|    height%, n_value%' % (head[0], head[1], head[2] ))
-
-   * - **show_info**                       |    ('after rows')
-
-   * - **show_info**                       |    ('opened')
-
-   * - **show_info**                       |    ("fid %s, width %s, height %s , heign_value %s, direction|    %s" % (fid, width, height, n_value, direction))
-
-   * - **show_info**                       |    ('next line')
-
-   * - **show_info**                       |    ("WARNING 040319.0521:\\n\\nThe following cell(s) with|    inlet/junction of type 4 " +
-
-   * - **show_info**                       |    ("Inflows schematized!")
-
-   * - **show_info**                       |    ("Outflows schematized!")
-
-   * - **show_info**                       |    ("Run 0.4 min debug")
-
-   * - **show_info**                       |    ('Calculating elevation finished!')
-
-   * - **show_info**                       |    ('Spatial tolerance values calculated!')
-
-   * - **show_info**                       |    ('Perform average grid elevation interception.')
-
-   * - **show_info**                       |    ('Perform elevation from shapefile.')
-
-   * - **show_info**                       |    ('Flow depths were calculated.')
-
-   * - **show_info**                       |    ('Perform sample from raster.')
-
-   * - **show_info**                       |    ('Perform interpolate from DTM points.')
-
-   * - **show_info**                       |    ('Compute from area reduction factors.')
-
-   * - **show_info**                       |    ("Buildings statistics can be seen in 'Buildings|    Statistics' table.\\n\\n" +
-
-   * - **show_info**                       |    ('Connection!')
-
-   * - **show_info**                       |    ('TABLE CHANGED in ' + str(I) + ' ' + str(J))
-
-
-.. list-table::
    :widths: 50 50
    :header-rows: 0
 
+   * - **Type**
+     - ** Details**
 
    * - **show_info**
-     - ("WARNING 020219.1836:\\n\\nThe following " + str(no_rt) +
+     - ("Files read by this project:" + self.files_used + "Files not found or empty:" +
+
+       self.files_not_used)
+
+   * - **show_info**
+     - ("Files read by this project:" + self.files_used + Files not found or empty:" +
+
+       self.files_not_used)
+
+   * - **show_info**
+     - ("Files exported:" + self.files_used)
+
+   * - **show_info**
+     - ('Values assigned to the Schematic Levees layer!')
+
+   * - **show_info**
+     - ('Converting User Layers to Schematic Layers finished!)
+
+   * - **show_info**
+     - ('gutter globals is empty')show_info,('gutter globals filled')show_info,('head')show_info,"('globals
+
+       width%,   height%, n_value%' % (head[0], head[1], head[2]))
+
+   * - **show_info**
+     - ('after rows')
+
+   * - **show_info**
+     - ('opened')
+
+   * - **show_info**
+     - ("fid %s, width %s, height %s , heign_value %s, direction  %s" % (fid, width, height, n_value, direction))
+
+   * - **show_info**
+     - ('next line')
+
+   * - **show_info**
+     - ("WARNING 040319.0521: The following cell(s) with  inlet/junction of type 4 " +
+
+   * - **show_info**
+     - ("Inflows schematized!")
+
+   * - **show_info**
+     - ("Outflows schematized!")
+
+   * - **show_info**
+     - ("Run 0.4 min debug")
+
+   * - **show_info**
+     - ('Calculating elevation finished!')
+
+   * - **show_info**
+     - ('Spatial tolerance values calculated!')
+
+   * - **show_info**
+     - ('Perform average grid elevation interception.')
+
+   * - **show_info**
+     - ('Perform elevation from shapefile.')
+
+   * - **show_info**
+     - ('Flow depths were calculated.')
+
+   * - **show_info**
+     - ('Perform sample from raster.')
+
+   * - **show_info**
+     - ('Perform interpolate from DTM points.')
+
+   * - **show_info**
+     - ('Compute from area reduction factors.')
+
+   * - **show_info**
+     - ("Buildings statistics can be seen in 'Buildings Statistics' table." +
+
+   * - **show_info**
+     - ('Connection!')
+
+   * - **show_info**
+     - ('TABLE CHANGED in ' + str(I) + ' ' + str(J))
+
+   * - **show_info**
+     - ("WARNING 020219.1836: The following " + str(no_rt) +
 
    * - **show_info**
      - ('Connection!')
@@ -9093,13 +9118,13 @@ Info Dialogs
      - ('Sampling done.')
 
    * - **show_info**
-     - ("Importing Storm Drain nodes and conduits data finished!\\n\\n" +
+     - ("Importing Storm Drain nodes and conduits data finished!" +
 
    * - **show_info**
-     - ("Importing Storm Drain conduits data finished!\\n\\n" +
+     - ("Importing Storm Drain conduits data finished!" +
 
    * - **show_info**
-     - ("Importing Storm Drain nodes data finished!\\n\\n" +
+     - ("Importing Storm Drain nodes data finished!" +
 
    * - **show_info**
      - ("Floodplain cross-sections schematized!")
@@ -9138,7 +9163,7 @@ Info Dialogs
      - ('No-exchange areas selected!')
 
    * - **show_info**
-     - ("WARNING 150119.0354 Calculating Green-Ampt parameters finished, but \\n"
+     - ("WARNING 150119.0354 Calculating Green-Ampt parameters finished, but")
 
    * - **show_info**
      - ('Calculating Green-Ampt parameters finished!')
@@ -9156,19 +9181,19 @@ Info Dialogs
      - ('Importing predefined time series finished!')
 
    * - **show_info**
-     - ("Schematizing of Storm Drains finished!\\n\\n" +
+     - ("Schematizing of Storm Drains finished!")
 
    * - **show_info**
-     - ("No nodes or conduits were defined in file\\n\\n" + swmm_file)
+     - ("No nodes or conduits were defined in file + swmm_file)
 
    * - **show_info**
-     - ("Importing Storm Drain data finished!\\n\\n" +
+     - ("Importing Storm Drain data finished!")
 
    * - **show_info**
-     - (swmm_file + "\\n\\nfile saved with:\\n\\n" +
+     - (swmm_file + file saved with:)
 
    * - **show_info**
-     - ("Inlets saved to 'Storm Drain-Inlets' User Layer!\\n\\nSchematize it before saving into SWMMFLO.DAT.")
+     - ("Inlets saved to 'Storm Drain-Inlets' User Layer! Schematize it before saving into SWMMFLO.DAT.")
 
    * - **show_info**
      - ("Streets schematized!")
