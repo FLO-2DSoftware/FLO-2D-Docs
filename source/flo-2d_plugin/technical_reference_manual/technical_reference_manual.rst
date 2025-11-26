@@ -3825,7 +3825,6 @@ Not editable.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -3837,7 +3836,7 @@ Not editable.
    * - **raiselev**
      - REAL
      - Global height to raise all levees.
-       (ft or m)
+       (ft or m).
 
    * - **ilevfail**
      - INTEGER
