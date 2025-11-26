@@ -5669,7 +5669,6 @@ Table of local street data.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -5678,40 +5677,27 @@ Table of local street data.
      - INTEGER
      - Unit fid is unique and not associated with the grid id.
 
-
-Id field to join local streets
-
-**str_fid** INTEGER to individual street fea-
-
-   tures.
-
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
-
+   * - **str_fid**
+     - INTEGER
+     - Id field to join local streets to individual street features.
 
    * - **igridn**
-     -
      - INTEGER
      - Id field to join the individual street features to the grid element.
 
    * - **depex**
-     -
      - REAL
      - Local curb height.
 
    * - **stman**
-     -
      - REAL
      - Local Manning’s n.
 
    * - **elstr**
-     -
      - REAL
      - Local elevation of the street.
 
    * - **geom**
-     -
      - MULTILINESTRING
      - A geometry with multiple components.
 
