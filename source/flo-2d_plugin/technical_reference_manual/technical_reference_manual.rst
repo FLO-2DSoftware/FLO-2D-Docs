@@ -4196,7 +4196,6 @@ This data will be exported to the OUTFLOW.DAT file when the project is exported.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
