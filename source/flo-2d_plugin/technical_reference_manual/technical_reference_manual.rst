@@ -3216,33 +3216,30 @@ gutter_cells
 The gutter cells calculated from the gutter_areas.
 These are written to the GUTTER.DAT file when the project is exported.
 
-**Field Name Field Type Description**
-
-.. _`fid`:
-
-fid:
-
-INTEGER
-
-Unit fid is unique and not associated with the grid id.
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
 
-The fid that is associated
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-**area_fid** INTEGER with the gutter area poly-
+   * - **fid**
+     - INTEGER
+     - Unit fid is unique and not associated with the grid id.
 
-   gons.
+   * - **area_fid**
+     - INTEGER
+     - The fid that is associated with the gutter area polygons.
 
-.. _`line_fid`:
+   * - **line_fid**
+     - INTEGER
+     - The fid that is associated with the gutter line polylines.
 
-line_fid:
-
-INTEGER
-
-The fid that is associated with the gutter line polylines.
-
-
-**grid_fid** INTEGER Grid element id of the cell.
+   * - **line_fid**
+     - INTEGER
+     - Grid element id of the cell.
 
 gutter_globals
 ^^^^^^^^^^^^^^
