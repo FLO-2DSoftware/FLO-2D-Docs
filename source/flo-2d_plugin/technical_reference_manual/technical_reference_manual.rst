@@ -4395,7 +4395,6 @@ The data is imported and exported to the outflow.dat file.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
