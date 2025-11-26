@@ -6961,7 +6961,6 @@ This data is schematized to the Channel Segments layer.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -7015,7 +7014,6 @@ Levee failure data is also contained in this table.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -7030,48 +7028,36 @@ Levee failure data is also contained in this table.
 
    * - **elev**
      - REAL
-     - Crest elevation.
-       (ft or m)
+     - Crest elevation. (ft or m).
 
    * - **correction**
      - REAL
-     - Elevation correction.
-       (ft or m)
+     - Elevation correction. (ft or m).
 
    * - **failElev**
      - LINESTRING
-     - Elevation on the levee to initiate failure.
-       (ft or m)
+     - Elevation on the levee to initiate failure. (ft or m).
 
    * - **failDepth**
      - REAL
-     - Depth from highest grid element to initiate failure.
-       (ft or m)
+     - Depth from highest grid element to initiate failure. (ft or m).
 
    * - **failMaxWidth**
      - REAL
-     - Maximum failure width.
-       (ft or m)
+     - Maximum failure width. (ft or m).
 
+   * - **failVRate**
+     - REAL
+     - Vertical failure rate. (ft/hr or m/hr).
 
-..
+   * - **failhrate**
+     - REAL
+     - Horizontal failure rate. (ft/hr or m/hr).
 
-   Vertical failure rate.
-   (ft/hr **failVRate** REAL
+   * - **geom**
+     - LINESTRING
+     - Multiline geometry.
 
-   or m/hr)
-
-.. _`failhrate`:
-
-failhrate:
-
-REAL
-
-Horizontal failure rate.
-(ft/hr or m/hr)
-
-
-**geom** LINESTRING Multiline geometry.
 
 user_model_boundary
 ^^^^^^^^^^^^^^^^^^^
