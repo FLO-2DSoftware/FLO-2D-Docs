@@ -5909,8 +5909,10 @@ This data is written to swmm.inp.
      - REAL
      - x column of the table.
 
+   * - **y_value**
+     - REAL
+     - y column of the table.
 
-**y_value** REAL y column of the table.
 
 swmm_tidal_curve
 ^^^^^^^^^^^^^^^^
@@ -5921,7 +5923,6 @@ This data is written to swmm.inp.
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
@@ -5949,7 +5950,6 @@ Table of tidal data for stage and time.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -5966,8 +5966,10 @@ Table of tidal data for stage and time.
      - REAL
      - Time at stage in hours.
 
+   * - **stage**
+     - REAL
+     - Stage at time in ft or m.
 
-**stage** REAL Stage at time in ft or m.
 
 swmm_time_series
 ^^^^^^^^^^^^^^^^
@@ -5978,7 +5980,6 @@ This data is written to swmm.inp.
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
@@ -6015,7 +6016,6 @@ This data is written to swmm.inp.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -6051,7 +6051,6 @@ This data is imported and exported from SWMMFLO.DAT.
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
@@ -6101,23 +6100,13 @@ This data is imported and exported from SWMMFLO.DAT.
      - REAL
      - Curb height.
 
+   * - **name**
+     - TEXT
+     - Name (used by plugin not assigned to SWMMFLOW.DAT or SWMM.inp).
 
-..
-
-   Name (used by plugin not assigned to **name** TEXT
-
-SWMMFLOW.DAT or
-
-   SWMM.inp.)
-
-.. _`geom`:
-
-geom:
-
-POINT
-
-The feature is a point geometry that is assigned to the grid element closest to the actual inlet location.
-
+   * - **geom**
+     - POINT
+     - The feature is a point geometry that is assigned to the grid element closest to the actual inlet location.
 
 swmmflo_culvert
 ^^^^^^^^^^^^^^^
@@ -6127,7 +6116,6 @@ A table of data that joins the grid element and swmmid to the generalized culver
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
@@ -6162,8 +6150,10 @@ A table of data that joins the grid element and swmmid to the generalized culver
      - REAL
      - Conduit width.
 
+   * - **multbarrels**
+     - INTEGER
+     - Number of barrels.
 
-**multbarrels** Integer Number of barrels.
 
 swmmflort
 ^^^^^^^^^
@@ -6173,8 +6163,6 @@ A table of data that joins the grid element and swmmid to the rating table data 
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -6202,7 +6190,6 @@ This data is imported and exported from SWMMFLORT.DAT.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -6219,12 +6206,11 @@ This data is imported and exported from SWMMFLORT.DAT.
      - REAL
      - The depth of flow.
 
+   * - **q**
+     - REAL
+     - Inlet discharge received for each depth.
 
-..
 
-   Inlet discharge received **q** REAL
-
-   for each depth.
 
 swmmoutf
 ^^^^^^^^
@@ -6236,7 +6222,6 @@ This data is imported to and exported from to the SWMMOUTF.DAT.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -6245,37 +6230,21 @@ This data is imported to and exported from to the SWMMOUTF.DAT.
      - INTEGER
      - Unit fid is unique and not associated with the grid id.
 
+   * - **grid_fid**
+     - INTEGER
+     - Grid element id of the outfall cell.
 
-..
+   * - **name**
+     - TEXT
+     - Name of the outfall. This field is used by the MOUTF.DAT and SWMM.inp file.
 
-   Grid element id of the out\ **grid_fid** INTEGER
+   * - **outf_flo**
+     - INTEGER
+     - Outfall discharge switch.
 
-   fall cell.
-
-.. _`name`:
-
-name:
-
-TEXT
-
-Name of the outfall.
-This field is used by the
-
-MOUTF.DAT and
-
-SWMM.inp file.
-
-
-**outf_flo** INTEGER Outfall discharge switch.
-
-.. _`geom`:
-
-geom:
-
-POINT
-
-The feature is a point geometry that is assigned to the grid element closest to the actual outfall location.
-
+   * - **geom**
+     - POINT
+     - The feature is a point geometry that is assigned to the grid element closest to the actual outfall location.
 
 tailing_cells
 ^^^^^^^^^^^^^
