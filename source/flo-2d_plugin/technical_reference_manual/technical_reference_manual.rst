@@ -7708,7 +7708,6 @@ This data is written to the schematic layers.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -7757,16 +7756,13 @@ This data is written to the schematic layers.
      - REAL
      - Orifice opening height.
 
+   * - **orifice_width**
+     - REAL
+     - Orifice opening width.
 
-**orifice_width** REAL Orifice opening width.
-
-.. _`geom`:
-
-geom:
-
-LINESTRING
-
-Polyline geometry.
+   * - **geom**
+     - LINESTRING
+     - Polyline geometry.
 
 
 user_swmm_pumps
