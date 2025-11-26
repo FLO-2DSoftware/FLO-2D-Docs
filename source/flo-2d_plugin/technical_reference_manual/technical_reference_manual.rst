@@ -4483,7 +4483,6 @@ Data is imported and exported to the rain.dat file.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4526,23 +4525,18 @@ Data is imported and exported to the rain.dat file.
      - INTEGER
      - Moving storm switch.
 
+   * - **rainspeed**
+     - REAL
+     - The speed of moving storm.
 
-..
+   * - **iraindir**
+     - INTEGER
+     - The direction of moving storm.
 
-   The speed of moving **rainspeed** REAL
+   * - **notes**
+     - TEXT
+     - Notes
 
-   storm.
-
-.. _`iraindir`:
-
-iraindir:
-
-INTEGER
-
-The direction of moving storm.
-
-
-**notes** TEXT Notes.
 
 rain_arf_cells
 ^^^^^^^^^^^^^^
