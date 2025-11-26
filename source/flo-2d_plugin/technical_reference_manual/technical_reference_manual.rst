@@ -2577,7 +2577,6 @@ evapor_monthly
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -2593,7 +2592,6 @@ evapor_monthly
    * - **monthly_evap**
      - REAL
      - Monthly evaporation rate.
-
 
 fpfroude
 ^^^^^^^^
