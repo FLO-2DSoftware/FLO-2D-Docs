@@ -6638,18 +6638,14 @@ Table of data that stores channel geometry and joins a variable cross section to
 The data is saved and schematized to the Channel Tables.
 This table is edited by many processes:
 
-- Cross section editor
-
-- Channel left bank layer
-
-- Converter schematic to user
-
-- Schematize user data
+    - Cross section editor
+    - Channel left bank layer
+    - Converter schematic to user
+    - Schematize user data
 
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
