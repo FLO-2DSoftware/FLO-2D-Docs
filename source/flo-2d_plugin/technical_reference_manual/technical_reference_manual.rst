@@ -3906,7 +3906,6 @@ Data is for the sed.dat file.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -3933,7 +3932,6 @@ Data is for the SED.DAT file.
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
@@ -3962,7 +3960,6 @@ Data is for the mult.dat file.
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
@@ -4004,8 +4001,10 @@ Data is for the mult.dat file.
      - REAL
      - Bed material D50.
 
+   * - **simple_n**
+     - REAL
+     - Simple mult roughness.
 
-**simple_n** REAL Simple mult roughness.
 
 mult_areas
 ^^^^^^^^^^
