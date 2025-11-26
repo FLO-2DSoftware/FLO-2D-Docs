@@ -3862,7 +3862,6 @@ It is not editable.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
