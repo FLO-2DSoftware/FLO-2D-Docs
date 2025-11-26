@@ -2757,8 +2757,9 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
      - DOUBLE
      -
 
-
-**srs_id** INTEGER
+   * - **srs_id**
+     - INTEGER
+     -
 
 gpkg_data_column_constraints
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
