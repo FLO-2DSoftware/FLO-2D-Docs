@@ -5469,7 +5469,6 @@ A table of cells that are identified as simple mult cells by the cell id and sim
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -5492,18 +5491,22 @@ simple_mult_lines
 
 A table of cells that are identified as simple mult cells by the cell id and simple mult line id.
 
-**Field Name Field Type Description**
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
-.. _`fid`:
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-fid:
+   * - **fid**
+     - INTEGER
+     - Unit fid is unique and not associated with the grid id.
 
-INTEGER
+   * - **geom**
+     - POLYLINE
+     - Polyline geometry.
 
-Unit fid is unique and not associated with the grid id.
-
-
-**geom** POLYLINE Polyline geometry.
 
 spatialshallow
 ^^^^^^^^^^^^^^
