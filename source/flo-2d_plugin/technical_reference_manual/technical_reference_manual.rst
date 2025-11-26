@@ -7211,7 +7211,6 @@ This data is schematized to the Channel Segments layer.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -7228,8 +7227,10 @@ This data is schematized to the Channel Segments layer.
      - TEXT
      - Notes
 
+   * - **geom**
+     - LINESTRING
+     - Geometry is a polyline.
 
-**geom** LINESTRING Geometry is a polyline.
 
 user_roughness
 ^^^^^^^^^^^^^^
