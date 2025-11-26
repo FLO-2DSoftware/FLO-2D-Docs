@@ -7305,7 +7305,6 @@ A layer used to create spatially variable shallow n polygons.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -7322,10 +7321,9 @@ A layer used to create spatially variable shallow n polygons.
      - TEXT
      - Notes.
 
-
-Polygon features of spa-
-
-   **geom** POLYGON tially variable spatial shallow n data.
+   * - **geom**
+     - POLYGON
+     - Polygon features of spatially variable spatial shallow n data.
 
 user_spatial_tolerance
 ^^^^^^^^^^^^^^^^^^^^^^
