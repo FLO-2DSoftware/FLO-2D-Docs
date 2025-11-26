@@ -3206,10 +3206,9 @@ It also contains local variables used in gutter cells.
      - INTEGER
      - Curb direction.
 
-
-Polygons define the grid
-
-   **geom** POLYGON system based on the cells size.
+   * - **geom**
+     - POLYGON
+     - Polygons define the grid system based on the cells size.
 
 gutter_cells
 ^^^^^^^^^^^^
