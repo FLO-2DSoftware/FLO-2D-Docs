@@ -4846,7 +4846,6 @@ It writes to the R line of the INFLOW.DAT file
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4871,47 +4870,25 @@ It writes to the R line of the INFLOW.DAT file
      - REAL
      - Reservoir water surface elevation.
 
-
-Replacement n value for
-
-**n_value** REAL grid elements within reser-
-
-   voir.
-
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
-
+   * - **n_value**
+     - REAL
+     - Replacement n value for grid elements within reservoir
 
    * - **use_n_value**
-     -
      - INTEGER
      - Switch to replace n value within reservoir group to n_value reservoir.
 
+   * - **tailings**
+     - REAL
+     - Tailings elevation. Should be lower than wsel.
 
-..
+   * - **note**
+     - TEXT
+     - Note
 
-   Tailings elevation.
-   Should **tailings** REAL
-
-   be lower than wsel.
-
-.. _`note`:
-
-note:
-
-TEXT
-
-Note.
-
-
-..
-
-   The geometry of this layer is a polygon and it would
-
-**geom** POLYGON be the same size and
-
-   shape as a single grid element.
+   * - **geom**
+     - POLYGON
+     - The geometry of this layer is a polygon and it would be the same size and  shape as a single grid element.
 
 rtree_buildings_stats_geom
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
