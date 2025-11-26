@@ -7934,7 +7934,6 @@ The data in this layer is used by the User Cross Sections Editor to define the l
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -7959,12 +7958,11 @@ The data in this layer is used by the User Cross Sections Editor to define the l
      - TEXT
      - Notes.
 
+   * - **geom**
+     - LINESTRING
+     - A polyline that represents the location of a cross section.
 
-A polyline that represents
 
-**geom** LINESTRING the location of a cross sec-
-
-   tion.
 
 wstime
 ^^^^^^
