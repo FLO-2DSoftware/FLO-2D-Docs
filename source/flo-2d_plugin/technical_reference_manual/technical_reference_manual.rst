@@ -5412,22 +5412,22 @@ sed_supply_frac
 
 A table that lists the sediment supply groups.
 
-**Field Name Field Type Description**
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
-.. _`fid`:
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-fid:
+   * - **fid**
+     - INTEGER
+     - Unit fid is unique and not associated with the grid id.
 
-INTEGER
+   * - **name**
+     - TEXT
+     - Name of the sediment supply groups.
 
-Unit fid is unique and not associated with the grid id.
-
-
-..
-
-   Name of the sediment **name** TEXT
-
-supply groups.
 
 sed_supply_frac_data
 ^^^^^^^^^^^^^^^^^^^^
