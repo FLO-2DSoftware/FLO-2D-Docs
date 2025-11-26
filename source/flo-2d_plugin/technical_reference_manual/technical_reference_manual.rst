@@ -6882,7 +6882,6 @@ The data from this layer is schematized to the Infiltration tables and layers.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -6923,59 +6922,34 @@ The data from this layer is schematized to the Infiltration tables and layers.
      - REAL
      - Soil limiting depth.
 
+   * - **soil_depth**
+     - REAL
+     - Hydraulic conductivity channel.
 
-..
+   * - **scsn**
+     - REAL
+     - Curve number.
 
-   Hydraulic conductivity **hydconch** REAL
+   * - **fhorti**
+     - REAL
+     - Horton initial infiltration.
 
-   channel.
+   * - **fhortf**
+     - REAL
+     - Horton final infiltration.
 
-.. _`scsn`:
+   * - **deca**
+     - REAL
+     - Horton decay coefficient.
 
-scsn:
+   * - **notes**
+     - TEXT
+     - Notes.
 
-REAL
+   * - **geom**
+     - POLYGON
+     - Polygon feature outlines variable infiltration areas.
 
-Curve number.
-
-.. _`fhorti`:
-
-fhorti:
-
-REAL
-
-Horton initial infiltration.
-
-.. _`fhortf`:
-
-fhortf:
-
-REAL
-
-Horton final infiltration.
-
-.. _`deca`:
-
-deca:
-
-REAL
-
-Horton decay coefficient.
-
-.. _`notes`:
-
-notes:
-
-TEXT
-
-Notes.
-
-
-..
-
-   Polygon feature outlines **geom** POLYGON
-
-variable infiltration areas.
 
 user_left_bank
 ^^^^^^^^^^^^^^
