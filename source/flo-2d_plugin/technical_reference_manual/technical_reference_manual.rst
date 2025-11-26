@@ -2667,19 +2667,15 @@ Stores the order of cross sections listed in fpxsec.dat.
 
    * - **iflo**
      - INTEGER
-     - Flow direction 1 –
-       8.
+     - Flow direction 1 – 8.
 
    * - **nnxsec**
      - INTEGER
      - Cross section number.
 
-
-Polyline representing the
-
-**geom** LINESTRING exact location of the flood-
-
-   plain cross section.
+   * - **geom**
+     - LINESTRING
+     - Polyline representing the exact location of the floodplain cross section.
 
 fpxsec_cells
 ^^^^^^^^^^^^
