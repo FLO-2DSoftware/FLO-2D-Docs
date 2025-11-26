@@ -4452,7 +4452,6 @@ Data is imported and exported for outflow.dat.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4469,12 +4468,10 @@ Data is imported and exported for outflow.dat.
      - REAL
      - Channel depth.
 
+   * - **q (cqtable)**
+     - REAL
+     - Discharge for depth discharge outflow condition.
 
-..
-
-   Discharge for depth dis\ **q (cqtable)** REAL
-
-charge outflow condition.
 
 rain
 ^^^^
