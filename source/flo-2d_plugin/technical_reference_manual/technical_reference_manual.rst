@@ -4987,8 +4987,10 @@ RSTLNE.
      - INTEGER
      - Unit fid is unique and not associated with the grid id.
 
+   * - **nodeno**
+     - TEXT
+     -
 
-**nodeno** INTEGER
 
 rtree_grid_geom
 ^^^^^^^^^^^^^^^
