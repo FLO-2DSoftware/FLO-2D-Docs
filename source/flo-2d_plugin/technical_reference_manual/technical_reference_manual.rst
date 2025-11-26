@@ -4574,18 +4574,22 @@ rain_time_series
 
 A table that lists the names of the rainfall time series tables.
 
-**Field Name Field Type Description**
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
-.. _`fid`:
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-fid:
+   * - **fid**
+     - INTEGER
+     - Unit fid is unique and not associated with the grid id.
 
-INTEGER
+   * - **name**
+     - TEXT
+     - Name of time series table.
 
-Unit fid is unique and not associated with the grid id.
-
-
-**Name** TEXT Name of time series table.
 
 rain_time_series_data
 ^^^^^^^^^^^^^^^^^^^^^
