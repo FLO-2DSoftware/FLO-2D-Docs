@@ -5631,7 +5631,6 @@ Table of global street data assigned to each street segment.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -5656,8 +5655,10 @@ Table of global street data assigned to each street segment.
      - REAL
      - Global street curb height.
 
+   * - **widst**
+     - REAL
+     - Global street width.
 
-**widst** REAL Global street width.
 
 street_seg
 ^^^^^^^^^^
