@@ -3318,7 +3318,6 @@ Table of global infiltration parameters for Green-Ampt, SCS, and Horton.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -3333,130 +3332,66 @@ Table of global infiltration parameters for Green-Ampt, SCS, and Horton.
 
    * - **abstr**
      - REAL
-     - Initial abstraction global.
-       (in or mm)
+     - Initial abstraction global.(in or mm).
 
+   * - **sati**
+     - REAL
+     - Initial saturation global. (decimal percentage).
 
-..
+   * - **satf**
+     - REAL
+     - Final saturation global. (decimal percentage usually 1).
 
-   Initial saturation global.
-   **sati** REAL
+   * - **poros**
+     - REAL
+     - Porosity global.(in^3 or mm^3).
 
-(decimal percentage)
+   * - **soild**
+     - REAL
+     - Soil depth global.       The spatially variable soil depth will not be used unless this value is greater than zero.
+       (ft or m).
 
-.. _`satf`:
+   * - **infchan**
+     - INTEGER
+     - Infiltration channel switch.
 
-satf:
+   * - **hydcall**
+     - REAL
+     - Hydraulic conductivity global. (in/hr or mm/hr).
 
-REAL
+   * - **soilall**
+     - REAL
+     - Capillary soil suction global. (in or mm).
 
-Final saturation global.
-(decimal percentage usu-
+   * - **hydcadj**
+     - REAL
+     - Hydraulic conductivity adjustment.
+       This variable will adjust spatially hydraulic conductivity per the conditions in the data Input Manual.
+       (no units).
 
-ally 1)
+   * - **hydcxx**
+     - REAL
+     - Channel hydraulic conductivity global. (in/hr or mm/hr).
 
+   * - **scsnall**
+     - REAL
+     - SCS curve number global. Do not use a value greater than 99.
 
-..
+   * - **abstr1**
+     - REAL
+     - SCS initial abstraction global. (in or mm).
 
-   Porosity global.
-   (in^3 or **poros** REAL
+   * - **fhortoni**
+     - REAL
+     - Horton initial infiltration rate global. (in/hr only).
 
-   mm^3)
+   * - **fhortonf**
+     - REAL
+     - Horton final infiltration rate global. (in/hr only).
 
-.. _`soild`:
-
-soild:
-
-REAL
-
-Soil depth global.
-The spatially variable soil depth will not be used unless this value is greater than zero.
-(ft or m)
-
-
-**infchan** INTEGER Infiltration channel switch.
-
-.. _`hydcall`:
-
-hydcall:
-
-REAL
-
-Hydraulic conductivity global.
-(in/hr or mm/hr)
-
-
-..
-
-   Capillary soil suction **soilall** REAL
-
-global.
-(in or mm)
-
-.. _`hydcadj`:
-
-hydcadj:
-
-REAL
-
-Hydraulic conductivity adjustment.
-This variable will adjust spatially hydraulic conductivity per the conditions in the data Input
-
-Manual.
-(no units)
-
-
-Channel hydraulic conduc-
-
-**hydcxx** REAL tivity global.
-(in/hr or
-
-   mm/hr)
-
-.. _`scsnall`:
-
-scsnall:
-
-REAL
-
-SCS curve number global.
-Do not use a value greater than 99.
-
-.. _`abstr1`:
-
-abstr1:
-
-REAL
-
-SCS initial abstraction global.
-(in or mm)
-
-.. _`fhortoni`:
-
-fhortoni:
-
-REAL
-
-Horton initial infiltration rate global.
-(in/hr only)
-
-.. _`fhortonf`:
-
-fhortonf:
-
-REAL
-
-Horton final infiltration rate global.
-(in/hr only)
-
-.. _`decaya`:
-
-decaya:
-
-REAL
-
-Horton decay coefficient global.
-(no units)
+   * - **decaya**
+     - REAL
+     - Horton decay coefficient global. (no units).
 
 
 infil_cells_green
