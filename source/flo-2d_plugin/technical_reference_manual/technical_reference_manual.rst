@@ -4601,7 +4601,6 @@ This date is imported and exported to the rain.dat file.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4618,12 +4617,10 @@ This date is imported and exported to the rain.dat file.
      - REAL
      - Time of rainfall.
 
+   * - **value (r_distr)**
+     - REAL
+     - Percent total rainfall 0 to 1.
 
-..
-
-   Percent total rainfall 0 to **value (r_distr)** REAL
-
-   1.
 
 raincell
 ^^^^^^^^
