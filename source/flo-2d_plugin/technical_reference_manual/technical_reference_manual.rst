@@ -9393,179 +9393,86 @@ Bar Warning
    * - **bar_warn**
      - There is no grid! Please create it before running tool.
 
+  * - **bar_warn**
+    - There are not any point layers selected (or visible)
 
-.. _`bar_warn`:
+  * - **bar_warn**
+    - There is no grid! Please create it before running tool.
 
-bar_warn:
+  * - **bar_warn**
+    - There is no grid! Please create it before running tool.
 
-There are not any point layers selected (or visible)
+  * - **bar_warn**
+    - There is no grid. Please, create it before evaluating the reduction factors.
 
-.. _`bar_warn`:
+  * - **bar_warn**
+    - There is no any blocking polygons in ""Blocked Areas"" layer! Please digitize them before running tool.
 
-bar_warn:
+  * - **bar_warn**
+    - There is no grid. Please, create it before evaluating the tolerance values.
 
-There is no grid! Please create it before running tool.
+  * - **bar_warn**
+    - There is no grid. Please, create it before evaluating the Froude values.
 
-.. _`bar_warn`:
+  * - **bar_warn**
+    - WARNING 060319.1718 There is no grid. Please, create it before evaluating the shallow-n values.
 
-bar_warn:
+  * - **bar_warn**
+    - There is no grid. Please, create it before evaluating the shallow-n values.
 
-There is no grid! Please create it before running tool.
+  * - **bar_warn**
+    - There is no grid. Please, create it before evaluating the no-exchange cells.
 
-.. _`bar_warn`:
+  * - **bar_warn**
+    - Please define global infiltration method first!
 
-bar_warn:
+  * - **bar_warn**
+    - Please define global infiltration method first!
 
-There is no grid.
-Please, create it before evaluating the reduction factors.
+  * - **bar_warn**
+    - Please define global infiltration parameters first!
 
-.. _`bar_warn`:
+  * - **bar_warn**
+    - Please define global infiltration method first!
 
-bar_warn:
+  * - **bar_warn**
+    - Please define global infiltration method first!
 
-There is no any blocking polygons in ""Blocked Areas"" layer! Please digitize them before running tool.
+  * - **bar_warn**
+    - Please define global infiltration method first!
 
-.. _`bar_warn`:
+  * - **bar_warn**
+    - Schematizing of infiltration failed! Please check user infiltration layers.
 
-bar_warn:
+  * - **bar_warn**
+    - Importing Rainfall Data from ASCII files failed! Please check your input data.\\nIs the .RFC file missing?
 
-There is no grid.
-Please, create it before evaluating the tolerance values.
+  * - **bar_warn**
+    - There is no h5py module installed! Please install it to run export tool.
 
-.. _`bar_warn`:
+  * - **bar_warn**
+    - Exporting Rainfall Data failed! Please check your input data.
 
-bar_warn:
+  * - **bar_warn**
+    - Importing predefined time series failed! Please check your input data.
 
-There is no grid.
-Please, create it before evaluating the Froude values.
+  * - **bar_warn**
+    - There is no computational domain! Please digitize it before running tool.
 
-.. _`bar_warn`:
+  * - **bar_warn**
+    - There is no grid! Please create it before running tool.
 
-bar_warn:
+  * - **bar_warn**
+    - There is no computational domain! Please digitize it before running tool.
 
-WARNING 060319.1718 There is no grid.
-Please, create it before evaluating the shallow-n values.
+  * - **bar_warn**
+    - There is no grid! Please create it before running tool.
 
-.. _`bar_warn`:
+  * - **bar_warn**
+    - There is no computational domain! Please digitize it before running tool.
 
-bar_warn:
-
-There is no grid.
-Please, create it before evaluating the shallow-n values.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid.
-Please, create it before evaluating the no-exchange cells.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Please define global infiltration method first!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Please define global infiltration method first!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Please define global infiltration parameters first!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Please define global infiltration method first!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Please define global infiltration method first!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Please define global infiltration method first!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Schematizing of infiltration failed! Please check user infiltration layers.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Importing Rainfall Data from ASCII files failed! Please check your input data.\\nIs the .RFC file missing?
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no h5py module installed! Please install it to run export tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Exporting Rainfall Data failed! Please check your input data.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Importing predefined time series failed! Please check your input data.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no computational domain! Please digitize it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no computational domain! Please digitize it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no computational domain! Please digitize it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+  * - **bar_warn**
+    - There is no grid! Please create it before running tool.
 
 
    * - **bar_warn**
