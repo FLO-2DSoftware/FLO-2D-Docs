@@ -7244,7 +7244,6 @@ The tool will calculate it from any polygon layer.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -7261,12 +7260,11 @@ The tool will calculate it from any polygon layer.
      - TEXT
      - Notes.
 
+   * - **geom**
+     - POLYGON
+     - Polygon features of spatially variable roughness data.
 
-Polygon features of spa-
 
-**geom** POLYGON tially variable roughness
-
-   data.
 
 user_spatial_froude
 ^^^^^^^^^^^^^^^^^^^
