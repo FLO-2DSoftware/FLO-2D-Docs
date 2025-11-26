@@ -5438,7 +5438,6 @@ A table of sediment supply data representing sediment diameter and percentage of
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -5455,12 +5454,11 @@ A table of sediment supply data representing sediment diameter and percentage of
      - REAL
      - Sediment diameter.
 
+   * - **ssedpercent**
+     - REAL
+     - Percentage of the sediment for a given diameter.
 
-..
 
-   Percentage of the sedi\ **ssedpercent** REAL
-
-ment for a given diameter.
 
 simple_mult_cells
 ^^^^^^^^^^^^^^^^^
