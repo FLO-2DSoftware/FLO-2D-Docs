@@ -5517,7 +5517,6 @@ A table of data that lists the polygons that have local shallow n data.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -5567,37 +5566,32 @@ storm_drains
 
 The table of data for simple storm drains written to the HYDROSTRUC.DAT file.
 
-**Field Name Field Type Description**
-
-.. _`fid`:
-
-fid:
-
-INTEGER
-
-Unit fid is unique and not associated with the grid id.
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
 
-..
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-   Id of the hydraulic struc\ **struct_fid** INTEGER
+   * - **fid**
+     - INTEGER
+     - Unit fid is unique and not associated with the grid id.
 
-   ture.
+   * - **struct_fid**
+     - INTEGER
+     - Id of the hydraulic structure.
 
-.. _`istormdout`:
+   * - **istormdout**
+     - INTEGER
+     - Grid element number of the combined outflow node for the simple storm drain.
 
-istormdout:
-
-INTEGER
-
-Grid element number of the combined outflow node for the simple storm drain.
+   * - **stormdmax**
+     - REAL
+     - Maximum discharge value for the outlet.
 
 
-..
-
-   Maximum discharge value **stormdmax** REAL
-
-   for the outlet.
 
 street_elems
 ^^^^^^^^^^^^
