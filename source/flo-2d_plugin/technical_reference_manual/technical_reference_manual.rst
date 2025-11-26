@@ -2530,12 +2530,11 @@ The table that stores the start time and date for the Evaporation group.
 
    * - **ievapmonth**
      - INTEGER
-     - Starting month of simulation.
-       1-12
+     - Starting month of simulation. 1-12
 
    * - **iday**
      - INTEGER
-     - Starting day of the week.
+     - Starting day of the week. 1-7
 
    * - **clocktime**
      - REAL
