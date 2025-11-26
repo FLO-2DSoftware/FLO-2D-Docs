@@ -7441,7 +7441,6 @@ This data is written to the schematic layers.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -7466,126 +7465,73 @@ This data is written to the schematic layers.
      - REAL
      - Length of the conduit.
 
+   * - **conduit_manning**
+     - REAL
+     - Roughness of the conduit.
 
-**conduit_manning** REAL Roughness of the conduit.
+   * - **conduit_inlet_offset**
+     - REAL
+     - Offset height of conduit from inlet node invert elevation.
 
-.. _`conduit_inlet_offset`:
+   * - **conduit_outlet_offset**
+     - REAL
+     - Offset height of conduit from outlet node invert elevation.
 
-conduit_inlet_offset:
+   * - **conduit_init_flow**
+     - REAL
+     - Initial flow.
 
-REAL
+   * - **conduit_max_flow**
+     - REAL
+     - Max flow.
 
-Offset height of conduit from inlet node invert elevation.
+   * - **losses_inlet**
+     - REAL
+     - Inlet loss coefficient.
 
-.. _`conduit_outlet_offset`:
+   * - **losses_outlet**
+     - REAL
+     - Outlet loss coefficient.
 
-conduit_outlet_offset:
+   * - **losses_average**
+     - REAL
+     - Average loss coefficient.
 
-REAL
+   * - **losses_flapgate**
+     - TEXT
+     - Flapgate.
 
-Offset height of conduit from outlet node invert elevation.
+   * - **xsections_shape**
+     - TEXT
+     - Cross section shape.
 
-.. _`conduit_init_flow`:
+   * - **xsections_max_depth**
+     - TEXT
+     - Maximum depth or diameter.
 
-conduit_init_flow:
+   * - **xsections_geom2**
+     - REAL
+     - Geom 2
 
-REAL
+   * - **xsections_geom3**
+     - REAL
+     - Geom 3
 
-Initial flow.
+   * - **xsections_geom4**
+     - REAL
+     - Geom 4
 
+   * - **xsections_barrels**
+     - INTEGER
+     - Number of barrels.
 
-**conduit_max_flow** REAL Max flow.
+   * - **notes**
+     - TEXT
+     - Notes.
 
-.. _`losses_inlet`:
-
-losses_inlet:
-
-REAL
-
-Inlet loss coefficient.
-
-.. _`losses_outlet`:
-
-losses_outlet:
-
-REAL
-
-Outlet loss coefficient.
-
-.. _`losses_average`:
-
-losses_average:
-
-REAL
-
-Average loss coefficient
-
-.. _`losses_flapgate`:
-
-losses_flapgate:
-
-TEXT
-
-Flapgate.
-
-.. _`xsections_shape`:
-
-xsections_shape:
-
-TEXT
-
-Cross section shape.
-
-.. _`xsections_max_depth`:
-
-xsections_max_depth:
-
-REAL
-
-Maximum depth or diameter.
-
-.. _`xsections_geom2`:
-
-xsections_geom2:
-
-REAL
-
-Geom 2
-
-.. _`xsections_geom3`:
-
-xsections_geom3:
-
-REAL
-
-Geom 3
-
-.. _`xsections_geom4`:
-
-xsections_geom4:
-
-REAL
-
-Geom 4
-
-.. _`xsections_barrels`:
-
-xsections_barrels:
-
-INTEGER
-
-Number of barrels.
-
-.. _`notes`:
-
-notes:
-
-TEXT
-
-Notes
-
-
-**geom** LINESTRING polyline geometry.
+   * - **geom**
+     - LINESTRING
+     - polyline geometry.
 
 user_swmm_nodes
 ^^^^^^^^^^^^^^^
