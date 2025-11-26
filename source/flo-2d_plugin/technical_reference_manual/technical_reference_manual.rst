@@ -4289,7 +4289,6 @@ This layer is part of the Tables group.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4306,8 +4305,10 @@ This layer is part of the Tables group.
      - INTEGER
      - Grid element id of the cell.
 
+   * - **area_factor**
+     - REAL
+     - Not used.
 
-**area_factor** REAL Not used.
 
 outflow_time_series
 ^^^^^^^^^^^^^^^^^^^
