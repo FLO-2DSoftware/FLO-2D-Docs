@@ -3366,8 +3366,9 @@ Table of global infiltration parameters for Green-Ampt, SCS, and Horton.
    * - **hydcadj**
      - REAL
      - Hydraulic conductivity adjustment.
-       This variable will adjust spatially hydraulic conductivity per the conditions in the data Input Manual.
-       (no units).
+       This variable will adjust spatially hydraulic conductivity per the
+
+       conditions in the data Input Manual. (no units).
 
    * - **hydcxx**
      - REAL
