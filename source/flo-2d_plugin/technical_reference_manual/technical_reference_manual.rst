@@ -6734,7 +6734,6 @@ The EFF \* 0.01 is multiplied by the RTIMP.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -6751,10 +6750,11 @@ The EFF \* 0.01 is multiplied by the RTIMP.
      - REAL
      - EFF value in 0 to 100.
 
+   * - **geom**
+     - POLYGON
+     - Correction value + will add elevation correction and – will subtract correction.
 
-Correction value + will add
 
-**geom** POLYGON elevation correction and – will subtract correction.
 
 user_elevation_points
 ^^^^^^^^^^^^^^^^^^^^^
