@@ -5234,7 +5234,6 @@ This table stores the sediment data for the sediment fragment groups.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -5251,12 +5250,11 @@ This table stores the sediment data for the sediment fragment groups.
      - REAL
      - Diameter of the sediment in this group.
 
+   * - **sedpercent**
+     - REAL
+     - Percentage of the sediment with the specified diameter.
 
-Percentage of the sedi-
 
-**sedpercent** REAL ment with the specified di-
-
-   ameter.
 
 sed_groups
 ^^^^^^^^^^
