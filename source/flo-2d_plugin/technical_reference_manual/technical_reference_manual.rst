@@ -8163,37 +8163,37 @@ Errors
      - 101218.1617
      - exporting FPFROUDE.DAT failed!
 
-    * - **ERROR**
-      - 101218.1901
-      - exporting SHALLOWN_SPATIAL.DAT failed!
+   * - **ERROR**
+     - 101218.1901
+     - exporting SHALLOWN_SPATIAL.DAT failed!
 
-    * - **ERROR**
-      - 101218.1618
-      - exporting SWMMFLO.DAT failed!
+   * - **ERROR**
+     - 101218.1618
+     - exporting SWMMFLO.DAT failed!
 
-    * - **ERROR**
-      - 101218.1619
-      - exporting SWMMFLORT.DAT failed!
+   * - **ERROR**
+     - 101218.1619
+     - exporting SWMMFLORT.DAT failed!
 
-    * - **ERROR**
-      - 101218.162
-      - exporting SWMMOUTF.DAT failed!
+   * - **ERROR**
+     - 101218.162
+     - exporting SWMMOUTF.DAT failed!
 
-    * - **ERROR**
-      - 101218.1621
-      - exporting WSURF.DAT failed!
+   * - **ERROR**
+     - 101218.1621
+     - exporting WSURF.DAT failed!
 
-    * - **ERROR**
-      - 101218.1622
-      - exporting WSTIME.DAT failed!
+   * - **ERROR**
+     - 101218.1622
+     - exporting WSTIME.DAT failed!
 
-    * - **ERROR**
-      - 170618.0611
-      - construction of INP dictionary failed!
+   * - **ERROR**
+     - 170618.0611
+     - construction of INP dictionary failed!
 
-    * - **ERROR**
-      - 170618.0701
-      - couldn't create a [LOSSES] group from storm drain .INP file!
+   * - **ERROR**
+     - 170618.0701
+     - couldn't create a [LOSSES] group from storm drain .INP file!
 
 
 ...........................................................................
