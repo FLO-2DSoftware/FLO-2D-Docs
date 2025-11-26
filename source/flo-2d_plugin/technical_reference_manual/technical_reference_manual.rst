@@ -3533,7 +3533,6 @@ Data is not available to view via a table.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
