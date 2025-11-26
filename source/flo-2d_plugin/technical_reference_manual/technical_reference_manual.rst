@@ -3702,7 +3702,6 @@ This data is written to the levee.dat file when the file is exported.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -3727,12 +3726,9 @@ This data is written to the levee.dat file when the file is exported.
      - INTEGER
      - Id from the user layer.
 
-
-The line that represents a
-
-**geom** LINESTRING levee aligned along the
-
-   cut-off direction.
+   * - **geom**
+     - LINESTRING
+     - The line that represents a levee aligned along the cut-off direction.
 
 levee_failure
 ^^^^^^^^^^^^^
