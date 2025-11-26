@@ -4425,18 +4425,22 @@ qh_table
 
 Table for storing the name and id of the channel time discharge curve.
 
-**Field Name Field Type Description**
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
-.. _`fid`:
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-fid:
+   * - **fid**
+     - INTEGER
+     - Unit fid is unique and not associated with the grid id.
 
-INTEGER
+   * - **name**
+     - TEXT
+     - Name of the hydrograph.
 
-Unit fid is unique and not associated with the grid id.
-
-
-**name** TEXT Name of the hydrograph.
 
 qh_table_data
 ^^^^^^^^^^^^^
