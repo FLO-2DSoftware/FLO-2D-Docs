@@ -3645,7 +3645,6 @@ This data is used to join the time series data to the inflow cell data and the t
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -3654,8 +3653,10 @@ This data is used to join the time series data to the inflow cell data and the t
      - INTEGER
      - Unit fid is unique and not associated with the grid id.
 
+   * - **name**
+     - TEXT
+     - Name of the time series.
 
-**name** TEXT Name of the time series.
 
 inflow_time_series_data
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -3665,7 +3666,6 @@ Table of the time series hydrograph data.
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
