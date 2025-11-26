@@ -7902,7 +7902,6 @@ User cross section data including cross section number and station elevation pai
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -7919,8 +7918,10 @@ User cross section data including cross section number and station elevation pai
      - REAL
      - Cross section station.
 
+   * - **yi**
+     - REAL
+     - Cross section elevation.
 
-**yi** REAL Cross section elevation.
 
 user_xsections
 ^^^^^^^^^^^^^^
