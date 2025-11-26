@@ -3794,7 +3794,6 @@ This table is not editable.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -3811,8 +3810,10 @@ This table is not editable.
      - TEXT
      - Fragility character representing levee frag line.
 
+   * - **levfragprob**
+     - REAL
+     - Fragility probability.
 
-**levfragprob** REAL Fragility probability.
 
 levee_general
 ^^^^^^^^^^^^^
