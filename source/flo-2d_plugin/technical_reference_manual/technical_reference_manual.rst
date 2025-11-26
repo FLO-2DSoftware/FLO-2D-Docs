@@ -4632,7 +4632,6 @@ This data is imported and exported to the raincell.dat or raincell binary file.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4668,7 +4667,6 @@ This data is imported and exported to the raincell.dat file or the raincell hdf5
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4685,8 +4683,10 @@ This data is imported and exported to the raincell.dat file or the raincell hdf5
      - REAL
      - Time of rainfall.
 
+   * - **iraindum**
+     - REAL
+     - Rainfall in inches or mm.
 
-**iraindum** REAL Rainfall in inches or mm.
 
 rat_curves
 ^^^^^^^^^^
