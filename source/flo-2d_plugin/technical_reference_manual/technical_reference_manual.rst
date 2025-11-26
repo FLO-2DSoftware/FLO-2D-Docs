@@ -6768,7 +6768,6 @@ Data processing is saved to the Levee and Grid layers.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -6785,21 +6784,19 @@ Data processing is saved to the Levee and Grid layers.
      - REAL
      - Elevation.
 
-   * - **correction** | REAL|
-     - Correction value + wil correction and – will
-     - add elevation         |          | btract correction.
-       |          |
+   * - **correction**
+     - REAL
+     - Correction value + will add elevation correction and – will subtract elevation correction.
+
 
    * - **membership**
      - TEXT
      - All, Grid or Levee.
        Elevation or correction is applied to grid layer or levee feature based on membership.
 
-   * - **geom**       | POINT||
+   * - **geom**
+     - POINT
      - Geometry is a point representing a point of know elevation.
-     - |          |
-       |          |
-       |          |
 
 
 user_elevation_polygons
