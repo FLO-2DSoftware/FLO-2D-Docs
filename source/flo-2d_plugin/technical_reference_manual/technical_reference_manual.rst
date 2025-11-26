@@ -8251,253 +8251,312 @@ Errors
      - Evaluation of ARFs and WRFs failed! Please check your Blocked Areas User Layer.
      -
 
-
-jininininnini
    * - **ERROR**
      - 051218.2035
      - Green-Ampt infiltration failed while intersecting soil layer with grid.
+     -
 
    * - **ERROR**
      - 51218.2001
      - Green-Ampt infiltration failed!
+     -
 
    * - **ERROR**
      - 140119.1715
      - Green-Ampt infiltration failed!
+     -
 
    * - **ERROR**
      - 40319.1921
      - Adding features to Storm Drain Nodes failed!
+     -
 
    * - **ERROR**
      - 21019.0629
      - update of Breach Global Data failed!
-
-   * - **ERROR**
-     - 40219.2015
-     - update of Individual Breach Data failed!"
-
-   * - **ERROR**
-     - 130219.0755
-     - update of fragility curves failed!
-
-   * - **ERROR**
-     - 200618.0707
-     - assignment of value failed!
-
-   * - **ERROR**
-     - 200618.0705
-     - assignment of value from conduits users layer failed!
-
-   * - **ERROR**
-     - 200618.0631
-     - assignment of value failed!
-
-   * - **ERROR**
-     - 310718.1942
-     - error populating control variables dialog.
-
-   * - **ERROR**
-     - 110618.1806
-     - Could not save FLO-2D parameters!
-
-   * - **ERROR**
-     - 130618.165
-     - Hazus layers loading failed!
-
-   * - **ERROR**
-     - 130618.1715
-     - Hazus layers loading failed!
-
-   * - **ERROR**
-     - 80618.0456
-     - Uniformization of field values failed!
-
-   * - **ERROR**
-     - 150618.0235
-     - Error while computing buildings statistics!
-
-   * - **ERROR**
-     - 80618.0456
-     - Uniformization of field values failed!
+     -
 
    * - **ERROR**
      - 40219.2015
      - update of Individual Breach Data failed!
+     -
+
+   * - **ERROR**
+     - 130219.0755
+     - update of fragility curves failed!
+     -
+
+   * - **ERROR**
+     - 200618.0707
+     - assignment of value failed!
+     -
+
+   * - **ERROR**
+     - 200618.0705
+     - assignment of value from conduits users layer failed!
+     -
+
+   * - **ERROR**
+     - 200618.0631
+     - assignment of value failed!
+     -
+
+   * - **ERROR**
+     - 310718.1942
+     - error populating control variables dialog.
+     -
+
+   * - **ERROR**
+     - 110618.1806
+     - Could not save FLO-2D parameters!
+     -
+
+   * - **ERROR**
+     - 130618.165
+     - Hazus layers loading failed!
+     -
+
+   * - **ERROR**
+     - 130618.1715
+     - Hazus layers loading failed!
+     -
+
+   * - **ERROR**
+     - 80618.0456
+     - Uniformization of field values failed!
+     -
+
+   * - **ERROR**
+     - 150618.0235
+     - Error while computing buildings statistics!
+     -
+
+   * - **ERROR**
+     - 80618.0456
+     - Uniformization of field values failed!
+     -
+
+   * - **ERROR**
+     - 40219.2015
+     - update of Individual Breach Data failed!
+     -
 
    * - **ERROR**
      - 20219.0812
      - couldn't save inlets/junction into User Storm Drain Nodes!
+     -
 
    * - **ERROR**
      - 100618.0846
      - error while loading outfalls components!
+     -
 
    * - **ERROR**
      - 210618.1702
      - error assigning outfall values!
+     -
 
    * - **ERROR**
      - 40319.1915
      - Converting Schematic SD Inlets to User Storm Drain Nodes failed!
+     -
 
    * - **ERROR**
      - 51218.1146
      - couldn't load point or/and line layers!
+     -
 
    * - **ERROR**
      - 51218.0559
      - there are not defined or visible point layers to select ‘inlets/junctions’ components!
+     -
 
    * - **ERROR**
      - 51218.06
      - there are not defined or visible point layers to select outfall components!
+     -
 
    * - **ERROR**
      - 51218.0601
      - there are not defined or visible line layers to select conduits components!
+     -
 
    * - **ERROR**
      - 70618.0451
      - creation of Storm Drain Nodes (Inlets) layer failed!
+     -
 
    * - **ERROR**
      - 70618.0454
      - creation of Storm Drain Nodes (Outfalls) layer failed!
+     -
 
    * - **ERROR**
      - 70618.05
      - creation of Storm Drain Conduits User layer failed!
+     -
 
    * - **ERROR**
      - 290718.1934
-     - error while displaying elevation of cell ' + fid
+     - error while displaying elevation of cell + fid
+     -
 
    * - **ERROR**
      - 60319.1607
      - Assigning grid elevation aborted! Please check your input layers.
+     -
 
    * - **ERROR**
      - 60319.1608
      - Evaluation of ARFs and WRFs failed! Please check your Blocked Areas User Layer.
+     -
 
    * - **ERROR**
      - 60319.1609
      - Replacing duplicated ARFs and WRFs failed!
+     -
 
    * - **ERROR**
      - 110618.1818
      - Could not read infiltration global parameters!
+     -
 
    * - **ERROR**
      - 271118.1638
      - error schematizing infiltration!
+     -
 
    * - **ERROR**
      - 51218.1839
      - Green-Ampt infiltration failed! Please check data in your input layers.
+     -
 
    * - **ERROR**
      - 40219.2004
      - assignment of Individual Breach Data failed!
+     -
 
    * - **ERROR**
      - 210119.0626
      - assignment of Breach Global Data failed!
+     -
 
    * - **ERROR**
      - 40219.2004
      - assignment of Individual Breach Data failed!
+     -
 
    * - **ERROR**
      - 130219.0746
      - Saving of Fragility Curve Data failed!
+     -
 
    * - **ERROR**
      - 100219.0646
      - assignment of Individual Multiple Channels Data failed!
+     -
 
    * - **ERROR**
      - 310818.0824
      - error populating export storm drain INP dialog.
+     -
 
    * - **ERROR**
      - 80618.044
      - reading SWMM input file failed!"
+     -
 
    * - **ERROR**
      - 60319.161
-     - Creating Storm Drain Nodes layer failed! Please check your SWMM input data.
+     - Creating Storm Drain Nodes layer failed!
+     - Please check your SWMM input data.
 
        Are the nodes coordinates inside the computational domain?
 
    * - **ERROR**
      - 50618.1804
      - creation of Storm Drain Conduits layer failed!
+     -
 
    * - **ERROR**
      - 70618.0851
      - error while exporting [JUNCTIONS] to .INP file!
+     -
 
    * - **ERROR**
      - 70618.1619
      - error while exporting [OUTFALLS] to .INP file!
+     -
 
    * - **ERROR**
      - 70618.162
      - error while exporting [CONDUITS] to .INP file!
+     -
 
    * - **ERROR**
      - 70618.1621
      - error while exporting [XSECTIONS] to .INP file!
+     -
 
    * - **ERROR**
      - 70618.1622
      - error while exporting [LOSSES] to .INP file!
+     -
 
    * - **ERROR**
      - 70618.1623
      - error while exporting [COORDINATES] to .INP file!
+     -
 
    * - **ERROR**
      - 160618.0634
      - couldn't export .INP file!
+     -
 
    * - **ERROR**
      - 130718.0831
      - schematized dialog failed to show!
+     -
 
    * - **ERROR**
      - 60319.1611
      - Schematizing left bank lines failed!
+     -
 
    * - **ERROR**
      - 280718.1054
      - Schematizing right bank lines failed!
+     -
 
    * - **ERROR**
      - 101218.1607
      - exporting XSEC.DAT failed!
+     -
 
    * - **ERROR**
      - 260618.0416
      - couldn’t read CHANBANK.DAT or reassign right bank coordinates!
+     -
 
    * - **ERROR**
      - 50818.0618
      - couldn’t process HYCHAN.OUT!
+     -
 
    * - **ERROR**
      - 240718.0359
      - Couldn't join left and right banks!
+     -
 
    * - **ERROR**
      - 80618.0456
      - couldn't update the inlets/junctions component using [SUBCATCHMENT] group from storm drain .INP file!
+     -
 
    * - **ERROR**
      - 60319.1631
      - Interpolation of channel n-values failed!
+     -
 
 
 
