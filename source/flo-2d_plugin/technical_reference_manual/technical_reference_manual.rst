@@ -1,5 +1,5 @@
 .. vim: syntax=rst
-..
+
 Technical Reference Manual
 ==========================
 
