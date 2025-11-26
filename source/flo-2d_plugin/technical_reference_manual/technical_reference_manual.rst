@@ -7694,8 +7694,8 @@ This data is written to the schematic layers.
      -
 
    * - **geom**
-     - TEXT
      - POINT
+     -
 
 
 user_swmm_orifices
