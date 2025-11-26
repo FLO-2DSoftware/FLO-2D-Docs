@@ -4548,7 +4548,6 @@ Data is imported and exported to the RAIN.DAT file.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4565,8 +4564,10 @@ Data is imported and exported to the RAIN.DAT file.
      - INTEGER
      - Grid element id of the cell.
 
+   * - **arf**
+     - REAL
+     - Rainfall reduction factor.
 
-**arf** REAL Rainfall reduction factor.
 
 rain_time_series
 ^^^^^^^^^^^^^^^^
