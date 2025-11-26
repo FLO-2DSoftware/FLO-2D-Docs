@@ -9221,71 +9221,92 @@ Bar Warning
 ^^^^^^^^^^^
 
 .. list-table::
-   :widths: 100
-   :header-rows: 0
-
-
-   * - **Type Message**
-
-   * - **bar_warn**                        | Could not run simulation under current operation system!
-
-   * - **bar_warn**                        | Running simulation failed!
-
-   * - **bar_warn**                        | Could not find TOPO.DAT file! Importing GDS files aborted!',| dur=3
-
-   * - **bar_warn**                        | Could not read HEC-RAS file!
-
-   * - **bar_warn**                        | There is no grid layer to identify.
-
-   * - **bar_warn**                        | There is no schematic cross-section data to display!
-
-   * - **bar_warn**                        | There is no evaporation data to display!
-
-   * - **bar_warn**                        | There is no grid! Please create it before running tool.
-
-   * - **bar_warn**                        | There is no grid! Please create it before running tool.
-
-   * - **bar_warn**                        | WARNING 060319.1809 There are not any polygon layers| selected (or visible)!
-
-   * - **bar_warn**                        | Could not compute Hazus Flooding Analysis!
-
-   * - **bar_warn**                        | Reading coordinates from SWMM input data failed!
-
-   * - **bar_warn**                        | Reading conduits from SWMM input data failed!
-
-   * - **bar_warn**                        | No time series fid for current outflow is defined.
-
-   * - **bar_warn**                        | No time series fid for rain defined.
-
-   * - **bar_warn**                        | Define a database connections first!
-
-   * - **bar_warn**                        | No data series for this inflow.
-
-   * - **bar_warn**                        | No time series data defined for that inflow.
-
-   * - **bar_warn**                        | No data series for this type of outflow.
-
-   * - **bar_warn**                        | Couldn't find outflow fid={} and type={}'.format(fid, typ).
-
-   * - **bar_warn**                        | Schematized Channel Editor populated!
-
-   * - **bar_warn**                        | Schematized Channel Segments (left bank) Layer is empty!
-
-   * - **bar_warn**                        | Schematized Channel Segments (left bank) Layer is empty!
-
-   * - **bar_warn**                        | Could not save Channels data! Please check it
-
-   * - **bar_warn**                        | There are no Schematized Channel Cross Sections!
-
-   * - **bar_warn**                        | Schematized Channel Segments (left bank) Layer is empty!
-
-   * - **bar_warn**                        | There are no Schematized Channel Cross Sections!
-
-
-.. list-table::
    :widths: 50 50
    :header-rows: 0
 
+   * - **Type**
+     - **Message**
+
+   * - **bar_warn**
+     - Could not run simulation under current operation system!
+
+   * - **bar_warn**
+     - Running simulation failed!
+
+   * - **bar_warn**
+     - Could not find TOPO.DAT file! Importing GDS files aborted!',| dur=3
+
+   * - **bar_warn**
+     - Could not read HEC-RAS file!
+
+   * - **bar_warn**
+     - There is no grid layer to identify.
+
+   * - **bar_warn**
+     - There is no schematic cross-section data to display!
+
+   * - **bar_warn**
+     - There is no evaporation data to display!
+
+   * - **bar_warn**
+     - There is no grid! Please create it before running tool.
+
+   * - **bar_warn**
+     - There is no grid! Please create it before running tool.
+
+   * - **bar_warn**
+     - WARNING 060319.1809 There are not any polygon layers| selected (or visible)!
+
+   * - **bar_warn**
+     - Could not compute Hazus Flooding Analysis!
+
+   * - **bar_warn**
+     - Reading coordinates from SWMM input data failed!
+
+   * - **bar_warn**
+     - Reading conduits from SWMM input data failed!
+
+   * - **bar_warn**
+     - No time series fid for current outflow is defined.
+
+   * - **bar_warn**
+     - No time series fid for rain defined.
+
+   * - **bar_warn**
+     - Define a database connections first!
+
+   * - **bar_warn**
+     - No data series for this inflow.
+
+   * - **bar_warn**
+     - No time series data defined for that inflow.
+
+   * - **bar_warn**
+     - No data series for this type of outflow.
+
+   * - **bar_warn**
+     - Couldn't find outflow fid={} and type={}'.format(fid, typ).
+
+   * - **bar_warn**
+     - Schematized Channel Editor populated!
+
+   * - **bar_warn**
+     - Schematized Channel Segments (left bank) Layer is empty!
+
+   * - **bar_warn**
+     - Schematized Channel Segments (left bank) Layer is empty!
+
+   * - **bar_warn**
+     - Could not save Channels data! Please check it
+
+   * - **bar_warn**
+     - There are no Schematized Channel Cross Sections!
+
+   * - **bar_warn**
+     - Schematized Channel Segments (left bank) Layer is empty!
+
+   * - **bar_warn**
+     - There are no Schematized Channel Cross Sections!
 
    * - **bar_warn**
      - There are not any polygon layers selected (or visible)
