@@ -7974,7 +7974,6 @@ This data is imported from and exported to the WSTIME.DAT file.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
