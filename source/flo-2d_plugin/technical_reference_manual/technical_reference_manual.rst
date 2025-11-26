@@ -7990,20 +7990,11 @@ This data is imported from and exported to the WSTIME.DAT file.
      - REAL
      - Water surface elevation.
 
-
-..
-
-   Time at which the eleva\ **wstime** REAL
-
-   tion occurs.
-
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
-
+   * - **wstime**
+     - REAL
+     - Time at which the elevation occurs.
 
    * - **geom**
-     -
      - POINT
      - Point feature reflecting a known location of elevation of water.
 
