@@ -7365,7 +7365,6 @@ This data is schematized to the Streets layer.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -7398,12 +7397,10 @@ This data is schematized to the Streets layer.
      - TEXT
      - Notes.
 
+   * - **geom**
+     - LINESTRING
+     - Polyline that represents a single street segment.
 
-..
-
-   Polyline that represents a **geom** LINESTRING
-
-   single street segment.
 
 user_struct
 ^^^^^^^^^^^
