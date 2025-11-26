@@ -5102,7 +5102,6 @@ This data is written to the SED.DAT file.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -5143,20 +5142,13 @@ This data is written to the SED.DAT file.
      - INTEGER
      - Supply sediment group to floodplain or channel.
 
+   * - **isedisplay**
+     - INTEGER
+     - The element used for a list of output for each sediment transport equation.
 
-The element used for a list
-
-**isedisplay** INTEGER of output for each sedi-
-
-ment transport equation.
-
-.. _`scourdep`:
-
-scourdep:
-
-REAL
-
-Maximum allowable scour depth.
+   * - **scourdep**
+     - REAL
+     - Maximum allowable scour depth.
 
 
 sed_group_areas
