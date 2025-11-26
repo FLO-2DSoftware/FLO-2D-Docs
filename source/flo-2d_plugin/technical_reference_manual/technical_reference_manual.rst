@@ -8566,6 +8566,9 @@ Errors
      - Interpolation of channel n-values failed!
      -
 
+.. raw:: html
+
+    <br><br>
 
 Warnings
 ^^^^^^^^
@@ -8586,7 +8589,9 @@ Warnings
 
    * - **WARNING**
      - 060319.1806
-     - Assigning values aborted! Please check your crest elevation source layers.
+     - Assigning values aborted!
+
+       Please check your crest elevation source layers.
      -
 
    * - **WARNING**
@@ -8633,7 +8638,7 @@ Warnings
 
    * - **WARNING**
      - 060319.1615
-     - Assignment of building areas to building polygons. Not implemented yet!'
+     - Assignment of building areas to building polygons. Not implemented yet!
      -
 
    * - **WARNING**
@@ -8689,29 +8694,36 @@ Warnings
    * - **WARNING**
      - 060319.1629
      - Cell size must be positive.
+
        Change the feature attribute value in Computational Domain layer.
      -
 
    * - **WARNING**
      - 060319.1630
      - Cell size must be positive.
-       Change the feature attribute value in Computational Domain layer or default cell size in the project settings.
+
+       Change the feature attribute value in Computational
+
+       Domain layer or default cell size in the project settings.
      -
 
    * - **WARNING**
      - 060319.1632
      - Assignment of building areas to building polygons.
+
        Not implemented yet!
      -
 
    * - **WARNING**
      - 060319.1650
-     - Evaluation of buildings adjustment factor failed! Please check your Building Areas (Schematic layer).
+     - Evaluation of buildings adjustment factor failed!
+
+       Please check your Building Areas (Schematic layer).
      -
 
    * - **WARNING**
      - 060319.1612
-     - Please choose at least one crest elevation source!')
+     - Please choose at least one crest elevation source!'
      -
 
    * - **WARNING**
@@ -8731,7 +8743,7 @@ Warnings
 
    * - **WARNING**
      - 060319.1657
-     - The following inlets/junctions are outside the computational domain!\\n
+     - The following inlets/junctions are outside the computational domain!
      - + outside_inlets
 
    * - **WARNING**
@@ -8746,7 +8758,7 @@ Warnings
 
    * - **WARNING**
      - 060319.1700
-     - The following outfalls are outside the computational domain!\\n
+     - The following outfalls are outside the computational domain!
      - +
        outside_outfalls
 
@@ -8772,37 +8784,41 @@ Warnings
      - Process failed on schematizing floodplain crosssections!
      -
 
-
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
-
-
    * - **WARNING**
      - 060319.1706
      - Cell size must be positive.
+
        Change the feature attribute value in Computational Domain layer.
      -
 
    * - **WARNING**
      - 060319.1707
      - Cell size must be positive.
-       Change the feature attribute value in Computational Domain layer or default cell size in the project settings.'
+
+       Change the feature attribute value in Computational Domain layer or
+
+       default cell size in the project settings.'
      -
 
    * - **WARNING**
      - 060319.1709
-     - Creating grid aborted! Please check Computational Domain layer.
+     - Creating grid aborted!
+
+       Please check Computational Domain layer.
      -
 
    * - **WARNING**
      - 060319.1710
-     - Probing grid elevation failed! Please check your raster layer.
+     - Probing grid elevation failed!
+
+       Please check your raster layer.
      -
 
    * - **WARNING**
      - 060319.1712
-     - Calculating grid elevation aborted! Please check elevation points layer.
+     - Calculating grid elevation aborted!
+
+       Please check elevation points layer.
      -
 
    * - **WARNING**
@@ -8819,37 +8835,51 @@ Warnings
 
    * - **WARNING**
      - 060319.1715
-     - There are no roughness polygons! Please digitize them before running tool.
+     - There are no roughness polygons!
+
+       Please digitize them before running tool.
      -
 
    * - **WARNING**
      - 060319.1716
-     - Assigning roughness aborted! Please check roughness layer.
+     - Assigning roughness aborted!
+
+       Please check roughness layer.
      -
 
    * - **WARNING**
      - 060319.1717
-     - Evaluation of spatial Froude failed! Please check your Froude Areas (Schematic layer).
+     - Evaluation of spatial Froude failed!
+
+       Please check your Froude Areas (Schematic layer).
      -
 
    * - **WARNING**
      - 060319.1719
-     - Evaluation of spatial shallow-n failed! Please check your Shallow-n Areas (Schematic layer).
+     - Evaluation of spatial shallow-n failed!
+
+       Please check your Shallow-n Areas (Schematic layer).
      -
 
    * - **WARNING**
      - 060319.1720
-     - Evaluation of spatial gutter failed! Please check your Gutter Areas (Schematic layer).
+     - Evaluation of spatial gutter failed!
+
+       Please check your Gutter Areas (Schematic layer).
      -
 
    * - **WARNING**
      - 060319.1721
-     - Selection of no-exchange cells failed! Please check your No-xchange Cells (Tables layer).
+     - Selection of no-exchange cells failed!
+
+       Please check your No-xchange Cells (Tables layer).
      -
 
    * - **WARNING**
      - 060319.1724
-     - Calculating SCS Curve Number parameters failed! Please check data in your input layers.'
+     - Calculating SCS Curve Number parameters failed!
+
+       Please check data in your input layers.'
      -
 
    * - **WARNING**
@@ -8870,7 +8900,9 @@ Warnings
    * - **WARNING**
      - 060319.1728
      - Cell size must be positive.
-     - Change the feature attribute value in Computational Domain layer or default cell size in the project settings.'
+     - Change the feature attribute value in Computational
+
+       Domain layer or default cell size in the project settings.
 
    * - **WARNING**
      - 060319.1729
