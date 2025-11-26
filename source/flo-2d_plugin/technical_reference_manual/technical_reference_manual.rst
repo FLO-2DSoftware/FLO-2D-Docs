@@ -3281,7 +3281,6 @@ It is exported to intersected to the gutter_cells table when the gutter calculat
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -3306,8 +3305,9 @@ It is exported to intersected to the gutter_cells table when the gutter calculat
      -
      -
 
-
-**geom** POLYLINE Polyline geometry type.
+   * - **geom**
+     - POLYLINE
+     - Polyline geometry type.
 
 infil
 ^^^^^
