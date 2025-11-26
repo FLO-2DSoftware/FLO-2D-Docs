@@ -5265,7 +5265,6 @@ This table stores the data for sediment fraction groups like bed thickness and v
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -5274,35 +5273,25 @@ This table stores the data for sediment fraction groups like bed thickness and v
      - INTEGER
      - Unit fid is unique and not associated with the grid id.
 
-
-..
-
-   Sediment transport equa\ **isedeqi** INTEGER
-
-   tion number.
-
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
-
+   * - **isedeqi**
+     - INTEGER
+     - Sediment transport equation number.
 
    * - **bedthick**
-     -
      - REAL
      - Sediment bed thickness for sediment routing by size fraction.
 
    * - **cvfi**
-     -
      - REAL
      - Fine sediment volumetric concentration local.
 
    * - **name**
-     -
      - TEXT
      - Name of sediment group.
 
-
-**dist_fid** INTEGER Id of sediment group.
+   * - **dist_fid**
+     - INTEGER
+     - Id of sediment group.
 
 sed_rigid_areas
 ^^^^^^^^^^^^^^^
