@@ -4698,7 +4698,6 @@ This data is imported and exported to the hystruc.dat file.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4743,7 +4742,6 @@ This data is imported and exported to the hystruc.dat file.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4778,7 +4776,6 @@ Table of data linked to the Right Bank layer of the Schematic Layers group.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4806,7 +4803,6 @@ This data is saved to the HYSTRUC.DAT file.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4815,53 +4811,29 @@ This data is saved to the HYSTRUC.DAT file.
      - INTEGER
      - Unit fid is unique and not associated with the grid id.
 
+   * - **struct_fid**
+     - INTEGER
+     - Id to join to structure polyline.
 
-..
+   * - **repdep**
+     - REAL
+     - Replacement depth. Replacement curve starts at this depth.
 
-   Id to join to structure pol\ **struct_fid** INTEGER
+   * - **rqcoef**
+     - REAL
+     - Replacement discharge coefficient.
 
-   yline.
+   * - **rqexp**
+     - REAL
+     - Replacement discharge exponent.
 
-.. _`repdep`:
+   * - **racoef**
+     - REAL
+     - Replacement area coefficient.
 
-repdep:
-
-REAL
-
-Replacement depth.
-Replacement curve starts at this depth.
-
-.. _`rqcoef`:
-
-rqcoef:
-
-REAL
-
-Replacement discharge coefficient.
-
-.. _`rqexp`:
-
-rqexp:
-
-REAL
-
-Replacement discharge exponent.
-
-.. _`racoef`:
-
-racoef:
-
-REAL
-
-Replacement area coefficient.
-
-.. _`raexp`:
-
-raexp:
-
-REAL
-
-Replacement area exponent.
+   * - **raexp**
+     - REAL
+     - Replacement area exponent.
 
 
 reservoirs
