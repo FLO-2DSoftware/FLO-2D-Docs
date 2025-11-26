@@ -3742,7 +3742,6 @@ It is filled when the project is imported.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -3761,33 +3760,27 @@ It is filled when the project is imported.
 
    * - **failevel**
      - REAL
-     - Fail start elevation.
-       (ft or m)
+     - Fail start elevation. (ft or m).
 
    * - **failtime**
      - REAL
-     - Levee fail time to delay start.
-       (hrs)
+     - Levee fail time to delay start. (hrs).
 
    * - **levbase**
      - REAL
-     - Fail base elevation.
-       (ft or m)
+     - Fail base elevation. (ft or m).
 
    * - **failwidthmax**
      - REAL
-     - Max breach width.
-       (ft or m)
+     - Max breach width. (ft or m).
 
    * - **failrate**
      - REAL
-     - Vertical fail rate.
-       (ft/hr or m/hr)
+     - Vertical fail rate. (ft/hr or m/hr).
 
    * - **failwidrate**
      - REAL
-     - Horizontal fail rate.
-       (ft/hr or m/hr)
+     - Horizontal fail rate. (ft/hr or m/hr).
 
 
 levee_fragility
