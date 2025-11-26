@@ -3506,7 +3506,6 @@ Table that stores the channel hydraulic conductivity for specific channel elemen
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -3515,20 +3514,13 @@ Table that stores the channel hydraulic conductivity for specific channel elemen
      - INTEGER
      - Unit fid is unique and not associated with the grid id.
 
+   * - **grid_fid (infch)**
+     - INTEGER
+     - Grid element id of the cell left bank.
 
-..
-
-   Grid element id of the cell **grid_fid (infch)** INTEGER
-
-   left bank.
-
-.. _`hydconch`:
-
-hydconch:
-
-REAL
-
-Hydraulic conductivity for a specific channel cross section identified by the left bank grid id.
+   * - **hydconch**
+     - INTEGER
+     - Hydraulic conductivity for a specific channel cross section identified by the left bank grid id.
 
 
 infil_chan_seg
