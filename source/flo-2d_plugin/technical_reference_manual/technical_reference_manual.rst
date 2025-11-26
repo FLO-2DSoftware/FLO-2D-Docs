@@ -2687,7 +2687,6 @@ Lists the cells in each floodplain cross section as written to fpxsec.dat.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -2704,12 +2703,9 @@ Lists the cells in each floodplain cross section as written to fpxsec.dat.
      - INTEGER
      - Grid element id of the cell.
 
-
-Point geometry to identify
-
-**geom** POINT the cells in each floodplain
-
-   cross section.
+   * - **geom**
+     - POINT
+     - Point geometry to identify the cells in each floodplain cross section.
 
 gpkg_contents
 ^^^^^^^^^^^^^
