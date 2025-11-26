@@ -4341,7 +4341,6 @@ The table that lists the time series stage-time tables by time and elevation dat
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4358,26 +4357,32 @@ The table that lists the time series stage-time tables by time and elevation dat
      - REAL
      - Time for each stage.
 
+   * - **value (sta_stage)**
+     - REAL
+     - Stage in elevation.
 
-**value (sta_stage)** REAL Stage in elevation.
 
 qh_params
 ^^^^^^^^^
 
 Table to store the names of features for channel outflow discharge curve.
 
-**Field Name Field Type Description**
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
-.. _`fid`:
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-fid:
+   * - **fid**
+     - INTEGER
+     - Id of outflow curve.
 
-INTEGER
+   * - **name**
+     - TEXT
+     - Name of outflow curve.
 
-Id of outflow curve.
-
-
-**name** TEXT Name of outflow curve.
 
 qh_params_data
 ^^^^^^^^^^^^^^
