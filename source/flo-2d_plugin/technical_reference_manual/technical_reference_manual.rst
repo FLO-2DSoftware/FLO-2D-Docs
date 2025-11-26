@@ -4222,103 +4222,62 @@ The table is listed in the import lines of the flo2dgeopackage.py code.
 It is used by the import function and its the main purpose is to set up the id fields and switches to join various data tables to the outflow nodes.
 It is referenced in the import GDS code, schematic to user layers code and export GDS code.
 
-**Field Name Field Type Description**
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
-.. _`fid`:
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-fid:
+   * - **fid**
+     - INTEGER
+     - Unit fid is unique and not associated with the grid id.
 
-INTEGER
+   * - **name**
+     - TEXT
+     - Name of the outflow feature.
 
-Unit fid is unique and not associated with the grid id.
+   * - **chan_out**
+     - INTEGER
+     - Switch to identify a channel node. Set to 1 for a channel. Leave null for no channel.
 
+   * - **fp_out**
+     - INTEGER
+     - Switch to identify a floodplain node. Set to 1 for floodplain. Leave null for no floodplain.
 
-..
+   * - **hydro_out**
+     - INTEGER
+     - Switch to identify that a hydrograph should be captured for a downstream model.
 
-   Name of the outflow fea\ **name** TEXT
+   * - **chan_tser_fid**
+     - INTEGER
+     - Id to join to time series data for a channel.
 
-   ture.
+   * - **chan_qhpar_fid**
+     - INTEGER
+     - Id to join to channel rating curve data.
 
-.. _`chan_out`:
+   * - **chan_qhtab_fid**
+     - INTEGER
+     - Id to join to depth discharge data.
 
-chan_out:
+   * - **fp_tser_fid**
+     - INTEGER
+     - Id to join to outflow time series data.
 
-INTEGER
+   * - **type**
+     - INTEGER
+     - Inflow or outflow.
 
-Switch to identify a channel node.
-Set to 1 for a channel.
-Leave null for no channel.
+   * - **geom_type**
+     - TEXT
+     - Point, line or polygon.
 
+   * - **bc_fid**
+     - INTEGER
+     - Id from the BC layer in Schematic layers.
 
-..
-
-   Switch to identify a floodplain node.
-   Set to 1 for **fp_out** INTEGER
-
-   floodplain.
-   Leave null for no floodplain.
-
-.. _`hydro_out`:
-
-hydro_out:
-
-INTEGER
-
-Switch to identify that a hydrograph should be captured for a downstream model.
-
-
-..
-
-   Id to join to time series **chan_tser_fid** INTEGER
-
-   data for a channel.
-
-.. _`chan_qhpar_fid`:
-
-chan_qhpar_fid:
-
-INTEGER
-
-Id to join to channel rating curve data.
-
-.. _`chan_qhtab_fid`:
-
-chan_qhtab_fid:
-
-INTEGER
-
-Id to join to depth discharge data.
-
-.. _`fp_tser_fid`:
-
-fp_tser_fid:
-
-INTEGER
-
-Id to join to outflow time series data.
-
-.. _`type`:
-
-type:
-
-INTEGER
-
-Inflow or outflow.
-
-.. _`geom_type`:
-
-geom_type:
-
-TEXT
-
-Point, line or polygon.
-
-
-..
-
-   Id from the BC layer in **bc_fid** INTEGER
-
-Schematic layers.
 
 outflow_cells
 ^^^^^^^^^^^^^
