@@ -9022,7 +9022,7 @@ Info Dialogs
    :header-rows: 0
 
    * - **Type**
-     - ** Details**
+     - **Details**
 
    * - **show_info**
      - ("Files read by this project:" + self.files_used + "Files not found or empty:" +
