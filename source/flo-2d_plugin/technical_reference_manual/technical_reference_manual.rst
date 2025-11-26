@@ -2506,8 +2506,9 @@ The table that stores the data for the generalized culvert equations and linked 
      - REAL
      - Culvert width.
 
-
-**multibarrels** INTEGER Multiple barrels.
+   * - **multibarrels**
+     - INTEGER
+     - Multiple barrels.
 
 evapor
 ^^^^^^
