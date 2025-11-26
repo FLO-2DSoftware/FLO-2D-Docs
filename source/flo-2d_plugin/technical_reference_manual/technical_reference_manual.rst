@@ -5390,7 +5390,6 @@ These are the cells that are intersected with the sed_supply_areas table.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
