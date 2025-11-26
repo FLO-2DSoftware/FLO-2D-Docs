@@ -5053,16 +5053,22 @@ rtree_grid_geom_parent
 
 RSTLNE.
 
-**Field Name Field Type Description**
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
-.. _`nodeno`:
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-nodeno:
+   * - **nodeno**
+     - INTEGER
+     -
 
-INTEGER
+   * - **parentnode**
+     - TEXT
+     -
 
-
-**parentnode** TEXT
 
 rtree_grid_geom_rowid
 ^^^^^^^^^^^^^^^^^^^^^
