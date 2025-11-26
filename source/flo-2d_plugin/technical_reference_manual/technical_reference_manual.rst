@@ -5778,28 +5778,21 @@ This data is imported and exported to HYSTRUC.DAT.
      - REAL
      - Head reference elevation.
 
+   * - **clength**
+     - REAL
+     - Culvert length.
 
-**clength** REAL Culvert length.
+   * - **cdiameter**
+     - REAL
+     - Culvert diameter.
 
-.. _`cdiameter`:
+   * - **notes**
+     - TEXT
+     - Notes
 
-cdiameter:
-
-REAL
-
-Culvert diameter.
-
-
-**notes** TEXT Notes.
-
-.. _`geom`:
-
-geom:
-
-LINESTRING
-
-Geometry is a line that begins in the inlet node and ends in the outlet node.
-
+   * - **geom**
+     - LINESTRING
+     - Geometry is a line that begins in the inlet node and ends in the outlet node.
 
 swmm_inflow_patterns
 ^^^^^^^^^^^^^^^^^^^^
