@@ -4165,7 +4165,6 @@ This table is used for schematizing the out_hydrographs_cells table.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4182,12 +4181,10 @@ This table is used for schematizing the out_hydrographs_cells table.
      - TEXT
      - Name of outflow cell with hydrograph.
 
+   * - **geom**
+     - POLYGON
+     - Polygon that will intersect a group of cells that will be assigned as outflow nodes.
 
-Polygon that will intersect
-
-**geom** POLYGON a group of cells that will be
-
-assigned as outflow nodes.
 
 out_hydrographs_cells
 ^^^^^^^^^^^^^^^^^^^^^
