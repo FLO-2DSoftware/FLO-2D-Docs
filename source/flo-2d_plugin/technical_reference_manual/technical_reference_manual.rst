@@ -5711,7 +5711,6 @@ Table of street names for individual street segments.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -5738,7 +5737,6 @@ This data is imported and exported to HYSTRUC.DAT.
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
