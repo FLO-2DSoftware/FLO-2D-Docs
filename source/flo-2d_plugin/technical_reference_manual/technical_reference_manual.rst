@@ -4899,7 +4899,6 @@ RSTLNE.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4934,7 +4933,6 @@ RSTLNE.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -4943,8 +4941,10 @@ RSTLNE.
      - INTEGER
      -
 
+   * - **data**
+     - TEXT
+     -
 
-**data** TEXT
 
 rtree_buildings_stats_geom_parent
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -4964,8 +4964,10 @@ RSTLNE.
      - INTEGER
      -
 
+   * - **parentnode**
+     - TEXT
+     -
 
-**parentnode** TEXT
 
 rtree_buildings_stats_rowid
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
