@@ -3034,8 +3034,9 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
      - TEXT
      -
 
-
-**description** TEXT
+   * - **description**
+     - TEXT
+     -
 
 gpkg_tile_matrix
 ^^^^^^^^^^^^^^^^
