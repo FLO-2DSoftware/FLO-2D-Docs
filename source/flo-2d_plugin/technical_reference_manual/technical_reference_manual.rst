@@ -6256,7 +6256,6 @@ This data is imported and exported from SWMMFLORT.DAT.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -6284,7 +6283,6 @@ Table of data that stores the depth assigned to individual polygons.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -6307,30 +6305,25 @@ tolspatial_cells
 
 Table of values that join the tolspatial polygons to grid elements.
 
-**Field Name Field Type Description**
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
-.. _`fid`:
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-fid:
+   * - **fid**
+     - INTEGER
+     - Unit fid is unique and not associated with the grid id.
 
-INTEGER
+   * - **area_fid**
+     - INTEGER
+     - Id field from the tolspatial layer.
 
-Unit fid is unique and not associated with the grid id.
-
-
-..
-
-   Id field from the tolspatial **area_fid** INTEGER
-
-   layer.
-
-.. _`grid_fid`:
-
-grid_fid:
-
-INTEGER
-
-Id of the grid element spatially joined to the tolspatial polygon.
+   * - **grid_fid**
+     - INTEGER
+     - Id of the grid element spatially joined to the tolspatial polygon.
 
 
 trigger_control
