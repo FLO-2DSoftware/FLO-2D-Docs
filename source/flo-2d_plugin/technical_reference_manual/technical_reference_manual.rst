@@ -2366,71 +2366,38 @@ The table that stores the cross-section data for variable area regression cross 
      - REAL
      - Coefficient top width c1.
 
+   * - **c2**
+     - REAL
+     - Exponent top width c2.
 
+   * - **excdep**
+     - REAL
+     - Second equation starts when channel reaches this depth.
 
+   * - **a11**
+     - REAL
+     - Coefficient area (depth 2) a11.
 
+   * - **a22**
+     - REAL
+     - Exponent area (depth 2) a22.
 
+   * - **b11**
+     - REAL
+     - Coefficient wetted perimeter (depth 2) b11.
 
-.. _`c2`:
+   * - **b22**
+     - REAL
+     - Exponent wetted perimeter (depth 2) b22.
 
-c2:
+   * - **c11**
+     - REAL
+     - Coefficient top width (depth 2) c11.
 
-REAL
+   * - **c22**
+     - REAL
+     - Exponent top width (depth 2) c22.
 
-Exponent top width c2.
-
-.. _`excdep`:
-
-excdep:
-
-REAL
-
-Second equation starts when channel reaches this depth.
-
-.. _`a11`:
-
-a11:
-
-REAL
-
-Coefficient area (depth 2) a11.
-
-.. _`a22`:
-
-a22:
-
-REAL
-
-Exponent area (depth 2) a22.
-
-.. _`b11`:
-
-b11:
-
-REAL
-
-Coefficient wetted perimeter (depth 2) b11.
-
-.. _`b22`:
-
-b22:
-
-REAL
-
-Exponent wetted perimeter (depth 2) b22.
-
-.. _`c11`:
-
-c11:
-
-REAL
-
-Coefficient top width (depth 2) c11.
-
-
-..
-
-Exponent top width (depth **c22** REAL2) c22.
 
 chan_wsel
 ^^^^^^^^^
