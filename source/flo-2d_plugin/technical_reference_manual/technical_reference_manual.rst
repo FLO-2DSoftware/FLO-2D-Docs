@@ -5298,18 +5298,22 @@ sed_rigid_areas
 
 This table lists the polygons that represent rigid bed areas.
 
-**Field Name Field Type Description**
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
-.. _`fid`:
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-fid:
+   * - **fid**
+     - INTEGER
+     - Unit fid is unique and not associated with the grid id.
 
-INTEGER
+   * - **geom**
+     - POLYGON
+     -
 
-Unit fid is unique and not associated with the grid id.
-
-
-**geom** POLYGON
 
 sed_rigid_cells
 ^^^^^^^^^^^^^^^
@@ -5319,7 +5323,6 @@ This table connects the rigid bed areas to the grid elements.
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
@@ -5341,12 +5344,12 @@ This table connects the rigid bed areas to the grid elements.
 sed_supply_areas
 ^^^^^^^^^^^^^^^^
 
-This table lists the sediment supply data for polygons that are used to define the location of specific local sediment supply areas.
+This table lists the sediment supply data for polygons that are used to define the location of specific local
+sediment supply areas.
 
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
@@ -5372,12 +5375,11 @@ This table lists the sediment supply data for polygons that are used to define t
      - INTEGER
      - Id of the sediment supply group.
 
+   * - **geom**
+     - POLYGON
+     - Polygon features that represent the sediment supply areas.
 
-Polygon features that rep-
 
-**geom** POLYGON resent the sediment sup-
-
-   ply areas.
 
 sed_supply_cells
 ^^^^^^^^^^^^^^^^
