@@ -2603,7 +2603,6 @@ This polygon layers stores the spatially variable limiting Froude data.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -2612,17 +2611,12 @@ This polygon layers stores the spatially variable limiting Froude data.
      - INTEGER
      - Unit fid is unique and not associated with the grid id.
 
-
-**froudefp** REAL Limting Froude.
-
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
-
+   * - **froudefp**
+     - REAL
+     - Limting Froude.
 
    * - **geom**
      - POLYGON
-     -
      - Polygon features that outline the limiting Froude areas.
 
 
