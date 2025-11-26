@@ -7178,7 +7178,6 @@ A layer that can be used to create a right bank defined by a polyline.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -7195,10 +7194,10 @@ A layer that can be used to create a right bank defined by a polyline.
      - TEXT
      - Notes.
 
+   * - **geom**
+     - LINESTRING
+     - Polyline feature used to intersect grid elements for a right bank.
 
-Polyline feature used to in-
-
-   **geom** LINESTRING tersect grid elements for a right bank.
 
 .. _user_right_bank-1:
 
