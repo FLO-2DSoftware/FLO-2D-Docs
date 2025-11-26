@@ -2444,7 +2444,6 @@ cont
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -2461,8 +2460,9 @@ cont
      - TEXT
      - Value field.
 
-
-**note** TEXT Notes.
+   * - **note**
+     - TEXT
+     - Notes.
 
 culvert_equations
 ^^^^^^^^^^^^^^^^^
