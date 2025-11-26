@@ -3080,8 +3080,10 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
      - DOUBLE
      -
 
+   * - **pixel_y_size**
+     - DOUBLE
+     -
 
-**pixel_y_size** DOUBLE
 
 gpkg_tile_matrix_set
 ^^^^^^^^^^^^^^^^^^^^
