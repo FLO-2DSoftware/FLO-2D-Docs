@@ -8009,7 +8009,6 @@ This data is imported from and exported to the WSURF.DAT file.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -8026,12 +8025,11 @@ This data is imported from and exported to the WSURF.DAT file.
      - REAL
      - Max water surface elevation.
 
+   * - **geom**
+     - POINT
+     - Point of known water surface elevation.
 
-..
 
-   Point of known water sur\ **geom** POINT
-
-   face elevation.
 
 xsec_n_data
 ^^^^^^^^^^^
