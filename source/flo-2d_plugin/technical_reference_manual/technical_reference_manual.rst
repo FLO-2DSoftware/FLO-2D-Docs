@@ -8469,11 +8469,13 @@ Errors
    * - **ERROR**
      - 60319.161
      - Creating Storm Drain Nodes layer failed!
-     - Please check your SWMM
+     - Please check your
 
-       input data.
+       SWMM input data.
 
-       Are the nodes coordinates
+       Are the nodes
+
+       coordinates
 
        inside the computational
 
