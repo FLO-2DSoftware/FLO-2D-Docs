@@ -4138,7 +4138,6 @@ This table stores the areas that are converted into noexchange channel cells.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
