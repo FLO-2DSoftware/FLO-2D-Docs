@@ -2417,30 +2417,25 @@ Table connecting the initial conditions to specific channel segments.
      - INTEGER
      - Unit fid is unique and not associated with the grid id.
 
+   * - **seg_fid**
+     - INTEGER
+     - Channel segment id.
 
-**seg_fid** INTEGER Channel segment id.
+   * - **istart**
+     - INTEGER
+     - Channel element number that starts the water surface elevation.
 
-.. _`istart`:
+   * - **wselstart**
+     - REAL
+     - Elevation at the start.
 
-istart:
+   * - **iend**
+     - INTEGER
+     - Channel element number that ends the water surface elevation.
 
-INTEGER
-
-Channel element number that starts the water surface elevation.
-
-
-**wselstart** REAL Elevation at the start.
-
-.. _`iend`:
-
-iend:
-
-INTEGER
-
-Channel element number that ends the water surface elevation.
-
-
-**wselend** REAL Elevation at the end.
+   * - **wselend**
+     - REAL
+     - Elevation at the end.
 
 cont
 ^^^^
