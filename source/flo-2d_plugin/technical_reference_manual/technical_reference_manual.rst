@@ -5160,7 +5160,6 @@ The table used to connect the sediment transport polygons to the sediment table.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -5187,7 +5186,6 @@ Table and layer that joins the sediment layers to the grid layer.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -5210,18 +5208,22 @@ sed_group_frac
 
 This table lists the names of the sediment fragment groups.
 
-**Field Name Field Type Description**
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
-.. _`fid`:
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-fid:
+   * - **fid**
+     - INTEGER
+     - Unit fid is unique and not associated with the grid id.
 
-INTEGER
+   * - **name**
+     - TEXT
+     -
 
-Unit fid is unique and not associated with the grid id.
-
-
-**name** TEXT
 
 sed_group_frac_data
 ^^^^^^^^^^^^^^^^^^^
