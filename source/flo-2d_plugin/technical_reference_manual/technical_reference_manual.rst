@@ -2894,7 +2894,6 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -2919,8 +2918,9 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
      - TINYINT
      -
 
-
-**m** TINYINT
+   * - **m**
+     - TINYINT
+     -
 
 gpkg_metadata
 ^^^^^^^^^^^^^
