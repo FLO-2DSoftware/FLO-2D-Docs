@@ -2348,27 +2348,27 @@ The table that stores the cross-section data for variable area regression cross 
 
    * - **a1**
      - REAL
-     - Coefficient area a1.
+     - Coefficient area.
 
    * - **a2**
      - REAL
-     - Exponent area a2.
+     - Exponent area.
 
    * - **b1**
      - REAL
-     - Coefficient wetted perimeter b1.
+     - Coefficient wetted perimeter.
 
    * - **b2**
      - REAL
-     - Exponent wetted perimeter b2.
+     - Exponent wetted perimeter.
 
    * - **c1**
      - REAL
-     - Coefficient top width c1.
+     - Coefficient top width.
 
    * - **c2**
      - REAL
-     - Exponent top width c2.
+     - Exponent top width.
 
    * - **excdep**
      - REAL
@@ -2376,27 +2376,27 @@ The table that stores the cross-section data for variable area regression cross 
 
    * - **a11**
      - REAL
-     - Coefficient area (depth 2) a11.
+     - Coefficient area (depth 2).
 
    * - **a22**
      - REAL
-     - Exponent area (depth 2) a22.
+     - Exponent area (depth 2).
 
    * - **b11**
      - REAL
-     - Coefficient wetted perimeter (depth 2) b11.
+     - Coefficient wetted perimeter (depth 2).
 
    * - **b22**
      - REAL
-     - Exponent wetted perimeter (depth 2) b22.
+     - Exponent wetted perimeter (depth 2).
 
    * - **c11**
      - REAL
-     - Coefficient top width (depth 2) c11.
+     - Coefficient top width (depth 2).
 
    * - **c22**
      - REAL
-     - Exponent top width (depth 2) c22.
+     - Exponent top width (depth 2).
 
 
 chan_wsel
