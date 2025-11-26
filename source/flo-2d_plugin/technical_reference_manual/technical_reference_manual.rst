@@ -7561,7 +7561,7 @@ This data is written to the schematic layers.
 
    * - **name**
      - TEXT
-     - Node name. Use “i” or “I”  for nodes that act as inlets **** or manholes.
+     - Node name. Use “i” or “I”  for nodes that act as inlets or manholes.
 
    * - **intype**
      - INTEGER
@@ -7573,127 +7573,127 @@ This data is written to the schematic layers.
      - Switch to turn external inflow on or off.
        (0 or 1).
 
-   * - **junction_nvert_elev*
+   * - **junction_nvert_elev**
      - REAL
      - Junction invert elevation.
 
-   * - **max_depth*
+   * - **max_depth**
      - REAL
      - node maximum depth from rim elevation to invert elevation.
 
-   * - **init_depth*
+   * - **init_depth**
      - REAL
      - Initial flow depth at the node.
 
-   * - **surcharge_depth*
+   * - **surcharge_depth**
      - REAL
      - Depth or weight related to the manhole cover.
 
-   * - **ponded_area*
+   * - **ponded_area**
      - REAL
      - Ponded area.
 
-   * - **outfall_invert_elev*
+   * - **outfall_invert_elev**
      - REAL
      - Invert elevation of the outfall.
 
-   * - **outfall_type*
+   * - **outfall_type**
      - TEXT
      - Outfall type: free, fixed stage, tidal, time series.
 
-   * - **tidal_curve*
+   * - **tidal_curve**
      - TEXT
      - Tidal curve name or id to link the node to a tide table.
 
-   * - **time_series*
+   * - **time_series**
      - TEXT
      - Time series name or id to link the node to a time series flow control.
 
-   * - **flapgate*
+   * - **flapgate**
      - TEXT
      - Outfall flapgate.
 
-   * - **swmm_length*
+   * - **swmm_length**
      - REAL
      - Length of a curb opening or perimeter of a grate or manhole opening.
 
-   * - **swmm_width*
+   * - **swmm_width**
      - REAL
      -
 
-   * - **swmm_height*
+   * - **swmm_height**
      - REAL
      - Rim elevation.
 
-   * - **swmm_coeff*
+   * - **swmm_coeff**
      - REAL
      - Grid element elevation.
 
-   * - **swmm_feature*
+   * - **swmm_feature**
      - INTEGER
      - Grid element to rim elevation difference.
 
-   * - **curbheight*
+   * - **curbheight**
      - REAL
      - Notes
 
-   * - **swmm_clogging_factor*
+   * - **swmm_clogging_factor**
      - REAL
      - Inlet or junction point.
 
-   * - **swmm_time_for_clogging*
+   * - **swmm_time_for_clogging**
      - REAL
      -
 
-   * - **swmm_allow_discharge*
+   * - **swmm_allow_discharge**
      - TEXT
      -
 
-   * - **water_depth*
+   * - **water_depth**
      - REAL
      -
 
-   * - **rt_fid*
+   * - **rt_fid**
      - INTEGER
      -
 
-   * - **rt_name*
+   * - **rt_name**
      - TEXT
      -
 
-   * - **outf_flo*
+   * - **outf_flo**
      - INTEGER
      -
 
-   * - **invert_elev_inp*
+   * - **invert_elev_inp**
      - REAL
      -
 
-   * - **max_depth_inp*
+   * - **max_depth_inp**
      - REAL
      -
 
-   * - **rim_elev_inp*
+   * - **rim_elev_inp**
      - REAL
      -
 
-   * - **rim_elev*
+   * - **rim_elev**
      - REAL
      -
 
-   * - **ge_elev*
+   * - **ge_elev**
      - REAL
      -
 
-   * - **difference*
+   * - **difference**
      - REAL
      -
 
-   * - **notes*
+   * - **notes**
      - TEXT
      -
 
-   * - **geom*
+   * - **geom**
      - TEXT
      - POINT
 
