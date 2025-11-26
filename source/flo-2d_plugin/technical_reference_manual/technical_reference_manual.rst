@@ -6850,7 +6850,6 @@ This data is schematized to the Floodplain Cross Sections and Floodplain Cross S
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -6867,8 +6866,10 @@ This data is schematized to the Floodplain Cross Sections and Floodplain Cross S
      - TEXT
      - Cross-section name.
 
+   * - **geom**
+     - LINESTRING
+     - Geometry polyline.
 
-**geom** LINESTRING Geometry polyline.
 
 user_infiltration_areas
 ^^^^^^^^^^^^^^^^^^^^^^^
