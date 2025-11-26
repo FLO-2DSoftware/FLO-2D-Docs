@@ -6679,12 +6679,6 @@ This table is edited by many processes:
      - REAL
      - Exponent for variable area.
 
-
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
-
-
    * - **b1**
      - REAL
      - Coefficient for variable wetted perimeter.
@@ -6725,12 +6719,10 @@ This table is edited by many processes:
      - REAL
      - Upper coefficient for variable top width
 
+   * - **c22**
+     - REAL
+     - Upper exponent for variable top width
 
-..
-
-   Upper exponent for varia\ **c22** REAL
-
-   ble top width
 
 user_effective_impervious_area
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
