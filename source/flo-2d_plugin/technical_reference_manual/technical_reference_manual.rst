@@ -8068,153 +8068,191 @@ Errors
 ^^^^^^
 
 .. list-table::
-   :widths: 33 33 33
+   :widths: 25 25 25 25
    :header-rows: 0
 
    * - **Type**
      - **Code**
-     - **Message Details**
+     - **Message**
+     - **Details**
 
    * - **ERROR**
      - 110618.1828
      - Could not save FLO-2D parameters!
+     -
 
    * - **ERROR**
      - 110618.1816
      - Could not save FLO-2D parameters!!
+     -
 
    * - **ERROR**
      - 101218.1535
      - exporting CONT.DAT or TOLER.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1541
      - exporting MANNINGS_N.DAT or TOPO.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1542
      - exporting INFLOW.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1543
      - exporting OUTFLOW.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1543
      - exporting RAIN.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1558
      - exporting RAINCELL.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1559
      - exporting INFIL.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1544
      - exporting EVAPOR.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1623
      - exporting CHAN.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1607
      - exporting XSEC.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1608
      - exporting HYSTRUC.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1609
      - exporting STREET.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.161
      - exporting ARF.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1611
      - exporting MULT.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1539
      - exporting TOLSPATIAL.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1612
      - exporting SED.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1614
      - exporting LEVEE.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1613
      - exporting FPXSEC.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1616
      - exporting BREACH.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1617
      - exporting FPFROUDE.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1901
      - exporting SHALLOWN_SPATIAL.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1618
      - exporting SWMMFLO.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1619
      - exporting SWMMFLORT.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.162
      - exporting SWMMOUTF.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1621
      - exporting WSURF.DAT failed!
+     -
 
    * - **ERROR**
      - 101218.1622
      - exporting WSTIME.DAT failed!
+     -
 
    * - **ERROR**
      - 170618.0611
      - construction of INP dictionary failed!
+     -
 
    * - **ERROR**
      - 170618.0701
      - couldn't create a [LOSSES] group from storm drain .INP file!
+     -
 
    * - **ERROR**
      - 170618.0704
      - couldn't create a [XSECTIONS] group from storm drain .INP file!
+     -
 
    * - **ERROR**
      - 170618.07
      - couldn't create a [OUTFALLS] group from storm drain .INP file!
+     -
 
    * - **ERROR**
      - 170618.0701
      - couldn't create a [JUNCTIONS] group from storm drain .INP file!
+     -
 
    * - **ERROR**
      - 060319.1604
      - Evaluation of ARFs and WRFs failed! Please check your Blocked Areas User Layer.
+     -
 
    * - **ERROR**
      - 060319.1606
      - Evaluation of ARFs and WRFs failed! Please check your Blocked Areas User Layer.
+     -
 
+
+jininininnini
    * - **ERROR**
      - 051218.2035
      - Green-Ampt infiltration failed while intersecting soil layer with grid.
