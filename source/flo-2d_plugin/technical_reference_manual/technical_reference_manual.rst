@@ -3480,7 +3480,6 @@ Tables that stores the scs curve number for specific grid elements.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -3489,17 +3488,13 @@ Tables that stores the scs curve number for specific grid elements.
      - INTEGER
      - Unit fid is unique and not associated with the grid id.
 
+   * - **grid_fid (infgrid)**
+     - INTEGER
+     - Grid element id of the cell.
 
-**grid_fid (infgrid)** INTEGER Grid element id of the cell.
-
-.. _`scsn`:
-
-scsn:
-
-INTEGER
-
-SCS curve number for specific grid elements.
-Do not use a value greater than 99.
+   * - **scsn**
+     - INTEGER
+     - SCS curve number for specific grid elements. Do not use a value greater than 99.
 
 
 infil_chan_elems
