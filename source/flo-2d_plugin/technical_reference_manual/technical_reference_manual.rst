@@ -2619,7 +2619,6 @@ This polygon layers stores the spatially variable limiting Froude data.
      - POLYGON
      - Polygon features that outline the limiting Froude areas.
 
-
 fpfroude_cells
 ^^^^^^^^^^^^^^
 
