@@ -5570,7 +5570,6 @@ The table of data for simple storm drains written to the HYDROSTRUC.DAT file.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -5602,7 +5601,6 @@ The table that links local street nodes to the street segment.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -5619,8 +5617,10 @@ The table that links local street nodes to the street segment.
      - INTEGER
      - Flow direction from the center of the node.
 
+   * - **widr**
+     - REAL
+     - Local street width.
 
-**widr** REAL Local street width.
 
 street_general
 ^^^^^^^^^^^^^^
