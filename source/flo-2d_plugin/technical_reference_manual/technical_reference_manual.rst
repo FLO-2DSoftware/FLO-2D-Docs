@@ -7143,22 +7143,22 @@ This data is schematized to the Reservoirs layer.
    * - **wsel**
      - REAL
      - Water surface elevation.
-       (ft or m)
+       (ft or m).
 
    * - **n_value**
      - REAL
-     - Replacement n value for grid elements within the reservoir.n
+     - Replacement n value for grid elements within the reservoir.
 
    * - **use_n_value**
      - INTEGER
      - Switch to use replacement n value.
-       (0 or 1)
+       (0 or 1).
 
    * - **tailings**
      - REAL
      - Tailings elevation.
        Should be lower than the wsel.
-       (ft or m)
+       (ft or m).
 
    * - **notes**
      - TEXT
@@ -7275,7 +7275,6 @@ A layer used to create spatially variable limiting Froude polygons.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -7292,10 +7291,10 @@ A layer used to create spatially variable limiting Froude polygons.
      - TEXT
      - Notes.
 
+   * - **geom**
+     - POLYGON
+     - Polygon features of spatially variable roughness data.
 
-Polygon features of spa-
-
-   **geom** POLYGON tially variable roughness data.
 
 user_spatial_shallown
 ^^^^^^^^^^^^^^^^^^^^^
