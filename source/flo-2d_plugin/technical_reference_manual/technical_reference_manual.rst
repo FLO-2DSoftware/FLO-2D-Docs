@@ -5000,7 +5000,6 @@ RSTLNE.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -5031,16 +5030,23 @@ rtree_grid_geom_node
 
 RSTLNE.
 
-**Field Name Field Type Description**
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
-.. _`nodeno`:
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-nodeno:
+   * - **nodeno**
+     - INTEGER
+     -
 
-INTEGER
+   * - **data**
+     - TEXT
+     -
 
 
-**data** TEXT
 
 rtree_grid_geom_parent
 ^^^^^^^^^^^^^^^^^^^^^^
