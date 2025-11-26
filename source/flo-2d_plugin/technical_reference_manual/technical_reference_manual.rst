@@ -2803,8 +2803,9 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
      - BOOLEAN
      -
 
-
-**description** TEXT
+   * - **description**
+     - TEXT
+     -
 
 gpkg_data_columns
 ^^^^^^^^^^^^^^^^^
