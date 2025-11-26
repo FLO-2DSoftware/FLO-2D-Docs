@@ -3348,7 +3348,7 @@ Table of global infiltration parameters for Green-Ampt, SCS, and Horton.
 
    * - **soild**
      - REAL
-     - Soil depth global.       The spatially variable soil depth will not be used unless this value is greater than zero.
+     - Soil depth global. The spatially variable soil depth will not be used unless this value is greater than zero.
        (ft or m).
 
    * - **infchan**
