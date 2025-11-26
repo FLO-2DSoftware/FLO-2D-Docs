@@ -6336,7 +6336,6 @@ the layers are schematized.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -6360,22 +6359,22 @@ user_1d_domain
 Table of data assigned for a 1d layer.
 This table is not currently used by the plugin.
 
-**Field Name Field Type Description**
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
-.. _`fid`:
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-fid:
+   * - **fid**
+     - INTEGER
+     - Unit fid is unique and not associated with the grid id.
 
-INTEGER
+   * - **geom**
+     - POLYGON
+     - Polygon geometry for a 1 D layer.
 
-Unit fid is unique and not associated with the grid id.
-
-
-..
-
-   Polygon geometry for a 1\ **geom** POLYGON
-
-   D layer.
 
 user_bc_lines
 ^^^^^^^^^^^^^
