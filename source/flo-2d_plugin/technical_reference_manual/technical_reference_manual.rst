@@ -7543,7 +7543,6 @@ This data is written to the schematic layers.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -7560,248 +7559,144 @@ This data is written to the schematic layers.
      - TEXT
      - Inlet, junction, or outfall.
 
-
-Node name.
-Use “i” or “I”
-
-   TEXT for nodes that act as inlets **name** or manholes.
-
-.. list-table::
-   :widths: 20 20 20 20 20
-   :header-rows: 0
-
+   * - **name**
+     - TEXT
+     - Node name. Use “i” or “I”  for nodes that act as inlets **** or manholes.
 
    * - **intype**
-     -
-     -
      - INTEGER
      - Inlet type 1 to 5.
        1, and 2 are curb and gutter, 3 is grate, 4 is rating table or generalized culvert equation, 5 is manhole.
 
-   * - **external_
-     - nflow**
-     -
+   * - **external_inflow**
      - INTEGER
      - Switch to turn external inflow on or off.
-       (0 or 1)
+       (0 or 1).
 
-   * - **junction_
-     - nvert_elev*
-     -
+   * - **junction_nvert_elev*
      - REAL
      - Junction invert elevation.
 
+   * - **max_depth*
+     - REAL
+     - node maximum depth from rim elevation to invert elevation.
+
+   * - **init_depth*
+     - REAL
+     - Initial flow depth at the node.
+
+   * - **surcharge_depth*
+     - REAL
+     - Depth or weight related to the manhole cover.
+
+   * - **ponded_area*
+     - REAL
+     - Ponded area.
+
+   * - **outfall_invert_elev*
+     - REAL
+     - Invert elevation of the outfall.
+
+   * - **outfall_type*
+     - TEXT
+     - Outfall type: free, fixed stage, tidal, time series.
 
-..
+   * - **tidal_curve*
+     - TEXT
+     - Tidal curve name or id to link the node to a tide table.
 
-   node maximum depth
+   * - **time_series*
+     - TEXT
+     - Time series name or id to link the node to a time series flow control.
 
-REAL from rim elevation to in-
+   * - **flapgate*
+     - TEXT
+     - Outfall flapgate.
 
-**max_depth** vert elevation.
+   * - **swmm_length*
+     - REAL
+     - Length of a curb opening or perimeter of a grate or manhole opening.
 
-.. _`init_depth`:
+   * - **swmm_width*
+     - REAL
+     -
 
-init_depth:
+   * - **swmm_height*
+     - REAL
+     - Rim elevation.
 
-REAL
+   * - **swmm_coeff*
+     - REAL
+     - Grid element elevation.
 
-Initial flow depth at the node.
+   * - **swmm_feature*
+     - INTEGER
+     - Grid element to rim elevation difference.
 
-.. _`surcharge_depth`:
+   * - **curbheight*
+     - REAL
+     - Notes
 
-surcharge_depth:
+   * - **swmm_clogging_factor*
+     - REAL
+     - Inlet or junction point.
 
-REAL
+   * - **swmm_time_for_clogging*
+     - REAL
+     -
 
-Depth or weight related to the manhole cover.
+   * - **swmm_allow_discharge*
+     - TEXT
+     -
 
-.. _`ponded_area`:
+   * - **water_depth*
+     - REAL
+     -
 
-ponded_area:
+   * - **rt_fid*
+     - INTEGER
+     -
 
-REAL
+   * - **rt_name*
+     - TEXT
+     -
 
-Ponded area.
+   * - **outf_flo*
+     - INTEGER
+     -
 
-.. _`outfall_invert_elev`:
+   * - **invert_elev_inp*
+     - REAL
+     -
 
-outfall_invert_elev:
+   * - **max_depth_inp*
+     - REAL
+     -
 
-REAL
+   * - **rim_elev_inp*
+     - REAL
+     -
 
-Invert elevation of the outfall.
+   * - **rim_elev*
+     - REAL
+     -
 
-.. _`outfall_type`:
+   * - **ge_elev*
+     - REAL
+     -
 
-outfall_type:
+   * - **difference*
+     - REAL
+     -
 
-TEXT
+   * - **notes*
+     - TEXT
+     -
 
-Outfall type: free, fixed stage, tidal, time series.
+   * - **geom*
+     - TEXT
+     - POINT
 
-.. _`tidal_curve
-
-tidal_curve
-
-Tidal curve name or id to link the node to a tide table.
-
-|
-|
-|
-
-.. _`time_series|||`:
-
-time_series|||:
-
-TEXT
-
-Time series name or id to link the node to a time series flow control.
-
-
-**flapgate** TEXT Outfall flapgate.
-
-.. _`swmm_length`:
-
-swmm_length:
-
-REAL
-
-Length of a curb opening or perimeter of a grate or manhole opening.
-
-.. _`swmm_width`:
-
-swmm_width:
-
-REAL
-
-
-.. _`swmm_height`:
-
-swmm_height:
-
-REAL
-
-Rim elevation.
-
-.. _`swmm_coeff`:
-
-swmm_coeff:
-
-REAL
-
-Grid element elevation.
-
-.. _`swmm_feature`:
-
-swmm_feature:
-
-INTEGER
-
-Grid element to rim elevation difference.
-
-.. _`curbheight`:
-
-curbheight:
-
-REAL
-
-Notes
-
-.. _`swmm_clogging_factor`:
-
-swmm_clogging_factor:
-
-REAL
-
-Inlet or junction point.
-
-
-.. _`swmm_time_for_clogging`:
-
-swmm_time_for_clogging:
-
-REAL
-
-
-.. _`swmm_allow_discharge`:
-
-swmm_allow_discharge:
-
-TEXT
-
-
-.. _`water_depth`:
-
-water_depth:
-
-REAL
-
-
-.. _`rt_fid`:
-
-rt_fid:
-
-INTEGER
-
-
-.. _`rt_name`:
-
-rt_name:
-
-TEXT
-
-
-.. _`outf_flo`:
-
-outf_flo:
-
-INTEGER
-
-
-.. _`invert_elev_inp`:
-
-invert_elev_inp:
-
-REAL
-
-
-.. _`max_depth_inp`:
-
-max_depth_inp:
-
-REAL
-
-
-.. _`rim_elev_inp`:
-
-rim_elev_inp:
-
-REAL
-
-
-**rim_elev** REAL
-
-.. _`ge_elev`:
-
-ge_elev:
-
-REAL
-
-.. _`difference`:
-
-difference:
-
-REAL
-
-.. _`notes`:
-
-notes:
-
-TEXT
-
-
-**geom** POINT
 
 user_swmm_orifices
 ^^^^^^^^^^^^^^^^^^
