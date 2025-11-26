@@ -3404,7 +3404,6 @@ Tables that stores green-ampt infiltration parameters for specific grid elements
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -3447,7 +3446,6 @@ Table that stores the Horton infiltration parameters for specific grid elements.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -3456,37 +3454,21 @@ Table that stores the Horton infiltration parameters for specific grid elements.
      - INTEGER
      - Unit fid is unique and not associated with the grid id.
 
+   * - **grid_fid (infgrid)**
+     - INTEGER
+     - Grid element number.
 
-**grid_fid (infgrid)** INTEGER Grid element number.
+   * - **fhorti**
+     - REAL
+     - Horton initial infiltration rate for a specific grid element. (in/hr only).
 
-.. _`fhorti`:
+   * - **fhortf**
+     - REAL
+     - Horton final infiltration rate for a specific grid element. (in/hr only).
 
-fhorti:
-
-REAL
-
-Horton initial infiltration rate for a specific grid element.
-(in/hr only)
-
-
-Horton final infiltration
-
-.. _`fhortf`:
-
-fhortf:
-
-REAL
-
-rate for a specific grid element.
-(in/hr only)
-
-.. _`deca`:
-
-deca:
-
-REAL
-
-Horton decay coefficient for a specific grid element.
+   * - **deca**
+     - REAL
+     - Horton decay coefficient for a specific grid element.
 
 
 infil_cells_scs
