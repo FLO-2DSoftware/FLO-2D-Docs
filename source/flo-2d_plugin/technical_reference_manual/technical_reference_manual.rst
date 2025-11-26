@@ -6211,7 +6211,6 @@ This data is imported and exported from SWMMFLORT.DAT.
      - Inlet discharge received for each depth.
 
 
-
 swmmoutf
 ^^^^^^^^
 
@@ -6501,34 +6500,30 @@ Table of data that joins a natural cross section to a channel element.
 The data is saved and schematized to the Channel Tables.
 This table is edited by many processes:
 
-- RAS imported
+    - RAS imported
+    - Cross section editor
+    - Channel left bank layer
+    - Converter schematic to user
+    - Schematize user data
+    - Interpolation processes
 
-- Cross section editor
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
-- Channel left bank layer
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-- Converter schematic to user
+   * - **fid**
+     - INTEGER
+     - Unit fid is unique and not associated with the grid id.
 
-- Schematize user data
-
-- Interpolation processes
-
-**Field Name Field Type Description**
-
-.. _`fid`:
-
-fid:
-
-INTEGER
-
-Unit fid is unique and not associated with the grid id.
+   * - **user_xs_fid**
+     - INTEGER
+     - Id of a cross-section feature to join to channel feature.
 
 
-Id of a cross-section fea-
-
-**user_xs_fid** INTEGER ture to join to channel fea-
-
-   ture.
 
 .. _`nxsecnum`:
 
