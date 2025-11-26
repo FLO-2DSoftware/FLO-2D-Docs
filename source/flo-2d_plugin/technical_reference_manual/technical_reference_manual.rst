@@ -8567,89 +8567,114 @@ Errors
      -
 
 
-
-
-
-
-
-
-
-
-
-
-
 Warnings
 ^^^^^^^^
-
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
-
-   * - **Type**
-     - **Code**
-     - **Message Details**
-
-   * - **WARNING**
-     - 060319.1831
-     - Levee user lines required!
-
-   * - **WARNING**
-     - 060319.1806
-     - Assigning values aborted! Please check your crest elevation source layers.
-
-   * - **WARNING**
-     - 060319.1808
-     - File DEPFP.OUT is needed for the Hazus flooding analysis.
-
-
-   * - **WARNING**     |        |     | + project_dir)|                    |
-       ||                    |    It is not in the current     ||                    |    project directory:\\n        |
-
-   * - **WARNING**     |    060319.1810     |    Please choose at least one   ||                    |    conversion source!           |
-
-   * - **WARNING**     |    060319.1811     |    Please choose at least one   ||                    |    conversion source!           |
-
-   * - **WARNING**     |    060319.1612     |    Can't import channels!.\\n   |    CHAN.DAT|                    |                                 |
-       doesn't exist.
-
-   * - **WARNING**     |    060319.1632     |    Can't import channels!.\\n   |    CHANBANK.DAT|                    |                                 |
-       doesn't exist.
-
-   * - **WARNING**     |    010219.0742     |    Import channels failed!.
-       |    Maybe the|                    |    Check CHAN.DAT and           |    number of left|                    |    CHANBANK.DAT files.
-       Import   |    bank and right|                    |    channels failed!.\\n         |    bank cells are|                    |
-       |    different.
-
-   * - **WARNING**     |    060319.1613     |    Export to ""GUTTER.DAT""     ||                    |    failed!                      |
-
-   * - **WARNING**     |    060319.1615     |    Assignment of building areas ||                    |    to building polygons.
-       Not    ||                    |    implemented yet!'            |
-
-   * - **WARNING**     |    060319.1633     |    You need at least 2          ||                    |    cross-sections crossing left ||                    |
-       bank line!                   |
-
-   * - **WARNING**     |    060319.1618     |    Error while creating         ||                    |    schematic Left banks!        |
-
-   * - **WARNING**     |    220718.0741     |    Error while creating         ||                    |    schematic Right banks!       |
-
-   * - **WARNING**     |    180319.1431     |    Schematizing of inflow       ||                    |    aborted!                     |
-
-   * - **WARNING**     |    180319.1434     |    Schematizing of outflows     ||                    |    aborted!                     |
-
-   * - **WARNING**     |    060319.1641     |    Element "" + elem + "" has a ||                    |    cross section of type 'R'    ||                    |
-       without data!                |
-
-   * - **WARNING**     |    060319.1624     |    Element "" + elem + "" has a ||                    |    cross section of type 'V'    ||                    |
-       without data!                |
-
-   * - **WARNING**     |    060319.1625     |    Element "" + elem + "" has a ||                    |    cross section of type 'T'    ||                    |
-       without data!                |
-
 
 .. list-table::
    :widths: 25 25 25 25
    :header-rows: 0
 
+   * - **Type**
+     - **Code**
+     - **Message**
+     - **Details**
+
+   * - **WARNING**
+     - 060319.1831
+     - Levee user lines required!
+     -
+
+   * - **WARNING**
+     - 060319.1806
+     - Assigning values aborted! Please check your crest elevation source layers.
+     -
+
+   * - **WARNING**
+     - 060319.1808
+     - File DEPFP.OUT is needed for the Hazus flooding analysis.
+
+       It is not in the current project directory:
+     - project_dir
+
+   * - **WARNING**
+     - 060319.1808
+     - Please choose at least one conversion source!
+     -
+
+   * - **WARNING**
+     - 060319.1811
+     - Please choose at least one conversion source!
+     -
+
+   * - **WARNING**
+     - 060319.1612
+     - Can't import channels!.
+     - CHAN.DAT doesn't exist.
+
+   * - **WARNING**
+     - 060319.1632
+     - Can't import channels!.
+     - CHANBANK.DAT doesn't exist.
+
+   * - **WARNING**
+     - 010219.0742
+     - Import channels failed!. Check CHAN.DAT and CHANBANK.DAT files.
+     - Maybe the number of left and righ bank cells are different.
+
+   * - **WARNING**
+     - 010219.0742
+     - Import channels failed!. Check CHAN.DAT and CHANBANK.DAT files.
+     - Maybe the number of left and righ bank cells are different.
+
+   * - **WARNING**
+     - 060319.1613
+     - Export to ""GUTTER.DAT failed!
+     -
+
+   * - **WARNING**
+     - 060319.1615
+     - Assignment of building areas to building polygons. Not implemented yet!'
+     -
+
+   * - **WARNING**
+     - 060319.1633
+     - You need at least 2 cross-sections crossing left bank line!
+     -
+
+   * - **WARNING**
+     - 060319.1618
+     - Error while creating schematic Left banks!
+     -
+
+   * - **WARNING**
+     - 220718.0741
+     - Error while creating schematic Right banks!
+     -
+
+   * - **WARNING**
+     - 180319.1431
+     - Schematizing of inflow aborted!
+     -
+
+   * - **WARNING**
+     - 180319.1434
+     - Schematizing of outflow aborted!
+     -
+
+   * - **WARNING**
+     - 060319.1641
+     - Element "" + elem + "" has a cross section of type 'R' without data!
+     -
+
+   * - **WARNING**
+     - 060319.1641
+     - Element "" + elem + "" has a cross section of type 'V' without data!
+     -
+
+   * - **WARNING**
+     - 060319.1641
+     - Element "" + elem + "" has a cross section of type 'T' without data!
+     -
 
    * - **WARNING**
      - 060319.1626
@@ -8842,12 +8867,6 @@ Warnings
      - Cell size must be positive.
      - Change the feature attribute value in Computational Domain layer.
 
-
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
-
-
    * - **WARNING**
      - 060319.1728
      - Cell size must be positive.
@@ -8855,12 +8874,12 @@ Warnings
 
    * - **WARNING**
      - 060319.1729
-     - SWMM input file\\n
+     - SWMM input file
      - "" + swmm_file + "" has no coordinates defined!
 
    * - **WARNING**
      - 060319.1730
-     - SWMM input file\\n
+     - SWMM input file
      - "" + swmm_file + "" has no coordinates defined!
 
    * - **WARNING**
@@ -8870,12 +8889,12 @@ Warnings
 
    * - **WARNING**
      - 060319.1732
-     - The following conduit inlets were not found!\\n
+     - The following conduit inlets were not found!
      - + conduit_inlets_not_found
 
    * - **WARNING**
      - 060319.1733
-     - The following conduit outlets were not found!\\n
+     - The following conduit outlets were not found!
      - +
        conduit_outlets_not_found
 
@@ -8885,7 +8904,7 @@ Warnings
        + "" conduits have no
        inlet and/or outlet! The
        value '?' was assigned to
-       them.\\
+       them.
      -
 
    * - **WARNING**
@@ -8920,7 +8939,7 @@ Warnings
 
    * - **WARNING**
      - 060319.1748
-     - Can't import channels!.\\n
+     - Can't import channels!.
      - CHAN.DAT doesn't exist
 
    * - **WARNING**
