@@ -8195,8 +8195,6 @@ Errors
      - 170618.0701
      - couldn't create a [LOSSES] group from storm drain .INP file!
 
-
-...........................................................................
    * - **ERROR**
      - 170618.0704
      - couldn't create a [XSECTIONS] group from storm drain .INP file!
