@@ -3251,7 +3251,6 @@ It is exported to GUTTER.DAT when the project is exported.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -3268,8 +3267,9 @@ It is exported to GUTTER.DAT when the project is exported.
      - REAL
      - Global street width.
 
-
-**n_value (street_n-value)** REAL Global gutter n-value
+   * - **n_value (street_n-value)**
+     - REAL
+     - Global gutter n-value
 
 gutter_lines
 ^^^^^^^^^^^^
