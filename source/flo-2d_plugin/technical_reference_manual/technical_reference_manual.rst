@@ -7876,32 +7876,21 @@ This data is written to the schematic layers.
      - TEXT
      - Weir shape.
 
+   * - **weir_height**
+     - REAL
+     - Weir height.
 
-**weir_height** REAL Weir height.
+   * - **weir_length**
+     - REAL
+     - Weir length.
 
-.. _`weir_length`:
+   * - **weir_side_slope**
+     - REAL
+     - Weir side slope.
 
-weir_length:
-
-REAL
-
-Weir length.
-
-.. _`weir_side_slope`:
-
-weir_side_slope:
-
-REAL
-
-Weir side slope.
-
-.. _`geom`:
-
-geom:
-
-LINESTRING
-
-Polyline geometry.
+   * - **geom**
+     - LINESTRING
+     - Polyline geometry.
 
 
 user_xsec_n_data
