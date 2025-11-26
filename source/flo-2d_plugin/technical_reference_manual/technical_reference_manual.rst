@@ -3615,7 +3615,6 @@ This table joins the grid layer to the inflow layer.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -3632,8 +3631,9 @@ This table joins the grid layer to the inflow layer.
      - INTEGER
      - Grid element id of the cell.
 
-
-**area_factor** REAL Not used.
+   * - **area_factor**
+     - REAL
+     - Not used.
 
 inflow_time_series
 ^^^^^^^^^^^^^^^^^^
