@@ -6163,6 +6163,7 @@ A table of data that joins the grid element and swmmid to the rating table data 
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
+
    * - **Field Name**
      - **Field Type**
      - **Description**
