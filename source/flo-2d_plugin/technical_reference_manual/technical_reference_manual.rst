@@ -3400,61 +3400,42 @@ infil_cells_green
 
 Tables that stores green-ampt infiltration parameters for specific grid elements.
 
-**Field Name Field Type Description**
-
-.. _`fid`:
-
-fid:
-
-INTEGER
-
-Unit fid is unique and not associated with the grid id.
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
 
 
-**grid_fid (infgrid)** INTEGER Grid element id of the cell.
+   * - **Field Name**
+     - **Field Type**
+     - **Description**
 
-.. _`hydc`:
+   * - **fid**
+     - INTEGER
+     - Unit fid is unique and not associated with the grid id.
 
-hydc:
+   * - **grid_fid (infgrid)**
+     - INTEGER
+     - Grid element id of the cell.
 
-REAL
+   * - **hydc**
+     - REAL
+     - Hydraulic conductivity for a specific grid element. (in/hr or mm/hr).
 
-Hydraulic conductivity for a specific grid element.
-(in/hr or mm/hr)
+   * - **soils**
+     - REAL
+     - Capillary soil suction for a specific grid element.(in or mm).
 
+   * - **dtheta**
+     - REAL
+     - Soil volumetric void ratio for a specific grid element. (unitless volume ratio).
 
-Capillary soil suction for a
+   * - **abstrinf**
+     - REAL
+     - Initial abstraction for a specific grid element. (in or mm).
 
-**soils** REAL specific grid element.
-(in
-
-   or mm)
-
-.. _`dtheta`:
-
-dtheta:
-
-REAL
-
-Soil volumetric void ratio for a specific grid element.
-(unitless volume ratio)
-
-
-Initial abstraction for a
-
-**abstrinf** REAL specific grid element.
-(in
-
-   or mm)
-
-.. _`soil_depth`:
-
-soil_depth:
-
-REAL
-
-Limiting soil infiltration depth for a specific grid element.
-(ft or m)
+   * - **soil_depth**
+     - REAL
+     - Limiting soil infiltration depth for a specific grid element. (ft or m).
 
 
 infil_cells_horton
