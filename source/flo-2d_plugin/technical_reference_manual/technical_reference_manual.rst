@@ -2537,10 +2537,9 @@ The table that stores the start time and date for the Evaporation group.
      - INTEGER
      - Starting day of the week.
 
-       1-7
-
-
-**clocktime** REAL Starting clock time hours.
+   * - **clocktime**
+     - REAL
+     - Starting clock time hours.
 
 evapor_hourly
 ^^^^^^^^^^^^^
