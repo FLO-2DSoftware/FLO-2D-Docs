@@ -7334,7 +7334,6 @@ A layer used to create spatially variable tolerance or LID polygons.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -7351,10 +7350,10 @@ A layer used to create spatially variable tolerance or LID polygons.
      - TEXT
      - Notes.
 
+   * - **geom**
+     - POLYGON
+     - Polygon features of spatially variable spatial shallow n data.
 
-Polygon features of spa-
-
-   **geom** POLYGON tially variable spatial shallow n data.
 
 user_streets
 ^^^^^^^^^^^^
