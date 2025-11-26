@@ -7073,7 +7073,6 @@ The numbering is by column top to bottom.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -7102,7 +7101,6 @@ User polygon areas applied to left banks as no exchange channel cells.
    :widths: 33 33 33
    :header-rows: 0
 
-
    * - **Field Name**
      - **Field Type**
      - **Description**
@@ -7129,7 +7127,6 @@ This data is schematized to the Reservoirs layer.
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
@@ -7167,12 +7164,10 @@ This data is schematized to the Reservoirs layer.
      - TEXT
      - Notes.
 
+   * - **geom**
+     - POINT
+     - A point feature representing any location within the banks of the reservoir.
 
-A point feature represent-
-
-**geom** POINT ing any location within the
-
-   banks of the reservoir.
 
 user_right_bank
 ^^^^^^^^^^^^^^^
