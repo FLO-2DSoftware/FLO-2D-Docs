@@ -13,7 +13,7 @@ html_logo = "FLO-2D Transparent.png"
 
 # 🔁 FULL BUILD: Use this when building all branches (e.g., on GitHub Actions)
 smv_tag_whitelist = r'^$'  # Exclude all tags
-smv_branch_whitelist = r'^(Build23|Build25)$'  # Include branche Build23 ONLY (for now).
+smv_branch_whitelist = r'^(Build23)$'  # Include branche Build23 ONLY (for now).
 smv_remote_whitelist = r'^origin$'  # Default remote
 
 # -- General configuration ---------------------------------------------------
