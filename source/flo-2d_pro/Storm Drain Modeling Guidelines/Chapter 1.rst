@@ -947,7 +947,7 @@ Orifice Flow:
 .. math::
    :label:
 
-   𝑄_𝑜 = 𝐶_𝑑\ 𝐴√2𝑔𝐻
+   Q_o = C_d A \sqrt{2 g H}
 
 where:
 
