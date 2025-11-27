@@ -1976,8 +1976,6 @@ Table for bridge upstream and downstream cross section identification.
      - Distance from bridge to up cross section.
 
 
-
-
 chan
 ^^^^
 
@@ -1989,7 +1987,6 @@ Channel are written in order from rank = 1 to n number of segments.
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
-
 
    * - **Field Name**
      - **Field Type**
