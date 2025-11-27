@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 1: INTRODUCTION
+CHAPTER 1: INTRODUCTION
 ========================
 
 This Reference Manual discusses the physical processes of flooding.
@@ -8,7 +8,7 @@ It is designed to acquaint the user with the model theory, finite difference alg
 potential flood scenarios.
 A reference list is provided for further reading.
 
-1.1 Evolution of the FLO-2D Model
+Evolution of the FLO-2D Model
 --------------------------------------
 
 The first version of the FLO-2D model was called MUDFLOW.
@@ -36,7 +36,7 @@ seconds).
 Typical applications have grid elements that range from 10 ft (3 m) to 500 ft (130 m) on a side and the number of grid elements is limited only by the
 computer resources and runtime.
 
-1.2 Modeling the Hydrologic System with FLO-2D
+Modeling the Hydrologic System with FLO-2D
 ----------------------------------------------
 
 The FLO-2D model has components for rainfall, channel flow, overland flow, street flow, infiltration, levees, sediment transport, storm drain and
@@ -86,7 +86,7 @@ Physical Processes Simulated by FLO-2D.*
 *Figure 2.
 Channel – Floodplain Interface.*
 
-1.3 Getting Started on a Project – A Brief Overview
+Getting Started on a Project – A Brief Overview
 ---------------------------------------------------
 
 There are two steps to starting a flood simulation, obtaining the topographic data, and developing the flood hydrology.
