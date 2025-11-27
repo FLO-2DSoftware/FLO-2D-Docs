@@ -16,11 +16,6 @@ smv_tag_whitelist = r'^$'  # Exclude all tags
 smv_branch_whitelist = r'^Build21$'  # Include branches like Build21, Build23, etc.
 smv_remote_whitelist = r'^origin$'  # Default remote
 
-# 🔁 QUICK BUILD: Uncomment below for fast local dev on current branch
-# smv_tag_whitelist = r'^$'
-# smv_branch_whitelist = r'^(main|Tutorials)$'  # Change to your working branch
-# smv_remote_whitelist = r'^$'  # Local only
-
 # -- General configuration ---------------------------------------------------
 extensions = [
     'sphinxcontrib.mermaid',
@@ -56,7 +51,7 @@ docx_documents = [
 ]
 docx_pagebreak_before_section = 1
 
-
+# Enable Chapter-based equation  numbering
 numfig = True
 numfig_secnum_depth = 1
 
