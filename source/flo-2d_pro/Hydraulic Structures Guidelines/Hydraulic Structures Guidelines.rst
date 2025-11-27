@@ -31,7 +31,6 @@ In addition, flow can be exchanged between a floodplain element and channel elem
 A hydraulic structure rating curve equation specifies discharge as a function of the headwater depth h:
 
 .. math::
-    :label:
 
     Q = a h^b
 
@@ -261,6 +260,7 @@ Hydraulic Structure Rating Table Options*
 
    * - INOUTCONT = 2
      - Upstream flow through the structure is computed with the rating table adjustment when the tailwater surface
+
        exceeds the headwater surface.
 
        The headwater depth Hw and tailwater Tw can switch with submergence to allow flow to go upstream.
@@ -489,7 +489,9 @@ Hydraulic Structure Troubleshooting*
 
               problem surfaced.
 
-            - If the problem is in the hydraulic structures, isolate the structures that appear to be the problem.
+            - If the problem is in the hydraulic structures, isolate the structures
+
+              that appear to be the problem.
 
        To isolate a hydraulic structure, put a simple inflow hydrograph (for steady flow) several
 
