@@ -58,11 +58,7 @@ docx_documents = [
 ]
 docx_pagebreak_before_section = 1
 
-
-
-
-
-
+# Enable Chapter-based equation  numbering
 numfig = True
 numfig_secnum_depth = 1
 
