@@ -244,9 +244,18 @@ where:
 
 *Orifice Flow:*
 
-If H ≤ h then: Q\ :sub:`o` = C\ :sub:`d`\ A√2gH
+If H ≤ h then:
 
-If H > h then: Q\ :sub:`o` = C\ :sub:`d` A√2g (H + h/2)
+    .. math::
+        :label:
+
+        Q_o = C_d\ A \sqrt{2gH}
+
+If H > h then:
+    .. math::
+        :label:
+
+        Q_o = C_d A \sqrt{2g \left(H + \frac{h}{2}\right)}
 
 where:
 
