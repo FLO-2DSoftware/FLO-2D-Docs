@@ -413,9 +413,6 @@ The depth integrated roughness is given by the equation:
 .. math::
    :label:
 
- .. math::
-   :label:
-
    n_d = n_b r_c e^{-r2 \frac{depth}{dmax}}
 
 where:
@@ -714,8 +711,6 @@ Recommended limiting Froude numbers are:
 
 When a limiting Froude number (FROUDC in CHAN.DAT) is assigned, the model computes the channel Froude number for each timestep.
 If the limiting Froude number is exceeded, the Manning’s n-value is increased according to the following criteria:
-
-
 
 
 .. raw:: html
