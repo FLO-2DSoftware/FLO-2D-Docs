@@ -55,7 +55,7 @@ It is also a function of flow depth.
 Typical overland flow roughness values (Manning’s n coefficients) are shown in Table 3.
 
 *Table 3.
-Overland Flow Manning's n Roughness Values.\ :sup: `1`*
+Overland Flow Manning's n Roughness Values.\ :sup:`1`*
 
 .. raw:: html
 
