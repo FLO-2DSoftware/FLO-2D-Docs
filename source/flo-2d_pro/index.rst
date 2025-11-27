@@ -3,7 +3,6 @@ FLO-2D Pro Resource Center 2023
 
 .. toctree::
    :maxdepth: 1
-   :numbered:
 
    data_input_manual
    Reference Manual 2023/index
