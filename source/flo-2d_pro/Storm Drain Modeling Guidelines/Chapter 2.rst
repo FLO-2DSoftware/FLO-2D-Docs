@@ -358,17 +358,14 @@ Assuming a diameter of 2 ft (0.61 m) and a weight of 100 pounds, what surcharge 
 Solution:
 
 .. math::
-   :label:
 
    w_m = 100 lb (45.4 kg)
 
 .. math::
-   :label:
 
-   A_m = frac\ ({π2ft^2}{4}) = 3.14 ft^2(0.29 m^2)
+   A_m = \frac({π2ft^2}{4}) = 3.14 ft^2(0.29 m^2)
 
 .. math::
-   :label:
 
    d_s = \frac {w_m} {A_m γ_w} = \frac {100lb}{3.14ft^2 \ 62.4lb/ft^3} ≈ \frac {45.4kg}{0.29m^2 \ 1000kg/m^3} ≈ 0.5 ft (0.16 m)
 
