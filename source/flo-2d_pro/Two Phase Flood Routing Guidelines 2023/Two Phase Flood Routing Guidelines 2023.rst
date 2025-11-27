@@ -1252,7 +1252,7 @@ relationships can be used to compute viscosity and yield stress:
 
         \quad \tau_y = \alpha_2 e^{\beta_2 c_v}
 
-where α\:sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
+where α\ :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
 The viscosity and yield stress are functions of the concentration of silts, clays and in some cases, fine sands, but not the larger clastic material
 rafted along with the flow (See Appendix Table B.1 ).
 The viscosity of the fluid matrix is also a function of the percent and type of clays and fluid temperature.
