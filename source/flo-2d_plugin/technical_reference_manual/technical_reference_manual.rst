@@ -9393,6 +9393,9 @@ Bar Warning
    * - **bar_warn**
      - There is no grid! Please create it before running tool.
 
+
+
+999999999999999999999999999999999999999999
   * - **bar_warn**
     - There are not any point layers selected (or visible)
 
@@ -9475,35 +9478,35 @@ Bar Warning
     - There is no grid! Please create it before running tool.
 
 
-   * - **bar_warn**
-     - Vertical inlet opening is not allowed for {}!'.format(inlet_type))
+  * - **bar_warn**
+    - Vertical inlet opening is not allowed for {}!'.format(inlet_type))
 
-   * - **bar_warn**
-     - There is no computational domain! Please digitize it before running tool.
+  * - **bar_warn**
+    - There is no computational domain! Please digitize it before running tool.
 
-   * - **bar_warn**
-     - There is no grid! Please create it before running tool.
+  * - **bar_warn**
+    - There is no grid! Please create it before running tool.
 
-   * - **bar_warn**
-     - There are no storm drain components (inlets/outfalls) defined in layer Storm Drain Nodes  (User Layers"
+  * - **bar_warn**
+    - There are no storm drain components (inlets/outfalls) defined in layer Storm Drain Nodes  (User Layers"
 
-   * - **bar_warn**
-     - There is no computational domain! Please digitize it before running tool.
+  * - **bar_warn**
+    - There is no computational domain! Please digitize it before running tool.
 
-   * - **bar_warn**
-     - There is no grid! Please create it before running tool.
+  * - **bar_warn**
+    - There is no grid! Please create it before running tool.
 
-   * - **bar_warn**
-     - User Layer ""Storm Drain Nodes"" is empty! Import components from .INP file or shapefile, or schematize Storm Drains.
+  * - **bar_warn**
+    - User Layer ""Storm Drain Nodes"" is empty! Import components from .INP file or shapefile, or schematize Storm Drains.
 
-   * - **bar_warn**
-     - No oulets defined in 'Storm Drain Nodes' User Layer!
+  * - **bar_warn**
+    - No oulets defined in 'Storm Drain Nodes' User Layer!
 
-   * - **bar_warn**
-     - Could not save outfalls! Please check if they are correct.
+  * - **bar_warn**
+    - Could not save outfalls! Please check if they are correct.
 
-   * - **bar_warn**
-     - User Layer ""Storm Drain Nodes"" is empty! Import components from .INP file or shapefile, or schematize Storm Drains.
+  * - **bar_warn**
+    - User Layer ""Storm Drain Nodes"" is empty! Import components from .INP file or shapefile, or schematize Storm Drains.
 
    * - **bar_warn**
      - No inlets defined in 'Storm Drain Nodes' User Layer!
