@@ -1,4 +1,4 @@
-FLO-2D Plugin Gila v1.0.0: Documentation
+FLO-2D Plugin Gila: Documentation
 ========================================
 
 .. toctree::
