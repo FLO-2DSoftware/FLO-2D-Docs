@@ -9393,135 +9393,68 @@ Bar Warning
    * - **bar_warn**
      - There is no grid! Please create it before running tool.
 
-
-
-999999999999999999999999999999999999999999
-  * - **bar_warn**
-    - There are not any point layers selected (or visible)
-
-  * - **bar_warn**
-    - There is no grid! Please create it before running tool.
-
-  * - **bar_warn**
-    - There is no grid! Please create it before running tool.
-
-  * - **bar_warn**
-    - There is no grid. Please, create it before evaluating the reduction factors.
-
-  * - **bar_warn**
-    - There is no any blocking polygons in ""Blocked Areas"" layer! Please digitize them before running tool.
-
-  * - **bar_warn**
-    - There is no grid. Please, create it before evaluating the tolerance values.
-
-  * - **bar_warn**
-    - There is no grid. Please, create it before evaluating the Froude values.
-
-  * - **bar_warn**
-    - WARNING 060319.1718 There is no grid. Please, create it before evaluating the shallow-n values.
-
-  * - **bar_warn**
-    - There is no grid. Please, create it before evaluating the shallow-n values.
-
-  * - **bar_warn**
-    - There is no grid. Please, create it before evaluating the no-exchange cells.
-
-  * - **bar_warn**
-    - Please define global infiltration method first!
-
-  * - **bar_warn**
-    - Please define global infiltration method first!
-
-  * - **bar_warn**
-    - Please define global infiltration parameters first!
-
-  * - **bar_warn**
-    - Please define global infiltration method first!
-
-  * - **bar_warn**
-    - Please define global infiltration method first!
-
-  * - **bar_warn**
-    - Please define global infiltration method first!
-
-  * - **bar_warn**
-    - Schematizing of infiltration failed! Please check user infiltration layers.
-
-  * - **bar_warn**
-    - Importing Rainfall Data from ASCII files failed! Please check your input data.\\nIs the .RFC file missing?
-
-  * - **bar_warn**
-    - There is no h5py module installed! Please install it to run export tool.
-
-  * - **bar_warn**
-    - Exporting Rainfall Data failed! Please check your input data.
-
-  * - **bar_warn**
-    - Importing predefined time series failed! Please check your input data.
-
-  * - **bar_warn**
-    - There is no computational domain! Please digitize it before running tool.
-
-  * - **bar_warn**
-    - There is no grid! Please create it before running tool.
-
-  * - **bar_warn**
-    - There is no computational domain! Please digitize it before running tool.
-
-  * - **bar_warn**
-    - There is no grid! Please create it before running tool.
-
-  * - **bar_warn**
-    - There is no computational domain! Please digitize it before running tool.
-
-  * - **bar_warn**
-    - There is no grid! Please create it before running tool.
-
-
-  * - **bar_warn**
-    - Vertical inlet opening is not allowed for {}!'.format(inlet_type))
-
-  * - **bar_warn**
-    - There is no computational domain! Please digitize it before running tool.
-
-  * - **bar_warn**
-    - There is no grid! Please create it before running tool.
-
-  * - **bar_warn**
-    - There are no storm drain components (inlets/outfalls) defined in layer Storm Drain Nodes  (User Layers"
-
-  * - **bar_warn**
-    - There is no computational domain! Please digitize it before running tool.
-
-  * - **bar_warn**
-    - There is no grid! Please create it before running tool.
-
-  * - **bar_warn**
-    - User Layer ""Storm Drain Nodes"" is empty! Import components from .INP file or shapefile, or schematize Storm Drains.
-
-  * - **bar_warn**
-    - No oulets defined in 'Storm Drain Nodes' User Layer!
-
-  * - **bar_warn**
-    - Could not save outfalls! Please check if they are correct.
-
-  * - **bar_warn**
-    - User Layer ""Storm Drain Nodes"" is empty! Import components from .INP file or shapefile, or schematize Storm Drains.
+   * - **bar_warn**
+     - There are not any point layers selected (or visible)
 
    * - **bar_warn**
-     - No inlets defined in 'Storm Drain Nodes' User Layer!
+     - There is no grid! Please create it before running tool.
 
    * - **bar_warn**
-     - Could not save Inlets! Please check if they are correct.
+     - There is no grid! Please create it before running tool.
 
    * - **bar_warn**
-     - User Layer ""Storm Drain Conduits"" is empty! Import components from .INP file or shapefile, or schematize Storm Drains.
+     - There is no grid. Please, create it before evaluating the reduction factors.
 
    * - **bar_warn**
-     - Could not save conduits! Please check if they are correct.
+     - There is no any blocking polygons in ""Blocked Areas"" layer! Please digitize them before running tool.
 
    * - **bar_warn**
-     - User Layer ""Storm Drain Conduits"" is empty!
+     - There is no grid. Please, create it before evaluating the tolerance values.
+
+   * - **bar_warn**
+     - There is no grid. Please, create it before evaluating the Froude values.
+
+   * - **bar_warn**
+     - WARNING 060319.1718 There is no grid. Please, create it before evaluating the shallow-n values.
+
+   * - **bar_warn**
+     - There is no grid. Please, create it before evaluating the shallow-n values.
+
+   * - **bar_warn**
+     - There is no grid. Please, create it before evaluating the no-exchange cells.
+
+   * - **bar_warn**
+     - Please define global infiltration method first!
+
+   * - **bar_warn**
+     - Please define global infiltration method first!
+
+   * - **bar_warn**
+     - Please define global infiltration parameters first!
+
+   * - **bar_warn**
+     - Please define global infiltration method first!
+
+   * - **bar_warn**
+     - Please define global infiltration method first!
+
+   * - **bar_warn**
+     - Please define global infiltration method first!
+
+   * - **bar_warn**
+     - Schematizing of infiltration failed! Please check user infiltration layers.
+
+   * - **bar_warn**
+     - Importing Rainfall Data from ASCII files failed! Please check your input data.\\nIs the .RFC file missing?
+
+   * - **bar_warn**
+     - There is no h5py module installed! Please install it to run export tool.
+
+   * - **bar_warn**
+     - Exporting Rainfall Data failed! Please check your input data.
+
+   * - **bar_warn**
+     - Importing predefined time series failed! Please check your input data.
 
    * - **bar_warn**
      - There is no computational domain! Please digitize it before running tool.
@@ -9530,106 +9463,169 @@ Bar Warning
      - There is no grid! Please create it before running tool.
 
    * - **bar_warn**
-     - Storm drain components not saved!
-
-   * - **bar_warn**
-     - No rating table defined!
+     - There is no computational domain! Please digitize it before running tool.
 
    * - **bar_warn**
      - There is no grid! Please create it before running tool.
 
    * - **bar_warn**
-     - There is no any user streets to schematize! Please digitize them before running tool.
+     - There is no computational domain! Please digitize it before running tool.
+
+   * - **bar_warn**
+     - There is no grid! Please create it before running tool.
 
    * - **bar_warn**
      - Vertical inlet opening is not allowed for {}!'.format(inlet_type))
 
    * - **bar_warn**
-     - Schematizing of Storm Drains failed! Please check user Storm Drains Points layer.
-
-   * - **bar_warn**
-     - Recalculation of Max Depth failed!
-
-   * - **bar_warn**
-     - Importing Storm Drain input data failed! Please check your SWMM input data.
-
-   * - **bar_warn**
-     - Updating SWMM input data failed! Please check Storm Drain data.
-
-   * - **bar_warn**
-     - No rating table defined!
-
-   * - **bar_warn**
-     - Too many columns to paste.
+     - There is no computational domain! Please digitize it before running tool.
 
    * - **bar_warn**
      - There is no grid! Please create it before running tool.
 
    * - **bar_warn**
-     - There are no User Left Bank lines! Please digitize them before running the tool.
+     - There are no storm drain components (inlets/outfalls) defined in layer Storm Drain Nodes  (User Layers"
 
    * - **bar_warn**
-     - There are no User Cross Sections! Please digitize them before running the tool.
-
-   * - **bar_warn**
-     - There is no grid! Please create it before running tool.
-
-   * - **bar_warn**
-     - There are no User Right Bank lines! Please digitize them before running the tool.
+     - There is no computational domain! Please digitize it before running tool.
 
    * - **bar_warn**
      - There is no grid! Please create it before running tool.
 
    * - **bar_warn**
-     - There are no Schematized Channel Segments (Left Banks) to export.
+     - User Layer ""Storm Drain Nodes"" is empty! Import components from .INP file or shapefile, or schematize Storm Drains.
 
    * - **bar_warn**
-     - There are no Schematized Channel Cross Sections to export.
+     - No oulets defined in 'Storm Drain Nodes' User Layer!
 
    * - **bar_warn**
-     - Could not run interpolation under current operation system!
+     - Could not save outfalls! Please check if they are correct.
 
    * - **bar_warn**
-     - Could not run CHANRIGHTBANK.EXE under current operation system!
+     - User Layer ""Storm Drain Nodes"" is empty! Import components from .INP file or shapefile, or schematize Storm Drains.
 
-   * - **bar_warn**
-     - CHANRIGHTBANK.EXE failed!
+    * - **bar_warn**
+      - No inlets defined in 'Storm Drain Nodes' User Layer!
 
-   * - **bar_warn**
-     - WARNING 060319.1754 There is no grid! Please create it before running tool.
+    * - **bar_warn**
+      - Could not save Inlets! Please check if they are correct.
 
-   * - **bar_warn**
-     - WARNING 060319.1755 There are no cross-sections! Please create them before running tool.
+    * - **bar_warn**
+      - User Layer ""Storm Drain Conduits"" is empty! Import components from .INP file or shapefile, or schematize Storm Drains.
 
-   * - **bar_warn**
-     - There is no grid! Please create it before running tool.
+    * - **bar_warn**
+      - Could not save conduits! Please check if they are correct.
 
-   * - **bar_warn**
-     - There is no grid! Please create it before running tool.
+    * - **bar_warn**
+      - User Layer ""Storm Drain Conduits"" is empty!
 
-   * - **bar_warn**
-     - Could not run 'CHAN N-VALUE INTERPOLATOR.EXE' under current operation system!
+    * - **bar_warn**
+      - There is no computational domain! Please digitize it before running tool.
 
-   * - **bar_warn**
-     - There is no grid! Please create it before running tool.
+    * - **bar_warn**
+      - There is no grid! Please create it before running tool.
 
-   * - **bar_warn**
-     - WARNING 060319.1801 There is no grid! Please create it before running tool.
+    * - **bar_warn**
+      - Storm drain components not saved!
 
-   * - **bar_warn**
-     - WARNING 060319.1802 There are no any user left bank lines! Please digitize them before running the tool.
+    * - **bar_warn**
+      - No rating table defined!
 
-   * - **bar_warn**
-     - WARNING 060319.1803 There are no any user cross sections! Please digitize them before running the tool.
+    * - **bar_warn**
+      - There is no grid! Please create it before running tool.
 
-   * - **bar_warn**
-     - All changes to this layer can be overwritten by changes in the User Layer.
+    * - **bar_warn**
+      - There is no any user streets to schematize! Please digitize them before running tool.
 
-   * - **bar_warn**
-     - ERROR 12117.0602
+    * - **bar_warn**
+      - Vertical inlet opening is not allowed for {}!'.format(inlet_type))
 
-   * - **bar_warn**
-     - ERROR 121117.0544
+    * - **bar_warn**
+      - Schematizing of Storm Drains failed! Please check user Storm Drains Points layer.
+
+    * - **bar_warn**
+      - Recalculation of Max Depth failed!
+
+    * - **bar_warn**
+      - Importing Storm Drain input data failed! Please check your SWMM input data.
+
+    * - **bar_warn**
+      - Updating SWMM input data failed! Please check Storm Drain data.
+
+    * - **bar_warn**
+      - No rating table defined!
+
+    * - **bar_warn**
+      - Too many columns to paste.
+
+    * - **bar_warn**
+      - There is no grid! Please create it before running tool.
+
+    * - **bar_warn**
+      - There are no User Left Bank lines! Please digitize them before running the tool.
+
+    * - **bar_warn**
+      - There are no User Cross Sections! Please digitize them before running the tool.
+
+    * - **bar_warn**
+      - There is no grid! Please create it before running tool.
+
+    * - **bar_warn**
+      - There are no User Right Bank lines! Please digitize them before running the tool.
+
+    * - **bar_warn**
+      - There is no grid! Please create it before running tool.
+
+    * - **bar_warn**
+      - There are no Schematized Channel Segments (Left Banks) to export.
+
+    * - **bar_warn**
+      - There are no Schematized Channel Cross Sections to export.
+
+    * - **bar_warn**
+      - Could not run interpolation under current operation system!
+
+    * - **bar_warn**
+      - Could not run CHANRIGHTBANK.EXE under current operation system!
+
+    * - **bar_warn**
+      - CHANRIGHTBANK.EXE failed!
+
+    * - **bar_warn**
+      - WARNING 060319.1754 There is no grid! Please create it before running tool.
+
+    * - **bar_warn**
+      - WARNING 060319.1755 There are no cross-sections! Please create them before running tool.
+
+    * - **bar_warn**
+      - There is no grid! Please create it before running tool.
+
+    * - **bar_warn**
+      - There is no grid! Please create it before running tool.
+
+    * - **bar_warn**
+      - Could not run 'CHAN N-VALUE INTERPOLATOR.EXE' under current operation system!
+
+    * - **bar_warn**
+      - There is no grid! Please create it before running tool.
+
+    * - **bar_warn**
+      - WARNING 060319.1801 There is no grid! Please create it before running tool.
+
+    * - **bar_warn**
+      - WARNING 060319.1802 There are no any user left bank lines! Please digitize them before running the tool.
+
+    * - **bar_warn**
+      - WARNING 060319.1803 There are no any user cross sections! Please digitize them before running the tool.
+
+    * - **bar_warn**
+      - All changes to this layer can be overwritten by changes in the User Layer.
+
+    * - **bar_warn**
+      - ERROR 12117.0602
+
+    * - **bar_warn**
+      - ERROR 121117.0544
 
 
 Bar Error
