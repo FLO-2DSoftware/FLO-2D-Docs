@@ -3,7 +3,7 @@
 Chapter 4. MODEL COMPONENTS
 ===========================
 
-4.1 Model Features
+Model Features
 -------------------
 
 The primary FLO-2D flood routing features and attributes are:
@@ -36,7 +36,7 @@ the user can learn about how the flood project responds to mitigation or sensiti
 Model component selection should focus on those physical features that will significantly affect the volume distribution and area of inundation.
 A brief description of the FLO-2D components follows.
 
-4.2 Overland Flow
+Overland Flow
 ------------------
 
 The simplest FLO-2D model is overland flow on an alluvial fan or floodplain.
@@ -60,9 +60,6 @@ Overland Flow Manning's n Roughness Values.\ :sup: `1`*
 .. raw:: html
 
    <table border="1" cellspacing="0" cellpadding="6" style="border-collapse: collapse; width: 100%;">
-     <caption style="text-align: left; font-weight: bold;">
-       Table 3. Overland Flow Manning's n Roughness Values.<sup>1</sup>
-     </caption>
      <thead>
        <tr>
          <th style="text-align: left;">Surface</th>
@@ -77,7 +74,6 @@ Overland Flow Manning's n Roughness Values.\ :sup: `1`*
        <tr><td>Poor grass cover on rough surface</td><td>0.20 - 0.30</td></tr>
        <tr><td>Short prairie grass</td><td>0.10 - 0.20</td></tr>
        <tr><td>Sparse vegetation</td><td>0.05 - 0.13</td></tr>
-    ]
 
        <tr><td colspan="2"><strong>Sparse rangeland with debris</strong></td></tr>
        <tr><td>&nbsp;&nbsp;&nbsp;0% cover</td><td>0.09 - 0.34</td></tr>
@@ -96,8 +92,8 @@ Overland Flow Manning's n Roughness Values.\ :sup: `1`*
        <tr><td>Shallow flow on asphalt or concrete (0.25&quot; to 1.0&quot;)</td><td>0.10 - 0.15</td></tr>
        <tr><td>Fallow fields</td><td>0.08 - 0.12</td></tr>
        <tr><td>Open ground, no debris</td><td>0.04 - 0.10</td></tr>
-       <tr><t
-
+    </tbody>
+   </table>
 
 .. image:: img/Chapter4/Chapte002.png
 
@@ -168,7 +164,7 @@ It should be noted that the application of the Manning’s equation for uniform 
 the depth average velocity approaches zero (ponded flow condition).
 The resulting water surface elevations can be accurately predicted but will display some variation across the channel.
 
-4.3 Channel Flow
+Channel Flow
 -----------------
 
 The full channel guidelines are in the Manuals folder.
@@ -242,7 +238,7 @@ The cross-section interpolation is based a weighted flow area adjustment to achi
 The user has several other options for setting up the channel data file including grouping the channel elements into segments, specifying initial flow
 depths, identifying contiguous channel elements that do not share discharge, assigning limiting Froude numbers and depth variable nvalue adjustments.
 
-4.4 Channel-Floodplain Interface
+Channel-Floodplain Interface
 --------------------------------
 
 Channel flow is exchanged with the floodplain grid elements in a separate routine after the channel, street and floodplain flow subroutines have been
@@ -263,7 +259,7 @@ velocity.
 Overbank discharge or return flow to the channel is computed using the floodplain assigned roughness.
 The overland flow can enter a previously dry channel.
 
-4.5 Levees
+Levees
 ----------
 
 The FLO-2D levee component confines flow on the floodplain surface by blocking one of the eight flow directions.
@@ -307,7 +303,7 @@ The levee deficit can be displayed graphically in both MAPPER Pro and MAXPLOT (F
 *Figure 39.
 Levee Freeboard Deficit Plot Using MAXPLOT.*
 
-4.6 Levee and Dam Breach Failures
+Levee and Dam Breach Failures
 ---------------------------------
 
 Breach Options
@@ -453,7 +449,7 @@ Tailwater submergence of the weir flow will reduce the breach discharge.
 A comprehensive guide to modeling the breach of levees, dams and walls is outlined in the manual Levee, Dam, and Wall Breach Guidelines (FLO-2D,
 2018).
 
-4.7 Hydraulic Structures
+Hydraulic Structures
 ------------------------
 
 The full hydraulic structures guidelines are in the Handouts folder.
@@ -508,7 +504,7 @@ The highlights of this component are:
 
     - No rating curves or tables required.
 
-4.8 Storm Drain Modeling
+Storm Drain Modeling
 ------------------------
 
 The full storm drain guidelines are available in the Manuals folder.
@@ -553,7 +549,7 @@ The basic storm drain model development procedure is:
 
     viii. Add other FLO-2D model components and details such as channels, buildings and levees.
 
-4.9 Street Flow
+Street Flow
 ---------------
 
 Street flow as shallow flow in rectangular channels with a curb height using the same routing algorithm as for the 1-D rectangular channels.
@@ -573,7 +569,7 @@ Street roughness values, street widths, elevations and curb heights can be modif
 *Figure 46.
 Streets Depicted in Green in the GDS Program.*
 
-4.10 Floodplain Storage Modification and Flow Obstruction
+Floodplain Storage Modification and Flow Obstruction
 ---------------------------------------------------------
 
 One of the unique features the FLO-2D model is its ability to simulate flow conditions associated with flow obstructions or loss of flood storage.
@@ -659,7 +655,7 @@ ARF values for either a totally blocked or partially blocked grid element.
 *Figure 51.
 Building Collapse Vulnerability Curves.*
 
-4.11 Rainfall Runoff
+Rainfall Runoff
 --------------------
 
 Rainfall runoff can be routed to the channel system and then the river flood hydraulics can be computed in the same flood simulation.
@@ -708,7 +704,7 @@ The building ARF values are in addition to the RTIMP impervious surface infiltra
 *Figure 52.
 Flooding Replicated from NEXRAD Data near Tucson, Arizona.*
 
-4.12 Infiltration and Abstraction
+Infiltration and Abstraction
 ---------------------------------
 
 Precipitation losses, abstraction (interception) and infiltration are simulated in the FLO-2D model.
@@ -1210,7 +1206,7 @@ Horton Infiltration Parameters.*
 
 .. image:: img/Chapter4/Chapte109.png
 
-4.13 Evaporation
+Evaporation
 ----------------
 
 Open water surface evaporation losses for long duration floods in large river systems can be simulated.
@@ -1224,7 +1220,7 @@ The floodplain wetted surface area excludes the area defined by ARF area reducti
 The evaporation loss does not include evapotranspiration from floodplain vegetation.
 The total evaporation loss is reported in the SUMMARY.OUT file and should be compared with the infiltration loss for reasonableness.
 
-4.14 Overland Multiple Channel Flow
+Overland Multiple Channel Flow
 -----------------------------------
 
 The purpose of the multiple channel flow component is to simulate the overland flow in rills and gullies rather than as overland sheet flow for
@@ -1282,7 +1278,7 @@ elevation in the channel bank element.
 If necessary, use an adjust to the width and depth as the multiple channel approaches the 1-D channel over several multiple channel elements to
 simulate the multiple channel becoming wider and shallower on the flat river floodplain.
 
-4.15 Sediment Transport – Total Load
+Sediment Transport – Total Load
 ------------------------------------
 
 When a channel rigid bed analysis is performed, any potential cross-section changes associated with sediment transport are assumed to have a
@@ -1569,7 +1565,7 @@ There are two other sediment transport options available in the FLO-2D model; as
 Rigid bed element can be used would simulate a concrete apron in a channel below a culvert outlet, channel bed rock or a concrete lined channel reach.
 The scour depth limitation is a control that can be invoked for sediment routing.
 
-4.16 Mud and Debris Flow Simulation
+Mud and Debris Flow Simulation
 -----------------------------------
 
 Very viscous, hyperconcentrated sediment flows are generally referred to as either mud or debris flows.
@@ -1922,7 +1918,7 @@ The areal extent of mudflow inundation and the maximum flow depths and velocitie
 which can be varied in the FLO-2D simulations.
 For further discussion on model hyperconcentrated sediment flows, refer to the FLO-2D white paper document *“Simulating Mudflows Guidelines”*.
 
-4.17 Specific Energy, Impact and Static Pressure
+Specific Energy, Impact and Static Pressure
 ------------------------------------------------
 
 For overland flow, the specific energy, impact pressure and static pressure are computed and reported to a file on an output interval basis.
@@ -1963,7 +1959,7 @@ The maximum static pressure is written to the STATICPRESS.OUT file.
 
    P_s = \gamma\, \hat{h}
 
-4.18 Floodway Delineation
+Floodway Delineation
 -------------------------
 
 The floodplain management concept of the floodway delineation is to reserve an unobstructed area of flood conveyance passage while allowing for
@@ -2069,7 +2065,7 @@ Flood Delineation Comparison*
 *Figure 63.
 Floodway Delineation Comparison.*
 
-4.19 Groundwater – Surface Water Modeling
+Groundwater – Surface Water Modeling
 -----------------------------------------
 
 The FLO-2D flood routing model is linked with the USGS MODFLOW-2005 Groundwater Flow Process (GWF) package to simulate integrated surface – subsurface
@@ -2100,7 +2096,7 @@ Refer the MODFLO-2D manual for more details.
 *Figure 64.
 GDS Data Entry for a MODFLOW Groundwater Simulation.*
 
-4.20 Building Collapse
+Building Collapse
 ----------------------
 
 In the FLO-2D model, the loss of flood storage due to buildings is simulated with area reduction factors (ARF values) that reduce the surface area of
@@ -2199,7 +2195,7 @@ If a building consists of multiple grid elements, each element must have a vulne
 The global vulnerability curve value could be zero.
 A portion of a typical BUILDING_COLLAPSE.DAT file is follows:
 
-0            Global Vulnerability Curve
+ 0            Global Vulnerability Curve
 
  2
 
@@ -2290,7 +2286,7 @@ The building collapse routine is triggered by assigning grid element building vu
 ARF values for either a totally blocked or partially blocked grid element.
 In the future other building vulnerability curves to cover an expanded matrix of building types can be considered.
 
-4.21 Predicting Alluvial Fan Channel Avulsion
+Predicting Alluvial Fan Channel Avulsion
 ---------------------------------------------
 
 Avulsion of alluvial fan channels depicts the rapid abandonment of one channel and the formation of a new channel with a steeper slope.
@@ -2427,7 +2423,7 @@ During the falling limb of the hydrograph when the flow depth is less than 1 ft 
 the original width is again attained.
 The user can assign the range of slope where the multiple channel widening is computed.
 
-4.22 Low Impact Development (LID) Modeling
+Low Impact Development (LID) Modeling
 ------------------------------------------
 
 Low impact development (LID) flood retention can be assessed with the FLO-2D model using a sink volume assignment or a spatially variable tolerance
@@ -2598,7 +2594,7 @@ This method might be used for surface features that create ponding and the user 
 surface area.
 Both methods would have to be tested to determine the impacts on infiltration, storm drain capacity or downstream flooding.
 
-4.23 Building Rainfall Runoff
+Building Rainfall Runoff
 -----------------------------
 
 Building Runoff
@@ -3135,7 +3131,7 @@ The three new tools were tested extensively with a flat and sloped roof to valid
 
 There are no required data file revisions to use these new building rainfall tools.
 
-4.24 Gutter Tool
+Gutter Tool
 ----------------
 
 The street gutters are designed to convey shallow flow during storm runoff less than or equal to the design discharge without traffic interruption.
@@ -3258,7 +3254,7 @@ The gutter flow results are displayed in the Figure 113.
 *Figure 113.
 Flow Depth with Gutter.*
 
-4.25 Bridge Routine
+Bridge Routine
 -------------------
 
 Many bridge hydraulic analyses are conducted using steady state peak flow conditions where the objective is to predict the maximum water surface
@@ -3479,8 +3475,7 @@ where:
 
     k\ :sub:`p` = non-hydrostatic pressure coefficient
 
-The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959, p.
-490) in English units:
+The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959, p.490) in English units:
 
         Q = 8.02 C A\ :sub:`2` (∆h/β)\ :sup:`0.5` (1)
 
