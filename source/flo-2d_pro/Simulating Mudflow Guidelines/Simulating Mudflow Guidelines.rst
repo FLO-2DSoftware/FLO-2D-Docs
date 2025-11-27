@@ -592,9 +592,7 @@ Where resources are available, it is recommended that viscosity and yield stress
 For most flood and mudflow hazard delineation projects, it is outside the scope of work or budget to design, fabricate and calibrate a mudflow
 viscometer.
 Commercially available viscometers that are designed to accommodate asphalt samples with low speeds could be used.
-Typically these viscometers cost in the range from $4,000 to $6,000 US (e.g. Brookfield
-
-AMETEK…see website: *https://www.brookfieldengineering.com/products/viscometers*).
+Typically these viscometers cost in the range from $4,000 to $6,000 US (e.g. Brookfield AMETEK…see website: *https://www.brookfieldengineering.com/products/viscometers*).
 It is necessary to collect an undisturbed mudflow sample deposit and dry and sieve it to extract the fluid matrix.
 
 In the absence of in-situ sample data, reasonable assumptions must be made to estimate the rheological properties as a function of sediment
@@ -606,6 +604,7 @@ The variability of this data is primarily a function of the type and quantity of
 If rheological laboratory investigations are performed for a project site, the data should fall within the banded range given the diverse range of
 data collected worldwide.
 If a subjective judgment to select a set of rheological relationships is necessary, one of the following approach is recommended.
+
 A. If mudflow deposit field data of the fluid matrix is collected, this analysis is suggested:
 
     1. Observe the field post event conditions including deposits and available photos.
