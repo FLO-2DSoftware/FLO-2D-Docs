@@ -121,7 +121,9 @@ where:
 
 A similar construct for the convective acceleration term (V\ :sub:`x`/g*∂V/∂x) can be made where:
 
-    V\ :sub:`2` is the velocity in the east direction and
+    V\ :sub:`2` is the velocity in the east direction
+
+    and
 
     V\ :sub:`4` is the velocity in the west direction for grid element 251:
 
@@ -137,6 +139,7 @@ This net change in volume is then divided by the available surface area (A\ :sub
 decrease in flow depth ∆h for the timestep.
 
 .. math::
+    :label:
 
     \sum Q_{x}^{i+1} = Q_{n} + Q_{e} + Q_{s} + Q_{w} + Q_{ne} + Q_{se} + Q_{sw} + Q_{nw} = A_{surf} \, \frac{\Delta h}{\Delta t}
 
