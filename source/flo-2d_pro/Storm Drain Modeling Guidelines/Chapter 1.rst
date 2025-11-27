@@ -64,7 +64,7 @@ Figure 3 shows an example of a storm drain integrated with a surface model on a 
 .. image:: img/Chapter1/Chapte003.jpg
 
 *Figure 3.
-A Typical Storm Drain System as Viewed in QGIS .**
+A Typical Storm Drain System as Viewed in QGIS.**
 
 FLO-2D Storm Drain Model Overview
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -131,7 +131,6 @@ There is no maximum ponded volume.
 
     - The global ponding options were off and none of the nodes could store volume.
       The flooding option was applied for this case.
-
     - The Allow Ponding option was selected, and those nonzero ponded area nodes would receive ponded water.
       Nodes with a zero-ponded area would receive flooding water.
 
@@ -177,9 +176,7 @@ Surface Water – Storm Drain Exchange Conditions:
 Storm drain pressure head < rim elevation:
 
     - Inflow discharge is passed from FLO-2D to the storm drain.
-
     - The conduit is not full.
-
     - No return flow.
 
 .. image:: img/Chapter1/Chapte004.png
@@ -190,9 +187,7 @@ Inlet No Return Flow.*
 FLO-2D WSE > Storm drain pressure head> rim elevation:
 
     - No inflow discharge is passed from FLO-2D.
-
     - The conduit capacity is full.
-
     - No return flow.
 
 .. image:: img/Chapter1/Chapte005.png
@@ -203,11 +198,8 @@ No Return Flow No Inlet Flow*
 Storm drain pressure head > FLO-2D WSE > rim elevation:
 
     - No inflow discharge is passed from FLO-2D surface to storm drain.
-
     - The conduit capacity is full.
-
     - Return flow is exchanged to the surface.
-
     - Water leaves the storm drain system and it is added to the surface grid cell.
 
 .. image:: img/Chapter1/Chapte006.png
@@ -221,11 +213,8 @@ Pressure head and manholes
 Flooding will occur at manholes when the pressure head exceeds manhole rim elevation plus surcharge depth plus FLO-2D water depth (see Figure 7).
 
         - Conduit capacity is full.
-
         - Pressure head greater than water surface elevation.
-
         - Return flow to system.
-
         - Manhole cap is removed, and the manhole converts to a type 3 inlet that collects discharge from the surface.
 
 .. image:: img/Chapter1/Chapte007.png
@@ -242,15 +231,15 @@ models.
 The following response can be observed in the FLO-2D storm drain results:
 
     1. The head on the inlet continuously increases when the PH is less than the FLO-2D WSE even though the head exceeds the rim elevation.
-    Since the inlets are flooded, this results in higher storm drain pressure.
-    The volume above the rim is not released to the surface until the PH exceeds the FLO-2D WSE.
+       Since the inlets are flooded, this results in higher storm drain pressure.
+       The volume above the rim is not released to the surface until the PH exceeds the FLO-2D WSE.
 
     2. For underwater inlets, the higher-pressure head pushes more water through the downstream conduits at higher velocity.
 
     3. Higher velocities in downstream conduits may result in higher discharges in various locations in the storm drain with a possible corresponding
-    reduction in the return flow to the surface water for some inlets and manholes.
-    Maintaining continuity in the storm drain system, there may be sufficient head to force the flow to the outfalls instead of overflowing the inlets and
-    manholes.
+       reduction in the return flow to the surface water for some inlets and manholes.
+       Maintaining continuity in the storm drain system, there may be sufficient head to force the flow to the outfalls instead of overflowing the inlets and
+       manholes.
 
 Summarizing, higher upstream pressure head on inlets (higher FLO-2D WSE) may result in a change in the distribution between the return flow from a
 popped manhole or inlet compared the downstream conduit flow through the outfall nodes.
@@ -345,13 +334,9 @@ These files contain the same information, SDManholePopUp.OUT in a narrative form
 The following information is reported to the files:
 
     - Manhole ID.
-
     - Time of occurrence
-
     - Pressure head
-
     - Rim elevation + Surcharge Elevation
-
     - FLO-2D WSE.
 
 The following is an example of the information that is reported to the SDManholePopUp.OUT output file:
