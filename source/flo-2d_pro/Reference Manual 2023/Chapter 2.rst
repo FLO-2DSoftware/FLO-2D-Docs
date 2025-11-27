@@ -69,7 +69,7 @@ steep slopes or unsteady flow conditions.
 Only the full dynamic wave equation is applied in FLO-2D model and the contribution of each term in the equation is computed regardless of an
 assumption of negligibility.
 
-2.2 Solution Algorithm - How the Model Works
+Solution Algorithm - How the Model Works
 --------------------------------------------
 
 The differential form of the continuity and momentum equations in the FLO-2D model is solved with a central, finite difference numerical scheme.
@@ -339,7 +339,7 @@ This algorithm increases the timestep uniformly until the timestep DSEC is great
 When DSEC > 1.0, successive increases in DSEC result in a larger value of XFAST which begins to slow down the timestep rate of change.
 The maximum timestep is limited to 30 seconds.
 
-2.3 The Importance of Volume Conservation
+The Importance of Volume Conservation
 -----------------------------------------
 
 A review of any flood model simulation results begins with volume conservation.
@@ -355,7 +355,7 @@ The user must decide on an acceptable level of error in the volume conservation.
 While volume conservation with 0.001 percent is considered very accurate, most FLO-2D simulations have a volume conservation accuracy within a few
 millionths of one percent.
 
-2.4 Courant Number Variability for Numerical Stability
+Courant Number Variability for Numerical Stability
 ------------------------------------------------------
 
 The key to efficient FLO-2D flood routing is assigning numerical stability criteria that limits the timestep to avoid surging and yet allows large
@@ -511,7 +511,7 @@ timestep and contributing to a slow model speed.
 For those grid elements with excessive timestep decrements, adjustments can be made to the node attributes such as topography, roughness, available
 surface area (area reduction values ARFs) or width reduction values (WRFs).
 
-2.5 Volume Evacuation from Small Grid Elements
+Volume Evacuation from Small Grid Elements
 ----------------------------------------------
 
 Potential negative storage with very shallow flows was not a significant issue when the original TOL (depression storage TOL value) was typically
@@ -584,7 +584,7 @@ terms of their attributes (n-values, elevations) or components (ARF-values, stre
 For these projects, only run the simulation until the model begins to slow down (a timestep less than 0.1 second or lower) and continue to adjust the
 evacuated elements until these no longer appear in the output files.
 
-2.6 Limiting Froude Number
+Limiting Froude Number
 --------------------------
 
 Using the Froude number in flood routing models is an important to the both the understanding of the floodwave movement and the numerical stability of
@@ -689,7 +689,7 @@ The limiting Froude number for mobile bed conditions can be approximated by (Gra
 Roughness n-values include many factors: n = n1 + n2 + n3 + n4 + …such as friction drag, vegetation, expansion/contraction, bed forms, flow in bends,
 unsteady and non-uniform flow.
 
-2.7 Shallow Flow Roughness and TOL
+Shallow Flow Roughness and TOL
 ----------------------------------
 
 Open channel (or floodplain) uniform flow is characterized by a constant depth, velocity, flow area and discharge such that the bed slope, water
