@@ -110,7 +110,6 @@ The following are the input parameters for a Type 1 inlet (Figure 28):
 The discharge is based on the flow depth in the F    LO-2D grid cell and the inlet geometry:
 
     - The inlet opening height (h), referred to as “Height” column 7 of the SWMMFLO.DAT.
-
     - The inlet opening length (L) specified as “Length,” column 5 of the SWMMFLO.DAT.
 
 The discharge is calculated using the weir and orifice equations as follows:
@@ -131,11 +130,8 @@ Type 2 - Curb Opening Inlet with Sag
 The following are the input parameters for a Type 2 inlet (Figure 29):
 
     - Weir coefficient: 2.30 (1.25 metric)
-
     - Curb opening length (L)
-
     - Curb opening height (h)
-
     - Curb opening sag width (W)
 
 .. image:: img/Chapter2/Chapte019.jpg
@@ -147,7 +143,10 @@ Conservatively, the weir or orifice discharge, whichever is smaller, is used for
 The inlet elevation is assumed to be equivalent to the grid element elevation.
 For weir flow (Johnson and Fred, 1984):
 
-   Q\ :sub:`w` = C(L + 1.8W)H\ :sup:`m`
+    .. math::
+        :label:
+
+        Q_w = C(L + 1.8W)H^m
 
 where:
 
@@ -161,9 +160,19 @@ where:
 
 Orifice flow can have two potential sag inlet conditions (Johnson and Fred, 1984):
 
-   If h ≥ H then Q\ :sub:`o` = C\ :sub:`d`\ A√2gH
+   If h ≥ H then
 
-   If h < H then Q\ :sub:`o` = C\ :sub:`d` A√2g (H −h/2)
+.. math::
+    :label:
+
+    Q_o = C_d A \sqrt{2 g H}
+
+   If h < H then
+
+.. math::
+    :label:
+
+    Q_o = C_d\ A√(2g(H −h/2))
 
 where:
 
