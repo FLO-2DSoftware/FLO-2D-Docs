@@ -172,7 +172,7 @@ Orifice flow can have two potential sag inlet conditions (Johnson and Fred, 1984
     .. math::
         :label:
 
-        Q_o = C_d\ A√(2g(H −h/2))
+        Q_o = C_d\ A \sqrt{\left(2g(H − \frac{h}{2}\right)}
 
 where:
 
