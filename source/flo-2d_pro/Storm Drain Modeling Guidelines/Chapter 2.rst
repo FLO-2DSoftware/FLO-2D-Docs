@@ -238,7 +238,11 @@ where:
 
     C = weir coefficient, ‘Inlet Weir Coeff.’ field in SWMMFLO.DAT
 
-    P = Grate perimeter ‘Perimeter’ field in SWMMFLO.DAT H = FLO-2D inlet element flow depth m = 1.5 horizontal weir exponent (hardcoded).
+    P = Grate perimeter ‘Perimeter’ field in SWMMFLO.DAT
+
+    H = FLO-2D inlet element flow depth
+
+    m = 1.5 horizontal weir exponent (hardcoded).
 
     h = sag height from the ‘Sag Height’ field of SWMMFLO.DAT.
 
@@ -252,6 +256,7 @@ If H ≤ h then:
         Q_o = C_d\ A \sqrt{2gH}
 
 If H > h then:
+
     .. math::
         :label:
 
@@ -314,11 +319,8 @@ Popped Manhole Cover (source: istock)*
 The required manhole input parameters are:
 
     - Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)
-
     - Manhole perimeter (manhole cover shapes can vary)
-
     - Manhole flow area (ft\ :sup:`2` or m\ :sup:`2`)
-
     - Surcharge depth (ft or m).
 
 A manhole is assumed to be level without sag and column 7 in the SWMMFLO.DAT is used to define the surcharge depth (ft or m).
@@ -336,9 +338,13 @@ The water depth (head) that represents the manhole cover weight can be estimated
 
 where:
 
-    d\ :sub:`s` = surcharge depth that pops the manhole cover w\ :sub:`m` = weight of the manhole cover
+    d\ :sub:`s` = surcharge depth that pops the manhole cover
 
-    A\ :sub:`m` = area of the circular manhole opening (πD\ :sup:`2`/4) γ\ :sub:`w` = clear water density 62.4 lb/ft\ :sup:`3` (1000 kg/m\ :sup:`3`)
+    w\ :sub:`m` = weight of the manhole cover
+
+    A\ :sub:`m` = area of the circular manhole opening (πD\ :sup:`2`/4)
+
+    γ\ :sub:`w` = clear water density 62.4 lb/ft\ :sup:`3` (1000 kg/m\ :sup:`3`)
 
 .. image:: img/Chapter2/Chapte013.jpg
 
