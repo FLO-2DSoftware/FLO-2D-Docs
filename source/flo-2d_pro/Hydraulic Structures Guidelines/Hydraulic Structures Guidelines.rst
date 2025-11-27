@@ -30,7 +30,10 @@ For example, a culvert under an interstate highway may span several grid element
 In addition, flow can be exchanged between a floodplain element and channel element.
 A hydraulic structure rating curve equation specifies discharge as a function of the headwater depth h:
 
-   Q = a h\ :sup:`b`
+.. math::
+    :label:
+
+    Q = a h^b
 
 where: 
    a = regression coefficient 
