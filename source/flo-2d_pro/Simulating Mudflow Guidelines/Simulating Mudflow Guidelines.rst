@@ -130,14 +130,14 @@ The specific weight of the mudflow mixture γ\ :sub:`m` is a function of the sed
 .. math::
     :label:
 
-    γm = γ + Cv (γs - γ)
+    γ_m = γ + C_v (γ_s - γ)
 
 Similarly the density of the mudflow mixture ρm is given by:
 
 .. math::
     :label:
 
-    ρm = ρ + Cv (ρs - ρ)
+    ρ_m = ρ + C_v (ρ_s - ρ)
 
 and
 
