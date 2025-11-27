@@ -160,14 +160,14 @@ where:
 
 Orifice flow can have two potential sag inlet conditions (Johnson and Fred, 1984):
 
-   If h ≥ H then
+   If h ≥ H then:
 
     .. math::
         :label:
 
         Q_o = C_d A \sqrt{2 g H}
 
-   If h < H then
+   If h < H then:
 
     .. math::
         :label:
@@ -202,11 +202,8 @@ Type 3 - Grate (Gutter) Inlet with/without Sag
 The following are the input parameters for a Type 3 inlet (Figure 30):
 
     - Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)
-
     - Grate perimeter (not including curb side)
-
     - Grate open area
-
     - Grate sag height (zero for at grade)
 
 *Note: Orifice flow coefficient = 0.67 (hardcoded) for all cases.*
@@ -221,9 +218,19 @@ The smaller of two discharges (weir or orifice) calculated for a grate (gutter) 
 
 *Weir Flow:*
 
-   If H ≤ h then: Q\ :sub:`w` = CPH\ :sup:`m`
+If H ≤ h then:
 
-If H > h then: Q\ :sub:`w` = CP (H + h/2)\ :sup:`m`
+    .. math::
+        :label:
+
+        Q_w = CPH^m
+
+If H > h then:
+
+    .. math::
+        :label:
+
+        Q_w = CP \left(H + \frac{h}{2}\right)^m
 
 where:
 
