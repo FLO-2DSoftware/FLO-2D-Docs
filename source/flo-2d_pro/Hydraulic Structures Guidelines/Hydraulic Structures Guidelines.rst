@@ -483,7 +483,9 @@ Hydraulic Structure Troubleshooting*
 
        conservation or numerical instability, follow this protocal:
 
-            - Turn off the hydraulic structures in CONT.DAT and run the model until the problem occurred.
+            - Turn off the hydraulic structures in CONT.DAT and run the model until the
+
+              problem occurred.
 
             - Turn off the levees in CONT.DAT and run the model only until the time that the
 
@@ -511,11 +513,15 @@ Hydraulic Structure Troubleshooting*
 
        The model automatically adjusts the hydraulic structure rating table and writes the revised
 
-       table pairs to an output file. If instability persists, review the revised rating table and make
+       table pairs to an output file. If instability persists, review the revised rating
+
+       table and make
 
        further adjustments.
 
-       Typically the instability is related to the lower flows and there are insufficient rating table pairs
+       Typically the instability is related to the lower flows and there are insufficient
+
+       rating table pairs
 
        to define the rating table for the lower discharges. Review the HYDROSTRUCT.OUT file to determine
 
@@ -528,7 +534,9 @@ Hydraulic Structure Troubleshooting*
        Set the INOUTCONT = 1 in the HYSTRUC.DAT file to allow upstream flow.
 
    * - Time-Stage Backwater Downstream of Hydraulic Structures
-     - Time-stage elements that control the water surface elevation downstream of a hydraulic structure are
+     - Time-stage elements that control the water surface elevation downstream of a
+
+       hydraulic structure are
 
        generally not a problem. Numerical instability are usually associated with the time-stage elements
 
