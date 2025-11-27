@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 2. FLO-2D MODEL THEORY
+CHAPTER 2. FLO-2D MODEL THEORY
 ==============================
 
 FLO-2D is a simple volume conservation model.
@@ -10,7 +10,7 @@ Flood routing in two dimensions is accomplished through a numerical integration 
 either a water flood or a hyperconcentrated sediment flow.
 A discussion of the governing equations follows.
 
-2.1 Governing Equations
+Governing Equations
 -----------------------
 
 The constitutive fluid motion equations include the continuity equation and the momentum equation:
