@@ -1239,14 +1239,20 @@ Mudflow Parameters
 Some practical guidelines for estimating the mudflow rheological parameters are presented in this section.
 Mudflow yield stress τ\ :sub:`y` and viscosity η vary principally with sediment concentration.
 The viscous stresses will not play a role in the flow hydraulics unless the sediment concentration by volume exceeds 20%.
-If a rheological laboratory analysis of the
+If a rheological laboratory analysis of the mudflow site depositional material is available, the following empirical
+relationships can be used to compute viscosity and yield stress:
 
-.. math::
+    .. math::
 
-   \eta = \alpha_1 e^{\beta_1 c_v} \quad \text{and} \quad \tau_y = \alpha_2 e^{\beta_2 c_v}
+       \eta = \alpha_1 e^{\beta_1 c_v}
 
-mudflow site depositional material is available, the following empirical relationships can be used to compute viscosity and yield stress: where α\
-:sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
+    and
+
+    .. math::
+
+        \quad \tau_y = \alpha_2 e^{\beta_2 c_v}
+
+where α\:sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
 The viscosity and yield stress are functions of the concentration of silts, clays and in some cases, fine sands, but not the larger clastic material
 rafted along with the flow (See Appendix Table B.1 ).
 The viscosity of the fluid matrix is also a function of the percent and type of clays and fluid temperature.
