@@ -382,8 +382,8 @@ Table 4 presents some suggested surcharge depths.
    :header-rows: 0
 
 
-   * - Manhole Cover Representative Weight
-     - Surcharge Depth (ft)  (assuming 2 ft diameter)
+   * - **Manhole Cover Representative Weight**
+     - **Surcharge Depth (ft) (assuming 2 ft diameter)**
 
    * - 85 to 300 lb manhole cover unbolted
      - 0.4 to 1.5
