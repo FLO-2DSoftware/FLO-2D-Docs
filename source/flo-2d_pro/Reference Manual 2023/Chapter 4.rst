@@ -952,10 +952,10 @@ Green-Ampt Infiltration - Soil Suction.*
    :header-rows: 0
 
 
-   * - Classification
-     - (in)\ :sup:`1`
-     - (in)\ :sup:`2`
-     - (in)\ :sup:`3`
+   * - **Classification**
+     - **(in)**\ :sup:`1`
+     - **(in)**\ :sup:`2`
+     - **(in)**\ :sup:`3`
 
    * - sand and loamy sand
      - 2.4
@@ -1075,9 +1075,9 @@ Green-Ampt Infiltration Volumetric Moisture Deficiency.*
    :header-rows: 0
 
 
-   * - Classification
-     - Dry (% Diff)
-     - Normal (% Diff)
+   * - **Classification**
+     - **Dry (% Diff)**
+     - **Normal (% Diff)**
 
    * - sand and loamy sand\ :sup:`1`
      - 35
