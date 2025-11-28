@@ -1643,7 +1643,10 @@ where g is gravitational acceleration.
 Finally, the total mixture volume of water and sediment can be determined by multiplying the water volume by the bulking factor.
 The bulking factor is simply:
 
-                                            BF = 1/(1 - C\ :sub:`v`)
+.. math::
+    :label:
+
+    BF = \frac{1}{(1 - C_v)}
 
 The bulking factor is 2.0 for a sediment concentration by volume of 50%.
 A sediment concentration of 7% by volume for a conventional river bedload and suspended results in a bulking factor of 1.075 indicating that the flood
@@ -1723,8 +1726,9 @@ viscous shear stress :math:`\tau_v` (:math:`\eta\, \dv/dy`), the turbulent shear
 dispersive shear stress :math:`\tau_d`.
 
 .. math::
+    :label:
 
-   \tau = \tau_c + \tau_{mc} + \tau_v + \tau_l + \tau_d
+    \tau = \tau_c + \tau_{mc} + \tau_v + \tau_l + \tau_d
 
 When written in terms of shear rates :math:`\left(\dfrac{dv}{dy}\right)`, the following quadratic rheological model can be defined (O’Brien and Julien, 1985):
 
