@@ -738,8 +738,8 @@ Initial Abstraction.*
    :header-rows: 0
 
 
-   * - Surface Cover
-     - Abstraction (inches)
+   * - **Surface Cover**
+     - **Abstraction (inches)**
 
    * - Natural\ :sup:`1`
 
