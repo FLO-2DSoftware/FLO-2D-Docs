@@ -1605,13 +1605,19 @@ The sediment concentration by volume C\ :sub:`v` is given by:
 
 C\ :sub:`v` is related to the sediment concentration by weight C\ :sub:`w` by:
 
-                                             C\ :sub:`v` = C\ :sub:`w`\ γ/ {γ\ :sub:`s` - C\ :sub:`w`\ (γ\ :sub:`s` - γ)}
+    .. math::
+        :label:
+
+        C_v = C_w γ{γ_s - C_w(γ_s - γ)}
 
 where γ = specific weight of the water and γ\ :sub:`s` = specific weight of the sediment.
 The sediment concentration can also be expressed in parts per million (ppm) by multiplying the concentration by weight C\ :sub:`w` by 10\ :sup:`6`.
 The specific weight of the mudflow mixture γ\ :sub:`m` is a function of the sediment concentration by volume:
 
-                                             γ\ :sub:`m` = γ + C\ :sub:`v`\ (γ\ :sub:`s` - γ)
+.. math::
+    :label:
+
+    γ\ :sub:`m` = γ + C\ :sub:`v`\ (γ\ :sub:`s` - γ)
 
 Similarly the density of the mudflow mixture ρ\ :sub:`m` is given by:
 
