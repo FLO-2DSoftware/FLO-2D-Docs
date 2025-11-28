@@ -467,9 +467,16 @@ For example, a culvert under an interstate highway may span several grid element
 
 A hydraulic structure rating curve equation specifies discharge as a function of the headwater depth h:
 
-                    Q = a h\ :sup:`b`
+.. math::
+    :label:
 
-where: (a) is a regression coefficient and (b) is a regression exponent.
+    Q = a h^b
+
+where:
+
+     a = regression coefficient
+
+     b = regression exponent.
 
 More than one power regression relationship may be used for a hydraulic structure by specifying the maximum depth for which the relationship is valid.
 For example, one depth relationship can represent culvert inlet control and a second relationship can be used for the outlet control.
@@ -1191,14 +1198,22 @@ The UDFCD Drainage Criteria Manual (2008) suggests that the model represents a r
 urban watersheds where the runoff is not sensitive to soil parameters.
 This Horton equation is defined by:
 
-   *f = f\ o + (f\ i - f\ o) e\ -at*
+.. math::
+    :label:
+
+    f = f_o + (f_i - f_o) e^{-at}
 
 where:
 
-     *f* = infiltration rate at any time *t* after the rainfall begins (in/hr) *f\ i* = initial infiltration rate (in/hr) *f\ o* = final infiltration rate
-     (in/hr) *a* = decay coefficient (1/seconds)
+     f = infiltration rate at any time *t* after the rainfall begins (in/hr)
 
-     *t* = time from the rainfall initiation (seconds)
+     f\ :sub:`i` = initial infiltration rate (in/hr)
+
+     f\ :sub:`o` = final infiltration rate (in/hr)
+
+     a = decay coefficient (1/seconds)
+
+     t = time from the rainfall initiation (seconds)
 
 This equation simulates initial high infiltration early in the storm and decays to a steady rate with soil saturation.
 The parameters depend on soil conditions and vegetative cover.
