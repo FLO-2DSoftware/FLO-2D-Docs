@@ -54,12 +54,7 @@ The assignment of overland flow roughness must account for vegetation, surface i
 It is also a function of flow depth.
 Typical overland flow roughness values (Manning’s n coefficients) are shown in Table 3.
 
-*Table 3.
-Overland Flow Manning's n Roughness Values.\ :sup:`1`*
-
-.\ :sup:`1`
-
-a\ :sup:`1`
+*Table 3. Overland Flow Manning's n Roughness Values.*\ :sup:`1`
 
 .. raw:: html
 
