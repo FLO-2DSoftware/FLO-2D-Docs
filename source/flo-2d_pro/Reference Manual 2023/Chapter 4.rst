@@ -1608,7 +1608,7 @@ C\ :sub:`v` is related to the sediment concentration by weight C\ :sub:`w` by:
     .. math::
         :label:
 
-        C_v = C_wγ/{{γ_s - C_w(γ_s - γ)}}
+        C_v = \frac{C_w \, \gamma}{\gamma_s - C_w(\gamma_s - \gamma)}
 
 where:
 
