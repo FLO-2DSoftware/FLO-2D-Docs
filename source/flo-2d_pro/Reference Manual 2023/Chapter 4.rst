@@ -1614,14 +1614,17 @@ where γ = specific weight of the water and γ\ :sub:`s` = specific weight of th
 The sediment concentration can also be expressed in parts per million (ppm) by multiplying the concentration by weight C\ :sub:`w` by 10\ :sup:`6`.
 The specific weight of the mudflow mixture γ\ :sub:`m` is a function of the sediment concentration by volume:
 
-.. math::
-    :label:
+    .. math::
+        :label:
 
-    γ\ :sub:`m` = γ + C\ :sub:`v`\ (γ\ :sub:`s` - γ)
+        γ_m = γ + C_v\ (γ_s - γ)
 
 Similarly the density of the mudflow mixture ρ\ :sub:`m` is given by:
 
-                                             ρ\ :sub:`m` = ρ + C\ :sub:`v` (ρ\ :sub:`s` - ρ)
+.. math::
+    :label:
+
+    ρ_m = ρ + C\ :sub:`v` (ρ\ :sub:`s` - ρ)
 
           and
 
