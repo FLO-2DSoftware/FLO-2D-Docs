@@ -1349,9 +1349,8 @@ Sediment Size Fraction.*
    :widths: 50 50
    :header-rows: 0
 
-
-   * - Sediment Diameter (mm)
-     - Percent Finer
+   * - **Sediment Diameter (mm)**
+     - **Percent Finer**
 
    * - 0.074
      - 0.058
