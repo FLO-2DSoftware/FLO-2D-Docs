@@ -94,6 +94,11 @@ Typical overland flow roughness values (Manning’s n coefficients) are shown in
     </tbody>
    </table>
 
+
+.. raw:: html
+
+    <br><br>
+
 .. image:: img/Chapter4/Chapte002.png
 
 *Figure 34.
