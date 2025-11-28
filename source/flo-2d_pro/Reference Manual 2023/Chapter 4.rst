@@ -1622,20 +1622,24 @@ The specific weight of the mudflow mixture γ\ :sub:`m` is a function of the sed
     .. math::
         :label:
 
-        γ_m = γ + C_v\ (γ_s - γ)
+        γ_m = γ + C_v(γ_s - γ)
 
 Similarly the density of the mudflow mixture ρ\ :sub:`m` is given by:
 
 .. math::
     :label:
 
-    ρ_m = ρ + C\ :sub:`v` (ρ\ :sub:`s` - ρ)
+    ρ_m = ρ + C_v(ρ_s - ρ)
 
-          and
+and
 
-                                             ρ\ :sub:`m` = γ\ :sub:`m` /g
+.. math::
+    :label:
+
+    ρ_m = \frac{γ_m}{g}
 
 where g is gravitational acceleration.
+
 Finally, the total mixture volume of water and sediment can be determined by multiplying the water volume by the bulking factor.
 The bulking factor is simply:
 
