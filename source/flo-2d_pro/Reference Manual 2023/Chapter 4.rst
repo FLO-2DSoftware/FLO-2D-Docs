@@ -1742,7 +1742,7 @@ where
 .. math::
     :label:
 
-    C = \rhom \, l^{2} + f\!\left( \rho_m,\, C_v \right) d_s^{2}
+    C = \rho_m \, l^{2} + f\!\left( \rho_m,\, C_v \right) d_s^{2}
 
 and
 
