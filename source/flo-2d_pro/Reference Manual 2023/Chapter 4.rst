@@ -1751,10 +1751,28 @@ and
 
     \tau_y = \tau_c + \tau_{mc}
 
-In these equations η is the dynamic viscosity; τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ
-depends on the intergranular pressure p\ :sub:`s` and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which
-depends on the mass density of the mixture ρ\ :sub:`m`, the Prandtl mixing length l, the sediment size d\ :sub:`s` and a function of the volumetric
-sediment concentration C\ :sub:`v`.
+In these equations:
+
+    η = the dynamic viscosity
+
+    τ\ :sub:`c`= cohesive yield strength:
+
+    the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ depends on p\ :sub:`s` and φ;
+
+        p\ :sub:`s`= intergranular pressure of the material
+
+        φ = angle of repose of the material;
+
+    C denotes the inertial shear stress coefficient, which depends on ρ\ :sub:`m` l, d\ :sub:`s` and C\ :sub:`v`;
+
+        ρ\ :sub:`m` = mass density of the mixture
+
+        l = Prandtl mixing length
+
+        d\ :sub:`s` = sediment size
+
+        C\ :sub:`v` = function of the volumetric sediment concentration
+
 Bagnold (1954) defined the functional relationship f(ρ\ :sub:`m`, C\ :sub:`v`) in the above equation as:
 
 .. math::
