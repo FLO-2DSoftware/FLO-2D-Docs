@@ -1403,7 +1403,10 @@ Sediment Supply
 There are two options for computing the sediment supply to a given project.
 The first option is to calculate a sediment supply discharge Q\ :sub:`s` rating curve in the form of:
 
-            Q\ :sub:`s` = a Q\ :sub:`w`\ :sup:`b`
+.. math::
+    :label:
+
+    Q_s = a Q_w \, ^b
 
 where:
 
