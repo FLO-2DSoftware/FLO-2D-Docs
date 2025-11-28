@@ -1733,20 +1733,23 @@ dispersive shear stress :math:`\tau_d`.
 When written in terms of shear rates :math:`\left(\frac{dv}{dy}\right)`, the following quadratic rheological model can be defined (O’Brien and Julien, 1985):
 
 .. math::
+    :label:
 
-   \tau = \tau_y + \eta \left( \frac{dv}{dy} \right) + C \left( \frac{dv}{dy} \right)^{2}
+    \tau = \tau_y + \eta \left( \frac{dv}{dy} \right) + C \left( \frac{dv}{dy} \right)^{2}
 
 where
 
 .. math::
+    :label:
 
-   C = \rho_m \, l^{2} + f\!\left( \rho_m,\, C_v \right) d_s^{2}
+    C = \rhom \, l^{2} + f\!\left( \rho_m,\, C_v \right) d_s^{2}
 
 and
 
 .. math::
+    :label:
 
-   \tau_y = \tau_c + \tau_{mc}
+    \tau_y = \tau_c + \tau_{mc}
 
 In these equations η is the dynamic viscosity; τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ
 depends on the intergranular pressure p\ :sub:`s` and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which
@@ -1755,18 +1758,20 @@ sediment concentration C\ :sub:`v`.
 Bagnold (1954) defined the functional relationship f(ρ\ :sub:`m`, C\ :sub:`v`) in the above equation as:
 
 .. math::
+    :label:
 
-   f(\rho_m, C_v) = a_i\, \rho_m \left[ \left( \frac{C^{*}}{C_v} \right)^{1/3} - 1 \right]
+    f(\rho_m, C_v) = a_i\, \rho_m \left[ \left( \frac{C^{*}}{C_v} \right)^{1/3} - 1 \right]
 
 where :math:`a_i` (∼ :math:`0.01`) is an empirical coefficient and :math:`C^{*}` is the maximum static volume concentration for the sediment particles. It should be noted that Takahashi (1979) found that the coefficient :math:`a_i` may vary over several orders of magnitude. Egashira et al. (1989) revised this relationship and suggested the following:
 
 .. math::
+    :label:
 
-   f(\rho_s, C_v) =
-   \left( \frac{\pi}{12} \right)^{1/3}
-   \left( \frac{6}{\pi} \right)^{1/3}
-   \sin^{2}\!\alpha_I \,
-   \rho_s \left( 1 - e_n^{2} \right) C_v^{1/3}
+    f(\rho_s, C_v) =
+    \left( \frac{\pi}{12} \right)^{1/3}
+    \left( \frac{6}{\pi} \right)^{1/3}
+    \sin^{2}\!\alpha_I \,
+    \rho_s \left( 1 - e_n^{2} \right) C_v^{1/3}
 
 where the energy restitution coefficient e\ :sub:`n` after impact ranges 0.70 < e\ :sub:`n` < 0.85 for sands, α\ :sub:`I` is the average particle
 impact angle and ρ\ :sub:`s` is the mass density of sediment particles.
