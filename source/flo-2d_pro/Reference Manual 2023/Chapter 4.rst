@@ -1405,15 +1405,15 @@ The first option is to calculate a sediment supply discharge Q\ :sub:`s` rating 
 .. math::
     :label:
 
-    Q_s = a Q_w \, ^b
+    Q_s = a \, Q_w \, ^b
 
 where:
 
-     Q\ :sub:`w` is the water discharge,
+     Q\ :sub:`w` = the water discharge,
 
-     a is a coefficient and
+     a = coefficient
 
-     b is an exponent.
+     b = exponent.
 
 This equation is typically derived from a known stream gaging station that is recording suspended sediment load.
 This data sediment load base is usually limited to large rivers and is not available for alluvial fan or watershed overland flow.
