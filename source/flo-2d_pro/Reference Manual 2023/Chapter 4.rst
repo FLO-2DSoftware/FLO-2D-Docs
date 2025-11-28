@@ -824,11 +824,11 @@ Green-Ampt Infiltration - Hydraulic Conductivity and Porosity.*
    :header-rows: 0
 
 
-   * - Classification
-     - (in/hr)\ :sup:`1`
-     - (in/hr)\ :sup:`2`
-     - (in/hr)\ :sup:`3`
-     - Porosity\ :sup:`4`
+   * - **Classification**
+     - **(in/hr)**\ :sup:`1`
+     - **(in/hr)**\ :sup:`2`
+     - **(in/hr)**\ :sup:`3`
+     - **Porosity**\ :sup:`4`
 
    * - sand and loamy
      - 1.20
