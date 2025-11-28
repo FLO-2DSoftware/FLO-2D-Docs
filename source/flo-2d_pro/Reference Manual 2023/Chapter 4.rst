@@ -1724,6 +1724,7 @@ summation of five shear stress components.
 The total shear stress τ depends on the cohesive yield stress τ\ :sub:`c`, the Mohr-Coulomb shear :math:`\tau_{mc}`, the
 viscous shear stress :math:`\tau_v` (:math:`\eta\, dv/dy`), the turbulent shear stress :math:`\tau_t`, and the
 dispersive shear stress :math:`\tau_d`.
+
 .. math::
     :label:
 
