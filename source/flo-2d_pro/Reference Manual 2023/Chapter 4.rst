@@ -2853,7 +2853,7 @@ The inlet control rating table can be based on orifice flow using the equation:
 .. math::
     :label:
 
-    Q = C \* A \* (2.*g*DEPTH)^{0.5}
+    Q = C \ ^* A \ ^* (2.*g*DEPTH)^{0.5}
 
 where:
 
