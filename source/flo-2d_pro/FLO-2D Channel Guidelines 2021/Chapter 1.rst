@@ -290,6 +290,7 @@ The channel length within each grid element is initially estimated as a straight
 (Figure 11).
 
 .. image:: ../img/Chapter1/Chapte008.jpg
+
 *Figure 11.
 Channel Segment Length and Segment Number.*
 
@@ -298,6 +299,7 @@ The length is the sum half the length of the grid element from the center of the
 (Figure 12).
 
 .. image:: ../img/Chapter1/Chapte009.jpg
+
 *Figure 12.
 Channel Length for 3 Channel Elements.*
 
