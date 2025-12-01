@@ -2272,6 +2272,10 @@ If a building consists of multiple grid elements, each element must have a vulne
 The global vulnerability curve value could be zero.
 A portion of a typical BUILDING_COLLAPSE.DAT file is follows:
 
+.. raw:: html
+
+    <div><pre>
+
  0            Global Vulnerability Curve
 
  2
@@ -2285,6 +2289,9 @@ A portion of a typical BUILDING_COLLAPSE.DAT file is follows:
  6756 3             Grid element vulnerability curve (good)
 
  6756 4             Grid element Clausen and Clark
+
+    </div></pre>
+
 
 Assigning a nonzero value to the global vulnerability curve would initiate potential building failure for any of the buildings in the model.
 
