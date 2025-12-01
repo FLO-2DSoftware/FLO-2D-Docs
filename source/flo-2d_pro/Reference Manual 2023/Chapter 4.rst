@@ -1890,7 +1890,7 @@ flow:
 .. math::
     :label:
 
-   S_{td} = \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}
+    S_{td} = \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}
 
 At very high concentrations, the dispersive stress arising from sediment particle contact increases the flow resistance n\ :sub:`td` by transferring
 more momentum flux to the boundary.
@@ -1900,7 +1900,7 @@ of the sediment concentration C\ :sub:`v`:
 .. math::
     :label:
 
-   n_{td} = n_t \, b \, e^{m C_v}
+    n_{td} = n_t \, b \, e^{m C_v}
 
 where: n\ :sub:`t` is the turbulent n-value and b is a coefficient (0.0538) and m is an exponent (6.0896).
 This equation was based on unpublished paper by Julien and O’Brien (1998) that relates the dispersive and turbulent resistance in hyperconcentrated
@@ -1910,9 +1910,9 @@ The friction slope components can then be combined in the following form:
 .. math::
     :label:
 
-   S_f = \frac{\tau_y}{\gamma_m\, h}
-         + \frac{K\, \eta\, V}{8\, \gamma_m\, h^{2}}
-         + \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}
+    S_f = \frac{\tau_y}{\gamma_m\, h}
+          + \frac{K\, \eta\, V}{8\, \gamma_m\, h^{2}}
+          + \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}
 
 A quadratic equation solution to the friction slope equation has been formulated in the FLO-2D model to estimate the velocity for use in the momentum
 equation.
@@ -1924,14 +1924,16 @@ Unless a rheological analysis of the mudflow site material is available, the fol
 yield stress:
 
 .. math::
+    :label:
 
-   \tau_y = \alpha_2 \, e^{\beta_2 C_v}
+    \tau_y = \alpha_2 \, e^{\beta_2 C_v}
 
 and
 
 .. math::
+    :label:
 
-   \eta = \alpha_1 \, e^{\beta_1 C_v}
+    \eta = \alpha_1 \, e^{\beta_1 C_v}
 
 where α\ :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
 The viscosity (poises) and yield stress (dynes/cm\ :sup:`2`) are shown to be exponential functions of the volumetric sediment concentration C\
