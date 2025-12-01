@@ -5,8 +5,7 @@ FLO-2D Pro
    :maxdepth: 1
 
    data_input_manual
-..   Reference Manual 2021/index
-
+   Reference Manual 2021/index
    Channel Modeling Guidelines 2021/index
    Storm Drain Modeling Guidelines 2021/index
    Hydraulic Structures Guidelines 2021/Hydraulic Structures Guidelines 2021
