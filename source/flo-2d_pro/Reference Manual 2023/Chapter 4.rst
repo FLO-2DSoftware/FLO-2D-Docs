@@ -2869,7 +2869,7 @@ The hydraulic structure data file is organized as follows:
 
 HYSTRUC.DAT file example
 
-.. raw: html
+.. :raw: html
 
     <pre>
      S Downspoutname 0 1 22365 21991 0 0 0 0
