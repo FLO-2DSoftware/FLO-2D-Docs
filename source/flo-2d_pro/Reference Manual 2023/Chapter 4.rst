@@ -3441,7 +3441,7 @@ The subcritical discharge Q through constrictions equation is given in Chow’s 
 .. math::
     :label:
 
-    Q = C A_2 {2g (∆h – h_f + α_1 V_1^2/2g)}^0.5
+    Q = C A_2 {2g (∆h – h_f + α_1 V_1^2/2g)}^{0.5}
 
 where:
 
@@ -3469,7 +3469,10 @@ where:
 
 The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959, p.490) in English units:
 
-        Q = 8.02 C A\ :sub:`2` (∆h/β)\ :sup:`0.5` (1)
+.. math::
+    :label:
+
+    Q = 8.02 C A_2 (∆h/β)^{0.5}
 
 where:
 
