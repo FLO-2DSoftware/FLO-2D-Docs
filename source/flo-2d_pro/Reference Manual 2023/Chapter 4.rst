@@ -3707,7 +3707,7 @@ The weir coefficient is a lumped parameter that is based on the weir’s charact
 .. math::
     :label:
 
-    C = 2/3 C_q (2g)^{0.5}
+    C = \frac{2}{3}C_q (2g)^{0.5}
 
 The discharge coefficient C\ :sub:`q` is same in both English and SI (metric) units and is dimensionless.
 The weir coefficient, however, is not dimensionless since it is a function of the gravitational acceleration g (ft/s\ :sup:`2` or m/s\ :sup:`2`).
