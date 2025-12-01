@@ -3130,7 +3130,6 @@ channels.
 DOT Equation 4.2 is given as:
 
 .. math::
-
     :label:
 
     Q = (Ku/n) Sx1.67 SL0.5 T2.67
@@ -3150,7 +3149,6 @@ where:
 This DOT equation is Mannings equation for normal flow depth (steady, uniform flow) with an additional coefficient of 0.188:
 
 .. math::
-
     :label:
 
     Q = VA = (1.486/n) d\ :sup:`0.67` S\ :sub:`L`\ :sup:`0.5` A (0.188)
