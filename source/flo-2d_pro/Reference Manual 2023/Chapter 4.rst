@@ -2274,23 +2274,15 @@ A portion of a typical BUILDING_COLLAPSE.DAT file is follows:
 
 .. raw:: html
 
-    <div><pre>
-
- 0            Global Vulnerability Curve
-
- 2
-
- 6756 1
-
- 6756 1             Grid element vulnerability curve (poor)
-
- 6756 2             Grid element vulnerability curve (moderate)
-
- 6756 3             Grid element vulnerability curve (good)
-
- 6756 4             Grid element Clausen and Clark
-
-    </div></pre>
+    <pre>
+     0            Global Vulnerability Curve
+     2
+     6756 1
+     6756 1             Grid element vulnerability curve (poor)
+     6756 2             Grid element vulnerability curve (moderate)
+     6756 3             Grid element vulnerability curve (good)
+     6756 4             Grid element Clausen and Clark
+    </pre>
 
 
 Assigning a nonzero value to the global vulnerability curve would initiate potential building failure for any of the buildings in the model.
