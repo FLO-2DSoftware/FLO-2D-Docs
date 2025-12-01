@@ -3132,7 +3132,7 @@ DOT Equation 4.2 is given as:
 .. math::
     :label:
 
-    Q = (Ku/n) Sx1.67 SL0.5 T2.67
+    Q = (Ku/n) Sx^{1.67} SL^{0.5} T^{2.67}
 
 where:
 
