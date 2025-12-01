@@ -2295,49 +2295,33 @@ For this case, the upper Clausen & Clark (1990) is applied.
 
    ARF.DAT File Example
 
+.. raw::
+
+    <pre>
+
    T 1450
-
    T 1451
-
    T -1452
-
    T -1453
-
    T 1454
-
    T 2502
-
    T 3818
-
    T -3861
-
    T -4435
-
    T 4766
-
    46 0.10 0.00 0.50 0.00 0.00 0.00 0.50 0.00 0.00
-
    68.0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.50
-
    69.0.30 0.00 0.00 0.00 0.50 0.00 0.00 0.00 0.00
-
    119.0.40 0.50 0.70 0.00 0.00 1.00 0.00 0.00 0.00
-
    120.0.00 0.00 0.00 0.50 0.00 0.00 1.00 0.00 0.00
-
    142.0.20 0.20 0.00 0.00 0.70 0.00 0.00 0.00 1.00
-
    143.0.00 0.00 0.00 0.20 0.00 0.00 0.00 1.00 0.00
-
    161.-0.50 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
-
    162.-0.50 0.70 0.20 0.00 0.00 1.00 0.00 0.00 0.00
-
    163.-0.10 0.00 0.00 0.70 0.00 0.00 1.00 0.00 0.00
-
    182 0.30 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
-
    185 0.00 0.00 0.00 0.00 0.20 0.00 0.00 0.00 1.00
+   <pre>
 
 A portion of building or the entire building can be assigned the collapse trigger (negative ARF value).
 For a complete collapse of the building that encompasses several elements, all the designated building cells must be assigned a negative ARF value.
