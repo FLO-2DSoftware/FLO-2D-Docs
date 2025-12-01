@@ -195,16 +195,15 @@ Channel Extension over Several Grid Elements*
 
 There are three options for establishing the channel bank elevation to bed elevation relationship:
 
-1. A prismatic channel element bed elevation (rectangular and trapezoidal channels) is determined by subtracting the assigned channel thalweg depth from
-   the floodplain elevation.
-   .
+    1. A prismatic channel element bed elevation (rectangular and trapezoidal channels) is determined by subtracting the assigned channel thalweg depth from
+       the floodplain elevation.
 
-2. A bank elevation is assigned in the CHAN.DAT file and the channel bed elevation is computed by subtracting the channel depth from the lowest bank
-   elevation.
-   This is appropriated for rectangular and trapezoidal geometry.
+    2. A bank elevation is assigned in the CHAN.DAT file and the channel bed elevation is computed by subtracting the channel depth from the lowest bank
+       elevation.
+       This is appropriated for rectangular and trapezoidal geometry.
 
-3. Station/elevation cross section data is assigned in XSEC.DAT that represents the top of bank and bed elevations in the channel.
-   When using actual cross section data for the channel geometry, option 3 should be applied.
+    3. Station/elevation cross section data is assigned in XSEC.DAT that represents the top of bank and bed elevations in the channel.
+       When using actual cross section data for the channel geometry, option 3 should be applied.
 
 Channel Development
 ~~~~~~~~~~~~~~~~~~~
@@ -226,9 +225,11 @@ For channel flow to occur through a reach of river, the channel elements must be
 drawn along the left bank to select the left bank elements and then the individual cross sections can be identified with the appropriate channel bank
 element (Figure 7).
 This process is completely automated if a GEO-RAS geometry file can be imported with the cross section data.
+
 .. image:: ../img/Chapter1/Chapte005.jpg
-   **Figure 7.
-   Channel Delineation.**
+
+*Figure 7.
+Channel Delineation.*
 
 Interpolate the Cross Section
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -239,9 +240,11 @@ elements.
 In the GDS, the surveyed or known cross sections are assigned to corresponding channel elements where they are located, the rest of the channel
 elements have a zero assigned as the cross section number (Figure 8).
 A shapefile of cross section locations can be used to help identify the cross section to channel element placement.
+
 .. image:: ../img/Chapter1/Chapte006.jpg
-   **Figure 8.
-   Cross Section Assignment.**
+
+*Figure 8.
+Cross Section Assignment.*
 
 When the cross sections have all been assigned the channel bed profile looks like a staircase (Figure 9 top) because the channel elements without a
 surveyed cross section not been interpolated.
@@ -253,17 +256,10 @@ The first loop interpolates only the cross section shape and the second loop is 
 change in the flow area between interpolated cross sections.
 The original cross sections are not edited.
 
-**Figure**
+.. image:: ../img/Chapter1/Chapte022.png
 
-**9**
-
-**.**
-
-**Channel Bed Profile**
-
-**Examples**
-
-**.**
+**Figure 9.
+Channel Bed Profile Examples*
 
 Adjust the Channel Bed Slope
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
