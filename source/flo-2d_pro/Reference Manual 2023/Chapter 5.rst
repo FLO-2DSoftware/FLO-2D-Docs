@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 5. Flo-2d Project Applications
+CHAPTER 5. FLO-2D PROJECT APPLICATIONS
 ======================================
 
 The FLO-2D website https://flo-2d.com has numerous webinars, video animations of predicted flooding, PowerPoint presentations and various documents
@@ -8,7 +8,7 @@ that highlight FLO-2D model project applications.
 The five primary projects applications of the FLO-2D model are river projects, unconfined floodplain and alluvial fans models, watershed and
 rainfall/runoff analyses, urban and storm drain simulations, and coastal flooding.
 
-5.1 River Applications
+River Applications
 ----------------------
 
 Simulating river flow is one of the more common applications of the FLO-2D model (Figure 128).
@@ -48,7 +48,7 @@ Channel infiltration is based solely on hydraulic conductivity and represents av
 Bed scour or deposition associated with a mobile analysis is non-uniformly distributed on the channel cross-section.
 Mudflows can also be routed in channels.
 
-5.2 Unconfined Floodplain and Alluvial Fan Flooding
+Unconfined Floodplain and Alluvial Fan Flooding
 ---------------------------------------------------
 
 The primary focus of an unconfined flood simulation is how the volume is distributed over the floodplain surface.
@@ -73,7 +73,7 @@ An appropriate grid element size should be selected to generate enough interior 
 *Figure 129.
 Unconfined Alluvial Fan Flooding*
 
-5.3 Watershed Rainfall Runoff Simulation
+Watershed Rainfall Runoff Simulation
 ----------------------------------------
 
 FLO-2D can used as a watershed model to predict rainfall runoff using one of three infiltration loss methods.
@@ -103,7 +103,7 @@ Once the hydrograph is bulked with sediment, the mudflow is routed as a water an
 The bulked sediment hydrograph is tracked through system conserving volume for both water and sediment.
 Flow cessation and flow dilution are possible outcomes of the mudflow routing.
 
-5.4 Urban Flooding
+Urban Flooding
 ------------------
 
 One of the primary applications of the FLO-2D model is urban flood hazard delineation.
@@ -137,7 +137,7 @@ Urban Model with Streets, Buildings and Storm Drains*
 *Figure 132.
 Urban Model Results with Storm Drains*
 
-5.5 Coastal Flooding
+Coastal Flooding
 --------------------
 
 FLO-2D can predict accurate ocean hurricane surge flooding for sea level scenarios including spatially variable hurricane rainfall.
@@ -228,7 +228,7 @@ Using these area of inundation results, the products associated with coastal flo
 *Figure 133.
 Hurricane Wilma 2005 Predicted Storm Surge in the Florida Keys*
 
-5.6 Model Results – What Constitutes a Successful Flood Simulation?
+Model Results – What Constitutes a Successful Flood Simulation?
 -------------------------------------------------------------------
 
 When a FLO-2D simulation is completed, how do you know if the simulation was successful or accurate? There are three keys to a successful project
@@ -253,7 +253,7 @@ Once the FLO-2D flood simulation is providing reasonable results, you can fine t
 Review the TIME.OUT file to determine which channel, floodplain or street elements are causing the most timestep reductions.
 Model speed may not be critical if the simulation is accurate with respect to volume conservation, discharge surging and area of inundation.
 
-5.7 FLO-2D Bridge Routine Comparison with HEC-RAS
+FLO-2D Bridge Routine Comparison with HEC-RAS
 -------------------------------------------------
 
 The objective of the FLO-2D bridge routine is to compute the discharge through the bridge based on the physical configuration and features of the
