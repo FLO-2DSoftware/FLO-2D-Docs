@@ -73,7 +73,7 @@ The average flow path length between two channel elements is on the order of the
 hydraulic jumps over a short distance.
 The flow transition between subcritical and supercritical flow is based on the average conditions between two channel elements.
 
-.. image:: ../img/Chapter1/Chapte002.jpg
+.. image:: /img/Chapter1/Chapte002.jpg
 
 *Figure 1.
 Channel Flow is One-Dimensional – No Vertical or Horizontal Velocity Distribution*
@@ -118,7 +118,7 @@ For data file example refer to the FLO-2D Data Input Manual.
 
 The rectangular channel geometry is defined by width, depth and length of channel inside the grid element (Figure 2).
 
-.. image:: ../img/Chapter1/Chapte003.jpg
+.. image:: /img/Chapter1/Chapte003.jpg
 
 *Figure 2.
 Rectangular Channel Geometry.*
@@ -131,7 +131,7 @@ Rectangular Channel Geometry.*
 Similarly, the trapezoidal channels are defined by bottom width, channel depth and side slopes (ratio of horizontal to vertical) (Figure 3).
 Again, the channel length is the length inside the grid element.
 
-.. image:: ../img/Chapter1/Chapte004.jpg
+.. image:: /img/Chapter1/Chapte004.jpg
 
 *Figure 3.
 Trapezoidal Channel Geometry.*
@@ -164,12 +164,12 @@ For flow depths above this the cross section is extended vertically.
 This data constitutes a channel geometry rating table for each cross section.
 The cross section data in the XSEC.DAT file can be automatically assigned from a GEO-RAS geometry file using the GDS.
 
-.. image:: ../img/Chapter1/Chapte004.jpg
+.. image:: /img/Chapter1/Chapte004.jpg
 
 *Figure 4.
 Natural Channel Cross Section Data.*
 
-.. image:: ../img/Chapter1/Chapte020.png
+.. image:: /img/Chapter1/Chapte020.png
 
 *Figure 5.
 Natural Shape Cross Section Geometry*
@@ -188,7 +188,7 @@ Each bank element can have a unique elevation.
 If the two bank elevations are different in the CHAN.DAT file, the model automatically splits the channel into two elements even if the channel would
 fit into one grid element.
 
-.. image:: ../img/Chapter1/Chapte021.png
+.. image:: /img/Chapter1/Chapte021.png
 
 *Figure 6
 Channel Extension over Several Grid Elements*
@@ -226,7 +226,7 @@ drawn along the left bank to select the left bank elements and then the individu
 element (Figure 7).
 This process is completely automated if a GEO-RAS geometry file can be imported with the cross section data.
 
-.. image:: ../img/Chapter1/Chapte005.jpg
+.. image:: /img/Chapter1/Chapte005.jpg
 
 *Figure 7.
 Channel Delineation.*
@@ -241,7 +241,7 @@ In the GDS, the surveyed or known cross sections are assigned to corresponding c
 elements have a zero assigned as the cross section number (Figure 8).
 A shapefile of cross section locations can be used to help identify the cross section to channel element placement.
 
-.. image:: ../img/Chapter1/Chapte006.jpg
+.. image:: /img/Chapter1/Chapte006.jpg
 
 *Figure 8.
 Cross Section Assignment.*
@@ -256,7 +256,7 @@ The first loop interpolates only the cross section shape and the second loop is 
 change in the flow area between interpolated cross sections.
 The original cross sections are not edited.
 
-.. image:: ../img/Chapter1/Chapte022.png
+.. image:: /img/Chapter1/Chapte022.png
 
 **Figure 9.
 Channel Bed Profile Examples*
@@ -278,7 +278,7 @@ Once the channel geometry has been assigned and interpolated, the right bank ele
 After the assignment, the right or left banks can be realigned to the better represent the bank locations in the aerial image using mouse point and
 click commands.
 
-.. image:: ../img/Chapter1/Chapte007.jpg
+.. image:: /img/Chapter1/Chapte007.jpg
 
 *Figure 10.
 Right Bank Assignment and Realignment.*
@@ -289,7 +289,7 @@ Channel Length Adjustment
 The channel length within each grid element is initially estimated as a straight line for a half grid element and is reported in the GDS dialog box
 (Figure 11).
 
-.. image:: ../img/Chapter1/Chapte008.jpg
+.. image:: /img/Chapter1/Chapte008.jpg
 
 *Figure 11.
 Channel Segment Length and Segment Number.*
@@ -298,7 +298,7 @@ This value is based on the position of each grid element with respect to its con
 The length is the sum half the length of the grid element from the center of the node to the edge or corner closest to the upstream or downstream node
 (Figure 12).
 
-.. image:: ../img/Chapter1/Chapte009.jpg
+.. image:: /img/Chapter1/Chapte009.jpg
 
 *Figure 12.
 Channel Length for 3 Channel Elements.*
@@ -313,7 +313,7 @@ Adjusting the channel element lengths to have an accurate total channel volume w
 and the flood volume on the floodplain.
 Figure 13 shows the total distance of the channel in the GDS and the isolated channel lengths in the CHAN.DAT file.
 
-.. image:: ../img/Chapter1/Chapte010.jpg
+.. image:: /img/Chapter1/Chapte010.jpg
 
 *Figure 13.
 Channel Length.*
@@ -364,12 +364,11 @@ When computing velocity for shallow flow depths on the order of 0.1 ft or smalle
 In lieu of using different velocity equations, one for deeper flow and one for shallow flow, it is necessary to compensate for overpredicting the low
 flow velocity by assigning higher shallow n-values or by using depth variable n-value adjustment or both.
 
-   **Figure 14.
-   Low Flow vs.
-   Bank Full Discharge.**
+*Figure 14.
+Low Flow vs. Bank Full Discharge.*
 
 A channel roughness adjustment can be assigned in the CHAN.DAT file to estimate the n-value at depths below bankfull discharge (Figure 15 – red box).
-.. image:: ../img/Chapter1/Chapte011.jpg
+.. image:: /img/Chapter1/Chapte011.jpg
    **Figure 15.
    Channel Control Variables.**
 
@@ -383,13 +382,13 @@ If only one n-value is assigned representing bankfull discharge, the Caballo dam
 station in El Paso (107 miles downstream) 6 to 8 hours too soon.
 Similarly, matching the measured hydrographs at the Jensen, Utah gage from diurnal power plant releases at Flaming Gorge Dam would not be possible
 without the depth integrated n-value adjustment (Figure 18).
-.. image:: ../img/Chapter1/Chapte012.jpg
+.. image:: /img/Chapter1/Chapte012.jpg
    **Figure 16.
    Depth Variable Roughness.**
-.. image:: ../img/Chapter1/Chapte013.jpg
+.. image:: /img/Chapter1/Chapte013.jpg
    **Figure 17.
    Dam Release Hydrograph El Paso, TX.**
-.. image:: ../img/Chapter1/Chapte014.jpg
+.. image:: /img/Chapter1/Chapte014.jpg
    **Figure 18.
    Dam Release Hydrograph Jenson, UT.**\  [1]_
 
@@ -453,7 +452,7 @@ The slope is the given by path length (a function of the available floodplain su
 elevation and the top of bank elevation.
 Overbank discharge or return flow to the channel is computed using the floodplain assigned roughness.
 The overland flow can enter a previously dry channel.
-.. image:: ../img/Chapter1/Chapte015.jpg
+.. image:: /img/Chapter1/Chapte015.jpg
 Channel flow is exchanged with the floodplain grid elements in a separate routine after the channel and floodplain flow subroutines have been
 completed.
 The exchange flow is not subject to the numerical stability criteria associated with the channel or the floodplain.
@@ -566,10 +565,10 @@ The CHANMAX.OUT file lists the maximum discharge, maximum stage and time of occu
 The HYDROG program plotted hydrographs (Figure 21) can also reveal channel surging.
 Typically steep rising hydrographs and small channel storage cause the most frequent surging issues (Figure 22).
 The rate of change in the discharge flux (ΔQ/Δt) is the culprit.
-.. image:: ../img/Chapter1/Chapte016.jpg
+.. image:: /img/Chapter1/Chapte016.jpg
    **Figure 21.
    Surging Observed in a Channel Element Hydrograph.**
-.. image:: ../img/Chapter1/Chapte017.jpg
+.. image:: /img/Chapter1/Chapte017.jpg
    **Figure 22.
    Steep Rising Hydrograph.**
 
@@ -585,7 +584,7 @@ To eliminate channel surging, perform the following steps:
 
 4. Apply the depth variable roughness; 5.
    Use limiting Froude number FROUDC.
-.. image:: ../img/Chapter1/Chapte018.jpg
+.. image:: /img/Chapter1/Chapte018.jpg
    **Figure 23.
    Check the Channel Bed Profile for Data Errors.**
 
@@ -731,14 +730,15 @@ Volume conservation errors are almost always data errors and typically grow with
 A volume conservation error that is greater than 0.001 percent can be improved.
 A successful simulation generally has a volume conservation error less than 0.000100 percent.
 The volume conservation accounting can be reviewed in the SUMMARY.OUT (Figure 24) as shown below for a project that had excellent volume conservation.
-.. image:: ../img/Chapter1/Chapte019.jpg
+.. image:: /img/Chapter1/Chapte019.jpg
    **Figure 24.
    SUMMARY.OUT Example.**
 
 The CHVOLUME.OUT file reports the channel volume conservation.
 Usually if there is a volume conservation error it is in the channel and both CHVOLUME.OUT and SUMMARY.OUT will report the same error.
 CHVOLUME.OUT (Figure 25) is listed below:
-.. image:: ../img/Chapter1/Chapte020.jpg
+.. image:: /img/Chapter1/Chapte020.jpg
+
    **Figure 25.
    CHVOLUME.OUT Example.**
 
