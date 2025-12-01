@@ -3686,7 +3686,9 @@ where:
 
     C = Broadcrested weir discharge coefficient which varies from 2.6 to 3.1
 
-    ∆H = energy grade line between headwater and roadway crest elevation (or railing) or tailwater L\ :sub:`c` = crest length
+    ∆H = energy grade line between headwater and roadway crest elevation (or railing) or tailwater
+
+    L\ :sub:`c` = crest length
 
 Broadcrested weir flow representing bridge overflow is usually justified because flow across the crest (roadway) is considered broad and the flow
 depth on the bridge is shallow.
