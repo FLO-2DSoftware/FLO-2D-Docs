@@ -1755,11 +1755,11 @@ In these equations:
 
     η = the dynamic viscosity
 
-    τ\ :sub:`c`= cohesive yield strength:
+    τ\ :sub:`c` = cohesive yield strength:
 
     the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ depends on p\ :sub:`s` and φ;
 
-        p\ :sub:`s`= intergranular pressure of the material
+        p\ :sub:`s` = intergranular pressure of the material
 
         φ = angle of repose of the material;
 
