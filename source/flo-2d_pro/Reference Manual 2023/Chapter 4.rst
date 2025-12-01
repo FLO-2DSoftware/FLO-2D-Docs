@@ -3743,11 +3743,14 @@ The second B-line includes the various bridge parameters such as low chord, deck
 
 A. typical HYSTRUCT.DAT file for a bridge would be as follows:
 
+.. raw:: html
+    <pre>
      S Name 0 3 631 625 1 0.0 0 0
 
      B 1 0.0.0.0.1.1.1.1.
 
      B. 15.40. 0.05 40.1378.00 1380.00 22.00 0.0.0.50 3.05 0.0.1376.5 1377.2
+    </pre>
 
 These parameters are defined in Table 14 and are used to compute the coefficients for free surface flow presented in the Appendix.
 The Appendix figure showing the relationships with the bridge configuration are used to interpolate the free surface coefficients from the data
