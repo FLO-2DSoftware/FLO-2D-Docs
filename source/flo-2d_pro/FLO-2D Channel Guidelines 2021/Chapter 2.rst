@@ -1,6 +1,7 @@
 .. vim: syntax=rst
 
 Chapter 2
+==========
 
 Guidelines and Getting Started - Channels in the Urban Environment
 ------------------------------------------------------------------
