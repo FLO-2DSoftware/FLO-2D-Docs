@@ -1,9 +1,10 @@
 .. vim: syntax=rst
 
 FLO-2D Hydraulic Structure Guidelines
+======================================
 
 Overview
-========
+---------
 
 Hydraulic structures can include bridges, culverts, weirs, spillways, pumps or any facility that controls the water surface elevation and whose
 discharge can be specifying by a rating curve or tables, or generalized culvert equations.
