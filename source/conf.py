@@ -13,14 +13,8 @@ html_logo = "FLO-2D Transparent.png"
 
 # 🔁 FULL BUILD: Use this when building all branches (e.g., on GitHub Actions)
 smv_tag_whitelist = r'^$'  # Exclude all tags
-smv_branch_whitelist = r'^(Build25|Build23|Build21)$'  # Include branches Build23 & Build25.
+smv_branch_whitelist = r'^(Build21|Build23|Build25)$'  # Include branches Build23 & Build25.
 smv_remote_whitelist = r'^origin$'  # Default remote
-
-
-# 🔁 QUICK BUILD: Uncomment below for fast local dev on current branch
-# smv_tag_whitelist = r'^$'
-# smv_branch_whitelist = r'^(main|Tutorials)$'  # Change to your working branch
-# smv_remote_whitelist = r'^$'  # Local only
 
 # -- General configuration ---------------------------------------------------
 extensions = [
@@ -31,7 +25,6 @@ extensions = [
 ]
 templates_path = ['_templates']
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
-
 
 # -- HTML Output -------------------------------------------------------------
 html_theme = "sphinx_rtd_theme"
