@@ -3151,7 +3151,7 @@ This DOT equation is Mannings equation for normal flow depth (steady, uniform fl
 .. math::
     :label:
 
-    Q = VA = (1.486/n) d^0.67 S_L^{0.5} A (0.188)
+    Q = VA = (1.486/n) d^{0.67} S_L^{0.5} A (0.188)
 
 where:
 
