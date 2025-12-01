@@ -3548,19 +3548,25 @@ The difference between the two water surfaces is the afflux.
 The bridge flow in this figure is concave upwards above the soffit.
 Sluice gate discharge Q\ :sub:`p` (pressure flow) is described by the equation:
 
-        Q\ :sub:`p` = CA\ :sub:`b` (2g ∆H)\ :sup:`0.5`
+.. math::
+    :label:
+
+    Q^p = CA_b (2g ∆H)\ :^{0.5}
 
 where:
 
-C = coefficient of discharge (0.3 to 0.6 dimensionless, Figure 125)
+    C = coefficient of discharge (0.3 to 0.6 dimensionless, Figure 125)
 
-A\ :sub:`b` = cross-section flow area through the bridge opening
+    A\ :sub:`b` = cross-section flow area through the bridge opening
 
-g = gravitational acceleration
+    g = gravitational acceleration
 
-∆H = energy gradient from upstream to tailwater elevation Y\ :sub:`c` given by (see Figure 117):
+    ∆H = energy gradient from upstream to tailwater elevation Y\ :sub:`c` given by (see Figure 117):
 
-                Y\ :sub:`u` – Y + V\ :sub:`u`\ :sup:`2`/2g
+.. math::
+    :label:
+
+    Y_u – Y + V_u^2/2g
 
 .. image:: img/Chapter4/Chapte062.jpg
 
