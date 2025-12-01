@@ -3557,7 +3557,7 @@ Sluice gate discharge Q\ :sub:`p` (pressure flow) is described by the equation:
 .. math::
     :label:
 
-    Q^p = CA_b (2g ∆H)\ :^{0.5}
+    Q_p = CA_b (2g ∆H)^{0.5}
 
 where:
 
