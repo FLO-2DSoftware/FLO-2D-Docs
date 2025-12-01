@@ -3476,17 +3476,20 @@ The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959, p.490) 
 
 where:
 
-.. math::
-    :label:
+    .. math::
+        :label:
 
-    β = 1 - α_1 C^2 (A_2 /A_1)^2 + 2gC^2 (A_2/K_2)^2(L_B +L_{1-2}K_2/K_1);
+        β = 1 - α_1 C^2 (A_2 /A_1)^2 + 2gC^2 (A_2/K_2)^2(L_B +L_{1-2}K_2/K_1)
 
     L\ :sub:`B` = length of contracted reach
 
     L\ :sub:`1-2` = length of the reach from cross-section 1 to cross-section 2 (Figure 124)
 
-    K\ :sub:`1` and K\ :sub:`2` = conveyance at cross-sections 1 and 2; K\ :sub:`1` = 1.486/n A\ :sub:`1` R\ :sub:`1`\ :sup:`0.67`; K\ :sub:`2` = 1.486/n
-    A\ :sub:`2` R\ :sub:`2`\ 0.67
+    K\ :sub:`1` and K\ :sub:`2` = conveyance at cross-sections 1 and 2;
+
+        K\ :sub:`1` = 1.486/n A\ :sub:`1` R\ :sub:`1`\ :sup:`0.67`;
+
+        K\ :sub:`2` = 1.486/n A\ :sub:`2` R\ :sub:`2`\ 0.67
 
     n = Manning’s n-value through the contracted reach
 
