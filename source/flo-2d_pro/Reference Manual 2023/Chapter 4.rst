@@ -2321,7 +2321,7 @@ For this case, the upper Clausen & Clark (1990) is applied.
    163.-0.10 0.00 0.00 0.70 0.00 0.00 1.00 0.00 0.00
    182 0.30 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
    185 0.00 0.00 0.00 0.00 0.20 0.00 0.00 0.00 1.00
-   <pre>
+   </pre>
 
 A portion of building or the entire building can be assigned the collapse trigger (negative ARF value).
 For a complete collapse of the building that encompasses several elements, all the designated building cells must be assigned a negative ARF value.
