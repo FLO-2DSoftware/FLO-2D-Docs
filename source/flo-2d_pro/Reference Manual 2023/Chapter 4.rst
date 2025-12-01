@@ -3746,6 +3746,7 @@ The second B-line includes the various bridge parameters such as low chord, deck
 A. typical HYSTRUCT.DAT file for a bridge would be as follows:
 
 .. raw:: html
+
     <pre>
      S Name 0 3 631 625 1 0.0 0 0
 
@@ -3980,6 +3981,7 @@ In line 1, X indicates the start of a new bridge cross-section and the number 63
 The remaining lines are station from the left top of bank, upstream bed elevation at the given station, and the bridge station bed elevation.
 
 .. raw:: html
+
     <pre>
      X   631
 
