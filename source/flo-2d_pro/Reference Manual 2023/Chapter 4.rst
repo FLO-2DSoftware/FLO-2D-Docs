@@ -3438,7 +3438,10 @@ The complete derivation of the free surface (flow below the low chord) equation 
 The subcritical discharge Q through constrictions equation is given in Chow’s (1959) book *Open* *Channel Flow* (p.
 479, Eqn 17-15) as:
 
-        Q = C A\ :sub:`2` {2g (∆h – h\ :sub:`f` + α\ :sub:`1` V\ :sub:`1`\ :sup:`2`/2g)}\ :sup:`0.5`
+.. math::
+    :label:
+
+    Q = C A_2 {2g (∆h – h_f + α_1 V_1^2/2g)}^0.5
 
 where:
 
