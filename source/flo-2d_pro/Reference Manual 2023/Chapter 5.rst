@@ -397,7 +397,9 @@ The vertical lines in the active channel area below the bridge soffit are the ro
 At 45,000 cfs the bridge deck was barely overtopped in the HEC-RAS model (blues horizontal lines in Figure 138).
 The seven steady flow discharges used in the two models were:
 
-100 cfs 1,000 cfs 2,500 cfs 5,000 cfs, 10,000 cfs, 20,000 cfs, 45,000 cfs
+.. raw:: html
+
+    <pre>100 cfs 1,000 cfs 2,500 cfs 5,000 cfs, 10,000 cfs, 20,000 cfs, 45,000 cfs</pre>
 
 .. image:: img/Chapter5/Chapte009.png
 
@@ -409,13 +411,15 @@ Outflow nodes were assigned to a channel element about 9 channel elements downst
 inflow node.
 The inflow hydrograph to achieve steady was assigned as follows:
 
+.. raw:: html
+
+    <pre>
         Time (hrs)  Q (cfs)
 
-        0.0         0.0
-
-        2.0         1,000
-
-        100.        1,000
+            0.0         0.0
+            2.0         1,000
+            100.        1,000
+    </pre>
 
 The FLO-2D model was run for a simulation time of 6 hrs which was sufficient to achieve steady discharge at the bridge.
 The model was also setup with the following data and assumptions:
