@@ -277,25 +277,29 @@ Assign the Right Bank Element
 Once the channel geometry has been assigned and interpolated, the right bank elements can be assigned using a GDS menu command (Figure 10).
 After the assignment, the right or left banks can be realigned to the better represent the bank locations in the aerial image using mouse point and
 click commands.
+
 .. image:: ../img/Chapter1/Chapte007.jpg
-   **Figure 10.
-   Right Bank Assignment and Realignment.**
+
+*Figure 10.
+Right Bank Assignment and Realignment.*
 
 Channel Length Adjustment
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The channel length within each grid element is initially estimated as a straight line for a half grid element and is reported in the GDS dialog box
 (Figure 11).
+
 .. image:: ../img/Chapter1/Chapte008.jpg
-   **Figure 11.
-   Channel Segment Length and Segment Number.**
+*Figure 11.
+Channel Segment Length and Segment Number.*
 
 This value is based on the position of each grid element with respect to its contiguous upstream and downstream neighbors.
 The length is the sum half the length of the grid element from the center of the node to the edge or corner closest to the upstream or downstream node
 (Figure 12).
+
 .. image:: ../img/Chapter1/Chapte009.jpg
-   **Figure 12.
-   Channel Length for 3 Channel Elements.**
+*Figure 12.
+Channel Length for 3 Channel Elements.*
 
 The total channel length in the dialog box represents the sum of the individual grid element channel lengths.
 Using the GDS distance measurement tool in the Tools menu, a channel centerline length can be computed.
@@ -306,9 +310,11 @@ The total bankfull channel volume is the sum of all the channel element cross se
 Adjusting the channel element lengths to have an accurate total channel volume will improve the relationship between the flood volume in the channel
 and the flood volume on the floodplain.
 Figure 13 shows the total distance of the channel in the GDS and the isolated channel lengths in the CHAN.DAT file.
+
 .. image:: ../img/Chapter1/Chapte010.jpg
-   **Figure 13.
-   Channel Length.**
+
+*Figure 13.
+Channel Length.*
 
 Channel Roughness
 ^^^^^^^^^^^^^^^^^
@@ -321,8 +327,10 @@ For practical purposes, natural uniform flow assumes the turbulent boundary laye
 logarithmic.
 There are a number of mean velocity equations for open channel uniform flow and Manning’s equation is the best known of these:
 
-V = 1.486/n R\ :sup:`2/3` S\ :sup:`1/2`
-'''''''''''''''''''''''''''''''''''''''
+.. math::
+    :label:
+
+    V = 1.486/n R^{2/3} S^{1/2}
 
 where V = velocity, R = hydraulic radius, S = friction slope, n = Manning’s roughness coefficient.
 
