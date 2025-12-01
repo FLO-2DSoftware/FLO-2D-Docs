@@ -2869,17 +2869,16 @@ The hydraulic structure data file is organized as follows:
 
 HYSTRUC.DAT file example
 
-S Downspoutname 0 1 22365 21991 0 0 0 0
+.. raw: html
 
- T     0     0
-
- T     0.25 1.0
-
- T     0.5  2.0
-
- T     1    3.5
-
- T     5    5.5
+    <pre>
+     S Downspoutname 0 1 22365 21991 0 0 0 0
+     T     0     0
+     T     0.25 1.0
+     T     0.5  2.0
+     T     1    3.5
+     T     5    5.5
+    </pre>
 
 In the S-line above, the data includes a downspout name, floodplain or channel element (floodplain = 0), rating curve or table (rating table = 1),
 inlet and outlet cell number, and 4 additional controls that not required.
