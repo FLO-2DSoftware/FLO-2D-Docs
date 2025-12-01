@@ -3615,7 +3615,7 @@ The FHA curve in Figure 126 has a regressed relationship of:
 .. math::
     :label:
 
-    C = 0.341 (Y_u/Z)_{0.931}
+    C = 0.341 (Y_u/Z)^{0.931}
 
 with a correlation coefficient R\ :sup:`2` = 0.61.
 This equation is used in the FLO-2D model.
@@ -3627,7 +3627,10 @@ Orifice flow is defined by a pressure flow condition through the bridge where bo
 low chord (Y\ :sub:`u` > Z, Y\ :sub:`d` > Z) indicating a drowned opening (Figure 3d).
 The orifice equation for discharge is:
 
-        Q\ :sub:`p` = CA\ :sub:`b` (2g ∆H)\ :sup:`0.5` (3)
+.. math::
+    :label:
+
+    Q_p = CA_b (2g ∆H)^{0.5}
 
 where:
 
@@ -3653,7 +3656,10 @@ Orifice Coefficient of Discharge as Function of Low Chord Submergence (Hamill, 1
 
 The regressed relationship of the data in Figure 127 for Y\ :sub:`u`/Z > 1.25 is given by:
 
-        C = 0.80 (Y\ :sub:`u`/Z)\ :sup:`-0.184`
+.. math::
+    :label:
+
+    C = 0.80 (Y_u/Z)^{-0.184}
 
 This equation is used in the FLO-2D model and results in a coefficient variability in the range of 0.7 to 0.8.
 This is compared with the sluice gate flow discharge coefficient, which ranges from about 0.4 to 0.5 as shown in Figure 126.
@@ -3664,11 +3670,17 @@ Pressure Flow Plus Weir Flow
 Once the flow is above the deck, then the total discharge through bridge Q\ :sub:`T` is the sum of the pressure flow (sluice gate or orifice flow)
 plus the weir flow over the bridge deck:
 
-        Q\ :sub:`T` = Q\ :sub:`p` + Q\ :sub:`w`
+.. math::
+    :label:
+
+    Q_T = Q^p + Q_w
 
 Broadcrested weir flow is generally used to represent flow over a bridge deck as given by:
 
-            Q\ :sub:`w` = C L\ :sub:`c` ∆H\ :sup:`1.5`
+.. math::
+    :label:
+
+    Q_w = C L_c ∆H^{1.5}
 
 where:
 
@@ -3690,7 +3702,10 @@ conditions will decrease the broadcrested weir coefficient.
 It is important to note the difference between the weir coefficient C and a discharge coefficient C\ :sub:`q`.
 The weir coefficient is a lumped parameter that is based on the weir’s characteristics and includes the discharge coefficient.
 
-        C = 2/3 C\ :sub:`q` (2g)\ :sup:`0.5`
+.. math::
+    :label:
+
+    C = 2/3 C_q (2g)^{0.5}
 
 The discharge coefficient C\ :sub:`q` is same in both English and SI (metric) units and is dimensionless.
 The weir coefficient, however, is not dimensionless since it is a function of the gravitational acceleration g (ft/s\ :sup:`2` or m/s\ :sup:`2`).
