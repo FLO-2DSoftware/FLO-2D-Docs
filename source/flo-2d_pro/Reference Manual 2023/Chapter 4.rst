@@ -2007,8 +2007,9 @@ Impact force is a function of fluid density, structure materials, angle of impac
 To conservatively estimate the impact pressure, the equation for water taken from Deng (1996):
 
 .. math::
+    :label:
 
-   P_i = k\, \rho_f\, V^{2}
+    P_i = k\, \rho_f\, V^{2}
 
 where P\ :sub:`i` is the impact pressure, coefficient k is 1.28 for both English and SI units, ρ\ :sub:`f` = water density and V is the maximum
 velocity regardless of direction.
@@ -2018,8 +2019,9 @@ The coefficient k is based on a regressed relationship as a function of sediment
 This relationship is given by,
 
 .. math::
+    :label:
 
-   k = 1.261\, e^{C_w}
+    k = 1.261\, e^{C_w}
 
 where Cw = sediment concentration by weight.
 The impact pressure is reported in the file IMPACT.OUT.
@@ -2030,8 +2032,9 @@ The static pressure is then multiplied by the flow depth to compute the static f
 The maximum static pressure is written to the STATICPRESS.OUT file.
 
 .. math::
+    :label:
 
-   P_s = \gamma\, \hat{h}
+    P_s = \gamma\, \hat{h}
 
 Floodway Delineation
 -------------------------
