@@ -3604,12 +3604,18 @@ For the vertical sluice gate case, the assumed discharge is a function of the sq
 some percentage of the gate opening.
 Oskuyi and Salmasi (2012) presented a vertical sluice gate coefficient relationship with limited variability over a range of flows:
 
-            C = 0.445 (Y\ :sub:`u`/Z)\ :sup:`0.122`
+.. math::
+    :label:
+
+    C = 0.445 (Y_u/Z)^{0.122}
 
 which is plotted as the green line in Figure 126.
 The FHA curve in Figure 126 has a regressed relationship of:
 
-            C = 0.341 (Y\ :sub:`u`/Z)\ :sup:`0.931`
+.. math::
+    :label:
+
+    C = 0.341 (Y_u/Z)_{0.931}
 
 with a correlation coefficient R\ :sup:`2` = 0.61.
 This equation is used in the FLO-2D model.
