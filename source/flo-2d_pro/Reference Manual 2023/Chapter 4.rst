@@ -3673,7 +3673,7 @@ plus the weir flow over the bridge deck:
 .. math::
     :label:
 
-    Q_T = Q^p + Q_w
+    Q_T = Q_p + Q_w
 
 Broadcrested weir flow is generally used to represent flow over a bridge deck as given by:
 
