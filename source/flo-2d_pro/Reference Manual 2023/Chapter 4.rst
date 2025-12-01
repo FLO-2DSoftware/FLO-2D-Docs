@@ -1825,7 +1825,10 @@ To define all the shear stress terms for use in the FLO-2D model, the following 
 By analogy, from the work of Meyer-Peter and Müller (1948) and Einstein (1950), the shear stress relationship is depth integrated and rewritten in the
 following form as a dimensionless slope:
 
-                                                        *S f = S y + S v + S t d*
+.. math::
+    :label:
+
+    S_f = S_y + S_v + S_{td}
 
 where the total friction slope S\ :sub:`f` is the sum of the yield slope S\ :sub:`y`, the viscous slope S\ :sub:`v`, and the turbulent-dispersive
 slope S\ :sub:`td`.
@@ -1833,8 +1836,9 @@ The viscous and turbulent-dispersive slope terms are written in terms of depth- 
 The viscous slope can be written as:
 
 .. math::
+    :label:
 
-   S_v = \frac{K\, \eta}{8\, \gamma_m} \frac{V}{h^{2}}
+    S_v = \frac{K\, \eta}{8\, \gamma_m} \frac{V}{h^{2}}
 
 where γ\ :sub:`m` is the specific weight of the sediment mixture.
 The resistance parameter K for laminar flow equals 24 for smooth wide rectangular channels but increases significantly (~ 50,000) with roughness and
@@ -1884,6 +1888,7 @@ The flow resistance n\ :sub:`td` of the turbulent and dispersive shear stress co
 flow:
 
 .. math::
+    :label:
 
    S_{td} = \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}
 
@@ -1893,6 +1898,7 @@ To estimate this increase in flow resistance, the conventional turbulent flow re
 of the sediment concentration C\ :sub:`v`:
 
 .. math::
+    :label:
 
    n_{td} = n_t \, b \, e^{m C_v}
 
@@ -1902,6 +1908,7 @@ sediment flows as function of the ratio of the flow depth to the sediment grain 
 The friction slope components can then be combined in the following form:
 
 .. math::
+    :label:
 
    S_f = \frac{\tau_y}{\gamma_m\, h}
          + \frac{K\, \eta\, V}{8\, \gamma_m\, h^{2}}
