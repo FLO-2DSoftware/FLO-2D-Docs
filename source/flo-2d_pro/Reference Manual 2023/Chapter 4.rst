@@ -3977,30 +3977,33 @@ The cross-section data is entered in the BRIDGE_XSEC.DAT file in the ASCII forma
 In line 1, X indicates the start of a new bridge cross-section and the number 631 is bridge inflow node grid element number.
 The remaining lines are station from the left top of bank, upstream bed elevation at the given station, and the bridge station bed elevation.
 
- X   631
+.. raw:: html
+    <pre>
+     X   631
 
-   0.00 1380.00 1385.00
+       0.00 1380.00 1385.00
 
-   0.60 1378.70 1378.46
+       0.60 1378.70 1378.46
 
-   5.00 1377.00 1376.96
+       5.00 1377.00 1376.96
 
-   5.50 1376.85 1376.68
+       5.50 1376.85 1376.68
 
-   6.00 1376.75 1376.46
+       6.00 1376.75 1376.46
 
-   12.65 1376.70 1376.46
+       12.65 1376.70 1376.46
 
-   15.85 1376.78 1376.51
+       15.85 1376.78 1376.51
 
-   18.95 1377.20 1377.00
+       18.95 1377.20 1377.00
 
-   20.65 1378.15 1377.26
+       20.65 1378.15 1377.26
 
-   22.00 1378.70 1378.44
+       22.00 1378.70 1378.44
 
-   22.10 1380.00 1385.00
+       22.10 1380.00 1385.00
 
+    </pre>
 The bridge cross-section is referenced to the upstream cross-section stations.
 The bridge cross-section contraction corresponds to the abutments or channel bank elevations under the bridge deck.
 The low chord data (LOWCHORD) represents the average low elevation of the deck structure and the deck elevation (DECKHT) represents the average
