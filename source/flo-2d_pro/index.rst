@@ -5,4 +5,4 @@ FLO-2D Pro
    :maxdepth: 1
 
    data_input_manual
-   Channel Modeling Guidelines 2021/index
+   FLO-2D Channel Guidelines 2021/index
