@@ -2850,7 +2850,10 @@ The downspout discharge can be simulated as a hydraulic structure identifying th
 assigning an inlet control rating table.
 The inlet control rating table can be based on orifice flow using the equation:
 
-Q = C \* A \* (2.*g*DEPTH)\ :sup:`0.5`
+.. math::
+    :label:
+
+    Q = C \* A \* (2.*g*DEPTH)^{0.5}
 
 where:
 
