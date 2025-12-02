@@ -25,79 +25,29 @@ The FLO-2D model will compute the storm drain inflow discharge based on the pred
 This inlet-controlled discharge will then be routed as storm drain pipe discharge.
 The storm drain return flow to the surface water system is exchanged through storm drain inlets/outlets and outfalls.
 The complete conceptualized flood routing system is shown in Figure 1.
-.. image:: img/Chapter1/Chapte002.png
-   **Figure 1.
-   Conceptualized FLO-2D Model System with a Storm Drain Component.**
+
+.. image:: img/Chapter1/Chapte002.jpg
+
+*Figure 1.
+Conceptualized FLO-2D Model System with a Storm Drain Component.*
 
 The FLO-2D storm drain component can be visualized in layers.
 The surficial layer represents all the surface water flood movement which is connected to the subsurface pipe layer through the pipe junctions defined
 as inlets (or outfalls).
 Figure 2 illustrates the layered system.
 
-Surface Hydrology and Hydraulics
+.. image:: img/Chapter1/Chapte021.png
 
-FLO
-
-(
-
--
-
-)
-
-D Model
-
-2
-
-Pipe Hydraulics
-
-)
-
-Closed Conduit System
-
-(
-
-Outlet nodes, infiltra-
-
-tion,
-
-evaporation
-
-Rainfall, inflow
-
-hydro-
-
-graphs
-
-External Inflow
-
-Outlets
-
-**Dynamic**
-
-**Link**
-
-**Bi**
-
-**-**
-
-**directional flow exchange**
-
-**thru user assigned features**
-
-   **Figure 2.
-   Volume Exchange between the Surface Water and Storm Drain System**
+*Figure 2.
+Volume Exchange between the Surface Water and Storm Drain System*
 
 The FLO-2D storm drain component can be applied to a variety of different storm water projects including:
 
-- Assessment of the storm drain capacity;
-
-- Existing storm drain system response to floods events;
-
-- Design (sizing) of flood control and drainage system features;
-
-- Analysis of urban surface features (levees, walls, streets, channels) and their impact on the volumes captured by the piping system;
-
-- Design strategies to minimize storm drain overflow.
+    - Assessment of the storm drain capacity;
+    - Existing storm drain system response to floods events;
+    - Design (sizing) of flood control and drainage system features;
+    - Analysis of urban surface features (levees, walls, streets, channels) and their impact on the volumes captured by the piping system;
+    - Design strategies to minimize storm drain overflow.
 
 The FLO-2D storm drain system data base can be developed using the FLO-2D QGIS plug-in tool, the EPA SWMM Graphical User Interface (GUI) or other
 external SWMM software programs.
