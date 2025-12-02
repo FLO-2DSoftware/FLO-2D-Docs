@@ -11,21 +11,15 @@ Here is a list of other available references for channel modeling: C:\\users\\Pu
 - Data Input Manual
 
     ˖ Chan.dat, chanbank.dat, xsec.dat
-
     ˖ Profiles.exe processor program overview
-
     ˖ Channel output files
 
 - Workshop Lessons
 
    ˖ Lesson 3 – Simple geometry and confluence
-
    ˖ Lesson 4 – Simple cross section converter
-
    ˖ Lesson 5 – Profiles.exe overview and example
-
    ˖ Lesson 8 – Import from HEC-RAS
-
    ˖ Lesson 14 – Advanced natural channel modeling
 
 - QGIS Workshop Lessons
@@ -35,17 +29,11 @@ Here is a list of other available references for channel modeling: C:\\users\\Pu
 - Example Projects w/Channels
 
    ˖ Urban example
-
    ˖ Lesson 15 – natural channel with levee
-
    ˖ Alawai
-
    ˖ Rio Grande
-
    ˖ Goat
-
    ˖ Aqueduct
-
    ˖ Sediment transport
 
 Sharefile.flo-2d.com – Webinar Series\\Channel Series
@@ -53,11 +41,8 @@ Sharefile.flo-2d.com – Webinar Series\\Channel Series
 - Videos
 
    ˖ Basic channels
-
    ˖ Advanced channel modeling
-
    ˖ Channel optimization
-
    ˖ Advanced natural channels
 
 Channel Overview
@@ -73,7 +58,7 @@ The average flow path length between two channel elements is on the order of the
 hydraulic jumps over a short distance.
 The flow transition between subcritical and supercritical flow is based on the average conditions between two channel elements.
 
-.. image:: img/Chapter1/Chapte002.jpg
+.. image:: ./img/Chapter1/Chapte002.jpg
 
 *Figure 1.
 Channel Flow is One-Dimensional – No Vertical or Horizontal Velocity Distribution*
