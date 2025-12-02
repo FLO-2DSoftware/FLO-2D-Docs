@@ -720,7 +720,7 @@ The local head loss term h\ :sub:`L` is caused by an energy loss that is proport
 .. math::
     :label:
 
-    h_L = \frac {KV^2}{2gL}
+    h_L = \frac{KV^2}{2gL}
 
 where:
 
@@ -732,7 +732,8 @@ where:
 
     g = gravitational acceleration
 
-To calculate the change in pressure head at each node that connects two or more conduits an additional equation is necessary (Figure 23):
+To calculate the change in pressure head at each node that connects two or more conduits
+an additional equation is necessary (Figure 23):
 
 ∂H ∑ Q = ∂t A\ :sub:`store` + ∑ As
 
