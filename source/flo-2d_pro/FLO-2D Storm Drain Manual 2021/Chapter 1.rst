@@ -639,20 +639,28 @@ Continuity Equation:
 
 Momentum equation for x-direction:
 
-|Chapte022| Q ∂(Q\ :sup:`2`\ ⁄A) ∂
+.. math::
+    :label:
 
-:sub:`∂` gASf + gAh\ :sub:`L` = 0
+     \frac{∂A}{∂Q} + \frac{(∂Q^2/A)}{∂x} + gA\frac{(∂H)}{∂x} + gAS_f + gAh_L = 0
 
 where:
 
-x = distance along the conduit t = computational timestep A = cross sectional area of the pipe
+    x = distance along the conduit
 
-Q = pipe discharge
+    t = computational timestep
 
-H = hydraulic head of water in the conduit (sum of WSE plus pressure head)
+    A = cross sectional area of the pipe
 
-S\ :sub:`f` = friction slope or head loss per unit length of pipe h\ :sub:`L` = local energy loss per unit length of pipe g = gravitational
-acceleration
+    Q = pipe discharge
+
+    H = hydraulic head of water in the conduit (sum of WSE plus pressure head)
+
+    S\ :sub:`f` = friction slope or head loss per unit length of pipe
+
+    h\ :sub:`L` = local energy loss per unit length of pipe
+
+    g = gravitational acceleration
 
 These equations are solved for the discharge Q and head H in each pipe by setting the initial conditions for H and Q at the beginning of the
 simulation as well as setting the boundary conditions at the beginning and end of each conduit for all timesteps.
