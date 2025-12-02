@@ -17,10 +17,10 @@ The removal of any channel elements (segments or tributaries) from the CHAN.DAT 
 modified by eliminating the corresponding cross sections and right banks.
 Another method for isolating a portion of the channel is to establish a new temporary inflow and outflow node in a short reach of channel (Figure 69).
 
-|Chapte002|
+.. image:: img/Chapter3/Chapte002.jpg
 
-   **Figure 69.
-   Isolate a Short Portion of the Channel.**
+*Figure 69.
+Isolate a Short Portion of the Channel.*
 
 Fixing a volume conservation error could entail adjusting the channel cross sections, reviewing the bank elevations, adjusting the hydraulic
 structures rating tables or eliminating other component conflicts.
@@ -35,10 +35,10 @@ The most sensitive model scenario is a wide channel with small grid elements whe
 elements.
 In this situation, the channel element conveyance capacity is relatively small because the channel length is short compared to the channel width.
 
-|Chapte003|
+.. image:: img/Chapter3/Chapte003.jpg
 
-   **Figure 70.
-   TIME.OUT and Profiles - Peak Discharge.**
+*Figure 70.
+TIME.OUT and Profiles - Peak Discharge.*
 
 For example, a channel on the order of 800 ft wide was simulated on a grid system of 20 ft elements in Phoenix.
 Between the left and right bank elements, there were 40 or more elements (Figure 71).
@@ -49,10 +49,10 @@ To avoid small timesteps with such a large channel, it is necessary to select la
 The choice of the grid element size has to be based on the project priority; either accurate channel flood routing or predicting the floodplain
 inundation in detail.
 
-|Chapte004|
+.. image:: img/Chapter3/Chapte004.jpg
 
-   **Figure 71.
-   Wide Large Channel Assigned to a Small Grid System.**
+*Figure 71.
+Wide Large Channel Assigned to a Small Grid System.*
 
 To compute smoother hydraulics between two channel grid elements the options are to adjust the bed slope, the cross section flow area or the roughness
 values.
@@ -66,37 +66,39 @@ To improve the channel component performance, the following steps should be take
 Review PROFILES peak discharge plots or the output files CHANMAX.OUT or VELTIMEC.OUT.
 Look for any channel elements with numerical surging (note spike – Figure 72).
 
-|Chapte005|
+.. image:: img/Chapter3/Chapte005.jpg
 
-   **Figure 72.
-   Channel Numerical Instability – Peak Discharge vs Channel Distance.**
+*Figure 72.
+Channel Numerical Instability – Peak Discharge vs Channel Distance.*
 
 Review and adjust the bed slope with the PROFILES program.
 Adverse bed slopes are acceptable, but flat beds, spikes and other inconsistences should be reviewed (Figure 73 – red ovals).
 In a highly modified or constructed urban environment, this channel profile may be appropriate, but it should be edited if necessary to achieve a
 stable more realistic model.
 
-|Chapte006|
+.. image:: img/Chapter3/Chapte006.jpg
 
-   **Figure 73.
-   Review the Channel Bed Slope for Irregularities.**
+*Figure 73.
+Review the Channel Bed Slope for Irregularities.*
 
 Reduce the variability between channel element cross section flow areas.
 Avoid abrupt cross section transitions between channel elements.
 Adjust the channel cross section geometry in the PROFILES program.
 Figure 74 A and B shows the change in channel shape between two contiguous channel elements with the same approximate bankfull flow area.
 
-|Chapte007|
+.. image:: img/Chapter3/Chapte007.jpg
 
-   **Figure 74 A and B.
-   Change in Channel Geometry between Two Contiguous Channel Elements.**
+*Figure 74 A and B.
+Change in Channel Geometry between Two Contiguous Channel Elements.*]
 
 Figure 75 A - D show four consecutive channel elements with a bankfull flow area that varies from 4,600 ft\ :sup:`2` to 3,300 ft\ :sup:`2` to 3,250
 ft\ :sup:`2` back to 4,100 ft\ :sup:`2`.
 This is about a 33% change in bankfull conveyance capacity.
 
-   **Figure 75.
-   A-D Change in Bankfull Flow Area between Four Consecutive Channel Elements.**
+.. image:: img/Chapter3/Chapte009.jpg
+
+*Figure 75.
+A-D Change in Bankfull Flow Area between Four Consecutive Channel Elements.**
 
 For the entire channel segment, the flow area varies from 223 ft\ :sup:`2` to 7,817 ft\ :sup:`2` with an average cross section flow area of 3,507 ft\
 :sup:`2` as displayed in the PROFILES program n-value interpolation dialog box (**Error! Reference source not found.**).
@@ -106,34 +108,34 @@ This indicates that each cross section in the model needs to be reviewed.
 To improve numerical stability, increase the roughness in wide, shallow cross sections and decrease the roughness in narrow deep channel grid elements.
 Review the channel element roughness variation upstream and downstream of channel elements with spikes in discharge (Figure 76).
 
-|Chapte008|
+.. image:: img/Chapter3/Chapte008.jpg
 
-   **Figure 76.
-   Variable n-value System Profiles.**
+*Figure 76.
+Variable n-value System Profiles.*
 
 Select a longer channel length within the channel grid element to allow more storage (Increase the lengths in the red outline in Table 5.
 The maximum length should be less than 1.5 times the grid element side.
 
-   **Table 5.
-   CHAN.DAT File with Channel Lengths Highlighted**
+**Table 5.
+CHAN.DAT File with Channel Lengths Highlighted**
 
-   N 801 0.04 20.23 1 N 1723 0.04 20.33 2
+.. raw:: html
 
-N 2646 0.04 20 3
+    <pre>
+    N 801 0.04 20.23 1 N 1723 0.04 20.33 2
+    N 2646 0.04 20 3
+    N 3569 0.04 20 4
+    N 4492 0.04 20.04 5
+    N 5416 0.04 20.05 6
+    N 6340 0.04 20.53 7 N 7264 0.04 20 8
+    N 8188 0.04 20 9 N 9111 0.04 20 10
+    N 10034 0.04 20 11
+    N 10957 0.06 20.59 12
+    </pre>
 
-N 3569 0.04 20 4
+.. raw:: html
 
-N 4492 0.04 20.04 5
-
-N 5416 0.04 20.05 6
-
-   N 6340 0.04 20.53 7 N 7264 0.04 20 8
-
-   N 8188 0.04 20 9 N 9111 0.04 20 10
-
-N 10034 0.04 20 11
-
-N 10957 0.06 20.59 12
+    <br>
 
 Small timesteps are the result of exceeding the numerical stability criteria (Courant criteria).
 The change in channel flow depth for a timestep may be too large.
@@ -169,27 +171,3 @@ Department of Transportation, Federal Highway Administration, 2005.
 "Hydraulic Design of Highway Culverts," Pub.
 No.
 FHWA-NHI-01-020, National Technical Information Service, Springfield, VA.
-
-77 References
-
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 6.69917in
-   :height: 3.37292in
-.. |Chapte003| image:: media\Chapte003.png
-   :width: 6.92389in
-   :height: 3.51319in
-.. |Chapte004| image:: media\Chapte004.jpg
-   :width: 5.59097in
-   :height: 3.91222in
-.. |Chapte005| image:: media\Chapte005.jpg
-   :width: 4.93444in
-   :height: 2.28958in
-.. |Chapte006| image:: media\Chapte006.jpg
-   :width: 5.16514in
-   :height: 2.45903in
-.. |Chapte007| image:: media\Chapte007.png
-   :width: 4.60347in
-   :height: 7.27569in
-.. |Chapte008| image:: media\Chapte008.jpg
-   :width: 5.35264in
-   :height: 2.51944in
