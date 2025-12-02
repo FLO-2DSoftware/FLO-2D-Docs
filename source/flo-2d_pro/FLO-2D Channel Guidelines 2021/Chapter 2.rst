@@ -425,11 +425,8 @@ The hydraulic structure rating table or curve can be created from:
 
     - HEC-RAS, HY-8 or another suitable program.
       Always check with the regulating agency to determine what software will be accepted.
-
     - Two cross sections upstream and two downstream of a bridge are be used to generate a rating table with HEC-RAS.
-
     - Culvert tables or programs
-
     - Weir and spillway equations
 
 Generalized Culvert Equations
@@ -449,19 +446,12 @@ Select the Hydraulic Structures Dialog Box.*
 The data requirements for the generalized culvert equations include:
 
     - Length
-
     - Diameter
-
     - Rectangular Width
-
     - Type – Box or Pipe
-
     - Entrance Type (3)
-
     - Entrance Loss Coefficient
-
     - Roughness
-
     - Multiple Barrels
 
 All the possible flow scenarios involving inlet and outlet control are analyzed internally by the generalized culvert equations, based on tailwater
@@ -682,17 +672,11 @@ In this case, it is not necessary to eliminate the instability, but perhaps it c
 To reduce or eliminate channel numerical surging with a hydraulic structure, the following steps are suggested:
 
     1. Provide more definition to the rating table at low flows;
-
     2. Regenerate the rating curves in the external program with more realistic n-values used in the FLO-2D channel;
-
     3. Review and adjust the slope through the structure;
-
     4. Gradually increase the channel n-values upstream and downstream of the bridge/culvert;
-
     5. Review and adjust the channel flow area transition leading upstream to and away downstream from the bridge;
-
     6. Use a rating curve instead of the rating table, although, in general, the rating table is more accurate than a rating curve;
-
     7. Use the FLO-2D bridge flow component that represents the combined bridge features and channel geometry.
 
 Storm Drains
@@ -726,16 +710,17 @@ For this configuration a vertical Type 4 inlet can be applied (refer to the Stor
 Figure 53 and Figure 54 provide some additional details about setting up the inlet/channel interface.
 This system shows that the bed elevation of the channel is equal to the invert elevation of the inlet.
 
-- Channel Bed Elevation = Bank Elevation – Depth = (299.8 – 3.5) = 296.3 ft
+    - Channel Bed Elevation = Bank Elevation – Depth = (299.8 – 3.5) = 296.3 ft
 
-- Inlet Elevation = 296.3 ft
+    - Inlet Elevation = 296.3 ft
 
 .. image:: img/Chapter2/Chapte029.jpg
 
 *Figure 53.
- Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet.*
+Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet.*
 
 .. image:: img/Chapter2/Chapte030.jpg
+
 *Figure 54.
 Elevation of a Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet.*
 
@@ -786,6 +771,7 @@ The user should verify that the final pipe length and invert elevation are corre
 does not.
 
 .. image:: img/Chapter2/Chapte033.jpg
+
 *Figure 57.
 Typical Configuration of a Storm Drain Outfall Discharging to a Natural Channel.*
 
@@ -805,6 +791,7 @@ Assignment of the outfall to a right bank element, or a channel interior element
 allowed.
 
 .. image:: img/Chapter2/Chapte034.jpg
+
 *Figure 58.
 Outfall Nodes Paired to Interior Channel Elements by GDS.*
 
@@ -824,6 +811,7 @@ out of the outfall pipe based on the pressure head (Figure 59).
 To account for volume conservation, the storm drain outflow that represents inflow volume to a FLO-2D channel is reported in the CHVOLUME.OUT file.
 
 .. image:: img/Chapter2/Chapte035.jpg
+
 *Figure 59.
 Underground Outfall Condition.*
 
@@ -936,16 +924,11 @@ The guidelines for setting up a **channel termination** to the floodplain are:
 
     - Select a distance over which the channel will widen and become shallow (4 to 10 channel elements).
       The final channel cross section should have a thalweg less than 2.0 ft.
-
     - Maintain essentially the same channel cross section flow area (with maybe a slight reduction) over the last few channel elements.
-
     - Increase the n-values in the downstream direction.
-
     - The floodplain elevations of the channel interior elements are set to the channel thalweg elevation of the last channel element and are identical.
-
     - The downstream floodplain grid element elevations contiguous to the channel end elements should be lower than the channel end thalweg elevation to
       allow the flow to drain out of the channel.
-
     - The channel can only terminate in one of the four compass directions.
       The end of the channel cannot extend from bank to bank across of the diagonal directions.
       At least three channel bank extensions should be oriented in one of the four compass directions as shown in Figure 66.
