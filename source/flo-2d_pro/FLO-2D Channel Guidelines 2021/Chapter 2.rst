@@ -94,7 +94,7 @@ In this figure, two cross sections are contiguous but only one controls the flow
 One cross section has a bank full flow area of 33 ft\ :sup:`2` and the second one has 139 ft\ :sup:`2`.
 It is necessary to review the data source for each cross section to ensure they represent the physical configuration.
 
-.. image:: img/Chapter2/Chapte003.jpg
+.. image:: img/Chapter2/Chapte003.png
 
 *Figure 27.
 Cross Section Comparison.*
