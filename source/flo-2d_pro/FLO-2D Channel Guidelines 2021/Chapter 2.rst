@@ -110,7 +110,7 @@ The channel may increase its bankfull capacity during the flood event.
 If the cut cross section cannot be accurately delineated with aerial photos or field observations, the channel cross section shape may have to be
 estimated or small grid elements can replace the 1-D channel.
 
-.. image:: img/Chapter2/Chapte004.jpg
+.. image:: img/Chapter2/Chapte004.png
 
 *Figure 28.
 Braided Channel Cross Section.*
@@ -157,7 +157,7 @@ island is presumed to be the right bank for the entire cross section.
 For some islands, splitting the river into two channels with a confluence may be more expedient.
 The other approach is to lower the island below the right bank.
 
-.. image:: img/Chapter2/Chapte008.jpg
+.. image:: img/Chapter2/Chapte008.png
 
 *Figure 32.
 Split Flows.*
