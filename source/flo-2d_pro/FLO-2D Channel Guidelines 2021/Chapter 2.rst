@@ -282,6 +282,7 @@ When the User clicks on any pair in the Dialog box, the corresponding elements w
 This helps the user identify which element pairs to select.
 
 .. image:: img/Chapter2/Chapte017.png
+
 *Figure 41.
 Confluence dialog boxes.*
 
@@ -346,7 +347,7 @@ Hydraulic structures can interact with the channel in three ways:
 
     - *channel to floodplain*
 
-.. image:: img/Chapter2/Chapte020.jpg
+.. image:: img/Chapter2/Chapte020.png
 
 *Figure 44.
 Channel Structure Configurations*
