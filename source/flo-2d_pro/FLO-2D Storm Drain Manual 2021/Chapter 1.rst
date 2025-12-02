@@ -603,6 +603,9 @@ The sudden contraction at the inlet from the drop box pipe diameter results in a
 water.
 The energy loss for a contraction in pressure flow can be calculated from the following equation (DOT Urban Drainage Design Manual):
 
+.. math::
+    :label:
+
    H\ :sub:`c`\ =K\ :sub:`c`\ (V\ :sub:`2`\ :sup:`2`/2g)
 
 where:
