@@ -657,29 +657,16 @@ Recommended limiting Froude numbers are:
 When a limiting Froude number (FROUDC in CHAN.DAT) is assigned, the model computes the channel Froude number for each timestep.
 If the limiting Froude number is exceeded, the Manning’s n-value is increased according to the following criteria:
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+.. raw:: html
 
-
-   * - percent change
-     -
-
-   * - from the original n-value
-     - n-value increment increase
-
-   * - < 20
-     - 0.0002
-
-   * - 20 < % < 50
-     - 0.0001
-
-   * - 50 < % < 100
-     - 0.00002
-
-   * - 100 < % < 200
-     - 0.000002
-
+    <pre>
+    percent change
+    from the original n-value       n-value increment increase
+           < 20                            0.0002
+        20 < % < 50                        0.0001
+        50 < % < 100                      0.00002
+       100 < % < 200                     0.000002
+    </pre>
 
 On the recessional limb, when the limiting Froude number is no longer exceeded, the n-value is decreased by 0.0001.
 This increase in flow resistance mimics increasing energy loss as the flow accelerates.
