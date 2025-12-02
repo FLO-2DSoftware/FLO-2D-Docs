@@ -671,12 +671,10 @@ Unsteady flow with backwater effects, flow reversals, pressurized flow with entr
 The momentum equation inertial terms are reduced as flow comes closer to being critical and are ignored when the flow is supercritical based on the
 following options:
 
-- Damping option (KEEP) - inertial terms of the St.
-  Venant equation solution are included.
-
-- Ignore option (IGNORE) - inertial terms are ignored.
-
-- Dampen option (DAMPEN) - implements Local Partial Inertial modification (LPI).
+    - Damping option (KEEP) - inertial terms of the St.
+      Venant equation solution are included.
+    - Ignore option (IGNORE) - inertial terms are ignored.
+    - Dampen option (DAMPEN) - implements Local Partial Inertial modification (LPI).
 
 For the FLO-2D model the LPI damping option is always applied.
 The simulation of unsteady flows with subcritical/supercritical mixed flow regimes is accomplished by neglecting varying portions of the inertial
