@@ -30,26 +30,25 @@ Figure 25 is a profile of closed conduit system with three inlets, one junction 
 The figure displays a peak water surface elevation for the 10 year return period storm.
 
 .. image:: img/Chapter2/Chapte002.jpg
-   **Figure 25.
-   Profile of Typical Closed Conduit System**
+
+*Figure 25.
+Profile of Typical Closed Conduit System*
 
 Inlets are nodes that collect surface water from the FLO-2D grid element.
 Only one inlet can be assigned to one FLO-2D grid cell.
 Storm drain inlets are depicted by the QGIS and GDS as blue in Figure 26 and Figure 27.
 
-**IN48**
+.. image:: img/Chapter2/Chapte009.png
 
-**IN50**
+*Figure 26.
+Storm Drain System Represented in the GDS Graphic Display.
+Inlets are blue and junctions are green.*
 
-**Channel**
-
-   **Figure 26.
-   Storm Drain System Represented in the GDS Graphic Display.
-   Inlets are blue and junctions are green.**
 .. image:: img/Chapter2/Chapte003.jpg
-   **Figure 27.
-   Storm Drain System Represented in the QGIS Graphic Display.
-   Inlets are blue and outfalls are green.**
+
+*Figure 27.
+Storm Drain System Represented in the QGIS Graphic Display.
+Inlets are blue and outfalls are green.*
 
 Outfalls are nodes located at the terminus of a pipe network and discharge flow out the storm drain system.
 A variety of outfall boundary conditions can be assigned including a fixed stage elevation, critical or normal flow depth, tidal stages, tide gates,
@@ -60,18 +59,16 @@ If the outfall discharge is returned to the surface water, the water surface is 
 An outfall to a retention basin is shown in Figure 28.
 The boundary condition for this outfall would vary with the basin water surface.
 In Figure 29 the pipe outfall discharges into a channel and may have a potential backwater condition.
+
 .. image:: img/Chapter2/Chapte004.jpg
-   **Figure 28.
-   Outfall Discharge Retention Basin**
 
-**OF185**
+*Figure 28.
+Outfall Discharge Retention Basin*
 
-**Closed Conduit System**
+.. image:: img/Chapter2/Chapte018.png
 
-**Outfall**
-
-   **Figure 29.
-   GDS Image of Storm Drain System with Outfall OF185 Discharging to a Channel**
+*Figure 29.
+GDS Image of Storm Drain System with Outfall OF185 Discharging to a Channel*
 
 Storm Drain Inlets
 ''''''''''''''''''
