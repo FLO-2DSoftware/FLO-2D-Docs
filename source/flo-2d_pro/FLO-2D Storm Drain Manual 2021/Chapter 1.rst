@@ -720,13 +720,17 @@ The local head loss term h\ :sub:`L` is caused by an energy loss that is proport
 .. math::
     :label:
 
-    h_L = {KV^2}{2gL}
+    h_L = \frac {KV^2}{2gL}
 
 where:
 
     K = loss coefficient for each pipe
 
-    V = velocity L = conduit length g = gravitational acceleration
+    V = velocity
+
+    L = conduit length
+
+    g = gravitational acceleration
 
 To calculate the change in pressure head at each node that connects two or more conduits an additional equation is necessary (Figure 23):
 
