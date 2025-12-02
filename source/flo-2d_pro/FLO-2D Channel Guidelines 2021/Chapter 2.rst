@@ -170,7 +170,7 @@ LiDAR and IFSAR data does not penetrate water surfaces, the bottom of the channe
 Bathometric data is needed to fully define the cross section geometry.
 It may be necessary to estimate the missing wet channel reach conveyance in the thalweg if a portion of the channel has a dry thalweg.
 
-.. image:: img/Chapter2/Chapte009.jpg
+.. image:: img/Chapter2/Chapte009.png
 
 *Figure 33.
 Water Surface.*
@@ -184,7 +184,7 @@ In the red points represent the station and elevation pairs listed in the XSEC.D
 Four station points are insufficient to define the rating table for the natural cross section geometry.
 It is more appropriate to model urban design channels with the Rectangular or Trapezoidal method.
 
-.. image:: img/Chapter2/Chapte010.jpg
+.. image:: img/Chapter2/Chapte010.png
 
 *Figure 34.
 Urban Design Channel.*
