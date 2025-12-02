@@ -71,7 +71,7 @@ Outfall Discharge Retention Basin*
 GDS Image of Storm Drain System with Outfall OF185 Discharging to a Channel*
 
 Storm Drain Inlets
-''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~
 
 FLO-2D can simulate 5 types of inlet geometries.
 Three of them are based on the Hydraulic Design Series No.
@@ -81,22 +81,25 @@ For curb and grate inlets, the inlet geometry is assigned, and the discharge is 
 available storm drain capacity.
 For slotted drains, combination inlets and other non-typical inlets, a rating table must be generated with discharge as a function of headwater depth
 (Figure 30 and Figure 31).
+
 .. image:: img/Chapter2/Chapte005.jpg
-   **Figure 30.
-   Combination Curb Opening Inlet with Sag and a Grate**
+
+*Figure 30.
+Combination Curb Opening Inlet with Sag and a Grate*
+
 .. image:: img/Chapter2/Chapte006.jpg
-   **Figure 31.
-   Combination of a Curb Opening at Grade with a Grate**
+
+*Figure 31.
+Combination of a Curb Opening at Grade with a Grate*
 
 The manhole is a special inlet type that represents a service access point to the storm drain system.
 Manholes are modeled as inlets with an additional surcharge depth that represents the equivalent pressure required to displace the cover.
 When the surcharge depth is exceeded, the manhole is popped, and the manhole behaves as an inlet type 3.
 
 Inlet Types
-'''''''''''
+~~~~~~~~~~~~~
 
 Type 1 - Curb Opening Inlet at Grade
-
 
 The following are the input parameters for a Type 1 inlet (Figure 32):
 
