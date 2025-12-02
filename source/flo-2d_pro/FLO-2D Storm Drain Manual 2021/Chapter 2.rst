@@ -99,81 +99,49 @@ When the surcharge depth is exceeded, the manhole is popped, and the manhole beh
 Inlet Types
 ~~~~~~~~~~~~~
 
-Type 1 - Curb Opening Inlet at Grade
+*Type 1 - Curb Opening Inlet at Grade*
 
 The following are the input parameters for a Type 1 inlet (Figure 32):
 
-- Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)
+    - Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)
+    - Curb opening length (L)
+    - Curb opening height (h)
 
-- Curb opening length (L)
+.. image:: img/Chapter2/Chapte019.png
 
-•
-
-Curb opening height (h)
-
-**Figure**
-
-**32**
-
-**.**
-
-**Curb**
-
-**O**
-
-**pening at**
-
-**G**
-
-**rade (Type 1 inlet)**
-
-Curb opening length (L)
-
-Curb opening Height (h)
-
-Rim Eleva-
-
-tion
+*Figure 32.
+Curb Opening at Grade (Type 1 inlet)*
 
 The discharge is based on the flow depth in the FLO-2D grid cell and the inlet geometry:
 
-- The inlet opening height (h), referred to as “Height” column 7 of the SWMMFLO.DAT.
-
-- The inlet opening length (L) specified as “Length”, column 5 of the SWMMFLO.DAT.
+    - The inlet opening height (h), referred to as “Height” column 7 of the SWMMFLO.DAT.
+    - The inlet opening length (L) specified as “Length”, column 5 of the SWMMFLO.DAT.
 
 The discharge is calculated using the weir and orifice equations as follows:
 
-1. If h ≤ H < 1.4h, then:
+    1. If h ≤ H < 1.4h, then:
 
-If Q\ :sub:`w` ≤ Q\ :sub:`o`, discharge= Q\ :sub:`w` Weir Equation Controls
+        If Q\ :sub:`w` ≤ Q\ :sub:`o`, discharge= Q\ :sub:`w` Weir Equation Controls
 
-If Q\ :sub:`w` > Q\ :sub:`o`, discharge= Q\ :sub:`o` Orifice Equation Controls
+        If Q\ :sub:`w` > Q\ :sub:`o`, discharge= Q\ :sub:`o` Orifice Equation Controls
 
-2. If H < h, discharge= Q\ :sub:`w`
+    2. If H < h, discharge= Q\ :sub:`w`
 
-3. If H ≥ 1.4h, discharge= Q\ :sub:`o`
+    3. If H ≥ 1.4h, discharge= Q\ :sub:`o`
 
-Type 2 - Curb Opening Inlet with Sag
-
+*Type 2 - Curb Opening Inlet with Sag*
 
 The following are the input parameters for a Type 2 inlet (Figure 33):
 
-- Weir coefficient: 2.30 (1.25 metric)
+    - Weir coefficient: 2.30 (1.25 metric)
+    - Curb opening length (L)
+    - Curb opening height (h)
+    - Curb opening sag width (W)
 
-- Curb opening length (L)
+.. image:: img/Chapter2/Chapte020.png
 
-- Curb opening height (h)
-
-- Curb opening sag width (W)
-
-Curb opening height (h)
-
-Curb opening length (L)
-
-Curb opening sag width (W)
-
-   **Figure 33.
-   Curb Opening with Sag (Type 2 Inlet, Johnson and Fred, 1984)**
+*Figure 33.
+Curb Opening with Sag (Type 2 Inlet, Johnson and Fred, 1984)*
 
    Conservatively, the weir or orifice discharge, whichever is smaller, is used for the curb opening with sag.
    The inlet elevation is assumed to be equivalent to the grid element elevation.
