@@ -632,9 +632,10 @@ a network of pipes (Rossman, 2006).
 
 Continuity Equation:
 
-∂A ∂Q
+.. math::
+    :label:
 
-   |Chapte021| t x
+    \frac{∂A}{∂Q} + \frac{∂Q}{∂x} = 0
 
 Momentum equation for x-direction:
 
