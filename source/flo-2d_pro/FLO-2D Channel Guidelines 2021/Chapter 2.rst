@@ -440,7 +440,7 @@ These equations are based on the U.S.
 Dept.
 of Transportation Highway Manual (2005) and the culvert data is entered with the hydraulic structure data in HYSTRUC.DAT (Figure 47).
 
-.. image:: img/Chapter2/Chapte023.jpg
+.. image:: img/Chapter2/Chapte023.png
 
 *Figure 47.
 Select the Hydraulic Structures Dialog Box.*
