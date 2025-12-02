@@ -194,7 +194,7 @@ Use 10 or more station/elevation points (Figure 35).
 This will ensure the model creates the proper flow area rating tables and that the Profiles program correctly interpolates the thalweg and channel
 shape.
 
-.. image:: img/Chapter2/Chapte011.jpg
+.. image:: img/Chapter2/Chapte011.png
 
 *Figure 35.
 Urban Design Channel Corrected.*
