@@ -179,11 +179,9 @@ There are three options for establishing the channel bank elevation to bed eleva
 
     1. A prismatic channel element bed elevation (rectangular and trapezoidal channels) is determined by subtracting the assigned channel thalweg depth from
        the floodplain elevation.
-
     2. A bank elevation is assigned in the CHAN.DAT file and the channel bed elevation is computed by subtracting the channel depth from the lowest bank
        elevation.
        This is appropriated for rectangular and trapezoidal geometry.
-
     3. Station/elevation cross section data is assigned in XSEC.DAT that represents the top of bank and bed elevations in the channel.
        When using actual cross section data for the channel geometry, option 3 should be applied.
 
@@ -280,7 +278,7 @@ This value is based on the position of each grid element with respect to its con
 The length is the sum half the length of the grid element from the center of the node to the edge or corner closest to the upstream or downstream node
 (Figure 12).
 
-.. image:: img/Chapter1/Chapte009.jpg
+.. image:: img/Chapter1/Chapte009.png
 
 *Figure 12.
 Channel Length for 3 Channel Elements.*
@@ -353,7 +351,7 @@ Low Flow vs. Bank Full Discharge.*
 
 A channel roughness adjustment can be assigned in the CHAN.DAT file to estimate the n-value at depths below bankfull discharge (Figure 15 – red box).
 
-.. image:: img/Chapter1/Chapte011.jpg
+.. image:: img/Chapter1/Chapte011.png
 
 *Figure 15.
 Channel Control Variables.*
@@ -382,7 +380,7 @@ Dam Release Hydrograph El Paso, TX.*
 .. image:: img/Chapter1/Chapte014.jpg
 
 *Figure 18.
-Dam Release Hydrograph Jenson, UT. \:sup: `1`*
+Dam Release Hydrograph Jenson, UT. \ :sup: `1`*
 
 The applicability of Manning’s equation to a given flow condition depends on the relative submergence of the roughness elements (d/k\ :sub:`s`) where
 d is the flow depth and k\ :sub:`s` is the effective roughness height.
@@ -399,35 +397,31 @@ than the relative roughness (Simons and Senturk, 1976 and Chow, 1959).
 Using these criteria, a flow depth for coarse sand would be about 0.25 ft.
 
 The depth integrated roughness is given by the equation:
+.. math::
+    :label:
 
-n\ :sub:`d` = n\ :sub:`b` r\ :sub:`c` e –(r2 depth/dmax)
+    n_d = n_b r_c e –(r2 depth/dmax)
 
 where:
 
-depth = flow depth d\ :sub:`max` = bankfull depth n\ :sub:`b` = bankfull n-value n\ :sub:`d` = n-value at the flow depth r2 = ROUGHADJ factor (0.2 –
-0.4) rc = 1./e –(r2)
+    depth = flow depth d\ :sub:`max` = bankfull depth n\ :sub:`b` = bankfull n-value n\ :sub:`d` = n-value at the flow depth r2 = ROUGHADJ factor (0.2 –
+    0.4) rc = 1./e –(r2)
 
 The bankfull n-value is defined as the n-value for a depth of 3 ft or 1 m for overland or floodplain and the ROUGHADJ default value is 0.4.
 The ROUGHADJ factor can be higher ranging up to 1.0 or more, but a typical range is from 0.2 to 0.4.
 The application of the depth variable roughness has the following advantages:
 
-- Can be used to reduce or eliminate surging from low to high flow;
-
-- Accounts for submerged roughness elements;
-
-- Enhances the modeling upper regime sediment transport.
+    - Can be used to reduce or eliminate surging from low to high flow;
+    - Accounts for submerged roughness elements;
+    - Enhances the modeling upper regime sediment transport.
 
 The basic guidelines for roughness assignment and temporal variation in a FLO-2D model are:
 
-- SHALLOWN – for very shallow flows up to 0.2 ft
-
-- SHALLOWN/2 for flows up to 0.5 ft
-
-- Assign n-values for floodplain flow depths > 3 ft or 1 m (channel – bankfull)
-
-- Use depth integrated n-values (default for floodplain)
-
-- Calibrate n-values for reasonable Froude numbers – adjusted at runtime
+    - SHALLOWN – for very shallow flows up to 0.2 ft
+    - SHALLOWN/2 for flows up to 0.5 ft
+    - Assign n-values for floodplain flow depths > 3 ft or 1 m (channel – bankfull)
+    - Use depth integrated n-values (default for floodplain)
+    - Calibrate n-values for reasonable Froude numbers – adjusted at runtime
 
 Channel – Floodplain Flow Exchange
 ----------------------------------
@@ -444,7 +438,12 @@ The slope is the given by path length (a function of the available floodplain su
 elevation and the top of bank elevation.
 Overbank discharge or return flow to the channel is computed using the floodplain assigned roughness.
 The overland flow can enter a previously dry channel.
-.. image:: img/Chapter1/Chapte015.jpg
+
+.. image:: img/Chapter1/Chapte015.png
+
+*Figure 19.
+Channel Floodplain Flow Exchange.*
+
 Channel flow is exchanged with the floodplain grid elements in a separate routine after the channel and floodplain flow subroutines have been
 completed.
 The exchange flow is not subject to the numerical stability criteria associated with the channel or the floodplain.
@@ -477,12 +476,10 @@ It does not significantly change the potential for overbank discharge exchange w
 It only slightly increases the flow area for channel hydraulic computations.
 The channel conveyance flow area for a natural channel is increased by the green space in Figure 20.
 
-Highest Top of
+.. image:: img/Chapter1/Chapte025.png
 
-Lowest Top of
-
-   **Figure 20.
-   Vertical Extension of the Lowest Top of Bank to the Highest Top of Bank.**
+*Figure 20.
+Vertical Extension of the Lowest Top of Bank to the Highest Top of Bank.*
 
 Channel Numerical Stability and Volume Conservation
 ---------------------------------------------------
@@ -503,7 +500,10 @@ The concept of the Courant Number is that a particle of fluid should not travel 
 timestep Δt.
 In the FLO-2D model the Courant number limits the timestep Δt by:
 
-Δt = C Δx / (V + c)
+.. math::
+    :label:
+
+    Δt = \frac{C Δx}{(V + c)}
 
 where:
 
@@ -522,19 +522,17 @@ values less than 1.0.
 A starting value of C = 0.6 is recommended.
 Some guidelines fo applying the Courant number are:
 
-1. Use the default stability criteria for the initial simulation:
+    1. Use the default stability criteria for the initial simulation:
 
-   - Courant Number C = 0.6
+       - Courant Number C = 0.6
+       - DEPTOL = 0.0
+       - WAVEMAX = 0.0.
 
-   - DEPTOL = 0.0
+    2. If the model has no numerical surging or unreasonable maximum velocities, the model can run faster by increasing the Courant Number to 0.7 or 0.8.
 
-   - WAVEMAX = 0.0.
+    3. If the model has some numerical instability, decrease the Courant Number by 0.1 to a minimum value of 0.3.
 
-2. If the model has no numerical surging or unreasonable maximum velocities, the model can run faster by increasing the Courant Number to 0.7 or 0.8.
-
-3. If the model has some numerical instability, decrease the Courant Number by 0.1 to a minimum value of 0.3.
-
-4. After a flood simulation is complete, review the TIME.OUT file to determine which of the stability criterion is slowing down the model.
+    4. After a flood simulation is complete, review the TIME.OUT file to determine which of the stability criterion is slowing down the model.
 
 It has been determined that the Courant Number is more effective in controlling numerical instability surging than the other FLO-2D stability
 parameters DEPTOL and WAVEMAX.
@@ -546,8 +544,12 @@ Channel instability arises because of a mismatch in the channel flow area, frict
 Discharge is a function of the friction slope S\ :sub:`f` in Manning’s equations to the one-half power and is inversely proportional to the n-value,
 but the discharge is a function of the flow area A to approximately the 5/3 power.
 
-Q = f(A, S, n) where A = a d\ :sup:`b` and a = power regression coefficient and b = power regression exponent
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. math::
+    :label:
+
+    Q = f(A, S, n)
+
+where A = a d\ :sup:`b` and a = power regression coefficient and b = power regression exponent
 
 Assigning a reasonable n-value that balances flow area and slope will make the model more stable.
 
@@ -557,55 +559,58 @@ The CHANMAX.OUT file lists the maximum discharge, maximum stage and time of occu
 The HYDROG program plotted hydrographs (Figure 21) can also reveal channel surging.
 Typically steep rising hydrographs and small channel storage cause the most frequent surging issues (Figure 22).
 The rate of change in the discharge flux (ΔQ/Δt) is the culprit.
+
 .. image:: img/Chapter1/Chapte016.jpg
-   **Figure 21.
-   Surging Observed in a Channel Element Hydrograph.**
+
+*Figure 21.
+Surging Observed in a Channel Element Hydrograph.*
+
 .. image:: img/Chapter1/Chapte017.jpg
-   **Figure 22.
-   Steep Rising Hydrograph.**
+
+*Figure 22.
+Steep Rising Hydrograph.*
 
 A steep rising hydrograph, intense rainfall, or severe overland flow to the channel may cause instability near the inflow node or at any location in
 the channel where the conveyance capacity may be highly variable.
 To eliminate channel surging, perform the following steps:
 
-1. Check the bed profile for unreasonable spikes (PROFILES program – Figure 23);
+    1. Check the bed profile for unreasonable spikes (PROFILES program – Figure 23);
+    2. Adjust the n-values (particularly in channel area transition reaches);
+    3. Adjust the flow area - smooth out the area transitions (re-interpolate the cross sections);
+    4. Apply the depth variable roughness; 5.
+       Use limiting Froude number FROUDC.
 
-2. Adjust the n-values (particularly in channel area transition reaches);
-
-3. Adjust the flow area - smooth out the area transitions (re-interpolate the cross sections);
-
-4. Apply the depth variable roughness; 5.
-   Use limiting Froude number FROUDC.
 .. image:: img/Chapter1/Chapte018.jpg
-   **Figure 23.
-   Check the Channel Bed Profile for Data Errors.**
+
+*Figure 23.
+Check the Channel Bed Profile for Data Errors.*
 
 The Froude number is important for several reasons:
 
-- It delineates subcritical and supercritical flow;
-
-- It is the ratio of average flow velocity to shallow wave celerity;
-
-- It relates the movement of a translational wave to the stream flow; • It defines an appropriate relationship between velocity and depth.
+    - It delineates subcritical and supercritical flow;
+    - It is the ratio of average flow velocity to shallow wave celerity;
+    - It relates the movement of a translational wave to the stream flow; • It defines an appropriate relationship between velocity and depth.
 
 Most models report the Froude number or provide warnings when the Froude number is high, but do not make any model adjustments at runtime to limit
 unreasonable Froude numbers from being encountered.
 The Froude number is directly related to model stability through the Courant number:
 
-C = c(F + 1)/(x /t)
-^^^^^^^^^^^^^^^^^^^^^
+.. math::
+    :label:
+
+    C = \frac {c(F + 1)}{(x /t)}
 
 where:
 
-   C = selected value of Courant number
+    C = selected value of Courant number
 
-   F = Froude number
+    F = Froude number
 
-   c = wave celerity = (gd)\ :sup:`0.5`; d = flow depth, g = gravitational acceleration
+    c = wave celerity = (gd)\ :sup:`0.5`; d = flow depth, g = gravitational acceleration
 
-   t = timestep
+    t = timestep
 
-   x = channel element length
+    x = channel element length
 
 Channel instability arises when the Froude number is high, the timestep is large, or the computation length is small (small channel conveyance
 capacity).
@@ -627,22 +632,21 @@ High velocities and shallow depths on alluvial surfaces will dissipate energy wi
 Supercritical flow is more prevalent on hard surfaces such as concrete-lined channels.
 Jia (1990) provides a relationship to estimate a minimum Froude number (Fr\ :sub:`min`) for stable alluvial channels at equilibrium:
 
-Fr(min) = 4.49 d-0.186 (VS)0.377
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. math::
+    :label:
+
+    Fr(min) = 4.49 d-0.186 (VS)0.377
 
 Where:
 
-   d = representative sediment size (typically D\ :sub:`50)` V = velocity and S = bed slope.
+    d = representative sediment size (typically D\ :sub:`50)` V = velocity and S = bed slope.
 
 Recommended limiting Froude numbers are:
 
-- Major rivers: 0.3 – 0.6
-
-- Floodplain: 0.5 – 0.8
-
-- Alluvial fans: 0.9 – 1.1
-
-- Street flow: 1.1 – 1.75
+    - Major rivers: 0.3 – 0.6
+    - Floodplain: 0.5 – 0.8
+    - Alluvial fans: 0.9 – 1.1
+    - Street flow: 1.1 – 1.75
 
 When a limiting Froude number (FROUDC in CHAN.DAT) is assigned, the model computes the channel Froude number for each timestep.
 If the limiting Froude number is exceeded, the Manning’s n-value is increased according to the following criteria:
@@ -687,17 +691,22 @@ As slope increases, competent flow for sediment transport asymptotically approac
 In most instances, flow is forced to be less than critical by incipient motion thresholds.
 This will define a limiting Froude number as given by Grant (1997):
 
-F\ :sub:`r` = 3.85 S\ :sup:`0.33` gravel bed (τ\ :sup:`\*`\ :sub:`cr` = 0.03)
+.. math::
+    :label:
 
-F\ :sub:`r` = 5.18 S\ :sup:`0.11` sand bed (τ\ :sup:`\*`\ :sub:`cr` = 0.06)
+    F_r = 3.85 S^{0.33} gravel bed (τ^*_cr` = 0.03)
+
+    F_r = 5.18 S^{0.11} sand bed (τ^*_cr = 0.06)
 
 For mobile bed channels a steep slope is required for flow to approach critical because the hydraulics oscillate with sediment entrainment.
 These relationships define the upper limit Froude number for sand and gravel for slopes < 0.10.
 There is a unique relationship that exists between slope, flow area and roughness.
 The Froude number (Fr) is related to the flow resistance K and the energy slope S as given by:
 
-Fr = (KS)\ :sup:`0.5`
-~~~~~~~~~~~~~~~~~~~~~
+.. math::
+    :label:
+
+    Fr = (KS)_{0.5}
 
 If there is a mismatch between these physical variables in a flood routing model, then high velocities can occur that may result in flow surging.
 Assigning a limiting Froude number has several practical advantages.
@@ -722,31 +731,29 @@ Volume conservation errors are almost always data errors and typically grow with
 A volume conservation error that is greater than 0.001 percent can be improved.
 A successful simulation generally has a volume conservation error less than 0.000100 percent.
 The volume conservation accounting can be reviewed in the SUMMARY.OUT (Figure 24) as shown below for a project that had excellent volume conservation.
-.. image:: img/Chapter1/Chapte019.jpg
-   **Figure 24.
-   SUMMARY.OUT Example.**
+
+.. image:: img/Chapter1/Chapte019.png
+
+*Figure 24.
+SUMMARY.OUT Example.*
 
 The CHVOLUME.OUT file reports the channel volume conservation.
 Usually if there is a volume conservation error it is in the channel and both CHVOLUME.OUT and SUMMARY.OUT will report the same error.
 CHVOLUME.OUT (Figure 25) is listed below:
+
 .. image:: img/Chapter1/Chapte020.jpg
 
-   **Figure 25.
-   CHVOLUME.OUT Example.**
+*Figure 25.
+CHVOLUME.OUT Example.*
 
 Channel data issues that might lead to a volume conservation error include:
 
-- Inappropriate Profile
-
-- Wrong or missing channel elements (typos)
-
-- No channel outflow element
-
-- Missing bank stations in the cross section data
-
-- Conflicts with hydraulic structures or other components
-
-- Radical cross section shape or area changes between two contiguous elements
+    - Inappropriate Profile
+    - Wrong or missing channel elements (typos)
+    - No channel outflow element
+    - Missing bank stations in the cross section data
+    - Conflicts with hydraulic structures or other components
+    - Radical cross section shape or area changes between two contiguous elements
 
 Every completed FLO-2D project should demonstrate that volume was accurately conserved.
 Troubleshooting channel volume conservation errors is discussed in Chapter 3.
