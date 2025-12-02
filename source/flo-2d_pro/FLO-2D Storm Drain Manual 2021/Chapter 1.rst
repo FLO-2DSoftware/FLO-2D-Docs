@@ -1,10 +1,10 @@
 .. vim: syntax=rst
 
 Chapter 1
----------
+==========
 
 FLO-2D Storm Drain Overview
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 Initially, the FLO-2D PRO two-dimensional flood routing model was integrated with the Environmental Protection Agency (EPA) Storm Water Management
 Model (SWMM) Version 5.0.022 (Rossman, 2005; Rossman, Lewis A., 2006; Rossman, Lewis A., 2007) starting in 2013.
@@ -25,9 +25,7 @@ The FLO-2D model will compute the storm drain inflow discharge based on the pred
 This inlet-controlled discharge will then be routed as storm drain pipe discharge.
 The storm drain return flow to the surface water system is exchanged through storm drain inlets/outlets and outfalls.
 The complete conceptualized flood routing system is shown in Figure 1.
-
-|Chapte002|
-
+.. image:: img/Chapter1/Chapte002.png
    **Figure 1.
    Conceptualized FLO-2D Model System with a Storm Drain Component.**
 
@@ -113,9 +111,7 @@ model is started.
 Following a successful simulation of the surface water and storm water integrated model, the storm drain results can be reviewed in either the QGIS,
 GDS (Figure 3) or in the EPA SWMM GUI.
 Junctions are shown in green and Inlets are blue.
-
-|Chapte003|
-
+.. image:: img/Chapter1/Chapte003.png
    **Figure 3.
    A Typical Storm Drain System as Viewed in the GDS**
 
@@ -246,9 +242,7 @@ Storm drain pressure head < rim elevation:
 - Inflow discharge is passed from FLO-2D to the storm drain;
 
 - Pipe is not full; • No return flow.
-
-|Chapte004|
-
+.. image:: img/Chapter1/Chapte004.png
    **Figure 4.
    Inlet No Return Flow.**
 
@@ -259,18 +253,14 @@ Storm drain pressure head > FLO-2D WSE > rim elevation:
 - Pipe capacity is full;
 
 - Return flow is exchanged to the surface; • Water leaves the storm drain system.
-
-|Chapte005|
-
+.. image:: img/Chapter1/Chapte005.png
    **Figure 5.
    Inlet with Return Flow**
 
 FLO-2D WSE > Storm drain pressure head> rim elevation:
 
 - No inflow discharge is passed from FLO-2D; • Pipe capacity is full; • No return flow.
-
-|Chapte006|
-
+.. image:: img/Chapter1/Chapte006.png
    **Figure 6.
    No Return Flow No Inlet Flow**
 
@@ -284,9 +274,7 @@ Inlet pressure head and the FLO-2D WSE
 - No return flow;
 
 - The volume of water column above the rim will not return to surface until it exceeds the WSE.
-
-|Chapte007|
-
+.. image:: img/Chapter1/Chapte007.png
    **Figure 7.
    WSE Greater than Inlet Pressure Head.**
 
@@ -300,9 +288,7 @@ Inlet pressure head and the pipe flow
 - Reduced or no return flow to the surface;
 
 - Higher head due to high water surface elevations may force the flow to the outfalls instead of overflowing the inlets and manholes.
-
-|Chapte008|
-
+.. image:: img/Chapter1/Chapte008.png
    **Figure 8.
    High Pressure Head at an Inlet.**
 
@@ -312,9 +298,7 @@ Return flow to the surface
 - The return flow to the surface water is equal to the flow volume above the RIM at each timestep;
 
 - The volume fills the vertical pipe to the rim elevation; • All available return volume is exchanged to the surface water.
-
-|Chapte009|
-
+.. image:: img/Chapter1/Chapte009.png
    **Figure 9.
    Return Flow.**
 
@@ -328,9 +312,7 @@ greater than zero (see Figure 10).
 - Pipe capacity full;
 
 - Pipe velocity zero or negative; • Inlet flow zero; • Return flow.
-
-|Chapte010|
-
+.. image:: img/Chapter1/Chapte010.png
    **Figure 10.
    Surface Water and Pipe Capacity.**
 
@@ -344,9 +326,7 @@ Flooding will occur at manholes when the pressure head exceeds manhole rim eleva
 - Pressure head greater than water surface elevation;
 
 - Return flow to system.
-
-|Chapte011|
-
+.. image:: img/Chapter1/Chapte011.png
    **Figure 11.
    Manhole under Pressure with Return Flow.**
 
@@ -397,9 +377,7 @@ An artificial head equal to the ground elevation is assigned to the outfall node
 This artificial head causes the pipe to fill, and the artificial volume is accounted for in the storm drain model.
 When the model runs, the inflow may be added to either the outfall grid element or the upstream storm drain pipe network and the flow can go either in
 or out of the outfall pipe based on the pressure head.
-
-|Chapte012|
-
+.. image:: img/Chapter1/Chapte012.png
    **Figure 12.
    Initial Condition for an Underground (Underwater) Storm Drain Outfall**
 
@@ -514,9 +492,7 @@ Volume = total water volume on a grid element = side L x side L x Grid Depth
 VOLCurb = volume equal to the curb height =
 
    1/2 base (L) x height (0.02 x L) x side L = 0.5 x 0.02 x L\ :sup:`3` = 0.01 L\ :sup:`3`
-
-|Chapte013|
-
+.. image:: img/Chapter1/Chapte013.png
    **Figure 14.
    Volume Conversion - Square Floodplain Grid Element to Right Triangle at 2% Slope**
 
@@ -599,9 +575,7 @@ Pressure head oscillations for various
 
    **Figure 15.
    Water Elevation Profile at 03:17:00.**
-
-|Chapte014|
-
+.. image:: img/Chapter1/Chapte014.png
    **Figure 16.
    Inlet Pressure Head - No Pressure Head Dampening is Applied**
 
@@ -637,9 +611,7 @@ to the RIM
 elevation at 03:19:30.
 
 No Pressure Head Dampening Algorithm is Ap-
-
-|Chapte015|
-
+.. image:: img/Chapter1/Chapte015.png
    **Figure 18.
    Inlet Pressure Head with Dampening up to 1.25 Times the Lateral Pipe Diameter.**
 
@@ -664,9 +636,7 @@ output timesteps for the PH to build up to the
 RIM elevation at 03:24:30.
 
 Pressure Head Dampening Occurs up to RIM
-
-|Chapte016|
-
+.. image:: img/Chapter1/Chapte016.png
    **Figure 20.
    Inlet Pressure Head with Dampening up to RIM Elevation**
 
@@ -697,14 +667,10 @@ Q\ :sub:`c`\ = calculated discharge using the orifice/weir equations.
 
 This methodology is recommended for single inlets by entities such as the Colorado Department of Transportation and the cities of Denver and Las Vegas.
 Figure 21 and Figure 22 show the reduced discharge for a Type 2 inlet using a clogging factor of 50% at time 0.5 hrs.
-
-|Chapte017|
-
+.. image:: img/Chapter1/Chapte017.png
    **Figure 21.
    Type 2 Inlet Discharge versus Time**
-
-|Chapte018|
-
+.. image:: img/Chapter1/Chapte018.png
    **Figure 22.
    Type 2 Inlet Discharge versus Time Using a Clogging Factor of 50% at Time 0.5 hrs**
 
@@ -716,9 +682,7 @@ Figure 21 and Figure 22 show the reduced discharge for a Type 2 inlet using a cl
 
    **Table 2.
    FCDMC Catch Basin Clogging Factors (FCDMC, 2018)**
-
-|Chapte019|
-
+.. image:: img/Chapter1/Chapte019.png
 Reduction of Return Flow to Surface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -742,9 +706,7 @@ G = acceleration due to gravity 9.81 m/s\ :sup:`2` (32.2 ft/s\ :sup:`2`)
    Values of K for Contraction.
    (Dept.
    of Transportation, 2013)**
-
-|Chapte020|
-
+.. image:: img/Chapter1/Chapte020.png
 Storm Drain Model Governing Equations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -886,10 +848,7 @@ surface area contributed by the conduits connected to the node.
 =
 
 net flow at Node J contributed by all connected conduits plus external inflows
-
-
-|Chapte023|
-
+.. image:: img/Chapter1/Chapte023.png
    **Figure 23.
    Node-Link Representation of a Drainage System (Roesner et al, 1992)**
 
@@ -1467,79 +1426,3 @@ Outlets are used to control discharge from storage units or to simulate special 
 orifices and weirs.
 They can have a flapgate that restricts the flow to only one direction.
 This option does not discharge to the FLO-2D surface water system.
-
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 7.59861in
-   :height: 6.56653in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 5.875in
-   :height: 2.80208in
-.. |Chapte004| image:: media\Chapte004.png
-   :width: 5.33333in
-   :height: 4in
-.. |Chapte005| image:: media\Chapte005.png
-   :width: 5.33333in
-   :height: 4in
-.. |Chapte006| image:: media\Chapte006.png
-   :width: 5.33333in
-   :height: 4in
-.. |Chapte007| image:: media\Chapte007.png
-   :width: 5.33333in
-   :height: 4in
-.. |Chapte008| image:: media\Chapte008.png
-   :width: 5.33333in
-   :height: 4in
-.. |Chapte009| image:: media\Chapte009.png
-   :width: 6.025in
-   :height: 3.99972in
-.. |Chapte010| image:: media\Chapte010.jpg
-   :width: 5.92958in
-   :height: 3.83681in
-.. |Chapte011| image:: media\Chapte011.png
-   :width: 6.5in
-   :height: 4.875in
-.. |Chapte012| image:: media\Chapte012.jpg
-   :width: 6.90681in
-   :height: 3.05in
-.. |Chapte013| image:: media\Chapte013.jpg
-   :width: 4.30931in
-   :height: 0.80139in
-.. |Chapte014| image:: media\Chapte014.jpg
-   :width: 6.74903in
-   :height: 3.45in
-.. |Chapte015| image:: media\Chapte015.jpg
-   :width: 6.49097in
-   :height: 3.28111in
-.. |Chapte016| image:: media\Chapte016.jpg
-   :width: 6.56319in
-   :height: 3.3125in
-.. |Chapte017| image:: media\Chapte017.jpg
-   :width: 6.47153in
-   :height: 3.21861in
-.. |Chapte018| image:: media\Chapte018.jpg
-   :width: 6.40972in
-   :height: 3.26014in
-.. |Chapte019| image:: media\Chapte019.jpg
-   :width: 6.5in
-   :height: 4.64931in
-.. |Chapte020| image:: media\Chapte020.jpg
-   :width: 5.46847in
-   :height: 6.375in
-.. |Chapte021| image:: media\Chapte021.png
-   :width: 1.05in
-   :height: 0.26667in
-.. |Chapte022| image:: media\Chapte022.png
-   :width: 1.81667in
-   :height: 0.32333in
-.. |Chapte023| image:: media\Chapte023.jpg
-   :width: 6.56274in
-   :height: 3.2185in
-.. |Chapte024| image:: media\Chapte024.png
-   :width: 0.21333in
-   :height: 0.17in
-.. |Chapte025| image:: media\Chapte025.png
-   :width: 0.86in
-   :height: 0.21333in
-.. |Chapte026| image:: media\Chapte026.png
-   :width: 1.22667in
-   :height: 0.21333in
