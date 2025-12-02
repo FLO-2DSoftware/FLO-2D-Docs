@@ -391,7 +391,7 @@ A broadcrested weir (Figure 45) discharge curve is an example of a rating curve:
 
 where C = 2.65 - 3.40 in English Units,
 
-.. image:: img/Chapter2/Chapte021.jpg
+.. image:: img/Chapter2/Chapte021.png
 
 *Figure 45.
 Broadcrested Weir Definition.*
@@ -732,7 +732,7 @@ The water surface elevation and the pressure head are a function of the followin
     - Channel thalweg elevation = inlet invert elevation
     - Channel bank elevation = inlet rim elevation
 
-.. image:: img/Chapter2/Chapte031.jpg
+.. image:: img/Chapter2/Chapte031.png
 
 *Figure 55.
 Complex Interaction between a Storm Drain Pipe and 1-D Channel.*
@@ -756,7 +756,7 @@ To connect a storm drain outfall to a channel element the following issues shoul
 Figure 56 shows a complex storm drain – channel system where a channel feeds the storm drain as an inlet and flow returns to surface further
 downstream and back into the channel network.
 
-.. image:: img/Chapter2/Chapte032.jpg
+.. image:: img/Chapter2/Chapte032.png
 
 *Figure 56.
 Complex Flow Exchange between a Storm Drain System and 1-D Channel.*
@@ -811,7 +811,7 @@ When the model runs, inflow may be added to either the outfall grid element or t
 out of the outfall pipe based on the pressure head (Figure 59).
 To account for volume conservation, the storm drain outflow that represents inflow volume to a FLO-2D channel is reported in the CHVOLUME.OUT file.
 
-.. image:: img/Chapter2/Chapte035.jpg
+.. image:: img/Chapter2/Chapte035.png
 
 *Figure 59.
 Underground Outfall Condition.*
@@ -850,7 +850,7 @@ This can occur regardless of the position of the channel outflow node on the gri
 This is the conventional method to end the channel flow whether the channel continues downstream after the outflow node or discharges into lake, bay
 or estuary.
 
-.. image:: img/Chapter2/Chapte037.jpg
+.. image:: img/Chapter2/Chapte037.png
 
 *Figure 61.
 Channel Outflow Configuration.*
@@ -888,7 +888,7 @@ To allow channel discharge exchange from the interior channel elements at the en
 channel without an outflow element.
 The interior channel elements discharge directly to the downstream floodplain elements at the end of the channel.
 
-.. image:: img/Chapter2/Chapte039.jpg
+.. image:: img/Chapter2/Chapte039.png
 
 *Figure 63.
 Channel termination (channel elements are marked by a yellow line).*
@@ -916,7 +916,7 @@ The channel roughness may also increase with decreasing thalweg depth.
 *Figure 64.
 Combined maximum floodplain and channel flow depths.*
 
-.. image:: img/Chapter2/image45.jpeg
+.. image:: img/Chapter2/image45.png
 
 *Figure 65.
 Maximum floodplain velocities showing the flow downstream of the channel.*
@@ -935,7 +935,7 @@ The guidelines for setting up a **channel termination** to the floodplain are:
       At least three channel bank extensions should be oriented in one of the four compass directions as shown in Figure 66.
       The incorrect set-up will not yield correct discharge results from the channel to the floodplain.
 
-.. image:: img/Chapter2/Chapte040.jpg
+.. image:: img/Chapter2/Chapte040.png
 
 *Figure 66.
 Channel Termination Bank Position.*
