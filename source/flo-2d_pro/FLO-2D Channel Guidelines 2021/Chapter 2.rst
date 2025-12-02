@@ -17,24 +17,24 @@ Starting simple and gradually building a project will avoid many component confl
 Constructing a complex project with many details before the preliminary simulation is highly discouraged.
 A suggested order of component development is:
 
-- Finalize the inflow hydrology – perhaps add return period inflow hydrographs where appropriate.
+    - Finalize the inflow hydrology – perhaps add return period inflow hydrographs where appropriate.
 
-- Add the rain and infiltration.
-  This will complete the total source volume.
+    - Add the rain and infiltration.
+      This will complete the total source volume.
 
 Turn off the rainfall and infiltration and test the remaining components using temporary inflow hydrographs as needed to test specific components.
 
-- Add mainstem channels in segments.
+    - Add mainstem channels in segments.
 
-- Add tributary channels as separate segments.
+    - Add tributary channels as separate segments.
 
-- Add channel hydraulic structures.
+    - Add channel hydraulic structures.
 
-- Add other urban components in no specific order…streets, buildings – ARF values, levees, etc.
+    - Add other urban components in no specific order…streets, buildings – ARF values, levees, etc.
 
-- Add the storm drain.
+    - Add the storm drain.
 
-- Other details: Sediment transport, groundwater, mudflows, etc.
+    - Other details: Sediment transport, groundwater, mudflows, etc.
 
 .. image:: img/Chapter2/Chapte002.jpg
 
@@ -61,13 +61,13 @@ The elevation data is only valid as of the day it is flown.
 As the dataset ages, the actual channel geometry evolves with flow.
 Some of the issues are:
 
-- What was the original channel morphology and how much has it changed?
+    - What was the original channel morphology and how much has it changed?
 
-- What is the channel base flow?
+    - What is the channel base flow?
 
-- How does the base flow change in the downstream direction?
+    - How does the base flow change in the downstream direction?
 
-- What will be the bed form at high flows?
+    - What will be the bed form at high flows?
 
 These questions can usually be answered during a site visit.
 Look at the overall picture including the channel geometry, makeup of the bed material, any obstructions and how the channel evolves in the downstream
@@ -93,9 +93,11 @@ Cross sections can have a similar appearance but have a completely different geo
 In this figure, two cross sections are contiguous but only one controls the flow.
 One cross section has a bank full flow area of 33 ft\ :sup:`2` and the second one has 139 ft\ :sup:`2`.
 It is necessary to review the data source for each cross section to ensure they represent the physical configuration.
+
 .. image:: img/Chapter2/Chapte003.jpg
-   **Figure 27.
-   Cross Section Comparison.**
+
+*Figure 27.
+Cross Section Comparison.*
 
 Braided channels
 ^^^^^^^^^^^^^^^^
@@ -107,9 +109,11 @@ Typically, the braided channel will convey a 2-year to 5-year return period floo
 The channel may increase its bankfull capacity during the flood event.
 If the cut cross section cannot be accurately delineated with aerial photos or field observations, the channel cross section shape may have to be
 estimated or small grid elements can replace the 1-D channel.
+
 .. image:: img/Chapter2/Chapte004.jpg
-   **Figure 28.
-   Braided Channel Cross Section.**
+
+*Figure 28.
+Braided Channel Cross Section.*
 
 Braided channels are difficult to model for split flow conditions and the channel can rework itself during flood events.
 Sediment deposition and slope variation can produce temporally variable channel geometry.
@@ -119,14 +123,16 @@ Typically the braided channel will convey a 2-year to 5-year return period flood
 The channel will increase its bankfull capacity during the flood event.
 If the cut cross section cannot be accurately delineated with aerial photos or field observations, the channel cross section shape may have to be
 estimated.
+
 .. image:: img/Chapter2/Chapte005.jpg
-   **Figure 29.
-   Braided Channel 2012.
-   (Source Google Earth)**
+
+*Figure 29.
+Braided Channel 2012. (Source Google Earth)**
+
 .. image:: img/Chapter2/Chapte006.jpg
-   **Figure 30.
-   Braided Channel 2014.
-   (Source: Google Earth)**
+
+**Figure 30.
+Braided Channel 2014. (Source: Google Earth)**
 
 Undefined banks
 ^^^^^^^^^^^^^^^
@@ -136,9 +142,11 @@ This can occur if the channel width is too narrow or if the elevation data has i
 Figure 31 right bank is not captured.
 This is probably because the cross section was not long enough or the elevation data didn’t have enough resolution along the right bank.
 This is one of the most common errors of cut cross sections.
+
 .. image:: img/Chapter2/Chapte007.jpg
-   **Figure 31.
-   Cross Section Missing Right Bank.**
+
+*Figure 31.
+Cross Section Missing Right Bank.*
 
 Split flows and Islands
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -148,9 +156,11 @@ Figure 32 shows that the secondary channel on the right has a lower right bank e
 island is presumed to be the right bank for the entire cross section.
 For some islands, splitting the river into two channels with a confluence may be more expedient.
 The other approach is to lower the island below the right bank.
+
 .. image:: img/Chapter2/Chapte008.jpg
-   **Figure 32.
-   Split Flows.**
+
+*Figure 32.
+Split Flows.*
 
 Under water
 ^^^^^^^^^^^
@@ -159,9 +169,11 @@ LiDAR and IFSAR data does not penetrate water surfaces, the bottom of the channe
 (Figure 33).
 Bathometric data is needed to fully define the cross section geometry.
 It may be necessary to estimate the missing wet channel reach conveyance in the thalweg if a portion of the channel has a dry thalweg.
+
 .. image:: img/Chapter2/Chapte009.jpg
-   **Figure 33.
-   Water Surface.**
+
+*Figure 33.
+Water Surface.*
 
 Urban channels
 ^^^^^^^^^^^^^^
@@ -171,17 +183,21 @@ stations.
 In the red points represent the station and elevation pairs listed in the XSEC.DAT for this cross section.
 Four station points are insufficient to define the rating table for the natural cross section geometry.
 It is more appropriate to model urban design channels with the Rectangular or Trapezoidal method.
+
 .. image:: img/Chapter2/Chapte010.jpg
-   **Figure 34.
-   Urban Design Channel.**
+
+*Figure 34.
+Urban Design Channel.*
 
 If modeling a rectangular or trapezoidal channel with station elevation data, it’s best to fill in the points at regular intervals.
 Use 10 or more station/elevation points (Figure 35).
 This will ensure the model creates the proper flow area rating tables and that the Profiles program correctly interpolates the thalweg and channel
 shape.
+
 .. image:: img/Chapter2/Chapte011.jpg
-   **Figure 35.
-   Urban Design Channel Corrected.**
+
+*Figure 35.
+Urban Design Channel Corrected.*
 
 Bridge and Culvert Cross Section Transitions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -198,9 +214,11 @@ representing the upstream channel to 0.03 or so at the bridge piers.
 There is also a storm drain outlet near the bridge entrance as identified by the sediment bar deposit.
 During flooding, the flow streamlines would be distorted by the outlet discharge and the squeezed channel flow would experience higher flow resistance
 (higher n-values).
+
 .. image:: img/Chapter2/Chapte012.jpg
-   **Figure 36.
-   Urban Concrete-Lined Trapezoidal Channel Transition**
+
+*Figure 36.
+Urban Concrete-Lined Trapezoidal Channel Transition*
 
 Confluences
 ~~~~~~~~~~~
@@ -219,29 +237,36 @@ The channel confluence guidelines are as follows:
 The tributary or split flow channel segment should not include the main channel confluence channel element.
 A channel element should only be listed once in the CHAN.DAT file.
 In Figure 37, the red arrows indicate the *incorrect* method.
+
 .. image:: img/Chapter2/Chapte013.jpg
-   **Figure 37.
-   Tributary Element in a Main Channel Bank.**
+
+*Figure 37.
+Tributary Element in a Main Channel Bank.*
 
 The last tributary channel element before the confluence should be the last channel element listed for that tributary channel segment (Figure 38 –
 green arrows indicate correct method).
 Dark blue element is the Tributary Confluence Node and the light cyan element is the Main Channel Node.
+
 .. image:: img/Chapter2/Chapte014.jpg
-   **Figure 38.
-   Tributary Channel Ends Adjacent to Main Channel Bank.**
+*Figure 38.
+Tributary Channel Ends Adjacent to Main Channel Bank.*
 
 The first split channel element after the confluence should be the first channel element listed for that channel segment.
 In this case it was also necessary to “Add the Confluence Pair” (Figure 39).
+,
 .. image:: img/Chapter2/Chapte015.jpg
-   **Figure 39.
-   Split Flow Condition.**
+
+*Figure 39.
+Split Flow Condition.*
 
 The tributary or split flow element must be contiguous the main channel.
 It cannot be separated by one or more floodplain elements from the main channel.
 The red circle in Figure 40 shows this incorrect configuration.
+
 .. image:: img/Chapter2/Chapte016.jpg
-   **Figure 40.
-   Tributary Channel Element not Contiguous to Main Channel.**
+
+*Figure 40.
+Tributary Channel Element not Contiguous to Main Channel.*
 
 The tributary element can be contiguous to either a left or right bank main channel element.
 If the tributary joins the main channel right bank element, Line C in CHAN.DAT should list the tributary/split channel element and the main channel
@@ -255,19 +280,20 @@ The data entry will list all the potential channel confluences and split flow lo
 The channel confluences/split flows elements can be added, edited or deleted.
 When the User clicks on any pair in the Dialog box, the corresponding elements will be highlighted momentarily on the GDS screen.
 This helps the user identify which element pairs to select.
+
 .. image:: img/Chapter2/Chapte017.jpg
-   **Figure 41.
-   Confluence dialog boxes.**
+*Figure 41.
+Confluence dialog boxes.*
 
 The following are guidelines to avoid having numerical stability issues at the confluence.
 Use the PROFILE program when reviewing the confluence channel element geometry.
 
-- The channel bed elevations for the tributary and main channel upstream of the confluence should have the same approximate slope.
+    - The channel bed elevations for the tributary and main channel upstream of the confluence should have the same approximate slope.
 
-- The tributary flow area for the last channel element or two upstream of the confluence can be increased to reduce observed numerical instability.
+    - The tributary flow area for the last channel element or two upstream of the confluence can be increased to reduce observed numerical instability.
 
-- The roughness values for the tributary and main channel upstream and downstream of the confluence should be increased to reflect the highly turbulent
-  flow constriction.
+    - The roughness values for the tributary and main channel upstream and downstream of the confluence should be increased to reflect the highly turbulent
+      flow constriction.
 
 Channel Infiltration
 ~~~~~~~~~~~~~~~~~~~~
@@ -291,18 +317,22 @@ Levees can be assigned along channels without issues (Figure 42).
 In urban areas, levees may also represent fences, berms, or flood walls that are assigned with shapefiles.
 When constructing the levee component it is only necessary to avoid drawing the levees into the interior channel.
 There is an automated error message at runtime to alert the user to this condition.
+
 .. image:: img/Chapter2/Chapte018.jpg
-   **Figure 42.
-   Levees and River Channel Configuration.**
+
+*Figure 42.
+Levees and River Channel Configuration.*
 
 Channel routing instability or volume conservation errors may occur when levees fail or are overtopped.
 These modeling issues are channel flood routing problems, not levee and channel conflicts.
 Water stored behind levees can created ponding flow conditions (Figure 43).
 Ponded water is not an open channel flow condition and must be assigned a reasonable n-value for deep, still water (see Ponded Water Guidelines
 document).
+
 .. image:: img/Chapter2/Chapte019.jpg
-   **Figure 43.
-   Ponded Area Behind Rivers Levees from a Levee Breach Upstream.**
+
+*Figure 43.
+Ponded Area Behind Rivers Levees from a Levee Breach Upstream.*
 
 Hydraulic Structures
 ~~~~~~~~~~~~~~~~~~~~
@@ -310,14 +340,16 @@ Hydraulic Structures
 Channels and hydraulic structures can be used to simulate a variety of features.
 Hydraulic structures can interact with the channel in three ways:
 
-- *channel to channel*
+    - *channel to channel*
 
-- *floodplain to channel*
+    - *floodplain to channel*
 
-- *channel to floodplain*
+    - *channel to floodplain*
+
 .. image:: img/Chapter2/Chapte020.jpg
-   **Figure 44.
-   Channel Structure Configurations**
+
+*Figure 44.
+Channel Structure Configurations*
 
 Figure 44 shows examples of the three configurations.
 Flow in the figure is north to south.
@@ -338,14 +370,30 @@ The hydraulic structure stage-discharge relationship can be assigned as either a
 above the channel thalweg (assumed to be the hydraulic structure invert elevation) unless a headwater reference elevation is specified.
 A discharge rating curve uses headwater depth to calculate discharge:
 
-   Q = a depth :sup:`b` where a = coefficient, b = exponent
+.. math::
+    :label:
+
+    Q = a depth_b
+
+where
+
+    a = coefficient,
+
+    b = exponent
 
 A broadcrested weir (Figure 45) discharge curve is an example of a rating curve:
 
-   Q = C L h\ :sub:`d` :sup:`1.5` where C = 2.65 - 3.40 in English Units
+.. math::
+    :label:
+
+    Q = C L h_d^1.5
+
+where C = 2.65 - 3.40 in English Units,
+
 .. image:: img/Chapter2/Chapte021.jpg
-   **Figure 45.
-   Broadcrested Weir Definition.**
+
+*Figure 45.
+Broadcrested Weir Definition.*
 
 More than one rating curve relationship can be used to simulate blockage, or changes in inlet or outlet control.
 The primary hydraulic structure interaction with the channels is backwater effects when the rating curve or table predicts less discharge than the
