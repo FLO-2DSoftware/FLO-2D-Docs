@@ -61,12 +61,14 @@ model is started.
 Following a successful simulation of the surface water and storm water integrated model, the storm drain results can be reviewed in either the QGIS,
 GDS (Figure 3) or in the EPA SWMM GUI.
 Junctions are shown in green and Inlets are blue.
+
 .. image:: img/Chapter1/Chapte003.png
-   **Figure 3.
-   A Typical Storm Drain System as Viewed in the GDS**
+
+*Figure 3.
+A Typical Storm Drain System as Viewed in the GDS*
 
 FLO-2D Storm Drain Model Enhancements
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------
 
 The enhancements to the original SWMM model are extensive.
 Some of the enhancements are related to the water surface head on the storm drain system.
@@ -105,8 +107,8 @@ and entering the storm drain system were eliminated.
 The storm drain routing timestep is set up as the FLO-2D timestep for the dynamic wave solution throughout the simulation for all conditions, if the
 user sets up a fixed timestep or if the user assigns a variable timestep.
 
-   In most of the simulations, the FLO-2D timesteps are small enough for the storm drain solution to converge.
-   For all conditions, the computed variable timestep is equal to the FLO-2D computational timestep.
+In most of the simulations, the FLO-2D timesteps are small enough for the storm drain solution to converge.
+For all conditions, the computed variable timestep is equal to the FLO-2D computational timestep.
 
 Inlet Geometry
 ^^^^^^^^^^^^^^
@@ -141,11 +143,10 @@ To enable return flow, the catch basin pressure head must exceed the rim elevati
 The rate of the rise in the pressure head depends on multiple factors including the available ponded area.
 There is no maximum ponded volume.
 
-- The global ponding options was off and none of the nodes could store volume.
-  The flooding option was applied for this case.
-
-- The Allow Ponding option was selected, and those nonzero ponded area nodes would receive ponded water.
-  Nodes with a zero-ponded area would receive flooding water.
+    - The global ponding options was off and none of the nodes could store volume.
+      The flooding option was applied for this case.
+    - The Allow Ponding option was selected, and those nonzero ponded area nodes would receive ponded water.
+      Nodes with a zero-ponded area would receive flooding water.
 
 When an inlet is flooded, the computed depth will decrease to the rim elevation and the overflow lost from the system is considered excess inflow into
 the node.
@@ -187,123 +188,130 @@ When this occurs, oscillations may be noted in the storm drain pressure and disc
 With this modification to the storm drain code, the conditions that control the inlet flow direction described below and shown in Figure 4 through
 Figure 11:
 
-Storm drain pressure head < rim elevation:
+*Storm drain pressure head < rim elevation:*
 
-- Inflow discharge is passed from FLO-2D to the storm drain;
+    - Inflow discharge is passed from FLO-2D to the storm drain;
+    - Pipe is not full;
+    - No return flow.
 
-- Pipe is not full; • No return flow.
 .. image:: img/Chapter1/Chapte004.png
-   **Figure 4.
-   Inlet No Return Flow.**
 
-Storm drain pressure head > FLO-2D WSE > rim elevation:
+*Figure 4.
+Inlet No Return Flow.*
 
-- No inflow discharge is passed from FLO-2D surface to stormdrain;
+*Storm drain pressure head > FLO-2D WSE > rim elevation:*
 
-- Pipe capacity is full;
+    - No inflow discharge is passed from FLO-2D surface to stormdrain;
+    - Pipe capacity is full;
+    - Return flow is exchanged to the surface;
+    - Water leaves the storm drain system.
 
-- Return flow is exchanged to the surface; • Water leaves the storm drain system.
 .. image:: img/Chapter1/Chapte005.png
-   **Figure 5.
-   Inlet with Return Flow**
 
-FLO-2D WSE > Storm drain pressure head> rim elevation:
+*Figure 5.
+Inlet with Return Flow*
 
-- No inflow discharge is passed from FLO-2D; • Pipe capacity is full; • No return flow.
+*FLO-2D WSE > Storm drain pressure head> rim elevation:*
+
+    - No inflow discharge is passed from FLO-2D;
+    -Pipe capacity is full;
+    - No return flow.
+
 .. image:: img/Chapter1/Chapte006.png
-   **Figure 6.
-   No Return Flow No Inlet Flow**
+
+*Figure 6.
+No Return Flow No Inlet Flow*
 
 Inlet pressure head and the FLO-2D WSE
-''''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   The inlet pressure head increases but is less than the FLO-2D WSE;
+The inlet pressure head increases but is less than the FLO-2D WSE;
 
-- The head exceeds the rim elevation;
+    - The head exceeds the rim elevation;
+    - No return flow;
+    - The volume of water column above the rim will not return to surface until it exceeds the WSE.
 
-- No return flow;
-
-- The volume of water column above the rim will not return to surface until it exceeds the WSE.
 .. image:: img/Chapter1/Chapte007.png
-   **Figure 7.
-   WSE Greater than Inlet Pressure Head.**
+
+*Figure 7.
+WSE Greater than Inlet Pressure Head.*
 
 Inlet pressure head and the pipe flow
-'''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Higher head from surface water at the inlet;
+    - Higher head from surface water at the inlet;
+    - Surface water head forces more water through the downstream conduits at higher velocities;
+    - Reduced or no return flow to the surface;
+    - Higher head due to high water surface elevations may force the flow to the outfalls instead of overflowing the inlets and manholes.
 
-- Surface water head forces more water through the downstream conduits at higher velocities;
-
-- Reduced or no return flow to the surface;
-
-- Higher head due to high water surface elevations may force the flow to the outfalls instead of overflowing the inlets and manholes.
 .. image:: img/Chapter1/Chapte008.png
-   **Figure 8.
-   High Pressure Head at an Inlet.**
+
+*Figure 8.
+High Pressure Head at an Inlet.*
 
 Return flow to the surface
-''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- The return flow to the surface water is equal to the flow volume above the RIM at each timestep;
+    - The return flow to the surface water is equal to the flow volume above the RIM at each timestep;
+    - The volume fills the vertical pipe to the rim elevation;
+    - All available return volume is exchanged to the surface water.
 
-- The volume fills the vertical pipe to the rim elevation; • All available return volume is exchanged to the surface water.
 .. image:: img/Chapter1/Chapte009.png
-   **Figure 9.
-   Return Flow.**
+
+*Figure 9.
+Return Flow.*
 
 Surface water and the pipe capacity
-'''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When an inlet is connected to a downstream pipe that is at full capacity with zero or negative pipe velocity (backwater effect), the inflow from the
 surface water is zero, the inlet pressure head will exceed the crown elevation of the horizontal pipe and the FLO-2D surface water elevation may be
 greater than zero (see Figure 10).
 
-- Pipe capacity full;
+    - Pipe capacity full;
+    - Pipe velocity zero or negative; • Inlet flow zero;
+    - Return flow.
 
-- Pipe velocity zero or negative; • Inlet flow zero; • Return flow.
 .. image:: img/Chapter1/Chapte010.png
-   **Figure 10.
-   Surface Water and Pipe Capacity.**
+
+*Figure 10.
+Surface Water and Pipe Capacity.*
 
 Pressure head and manholes
-''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Flooding will occur at manholes when the pressure head exceeds manhole rim elevation plus surcharge depth plus FLO-2D water depth (see Figure 11).
 
-- Pipe capacity full;
+    - Pipe capacity full;
+    - Pressure head greater than water surface elevation;
+    - Return flow to system.
 
-- Pressure head greater than water surface elevation;
-
-- Return flow to system.
 .. image:: img/Chapter1/Chapte011.png
-   **Figure 11.
-   Manhole under Pressure with Return Flow.**
+*Figure 11.
+Manhole under Pressure with Return Flow.*
 
 Pressure head variability
-^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------
 
 This approach for the water exchange between the surface and the storm drain may result in pressure head variability, conduit velocity fluctuations
 and different return flow results for inlets and manholes under pressure when compared with SWMM models or early FLO-2D storm drain models.
 The following response can be observed in the FLO-2D storm drain results:
 
-1. The head on the inlet continuously increases when the PH is less than the FLO-2D WSE even though the head exceeds the rim elevation.
-   Since the inlets are flooded, this results in higher storm drain pressure.
-   The volume above the rim is not released to the surface until the PH exceeds the FLO-2D WSE.
-
-2. For underwater inlets, the higher-pressure head pushes more water through the downstream conduits at higher velocity.
-
-3. Higher velocities in downstream conduits may result in higher discharges in various locations in the storm drain with a possible corresponding
-   reduction in the return flow to the surface water for some inlets and manholes.
-   Maintaining continuity in the storm drain system, there may be sufficient head to force the flow to the outfalls instead of overflowing the inlets and
-   manholes.
+    1. The head on the inlet continuously increases when the PH is less than the FLO-2D WSE even though the head exceeds the rim elevation.
+       Since the inlets are flooded, this results in higher storm drain pressure.
+       The volume above the rim is not released to the surface until the PH exceeds the FLO-2D WSE.
+    2. For underwater inlets, the higher-pressure head pushes more water through the downstream conduits at higher velocity.
+    3. Higher velocities in downstream conduits may result in higher discharges in various locations in the storm drain with a possible corresponding
+       reduction in the return flow to the surface water for some inlets and manholes.
+       Maintaining continuity in the storm drain system, there may be sufficient head to force the flow to the outfalls instead of overflowing the inlets and
+       manholes.
 
 Summarizing, higher upstream pressure head on inlets (higher FLO-2D WSE) may result in a change in the distribution between the return flow from a
 popped manhole or inlet compared the downstream conduit flow through the outfall nodes.
 This is a physical process that was not simulated in the original SWMM storm drain engine.
 
 Outfall Discharge
-^^^^^^^^^^^^^^^^^
+-------------------
 
 The FLO-2D preprocessor tool (QGIS or GDS) will create the SWMMOUTF.DAT containing the outfall nodes that are defined in the SWMM.inp file.
 The outfall discharge to the surface water can be turned ‘on’ = 1 or ‘off’ = 0 in the QGIS Storm Drain Editor dialog window (Components \| Outfalls)
@@ -327,9 +335,11 @@ An artificial head equal to the ground elevation is assigned to the outfall node
 This artificial head causes the pipe to fill, and the artificial volume is accounted for in the storm drain model.
 When the model runs, the inflow may be added to either the outfall grid element or the upstream storm drain pipe network and the flow can go either in
 or out of the outfall pipe based on the pressure head.
+
 .. image:: img/Chapter1/Chapte012.png
-   **Figure 12.
-   Initial Condition for an Underground (Underwater) Storm Drain Outfall**
+
+*Figure 12.
+Initial Condition for an Underground (Underwater) Storm Drain Outfall*
 
 Typically, an outfall has an invert elevation equal to or greater than the floodplain, channel or street elevations.
 To account for volume conservation, the storm drain outflow that represents inflow volume to a FLO-2D channel is reported in the CHVOLUME.OUT file.
@@ -338,16 +348,16 @@ Water can enter the storm drain when the water surface elevation is greater than
 pressure head is above the water surface elevation.
 
 Flapgate Option
-^^^^^^^^^^^^^^^
+-----------------
 
 A storm drain inlet can be simulated as an outlet with a flapgate to stop the surface water from entering the storm drain system (Type 4 inlet).
 The flapgate switch in SWMMFLO.DAT has the following settings:
 
-Feature = 0, No flapgate – horizontal inlet opening
+    Feature = 0, No flapgate – horizontal inlet opening
 
-Feature = 1, No flapgate – vertical inlet opening
+    Feature = 1, No flapgate – vertical inlet opening
 
-Feature = 2, Flapgate ‘on’ for fake outfalls
+    Feature = 2, Flapgate ‘on’ for fake outfalls
 
 A "fake outfall" can be set up as an inlet that will discharge flow from the storm drain to the surface water.
 Feature equal to 2 set up a flap gate for a fake outfall.
@@ -365,51 +375,61 @@ Flooding occurs at manholes when the pressure head at node is above manhole inve
 SDManholePopUp.OUT and ManholePop.OUT are created when at least one manhole pops in the storm drain system.
 These files contain the following information:
 
-- Manhole ID.
-
-- Time of occurrence
-
-- Pressure head
-
-- Rim elevation + Surcharge Elevation • FLO-2D WSE.
+    - Manhole ID.
+    - Time of occurrence
+    - Pressure head
+    - Rim elevation + Surcharge Elevation
+    - FLO-2D WSE.
 
 The following is an example of the information that is reported to the SDManholePopUp.OUT output file:
 
-MANHOLE: I5-37-27-28
+.. raw:: html
 
-POPPED AT TIME (hrs): 3.93
+    <pre>
+    MANHOLE: I5-37-27-28
+    POPPED AT TIME (hrs): 3.93
+    PRESSURE HEAD: 1374.07 > RIM + SURCH: 1371.44 > FLO-2D WSE: 1370.95
+    </pre>
 
-PRESSURE HEAD: 1374.07 > RIM + SURCH: 1371.44 > FLO-2D WSE: 1370.95
+.. raw:: html
+
+    <br>
 
 Table 1 is an example of the information that is reported to the ManholePop.OUT output file.
 
    **Table 1.
    ManholePop.OUT File.**
 
-.. list-table::
-   :widths: 12 12 12 12 12 12 12 12
-   :header-rows: 0
+.. raw:: html
 
+   <table style="border-collapse: collapse; text-align: center;">
+     <caption><strong>Table 1. ManholePop.OUT File.</strong></caption>
+     <thead>
+       <tr>
+         <th style="border: 1px solid #000; padding: 4px;">X Coord</th>
+         <th style="border: 1px solid #000; padding: 4px;">Y Coord</th>
+         <th style="border: 1px solid #000; padding: 4px;">Grid</th>
+         <th style="border: 1px solid #000; padding: 4px;">Manhole ID</th>
+         <th style="border: 1px solid #000; padding: 4px;">Popped at time (hrs)</th>
+         <th style="border: 1px solid #000; padding: 4px;">Pressure Head</th>
+         <th style="border: 1px solid #000; padding: 4px;">PH RIM + SURCH</th>
+         <th style="border: 1px solid #000; padding: 4px;">FLO-2D WSE</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">705202.50</td>
+         <td style="border: 1px solid #000; padding: 4px;">954517.50</td>
+         <td style="border: 1px solid #000; padding: 4px;">439087</td>
+         <td style="border: 1px solid #000; padding: 4px;">IM5-349</td>
+         <td style="border: 1px solid #000; padding: 4px;">0.00</td>
+         <td style="border: 1px solid #000; padding: 4px;">1482.03</td>
+         <td style="border: 1px solid #000; padding: 4px;">1480.12</td>
+         <td style="border: 1px solid #000; padding: 4px;">1479.44</td>
+       </tr>
+     </tbody>
+   </table>
 
-   * - X Coord
-     - Y Coord
-     - Grid
-     - Manhole ID
-     - Popped at time
-
-       s)
-     - Pressure Head
-     - PH RIM + SURCH
-     - FLO-2D WSE
-
-   * - 705202.50
-     - 954517.50
-     - 439087
-     - IM5-349
-     - 0.00
-     - 1482.03
-     - 1480.12
-     - 1479.44
 
 
 Curb Inlet Flow Adjustment
