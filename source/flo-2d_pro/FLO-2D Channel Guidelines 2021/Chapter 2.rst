@@ -248,6 +248,7 @@ green arrows indicate correct method).
 Dark blue element is the Tributary Confluence Node and the light cyan element is the Main Channel Node.
 
 .. image:: img/Chapter2/Chapte014.jpg
+
 *Figure 38.
 Tributary Channel Ends Adjacent to Main Channel Bank.*
 
