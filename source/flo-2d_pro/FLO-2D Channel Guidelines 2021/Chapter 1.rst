@@ -151,7 +151,7 @@ The cross section data in the XSEC.DAT file can be automatically assigned from a
 *Figure 4.
 Natural Channel Cross Section Data.*
 
-.. image:: img/Chapter1/Chapte020.png
+.. image:: img/Chapter1/Chapte024.png
 
 *Figure 5.
 Natural Shape Cross Section Geometry*
@@ -240,7 +240,7 @@ The original cross sections are not edited.
 
 .. image:: img/Chapter1/Chapte022.png
 
-**Figure 9.
+*Figure 9.
 Channel Bed Profile Examples*
 
 Adjust the Channel Bed Slope
@@ -346,13 +346,17 @@ When computing velocity for shallow flow depths on the order of 0.1 ft or smalle
 In lieu of using different velocity equations, one for deeper flow and one for shallow flow, it is necessary to compensate for overpredicting the low
 flow velocity by assigning higher shallow n-values or by using depth variable n-value adjustment or both.
 
+.. image:: img/Chapter1/Chapte023.png
+
 *Figure 14.
 Low Flow vs. Bank Full Discharge.*
 
 A channel roughness adjustment can be assigned in the CHAN.DAT file to estimate the n-value at depths below bankfull discharge (Figure 15 – red box).
+
 .. image:: img/Chapter1/Chapte011.jpg
-   **Figure 15.
-   Channel Control Variables.**
+
+*Figure 15.
+Channel Control Variables.*
 
 The n-value assigned in CHAN.DAT should represent the flow roughness near bankfull flow.
 The depth integrated n-value based on the ROUGHADJ coefficient (0.2 to 0.4) will result in an n-value of 1.5 to 1.8 times the assigned bankfull
@@ -364,15 +368,21 @@ If only one n-value is assigned representing bankfull discharge, the Caballo dam
 station in El Paso (107 miles downstream) 6 to 8 hours too soon.
 Similarly, matching the measured hydrographs at the Jensen, Utah gage from diurnal power plant releases at Flaming Gorge Dam would not be possible
 without the depth integrated n-value adjustment (Figure 18).
+
 .. image:: img/Chapter1/Chapte012.jpg
-   **Figure 16.
-   Depth Variable Roughness.**
+
+*Figure 16.
+Depth Variable Roughness.*
+
 .. image:: img/Chapter1/Chapte013.jpg
-   **Figure 17.
-   Dam Release Hydrograph El Paso, TX.**
+
+*Figure 17.
+Dam Release Hydrograph El Paso, TX.*
+
 .. image:: img/Chapter1/Chapte014.jpg
-   **Figure 18.
-   Dam Release Hydrograph Jenson, UT.**\  [1]_
+
+*Figure 18.
+Dam Release Hydrograph Jenson, UT. \:sup: `1`*
 
 The applicability of Manning’s equation to a given flow condition depends on the relative submergence of the roughness elements (d/k\ :sub:`s`) where
 d is the flow depth and k\ :sub:`s` is the effective roughness height.
