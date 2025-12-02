@@ -417,6 +417,11 @@ where:
 
     r2 = ROUGHADJ factor (0.2 – 0.4) rc = 1./e –(r2)
 
+.. note::
+   The difference in the predicted hydrograph and the measured
+   hydrograph is around 200cfs. This is due to unmeasured tributary flow
+   between the dam and the gage.
+
 The bankfull n-value is defined as the n-value for a depth of 3 ft or 1 m for overland or floodplain and the ROUGHADJ default value is 0.4.
 The ROUGHADJ factor can be higher ranging up to 1.0 or more, but a typical range is from 0.2 to 0.4.
 The application of the depth variable roughness has the following advantages:
@@ -751,7 +756,4 @@ Channel data issues that might lead to a volume conservation error include:
 Every completed FLO-2D project should demonstrate that volume was accurately conserved.
 Troubleshooting channel volume conservation errors is discussed in Chapter 3.
 
-.. [1]
-   The difference in the predicted hydrograph and the measured
-   hydrograph is around 200cfs. This is due to unmeasured tributary flow
-   between the dam and the gage.
+
