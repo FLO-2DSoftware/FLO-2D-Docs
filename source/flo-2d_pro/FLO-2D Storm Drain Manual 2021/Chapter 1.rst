@@ -925,37 +925,34 @@ Additional criteria include:
       surcharged nodes after a flow solution has been reached.
     - Flow continuity condition is enforced in the form of a perturbation equation:
 
-∂Q
+        .. math::
+           :label:
 
-Σ[Q +\ |Chapte024|\ ∆H] = 0
+           \Sigma\left\lbrack Q + \frac{\partial Q}{\partial H}\mathrm{\Delta}H \right\rbrack\  = 0
 
-where:
+        where:
 
-∆𝐻 = node head that must be made to achieve flow continuity.
+        :math:`\mathrm{\Delta}H` = node head that must be made to achieve flow continuity.
 
-Solving for ∆𝐻:
+        Solving for :math:`\mathrm{\Delta}H`:
 
-−∑ Q
+        .. math::
+           :label:
 
-∆H =
+           \mathrm{\Delta}H = \frac{- \sum_{}^{}Q}{\sum_{}^{}\frac{\partial Q}{\partial H}}
 
-∑ ∂Q⁄∂H
+        where:
 
-where:
+        .. math::
+           :label:
 
-∂Q −gA̅ ∆t⁄L
+           \frac{\partial Q}{\partial H} = \frac{- g\overline{A}\frac{\mathrm{\Delta}t}{L}}{1 +
+           \mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}
 
-=
+        :math:`\frac{\partial Q}{\partial H}\ ` has a negative sign because when evaluating
+        :math:`\sum_{}^{}Q` because the flow directed out of a node is considered negative while flow into the
+        node is positive.
 
-∂H 1 + ∆Qfriction + ∆Qlosses
-
-𝜕𝑄
-
-   has a negative sign because when evaluating ∑ 𝑄 because the flow directed out of a node is
-
-𝜕𝐻
-
-considered negative while flow into the node is positive.
 If surcharge (return flow to the surface water) is computed, the pressure head is considered in the total node adjustment for the successive
 approximation scheme.
 
