@@ -399,6 +399,7 @@ than the relative roughness (Simons and Senturk, 1976 and Chow, 1959).
 Using these criteria, a flow depth for coarse sand would be about 0.25 ft.
 
 The depth integrated roughness is given by the equation:
+
 .. math::
     :label:
 
