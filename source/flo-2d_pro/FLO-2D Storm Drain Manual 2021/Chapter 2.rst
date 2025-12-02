@@ -143,13 +143,16 @@ The following are the input parameters for a Type 2 inlet (Figure 33):
 *Figure 33.
 Curb Opening with Sag (Type 2 Inlet, Johnson and Fred, 1984)*
 
-   Conservatively, the weir or orifice discharge, whichever is smaller, is used for the curb opening with sag.
-   The inlet elevation is assumed to be equivalent to the grid element elevation.
-   For weir flow (Johnson and Fred, 1984):
+Conservatively, the weir or orifice discharge, whichever is smaller, is used for the curb opening with sag.
+The inlet elevation is assumed to be equivalent to the grid element elevation.
+For weir flow (Johnson and Fred, 1984):
 
-Q\ :sub:`w` = C(L + 1.8W)H\ :sup:`m`
+.. math::
+    :label:
 
-   where:
+    Q_w = C(L + 1.8W)H^m
+
+where:
 
    Q\ :sub:`w` = weir flow rate at depth H
 
