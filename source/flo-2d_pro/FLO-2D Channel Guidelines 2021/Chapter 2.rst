@@ -982,7 +982,9 @@ The conventional method of assigning an inflow hydrograph to the upstream channe
 flow only going down the channel.
 The inflow would leave the channel inflow element and flow upstream onto the floodplain.
 It is recommended that any inflow hydrographs be assigned to the upstream end of the floodplain grid system in this case.
+
 .. image:: img/Chapter2/Chapte042.jpg
-**Figure 68.
-The channel widens and the flow exits the channel back to the floodplain.**
+
+*Figure 68.
+The channel widens and the flow exits the channel back to the floodplain.*
 
