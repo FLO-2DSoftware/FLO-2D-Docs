@@ -380,7 +380,7 @@ Dam Release Hydrograph El Paso, TX.*
 .. image:: img/Chapter1/Chapte014.jpg
 
 *Figure 18.
-Dam Release Hydrograph Jenson, UT. \ :sup: `1`*
+Dam Release Hydrograph Jenson, UT.* \ :sup:`1`
 
 The applicability of Manning’s equation to a given flow condition depends on the relative submergence of the roughness elements (d/k\ :sub:`s`) where
 d is the flow depth and k\ :sub:`s` is the effective roughness height.
