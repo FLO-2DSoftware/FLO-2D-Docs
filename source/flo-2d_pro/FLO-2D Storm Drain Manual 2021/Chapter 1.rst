@@ -62,7 +62,7 @@ Following a successful simulation of the surface water and storm water integrate
 GDS (Figure 3) or in the EPA SWMM GUI.
 Junctions are shown in green and Inlets are blue.
 
-.. image:: img/Chapter1/Chapte003.png
+.. image:: img/Chapter1/Chapte003.jpg
 
 *Figure 3.
 A Typical Storm Drain System as Viewed in the GDS*
@@ -214,7 +214,7 @@ Inlet with Return Flow*
 *FLO-2D WSE > Storm drain pressure head> rim elevation:*
 
     - No inflow discharge is passed from FLO-2D;
-    -Pipe capacity is full;
+    - Pipe capacity is full;
     - No return flow.
 
 .. image:: img/Chapter1/Chapte006.png
@@ -272,7 +272,7 @@ greater than zero (see Figure 10).
     - Pipe velocity zero or negative; • Inlet flow zero;
     - Return flow.
 
-.. image:: img/Chapter1/Chapte010.png
+.. image:: img/Chapter1/Chapte010.jpg
 
 *Figure 10.
 Surface Water and Pipe Capacity.*
@@ -287,6 +287,7 @@ Flooding will occur at manholes when the pressure head exceeds manhole rim eleva
     - Return flow to system.
 
 .. image:: img/Chapter1/Chapte011.png
+
 *Figure 11.
 Manhole under Pressure with Return Flow.*
 
