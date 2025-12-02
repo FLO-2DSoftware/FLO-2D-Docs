@@ -362,6 +362,7 @@ The flapgate switch in SWMMFLO.DAT has the following settings:
     Feature = 1, No flapgate – vertical inlet opening
     Feature = 2, Flapgate ‘on’ for fake outfalls
     </pre>
+
 A "fake outfall" can be set up as an inlet that will discharge flow from the storm drain to the surface water.
 Feature equal to 2 set up a flap gate for a fake outfall.
 
@@ -431,7 +432,7 @@ Table 1 is an example of the information that is reported to the ManholePop.OUT 
     <br>
 
 Curb Inlet Flow Adjustment
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------
 
 For each timestep, the FLO-2D grid element water surface elevation (flow depth) is used to calculate the discharge that passes through the inlets
 using the weir and orifice equations as well as the geometry of the inlets defined by the user in the SWMMFLO.DAT file.
@@ -462,9 +463,11 @@ Volume = total water volume on a grid element = side L x side L x Grid Depth
 VOLCurb = volume equal to the curb height =
 
    1/2 base (L) x height (0.02 x L) x side L = 0.5 x 0.02 x L\ :sup:`3` = 0.01 L\ :sup:`3`
+
 .. image:: img/Chapter1/Chapte013.png
-   **Figure 14.
-   Volume Conversion - Square Floodplain Grid Element to Right Triangle at 2% Slope**
+
+*Figure 14.
+Volume Conversion - Square Floodplain Grid Element to Right Triangle at 2% Slope*
 
 To calculate flow depth on the storm drain inlet:
 
@@ -472,8 +475,7 @@ IF Volume < VOLCurb:
 
    Volume = 0.5 x Curb depth x L\ :sub:`c` x L = 0.5 x Curb depth x Curb depth/0.02 x L
 
-   Curb depth = (Volume/(25.
-   x L))\ :sup:`0.5` Flow depth = 0.
+   Curb depth = (Volume/(25.x L))\ :sup:`0.5` Flow depth = 0.
 
 If VOLCurb ≤ Volume:
 
