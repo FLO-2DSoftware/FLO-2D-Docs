@@ -835,6 +835,8 @@ As a consequence, the velocity cannot be higher than 50 ft/sec.
 For a conduit with free fall discharge into either of its end nodes, the depth at the end of the conduit for the node below the invert elevation of
 the conduit is set equal to the smaller of the critical depth and the normal flow depth for the conduit flow.
 The equation to calculate the head adjustment term for each timestep at each node is:
+
+.. math::
    :label:
 
    H_{t + \mathrm{\Delta}t} = H_{t} + \frac{\mathrm{\Delta}Vol}{\left( A_{store} +
