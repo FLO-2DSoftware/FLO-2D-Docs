@@ -546,42 +546,53 @@ Storm Drain Blockage Method
 A clogging factor was created to simulate a reduction in inlet capacity.
 The SDCLOGGING.DAT file has the following format:
 
-   ID Grid Cell Inlet ID Clogging Factor - C\ :sub:`f` (%) Time for clogging -T\ :sub:`c` (hr)
+.. raw:: html
 
-D 2694 I1 25 0.50
+    <pre>
 
-D 2409 I2 50 3.25
+    ID  Grid Cell   Inlet ID    Clogging Factor - C<sub>f</sub> (%)   Time for clogging -T<sub>c</sub> (hr)
+    D       2694        I1                      25                                  0.50
+    D   2   409         I2                      50                                  3.25
+    </pre>
 
 The inlet discharge calculated using either the orifice or weir equations is subject to a blockage reduction that is specified by the user.
 The inlet discharge is calculated and then reduced using the clogging factor in the following equation:
 
-Q\ :sub:`R` = (1-C\ :sub:`f`) Q\ :sub:`c`
+.. math::
+    :label:
+
+    Q_R = (1-C_f) Q_c
 
 where:
 
-Q\ :sub:`R` = reduced inflow discharge
+    Q\ :sub:`R` = reduced inflow discharge
 
-C\ :sub:`f` = clogging factor
+    C\ :sub:`f` = clogging factor
 
-Q\ :sub:`c`\ = calculated discharge using the orifice/weir equations.
+    Q\ :sub:`c`\ = calculated discharge using the orifice/weir equations.
 
 This methodology is recommended for single inlets by entities such as the Colorado Department of Transportation and the cities of Denver and Las Vegas.
 Figure 21 and Figure 22 show the reduced discharge for a Type 2 inlet using a clogging factor of 50% at time 0.5 hrs.
+
 .. image:: img/Chapter1/Chapte017.png
-   **Figure 21.
-   Type 2 Inlet Discharge versus Time**
+
+*Figure 21.
+Type 2 Inlet Discharge versus Time*
+
 .. image:: img/Chapter1/Chapte018.png
-   **Figure 22.
-   Type 2 Inlet Discharge versus Time Using a Clogging Factor of 50% at Time 0.5 hrs**
 
-   It is noted that the Flood Control District of Maricopa County (FCDMC) in Phoenix, Arizona recommends this approach for flooding and drainage studies,
-   but it should not be applied for storm drain design.
-   In a design project the storm drain features are oversized to provide enough capacity for clogging.
-   Table 2 shows the FCDMC catch basin clogging factors for predicting inlet discharge (FCDMC, 2018).
-   The clogging factor data file can be created in the SWMMFLO.DAT data dialog for all types of inlets.
+*Figure 22.
+Type 2 Inlet Discharge versus Time Using a Clogging Factor of 50% at Time 0.5 hrs*
 
-   **Table 2.
-   FCDMC Catch Basin Clogging Factors (FCDMC, 2018)**
+It is noted that the Flood Control District of Maricopa County (FCDMC) in Phoenix, Arizona recommends this approach for flooding and drainage studies,
+but it should not be applied for storm drain design.
+In a design project the storm drain features are oversized to provide enough capacity for clogging.
+Table 2 shows the FCDMC catch basin clogging factors for predicting inlet discharge (FCDMC, 2018).
+The clogging factor data file can be created in the SWMMFLO.DAT data dialog for all types of inlets.
+
+**Table 2.
+FCDMC Catch Basin Clogging Factors (FCDMC, 2018)**
+
 .. image:: img/Chapter1/Chapte019.png
 Reduction of Return Flow to Surface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
