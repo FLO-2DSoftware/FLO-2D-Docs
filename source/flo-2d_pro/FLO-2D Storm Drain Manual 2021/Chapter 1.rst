@@ -594,6 +594,7 @@ The clogging factor data file can be created in the SWMMFLO.DAT data dialog for 
 FCDMC Catch Basin Clogging Factors (FCDMC, 2018)**
 
 .. image:: img/Chapter1/Chapte019.png
+
 Reduction of Return Flow to Surface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
