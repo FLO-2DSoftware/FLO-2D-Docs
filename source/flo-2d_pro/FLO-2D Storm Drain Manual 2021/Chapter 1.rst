@@ -717,17 +717,16 @@ where:
 
 The local head loss term h\ :sub:`L` is caused by an energy loss that is proportional to the velocity head and it can be expressed as:
 
-   KV\ :sup:`2`
+.. math::
+    :label:
 
-   h\ :sub:`L` =
-
-   2gL
+    h_L = {KV^2}{2gL}
 
 where:
 
-K = loss coefficient for each pipe
+    K = loss coefficient for each pipe
 
-V = velocity L = conduit length g = gravitational acceleration
+    V = velocity L = conduit length g = gravitational acceleration
 
 To calculate the change in pressure head at each node that connects two or more conduits an additional equation is necessary (Figure 23):
 
@@ -924,10 +923,8 @@ The conduit surface area (A\ :sub:`store`) depends on the flow condition within 
     1. Under normal conditions the pipe surface area equals half of the conduit length times the average of the top width at the end and mid points of the
        conduit.
        These widths are evaluated before the next updated timestep using the flow depths y1, y2, and y.
-
     2. If the inflow of the conduit to a node is in free-fall (conduit invert elevation is above the water surface of the node), then the conduit does not
        contribute to the node surface area.
-
     3. For conduits with closed shapes such as circular pipes that are greater than 96 percent full, a constant top width equal to the width when 96 percent
        full is used.
        This prevents the head adjustment term H\ :sub:`t` from creating numerical instability as the top width and corresponding surface area approach zero
@@ -985,10 +982,8 @@ Additional criteria include:
 
     - An alternative nodal continuity condition is used where the total rate of outflow from a surcharged node must equal the total rate of inflow Σ𝑄 = 0.
       This equation only contains flow and it is insufficient to update nodal heads at the new time step.
-
     - Since the flow and head updating equations for the system are not solved simultaneously, there is no guarantee that the condition will hold at the
       surcharged nodes after a flow solution has been reached.
-
     - Flow continuity condition is enforced in the form of a perturbation equation:
 
 ∂Q
@@ -1084,26 +1079,19 @@ The advantages of the FLO-2D storm drain component over the original SWMM model 
 
     - Complete surface water hydrology and hydraulics including rainfall runoff, infiltration, and flood routing in channels, streets or unconfined overland
       flow are simulated by FLO2D surface water model.
-
     - The storm drain component solves the pipe hydraulics and flow routing but integrates the inlet/outlets and outfalls with the surface water at each
       computational timestep.
-
     - FLO-2D computes the storm drain inlet discharge based on the water surface head and the inlet geometry.
       The original SWMM model did not consider inlet control.
-
     - Only those junctions set up as inlets/outfalls in the storm drain model are recognized for system exchange.
       Pipe junctions without an inlet will not receive a surface runoff discharge.
-
     - The inlet locations digitized in storm drain data files (\*.INP) are automatically read by the FLO-2D GDS to establish the storm drain inlet
       connections.
-
     - Inlets can become outlets if the storm drain pressure head exceeds the grid element water surface elevation at a given node.
       The potential return flow to the surface water is based on the water surface elevation not the rim elevation as in the original SWMM model.
-
     - Manhole covers can pop and allow return flow based on a surcharge depth representing the manhole cover weight.
       Once popped the manhole surcharge is turned ‘off’ and the manhole functions as an inlet/outlet for the rest of the simulation.
       This is an improvement over the original SWMM model.
-
     - For outfall nodes in the closed conduit system network, pipe discharge can be removed from the storm drain system or returned to the surface water as
       a user defined option.
       The outfall can function as an inlet to the storm drain system based on the surface water elevation.
@@ -1198,12 +1186,10 @@ The required input data is:
 
       - Allow Discharge is ‘off’ - Free Outfalls can discharge the flow from the storm drain system.
         Flow will not be added to the surface.
-
       - Allow Discharge is ‘on’ - The FLO-2D water surface elevation is imposed on the outfall node.
         Storm drain water will return to the surface model.
         This is the only outfall type that allows flow exchange with the surface water.
         Pressure head is compared to the water surface elevation to define the flow direction.
-
       - Normal, Fixed, Tidal and Time Series Outfalls discharges flow off the storm drain system with a boundary condition set up in the SWMM.INP file.
 
 Links
