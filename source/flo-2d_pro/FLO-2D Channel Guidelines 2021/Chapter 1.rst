@@ -660,7 +660,7 @@ If the limiting Froude number is exceeded, the Manning’s n-value is increased 
 .. raw:: html
 
     <pre>
-    percent change
+        percent change
     from the original n-value       n-value increment increase
            < 20                            0.0002
         20 < % < 50                        0.0001
@@ -687,9 +687,9 @@ This will define a limiting Froude number as given by Grant (1997):
 .. math::
     :label:
 
-    F_r = 3.85 S^{0.33} gravel bed (τ^*_cr = 0.03)
+    F_r = 3.85 S^{0.33} \, \, gravel bed (τ^*_cr = 0.03)
 
-    F_r = 5.18 S^{0.11} sand bed (τ^*_cr = 0.06)
+    F_r = 5.18 S^{0.11} \, \, sand bed (τ^*_cr = 0.06)
 
 For mobile bed channels a steep slope is required for flow to approach critical because the hydraulics oscillate with sediment entrainment.
 These relationships define the upper limit Froude number for sand and gravel for slopes < 0.10.
