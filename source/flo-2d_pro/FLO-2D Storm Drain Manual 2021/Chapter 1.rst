@@ -1237,18 +1237,26 @@ The weir calculations are based on the following criteria:
 
     - When the weir becomes completely submerged, the model switches to the orifice equation to predict flow as a function of the head.
     - Weirs do not contribute any surface area to their end nodes.
-    - The general weir equation 𝑄 = 𝐶 𝐿 ℎ\ :sup:`𝑚` is used to compute the discharge as a function of head *h* across the weir when the weir is not fully
-      submerged.
+    - The general weir equation;
 
-where:
+        .. math::
+           :label:
 
-   C = the weir coefficient L = the crest length m = an exponent that depends on the type of weir being modeled: lateral, transverse, side-flow, V-notch,
-   or trapezoidal.
-   Typically m = 1.5 for a lateral weir.
-   This exponent is hardcoded in the FLO-2D storm drain model.
+           Q = C\ L\ h^{m}
+
+        is used to compute the discharge as a function of head *h* across the weir when the weir is not fully submerged.
+
+        where:
+
+            C = the weir coefficient
+
+            L = the crest length
+
+            m = an exponent that depends on the type of weir being modeled: lateral, transverse, side-flow, V-notch
+            , or trapezoidal. Typically, m = 1.5 for a lateral weir. This exponent is hardcoded in the FLO-2D storm drain model.
 
 Outlets
-'''''''
+~~~~~~~~
 
 Outlets are used to control discharge from storage units or to simulate special stage-discharge relationships that cannot be characterized by pumps,
 orifices and weirs.
