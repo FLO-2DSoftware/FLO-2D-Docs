@@ -951,13 +951,11 @@ Additional criteria include:
 
         :math:`\frac{\partial Q}{\partial H}\ ` has a negative sign because when evaluating
         :math:`\sum_{}^{}Q` because the flow directed out of a node is considered negative while flow into the
-        node is positive.
-
-If surcharge (return flow to the surface water) is computed, the pressure head is considered in the total node adjustment for the successive
+        node is positive. If surcharge (return flow to the surface water) is computed, the pressure head is considered in the total node adjustment for the successive
 approximation scheme.
 
 Boundary conditions – FLO-2D inlet discharge
-''''''''''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Floodplain runoff discharges from the surface layer typically only enters the pipeline system at inlets.
 Weir and orifice equations are used to calculate an inflow discharge under inlet control.
@@ -968,35 +966,44 @@ drain pressure head.
 The inlet discharge is imposed as surface water boundary conditions (BC) and is passed to the storm drain layer for routing.
 The following equations (Johnson and Fred, 1984) are used:
 
-Weir Flow:
+    Weir Flow:
 
-𝑄\ :sub:`𝑤` = 𝐶𝐿𝐻\ :sup:`𝑚`
+    .. math::
+       :label:
 
-   where:
+       Q_{w} = CLH^{m}
 
-Q\ :sub:`w` = weir discharge
+    where:
 
-   C = weir coefficient, enter in the “Inlet Weir Coeff.” field in the SWMMFLO.DAT
+        :math:`Q_{w}` = weir discharge
 
-L = crest length; enter in the “Length (1 or 2)” field in the SWMMFLO.DAT H = FLO-2D grid element water depth that contains the inlet structure m =
-1.5 for a broad crested weir.
-This is hardcoded.
+        C = weir coefficient, enter in the “Inlet Weir Coeff.” field in the SWMMFLO.DAT
 
-Orifice Flow:
+        L = crest length; enter in the “Length (1 or 2)” field in the SWMMFLO.DAT
 
-𝑄\ :sub:`𝑜` = 𝐶\ :sub:`𝑑`\ 𝐴√2𝑔𝐻
+        H = FLO-2D grid element water depth that contains the inlet structure
 
-   where:
+        m = 1.5 for a broad crested weir. This is hardcoded.
 
-Q\ :sub:`o` = orifice flow rate at depth H
+    Orifice Flow:
 
-C\ :sub:`d` = discharge coefficient hardcoded to 0.67
+    .. math::
+       :label:
 
-   A = Lh; cross-sectional orifice area, computed from inlet opening length (L) and inlet opening height (h) fields in the SWMMFLO.DAT
+       Q_{o} = \ C_{d}A\sqrt{2gH}
 
-g = gravitational acceleration
+    where:
 
-H = FLO-2D grid element water depth that contains the inlet structure
+        :math:`Q_{o}` = orifice flow rate at depth H
+
+        C\ :sub:`d` = discharge coefficient hardcoded to 0.67
+
+        A = Lh; cross-sectional orifice area, computed from inlet opening length (L) and inlet opening height
+        (h) fields in the SWMMFLO.DAT
+
+        g = gravitational acceleration
+
+        H = FLO-2D grid element water depth that contains the inlet structure
 
 The discharges are calculated based on the physical behavior of the inlet as a weir or an orifice for a given timestep and the smaller of the two
 discharges is used in the surface water exchange to the storm drain system.
