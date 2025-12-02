@@ -700,17 +700,20 @@ solution at sub-critical flow conditions.
 
 The friction slope component S\ :sub:`f` is based on Manning’s equation:
 
-   n\ :sup:`2`\ V|V\| S\ :sub:`f` :sup:`=` k2\ :sub:`R`\ 4⁄3
+.. math::
+    :label:
+
+    S_f = n^2 V|V|\frac{K^2R^{\frac{4}{3}}
 
 where:
 
-n = Manning roughness coefficient
+    n = Manning roughness coefficient
 
-V = average flow velocity (Q⁄A)
+    V = average flow velocity (Q⁄A)
 
-R = hydraulic radius
+    R = hydraulic radius
 
-k = 1.486 for English units or 1.0 for metric units
+    k = 1.486 for English units or 1.0 for metric units
 
 The local head loss term h\ :sub:`L` is caused by an energy loss that is proportional to the velocity head and it can be expressed as:
 
@@ -728,11 +731,7 @@ V = velocity L = conduit length g = gravitational acceleration
 
 To calculate the change in pressure head at each node that connects two or more conduits an additional equation is necessary (Figure 23):
 
-∂H ∑ Q
-
-=
-
-∂t A\ :sub:`store` + ∑ As
+∂H ∑ Q = ∂t A\ :sub:`store` + ∑ As
 
 .. _`where:`:
 
@@ -770,9 +769,11 @@ surface area contributed by the conduits connected to the node.
 =
 
 net flow at Node J contributed by all connected conduits plus external inflows
+
 .. image:: img/Chapter1/Chapte023.png
-   **Figure 23.
-   Node-Link Representation of a Drainage System (Roesner et al, 1992)**
+
+*Figure 23.
+Node-Link Representation of a Drainage System (Roesner et al, 1992)*
 
 Solution Algorithm – How the Model Works
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -920,22 +921,21 @@ t t+∆t
 
 The conduit surface area (A\ :sub:`store`) depends on the flow condition within the conduit as follows:
 
-1. Under normal conditions the pipe surface area equals half of the conduit length times the average of the top width at the end and mid points of the
-   conduit.
-   These widths are evaluated before the next updated timestep using the flow depths y1, y2, and y.
+    1. Under normal conditions the pipe surface area equals half of the conduit length times the average of the top width at the end and mid points of the
+       conduit.
+       These widths are evaluated before the next updated timestep using the flow depths y1, y2, and y.
 
-2. If the inflow of the conduit to a node is in free-fall (conduit invert elevation is above the water surface of the node), then the conduit does not
-   contribute to the node surface area.
+    2. If the inflow of the conduit to a node is in free-fall (conduit invert elevation is above the water surface of the node), then the conduit does not
+       contribute to the node surface area.
 
-3. For conduits with closed shapes such as circular pipes that are greater than 96 percent full, a constant top width equal to the width when 96 percent
-   full is used.
-   This prevents the head adjustment term H\ :sub:`t` from creating numerical instability as the top width and corresponding surface area approach zero
-   when the conduit reaches a full condition.
-   A minimum surface area for A\ :sub:`store` is assigned to all nodes, including junctions that normally have no storage volume, preventing H\ :sub:`t`
-   from becoming unbounded.
-   Under normal conditions A\ :sub:`store` equals half the conduit’s length times the average of the top width at
+    3. For conduits with closed shapes such as circular pipes that are greater than 96 percent full, a constant top width equal to the width when 96 percent
+       full is used.
+       This prevents the head adjustment term H\ :sub:`t` from creating numerical instability as the top width and corresponding surface area approach zero
+       when the conduit reaches a full condition.
+       A minimum surface area for A\ :sub:`store` is assigned to all nodes, including junctions that normally have no storage volume, preventing H\ :sub:`t`
+       from becoming unbounded.
+       Under normal conditions A\ :sub:`store` equals half the conduit’s length times the average of the top width at the end- and mid-points of the conduit.
 
-the end- and mid-points of the conduit.
 These widths are evaluated before the next updated flow solution is found, using the flow depths y1, y2, and y discussed previously.
 The default value for this minimum area is 12.57 ft\ :sup:`2` which corresponds to the area of a 4-foot diameter manhole.
 
@@ -943,42 +943,33 @@ To calculate the discharge Q and the head H, the equations are solved for each t
 relaxation (Rossman, 2005).
 The solution algorithm involves the following steps:
 
-1. A first estimate of discharge Q in each conduit at time *t+*\ Δ\ *t* is calculated by solving for Q\ :sub:`t+∆t` using the heads, areas, and
-   velocities determined at the current time *t*.
+    1. A first estimate of discharge Q in each conduit at time *t+*\ Δ\ *t* is calculated by solving for Q\ :sub:`t+∆t` using the heads, areas, and
+       velocities determined at the current time *t*.
+    2. A first estimate of the head (H) in each conduit at time *t +* Δ\ *t* is calculated by evaluating H\ :sub:`t+∆t` using the discharge Q just computed.
+       The results are denoted as:
 
-2. A first estimate of the head (H) in each conduit at time *t +* Δ\ *t* is calculated by evaluating H\ :sub:`t+∆t` using the discharge Q just computed.
-   The results are denoted as:
+       Qlast and Hlast
 
-..
+    3. The equation Q\ :sub:`t+∆t` is solved once again, using the head, area, and velocity based on the Q\ :sub:`last` and H\ :sub:`last` values just
+       computed.
+       A relaxation factor Ω is used to combine the new flow estimate Q\ :sub:`new` with the previous estimate Q\ :sub:`last` to generate a new Q\ :sub:`new`
+       according to the equation:
 
-   Qlast and Hlast
+    Qnew = (1−Ω) Qlast +Ω Qnew
 
-3. The equation Q\ :sub:`t+∆t` is solved once again, using the head, area, and velocity based on the Q\ :sub:`last` and H\ :sub:`last` values just
-   computed.
-   A relaxation factor Ω is used to combine the new flow estimate Q\ :sub:`new` with the previous estimate Q\ :sub:`last` to generate a new Q\ :sub:`new`
-   according to the equation:
+    4. The equation for H\ :sub:`t+∆t`\ is solved again for heads using Q\ :sub:`new`.
+       As with discharge, this new solution for head, H\ :sub:`new` is weighted with H\ :sub:`last` to produce an updated estimate for heads:
 
-..
+       Hnew = (1−Ω) Hlast +Ω Hnew
 
-   Qnew = (1−Ω) Qlast +Ω Qnew
-
-4. The equation for H\ :sub:`t+∆t`\ is solved again for heads using Q\ :sub:`new`.
-   As with discharge, this new solution for head, H\ :sub:`new` is weighted with H\ :sub:`last` to produce an updated estimate for heads:
-
-..
-
-   Hnew = (1−Ω) Hlast +Ω Hnew
-
-5. If H\ :sub:`new` is close enough to H\ :sub:`last` then the process stops with Q\ :sub:`new` and H\ :sub:`new` as the solution for time t + Δt.
-   Otherwise H\ :sub:`last` and Q\ :sub:`last` are replaced with H\ :sub:`new` and Q\ :sub:`new`, respectively and the process returns to step 2.
+    5. If H\ :sub:`new` is close enough to H\ :sub:`last` then the process stops with Q\ :sub:`new` and H\ :sub:`new` as the solution for time t + Δt.
+       Otherwise H\ :sub:`last` and Q\ :sub:`last` are replaced with H\ :sub:`new` and Q\ :sub:`new`, respectively and the process returns to step 2.
 
 The procedure uses the following parameters and conditions for this iterative procedure:
 
-- A constant relaxation factor Ω equal to 0.5.
-
-- A convergence tolerance of 0.005 feet on nodal heads.
-
-- Number of trials is limited to four.
+    - A constant relaxation factor Ω equal to 0.5.
+    - A convergence tolerance of 0.005 feet on nodal heads.
+    - Number of trials is limited to four.
 
 The flow depth in conduits that are not surcharged is limited not to exceed the normal flow depth for the discharge at the upstream end of the conduit
 whenever the flow regime is supercritical.
@@ -992,13 +983,13 @@ Under this condition the surface area of any closed conduits would be zero and e
 applicable.
 Additional criteria include:
 
-- An alternative nodal continuity condition is used where the total rate of outflow from a surcharged node must equal the total rate of inflow Σ𝑄 = 0.
-  This equation only contains flow and it is insufficient to update nodal heads at the new time step.
+    - An alternative nodal continuity condition is used where the total rate of outflow from a surcharged node must equal the total rate of inflow Σ𝑄 = 0.
+      This equation only contains flow and it is insufficient to update nodal heads at the new time step.
 
-- Since the flow and head updating equations for the system are not solved simultaneously, there is no guarantee that the condition will hold at the
-  surcharged nodes after a flow solution has been reached.
+    - Since the flow and head updating equations for the system are not solved simultaneously, there is no guarantee that the condition will hold at the
+      surcharged nodes after a flow solution has been reached.
 
-- Flow continuity condition is enforced in the form of a perturbation equation:
+    - Flow continuity condition is enforced in the form of a perturbation equation:
 
 ∂Q
 
@@ -1091,33 +1082,33 @@ The models are fully integrated on a computational timestep basis.
 
 The advantages of the FLO-2D storm drain component over the original SWMM model are:
 
-- Complete surface water hydrology and hydraulics including rainfall runoff, infiltration, and flood routing in channels, streets or unconfined overland
-  flow are simulated by FLO2D surface water model.
+    - Complete surface water hydrology and hydraulics including rainfall runoff, infiltration, and flood routing in channels, streets or unconfined overland
+      flow are simulated by FLO2D surface water model.
 
-- The storm drain component solves the pipe hydraulics and flow routing but integrates the inlet/outlets and outfalls with the surface water at each
-  computational timestep.
+    - The storm drain component solves the pipe hydraulics and flow routing but integrates the inlet/outlets and outfalls with the surface water at each
+      computational timestep.
 
-- FLO-2D computes the storm drain inlet discharge based on the water surface head and the inlet geometry.
-  The original SWMM model did not consider inlet control.
+    - FLO-2D computes the storm drain inlet discharge based on the water surface head and the inlet geometry.
+      The original SWMM model did not consider inlet control.
 
-- Only those junctions set up as inlets/outfalls in the storm drain model are recognized for system exchange.
-  Pipe junctions without an inlet will not receive a surface runoff discharge.
+    - Only those junctions set up as inlets/outfalls in the storm drain model are recognized for system exchange.
+      Pipe junctions without an inlet will not receive a surface runoff discharge.
 
-- The inlet locations digitized in storm drain data files (\*.INP) are automatically read by the FLO-2D GDS to establish the storm drain inlet
-  connections.
+    - The inlet locations digitized in storm drain data files (\*.INP) are automatically read by the FLO-2D GDS to establish the storm drain inlet
+      connections.
 
-- Inlets can become outlets if the storm drain pressure head exceeds the grid element water surface elevation at a given node.
-  The potential return flow to the surface water is based on the water surface elevation not the rim elevation as in the original SWMM model.
+    - Inlets can become outlets if the storm drain pressure head exceeds the grid element water surface elevation at a given node.
+      The potential return flow to the surface water is based on the water surface elevation not the rim elevation as in the original SWMM model.
 
-- Manhole covers can pop and allow return flow based on a surcharge depth representing the manhole cover weight.
-  Once popped the manhole surcharge is turned ‘off’ and the manhole functions as an inlet/outlet for the rest of the simulation.
-  This is an improvement over the original SWMM model.
+    - Manhole covers can pop and allow return flow based on a surcharge depth representing the manhole cover weight.
+      Once popped the manhole surcharge is turned ‘off’ and the manhole functions as an inlet/outlet for the rest of the simulation.
+      This is an improvement over the original SWMM model.
 
-- For outfall nodes in the closed conduit system network, pipe discharge can be removed from the storm drain system or returned to the surface water as
-  a user defined option.
-  The outfall can function as an inlet to the storm drain system based on the surface water elevation.
-  A tide gate can be used to prevent inflow to the outfall.
-  The integration of the outfall boundary conditions with surface water represents an enhancement over the original SWMM model.
+    - For outfall nodes in the closed conduit system network, pipe discharge can be removed from the storm drain system or returned to the surface water as
+      a user defined option.
+      The outfall can function as an inlet to the storm drain system based on the surface water elevation.
+      A tide gate can be used to prevent inflow to the outfall.
+      The integration of the outfall boundary conditions with surface water represents an enhancement over the original SWMM model.
 
 To integrate the surface water and storm drain models, the first task is to develop a running FLO-2D surface water flood model.
 Then the storm drain model can be built with the assigned inlets/manholes/outfalls for surface water exchange.
@@ -1151,15 +1142,10 @@ The junction will not receive FLO-2D surface inflow if it serves as a simple pip
 The required input data is:
 
 - Name
-
 - X and Y Coordinates
-
 - Invert elevation
-
 - Maximum depth is the distance from invert to the rim
-
 - Initial depth (optional)
-
 - Surcharge Depth (optional)
 
 Inlets
@@ -1175,15 +1161,11 @@ Manholes are covered inlets that capture flow from the surface when the cover is
 The manhole ID name need to start with an ‘I’.
 The required inlet data is:
 
-- Name: Starts with an ‘I’ to be identified as Inlets
-
-- X and Y Coordinates
-
-- Invert elevation
-
-- Maximum depth is the distance from invert to the rim
-
-- Initial depth (optional)
+    - Name: Starts with an ‘I’ to be identified as Inlets
+    - X and Y Coordinates
+    - Invert elevation
+    - Maximum depth is the distance from invert to the rim
+    - Initial depth (optional)
 
 Conduits
 ''''''''
@@ -1192,15 +1174,11 @@ Conduits convey flow through the storm drain system.
 Slope is calculated internally based on inlet and outlet node invert elevation.
 Required input data is:
 
-- Conduit name
-
-- Name of connecting feature inlet and outlet
-
-- Cross-sectional Geometry
-
-- Length - between nodes
-
-- Pipe roughness – Manning’s n-value
+    - Conduit name
+    - Name of connecting feature inlet and outlet
+    - Cross-sectional Geometry
+    - Length - between nodes
+    - Pipe roughness – Manning’s n-value
 
 Outfall
 '''''''
@@ -1212,25 +1190,21 @@ Any other outfall (that is not free) will simply discharge out of the drainage s
 Only one conduit can be connected to an outfall node and there must be at least one outfall node in the network.
 The required input data is:
 
-- Name
+    - Name
+    - X and Y Coordinates
+    - Invert elevation
+    - Tide Gate (optional) can be assigned to prevent backflow into the pipes.
+    - Boundary Condition Types:
 
-- X and Y Coordinates
+      - Allow Discharge is ‘off’ - Free Outfalls can discharge the flow from the storm drain system.
+        Flow will not be added to the surface.
 
-- Invert elevation
+      - Allow Discharge is ‘on’ - The FLO-2D water surface elevation is imposed on the outfall node.
+        Storm drain water will return to the surface model.
+        This is the only outfall type that allows flow exchange with the surface water.
+        Pressure head is compared to the water surface elevation to define the flow direction.
 
-- Tide Gate (optional) can be assigned to prevent backflow into the pipes.
-
-- Boundary Condition Types:
-
-  - Allow Discharge is ‘off’ - Free Outfalls can discharge the flow from the storm drain system.
-    Flow will not be added to the surface.
-
-  - Allow Discharge is ‘on’ - The FLO-2D water surface elevation is imposed on the outfall node.
-    Storm drain water will return to the surface model.
-    This is the only outfall type that allows flow exchange with the surface water.
-    Pressure head is compared to the water surface elevation to define the flow direction.
-
-  - Normal, Fixed, Tidal and Time Series Outfalls discharges flow off the storm drain system with a boundary condition set up in the SWMM.INP file.
+      - Normal, Fixed, Tidal and Time Series Outfalls discharges flow off the storm drain system with a boundary condition set up in the SWMM.INP file.
 
 Links
 '''''
@@ -1238,15 +1212,11 @@ Links
 Links are defined as those features that connect junctions and outfalls in the storm drain system.
 The following components are defined as links in the storm drain system:
 
-- Conduits
-
-- Pumps
-
-- Orifices
-
-- Weirs
-
-- Outlets
+    - Conduits
+    - Pumps
+    - Orifices
+    - Weirs
+    - Outlets
 
 Pumps
 '''''
@@ -1257,23 +1227,18 @@ The flow through a pump is computed as a function of the heads at their end node
 Pumps can be simulated in FLO-2D as part of the storm drain system or as a hydraulic structure in the surface model.
 They have to be set up based on the following considerations:
 
-- The pump curve can specify flow as a function of inlet node volume, inlet node depth, or the head difference between the inlet and outlet nodes.
-
-- The pump discharge is limited to the inlet inflow during a given timestep.
-  This will eliminate the possibility of the pump curve being sufficient to drain the inlet node during the time step.
-
-- An ideal transfer pump can be specified where the flow rate equals the inflow rate at its inlet node and no curve is required.
-  In this case, the pump must be the only outflow link from its inlet node.
+    - The pump curve can specify flow as a function of inlet node volume, inlet node depth, or the head difference between the inlet and outlet nodes.
+    - The pump discharge is limited to the inlet inflow during a given timestep.
+      This will eliminate the possibility of the pump curve being sufficient to drain the inlet node during the time step.
+    - An ideal transfer pump can be specified where the flow rate equals the inflow rate at its inlet node and no curve is required.
+      In this case, the pump must be the only outflow link from its inlet node.
 
 The parameters for a pump in the storm drain system are:
 
-- Names of the inlet and outlet nodes
-
-- Pump curve name
-
-- Initial status ‘on’ or ‘off’ status
-
-- Startup and shutoff depths
+    - Names of the inlet and outlet nodes
+    - Pump curve name
+    - Initial status ‘on’ or ‘off’ status
+    - Startup and shutoff depths
 
 Flow Regulators
 '''''''''''''''
@@ -1303,13 +1268,12 @@ They can be either circular or rectangular in shape and can be located either at
 They can have a tide gate to prevent backflow.
 Orifice flow is based on the following criteria:
 
-- When fully submerged the classical orifice equation is used: 𝑄\ :sub:`𝑤` |Chapte025|.
+    - When fully submerged the classical orifice equation is used: 𝑄\ :sub:`𝑤` |Chapte025|.
+    - A partially submerged orifice applies the modified weir equation:
 
-- A partially submerged orifice applies the modified weir equation:
+    𝑄\ :sub:`𝑤` |Chapte026|.
 
-𝑄\ :sub:`𝑤` |Chapte026|.
-
-- An orifice surface area contribution to the outlet is based on the equivalent pipe length and the depth of water in the orifice.
+    - An orifice surface area contribution to the outlet is based on the equivalent pipe length and the depth of water in the orifice.
 
 where:
 
@@ -1327,12 +1291,10 @@ Weirs can be a link connecting two nodes where the weir itself is placed at the 
 A flapgate can be included to prevent backflow.
 The weir calculations are based on the following criteria:
 
-- When the weir becomes completely submerged, the model switches to the orifice equation to predict flow as a function of the head.
-
-- Weirs do not contribute any surface area to their end nodes.
-
-- The general weir equation 𝑄 = 𝐶 𝐿 ℎ\ :sup:`𝑚` is used to compute the discharge as a function of head *h* across the weir when the weir is not fully
-  submerged.
+    - When the weir becomes completely submerged, the model switches to the orifice equation to predict flow as a function of the head.
+    - Weirs do not contribute any surface area to their end nodes.
+    - The general weir equation 𝑄 = 𝐶 𝐿 ℎ\ :sup:`𝑚` is used to compute the discharge as a function of head *h* across the weir when the weir is not fully
+      submerged.
 
 where:
 
