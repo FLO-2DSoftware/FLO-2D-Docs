@@ -515,7 +515,7 @@ The selected method allows the pressure head to be exponentially reduced over to
 *Figure 15.
 Water Elevation Profile at 03:17:00.*
 
-.. image:: img/Chapter1/Chapte014.png
+.. image:: img/Chapter1/Chapte014.jpg
 
 *Figure 16.
 Inlet Pressure Head - No Pressure Head Dampening is Applied*
@@ -525,7 +525,7 @@ Inlet Pressure Head - No Pressure Head Dampening is Applied*
 *Figure 17.
 Water Elevation Profile at 03:18:00.*
 
-.. image:: img/Chapter1/Chapte015.png
+.. image:: img/Chapter1/Chapte015.jpg
 
 *Figure 18.
 Inlet Pressure Head with Dampening up to 1.25 Times the Lateral Pipe Diameter.*
