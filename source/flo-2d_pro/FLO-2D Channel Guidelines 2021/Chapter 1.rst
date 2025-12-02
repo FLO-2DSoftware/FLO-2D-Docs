@@ -58,7 +58,7 @@ The average flow path length between two channel elements is on the order of the
 hydraulic jumps over a short distance.
 The flow transition between subcritical and supercritical flow is based on the average conditions between two channel elements.
 
-.. image:: ./img/Chapter1/Chapte002.jpg
+.. image:: img/Chapter1/Chapte002.jpg
 
 *Figure 1.
 Channel Flow is One-Dimensional – No Vertical or Horizontal Velocity Distribution*
@@ -76,11 +76,8 @@ Channel Geometry, Length and Roughness
 There are four channel geometry options:
 
     - R - Rectangular
-
     - T - Trapezoidal
-
     - N - Natural
-
     - V - Regression Equation (not recommended except for unique cases)
 
 The channel cross section options are rectangular, trapezoidal and natural.
