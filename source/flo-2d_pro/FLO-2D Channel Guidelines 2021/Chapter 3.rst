@@ -35,7 +35,7 @@ The most sensitive model scenario is a wide channel with small grid elements whe
 elements.
 In this situation, the channel element conveyance capacity is relatively small because the channel length is short compared to the channel width.
 
-.. image:: img/Chapter3/Chapte003.jpg
+.. image:: img/Chapter3/Chapte003.png
 
 *Figure 70.
 TIME.OUT and Profiles - Peak Discharge.*
@@ -86,7 +86,7 @@ Avoid abrupt cross section transitions between channel elements.
 Adjust the channel cross section geometry in the PROFILES program.
 Figure 74 A and B shows the change in channel shape between two contiguous channel elements with the same approximate bankfull flow area.
 
-.. image:: img/Chapter3/Chapte007.jpg
+.. image:: img/Chapter3/Chapte007.png
 
 *Figure 74 A and B.
 Change in Channel Geometry between Two Contiguous Channel Elements.*]
@@ -98,7 +98,7 @@ This is about a 33% change in bankfull conveyance capacity.
 .. image:: img/Chapter3/Chapte009.jpg
 
 *Figure 75.
-A-D Change in Bankfull Flow Area between Four Consecutive Channel Elements.**
+A-D Change in Bankfull Flow Area between Four Consecutive Channel Elements.*
 
 For the entire channel segment, the flow area varies from 223 ft\ :sup:`2` to 7,817 ft\ :sup:`2` with an average cross section flow area of 3,507 ft\
 :sup:`2` as displayed in the PROFILES program n-value interpolation dialog box (**Error! Reference source not found.**).
