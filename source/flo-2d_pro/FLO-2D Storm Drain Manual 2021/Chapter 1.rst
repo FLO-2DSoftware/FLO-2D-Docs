@@ -885,12 +885,18 @@ The solution algorithm involves the following steps:
        A relaxation factor Ω is used to combine the new flow estimate Q\ :sub:`new` with the previous estimate Q\ :sub:`last` to generate a new Q\ :sub:`new`
        according to the equation:
 
-    Qnew = (1−Ω) Qlast +Ω Qnew
+            .. math::
+               :label:
+
+               Q_{new} = (1−Ω) Q_{last} +Ω Q_{new}
 
     4. The equation for H\ :sub:`t+∆t`\ is solved again for heads using Q\ :sub:`new`.
        As with discharge, this new solution for head, H\ :sub:`new` is weighted with H\ :sub:`last` to produce an updated estimate for heads:
 
-       Hnew = (1−Ω) Hlast +Ω Hnew
+            .. math::
+               :label:
+
+               H_{new} = (1−Ω) H_{last} +Ω H_{new}
 
     5. If H\ :sub:`new` is close enough to H\ :sub:`last` then the process stops with Q\ :sub:`new` and H\ :sub:`new` as the solution for time t + Δt.
        Otherwise H\ :sub:`last` and Q\ :sub:`last` are replaced with H\ :sub:`new` and Q\ :sub:`new`, respectively and the process returns to step 2.
@@ -906,7 +912,7 @@ whenever the flow regime is supercritical.
 FLO-2D storm drain model uses the water surface slope and Froude number to determine when supercritical flow occurs in a conduit.
 
 Surcharge conditions
-''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~
 
 A node is defined to be in a surcharged condition when its water level exceeds the crown of the highest conduit connected to it.
 Under this condition the surface area of any closed conduits would be zero and equation for the change in the pressure head would no longer be
