@@ -479,11 +479,11 @@ IF Volume < VOLCurb:
 
 If VOLCurb ≤ Volume:
 
-Volume - VOLCurb = L x L x Flow depth
+    Volume - VOLCurb = L x L x Flow depth
 
-Flow depth = (Volume - 0.01 L\ :sup:`3`)/ L\ :sup:`2`
+    Flow depth = (Volume - 0.01 L\ :sup:`3`)/ L\ :sup:`2`
 
-Curb depth = Curb height + Flow depth
+    Curb depth = Curb height + Flow depth
 
 The curb depth is used to compute the discharge into the storm drain.
 This inlet discharge volume is removed from the grid element and the model continues to route the remaining volume down the street.
