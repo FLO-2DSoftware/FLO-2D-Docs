@@ -441,8 +441,10 @@ The curb height can be entered in the SWMMFLO.DAT file to make this adjustment a
 The curb inlet flow assignment is the same concept as the Street Gutter Flow feature (requires GUTTER.DAT file) that can be applied to gutters in
 streets without storm drain inlets.
 
-   **Figure 13.
-   Curb Inlet Water Depth Profile Adjustment**
+
+
+*Figure 13.
+Curb Inlet Water Depth Profile Adjustment*
 
 Definitions:
 
