@@ -734,7 +734,6 @@ Figure 53 and Figure 54 provide some additional details about setting up the inl
 This system shows that the bed elevation of the channel is equal to the invert elevation of the inlet.
 
     - Channel Bed Elevation = Bank Elevation – Depth = (299.8 – 3.5) = 296.3 ft
-
     - Inlet Elevation = 296.3 ft
 
 .. image:: img/Chapter2/Chapte029.jpg
