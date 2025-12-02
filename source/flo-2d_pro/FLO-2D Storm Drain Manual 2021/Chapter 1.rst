@@ -616,13 +616,13 @@ where:
 
     G = acceleration due to gravity 9.81 m/s\ :sup:`2` (32.2 ft/s\ :sup:`2`)
 
-   **Table 3.
-   Values of K for Contraction.
-   (Dept.
-   of Transportation, 2013)**
-.. image:: img/Chapter1/Chapte020.png
+**Table 3.
+Values of K for Contraction. (Dept. of Transportation, 2013)**
+
+.. image:: img/Chapter1/Chapte020.jpg
+
 Storm Drain Model Governing Equations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------
 
 Unsteady Flow in a Pipe Network
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
