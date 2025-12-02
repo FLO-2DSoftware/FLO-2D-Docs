@@ -262,14 +262,15 @@ Return flow to the surface
 Return Flow.*
 
 Surface water and the pipe capacity
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------
 
 When an inlet is connected to a downstream pipe that is at full capacity with zero or negative pipe velocity (backwater effect), the inflow from the
 surface water is zero, the inlet pressure head will exceed the crown elevation of the horizontal pipe and the FLO-2D surface water elevation may be
 greater than zero (see Figure 10).
 
     - Pipe capacity full;
-    - Pipe velocity zero or negative; • Inlet flow zero;
+    - Pipe velocity zero or negative;
+    - Inlet flow zero;
     - Return flow.
 
 .. image:: img/Chapter1/Chapte010.jpg
@@ -278,7 +279,7 @@ greater than zero (see Figure 10).
 Surface Water and Pipe Capacity.*
 
 Pressure head and manholes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 Flooding will occur at manholes when the pressure head exceeds manhole rim elevation plus surcharge depth plus FLO-2D water depth (see Figure 11).
 
