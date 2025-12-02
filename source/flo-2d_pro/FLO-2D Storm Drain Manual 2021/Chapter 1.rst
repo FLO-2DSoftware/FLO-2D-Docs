@@ -394,7 +394,7 @@ The following is an example of the information that is reported to the SDManhole
 
 .. raw:: html
 
-    <br>
+    <br><br>
 
 Table 1 is an example of the information that is reported to the ManholePop.OUT output file.
 
