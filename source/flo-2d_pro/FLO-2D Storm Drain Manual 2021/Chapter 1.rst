@@ -1045,27 +1045,27 @@ To integrate the surface water and storm drain models, the first task is to deve
 Then the storm drain model can be built with the assigned inlets/manholes/outfalls for surface water exchange.
 
 Storm Drain Model Features and Modifications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------------------
 
 Some of the original SWMM model data and functions have been modified or simplified to enable the flow exchange with the FLO-2D model.
 The objective has been to eliminate nonfunctional storm drain variables.
 
 Rain gage
-'''''''''
+~~~~~~~~~~
 
 Rain gages are not required in the FLO-2D storm drain model.
 The FLO-2D surface model simulates the hydrology.
 The model is backward compatible and will run simulations that have a rain gage.
 
 Subcatchment
-''''''''''''
+~~~~~~~~~~~~~
 
 No subcatchments need to be assigned.
 The watersheds are represented by the FLO-2D grid elements.
 Junctions with an ID that starts with ‘I’ will identify the storm drain inlets and collect water from the surface model.
 
 Junctions
-'''''''''
+~~~~~~~~~~~
 
 Junctions function as pipe connection nodes.
 FLO-2D can only exchange flow with those junctions defined as inlets (see Inlets).
@@ -1080,7 +1080,7 @@ The required input data is:
 - Surcharge Depth (optional)
 
 Inlets
-''''''
+~~~~~~~~~
 
 Storm drain inlets will exchange flow between the FLO-2D surface water and the pipe system.
 An inlet is a junction that captures surface inflow and must be connected to the grid system.
@@ -1099,7 +1099,7 @@ The required inlet data is:
     - Initial depth (optional)
 
 Conduits
-''''''''
+~~~~~~~~~~
 
 Conduits convey flow through the storm drain system.
 Slope is calculated internally based on inlet and outlet node invert elevation.
@@ -1112,7 +1112,7 @@ Required input data is:
     - Pipe roughness – Manning’s n-value
 
 Outfall
-'''''''
+~~~~~~~~
 
 An outfall node is a terminal node of a pipeline with potential boundary conditions.
 A free outfall can discharge from the storm drain system to a FLO-2D floodplain element, channel or street cell.
@@ -1136,7 +1136,7 @@ The required input data is:
       - Normal, Fixed, Tidal and Time Series Outfalls discharges flow off the storm drain system with a boundary condition set up in the SWMM.INP file.
 
 Links
-'''''
+~~~~~~
 
 Links are defined as those features that connect junctions and outfalls in the storm drain system.
 The following components are defined as links in the storm drain system:
@@ -1148,7 +1148,7 @@ The following components are defined as links in the storm drain system:
     - Outlets
 
 Pumps
-'''''
+~~~~~
 
 Pumps are links used to lift water to higher elevations.
 A pair of nodes can be connected using links as pumps.
@@ -1170,7 +1170,7 @@ The parameters for a pump in the storm drain system are:
     - Startup and shutoff depths
 
 Flow Regulators
-'''''''''''''''
+~~~~~~~~~~~~~~~~~
 
 Flow regulators are devices used to divert flow and can be applied to control releases from storage facilities, prevent surcharging or convey flow to
 interceptors.
@@ -1188,7 +1188,7 @@ An example is a large catch basin with an opening in the inlet wall (orifice).
 This component belongs to the storm drain layer and it needs to be modeled as a storage unit with an orifice.
 
 Orifices
-''''''''
+~~~~~~~~~~
 
 Orifices are used to model outlet and diversion structures.
 These outlet orifices should be distinguished from the inlet orifice flow and are typically openings in the wall of a manhole, storage facility, or
@@ -1197,23 +1197,38 @@ They can be either circular or rectangular in shape and can be located either at
 They can have a tide gate to prevent backflow.
 Orifice flow is based on the following criteria:
 
-    - When fully submerged the classical orifice equation is used: 𝑄\ :sub:`𝑤` |Chapte025|.
+    - When fully submerged the classical orifice equation is used:
+
+        .. math::
+            :label:
+
+            Q_{w} = C_{d}A\sqrt{2gH}
+
     - A partially submerged orifice applies the modified weir equation:
 
-    𝑄\ :sub:`𝑤` |Chapte026|.
+    .. math::
+       :label:
+
+       Q_{w} = C_{d}A\sqrt{2gDh}f^{1.5}
 
     - An orifice surface area contribution to the outlet is based on the equivalent pipe length and the depth of water in the orifice.
 
 where:
 
-   A = orifice open area (may be an irregular shape) D = height of the full orifice opening h = hydraulic head on the orifice
+    A = orifice open area (may be an irregular shape)
 
-   Cd = discharge coefficient hardcoded to 0.67 g = gravitational acceleration
+    D = height of the full orifice opening
 
-*f* = fraction of the orifice that is submerged
+    h = hydraulic head on the orifice
+
+    C\ :sub:`d` = discharge coefficient hardcoded to 0.67
+
+    g = gravitational acceleration
+
+    *f* = fraction of the orifice that is submerged
 
 Weirs
-'''''
+~~~~~~
 
 A weir is an unrestricted overflow opening oriented either transversely or parallel to the flow direction.
 Weirs can be a link connecting two nodes where the weir itself is placed at the upstream node.
