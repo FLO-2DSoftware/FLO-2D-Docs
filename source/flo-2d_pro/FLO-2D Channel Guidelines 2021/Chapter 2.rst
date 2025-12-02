@@ -281,7 +281,7 @@ The channel confluences/split flows elements can be added, edited or deleted.
 When the User clicks on any pair in the Dialog box, the corresponding elements will be highlighted momentarily on the GDS screen.
 This helps the user identify which element pairs to select.
 
-.. image:: img/Chapter2/Chapte017.jpg
+.. image:: img/Chapter2/Chapte017.png
 *Figure 41.
 Confluence dialog boxes.*
 
