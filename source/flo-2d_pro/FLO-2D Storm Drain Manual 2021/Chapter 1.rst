@@ -489,7 +489,7 @@ The curb depth is used to compute the discharge into the storm drain.
 This inlet discharge volume is removed from the grid element and the model continues to route the remaining volume down the street.
 
 Storm Drain Pressure Head Variation Dampening
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------------
 
 In the original SWMM model, to avoid rapid pressure fluctuation that induces discharge oscillations in the drop boxes, the storm drain engine had a
 pressure dampening algorithm.
@@ -510,110 +510,38 @@ This example shows how the pressure head calculation is affected for three diffe
 elevation.
 The selected method allows the pressure head to be exponentially reduced over to entire drop box to the RIM elevation.
 
-Water surface elevation is shown at 03:17:00
+.. image:: img/Chapter1/Chapte024.png
 
-.
+*Figure 15.
+Water Elevation Profile at 03:17:00.*
 
-T
-
-he reporting step is 30 s
-
-econds.
-I
-
-t takes 2 out-
-
-put timesteps for the PH to build up to the RIM
-
-elevation at 03:18:00.
-The PH
-
-then
-
-quickly jumps
-
-up and down
-
-with
-
-each timestep
-
-.
-
-No Pressure head dampening algorithm is ap-
-
-plied.
-Pressure head oscillations for various
-
-   **Figure 15.
-   Water Elevation Profile at 03:17:00.**
 .. image:: img/Chapter1/Chapte014.png
-   **Figure 16.
-   Inlet Pressure Head - No Pressure Head Dampening is Applied**
 
-**Figure**
+*Figure 16.
+Inlet Pressure Head - No Pressure Head Dampening is Applied*
 
-**17**
+.. image:: img/Chapter1/Chapte025.png
 
-**.
-Water Elevation Profile at 03:18:00.**
+*Figure 17.
+Water Elevation Profile at 03:18:00.*
 
-Water surface elevation is shown at 03:18:00
-
-.
-
-R
-
-eporting step is 30 s
-
-econds.
-
-Four
-
-output
-
-timesteps
-
-are required
-
-for the PH to build up
-
-to the RIM
-
-elevation at 03:19:30.
-
-No Pressure Head Dampening Algorithm is Ap-
 .. image:: img/Chapter1/Chapte015.png
-   **Figure 18.
-   Inlet Pressure Head with Dampening up to 1.25 Times the Lateral Pipe Diameter.**
 
-**Figure**
+*Figure 18.
+Inlet Pressure Head with Dampening up to 1.25 Times the Lateral Pipe Diameter.*
 
-**19**
+.. image:: img/Chapter1/Chapte026.png
 
-**.
-Water**
+*Figure 19.
+Water Elevation Profile at 03:18:00.*
 
-**Elevation Profile at 03:18:00.**
-
-Water surface elevation is shown at 03:18:00.
-
-Reporting step is 30
-
-seconds.
-There are 13
-
-output timesteps for the PH to build up to the
-
-RIM elevation at 03:24:30.
-
-Pressure Head Dampening Occurs up to RIM
 .. image:: img/Chapter1/Chapte016.png
-   **Figure 20.
-   Inlet Pressure Head with Dampening up to RIM Elevation**
+
+*Figure 20.
+Inlet Pressure Head with Dampening up to RIM Elevation*
 
 Storm Drain Blockage Method
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
 A clogging factor was created to simulate a reduction in inlet capacity.
 The SDCLOGGING.DAT file has the following format:
