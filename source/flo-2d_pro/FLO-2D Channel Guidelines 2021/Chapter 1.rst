@@ -641,7 +641,7 @@ Jia (1990) provides a relationship to estimate a minimum Froude number (Fr\ :sub
 .. math::
     :label:
 
-    Fr(min) = 4.49 d-0.186 (VS)0.377
+    Fr_{min} = 4.49 d^{-0.186} (VS)^{0.377}
 
 Where:
 
