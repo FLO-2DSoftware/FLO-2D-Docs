@@ -623,17 +623,21 @@ table, lack of entrance coefficients, or inappropriate slope.
 When a rate table accelerates flow through hydraulic structure in the model, it pulls down the inflow node water surface and conversely increases the
 outflow node storage.
 This changes the relationship between the headwater and tailwater resulting in numerical surging (Figure 50).
+
 .. image:: img/Chapter2/Chapte025.jpg
-   **Figure 50.
-   Hydraulic Structure Numerical Surging**
+
+*Figure 50.
+Hydraulic Structure Numerical Surging.*
 
 A poor rating table can be generated when the user is primarily interested in the 100-year flood and neglects to assign sufficient detail to the lower
 portion of the rating table.
 In the following Table 2, the user may be interested in discharges over 20,000 cfs, but what is the discharge at one foot?
 
-   **Table 2.
-   Stage Discharge Relationship for a Bridge**
+**Table 2.
+Stage Discharge Relationship for a Bridge**
+
 .. image:: img/Chapter2/Chapte026.jpg
+
 The interpolated discharge at 1 ft in the above table is about 1,000 cfs.
 In almost any natural river channel, it is impossible to have discharge of 1,000 cfs with a depth of 1 ft above the thalweg.
 The flow velocity would be on the order of 1 to 2 fps which would mean that the channel width would have to be 500 to 1,000 ft wide with a uniform
@@ -642,25 +646,33 @@ The issue is that there is a linear interpolation between the stage-discharge pa
 linear.
 It is more reasonable for the discharge to be on the order of 100 cfs at one ft deep.
 The bridge in Figure 51 was assigned the rating table below (Table 4).
+
 .. image:: img/Chapter2/Chapte022.jpg
-   **Figure 51.
-   Bridge/Culvert and Concrete-Lined Trapezoidal Channel**
+
+*Figure 51.
+Bridge/Culvert and Concrete-Lined Trapezoidal Channel.*
 
 The discharge from Table 3 is approximately 100 cfs for a depth of about 1 ft (0.9 ft).
 
-   **Table 3.
-   Rating Table for the Bridge/Culvert**
+**Table 3.
+Rating Table for the Bridge/Culvert**
+
 .. image:: img/Chapter2/Chapte027.jpg
+
 From the HYCHAN.OUT file the discharge several hundred feet upstream of the bridge is only 37 cfs at approximately one ft (Table 4).
 For 37 cfs discharge coming down the channel, the rating table (Table 4) has a corresponding depth of only about 0.45 ft, thus the bridge/culvert will
 numerically pull the water surface down as the flow enters the structure.
 The result is the numerical surging displayed in the plotted hydrograph of flow through the bridge (Figure 52).
 
-   **Table 4.
-   Channel Hydraulics Upstream of Bridge Reported by HYCHAN.OUT**
+**Table 4.
+Channel Hydraulics Upstream of Bridge Reported by HYCHAN.OUT**
+
+.. image:: img/Chapter2/Chapte043.jpg
+
 .. image:: img/Chapter2/Chapte028.jpg
-   **Figure 52.
-   Box Culvert Hydrograph Numerical Surging.**
+
+*Figure 52.
+Box Culvert Hydrograph Numerical Surging.*
 
 It is possible that for a concrete lined structure or culvert with a slope steeper than the upstream channel that physical surging could occur.
 Typically, this is demonstrated by smooth peaks and troughs (not spikes as shown in Figure 52) and maybe be limited to a specific range of flow depths
@@ -669,19 +681,19 @@ In this case, it is not necessary to eliminate the instability, but perhaps it c
 
 To reduce or eliminate channel numerical surging with a hydraulic structure, the following steps are suggested:
 
-1. Provide more definition to the rating table at low flows;
+    1. Provide more definition to the rating table at low flows;
 
-2. Regenerate the rating curves in the external program with more realistic n-values used in the FLO-2D channel;
+    2. Regenerate the rating curves in the external program with more realistic n-values used in the FLO-2D channel;
 
-3. Review and adjust the slope through the structure;
+    3. Review and adjust the slope through the structure;
 
-4. Gradually increase the channel n-values upstream and downstream of the bridge/culvert;
+    4. Gradually increase the channel n-values upstream and downstream of the bridge/culvert;
 
-5. Review and adjust the channel flow area transition leading upstream to and away downstream from the bridge;
+    5. Review and adjust the channel flow area transition leading upstream to and away downstream from the bridge;
 
-6. Use a rating curve instead of the rating table, although, in general, the rating table is more accurate than a rating curve;
+    6. Use a rating curve instead of the rating table, although, in general, the rating table is more accurate than a rating curve;
 
-7. Use the FLO-2D bridge flow component that represents the combined bridge features and channel geometry.
+    7. Use the FLO-2D bridge flow component that represents the combined bridge features and channel geometry.
 
 Storm Drains
 ~~~~~~~~~~~~
@@ -701,13 +713,11 @@ After initial set up of the urban project, the following issues related to the s
 - Inlet locations:
 
   - Inlets must be inside the FLO-2D computational domain;
-
   - Inlets cannot be assigned to the interior channel elements; ✓ Inlets should not be assigned to the channel bank elements.
 
 - Inlet elevations:
 
   - Channels discharging to a storm drain inlet should have a thalweg that matches the inlet invert elevation;
-
   - In most instances, the inlet should be set up as a vertical inlet in the SWMMFLO.DAT file.
 
 Storm drain inlets should not be assigned to an interior channel element.
@@ -719,23 +729,27 @@ This system shows that the bed elevation of the channel is equal to the invert e
 - Channel Bed Elevation = Bank Elevation – Depth = (299.8 – 3.5) = 296.3 ft
 
 - Inlet Elevation = 296.3 ft
+
 .. image:: img/Chapter2/Chapte029.jpg
-   **Figure 53.
-   Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet.**
+
+*Figure 53.
+ Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet.*
+
 .. image:: img/Chapter2/Chapte030.jpg
-   **Figure 54.
-   Elevation of a Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet.**
+*Figure 54.
+Elevation of a Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet.*
 
 Figure 55 shows another example of a storm drain system interfacing with a channel system.
 The surface water and the storm drain exchange flow based on the water surface elevation in the channel and the pressure head in the storm drain.
 The water surface elevation and the pressure head are a function of the following:
 
-- Channel thalweg elevation = inlet invert elevation
+    - Channel thalweg elevation = inlet invert elevation
+    - Channel bank elevation = inlet rim elevation
 
-- Channel bank elevation = inlet rim elevation
 .. image:: img/Chapter2/Chapte031.jpg
-   **Figure 55.
-   Complex Interaction between a Storm Drain Pipe and 1-D Channel.**
+
+*Figure 55.
+Complex Interaction between a Storm Drain Pipe and 1-D Channel.*
 
 Storm Drain Outfall – Channel Considerations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -745,22 +759,21 @@ To connect a storm drain outfall to a channel element the following issues shoul
 - Outfall locations:
 
   - Are all outfalls inside the FLO-2D computational domain?
-
   - Are there outfalls assigned to the interior channel elements? This is not allowed.
-
   - Are outfalls assigned to the appropriate channel bank elements? They should be assigned to the left bank only.
 
 - Outfall type:
 
   - Are outfalls set up as a FREE condition outfall type in the SWMM.inp file? This is required.
-
   - Is the switch to discharge flow back to the surface ‘ON’ in the SWMMOUTF.DAT file?
 
 Figure 56 shows a complex storm drain – channel system where a channel feeds the storm drain as an inlet and flow returns to surface further
 downstream and back into the channel network.
+
 .. image:: img/Chapter2/Chapte032.jpg
-   **Figure 56.
-   Complex Flow Exchange between a Storm Drain System and 1-D Channel.**
+
+*Figure 56.
+Complex Flow Exchange between a Storm Drain System and 1-D Channel.*
 
 Storm drain outfalls should be assigned to the channel left bank element.
 For most cases, the outfall invert elevation would be assigned to the channel element thalweg elevation.
@@ -771,9 +784,10 @@ Refer to Figure 57 for an example of a storm drain that physically outfalls to t
 purposes.
 The user should verify that the final pipe length and invert elevation are correctly assigned to match reality even though the modeling connection
 does not.
+
 .. image:: img/Chapter2/Chapte033.jpg
-   **Figure 57.
-   Typical Configuration of a Storm Drain Outfall Discharging to a Natural Channel.**
+*Figure 57.
+Typical Configuration of a Storm Drain Outfall Discharging to a Natural Channel.*
 
 The GDS uses coordinates of the different storm drain components from the SWMM.inp file to pair them with the grid elements in the surface layer.
 It is usually not necessary for the outfall coordinates in the SWMM.inp match the left bank channel element coordinate.
@@ -789,9 +803,10 @@ If the outfall physically discharges to the floodplain elevation instead of the 
 element that is not a channel bank element.
 Assignment of the outfall to a right bank element, or a channel interior element will generate an error message because that configuration is not
 allowed.
+
 .. image:: img/Chapter2/Chapte034.jpg
-   **Figure 58.
-   Outfall Nodes Paired to Interior Channel Elements by GDS.**
+*Figure 58.
+Outfall Nodes Paired to Interior Channel Elements by GDS.*
 
 The outfall invert elevation can be less than the channel thalweg elevations.
 If the outfall invert elevation is lower than the thalweg elevation (underground), then the storm drain would be assumed to be underwater with an
@@ -807,9 +822,10 @@ The artificial volume is accounted for in the storm drain model as backwater.
 When the model runs, inflow may be added to either the outfall grid element or the upstream storm drain pipe network and the flow can go either in or
 out of the outfall pipe based on the pressure head (Figure 59).
 To account for volume conservation, the storm drain outflow that represents inflow volume to a FLO-2D channel is reported in the CHVOLUME.OUT file.
+
 .. image:: img/Chapter2/Chapte035.jpg
-   **Figure 59.
-   Underground Outfall Condition.**
+*Figure 59.
+Underground Outfall Condition.*
 
 Water will flow in or out of the outfall pipe based on the relationship between the water surface elevation and pipe pressure head.
 Water can enter the storm drain when the external water surface elevation at the outfall is greater than the invert, but it could also evacuate from
@@ -817,9 +833,11 @@ the storm drain if the hydraulic grade line in the storm drain at the 1\ :sup:`s
 elevation at the outfall.
 This behavior can introduce oscillations in the system that can be explained as a respond to the interaction between external surface water and storm
 drain pressure (Figure 60).
+
 .. image:: img/Chapter2/Chapte036.jpg
-   **Figure 60.
-   Head Variations Cause Pipe Discharge Oscillations.**
+
+*Figure 60.
+Head Variations Cause Pipe Discharge Oscillations.*
 
 Storm Drain Reference Manual
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -842,9 +860,11 @@ This configuration is shown in Figure 61.
 This can occur regardless of the position of the channel outflow node on the grid system.
 This is the conventional method to end the channel flow whether the channel continues downstream after the outflow node or discharges into lake, bay
 or estuary.
+
 .. image:: img/Chapter2/Chapte037.jpg
-   **Figure 61.
-   Channel Outflow Configuration.**
+
+*Figure 61.
+Channel Outflow Configuration.*
 
 Hydraulic Structure
 ^^^^^^^^^^^^^^^^^^^
@@ -853,9 +873,11 @@ The second method is to use a hydraulic structure to discharge the flow from a c
 This method might result in some flood routing instabilities or errors because the channel area could be much larger than the grid element area.
 If the peak discharge to grid element area ratio (Q\ :sub:`p`/A) exceeds 10 cfs/ft\ :sup:`2` (30 cms/m\ :sup:`2`), it might be better to use the third
 method.
+
 .. image:: img/Chapter2/Chapte038.jpg
-   **Figure 62.
-   Channel to Floodplain - Hydraulic Structure.**
+
+*Figure 62.
+Channel to Floodplain - Hydraulic Structure.*
 
 Channel Termination on Floodplain
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -876,9 +898,11 @@ with a slight decrease in the flow area to the channel end.
 To allow channel discharge exchange from the interior channel elements at the end of the channel to the floodplain, it is only necessary to stop the
 channel without an outflow element.
 The interior channel elements discharge directly to the downstream floodplain elements at the end of the channel.
+
 .. image:: img/Chapter2/Chapte039.jpg
-   **Figure 63.
-   Channel termination (channel elements are marked by a yellow line).**
+
+*Figure 63.
+Channel termination (channel elements are marked by a yellow line).*
 
 In **Figure 3**, the channel right bank element is *1011* and the left bank element is *1008* at the downstream end of the channel.
 Grid elements *1009* and *1010* are interior channel elements at the end of the channel.
@@ -898,33 +922,39 @@ thalweg depth* while increasing from a *240 ft.
 width* to *820 ft.* over the last five channel elements.
 The channel roughness may also increase with decreasing thalweg depth.
 
-   **Figure 64.
-   Combined maximum floodplain and channel flow depths.**
+.. image:: img/Chapter2/image46.jpeg
 
-   **Figure 65.
-   Maximum floodplain velocities showing the flow downstream of the channel.**
+*Figure 64.
+Combined maximum floodplain and channel flow depths.*
+
+.. image:: img/Chapter2/image45.jpeg
+
+*Figure 65.
+Maximum floodplain velocities showing the flow downstream of the channel.*
 
 The guidelines for setting up a **channel termination** to the floodplain are:
 
-- Select a distance over which the channel will widen and become shallow (4 to 10 channel elements).
-  The final channel cross section should have a thalweg less than 2.0 ft.
+    - Select a distance over which the channel will widen and become shallow (4 to 10 channel elements).
+      The final channel cross section should have a thalweg less than 2.0 ft.
 
-- Maintain essentially the same channel cross section flow area (with maybe a slight reduction) over the last few channel elements.
+    - Maintain essentially the same channel cross section flow area (with maybe a slight reduction) over the last few channel elements.
 
-- Increase the n-values in the downstream direction.
+    - Increase the n-values in the downstream direction.
 
-- The floodplain elevations of the channel interior elements are set to the channel thalweg elevation of the last channel element and are identical.
+    - The floodplain elevations of the channel interior elements are set to the channel thalweg elevation of the last channel element and are identical.
 
-- The downstream floodplain grid element elevations contiguous to the channel end elements should be lower than the channel end thalweg elevation to
-  allow the flow to drain out of the channel.
+    - The downstream floodplain grid element elevations contiguous to the channel end elements should be lower than the channel end thalweg elevation to
+      allow the flow to drain out of the channel.
 
-- The channel can only terminate in one of the four compass directions.
-  The end of the channel cannot extend from bank to bank across of the diagonal directions.
-  At least three channel bank extensions should be oriented in one of the four compass directions as shown in Figure 66.
-  The incorrect set-up will not yield correct discharge results from the channel to the floodplain.
+    - The channel can only terminate in one of the four compass directions.
+      The end of the channel cannot extend from bank to bank across of the diagonal directions.
+      At least three channel bank extensions should be oriented in one of the four compass directions as shown in Figure 66.
+      The incorrect set-up will not yield correct discharge results from the channel to the floodplain.
+
 .. image:: img/Chapter2/Chapte040.jpg
-   **Figure 66.
-   Channel Termination Bank Position.**
+
+*Figure 66.
+Channel Termination Bank Position.*
 
 Although it is not recommended, a uniform cross section can be used to the end of the channel as in the case of a rectangular concrete channel that
 just debouches onto the floodplain surface.
@@ -942,10 +972,11 @@ The blue elements represent floodplain flow depth that enters the channel shown 
 elements).
 The levee elements with red lines are not required but are used to facilitate this test model.
 Figure 68 shows the complete floodplain and channel scenario with channel termination about half way through the grid system.
+
 .. image:: img/Chapter2/Chapte041.jpg
-   **Figure 67.
-   Floodplain flow entering the channel (from top of the image).
-   Levees are shown in red.**
+
+*Figure 67.
+Floodplain flow entering the channel (from top of the image). Levees are shown in red.*
 
 The conventional method of assigning an inflow hydrograph to the upstream channel element in this case would not generate the same results with the
 flow only going down the channel.
