@@ -500,20 +500,18 @@ Tailwater Conditions
 ^^^^^^^^^^^^^^^^^^^^
 
 As the tailwater increases in relation to the headwater, backwater or submergence may ensue and eventually flow may go upstream through a hydraulic
-structure (
+structure (Figure 49).
 
-Figure 49).
 The effects of the relationship between the structure headwater and tailwater is controlled by the INOUTCONT parameter (0, 1, or 2) in the HYSTRUC.DAT
 file (Table 1).
 If INOUTCONT =2,
 
+**Table 1.
+Hydraulic Structure Rating Table Options.**
+
 .. list-table::
    :widths: 50 50
    :header-rows: 0
-
-
-   * - Table 1.
-       Hydraulic Structure Rating Table Options
 
    * - Control
      - Control Details
@@ -546,51 +544,10 @@ headwater depth H\ :sub:`w` and tailwater T\ :sub:`w` can switch with submergenc
 The INOUTCONT parameter does not apply to the generalized culvert equations.
 
 .. image:: img/Chapter2/Chapte024.jpg
-.. list-table::
-   :widths: 100
-   :header-rows: 0
 
+*Figure 49.
+Variable Culvert Tailwater Condition*
 
-   * - Table 1.
-       Hydraulic Structure Rating Table Options
-
-   * - 47                                                           | Chapter 2
-
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
-
-   * - Control
-     - Control Details
-
-   * - INOUTCONT =0
-     - Simulates downstream flow through a structure or pump flow where the discharge is solely a function of the headwater depth Hw.
-
-   * - INOUTCONT =1
-     - Adjusts the rating table with a submergence factor as the tailwater approaches the headwater.
-       As tailwater water surface approaches the upstream headwater surface elevation.
-       No upstream flow through the structure is permitted.
-       The potential submergence is given by Q = Q \* SUBFACTOR; where SUBFACTOR is computed by the model based on HY-8 submergence criteria as defined by
-       (initially the SUBFACTOR = 1.0)  IF DELTA > 0.975, SUBFACTOR = SUBFACTOR – 0.01  IF DELTA < 0.975, SUBFACTOR = SUBFACTOR + 0.015  IF DELTA > 1,
-       SUBFACTOR = SUBFACTOR - 0.01\* DELTA
-
-   * - INOUTCONT =2
-     - Upstream flow through the structure is computed with the rating table adjustment when the tailwater surface exceeds the headwater surface.
-       The headwater depth Hw and tailwater Tw can switch with submergence to allow flow to go upstream.
-       For upstream discharge through the bridge or culvert, the outflow node must have upstream flow into it from the downstream channel element.
-
-   * - INOUTCONT =1, 2
-     - For bridges joining contiguous grid elements, the rating table is turned off for flow depths less than one foot or when the SUBFACTOR is less than
-       0.02.
-       This would occur for inflow and outflow WSEL that are nearly equilibrated.
-
-
-..
-
-   **Figure 49.
-   Variable Culvert Tailwater Condition**
 
 Channel Hydraulic Structure Troubleshooting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -606,23 +563,17 @@ again.
 
 The hydraulic structures that have the following flood routing issues will result in Warning Messages written to the ERROR.CHK file:
 
-- Adverse slope between the inflow and outflow nodes;
-
-- Inflow or outflow cells that also contain levee, streets or ARF’s;
-
-- Rating table data where the first pair of stage-discharge values are non-zero (must be 0.0.);
-
-- The rate of increase in the rating table values is unreasonably high.
+    - Adverse slope between the inflow and outflow nodes;
+    - Inflow or outflow cells that also contain levee, streets or ARF’s;
+    - Rating table data where the first pair of stage-discharge values are non-zero (must be 0.0.);
+    - The rate of increase in the rating table values is unreasonably high.
 
 Error Messages are written to the ERROR.CHK file for the following channel conditions:
 
-- Reference elevation is lower than the inlet or outlet grid elevations.
-
-- Inflow or outflow nodes are also assigned as channel elements.
-
-- Assignment of a channel element to more than one hydraulic structure inlet node.
-
-- Rating table must have increasing stage and Q.
+    - Reference elevation is lower than the inlet or outlet grid elevations.
+    - Inflow or outflow nodes are also assigned as channel elements.
+    - Assignment of a channel element to more than one hydraulic structure inlet node.
+    - Rating table must have increasing stage and Q.
 
 The most frequent problem with application of the hydraulic structure routine is a mismatched flow condition.
 This occurs when the discharge through the structure defined by the rating curve or table is greater than the upstream inflow to the structure.
@@ -633,14 +584,12 @@ Review the HYDROSTRUCT.OUT and HYCHAN.OUT files for surging.
 If surging is noted in the hydraulic structure hydrograph or the channel hydrographs near the inlet, the rating table or curve will need adjustment.
 The following conditions should be reviewed:
 
-- Shallow flows less than 1 ft in depth with velocity > 5 fps.
-  Warning message
-
-- Downstream WSEL > upstream WSEL with INOUTCONT < 2 (potential upstream flow thru the structure).
-  Warning message.
-
-- Rating table adjusted with SUBFACTOR.
-  Warning message and revised table values are written to REVISED_RATING_TABLE.OUT file.
+    - Shallow flows less than 1 ft in depth with velocity > 5 fps.
+      Warning message
+    - Downstream WSEL > upstream WSEL with INOUTCONT < 2 (potential upstream flow thru the structure).
+      Warning message.
+    - Rating table adjusted with SUBFACTOR.
+      Warning message and revised table values are written to REVISED_RATING_TABLE.OUT file.
 
 Hydraulic Structure – Channel Instability Adjustments
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
