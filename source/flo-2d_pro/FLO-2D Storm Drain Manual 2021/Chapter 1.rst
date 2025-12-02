@@ -535,7 +535,7 @@ Inlet Pressure Head with Dampening up to 1.25 Times the Lateral Pipe Diameter.*
 *Figure 19.
 Water Elevation Profile at 03:18:00.*
 
-.. image:: img/Chapter1/Chapte016.png
+.. image:: img/Chapter1/Chapte016.jpg
 
 *Figure 20.
 Inlet Pressure Head with Dampening up to RIM Elevation*
