@@ -36,12 +36,10 @@ Turn off the rainfall and infiltration and test the remaining components using t
 
 - Other details: Sediment transport, groundwater, mudflows, etc.
 
-..
+.. image:: img/Chapter2/Chapte002.jpg
 
-   |Chapte002|
-
-   **Figure 26.
-   Start a Project with a Grid System and an Inflow Hydrograph Only.**
+*Figure 26.
+Start a Project with a Grid System and an Inflow Hydrograph Only.*
 
 Cutting channel cross sections from DTM data
 --------------------------------------------
@@ -95,9 +93,7 @@ Cross sections can have a similar appearance but have a completely different geo
 In this figure, two cross sections are contiguous but only one controls the flow.
 One cross section has a bank full flow area of 33 ft\ :sup:`2` and the second one has 139 ft\ :sup:`2`.
 It is necessary to review the data source for each cross section to ensure they represent the physical configuration.
-
-   |Chapte003|
-
+.. image:: img/Chapter2/Chapte003.jpg
    **Figure 27.
    Cross Section Comparison.**
 
@@ -111,9 +107,7 @@ Typically, the braided channel will convey a 2-year to 5-year return period floo
 The channel may increase its bankfull capacity during the flood event.
 If the cut cross section cannot be accurately delineated with aerial photos or field observations, the channel cross section shape may have to be
 estimated or small grid elements can replace the 1-D channel.
-
-|Chapte004|
-
+.. image:: img/Chapter2/Chapte004.jpg
    **Figure 28.
    Braided Channel Cross Section.**
 
@@ -125,15 +119,11 @@ Typically the braided channel will convey a 2-year to 5-year return period flood
 The channel will increase its bankfull capacity during the flood event.
 If the cut cross section cannot be accurately delineated with aerial photos or field observations, the channel cross section shape may have to be
 estimated.
-
-|Chapte005|
-
+.. image:: img/Chapter2/Chapte005.jpg
    **Figure 29.
    Braided Channel 2012.
    (Source Google Earth)**
-
-|Chapte006|
-
+.. image:: img/Chapter2/Chapte006.jpg
    **Figure 30.
    Braided Channel 2014.
    (Source: Google Earth)**
@@ -146,9 +136,7 @@ This can occur if the channel width is too narrow or if the elevation data has i
 Figure 31 right bank is not captured.
 This is probably because the cross section was not long enough or the elevation data didn’t have enough resolution along the right bank.
 This is one of the most common errors of cut cross sections.
-
-|Chapte007|
-
+.. image:: img/Chapter2/Chapte007.jpg
    **Figure 31.
    Cross Section Missing Right Bank.**
 
@@ -160,9 +148,7 @@ Figure 32 shows that the secondary channel on the right has a lower right bank e
 island is presumed to be the right bank for the entire cross section.
 For some islands, splitting the river into two channels with a confluence may be more expedient.
 The other approach is to lower the island below the right bank.
-
-|Chapte008|
-
+.. image:: img/Chapter2/Chapte008.jpg
    **Figure 32.
    Split Flows.**
 
@@ -173,9 +159,7 @@ LiDAR and IFSAR data does not penetrate water surfaces, the bottom of the channe
 (Figure 33).
 Bathometric data is needed to fully define the cross section geometry.
 It may be necessary to estimate the missing wet channel reach conveyance in the thalweg if a portion of the channel has a dry thalweg.
-
-|Chapte009|
-
+.. image:: img/Chapter2/Chapte009.jpg
    **Figure 33.
    Water Surface.**
 
@@ -187,9 +171,7 @@ stations.
 In the red points represent the station and elevation pairs listed in the XSEC.DAT for this cross section.
 Four station points are insufficient to define the rating table for the natural cross section geometry.
 It is more appropriate to model urban design channels with the Rectangular or Trapezoidal method.
-
-|Chapte010|
-
+.. image:: img/Chapter2/Chapte010.jpg
    **Figure 34.
    Urban Design Channel.**
 
@@ -197,9 +179,7 @@ If modeling a rectangular or trapezoidal channel with station elevation data, it
 Use 10 or more station/elevation points (Figure 35).
 This will ensure the model creates the proper flow area rating tables and that the Profiles program correctly interpolates the thalweg and channel
 shape.
-
-|Chapte011|
-
+.. image:: img/Chapter2/Chapte011.jpg
    **Figure 35.
    Urban Design Channel Corrected.**
 
@@ -218,9 +198,7 @@ representing the upstream channel to 0.03 or so at the bridge piers.
 There is also a storm drain outlet near the bridge entrance as identified by the sediment bar deposit.
 During flooding, the flow streamlines would be distorted by the outlet discharge and the squeezed channel flow would experience higher flow resistance
 (higher n-values).
-
-|Chapte012|
-
+.. image:: img/Chapter2/Chapte012.jpg
    **Figure 36.
    Urban Concrete-Lined Trapezoidal Channel Transition**
 
@@ -241,35 +219,27 @@ The channel confluence guidelines are as follows:
 The tributary or split flow channel segment should not include the main channel confluence channel element.
 A channel element should only be listed once in the CHAN.DAT file.
 In Figure 37, the red arrows indicate the *incorrect* method.
-
-|Chapte013|
-
+.. image:: img/Chapter2/Chapte013.jpg
    **Figure 37.
    Tributary Element in a Main Channel Bank.**
 
 The last tributary channel element before the confluence should be the last channel element listed for that tributary channel segment (Figure 38 –
 green arrows indicate correct method).
 Dark blue element is the Tributary Confluence Node and the light cyan element is the Main Channel Node.
-
-|Chapte014|
-
+.. image:: img/Chapter2/Chapte014.jpg
    **Figure 38.
    Tributary Channel Ends Adjacent to Main Channel Bank.**
 
 The first split channel element after the confluence should be the first channel element listed for that channel segment.
 In this case it was also necessary to “Add the Confluence Pair” (Figure 39).
-
-|Chapte015|
-
+.. image:: img/Chapter2/Chapte015.jpg
    **Figure 39.
    Split Flow Condition.**
 
 The tributary or split flow element must be contiguous the main channel.
 It cannot be separated by one or more floodplain elements from the main channel.
 The red circle in Figure 40 shows this incorrect configuration.
-
-|Chapte016|
-
+.. image:: img/Chapter2/Chapte016.jpg
    **Figure 40.
    Tributary Channel Element not Contiguous to Main Channel.**
 
@@ -285,9 +255,7 @@ The data entry will list all the potential channel confluences and split flow lo
 The channel confluences/split flows elements can be added, edited or deleted.
 When the User clicks on any pair in the Dialog box, the corresponding elements will be highlighted momentarily on the GDS screen.
 This helps the user identify which element pairs to select.
-
-|Chapte017|
-
+.. image:: img/Chapter2/Chapte017.jpg
    **Figure 41.
    Confluence dialog boxes.**
 
@@ -323,9 +291,7 @@ Levees can be assigned along channels without issues (Figure 42).
 In urban areas, levees may also represent fences, berms, or flood walls that are assigned with shapefiles.
 When constructing the levee component it is only necessary to avoid drawing the levees into the interior channel.
 There is an automated error message at runtime to alert the user to this condition.
-
-   |Chapte018|
-
+.. image:: img/Chapter2/Chapte018.jpg
    **Figure 42.
    Levees and River Channel Configuration.**
 
@@ -334,9 +300,7 @@ These modeling issues are channel flood routing problems, not levee and channel 
 Water stored behind levees can created ponding flow conditions (Figure 43).
 Ponded water is not an open channel flow condition and must be assigned a reasonable n-value for deep, still water (see Ponded Water Guidelines
 document).
-
-   |Chapte019|
-
+.. image:: img/Chapter2/Chapte019.jpg
    **Figure 43.
    Ponded Area Behind Rivers Levees from a Levee Breach Upstream.**
 
@@ -351,9 +315,7 @@ Hydraulic structures can interact with the channel in three ways:
 - *floodplain to channel*
 
 - *channel to floodplain*
-
-|Chapte020|
-
+.. image:: img/Chapter2/Chapte020.jpg
    **Figure 44.
    Channel Structure Configurations**
 
@@ -381,9 +343,7 @@ A discharge rating curve uses headwater depth to calculate discharge:
 A broadcrested weir (Figure 45) discharge curve is an example of a rating curve:
 
    Q = C L h\ :sub:`d` :sup:`1.5` where C = 2.65 - 3.40 in English Units
-
-   |Chapte021|
-
+.. image:: img/Chapter2/Chapte021.jpg
    **Figure 45.
    Broadcrested Weir Definition.**
 
@@ -404,9 +364,7 @@ Several important features of hydraulic structures are:
 - Flow upstream thru the hydraulic structure can occur with the INOUTCONT parameter.
 
 - Hydraulic structure inlet and outlet channel elements don’t have to be contiguous (Figure 46)
-
-|Chapte022|
-
+.. image:: img/Chapter2/Chapte022.jpg
    **Figure 46.
    Hydraulic Structure (Culvert) Connecting Two Channel Elements.**
 
@@ -432,9 +390,7 @@ outlet control.
 These equations are based on the U.S.
 Dept.
 of Transportation Highway Manual (2005) and the culvert data is entered with the hydraulic structure data in HYSTRUC.DAT (Figure 47).
-
-|Chapte023|
-
+.. image:: img/Chapter2/Chapte023.jpg
    **Figure 47.
    Select the Hydraulic Structures Dialog Box.**
 
@@ -529,9 +485,7 @@ If INOUTCONT =2,
 
 headwater depth H\ :sub:`w` and tailwater T\ :sub:`w` can switch with submergence to allow flow to go upstream.
 The INOUTCONT parameter does not apply to the generalized culvert equations.
-
-|Chapte024|
-
+.. image:: img/Chapter2/Chapte024.jpg
 .. list-table::
    :widths: 100
    :header-rows: 0
@@ -660,9 +614,7 @@ table, lack of entrance coefficients, or inappropriate slope.
 When a rate table accelerates flow through hydraulic structure in the model, it pulls down the inflow node water surface and conversely increases the
 outflow node storage.
 This changes the relationship between the headwater and tailwater resulting in numerical surging (Figure 50).
-
-|Chapte025|
-
+.. image:: img/Chapter2/Chapte025.jpg
    **Figure 50.
    Hydraulic Structure Numerical Surging**
 
@@ -672,9 +624,7 @@ In the following Table 2, the user may be interested in discharges over 20,000 c
 
    **Table 2.
    Stage Discharge Relationship for a Bridge**
-
-   |Chapte026|
-
+.. image:: img/Chapter2/Chapte026.jpg
 The interpolated discharge at 1 ft in the above table is about 1,000 cfs.
 In almost any natural river channel, it is impossible to have discharge of 1,000 cfs with a depth of 1 ft above the thalweg.
 The flow velocity would be on the order of 1 to 2 fps which would mean that the channel width would have to be 500 to 1,000 ft wide with a uniform
@@ -683,9 +633,7 @@ The issue is that there is a linear interpolation between the stage-discharge pa
 linear.
 It is more reasonable for the discharge to be on the order of 100 cfs at one ft deep.
 The bridge in Figure 51 was assigned the rating table below (Table 4).
-
-|Chapte022|
-
+.. image:: img/Chapter2/Chapte022.jpg
    **Figure 51.
    Bridge/Culvert and Concrete-Lined Trapezoidal Channel**
 
@@ -693,9 +641,7 @@ The discharge from Table 3 is approximately 100 cfs for a depth of about 1 ft (0
 
    **Table 3.
    Rating Table for the Bridge/Culvert**
-
-   |Chapte027|
-
+.. image:: img/Chapter2/Chapte027.jpg
 From the HYCHAN.OUT file the discharge several hundred feet upstream of the bridge is only 37 cfs at approximately one ft (Table 4).
 For 37 cfs discharge coming down the channel, the rating table (Table 4) has a corresponding depth of only about 0.45 ft, thus the bridge/culvert will
 numerically pull the water surface down as the flow enters the structure.
@@ -703,9 +649,7 @@ The result is the numerical surging displayed in the plotted hydrograph of flow 
 
    **Table 4.
    Channel Hydraulics Upstream of Bridge Reported by HYCHAN.OUT**
-
-|Chapte028|
-
+.. image:: img/Chapter2/Chapte028.jpg
    **Figure 52.
    Box Culvert Hydrograph Numerical Surging.**
 
@@ -766,14 +710,10 @@ This system shows that the bed elevation of the channel is equal to the invert e
 - Channel Bed Elevation = Bank Elevation – Depth = (299.8 – 3.5) = 296.3 ft
 
 - Inlet Elevation = 296.3 ft
-
-|Chapte029|
-
+.. image:: img/Chapter2/Chapte029.jpg
    **Figure 53.
    Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet.**
-
-|Chapte030|
-
+.. image:: img/Chapter2/Chapte030.jpg
    **Figure 54.
    Elevation of a Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet.**
 
@@ -784,9 +724,7 @@ The water surface elevation and the pressure head are a function of the followin
 - Channel thalweg elevation = inlet invert elevation
 
 - Channel bank elevation = inlet rim elevation
-
-|Chapte031|
-
+.. image:: img/Chapter2/Chapte031.jpg
    **Figure 55.
    Complex Interaction between a Storm Drain Pipe and 1-D Channel.**
 
@@ -811,9 +749,7 @@ To connect a storm drain outfall to a channel element the following issues shoul
 
 Figure 56 shows a complex storm drain – channel system where a channel feeds the storm drain as an inlet and flow returns to surface further
 downstream and back into the channel network.
-
-|Chapte032|
-
+.. image:: img/Chapter2/Chapte032.jpg
    **Figure 56.
    Complex Flow Exchange between a Storm Drain System and 1-D Channel.**
 
@@ -826,9 +762,7 @@ Refer to Figure 57 for an example of a storm drain that physically outfalls to t
 purposes.
 The user should verify that the final pipe length and invert elevation are correctly assigned to match reality even though the modeling connection
 does not.
-
-|Chapte033|
-
+.. image:: img/Chapter2/Chapte033.jpg
    **Figure 57.
    Typical Configuration of a Storm Drain Outfall Discharging to a Natural Channel.**
 
@@ -846,9 +780,7 @@ If the outfall physically discharges to the floodplain elevation instead of the 
 element that is not a channel bank element.
 Assignment of the outfall to a right bank element, or a channel interior element will generate an error message because that configuration is not
 allowed.
-
-|Chapte034|
-
+.. image:: img/Chapter2/Chapte034.jpg
    **Figure 58.
    Outfall Nodes Paired to Interior Channel Elements by GDS.**
 
@@ -866,9 +798,7 @@ The artificial volume is accounted for in the storm drain model as backwater.
 When the model runs, inflow may be added to either the outfall grid element or the upstream storm drain pipe network and the flow can go either in or
 out of the outfall pipe based on the pressure head (Figure 59).
 To account for volume conservation, the storm drain outflow that represents inflow volume to a FLO-2D channel is reported in the CHVOLUME.OUT file.
-
-   |Chapte035|
-
+.. image:: img/Chapter2/Chapte035.jpg
    **Figure 59.
    Underground Outfall Condition.**
 
@@ -878,9 +808,7 @@ the storm drain if the hydraulic grade line in the storm drain at the 1\ :sup:`s
 elevation at the outfall.
 This behavior can introduce oscillations in the system that can be explained as a respond to the interaction between external surface water and storm
 drain pressure (Figure 60).
-
-|Chapte036|
-
+.. image:: img/Chapter2/Chapte036.jpg
    **Figure 60.
    Head Variations Cause Pipe Discharge Oscillations.**
 
@@ -905,9 +833,7 @@ This configuration is shown in Figure 61.
 This can occur regardless of the position of the channel outflow node on the grid system.
 This is the conventional method to end the channel flow whether the channel continues downstream after the outflow node or discharges into lake, bay
 or estuary.
-
-|Chapte037|
-
+.. image:: img/Chapter2/Chapte037.jpg
    **Figure 61.
    Channel Outflow Configuration.**
 
@@ -918,9 +844,7 @@ The second method is to use a hydraulic structure to discharge the flow from a c
 This method might result in some flood routing instabilities or errors because the channel area could be much larger than the grid element area.
 If the peak discharge to grid element area ratio (Q\ :sub:`p`/A) exceeds 10 cfs/ft\ :sup:`2` (30 cms/m\ :sup:`2`), it might be better to use the third
 method.
-
-|Chapte038|
-
+.. image:: img/Chapter2/Chapte038.jpg
    **Figure 62.
    Channel to Floodplain - Hydraulic Structure.**
 
@@ -943,9 +867,7 @@ with a slight decrease in the flow area to the channel end.
 To allow channel discharge exchange from the interior channel elements at the end of the channel to the floodplain, it is only necessary to stop the
 channel without an outflow element.
 The interior channel elements discharge directly to the downstream floodplain elements at the end of the channel.
-
-   |Chapte039|
-
+.. image:: img/Chapter2/Chapte039.jpg
    **Figure 63.
    Channel termination (channel elements are marked by a yellow line).**
 
@@ -991,9 +913,7 @@ The guidelines for setting up a **channel termination** to the floodplain are:
   The end of the channel cannot extend from bank to bank across of the diagonal directions.
   At least three channel bank extensions should be oriented in one of the four compass directions as shown in Figure 66.
   The incorrect set-up will not yield correct discharge results from the channel to the floodplain.
-
-|Chapte040|
-
+.. image:: img/Chapter2/Chapte040.jpg
    **Figure 66.
    Channel Termination Bank Position.**
 
@@ -1013,9 +933,7 @@ The blue elements represent floodplain flow depth that enters the channel shown 
 elements).
 The levee elements with red lines are not required but are used to facilitate this test model.
 Figure 68 shows the complete floodplain and channel scenario with channel termination about half way through the grid system.
-
-   |Chapte041|
-
+.. image:: img/Chapter2/Chapte041.jpg
    **Figure 67.
    Floodplain flow entering the channel (from top of the image).
    Levees are shown in red.**
@@ -1024,135 +942,7 @@ The conventional method of assigning an inflow hydrograph to the upstream channe
 flow only going down the channel.
 The inflow would leave the channel inflow element and flow upstream onto the floodplain.
 It is recommended that any inflow hydrographs be assigned to the upstream end of the floodplain grid system in this case.
-
-   |Chapte042|
-
+.. image:: img/Chapter2/Chapte042.jpg
 **Figure 68.
 The channel widens and the flow exits the channel back to the floodplain.**
 
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 2.74944in
-   :height: 2.58194in
-.. |Chapte003| image:: media\Chapte003.png
-   :width: 3.66667in
-   :height: 2.8125in
-.. |Chapte004| image:: media\Chapte004.png
-   :width: 5.89306in
-   :height: 1.60417in
-.. |Chapte005| image:: media\Chapte005.jpg
-   :width: 5.7875in
-   :height: 3.49972in
-.. |Chapte006| image:: media\Chapte006.jpg
-   :width: 5.7875in
-   :height: 3.49972in
-.. |Chapte007| image:: media\Chapte007.jpg
-   :width: 5.65556in
-   :height: 1.79306in
-.. |Chapte008| image:: media\Chapte008.png
-   :width: 5.78028in
-   :height: 1.58819in
-.. |Chapte009| image:: media\Chapte009.png
-   :width: 5.68597in
-   :height: 2.37847in
-.. |Chapte010| image:: media\Chapte010.png
-   :width: 5.9575in
-   :height: 2.69306in
-.. |Chapte011| image:: media\Chapte011.png
-   :width: 4.86736in
-   :height: 2.2in
-.. |Chapte012| image:: media\Chapte012.jpg
-   :width: 5.87917in
-   :height: 1.66667in
-.. |Chapte013| image:: media\Chapte013.jpg
-   :width: 4.53431in
-   :height: 2.39167in
-.. |Chapte014| image:: media\Chapte014.jpg
-   :width: 5.36736in
-   :height: 2.83111in
-.. |Chapte015| image:: media\Chapte015.png
-   :width: 4.65472in
-   :height: 3.63333in
-.. |Chapte016| image:: media\Chapte016.jpg
-   :width: 6.5in
-   :height: 2.41597in
-.. |Chapte017| image:: media\Chapte017.png
-   :width: 6.32431in
-   :height: 3.81667in
-.. |Chapte018| image:: media\Chapte018.jpg
-   :width: 3.33333in
-   :height: 3.46875in
-.. |Chapte019| image:: media\Chapte019.jpg
-   :width: 2.96806in
-   :height: 2.71361in
-.. |Chapte020| image:: media\Chapte020.png
-   :width: 4.51667in
-   :height: 5.47153in
-.. |Chapte021| image:: media\Chapte021.png
-   :width: 3.91181in
-   :height: 1.11667in
-.. |Chapte022| image:: media\Chapte022.jpg
-   :width: 4.66236in
-   :height: 2.35694in
-.. |Chapte023| image:: media\Chapte023.png
-   :width: 5.46611in
-   :height: 3.38264in
-.. |Chapte024| image:: media\Chapte024.jpg
-   :width: 6.07847in
-   :height: 1.34374in
-.. |Chapte025| image:: media\Chapte025.jpg
-   :width: 5.35972in
-   :height: 2.84222in
-.. |Chapte026| image:: media\Chapte026.jpg
-   :width: 1.87389in
-   :height: 1.57639in
-.. |Chapte022| image:: media\Chapte022.jpg
-   :width: 6.40833in
-   :height: 3.23944in
-.. |Chapte027| image:: media\Chapte027.jpg
-   :width: 4.43542in
-   :height: 2.04139in
-.. |Chapte028| image:: media\Chapte028.jpg
-   :width: 5.84792in
-   :height: 2.76042in
-.. |Chapte029| image:: media\Chapte029.jpg
-   :width: 6.55278in
-   :height: 4.6975in
-.. |Chapte030| image:: media\Chapte030.jpg
-   :width: 6.91667in
-   :height: 2.58333in
-.. |Chapte031| image:: media\Chapte031.png
-   :width: 5.04167in
-   :height: 5.49486in
-.. |Chapte032| image:: media\Chapte032.png
-   :width: 5.59861in
-   :height: 4.94736in
-.. |Chapte033| image:: media\Chapte033.jpg
-   :width: 5.52014in
-   :height: 4.72014in
-.. |Chapte034| image:: media\Chapte034.jpg
-   :width: 6.78472in
-   :height: 4.16639in
-.. |Chapte035| image:: media\Chapte035.png
-   :width: 3.82917in
-   :height: 3.11972in
-.. |Chapte036| image:: media\Chapte036.jpg
-   :width: 4.76597in
-   :height: 3.46458in
-.. |Chapte037| image:: media\Chapte037.png
-   :width: 6.925in
-   :height: 3.44792in
-.. |Chapte038| image:: media\Chapte038.jpg
-   :width: 5.71722in
-   :height: 2.49931in
-.. |Chapte039| image:: media\Chapte039.png
-   :width: 4.38056in
-   :height: 3.65514in
-.. |Chapte040| image:: media\Chapte040.png
-   :width: 6.925in
-   :height: 2.89931in
-.. |Chapte041| image:: media\Chapte041.jpg
-   :width: 4.06222in
-   :height: 3.86736in
-.. |Chapte042| image:: media\Chapte042.jpg
-   :width: 0.87494in
-   :height: 5.49861in
