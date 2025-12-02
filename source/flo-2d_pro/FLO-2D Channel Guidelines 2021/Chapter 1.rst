@@ -206,7 +206,7 @@ drawn along the left bank to select the left bank elements and then the individu
 element (Figure 7).
 This process is completely automated if a GEO-RAS geometry file can be imported with the cross section data.
 
-.. image:: img/Chapter1/Chapte005.jpg
+.. image:: img/Chapter1/Chapte005.png
 
 *Figure 7.
 Channel Delineation.*
