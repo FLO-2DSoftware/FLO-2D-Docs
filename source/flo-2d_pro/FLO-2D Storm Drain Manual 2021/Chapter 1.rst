@@ -735,52 +735,28 @@ where:
 To calculate the change in pressure head at each node that connects two or more conduits
 an additional equation is necessary (Figure 23):
 
-∂H ∑ Q = ∂t A\ :sub:`store` + ∑ As
+.. math::
+    :label:
 
-.. _`where:`:
+    \frac{∂H}{∂t} = \frac{∑ Q}{A_{store} + ∑ As}
 
-where::
+where:
 
+    H = flow depth (difference between the node head and the pipe invert elevation)
 
-.. _`h`:
+    A\ :sub:`store` = node surface area
 
-h:
+    ∑As = surface area contributed by the conduits connected to the node.
 
-=
+    ∑Q = net flow at Node J contributed by all connected conduits plus external inflows
 
-flow depth (difference between the node head and the pipe invert elevation)
-
-.. _`astore`:
-
-astore:
-
-=
-
-node surface area
-
-.. _`∑as`:
-
-∑as:
-
-=
-
-surface area contributed by the conduits connected to the node.
-
-.. _`∑q`:
-
-∑q:
-
-=
-
-net flow at Node J contributed by all connected conduits plus external inflows
-
-.. image:: img/Chapter1/Chapte023.png
+.. image:: img/Chapter1/Chapte023.jpg
 
 *Figure 23.
 Node-Link Representation of a Drainage System (Roesner et al, 1992)*
 
 Solution Algorithm – How the Model Works
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------
 
 The differential form of the continuity and momentum equations for the storm drain component are solved by converting them into an explicit set of
 finite difference formulas that compute the flow Q in each conduit and head at each node for time T + t.
