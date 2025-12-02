@@ -1,13 +1,13 @@
 .. vim: syntax=rst
 
 Chapter 2
-~~~~~~~~~
+==========
 
 FLO-2D Storm Drain Features
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
 Overview of Inlets and Outfalls
-'''''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 FLO-2D storm drain component exchanges discharge between the surface water and the closed conduit system through a series of objects that are
 representations of the physical components in a storm drain system, primarily inlets and outfalls.
@@ -16,80 +16,10 @@ when the pipe system capacity is exceeded.
 The storm drain system is represented by links and nodes where the links are the closed conduits and nodes are junctions and outfalls as shown in
 Figure 24.
 
-**Figure**
+.. image:: img/Chapter2/Chapte007.png
 
-**24**
-
-**.
-Surface and**
-
-**C**
-
-**losed**
-
-**C**
-
-**onduit**
-
-**F**
-
-**low**
-
-**Exchange**
-
-Inlet
-
-node
-
-Grid Element
-
-Closed Conduit Sys-
-
-tem
-
-FLO
-
--
-
-2
-
-D Water Surface Eleva
-
--
-
-tion
-
-Closed Conduit Water Surface El-
-
-evation
-
-Runoff
-
-enters
-
-the
-
-closed conduit if ca-
-
-pacity is available
-
-.
-
-R
-
-e-
-
-turn flow
-
-to the sur-
-
-face can occur
-
-when
-
-the capacity is ex-
-
-ceeded.
+*Figure 24.
+Surface and Closed Conduit Flow Exchange.*
 
 Nodes represent several features of a storm drain system.
 One type of node is the inlet which constitutes an inflow point to the pipe system from the surface water.
@@ -99,8 +29,7 @@ The water surface elevation is determined at each junction for each computationa
 Figure 25 is a profile of closed conduit system with three inlets, one junction and one outfall.
 The figure displays a peak water surface elevation for the 10 year return period storm.
 
-|Chapte002|
-
+.. image:: img/Chapter2/Chapte002.jpg
    **Figure 25.
    Profile of Typical Closed Conduit System**
 
@@ -117,9 +46,7 @@ Storm drain inlets are depicted by the QGIS and GDS as blue in Figure 26 and Fig
    **Figure 26.
    Storm Drain System Represented in the GDS Graphic Display.
    Inlets are blue and junctions are green.**
-
-|Chapte003|
-
+.. image:: img/Chapter2/Chapte003.jpg
    **Figure 27.
    Storm Drain System Represented in the QGIS Graphic Display.
    Inlets are blue and outfalls are green.**
@@ -133,9 +60,7 @@ If the outfall discharge is returned to the surface water, the water surface is 
 An outfall to a retention basin is shown in Figure 28.
 The boundary condition for this outfall would vary with the basin water surface.
 In Figure 29 the pipe outfall discharges into a channel and may have a potential backwater condition.
-
-   |Chapte004|
-
+.. image:: img/Chapter2/Chapte004.jpg
    **Figure 28.
    Outfall Discharge Retention Basin**
 
@@ -159,14 +84,10 @@ For curb and grate inlets, the inlet geometry is assigned, and the discharge is 
 available storm drain capacity.
 For slotted drains, combination inlets and other non-typical inlets, a rating table must be generated with discharge as a function of headwater depth
 (Figure 30 and Figure 31).
-
-|Chapte005|
-
+.. image:: img/Chapter2/Chapte005.jpg
    **Figure 30.
    Combination Curb Opening Inlet with Sag and a Grate**
-
-|Chapte006|
-
+.. image:: img/Chapter2/Chapte006.jpg
    **Figure 31.
    Combination of a Curb Opening at Grade with a Grate**
 
@@ -311,9 +232,7 @@ The following are the input parameters for a Type 3 inlet (Figure 34):
 - Grate sag height (zero for at grade)
 
 *Note: Orifice flow coefficient = 0.67 (hardcoded) for all cases.*
-
-|Chapte008|
-
+.. image:: img/Chapter2/Chapte008.jpg
    **Figure 34.
    Grate Inlet in a Street (Type 3 Inlet, Johnson and Fred, 1984)**
 
@@ -369,9 +288,7 @@ Inlets that cannot be represented by Types 1, 2 or 3 can have an inflow discharg
 Some storm drain inlets may include entrance types similar to that of a culvert with a vertical opening (Figure 35.
 ).
 In this case the rim elevation would be ignored as the flows are exchanged based on the invert elevation.
-
-|Chapte010|
-
+.. image:: img/Chapter2/Chapte010.jpg
    **Figure 35.
    Storm Drain Vertical Inlet with a Culvert Entrance**
 
@@ -390,9 +307,7 @@ Storm drains under high pressure during flooding can result in the manhole cover
 and Figure 37).
 The FLO-2D storm drain component can simulate covers popping through the application of a surcharge depth.
 Once the manhole cover has been popped, it remains off and the manhole becomes a Type 3 inlet.
-
-|Chapte011|
-
+.. image:: img/Chapter2/Chapte011.jpg
    **Figure 36.
    Popped Manhole Cover (source: istock)**
 
@@ -421,9 +336,7 @@ d\ :sub:`s` =
 where: d\ :sub:`s` = surcharge depth that pops the manhole cover w\ :sub:`m` = weight of the manhole cover
 
    A\ :sub:`m` = area of the circular manhole opening (πD\ :sup:`2`/4) γ\ :sub:`w` = clear water density 62.4 lb/ft\ :sup:`3` (1000 kg/m\ :sup:`3`)
-
-|Chapte012|
-
+.. image:: img/Chapter2/Chapte012.jpg
    **Figure 37.
    Popped Manhole Cover with Pressure Head (Source: istock)**
 
@@ -476,9 +389,7 @@ Flow into the outfall can occur based on the water surface elevation but may be 
 Normal, fixed, tidal or time series type of SWMM outfalls will discharge the flow off the storm drain system.
 In Figure 38, the outfall has a free flow condition but when the river is high, the outfall may be submerged.
 The location and elevation of the outfall can be assigned in the QGIS.
-
-   |Chapte013|
-
+.. image:: img/Chapter2/Chapte013.jpg
    **Figure 38.
    Storm Drain Free Outfall Condition (source: istock)**
 
@@ -488,9 +399,7 @@ This may result in backwater pressure on the pipe network.
 In the case of ponded flow as in detention or retention basins, the outfall might be submerged but still have sufficient pressure to discharge out of
 the storm drain network (Figure 39).
 When the retention basin water surface is high enough, water can enter the outfall and flow upstream in the pipe.
-
-|Chapte014|
-
+.. image:: img/Chapter2/Chapte014.jpg
    **Figure 39.
    Outfall Discharging into a Retention Basin**
 
@@ -520,9 +429,7 @@ If the outfall invert elevation is lower than the thalweg or floodplain elevatio
 SWMMOUTF.DAT is equal to 2 instead of 1,then the storm drain outfall would be connected to the surface layer but no initial underwater tailwater depth
 condition is imposed, and the outfall discharge to the surface based on the comparison between PH with the FLO-2D water Surface Elevation.
 Outfall is assumed to be located at ground elevation.
-
-|Chapte015|
-
+.. image:: img/Chapter2/Chapte015.jpg
    **Figure 40.
    Outfall Location with Respect the Channel Left Bank Elements.**
 
@@ -534,9 +441,7 @@ The floodplain water surface elevation is compared to the storm drain pressure h
 invert elevation (Vertical Type 4 Inlets) or the outfall invert elevation.
 It is possible that the elevations of the closed conduit system may have a different datum than that applied to the FLO-2D surface topography.
 The elevation of each inlet rim and outfall invert should be reviewed especially for unique conditions such as combination inlets (Figure 41).
-
-|Chapte016|
-
+.. image:: img/Chapter2/Chapte016.jpg
    **Figure 41.
    Diagram of a Combination Inlet Rim Elevation.**
 
@@ -595,9 +500,7 @@ Conduit Offsets
 
 The swmm.inp file uses offset heights to connect the conduits to the nodes.
 The inlet and outlet offsets can be zero if there is no offset or any height above zero to set the offset.
-
-|Chapte017|
-
+.. image:: img/Chapter2/Chapte017.jpg
    **Figure 42.
    Offsets in a Pipe System.
    Blue rectangles are the nodes that connect pipes.**
@@ -606,52 +509,3 @@ Pipe 1 and pipe 2 show the offsets in the pipe system.
 Pipe 3 shows no offset in Figure 42.
 An inlet offset and an outlet offset can be defined at each pipe in the SWMM.INP data file.
 An offset is the depth of conduit invert above node invert at inlet begin or start.
-
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 6.49097in
-   :height: 3.20806in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 5.84945in
-   :height: 2.68625in
-.. |Chapte004| image:: media\Chapte004.jpg
-   :width: 4.25208in
-   :height: 2.76014in
-.. |Chapte005| image:: media\Chapte005.jpg
-   :width: 4.5125in
-   :height: 2.80167in
-.. |Chapte006| image:: media\Chapte006.jpg
-   :width: 4.44708in
-   :height: 2.51597in
-.. |Chapte007| image:: media\Chapte007.png
-   :width: 1.36333in
-   :height: 0.38in
-.. |Chapte008| image:: media\Chapte008.jpg
-   :width: 4.76528in
-   :height: 2.87458in
-.. |Chapte009| image:: media\Chapte009.png
-   :width: 1.36333in
-   :height: 0.38333in
-.. |Chapte010| image:: media\Chapte010.jpg
-   :width: 5.68958in
-   :height: 3.18889in
-.. |Chapte011| image:: media\Chapte011.jpg
-   :width: 4.76528in
-   :height: 3.32in
-.. |Chapte012| image:: media\Chapte012.jpg
-   :width: 4.86389in
-   :height: 3.23542in
-.. |Chapte013| image:: media\Chapte013.jpg
-   :width: 3.83472in
-   :height: 2.55181in
-.. |Chapte014| image:: media\Chapte014.jpg
-   :width: 4.40069in
-   :height: 2.48944in
-.. |Chapte015| image:: media\Chapte015.jpg
-   :width: 6.58611in
-   :height: 4.08319in
-.. |Chapte016| image:: media\Chapte016.jpg
-   :width: 4.51319in
-   :height: 3.26583in
-.. |Chapte017| image:: media\Chapte017.png
-   :width: 4.16042in
-   :height: 2.31667in
