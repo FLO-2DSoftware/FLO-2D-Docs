@@ -550,8 +550,8 @@ The SDCLOGGING.DAT file has the following format:
 
     <pre>
     ID  Grid Cell   Inlet ID    Clogging Factor - C<sub>f</sub> (%)   Time for clogging -T<sub>c</sub> (hr)
-     D    2694         I1                      25                                  0.50
-     D    2409         I2                      50                                  3.25
+     D    2694         I1                 25                                  0.50
+     D    2409         I2                 50                                  3.25
     </pre>
 
 The inlet discharge calculated using either the orifice or weir equations is subject to a blockage reduction that is specified by the user.
