@@ -606,15 +606,15 @@ The energy loss for a contraction in pressure flow can be calculated from the fo
 .. math::
     :label:
 
-   H\ :sub:`c`\ =K\ :sub:`c`\ (V\ :sub:`2`\ :sup:`2`/2g)
+   H_c = K_c(\frac{V_2^2}{2g})
 
 where:
 
-K\ :sub:`c` = contraction coefficient (seeTable 3)
+    K\ :sub:`c` = contraction coefficient (seeTable 3)
 
-V = velocity downstream of transition
+    V = velocity downstream of transition
 
-G = acceleration due to gravity 9.81 m/s\ :sup:`2` (32.2 ft/s\ :sup:`2`)
+    G = acceleration due to gravity 9.81 m/s\ :sup:`2` (32.2 ft/s\ :sup:`2`)
 
    **Table 3.
    Values of K for Contraction.
