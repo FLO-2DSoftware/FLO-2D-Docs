@@ -825,7 +825,6 @@ where:
 
     ∆T = timestep
 
-
 The average area 𝐴̅, hydraulic radius 𝑅̅, and velocity 𝑉̅ are computed using the heads H1 and H2 at either end of the conduit from which corresponding
 flow depth values y1 and y2 can be derived.
 An average depth *y* is then computed by averaging these values and is used with the cross-section geometry of the conduit to compute 𝐴̅ and 𝑅̅.
@@ -836,17 +835,19 @@ As a consequence, the velocity cannot be higher than 50 ft/sec.
 For a conduit with free fall discharge into either of its end nodes, the depth at the end of the conduit for the node below the invert elevation of
 the conduit is set equal to the smaller of the critical depth and the normal flow depth for the conduit flow.
 The equation to calculate the head adjustment term for each timestep at each node is:
+   :label:
 
-∆Vol
-
-   Ht+∆t = Ht + (Astore + ∑ As)t+∆t
+   H_{t + \mathrm{\Delta}t} = H_{t} + \frac{\mathrm{\Delta}Vol}{\left( A_{store} +
+   \sum_{}^{}A_{s} \right)_{t + \mathrm{\Delta}t}}
 
 where ∆Vol is the net volume flowing through the node over the timestep.
 The net volume is computed as:
 
-∆Vol = 0.5 [(∑ Q) + (∑ Q) ] ∆t
+.. math::
+   :label:
 
-t t+∆t
+   \mathrm{\Delta}Vol = 0.5\left\lbrack \left( \sum_{}^{}Q \right)_{t} +
+   \left( \sum_{}^{}Q \right)_{t + \mathrm{\Delta}t} \right\rbrack\mathrm{\Delta}t
 
 The conduit surface area (A\ :sub:`store`) depends on the flow condition within the conduit as follows:
 
