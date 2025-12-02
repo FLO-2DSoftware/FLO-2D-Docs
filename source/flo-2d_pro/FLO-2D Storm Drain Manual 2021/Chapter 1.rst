@@ -573,12 +573,12 @@ where:
 This methodology is recommended for single inlets by entities such as the Colorado Department of Transportation and the cities of Denver and Las Vegas.
 Figure 21 and Figure 22 show the reduced discharge for a Type 2 inlet using a clogging factor of 50% at time 0.5 hrs.
 
-.. image:: img/Chapter1/Chapte017.png
+.. image:: img/Chapter1/Chapte017.jpg
 
 *Figure 21.
 Type 2 Inlet Discharge versus Time*
 
-.. image:: img/Chapter1/Chapte018.png
+.. image:: img/Chapter1/Chapte018.jpg
 
 *Figure 22.
 Type 2 Inlet Discharge versus Time Using a Clogging Factor of 50% at Time 0.5 hrs*
@@ -592,10 +592,10 @@ The clogging factor data file can be created in the SWMMFLO.DAT data dialog for 
 **Table 2.
 FCDMC Catch Basin Clogging Factors (FCDMC, 2018)**
 
-.. image:: img/Chapter1/Chapte019.png
+.. image:: img/Chapter1/Chapte019.jpg
 
 Reduction of Return Flow to Surface
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------
 
 Flow energy losses are experienced when a conduit or conveyance facility has change in size or geometry.
 There is contraction in the flow area between the catch basin of an inlet (vertical pipe) and the inlet.
