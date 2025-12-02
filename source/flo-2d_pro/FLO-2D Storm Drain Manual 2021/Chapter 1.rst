@@ -392,14 +392,7 @@ The following is an example of the information that is reported to the SDManhole
     PRESSURE HEAD: 1374.07 > RIM + SURCH: 1371.44 > FLO-2D WSE: 1370.95
     </pre>
 
-.. raw:: html
-
-    <br><br>
-
 Table 1 is an example of the information that is reported to the ManholePop.OUT output file.
-
-   **Table 1.
-   ManholePop.OUT File.**
 
 .. raw:: html
 
@@ -431,6 +424,9 @@ Table 1 is an example of the information that is reported to the ManholePop.OUT 
      </tbody>
    </table>
 
+.. raw:: html
+
+    <br>
 
 
 Curb Inlet Flow Adjustment
