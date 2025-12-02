@@ -703,7 +703,7 @@ The friction slope component S\ :sub:`f` is based on Manning’s equation:
 .. math::
     :label:
 
-    S_f = \frac{n^2V|V|}{K^2R^{\frac{4}{3}}
+    S_f = \frac{n^2V\|V\|}{K^2R^{\frac{4}{3}}
 
 where:
 
@@ -765,15 +765,17 @@ The following discussion has been extracted from the SWMM documentation (Rossman
 
 The flow equation solved for each conduit is given by:
 
-   Qt + ∆Qgravity + ∆Qinertial
+.. math::
+    :label:
 
-   Q\ :sub:`t`\ +∆t =
-
-   1 + ∆Qfriction + ∆Qlosses
+    Q_{t + ∆t} = \frac{Q_t +  ∆Q_{gravity} + ∆Q{inertial}}{1 + ∆Q_{friction} + ∆Q_{losses}}
 
 The ∆𝑄 in each conduit corresponds to the different force terms expressed as:
 
-   ∆Q\ :sub:`gravity` = gA̅(H\ :sub:`1` − H\ :sub:`2`) ∆t⁄L
+.. math::
+    :label:
+
+    ∆Q\ :sub:`gravity` = gA̅(H\ :sub:`1` − H\ :sub:`2`) ∆t⁄L
 
    ∆Q\ :sub:`inertial` = 2V̅(A̅ − A\ :sub:`t`)+V̅\ :sup:`2`\ (A\ :sub:`2` − A\ :sub:`1`)∆t⁄L
 
