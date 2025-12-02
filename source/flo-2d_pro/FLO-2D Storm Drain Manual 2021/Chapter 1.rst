@@ -355,12 +355,13 @@ Flapgate Option
 A storm drain inlet can be simulated as an outlet with a flapgate to stop the surface water from entering the storm drain system (Type 4 inlet).
 The flapgate switch in SWMMFLO.DAT has the following settings:
 
+.. raw:: html
+
+    <pre>
     Feature = 0, No flapgate – horizontal inlet opening
-
     Feature = 1, No flapgate – vertical inlet opening
-
     Feature = 2, Flapgate ‘on’ for fake outfalls
-
+    </pre>
 A "fake outfall" can be set up as an inlet that will discharge flow from the storm drain to the surface water.
 Feature equal to 2 set up a flap gate for a fake outfall.
 
