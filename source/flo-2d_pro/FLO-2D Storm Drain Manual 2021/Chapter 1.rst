@@ -338,7 +338,7 @@ This artificial head causes the pipe to fill, and the artificial volume is accou
 When the model runs, the inflow may be added to either the outfall grid element or the upstream storm drain pipe network and the flow can go either in
 or out of the outfall pipe based on the pressure head.
 
-.. image:: img/Chapter1/Chapte012.png
+.. image:: img/Chapter1/Chapte012.jpg
 
 *Figure 12.
 Initial Condition for an Underground (Underwater) Storm Drain Outfall*
@@ -365,7 +365,7 @@ A "fake outfall" can be set up as an inlet that will discharge flow from the sto
 Feature equal to 2 set up a flap gate for a fake outfall.
 
 Manhole Covers
-^^^^^^^^^^^^^^
+---------------
 
 The manhole cover lift-off (popping) is simulated by assigning the surcharge depth in the SWMMFLO.DAT file (Type 5 inlet).
 When the cover is in place there is no flow exchange.
