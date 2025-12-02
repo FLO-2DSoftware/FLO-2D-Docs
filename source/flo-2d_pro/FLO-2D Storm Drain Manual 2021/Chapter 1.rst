@@ -177,7 +177,7 @@ For the second condition:
 When the storm drain pressure exceeds the surface water elevation, the water should overflow the inlet and join the surface water to be routed away
 from the inlet and there is no storage volume in the pipe system.
 
-Surface Water – Storm Drain Exchange Conditions:
+*Surface Water – Storm Drain Exchange Conditions:*
 
 When the storm drain capacity is exceeded and is under pressure, the return flooding volume becomes part of the surface water in the FLO-2D model if
 the pressure head exceeds the FLO2D water surface elevation.
@@ -427,7 +427,6 @@ Table 1 is an example of the information that is reported to the ManholePop.OUT 
 .. raw:: html
 
     <br>
-
 
 Curb Inlet Flow Adjustment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
