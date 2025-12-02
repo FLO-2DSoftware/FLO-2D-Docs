@@ -770,113 +770,60 @@ The flow equation solved for each conduit is given by:
 
     Q_{t + ∆t} = \frac{Q_t +  ∆Q_{gravity} + ∆Q{inertial}}{1 + ∆Q_{friction} + ∆Q_{losses}}
 
-The ∆𝑄 in each conduit corresponds to the different force terms expressed as:
+The :math:`\mathrm{\Delta}Q` in each conduit corresponds to the different force terms expressed as:
 
 .. math::
-    :label:
+   :label:
 
-    ∆Q\ :sub:`gravity` = gA̅(H\ :sub:`1` − H\ :sub:`2`) ∆t⁄L
+   \mathrm{\Delta}Q_{gravity} = g\overline{A}\left( H_{1} - H_{2} \right)
+   \frac{\mathrm{\Delta}t}{L\ }
 
-   ∆Q\ :sub:`inertial` = 2V̅(A̅ − A\ :sub:`t`)+V̅\ :sup:`2`\ (A\ :sub:`2` − A\ :sub:`1`)∆t⁄L
+.. math::
+   :label:
 
-   gn\ :sup:`2`\ \|V̅|∆t
+   \mathrm{\Delta}Q_{inertial} = 2\overline{V}\left( \overline{A} - A_{t} \right)
+   \frac{+ {\overline{V}}^{2}\left( A_{2} - A_{1} \right)\mathrm{\Delta}t}{L}
 
-∆Qfriction = k\ :sub:`2`\ R̅4⁄\ :sub:`3`
+.. math::
+   :label:
 
-   ∑\ :sub:`i` K\ :sub:`i`\ \|V\ :sub:`i`\ \|∆t
+   \mathrm{\Delta}Q_{friction} = \frac{gn^{2}\left| \overline{V}
+   \right|\mathrm{\Delta}t}{k^{2}{\overline{R}}^{\frac{4}{3}}}
 
-∆Q\ :sub:`losses` =
+.. math::
+   :label:
 
-   2L
+   \Delta Q_{\text{losses}} = \frac{\sum_i K_i \left| V_i \right| \Delta t}{2L}
 
-.. _`where:`:
+where:
 
-where::
+    :math:`\overline{A}` = conduit average cross-sectional flow area
 
+    :math:`\overline{R}` = average conduit hydraulic radius
 
-.. _`a̅=`:
+    :math:`\overline{V}` = conduit average flow velocity
 
-a̅=:
+    :math:`V_{i}` = local flow velocity at location i along the conduit
 
-| conduit average cross-sectional flow area
+    :math:`K_{i}` = local loss coefficient at location i along the conduit
 
-.. _`r̅=`:
+    :math:`H_{1}` = head at upstream node of conduit
 
-r̅=:
+    :math:`H_{2}` = head at downstream node of conduit
 
-| average conduit hydraulic radius
+    :math:`A_{1}` = cross-sectional area at the upstream end of the conduit
 
-.. _`v̅=`:
+    :math:`A_{2}` = cross-sectional area at the downstream end of the conduit
 
-v̅=:
+    n = Manning roughness coefficient
 
-| conduit average flow velocity
+    L = conduit length
 
-.. _`v\:sub:`𝑖`=`:
+    g = gravitational acceleration
 
-v\:sub:`𝑖`=:
+    t = time
 
-local flow velocity at location i along the conduit
-
-.. _`k\:sub:`𝑖`=`:
-
-k\:sub:`𝑖`=:
-
-local loss coefficient at location i along the conduit
-
-.. _`h\:sub:`1`=`:
-
-h\:sub:`1`=:
-
-head at upstream node of conduit
-
-.. _`h\:sub:`2`=`:
-
-h\:sub:`2`=:
-
-head at downstream node of conduit
-
-.. _`a\:sub:`1`=`:
-
-a\:sub:`1`=:
-
-cross-sectional area at the upstream end of the conduit
-
-.. _`a\:sub:`2`=`:
-
-a\:sub:`2`=:
-
-cross-sectional area at the downstream end of the conduit
-
-.. _`n=`:
-
-n=:
-
-Manning roughness coefficient
-
-.. _`l=`:
-
-l=:
-
-conduit length
-
-.. _`g=`:
-
-g=:
-
-gravitational acceleration
-
-.. _`t=`:
-
-t=:
-
-time
-
-.. _`t=`:
-
-t=:
-
-timestep
+    ∆T = timestep
 
 
 The average area 𝐴̅, hydraulic radius 𝑅̅, and velocity 𝑉̅ are computed using the heads H1 and H2 at either end of the conduit from which corresponding
