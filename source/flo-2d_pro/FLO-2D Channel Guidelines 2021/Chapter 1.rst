@@ -386,8 +386,10 @@ The applicability of Manning’s equation to a given flow condition depends on t
 d is the flow depth and k\ :sub:`s` is the effective roughness height.
 In general, Manning’s equation is appropriate for a relative submergence greater than 100 (Julien, 1995):
 
-d/k\ :sub:`s` > 100
-^^^^^^^^^^^^^^^^^^^
+.. math::
+    :label:
+
+    {d/k}_s > 100
 
 The typical roughness height for grain size bed materials can range from 0.0015 ft for rough concrete to 0.01 ft for coarse sand or uniform earth
 channels.
@@ -523,15 +525,11 @@ A starting value of C = 0.6 is recommended.
 Some guidelines fo applying the Courant number are:
 
     1. Use the default stability criteria for the initial simulation:
-
        - Courant Number C = 0.6
        - DEPTOL = 0.0
        - WAVEMAX = 0.0.
-
     2. If the model has no numerical surging or unreasonable maximum velocities, the model can run faster by increasing the Courant Number to 0.7 or 0.8.
-
     3. If the model has some numerical instability, decrease the Courant Number by 0.1 to a minimum value of 0.3.
-
     4. After a flood simulation is complete, review the TIME.OUT file to determine which of the stability criterion is slowing down the model.
 
 It has been determined that the Courant Number is more effective in controlling numerical instability surging than the other FLO-2D stability
