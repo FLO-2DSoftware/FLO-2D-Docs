@@ -579,11 +579,15 @@ SWMMFLORT.DAT Variables**
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><i><pre>    SWMMFLORT.DAT File Variables</pre></i></div>
+        <div><i><pre>       SWMMFLORT.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     Line 1 to Number of INTYPE 4 (JTSWMM(JT)):
-    SWMMCHARRT GRIDCELL SWMMType4IDSWMMCHARRT DEPTHSWMMRT(JTSWMM(JT),K) QSWMMRT(JTSWMM(JT),K)
+
+
+    SWMMCHARRT GRIDCELL SWMMType4ID
+
+    SWMMCHARRT DEPTHSWMMRT(JTSWMM(JT),K) QSWMMRT(JTSWMM(JT),K)
     </pre>
     </div>
 
