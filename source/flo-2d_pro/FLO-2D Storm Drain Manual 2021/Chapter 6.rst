@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 
 Chapter 6
-~~~~~~~~~
+==============
 
 Reviewing Storm Drain Model Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -21,8 +21,8 @@ The plots are saved to a subfolder (StormDrainDischarge MM-DD-YYYY) in the proje
 With the SWMM GUI the user can access the results from the various storm drain objects.
 A FLO-2D storm drain simulation will generate the following files in Table 19.
 
-   **Table 19.
-   FLO-2D Storm Drain Simulation Files**
+*Table 19.
+FLO-2D Storm Drain Simulation Files**
 
 .. list-table::
    :widths: 50 50
@@ -79,11 +79,11 @@ Review the SUMMARY.OUT File
 After a FLO-2D simulation is completed, the SUMMARY.OUT file can be reviewed with an ASCII text editor program.
 A FLO-2D model has been successfully completed if the termination time and date is reported at the end of the SUMMARY.OUT:
 
-|Chapte002|
+.. image:: img/Chapter6/Chapte002.jpg
 
 Volume exchange and conservation between the surface water and storm drain is reported in the SUMMARY.OUT file as shown below.
 
-|Chapte003|
+.. image:: img/Chapter6/Chapte003.jpg
 
 *Storm Drain Inflow:* Reports the volume that represents inflow to the storm drain through the inlets and outfalls.
 
@@ -94,18 +94,15 @@ Volume exchange and conservation between the surface water and storm drain is re
 Step 2.
 View the Surface Water Data and Results in the GDS
 
-
 Open the GDS and load the project as shown in Figure 58.
 The components displayed in this image are the building area reduction factors (ARF-values) and the storm drain features.
 The storm drain features and parameters can be edited in the GDS while viewing the project (see the GDS manual).
 Alternatively, the project could be opened in the FLO-2D QGIS plug-in.
 
-**Figure**
+.. image:: img/Chapter6/Chapte021.jpg
 
-**58**
-
-**.
-Typical GDS Storm Drain Project**
+*Figure 58
+Typical GDS Storm Drain Project*
 
 Step 3.
 Import Shapefiles from Mapper (Optional)
@@ -117,8 +114,7 @@ including the storm drain.
 The layer properties for each shapefile can be modified in the layers menu.
 A 10-year return period area of inundation is shown in Figure 59.
 The flooding is shown in the streets and is being captured by the storm drain system.
-
-|Chapte004|
+.. image:: img/Chapter6/Chapte004.jpg
 
    **Figure 59.
    Maximum Flow Depth Shapefile in the GDS with Storm Drain Components**
@@ -130,38 +126,32 @@ Display the Storm Drain Results in the GDS
 The GDS can display the storm drain inlet discharge hydrograph including the return flow (pressure flow) to the surface water.
 GDS will plot the water surface head on the storm drain inlet and outlet and the hydraulic and energy grade lines.
 Click Tools \| Storm Drain \| Storm Drain Discharge Display (Figure 60) to view results plots.
-
-|Chapte005|
+.. image:: img/Chapter6/Chapte005.jpg
 
    **Figure 60.
    Storm Drain Display Menu Options**
 
 Select the SWMM.RPT output file from the project folder to display results (Figure 61), then click on the individual inlet/junction to generate the
 plots.
-
-|Chapte006|
+.. image:: img/Chapter6/Chapte006.jpg
 
    **Figure 61.
    Dialog to select the SWMM.RPT Output File**
 
 Figure 62 to Figure 65 displays an inlet hydrograph, return flow, water surface head and energy grade line as displayed by the GDS.
-
-|Chapte007|
+.. image:: img/Chapter6/Chapte007.jpg
 
    **Figure 62.
    Display of Storm Drain Node Inflow Discharge**
-
-|Chapte008|
+.. image:: img/Chapter6/Chapte008.jpg
 
    **Figure 63.
    Display of Storm Drain Inflow and Return Flow Hydrograph**
-
-|Chapte009|
+.. image:: img/Chapter6/Chapte009.jpg
 
    **Figure 64.
    Display of Water Surface Head on the Storm Drain Inlet**
-
-|Chapte010|
+.. image:: img/Chapter6/Chapte010.jpg
 
    **Figure 65.
    Display of the Energy Grade Line on a Storm Drain Conduit**
@@ -194,8 +184,7 @@ SWMM.ini
 The storm drain results are not automatically loaded into the SWMM GUI.
 To load the results, navigate to the project folder directory and open the SWMM.ini file using an ASCII text editor.
 The user needs to set ‘Saved = 1” and “Current = 1” as highlighted in Figure 66.
-
-|Chapte011|
+.. image:: img/Chapter6/Chapte011.jpg
 
    **Figure 66.
    SWMM.ini File with Required Data to View the Results in the SWMM GUI**
@@ -207,8 +196,7 @@ Open the SWMM GUI and navigate to the project folder.
 Open the SWMM.inp file from the File|Open menu.
 This will access the model output and enable the GUI to display the results as shown in Figure 67.
 The SWMM GUI has controls to label and color code the results in a variety of configurations.
-
-|Chapte012|
+.. image:: img/Chapter6/Chapte012.jpg
 
    **Figure 67.
    Example Storm Drain Model in the SWMM GUI**
@@ -283,16 +271,14 @@ Report Menu
 
    **Status:** Displays a status report for the last simulation.
    The Bookmark feature enables quick review of the SWMM.RPT file sections (Figure 69).
-
-|Chapte013|
+.. image:: img/Chapter6/Chapte013.jpg
 
    **Figure 69.
    Bookmark Interface that Facilitates a Review the SWMM.RPT File**
 
 **Graph:** Command that displays simulation results in graphical form (Figure 70.
 Graph: Time Series).
-
-|Chapte014|
+.. image:: img/Chapter6/Chapte014.jpg
 
    **Figure 70.
    Graph: Time Series**
@@ -306,8 +292,7 @@ Tools Menu – Commands that Provide Control Detail
 
 **Map Control Display Options:** Sets appearance options for the Map, such as object size, annotation, flow direction arrows, and background colors
 (Figure 71).
-
-|Chapte015|
+.. image:: img/Chapter6/Chapte015.jpg
 
    **Figure 71.
    Map Options**
@@ -452,8 +437,7 @@ Figure 74 shows the inlet discharge computed by FLO-2D.
 This figure is plotted in the GDS and shows the exchanged flow between the surface water and the storm drain system.
 The plot represents the volume that is returned from the storm drain system to the surface water under pressure.
 This occurs when the there is no more capacity in the system.
-
-|Chapte016|
+.. image:: img/Chapter6/Chapte016.jpg
 
    **Figure 74.
    Storm Drain Discharge Reported in SWMMQIN.OUT (Plotted in the GDS)**
@@ -461,8 +445,7 @@ This occurs when the there is no more capacity in the system.
 Figure 75 shows the time series of an outfall depth.
 Other variables are plotted as a time series by the SWMM GUI.
 Outfall discharge may be computer as flow off the storm drain system or as return flow to the FLO-2D surface water.
-
-|Chapte017|
+.. image:: img/Chapter6/Chapte017.jpg
 
    **Figure 75.
    Time Series Plots of Depth, Head, Inflow and Return Flow in the SWMM GUI.**
@@ -472,8 +455,7 @@ displays the flow in a series of connected pipes.
 A number of hydrographs from various locations in the storm drain can be plotted on a single graph.
 Combined hydrograph plots are helpful to determine the volume distribution and to review the timing of the flood wave progression throughout the storm
 drain system.
-
-|Chapte018|
+.. image:: img/Chapter6/Chapte018.jpg
 
    **Figure 76.
    Hydrographs for Each Link in the Storm Drain System**
@@ -481,8 +463,7 @@ drain system.
 The conduit flow depth profile at the peak discharge is shown in Figure 77.
 This profile can be animated using the map panel options.
 This tool will display the flow progression through the pipe system.
-
-|Chapte019|
+.. image:: img/Chapter6/Chapte019.jpg
 
    **Figure 77.
    A Conduit Depth Profile**
@@ -490,66 +471,7 @@ This tool will display the flow progression through the pipe system.
 The storm drain system results can be colored and animated with the mapper tools.
 The SWMM.RPT file can be reviewed using the status report command in the report menu.
 The use of colors and labels enables a dynamic visual display of the flow distribution (Figure 78).
-
-|Chapte020|
+.. image:: img/Chapter6/Chapte020.jpg
 
    **Figure 78.
    The Display of the Storm Drain System with the Map Settings**
-
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 6in
-   :height: 0.74236in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 5.63542in
-   :height: 5.65417in
-.. |Chapte004| image:: media\Chapte004.jpg
-   :width: 5.35417in
-   :height: 2.89444in
-.. |Chapte005| image:: media\Chapte005.jpg
-   :width: 2.96875in
-   :height: 4.15625in
-.. |Chapte006| image:: media\Chapte006.jpg
-   :width: 6.58125in
-   :height: 3.28111in
-.. |Chapte007| image:: media\Chapte007.jpg
-   :width: 5.52153in
-   :height: 3.52042in
-.. |Chapte008| image:: media\Chapte008.jpg
-   :width: 4.84486in
-   :height: 2.60972in
-.. |Chapte009| image:: media\Chapte009.jpg
-   :width: 4.82431in
-   :height: 2.42708in
-.. |Chapte010| image:: media\Chapte010.jpg
-   :width: 4.89514in
-   :height: 2.79125in
-.. |Chapte011| image:: media\Chapte011.jpg
-   :width: 3.22292in
-   :height: 3.08278in
-.. |Chapte012| image:: media\Chapte012.jpg
-   :width: 5.99986in
-   :height: 4.40764in
-.. |Chapte013| image:: media\Chapte013.jpg
-   :width: 5.74139in
-   :height: 3.6in
-.. |Chapte014| image:: media\Chapte014.jpg
-   :width: 3.17569in
-   :height: 1.65597in
-.. |Chapte015| image:: media\Chapte015.jpg
-   :width: 2.59917in
-   :height: 2.8375in
-.. |Chapte016| image:: media\Chapte016.jpg
-   :width: 3.92431in
-   :height: 3.34319in
-.. |Chapte017| image:: media\Chapte017.jpg
-   :width: 6.67083in
-   :height: 3.16653in
-.. |Chapte018| image:: media\Chapte018.jpg
-   :width: 6.26014in
-   :height: 2.75556in
-.. |Chapte019| image:: media\Chapte019.jpg
-   :width: 6.32278in
-   :height: 3.66667in
-.. |Chapte020| image:: media\Chapte020.jpg
-   :width: 6.47167in
-   :height: 3.48889in
