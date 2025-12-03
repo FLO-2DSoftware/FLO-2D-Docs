@@ -369,7 +369,7 @@ function of the following:
     - Channel bed elevation = inlet invert elevation
     - Channel bank elevation = inlet rim elevation (typical design)
 
-.. image:: img/Chapter4/Chapte004.jpg
+.. image:: img/Chapter4/Chapte004.png
 
 *Figure 52.
 Complex Interaction between a Storm Drain Pipe and 1-D Channel*
@@ -383,7 +383,7 @@ To connect a storm drain outfall to a channel element the following issues shoul
 Figure 53 shows a complex storm drain – channel system where a channel feeds the storm drain as an inlet and flow returns to surface channel
 downstream.
 
-.. image:: img/Chapter4/Chapte005.jpg
+.. image:: img/Chapter4/Chapte005.png
 
 *Figure 53.
 Complex Flow Exchange between a Storm Drain System and 1-D Channel*
@@ -429,7 +429,7 @@ When the model runs, inflow may be added to either the outfall grid element or t
 out of the outfall pipe based on the pressure head (Figure 56).
 To account for volume conservation, the storm drain outflow that represents inflow volume to a FLO-2D channel is reported in the CHVOLUME.OUT file.
 
-.. image:: img/Chapter4/Chapte008.jpg
+.. image:: img/Chapter4/Chapte008.png
 
 *Figure 56.
 Underground Outfall Condition*
