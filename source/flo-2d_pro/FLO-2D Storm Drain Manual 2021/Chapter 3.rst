@@ -704,17 +704,18 @@ A clogging factor was created to simulate the debris reduction of the inlet capa
 QGIS plugin creates the SDCLOGGING.DAT file for inlet type 1,2,3,4 or 5.
 For a more detailed information about the methodology review the FLO-2D Plugin User’s Manual and the FLO-2D Plugin Technical Reference Manual.
 
-This option (INTYPE = 1,2,3,4 or 5 in the SWMMFLO.DAT) is assigned by the GDS in the inlet geometry dialog box (Figure 48.
-).
+This option (INTYPE = 1,2,3,4 or 5 in the SWMMFLO.DAT) is assigned by the GDS in the inlet geometry dialog box (Figure 48.).
 
 The SDCLOGGING.DAT file contains the data with the following format:
 
 ID Grid Cell Inlet ID Clogging Factor - C\ :sub:`f` (%) Time for clogging -T\ :sub:`c` (hr)
 
 D 2694 I1 25 0.50 D 2409 I2 50 3.25
+
 .. image:: img/Chapter3/Chapte008.jpg
-   **Figure 48.
-   GDS Dialog Box for Entering clogging factor data.**
+
+*Figure 48.
+GDS Dialog Box for Entering clogging factor data.*
 
 SWMM.ini
 ''''''''
