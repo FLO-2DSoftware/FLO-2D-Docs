@@ -573,19 +573,19 @@ The following is an example from a SWMM.RPT file:
 
     <pre>
 
-    High Flow Instability Indexes
+        High Flow Instability Indexes
 
-    ********************************
+        ********************************
 
-    Link C9 (9)
+        Link C9 (9)
 
-    Link C8 (8)
+        Link C8 (8)
 
-    Link C10 (7)
+        Link C10 (7)
 
-    Link C7 (6)
+        Link C7 (6)
 
-    Link C6 (6)
+        Link C6 (6)
     </pre>
 
 To improve the volume conservation error, the links listed on the HFII table have to be reviewed.
