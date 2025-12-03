@@ -170,12 +170,12 @@ Orifice flow can have two potential sag inlet conditions (Johnson and Fred, 1984
 
    where:
 
-   Q\ :sub:`o` = orifice flow rate at depth H
+       Q\ :sub:`o` = orifice flow rate at depth H
 
-   C\ :sub:`d` = discharge coefficient hardcoded to 0.67 A = orifice area Area= L x h g = gravitational acceleration
+       C\ :sub:`d` = discharge coefficient hardcoded to 0.67 A = orifice area Area= L x h g = gravitational acceleration
 
-   H = FLO-2D grid element water depth that contains the inlet structure.
-   h = curb opening height of the orifice.
+       H = FLO-2D grid element water depth that contains the inlet structure.
+       h = curb opening height of the orifice.
 
 Type 2 inlet discharge is determined from the following criteria:
 
@@ -189,23 +189,22 @@ If Q\ :sub:`w` > Q\ :sub:`o`, discharge= Q\ :sub:`o`
 
    If H ≥ 1.4h, discharge= Q\ :sub:`o`
 
-Type 3 - Grate (Gutter) Inlet with/without Sag
 
+*Type 3 - Grate (Gutter) Inlet with/without Sag*
 
 The following are the input parameters for a Type 3 inlet (Figure 34):
 
-- Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)
+    - Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)
+    - Grate perimeter (not including curb side)
+    - Grate open area
+    - Grate sag height (zero for at grade)
 
-- Grate perimeter (not including curb side)
+.. note:: Orifice flow coefficient = 0.67 (hardcoded) for all cases.
 
-- Grate open area
-
-- Grate sag height (zero for at grade)
-
-*Note: Orifice flow coefficient = 0.67 (hardcoded) for all cases.*
 .. image:: img/Chapter2/Chapte008.jpg
-   **Figure 34.
-   Grate Inlet in a Street (Type 3 Inlet, Johnson and Fred, 1984)**
+
+*Figure 34.
+Grate Inlet in a Street (Type 3 Inlet, Johnson and Fred, 1984)*
 
 The smaller of two discharges (weir or orifice) calculated for a grate (gutter) inlet with/without sag is applied for the inlet discharge computation
 (Johnson and Fred, 1984):
