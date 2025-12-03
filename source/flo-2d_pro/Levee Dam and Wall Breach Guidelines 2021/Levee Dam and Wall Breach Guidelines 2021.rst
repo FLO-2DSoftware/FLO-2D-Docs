@@ -241,7 +241,7 @@ cohesion that resist sliding.
 When the dam collapse occurs, it is assumed that the breach enlargement ceases until all the wedge material is transported downstream.
 A flow chart of the basic computation scheme for the breach component is shown in Figure 7.
 
-.. image:: img/Levee003.jpg
+.. image:: img/Levee003.png
 
 *Figure 7.
 Breach Schematic Flow Chart.*
@@ -321,7 +321,7 @@ The required data includes:
     - Maximum breach width
     - Vertical and horizontal rates of breach expansion
 
-.. image:: img/Levee003.png
+.. image:: img/Levee027.jpg
 
 *Figure 12.
 GDS Prescribed Breach Dialog Box.*
