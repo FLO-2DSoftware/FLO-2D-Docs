@@ -107,220 +107,204 @@ Typical GDS Storm Drain Project*
 Step 3.
 Import Shapefiles from Mapper (Optional)
 
-
 If the output data was plotted in Mapper, the automatically generated shapefiles can be imported into the GDS or QGIS plug-in.
 The FLO-2D model maximum depths and velocities and other output can be imported as shapefiles to view the flooding with the various model components
 including the storm drain.
 The layer properties for each shapefile can be modified in the layers menu.
 A 10-year return period area of inundation is shown in Figure 59.
 The flooding is shown in the streets and is being captured by the storm drain system.
+
 .. image:: img/Chapter6/Chapte004.jpg
 
-   **Figure 59.
-   Maximum Flow Depth Shapefile in the GDS with Storm Drain Components**
+*Figure 59.
+Maximum Flow Depth Shapefile in the GDS with Storm Drain Components*
 
 Step 4.
 Display the Storm Drain Results in the GDS
 
-
 The GDS can display the storm drain inlet discharge hydrograph including the return flow (pressure flow) to the surface water.
 GDS will plot the water surface head on the storm drain inlet and outlet and the hydraulic and energy grade lines.
 Click Tools \| Storm Drain \| Storm Drain Discharge Display (Figure 60) to view results plots.
+
 .. image:: img/Chapter6/Chapte005.jpg
 
-   **Figure 60.
-   Storm Drain Display Menu Options**
+*Figure 60.
+Storm Drain Display Menu Options*
 
 Select the SWMM.RPT output file from the project folder to display results (Figure 61), then click on the individual inlet/junction to generate the
 plots.
+
 .. image:: img/Chapter6/Chapte006.jpg
 
-   **Figure 61.
-   Dialog to select the SWMM.RPT Output File**
+*Figure 61.
+Dialog to select the SWMM.RPT Output File*
 
 Figure 62 to Figure 65 displays an inlet hydrograph, return flow, water surface head and energy grade line as displayed by the GDS.
+
 .. image:: img/Chapter6/Chapte007.jpg
 
-   **Figure 62.
-   Display of Storm Drain Node Inflow Discharge**
+*Figure 62.
+Display of Storm Drain Node Inflow Discharge*
+
 .. image:: img/Chapter6/Chapte008.jpg
 
-   **Figure 63.
-   Display of Storm Drain Inflow and Return Flow Hydrograph**
+*Figure 63.
+Display of Storm Drain Inflow and Return Flow Hydrograph*
+
 .. image:: img/Chapter6/Chapte009.jpg
 
-   **Figure 64.
-   Display of Water Surface Head on the Storm Drain Inlet**
+*Figure 64.
+Display of Water Surface Head on the Storm Drain Inlet*
+
 .. image:: img/Chapter6/Chapte010.jpg
 
-   **Figure 65.
-   Display of the Energy Grade Line on a Storm Drain Conduit**
+*Figure 65.
+Display of the Energy Grade Line on a Storm Drain Conduit*
 
 Viewing the Storm Drain Output in the SWMM GUI
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 The SWMM GUI creates the storm drain data input files and graphically displays the results.
-A
-
-FLO-2D storm drain simulation will generate output files that are compatible with the SWMM GUI.
+A FLO-2D storm drain simulation will generate output files that are compatible with the SWMM GUI.
 To view the output, first make sure that the following files are present in the project folder:
 
-- SWMM.ini
+    - SWMM.ini
 
-- SWMM.inp
+    - SWMM.inp
 
-- SWMM.rain
+    - SWMM.rain
 
-- SWMM.RPT
+    - SWMM.RPT
 
-- SWMM.OUT
+    - SWMM.OUT
 
 The SWMM.RPT file reports the storm drain output data in ASCII format and can be read with any ASCII editor.
 The SWMM.OUT file is a binary output file with results reported temporally and spatially that can be read by the SWMM GUI.
 
 SWMM.ini
 
-
 The storm drain results are not automatically loaded into the SWMM GUI.
 To load the results, navigate to the project folder directory and open the SWMM.ini file using an ASCII text editor.
 The user needs to set ‘Saved = 1” and “Current = 1” as highlighted in Figure 66.
+
 .. image:: img/Chapter6/Chapte011.jpg
 
-   **Figure 66.
-   SWMM.ini File with Required Data to View the Results in the SWMM GUI**
+*Figure 66.
+SWMM.ini File with Required Data to View the Results in the SWMM GUI*
 
 View the Storm Drain Results
-
 
 Open the SWMM GUI and navigate to the project folder.
 Open the SWMM.inp file from the File|Open menu.
 This will access the model output and enable the GUI to display the results as shown in Figure 67.
 The SWMM GUI has controls to label and color code the results in a variety of configurations.
+
 .. image:: img/Chapter6/Chapte012.jpg
 
-   **Figure 67.
-   Example Storm Drain Model in the SWMM GUI**
+*Figure 67.
+Example Storm Drain Model in the SWMM GUI*
 
 The SWMM GUI has some tools that can assist in the review of the storm drain output.
-The
-
-SWMM manual should be used referenced when using the SWMM GUI.
+The SWMM manual should be used referenced when using the SWMM GUI.
 The GUI environment is shown in Figure 68 consisting of a main menu, tool bars, study area, and working area.
 These attributes and some of the options are explained briefly.
 
 File Menu
 
+    **Open:** Opens an existing project
 
-**Open:** Opens an existing project
+    **Reopen:** Opens recently used projects
 
-**Reopen:** Opens recently used projects
-
-**Save:** Saves the current project
+    **Save:** Saves the current project
 
    **Save As:** Saves the project under a different name
 
-**Figure**
+.. image:: img/Chapter6/Chapte022.jpg
 
-**68**
-
-**.**
-
-**SWMM GUI Environment**
-
-Main
-
-Data/Map
-
-Browser
-
-Study Area Map
-
-Status Bar
-
-Toolbars
+*Figure 68.
+SWMM GUI Environment*
 
 Edit Menu
 
-**Select Object:** Select an object on the map
+    **Select Object:** Select an object on the map
 
-**Find Object:** Locates a specific object by name in the map
+    **Find Object:** Locates a specific object by name in the map
 
-**Find Text:** Locates specific text in a status report
+    **Find Text:** Locates specific text in a status report
 
-**Group Edit:** Edits a property for the group of objects within selected region
+    **Group Edit:** Edits a property for the group of objects within selected region
 
 View Menu
 
+    **Dimensions:** Sets reference coordinates and distance units for a study area
 
-**Dimensions:** Sets reference coordinates and distance units for a study area
+    **Backdrop:** Allows a background image to be added, positioned and viewed.
 
-**Backdrop:** Allows a background image to be added, positioned and viewed.
+    **Query:** Highlights objects that meet specific criteria
 
-**Query:** Highlights objects that meet specific criteria
+    **Objects:** Toggles display of classes of objects
 
-**Objects:** Toggles display of classes of objects
-
-**Legends:** Controls display of the map legends **Toolbars:** Toggles display of tool bars
+    **Legends:** Controls display of the map legends **Toolbars:** Toggles display of tool bars
 
 Project Menu
 
-**Defaults:** Edits a project’s default properties
+    **Defaults:** Edits a project’s default properties
 
 Report Menu
 
-
    **Status:** Displays a status report for the last simulation.
-   The Bookmark feature enables quick review of the SWMM.RPT file sections (Figure 69).
+
+The Bookmark feature enables quick review of the SWMM.RPT file sections (Figure 69).
+
 .. image:: img/Chapter6/Chapte013.jpg
 
-   **Figure 69.
-   Bookmark Interface that Facilitates a Review the SWMM.RPT File**
+*Figure 69.
+Bookmark Interface that Facilitates a Review the SWMM.RPT File*
 
-**Graph:** Command that displays simulation results in graphical form (Figure 70.
-Graph: Time Series).
+    **Graph:** Command that displays simulation results in graphical form (Figure 70.
+    Graph: Time Series).
+
 .. image:: img/Chapter6/Chapte014.jpg
 
-   **Figure 70.
-   Graph: Time Series**
+*Figure 70.
+Graph: Time Series**
 
-**Table:** Displays simulation results in tabular form\ **.**
+    **Table:** Displays simulation results in tabular form\ **.**
 
 Tools Menu – Commands that Provide Control Detail
 
+    **Program Preferences:** Sets program preferences, such as font sizes, deletions, number of decimal places displayed, etc.
 
-**Program Preferences:** Sets program preferences, such as font sizes, deletions, number of decimal places displayed, etc.
+    **Map Control Display Options:** Sets appearance options for the Map, such as object size, annotation, flow direction arrows, and background colors
+    (Figure 71).
 
-**Map Control Display Options:** Sets appearance options for the Map, such as object size, annotation, flow direction arrows, and background colors
-(Figure 71).
 .. image:: img/Chapter6/Chapte015.jpg
 
-   **Figure 71.
-   Map Options**
+*Figure 71.
+Map Options*
 
 Help Menu
 
+    **Help Topics:** Displays the Help system’s Table of Contents
 
-**Help Topics:** Displays the Help system’s Table of Contents
+    **How Do I:** Displays a list of the most common operations
 
-**How Do I:** Displays a list of the most common operations
-
-**Tutorial:** Presents a short tutorial introducing the user to the EPA SWMM
+    **Tutorial:** Presents a short tutorial introducing the user to the EPA SWMM
 
 Study Area Map
 
-This map is a working environment with of storm drain system.
+    This map is a working environment with of storm drain system.
 
 Toolbars
 
-Provide shortcuts to common operations and includes the standard toolbar.
+    Provide shortcuts to common operations and includes the standard toolbar.
 
 Map Toolbar and Object Toolbar
 
 
-Data/map browser provides access to all the data objects in a project and controls the mapping themes and time periods viewed on the study area map.
+    Data/map browser provides access to all the data objects in a project and controls the mapping themes and time periods viewed on the study area map.
 
 Status Bar
-
 
    **Auto-length**: Indicates whether the automatic computation of conduit lengths.
    It is recommended that the auto-length be turn ‘off” if the data is imported from a GIS database.
@@ -332,101 +316,35 @@ Status Bar
    **Flow units**: English or metric.
    The previously entered data is not automatically adjusted for the unit system if the system is changed.
 
-**Zoom level:** Zoom level percentage.
+    **Zoom level:** Zoom level percentage.
 
-**XY location**: Mouse cursor coordinates.
+    **XY location**: Mouse cursor coordinates.
 
 Data Browser
-
 
 The data browser has three sections (Figure 72).
 
-- A tree box that lists all the storm drain categories of data objects;
+    - A tree box that lists all the storm drain categories of data objects;
+    - Edit buttons;
+    - A list of individual objects in the selected category.
 
-- Edit buttons;
+.. image:: img/Chapter6/Chapte024.jpg
 
-- A list of individual objects in the selected category.
-
-List of data
-
-objects
-
-List of individual
-
-data objects in
-
-the selected cat-
-
-egory
-
-Data Object Ed-
-
-iting
-
-buttons
-
-Data Browser
-
-   **Figure 72.
-   SWMM GUI Data Browser Panel**
+*Figure 72.
+SWMM GUI Data Browser Panel*
 
 Map Browser
-
 
 The map browser consists of three panels that control the results display (Figure 73).
 
-- Themes Panel selects variables according to color on the map.
+    - Themes Panel selects variables according to color on the map.
+    - Time Period Panel indicates a specific output interval to display results on the map.
+    - Animator Panel controls the animation of the temporal output and profile plots.
 
-- Time Period Panel indicates a specific output interval to display results on the map.
+.. image:: img/Chapter6/Chapte025.jpg
 
-- Animator Panel controls the animation of the temporal output and profile plots.
-
-The Themes
-
-P
-
-anel se-
-
-lects variables
-
-accord-
-
-ing to
-
-color.
-
-The Time Period Panel
-
-indicates a specific
-
-out-
-
-put
-
-time
-
-to view the re-
-
-sults.
-
-The Animator
-
-Panel controls
-
-an
-
-animated display
-
-of temporal
-
-pro-
-
-file plots.
-
-Map Browser
-
-**Figure 73.
-Map Browser, Time Output Interval to View Results and Animator Controls**
+*Figure 73.
+Map Browser, Time Output Interval to View Results and Animator Controls*
 
 Output Display
 ''''''''''''''
@@ -437,41 +355,46 @@ Figure 74 shows the inlet discharge computed by FLO-2D.
 This figure is plotted in the GDS and shows the exchanged flow between the surface water and the storm drain system.
 The plot represents the volume that is returned from the storm drain system to the surface water under pressure.
 This occurs when the there is no more capacity in the system.
+
 .. image:: img/Chapter6/Chapte016.jpg
 
-   **Figure 74.
-   Storm Drain Discharge Reported in SWMMQIN.OUT (Plotted in the GDS)**
+*Figure 74.
+Storm Drain Discharge Reported in SWMMQIN.OUT (Plotted in the GDS)*
 
 Figure 75 shows the time series of an outfall depth.
 Other variables are plotted as a time series by the SWMM GUI.
 Outfall discharge may be computer as flow off the storm drain system or as return flow to the FLO-2D surface water.
+
 .. image:: img/Chapter6/Chapte017.jpg
 
-   **Figure 75.
-   Time Series Plots of Depth, Head, Inflow and Return Flow in the SWMM GUI.**
+*Figure 75.
+Time Series Plots of Depth, Head, Inflow and Return Flow in the SWMM GUI.*
 
 Figure 76.
 displays the flow in a series of connected pipes.
 A number of hydrographs from various locations in the storm drain can be plotted on a single graph.
 Combined hydrograph plots are helpful to determine the volume distribution and to review the timing of the flood wave progression throughout the storm
 drain system.
+
 .. image:: img/Chapter6/Chapte018.jpg
 
-   **Figure 76.
-   Hydrographs for Each Link in the Storm Drain System**
+*Figure 76.
+Hydrographs for Each Link in the Storm Drain System*
 
 The conduit flow depth profile at the peak discharge is shown in Figure 77.
 This profile can be animated using the map panel options.
 This tool will display the flow progression through the pipe system.
+
 .. image:: img/Chapter6/Chapte019.jpg
 
-   **Figure 77.
-   A Conduit Depth Profile**
+*Figure 77.
+A Conduit Depth Profile*
 
 The storm drain system results can be colored and animated with the mapper tools.
 The SWMM.RPT file can be reviewed using the status report command in the report menu.
 The use of colors and labels enables a dynamic visual display of the flow distribution (Figure 78).
+
 .. image:: img/Chapter6/Chapte020.jpg
 
-   **Figure 78.
-   The Display of the Storm Drain System with the Map Settings**
+*Figure 78.
+The Display of the Storm Drain System with the Map Settings*
