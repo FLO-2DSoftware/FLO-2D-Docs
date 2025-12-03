@@ -20,15 +20,15 @@ Porting SWMM Data Files to a FLO-2D Storm Drain Model
 
 The modifications that have to be made to the SWMM.inp file are discussed.
 
-Rain gages
+*Rain gages*
 
 Rain gages are not required in the FLO-2D Storm Drain Model.
 
-Subcatchments
+*Subcatchments*
 
 Subcatchments are not required in the FLO-2D Storm Drain Model.
 
-Inlets
+*Inlets*
 
 For junctions to function as inlets they must have an ID that starts with ‘I’.
 The required data for inlets are (Figure 79):
@@ -49,7 +49,7 @@ The required data for inlets are (Figure 79):
 *Figure 79.
 SWMM GUI Junction Dialog Box Showing the Required Data*
 
-Outfalls
+*Outfalls*
 
 Outfalls are terminal nodes in the drainage system used to define final downstream boundaries.
 Only a single link can be connected to an outfall node.
@@ -77,7 +77,7 @@ The required data includes (Figure 80):
 *Figure 80.
 SWMM GUI Outfall Dialog Box.*
 
-SWMM.ini
+**SWMM.ini**
 
 This file contains information about the model global settings and output and is saved by the QGIS plug-in and by the SWMM GUI.
 To enable the display of the FLO-2D storm drain results in the SWMM GUI the user must set the following lines as follows:
@@ -88,7 +88,7 @@ To enable the display of the FLO-2D storm drain results in the SWMM GUI the user
 
     Current=1
 
-SWMMFLO.DAT
+**SWMMFLO.DAT**
 
 This file contains the inlet geometry as well as the names/numbers that identify the paired inlet with the FLO-2D grid cells.
 It is created from the SWMM.inp file by the QGIS plug-in or by the GDS.
@@ -122,7 +122,7 @@ Reading the SWMM.inp File in the GDS.*
 *Figure 83.
 GDS dialog Inlet Geometry Data*
 
-SWMMOUTF.DAT
+**SWMMOUTF.DAT**
 
 In the SWMMOUTF.DAT file the “Allow Discharge” switch can be selected to enable outfall discharge to the FLO-2D surface water system.
 The FLO-2D GUI reads the outfall nodes from the SWMM.inp file, paired the outfalls with the grid element and creates the data file.
@@ -137,7 +137,7 @@ The dialog can then be used to turn ‘ON’ or ‘OFF’ the outfall nodes and 
 *Figure 84.
 GDS Outfall Dialog Box Command*
 
-Simulation Options
+*Simulation Options*
 
 The following simulation options have to be selected:
 
