@@ -321,6 +321,8 @@ The required data includes:
     - Maximum breach width
     - Vertical and horizontal rates of breach expansion
 
+.. image:: img/Levee003.png
+
 *Figure 12.
 GDS Prescribed Breach Dialog Box.*
 
