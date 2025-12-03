@@ -411,9 +411,11 @@ Flow into the outfall can occur based on the water surface elevation but may be 
 Normal, fixed, tidal or time series type of SWMM outfalls will discharge the flow off the storm drain system.
 In Figure 38, the outfall has a free flow condition but when the river is high, the outfall may be submerged.
 The location and elevation of the outfall can be assigned in the QGIS.
+
 .. image:: img/Chapter2/Chapte013.jpg
-   **Figure 38.
-   Storm Drain Free Outfall Condition (source: istock)**
+
+*Figure 38.
+Storm Drain Free Outfall Condition (source: istock)*
 
 During the simulation FLO-2D compares the downstream water surface elevations with the storm drain pressure head to control the flow in or out of the
 outlet.
@@ -421,9 +423,11 @@ This may result in backwater pressure on the pipe network.
 In the case of ponded flow as in detention or retention basins, the outfall might be submerged but still have sufficient pressure to discharge out of
 the storm drain network (Figure 39).
 When the retention basin water surface is high enough, water can enter the outfall and flow upstream in the pipe.
+
 .. image:: img/Chapter2/Chapte014.jpg
-   **Figure 39.
-   Outfall Discharging into a Retention Basin**
+
+*Figure 39.
+Outfall Discharging into a Retention Basin*
 
 The discharge at the outfall is controlled as follows:
 
@@ -451,9 +455,10 @@ If the outfall invert elevation is lower than the thalweg or floodplain elevatio
 SWMMOUTF.DAT is equal to 2 instead of 1,then the storm drain outfall would be connected to the surface layer but no initial underwater tailwater depth
 condition is imposed, and the outfall discharge to the surface based on the comparison between PH with the FLO-2D water Surface Elevation.
 Outfall is assumed to be located at ground elevation.
+
 .. image:: img/Chapter2/Chapte015.jpg
-   **Figure 40.
-   Outfall Location with Respect the Channel Left Bank Elements.**
+*Figure 40.
+Outfall Location with Respect the Channel Left Bank Elements.*
 
 Elevations and Datum
 ''''''''''''''''''''
