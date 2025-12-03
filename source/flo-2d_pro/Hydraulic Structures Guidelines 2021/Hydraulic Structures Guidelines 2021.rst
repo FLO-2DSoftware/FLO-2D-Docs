@@ -63,8 +63,10 @@ It is possible to assign a limiting conveyance capacity for the outlet node (Fig
 This will curtail the inflow in subsequent downstream inlets.
 Once the conveyance capacity is exceeded, the discharge to the remaining downstream inlet nodes is zero.
 
-   Figure 3.
-   Multiple Storm Drain Inlets to a Single Outlet with a Conveyance Capacity Limit
+.. image:: img/Hydrau008.jpg
+
+*Figure 3.
+Multiple Storm Drain Inlets to a Single Outlet with a Conveyance Capacity Limit*
 
 Generalized equations for inlet and outlet control for round or rectangular culverts are available in the Pro model.
 The culvert discharge will be computed using equations based on experimental and theoretical results from the U.S.
@@ -75,34 +77,25 @@ degrees, wingall flare 90 or 15 degrees and wingall flare 0 degrees) and three e
 with headwall and socket end projecting).
 The highlights of this new component are:
 
-- Computes discharge through box or circular pipe culverts for various entrance conditions.
-
-- Computes both inlet and outlet control and the transition between them.
-
-- No rating curves or tables required.
+    - Computes discharge through box or circular pipe culverts for various entrance conditions.
+    - Computes both inlet and outlet control and the transition between them.
+    - No rating curves or tables required.
 
 The data required for the generalized culvert equations include (Figure 4):
 
-- Length
+    - Length
+    - Diameter
+    - Rectangular Width
+    - Type – Box or Pipe
+    - Entrance Type (3)
+    - Entrance Loss Coefficient
+    - Roughness
 
-- Diameter
 
-- Rectangular Width
+.. image:: img/Hydrau004.jpg
 
-- Type – Box or Pipe
-
-- Entrance Type (3)
-
-- Entrance Loss Coefficient
-
-- Roughness
-
-..
-
-   |Hydrau004|
-
-   Figure 4.
-   GDS Dialog Box for Entering the Generalized Culvert Data
+*Figure 4.
+GDS Dialog Box for Entering the Generalized Culvert Data*
 
 Hydraulic structures may be used to allow flow to go through a levee.
 This might simulate a drainage hole in a block wall or a culvert through a highway embankment.
@@ -112,7 +105,7 @@ When the levee or wall fails the hydraulic structure flow is terminated and the 
 If the breach failure is instantaneous, the hydraulic structure flow is ceased and the flow reverts to overland flow.
 
 Guidelines
-==========
+-----------
 
 Hydraulic structures pass flow across a grid element boundary and can connect two floodplain elements, two channel elements or a floodplain to channel
 element combination.
