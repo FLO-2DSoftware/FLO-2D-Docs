@@ -569,6 +569,10 @@ High Flow Instability Indices (HFII)
 The SWMM.RPT file lists those nodes of the drainage network that have the largest flow continuity errors.
 The following is an example from a SWMM.RPT file:
 
+.. raw:: html
+
+    <pre>
+
     High Flow Instability Indexes
 
     ********************************
@@ -582,6 +586,7 @@ The following is an example from a SWMM.RPT file:
     Link C7 (6)
 
     Link C6 (6)
+    </pre>
 
 To improve the volume conservation error, the links listed on the HFII table have to be reviewed.
 Fixing the top 5 listed HFII links usually result in a more stable model.
