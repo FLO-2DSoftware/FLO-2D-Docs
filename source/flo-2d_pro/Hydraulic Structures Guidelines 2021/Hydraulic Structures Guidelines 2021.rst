@@ -491,6 +491,32 @@ Table 2 is a list of possible hydraulic structure issues and fixes.
             structure. Set the INOUTCONT = 1 in the HYSTRUC.DAT file to allow upstream flow.
          </td>
        </tr>
+       <!-- Time-Stage Backwater Downstream of Hydraulic Structures -->
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="3">
+           Time-Stage Backwater Downstream of Hydraulic Structures
+         </td>
+         <td style="border: 1px solid #000; padding: 4px;">
+            Time-stage elements that control the water surface elevation downstream of a hydraulic structure
+            are generally not a problem. Numerical instability are usually associated with the time-stage
+            elements by having the water surface stage be less than ground elevation or having contiguous timestage elements with non-uniform ground elevations.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+            If the water downstream is ponded and has a highly variable water surface elevation (in a reservoir
+            scenario or from the time-stage ocean simulation), slow down the timesteps (use a smaller Courant
+            number), varying the n-values or adjust the topography to make it more uniform.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+            Review the HYDROSTRUCT.OUT file for surging. High velocities may be eliminated with increasing nvalues. Some high velocities may be associated with the initial floodwave movement upstream by
+            creating an instantaneous wall of water in the TIME-STAGE pairs. Have the water stage gradually
+            increase above the ground or bed elevation, similar to the actual physical condition. Consider that a
+            channel near the ocean may have to filled before assigning the tidal stage or storm surge
+         </td>
+       </tr>
      </tbody>
    </table>
 
