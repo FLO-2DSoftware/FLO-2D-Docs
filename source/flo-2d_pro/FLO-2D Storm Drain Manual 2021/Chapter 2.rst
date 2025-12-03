@@ -178,7 +178,7 @@ Orifice flow can have two potential sag inlet conditions (Johnson and Fred, 1984
 
        Q_{o} = C_{d}A\sqrt{2g\left( H - \frac{h}{2} \right)}
 
-       where:
+    where:
 
            Q\ :sub:`o` = orifice flow rate at depth H
 
