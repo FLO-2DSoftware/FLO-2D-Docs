@@ -730,9 +730,11 @@ After a project is saved in the storm drain GUI, the control settings file SWMM.
 This file has the same name as the project file and the extension \*.ini.
 It contains global settings and model output options such as map display, legend colors and intervals, object default values, etc.
 To enable the display of results in the storm drain GUI the user must set the last two lines in Figure 49 as shown.
+
 .. image:: img/Chapter3/Chapte009.jpg
-   **Figure 49.
-   SWMM.ini file.**
+
+*Figure 49.
+SWMM.ini file.*
 
 Output files
 ^^^^^^^^^^^^
@@ -740,8 +742,8 @@ Output files
 With the successful completion of a FLO-2D storm drain simulation, the storm drain output files will be created in the simulation folder.
 Table 15 list the storm drain output files and the description.
 
-   **Table 15.
-   List of the Storm Drain Data Output Files and Description**
+**Table 15.
+List of the Storm Drain Data Output Files and Description**
 
 .. list-table::
    :widths: 50 50
