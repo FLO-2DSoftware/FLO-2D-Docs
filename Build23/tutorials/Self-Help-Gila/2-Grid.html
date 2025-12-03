@@ -1,0 +1,477 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Project and Grid &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Hydrology" href="3-Hydrology.html" />
+    <link rel="prev" title="Self-Help Kit Setup" href="1-Setup.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro Resource Center 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin Gila: Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Self-Help Kit Gila 1.0.0</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="1-Setup.html">Self-Help Kit Setup</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Create Project and Grid</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-new-project">Create a New Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setup-the-grid">Setup the Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#assign-elevation">Assign Elevation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#assign-grid-roughness">Assign Grid Roughness</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#assign-control-parameters">Assign Control Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#save-export-and-run">Save, Export, and Run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-demo-engine">Run Demo Engine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backup-and-recovery">Backup and Recovery</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3-Hydrology.html">Hydrology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4-Channels.html">Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5-Storm%20Drain.html">Storm Drain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="6-Buildings.html">Buildings and Walls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7-Realtime.html">Realtime Rainfall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="8-Hydraulic.html">Hydraulic Structures - Culverts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9-Mapping.html">Project Review and Mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-Troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-Troubleshooting.html#faq-webinar">FAQ - Webinar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Self-Help Kit Gila 1.0.0</a></li>
+      <li class="breadcrumb-item active">Create Project and Grid</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/Self-Help-Gila/2-Grid.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="create-project-and-grid">
+<h1>Create Project and Grid<a class="headerlink" href="#create-project-and-grid" title="Link to this heading"></a></h1>
+<p>This tutorial guides users through setting up a project in FLO-2D and QGIS.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For better visibility, it is recommended to watch these videos on YouTube.</p>
+<p>Adjusting the video playback speed to 2x can expedite the learning process.</p>
+</div>
+<section id="create-a-new-project">
+<h2>Create a New Project<a class="headerlink" href="#create-a-new-project" title="Link to this heading"></a></h2>
+<section id="load-project-domain">
+<h3>Load Project Domain<a class="headerlink" href="#load-project-domain" title="Link to this heading"></a></h3>
+<p>Open the <strong>Self-Help Lesson 1</strong> folder and drag and drop the <strong>Project Domain shapefile</strong> onto the QGIS map.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If identifying the correct <cite>.shp</cite> (shapefile) file is difficult, enable <strong>file extensions</strong> in the folder
+view options.</p>
+</div>
+<p>QGIS should display the domain as shown below. The polygon color is randomly assigned and may differ from the example
+image.</p>
+<img alt="../../_images/shg02_002.png" src="../../_images/shg02_002.png" />
+</section>
+<section id="check-the-crs">
+<h3>Check the CRS<a class="headerlink" href="#check-the-crs" title="Link to this heading"></a></h3>
+<p>Open the <strong>CRS Selector</strong> by clicking the button shown in the image below:</p>
+<img alt="../../_images/shg02_003.png" src="../../_images/shg02_003.png" />
+<p>The coordinate reference system for this project is <strong>EPSG:2223</strong>, representing <strong>NAD 83 Arizona Central</strong>. While
+<strong>EPSG:2868</strong> or <strong>EPSG:6405</strong> are generally preferred for Arizona, EPSG:2223 will be used throughout this tutorial
+to maintain consistency with the provided data.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>For new projects, consult local city, county, or state agencies, or a surveying team to determine the
+appropriate coordinate system.</p>
+</div>
+<p>The following image displays a filtered list of Arizona coordinate systems:</p>
+<img alt="../../_images/shg02_001.png" src="../../_images/shg02_001.png" />
+<p>Close the window if the coordinate system is set correctly.</p>
+</section>
+<section id="id1">
+<h3>Create a New Project<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>Locate the <strong>FLO-2D Toolbar</strong> and click the <strong>New Project</strong> button.</p>
+<img alt="../../_images/shg02_004.png" src="../../_images/shg02_004.png" />
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The project name should be descriptive, including key details such as study location, project number, or
+start date. In this tutorial, a simplified naming convention is used for clarity.</p>
+</div>
+<p>Use the <strong>Create</strong> button to navigate to the <strong>Self-Help Kit Gila</strong> directory and name the <strong>GeoPackage file</strong>
+appropriately, such as <strong>Self-Help Kit</strong> or <strong>Project 1</strong>.</p>
+</section>
+<section id="project-settings-overview">
+<h3>Project Settings Overview<a class="headerlink" href="#project-settings-overview" title="Link to this heading"></a></h3>
+<p>The <strong>Project Settings</strong> dialog box provides key details about the project:</p>
+<ol class="arabic simple">
+<li><p>Displays essential project-related information.</p></li>
+<li><p>If the unit system is not recognized, update the FLO-2D plugin.</p></li>
+<li><p>User data entry is optional but can assist future users in retrieving project details.</p></li>
+<li><p>If the <strong>FLO-2D Build</strong> version is displayed as <em>Version not Found</em>, an experimental <strong>FLOPRO.exe</strong> may be installed
+on the system.</p></li>
+<li><p>The <strong>grid cell size</strong> displayed in this dialog is not used. Instead, refer to the “Computational Domain” attribute
+for the correct setting. Instructions are available in the <strong>Assign Grid Roughness</strong> section.</p></li>
+<li><p>A <strong>default n value</strong> is applied to all projects. This value is intentionally low to encourage modification based on
+<strong>Assign Grid Roughness</strong> guidelines. Updating overland roughness is essential for accurate modeling. If a project
+is submitted to technical support with unchanged default n values, it may indicate that key adjustments have been
+overlooked.</p></li>
+</ol>
+<img alt="../../_images/shg02_005.png" src="../../_images/shg02_005.png" />
+<p>Set the CRS using the pop-up dialog and click <strong>OK</strong>.</p>
+<img alt="../../_images/shg02_006.png" src="../../_images/shg02_006.png" />
+<p>Click <strong>OK</strong> to close the <strong>Project Settings</strong> window. This action will initialize the FLO-2D plugin and save the QGIS
+project.</p>
+<p>When prompted with save options, external data can either be embedded into the <strong>GeoPackage</strong> or referenced using
+file paths.</p>
+<p>Click <strong>Yes</strong> when prompted to save.</p>
+<img alt="../../_images/shg02_007.png" src="../../_images/shg02_007.png" />
+</section>
+<section id="managing-external-layers">
+<h3>Managing External Layers<a class="headerlink" href="#managing-external-layers" title="Link to this heading"></a></h3>
+<p>The <strong>GeoPackage Management Tool</strong> provides options for handling external layers.</p>
+<ul class="simple">
+<li><p>To ensure that a layer remains accessible within the project, move it to the left side of the dialog box.</p></li>
+<li><p>Layers that are temporary or non-essential can remain on the right side.</p></li>
+<li><p>Layers that are server connected like Google Maps or from FLO-2D MapCrafter will always use the <strong>Path</strong> option.</p></li>
+</ul>
+<p>For this tutorial, the <strong>Project Domain</strong> layer is only needed once and will be copied into the <strong>Computational Domain</strong>
+layer. It does not need to be retained within the GeoPackage.</p>
+<img alt="../../_images/shg02_008.png" src="../../_images/shg02_008.png" />
+<p>After setup, the project interface should appear as follows:</p>
+<ul class="simple">
+<li><p><strong>FLO-2D Widget</strong> positioned on the right side of QGIS.</p></li>
+<li><p><strong>Table and Plotting Windows</strong> located at the bottom.</p></li>
+<li><p><strong>FLO-2D Grid Info Panel</strong> displayed on the left.</p></li>
+</ul>
+<img alt="../../_images/shg02_009.png" src="../../_images/shg02_009.png" />
+</section>
+</section>
+<section id="setup-the-grid">
+<h2>Setup the Grid<a class="headerlink" href="#setup-the-grid" title="Link to this heading"></a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/V0N064712ng?si=El8bthhN_ePQ0V2k"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe><p>Expand the <strong>Grid Tools Widget</strong> and click the <strong>Create Grid</strong> button.</p>
+<p>Select <strong>External Layer</strong> and choose <strong>Project Domain</strong> as the layer.</p>
+<p>Set the <strong>Cell Size</strong> field to <cite>cell_size</cite> and click <strong>OK</strong> to generate the grid.</p>
+<img alt="../../_images/shg02_010.png" src="../../_images/shg02_010.png" />
+<p>The FLO-2D plugin will generate and validate the grid.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If this process takes longer than expected, verify that the <strong>correct field</strong> is being used. Selecting the
+<strong>FID field</strong> instead of <cite>cell_size</cite> may result in an excessively large grid. If this occurs, allow the process to
+complete and then retry with the appropriate field.</p>
+</div>
+<p>The dialog displays the <strong>cell size</strong>, <strong>grid count</strong>, and <strong>elapsed time</strong> for grid generation. While the elapsed
+time varies based on system performance and grid size, this metric assists in evaluating plugin optimization.</p>
+<img alt="../../_images/shg02_011.png" src="../../_images/shg02_011.png" />
+</section>
+<section id="assign-elevation">
+<h2>Assign Elevation<a class="headerlink" href="#assign-elevation" title="Link to this heading"></a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Xcqbf42UUnI?si=_tj6UtGkD3COQvaO"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe><p><strong>Load the Elevation File</strong></p>
+<p>To begin, add the elevation raster to the project by dragging and dropping it onto the map.</p>
+<img alt="../../_images/shg02_012.png" src="../../_images/shg02_012.png" />
+<p><strong>Assign Elevation to the Grid</strong></p>
+<p>From the <strong>Grid Tools Widget</strong>, select the <strong>Assign Elevation Data to Grid</strong> tool. Complete the dialog box as shown
+below and click <strong>OK</strong> to process the elevation.</p>
+<img alt="../../_images/shg02_013.png" src="../../_images/shg02_013.png" />
+<p>For additional information on this tool and its interpolation methods, click the <strong>Help</strong> button.</p>
+<img alt="../../_images/shg02_014.png" src="../../_images/shg02_014.png" />
+<p><strong>Adjust Layer Visibility</strong></p>
+<p>To improve visibility, deselect <strong>Elevation</strong> and <strong>Project Domain</strong> in the Layers panel. This will ensure the grid
+is clearly displayed.</p>
+<img alt="../../_images/shg02_016.png" src="../../_images/shg02_016.png" />
+<p><strong>Review Grid Elevation</strong></p>
+<p>Enable the <strong>Render Elevation</strong> checkbox to inspect the assigned elevation values. Once the review is complete,
+disable this option to optimize map rendering performance.</p>
+<img alt="../../_images/shg02_015.png" src="../../_images/shg02_015.png" />
+</section>
+<section id="assign-grid-roughness">
+<h2>Assign Grid Roughness<a class="headerlink" href="#assign-grid-roughness" title="Link to this heading"></a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hItgohR5e8w?si=-9uzzocICxnusRAF"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe><p><strong>Load the Manning’s n Shapefile</strong></p>
+<p>To assign roughness values, add the <strong>Manning’s n</strong> shapefile to the project.</p>
+<img alt="../../_images/shg02_017.png" src="../../_images/shg02_017.png" />
+<p><strong>Assign Roughness Values</strong></p>
+<p>Use the <strong>Assign Roughness from Polygon</strong> tool to apply roughness values to the grid.</p>
+<img alt="../../_images/shg02_018.png" src="../../_images/shg02_018.png" />
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>When using a roughness raster, select the <strong>Assign Roughness from Raster</strong> option.</p>
+</div>
+<p><strong>Review Grid Attributes</strong></p>
+<p>To verify the assigned values, open the <strong>Grid Attribute Table</strong>:</p>
+<ol class="arabic simple">
+<li><p>Right-click the <strong>Grid</strong> layer.</p></li>
+<li><p>Select <strong>Open Attribute Table</strong>.</p></li>
+</ol>
+<img alt="../../_images/shg02_019.png" src="../../_images/shg02_019.png" />
+<p>The attribute table can be sorted by clicking on the column headers. The <strong>FID</strong> field represents the <strong>Grid Element
+Number (GE Number)</strong>.</p>
+<img alt="../../_images/shg02_020.png" src="../../_images/shg02_020.png" />
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Avoid opening the <strong>Grid Attribute Table</strong> if the grid contains more than <strong>one million cells</strong>, as performance
+may be significantly impacted.</p>
+</div>
+</section>
+<section id="assign-control-parameters">
+<h2>Assign Control Parameters<a class="headerlink" href="#assign-control-parameters" title="Link to this heading"></a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mgl5VgAXP_g?si=9CO0AhES5GdnIZFe"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe><p><strong>Configure Control and Stability Parameters</strong></p>
+<p>Open the <strong>FLO-2D Parameters Group</strong> and select the first option to access the <strong>Control and Stability Parameters</strong> dialog.</p>
+<img alt="../../_images/shg02_021.png" src="../../_images/shg02_021.png" />
+<p>Complete the fields as shown in the example below.</p>
+<img alt="../../_images/shg02_022.png" src="../../_images/shg02_022.png" />
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Tooltips are available in this dialog to provide descriptions of each variable. The variable names correspond
+to those in <strong>Chapter 4</strong> of the <strong>Data Input Manual</strong>, making it easy to locate specific tables for reference.</p>
+</div>
+<p><strong>Review Numerical Stability Parameters</strong></p>
+<p>Navigate to the <strong>Numerical Stability</strong> tab and review the parameter values.</p>
+<img alt="../../_images/shg02_023.png" src="../../_images/shg02_023.png" />
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>For a more detailed understanding, refer to the <strong>Numerical Stability</strong> section of the <strong>FLO-2D Reference
+Manual</strong> and review related webinar recordings by <strong>Dr. Jimmy O’Brien</strong>. These resources are available in the
+<strong>Training Packages</strong> section on the FLO-2D website and in the <strong>ShareFile Webinar Series</strong> folder.
+<a href="https://flo-2d.sharefile.com/share/view/s8eb82117ebf4d5b8/fo0f5642-4b81-43e2-9a11-e79085fc030c"
+target="_blank" rel="noopener noreferrer">Webinar Series</a></p>
+</div>
+</section>
+<section id="save-export-and-run">
+<h2>Save, Export, and Run<a class="headerlink" href="#save-export-and-run" title="Link to this heading"></a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_uE-NrasaXA?si=IWpqfAKH5k7KNoih"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe><section id="save-the-project">
+<h3><strong>Save the Project</strong><a class="headerlink" href="#save-the-project" title="Link to this heading"></a></h3>
+<p>Click the <strong>QGIS Save</strong> button and confirm by selecting <strong>Yes</strong> in the dialog box.</p>
+<img alt="../../_images/shg02_024.png" src="../../_images/shg02_024.png" />
+<p>Move the <strong>Elevation</strong> and <strong>Manning’s n</strong> layers to the left side of the dialog box. This action saves these layers
+to the GeoPackage.</p>
+<img alt="../../_images/shg02_025.png" src="../../_images/shg02_025.png" />
+<p>The <strong>FLO-2D Plugin</strong> automatically organizes external layers added to the GeoPackage into a separate group.
+The <strong>Project Domain</strong> layer can be removed, as it has already been copied into the <strong>Computational Domain</strong>.</p>
+<img alt="../../_images/shg02_026.png" src="../../_images/shg02_026.png" />
+</section>
+<section id="review-the-geopackage-structure">
+<h3><strong>Review the GeoPackage Structure</strong><a class="headerlink" href="#review-the-geopackage-structure" title="Link to this heading"></a></h3>
+<p>Open the <strong>Browser Panel</strong> and dock it next to the <strong>Layers Panel</strong> by dragging the panel with a left-click and
+dropping it on the Layers Panel when highlighted.</p>
+<img alt="../../_images/shg_002.gif" src="../../_images/shg_002.gif" />
+<p>Connect to the <strong>Project GeoPackage</strong> by right-clicking the <strong>GeoPackage</strong> section and selecting <strong>New Connection</strong>.
+Choose the <strong>Project GeoPackage</strong> file and click <strong>Open</strong>.</p>
+<img alt="../../_images/shg02_027.png" src="../../_images/shg02_027.png" />
+<p>Expand the <strong>GeoPackage</strong> and use the <strong>E, G, and M</strong> keys on the keyboard to quickly navigate to tables that begin
+with those letters.</p>
+<img alt="../../_images/shg_003.gif" src="../../_images/shg_003.gif" />
+</section>
+<section id="using-sql-tools-in-geopackage">
+<h3><strong>Using SQL Tools in GeoPackage</strong><a class="headerlink" href="#using-sql-tools-in-geopackage" title="Link to this heading"></a></h3>
+<p>To execute SQL queries, right-click the <strong>Grid</strong> layer and select <strong>Execute SQL</strong>.</p>
+<img alt="../../_images/shg02_029.png" src="../../_images/shg02_029.png" />
+<p>To compute basic statistics on the <cite>n_value</cite> field in the <cite>grid</cite> table within a GeoPackage database, use the
+following SQL query:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
+<span class="w">    </span><span class="k">MIN</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">min_value</span><span class="p">,</span>
+<span class="w">    </span><span class="k">MAX</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">max_value</span><span class="p">,</span>
+<span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">mean_value</span><span class="p">,</span>
+<span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">sum_value</span><span class="p">,</span>
+<span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_entries</span><span class="p">,</span>
+<span class="w">    </span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="n">n_value</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">n_value</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">n_value</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">variance</span><span class="p">,</span>
+<span class="w">    </span><span class="n">SQRT</span><span class="p">((</span><span class="k">SUM</span><span class="p">(</span><span class="n">n_value</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">n_value</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">n_value</span><span class="p">)))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">std_dev</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">grid</span><span class="p">;</span>
+</pre></div>
+</div>
+<p><strong>Query Explanation:</strong></p>
+<ul class="simple">
+<li><p><cite>MIN(n_value)</cite>: Returns the <strong>minimum</strong> roughness value.</p></li>
+<li><p><cite>MAX(n_value)</cite>: Returns the <strong>maximum</strong> roughness value.</p></li>
+<li><p><cite>AVG(n_value)</cite>: Computes the <strong>mean</strong> roughness value.</p></li>
+<li><p><cite>SUM(n_value)</cite>: Returns the <strong>sum</strong> of all roughness values.</p></li>
+<li><p><cite>COUNT(n_value)</cite>: Counts the <strong>total number of records</strong>.</p></li>
+<li><p><cite>variance</cite>: Computes the <strong>variance</strong> of <cite>n_value</cite>.</p></li>
+<li><p><cite>std_dev</cite>: Computes the <strong>standard deviation</strong>.</p></li>
+</ul>
+<p><strong>Executing the Query in QGIS:</strong></p>
+<ol class="arabic simple">
+<li><p>Right-click the <strong>grid</strong> table and select <strong>Execute SQL</strong>.</p></li>
+<li><p>Paste the SQL query into the query editor.</p></li>
+<li><p>Click <strong>Run</strong> to execute the query and display the results.</p></li>
+</ol>
+<img alt="../../_images/shg02_028.png" src="../../_images/shg02_028.png" />
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Using SQL processing is a more efficient method for analyzing data in GeoPackages. Large grids (over 1 million
+cells) may experience performance issues when using QGIS table joins and table tools. SQL-based queries operate
+directly on the database without requiring additional memory allocation, making them significantly faster.</p>
+</div>
+</section>
+<section id="quick-run">
+<h3><strong>Quick Run</strong><a class="headerlink" href="#quick-run" title="Link to this heading"></a></h3>
+<p>The <strong>Quick Run</strong> feature allows exporting data and running the model in a single step.</p>
+<img alt="../../_images/shg02_030.png" src="../../_images/shg02_030.png" />
+<p>Create a new folder named <strong>Quick Run</strong> inside the <strong>Lesson 1</strong> directory and select it.</p>
+<img alt="../../_images/shg02_031.png" src="../../_images/shg02_031.png" />
+<p>Uncheck <strong>Rain</strong> and click <strong>OK</strong> to initiate a <strong>Quick Run</strong> test.</p>
+<img alt="../../_images/shg02_032.png" src="../../_images/shg02_032.png" />
+<p>If the model starts successfully, the <strong>License Status</strong> will be displayed, and the simulation will begin.</p>
+<img alt="../../_images/shg02_033.png" src="../../_images/shg02_033.png" />
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The <strong>Quick Run</strong> feature executes <strong>FLOPRO.EXE</strong> validation checks. If the model starts, the verification
+process has passed. For additional information on ASCII data files used by the <strong>FLOPRO.EXE</strong> engine, refer to
+the accompanying <strong>YouTube tutorial</strong>.</p>
+</div>
+</section>
+</section>
+<section id="run-demo-engine">
+<h2>Run Demo Engine<a class="headerlink" href="#run-demo-engine" title="Link to this heading"></a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9wUJBdP6vjQ?si=gHTxsyj6ct_J3TKf"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Self-Help Tutorial does not require a license.  Use the Demo-Engine as shown in the video to take this
+tutorial with a demo version of the software.</p>
+</div>
+</section>
+<section id="backup-and-recovery">
+<h2>Backup and Recovery<a class="headerlink" href="#backup-and-recovery" title="Link to this heading"></a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wmo3Mkl7ZvU"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="1-Setup.html" class="btn btn-neutral float-left" title="Self-Help Kit Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="3-Hydrology.html" class="btn btn-neutral float-right" title="Hydrology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build23
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="2-Grid.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,7 +1,22 @@
 .. vim: syntax=rst
 
-FLO-2D Hydraulic Structure Guidelines
+Hydraulic Structure Guidelines
 ======================================
+
+Additional Resources
+---------------------
+
+Data, tutorials and examples related to hydraulic structures can be found in the following locations:
+
+    - FLO-2D Data Input Manual: HYSTRUC.DAT
+    
+    - FLO-2D Gila 1.0 User Manual Structures Editor
+
+    - Basic and Advanced Culverts: Self Help Lesson 2 and 6
+
+    - Bridge Tutorial: Advanced Module 3
+
+    - Example Projects: Rio Grande Riverine, and Urban
 
 Overview
 ---------
@@ -15,13 +30,20 @@ For example, a culvert under an interstate highway may span several grid element
 In addition, flow can be exchanged between a floodplain element and channel element.
 A hydraulic structure rating curve equation specifies discharge as a function of the headwater depth h:
 
-   Q = a h\ :sup:`b`
+.. math::
 
-where: (a) is a regression coefficient and (b) is a regression exponent.
+    Q = a h^b
+
+where: 
+   a = regression coefficient 
+
+   b = regression exponent.
+
 More than one power regression relationship may be used for a hydraulic structure by specifying the maximum depth for which the relationship is valid.
 For example, one depth relationship can represent normal flow through a bridge and a second relationship can be used to simulate blockage with a zero
 coefficient for the height of the bridge low chord.
 Flow can also reverse and go upstream through a hydraulic structure.
+
 Hydraulic structures may include:
 
     - Broadcrested weir such as a berm or embankment (Figure 1);
@@ -50,6 +72,7 @@ Broadcrested Weir Equation for Modeling Hydraulic Structure Flow Over an Embankm
 By specifying a hydraulic structure rating table, the model interpolates between the depth and discharge increments to calculate the discharge.
 A typical rating curve will start with zero depth and zero discharge and increase in non-uniform increments to the maximum expected discharge or
 higher.
+
 In general, the rating table will be more accurate than the regression equation if the curve is nonlinear on a log-log plot of the depth and discharge.
 The rating table must be based on a reference elevation (Figure 2).
 Flow blockage by debris can be simulated by setting the discharge equal to zero corresponding to a prescribed depth.
@@ -59,7 +82,7 @@ Blockage forces all the discharge to flow overland on the fan or floodplain surf
 .. image:: img/Hydrau003.jpg
 
 *Figure 2.
-Levees are Depicted in Red and the River in Blue in the GDS Program*
+Levees are Depicted in Red and the River in Blue*
 
 For a simplified storm drain system, multiple inflow nodes can be assigned to the same outflow element.
 This will enable the cumulative storm drain discharge at the outlet to be assessed without conduit flow routing.
@@ -103,10 +126,11 @@ The data required for the generalized culvert equations include (Figure 4):
 
     - Roughness
 
-.. image:: img/Hydrau004.jpg
+.. image:: img/Hydrau005.png
+.. image:: img/Hydrau006.png  
 
 *Figure 4.
-GDS Dialog Box for Entering the Generalized Culvert Data*
+Generalized Culvert Data*
 
 Hydraulic structures may be used to allow flow to go through a levee.
 This might simulate a drainage hole in a block wall or a culvert through a highway embankment.
@@ -148,7 +172,8 @@ When a rate table accelerates flow through hydraulic structure in the model, it 
 the outflow node storage.
 This changes the relationship between the headwater and tailwater can result in numerical surging through the structure (Figure 5).
 
-.. image:: img/Hydrau005.jpg
+.. image:: img/Hydrau005.png
+.. image:: img/Hydrau006.png
 
 *Figure 5.
 Hydraulic Structure Numerical Surging*
@@ -235,6 +260,7 @@ Hydraulic Structure Rating Table Options*
 
    * - INOUTCONT = 2
      - Upstream flow through the structure is computed with the rating table adjustment when the tailwater surface
+
        exceeds the headwater surface.
 
        The headwater depth Hw and tailwater Tw can switch with submergence to allow flow to go upstream.
@@ -457,13 +483,17 @@ Hydraulic Structure Troubleshooting*
 
        conservation or numerical instability, follow this protocal:
 
-            - Turn off the hydraulic structures in CONT.DAT and run the model until the problem occurred.
+            - Turn off the hydraulic structures in CONT.DAT and run the model until the
+
+              problem occurred.
 
             - Turn off the levees in CONT.DAT and run the model only until the time that the
 
               problem surfaced.
 
-            - If the problem is in the hydraulic structures, isolate the structures that appear to be the problem.
+            - If the problem is in the hydraulic structures, isolate the structures
+
+              that appear to be the problem.
 
        To isolate a hydraulic structure, put a simple inflow hydrograph (for steady flow) several
 
@@ -483,11 +513,15 @@ Hydraulic Structure Troubleshooting*
 
        The model automatically adjusts the hydraulic structure rating table and writes the revised
 
-       table pairs to an output file. If instability persists, review the revised rating table and make
+       table pairs to an output file. If instability persists, review the revised rating
+
+       table and make
 
        further adjustments.
 
-       Typically the instability is related to the lower flows and there are insufficient rating table pairs
+       Typically the instability is related to the lower flows and there are insufficient
+
+       rating table pairs
 
        to define the rating table for the lower discharges. Review the HYDROSTRUCT.OUT file to determine
 
@@ -500,7 +534,9 @@ Hydraulic Structure Troubleshooting*
        Set the INOUTCONT = 1 in the HYSTRUC.DAT file to allow upstream flow.
 
    * - Time-Stage Backwater Downstream of Hydraulic Structures
-     - Time-stage elements that control the water surface elevation downstream of a hydraulic structure are
+     - Time-stage elements that control the water surface elevation downstream of a
+
+       hydraulic structure are
 
        generally not a problem. Numerical instability are usually associated with the time-stage elements
 

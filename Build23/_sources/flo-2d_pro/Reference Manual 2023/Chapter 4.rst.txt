@@ -3,7 +3,7 @@
 Chapter 4. MODEL COMPONENTS
 ===========================
 
-4.1 Model Features
+Model Features
 -------------------
 
 The primary FLO-2D flood routing features and attributes are:
@@ -36,7 +36,7 @@ the user can learn about how the flood project responds to mitigation or sensiti
 Model component selection should focus on those physical features that will significantly affect the volume distribution and area of inundation.
 A brief description of the FLO-2D components follows.
 
-4.2 Overland Flow
+Overland Flow
 ------------------
 
 The simplest FLO-2D model is overland flow on an alluvial fan or floodplain.
@@ -54,15 +54,11 @@ The assignment of overland flow roughness must account for vegetation, surface i
 It is also a function of flow depth.
 Typical overland flow roughness values (Manning’s n coefficients) are shown in Table 3.
 
-*Table 3.
-Overland Flow Manning's n Roughness Values.\ :sup: `1`*
+*Table 3. Overland Flow Manning's n Roughness Values.*\ :sup:`1`
 
 .. raw:: html
 
    <table border="1" cellspacing="0" cellpadding="6" style="border-collapse: collapse; width: 100%;">
-     <caption style="text-align: left; font-weight: bold;">
-       Table 3. Overland Flow Manning's n Roughness Values.<sup>1</sup>
-     </caption>
      <thead>
        <tr>
          <th style="text-align: left;">Surface</th>
@@ -77,7 +73,6 @@ Overland Flow Manning's n Roughness Values.\ :sup: `1`*
        <tr><td>Poor grass cover on rough surface</td><td>0.20 - 0.30</td></tr>
        <tr><td>Short prairie grass</td><td>0.10 - 0.20</td></tr>
        <tr><td>Sparse vegetation</td><td>0.05 - 0.13</td></tr>
-    ]
 
        <tr><td colspan="2"><strong>Sparse rangeland with debris</strong></td></tr>
        <tr><td>&nbsp;&nbsp;&nbsp;0% cover</td><td>0.09 - 0.34</td></tr>
@@ -96,8 +91,13 @@ Overland Flow Manning's n Roughness Values.\ :sup: `1`*
        <tr><td>Shallow flow on asphalt or concrete (0.25&quot; to 1.0&quot;)</td><td>0.10 - 0.15</td></tr>
        <tr><td>Fallow fields</td><td>0.08 - 0.12</td></tr>
        <tr><td>Open ground, no debris</td><td>0.04 - 0.10</td></tr>
-       <tr><t
+    </tbody>
+   </table>
 
+
+.. raw:: html
+
+    <br><br>
 
 .. image:: img/Chapter4/Chapte002.png
 
@@ -168,7 +168,7 @@ It should be noted that the application of the Manning’s equation for uniform 
 the depth average velocity approaches zero (ponded flow condition).
 The resulting water surface elevations can be accurately predicted but will display some variation across the channel.
 
-4.3 Channel Flow
+Channel Flow
 -----------------
 
 The full channel guidelines are in the Manuals folder.
@@ -242,7 +242,7 @@ The cross-section interpolation is based a weighted flow area adjustment to achi
 The user has several other options for setting up the channel data file including grouping the channel elements into segments, specifying initial flow
 depths, identifying contiguous channel elements that do not share discharge, assigning limiting Froude numbers and depth variable nvalue adjustments.
 
-4.4 Channel-Floodplain Interface
+Channel-Floodplain Interface
 --------------------------------
 
 Channel flow is exchanged with the floodplain grid elements in a separate routine after the channel, street and floodplain flow subroutines have been
@@ -263,7 +263,7 @@ velocity.
 Overbank discharge or return flow to the channel is computed using the floodplain assigned roughness.
 The overland flow can enter a previously dry channel.
 
-4.5 Levees
+Levees
 ----------
 
 The FLO-2D levee component confines flow on the floodplain surface by blocking one of the eight flow directions.
@@ -307,7 +307,7 @@ The levee deficit can be displayed graphically in both MAPPER Pro and MAXPLOT (F
 *Figure 39.
 Levee Freeboard Deficit Plot Using MAXPLOT.*
 
-4.6 Levee and Dam Breach Failures
+Levee and Dam Breach Failures
 ---------------------------------
 
 Breach Options
@@ -453,7 +453,7 @@ Tailwater submergence of the weir flow will reduce the breach discharge.
 A comprehensive guide to modeling the breach of levees, dams and walls is outlined in the manual Levee, Dam, and Wall Breach Guidelines (FLO-2D,
 2018).
 
-4.7 Hydraulic Structures
+Hydraulic Structures
 ------------------------
 
 The full hydraulic structures guidelines are in the Handouts folder.
@@ -467,9 +467,16 @@ For example, a culvert under an interstate highway may span several grid element
 
 A hydraulic structure rating curve equation specifies discharge as a function of the headwater depth h:
 
-                    Q = a h\ :sup:`b`
+.. math::
+    :label:
 
-where: (a) is a regression coefficient and (b) is a regression exponent.
+    Q = a h^b
+
+where:
+
+     a = regression coefficient
+
+     b = regression exponent.
 
 More than one power regression relationship may be used for a hydraulic structure by specifying the maximum depth for which the relationship is valid.
 For example, one depth relationship can represent culvert inlet control and a second relationship can be used for the outlet control.
@@ -508,7 +515,7 @@ The highlights of this component are:
 
     - No rating curves or tables required.
 
-4.8 Storm Drain Modeling
+Storm Drain Modeling
 ------------------------
 
 The full storm drain guidelines are available in the Manuals folder.
@@ -553,7 +560,7 @@ The basic storm drain model development procedure is:
 
     viii. Add other FLO-2D model components and details such as channels, buildings and levees.
 
-4.9 Street Flow
+Street Flow
 ---------------
 
 Street flow as shallow flow in rectangular channels with a curb height using the same routing algorithm as for the 1-D rectangular channels.
@@ -573,7 +580,7 @@ Street roughness values, street widths, elevations and curb heights can be modif
 *Figure 46.
 Streets Depicted in Green in the GDS Program.*
 
-4.10 Floodplain Storage Modification and Flow Obstruction
+Floodplain Storage Modification and Flow Obstruction
 ---------------------------------------------------------
 
 One of the unique features the FLO-2D model is its ability to simulate flow conditions associated with flow obstructions or loss of flood storage.
@@ -659,7 +666,7 @@ ARF values for either a totally blocked or partially blocked grid element.
 *Figure 51.
 Building Collapse Vulnerability Curves.*
 
-4.11 Rainfall Runoff
+Rainfall Runoff
 --------------------
 
 Rainfall runoff can be routed to the channel system and then the river flood hydraulics can be computed in the same flood simulation.
@@ -708,7 +715,7 @@ The building ARF values are in addition to the RTIMP impervious surface infiltra
 *Figure 52.
 Flooding Replicated from NEXRAD Data near Tucson, Arizona.*
 
-4.12 Infiltration and Abstraction
+Infiltration and Abstraction
 ---------------------------------
 
 Precipitation losses, abstraction (interception) and infiltration are simulated in the FLO-2D model.
@@ -738,8 +745,8 @@ Initial Abstraction.*
    :header-rows: 0
 
 
-   * - Surface Cover
-     - Abstraction (inches)
+   * - **Surface Cover**
+     - **Abstraction (inches)**
 
    * - Natural\ :sup:`1`
 
@@ -823,18 +830,17 @@ Green-Ampt Infiltration - Hydraulic Conductivity and Porosity.*
    :widths: 40 15 15 15 15
    :header-rows: 0
 
+   * - **Classification**
+     - **(in/hr)**\ :sup:`1`
+     - **(in/hr)**\ :sup:`2`
+     - **(in/hr)**\ :sup:`3`
+     - **Porosity**\ :sup:`4`
 
-   * - Classification
-     - (in/hr)\ :sup:`1`
-     - (in/hr)\ :sup:`2`
-     - (in/hr)\ :sup:`3`
-     - Porosity\ :sup:`4`
-
-   * - sand and loamy
+   * - sand and loamy sand
      - 1.20
      - 1.21 - 4.14
      - 2.41 - 8.27
-     - 0.437sand
+     - 0.437
 
    * - sandy loam
      - 0.40
@@ -953,10 +959,10 @@ Green-Ampt Infiltration - Soil Suction.*
    :header-rows: 0
 
 
-   * - Classification
-     - (in)\ :sup:`1`
-     - (in)\ :sup:`2`
-     - (in)\ :sup:`3`
+   * - **Classification**
+     - **(in)**\ :sup:`1`
+     - **(in)**\ :sup:`2`
+     - **(in)**\ :sup:`3`
 
    * - sand and loamy sand
      - 2.4
@@ -1076,9 +1082,9 @@ Green-Ampt Infiltration Volumetric Moisture Deficiency.*
    :header-rows: 0
 
 
-   * - Classification
-     - Dry (% Diff)
-     - Normal (% Diff)
+   * - **Classification**
+     - **Dry (% Diff)**
+     - **Normal (% Diff)**
 
    * - sand and loamy sand\ :sup:`1`
      - 35
@@ -1192,14 +1198,22 @@ The UDFCD Drainage Criteria Manual (2008) suggests that the model represents a r
 urban watersheds where the runoff is not sensitive to soil parameters.
 This Horton equation is defined by:
 
-   *f = f\ o + (f\ i - f\ o) e\ -at*
+.. math::
+    :label:
+
+    f = f_o + (f_i - f_o) e^{-at}
 
 where:
 
-     *f* = infiltration rate at any time *t* after the rainfall begins (in/hr) *f\ i* = initial infiltration rate (in/hr) *f\ o* = final infiltration rate
-     (in/hr) *a* = decay coefficient (1/seconds)
+     f = infiltration rate at any time *t* after the rainfall begins (in/hr)
 
-     *t* = time from the rainfall initiation (seconds)
+     f\ :sub:`i` = initial infiltration rate (in/hr)
+
+     f\ :sub:`o` = final infiltration rate (in/hr)
+
+     a = decay coefficient (1/seconds)
+
+     t = time from the rainfall initiation (seconds)
 
 This equation simulates initial high infiltration early in the storm and decays to a steady rate with soil saturation.
 The parameters depend on soil conditions and vegetative cover.
@@ -1210,7 +1224,7 @@ Horton Infiltration Parameters.*
 
 .. image:: img/Chapter4/Chapte109.png
 
-4.13 Evaporation
+Evaporation
 ----------------
 
 Open water surface evaporation losses for long duration floods in large river systems can be simulated.
@@ -1224,7 +1238,7 @@ The floodplain wetted surface area excludes the area defined by ARF area reducti
 The evaporation loss does not include evapotranspiration from floodplain vegetation.
 The total evaporation loss is reported in the SUMMARY.OUT file and should be compared with the infiltration loss for reasonableness.
 
-4.14 Overland Multiple Channel Flow
+Overland Multiple Channel Flow
 -----------------------------------
 
 The purpose of the multiple channel flow component is to simulate the overland flow in rills and gullies rather than as overland sheet flow for
@@ -1282,7 +1296,7 @@ elevation in the channel bank element.
 If necessary, use an adjust to the width and depth as the multiple channel approaches the 1-D channel over several multiple channel elements to
 simulate the multiple channel becoming wider and shallower on the flat river floodplain.
 
-4.15 Sediment Transport – Total Load
+Sediment Transport – Total Load
 ------------------------------------
 
 When a channel rigid bed analysis is performed, any potential cross-section changes associated with sediment transport are assumed to have a
@@ -1335,9 +1349,8 @@ Sediment Size Fraction.*
    :widths: 50 50
    :header-rows: 0
 
-
-   * - Sediment Diameter (mm)
-     - Percent Finer
+   * - **Sediment Diameter (mm)**
+     - **Percent Finer**
 
    * - 0.074
      - 0.058
@@ -1389,15 +1402,18 @@ Sediment Supply
 There are two options for computing the sediment supply to a given project.
 The first option is to calculate a sediment supply discharge Q\ :sub:`s` rating curve in the form of:
 
-            Q\ :sub:`s` = a Q\ :sub:`w`\ :sup:`b`
+.. math::
+    :label:
+
+    Q_s = a \, Q_w \, ^b
 
 where:
 
-     Q\ :sub:`w` is the water discharge,
+     Q\ :sub:`w` = the water discharge,
 
-     a is a coefficient and
+     a = coefficient
 
-     b is an exponent.
+     b = exponent.
 
 This equation is typically derived from a known stream gaging station that is recording suspended sediment load.
 This data sediment load base is usually limited to large rivers and is not available for alluvial fan or watershed overland flow.
@@ -1569,7 +1585,7 @@ There are two other sediment transport options available in the FLO-2D model; as
 Rigid bed element can be used would simulate a concrete apron in a channel below a culvert outlet, channel bed rock or a concrete lined channel reach.
 The scour depth limitation is a control that can be invoked for sediment routing.
 
-4.16 Mud and Debris Flow Simulation
+Mud and Debris Flow Simulation
 -----------------------------------
 
 Very viscous, hyperconcentrated sediment flows are generally referred to as either mud or debris flows.
@@ -1589,27 +1605,48 @@ The sediment concentration by volume C\ :sub:`v` is given by:
 
 C\ :sub:`v` is related to the sediment concentration by weight C\ :sub:`w` by:
 
-                                             C\ :sub:`v` = C\ :sub:`w`\ γ/ {γ\ :sub:`s` - C\ :sub:`w`\ (γ\ :sub:`s` - γ)}
+    .. math::
+        :label:
 
-where γ = specific weight of the water and γ\ :sub:`s` = specific weight of the sediment.
+        C_v = \frac{C_w \, \gamma}{\gamma_s - C_w(\gamma_s - \gamma)}
+
+where:
+
+    γ = specific weight of the water
+
+    γ\ :sub:`s` = specific weight of the sediment.
+
 The sediment concentration can also be expressed in parts per million (ppm) by multiplying the concentration by weight C\ :sub:`w` by 10\ :sup:`6`.
 The specific weight of the mudflow mixture γ\ :sub:`m` is a function of the sediment concentration by volume:
 
-                                             γ\ :sub:`m` = γ + C\ :sub:`v`\ (γ\ :sub:`s` - γ)
+    .. math::
+        :label:
+
+        γ_m = γ + C_v(γ_s - γ)
 
 Similarly the density of the mudflow mixture ρ\ :sub:`m` is given by:
 
-                                             ρ\ :sub:`m` = ρ + C\ :sub:`v` (ρ\ :sub:`s` - ρ)
+.. math::
+    :label:
 
-          and
+    ρ_m = ρ + C_v(ρ_s - ρ)
 
-                                             ρ\ :sub:`m` = γ\ :sub:`m` /g
+and
+
+.. math::
+    :label:
+
+    ρ_m = \frac{γ_m}{g}
 
 where g is gravitational acceleration.
+
 Finally, the total mixture volume of water and sediment can be determined by multiplying the water volume by the bulking factor.
 The bulking factor is simply:
 
-                                            BF = 1/(1 - C\ :sub:`v`)
+.. math::
+    :label:
+
+    BF = \frac{1}{(1 - C_v)}
 
 The bulking factor is 2.0 for a sediment concentration by volume of 50%.
 A sediment concentration of 7% by volume for a conventional river bedload and suspended results in a bulking factor of 1.075 indicating that the flood
@@ -1685,50 +1722,74 @@ In should be noted that the sediment transport and mudflow components **cannot**
 The shear stress in hyperconcentrated sediment flows, including those described as debris flows, mudflows, and mud floods, can be calculated from the
 summation of five shear stress components.
 The total shear stress τ depends on the cohesive yield stress τ\ :sub:`c`, the Mohr-Coulomb shear :math:`\tau_{mc}`, the
-viscous shear stress :math:`\tau_v` (:math:`\eta\, \dv/dy`), the turbulent shear stress :math:`\tau_t`, and the
+viscous shear stress :math:`\tau_v` (:math:`\eta \frac{dv}{dy}`), the turbulent shear stress :math:`\tau_t`, and the
 dispersive shear stress :math:`\tau_d`.
 
 .. math::
+    :label:
 
-   \tau = \tau_c + \tau_{mc} + \tau_v + \tau_l + \tau_d
+    \tau = \tau_c + \tau_{mc} + \tau_v + \tau_l + \tau_d
 
-When written in terms of shear rates :math:`\left(\dfrac{dv}{dy}\right)`, the following quadratic rheological model can be defined (O’Brien and Julien, 1985):
+When written in terms of shear rates :math:`\left(\frac{dv}{dy}\right)`, the following quadratic rheological model can be defined (O’Brien and Julien, 1985):
 
 .. math::
+    :label:
 
-   \tau = \tau_y + \eta \left( \frac{dv}{dy} \right) + C \left( \frac{dv}{dy} \right)^{2}
+    \tau = \tau_y + \eta \left( \frac{dv}{dy} \right) + C \left( \frac{dv}{dy} \right)^{2}
 
 where
 
 .. math::
+    :label:
 
-   C = \rho_m \, l^{2} + f\!\left( \rho_m,\, C_v \right) d_s^{2}
+    C = \rho_m \, l^{2} + f\!\left( \rho_m,\, C_v \right) d_s^{2}
 
 and
 
 .. math::
+    :label:
 
-   \tau_y = \tau_c + \tau_{mc}
+    \tau_y = \tau_c + \tau_{mc}
 
-In these equations η is the dynamic viscosity; τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ
-depends on the intergranular pressure p\ :sub:`s` and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which
-depends on the mass density of the mixture ρ\ :sub:`m`, the Prandtl mixing length l, the sediment size d\ :sub:`s` and a function of the volumetric
-sediment concentration C\ :sub:`v`.
+In these equations:
+
+    η = the dynamic viscosity
+
+    τ\ :sub:`c` = cohesive yield strength:
+
+    the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ depends on p\ :sub:`s` and φ;
+
+        p\ :sub:`s` = intergranular pressure of the material
+
+        φ = angle of repose of the material;
+
+    C denotes the inertial shear stress coefficient, which depends on ρ\ :sub:`m` l, d\ :sub:`s` and C\ :sub:`v`;
+
+        ρ\ :sub:`m` = mass density of the mixture
+
+        l = Prandtl mixing length
+
+        d\ :sub:`s` = sediment size
+
+        C\ :sub:`v` = function of the volumetric sediment concentration
+
 Bagnold (1954) defined the functional relationship f(ρ\ :sub:`m`, C\ :sub:`v`) in the above equation as:
 
 .. math::
+    :label:
 
-   f(\rho_m, C_v) = a_i\, \rho_m \left[ \left( \frac{C^{*}}{C_v} \right)^{1/3} - 1 \right]
+    f(\rho_m, C_v) = a_i\, \rho_m \left[ \left( \frac{C^{*}}{C_v} \right)^{1/3} - 1 \right]
 
 where :math:`a_i` (∼ :math:`0.01`) is an empirical coefficient and :math:`C^{*}` is the maximum static volume concentration for the sediment particles. It should be noted that Takahashi (1979) found that the coefficient :math:`a_i` may vary over several orders of magnitude. Egashira et al. (1989) revised this relationship and suggested the following:
 
 .. math::
+    :label:
 
-   f(\rho_s, C_v) =
-   \left( \frac{\pi}{12} \right)^{1/3}
-   \left( \frac{6}{\pi} \right)^{1/3}
-   \sin^{2}\!\alpha_I \,
-   \rho_s \left( 1 - e_n^{2} \right) C_v^{1/3}
+    f(\rho_s, C_v) =
+    \left( \frac{\pi}{12} \right)^{1/3}
+    \left( \frac{6}{\pi} \right)^{1/3}
+    \sin^{2}\!\alpha_I \,
+    \rho_s \left( 1 - e_n^{2} \right) C_v^{1/3}
 
 where the energy restitution coefficient e\ :sub:`n` after impact ranges 0.70 < e\ :sub:`n` < 0.85 for sands, α\ :sub:`I` is the average particle
 impact angle and ρ\ :sub:`s` is the mass density of sediment particles.
@@ -1764,7 +1825,10 @@ To define all the shear stress terms for use in the FLO-2D model, the following 
 By analogy, from the work of Meyer-Peter and Müller (1948) and Einstein (1950), the shear stress relationship is depth integrated and rewritten in the
 following form as a dimensionless slope:
 
-                                                        *S f = S y + S v + S t d*
+.. math::
+    :label:
+
+    S_f = S_y + S_v + S_{td}
 
 where the total friction slope S\ :sub:`f` is the sum of the yield slope S\ :sub:`y`, the viscous slope S\ :sub:`v`, and the turbulent-dispersive
 slope S\ :sub:`td`.
@@ -1772,8 +1836,9 @@ The viscous and turbulent-dispersive slope terms are written in terms of depth- 
 The viscous slope can be written as:
 
 .. math::
+    :label:
 
-   S_v = \frac{K\, \eta}{8\, \gamma_m} \frac{V}{h^{2}}
+    S_v = \frac{K\, \eta}{8\, \gamma_m} \frac{V}{h^{2}}
 
 where γ\ :sub:`m` is the specific weight of the sediment mixture.
 The resistance parameter K for laminar flow equals 24 for smooth wide rectangular channels but increases significantly (~ 50,000) with roughness and
@@ -1823,8 +1888,9 @@ The flow resistance n\ :sub:`td` of the turbulent and dispersive shear stress co
 flow:
 
 .. math::
+    :label:
 
-   S_{td} = \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}
+    S_{td} = \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}
 
 At very high concentrations, the dispersive stress arising from sediment particle contact increases the flow resistance n\ :sub:`td` by transferring
 more momentum flux to the boundary.
@@ -1832,8 +1898,9 @@ To estimate this increase in flow resistance, the conventional turbulent flow re
 of the sediment concentration C\ :sub:`v`:
 
 .. math::
+    :label:
 
-   n_{td} = n_t \, b \, e^{m C_v}
+    n_{td} = n_t \, b \, e^{m C_v}
 
 where: n\ :sub:`t` is the turbulent n-value and b is a coefficient (0.0538) and m is an exponent (6.0896).
 This equation was based on unpublished paper by Julien and O’Brien (1998) that relates the dispersive and turbulent resistance in hyperconcentrated
@@ -1841,10 +1908,11 @@ sediment flows as function of the ratio of the flow depth to the sediment grain 
 The friction slope components can then be combined in the following form:
 
 .. math::
+    :label:
 
-   S_f = \frac{\tau_y}{\gamma_m\, h}
-         + \frac{K\, \eta\, V}{8\, \gamma_m\, h^{2}}
-         + \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}
+    S_f = \frac{\tau_y}{\gamma_m\, h}
+          + \frac{K\, \eta\, V}{8\, \gamma_m\, h^{2}}
+          + \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}
 
 A quadratic equation solution to the friction slope equation has been formulated in the FLO-2D model to estimate the velocity for use in the momentum
 equation.
@@ -1856,14 +1924,16 @@ Unless a rheological analysis of the mudflow site material is available, the fol
 yield stress:
 
 .. math::
+    :label:
 
-   \tau_y = \alpha_2 \, e^{\beta_2 C_v}
+    \tau_y = \alpha_2 \, e^{\beta_2 C_v}
 
 and
 
 .. math::
+    :label:
 
-   \eta = \alpha_1 \, e^{\beta_1 C_v}
+    \eta = \alpha_1 \, e^{\beta_1 C_v}
 
 where α\ :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
 The viscosity (poises) and yield stress (dynes/cm\ :sup:`2`) are shown to be exponential functions of the volumetric sediment concentration C\
@@ -1922,7 +1992,7 @@ The areal extent of mudflow inundation and the maximum flow depths and velocitie
 which can be varied in the FLO-2D simulations.
 For further discussion on model hyperconcentrated sediment flows, refer to the FLO-2D white paper document *“Simulating Mudflows Guidelines”*.
 
-4.17 Specific Energy, Impact and Static Pressure
+Specific Energy, Impact and Static Pressure
 ------------------------------------------------
 
 For overland flow, the specific energy, impact pressure and static pressure are computed and reported to a file on an output interval basis.
@@ -1937,8 +2007,9 @@ Impact force is a function of fluid density, structure materials, angle of impac
 To conservatively estimate the impact pressure, the equation for water taken from Deng (1996):
 
 .. math::
+    :label:
 
-   P_i = k\, \rho_f\, V^{2}
+    P_i = k\, \rho_f\, V^{2}
 
 where P\ :sub:`i` is the impact pressure, coefficient k is 1.28 for both English and SI units, ρ\ :sub:`f` = water density and V is the maximum
 velocity regardless of direction.
@@ -1948,8 +2019,9 @@ The coefficient k is based on a regressed relationship as a function of sediment
 This relationship is given by,
 
 .. math::
+    :label:
 
-   k = 1.261\, e^{C_w}
+    k = 1.261\, e^{C_w}
 
 where Cw = sediment concentration by weight.
 The impact pressure is reported in the file IMPACT.OUT.
@@ -1960,10 +2032,11 @@ The static pressure is then multiplied by the flow depth to compute the static f
 The maximum static pressure is written to the STATICPRESS.OUT file.
 
 .. math::
+    :label:
 
-   P_s = \gamma\, \hat{h}
+    P_s = \gamma\, \hat{h}
 
-4.18 Floodway Delineation
+Floodway Delineation
 -------------------------
 
 The floodplain management concept of the floodway delineation is to reserve an unobstructed area of flood conveyance passage while allowing for
@@ -2069,7 +2142,7 @@ Flood Delineation Comparison*
 *Figure 63.
 Floodway Delineation Comparison.*
 
-4.19 Groundwater – Surface Water Modeling
+Groundwater – Surface Water Modeling
 -----------------------------------------
 
 The FLO-2D flood routing model is linked with the USGS MODFLOW-2005 Groundwater Flow Process (GWF) package to simulate integrated surface – subsurface
@@ -2100,7 +2173,7 @@ Refer the MODFLO-2D manual for more details.
 *Figure 64.
 GDS Data Entry for a MODFLOW Groundwater Simulation.*
 
-4.20 Building Collapse
+Building Collapse
 ----------------------
 
 In the FLO-2D model, the loss of flood storage due to buildings is simulated with area reduction factors (ARF values) that reduce the surface area of
@@ -2199,19 +2272,18 @@ If a building consists of multiple grid elements, each element must have a vulne
 The global vulnerability curve value could be zero.
 A portion of a typical BUILDING_COLLAPSE.DAT file is follows:
 
-0            Global Vulnerability Curve
+.. raw:: html
 
- 2
+    <pre>
+     0            Global Vulnerability Curve
+     2
+     6756 1
+     6756 1             Grid element vulnerability curve (poor)
+     6756 2             Grid element vulnerability curve (moderate)
+     6756 3             Grid element vulnerability curve (good)
+     6756 4             Grid element Clausen and Clark
+    </pre>
 
- 6756 1
-
- 6756 1             Grid element vulnerability curve (poor)
-
- 6756 2             Grid element vulnerability curve (moderate)
-
- 6756 3             Grid element vulnerability curve (good)
-
- 6756 4             Grid element Clausen and Clark
 
 Assigning a nonzero value to the global vulnerability curve would initiate potential building failure for any of the buildings in the model.
 
@@ -2223,49 +2295,33 @@ For this case, the upper Clausen & Clark (1990) is applied.
 
    ARF.DAT File Example
 
+.. raw:: html
+
+    <pre>
+
    T 1450
-
    T 1451
-
    T -1452
-
    T -1453
-
    T 1454
-
    T 2502
-
    T 3818
-
    T -3861
-
    T -4435
-
    T 4766
-
    46 0.10 0.00 0.50 0.00 0.00 0.00 0.50 0.00 0.00
-
-   68.0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.50
-
-   69.0.30 0.00 0.00 0.00 0.50 0.00 0.00 0.00 0.00
-
-   119.0.40 0.50 0.70 0.00 0.00 1.00 0.00 0.00 0.00
-
-   120.0.00 0.00 0.00 0.50 0.00 0.00 1.00 0.00 0.00
-
-   142.0.20 0.20 0.00 0.00 0.70 0.00 0.00 0.00 1.00
-
-   143.0.00 0.00 0.00 0.20 0.00 0.00 0.00 1.00 0.00
-
-   161.-0.50 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
-
-   162.-0.50 0.70 0.20 0.00 0.00 1.00 0.00 0.00 0.00
-
-   163.-0.10 0.00 0.00 0.70 0.00 0.00 1.00 0.00 0.00
-
+   68 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.50
+   69 0.30 0.00 0.00 0.00 0.50 0.00 0.00 0.00 0.00
+   119 0.40 0.50 0.70 0.00 0.00 1.00 0.00 0.00 0.00
+   120 0.00 0.00 0.00 0.50 0.00 0.00 1.00 0.00 0.00
+   142 0.20 0.20 0.00 0.00 0.70 0.00 0.00 0.00 1.00
+   143 0.00 0.00 0.00 0.20 0.00 0.00 0.00 1.00 0.00
+   161 -0.50 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+   162 -0.50 0.70 0.20 0.00 0.00 1.00 0.00 0.00 0.00
+   163 -0.10 0.00 0.00 0.70 0.00 0.00 1.00 0.00 0.00
    182 0.30 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
-
    185 0.00 0.00 0.00 0.00 0.20 0.00 0.00 0.00 1.00
+    </pre>
 
 A portion of building or the entire building can be assigned the collapse trigger (negative ARF value).
 For a complete collapse of the building that encompasses several elements, all the designated building cells must be assigned a negative ARF value.
@@ -2290,7 +2346,7 @@ The building collapse routine is triggered by assigning grid element building vu
 ARF values for either a totally blocked or partially blocked grid element.
 In the future other building vulnerability curves to cover an expanded matrix of building types can be considered.
 
-4.21 Predicting Alluvial Fan Channel Avulsion
+Predicting Alluvial Fan Channel Avulsion
 ---------------------------------------------
 
 Avulsion of alluvial fan channels depicts the rapid abandonment of one channel and the formation of a new channel with a steeper slope.
@@ -2427,7 +2483,7 @@ During the falling limb of the hydrograph when the flow depth is less than 1 ft 
 the original width is again attained.
 The user can assign the range of slope where the multiple channel widening is computed.
 
-4.22 Low Impact Development (LID) Modeling
+Low Impact Development (LID) Modeling
 ------------------------------------------
 
 Low impact development (LID) flood retention can be assessed with the FLO-2D model using a sink volume assignment or a spatially variable tolerance
@@ -2598,7 +2654,7 @@ This method might be used for surface features that create ponding and the user 
 surface area.
 Both methods would have to be tested to determine the impacts on infiltration, storm drain capacity or downstream flooding.
 
-4.23 Building Rainfall Runoff
+Building Rainfall Runoff
 -----------------------------
 
 Building Runoff
@@ -2794,7 +2850,10 @@ The downspout discharge can be simulated as a hydraulic structure identifying th
 assigning an inlet control rating table.
 The inlet control rating table can be based on orifice flow using the equation:
 
-Q = C \* A \* (2.*g*DEPTH)\ :sup:`0.5`
+.. math::
+    :label:
+
+    Q = C \ ^* A \ ^* (2.^*g^*DEPTH)^{0.5}
 
 where:
 
@@ -2810,17 +2869,16 @@ The hydraulic structure data file is organized as follows:
 
 HYSTRUC.DAT file example
 
-S Downspoutname 0 1 22365 21991 0 0 0 0
+.. raw:: html
 
- T     0     0
-
- T     0.25 1.0
-
- T     0.5  2.0
-
- T     1    3.5
-
- T     5    5.5
+    <pre>
+     S Downspoutname   0  1  22365  21991 0 0 0 0
+     T     0       0
+     T     0.25   1.0
+     T     0.5    2.0
+     T     1      3.5
+     T     5      5.5
+    </pre>
 
 In the S-line above, the data includes a downspout name, floodplain or channel element (floodplain = 0), rating curve or table (rating table = 1),
 inlet and outlet cell number, and 4 additional controls that not required.
@@ -2913,65 +2971,41 @@ LEVEE ELEMENTS WITH NO OVERTOP DISCHARGE ARE NOT REPORTED
 
 DISCHARGE IS REPORTED BY DIRECTION
 
-GRID ELEMENT TIME TOTAL DISCHARGE N E S W NE SE SW NW
+.. raw:: html
 
-22365  3.30 -0.02 0.00 0.00 0.00 0.00 -0.02 0.00 0.00 0.00
+    <pre>
 
-       3.40 -0.06 0.00 0.00 0.00 0.00 -0.06 0.00 0.00 0.00
-
-       3.50 -0.09 0.00 0.00 0.00 0.00 -0.09 0.00 0.00 0.00
-
-       3.60 -0.17 0.00 0.00 0.00 0.00 -0.17 0.00 0.00 0.00
-
-       3.70 -0.23 0.00 0.00 0.00 0.00 -0.23 0.00 0.00 0.00
-
-       3.80 -0.36 0.00 0.00 0.00 0.00 -0.36 0.00 0.00 0.00
-
-       3.90 -0.54 0.00 0.00 0.00 0.00 -0.54 0.00 0.00 0.00
-
-       4.00 -0.70 0.00 0.00 0.00 0.00 -0.70 0.00 0.00 0.00
-
-       4.10 -0.69 0.00 0.00 0.00 0.00 -0.69 0.00 0.00 0.00
-
-       4.20 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00 0.00 0.00
-
-       4.30 -0.74 0.00 0.00 0.00 0.00 -0.74 0.00 0.00 0.00
-
-       4.40 -0.75 0.00 0.00 0.00 0.00 -0.75 0.00 0.00 0.00
-
-       4.50 -0.75 0.00 0.00 0.00 0.00 -0.75 0.00 0.00 0.00
-
-       4.60 -0.75 0.00 0.00 0.00 0.00 -0.75 0.00 0.00 0.00
-
-       4.70 -0.76 0.00 0.00 0.00 0.00 -0.76 0.00 0.00 0.00
-
-       4.80 -0.78 0.00 0.00 0.00 0.00 -0.78 0.00 0.00 0.00
-
-       4.90 -0.78 0.00 0.00 0.00 0.00 -0.78 0.00 0.00 0.00
-
-PEAK Q    4.92  -0.79
-
-       5.00 -0.78 0.00 0.00 0.00 0.00 -0.78 0.00 0.00 0.00
-
-       5.10 -0.77 0.00 0.00 0.00 0.00 -0.77 0.00 0.00 0.00
-
-       5.20 -0.74 0.00 0.00 0.00 0.00 -0.74 0.00 0.00 0.00
-
-       5.30 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00 0.00 0.00
-
-       5.40 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00 0.00 0.00
-
-       5.50 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00 0.00 0.00
-
-       5.60 -0.70 0.00 0.00 0.00 0.00 -0.70 0.00 0.00 0.00
-
-       5.70 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00 0.00 0.00
-
-       5.80 -0.68 0.00 0.00 0.00 0.00 -0.68 0.00 0.00 0.00
-
-       5.90 -0.66 0.00 0.00 0.00 0.00 -0.66 0.00 0.00 0.00
-
-       6.00 -0.65 0.00 0.00 0.00 0.00 -0.65 0.00 0.00 0.00
+    GRID ELEMENT TIME TOTAL DISCHARGE   N      E      S      W      NE     SE     SW     NW
+    22365        3.30   -0.02         0.00   0.00   0.00   0.00   -0.02   0.00   0.00   0.00
+                 3.40   -0.06         0.00   0.00   0.00   0.00   -0.06   0.00   0.00   0.00
+                 3.50   -0.09         0.00   0.00   0.00   0.00   -0.09   0.00   0.00   0.00
+                 3.60   -0.17         0.00   0.00   0.00   0.00   -0.17   0.00   0.00   0.00
+                 3.70   -0.23         0.00   0.00   0.00   0.00   -0.23   0.00   0.00   0.00
+                 3.80   -0.36         0.00   0.00   0.00   0.00   -0.36   0.00   0.00   0.00
+                 3.90   -0.54         0.00   0.00   0.00   0.00   -0.54   0.00   0.00   0.00
+                 4.00   -0.70         0.00   0.00   0.00   0.00   -0.70   0.00   0.00   0.00
+                 4.10   -0.69         0.00   0.00   0.00   0.00   -0.69   0.00   0.00   0.00
+                 4.20   -0.72         0.00   0.00   0.00   0.00   -0.72   0.00   0.00   0.00
+                 4.30   -0.74         0.00   0.00   0.00   0.00   -0.74   0.00   0.00   0.00
+                 4.40   -0.75         0.00   0.00   0.00   0.00   -0.75   0.00   0.00   0.00
+                 4.50   -0.75         0.00   0.00   0.00   0.00   -0.75   0.00   0.00   0.00
+                 4.60   -0.75         0.00   0.00   0.00   0.00   -0.75   0.00   0.00   0.00
+                 4.70   -0.76         0.00   0.00   0.00   0.00   -0.76   0.00   0.00   0.00
+                 4.80   -0.78         0.00   0.00   0.00   0.00   -0.78   0.00   0.00   0.00
+                 4.90   -0.78         0.00   0.00   0.00   0.00   -0.78   0.00   0.00   0.00
+    PEAK Q          4.92  -0.79
+                 5.00   -0.78         0.00   0.00   0.00   0.00   -0.78   0.00   0.00   0.00
+                 5.10   -0.77         0.00   0.00   0.00   0.00   -0.77   0.00   0.00   0.00
+                 5.20   -0.74         0.00   0.00   0.00   0.00   -0.74   0.00   0.00   0.00
+                 5.30   -0.72         0.00   0.00   0.00   0.00   -0.72   0.00   0.00   0.00
+                 5.40   -0.72         0.00   0.00   0.00   0.00   -0.72   0.00   0.00   0.00
+                 5.50   -0.72         0.00   0.00   0.00   0.00   -0.72   0.00   0.00   0.00
+                 5.60   -0.70         0.00   0.00   0.00   0.00   -0.70   0.00   0.00   0.00
+                 5.70   -0.72         0.00   0.00   0.00   0.00   -0.72   0.00   0.00   0.00
+                 5.80   -0.68         0.00   0.00   0.00   0.00   -0.68   0.00   0.00   0.00
+                 5.90   -0.66         0.00   0.00   0.00   0.00   -0.66   0.00   0.00   0.00
+                 6.00   -0.65         0.00   0.00   0.00   0.00   -0.65   0.00   0.00   0.00
+    </pre>
 
 The final test simulation combines the sloped roof with a downspout in grid element 22365.
 The inlet (red oval) maximum water surface is lowered by the downspout water discharge as shown in Figure 106.
@@ -2997,127 +3031,72 @@ COMBINES MULTIPLE CULVERTS
 
 THE MAXIMUM DISCHARGE FOR: Downspout STRUCTURE NO.1 IS: 0.94 AT TIME: 4.91
 
-            INFLOW NODE: 22365 OUTFLOW NODE: 21990
+.. raw:: html
 
-    0.10 0.00 0.00
+    <pre>
+           INFLOW NODE: 22365   OUTFLOW NODE: 21990
 
-    0.20 0.00 0.00
-
-    0.30 0.00 0.00
-
-    0.40 0.00 0.00
-
-    0.50 0.00 0.00
-
-    0.60 0.00 0.00
-
-    0.70 0.00 0.00
-
-    0.80 0.00 0.00
-
-    0.90 0.00 0.00
-
-    1.00 0.00 0.00
-
-    1.10 0.00 0.00
-
-    1.20 0.00 0.00
-
-    1.30 0.00 0.00
-
-    1.40 0.00 0.00
-
-    1.50 0.00 0.00
-
-    1.60 0.00 0.00
-
-    1.70 0.04 -0.04
-
-    1.80 0.07 -0.07
-
-    1.90 0.08 -0.08
-
-    2.00 0.10 -0.10
-
-    2.10 0.13 -0.13
-
-    2.20 0.14 -0.14
-
-    2.30 0.14 -0.14
-
-    2.40 0.15 -0.15
-
-    2.50 0.15 -0.15
-
-    2.60 0.16 -0.16
-
-    2.70 0.16 -0.16
-
-    2.80 0.17 -0.17
-
-    2.90 0.16 -0.16
-
-    3.00 0.16 -0.16
-
-    3.10 0.16 -0.16
-
-    3.20 0.17 -0.17
-
-    3.30 0.17 -0.17
-
-    3.40 0.22 -0.22
-
-    3.50 0.27 -0.27
-
-    3.60 0.34 -0.34
-
-    3.70 0.46 -0.46
-
-    3.80 0.51 -0.51
-
-    3.90 0.64 -0.64
-
-    4.00 0.76 -0.76
-
-    4.10 0.83 -0.83
-
-    4.20 0.86 -0.86
-
-    4.30 0.89 -0.89
-
-    4.40 0.91 -0.91
-
-    4.50 0.91 -0.91
-
-    4.60 0.91 -0.91
-
-    4.70 0.92 -0.92
-
-    4.80 0.93 -0.93
-
-    4.90 0.94 -0.94
-
-    5.00 0.94 -0.94
-
-    5.10 0.93 -0.93
-
-    5.20 0.91 -0.91
-
-    5.30 0.88 -0.88
-
-    5.40 0.87 -0.87
-
-    5.50 0.86 -0.86
-
-    5.60 0.86 -0.86
-
-    5.70 0.85 -0.85
-
-    5.80 0.85 -0.85
-
-    5.90 0.82 -0.82
-
-    6.00 0.79 -0.79
+    0.10   0.00                 0.00
+    0.20   0.00                 0.00
+    0.30   0.00                 0.00
+    0.40   0.00                 0.00
+    0.50   0.00                 0.00
+    0.60   0.00                 0.00
+    0.70   0.00                 0.00
+    0.80   0.00                 0.00
+    0.90   0.00                 0.00
+    1.00   0.00                 0.00
+    1.10   0.00                 0.00
+    1.20   0.00                 0.00
+    1.30   0.00                 0.00
+    1.40   0.00                 0.00
+    1.50   0.00                 0.00
+    1.60   0.00                 0.00
+    1.70   0.04                 -0.04
+    1.80   0.07                 -0.07
+    1.90   0.08                 -0.08
+    2.00   0.10                 -0.10
+    2.10   0.13                 -0.13
+    2.20   0.14                 -0.14
+    2.30   0.14                 -0.14
+    2.40   0.15                 -0.15
+    2.50   0.15                 -0.15
+    2.60   0.16                 -0.16
+    2.70   0.16                 -0.16
+    2.80   0.17                 -0.17
+    2.90   0.16                 -0.16
+    3.00   0.16                 -0.16
+    3.10   0.16                 -0.16
+    3.20   0.17                 -0.17
+    3.30   0.17                 -0.17
+    3.40   0.22                 -0.22
+    3.50   0.27                 -0.27
+    3.60   0.34                 -0.34
+    3.70   0.46                 -0.46
+    3.80   0.51                 -0.51
+    3.90   0.64                 -0.64
+    4.00   0.76                 -0.76
+    4.10   0.83                 -0.83
+    4.20   0.86                 -0.86
+    4.30   0.89                 -0.89
+    4.40   0.91                 -0.91
+    4.50   0.91                 -0.91
+    4.60   0.91                 -0.91
+    4.70   0.92                 -0.92
+    4.80   0.93                 -0.93
+    4.90   0.94                 -0.94
+    5.00   0.94                 -0.94
+    5.10   0.93                 -0.93
+    5.20   0.91                 -0.91
+    5.30   0.88                 -0.88
+    5.40   0.87                 -0.87
+    5.50   0.86                 -0.86
+    5.60   0.86                 -0.86
+    5.70   0.85                 -0.85
+    5.80   0.85                 -0.85
+    5.90   0.82                 -0.82
+    6.00   0.79                 -0.79
+    </pre>
 
 The FLO-2D model simulation of rainfall runoff from building roofs has been modified to allow parapet walls (levees) to store rainfall water, enable
 the parapet walls to be overtopped and discharge storm off the roof through a downspout.
@@ -3135,7 +3114,7 @@ The three new tools were tested extensively with a flat and sloped roof to valid
 
 There are no required data file revisions to use these new building rainfall tools.
 
-4.24 Gutter Tool
+Gutter Tool
 ----------------
 
 The street gutters are designed to convey shallow flow during storm runoff less than or equal to the design discharge without traffic interruption.
@@ -3150,7 +3129,10 @@ of Transportation Urban Drainage Design Manual (revised 2013) presents a gutter 
 channels.
 DOT Equation 4.2 is given as:
 
-        Q = (Ku/n) Sx1.67 SL0.5 T2.67
+.. math::
+    :label:
+
+    Q = (K_u/n) S_x^{1.67} S_L^{0.5} T^{2.67}
 
 where:
 
@@ -3166,7 +3148,10 @@ where:
 
 This DOT equation is Mannings equation for normal flow depth (steady, uniform flow) with an additional coefficient of 0.188:
 
-        Q = VA = (1.486/n) d\ :sup:`0.67` S\ :sub:`L`\ :sup:`0.5` A (0.188)
+.. math::
+    :label:
+
+    Q = VA = (1.486/n) d^{0.67} S_L^{0.5} A (0.188)
 
 where:
 
@@ -3258,7 +3243,7 @@ The gutter flow results are displayed in the Figure 113.
 *Figure 113.
 Flow Depth with Gutter.*
 
-4.25 Bridge Routine
+Bridge Routine
 -------------------
 
 Many bridge hydraulic analyses are conducted using steady state peak flow conditions where the objective is to predict the maximum water surface
@@ -3453,7 +3438,10 @@ The complete derivation of the free surface (flow below the low chord) equation 
 The subcritical discharge Q through constrictions equation is given in Chow’s (1959) book *Open* *Channel Flow* (p.
 479, Eqn 17-15) as:
 
-        Q = C A\ :sub:`2` {2g (∆h – h\ :sub:`f` + α\ :sub:`1` V\ :sub:`1`\ :sup:`2`/2g)}\ :sup:`0.5`
+.. math::
+    :label:
+
+    Q = C A_2 {2g (∆h – h_f + α_1 V_1^2/2g)}^{0.5}
 
 where:
 
@@ -3479,21 +3467,29 @@ where:
 
     k\ :sub:`p` = non-hydrostatic pressure coefficient
 
-The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959, p.
-490) in English units:
+The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959, p.490) in English units:
 
-        Q = 8.02 C A\ :sub:`2` (∆h/β)\ :sup:`0.5` (1)
+.. math::
+    :label:
+
+    Q = 8.02 C A_2 (∆h/β)^{0.5}
 
 where:
 
-        β = 1 - α\ :sub:`1` C\ :sup:`2` (A\ :sub:`2` /A\ :sub:`1`)\ :sup:`2` + 2gC\ :sup:`2` (A\ :sub:`2`/K\ :sub:`2`)\ :sup:`2` (L\ :sub:`B` +L\ :sub:`1-2`K\ :sub:`2`/K\ :sub:`1`);
+    .. math::
+        :label:
+
+        β = 1 - α_1 C^2 (A_2 /A_1)^2 + 2gC^2 (A_2/K_2)^2(L_B +L_{1-2}K_2/K_1)
 
     L\ :sub:`B` = length of contracted reach
 
     L\ :sub:`1-2` = length of the reach from cross-section 1 to cross-section 2 (Figure 124)
 
-    K\ :sub:`1` and K\ :sub:`2` = conveyance at cross-sections 1 and 2; K\ :sub:`1` = 1.486/n A\ :sub:`1` R\ :sub:`1`\ :sup:`0.67`; K\ :sub:`2` = 1.486/n
-    A\ :sub:`2` R\ :sub:`2`\ 0.67
+    K\ :sub:`1` and K\ :sub:`2` = conveyance at cross-sections 1 and 2;
+
+        K\ :sub:`1` = 1.486/n A\ :sub:`1` R\ :sub:`1`\ :sup:`0.67`;
+
+        K\ :sub:`2` = 1.486/n A\ :sub:`2` R\ :sub:`2`\ 0.67
 
     n = Manning’s n-value through the contracted reach
 
@@ -3558,19 +3554,25 @@ The difference between the two water surfaces is the afflux.
 The bridge flow in this figure is concave upwards above the soffit.
 Sluice gate discharge Q\ :sub:`p` (pressure flow) is described by the equation:
 
-        Q\ :sub:`p` = CA\ :sub:`b` (2g ∆H)\ :sup:`0.5`
+.. math::
+    :label:
+
+    Q_p = CA_b (2g ∆H)^{0.5}
 
 where:
 
-C = coefficient of discharge (0.3 to 0.6 dimensionless, Figure 125)
+    C = coefficient of discharge (0.3 to 0.6 dimensionless, Figure 125)
 
-A\ :sub:`b` = cross-section flow area through the bridge opening
+    A\ :sub:`b` = cross-section flow area through the bridge opening
 
-g = gravitational acceleration
+    g = gravitational acceleration
 
-∆H = energy gradient from upstream to tailwater elevation Y\ :sub:`c` given by (see Figure 117):
+    ∆H = energy gradient from upstream to tailwater elevation Y\ :sub:`c` given by (see Figure 117):
 
-                Y\ :sub:`u` – Y + V\ :sub:`u`\ :sup:`2`/2g
+.. math::
+    :label:
+
+    Y_u – Y + V_u^2/2g
 
 .. image:: img/Chapter4/Chapte062.jpg
 
@@ -3602,12 +3604,18 @@ For the vertical sluice gate case, the assumed discharge is a function of the sq
 some percentage of the gate opening.
 Oskuyi and Salmasi (2012) presented a vertical sluice gate coefficient relationship with limited variability over a range of flows:
 
-            C = 0.445 (Y\ :sub:`u`/Z)\ :sup:`0.122`
+.. math::
+    :label:
+
+    C = 0.445 (Y_u/Z)^{0.122}
 
 which is plotted as the green line in Figure 126.
 The FHA curve in Figure 126 has a regressed relationship of:
 
-            C = 0.341 (Y\ :sub:`u`/Z)\ :sup:`0.931`
+.. math::
+    :label:
+
+    C = 0.341 (Y_u/Z)^{0.931}
 
 with a correlation coefficient R\ :sup:`2` = 0.61.
 This equation is used in the FLO-2D model.
@@ -3619,7 +3627,10 @@ Orifice flow is defined by a pressure flow condition through the bridge where bo
 low chord (Y\ :sub:`u` > Z, Y\ :sub:`d` > Z) indicating a drowned opening (Figure 3d).
 The orifice equation for discharge is:
 
-        Q\ :sub:`p` = CA\ :sub:`b` (2g ∆H)\ :sup:`0.5` (3)
+.. math::
+    :label:
+
+    Q_p = CA_b (2g ∆H)^{0.5}
 
 where:
 
@@ -3645,7 +3656,10 @@ Orifice Coefficient of Discharge as Function of Low Chord Submergence (Hamill, 1
 
 The regressed relationship of the data in Figure 127 for Y\ :sub:`u`/Z > 1.25 is given by:
 
-        C = 0.80 (Y\ :sub:`u`/Z)\ :sup:`-0.184`
+.. math::
+    :label:
+
+    C = 0.80 (Y_u/Z)^{-0.184}
 
 This equation is used in the FLO-2D model and results in a coefficient variability in the range of 0.7 to 0.8.
 This is compared with the sluice gate flow discharge coefficient, which ranges from about 0.4 to 0.5 as shown in Figure 126.
@@ -3656,17 +3670,25 @@ Pressure Flow Plus Weir Flow
 Once the flow is above the deck, then the total discharge through bridge Q\ :sub:`T` is the sum of the pressure flow (sluice gate or orifice flow)
 plus the weir flow over the bridge deck:
 
-        Q\ :sub:`T` = Q\ :sub:`p` + Q\ :sub:`w`
+.. math::
+    :label:
+
+    Q_T = Q_p + Q_w
 
 Broadcrested weir flow is generally used to represent flow over a bridge deck as given by:
 
-            Q\ :sub:`w` = C L\ :sub:`c` ∆H\ :sup:`1.5`
+.. math::
+    :label:
+
+    Q_w = C L_c ∆H^{1.5}
 
 where:
 
     C = Broadcrested weir discharge coefficient which varies from 2.6 to 3.1
 
-    ∆H = energy grade line between headwater and roadway crest elevation (or railing) or tailwater L\ :sub:`c` = crest length
+    ∆H = energy grade line between headwater and roadway crest elevation (or railing) or tailwater
+
+    L\ :sub:`c` = crest length
 
 Broadcrested weir flow representing bridge overflow is usually justified because flow across the crest (roadway) is considered broad and the flow
 depth on the bridge is shallow.
@@ -3682,7 +3704,10 @@ conditions will decrease the broadcrested weir coefficient.
 It is important to note the difference between the weir coefficient C and a discharge coefficient C\ :sub:`q`.
 The weir coefficient is a lumped parameter that is based on the weir’s characteristics and includes the discharge coefficient.
 
-        C = 2/3 C\ :sub:`q` (2g)\ :sup:`0.5`
+.. math::
+    :label:
+
+    C = \frac{2}{3}C_q (2g)^{0.5}
 
 The discharge coefficient C\ :sub:`q` is same in both English and SI (metric) units and is dimensionless.
 The weir coefficient, however, is not dimensionless since it is a function of the gravitational acceleration g (ft/s\ :sup:`2` or m/s\ :sup:`2`).
@@ -3720,11 +3745,15 @@ The second B-line includes the various bridge parameters such as low chord, deck
 
 A. typical HYSTRUCT.DAT file for a bridge would be as follows:
 
+.. raw:: html
+
+    <pre>
      S Name 0 3 631 625 1 0.0 0 0
 
      B 1 0.0.0.0.1.1.1.1.
 
      B. 15.40. 0.05 40.1378.00 1380.00 22.00 0.0.0.50 3.05 0.0.1376.5 1377.2
+    </pre>
 
 These parameters are defined in Table 14 and are used to compute the coefficients for free surface flow presented in the Appendix.
 The Appendix figure showing the relationships with the bridge configuration are used to interpolate the free surface coefficients from the data
@@ -3951,29 +3980,33 @@ The cross-section data is entered in the BRIDGE_XSEC.DAT file in the ASCII forma
 In line 1, X indicates the start of a new bridge cross-section and the number 631 is bridge inflow node grid element number.
 The remaining lines are station from the left top of bank, upstream bed elevation at the given station, and the bridge station bed elevation.
 
- X   631
+.. raw:: html
 
-   0.00 1380.00 1385.00
+    <pre>
+     X   631
 
-   0.60 1378.70 1378.46
+       0.00 1380.00 1385.00
 
-   5.00 1377.00 1376.96
+       0.60 1378.70 1378.46
 
-   5.50 1376.85 1376.68
+       5.00 1377.00 1376.96
 
-   6.00 1376.75 1376.46
+       5.50 1376.85 1376.68
 
-   12.65 1376.70 1376.46
+       6.00 1376.75 1376.46
 
-   15.85 1376.78 1376.51
+       12.65 1376.70 1376.46
 
-   18.95 1377.20 1377.00
+       15.85 1376.78 1376.51
 
-   20.65 1378.15 1377.26
+       18.95 1377.20 1377.00
 
-   22.00 1378.70 1378.44
+       20.65 1378.15 1377.26
 
-   22.10 1380.00 1385.00
+       22.00 1378.70 1378.44
+
+       22.10 1380.00 1385.00
+    </pre>
 
 The bridge cross-section is referenced to the upstream cross-section stations.
 The bridge cross-section contraction corresponds to the abutments or channel bank elevations under the bridge deck.
@@ -3992,23 +4025,23 @@ To assist in understanding the free surface bridge flow routine, some specific d
 
 Notes on the bridge configuration data:
 
-i.   ITYPE = 1-4 bridge configurations representing the type of constriction I through IV depending on abutment type shown in the Appendix figures.
-     The bridge type will be used to assign the various coefficients.
-     Refer also to Figures 17-16 through 17-23 beginning on page 480 of Chow (1959) or Figure 4.4 through 4.13 beginning on page 113 of Hamill (1999).
-     These two sets of figures are essentially the same but Hamill (1999) has a little more detail in some of the figures and for that reason, Hamill’s
-     (1999) figures has been reproduced in the Appendix.
+    i.   ITYPE = 1-4 bridge configurations representing the type of constriction I through IV depending on abutment type shown in the Appendix figures.
+         The bridge type will be used to assign the various coefficients.
+         Refer also to Figures 17-16 through 17-23 beginning on page 480 of Chow (1959) or Figure 4.4 through 4.13 beginning on page 113 of Hamill (1999).
+         These two sets of figures are essentially the same but Hamill (1999) has a little more detail in some of the figures and for that reason, Hamill’s
+         (1999) figures has been reproduced in the Appendix.
 
-ii.  The various coefficients are estimated from a linear interpolation between two points on the lines representing the bridge parameters and coefficient
-     data in the Appendix plots.
-     Typically, the lines in Appendix figures were divided into 8 to 12 segments to generate the digital data set.
+    ii.  The various coefficients are estimated from a linear interpolation between two points on the lines representing the bridge parameters and coefficient
+         data in the Appendix plots.
+         Typically, the lines in Appendix figures were divided into 8 to 12 segments to generate the digital data set.
 
-iii. The bridge opening (BOPENING) is the width of the contracted cross-section between the top of banks.
+    iii. The bridge opening (BOPENING) is the width of the contracted cross-section between the top of banks.
 
-iv.  L\ :sub:`1-2` = distance upstream of the surveyed constricted cross-section (UPLENGTH12).
-     This cross-section should be located upstream of the backwater effects of the bridge (up to several lengths of the bridge opening width).
+    iv.  L\ :sub:`1-2` = distance upstream of the surveyed constricted cross-section (UPLENGTH12).
+         This cross-section should be located upstream of the backwater effects of the bridge (up to several lengths of the bridge opening width).
 
-v.   Refer to the Appendix figures for parameter definition such as the radius of the leading edge of the Type I abutment, length of the wingwall chamfer
-     for various three chamfer angles (30\ :sup:`o`, 45\ :sup:`o` and 60\ :sup:`o`), angle of bridge with respect to the flow, and angle of wingwall.
+    v.   Refer to the Appendix figures for parameter definition such as the radius of the leading edge of the Type I abutment, length of the wingwall chamfer
+         for various three chamfer angles (30\ :sup:`o`, 45\ :sup:`o` and 60\ :sup:`o`), angle of bridge with respect to the flow, and angle of wingwall.
 
 Comments on the bridge coefficients:
 

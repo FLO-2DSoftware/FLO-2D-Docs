@@ -1,0 +1,227 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshooting &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Project Review and Mapping" href="9-Mapping.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro Resource Center 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin Gila: Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Self-Help Kit Gila 1.0.0</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="1-Setup.html">Self-Help Kit Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2-Grid.html">Create Project and Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3-Hydrology.html">Hydrology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4-Channels.html">Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5-Storm%20Drain.html">Storm Drain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="6-Buildings.html">Buildings and Walls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7-Realtime.html">Realtime Rainfall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="8-Hydraulic.html">Hydraulic Structures - Culverts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9-Mapping.html">Project Review and Mapping</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Troubleshooting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cell-size-issue">Cell Size Issue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#next-issue">Next Issue</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#faq-webinar">FAQ - Webinar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Self-Help Kit Gila 1.0.0</a></li>
+      <li class="breadcrumb-item active">Troubleshooting</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/Self-Help-Gila/10-Troubleshooting.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="troubleshooting">
+<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h1>
+<p>Common issues and mistakes that happen during this training activity.</p>
+<section id="cell-size-issue">
+<h2>Cell Size Issue<a class="headerlink" href="#cell-size-issue" title="Link to this heading"></a></h2>
+<p>If an error appears related to the variable cell_size.  Check the Attribute Table of Computational Domain and make
+sure the cell size field is appropriately assigned.</p>
+</section>
+<section id="next-issue">
+<h2>Next Issue<a class="headerlink" href="#next-issue" title="Link to this heading"></a></h2>
+</section>
+</section>
+<section id="faq-webinar">
+<h1>FAQ - Webinar<a class="headerlink" href="#faq-webinar" title="Link to this heading"></a></h1>
+<p>This section contains a list of frequently asked questions (FAQs) from various webinars.</p>
+<p><strong>Q: What is the difference between QuickRun and regular run?</strong>
+A: Quick Run exports and runs the engine. Regular run runs the engine on the Project Folder.</p>
+<p><strong>Q: When you apply an inflow line, does the hydrograph apply to each cell, or is it divided evenly amongst each cell?</strong>
+A: In the latest version, the hydrograph is divided by each cell during the export process. This only happens on line BCs.</p>
+<p><strong>Q: Can you please show how to add inflow (external inflow) to a channel or storm drain?</strong>
+A:
+- External inflow to a channel is done via a channel inflow node. This is shown in the Self Help Channel Lesson.
+- Storm drain nodes can also be assigned an external inflow using the Storm Drain Inlet Junction Attribute Editor.
+To access this, click the FLO Info button and then click any storm drain inlet/junction. Change the external inflow
+to “Yes” and access the Inflow dialog. You can enter an inflow table or a base flow. It’s pretty self-explanatory once you open the window.</p>
+<p><strong>Q: Doesn’t the Gila Plugin need Interpolate.exe for channels anymore?</strong>
+A: All the processes on the channels are done automatically on the backend. It still requires interpolate.exe, but you don’t see it in action. You will get an error message if interpolate.exe isn’t in the FLO-2D Pro folder or if you are pointing to the wrong flopro.exe folder.</p>
+<p><strong>Q: Does the boundary polygon select the last/bounding grids and eliminate stacked outflow nodes?</strong>
+A: Yes, it does. The polygon tool will eliminate stacked nodes. Robson also improved this tool’s speed, so it won’t take a long time to calculate the boundary anymore.</p>
+<p><strong>Q: Should the outflow polygon be placed anywhere there is flow leaving the computational domain?</strong>
+A: Yes, you should place a boundary anywhere the boundary causes an artificial ponded water condition.</p>
+<p><strong>Q: Will this recording be available at a later stage?</strong>
+A: Yes, the recording will be available in the ShareFile webinar series Self-Help Kit.</p>
+<p><strong>Q: For channel outflow, can we set up outflow with a hydrograph to obtain a hydrograph to transfer to a downstream model where the channel continues further downstream?</strong>
+A: No, that is not possible. Get the channel outflow from hychan.out just upstream of the outflow node.</p>
+<p><strong>Q: I saw that the tutorial schedule does not cover non-Newtonian flooding. Will the tutorial on this topic be updated soon?</strong>
+A: The tutorial is available by request. Sorry, we have not had time to get it on the new system.</p>
+<p><strong>Q: Where did you pull this storm drain component window?</strong>
+A: The “Select Component from Shapefile” button is the second button from the left on the Storm Drain Editor.</p>
+<p><strong>Q: I’m getting an error attempting to connect multiple conduits to one outfall. Is this bad modeling practice even if it contradicts field conditions?</strong>
+A: Only one conduit is allowed to be connected to an outfall. To fix this, add a junction that receives water from multiple conduits and then connect the outfall to the junction.</p>
+<p><strong>Q: I assume the outfall elevation is irrelevant if outfalling outside the project domain and assigning discharge off the grid?</strong>
+A: The outfall elevation, conduit length, and geometry are important to set the hydraulic conditions accurately at the outfall. It isn’t important to position them correctly, but their other attributes are important.</p>
+<p><strong>Q: If the outfall is outside the computation domain, can it be a free outfall with a true elevation (below grid elevation) since it is outside the domain?</strong>
+A: If you assign it as “Free,” then the flow will leave the outfall as if there is no head on the system. You may want to assign a water surface that represents something valid in that case. Good question! I will study it and hopefully remember to post it to the Basin Example.</p>
+<p><strong>Q: If a storm drain continues to downstream domains, can we set up outflow as time-discharge to obtain a hydrograph and then transfer it to the downstream domain?</strong>
+A: Use the reported results for the outfall to transfer a hydrograph or time series inflow to the downstream model. It isn’t necessary to define the outfall as a Time Series outfall—the information is already reported.</p>
+<p><strong>Q: Do the FLO-2D manuals have a reference table for roughness coefficients, especially for 1D channels?</strong>
+A: This question was answered live during the session.</p>
+<p><strong>Q: Can we import multiple culvert equations using a text file to assign multiple at once, similar to HYSTRUCT?</strong>
+A: This is a wishlist item.</p>
+<p><strong>Q: I read the manual but wanted to confirm that the surcharge depth applied to the junctions is related to the depth at the manhole. Does “Type 5” become affected by the flow depth? Can you provide some insight on typical depths used?</strong>
+A: The surcharge depth and flow depth represent the total pressure that must be exceeded to pop a manhole.</p>
+<p><strong>Q: Do you have a process to run old projects with SWMM components using the new exe? One of the changes is that no subcatchments are needed with the new exe. Are there any other checks?</strong>
+A: I’ll need to do some research, but the engine should use both types. However, QGIS and the plugin might ignore subcatchments.</p>
+<p><strong>Q: Which .OUT file has channel cross-section outflow hydrographs if we are to transfer flows between domains where the channel continues in downstream domains?</strong>
+A: Use the discharge at the next upstream node. You can get that from the QGIS reporting tool or from hycross.out.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="9-Mapping.html" class="btn btn-neutral float-left" title="Project Review and Mapping" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build23
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="10-Troubleshooting.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

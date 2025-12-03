@@ -25,11 +25,13 @@
       <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
       <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
       <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"tex": {"tags": "none", "useLabelIds": true}, "options": {"displayAlign": "right"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Simulating Mudflow Guidelines" href="../Simulating%20Mudflow%20Guidelines/Simulating%20Mudflow%20Guidelines.html" />
-    <link rel="prev" title="FLO-2D Hydraulic Structure Guidelines" href="../Hydraulic%20Structures%20Guidelines/Hydraulic%20Structures%20Guidelines.html" /> 
+    <link rel="prev" title="Hydraulic Structure Guidelines" href="../Hydraulic%20Structures%20Guidelines/Hydraulic%20Structures%20Guidelines.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,13 +57,15 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center 2023</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual%202023/index.html">FLO-2D Pro Reference Manual 2023</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Channel%20Modeling%20Guidelines%202023/index.html">Channel Modeling Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Storm%20Drain%20Modeling%20Guidelines/index.html">Storm Drain Modeling Guidelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/Hydraulic%20Structures%20Guidelines.html">FLO-2D Hydraulic Structure Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/Hydraulic%20Structures%20Guidelines.html">Hydraulic Structure Guidelines</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Levee Dam and Wall Breach Guidelines</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#levee-overview">Levee Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-resources">Additional Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#levee-and-dam-breach-failure">Levee and Dam Breach Failure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#general">General</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#prescribed-levee-and-dam-failure">Prescribed Levee and Dam Failure</a></li>
@@ -103,10 +107,9 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines/Simulating%20Mudflow%20Guidelines.html">Simulating Mudflow Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Flood%20Routing%20Guidelines%202023/Two%20Phase%20Flood%20Routing%20Guidelines%202023.html">Two Phase Flood Routing Guidelines 2023</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual%202023/index.html">Reference Manual</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin Gila</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin Gila: Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
 </ul>
 
@@ -124,7 +127,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center 2023</a></li>
       <li class="breadcrumb-item active">Levee Dam and Wall Breach Guidelines</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/flo-2d_pro/Levee Dam and Wall Breach Guidelines/Levee Dam and Wall Breach Guidelines.rst.txt" rel="nofollow"> View page source</a>
@@ -137,8 +140,21 @@
              
   <section id="levee-dam-and-wall-breach-guidelines">
 <h1>Levee Dam and Wall Breach Guidelines<a class="headerlink" href="#levee-dam-and-wall-breach-guidelines" title="Link to this heading"></a></h1>
-<section id="levee-overview">
-<h2>Levee Overview<a class="headerlink" href="#levee-overview" title="Link to this heading"></a></h2>
+<section id="additional-resources">
+<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading"></a></h2>
+<p>Data, tutorials and examples related to hydraulic structures can be found in the following locations:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>FLO-2D Data Input Manual: LEVEE.DAT and BREACH.DAT sections</p></li>
+<li><p>FLO-2D Gila 1.0 User Manual Levee Editor and Levee Breach Editor</p></li>
+<li><p>Walls Tutorials Self Help Lesson 4</p></li>
+<li><p>Dam Breach Tutorials and Tailings Dam Tutorials</p></li>
+<li><p>Example Projects: Rio Grande Riverine</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
 <p>The FLO-2D levee component confines flow on the floodplain surface by blocking one or more of the eight flow directions.
 The FLO-2D model conserves volume and this includes volume stored by the levee component and water routed through a levee breach.
 The terms dam and levee are earthen embankments that are used interchangeably in this document when discussing breach failure.
@@ -367,10 +383,15 @@ headwater is given by d<sub>t</sub>/d<sub>h</sub> based on the highest grid elem
 <p><em>Figure 8.
 Levee Overtopping Definition.</em></p>
 <p>The flow can occur in either direction and the discharge Q is computed using the conventional broad-crested weir equation:</p>
-<p>Q = CLH<sub>d</sub><sup>1.5</sup></p>
-<p>where: C is the broadcrested weir coefficient (3.09 in English units, average typical coefficient for the broadcrested weir); L is the length of the
-levee crest and H<sub>d</sub> is the headwater on the levee (Figure 9).
-The headwater depth must exceed a tolerance value = 0.1 ft (0.3 m) for discharge to occur.
+<div class="math notranslate nohighlight">
+\[Q = C\,L\,H_d^{1.5}\]</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>where:
+  C = broadcrested weir coefficient (3.09 in English units, typical average coefficient);
+  L = length of the levee crest;
+  H:sub:`d` = the headwater on the levee (Figure 9).
+</pre></div>
+</div>
+<p>The headwater depth must exceed a tolerance value = 0.1 ft (0.3 m) for discharge to occur.
 This is to accommodate non-uniform crest elevations and minute discharges that will not impact the flooding.
 Typically, if the flow is greater than about 0.1 ft, the discharge will be significant.</p>
 </section>
@@ -1174,20 +1195,22 @@ element velocity.
 This approach, however, still generated unreasonably high velocities for very deep reservoirs (&gt;100 ft – 30 m).
 To effective model the slow velocities in reservoirs, a new friction slope equation was developed that kept the same form as Manning’s equation for
 velocity V but applied a flow depth d variable exponent b that was a function of both depth and slope.</p>
-<blockquote>
-<div><p>V = 1.486/n d<sup>b</sup> S<sub>f</sub><sup>0.5</sup> (in English units)</p>
-</div></blockquote>
-<p>where:</p>
-<blockquote>
-<div><p>V = flow velocity d = flow depth</p>
-<p>n = Manning’s friction coefficient</p>
-<p>S<sub>f</sub> = friction slope</p>
-<p>b = exponent = f(depth, S<sub>f</sub>)</p>
-<blockquote>
-<div><p>b = 0.4973 – 0.000543 * d – 30.71 S<sub>f</sub></p>
-</div></blockquote>
-<p>a1, b1, c1 = coefficients given in the following table:</p>
-</div></blockquote>
+<div class="math notranslate nohighlight">
+\[V = \frac{1.486}{n}\, d^{b}\, S_f^{0.5}\]</div>
+<p>(English units)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>where:
+
+    V = flow velocity
+    d = flow depth
+    n = Manning’s friction coefficient
+    S\ :sub:`f` = friction slope
+    b = exponent = f(depth, S\ :sub:`f`)
+
+      b = 0.4973 – 0.000543 \* d – 30.71 S\ :sub:`f`
+
+    a1, b1, c1 = coefficients given in the following table:
+</pre></div>
+</div>
 <p><em>Table 5.
 Muskingum – Cunge Variable Definitions.</em></p>
 <img alt="../../_images/Levee031.jpg" src="../../_images/Levee031.jpg" />
@@ -1487,25 +1510,27 @@ curves.</p>
 <p>The levee fragility curves are read directly by the FLO-2D model in a discretized rating table format for a set of curves as shown below.
 The first column is the curve reference name; the second column is the probability of failure (x-axis Figure 1); and third column is the distance
 below the levee crest in feet or meters (y-axis).</p>
-<p>FS1 0.03 6.0</p>
-<p>FS1 0.15 3.5</p>
-<p>FS1 0.50 2.5</p>
-<p>FS1 0.85 1.0</p>
-<p>FS1 0.95 0.0</p>
-<p>FS2 0.03 9.0</p>
-<p>FS2 0.15 5.5</p>
-<p>FS2 0.50 4.0</p>
-<p>FS2 0.85 2.0</p>
-<p>FS2 0.98 0.0</p>
-<p>FS3 0.03 12.0</p>
-<p>FS3 0.15 9.0</p>
-<p>FS3 0.50 6.5</p>
-<p>FS3 0.85 4.0</p>
-<p>FS3 1.00 0.0</p>
-<p>FS4 0.15 15.0</p>
-<p>FS4 0.50 9.0</p>
-<p>FS4 0.85 6.0</p>
-<p>FS4 1.00 0.0</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FS1</span> <span class="mf">0.03</span> <span class="mf">6.0</span>
+<span class="n">FS1</span> <span class="mf">0.15</span> <span class="mf">3.5</span>
+<span class="n">FS1</span> <span class="mf">0.50</span> <span class="mf">2.5</span>
+<span class="n">FS1</span> <span class="mf">0.85</span> <span class="mf">1.0</span>
+<span class="n">FS1</span> <span class="mf">0.95</span> <span class="mf">0.0</span>
+<span class="n">FS2</span> <span class="mf">0.03</span> <span class="mf">9.0</span>
+<span class="n">FS2</span> <span class="mf">0.15</span> <span class="mf">5.5</span>
+<span class="n">FS2</span> <span class="mf">0.50</span> <span class="mf">4.0</span>
+<span class="n">FS2</span> <span class="mf">0.85</span> <span class="mf">2.0</span>
+<span class="n">FS2</span> <span class="mf">0.98</span> <span class="mf">0.0</span>
+<span class="n">FS3</span> <span class="mf">0.03</span> <span class="mf">12.0</span>
+<span class="n">FS3</span> <span class="mf">0.15</span> <span class="mf">9.0</span>
+<span class="n">FS3</span> <span class="mf">0.50</span> <span class="mf">6.5</span>
+<span class="n">FS3</span> <span class="mf">0.85</span> <span class="mf">4.0</span>
+<span class="n">FS3</span> <span class="mf">1.00</span> <span class="mf">0.0</span>
+<span class="n">FS4</span> <span class="mf">0.15</span> <span class="mf">15.0</span>
+<span class="n">FS4</span> <span class="mf">0.50</span> <span class="mf">9.0</span>
+<span class="n">FS4</span> <span class="mf">0.85</span> <span class="mf">6.0</span>
+<span class="n">FS4</span> <span class="mf">1.00</span> <span class="mf">0.0</span>
+</pre></div>
+</div>
 </section>
 <section id="application-of-the-levee-fragility-curves-in-the-flo-2d-model">
 <h2>Application of the Levee Fragility Curves in the FLO-2D Model<a class="headerlink" href="#application-of-the-levee-fragility-curves-in-the-flo-2d-model" title="Link to this heading"></a></h2>
@@ -1523,12 +1548,14 @@ The following levee fragility curve data is assigned by the user in the FLO-2D m
 <p>Global Levee Data: Line ID, Fragility Curve ID, Probability of Failure (eg.
 0.50) Individual Levee Data: Line ID, Grid Element, Fragility Curve ID, Probability of Failure</p>
 <p>Example:</p>
-<p>C FS3 0.5</p>
-<p>P 3450 FS1 0.5</p>
-<p>P 3558 FS1 0.9</p>
-<p>P 3559 FS2 0.7</p>
-<p>P 3669 FS3 0.5</p>
-<p>P 3670 FS4 0.5</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span> <span class="n">FS3</span> <span class="mf">0.5</span>
+<span class="n">P</span> <span class="mi">3450</span> <span class="n">FS1</span> <span class="mf">0.5</span>
+<span class="n">P</span> <span class="mi">3558</span> <span class="n">FS1</span> <span class="mf">0.9</span>
+<span class="n">P</span> <span class="mi">3559</span> <span class="n">FS2</span> <span class="mf">0.7</span>
+<span class="n">P</span> <span class="mi">3669</span> <span class="n">FS3</span> <span class="mf">0.5</span>
+<span class="n">P</span> <span class="mi">3670</span> <span class="n">FS4</span> <span class="mf">0.5</span>
+</pre></div>
+</div>
 <p>This data assignment enables the user to specify either global fragility curve data for the entire levee system or individual levee grid elements or
 reaches of levee fragility curves in the FLO-2D model in a spatially variable analysis.</p>
 </section>
@@ -1589,7 +1616,7 @@ Army Corps of Engineers, Sacramento District, Sacramento, California.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../Hydraulic%20Structures%20Guidelines/Hydraulic%20Structures%20Guidelines.html" class="btn btn-neutral float-left" title="FLO-2D Hydraulic Structure Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Hydraulic%20Structures%20Guidelines/Hydraulic%20Structures%20Guidelines.html" class="btn btn-neutral float-left" title="Hydraulic Structure Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../Simulating%20Mudflow%20Guidelines/Simulating%20Mudflow%20Guidelines.html" class="btn btn-neutral float-right" title="Simulating Mudflow Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

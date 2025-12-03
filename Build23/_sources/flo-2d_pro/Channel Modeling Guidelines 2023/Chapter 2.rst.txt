@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 
-Chapter 2
-===========
+Chapter 2 - Channel Modeling Guidelines
+==========================================
 
 Guidelines - Channels in the Urban Environment
 ----------------------------------------------
@@ -24,12 +24,12 @@ A suggested order of component development is:
 
 Turn off the rainfall and infiltration and test the remaining components using temporary inflow hydrographs as needed to test specific components.
 
-    - Add mainstem channels in segments.
-    - Add tributary channels as separate segments.
-    - Add channel hydraulic structures.
-    - Add other urban components in no specific order…streets, buildings – ARF values, levees, etc.
-    - Add the storm drain.
-    - Other details: Sediment transport, groundwater, mudflows, etc.
+- Add mainstem channels in segments.
+- Add tributary channels as separate segments.
+- Add channel hydraulic structures.
+- Add other urban components in no specific order…streets, buildings – ARF values, levees, etc.
+- Add the storm drain.
+- Other details: Sediment transport, groundwater, mudflows, etc.
 
 .. image:: img/Chapter2/Chapte002.jpg
 

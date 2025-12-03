@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FLO-2D Hydraulic Structure Guidelines &mdash; FLO-2D Pro Documentation  documentation</title>
+  <title>Hydraulic Structure Guidelines &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
@@ -25,11 +25,13 @@
       <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
       <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
       <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"tex": {"tags": "none", "useLabelIds": true}, "options": {"displayAlign": "right"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Levee Dam and Wall Breach Guidelines" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/Levee%20Dam%20and%20Wall%20Breach%20Guidelines.html" />
-    <link rel="prev" title="References" href="../Storm%20Drain%20Modeling%20Guidelines/References.html" /> 
+    <link rel="prev" title="8. References" href="../Storm%20Drain%20Modeling%20Guidelines/References.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,11 +57,13 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center 2023</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual%202023/index.html">FLO-2D Pro Reference Manual 2023</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Channel%20Modeling%20Guidelines%202023/index.html">Channel Modeling Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Storm%20Drain%20Modeling%20Guidelines/index.html">Storm Drain Modeling Guidelines</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">FLO-2D Hydraulic Structure Guidelines</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Hydraulic Structure Guidelines</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#additional-resources">Additional Resources</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#guidelines">Guidelines</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#modeling-pumps">Modeling Pumps</a></li>
@@ -70,10 +74,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/Levee%20Dam%20and%20Wall%20Breach%20Guidelines.html">Levee Dam and Wall Breach Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines/Simulating%20Mudflow%20Guidelines.html">Simulating Mudflow Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Flood%20Routing%20Guidelines%202023/Two%20Phase%20Flood%20Routing%20Guidelines%202023.html">Two Phase Flood Routing Guidelines 2023</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual%202023/index.html">Reference Manual</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin Gila</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin Gila: Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
 </ul>
 
@@ -91,8 +94,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center</a></li>
-      <li class="breadcrumb-item active">FLO-2D Hydraulic Structure Guidelines</li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center 2023</a></li>
+      <li class="breadcrumb-item active">Hydraulic Structure Guidelines</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/flo-2d_pro/Hydraulic Structures Guidelines/Hydraulic Structures Guidelines.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -102,8 +105,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="flo-2d-hydraulic-structure-guidelines">
-<h1>FLO-2D Hydraulic Structure Guidelines<a class="headerlink" href="#flo-2d-hydraulic-structure-guidelines" title="Link to this heading"></a></h1>
+  <section id="hydraulic-structure-guidelines">
+<h1>Hydraulic Structure Guidelines<a class="headerlink" href="#hydraulic-structure-guidelines" title="Link to this heading"></a></h1>
+<section id="additional-resources">
+<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading"></a></h2>
+<p>Data, tutorials and examples related to hydraulic structures can be found in the following locations:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>FLO-2D Data Input Manual: HYSTRUC.DAT</p></li>
+<li><p>FLO-2D Gila 1.0 User Manual Structures Editor</p></li>
+<li><p>Basic and Advanced Culverts: Self Help Lesson 2 and 6</p></li>
+<li><p>Bridge Tutorial: Advanced Module 3</p></li>
+<li><p>Example Projects: Rio Grande Riverine, and Urban</p></li>
+</ul>
+</div></blockquote>
+</section>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
 <p>Hydraulic structures can include bridges, culverts, weirs, spillways, pumps or any facility that controls the water surface elevation and whose
@@ -114,15 +130,18 @@ several grid elements.
 For example, a culvert under an interstate highway may span several grid elements.
 In addition, flow can be exchanged between a floodplain element and channel element.
 A hydraulic structure rating curve equation specifies discharge as a function of the headwater depth h:</p>
-<blockquote>
-<div><p>Q = a h<sup>b</sup></p>
-</div></blockquote>
-<p>where: (a) is a regression coefficient and (b) is a regression exponent.
-More than one power regression relationship may be used for a hydraulic structure by specifying the maximum depth for which the relationship is valid.
+<div class="math notranslate nohighlight">
+\[Q = a h^b\]</div>
+<dl>
+<dt>where:</dt><dd><p>a = regression coefficient</p>
+<p>b = regression exponent.</p>
+</dd>
+</dl>
+<p>More than one power regression relationship may be used for a hydraulic structure by specifying the maximum depth for which the relationship is valid.
 For example, one depth relationship can represent normal flow through a bridge and a second relationship can be used to simulate blockage with a zero
 coefficient for the height of the bridge low chord.
-Flow can also reverse and go upstream through a hydraulic structure.
-Hydraulic structures may include:</p>
+Flow can also reverse and go upstream through a hydraulic structure.</p>
+<p>Hydraulic structures may include:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Broadcrested weir such as a berm or embankment (Figure 1);</p></li>
@@ -141,15 +160,15 @@ Hydraulic structures may include:</p>
 Broadcrested Weir Equation for Modeling Hydraulic Structure Flow Over an Embankment</em></p>
 <p>By specifying a hydraulic structure rating table, the model interpolates between the depth and discharge increments to calculate the discharge.
 A typical rating curve will start with zero depth and zero discharge and increase in non-uniform increments to the maximum expected discharge or
-higher.
-In general, the rating table will be more accurate than the regression equation if the curve is nonlinear on a log-log plot of the depth and discharge.
+higher.</p>
+<p>In general, the rating table will be more accurate than the regression equation if the curve is nonlinear on a log-log plot of the depth and discharge.
 The rating table must be based on a reference elevation (Figure 2).
 Flow blockage by debris can be simulated by setting the discharge equal to zero corresponding to a prescribed depth.
 This blockage option may useful in simulating worst case mud and debris flow scenarios where bridges or culverts are located on alluvial fans.
 Blockage forces all the discharge to flow overland on the fan or floodplain surface.</p>
 <img alt="../../_images/Hydrau003.jpg" src="../../_images/Hydrau003.jpg" />
 <p><em>Figure 2.
-Levees are Depicted in Red and the River in Blue in the GDS Program</em></p>
+Levees are Depicted in Red and the River in Blue</em></p>
 <p>For a simplified storm drain system, multiple inflow nodes can be assigned to the same outflow element.
 This will enable the cumulative storm drain discharge at the outlet to be assessed without conduit flow routing.
 It is possible to assign a limiting conveyance capacity for the outlet node (Figure 3).
@@ -185,9 +204,10 @@ The highlights of this new component are:</p>
 <li><p>Roughness</p></li>
 </ul>
 </div></blockquote>
-<img alt="../../_images/Hydrau004.jpg" src="../../_images/Hydrau004.jpg" />
+<img alt="../../_images/Hydrau0051.png" src="../../_images/Hydrau0051.png" />
+<img alt="../../_images/Hydrau0061.png" src="../../_images/Hydrau0061.png" />
 <p><em>Figure 4.
-GDS Dialog Box for Entering the Generalized Culvert Data</em></p>
+Generalized Culvert Data</em></p>
 <p>Hydraulic structures may be used to allow flow to go through a levee.
 This might simulate a drainage hole in a block wall or a culvert through a highway embankment.
 The use of hydraulic structure in contiguous grid elements separated by a levee will preclude the discharge overtopping the levee or wall and the
@@ -224,7 +244,8 @@ generate the table, lack of entrance coefficients, or inappropriate slope.
 When a rate table accelerates flow through hydraulic structure in the model, it pulls down the inflow node the water surface and conversely increases
 the outflow node storage.
 This changes the relationship between the headwater and tailwater can result in numerical surging through the structure (Figure 5).</p>
-<img alt="../../_images/Hydrau005.jpg" src="../../_images/Hydrau005.jpg" />
+<img alt="../../_images/Hydrau0051.png" src="../../_images/Hydrau0051.png" />
+<img alt="../../_images/Hydrau0061.png" src="../../_images/Hydrau0061.png" />
 <p><em>Figure 5.
 Hydraulic Structure Numerical Surging</em></p>
 <p>It is possible to completely evacuate the hydraulic structure inflow node if the rating table poorly matches the upstream flow conditions at shallow
@@ -292,8 +313,8 @@ As tailwater water surface</p>
 </td>
 </tr>
 <tr class="row-even"><td><p>INOUTCONT = 2</p></td>
-<td><p>Upstream flow through the structure is computed with the rating table adjustment when the tailwater surface
-exceeds the headwater surface.</p>
+<td><p>Upstream flow through the structure is computed with the rating table adjustment when the tailwater surface</p>
+<p>exceeds the headwater surface.</p>
 <p>The headwater depth Hw and tailwater Tw can switch with submergence to allow flow to go upstream.</p>
 <p>For upstream discharge through the bridge or culvert, the outflow node must have upstream flow into it from</p>
 <p>the downstream channel| element.</p>
@@ -466,11 +487,15 @@ flow is based on the hydraulic structure rating table or</p>
 <p>conservation or numerical instability, follow this protocal:</p>
 <blockquote>
 <div><ul>
-<li><p>Turn off the hydraulic structures in CONT.DAT and run the model until the problem occurred.</p></li>
+<li><p>Turn off the hydraulic structures in CONT.DAT and run the model until the</p>
+<p>problem occurred.</p>
+</li>
 <li><p>Turn off the levees in CONT.DAT and run the model only until the time that the</p>
 <p>problem surfaced.</p>
 </li>
-<li><p>If the problem is in the hydraulic structures, isolate the structures that appear to be the problem.</p></li>
+<li><p>If the problem is in the hydraulic structures, isolate the structures</p>
+<p>that appear to be the problem.</p>
+</li>
 </ul>
 </div></blockquote>
 <p>To isolate a hydraulic structure, put a simple inflow hydrograph (for steady flow) several</p>
@@ -482,9 +507,11 @@ flow is based on the hydraulic structure rating table or</p>
 <p>water surface elevation.</p>
 <p>It might also be possible to eliminate the levee and replace it with WRF value.</p>
 <p>The model automatically adjusts the hydraulic structure rating table and writes the revised</p>
-<p>table pairs to an output file. If instability persists, review the revised rating table and make</p>
+<p>table pairs to an output file. If instability persists, review the revised rating</p>
+<p>table and make</p>
 <p>further adjustments.</p>
-<p>Typically the instability is related to the lower flows and there are insufficient rating table pairs</p>
+<p>Typically the instability is related to the lower flows and there are insufficient</p>
+<p>rating table pairs</p>
 <p>to define the rating table for the lower discharges. Review the HYDROSTRUCT.OUT file to determine</p>
 <p>if there is numerical instability in the rating table or curve.</p>
 <p>Downstream ponding or time-stage water surface controls may result in upstream flow</p>
@@ -493,7 +520,8 @@ flow is based on the hydraulic structure rating table or</p>
 </td>
 </tr>
 <tr class="row-odd"><td><p>Time-Stage Backwater Downstream of Hydraulic Structures</p></td>
-<td><p>Time-stage elements that control the water surface elevation downstream of a hydraulic structure are</p>
+<td><p>Time-stage elements that control the water surface elevation downstream of a</p>
+<p>hydraulic structure are</p>
 <p>generally not a problem. Numerical instability are usually associated with the time-stage elements</p>
 <p>by having the water surface stage be less than ground elevation or having contiguous timestage</p>
 <p>elements with non-uniform ground elevations.</p>
@@ -517,7 +545,7 @@ flow is based on the hydraulic structure rating table or</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../Storm%20Drain%20Modeling%20Guidelines/References.html" class="btn btn-neutral float-left" title="References" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Storm%20Drain%20Modeling%20Guidelines/References.html" class="btn btn-neutral float-left" title="8. References" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/Levee%20Dam%20and%20Wall%20Breach%20Guidelines.html" class="btn btn-neutral float-right" title="Levee Dam and Wall Breach Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
