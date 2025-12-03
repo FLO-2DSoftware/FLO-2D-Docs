@@ -15,37 +15,33 @@ For example, a culvert under an interstate highway may span several grid element
 In addition, flow can be exchanged between a floodplain element and channel element.
 A hydraulic structure rating curve equation specifies discharge as a function of the headwater depth h:
 
-   Q = a h\ :sup:`b`
+.. math::
+    :label:
+
+   Q = a h^b
 
 where: (a) is a regression coefficient and (b) is a regression exponent.
+
 More than one power regression relationship may be used for a hydraulic structure by specifying the maximum depth for which the relationship is valid.
 For example, one depth relationship can represent normal flow through a bridge and a second relationship can be used to simulate blockage with a zero
 coefficient for the height of the bridge low chord.
 Flow can also reverse and go upstream through a hydraulic structure.
 Hydraulic structures may include:
 
-- Broadcrested weir such as a berm or embankment (Figure 1);
+    - Broadcrested weir such as a berm or embankment (Figure 1);
+    - Sharp crested weir such as a wall;
+    - Channel side retention basin control weirs;
+    - Spillways or outlet works from a dam (e.g. Ogee Weir);
+    - Culverts;
+    - Bridges;
+    - Detention basin pumps;
+    - Highway dip crossings;
+    - Pumps
 
-- Sharp crested weir such as a wall;
+.. image:: img/Hydrau002.jpg
 
-- Channel side retention basin control weirs;
-
-- Spillways or outlet works from a dam (e.g. Ogee Weir);
-
-- Culverts;
-
-- Bridges;
-
-- Detention basin pumps;
-
-- Highway dip crossings;
-
-- Pumps
-
-|Hydrau002|
-
-   Figure 1.
-   Broadcrested Weir Equation for Modeling Hydraulic Structure Flow Over an Embankment
+*Figure 1.
+ Broadcrested Weir Equation for Modeling Hydraulic Structure Flow Over an Embankment*
 
 By specifying a hydraulic structure rating table, the model interpolates between the depth and discharge increments to calculate the discharge.
 A typical rating curve will start with zero depth and zero discharge and increase in non-uniform increments to the maximum expected discharge or
@@ -56,10 +52,10 @@ Flow blockage by debris can be simulated by setting the discharge equal to zero 
 This blockage option may useful in simulating worst case mud and debris flow scenarios where bridges or culverts are located on alluvial fans.
 Blockage forces all the discharge to flow overland on the fan or floodplain surface.
 
-|Hydrau003|
+.. image:: img/Hydrau003.jpg
 
-   Figure 2.
-   Levees are Depicted in Red and the River in Blue in the GDS Program
+*Figure 2.
+Levees are Depicted in Red and the River in Blue in the GDS Program*
 
 For a simplified storm drain system, multiple inflow nodes can be assigned to the same outflow element.
 This will enable the cumulative storm drain discharge at the outlet to be assessed without conduit flow routing.
@@ -373,21 +369,3 @@ Table 2 is a list of possible hydraulic structure issues and fixes.
        Consider that a channel near the| ocean may have to filled before assigning the| tidal stage or storm surge.
 
 
-.. |Hydrau002| image:: media\Hydrau002.jpg
-   :width: 4.46431in
-   :height: 1.32986in
-.. |Hydrau003| image:: media\Hydrau003.jpg
-   :width: 5.13042in
-   :height: 2.80208in
-.. |Hydrau004| image:: media\Hydrau004.jpg
-   :width: 3.76944in
-   :height: 3.73319in
-.. |Hydrau005| image:: media\Hydrau005.jpg
-   :width: 5.35972in
-   :height: 2.84222in
-.. |Hydrau006| image:: media\Hydrau006.jpg
-   :width: 1.87389in
-   :height: 1.57639in
-.. |Hydrau007| image:: media\Hydrau007.jpg
-   :width: 5.30236in
-   :height: 1.42986in
