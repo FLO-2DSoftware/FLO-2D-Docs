@@ -456,8 +456,11 @@ Table 2 is a list of possible hydraulic structure issues and fixes.
          <td style="border: 1px solid #000; padding: 4px;">
             If the combine hydraulic structure and levee (or levee breaching) is causing either volume
             conservation or numerical instability, follow this protocal:
+
                 • Turn off the hydraulic structures in CONT.DAT and run the model until the problem occurred.
+
                 • Turn off the levees in CONT.DAT and run the model only until the time that the problem surfaced.
+
                 • If the problem is in the hydraulic structures, isolate the structures that appear to be the problem.
          </td>
        </tr>
