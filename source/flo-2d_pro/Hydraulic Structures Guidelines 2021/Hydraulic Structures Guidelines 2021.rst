@@ -18,7 +18,7 @@ A hydraulic structure rating curve equation specifies discharge as a function of
 .. math::
     :label:
 
-   Q = a h^b
+    Q = a h^b
 
 where: (a) is a regression coefficient and (b) is a regression exponent.
 
@@ -41,7 +41,7 @@ Hydraulic structures may include:
 .. image:: img/Hydrau002.jpg
 
 *Figure 1.
- Broadcrested Weir Equation for Modeling Hydraulic Structure Flow Over an Embankment*
+Broadcrested Weir Equation for Modeling Hydraulic Structure Flow Over an Embankment*
 
 By specifying a hydraulic structure rating table, the model interpolates between the depth and discharge increments to calculate the discharge.
 A typical rating curve will start with zero depth and zero discharge and increase in non-uniform increments to the maximum expected discharge or
@@ -148,7 +148,7 @@ This occurs when the user is primarily interested in the 100-year event or bankf
 portion of the rating table.
 In the following table, the user may be interested in discharges over 20,000 cfs, but what is the discharge at one foot?
 
-.. image:: img/Hydrau006jpg
+.. image:: img/Hydrau006.jpg
 
 *Table 1.
  Stage Discharge Relationship for a Bridge*
