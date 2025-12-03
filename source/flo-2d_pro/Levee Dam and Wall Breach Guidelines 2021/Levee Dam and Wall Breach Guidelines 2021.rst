@@ -321,14 +321,8 @@ The required data includes:
     - Maximum breach width
     - Vertical and horizontal rates of breach expansion
 
-**Figure**
-
-**12**
-
-**.
-GDS Prescribed Bre**
-
-**ach Dialog Box.**
+*Figure 12.
+GDS Prescribed Breach Dialog Box.*
 
 Maximum
 ~~~~~~~
@@ -338,17 +332,17 @@ Multiple failure can occur simultaneously in the levee system.
 The levee failure will initiate when the water surface exceeds an assigned elevation for a given duration.
 The duration of inundation or saturation is based on the cumulative time above the prescribed levee elevation (Figure 13).
 
-|Levee008|
+.. image:: img/Levee008.jpg
 
-   **Figure 13.
-   Prescribed Levee Breach Initiates When the Assigned Duration is Exceeded.**
+*Figure 13.
+Prescribed Levee Breach Initiates When the Assigned Duration is Exceeded.*
 
 During a prescribed levee breach simulation, there are a number of data variables that may be assigned to control the levee overtopping and breach
 discharges for a range of flows and failure conditions.
 Table 1 outlines the potential controls.
 
-   **Table 1.
-   Prescribed Breach Failure Controls and Guidelines**
+*Table 1.
+Prescribed Breach Failure Controls and Guidelines*
 
 .. list-table::
    :widths: 100
