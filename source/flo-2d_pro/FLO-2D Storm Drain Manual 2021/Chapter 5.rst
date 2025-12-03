@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 
 Chapter 5
-~~~~~~~~~
+===========
 
 Troubleshooting
 ^^^^^^^^^^^^^^^
@@ -15,27 +15,22 @@ Even for successful simulations, the ERROR.CHK and STORMDRAIN_ERROR.CHK should b
 All the potential errors that may be encountered cannot be anticipated, but some suggestions to reduce the conflicts and have a better understanding
 of how to improve the storm drain model are presented:
 
-- Number of inlets (SWMMFLO.DAT) should be equal to the number of nodes with an ID that starts with “I” (SWMM.inp).
-  The QGIS plugin and the GDS identify the inlets automatically.
-  If a storm drain feature is added or deleted, the storm drain files need to be recreated to include the change.
-
-- The SWMMOUTF.DAT file should be created through the QGIS plug-in or the GDS, if the storm drain system has outfalls defined.
-  If the number of outfalls is modified, the user must recreate the SWMMOUTF.DAT.
-
-- Outfall to a channel must be assigned to the left bank channel element.
-
-- The SWMMFLORT.DAT file needs to be created if Type 4 inlet rating tables were assigned.
-
-- The inlet rim elevation has to be equal to the FLO-2D grid element floodplain elevation for horizontal inlets.
-  Cell elevation is adjusted to the rim elevation at runtime and a warning message is generated.
-  The user has to make the adjustment permanent in FPLAIN.DAT and TOPO.DAT by deleting the files and renaming FPLAIN_SDElev.RGH and TOPO_SDElev.RGH as
-  FPLAIN.DAT and TOPO.DAT.
-
-- The path names of FLO-2D storm drain files are recommended to be less than 254 characters.
-  Paths names approaching that number of characters may cause the storm drain model to crash.
-  The filenames and paths are defined as character pointers in the storm drain model so there is no text length issue but there are several opening and
-  write statements in the output files that include format specifiers that could trigger this problem.
-  If this problem is reported in the output \*.CHK files, then run the model in a folder with a short path and a simplified name.
+    - Number of inlets (SWMMFLO.DAT) should be equal to the number of nodes with an ID that starts with “I” (SWMM.inp).
+      The QGIS plugin and the GDS identify the inlets automatically.
+      If a storm drain feature is added or deleted, the storm drain files need to be recreated to include the change.
+    - The SWMMOUTF.DAT file should be created through the QGIS plug-in or the GDS, if the storm drain system has outfalls defined.
+      If the number of outfalls is modified, the user must recreate the SWMMOUTF.DAT.
+    - Outfall to a channel must be assigned to the left bank channel element.
+    - The SWMMFLORT.DAT file needs to be created if Type 4 inlet rating tables were assigned.
+    - The inlet rim elevation has to be equal to the FLO-2D grid element floodplain elevation for horizontal inlets.
+      Cell elevation is adjusted to the rim elevation at runtime and a warning message is generated.
+      The user has to make the adjustment permanent in FPLAIN.DAT and TOPO.DAT by deleting the files and renaming FPLAIN_SDElev.RGH and TOPO_SDElev.RGH as
+      FPLAIN.DAT and TOPO.DAT.
+    - The path names of FLO-2D storm drain files are recommended to be less than 254 characters.
+      Paths names approaching that number of characters may cause the storm drain model to crash.
+      The filenames and paths are defined as character pointers in the storm drain model so there is no text length issue but there are several opening and
+      write statements in the output files that include format specifiers that could trigger this problem.
+      If this problem is reported in the output \*.CHK files, then run the model in a folder with a short path and a simplified name.
 
 FLO-2D Error Messages
 '''''''''''''''''''''
@@ -56,71 +51,108 @@ The most important messages are listed in Table 17.
 
    * - Channel bed elevation.
      - THERE ARE STORM DRAIN INLETS ON CHANNEL GRID ELEMENTS.
+
        THE CHANNEL BED ELEVATION MIGHT BE DIFFERENT  THAN THE INVERT ELEVATION.
+
        NO ACTION WAS TAKEN DURING THE SIMULATION.
+
        PLEASE REVIEW AND REVISE IF NECESSARY.
 
    * - Elevations for outfall nodes.
-     - THE STORM DRAIN OUTFALL INVERT ELEVATION SHOULD BE  EQUAL TO OR GREATER THAN THE FLOODPLAIN, CHANNEL, STREET ELEVATION.
+     - THE STORM DRAIN OUTFALL INVERT ELEVATION SHOULD BE  EQUAL TO OR GREATER
+
+       THAN THE FLOODPLAIN, CHANNEL, STREET ELEVATION.
+
        NO ACTION IS TAKEN.
        PLEASE REVIEW AND REVISE IF NECESSARY.
 
    * - Outfall node in channelinterior element.
-     - THE FOLLOWING STORM DRAIN OUTFALL NODES ARE IN CHANNEL INTERIOR ELEMENTS, RE-ASSIGN TO THE CHANNEL ELEMENTS IN CHAN.DAT.
+     - THE FOLLOWING STORM DRAIN OUTFALL NODES ARE IN CHANNEL INTERIOR ELEMENTS,
+
+       RE-ASSIGN TO THE CHANNEL ELEMENTS IN CHAN.DAT.
 
    * - Outfall node assigned to aFLO-2D outflow element.
      - THERE IS AN OUTFLOW NODE AND A STORM DRAIN OUTFALL ASSIGNED TO THE SAME GRID CELL.
 
    * - Grid element floodplain has tobe revised.
-     - THE GRID ELEMENT FLOODPLAIN WAS REVISED DURING THE SIMULATION TO THE STORM DRAIN INLET RIM ELEVATIONS FOR THE FOLLOWING GRID ELEMENTS (PLEASE REVIEW
+     - THE GRID ELEMENT FLOODPLAIN WAS REVISED DURING THE SIMULATION TO THE STORM DRAIN
+
+       INLET RIM ELEVATIONS FOR THE FOLLOWING GRID ELEMENTS (PLEASE REVIEW
+
        AND REVISE FPRIMELEV.OUT FILE IF NECESSARY).
 
    * - Horizontal type 4 storm draininlet elevations.
-     - THE HORIZONTAL TYPE 4 STORM DRAIN INLET ELEVATIONS  WERE REVISED DURING THE SIMULATION TO THE STORM  DRAIN INLET RIM ELEVATIONS FOR THE FOLLOWING GRID
+     - THE HORIZONTAL TYPE 4 STORM DRAIN INLET ELEVATIONS  WERE REVISED DURING THE
+
+       SIMULATION TO THE STORM  DRAIN INLET RIM ELEVATIONS FOR THE FOLLOWING GRID
+
        ELEMENTS (PLEASE REVIEW AND REVISE FPRIMELEV.OUT FILE IF NECESSARY).
 
    * - Type 4 inlet is a verticalinlet and it is in afloodplain cell.
-     - THE GRID ELEMENT ELEVATIONS IN "FLOODPLAIN  SWALES" WERE REVISED DURING THE SIMULATION TO THE TYPE 4 VERTICAL INLET INVERT ELEVATIONS.
+     - THE GRID ELEMENT ELEVATIONS IN "FLOODPLAIN  SWALES" WERE REVISED DURING THE
+
+       SIMULATION TO THE TYPE 4 VERTICAL INLET INVERT ELEVATIONS.
+
        PLEASE REVIEW FPRIMELEV.OUT FILE.
-       *NOTE: If a floodplain swale is discharging into a storm drain pipe or culvert, the invert elevation should be equal to the swale bed elevation.*
 
+       .. note:: If a floodplain swale is discharging into a storm drain pipe or culvert,
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
+                 the invert elevation should be equal to the swale bed elevation.
 
    * - Type 4 inlet is a verticalinlet and it is in a channelcell.
-     - THERE ARE VERTICAL TYPE 4 INLETS ASSIGNED TO CHANNEL EL-  EMENTS AND THE CHANNEL BED ELEVATION IS DIFFERENT THAN THE INVERT ELEVATION.
+     - THERE ARE VERTICAL TYPE 4 INLETS ASSIGNED TO CHANNEL ELEMENTS AND THE CHANNEL BED
+
+       ELEVATION IS DIFFERENT THAN THE INVERT ELEVATION.
+
        NO ACTION WAS TAKEN DURING THE SIMULATION.
+
        PLEASE REVIEW AND REVISE IF NECESSARY.
-       *NOTE: If an inlet is assigned to the end of a 1-D channel segment and the channel flow discharges into the storm drain, the invert elevation should
-       equal to the channel bed elevation.*
+
+       .. note:: If an inlet is assigned to the end of a 1-D channel segment and the channel
+
+                 flow discharges into the storm drain, the invert elevation should
+
+                 equal to the channel bed elevation.
 
    * - No elevation differencesbetween surface and stormdrain layers.
      - NOTE: THERE ARE NO DIFFERENCES BETWEEN FLOODPLAIN GRID AND STORM DRAIN RIM ELEVATIONS.
-       *NOTE: THERE ARE NO DIFFERENCES BETWEEN FLOODPLAIN GRID AND TYPE 4 INVERT INLET ELEVATIONS.
-       FPRIMELEV.OUT FILE WAS NOT CREATED*.
+
+       .. note:: THERE ARE NO DIFFERENCES BETWEEN FLOODPLAIN GRID AND TYPE 4 INVERT INLET
+
+                 ELEVATIONS. FPRIMELEV.OUT FILE WAS NOT CREATED.
 
    * - Elevations are revised.
-     - THE GRID ELEMENT FLOODPLAIN OR STREET ELEVATIONS WERE  REVISED DURING THE SIMULATION TO THE STORM DRAIN IN-  LET RIM ELEVATIONS FOR THE FOLLOWING GRID
+     - THE GRID ELEMENT FLOODPLAIN OR STREET ELEVATIONS WERE  REVISED DURING THE SIMULATION
+
+       TO THE STORM DRAIN IN-  LET RIM ELEVATIONS FOR THE FOLLOWING GRID
+
        ELEMENTS  (PLEASE REVIEW THE FPRIMELEV.OUT FILE)
 
    * - More than one storm draininlet is assigned to one gridelement.
+
        Simulation does notstart.
+
      - THERE ARE POTENTIAL DATA ERROR(S) IN FILE SWMM.inp AND  SWMMFLO.DAT.
+
        MULTIPLE INLETS ASSIGNED TO ONE GRID CELL
 
    * - Multiple cells are assigned toone inlet.
+
        Simulation does notstart.
+
      - MULTIPLE CELLS ASSIGNED TO ONE INLET
 
    * - Missing storm drain inletgeometry or inappropriategeometry, simulation does notstart.
+
      - THERE ARE A MISSING OR INAPPROPIATE STORM DRAIN INLET  GEOMETRY IN FILE: SWMMFLO.DAT.
+
        REVIEW STORM DRAIN  INLET: XX, DRAIN TYPE: IX ON GRID CELL: XXX
 
    * - Missed or inappropriategeometry.
-     - 'LENGTH MUST BE GREATER THAN ZERO'  'WIDTH OR HEIGHT MUST BE GREATER THAN ZERO'  'PERIMETER MUST BE GREATER THAN ZERO'  'TYPICAL WEIR COEFFICIENT:
+     - 'LENGTH MUST BE GREATER THAN ZERO'  'WIDTH OR HEIGHT MUST BE GREATER THAN ZERO'
+
+       'PERIMETER MUST BE GREATER THAN ZERO'  'TYPICAL WEIR COEFFICIENT:
+
        2.3'  'TYPICAL WEIR COEFFICIENT RANGE: 2.8 - 3.2'
 
    * - General Error in SWMM Model.
@@ -128,8 +160,10 @@ The most important messages are listed in Table 17.
 
    * - General Error in SWMM Modelreported to the ERROR.CHK fileand to theSTORMDRAIN_ERROR.CHK.
      - THERE IS AN ERROR IN THE SWMM MODEL.
-       PLEASE REVIEW  THE FOLLOWING ERROR CODE IN THE SWMM ERROR LIST OR  CONTACT THE FLO-2D TEAM FOR SUPPORT  Error Code: XXX.
-       (See Table 18 below.)
+
+       PLEASE REVIEW  THE FOLLOWING ERROR CODE IN THE SWMM ERROR LIST OR  CONTACT
+
+       THE FLO-2D TEAM FOR SUPPORT  Error Code: XXX. (See Table 18 below.)
 
 
 SWMM error messages
