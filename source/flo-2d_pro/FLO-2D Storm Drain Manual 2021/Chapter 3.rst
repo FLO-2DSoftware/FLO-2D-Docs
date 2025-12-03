@@ -256,7 +256,7 @@ SWMMFLO.DAT Variables**
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><i><pre>               SWMMFLO.DAT File Variables</pre></i></div>
+        <div><i><pre>                           SWMMFLO.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     Line 1 to Number of Inlets (JT):
@@ -281,7 +281,7 @@ SWMMFLO.DAT Input File Example**
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><i><pre>               SWMMFLO.DAT</pre></i></div>
+        <div><i><pre>                   SWMMFLO.DAT</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     D 452161 I19CP1SEMDRHRL 1   12  0   0.417  3  0  0
