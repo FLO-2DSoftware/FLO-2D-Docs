@@ -151,7 +151,7 @@ In the following table, the user may be interested in discharges over 20,000 cfs
 .. image:: img/Hydrau006.jpg
 
 *Table 1.
- Stage Discharge Relationship for a Bridge*
+Stage Discharge Relationship for a Bridge*
 
 The discharge at 1 ft in the above table is 1,000 cfs.
 In almost any natural river channel, it is impossible to have discharge of 1,000 cfs with a depth of 1 ft above the thalweg.
