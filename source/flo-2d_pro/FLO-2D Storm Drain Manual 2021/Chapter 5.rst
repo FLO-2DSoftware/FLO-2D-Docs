@@ -489,19 +489,16 @@ SWMM Error Numbers.*
    * - 405
      - Amount of output produced will exceed maximum file size; either reduce Ending Date or increase
 
-
-Up-
-
 dating FLOPro.exe
 '''''''''''''''''
 
 To run a new FLO-2D model update (FLOPro.exe) but keep the previous version of the storm drain engine VC2005-CON.DLL for other projects, do the
 following:
 
-1. Rename the previous VC2005-CON.dll file as VC2005-CON_OLD.dll from all the specified locations (C:\\Program Files (x86)\\FLO-2D PRO,
-   C:\\Windows\\System32 or C:\\Windows\\SysWOW64).
+    1. Rename the previous VC2005-CON.dll file as VC2005-CON_OLD.dll from all the specified locations (C:\\Program Files (x86)\\FLO-2D PRO,
+       C:\\Windows\\System32 or C:\\Windows\\SysWOW64).
 
-2. Copy the new VC2005-CON.dll into the project folder along with the new FLOPRO.exe.
+    2. Copy the new VC2005-CON.dll into the project folder along with the new FLOPRO.exe.
 
 Dynamic Link Library VC2005-CON.DLL
 '''''''''''''''''''''''''''''''''''
@@ -511,17 +508,17 @@ When updating FLOPRO.exe, it is necessary to update VC2005-CON.dll.
 An out of date DLL library may cause a crash error or inconsistent results.
 The VC2005-CON.dll file (based on the file date) should be current in the following directories:
 
-- C:\\Program Files (x86)\\FLO-2D PRO
+    - C:\\Program Files (x86)\\FLO-2D PRO
 
-- C:\\Windows\\System32 [1]_
+    - C:\\Windows\\System32 [1]_
 
-- C:\\Windows\\SysWOW64\ :sup:`1`
+    - C:\\Windows\\SysWOW64\ :sup:`1`
 
 The versions of the FLO-2D and the Storm Drain versions are reported in the STORMDRAIN_ERROR.CHK file, see example below.
 
-\**\* FLO-2D Pro Model - Build No.20.07.22 \**\*
+    \**\* FLO-2D Pro Model - Build No.20.07.22 \**\*
 
-\**\* Storm Drain Model - Build No.20.07.22 \**\*
+    \**\* Storm Drain Model - Build No.20.07.22 \**\*
 
 Volume Conservation and Numerical Instability
 '''''''''''''''''''''''''''''''''''''''''''''
@@ -540,19 +537,19 @@ It is recommended that the minimum pipe length be at least the size
 of the FLO-2D grid element side.
 Generally, the volume conservation errors and numerical instabilities may be reduced or eliminated by:
 
-- Increasing pipe roughness n-values;
+    - Increasing pipe roughness n-values;
 
-- Reviewing the selection of reporting timestep (REPORT_STEP) in the SWMM.inp file and the simulation time (TOUT) in the CONT.DAT file;
+    - Reviewing the selection of reporting timestep (REPORT_STEP) in the SWMM.inp file and the simulation time (TOUT) in the CONT.DAT file;
 
-- Reviewing the system connectivity for adverse slopes and incorrect inlet geometry.
+    - Reviewing the system connectivity for adverse slopes and incorrect inlet geometry.
 
 Reviewing the interaction at key features between the surface and the storm drain models.
 
 The most common sources of numerical instability are:
 
-- Short conduits;
+    - Short conduits;
 
-- Conflicting or poor system connectivity in the pipe network.
+    - Conflicting or poor system connectivity in the pipe network.
 
 Discharge oscillations at inlets primarily occur when the pipe system is under pressure (full capacity).
 In the original SWMM model, when the pipe pressure exceeded the rim elevation, the inlet inflow discharge ceased and the water in the pipe could
@@ -572,19 +569,19 @@ High Flow Instability Indices (HFII)
 The SWMM.RPT file lists those nodes of the drainage network that have the largest flow continuity errors.
 The following is an example from a SWMM.RPT file:
 
-High Flow Instability Indexes
+    High Flow Instability Indexes
 
-\\*
+    ********************************
 
-Link C9 (9)
+    Link C9 (9)
 
-Link C8 (8)
+    Link C8 (8)
 
-Link C10 (7)
+    Link C10 (7)
 
-Link C7 (6)
+    Link C7 (6)
 
-Link C6 (6)
+    Link C6 (6)
 
 To improve the volume conservation error, the links listed on the HFII table have to be reviewed.
 Fixing the top 5 listed HFII links usually result in a more stable model.
