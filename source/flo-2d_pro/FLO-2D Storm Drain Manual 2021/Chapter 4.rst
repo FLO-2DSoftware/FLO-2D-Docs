@@ -211,62 +211,53 @@ Default Parameters
 
 The following storm drain parameters are automatically assigned in the SWMM.inp file:
 
-- Runoff Wet Weather (WET_STEP) and Runoff Dry Weather (DRY_STEP) timesteps equal 00:01:00 min.
-  These watershed routing parameters are not directly used by the storm drain model but can affect the storm drain routing if they are less than the
-  ROUTING_STEP.
-  This avoids an inappropriate assignment of these parameters.
+    - Runoff Wet Weather (WET_STEP) and Runoff Dry Weather (DRY_STEP) timesteps equal 00:01:00 min.
+      These watershed routing parameters are not directly used by the storm drain model but can affect the storm drain routing if they are less than the
+      ROUTING_STEP.
+      This avoids an inappropriate assignment of these parameters.
+    - Lengthening Step (LENGTHENING_STEP) is set as the routing timestep (ROUTING_STEP) divided by 6.
+      This option increases the length of the shorter conduits based on the Courant-Friederick-Levy (CFL) stability criteria.
+      The storm drain model bases the new equivalent pipe length on an estimate of the full flow velocity in the conduit as well as on the wave celerity.
+      The full area, width and hydraulic radius are unchanged in the modified link but the length, slope and roughness are altered.
 
-- Lengthening Step (LENGTHENING_STEP) is set as the routing timestep (ROUTING_STEP) divided by 6.
-  This option increases the length of the shorter conduits based on the Courant-Friederick-Levy (CFL) stability criteria.
-  The storm drain model bases the new equivalent pipe length on an estimate of the full flow velocity in the conduit as well as on the wave celerity.
-  The full area, width and hydraulic radius are unchanged in the modified link but the length, slope and roughness are altered.
+       Length Factor = (Wave Celerity + Full Depth Velocity) \* Timestep/ Pipe Length For a Length Factor > 1:
 
-..
+       New Roughness= Old Roughness /Length Factor**0.5
 
-   Length Factor = (Wave Celerity + Full Depth Velocity) \* Timestep/ Pipe Length For a Length Factor > 1:
+       New Slope = Old Slope Slope/Length Factor**0.5
 
-   New Roughness= Old Roughness /Length Factor**0.5
-
-   New Slope = Old Slope Slope/Length Factor**0.5
-
-- The routing model (FLOW_ROUTING) for the FLO-2D storm drain component is set as dynamic wave (DYNWAVE) to account for backwater effects, entrance/exit
-  losses, flow reversal or pressurized flow.
-
-- The inertial term (INERTIAL_DAMPING) is set to PARTIAL or dampen (Partial=1).
-  The inertial terms in the Saint Venant Equation are reduced for critical flow and ignored for supercritical flow.
-
-- Report Control Actions and Report Input Summary ([Report] CONTROLS and INPUT) are automatically turned on.
-
-- “Start Reporting on” variables (START_DATE and START_TIME) in the SWMM GUI is automatically set as Start Analysis on.
-  Both the FLO-2D and the storm drain model will start reporting results at the beginning of the simulation.
-
-- “End Analysis on” variables (END_DATE and END_TIME) in the SWMM GUI are automatically set based on the simulation time entered in FLO-2D.
-  The Storm Drain results (\*.RPT,\*.OUT) are automatically saved when the model simulation runs until completion.
-  If the model is stopped before completion, storm drain results are written.
+    - The routing model (FLOW_ROUTING) for the FLO-2D storm drain component is set as dynamic wave (DYNWAVE) to account for backwater effects, entrance/exit
+      losses, flow reversal or pressurized flow.
+    - The inertial term (INERTIAL_DAMPING) is set to PARTIAL or dampen (Partial=1).
+      The inertial terms in the Saint Venant Equation are reduced for critical flow and ignored for supercritical flow.
+    - Report Control Actions and Report Input Summary ([Report] CONTROLS and INPUT) are automatically turned on.
+    - “Start Reporting on” variables (START_DATE and START_TIME) in the SWMM GUI is automatically set as Start Analysis on.
+      Both the FLO-2D and the storm drain model will start reporting results at the beginning of the simulation.
+    - “End Analysis on” variables (END_DATE and END_TIME) in the SWMM GUI are automatically set based on the simulation time entered in FLO-2D.
+      The Storm Drain results (\*.RPT,\*.OUT) are automatically saved when the model simulation runs until completion.
+      If the model is stopped before completion, storm drain results are written.
 
 Initial Parameters
 ^^^^^^^^^^^^^^^^^^
 
 When building the storm drain model, the following data assignments in the SWMM.inp file are recommended:
 
-1. It is recommended to keep the names of the various storm drain components simple, short and uniform such as I1, I2, I3… for inlets.
-   The number of characters should be less than 25.
-   Use O = outlets and C = pipe conduits.
-   This will simplify the graphics display of the storm drain components and make it easier to differentiate between inlets, manholes and outlets.
+    1. It is recommended to keep the names of the various storm drain components simple, short and uniform such as I1, I2, I3… for inlets.
+       The number of characters should be less than 25.
+       Use O = outlets and C = pipe conduits.
+       This will simplify the graphics display of the storm drain components and make it easier to differentiate between inlets, manholes and outlets.
+    2. The END_TIME for the model duration is automatically assigned so that the END_TIME minus the START_TIME is equal to the simulation time SIMUL in the
+       FLO-2D model CONT.DAT file.
+    3. The ROUTING_STEP is automatically assigned as equal to the FLO-2D Timestep.
+       The FLO-2D Timestep is used as the Routing_STEP for all conditions including a VARIABLE_STEP equal or different to zero.
 
-2. The END_TIME for the model duration is automatically assigned so that the END_TIME minus the START_TIME is equal to the simulation time SIMUL in the
-   FLO-2D model CONT.DAT file.
+    .. note:: The WET_STEP and DRY_STEP values are hardcoded to 1 minute.*
 
-3. The ROUTING_STEP is automatically assigned as equal to the FLO-2D Timestep.
-   The FLO-2D Timestep is used as the Routing_STEP for all conditions including a VARIABLE_STEP equal or different to zero.
-
-*Note: The WET_STEP and DRY_STEP values are hardcoded to 1 minute.*
-
-4. The REPORT_START_DATE and REPORT_START_TIME are automatically assigned as the start date and time.
-   The storm drain component reporting time (REPORT_STEP) in SWMM.inp file is recommended to be set up as equal to the FLO-2D output interval (TOUT) in
-   the CONT.DAT file.
-   REPORT_STEP is a mixture of hours, minutes and seconds with the format 00:00:00.
-   The unit for TOUT is hours.
+    4. The REPORT_START_DATE and REPORT_START_TIME are automatically assigned as the start date and time.
+       The storm drain component reporting time (REPORT_STEP) in SWMM.inp file is recommended to be set up as equal to the FLO-2D output interval (TOUT) in
+       the CONT.DAT file.
+       REPORT_STEP is a mixture of hours, minutes and seconds with the format 00:00:00.
+       The unit for TOUT is hours.
 
 Integration of a Storm Drain Network into a Complex Urban Model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -281,21 +272,21 @@ Storm Drain Inlet – Channel Considerations
 
 After the urban project is prepared, the following questions related to the storm drain inlet to channel system can be addressed:
 
-- Inlet locations:
+    - Inlet locations:
 
-  - Are all inlets correctly assigned inside the FLO-2D computational domain?
+      - Are all inlets correctly assigned inside the FLO-2D computational domain?
 
-  - Are there inlets incorrectly assigned to the interior channel elements?
+      - Are there inlets incorrectly assigned to the interior channel elements?
 
-  - Are there inlets incorrectly assigned to the right channel bank elements?
+      - Are there inlets incorrectly assigned to the right channel bank elements?
 
-- Inlet elevations:
+    - Inlet elevations:
 
-  - Are there channels discharging to a storm drain inlet?
+      - Are there channels discharging to a storm drain inlet?
 
-  - Does the channel thalweg elevation match the inlet invert elevation?
+      - Does the channel thalweg elevation match the inlet invert elevation?
 
-  - Is the inlet set up as a vertical inlet opening in the SWMMFLO.DAT?
+      - Is the inlet set up as a vertical inlet opening in the SWMMFLO.DAT?
 
 Storm drain inlets should not be set up in an interior or in a right bank channel element.
 If the channel discharges directly to a storm drain pipe via a culvert, assign the inlet to the channel left bank element.
@@ -303,61 +294,59 @@ For this configuration a vertical Type 4 inlet can be assign (See Chapter 2 FLO-
 Figure 50 and Figure 51provide some additional details about setting up the inlet/channel interface.
 This system shows that the bed elevation of the channel is equal to the invert elevation of the inlet.
 
-- Channel Bed Elevation = Bank Elevation – Depth = (299.8 – 3.5) = 296.3 ft • Inlet Elevation = 296.3 ft
+    - Channel Bed Elevation = Bank Elevation – Depth = (299.8 – 3.5) = 296.3 ft
+    - Inlet Elevation = 296.3 ft
+
 .. image:: img/Chapter4/Chapte002.jpg
-   **Figure 50.
-   Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet**
+
+*Figure 50.
+Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet*
+
 .. image:: img/Chapter4/Chapte003.jpg
-   **Figure 51.
-   Elevation of a Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet**
+
+*Figure 51.
+Elevation of a Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet*
 
 Figure 52 shows a storm drain system interfacing with a channel system.
 The direction of the storm drain exchange flow are based on the comparison between the water surface elevation and the pressure head which are a
 function of the following:
 
-- Channel bed elevation = inlet invert elevation
+    - Channel bed elevation = inlet invert elevation
+    - Channel bank elevation = inlet rim elevation (typical design)
 
-- Channel bank elevation = inlet rim elevation (typical design)
 .. image:: img/Chapter4/Chapte004.jpg
-   **Figure 52.
-   Complex Interaction between a Storm Drain Pipe and 1-D Channel**
+
+*Figure 52.
+Complex Interaction between a Storm Drain Pipe and 1-D Channel*
 
 To connect a storm drain outfall to a channel element the following issues should be addressed:
 
-- Are outfalls set up as a ‘FREE’ condition type?
+    - Are outfalls set up as a ‘FREE’ condition type?
 
-- Is the switch to discharge flow back to the surface ‘ON’ in the SWMMOUTF.DAT file?
+    - Is the switch to discharge flow back to the surface ‘ON’ in the SWMMOUTF.DAT file?
 
 Figure 53 shows a complex storm drain – channel system where a channel feeds the storm drain as an inlet and flow returns to surface channel
 downstream.
+
 .. image:: img/Chapter4/Chapte005.jpg
-   **Figure 53.
-   Complex Flow Exchange between a Storm Drain System and 1-D Channel**
+
+*Figure 53.
+Complex Flow Exchange between a Storm Drain System and 1-D Channel*
 
 Storm drain outfalls are assigned to the channel left bank element.
 For most cases, the outfall invert elevation would be assigned to the channel element thalweg elevation.
 If the coordinates in the SWMM.inp file are the left bank element channel coordinates, then the QGIS Plugin or the GDS will automatically assign the
 outfall node to the left bank element.
 The outfall should be correctly paired to the left bank element in the SWMMOUTF.DAT (Figure 54).
+
 .. image:: img/Chapter4/Chapte006.jpg
-   **Figure 54.
-   Typical Configuration of a Storm Drain Outfall Discharging to a Natural Channel**
+
+*Figure 54.
+Typical Configuration of a Storm Drain Outfall Discharging to a Natural Channel*
 
 The coordinates of the different storm drain components from the SWMM.inp file are paired to the grid elements in the surface layer.
 It is not necessary that the outfall coordinates in the SWMM.inp match the left bank channel element coordinate.
-The position is correlated in the
-
-.. list-table::
-   :widths: 100
-   :header-rows: 0
-
-
-   * -
-
-   * - |    Storm Drain Manual
-
-
-SWMMOUTF.DAT updating the grid element number to the left bank element number (Figure 55.).
+The position is correlated in thew SWMMOUTF.DAT updating the grid element number to the left bank element number (Figure 55.).
 The outfall coordinates in the SWMM.inp file do not have to be replaced since the storm drain discharge calculations will not be affected.
 
 The bank elements in FLO-2D act as both floodplain and channel elements in order to facilitate the channel to floodplain exchange.
@@ -365,9 +354,11 @@ The outfall should not be assigned to the left bank floodplain element.
 If the outfall physically discharges to the floodplain elevation instead of the channel bed elevation, assign the outfall position to a contiguous
 element that is not a channel bank element.
 Assignment of the outfall to a right bank element, or a channel interior element will generate an error message.
+
 .. image:: img/Chapter4/Chapte007.jpg
-   **Figure 55.
-   Outfall Nodes Paired to Interior Channel Elements by GDS**
+
+*Figure 55.
+Outfall Nodes Paired to Interior Channel Elements by GDS*
 
 The outfall invert elevation can be less than the channel thalweg elevations (underground), and the storm drain would be assumed to be underwater with
 an initial tailwater depth.
@@ -382,89 +373,48 @@ The artificial volume is accounted for in the storm drain model.
 When the model runs, inflow may be added to either the outfall grid element or the upstream storm drain pipe network and the flow can go either in or
 out of the outfall pipe based on the pressure head (Figure 56).
 To account for volume conservation, the storm drain outflow that represents inflow volume to a FLO-2D channel is reported in the CHVOLUME.OUT file.
+
 .. image:: img/Chapter4/Chapte008.jpg
-   **Figure 56.
-   Underground Outfall Condition**
+
+*Figure 56.
+Underground Outfall Condition*
 
 Water will flow in or out of the outfall pipe based on the relationship between the water surface elevation and pipe pressure head.
 Water can enter the storm drain when the water surface elevation is greater than the pressure head, but it can evacuate from the storm drain if the
 pressure head is above the water surface elevation.
 This behavior can introduce oscillations in the system that can be explained as a respond to the surface water and storm drain pressure interaction
 (Figure 57).
+
 .. image:: img/Chapter4/Chapte009.jpg
-   **Figure 57.
-   Inlet and Outfall Pressure Head Variation Cause Pipe Discharge Oscillations**
+
+*Figure 57.
+Inlet and Outfall Pressure Head Variation Cause Pipe Discharge Oscillations*
 
 Model Checklist
 ^^^^^^^^^^^^^^^
 
 The following checklist was prepared to review the storm drain data files:
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
-
-   * - 
-     - Inlet location.
-       All inlets must be inside the FLO-2D computation domain.
-
-   * - 
-     - SWMM hydrology components for surface water modeling are eliminated.
-       If an existing SWMM model was ported to the FLO-2D model, all of the hydrology features have to be removed including subcatchments and rain gage
-       features.
-
-   * - 
-     - Pipe lengths.
-       If pipe lengths are less than 20ft or less than the FLO-2D grid element side length, adjust short pipe length or delete that section of pipe.
-
-   * - 
-     - Adverse pipe slope.
-       Check adverse pipe slope for accuracy.
-
-   * - 
-     - Inlet elevations.
-       Grid elevations or channel thalweg elevations should match the inlet rim elevations or invert elevations.
-
-   * - 
-     - Type 4 - Defined by a Stage-Discharge Rating Table.
-       Rating tables must be assigned in the SWMMFLORT.DAT file.
-
-   * - 
-     - Inlet geometry.
-       Check the size and location.
-
-   * - 
-     - Outfall discharge.
-       For outfall discharge to the surface water, the outfall must have a ‘free’ condition and must be turned ‘on’ in the SWMMOUTF.DAT file.
-
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
-
-   * - 
-     - Outfall location.
-       Check the outfall location with respect to the grid/channel element and check the invert elevation with respect to floodplain/thalweg channel
-       elevation.
-
-   * - 
-     - Outfall to the channel.
-       The outfall has to be connected to the left bank grid element.
-
-   * - 
-     - Tide gates for outfall nodes.
-       They have to be assigned in the SWMM.inp file.
-
-   * - 
-     - Manholes.
-       Check the assigned surcharge depth.
-
-   * - 
-     - Storm drain model simulation completion.
-       Check the SUMMARY.OUT file last line for the time stamp indicating that the model properly terminated.
-
-   * - 
-     - SWMM.ini file.
-       The SWMM.ini file should be modified to review the results.
+ Inlet location. All inlets must be inside the FLO-2D computation domain.
+ SWMM hydrology components for surface water modeling are eliminated. If an existing
+SWMM model was ported to the FLO-2D model, all of the hydrology features have to be
+removed including subcatchments and rain gage features.
+ Pipe lengths. If pipe lengths are less than 20ft or less than the FLO-2D grid element side
+length, adjust short pipe length or delete that section of pipe.
+ Adverse pipe slope. Check adverse pipe slope for accuracy.
+ Inlet elevations. Grid elevations or channel thalweg elevations should match the inlet
+rim elevations or invert elevations.
+ Type 4 - Defined by a Stage-Discharge Rating Table. Rating tables must be assigned in the
+SWMMFLORT.DAT file.
+ Inlet geometry. Check the size and location.
+ Outfall discharge. For outfall discharge to the surface water, the outfall must have a
+‘free’ condition and must be turned ‘on’ in the SWMMOUTF.DAT file.
+108 Storm Drain Manual
+ Outfall location. Check the outfall location with respect to the grid/channel element and
+check the invert elevation with respect to floodplain/thalweg channel elevation.
+ Outfall to the channel. The outfall has to be connected to the left bank grid element.
+ Tide gates for outfall nodes. They have to be assigned in the SWMM.inp file.
+ Manholes. Check the assigned surcharge depth.
+ Storm drain model simulation completion. Check the SUMMARY.OUT file last line for the
+time stamp indicating that the model properly terminated.
+ SWMM.ini file. The SWMM.ini file should be modified to review the results.
