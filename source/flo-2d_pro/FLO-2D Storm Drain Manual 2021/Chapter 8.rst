@@ -117,7 +117,7 @@ Use O = outlets, C = pipe conduits, etc.
 10. The Simulation Options|Dates are setup automatically by the FLO-2D Storm Drain model using the SIMUL time assignment in the CONT.DAT file.
 
 11. Go to Simulation Options|Dynamic Wave and set up the Force Main Equation by selection either Hazen-Williams or Darcy-Weisbach and save the project
-(Figure 93).
+    (Figure 93).
 
 .. image:: img/Chapter8/Chapte014.jpg
 
