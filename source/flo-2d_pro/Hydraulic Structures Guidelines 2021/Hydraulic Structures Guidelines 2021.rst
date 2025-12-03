@@ -440,10 +440,57 @@ Table 2 is a list of possible hydraulic structure issues and fixes.
        </tr>
        <tr>
          <td style="border: 1px solid #000; padding: 4px;">
-           Testing
+            If the levee or wall failures, the hydraulic structure rating table or curve flow is bypassed, and breach
+            flow will be computed. Numerical surging should be added by increasing the n-values or adjusting
+            the topography since the broadcrested weir equation is used to compute the discharge
          </td>
        </tr>
-
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+            If the levee or wall fails instantaneously (collapses or topples), the hydraulic structure flow is
+            terminated and the flow is computed as overland flow, not breach flow. If numerical surging is
+            observed increase the n-values or review the topography.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+            If the combine hydraulic structure and levee (or levee breaching) is causing either volume
+            conservation or numerical instability, follow this protocal:
+                • Turn off the hydraulic structures in CONT.DAT and run the model until the problem occurred.
+                • Turn off the levees in CONT.DAT and run the model only until the time that the problem surfaced.
+                • If the problem is in the hydraulic structures, isolate the structures that appear to be the problem.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+            To isolate a hydraulic structure, put a simple inflow hydrograph (for steady flow) several grid
+            elements upstream of the structure. Put a line of outflow elements downstream of the structure
+            and turn off all the other inflow hydrographs and rainfall. Make sure that the steady flow discharge
+            through the structure matches the assigned stage or depth.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+            If the instabilty issue cannot be resolved, it may be possible to move the hydraulic structure to the
+            next grid element without a loss of accuracy or mapping resolution for the maximum water surface
+            elevation. It might also be possible to eliminate the levee and replace it with WRF value.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+            The model automatically adjusts the hydraulic structure rating table and writes the revised table
+            pairs to an output file. If instability persists, review the revised rating table and make further
+            adjustments. Typically the instability is related to the lower flows and there are insufficient rating
+            table pairs to define the rating table for the lower discharges. Review the HYDROSTRUCT.OUT file to
+            determine if there is numerical instability in the rating table or curve.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+            Downstream ponding or time-stage water surface controls may result in upstream flow through
+            structure. Set the INOUTCONT = 1 in the HYSTRUC.DAT file to allow upstream flow.
+         </td>
+       </tr>
      </tbody>
    </table>
 
