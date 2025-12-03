@@ -253,12 +253,21 @@ The SWMMFLO.DAT file contains the inlet geometry as well as the names or numbers
 **Table 6.
 SWMMFLO.DAT Variables**
 
+.. raw:: html
 
-   * - SWMMFLO.DAT File Variables
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>    SWMMFLO.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+    <pre>
+    Line 1 to Number of Inlets (JT):SWMMCHAR=‘D’ SWMM_JT(JT) SWMM_IDEN(JT) INTYPE(JT) SWMMlength(JT)SWMMwidth(JT) SWMMheight(JT) SWMMcoeff(JT)
+    FLAPGATE(JT)CURBHEIGHT(JT)Notes:Multiple Inlets (SWMM_IDEN(JT)) assigned to the same grid cell(SWMM_JT(JT)) constitutes a data error.An Inlet
+    (SWMM_IDEN(JT)) assigned to more than one grid cell(SWMM_JT(JT)) constitutes a data error.
+    </pre>
+    </div>
 
-   * - Line 1 to Number of Inlets (JT):SWMMCHAR=‘D’ SWMM_JT(JT) SWMM_IDEN(JT) INTYPE(JT) SWMMlength(JT)SWMMwidth(JT) SWMMheight(JT) SWMMcoeff(JT)
-       FLAPGATE(JT)CURBHEIGHT(JT)Notes:Multiple Inlets (SWMM_IDEN(JT)) assigned to the same grid cell(SWMM_JT(JT)) constitutes a data error.An Inlet
-       (SWMM_IDEN(JT)) assigned to more than one grid cell(SWMM_JT(JT)) constitutes a data error.
+.. raw:: html
+
+   <br><br>
 
 
 The Table 7 outlines the required data in the SWMMFLO.DAT.
