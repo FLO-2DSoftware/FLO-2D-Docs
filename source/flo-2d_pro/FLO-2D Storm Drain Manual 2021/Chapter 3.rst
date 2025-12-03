@@ -421,6 +421,7 @@ To create the SWMMFLO.DAT in GDS, go Tools \| Storm Drain \| View Storm Drain In
 Browse for the SWMM.inp file using the GDS Window “Select a Storm Drain \*.inp file” as it is shown in Figure 43.
 
 .. image:: img/Chapter3/Chapte003.jpg
+
 *Figure 43.
 GDS Open \*.inp File*
 
@@ -428,14 +429,18 @@ The GDS will read the \*.inp data file and those junctions which names start wit
 The data from the storm drain file will then be paired with the data in the SWMMFLO.DAT file.
 Enter the inlet geometry and save the SWMMFLO.DAT file.
 The SWMMFLO.DAT file dialog box is shown in Figure 44.
+
 .. image:: img/Chapter3/Chapte004.jpg
-   **Figure 44.
-   GDS Enter Storm Drain Inlet Geometry Data**
+
+*Figure 44.
+GDS Enter Storm Drain Inlet Geometry Data*
 
 The typical structure of a SWMMFLO.DAT file is shown in Figure 45.
+
 .. image:: img/Chapter3/Chapte005.jpg
-   **Figure 45.
-   Typical SWMMFLO.DAT Input Data File**
+
+*Figure 45.
+Typical SWMMFLO.DAT Input Data File*
 
 SWMMOUTF.DAT
 ''''''''''''
