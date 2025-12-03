@@ -299,39 +299,39 @@ The discharge is determined using the following criteria for Type 3:
 *Type 4 – Unique Inlet with Stage-Discharge Rating Table*
 
 Inlets that cannot be represented by Types 1, 2 or 3 can have an inflow discharge defined by a rating table.
-Some storm drain inlets may include entrance types similar to that of a culvert with a vertical opening (Figure 35.
-).
+Some storm drain inlets may include entrance types similar to that of a culvert with a vertical opening (Figure 35.).
 In this case the rim elevation would be ignored as the flows are exchanged based on the invert elevation.
+
 .. image:: img/Chapter2/Chapte010.jpg
-   **Figure 35.
-   Storm Drain Vertical Inlet with a Culvert Entrance**
+
+*Figure 35.
+Storm Drain Vertical Inlet with a Culvert Entrance*
 
 The following are the input parameters for a Type 4 inlet that are entered in the SWMMFLORT.DAT file:
 
 Stage (depth) above inlet (ft or m) Discharge (cfs or cms)
 
-*Note: The stage-discharge data is assigned in pairs with the first pair being: 0.
-0.*
+.. note:: The stage-discharge data is assigned in pairs with the first pair being: 0.0.
 
-Type 5 – Manhole
 
+*Type 5 – Manhole*
 
 Manholes are a special case of inlets.
 Storm drains under high pressure during flooding can result in the manhole covers being popped off (Figure 36.
 and Figure 37).
 The FLO-2D storm drain component can simulate covers popping through the application of a surcharge depth.
 Once the manhole cover has been popped, it remains off and the manhole becomes a Type 3 inlet.
+
 .. image:: img/Chapter2/Chapte011.jpg
-   **Figure 36.
-   Popped Manhole Cover (source: istock)**
+
+*Figure 36.
+Popped Manhole Cover (source: istock)*
 
 The required manhole input parameters are:
 
-- Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)
-
-- Manhole perimeter (manhole cover shapes can vary) • Manhole flow area (ft\ :sup:`2` or m\ :sup:`2`)
-
-- Surcharge depth (ft or m).
+    - Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)
+    - Manhole perimeter (manhole cover shapes can vary) • Manhole flow area (ft\ :sup:`2` or m\ :sup:`2`)
+    - Surcharge depth (ft or m).
 
 A manhole is assumed to be level without sag and column 7 in the SWMMFLO.DAT is used to define the surcharge depth (ft or m).
 The surcharge depth can be estimated by the user as the equivalent depth that the pressure has to overcome to pop the cover.
