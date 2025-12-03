@@ -42,7 +42,7 @@ The most important messages are listed in Table 17.
 FLO-2D Error Messages*
 
 .. list-table::
-   :widths: 30 70
+   :widths: 15 85
    :header-rows: 0
 
 
@@ -179,7 +179,7 @@ Some of these errors could be not relevant to the FLO-2D storm drain model.
 SWMM Error Numbers.*
 
 .. list-table::
-   :widths: 20 80
+   :widths: 50 50
    :header-rows: 0
 
 
