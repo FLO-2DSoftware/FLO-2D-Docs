@@ -179,33 +179,23 @@ One of the reasons for selecting the NWS BREACH model for the FLO-2D model templ
 mathematically represent the physical process of dam breach failure.
 As a result, the FLO-2D breach model includes the following features:
 
-- The embankment can have an impervious core and a non-cohesive shell with different materials;
-
-- Embankment material properties include sediment size, specific weight, cohesive strength, internal friction angle, porosity and Manning’s n-value;
-
-- Breach channel initiation through piping failure;
-
-- Enlargement of the breach through sudden structural collapse or slope instability;
-
-- Riprap material or grass on the downstream face;
-
-- Sediment transport for different size sediment in the embankment core or shell.
+    - The embankment can have an impervious core and a non-cohesive shell with different materials;
+    - Embankment material properties include sediment size, specific weight, cohesive strength, internal friction angle, porosity and Manning’s n-value;
+    - Breach channel initiation through piping failure;
+    - Enlargement of the breach through sudden structural collapse or slope instability;
+    - Riprap material or grass on the downstream face;
+    - Sediment transport for different size sediment in the embankment core or shell.
 
 The following assumptions are hardcoded into the FLO-2D breach model:
 
-- Initial breach width to depth ratio (BRATIO) – if the assigned breach width to depth ratio is 0.0 (in the BREACH.DAT file), then BRATIO = 2.
-
-- The initial piping width is assumed to be 1.0ft (0.30m).
-
-- The minimum and maximum Manning’s n-values permitted for the breach flow resistance are 0.02 and 0.25, respectively.
-
-- The pipe outlet at the toe of the dam or levee is the downstream grid element floodplain elevation plus 1 ft (0.3 m).
-
-- After the specified breach initiation condition is reached, the breach discharge is computed if the upstream water surface elevation exceeds the
-  upstream breach pipe or channel bottom elevation plus a tolerance value of 0.1 ft or 0.3 m.
-
-- If the specified initial breach elevation in the BREACH.DAT file is less than 10.0 ft (3.0 m), then the initial piping breach elevation is assumed to
-  be the dam or levee crest elevation minus the assigned breach elevation (Initial Breach Elevation = Levee Crest – BRBOTTOMEL).
+    - Initial breach width to depth ratio (BRATIO) – if the assigned breach width to depth ratio is 0.0 (in the BREACH.DAT file), then BRATIO = 2.
+    - The initial piping width is assumed to be 1.0ft (0.30m).
+    - The minimum and maximum Manning’s n-values permitted for the breach flow resistance are 0.02 and 0.25, respectively.
+    - The pipe outlet at the toe of the dam or levee is the downstream grid element floodplain elevation plus 1 ft (0.3 m).
+    - After the specified breach initiation condition is reached, the breach discharge is computed if the upstream water surface elevation exceeds the
+      upstream breach pipe or channel bottom elevation plus a tolerance value of 0.1 ft or 0.3 m.
+    - If the specified initial breach elevation in the BREACH.DAT file is less than 10.0 ft (3.0 m), then the initial piping breach elevation is assumed to
+      be the dam or levee crest elevation minus the assigned breach elevation (Initial Breach Elevation = Levee Crest – BRBOTTOMEL).
 
 Pipe Breach
 -----------
