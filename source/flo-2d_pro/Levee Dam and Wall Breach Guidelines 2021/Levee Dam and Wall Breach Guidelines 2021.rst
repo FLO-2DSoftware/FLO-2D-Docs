@@ -128,15 +128,18 @@ When the vertical breach reaches the levee base elevation the maximum breach she
 Subsequently the horizontal breach rate (HBR) for the time step is set equal to the originally assigned horizontal breach rate (HBR\ :sub:`orig`)
 times the ratio of the computed shear stress for the time step to the maximum shear stress:
 
-HBR = HBRorig \* (τcalc/τmax)
+.. math::
+   :label:
+
+   HBR = HBR_{orig}\left( \frac{\tau_{calc}} {\tau_{\max}} \right)
 
 This will slow the rate of breach widening as the flow depth and velocity decrease or as the tailwater to headwater equilibrates.
 A typical rate of breach width decrease is shown in Figure 4.
 
-|Levee002|
+.. image:: img/Levee002.jpg
 
-   **Figure 4.
-   Prescribed Breach Horizontal Rate Decrease with Decreasing Shear Stress.**
+*Figure 4.
+Prescribed Breach Horizontal Rate Decrease with Decreasing Shear Stress.*
 
 Levee and Dam Predicted Breach Erosion
 --------------------------------------
@@ -150,13 +153,10 @@ The primary hydraulic mechanisms of dam or levee breach failure are overtopping,
 These physical processes were simulated in the original NWS model and were retained in the FLO-2D model.
 In FLO-2D a dam or levee breach can fail as follows:
 
-- Overtopping and development of a breach channel on the downstream face of the dam or levee; • Piping failure;
-
-- Piping failure and roof collapse and development into a breach channel;
-
-- Breach channel enlargement through side slope slumping;
-
-- Breach enlargement by wedge collapse.
+    - Overtopping and development of a breach channel on the downstream face of the dam or levee; • Piping failure;
+    - Piping failure and roof collapse and development into a breach channel;
+    - Breach channel enlargement through side slope slumping;
+    - Breach enlargement by wedge collapse.
 
 The user has the option to specify the breach element and elevation or to assign global parameters and the model will locate the initial levee breach
 failure element based on the water surface elevation and duration of inundation.
