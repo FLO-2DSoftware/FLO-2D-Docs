@@ -769,6 +769,7 @@ List of the Storm Drain Data Output Files and Description**
 
    * - SWMMQIN.OUT
      - Reports the inflow and return flow discharge for each storm drain inlet.
+
        The reported discharges may be different from those in the SWMM.RPT file
 
        since the storm drain results include lateral pipe inflow and outflow.
@@ -817,55 +818,80 @@ List of the Storm Drain Data Output Files and Description**
 
        the grid cell elevation and the difference between them.
 
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
-
    * - SUMMARY.OUT
      - Volume conservation, run time, and final disposition of the volumes between the model components are reported in this file.
-       The storm drain volume is reported as:  1.
-       Storm Drain Inflow in the inflow volume that flows from surface water to storm drain system through inlets and outfalls (compare total w/SWMM.rpt Wet
-       Weather Inflow):  - SURFACE TO STORM DRAIN SYSTEM THROUGH INLETS: Volume that flows from surface water to storm drain network through the inlets.
-       - SURFACE TO STORM DRAIN THROUGH OUTFALLS: Volume that flows from surface water to storm drain network through the outfalls as backwater.
-       - DIRECT INFLOW RECEIVED AT INLETS: volume that enters the system from outside of the domain.
-       - TOTAL INFLOW (compare w/SWMM.rpt Wet Weather Inflow).
-       2.
-       Storm Drain Outflow from Outfalls is the volume that leaves the storm drain system through outfalls (compare total w/SWMM.rpt External Outflow):  -
-       STORM DRAIN TO SURFACE THROUGH OUTFALLS: Volume that flows from the storm  ..
-       drain to the surface water through the outfalls.
-       Only those outfalls that were turned ‘on’ in the SWMMOUTF.DAT will discharge the volume back to the surface layer.
-       - STORM DRAIN OUTFALL (OFF SYSTEM): Volume that flows off the storm drain through the outfalls.
-       Only those outfalls that were turn ‘off’ in the SWMMOUTF.DAT will discharge the volume off the storm drain system.
-       - TOTAL OUTFLOW (compare w/SWMM.rpt External Outflow)  3.
-       Storm Drain Return Flow to Surface  - STORM DRAIN RETURN FLOW TO SURFACE THROUGH INLETS: Volume that returns to the surface water through inlets.
-       - TOTAL STORM DRAIN RETURN FLOW + OUTFLOW: Volume that returns to the surface water from the storm drain network plus outflow.
-       Return volume is possible when the storm drain pressure head is greater than both the RIM elevation and the FLO-2D water surface elevation in the
-       inlet grid element.
-       4.
-       STORM DRAIN SYSTEM STORAGE\ **:** volume in the pipe system at the end of the simulation.
-       This volume is extracted from the swmm.RPT file.
-       5.
-       STORM DRAIN RETURN FLOW + OUTFLOW + STORAGE  6.
-       STORM DRAIN MASS BALANCE: mass balance volume conservation calculated as:  ..
+
+       The storm drain volume is reported as:
+
+       1. Storm Drain Inflow in the inflow volume that flows from surface water to storm drain
+
+       system through inlets and outfalls (compare total w/SWMM.rpt Wet Weather Inflow):
+
+           - SURFACE TO STORM DRAIN SYSTEM THROUGH INLETS: Volume that flows from surface water to
+
+             storm drain network through the inlets.
+           - SURFACE TO STORM DRAIN THROUGH OUTFALLS: Volume that flows from surface water to storm drain
+
+             network through the outfalls as backwater.
+           - DIRECT INFLOW RECEIVED AT INLETS: volume that enters the system from outside of the domain.
+           - TOTAL INFLOW (compare w/SWMM.rpt Wet Weather Inflow).
+       2. Storm Drain Outflow from Outfalls is the volume that leaves the storm drain system through
+
+          outfalls (compare total w/SWMM.rpt External Outflow):
+
+            - STORM DRAIN TO SURFACE THROUGH OUTFALLS: Volume that flows from the storm drain to the surface
+
+              water through the outfalls. Only those outfalls that were turned ‘on’ in the SWMMOUTF.DAT will
+
+              discharge the volume back to the surface layer.
+           - STORM DRAIN OUTFALL (OFF SYSTEM): Volume that flows off the storm drain through the outfalls.
+
+             Only those outfalls that were turn ‘off’ in the SWMMOUTF.DAT will discharge the volume off the storm drain system.
+           - TOTAL OUTFLOW (compare w/SWMM.rpt External Outflow)
+
+      3. Storm Drain Return Flow to Surface
+
+           - STORM DRAIN RETURN FLOW TO SURFACE THROUGH INLETS: Volume that returns to the surface water through inlets.
+
+           - TOTAL STORM DRAIN RETURN FLOW + OUTFLOW: Volume that returns to the surface water from the storm
+
+             drain network plus outflow. Return volume is possible when the storm drain pressure head is greater
+
+             than both the RIM elevation and the FLO-2D water surface elevation in the inlet grid element.
+
+       4. STORM DRAIN SYSTEM STORAGE: volume in the pipe system at the end of the simulation.
+
+          This volume is extracted from the swmm.RPT file.
+
+       5. STORM DRAIN RETURN FLOW + OUTFLOW + STORAGE
+
+       6. STORM DRAIN MASS BALANCE: mass balance volume conservation calculated as:
+
        Total Inflow - Total Outflow - Total Storm Drain Return Flow - Storm Drain System Storage
 
    * - SUMMARY.OUT
-     - 7.
-       Extracted from Storm Drain File (swmm.rpt):  - WET WEATHER INFLOW: Compare with Storm Drain Inflow.
-       - EXTERNAL INFLOW: Other node inflows in addition to any surface runoff such as direct inflows as user-defined time series, dry weather inflows that
-       are continuous inflows as base flows, and rainfall dependent infiltration/inflow (RDII).
-       - EXTERNAL OUTFLOW: Compare with Storm Drain Outflow from Outfalls.
-       - Return Flow to Surface: Compare with STORM DRAIN RETURN FLOW TO SURFACE THROUGH INLETS.
-       - Total Storm Drain Storage (nodes + links): Sum of the storage.
-       - Continuity Error (%)
+     - 7. Extracted from Storm Drain File (swmm.rpt):
 
-   * - CHVOLUME.
-       OUT
-     - This file reports the channel flow distribution including inflow, outflow, overbank flow, infiltration losses and volume conservation.
+        - WET WEATHER INFLOW: Compare with Storm Drain Inflow.
+        - EXTERNAL INFLOW: Other node inflows in addition to any surface runoff such as direct inflows
+
+          as user-defined time series, dry weather inflows that are continuous inflows as base flows,
+
+          and rainfall dependent infiltration/inflow (RDII).
+
+        - EXTERNAL OUTFLOW: Compare with Storm Drain Outflow from Outfalls.
+        - Return Flow to Surface: Compare with STORM DRAIN RETURN FLOW TO SURFACE THROUGH INLETS.
+        - Total Storm Drain Storage (nodes + links): Sum of the storage.
+        - Continuity Error (%)
+
+   * - CHVOLUME.OUT
+     - This file reports the channel flow distribution including inflow, outflow, overbank flow,
+
+       infiltration losses and volume conservation.
+
        This includes the volumes for channel outflow to the storm drain and channel inflow from the storm drain.
 
    * - ERROR.CHK
      - This FLO-2D file contains input data error warnings and messages for the surface model.
+
        This file should be reviewed for messages after each simulation.
