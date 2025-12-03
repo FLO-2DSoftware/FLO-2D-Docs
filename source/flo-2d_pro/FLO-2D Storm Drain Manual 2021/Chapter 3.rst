@@ -450,10 +450,10 @@ discharge to the surface or out of the system.
 
 QGIS plugin creates the SWMMOUTF.DAT file, review FLO-2D Plugin User’s Manual and FLO-2D Plugin Technical Reference Manual for more information.
 
-   In the GDS, the option to allow the outfall discharge to be returned to the surface water can be selected by checking the ‘Allow Discharge’ box in
-   Figure 46..
-   This is the ‘Free’ outfall condition.
-   Unchecking the ‘Allow Discharge’ box (‘off’) forces outfall discharge to be removed from the complete model system.
+In the GDS, the option to allow the outfall discharge to be returned to the surface water can be selected by checking the ‘Allow Discharge’ box in
+Figure 46..
+This is the ‘Free’ outfall condition.
+Unchecking the ‘Allow Discharge’ box (‘off’) forces outfall discharge to be removed from the complete model system.
 
 .. image:: img/Chapter3/Chapte006.jpg
 
