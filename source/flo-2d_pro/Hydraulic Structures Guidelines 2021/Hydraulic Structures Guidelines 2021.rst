@@ -317,59 +317,128 @@ Warning message and revised table values are written to **REVISED_RATING_TABLE.O
 The revisions listed in this file can be used to adjust the hydraulic structure rating table prior to the next simulation.
 Table 2 is a list of possible hydraulic structure issues and fixes.
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. raw:: html
 
+   <table style="border-collapse: collapse; width: 100%;">
+     <caption><strong>Table 2. Hydraulic Structure Troubleshooting</strong></caption>
+     <thead>
+       <tr>
+         <th style="border: 1px solid #000; padding: 4px;">Task</th>
+         <th style="border: 1px solid #000; padding: 4px;">Model Data or Flow Condition</th>
+       </tr>
+     </thead>
+     <tbody>
+       <!-- Hydraulic Structure Data -->
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="11">
+           Hydraulic Structure Data
+         </td>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Adverse slope from inflow to outflow node. Adjust the floodplain or channel elevations.
+           This is a warning message in ERROR.CHK.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Reference elevation is lower than the inlet or outlet generates an error message.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Model checks if the inflow or outflow node is a channel element when assigned to a
+           channel. This creates an error message.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The model identifies if the hydraulic structures are contiguous and the discharge is
+           shared only by the rating table or curve.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Notification is made if the hydraulic structures have levee, streets or ARF values in
+           either the inflow or outflow elements.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The model recognizes the need for long culvert data if it is missing.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           An error message appears for the assignment of a grid element to more than one inflow node.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The hydraulic structure rating table must have increasing stage with increasing discharge.
+           This generates an error message.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The first pair of rating table data must be stage = 0 and discharge = 0.
+           This creates a warning message.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           An error message is reported for multiple outflow nodes without a corresponding D-line.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           A warning message will indicate if the rate of increase in the rating table is unreasonable.
+         </td>
+       </tr>
 
-   * - **Table 2.
-       Hydraulic Structure Troubleshooting**
+       <!-- Hydraulic Structure Discharge Instability Issues -->
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="4">
+           Hydraulic Structure Discharge Instability Issues
+         </td>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Discharge surging is noted in the HYDROSTRUCT.OUT file. Rating table or curve needs adjustment.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           For shallow flows, a warning message is written to ERROR.CHK if the rating table discharge
+           is unreasonable. For flow depths less than 1 ft, the velocity is greater than 5 fps.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           A warning message is generated if the downstream water surface becomes higher than the
+           upstream inflow node water surface with INOUTCONT = 0, indicating that there is potential
+           for upstream flow through the structure.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the rating table is adjusted using the SUBFACTOR for submergence, a warning message
+           indicates the modification was made to better match the flow conditions. A message is written
+           that indicates that the revised table values were written to the REVISED_RATING_TABLE.OUT file.
+         </td>
+       </tr>
 
-   * - **Task**                         |    **Model Data or Flow Condition**
-
-   * - Hydraulic Structure Data         | Adverse slope from inflow to outflow node.| Adjust the floodplain or channel elevations.| This is warning message
-       in ERROR.CHK.+-------------------------------------------------| Reference elevation is lower than the inlet or| outlet generates an error
-       message.+-------------------------------------------------| Model checks if the inflow or outflow node is a| channel element when assigned to a
-       channel.| This creates an error message.+-------------------------------------------------| The model identifies if the hydraulic| structures are
-       contiguous and the discharge is| shared only the rating table or curve.+-------------------------------------------------|    Notification is made if
-       the hydraulic|    structures have levee, streets or ARF values|    in the either the inflow or outflow|
-       elements.+-------------------------------------------------| The model recognizes the need for long culvert| data if its
-       missing.+-------------------------------------------------| An error message appears for the assignment of| a grid element to more than one inflow
-       node.+-------------------------------------------------| The hydraulic structure rating table must have| increasing stage with increasing discharge.|
-       This generates an error message.+-------------------------------------------------| The first pair of rating table data must be| stage = 0.
-       and discharge = 0.
-       This creates a| warning message.+-------------------------------------------------| An error message is reported for mulitiple| outflow nodes without
-       a corresponding D-line.+-------------------------------------------------| A warning message will indicate if the rate of| increase in the rating
-       table is unreasonable.
-
-   * - Hydraulic Structure Discharge    |    Discharge surging is noted in theInstability Issues               |    HYDROSTRUCT.OUT file.
-       Rating table or curve|    needs adjustment.+-------------------------------------------------|    For shallow flows, a warning message is|    written
-       to ERROR.CHK if the rating table|    discharge is unreasonable.
-       For flow depths|    less than 1 ft, the velocity is greater than|    5 fps.+-------------------------------------------------|    A warning message is
-       generated if the|    downstream water surface becomes higher than|    the upstream inflow node water surface with|    INOUTCONT = 0 indicating that
-       there is|    potential for upstream flow through the|    structure.+-------------------------------------------------|    If the rating table is
-       adjusted using the|    SUBFACTOR for submergence, a warning message|    indicates the modification was made to|    better match the flow conditions.
-       A message|    is written that indicates that the revised|    table values were written to the|    REVISED_RATING_TABLE.OUT file.
-
-   * - Combined Hydraulic Structure and |    Hydraulic structures may be used to allowLevee Breach                     |    flow to go through a levee
-       connecting|    contiguous grid elements.
-       This might|    simulate a drainage hole in a block wall or|    a culvert through a highway embankment.|    While the levee or wall is intact, the
-       flow|    is based on the hydraulic structure rating|    table or curve which includes the flow over|    the embankment.
-       If the rating table is|    poorly matched with the upstream inflow|    conditions, surging may ensue.
-       The rating|    table or curve must be modified.
-
-   * - | If the levee or wall failures, the hydraulic| structure rating table or curve flow is| bypassed, and breach flow will be computed.| Numerical surging should be added by increasing| the n-values or adjusting the topography since| the broadcrested weir equation is used to| compute the discharge.+-------------------------------------------------| If the levee or wall fails instantaneously| (collapses or topples), the hydraulic structure| flow is terminated and the flow is computed as| overland flow, not breach flow. If numerical| surging is observed increase the n-values or| review the topography.+-------------------------------------------------| If the combine hydraulic structure and levee| (or levee breaching) is causing either volume| conservation or numerical instability, follow| this protocal:|| - Turn off the hydraulic structures in CONT.DAT|   and run the model until the problem occurred.|| - Turn off the levees in CONT.DAT and run the|   model only until the time that the problem|   surfaced.|| - If the problem is in the hydraulic|   structures, isolate the structures that|   appear to be the problem.+-------------------------------------------------| To isolate a hydraulic structure, put a simple| inflow hydrograph (for steady flow) several| grid elements upstream of the structure. Put a| line of outflow elements downstream of the| structure and turn off all the other inflow| hydrographs and rainfall. Make sure that the| steady flow discharge through the structure| matches the assigned stage or depth.+-------------------------------------------------| If the instabilty issue cannot be resolved, it| may be possible to move the hydraulic structure| to the next grid element without a loss of| accuracy or mapping resolution for the maximum| water surface elevation. It might also be| possible to eliminate the levee and replace it| with WRF value.+-------------------------------------------------| The model automatically adjusts the hydraulic| structure rating table and writes the revised| table pairs to an output file. If instability| persists, review the revised rating table and| make further adjustments. Typically the| instability is related to the lower flows and| there are insufficient rating table pairs to| define the rating table for the lower| discharges. Review the HYDROSTRUCT.OUT file to| determine if there is numerical instability in| the rating table or curve.+-------------------------------------------------| Downstream ponding or time-stage water surface| controls may result in upstream flow through| structure. Set the INOUTCONT = 1 in the| HYSTRUC.DAT file to allow upstream flow.
-
-   * - Time-Stage Backwater             | Time-stage elements that control the water| surface elevation downstream of a hydraulicDownstream of Hydraulic
-       | structure are generally not a problem.| Numerical instability are usually associatedStructures                       | with the time-stage elements
-       by having the| water surface stage be less than ground| elevation or having contiguous timestage| elements with non-uniform ground
-       elevations.+-------------------------------------------------| If the water downstream is ponded and has a| highly variable water surface elevation
-       (in a| reservoir scenario or from the time-stage ocean| simulation), slow down the timesteps (use a| smaller Courant number), varying the n-values| or
-       adjust the topography to make it more| uniform.+-------------------------------------------------| Review the HYDROSTRUCT.OUT file for surging.| High
-       velocities may be eliminated with| increasing nvalues.
-       Some high velocities may be| associated with the initial floodwave movement| upstream by creating an instantaneous wall of| water in the TIME-STAGE
-       pairs.
-       Have the water| stage gradually increase above the ground or| bed elevation, similar to the actual physical| condition.
-       Consider that a channel near the| ocean may have to filled before assigning the| tidal stage or storm surge.
+       <!-- Combined Hydraulic Structure and Levee Breach -->
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Combined Hydraulic Structure and Levee Breach
+         </td>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Hydraulic structures may be used to allow flow to go through a levee connecting contiguous
+           grid elements. This might simulate a drainage hole in a block wall or a culvert through a
+           highway embankment. While the levee or wall is intact, the flow is based on the hydraulic
+           structure rating table or curve which includes the flow over the embankment. If the rating
+           table is poorly matched with the upstream inflow conditions, surging may ensue. The rating
+           table or curve must be modified.
+         </td>
+       </tr>
+     </tbody>
+   </table>
 
 
