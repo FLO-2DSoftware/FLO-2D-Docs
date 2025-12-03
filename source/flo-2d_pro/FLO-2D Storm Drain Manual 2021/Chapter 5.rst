@@ -179,7 +179,7 @@ Some of these errors could be not relevant to the FLO-2D storm drain model.
 SWMM Error Numbers.*
 
 .. list-table::
-   :widths: 50 50
+   :widths: 20 80
    :header-rows: 0
 
 
@@ -224,12 +224,6 @@ SWMM Error Numbers.*
 
    * - 117
      - No cross section defined for link
-
-
-.. list-table::
-   :widths: 20 80
-   :header-rows: 0
-
 
    * - 119
      - Invalid cross section for link
@@ -285,120 +279,59 @@ SWMM Error Numbers.*
    * - 157
      - Inconsistent rainfall format for rain gage
 
+   * - 158
+     - Time series for rain gage xxx is used by another object
 
-.. _`158`:
+   * - 159
+     - Recording interval > time series interval for Rain Gage
 
-158:
+   * - 161
+     - Cyclic dependency in treatment functions at node
 
-Time series for rain gage xxx is used by another object
+   * - 171
+     - Curve xxx has invalid or out of sequence data
 
-.. _`159`:
+   * - 173
+     - Time series xxx has its data out of sequence
 
-159:
+   * - 181
+     - Invalid snow melt climatology parameters
 
-Recording interval > time series interval for Rain Gage
+   * - 182
+     - Invalid parameters for snow pack
 
-.. _`161`:
+   * - 183
+     - No type specified for LID
 
-161:
+   * - 184
+     - Missing layer for LID
 
-Cyclic dependency in treatment functions at node
+   * - 185
+     - Invalid parameter value for LID
 
-.. _`171`:
+   * - 186
+     - Invalid parameter value for LID placed in subcatchment
 
-171:
+   * - 187
+     - LID area exceeds total area for subcatchment
 
-Curve xxx has invalid or out of sequence data
+   * - 188
+     - LID capture area exceeds impervious area for subcatchment
 
-.. _`173`:
+   * - 191
+     - Simulation start date comes after ending date
 
-173:
+   * - 193
+     - Report start date comes after ending date
 
-Time series xxx has its data out of sequence
+   * - 195
+     - Reporting time step or duration is less than routing time step
 
-.. _`181`:
+   * - 200
+     - One or more errors in input file
 
-181:
-
-Invalid snow melt climatology parameters
-
-.. _`182`:
-
-182:
-
-Invalid parameters for snow pack
-
-.. _`183`:
-
-183:
-
-No type specified for LID
-
-.. _`184`:
-
-184:
-
-Missing layer for LID
-
-.. _`185`:
-
-185:
-
-Invalid parameter value for LID
-
-.. _`186`:
-
-186:
-
-Invalid parameter value for LID placed in subcatchment
-
-.. _`187`:
-
-187:
-
-LID area exceeds total area for subcatchment
-
-.. _`188`:
-
-188:
-
-LID capture area exceeds impervious area for subcatchment
-
-.. _`191`:
-
-191:
-
-Simulation start date comes after ending date
-
-.. _`193`:
-
-193:
-
-Report start date comes after ending date
-
-.. _`195`:
-
-195:
-
-Reporting time step or duration is less than routing time step
-
-.. _`200`:
-
-200:
-
-One or more errors in input file
-
-.. _`201`:
-
-201:
-
-Too many characters in input line
-
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
+   * - 201
+     - Too many characters in input line
 
    * - 203
      - Too few items
@@ -454,120 +387,59 @@ Too many characters in input line
    * - 305
      - Cannot open report file
 
+   * - 307
+     - Cannot open binary results file
 
-.. _`307`:
+   * - 309
+     - Error writing to binary results file
 
-307:
+   * - 311
+     - Error reading from binary results file
 
-Cannot open binary results file
+   * - 313
+     - Cannot open scratch rainfall interface file
 
-.. _`309`:
+   * - 315
+     - Cannot open rainfall interface file
 
-309:
+   * - 317
+     - Cannot open rainfall data file
 
-Error writing to binary results file
+   * - 318
+     - Date out of sequence in rainfall data file
 
-.. _`311`:
+   * - 319
+     - Invalid format for rainfall interface file
 
-311:
+   * - 321
+     - No data in rainfall interface file for gage
 
-Error reading from binary results file
+   * - 323
+     - Cannot open runoff interface file
 
-.. _`313`:
+   * - 325
+     - Incompatible data found in runoff interface file
 
-313:
+   * - 327
+     - Attempting to read beyond end of runoff interface file
 
-Cannot open scratch rainfall interface file
+   * - 329
+     - Error in reading from runoff interface file
 
-.. _`315`:
+   * - 330
+     - Hotstart interface files have same names
 
-315:
+   * - 331
+     - Cannot open hotstart interface file
 
-Cannot open rainfall interface file
+   * - 333
+     - Incompatible data found in hotstart interface file
 
-.. _`317`:
+   * - 335
+     - Error in reading from hotstart interface file
 
-317:
-
-Cannot open rainfall data file
-
-.. _`318`:
-
-318:
-
-Date out of sequence in rainfall data file
-
-.. _`319`:
-
-319:
-
-Invalid format for rainfall interface file
-
-.. _`321`:
-
-321:
-
-No data in rainfall interface file for gage
-
-.. _`323`:
-
-323:
-
-Cannot open runoff interface file
-
-.. _`325`:
-
-325:
-
-Incompatible data found in runoff interface file
-
-.. _`327`:
-
-327:
-
-Attempting to read beyond end of runoff interface file
-
-.. _`329`:
-
-329:
-
-Error in reading from runoff interface file
-
-.. _`330`:
-
-330:
-
-Hotstart interface files have same names
-
-.. _`331`:
-
-331:
-
-Cannot open hotstart interface file
-
-.. _`333`:
-
-333:
-
-Incompatible data found in hotstart interface file
-
-.. _`335`:
-
-335:
-
-Error in reading from hotstart interface file
-
-.. _`336`:
-
-336:
-
-No climate file specified for evaporation and/or wind speed
-
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
+   * - 336
+     - No climate file specified for evaporation and/or wind speed
 
    * - 337
      - Cannot open climate file
