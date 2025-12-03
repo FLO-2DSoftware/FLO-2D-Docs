@@ -259,9 +259,13 @@ SWMMFLO.DAT Variables**
         <div><i><pre>    SWMMFLO.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
-    Line 1 to Number of Inlets (JT):SWMMCHAR=‘D’ SWMM_JT(JT) SWMM_IDEN(JT) INTYPE(JT) SWMMlength(JT)SWMMwidth(JT) SWMMheight(JT) SWMMcoeff(JT)
-    FLAPGATE(JT)CURBHEIGHT(JT)Notes:Multiple Inlets (SWMM_IDEN(JT)) assigned to the same grid cell(SWMM_JT(JT)) constitutes a data error.An Inlet
-    (SWMM_IDEN(JT)) assigned to more than one grid cell(SWMM_JT(JT)) constitutes a data error.
+    Line 1 to Number of Inlets (JT):
+    SWMMCHAR=‘D’ SWMM_JT(JT) SWMM_IDEN(JT) INTYPE(JT) SWMMlength(JT)
+    SWMMwidth(JT) SWMMheight(JT) SWMMcoeff(JT) FLAPGATE(JT)CURBHEIGHT(JT)
+
+    Notes:
+    Multiple Inlets (SWMM_IDEN(JT)) assigned to the same grid cell(SWMM_JT(JT)) constitutes a data error.
+    An Inlet (SWMM_IDEN(JT)) assigned to more than one grid cell(SWMM_JT(JT)) constitutes a data error.
     </pre>
     </div>
 
