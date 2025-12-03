@@ -256,7 +256,7 @@ SWMMFLO.DAT Variables**
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><i><pre>    SWMMFLO.DAT File Variables</pre></i></div>
+        <div><i><pre>               SWMMFLO.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     Line 1 to Number of Inlets (JT):
@@ -281,7 +281,7 @@ SWMMFLO.DAT Input File Example**
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><i><pre>    SWMMFLO.DAT</pre></i></div>
+        <div><i><pre>               SWMMFLO.DAT</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     D 452161 I19CP1SEMDRHRL 1   12  0   0.417  3  0  0
@@ -297,13 +297,16 @@ SWMMFLO.DAT Input File Example**
 
    <br><br>
 
-Table 8 lists the variable descriptions for the SWMMFLO.DAT file: **Table 8.
+Table 8 lists the variable descriptions for the SWMMFLO.DAT file: *
+
+*Table 8.
 SWMMFLO.DAT Input Variable Descriptions**
+
+\(i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
    :header-rows: 0
-
 
    * - **Variable**
      - **Format**
@@ -345,7 +348,7 @@ SWMMFLO.DAT Input Variable Descriptions**
 
    * - SWMMlength(JT)
      - r
-     - 0.01- |Chapte002|
+     - 0.01- ∞
      - Curb opening length for INTYPE= 1 or 2
 
        Grate perimeter (not including curb side) for
@@ -358,7 +361,7 @@ SWMMFLO.DAT Input Variable Descriptions**
 
    * - SWMMwidth(JT)
      - r
-     - 0.01- |Chapte002|
+     - 0.01- ∞
      - For INTYPE = 1 (set to 0 – not needed)
 
        Curb opening sag width for INTYPE=2
@@ -371,7 +374,7 @@ SWMMFLO.DAT Input Variable Descriptions**
 
    * - SWMMheight(JT)
      - r
-     - 0.01- |Chapte002|
+     - 0.01- ∞
      - Curb opening height for INTYPE=1
 
        Curb opening height for INTYPE=2
@@ -408,7 +411,7 @@ SWMMFLO.DAT Input Variable Descriptions**
 
    * - CURBHEIGHT(JT)
      - r
-     - 0.01- |Chapte002|
+     - 0.01- ∞
      - Curb height used to calculate discharge on inlets for all INTYPE
 
 
