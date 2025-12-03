@@ -527,7 +527,7 @@ Conduit Offsets
 The swmm.inp file uses offset heights to connect the conduits to the nodes.
 The inlet and outlet offsets can be zero if there is no offset or any height above zero to set the offset.
 
-.. image:: img/Chapter2/Chapte017.jpg
+.. image:: img/Chapter2/Chapte017.png
 
 *Figure 42.
 Offsets in a Pipe System.
