@@ -38,11 +38,11 @@ FLO-2D Error Messages
 Error/warning messages are listed in the ERROR.CHK file.
 The most important messages are listed in Table 17.
 
-   **Table 17.
-   FLO-2D Error Messages**
+*Table 17.
+FLO-2D Error Messages*
 
 .. list-table::
-   :widths: 50 50
+   :widths: 30 70
    :header-rows: 0
 
 
@@ -158,7 +158,10 @@ The most important messages are listed in Table 17.
    * - General Error in SWMM Model.
      - COMPUTATIONAL ERROR IN SWMM MODEL: REVIEW \*.RPT FILE FOR THE ERROR DESCRIPTION
 
-   * - General Error in SWMM Modelreported to the ERROR.CHK fileand to theSTORMDRAIN_ERROR.CHK.
+   * - General Error in SWMM Modelreported to the ERROR.CHK fileand to
+
+       theSTORMDRAIN_ERROR.CHK.
+
      - THERE IS AN ERROR IN THE SWMM MODEL.
 
        PLEASE REVIEW  THE FOLLOWING ERROR CODE IN THE SWMM ERROR LIST OR  CONTACT
@@ -172,8 +175,8 @@ SWMM error messages
 Table 18 lists the errors reported by SWMM (Rossman, 2005) to the SWMM.RPT file as well as to the STOMRDRAIN_ERROR.CHK file.
 Some of these errors could be not relevant to the FLO-2D storm drain model.
 
-   **Table 18.
-   SWMM Error Numbers.**
+*Table 18.
+SWMM Error Numbers.*
 
 .. list-table::
    :widths: 50 50
@@ -224,7 +227,7 @@ Some of these errors could be not relevant to the FLO-2D storm drain model.
 
 
 .. list-table::
-   :widths: 50 50
+   :widths: 20 80
    :header-rows: 0
 
 
