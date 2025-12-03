@@ -250,12 +250,8 @@ Surface water discharge is only shared between nodes that have the correct ID as
 Inlets are automatically paired by the QGIS plug-in or GDS to a corresponding FLO-2D grid element.
 The SWMMFLO.DAT file contains the inlet geometry as well as the names or numbers that identify the inlet that is paired with the grid cell (Table 6).
 
-   **Table 6.
-   SWMMFLO.DAT Variables**
-
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+**Table 6.
+SWMMFLO.DAT Variables**
 
 
    * - SWMMFLO.DAT File Variables
