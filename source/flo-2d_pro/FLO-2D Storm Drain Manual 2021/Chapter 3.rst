@@ -825,7 +825,7 @@ List of the Storm Drain Data Output Files and Description**
 
        1. Storm Drain Inflow in the inflow volume that flows from surface water to storm drain
 
-       system through inlets and outfalls (compare total w/SWMM.rpt Wet Weather Inflow):
+          system through inlets and outfalls (compare total w/SWMM.rpt Wet Weather Inflow):
 
            - SURFACE TO STORM DRAIN SYSTEM THROUGH INLETS: Volume that flows from surface water to
 
@@ -835,6 +835,7 @@ List of the Storm Drain Data Output Files and Description**
              network through the outfalls as backwater.
            - DIRECT INFLOW RECEIVED AT INLETS: volume that enters the system from outside of the domain.
            - TOTAL INFLOW (compare w/SWMM.rpt Wet Weather Inflow).
+
        2. Storm Drain Outflow from Outfalls is the volume that leaves the storm drain system through
 
           outfalls (compare total w/SWMM.rpt External Outflow):
@@ -849,7 +850,7 @@ List of the Storm Drain Data Output Files and Description**
              Only those outfalls that were turn ‘off’ in the SWMMOUTF.DAT will discharge the volume off the storm drain system.
            - TOTAL OUTFLOW (compare w/SWMM.rpt External Outflow)
 
-      3. Storm Drain Return Flow to Surface
+       3. Storm Drain Return Flow to Surface
 
            - STORM DRAIN RETURN FLOW TO SURFACE THROUGH INLETS: Volume that returns to the surface water through inlets.
 
@@ -869,20 +870,20 @@ List of the Storm Drain Data Output Files and Description**
 
        Total Inflow - Total Outflow - Total Storm Drain Return Flow - Storm Drain System Storage
 
-   * - SUMMARY.OUT
-     - 7. Extracted from Storm Drain File (swmm.rpt):
 
-        - WET WEATHER INFLOW: Compare with Storm Drain Inflow.
-        - EXTERNAL INFLOW: Other node inflows in addition to any surface runoff such as direct inflows
+       7. Extracted from Storm Drain File (swmm.rpt):
 
-          as user-defined time series, dry weather inflows that are continuous inflows as base flows,
+            - WET WEATHER INFLOW: Compare with Storm Drain Inflow.
+            - EXTERNAL INFLOW: Other node inflows in addition to any surface runoff such as direct inflows
 
-          and rainfall dependent infiltration/inflow (RDII).
+              as user-defined time series, dry weather inflows that are continuous inflows as base flows,
 
-        - EXTERNAL OUTFLOW: Compare with Storm Drain Outflow from Outfalls.
-        - Return Flow to Surface: Compare with STORM DRAIN RETURN FLOW TO SURFACE THROUGH INLETS.
-        - Total Storm Drain Storage (nodes + links): Sum of the storage.
-        - Continuity Error (%)
+              and rainfall dependent infiltration/inflow (RDII).
+
+            - EXTERNAL OUTFLOW: Compare with Storm Drain Outflow from Outfalls.
+            - Return Flow to Surface: Compare with STORM DRAIN RETURN FLOW TO SURFACE THROUGH INLETS.
+            - Total Storm Drain Storage (nodes + links): Sum of the storage.
+            - Continuity Error (%)
 
    * - CHVOLUME.OUT
      - This file reports the channel flow distribution including inflow, outflow, overbank flow,
