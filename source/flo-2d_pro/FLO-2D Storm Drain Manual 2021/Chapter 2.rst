@@ -164,30 +164,43 @@ where:
 
 Orifice flow can have two potential sag inlet conditions (Johnson and Fred, 1984):
 
-   If h ≥ H then Q\ :sub:`o` = C\ :sub:`d`\ A√2gH
+    If :math:`h \geq H`, then:
 
-   If h < H then Q\ :sub:`o` |Chapte007|
+    .. math::
+       :label:
 
-   where:
+       Q_{o} = C_{d}A\sqrt{2gH}
 
-       Q\ :sub:`o` = orifice flow rate at depth H
+    If :math:`h < H`, then:
 
-       C\ :sub:`d` = discharge coefficient hardcoded to 0.67 A = orifice area Area= L x h g = gravitational acceleration
+    .. math::
+       :label:
 
-       H = FLO-2D grid element water depth that contains the inlet structure.
-       h = curb opening height of the orifice.
+       Q_{o} = C_{d}A\sqrt{2g\left( H - \frac{h}{2} \right)}
+
+       where:
+
+           Q\ :sub:`o` = orifice flow rate at depth H
+
+           C\ :sub:`d` = discharge coefficient hardcoded to 0.67
+
+           A = orifice area Area= L x h g = gravitational acceleration
+
+           H = FLO-2D grid element water depth that contains the inlet structure.
+
+           h = curb opening height of the orifice.
 
 Type 2 inlet discharge is determined from the following criteria:
 
    If h ≤ H < 1.4h, then:
 
-If Q\ :sub:`w` ≤ Q\ :sub:`o`, discharge= Q\ :sub:`w`
+    If Q\ :sub:`w` ≤ Q\ :sub:`o`, discharge= Q\ :sub:`w`
 
-If Q\ :sub:`w` > Q\ :sub:`o`, discharge= Q\ :sub:`o`
+    If Q\ :sub:`w` > Q\ :sub:`o`, discharge= Q\ :sub:`o`
 
-   If H < h, discharge= Q\ :sub:`w`
+       If H < h, discharge= Q\ :sub:`w`
 
-   If H ≥ 1.4h, discharge= Q\ :sub:`o`
+       If H ≥ 1.4h, discharge= Q\ :sub:`o`
 
 
 *Type 3 - Grate (Gutter) Inlet with/without Sag*
