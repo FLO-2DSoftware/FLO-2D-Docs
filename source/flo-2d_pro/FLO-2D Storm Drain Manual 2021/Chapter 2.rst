@@ -385,7 +385,6 @@ Table 4 presents some suggested surcharge depths.
    :widths: 50 50
    :header-rows: 0
 
-
    * - **Manhole Cover Representative Weight**
      - **Surcharge Depth (ft)  (assuming 2 ft diameter)**
 
