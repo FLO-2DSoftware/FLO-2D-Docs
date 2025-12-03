@@ -1,8 +1,10 @@
 .. vim: syntax=rst
 
-Levee Overview
-==============
+Levee Dam and Wall Breach Guidelines
+=====================================
 
+Levee Overview
+---------------
 The FLO-2D levee component confines flow on the floodplain surface by blocking one or more of the eight flow directions.
 The FLO-2D model conserves volume and this includes volume stored by the levee component and water routed through a levee breach.
 The terms dam and levee are earthen embankments that are used interchangeably in this document when discussing breach failure.
@@ -37,11 +39,13 @@ When the levee or wall fails using the prescribed rate of failure controls, the 
 contiguous grid elements is based on the levee breach hydraulic calculations.
 If the levee failure is instantaneous, the hydraulic structure flow is also terminated and the model reverts to overland flow calculations.
 
-   **Figure 1.
-   Levees are Displayed in Red and the Channel in Blue in the GDS Program.**
+.. image:: img/Levee022.jpg
+
+*Figure 1.
+Levees are Displayed in Red and the Channel in Blue in the GDS Program.*
 
 Levee and Dam Breach Failure
-============================
+-----------------------------
 
 General
 -------
@@ -70,17 +74,15 @@ Additional output files that define the breach hazard include the time-to-peak, 
 These results can be mapped to aid in determining evacuation or emergency access routes.
 Examples of area of inundation mapping from a levee and dam breach are shown in Figure 2 and Figure 3.
 
-**Figure**
+.. image:: img/Levee023.jpg
 
-**2**
+*Figure 2.
+Example of Levee Breach Urban Flooding*
 
-**.
-Example of Levee Breach Urban Floodin**
+.. image:: img/Levee024.jpg
 
-**g.**
-
-   **Figure 3.
-   Example of a Proposed Domestic Water Supply Reservoir Breach Failure.**
+*Figure 3.
+Example of a Proposed Domestic Water Supply Reservoir Breach Failure.*
 
 Prescribed Levee and Dam Failure
 --------------------------------
@@ -98,23 +100,17 @@ Additional breach failure variables such as initial failure elevation if differe
 can be assigned to add detail to multiple levee failure locations.
 The highlights of spatially variable levee failure are:
 
-- Levee failure can occur anywhere on the grid system based on overtopping or the water surface elevation reaching a specified distance below the crest
-  elevation for an assigned duration.
-
-- Multiple levee breaches can occur and expand in various locations simultaneously.
-
-- Levee breach expansion with prescribed horizontal or vertical rates.
-
-- Failure can occur from either side of the levee (river side and land side).
-
-- Based on water surface elevation, flow through the levee breach can occur in either direction.
-  As landside ponding equilibrates with the river water surface elevation, the beach flow may alternate directions.
-
-- Levees may overtop or breach into detention basins or channel retention facilities.
-  Basin pumps then can be integrated with FLO-2D levee breach analyses.
-
-- By setting the prescribed breach failure rates equal to zero, an instantaneous collapse of the levee or wall can be simulated for a specified maximum
-  width or the side width of the grid element.
+    - Levee failure can occur anywhere on the grid system based on overtopping or the water surface elevation reaching a specified distance below the crest
+      elevation for an assigned duration.
+    - Multiple levee breaches can occur and expand in various locations simultaneously.
+    - Levee breach expansion with prescribed horizontal or vertical rates.
+    - Failure can occur from either side of the levee (river side and land side).
+    - Based on water surface elevation, flow through the levee breach can occur in either direction.
+      As landside ponding equilibrates with the river water surface elevation, the beach flow may alternate directions.
+    - Levees may overtop or breach into detention basins or channel retention facilities.
+      Basin pumps then can be integrated with FLO-2D levee breach analyses.
+    - By setting the prescribed breach failure rates equal to zero, an instantaneous collapse of the levee or wall can be simulated for a specified maximum
+      width or the side width of the grid element.
 
 Unless the levee or wall failure is instantaneous, the failure mechanism, initial breach width and the first thirty minutes or so of breach widening
 are generally inconsequential to the downstream flooding.
@@ -265,7 +261,7 @@ A flow chart of the basic computation scheme for the breach component is shown i
    Breach Schematic Flow Chart.**
 
 Levee Overtopping without Failure
-=================================
+------------------------------------
 
 Levee overtopping can occur without breach failure.
 Floodplain features such as roadway or railroad embankments, concrete walls and levees with riprap can be overtopped without erosion or failing.
@@ -311,7 +307,7 @@ These modifications to the broadcrested weir equation may the discharge transiti
    Levee Overtopping Tailwater Submergence.**
 
 Prescribed Levee Breach Input Data
-==================================
+-----------------------------------
 
 The prescribed breach failure is recommended over the breach erosion failure because the physical process of sediment scour in hyperconcentrated
 sediment flows is poorly understood and simplistically mathematically represented.
@@ -462,7 +458,7 @@ Table 1 outlines the potential controls.
 
 
 Urban Wall Failure (Collapse)
-=============================
+-------------------------------------
 
 Simulating flood confinement by urban walls in the FLO-2D model is accomplished with the levee component by blocking one or more of the eight flow
 directions.
@@ -858,7 +854,7 @@ elevations that are higher that the wall failure elevation but with insufficient
 These conditions are resolved are runtime in the model but should be avoided in the data files.
 
 Predicted Breach Erosion Input Data
-===================================
+-----------------------------------------
 
 The dam breach erosion component provides an opportunity to simulate the physical processes of breach widening through scour.
 Nine out of the eleven sediment transport equations in the FLO-2D can be used to compute the breach erosion including:
@@ -1087,7 +1083,7 @@ maximum sediment concentration by volume outlined in red.
 |Levee017|
 
 Reservoir Routing
-=================
+------------------------
 
 Deep water slow velocity movement in reservoir, detention basins or other ponded features in a twodimension model represents a unique condition for
 flood routing.
@@ -1252,7 +1248,7 @@ If computed high velocities persist in the basin, increase the n-values and set 
 At the end of the simulation, if the basin has stored water without inflow or outflow, the grid element water surfaces should be relatively flat.
 
 Levee Breach Numerical Instability
-==================================
+--------------------------------------
 
 Levee and dam breaches often result in a very high discharge, velocity and flow depth.
 It is important when the focus of the project is the levee or dam breach inundation to select an appropriate grid size.
@@ -1386,7 +1382,7 @@ Table 6. Numerical Surging Troubleshooting
 
 
 Dam Breach Floodwave Reporting for Hazard Mapping
-=================================================
+-----------------------------------------------------------------
 
 To address the California Office of Emergency Services requirements for dam breach area of inundation and hazard maps, the following output data is
 generated during a FLO-2D model simulation.
@@ -1447,7 +1443,7 @@ If no levee or dam breach is simulated with the FLO-2D model, the FLOODWAVETIME.
 to the commencement of the flood model (hour 0.0).
 
 Levee Fragility Curves
-======================
+-----------------------
 
 Introduction Levee fragility curves can be used in the Central Valley flood studies to develop flood hazard maps with the FLO-2D model.
 An algorithm using the Corps’ levee fragility curves has been coded in the FLO-2D model to automatically predict levee breach failure anywhere in the
@@ -1601,7 +1597,7 @@ levee failure corresponding with the actual floodwave progression.
 This represents a significant step in accurate hazard mapping.
 
 References
-==========
+-----------
 
 Fread, D.L., 1998.
 “Breach: An Erosional Model for Earthen Dam Failures,” National Weather Service, NOAA, Silver Spring, Maryland.
@@ -1621,64 +1617,3 @@ Army Corps of Engineers, 2002.
 “Sacramento and San Juaquin River Basins Comprehensive Study,” Appendix E Risk Analysis.
 Published by The Reclamation Board State of California and the U.S.
 Army Corps of Engineers, Sacramento District, Sacramento, California.
-
-.. |Levee002| image:: media\Levee002.jpg
-   :width: 5.51458in
-   :height: 2.63542in
-.. |Levee003| image:: media\Levee003.png
-   :width: 6.51in
-   :height: 8.33667in
-.. |Levee004| image:: media\Levee004.jpg
-   :width: 4.76736in
-   :height: 2.12694in
-.. |Levee005| image:: media\Levee005.jpg
-   :width: 5.43819in
-   :height: 2.99972in
-.. |Levee006| image:: media\Levee006.jpg
-   :width: 4.97708in
-   :height: 2.99972in
-.. |Levee007| image:: media\Levee007.jpg
-   :width: 3.75278in
-   :height: 1.91458in
-.. |Levee008| image:: media\Levee008.jpg
-   :width: 5.06806in
-   :height: 2.99986in
-.. |Levee009| image:: media\Levee009.png
-   :width: 6.11236in
-   :height: 2.87014in
-.. |Levee010| image:: media\Levee010.jpg
-   :width: 3.97014in
-   :height: 2.11528in
-.. |Levee011| image:: media\Levee011.jpg
-   :width: 4.33611in
-   :height: 2.13472in
-.. |Levee012| image:: media\Levee012.jpg
-   :width: 3.41625in
-   :height: 4.60278in
-.. |Levee013| image:: media\Levee013.png
-   :width: 7.01528in
-   :height: 1.19785in
-.. |Levee014| image:: media\Levee014.jpg
-   :width: 3.57153in
-   :height: 3.95347in
-.. |Levee015| image:: media\Levee015.jpg
-   :width: 4.69444in
-   :height: 2.45042in
-.. |Levee016| image:: media\Levee016.jpg
-   :width: 4.41361in
-   :height: 3.27014in
-.. |Levee017| image:: media\Levee017.jpg
-   :width: 4.45556in
-   :height: 3.31042in
-.. |Levee018| image:: media\Levee018.jpg
-   :width: 6.38125in
-   :height: 1.92694in
-.. |Levee019| image:: media\Levee019.jpg
-   :width: 4.53028in
-   :height: 1.81597in
-.. |Levee020| image:: media\Levee020.jpg
-   :width: 4.87306in
-   :height: 4.97986in
-.. |Levee021| image:: media\Levee021.jpg
-   :width: 6.69306in
-   :height: 2.15833in
