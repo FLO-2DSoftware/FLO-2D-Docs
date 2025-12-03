@@ -275,8 +275,8 @@ SWMMFLO.DAT Variables**
 
 The Table 7 outlines the required data in the SWMMFLO.DAT.
 
-   **Table 7.
-   SWMMFLO.DAT Input File Example**
+**Table 7.
+SWMMFLO.DAT Input File Example**
 
 .. raw:: html
 
@@ -284,8 +284,12 @@ The Table 7 outlines the required data in the SWMMFLO.DAT.
         <div><i><pre>    SWMMFLO.DAT</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
-    D 452161 I19CP1SEMDRHRL 1 12 0 0.417 3 0 0D 451297 I20CP1SEMDRHRL 1 4.8 0 0.417 3 0 0D 451302 I21CP1SEMDRHRL 1 12 0 0.417 3 0 0D 450875 I21CP2SEMDRHRL
-    3 6 4.4 0 3 0 0D 441072 I22CP1SEMDRHRL 1 12 0 0.417 3 0 0D 440649 I22CP2SEMDRHRL 3 5 3.0 0 3 0 0
+    D 452161 I19CP1SEMDRHRL 1   12  0   0.417  3  0  0
+    D 451297 I20CP1SEMDRHRL 1   4.8 0   0.417  3  0  0
+    D 451302 I21CP1SEMDRHRL 1   12  0   0.417  3  0  0
+    D 450875 I21CP2SEMDRHRL 3   6   4.4 0      3  0  0
+    D 441072 I22CP1SEMDRHRL 1   12  0   0.417  3  0  0
+    D 440649 I22CP2SEMDRHRL 3   5   3.0 0      3  0  0
     </pre>
     </div>
 
