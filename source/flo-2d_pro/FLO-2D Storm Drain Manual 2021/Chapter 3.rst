@@ -50,108 +50,83 @@ Table 5 lists the section data in the SWMM.inp file.
 GDS does not create the SWMM.INP file but it reads the file.
 Each section of the SWMM.inp file begins with a keyword.
 
-   **Table 5.
-   Sections that Enclose Data in the SWMM.inp (Rossman, 2005)**
+**Table 5.
+Sections that Enclose Data in the SWMM.inp (Rossman, 2005)**
 
-.. _`[title]`:
+.. raw:: html
 
-[title]:
-
-Project title
-
-.. _`[options]`:
-
-[options]:
-
-Analysis options
-
-.. _`[report]`:
-
-[report]:
-
-Output reporting instructions
-
-.. _`[files]`:
-
-[files]:
-
-Interface file options
-
-.. _`[junctions]`:
-
-[junctions]:
-
-Junction node information
-
-.. _`[outfalls]`:
-
-[outfalls]:
-
-Outfall node information
-
-.. _`[dividers]`:
-
-[dividers]:
-
-Flow divider node information
-
-.. _`[storage]`:
-
-[storage]:
-
-Storage node information
-
-.. _`[conduits]`:
-
-[conduits]:
-
-Conduit link information
-
-.. _`[pumps]`:
-
-[pumps]:
-
-Pump link information
-
-.. _`[orifices]`:
-
-[orifices]:
-
-Orifice link information
-
-.. _`[weirs]`:
-
-[weirs]:
-
-Weir link information
-
-.. _`[outlets]`:
-
-[outlets]:
-
-Outlet link information
-
-.. _`[xsections]`:
-
-[xsections]:
-
-Conduit, orifice, and weir cross-section geometry
-
-.. _`[transects]`:
-
-[transects]:
-
-Transect geometry for conduits with irregular cross-sections
-
-.. _`[losses]`:
-
-[losses]:
-
-Conduit entrance/exit losses and flap valves
-
-.. _`[controls]`:
-
-[controls]:
+   <table style="border-collapse: collapse; width: 100%;">
+     <tbody>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[TITLE]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Project title</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[OPTIONS]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Analysis options</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[REPORT]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Output reporting instructions</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[FILES]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Interface file options</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[JUNCTIONS]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Junction node information</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[OUTFALLS]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Outfall node information</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[DIVIDERS]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Flow divider node information</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[STORAGE]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Storage node information</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[CONDUITS]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Conduit link information</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[PUMPS]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Pump link information</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[ORIFICES]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Orifice link information</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[WEIRS]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Weir link information</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[OUTLETS]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Outlet link information</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[XSECTIONS]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Conduit, orifice, and weir cross-section geometry</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[TRANSECTS]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Transect geometry for conduits with irregular cross-sections</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[LOSSES]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Conduit entrance/exit losses and flap valves</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">[CONTROLS]</td>
+         <td style="border: 1px solid #000; padding: 4px;">Rules that control pump and regulator operation</td>
+       </tr>
+     </tbody>
+   </table>
 
 Rules that control pump and regulator operation
 
