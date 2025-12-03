@@ -407,7 +407,7 @@ Storm Drain
 
     - Open the Conduits attribute table.
     - Sort the table by the `length` field.
-    - Select the conduits taht are less than 30 ft long.
+    - Select the conduits than are less than 30 ft long.
     - Set the field editor to the `length` field.
     - Set the length of the conduits to 30 ft.
     - Apply 30 ft to the selected conduits.
