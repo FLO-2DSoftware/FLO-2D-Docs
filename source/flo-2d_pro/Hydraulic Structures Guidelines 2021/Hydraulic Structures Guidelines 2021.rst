@@ -437,8 +437,10 @@ Table 2 is a list of possible hydraulic structure issues and fixes.
            table is poorly matched with the upstream inflow conditions, surging may ensue. The rating
            table or curve must be modified.
          </td>
+       </tr>
+       <tr>
          <td style="border: 1px solid #000; padding: 4px;">
-           Mic Testing
+           Testing
          </td>
        </tr>
      </tbody>
