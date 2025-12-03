@@ -130,182 +130,117 @@ Sections that Enclose Data in the SWMM.inp (Rossman, 2005)**
 
 Rules that control pump and regulator operation
 
-
 The structure of the SWMM.inp file follows:
 
-- Sections appear in any arbitrary order in the input (\*.inp) file.
-  Section keywords can appear in mixed lower- and upper-case letters.
-  Only the first four characters (plus the open bracket) are used to distinguish one keyword from another (e.g., [DIVIDERS] and [Divi] are equivalent).
-
-- Not all sections must be present on each project.
-
-- Each section can contain one or more lines of data.
-
-- Blank lines may appear anywhere in the file.
-
-- A semicolon (;) can be used to indicate that comment follows, not data.
-  This sometimes generate reading errors in the storm drain code.
-
-- Data items can appear in any column of a line.
-
-- The data is ordered creating a tabular appearance complete with column headings.
-
-- When listing the format of a line of data, mandatory keywords are shown in boldface while optional items appear in parentheses.
-
-- A list of keywords separated by a slash (YES/NO) means that only one of the words should appear in the data line.
-
-- In the [OPTIONS] section, flow units can be selected as either cubic feet per second
-
-(CFS), gallons per minute (GPM), million gallons per day (MGD), cubic meters per second (CMS), liters per second, (LPS), or million liters per day
-(MLD).
-If cubic feet or gallons are chosen for flow units then US units are used for all other quantities.
-If cubic meters or liters are chosen then metric units apply to all other quantities.
-The default flow units are CFS.
+    - Sections appear in any arbitrary order in the input (\*.inp) file.
+      Section keywords can appear in mixed lower- and upper-case letters.
+      Only the first four characters (plus the open bracket) are used to distinguish one keyword from another (e.g., [DIVIDERS] and [Divi] are equivalent).
+    - Not all sections must be present on each project.
+    - Each section can contain one or more lines of data.
+    - Blank lines may appear anywhere in the file.
+    - A semicolon (;) can be used to indicate that comment follows, not data.
+      This sometimes generate reading errors in the storm drain code.
+    - Data items can appear in any column of a line.
+    - The data is ordered creating a tabular appearance complete with column headings.
+    - When listing the format of a line of data, mandatory keywords are shown in boldface while optional items appear in parentheses.
+    - A list of keywords separated by a slash (YES/NO) means that only one of the words should appear in the data line.
+    - In the [OPTIONS] section, flow units can be selected as either cubic feet per second (CFS), gallons per minute (GPM), million gallons per day (MGD), cubic meters per second (CMS), liters per second, (LPS), or million liters per day
+    (MLD). If cubic feet or gallons are chosen for flow units then US units are used for all other quantities.
+    If cubic meters or liters are chosen then metric units apply to all other quantities.
+    The default flow units are CFS.
 
 SWMM.inp Example
 
 The typical structure of a SWMM.inp file can be shown as follows:
 
-   [TITLE]
-
-   INP file created on 10/17/2014 9:30:50 AM by FLO-2D Team Title/Notes:
-
-   [OPTIONS]
-
-   FLOW_UNITS CFS
-
-   INFILTRATION HORTON
-
-   FLOW_ROUTING DYNWAVE
-
-   START_DATE 03/25/2013
-
-   START_TIME 00:00:00
-
-   REPORT_START_DATE 03/25/2013
-
-   REPORT_START_TIME 00:00:00
-
-   END_DATE 03/25/2013
-
-   END_TIME 00:24:00
-
-   SWEEP_START 01/01
-
-   SWEEP_END 12/31
-
-   DRY_DAYS 0
-
-   REPORT_STEP 00:01:30
-
-   WET_STEP 00:01:00
-
-   DRY_STEP 00:01:00
-
-   ROUTING_STEP 0.05
-
-   ALLOW_PONDING YES
-
-   INERTIAL_DAMPING PARTIAL
-
-   VARIABLE_STEP 0.00
-
-   LENGTHENING_STEP 0
-
-   MIN_SURFAREA 0
-
-   NORMAL_FLOW_LIMITED BOTH
-
-   SKIP_STEADY_STATE NO
-
-   FORCE_MAIN_EQUATION D-W
-
-   LINK_OFFSETS DEPTH
-
-   MIN_SLOPE 0
-
-   [EVAPORATION]
-
-   ;;Type Parameters
-
-   ;;---------- ----------
-
-   CONSTANT 0.0
-
-   DRY_ONLY NO
-
-   [JUNCTIONS]
-
-   ;; Invert Max.
-   Init.
-   Surcharge Ponded
-
-   ;;Name Elev.
-   Depth Depth Depth Area
-
-   ;;-------------- ---------- ---------- ---------- ---------- ---------- I1CP1C14 1264.35 6.34 0 0 0
-
-   [OUTFALLS]
-
-   ;; Invert Outfall Stage/Table Tide ;;Name Elev.
-   Type Time Series Gate
-
-   ;;-------------- ---------- ---------- ---------------- ---- OUTFALL 1254.20 FREE NO
-
-   [CONDUITS]
-
-   ;; Inlet Outlet Manning Inlet Outlet Init.
-   Max.
-
-   ;;Name Node Node Length N Offset Offset Flow Flow
-
-   ;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
-
-   C1 PJ1C1 FOUTFALL 176 0.013 0 0 0 0
-
-   [XSECTIONS]
-
-   ;;Link Shape Geom1 Geom2 Geom3 Geom4 Barrels
-
-   ;;-------------- ------------ ---------------- ---------- ---------- ---------- ---------- C1 CIRCULAR 10 0 0 0 1
-
-   [LOSSES]
-
-   ;;Link Inlet Outlet Average Flap Gate
-
-   ;;-------------- ---------- ---------- ---------- ----------
-
-   [REPORT]
-
-   INPUT YES
-
-   CONTROLS YES
-
-   NODES ALL
-
-   LINKS ALL
-
-   [TAGS]
-
-   [MAP]
-
-   DIMENSIONS 696350.607 908521.547 697144.791 909040.891
-
-   Units None
-
-   [COORDINATES]
-
-   ;;Node X-Coord Y-Coord
-
-   ;;-------------- ------------------ ------------------
-
-   I1CP1C14 696446.346 908983.021
-
-   [VERTICES]
-
-   ;;Link X-Coord Y-Coord
-
-   ;;-------------- ------------------ ------------------
+.. raw:: html
+
+    <pre>
+    [TITLE]
+    INP file created on 10/17/2014 9:30:50 AM by FLO-2D Team Title/Notes:
+
+    [OPTIONS]
+    FLOW_UNITS      CFS
+    INFILTRATION    HORTON
+    FLOW_ROUTING    DYNWAVE
+    START_DATE      03/25/2013
+    START_TIME      00:00:00
+    REPORT_START_DATE   03/25/2013
+    REPORT_START_TIME   00:00:00
+    END_DATE        03/25/2013
+    END_TIME        00:24:00
+    SWEEP_START     01/01
+    SWEEP_END       12/31
+    DRY_DAYS        0
+    REPORT_STEP     00:01:30
+    WET_STEP        00:01:00
+    DRY_STEP        00:01:00
+    ROUTING_STEP    0.05
+    ALLOW_PONDING   YES
+    INERTIAL_DAMPING    PARTIAL
+    VARIABLE_STEP   0.00
+    LENGTHENING_STEP    0
+    MIN_SURFAREA    0
+    NORMAL_FLOW_LIMITED BOTH
+    SKIP_STEADY_STATE   NO
+    FORCE_MAIN_EQUATION D-W
+    LINK_OFFSETS    DEPTH
+    MIN_SLOPE       0
+
+    [EVAPORATION]
+    ;;Type      Parameters
+    ;;---------- ----------
+    CONSTANT    0.0
+    DRY_ONLY    NO
+
+    [JUNCTIONS]
+    ;;         Invert   Max.    Init.   Surchage    Ponded
+    ;; Name    Elev.    Depth   Depth   Depth       Area
+    ;; ----    ------   ------  ------  ---------   -------
+    I1CP1C14    1264.35 6.34    0         0          0
+
+    [OUTFALLS]
+    ;;         Invert   Outfall    Stage/Table   Tide
+    ;; Name    Elev.    Type        Time Series  Gate
+    ;;-------------- ---------- ---------- ---------- ----
+    OUTFALL  1254.20    FREE                      NO
+
+    [CONDUITS]
+    ;;      Inlet   Outlet          Manning     Inlet   Outlet  Init.   Max.
+    ;;Name  Node    Node    Length     N        Offset  Offset  Flow    Flow
+    ;;-------------- ---------------- ---------------- ---------- ----------
+    C1      PJ1C1   FOUTFALL  176     0.013       0        0      0     0
+
+    [XSECTIONS]
+    ;;Link  Shape   Geom1   Geom2   Geom3   Geom4   Barrels
+    ;;-------------- ------------ ---------------- ---------
+    C1    CIRCULAR   10       0       0       0       1
+
+    [LOSSES]
+    ;;Link  Inlet   Outlet  Average   Flap Gate
+    ;;-------------- ---------- ---------- ---------- ----------
+
+    [REPORT]
+    INPUT   YES
+    CONTROLS    YES
+    NODES   ALL
+    LINKS   ALL
+
+    [TAGS]
+
+    [MAP]
+    DIMENSIONS  696350.607  908521.547  697144.791  909040.891
+    Units   None
+
+    [COORDINATES]
+    ;;Node      X-Coord     Y-Coord
+    ;;-------------- ------------------ ------------------
+    I1CP1C14   696446.346  908983.021
+
+    [VERTICES]
+    ;;Link  X-Coord  Y-Coord
+    ;;-------------- ------------------ ------------------
+    </pre>
 
 SWMMFLO.DAT
 '''''''''''
