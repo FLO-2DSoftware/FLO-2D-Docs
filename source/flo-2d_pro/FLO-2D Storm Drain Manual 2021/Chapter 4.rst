@@ -1,30 +1,25 @@
 .. vim: syntax=rst
 
 Chapter 4
----------
+==========
 
 Introduction
 ~~~~~~~~~~~~
 
 These guidelines will assist in understanding the FLO-2D surface water-storm drain interface.
 
-- Surface water hydrology and hydraulics including the rainfall runoff, infiltration, and flood routing in channels, streets or unconfined overland flow
-  are simulated by the FLO2D surface water model.
-
-- The storm drain engine only solves the pipe flow routing and hydraulics.
-
-- A storm drain inlet must have a name starting with an ‘I’ to distinguish it from a junction and to collect water from the surface.
-
-- The inlet locations are assigned in the SWMM.INP file.
-  The connectivity between inlets/outfalls and the surface grid system is created by the QGIS Plug-in or the GDS.
-  A set of shapefiles containing inlets/junctions, outfalls and conduits is needed to create the storm drain files in the QGIS plug-in.
-  For a more detailed information about how to create the storm drain system in QGIS review the FLO-2D Plugin User’s Manual and the FLO-2D Plugin
-  Technical Reference Manual.
-
-- Storm drain outfall nodes can be assigned to discharge pipe flow to the surface water system or off the models completely.
-  Only the “Free” outfall boundary condition can discharge back to the surface water model.
-
-- Return flow from inlets to the water surface depends on the relationship between the surface water elevation and the pipe pressure.
+    - Surface water hydrology and hydraulics including the rainfall runoff, infiltration, and flood routing in channels, streets or unconfined overland flow
+      are simulated by the FLO2D surface water model.
+    - The storm drain engine only solves the pipe flow routing and hydraulics.
+    - A storm drain inlet must have a name starting with an ‘I’ to distinguish it from a junction and to collect water from the surface.
+    - The inlet locations are assigned in the SWMM.INP file.
+      The connectivity between inlets/outfalls and the surface grid system is created by the QGIS Plug-in or the GDS.
+      A set of shapefiles containing inlets/junctions, outfalls and conduits is needed to create the storm drain files in the QGIS plug-in.
+      For a more detailed information about how to create the storm drain system in QGIS review the FLO-2D Plugin User’s Manual and the FLO-2D Plugin
+      Technical Reference Manual.
+    - Storm drain outfall nodes can be assigned to discharge pipe flow to the surface water system or off the models completely.
+      Only the “Free” outfall boundary condition can discharge back to the surface water model.
+    - Return flow from inlets to the water surface depends on the relationship between the surface water elevation and the pipe pressure.
 
 To get started on a new project, first develop the FLO-2D model by importing the digital terrain model (DTM) points, selecting a grid size, outlining
 the computational domain, assigning the grid element elevations and importing an aerial image.
@@ -35,59 +30,41 @@ The SWMM GUI (activated from the GDS command: Tools\| Storm Drain\| Run Storm Dr
 drain data base.
 The GDS or QGIS has several functions that integrate the FLO-2D surface water model with the storm drain model:
 
-- Activates the SWMM storm drain GUI;
+    - Activates the SWMM storm drain GUI;
+    - Create the SWMM.inp file using a set of shapefiles containing the storm drain system in QGIS plug-in;
+    - Reads the data from the SWMM.inp file and associates inlets/outlets with FLO-2D cells;
+    - Displays a dialog box to enter the storm drain inlet geometry data;
+    - Saves and edits the SWMMFLO.DAT file containing the inlet geometry data.
+    - Displays the inlets and outlets and the piping network connections:
 
-- Create the SWMM.inp file using a set of shapefiles containing the storm drain system in QGIS plug-in;
+       ✓ Inlets are identified as blue cells.
+       The pipe system is represented as a magenta polyline.
 
-- Reads the data from the SWMM.inp file and associates inlets/outlets with FLO-2D cells;
-
-- Displays a dialog box to enter the storm drain inlet geometry data;
-
-- Saves and edits the SWMMFLO.DAT file containing the inlet geometry data.
-
-- Displays the inlets and outlets and the piping network connections:
-
-..
-
-   ✓ Inlets are identified as blue cells.
-   The pipe system is represented as a magenta polyline.
-
-- Displays a dialog box containing the outfall list and all the outfall data needed.
-
-- Edits the switch that turns on the discharge from an outfall to the FLO-2D grid elements.
-
-- Saves the SWMMOUTF.DAT file.
-
-- Displays warning messages.
-
-- Graphically displays results including inflow and return flow hydrographs and the pipeline energy grade line.
-  GDS can automatically create all storm drain discharge plots without opening the project in GDS.
-  Open GDS PRO and go to Tools \| Storm Drain \| Storm Drain Discharge Display \| from External .RPT.
-  This will read the output file, create a subdirectory with the following name: *StormDrainDischarge MM-DD-YYYY*, and save to the new folder the storm
-  drain discharge plots for all inlets, junctions and outfalls.
+    - Displays a dialog box containing the outfall list and all the outfall data needed.
+    - Edits the switch that turns on the discharge from an outfall to the FLO-2D grid elements.
+    - Saves the SWMMOUTF.DAT file.
+    - Displays warning messages.
+    - Graphically displays results including inflow and return flow hydrographs and the pipeline energy grade line.
+      GDS can automatically create all storm drain discharge plots without opening the project in GDS.
+      Open GDS PRO and go to Tools \| Storm Drain \| Storm Drain Discharge Display \| from External .RPT.
+      This will read the output file, create a subdirectory with the following name: *StormDrainDischarge MM-DD-YYYY*, and save to the new folder the storm
+      drain discharge plots for all inlets, junctions and outfalls.
 
 When an existing SWMM.inp file is read by the QGIS plug-in or by the GDS, the location of the the inlet positions and the associate grid element is
 automatically identified.
 
 To summarize, a FLO-2D storm drain system model is generated through the following steps:
 
-1. Create or open an existing FLO-2D model project;
-
-2. Open the QGIS-plugin and generate all storm drain data files.
-   QGIS plugin is the recommended GUI to create the storm drain system because its simplicity.
-   For a more detailed information review the FLO-2D Plugin User’s Manual and the FLO-2D Plugin Technical Reference Manual.
-
-3. IF GDS is the selected GUI to create the storm drain data files, then open the SWMM GUI from the GDS and develop the SWMM.inp data file, other third
-   parties GUI have been mentioned in this manual.
-
-4. Close the SWMM GUI and view the storm drain network in the GDS;
-
-5. Generate the SWMMFLO.DAT file with the storm drain inlet data in GDS;
-   6. Create the SWMMOUTF.DAT using the Outfall Node Discharge Option in GDS;
-
-..
-
-   7. Run the integrated FLO-2D Storm Drain System model.
+    1. Create or open an existing FLO-2D model project;
+    2. Open the QGIS-plugin and generate all storm drain data files.
+       QGIS plugin is the recommended GUI to create the storm drain system because its simplicity.
+       For a more detailed information review the FLO-2D Plugin User’s Manual and the FLO-2D Plugin Technical Reference Manual.
+    3. IF GDS is the selected GUI to create the storm drain data files, then open the SWMM GUI from the GDS and develop the SWMM.inp data file, other third
+       parties GUI have been mentioned in this manual.
+    4. Close the SWMM GUI and view the storm drain network in the GDS;
+    5. Generate the SWMMFLO.DAT file with the storm drain inlet data in GDS;
+    6. Create the SWMMOUTF.DAT using the Outfall Node Discharge Option in GDS;
+    7. Run the integrated FLO-2D Storm Drain System model.
 
 After the FLO-2D grid system is prepared, the storm drain model switch (CONT.DAT file) must be activated to run the model from the QGIS or from the
 GDS.
@@ -102,27 +79,23 @@ Detailed Storm Drain Instructions and Guidelines
 Virtually all storm drain models are developed for urban areas.
 Specific instructions for creating a storm drain in a FLO-2D urban environment are:
 
-- A storm drain inlet/outfall should not be assigned to a completely blocked cell (ARF = 1); A reasonable amount of surface area should be available for
-  the storm drain feature to interact with the surface water.
-
-- Higher roughness values can be assigned to floodplain elements with storm drain features (inlet or outfalls) to represent the storm drain flow
-  disturbance around the inlet or outfall.
-  This would help surface routing numerical stability.
-
-- Inlet rim elevations should match the floodplain elevation.
-  It is possible to assign inlet rim elevations higher than the floodplain cell elevation, but this may lead to oscillating or poor results.
-  For an inlet rating table, the inlet discharge is zero if the floodplain water surface elevation is less than the inlet rim elevation.
-
-- Levees and walls may isolate a storm drain feature in the model resulting in oscillating storm drain discharge.
-  A review of the inlet/outfall location may be required.
-
-- Storm drain features should not be assigned to surface water inflow or outflow elements.
-  There is an error message generated for this conflict.
+    - A storm drain inlet/outfall should not be assigned to a completely blocked cell (ARF = 1); A reasonable amount of surface area should be available for
+      the storm drain feature to interact with the surface water.
+    - Higher roughness values can be assigned to floodplain elements with storm drain features (inlet or outfalls) to represent the storm drain flow
+      disturbance around the inlet or outfall.
+      This would help surface routing numerical stability.
+    - Inlet rim elevations should match the floodplain elevation.
+      It is possible to assign inlet rim elevations higher than the floodplain cell elevation, but this may lead to oscillating or poor results.
+      For an inlet rating table, the inlet discharge is zero if the floodplain water surface elevation is less than the inlet rim elevation.
+    - Levees and walls may isolate a storm drain feature in the model resulting in oscillating storm drain discharge.
+      A review of the inlet/outfall location may be required.
+    - Storm drain features should not be assigned to surface water inflow or outflow elements.
+      There is an error message generated for this conflict.
 
 Other specific urban guidelines are listed in Table 16.
 
-   **Table 16.
-   FLO-2D Storm Drain Instructional Comments.**
+*Table 16.
+FLO-2D Storm Drain Instructional Comments.*
 
 .. list-table::
    :widths: 50 50
@@ -138,55 +111,52 @@ Other specific urban guidelines are listed in Table 16.
        Horizontal inlets refer to gutter inlets and vertical inlets are culvert or pipe openings to the surface.
        Floodplain grid element elevation (FPE) is automatically set to the inlet rim elevation.
        For horizontal inlets changes to FPE are reported to a file named as FPRIMELEV.OUT.
-       For vertical inlets:  - An inlet on a 1-D channel (end of segment) where the channel flow is discharging to the storm drain pipe, the invert elevation
-       should be equal to the channel bed elevation.
-       - If the flow is discharging to a storm drain pipe or culvert in a floodplain swale, the invert elevation should be equal to the cell floodplain
-       elevation.
-       ..
-       The last column parameter ‘Feature’ in the GDS inlet dialog has three options:  1.
-       - default, no flapgate, no vertical inlet opening  2.
-       - vertical, inlet opening  3.
-       - flapgate (outlet)  ..
+       For vertical inlets:
+           - An inlet on a 1-D channel (end of segment) where the channel flow is discharging to the storm drain pipe, the invert elevation
+           should be equal to the channel bed elevation.
+           - If the flow is discharging to a storm drain pipe or culvert in a floodplain swale, the invert elevation should be equal to the cell floodplain
+           elevation.
+
+       The last column parameter ‘Feature’ in the GDS inlet dialog has three options:
+            0. - default, no flapgate, no vertical inlet opening
+            1. - vertical, inlet opening
+            2. - flapgate (outlet)
        If option 1 is assigned for a vertical inlet opening then there are two cases:
-
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
-
-   * -
-     - - The channel pipe inlet invert elevation has to be reset to the channel bed elevation.
-       Automated runtime changes for this case do not occur.
-       The user has to manually implement the elevation revision.
-       - Grid element elevation is reset to the pipe invert elevation at runtime.
-       ..
-       The corrected FPE is not revised in the FPLAIN.DAT file.
-       The user must review the  FPRIMELEV.OUT modifications and rename FPLAIN_SDElev.RGH and the  TOPO_SDElev.RGH files to FPLAIN.DAT AND TOPO.DAT files
-       respectively to make the elevation changes permanent.
-       Rim elevations for the inlets located in channel/street cells must be verified and manually revised by the user.
-       ------------------------------------------------------- The discharge and volume that enters the storm drain is based on the inlet geometry and on the
-       relationship between the water surface elevation and the storm drain pressure head.
-       Storm drain inflow discharge is inlet controlled until the system capacity is reached.
-       ------------------------------------------------------- Inlet conditions:  - Curb opening inlet at grade (no sag) INTYPE=1;  - Curb opening inlet with
-       sag INTYPE= 2;  - Grate (gutter) inlet with/without sag INTYPE=3;  - Unique inlet with stage - discharge rating table INTYPE=4; • Manhole INTYPE=5.
-       ..
+            • The channel pipe inlet invert elevation has to be reset to the channel bed elevation. Automated runtime changes for this case do not occur. The user
+            has to manually implement the elevation revision.
+            • Grid element elevation is reset to the pipe invert elevation at runtime.
+       The corrected FPE is not revised in the FPLAIN.DAT file. The user must review the
+       FPRIMELEV.OUT modifications and rename FPLAIN_SDElev.RGH and the
+       TOPO_SDElev.RGH files to FPLAIN.DAT AND TOPO.DAT filesrespectively to make the
+       elevation changes permanent. Rim elevations for the inlets located in channel/street
+       cells must be verified and manually revised by the user.
+       The discharge and volume that enters the storm drain is based on the inlet geometry
+       and on the relationship between the water surface elevation and the storm drain
+       pressure head. Storm drain inflow discharge is inlet controlled until the system
+       capacity is reached.
+       Inlet conditions:
+            • Curb opening inlet at grade (no sag) INTYPE=1;
+            • Curb opening inlet with sag INTYPE= 2;
+            • Grate (gutter) inlet with/without sag INTYPE=3;
+            • Unique inlet with stage - discharge rating table INTYPE=4;
+            • Manhole INTYPE=5.
        Weir/orifice equations are used to calculate the discharge for inlets 1 thru 3 and 5.
-       For the rating table option (INTYPE = 4), a relationship between cell flow depth and discharge is assigned in the GDS.
-       An additional file (SWMMFLORT.DAT) is created for these type of inlets.
+       For the rating table option (INTYPE = 4), a relationship between cell flow depth and
+       discharge is assigned in the GDS. An additional file (SWMMFLORT.DAT) is created for
+       these type of inlets.
 
    * - Storm drainpressure isgreater thanthe WSEL
      - Surcharging or return flow is computed from the storm drain to the surface water.
-       ------------------------------------------------------- Not all return flow or flooding reported in the SWMM.RPT file passes from the storm drain to
-       the surface water since the pressure head has to be greater than the WSEL.
-       ------------------------------------------------------- Return flow volume is distributed over the grid element surface area as an increased
+       Not all return flow or flooding reported in the SWMM.RPT file passes from the storm
+       drain to the surface water since the pressure head has to be greater than the WSEL.
+       Return flow volume is distributed over the grid element surface area as an increased
        incremental flow depth added to the existing cell depth.
-       ------------------------------------------------------- Inflow to storm drain from the surface water is not allowed in this case.
+       Inflow to storm drain from the surface water is not allowed in this case.
 
    * - WSE isgreater thanthe pressurehead and therimelevation
      - No return flow from the storm drain to the surface water is computed.
-       ------------------------------------------------------- Volume in the inlet node stays in the pipe and the overflow volume is set to 0.
-       ------------------------------------------------------- Inflow to the storm drain from surface water is not computed.
+       Volume in the inlet node stays in the pipe and the overflow volume is set to 0.
+       Inflow to the storm drain from surface water is not computed.
 
    * - Volumeconservation
      - Inflow to the storm drain and return volumes (flooding and outfall volumes) to the surface water are compiled and reported by the FLO-2D model.
@@ -199,10 +169,10 @@ Other specific urban guidelines are listed in Table 16.
    * - Detentionbasin outlet
      - Flapgates can be used to stop flow from going into the storm drain system.
        Flow only goes out of the outlet.
-       The SWMMFLO.DAT file assigns a switch (FEATURE) that can have one of the following values:  1.
-       = default, no flap gate, no vertical inlet opening  2.
-       = vertical inlet opening  3.
-       = flapgate, controls outlet node discharge
+       The SWMMFLO.DAT file assigns a switch (FEATURE) that can have one of the following values:
+            0. = default, no flap gate, no vertical inlet opening
+            1. = vertical inlet opening
+            2. = flapgate, controls outlet node discharge
 
    * - FreeOutfalls
      - Any type of SWMM outfall can be assigned.
@@ -215,29 +185,25 @@ Other specific urban guidelines are listed in Table 16.
        This is available only for the ‘free’ type of outfalls.
        It does not apply to normal, fixed, tidal or time series type of outfalls.
        When the outfall does not discharge to the surface water, the outfall head is assigned based on the type of outfall node.
-       The following types can be set up:  a.
-       FREE: minimum between normal and critical depth.
-       b.
-       NORMAL: normal depth.
-       c.
-       FIXED: fixed stage entered in the data.
-       d.
-       TIDAL: head computed from tide stage curve.
-       e.
-       TIME SERIES: head computed from the time series.
+       The following types can be set up:
+           a. FREE: minimum between normal and critical depth.
+           b. NORMAL: normal depth.
+           c. FIXED: fixed stage entered in the data.
+           d. TIDAL: head computed from tide stage curve.
+           e. TIME SERIES: head computed from the time series.
 
    * - Manholes
      - Popping a manhole cover can be simulated.
        The surcharge depth is entered in the SWMMFLO.DAT file.
        The user can define the surcharge depth in the junction properties (SWMM.inp file).
        When the surcharge depth is set to different values in  SWMMFLO.DAT and in the SWMM.inp file, the model uses the surcharge depth from the SWMMFLO.DAT.
-       - If Pressure Head + Surcharge Depth < WSEL:  - Cover remains in place.
-       - Inflow to the manhole is not allowed.
-       - Return flow will not occur.
-       - If Pressure Head + Surcharge Depth > WSEL:  - Cover is popped.
-       - Surcharge depth is reset to 0.
-       - Inflow to the storm drain is permitted.
-       - Return flow can occur.
+           - If Pressure Head + Surcharge Depth < WSEL:  - Cover remains in place.
+           - Inflow to the manhole is not allowed.
+           - Return flow will not occur.
+           - If Pressure Head + Surcharge Depth > WSEL:  - Cover is popped.
+           - Surcharge depth is reset to 0.
+           - Inflow to the storm drain is permitted.
+           - Return flow can occur.
 
 
 Default Parameters
@@ -338,14 +304,10 @@ Figure 50 and Figure 51provide some additional details about setting up the inle
 This system shows that the bed elevation of the channel is equal to the invert elevation of the inlet.
 
 - Channel Bed Elevation = Bank Elevation – Depth = (299.8 – 3.5) = 296.3 ft • Inlet Elevation = 296.3 ft
-
-|Chapte002|
-
+.. image:: img/Chapter4/Chapte002.jpg
    **Figure 50.
    Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet**
-
-|Chapte003|
-
+.. image:: img/Chapter4/Chapte003.jpg
    **Figure 51.
    Elevation of a Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet**
 
@@ -356,9 +318,7 @@ function of the following:
 - Channel bed elevation = inlet invert elevation
 
 - Channel bank elevation = inlet rim elevation (typical design)
-
-|Chapte004|
-
+.. image:: img/Chapter4/Chapte004.jpg
    **Figure 52.
    Complex Interaction between a Storm Drain Pipe and 1-D Channel**
 
@@ -370,9 +330,7 @@ To connect a storm drain outfall to a channel element the following issues shoul
 
 Figure 53 shows a complex storm drain – channel system where a channel feeds the storm drain as an inlet and flow returns to surface channel
 downstream.
-
-|Chapte005|
-
+.. image:: img/Chapter4/Chapte005.jpg
    **Figure 53.
    Complex Flow Exchange between a Storm Drain System and 1-D Channel**
 
@@ -381,9 +339,7 @@ For most cases, the outfall invert elevation would be assigned to the channel el
 If the coordinates in the SWMM.inp file are the left bank element channel coordinates, then the QGIS Plugin or the GDS will automatically assign the
 outfall node to the left bank element.
 The outfall should be correctly paired to the left bank element in the SWMMOUTF.DAT (Figure 54).
-
-|Chapte006|
-
+.. image:: img/Chapter4/Chapte006.jpg
    **Figure 54.
    Typical Configuration of a Storm Drain Outfall Discharging to a Natural Channel**
 
@@ -409,9 +365,7 @@ The outfall should not be assigned to the left bank floodplain element.
 If the outfall physically discharges to the floodplain elevation instead of the channel bed elevation, assign the outfall position to a contiguous
 element that is not a channel bank element.
 Assignment of the outfall to a right bank element, or a channel interior element will generate an error message.
-
-|Chapte007|
-
+.. image:: img/Chapter4/Chapte007.jpg
    **Figure 55.
    Outfall Nodes Paired to Interior Channel Elements by GDS**
 
@@ -428,9 +382,7 @@ The artificial volume is accounted for in the storm drain model.
 When the model runs, inflow may be added to either the outfall grid element or the upstream storm drain pipe network and the flow can go either in or
 out of the outfall pipe based on the pressure head (Figure 56).
 To account for volume conservation, the storm drain outflow that represents inflow volume to a FLO-2D channel is reported in the CHVOLUME.OUT file.
-
-   |Chapte008|
-
+.. image:: img/Chapter4/Chapte008.jpg
    **Figure 56.
    Underground Outfall Condition**
 
@@ -439,9 +391,7 @@ Water can enter the storm drain when the water surface elevation is greater than
 pressure head is above the water surface elevation.
 This behavior can introduce oscillations in the system that can be explained as a respond to the surface water and storm drain pressure interaction
 (Figure 57).
-
-|Chapte009|
-
+.. image:: img/Chapter4/Chapte009.jpg
    **Figure 57.
    Inlet and Outfall Pressure Head Variation Cause Pipe Discharge Oscillations**
 
@@ -518,29 +468,3 @@ The following checklist was prepared to review the storm drain data files:
    * - 
      - SWMM.ini file.
        The SWMM.ini file should be modified to review the results.
-
-
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 5.76875in
-   :height: 4.13542in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 5.89403in
-   :height: 2.20139in
-.. |Chapte004| image:: media\Chapte004.png
-   :width: 4.51111in
-   :height: 4.91653in
-.. |Chapte005| image:: media\Chapte005.png
-   :width: 6.14097in
-   :height: 5.42667in
-.. |Chapte006| image:: media\Chapte006.jpg
-   :width: 5.52014in
-   :height: 4.72014in
-.. |Chapte007| image:: media\Chapte007.jpg
-   :width: 6.43681in
-   :height: 3.95278in
-.. |Chapte008| image:: media\Chapte008.png
-   :width: 4.01458in
-   :height: 3.27083in
-.. |Chapte009| image:: media\Chapte009.jpg
-   :width: 4.95764in
-   :height: 3.60389in
