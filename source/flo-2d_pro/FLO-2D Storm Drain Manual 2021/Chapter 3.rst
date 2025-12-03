@@ -415,15 +415,14 @@ SWMMFLO.DAT Input Variable Descriptions**
      - Curb height used to calculate discharge on inlets for all INTYPE
 
 
-(i) = Integer variable (r) = Real variable (c) = Character
-
 QGIS plugin creates the SWMMFLO.DAT file, review FLO-2D Plugin User’s Manual and FLO-2D Plugin Technical Reference Manual for more information.
 
 To create the SWMMFLO.DAT in GDS, go Tools \| Storm Drain \| View Storm Drain Inlets Dialog command.
 Browse for the SWMM.inp file using the GDS Window “Select a Storm Drain \*.inp file” as it is shown in Figure 43.
+
 .. image:: img/Chapter3/Chapte003.jpg
-   **Figure 43.
-   GDS Open \*.inp File**
+*Figure 43.
+GDS Open \*.inp File*
 
 The GDS will read the \*.inp data file and those junctions which names start with an ‘I’ is identified by the GDS.
 The data from the storm drain file will then be paired with the data in the SWMMFLO.DAT file.
