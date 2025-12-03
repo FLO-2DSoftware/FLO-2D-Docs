@@ -210,12 +210,10 @@ The sediment discharge is assumed to erode uniformly from the walls, bed and the
 When the pipe opening height is larger than the height of the material remaining in the embankment above the pipe, the roof of the pipe collapses and
 channel flow ensues through the breach.
 
-**Figure**
+.. image:: img/Levee025.jpg
 
-**5**
-
-**.
-Pipe Breach Failure.**
+*Figure 5.
+Pipe Breach Failure.*
 
 Overtopping and Channel Breach
 ------------------------------
@@ -228,12 +226,10 @@ If the stability criteria are exceeded, the sides of the channel slump into the 
 The breach continues to widen until the top width of the channel equals the specified maximum width of failure, the dam crest length or the available
 connected levee grids.
 
-**Figure**
+.. image:: img/Levee026.jpg
 
-**6**
-
-**.
-Overtopping and Channel Breach Erosion.**
+*Figure 6.
+Overtopping and Channel Breach Erosion.*
 
 Dam Collapse
 ------------
@@ -245,10 +241,10 @@ cohesion that resist sliding.
 When the dam collapse occurs, it is assumed that the breach enlargement ceases until all the wedge material is transported downstream.
 A flow chart of the basic computation scheme for the breach component is shown in Figure 7.
 
-   |Levee003|
+.. image:: img/Levee003.jpg
 
-   **Figure 7.
-   Breach Schematic Flow Chart.**
+*Figure 7.
+Breach Schematic Flow Chart.*
 
 Levee Overtopping without Failure
 ------------------------------------
@@ -259,20 +255,27 @@ The discharge from levee overtopping is shared between two cells with the levee 
 In Figure 8, the levee crest width is L\ :sub:`r`, the headwater depth is H\ :sub:`r`, the tailwater depth is h\ :sub:`t`, the ratio of tailwater to
 headwater is given by d\ :sub:`t`/d\ :sub:`h` based on the highest grid element floodplain elevation.
 
-|Levee004|
+.. image:: img/Levee004.jpg
 
-   **Figure 8.
-   Levee Overtopping Definition.**
+*Figure 8.
+Levee Overtopping Definition.*
 
 The flow can occur in either direction and the discharge Q is computed using the conventional broad-crested weir equation:
 
-Q = CLH\ :sub:`d`\ :sup:`1.5`
+.. math::
+    :label:
 
-where: C is the broadcrested weir coefficient (3.09 in English units, average typical coefficient for the broadcrested weir); L is the length of the
-levee crest and H\ :sub:`d` is the headwater on the levee (Figure 9).
-The headwater depth must exceed a tolerance value = 0.1 ft (0.3 m) for discharge to occur.
-This is to accommodate non-uniform crest elevations and minute discharges that will not impact the flooding.
-Typically, if the flow is greater than about 0.1 ft, the discharge will be significant.
+    Q = CLH_d^{1.5}
+
+where:
+
+    C is the broadcrested weir coefficient (3.09 in English units, average typical coefficient for the broadcrested weir);
+
+    L is the length of the levee crest
+
+    H\ :sub:`d` is the headwater on the levee (Figure 9).The headwater depth must exceed a tolerance value = 0.1 ft (0.3 m) for discharge to occur.
+    This is to accommodate non-uniform crest elevations and minute discharges that will not impact the flooding.
+    Typically, if the flow is greater than about 0.1 ft, the discharge will be significant.
 
 Submergence
 -----------
@@ -286,15 +289,15 @@ If the water surface elevation on both sides of the levee is greater than 3 ft (
 flow routing routine.
 These modifications to the broadcrested weir equation may the discharge transitions more gradual and reduce the potential for numerical stability.
 
-|Levee005|
+.. image:: img/Levee005.jpg
 
-   **Figure 9.
-   Schematic of the Levee Overtopping Flow.**
+*Figure 9.
+Schematic of the Levee Overtopping Flow.*
 
-|Levee006|
+.. image:: img/Levee006.jpg
 
-   **Figure 10.
-   Levee Overtopping Tailwater Submergence.**
+*Figure 10.
+Levee Overtopping Tailwater Submergence.*
 
 Prescribed Levee Breach Input Data
 -----------------------------------
