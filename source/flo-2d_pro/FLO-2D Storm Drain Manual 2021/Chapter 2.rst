@@ -473,7 +473,7 @@ The elevation of each inlet rim and outfall invert should be reviewed especially
 .. image:: img/Chapter2/Chapte016.jpg
 
 *Figure 41.
-Diagram of a Combination Inlet Rim Elevation.*f
+Diagram of a Combination Inlet Rim Elevation.*
 
 For curb opening inlets at grade (Type 1), curb opening inlets with sag (Type 2), grates with or without sag (Type 3) and manholes (Type 5), the
 FLO-2D model computes the rim elevation at the node by adding the maximum depth in the SWMM.inp file to the invert elevation.
