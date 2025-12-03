@@ -127,7 +127,9 @@ FLO-2D Error Messages*
                  equal to the channel bed elevation.
 
    * - No elevation differencesbetween surface and stormdrain layers.
-     - NOTE: THERE ARE NO DIFFERENCES BETWEEN FLOODPLAIN GRID AND STORM DRAIN RIM ELEVATIONS.
+     - .. note:: THERE ARE NO DIFFERENCES BETWEEN FLOODPLAIN GRID AND STORM
+
+                 DRAIN RIM ELEVATIONS.
 
        .. note:: THERE ARE NO DIFFERENCES BETWEEN FLOODPLAIN GRID AND TYPE 4
 
