@@ -597,65 +597,53 @@ travel time through a pipe.
 This would be comparable to the wave celerity being equal to about 1.5 times the average flow velocity V in the pipe.
 To improve a model with numerical stability issues:
 
-- A minimum conduit length of 20 ft or the FLO-2D grid element side length is recommended.
-  Pipes shorter than 20 ft are reported as a warning message in the ERROR.CHK file and by the GDS.
+    - A minimum conduit length of 20 ft or the FLO-2D grid element side length is recommended.
+      Pipes shorter than 20 ft are reported as a warning message in the ERROR.CHK file and by the GDS.
+    - Dynamic wave routing numerical stability requires that the timestep be less than the time it takes for a dynamic wave (flow velocity plus wave
+      celerity) to travel through the shortest conduit in the storm drain system.
+      A maximum timestep of 1 second is sufficient for most storm drain simulations.
+      The FLO-2D timesteps are used for both the surface water and the storm drain model and they are small enough for the storm drain solution to converge.
+      A timestep calculation of a short pipe is:
 
-- Dynamic wave routing numerical stability requires that the timestep be less than the time it takes for a dynamic wave (flow velocity plus wave
-  celerity) to travel through the shortest conduit in the storm drain system.
-  A maximum timestep of 1 second is sufficient for most storm drain simulations.
-  The FLO-2D timesteps are used for both the surface water and the storm drain model and they are small enough for the storm drain solution to converge.
-  A timestep calculation of a short pipe is:
+           Conduit length ∆x = 20 ft
 
-..
+           Average conduit velocity V = 7.30 fps
 
-   Conduit length ∆x = 20 ft
+           COURANTFP from CONT.DAT C = 0.6
 
-   Average conduit velocity V = 7.30 fps
+           Wave celerity c = 1.5 x V
 
-   COURANTFP from CONT.DAT C = 0.6
+           Applying the Courant equation:
 
-   Wave celerity c = 1.5 x V
-
-   Applying the Courant equation:
-
-   ∆t = C ∆x/(V + c) = 0.6 (20 ft) / (7.3 fps + 1.5 x 7.3 fps) = 0.66 seconds
+           ∆t = C ∆x/(V + c) = 0.6 (20 ft) / (7.3 fps + 1.5 x 7.3 fps) = 0.66 seconds
 
 Unstable Results
-
 
 Oscillations that grow in time are a form of numerical instability.
 The solution is not converging, and the following issues should be reviewed:
 
-- A pipe is short relative to other adjacent pipes.
-  A longer pipe length is recommended.
-  A careful check of the storm drain connections in all contiguous connections of the unstable pipe should be completed prior to pipe length
-  adjustments.
-
-- Excessive discharges in adjacent downstream pipe elements generate an excessive decrease in the upstream water surface.
-
-- A node dries on each timestep despite an increasing inflow.
-  This is the result of an excessive discharges in adjacent downstream pipe elements.
-
-- Excessive velocities (over 20 ft/sec) and discharges grow without limit.
-  Increase the pipe length or the pipe roughness.
-
-- There is a large continuity error.
-  If the continuity error exceeds ± 10%, the user should check the pipe results for zero flow or oscillating flow.
-  This may indicate an improperly connected system.
+    - A pipe is short relative to other adjacent pipes.
+      A longer pipe length is recommended.
+      A careful check of the storm drain connections in all contiguous connections of the unstable pipe should be completed prior to pipe length
+      adjustments.
+    - Excessive discharges in adjacent downstream pipe elements generate an excessive decrease in the upstream water surface.
+    - A node dries on each timestep despite an increasing inflow.
+      This is the result of an excessive discharges in adjacent downstream pipe elements.
+    - Excessive velocities (over 20 ft/sec) and discharges grow without limit.
+      Increase the pipe length or the pipe roughness.
+    - There is a large continuity error.
+      If the continuity error exceeds ± 10%, the user should check the pipe results for zero flow or oscillating flow.
+      This may indicate an improperly connected system.
 
 In general, excessive discharge or pressure head oscillations should be eliminated.
 There are physical system configurations that in reality might generate some instability oscillations, but these will usually decay over time.
 Other possible modifications to reduce storm drain numerical instability include:
 
-- Increasing pipe roughness;
-
-- Decreasing pipe slope;
-
-- Increasing or adjusting pipe geometry;
-
-- Eliminating a junction between two short pipe sections;
-
-- Reducing or eliminating connections to isolate the unstable portion of the pipe network.
+    - Increasing pipe roughness;
+    - Decreasing pipe slope;
+    - Increasing or adjusting pipe geometry;
+    - Eliminating a junction between two short pipe sections;
+    - Reducing or eliminating connections to isolate the unstable portion of the pipe network.
 
 Conservatively high n-values (0.1 and higher) have been used to reduce pipe network instability.
 Uncertainty associated with pipe material, obstructions, debris, pipe bends, junction entrance and exit losses, and unsteady flow may warrant the
@@ -664,62 +652,39 @@ The numerical stability will improve with n-values higher than those typically a
 condition.
 To save time, there are two checks that can be made prior starting a complete simulation:
 
-1. Perform a short test run to confirm that the different links, nodes, subcatchments, etc.
-   are properly connected and represent the actual pipe network.
+    1. Perform a short test run to confirm that the different links, nodes, subcatchments, etc.
+       are properly connected and represent the actual pipe network.
+    2. Review the node inverts to make sure that they are at same elevation as the invert of the lowest pipe entering or leaving the junction otherwise
+       errors in the pipe hydraulics can occur.
 
-2. Review the node inverts to make sure that they are at same elevation as the invert of the lowest pipe entering or leaving the junction otherwise
-   errors in the pipe hydraulics can occur.
-
-.. list-table::
-   :widths: 100
-   :header-rows: 0
-
-
-   * - For complex models, it is sometimes difficult to differentiate between oscillations that are produced bya numerical instability and those real
-       oscillations that represent rapid discharge flux
-
-   * - |    Storm Drain Manual
-
-
-linked to inlets, junctions, conduits and outfall.
+For complex models, it is sometimes difficult to differentiate between oscillations that are produced bya numerical instability and those real
+oscillations that represent rapid discharge flux linked to inlets, junctions, conduits and outfall.
 Resolving potential error sources requires an understanding of the project and model application.
 Troubleshooting storm drain instability during the initial phase of a project can be accomplished with test runs.
 To summarize, the following are some of the methods for reducing storm drain pipe routing instability:
 
-1. Conservatively high n-values (up to 0.100) can be used to reduce pipe network dynamic instability.
-   For large complex project, local conservative pipe n-values can reduce oscillations in return flows.
-
-2. Eliminate short conduits in the simulation.
-   Conduits should be longer than 20 ft (6 m) or at least the length of a FLO-2D grid element.
-   A careful check of the storm drain connections in all contiguous connections of the unstable pipe should be completed prior to pipe length
-   adjustments.
-
-3. Investigate flooded or surcharged inlets.
-   Storm drain systems may have local conditions that may be explained by analyzing the actual physical behavior of the system.
-   For flooded or surcharge inlets or junctions displaying oscillations, upstream inlets should be examined to determine where the oscillations
-   originate.
-
-4. Review the system connectivity.
-   Search for adverse slopes and incorrect inlet geometry.
-
-5. Review the SWMM.rpt file for critical timestep elements and check the highest flow instability indexes (HFII).
-   This index is normalized with respect to the expected number of flow reversals (turns) that would occur for a purely random series of values and can
-   range from 0 to 150.
-   Inflow and flooding hydrographs for the HFII elements should be checked for oscillations.
-   Check upstream and downstream plots (flow, depth, velocity, Froude No., and capacity) of the links having the highest HFII's numbers.
-
-6. Check for oscillations or instabilities associated with pumps.
-
-7. If an instability or oscillation cannot be explained as a physical response of the system then try to isolate the problem by changing roughness in
-   contiguous links or by removing sections of the storm drain system.
-
-.. _`8.`:
-
-8.:
-
-Reduce the reporting timestep (30 s or smaller) when oscillations are identified to have a more complete picture of the dynamic behavior of the
-system.
-
+    1. Conservatively high n-values (up to 0.100) can be used to reduce pipe network dynamic instability.
+       For large complex project, local conservative pipe n-values can reduce oscillations in return flows.
+    2. Eliminate short conduits in the simulation.
+       Conduits should be longer than 20 ft (6 m) or at least the length of a FLO-2D grid element.
+       A careful check of the storm drain connections in all contiguous connections of the unstable pipe should be completed prior to pipe length
+       adjustments.
+    3. Investigate flooded or surcharged inlets.
+       Storm drain systems may have local conditions that may be explained by analyzing the actual physical behavior of the system.
+       For flooded or surcharge inlets or junctions displaying oscillations, upstream inlets should be examined to determine where the oscillations
+       originate.
+    4. Review the system connectivity.
+       Search for adverse slopes and incorrect inlet geometry.
+    5. Review the SWMM.rpt file for critical timestep elements and check the highest flow instability indexes (HFII).
+       This index is normalized with respect to the expected number of flow reversals (turns) that would occur for a purely random series of values and can
+       range from 0 to 150.
+       Inflow and flooding hydrographs for the HFII elements should be checked for oscillations.
+       Check upstream and downstream plots (flow, depth, velocity, Froude No., and capacity) of the links having the highest HFII's numbers.
+    6. Check for oscillations or instabilities associated with pumps.
+    7. If an instability or oscillation cannot be explained as a physical response of the system then try to isolate the problem by changing roughness in
+       contiguous links or by removing sections of the storm drain system.
+    8. Reduce the reporting timestep (30 s or smaller) when oscillations are identified to have a more complete picture of the dynamic behavior of the
+    system.
 
 The storm drain dynamic wave routing uses an explicit scheme numerical solution that may fluctuate or oscillate.
 In the original SWWM model, most volume conservation errors were associated with numerical surging and typically volume conservation errors of 10% or
