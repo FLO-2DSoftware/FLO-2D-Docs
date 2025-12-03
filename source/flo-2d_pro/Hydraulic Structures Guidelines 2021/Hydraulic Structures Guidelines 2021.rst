@@ -342,7 +342,7 @@ Table 2 is a list of possible hydraulic structure issues and fixes.
          <td style="border: 1px solid #000; padding: 4px;">
            Reference elevation is lower than the inlet or outlet generates an error message.
          </td>
-       <]/tr>
+       </tr>
        <tr>
          <td style="border: 1px solid #000; padding: 4px;">
            Model checks if the inflow or outflow node is a channel element when assigned to a
@@ -426,7 +426,7 @@ Table 2 is a list of possible hydraulic structure issues and fixes.
 
        <!-- Combined Hydraulic Structure and Levee Breach -->
        <tr>
-         <td style="border: 1px solid #000; padding: 4px; rowspan="8">
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="2">
            Combined Hydraulic Structure and Levee Breach
          </td>
          <td style="border: 1px solid #000; padding: 4px;">
