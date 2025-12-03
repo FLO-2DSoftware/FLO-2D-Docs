@@ -369,11 +369,12 @@ Assuming a diameter of 2 ft (0.61 m) and a weight of 100 pounds, what surcharge 
 
 Solution:
 
-w\ :sub:`m` = 100 lb (45.4 kg)
+   :math:`w_{m}` = 100 lb (45.4 kg)
 
-A\ :sub:`m` = (:sup:`π(2`\ :sub:`4`\ :sup:`ft)2`) = 3.14 ft\ :sup:`2` (0.29 m\ :sup:`2`)
+   :math:`A_{m}` = (:math:`\frac{\pi(2ft)^{2}}{4}`) = 3.14 ft\ :sup:`2` (0.29 m\ :sup:`2`)
 
-   ds = Awm\ *m*\ γw = 3.14 ft2100 62lb.4 lb/ft3 ≈ 0.29 m452 1000.4 kg kg/m3 ≈ 0.5 ft (0.16
+   :math:`d_{s} = \frac{w_{m}}{A_{m}\gamma_{w}}` = :math:`\frac{100lb}{3.14\ {ft}^{2}\ 62.4\ lb/ft3}` ≈ :math:`\frac{45.4\ kg}{0.29\ m^{2}\ 1000\ kg/m3}\
+   ` ≈ 0.5 ft (0.16 m)
 
 Table 4 presents some suggested surcharge depths.
 
