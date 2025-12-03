@@ -55,7 +55,7 @@ follows:
 
     Momentum Equation Term:   S<sub>o</sub>                 ∂h/∂x        V∂V/g∂x             ∂V/g∂t
 
-    Magnitude (ft/mi)         26                    0.5          0.12 - 0.25         0.05
+    Magnitude (ft/mi)         26                  0.5          0.12 - 0.25         0.05
 
     </pre>
     </div>
