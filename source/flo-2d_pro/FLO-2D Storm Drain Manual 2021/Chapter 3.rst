@@ -55,7 +55,7 @@ Sections that Enclose Data in the SWMM.inp (Rossman, 2005)**
 
 .. raw:: html
 
-   <table style="border-collapse: collapse; width: 100%;">
+   <table style="border-collapse: collapse; width: 70%;">
      <tbody>
        <tr>
          <td style="border: 1px solid #000; padding: 4px;">[TITLE]</td>
