@@ -59,18 +59,14 @@ Only a single link can be connected to an outfall node.
 The required data includes (Figure 80):
 
     - Name (field)
-
     - X- and Y-coordinate: It is required to have a spatial reference to pair FLO-2D and the ‘stand-alone’ SWMM system.
-
     - Invert Elevation:
 
       - An outfall that returns flows to a channel has to be assigned to the left bank.
-
       - An option to have an underground (underwater representing ponded flow) outfall was added in the FLO-2D storm drain.
         o This elevation can be lower than the grid element and is not reported in the FPRIMELEV.OUT file.
 
     - The outfall can discharge off the model.
-
     - Outfall Type (Figure 80):
 
       - Set to ‘FREE’ to exchange flow with the FLO-2D surface water system.
