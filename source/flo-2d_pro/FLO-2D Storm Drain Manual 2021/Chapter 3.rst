@@ -256,7 +256,7 @@ SWMMFLO.DAT Variables**
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><i><pre>                           SWMMFLO.DAT File Variables</pre></i></div>
+        <div><i><pre>                                   SWMMFLO.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     Line 1 to Number of Inlets (JT):
@@ -297,9 +297,9 @@ SWMMFLO.DAT Input File Example**
 
    <br><br>
 
-Table 8 lists the variable descriptions for the SWMMFLO.DAT file: *
+Table 8 lists the variable descriptions for the SWMMFLO.DAT file:
 
-*Table 8.
+**Table 8.
 SWMMFLO.DAT Input Variable Descriptions**
 
 \(i) = Integer variable (r) = Real variable (c) = Character
