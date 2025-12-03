@@ -75,7 +75,6 @@ Crayfish plugin can be installed from the QGIS plugin repository A possible appr
 Step 1.
 Review the SUMMARY.OUT File
 
-
 After a FLO-2D simulation is completed, the SUMMARY.OUT file can be reviewed with an ASCII text editor program.
 A FLO-2D model has been successfully completed if the termination time and date is reported at the end of the SUMMARY.OUT:
 
@@ -169,13 +168,9 @@ A FLO-2D storm drain simulation will generate output files that are compatible w
 To view the output, first make sure that the following files are present in the project folder:
 
     - SWMM.ini
-
     - SWMM.inp
-
     - SWMM.rain
-
     - SWMM.RPT
-
     - SWMM.OUT
 
 The SWMM.RPT file reports the storm drain output data in ASCII format and can be read with any ASCII editor.
@@ -300,7 +295,6 @@ Toolbars
     Provide shortcuts to common operations and includes the standard toolbar.
 
 Map Toolbar and Object Toolbar
-
 
     Data/map browser provides access to all the data objects in a project and controls the mapping themes and time periods viewed on the study area map.
 
