@@ -454,26 +454,29 @@ QGIS plugin creates the SWMMOUTF.DAT file, review FLO-2D Plugin User’s Manual 
    Figure 46..
    This is the ‘Free’ outfall condition.
    Unchecking the ‘Allow Discharge’ box (‘off’) forces outfall discharge to be removed from the complete model system.
+
 .. image:: img/Chapter3/Chapte006.jpg
-   **Figure 46.
-   GDS Dialog Box for Storm Drain Outfall Switch**
+
+*Figure 46.
+GDS Dialog Box for Storm Drain Outfall Switch*
 
 The required data in the SWMMOUTF.DAT is shown in Table 9 and Table 10:
 
-   **Table 9.
-   SWMMOUTF.DAT Variables**
+**Table 9.
+SWMMOUTF.DAT Variables**
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. raw:: html
 
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>           SWMMOUTF.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+    <pre>Line 1 to Number of Outfalls (JT):*OUTF_NAME(JT) OUTF_GRID(JT) OUTF_FLO2DVOL(JT)</pre>
+    </div>
 
-   * - SWMMOUTF.DAT File Variables
+.. raw:: html
 
-   * - Line 1 to Number of Outfalls (JT):*OUTF_NAME(JT) OUTF_GRID(JT) OUTF_FLO2DVOL(JT)*
+   <br><br>
 
-
-..
 
    **Table 10.
    SWMMOUTF.DAT Input File Example**
