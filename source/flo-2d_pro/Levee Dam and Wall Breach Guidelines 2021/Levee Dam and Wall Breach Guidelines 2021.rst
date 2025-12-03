@@ -306,24 +306,20 @@ The prescribed breach failure is recommended over the breach erosion failure bec
 sediment flows is poorly understood and simplistically mathematically represented.
 The prescribed levee failure is shown schematically in Figure 11.
 
-|Levee007|
+.. image:: img/Levee007.jpg
 
-   **Figure 11.
-   Prescribed Levee Failure Definition.**
+*Figure 11.
+Prescribed Levee Failure Definition.*
 
 The prescribed breach failure data can be entered in the GDS (select the grid cell and go to *Grid|Assign Parameters to selection|Levee*) as shown in
 Figure 12.
 The required data includes:
 
-- Elevation of the prescribed failure if different from the levee crest
-
-- Duration of saturation prior to breach initiation
-
-- Breach base elevation if different from the floodplain elevation
-
-- Maximum breach width
-
-- Vertical and horizontal rates of breach expansion
+    - Elevation of the prescribed failure if different from the levee crest
+    - Duration of saturation prior to breach initiation
+    - Breach base elevation if different from the floodplain elevation
+    - Maximum breach width
+    - Vertical and horizontal rates of breach expansion
 
 **Figure**
 
