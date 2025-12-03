@@ -597,16 +597,60 @@ SWMMFLORT.DAT Variables**
 
 The required data in the SWMMFLORT.DAT is listed in Table 12 and Table 13.
 
-   **Table 13.
-   SWMMFLORT.DAT Input File Example**
+**Table 13.
+SWMMFLORT.DAT Input File Example**
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+.. raw:: html
 
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>SWMMFLORT.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+    <pre>
+    D 153076 I4-85
 
-   * -
-     - SWMMFLORT.DAT File Example
+    N 0.00 0.00
+
+    N 0.70 10.00
+
+    N 1.12 20.00
+
+    N 1.46 30.00
+
+    N 1.77 40.00
+
+    N 2.06 50.00
+
+    N 2.32 60.00
+
+    N 2.57 70.00
+
+    N 2.81 80.00
+
+    D 199236 I4-196
+
+    N 0.00 0.00
+
+    N 0.79 10.00
+
+    N 1.19 20.00
+
+    N 1.56 30.00
+
+    N 1.89 40.00
+
+    N 2.19 50.00
+
+    N 2.47 60.00
+
+    N 2.74 70.00
+    </pre>
+    </div>
+
+.. raw:: html
+
+   <br><br>
+
+     -
 
    * - D 153076 I4-85N 0.00 0.00N 0.70 10.00N 1.12 20.00N 1.46 30.00N 1.77 40.00N 2.06 50.00N 2.32 60.00N 2.57 70.00N 2.81 80.00D 199236 I4-196N 0.00 0.00N
        0.79 10.00N 1.19 20.00N 1.56 30.00N 1.89 40.00N 2.19 50.00N 2.47 60.00N 2.74 70.00
