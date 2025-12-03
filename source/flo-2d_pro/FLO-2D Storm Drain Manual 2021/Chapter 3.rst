@@ -708,9 +708,15 @@ This option (INTYPE = 1,2,3,4 or 5 in the SWMMFLO.DAT) is assigned by the GDS in
 
 The SDCLOGGING.DAT file contains the data with the following format:
 
-ID Grid Cell Inlet ID Clogging Factor - C\ :sub:`f` (%) Time for clogging -T\ :sub:`c` (hr)
+.. raw:: html
 
-D 2694 I1 25 0.50 D 2409 I2 50 3.25
+    <pre>
+    ID  Grid Cell   Inlet ID    Clogging Factor - C<sub>f</sub>(%) Time for clogging -T<sub>c</sub>(hr)
+
+    D   2694           I1           25                              0.50
+    D   2409           I2           50                              3.25
+
+    </pre>
 
 .. image:: img/Chapter3/Chapte008.jpg
 
