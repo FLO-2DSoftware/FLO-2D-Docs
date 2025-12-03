@@ -426,7 +426,7 @@ Table 2 is a list of possible hydraulic structure issues and fixes.
 
        <!-- Combined Hydraulic Structure and Levee Breach -->
        <tr>
-         <td style="border: 1px solid #000; padding: 4px;" rowspan="2">
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="8">
            Combined Hydraulic Structure and Levee Breach
          </td>
          <td style="border: 1px solid #000; padding: 4px;">
