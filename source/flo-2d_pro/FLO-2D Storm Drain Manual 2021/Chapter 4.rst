@@ -138,9 +138,9 @@ FLO-2D Storm Drain Instructional Comments.*
 
             • The channel pipe inlet invert elevation has to be reset to the channel bed elevation.
 
-              Automated runtime changes for this case do not occur. The user has to manually implement the elevation
+              Automated runtime changes for this case do not occur. The user has to manually
 
-              revision.
+              implement the elevation revision.
 
             • Grid element elevation is reset to the pipe invert elevation at runtime.
 
@@ -210,9 +210,9 @@ FLO-2D Storm Drain Instructional Comments.*
 
        inflow and outflow.
 
-       SWMMOUTFIN.OUT file lists time and discharge pairs for storm drain outfall hydrographs when they discharge
+       SWMMOUTFIN.OUT file lists time and discharge pairs for storm drain outfall hydrographs when
 
-       back to the surface water.
+       they discharge back to the surface water.
 
    * - Detentionbasin outlet
      - Flapgates can be used to stop flow from going into the storm drain system.
