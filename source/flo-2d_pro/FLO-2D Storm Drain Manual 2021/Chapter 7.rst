@@ -34,23 +34,20 @@ For junctions to function as inlets they must have an ID that starts with ‘I�
 The required data for inlets are (Figure 79):
 
     - Name (field): Starts with the character ‘I’.
-
     - X-coordinate and Y-coordinate: It is required to have a spatial reference to pair FLO-2D and the ‘stand-alone’ SWMM system.
-
     - Invert Elevation and Maximum Depth (fields):
 
       - The invert elevation and maximum depth can be edited manually in the SWMM GUI or in the QGIS plug-in.
         Open the FLO-2D surface model in QGIS, go to the Storm Drain Editor and Import SWMM.inp file, then add the data.
         o The maximum depth and the invert elevation are used to determine the rim elevation.
-
       - The rim elevation is compared with the FLO-2D grid element elevations.
         o These comparisons are listed in the FPRIMELEV.OUT file.
         o Ideally the elevations in the \*.inp file should match those of the grid system.
 
 .. image:: img/Chapter7/Chapte006.jpg
 
-**Figure 79.
-SWMM GUI Junction Dialog Box Showing the Required Data**
+*Figure 79.
+SWMM GUI Junction Dialog Box Showing the Required Data*
 
 Outfalls
 
