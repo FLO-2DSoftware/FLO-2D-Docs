@@ -64,7 +64,7 @@ Open a New Project*
 
 6. Use the Junction Button to add junctions in the project workspace (Figure 89).
 
-.. image:: img/Chapter8/Chapte010.jpg
+.. image:: img/Chapter8/Chapte016.jpg
 
 *Figure 89.
 Assign a Junction*
