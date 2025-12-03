@@ -224,48 +224,79 @@ The smaller of two discharges (weir or orifice) calculated for a grate (gutter) 
 
 *Weir Flow:*
 
-   If H ≤ h then: Q\ :sub:`w` = CPH\ :sup:`m`
+If :math:`H \leq h`, then:
 
-h m
+.. math::
+   :label:
 
-If H > h then: Q\ :sub:`w` = CP (H + :sub:`2`)
+   Q_w = CPH^m
 
-   where:
+If :math:`H > h`, then:
 
-   Q\ :sub:`w` = weir flow rate at depth H
+.. math::
+   :label:
 
-   C = weir coefficient, ‘Inlet Weir Coeff.’ field in SWMMFLO.DAT
+   Q_w = CP\left( H + \frac{h}{2} \right)^m
 
-   P = Grate perimeter ‘Perimeter’ field in SWMMFLO.DAT H = FLO-2D inlet element flow depth m = 1.5 horizontal weir exponent (hardcoded).
-   h = sag height from the ‘Sag Height’ field of SWMMFLO.DAT.
+where:
 
-*Orifice Flow:*
+    Q\ :sub:`w` = weir flow rate at depth H
 
-If H ≤ h then: Q\ :sub:`o` = C\ :sub:`d`\ A√2gH
+    C  = weir coefficient, ‘Inlet Weir Coeff.’ field in SWMMFLO.DAT
 
-If H > h then: Q\ :sub:`o` |Chapte009|
+    P  = Grate perimeter ‘Perimeter’ field in SWMMFLO.DAT
 
-   where:
+    H  = FLO-2D inlet element flow depth
 
-   Q\ :sub:`o` = orifice discharge at depth H
+    m  = 1.5 horizontal weir exponent (hardcoded).
 
-   C\ :sub:`d` = discharge coefficient (hardcoded to 0.67) A = orifice area ‘Area’ field in SWMMFLO.DAT g = gravitational acceleration H = FLO-2D inlet
-   element flow depth h = sag height from the ‘Sag Height’ field of SWMMFLO.DAT.
+    h = sag height from the ‘Sag Height’ field of SWMMFLO.DAT.
+
+Orifice Flow:
+^^^^^^^^^^^^^
+
+If :math:`H \leq h`, then:
+
+    .. math::
+       :label:
+
+       Q_o = \ C_dA\sqrt{2gH}
+
+If :math:`H > h`, then:
+
+    .. math::
+       :label:
+
+       Q_{o} = \ C_{d}A\sqrt{2g\left( H + \frac{h}{2} \right)}
+
+    where:
+
+        :math:`Q_{o}` = orifice discharge at depth H
+
+        C\ :sub:`d` = discharge coefficient (hardcoded to 0.67)
+
+        A = orifice area ‘Area’ field in SWMMFLO.DAT
+
+        g = gravitational acceleration
+
+        H = FLO-2D inlet element flow depth
+
+        h = sag height from the ‘Sag Height’ field of SWMMFLO.DAT.
 
 The discharge is determined using the following criteria for Type 3:
 
-If 0.75 ≤ H < 1.8, then:
+   If :math:`0.75 \leq H < 1.8`, then:
 
-If Q\ :sub:`w` ≤ Q\ :sub:`o`, discharge= Q\ :sub:`w`
+        If :math:`Q_{w} \leq Q_{o}`, discharge= :math:`Q_{w}`
 
-If Q\ :sub:`w` > Q\ :sub:`o`, discharge= Q\ :sub:`o`
+        If :math:`Q_{w} > Q_{o}`, discharge= :math:`Q_{o}`
 
-If H < 0.75, discharge= Q\ :sub:`w`
+   If :math:`H < 0.75`, discharge= :math:`Q_{w}`
 
-If H ≥ 1.8, discharge= Q\ :sub:`o`
+   If :math:`H \geq 1.8`, discharge= :math:`Q_{o}`
 
-Type 4 – Unique Inlet with Stage-Discharge Rating Table
 
+*Type 4 – Unique Inlet with Stage-Discharge Rating Table*
 
 Inlets that cannot be represented by Types 1, 2 or 3 can have an inflow discharge defined by a rating table.
 Some storm drain inlets may include entrance types similar to that of a culvert with a vertical opening (Figure 35.
