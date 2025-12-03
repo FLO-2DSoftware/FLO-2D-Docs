@@ -108,9 +108,9 @@ FLO-2D Storm Drain Instructional Comments.*
    * - WSE isgreater thanpipepressurehead
      - Inlet discharge is computed by FLO-2D and exchanged with the storm drain system.
 
-       FLO-2D will use the grid element water depth (floodplain, channel or street) and the inlet geometry to calculate
+       FLO-2D will use the grid element water depth (floodplain, channel or street) and the inlet geometry
 
-       the inlet discharge.
+       to calculate the inlet discharge.
 
        Horizontal inlets refer to gutter inlets and vertical inlets are culvert or pipe openings to the surface.
 
@@ -120,10 +120,13 @@ FLO-2D Storm Drain Instructional Comments.*
 
        For vertical inlets:
 
-           - An inlet on a 1-D channel (end of segment) where the channel flow is discharging to the storm drain pipe, the invert elevation
-           should be equal to the channel bed elevation.
-           - If the flow is discharging to a storm drain pipe or culvert in a floodplain swale, the invert elevation should be equal to the cell floodplain
-           elevation.
+           - An inlet on a 1-D channel (end of segment) where the channel flow is discharging to the storm drain
+
+             pipe, the invert elevation should be equal to the channel bed elevation.
+
+           - If the flow is discharging to a storm drain pipe or culvert in a floodplain swale, the invert elevation
+
+             should be equal to the cell floodplain elevation.
 
        The last column parameter ‘Feature’ in the GDS inlet dialog has three options:
 
@@ -133,8 +136,12 @@ FLO-2D Storm Drain Instructional Comments.*
 
        If option 1 is assigned for a vertical inlet opening then there are two cases:
 
-            • The channel pipe inlet invert elevation has to be reset to the channel bed elevation. Automated runtime changes for this case do not occur. The user
-            has to manually implement the elevation revision.
+            • The channel pipe inlet invert elevation has to be reset to the channel bed elevation.
+
+              Automated runtime changes for this case do not occur. The user has to manually implement the elevation
+
+              revision.
+
             • Grid element elevation is reset to the pipe invert elevation at runtime.
 
        The corrected FPE is not revised in the FPLAIN.DAT file. The user must review the
@@ -192,14 +199,20 @@ FLO-2D Storm Drain Instructional Comments.*
        Inflow to the storm drain from surface water is not computed.
 
    * - Volumeconservation
-     - Inflow to the storm drain and return volumes (flooding and outfall volumes) to the surface water are compiled and reported by the FLO-2D model.
+     - Inflow to the storm drain and return volumes (flooding and outfall volumes) to the surface water are
+
+       compiled and reported by the FLO-2D model.
 
    * - Reportingresults
      - The FLO-2D file SWMMQIN.OUT reports the inflow and return flow discharge for each inlet.
 
-       This is different from the discharge values reported in the SWMM.RPT file which includes lateral pipe inflow and outflow.
+       This is different from the discharge values reported in the SWMM.RPT file which includes lateral pipe
 
-       SWMMOUTFIN.OUT file lists time and discharge pairs for storm drain outfall hydrographs when they discharge back to the surface water.
+       inflow and outflow.
+
+       SWMMOUTFIN.OUT file lists time and discharge pairs for storm drain outfall hydrographs when they discharge
+
+       back to the surface water.
 
    * - Detentionbasin outlet
      - Flapgates can be used to stop flow from going into the storm drain system.
@@ -231,7 +244,9 @@ FLO-2D Storm Drain Instructional Comments.*
 
        It does not apply to normal, fixed, tidal or time series type of outfalls.
 
-       When the outfall does not discharge to the surface water, the outfall head is assigned based on the type of outfall node.
+       When the outfall does not discharge to the surface water, the outfall head is assigned based
+
+       on the type of outfall node.
 
        The following types can be set up:
 
