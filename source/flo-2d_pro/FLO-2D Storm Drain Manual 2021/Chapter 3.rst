@@ -478,24 +478,27 @@ SWMMOUTF.DAT Variables**
    <br><br>
 
 
-   **Table 10.
-   SWMMOUTF.DAT Input File Example**
+**Table 10.
+SWMMOUTF.DAT Input File Example**
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. raw:: html
 
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>                       SWMMOUTF.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+    <pre>OF1 72565 1OF2 98863 0OF3 97479 1OF4 51882 1OF5 216195 0OF7 382089 1</pre>
+    </div>
 
-   * - SWMMOUTF.DAT File Example
+.. raw:: html
 
-   * - OF1 72565 1OF2 98863 0OF3 97479 1OF4 51882 1OF5 216195 0OF7 382089 1
-
+   <br><br>
 
 Table 11 lists the variables and the description for the SWMMOUTF.DAT file:
 
-   **Table 11.
-   SWMMOUTF.DAT Input Variable Descriptions**
+**Table 11.
+SWMMOUTF.DAT Input Variable Descriptions**
 
+\(i) = integer variable (r) = real variable (c) = character
 .. list-table::
    :widths: 25 25 25 25
    :header-rows: 0
@@ -523,11 +526,6 @@ Table 11 lists the variables and the description for the SWMMOUTF.DAT file:
        1: on
      - Allow discharge from the storm drain to FLO-2D
 
-
-..
-
-   (i) = integer variable (r) = real variable (c) = character
-
 SWMMOUTF.DAT file should contain the list of outfalls in the same order as it appears on the SWMM.inp.
 When the outfall order is modified in the SWMM.inp file because an outfall node was added or deleted, the list of outfall nodes in the QGIS plug-in or
 in the GDS should be edited and the SWMMOUTF.DAT file saved.
@@ -551,12 +549,13 @@ drain system.
 QGIS plugin creates the SWMMFLORT.DAT file by automatically reading the rating table from a file for each inlet type 4.
 For a more detailed information review the FLO-2D Plugin User’s Manual and the FLO-2D Plugin Technical Reference Manual.
 
-In the GDS this option (INTYPE = 4 in the SWMMFLO.DAT) is assigned in the inlet geometry dialog box (Figure 47.
-).
+In the GDS this option (INTYPE = 4 in the SWMMFLO.DAT) is assigned in the inlet geometry dialog box (Figure 47.).
 The rating table is used throughout the simulation without adjustment.
+
 .. image:: img/Chapter3/Chapte007.jpg
-   **Figure 47.
-   GDS Dialog Box for Entering Rating Table data for INTYPE 4**
+
+*Figure 47.
+GDS Dialog Box for Entering Rating Table data for INTYPE 4*
 
 The structure of a SWMMFLORT.DAT file is:
 
