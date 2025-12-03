@@ -499,6 +499,7 @@ Table 11 lists the variables and the description for the SWMMOUTF.DAT file:
 SWMMOUTF.DAT Input Variable Descriptions**
 
 \(i) = integer variable (r) = real variable (c) = character
+
 .. list-table::
    :widths: 25 25 25 25
    :header-rows: 0
@@ -572,18 +573,23 @@ The structure of a SWMMFLORT.DAT file is:
 The first pair of numbers should be zero depth and zero discharge.
 This is repeated from 1 to number of storm drain inlets with INTYPE= 4 (Table 12).
 
-   **Table 12.
-   SWMMFLORT.DAT Variables**
+**Table 12.
+SWMMFLORT.DAT Variables**
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. raw:: html
 
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>    SWMMFLORT.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+    <pre>
+    Line 1 to Number of INTYPE 4 (JTSWMM(JT)):
+    SWMMCHARRT GRIDCELL SWMMType4IDSWMMCHARRT DEPTHSWMMRT(JTSWMM(JT),K) QSWMMRT(JTSWMM(JT),K)
+    </pre>
+    </div>
 
-   * - SWMMFLORT.DAT File Variables
+.. raw:: html
 
-   * - Line 1 to Number of INTYPE 4 (JTSWMM(JT)):SWMMCHARRT GRIDCELL SWMMType4IDSWMMCHARRT DEPTHSWMMRT(JTSWMM(JT),K) QSWMMRT(JTSWMM(JT),K)
-
+   <br><br>
 
 The required data in the SWMMFLORT.DAT is listed in Table 12 and Table 13.
 
