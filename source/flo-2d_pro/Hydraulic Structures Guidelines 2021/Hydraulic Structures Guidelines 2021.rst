@@ -188,38 +188,59 @@ INOUTCONT parameter (0, 1, or 2) in the HYSTRUC.DAT file (Table 1).
 If INOUTCONT =2, headwater depth H\ :sub:`w` and tailwater T\ :sub:`w` can switch with submergence to allow flow to go upstream.
 The INOUTCONT parameter does not apply to the generalized culvert equations.
 
+**Table 1.
+Hydraulic Structure Rating Table Options**
+
 .. list-table::
-   :widths: 100
+   :widths: 50 50
    :header-rows: 0
 
+   * - **Control**
+     - **Significance**
 
-   * - **Table 1.
-       Hydraulic Structure Rating Table Options**
+   * - INOUTCONT = 0
+     - Simulates downstream flow through a structure or pump flow where the discharge
 
-   * - **Control**                         | **Significance**
+       is solely a function of the headwater depth Hw.
 
-   * - INOUTCONT = 0                       | Simulates downstream flow through a structure or pump| flow where the discharge is solely a function of the|
-       headwater depth Hw.
+   * - INOUTCONT = 1
+     - Adjusts the rating table with a submergence factor as the tailwater approaches the headwater.
 
-   * - INOUTCONT = 1                       | Adjusts the rating table with a submergence factor as| the tailwater approaches the headwater.
-       As tailwater| water surface approaches the upstream headwater| surface elevation.
+       As tailwater water surface approaches the upstream headwater surface elevation.
+
        No upstream flow through the| structure is permitted.
-       The potential submergence is| given by Q = Q \* SUBFACTOR; where SUBFACTOR is| computed by the model based on HY-8 submergence| criteria as defined by
-       (initially the SUBFACTOR = 1.0)||    IF DELTA > 0.975, SUBFACTOR = SUBFACTOR – 0.01||    IF DELTA < 0.975, SUBFACTOR = SUBFACTOR + 0.015||    IF DELTA
-       > 1, SUBFACTOR = SUBFACTOR - 0.01\* DELTA
 
-   * - INOUTCONT = 2                       | Upstream flow through the structure is computed with| the rating table adjustment when the tailwater surface|
-       exceeds the headwater surface.
-       The headwater depth Hw| and tailwater Tw can switch with submergence to allow| flow to go upstream.
-       For upstream discharge through| the bridge or culvert, the outflow node must have| upstream flow into it from the downstream channel| element.
+       The potential submergence is given by Q = Q \* SUBFACTOR; where SUBFACTOR is computed by
 
-   * - INOUTCONT = 1, 2                    | For bridges joining contiguous grid elements, the| rating table is turned off for flow depths less than| one
-       foot or when the SUBFACTOR is less than 0.02.
-       This| would occur for inflow and outflow WSEL that are| nearly equilibrated.
+       the model based on HY-8 submergence| criteria as defined by (initially the SUBFACTOR = 1.0)
+
+           IF DELTA > 0.975, SUBFACTOR = SUBFACTOR – 0.01
+
+           IF DELTA < 0.975, SUBFACTOR = SUBFACTOR + 0.015
+
+           IF DELTA > 1, SUBFACTOR = SUBFACTOR - 0.01\* DELTA
+
+   * - INOUTCONT = 2
+     - Upstream flow through the structure is computed with the rating table adjustment
+
+       when the tailwater surface exceeds the headwater surface.
+
+       The headwater depth Hw and tailwater Tw can switch with submergence to allow flow to go upstream.
+
+       For upstream discharge through| the bridge or culvert, the outflow node must have
+
+       upstream flow into it from the downstream channel element.
+
+   * - INOUTCONT = 1, 2
+     - For bridges joining contiguous grid elements, the rating table is turned off
+
+       for flow depths less than one foot or when the SUBFACTOR is less than 0.02.
+
+       This would occur for inflow and outflow WSEL that are nearly equilibrated.
 
 
 Modeling Pumps
-==============
+---------------
 
 The hydraulic structure rating table can be applied to simulate pump discharge by entering the stage (head) discharge relationship that is usually
 included with the pump manual.
@@ -229,7 +250,7 @@ elevation of the outfall (outflow node).
 To simulate a pump, set INOUTCONT = 0 to model the discharge solely as function of the inflow node stage.
 
 Numerical Instability
-=====================
+-----------------------
 
 Hydraulic structures create an artificial control on the water surface elevation.
 This may cause a mismatch of the depth and discharge over a range flows resulting in surging upstream or downstream of the structure.
@@ -249,7 +270,7 @@ High maximum velocities (VELTIMEFP.OUT), rapidly varying discharges (HYDROSTRUCT
 evidence of numerical surging.
 
 Hydraulic Structure Troubleshooting
-===================================
+------------------------------------
 
 General – Warning and Error Messages
 
@@ -263,24 +284,17 @@ replenish the volume in the inlet node and start the surge cycle again.
 
 Warning Messages are written to the ERROR.CHK file for the following structure issues:
 
-- Adverse slope between the structure inlet and outlet nodes;
-
-- Inlet or outlet nodes that also contain levee, streets or ARF’s;
-
-- Rating tables with a non-zero first pair of stage-discharge values (must be 0.
-  and 0.);
-
-- The rate of increase in the rating table values is unreasonably high.
+    - Adverse slope between the structure inlet and outlet nodes;
+    - Inlet or outlet nodes that also contain levee, streets or ARF’s;
+    - Rating tables with a non-zero first pair of stage-discharge values (must be 0.and 0.);
+    - The rate of increase in the rating table values is unreasonably high.
 
 Error Messages are written to the ERROR.CHK file for the following conditions:
 
-- Reference elevation is lower than the inflow or outflow grid elevations.
-
-- Grid system Inflow or outflow nodes are also assigned as hydraulic structures.
-
-- Assignment of a channel element to more than one hydraulic structure inlet node.
-
-- Rating table must have increasing stage and Q.
+    - Reference elevation is lower than the inflow or outflow grid elevations.
+    - Grid system Inflow or outflow nodes are also assigned as hydraulic structures.
+    - Assignment of a channel element to more than one hydraulic structure inlet node.
+    - Rating table must have increasing stage and Q.
 
 The most frequent problem with application of the hydraulic structure routine is a rating table that is mismatched with an upstream flow condition.
 This occurs when the discharge through the structure defined by the rating curve or table is greater than the upstream inflow to the structure.
@@ -293,11 +307,10 @@ If surging is noted in the hydraulic structure hydrograph or the channel hydrogr
 adjustment.
 The following conditions should be reviewed:
 
-- Shallow flows less than 1 ft in depth with velocity > 5 fps.
-  Warning message
-
-- Downstream WSEL > upstream WSEL with INOUTCONT < 2 (potential upstream flow thru the structure).
-  Warning message.
+    - Shallow flows less than 1 ft in depth with velocity > 5 fps.
+      Warning message
+    - Downstream WSEL > upstream WSEL with INOUTCONT < 2 (potential upstream flow thru the structure).
+      Warning message.
 
 Rating table adjusted with SUBFACTOR.
 Warning message and revised table values are written to **REVISED_RATING_TABLE.OUT** file.
