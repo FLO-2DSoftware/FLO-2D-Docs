@@ -329,8 +329,9 @@ Popped Manhole Cover (source: istock)*
 
 The required manhole input parameters are:
 
-    - Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)
-    - Manhole perimeter (manhole cover shapes can vary) • Manhole flow area (ft\ :sup:`2` or m\ :sup:`2`)
+    - Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric).
+    - Manhole perimeter (manhole cover shapes can vary).
+    - Manhole flow area (ft\ :sup:`2` or m\ :sup:`2`).
     - Surcharge depth (ft or m).
 
 A manhole is assumed to be level without sag and column 7 in the SWMMFLO.DAT is used to define the surcharge depth (ft or m).
@@ -341,18 +342,25 @@ Manhole covers are typically circular but can be found in other shapes.
 
 The water depth (head) that represents the manhole cover weight can be estimated by:
 
-w\ :sub:`m`
+    .. math::
+       :label:
 
-d\ :sub:`s` =
+       d_{s} = \frac{w_{m}}{A_{m}\gamma_{w}}
 
-   Amγw
+    where:
 
-where: d\ :sub:`s` = surcharge depth that pops the manhole cover w\ :sub:`m` = weight of the manhole cover
+        d\ :sub:`s` = surcharge depth that pops the manhole cover
 
-   A\ :sub:`m` = area of the circular manhole opening (πD\ :sup:`2`/4) γ\ :sub:`w` = clear water density 62.4 lb/ft\ :sup:`3` (1000 kg/m\ :sup:`3`)
+        w\ :sub:`m` = weight of the manhole cover
+
+        A\ :sub:`m` = area of the circular manhole opening (πD\ :sup:`2`/4)
+
+        γ\ :sub:`w` = clear water density 62.4 lb/ft\ :sup:`3` (1000 kg/m\ :sup:`3`)
+
 .. image:: img/Chapter2/Chapte012.jpg
-   **Figure 37.
-   Popped Manhole Cover with Pressure Head (Source: istock)**
+
+*Figure 37.
+Popped Manhole Cover with Pressure Head (Source: istock)*
 
 To calculate the surcharge depth for manhole cover shown in Figure 36.
 , the observed head of water is approximately 1.0 feet (0.3 meter).
