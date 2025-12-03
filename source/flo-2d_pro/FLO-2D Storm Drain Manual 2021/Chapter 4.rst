@@ -107,55 +107,88 @@ FLO-2D Storm Drain Instructional Comments.*
 
    * - WSE isgreater thanpipepressurehead
      - Inlet discharge is computed by FLO-2D and exchanged with the storm drain system.
-       FLO-2D will use the grid element water depth (floodplain, channel or street) and the inlet geometry to calculate the inlet discharge.
+
+       FLO-2D will use the grid element water depth (floodplain, channel or street) and the inlet geometry to calculate
+
+       the inlet discharge.
+
        Horizontal inlets refer to gutter inlets and vertical inlets are culvert or pipe openings to the surface.
+
        Floodplain grid element elevation (FPE) is automatically set to the inlet rim elevation.
+
        For horizontal inlets changes to FPE are reported to a file named as FPRIMELEV.OUT.
+
        For vertical inlets:
+
            - An inlet on a 1-D channel (end of segment) where the channel flow is discharging to the storm drain pipe, the invert elevation
            should be equal to the channel bed elevation.
            - If the flow is discharging to a storm drain pipe or culvert in a floodplain swale, the invert elevation should be equal to the cell floodplain
            elevation.
 
        The last column parameter ‘Feature’ in the GDS inlet dialog has three options:
+
             0. - default, no flapgate, no vertical inlet opening
             1. - vertical, inlet opening
             2. - flapgate (outlet)
+
        If option 1 is assigned for a vertical inlet opening then there are two cases:
+
             • The channel pipe inlet invert elevation has to be reset to the channel bed elevation. Automated runtime changes for this case do not occur. The user
             has to manually implement the elevation revision.
             • Grid element elevation is reset to the pipe invert elevation at runtime.
+
        The corrected FPE is not revised in the FPLAIN.DAT file. The user must review the
+
        FPRIMELEV.OUT modifications and rename FPLAIN_SDElev.RGH and the
+
        TOPO_SDElev.RGH files to FPLAIN.DAT AND TOPO.DAT filesrespectively to make the
+
        elevation changes permanent. Rim elevations for the inlets located in channel/street
+
        cells must be verified and manually revised by the user.
+
        The discharge and volume that enters the storm drain is based on the inlet geometry
+
        and on the relationship between the water surface elevation and the storm drain
+
        pressure head. Storm drain inflow discharge is inlet controlled until the system
+
        capacity is reached.
+
        Inlet conditions:
+
             • Curb opening inlet at grade (no sag) INTYPE=1;
             • Curb opening inlet with sag INTYPE= 2;
             • Grate (gutter) inlet with/without sag INTYPE=3;
             • Unique inlet with stage - discharge rating table INTYPE=4;
             • Manhole INTYPE=5.
+
        Weir/orifice equations are used to calculate the discharge for inlets 1 thru 3 and 5.
+
        For the rating table option (INTYPE = 4), a relationship between cell flow depth and
+
        discharge is assigned in the GDS. An additional file (SWMMFLORT.DAT) is created for
+
        these type of inlets.
 
    * - Storm drainpressure isgreater thanthe WSEL
      - Surcharging or return flow is computed from the storm drain to the surface water.
+
        Not all return flow or flooding reported in the SWMM.RPT file passes from the storm
+
        drain to the surface water since the pressure head has to be greater than the WSEL.
+
        Return flow volume is distributed over the grid element surface area as an increased
+
        incremental flow depth added to the existing cell depth.
+
        Inflow to storm drain from the surface water is not allowed in this case.
 
    * - WSE isgreater thanthe pressurehead and therimelevation
      - No return flow from the storm drain to the surface water is computed.
+
        Volume in the inlet node stays in the pipe and the overflow volume is set to 0.
+
        Inflow to the storm drain from surface water is not computed.
 
    * - Volumeconservation
@@ -163,29 +196,45 @@ FLO-2D Storm Drain Instructional Comments.*
 
    * - Reportingresults
      - The FLO-2D file SWMMQIN.OUT reports the inflow and return flow discharge for each inlet.
+
        This is different from the discharge values reported in the SWMM.RPT file which includes lateral pipe inflow and outflow.
+
        SWMMOUTFIN.OUT file lists time and discharge pairs for storm drain outfall hydrographs when they discharge back to the surface water.
 
    * - Detentionbasin outlet
      - Flapgates can be used to stop flow from going into the storm drain system.
+
        Flow only goes out of the outlet.
+
        The SWMMFLO.DAT file assigns a switch (FEATURE) that can have one of the following values:
+
             0. = default, no flap gate, no vertical inlet opening
             1. = vertical inlet opening
             2. = flapgate, controls outlet node discharge
 
    * - FreeOutfalls
      - Any type of SWMM outfall can be assigned.
+
        To discharge back to the FLO-2D surface water, the user has to set the outfall to type ‘free’.
+
        Discharge is based on the surface water elevation and storm drain pressure head.
+
        Outfall discharge will occur if WSE is greater than the pressure head.
+
        If the pressure head > WSEL: Outfall discharges to the FLO-2D grid cell.
+
        If the pressure head < WSEL: There is no outfall discharge but depth is equal to WSEL.
+
        Flow into the outfall depends on tide gate assignment and the WSEL.
+
        This is available only for the ‘free’ type of outfalls.
+
        It does not apply to normal, fixed, tidal or time series type of outfalls.
+
        When the outfall does not discharge to the surface water, the outfall head is assigned based on the type of outfall node.
+
        The following types can be set up:
+
            a. FREE: minimum between normal and critical depth.
            b. NORMAL: normal depth.
            c. FIXED: fixed stage entered in the data.
@@ -194,9 +243,15 @@ FLO-2D Storm Drain Instructional Comments.*
 
    * - Manholes
      - Popping a manhole cover can be simulated.
+
        The surcharge depth is entered in the SWMMFLO.DAT file.
+
        The user can define the surcharge depth in the junction properties (SWMM.inp file).
-       When the surcharge depth is set to different values in  SWMMFLO.DAT and in the SWMM.inp file, the model uses the surcharge depth from the SWMMFLO.DAT.
+
+       When the surcharge depth is set to different values in  SWMMFLO.DAT and in the SWMM.inp file,
+
+       the model uses the surcharge depth from the SWMMFLO.DAT.
+
            - If Pressure Head + Surcharge Depth < WSEL:  - Cover remains in place.
            - Inflow to the manhole is not allowed.
            - Return flow will not occur.
@@ -395,26 +450,24 @@ Model Checklist
 
 The following checklist was prepared to review the storm drain data files:
 
- Inlet location. All inlets must be inside the FLO-2D computation domain.
- SWMM hydrology components for surface water modeling are eliminated. If an existing
-SWMM model was ported to the FLO-2D model, all of the hydrology features have to be
-removed including subcatchments and rain gage features.
- Pipe lengths. If pipe lengths are less than 20ft or less than the FLO-2D grid element side
-length, adjust short pipe length or delete that section of pipe.
- Adverse pipe slope. Check adverse pipe slope for accuracy.
- Inlet elevations. Grid elevations or channel thalweg elevations should match the inlet
-rim elevations or invert elevations.
- Type 4 - Defined by a Stage-Discharge Rating Table. Rating tables must be assigned in the
-SWMMFLORT.DAT file.
- Inlet geometry. Check the size and location.
- Outfall discharge. For outfall discharge to the surface water, the outfall must have a
-‘free’ condition and must be turned ‘on’ in the SWMMOUTF.DAT file.
-108 Storm Drain Manual
- Outfall location. Check the outfall location with respect to the grid/channel element and
-check the invert elevation with respect to floodplain/thalweg channel elevation.
- Outfall to the channel. The outfall has to be connected to the left bank grid element.
- Tide gates for outfall nodes. They have to be assigned in the SWMM.inp file.
- Manholes. Check the assigned surcharge depth.
- Storm drain model simulation completion. Check the SUMMARY.OUT file last line for the
-time stamp indicating that the model properly terminated.
- SWMM.ini file. The SWMM.ini file should be modified to review the results.
+    ☐ Inlet location. All inlets must be inside the FLO-2D computation domain.
+    ☐ SWMM hydrology components for surface water modeling are eliminated. If an existing
+      SWMM model was ported to the FLO-2D model, all hydrology features must be removed,
+      including subcatchments and rain gage features.
+    ☐ Pipe lengths. If pipe lengths are less than 20 ft or less than the FLO-2D grid element
+      side length, adjust the pipe length or delete that section.
+    ☐ Adverse pipe slope. Check adverse pipe slope for accuracy.
+    ☐ Inlet elevations. Grid or channel thalweg elevations should match the inlet rim or invert elevations.
+    ☐ Type 4 – Defined by a Stage-Discharge Rating Table. Rating tables must be assigned in
+      the ``SWMMFLORT.DAT`` file.
+    ☐ Inlet geometry. Check the size and location.
+    ☐ Outfall discharge. For outfall discharge to surface water, the outfall must have a
+      'free' condition and be turned 'on' in the ``SWMMOUTF.DAT`` file.
+    ☐ Outfall location. Check its position relative to grid/channel elements and its invert
+      elevation relative to floodplain/thalweg elevation.
+    ☐ Outfall to the channel. The outfall must connect to the left bank grid element.
+    ☐ Tide gates for outfall nodes. They must be assigned in the ``SWMM.inp`` file.
+    ☐ Manholes. Check the assigned surcharge depth.
+    ☐ Storm drain model simulation completion. Check the ``SUMMARY.OUT`` file last line for
+      the time stamp indicating proper termination.
+    ☐ SWMM.ini file. Modify the ``SWMM.ini`` file to review the results.
