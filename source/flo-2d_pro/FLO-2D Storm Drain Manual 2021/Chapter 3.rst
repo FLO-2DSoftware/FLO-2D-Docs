@@ -650,22 +650,16 @@ SWMMFLORT.DAT Input File Example**
 
    <br><br>
 
-     -
-
-   * - D 153076 I4-85N 0.00 0.00N 0.70 10.00N 1.12 20.00N 1.46 30.00N 1.77 40.00N 2.06 50.00N 2.32 60.00N 2.57 70.00N 2.81 80.00D 199236 I4-196N 0.00 0.00N
-       0.79 10.00N 1.19 20.00N 1.56 30.00N 1.89 40.00N 2.19 50.00N 2.47 60.00N 2.74 70.00
-     -
-
-
 Table 14 lists the description of the variables for the SWMMFLORT.DAT file.
 
-   **Table 14.
-   SWMMFLORT.DAT Input Variable Descriptions**
+\(i) = Integer variable (r) = real variable (c) = character
+
+**Table 14.
+SWMMFLORT.DAT Input Variable Descriptions**
 
 .. list-table::
    :widths: 25 25 25 25
    :header-rows: 0
-
 
    * - Variable
      - Format
@@ -693,18 +687,14 @@ Table 14 lists the description of the variables for the SWMMFLORT.DAT file.
 
    * - DEPTHSWMMRT(JTSWMM(JT),K)
      - r
-     - 0.00- |Chapte002|
+     - 0.00- ∞
      - Depth (ft or m) for the rating table
 
    * - QSWMMRT(JTSWMM(JT),K)
      - r
-     - 0.00- |Chapte002|
+     - 0.00- ∞
      - Discharge (cfs or cms) for the rating table
 
-
-..
-
-   (i) = Integer variable (r) = real variable (c) = character
 
 SDCLOGGING.DAT
 ''''''''''''''
