@@ -457,6 +457,7 @@ condition is imposed, and the outfall discharge to the surface based on the comp
 Outfall is assumed to be located at ground elevation.
 
 .. image:: img/Chapter2/Chapte015.jpg
+
 *Figure 40.
 Outfall Location with Respect the Channel Left Bank Elements.*
 
@@ -468,9 +469,11 @@ The floodplain water surface elevation is compared to the storm drain pressure h
 invert elevation (Vertical Type 4 Inlets) or the outfall invert elevation.
 It is possible that the elevations of the closed conduit system may have a different datum than that applied to the FLO-2D surface topography.
 The elevation of each inlet rim and outfall invert should be reviewed especially for unique conditions such as combination inlets (Figure 41).
+
 .. image:: img/Chapter2/Chapte016.jpg
-   **Figure 41.
-   Diagram of a Combination Inlet Rim Elevation.**
+
+*Figure 41.
+Diagram of a Combination Inlet Rim Elevation.*f
 
 For curb opening inlets at grade (Type 1), curb opening inlets with sag (Type 2), grates with or without sag (Type 3) and manholes (Type 5), the
 FLO-2D model computes the rim elevation at the node by adding the maximum depth in the SWMM.inp file to the invert elevation.
@@ -488,38 +491,34 @@ Typically, inlets have horizontal inlets, but some inlets such as culverts have 
 For vertical inlets, the water surface elevations are compared at the node, but the rim elevation is ignored.
 Vertical inlets have some unique constraints:
 
-1. For an inlet on a channel (channel flow is discharging to the storm drain pipe), the invert elevation should be set to the channel bed elevation.
-   If the Type 4 inlet is a vertical inlet and it is located in a channel cell, the ‘Feature’ column has to be equal to 1 in the SWMMFLO.DAT file and the
-   floodplain elevation is not modified.
+    1. For an inlet on a channel (channel flow is discharging to the storm drain pipe), the invert elevation should be set to the channel bed elevation.
+       If the Type 4 inlet is a vertical inlet and it is located in a channel cell, the ‘Feature’ column has to be equal to 1 in the SWMMFLO.DAT file and the
+       floodplain elevation is not modified.
 
-2. For a floodplain swale where the flow is discharging to a storm drain pipe or culvert, the floodplain grid element elevation should match the pipe
-   invert elevation.
-   If the Type 4 inlet is a vertical inlet and it is located in a floodplain cell, the ‘Feature’ column has to be equal to 1 in the SWMMFLO.DAT file and
-   the floodplain elevation equal to the pipe invert elevation otherwise the floodplain elevation is modified at runtime.
+    2. For a floodplain swale where the flow is discharging to a storm drain pipe or culvert, the floodplain grid element elevation should match the pipe
+       invert elevation.
+       If the Type 4 inlet is a vertical inlet and it is located in a floodplain cell, the ‘Feature’ column has to be equal to 1 in the SWMMFLO.DAT file and
+       the floodplain elevation equal to the pipe invert elevation otherwise the floodplain elevation is modified at runtime.
 
-3. The ‘Feature’ column in the GDS inlet dialog window has three options:
+    3. The ‘Feature’ column in the GDS inlet dialog window has three options:
 
-   1. - default, no flapgate, no vertical inlet opening
+       1. - default, no flapgate, no vertical inlet opening
 
-   2. - vertical inlet opening
+       2. - vertical inlet opening
 
-      a. Channel pipe inlet invert elevation = channel bed elevation
+          a. Channel pipe inlet invert elevation = channel bed elevation
 
-      b. Floodplain grid element elevation = pipe invert elevation 2 - flapgate (outfall)
+          b. Floodplain grid element elevation = pipe invert elevation 2 - flapgate (outfall)
 
-4. Revised floodplain elevations are not changed in the FPLAIN.DAT file.
-   These modifications are only implemented at runtime.
-   For permanent floodplain revisions, the user must adjust the elevations in FPLAIN.DAT to match the modifications in FPRIMELEV.OUT.
-   Rim elevations for the inlets located in channel or street cells are not checked and must be verified by the user.
+    4. Revised floodplain elevations are not changed in the FPLAIN.DAT file.
+       These modifications are only implemented at runtime.
+       For permanent floodplain revisions, the user must adjust the elevations in FPLAIN.DAT to match the modifications in FPRIMELEV.OUT.
+       Rim elevations for the inlets located in channel or street cells are not checked and must be verified by the user.
 
-5. Unique inlet conditions such as those with unusual shape openings are simulated with a rating table.
+    5. Unique inlet conditions such as those with unusual shape openings are simulated with a rating table.
 
-All runtime changes in the floodplain elevation are reported in FPRIMELEV.OUT and
-
-Stormdrain_error.chk files.
-They are reported to the FPLAIN_SDElev.RGH and
-
-TOPO_SDElev.RGH TOPO_SDElev.RGH files and the FPLAIN.DAT AND TOPO.DAT files can be replaced by renaming the \*.RGH files to apply the storm drain
+All runtime changes in the floodplain elevation are reported in FPRIMELEV.OUT and Stormdrain_error.chk files.
+They are reported to the FPLAIN_SDElev.RGH and TOPO_SDElev.RGH TOPO_SDElev.RGH files and the FPLAIN.DAT AND TOPO.DAT files can be replaced by renaming the \*.RGH files to apply the storm drain
 elevation adjustments to the next simulation.
 
 Conduit Offsets
@@ -527,10 +526,12 @@ Conduit Offsets
 
 The swmm.inp file uses offset heights to connect the conduits to the nodes.
 The inlet and outlet offsets can be zero if there is no offset or any height above zero to set the offset.
+
 .. image:: img/Chapter2/Chapte017.jpg
-   **Figure 42.
-   Offsets in a Pipe System.
-   Blue rectangles are the nodes that connect pipes.**
+
+*Figure 42.
+Offsets in a Pipe System.
+Blue rectangles are the nodes that connect pipes.*
 
 Pipe 1 and pipe 2 show the offsets in the pipe system.
 Pipe 3 shows no offset in Figure 42.
