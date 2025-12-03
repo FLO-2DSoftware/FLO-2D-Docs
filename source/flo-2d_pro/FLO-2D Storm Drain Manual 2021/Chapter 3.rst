@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 
 Chapter 3
----------
+==========
 
 FLO-2D Storm Drain Data Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -16,11 +16,10 @@ Analysis and Civil 3D Storm and Sanitary Analysis.
 
 The following folders contain the storm drain model system:
 
-- FLO-2D PRO folder in C:\\Program Files (x86).
-  All executable program files for the FLO-2D model including pre- and post-processing and the FLOPRO.exe are located in this folder.
-
-- FLO-2D PRO documentation folder in C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation (My Documents).
-  Manuals, Handout Documents, PowerPoint Presentations and tutorials are located in this directory.
+    - FLO-2D PRO folder in C:\\Program Files (x86).
+      All executable program files for the FLO-2D model including pre- and post-processing and the FLOPRO.exe are located in this folder.
+    - FLO-2D PRO documentation folder in C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation (My Documents).
+      Manuals, Handout Documents, PowerPoint Presentations and tutorials are located in this directory.
 
 Data Input Files
 ^^^^^^^^^^^^^^^^
@@ -38,9 +37,8 @@ CONT.DAT
 
 This file contains the simulation control parameters:
 
-- Set SWMM = 1 to initiate the storm drain component, review the DATA INPUT MANUAL.DAT file for more information about this switch.
-
-- For no storm drain simulation, SWMM = 0 (default).
+    - Set SWMM = 1 to initiate the storm drain component, review the DATA INPUT MANUAL.DAT file for more information about this switch.
+    - For no storm drain simulation, SWMM = 0 (default).
 
 SWMM.inp
 ''''''''
@@ -494,9 +492,7 @@ QGIS plugin creates the SWMMFLO.DAT file, review FLO-2D Plugin User’s Manual a
 
 To create the SWMMFLO.DAT in GDS, go Tools \| Storm Drain \| View Storm Drain Inlets Dialog command.
 Browse for the SWMM.inp file using the GDS Window “Select a Storm Drain \*.inp file” as it is shown in Figure 43.
-
-|Chapte003|
-
+.. image:: img/Chapter3/Chapte003.jpg
    **Figure 43.
    GDS Open \*.inp File**
 
@@ -504,16 +500,12 @@ The GDS will read the \*.inp data file and those junctions which names start wit
 The data from the storm drain file will then be paired with the data in the SWMMFLO.DAT file.
 Enter the inlet geometry and save the SWMMFLO.DAT file.
 The SWMMFLO.DAT file dialog box is shown in Figure 44.
-
-|Chapte004|
-
+.. image:: img/Chapter3/Chapte004.jpg
    **Figure 44.
    GDS Enter Storm Drain Inlet Geometry Data**
 
 The typical structure of a SWMMFLO.DAT file is shown in Figure 45.
-
-   |Chapte005|
-
+.. image:: img/Chapter3/Chapte005.jpg
    **Figure 45.
    Typical SWMMFLO.DAT Input Data File**
 
@@ -529,9 +521,7 @@ QGIS plugin creates the SWMMOUTF.DAT file, review FLO-2D Plugin User’s Manual 
    Figure 46..
    This is the ‘Free’ outfall condition.
    Unchecking the ‘Allow Discharge’ box (‘off’) forces outfall discharge to be removed from the complete model system.
-
-|Chapte006|
-
+.. image:: img/Chapter3/Chapte006.jpg
    **Figure 46.
    GDS Dialog Box for Storm Drain Outfall Switch**
 
@@ -628,9 +618,7 @@ For a more detailed information review the FLO-2D Plugin User’s Manual and the
 In the GDS this option (INTYPE = 4 in the SWMMFLO.DAT) is assigned in the inlet geometry dialog box (Figure 47.
 ).
 The rating table is used throughout the simulation without adjustment.
-
-|Chapte007|
-
+.. image:: img/Chapter3/Chapte007.jpg
    **Figure 47.
    GDS Dialog Box for Entering Rating Table data for INTYPE 4**
 
@@ -745,9 +733,7 @@ The SDCLOGGING.DAT file contains the data with the following format:
 ID Grid Cell Inlet ID Clogging Factor - C\ :sub:`f` (%) Time for clogging -T\ :sub:`c` (hr)
 
 D 2694 I1 25 0.50 D 2409 I2 50 3.25
-
-|Chapte008|
-
+.. image:: img/Chapter3/Chapte008.jpg
    **Figure 48.
    GDS Dialog Box for Entering clogging factor data.**
 
@@ -758,9 +744,7 @@ After a project is saved in the storm drain GUI, the control settings file SWMM.
 This file has the same name as the project file and the extension \*.ini.
 It contains global settings and model output options such as map display, legend colors and intervals, object default values, etc.
 To enable the display of results in the storm drain GUI the user must set the last two lines in Figure 49 as shown.
-
-   |Chapte009|
-
+.. image:: img/Chapter3/Chapte009.jpg
    **Figure 49.
    SWMM.ini file.**
 
@@ -876,44 +860,3 @@ Table 15 list the storm drain output files and the description.
    * - ERROR.CHK
      - This FLO-2D file contains input data error warnings and messages for the surface model.
        This file should be reviewed for messages after each simulation.
-
-
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 0.22917in
-   :height: 0.11458in
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 0.22917in
-   :height: 0.11458in
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 0.22917in
-   :height: 0.11458in
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 0.22917in
-   :height: 0.11458in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 5.55903in
-   :height: 2.77056in
-.. |Chapte004| image:: media\Chapte004.jpg
-   :width: 6.42917in
-   :height: 4.4375in
-.. |Chapte005| image:: media\Chapte005.jpg
-   :width: 4.05194in
-   :height: 3.32917in
-.. |Chapte006| image:: media\Chapte006.jpg
-   :width: 2.99236in
-   :height: 2.82944in
-.. |Chapte007| image:: media\Chapte007.jpg
-   :width: 4.11389in
-   :height: 2.99972in
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 0.22917in
-   :height: 0.11458in
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 0.22917in
-   :height: 0.11458in
-.. |Chapte008| image:: media\Chapte008.jpg
-   :width: 6.49444in
-   :height: 5.00417in
-.. |Chapte009| image:: media\Chapte009.jpg
-   :width: 3.16875in
-   :height: 3.03097in
