@@ -620,38 +620,68 @@ The world file has the following general format:
 Line 1: This line has the dimension of a pixel in map units in the x-direction.
 Lines 2, 3: These lines are the rotation terms (Not used in this release).
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+.. raw:: html
 
+   <table style="border-collapse: collapse; width: 60%;">
+     <thead>
+       <tr>
+         <th style="border:1px solid #000; padding:4px;">File Extension</th>
+         <th style="border:1px solid #000; padding:4px;">World File Extension</th>
+       </tr>
+     </thead>
 
-   * - Line 4:
-     - This value is always negative because the image space is top-down whereas the map space is bottom-up.
+     <tbody>
+       <tr>
+         <td style="padding:4px;">bmp</td>
+         <td style="padding:4px;">bmpw or bpw</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">jpg; jpeg</td>
+         <td style="padding:4px;">jpgw or jgw</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">tif; tff; tiff</td>
+         <td style="padding:4px;">tfw</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">gis</td>
+         <td style="padding:4px;">gsw</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">lan</td>
+         <td style="padding:4px;">lnw</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">bil</td>
+         <td style="padding:4px;">blw</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">bip</td>
+         <td style="padding:4px;">bpw</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">bsq</td>
+         <td style="padding:4px;">bqw</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">sid</td>
+         <td style="padding:4px;">sdw</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">sun</td>
+         <td style="padding:4px;">snw</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">rs; ras</td>
+         <td style="padding:4px;">rsw</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">rlc</td>
+         <td style="padding:4px;">rcw</td>
+       </tr>
+     </tbody>
+   </table>
 
-   * - Line 5:
-     - This line has the translation term; x-Origin (x-coordinate of the center of the upper left pixel).
-
-   * - Line 6:
-     - This line has the translation term; y-Origin (y-coordinate of the center of the upper left pixel).
-
-
-..
-
-   An example world file format is:
-
-   20
-
-   0
-
-   0
-
-   -20
-
-   637510
-
-   1032490
-
-   3.2.19 Import Image/Group of Images (File Menu)
 .. image:: img/GDS043.jpg
 This command allows importing of several image files contained in a given subdirectory and part of an image catalog.
 First draw a polygon on the working region and then select an image catalog file.
