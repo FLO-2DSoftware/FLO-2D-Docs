@@ -318,21 +318,32 @@ The shear stress in hyperconcentrated sediment flows can be determined from the 
 The total shear stress τ depends on the cohesive yield stress τc, the Mohr-Coulomb shear τmc, the viscous shear stress τv (η dv/dy), the turbulent
 shear stress τt, and the dispersive shear stress τd.
 
-:sup:`τ` *=* τ\ *c +* τ\ *mc +* τ\ *v +* τ\ *t +* τ\ *d*
+.. math::
+   :label:
+
+   \tau = \tau_c + \tau_{mc} + \tau_v + \tau_t + \tau_d
 
 When written in terms of the shear rate (dv/dy) the following quadratic rheological model can be defined (O'Brien and Julien, 1985):
 
-   τ *=* τ\ *y +* η  *dy\ dv*  *+ C*  *dy\ dv*  *2*
+.. math::
+   :label:
 
-   
+   \tau = 2\,\tau_y\,\eta \left( \frac{dv}{dy} \right)
+          + C \left( \frac{dv}{dy} \right)
 
 where
 
-τ\ *y =* τ\ *c +* τ\ *mc*
+.. math::
+   :label:
+
+   \tau_y = \tau_c + \tau_{mc}
 
 and
 
-   *C =* ρ\ *m l\ 2 + f (*\ ρ\ *m , C\ v ) d\ 2\ s*
+.. math::
+   :label:
+
+   C = l_m + f(C_s, C_v)\, d^{2}
 
 In these equations, η is the dynamic viscosity; τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τmc = pstanφ depends on the
 intergranular pressure ps and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which depends on the mass
