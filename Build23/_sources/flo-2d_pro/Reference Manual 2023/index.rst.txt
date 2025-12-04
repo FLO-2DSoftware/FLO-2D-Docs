@@ -1,4 +1,5 @@
-FLO-2D Pro Reference Manual 2023
+
+FLO-2D PRO REFERENCE MANUAL 2023
 =================================
 
 .. toctree::
