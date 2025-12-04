@@ -209,7 +209,7 @@ The sediment concentration by volume C\ :sub:`v` is given by:
 .. math::
     :label:
 
-    C_v = volume of the sediment/(volume of water plus sediment)
+    C_v = \frac {volume \, of \, the \, sediment}{volume \, of \, water \, plus \, sediment}
 
 and C\ :sub:`v` is related to the sediment concentration by weight C\ :sub:`w` by:
 
