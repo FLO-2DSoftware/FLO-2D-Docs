@@ -1910,22 +1910,20 @@ Saturation = WET or SATURATED
    1) as a function of the vegetation cover VC from the 5th field of the landuse table when XSAT < 0.4 in/hr.
    This requires a computation of the ratio the hydraulic conductivity for the vegetative cover to the bare ground hydraulic conductivity (C\ :sub:`K`):
 
-..
+.. math::
+   :label:
 
-   *VCK* −10 1
+   C_k = \frac{VC_k - 10}{90} + 1
 
-   *CK* =+
+.. math::
+   :label:
 
-   90
+   XKSATC = XKSAT \sum_{k} P_k\, C_k
 
-XKSATC = XKSAT P\ :sub:`k`\ *C\ k*
+Where:
 
-   *k*
-
-   Where:
-
-   P\ :sub:`k` is the percentage of the area within the grid element corresponding to C\ :sub:`k` and XKSATC for each grid element is written to the
-   INFIL.DAT file.
+    P\ :sub:`k` is the percentage of the area within the grid element corresponding to C\ :sub:`k` and XKSATC for each grid element is written to the
+    INFIL.DAT file.
 
 8. For each grid element compute the initial abstraction *IABSTR*:
 
