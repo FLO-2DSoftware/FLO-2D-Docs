@@ -1,5 +1,6 @@
-Data Input Manual
-=================
+
+DATA INPUT MANUAL 2023
+=======================
 
 The original Data Input Manual was created in Adobe InDesign, and the layout does not convert cleanly into reStructuredText or online
 documentation. For this reason, the manual is provided in PDF format.
