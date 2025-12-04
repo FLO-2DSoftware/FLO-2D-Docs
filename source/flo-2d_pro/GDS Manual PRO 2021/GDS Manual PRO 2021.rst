@@ -146,7 +146,9 @@ The *GDS* may require or use the following data:
 
 .. important:: For the GDS system to function properly, the MS-Windows environment decimal symbol must be set to decimal point “.” And the digit
    grouping symbol to comma”,”. Set these options in the Control Panel/Regional and Language Options/Regional Options/Formats/Additional settings/Numbers// dialog box:
+
 .. image:: img/GDS002.jpg
+
 **Mouse Button Commands**
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -155,31 +157,45 @@ The *GDS* may require or use the following data:
    Zoom-in on the working region by selecting a rectangular area for a zoom view.
    Click the left mouse button to position the cursor on one the vertices of the desired area and drag the mouse to the opposite vertex.
    The rectangle appears to outline the selected zoom area.
+
 .. image:: img/GDS003.jpg
-   When the button is released, the selected rectangular area is magnified to the full screen.
+
+When the button is released, the selected rectangular area is magnified to the full screen.
+
 .. image:: img/GDS004.jpg
-   Clicking on a street or channel segment will display a submenu that allows editing, modifying or deleting the segment.
+
+Clicking on a street or channel segment will display a submenu that allows editing, modifying or deleting the segment.
+
 .. image:: img/GDS005.jpg
+
 **2.2 Left Button actions (double-click)**
 
-   After the grid system has been created and the grid element elevations assigned, double-click any grid element to display the following dialog box:
+After the grid system has been created and the grid element elevations assigned, double-click any grid element to display the following dialog box:
+
 .. image:: img/GDS006.jpg
-   This dialog box is used to edit elevation, n-value, limiting Froude number, and tolerance for any grid element.
-   There are buttons to edit the grid element attributes such as levees, infiltration, streets, etc.
+
+This dialog box is used to edit elevation, n-value, limiting Froude number, and tolerance for any grid element.
+There are buttons to edit the grid element attributes such as levees, infiltration, streets, etc.
 
 **2.3 Right Button actions**
 
-   After the grid system has been created and the grid element elevations assigned, you can right-click a grid element to display the following short cut
-   menu:
+After the grid system has been created and the grid element elevations assigned, you can right-click a grid element to display the following short cut
+menu:
+
 .. image:: img/GDS007.jpg
-   Clicking In/Out Condition for Element … and the inflow/outflow dialog box is displayed.
-   The input description for the FLO-2D inflow or outflow data is explained in chapter 5.
+
+Clicking In/Out Condition for Element … and the inflow/outflow dialog box is displayed.
+The input description for the FLO-2D inflow or outflow data is explained in chapter 5.
+
 .. image:: img/GDS008.jpg
+
 Click Create Reservoir Water Elevation for Element …
+
 .. image:: img/GDS009.jpg
-   This dialog box allows the user to define a reservoir.
-   The reservoir is defined by clicking an element within the banks of the reservoir and setting a water surface elevation.
-   At runtime, the FLO.EXE will find each element that is lower than the water surface elevation and fill it to that specified elevation.
+
+This dialog box allows the user to define a reservoir.
+The reservoir is defined by clicking an element within the banks of the reservoir and setting a water surface elevation.
+At runtime, the FLO.EXE will find each element that is lower than the water surface elevation and fill it to that specified elevation.
 
 **Toolbar and Menus**
 ~~~~~~~~~~~~~~~~~~~~~
@@ -187,67 +203,23 @@ Click Create Reservoir Water Elevation for Element …
 This section describes the *GDS* commands in the information toolbar and main Menu.
 
 **3.1 Toolbar**
+
 .. image:: img/GDS010.jpg
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
 
-
-   * - **ToolbarIcon**
-     - **Function**
-
-   * - |GDS011|
-     - Start new project (define region)
-
-   * - |GDS012|
-     - Open existing FLO-2D project
-
-   * - |GDS013|
-     - Save FLO-2D data files
-
-   * - |GDS014|
-     - View extent of modeling region (100% view)
-
-   * - |GDS015|
-     - Zoom out to previous view
-
-   * - |GDS016|
-     - Pan view
-
-   * - |GDS017|
-     - Select
-
-   * - |GDS018|
-     - Insert elevation point
-
-   * - |GDS019|
-     - Select grid element by grid element
-
-   * - |GDS020|
-     - Select grid elements defined by polygon
-
-   * - |GDS021|
-     - Unselect all grid elements
-
-   * - |GDS022|
-     - Levee express editor
-
-   * - |GDS023|
-     - Toggle component view
-
+.. image:: img/GDS265.jpg
 
 **3.2 File Menu Commands:**
 
 3.2.1 Define Working Region (File Menu)
 
-   This command creates a new project.
-   The user is prompted for the coordinates that define the project working region.
+This command creates a new project.
+The user is prompted for the coordinates that define the project working region.
 
-   **IMPORTANT NOTE:** *Only one project can open at a time in a single GDS execution.
+.. important:: Only one project can open at a time in a single GDS execution.
    If there is a project open when this command is selected, the GDS will prompt you to save the current project.
-   It is OK to open more than one GDS at a time.*
+   It is OK to open more than one GDS at a time.
 
-   The following table explains the required variables:
+The following table explains the required variables:
 
 .. list-table::
    :widths: 50 50
@@ -271,75 +243,95 @@ This section describes the *GDS* commands in the information toolbar and main Me
 
 
 3.2.2 New Project/from DTM Elevation Points (File Menu)
+
 .. image:: img/GDS024.jpg
-   A new project is created by importing the DTM elevation points from an existing file.
-   To import the DTM (\*.PTS) file click this command in the *File* menu and chose the correct filename in your project subdirectory.
-   The working region is automatically scaled from the minimum and maximum point coordinates.
+
+A new project is created by importing the DTM elevation points from an existing file.
+To import the DTM (\*.PTS) file click this command in the *File* menu and chose the correct filename in your project subdirectory.
+The working region is automatically scaled from the minimum and maximum point coordinates.
 
 3.2.3 New Project/from Existing ArcInfo ASCII Grid File...
 (File Menu)
+
 .. image:: img/GDS025.jpg
-   Using this command, a new project is created by importing the terrain elevation points from an existing ArcInfo ASCII grid file.
-   The format of these files is as follows:
 
-   ncols /\* Number of columns in the grid \*/ nrows /\* Number of rows in the grid \*/ xllcorner x /\* Lower left x coordinate of grid \*/ yllcorner y
-   /\* Lower left x coordinate of grid \*/ cellsize size /\* Grid cell size \*/
+Using this command, a new project is created by importing the terrain elevation points from an existing ArcInfo ASCII grid file.
+The format of these files is as follows:
 
-   NODATRA_value NODATA /\* value of an empty grid cell \*/ z11 z12 z13 ...
-   z1ncols /\* values of row 1 \*/ z21 z22 z23 ...
-   z2ncols /\* values of row 2 \*/
+.. raw:: html
 
-   … …
+    <pre>
+                ncols /* Number of columns in the grid */
+                nrows /* Number of rows in the grid */
+                xllcorner x /* Lower left x coordinate of grid */
+                yllcorner y /* Lower left x coordinate of grid */
+                cellsize size /* Grid cell size */
+                NODATRA_value NODATA /* value of an empty grid cell */
+                z11 z12 z13 ... z1ncols /* values of row 1 */
+                z21 z22 z23 ... z2ncols /* values of row 2 */
+                …
+                …
+                znrows1 znrows2 znrows3 ... znrowsncols /* values of last row*/
+    <\pre>
 
-   znrows1 znrows2 znrows3 ...
-   znrowsncols /\* values of last row*/
+Rows are read from north to south.
+For example:
 
-   Rows are read from north to south.
-   For example:
+.. raw:: html
 
-   ncols 388 nrows 461 xllcorner 674070.85270015 yllcorner 1000118.1562353
+    <pre>
+                ncols 388
+                nrows 461
+                xllcorner 674070.85270015
+                yllcorner 1000118.1562353
+                cellsize 100
+                NODATA_value -9999
+                2477.259 2480.868 2486.877 2486.877 2487.308 2490.641 2493.438 2493.438
+                2493.438. . .
+<\pre>
 
-   cellsize 100
-
-   NODATA_value -9999
-
-   2477.259 2480.868 2486.877 2486.877 2487.308 2490.641 2493.438 2493.438 2493.438..
-   .
-
-   The project area is automatically scaled from the minimum and maximum point coordinates.
-   To import the ArcInfo ASCII Grid File (\*.ASC) file click this command in the *File* menu and choose the correct filename in your project
-   subdirectory.
+The project area is automatically scaled from the minimum and maximum point coordinates.
+To import the ArcInfo ASCII Grid File (\*.ASC) file click this command in the *File* menu and choose the correct filename in your project
+subdirectory.
 
 3.2.4 New Project/from Existing Shapefile… (File Menu)
-.. image:: img/GDS026.jpg
-   A new project can be created by importing an ESRI *PointZ* Shape file.
-   The working region is automatically scaled from coordinate data in the shape file.
 
-   **IMPORTANT NOTE:** *GDS is only able to extract data from PointZ shape files, not from polygon or line shape files.
-   Polygon and Polyline shape files can be converted into PointZ shape files.*
+.. image:: img/GDS026.jpg
+
+A new project can be created by importing an ESRI *PointZ* Shape file.
+The working region is automatically scaled from coordinate data in the shape file.
+
+.. important:: GDS is only able to extract data from PointZ shape files, not from polygon or line shape files.
+   Polygon and Polyline shape files can be converted into PointZ shape files.
 
 3.2.5 New Project/from FLO-2D Project … (File Menu)
+
 .. image:: img/GDS027.jpg
-   A new project grid system can be created by importing an existing *FLO-2D* project.
-   The working region and the *FLO-2D* grid are automatically scaled from the minimum and maximum coordinate points.
-   To use this option, click this command in the *File* menu and chose the FPLAIN.DAT file in your project subdirectory.
-   The CONT.DAT data file must exist in the subdirectory.
-   An existing project may have various components that have already been developed such as channels, streets, levees, etc.
-   The components that you want to import can be identified in the FLO-2D Components dialog box.
+
+A new project grid system can be created by importing an existing *FLO-2D* project.
+The working region and the *FLO-2D* grid are automatically scaled from the minimum and maximum coordinate points.
+To use this option, click this command in the *File* menu and chose the FPLAIN.DAT file in your project subdirectory.
+The CONT.DAT data file must exist in the subdirectory.
+An existing project may have various components that have already been developed such as channels, streets, levees, etc.
+The components that you want to import can be identified in the FLO-2D Components dialog box.
+
 .. image:: img/GDS028.jpg
-   Only existing components will be available, otherwise the corresponding check boxes will be grayed out.
-   Existing component data (such as reduction factors or levees) can be graphically edited by simply clicking on the grid element with the left mouse
-   button.
-   A dialog box will appear so that you can select the component for editing.
-   This editing procedure is different from the procedure creating new components such as streets or channels.
+
+Only existing components will be available, otherwise the corresponding check boxes will be grayed out.
+Existing component data (such as reduction factors or levees) can be graphically edited by simply clicking on the grid element with the left mouse
+button.
+A dialog box will appear so that you can select the component for editing.
+This editing procedure is different from the procedure creating new components such as streets or channels.
 
 If the user unchecks the component or unchecks “View Components”, the component will not be loaded and cannot be edited or saved.
 The save button will overwrite the unloaded component data file.
 
 3.2.6 New Project/from Existing CAD File (File Menu)
+
 .. image:: img/GDS029.jpg
-   This option provides a way to start a *GDS* project by importing a DXF or DWG CAD file.
-   The working region and *FLO-2D* grid system are automatically scaled from the existing CAD file extents.
+
+This option provides a way to start a *GDS* project by importing a DXF or DWG CAD file.
+The working region and *FLO-2D* grid system are automatically scaled from the existing CAD file extents.
 
 3.2.7 New Project/from Existing HEC-RAS .PRJ File (File Menu)
 
