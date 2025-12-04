@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 4
+CHAPTER 4
 ---------
 
 Guidelines Storm Drain Setup
