@@ -768,7 +768,7 @@ The effects of bulking a flood hydrograph with high concentrations of sediment a
 In the following figure the 100-year design storm water flood and mudflow are shown for watershed near Colorado Springs, Colorado.
 The average sediment concentration is approximately 35% by volume with a peak concentration of 47% by volume.
 
-.. image:: img/Simula006.jpg
+.. image:: img/Simula006.png
 
 *Figure 5.
 Upstream Water and Mudflow Hydrograph*
@@ -784,7 +784,7 @@ outflow, the design mudflow discharge would be significantly underestimated.
 This is because the hydrograph shape has been altered by the flood routing resulting in a steeper, slower moving rising limb.
 The altered hydrograph shape results in a modified peak discharge that would exceed the bulked water hydrograph.
 
-.. image:: img/Simula007.jpg
+.. image:: img/Simula007.png
 
 *Figure 6.
 Channel Outflow Hydrographs*
@@ -1023,6 +1023,7 @@ exceeds 53%.
 
      </tbody>
    </table>
+
 
 
 
