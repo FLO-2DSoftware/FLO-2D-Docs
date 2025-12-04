@@ -921,58 +921,72 @@ In Table 4, when the concentration by volume exceeds 0.531, the dispersive contr
 This factor can be used to increase the turbulence Manning’s n-value in the quadratic rheologic model when the sediment concentration by volume
 exceeds 53%.
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+.. raw:: html
 
+   <table style="border-collapse: collapse; width: 100%; text-align: center;">
+     <caption><strong>Table 4. Dispersive – Turbulent Ratio</strong></caption>
 
-   * - **Table 4.
-       Dispersive – Turbulent Ratio**
-     -
+     <thead>
+       <tr>
+         <th style="border:1px solid #000; padding:4px;">C<sub>v</sub></th>
+         <th style="border:1px solid #000; padding:4px;">λ</th>
+         <th style="border:1px solid #000; padding:4px;">h/d<sub>s</sub></th>
+         <th style="border:1px solid #000; padding:4px;">n<sub>d</sub> / n<sub>t</sub></th>
+       </tr>
+     </thead>
 
-   * - C\ :sub:`v`  |    λ            |    h/d\ :sub:`s` |
-     - nd/nt
+     <tbody>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">0.0</td>
+         <td style="border:1px solid #000; padding:4px;">0.0</td>
+         <td style="border:1px solid #000; padding:4px;">0.0</td>
+         <td style="border:1px solid #000; padding:4px;">0.0</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">0.1</td>
+         <td style="border:1px solid #000; padding:4px;">1.2</td>
+         <td style="border:1px solid #000; padding:4px;">3.8</td>
+         <td style="border:1px solid #000; padding:4px;">0.14</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">0.2</td>
+         <td style="border:1px solid #000; padding:4px;">2.2</td>
+         <td style="border:1px solid #000; padding:4px;">7.0</td>
+         <td style="border:1px solid #000; padding:4px;">0.20</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">0.3</td>
+         <td style="border:1px solid #000; padding:4px;">3.7</td>
+         <td style="border:1px solid #000; padding:4px;">11.7</td>
+         <td style="border:1px solid #000; padding:4px;">0.28</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">0.4</td>
+         <td style="border:1px solid #000; padding:4px;">6.5</td>
+         <td style="border:1px solid #000; padding:4px;">20.5</td>
+         <td style="border:1px solid #000; padding:4px;">0.42</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">0.5</td>
+         <td style="border:1px solid #000; padding:4px;">14.0</td>
+         <td style="border:1px solid #000; padding:4px;">44.2</td>
+         <td style="border:1px solid #000; padding:4px;">0.75</td>
+       </tr>
 
-   * - 0.0          |    0.0          |    0.0           |
-     - 0.0
+       <!-- Highlighted Row -->
+       <tr>
+         <td style="border:1px solid #000; padding:4px; font-weight:bold;">0.531</td>
+         <td style="border:1px solid #000; padding:4px;"></td>
+         <td style="border:1px solid #000; padding:4px;"></td>
+         <td style="border:1px solid #000; padding:4px; font-weight:bold;">1.00</td>
+       </tr>
 
-   * - 0.1          |    1.2          |    3.8           |
-     - 0.14
-
-   * - 0.2          |    2.2          |    7.0           |
-     - 0.20
-
-   * - 0.3          |    3.7          |    11.7          |
-     - 0.28
-
-   * - 0.4          |    6.5          |    20.5          |
-     - 0.42
-
-   * - 0.5          |    14.0         |    44.2          |
-     - 0.75
-
-   * - **0.531**    |                 |                  |
-     - **1.00**
-
-   * - 0.55         |    26.0         |    83.0          |
-     - 1.25
-
-   * - 0.56         |    31.5         |    99.8          |
-     - 1.45
-
-   * - 0.58         |    50.8         |    160.6         |
-     - 2.15
-
-   * - 0.60         |    121.0        |    382.6         |
-     - 4.60
-
-   * - 0.615        |    ∞            |    ∞             |
-     - ∞
-
-   * - C\ :sub:`v` = 0.56 Maximum packing factor for spheresC\ :sub:`v` = 0.615 Bagnolds maximum sediment concentrationC\ :sub:`v` = 0.74 Natural soil
-       porosity
-     -
-
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">0.55</td>
+         <td style="border:1px solid #000; padding:4px;">26.0</td>
+         <td style="border:1px solid #000; padding:4px;">83.0</td>
+         <td style="border:1px solid #000; padding:4px;">1.25</td>
+       </tr>
 
 **References**
 
