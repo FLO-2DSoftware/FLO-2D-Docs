@@ -464,63 +464,168 @@ Very viscous mudflows have high sediment concentrations and correspondingly high
 in nature are extremely rare.
 Less viscous flows (mud floods) are always turbulent.
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+*TABLE 3.
+YIELD STRESS AND VISCOSITY AS A FUNCTION OF SEDIMENTCONCENTRATION*
 
+.. raw:: html
 
-   * - TABLE 3.
-       YIELD STRESS AND VISCOSITY AS A FUNCTION OF SEDIMENTCONCENTRATION
+   <table style="border-collapse: collapse; width: 100%;">
+     <caption><strong>Table 3. Yield Stress and Viscosity as a Function of Sediment Concentration</strong></caption>
 
-   * - Source              | τy = α\ *e*\ βCv                      | η = α\ *e*\
-       :sup:`βCv`+-------------------+-------------------+-------------------+-------------------| α                 | β                 | α
-       | β
+     <thead>
+       <tr>
+         <th style="border:1px solid #000; padding:4px;" rowspan="3">Source</th>
+         <th style="border:1px solid #000; padding:4px;" colspan="2">
+           τ<sub>y</sub> = α e<sup>β C<sub>v</sub></sup>
+         </th>
+         <th style="border:1px solid #000; padding:4px;" colspan="2">
+           η = α e<sup>β C<sub>v</sub></sup>
+         </th>
+       </tr>
+       <tr>
+         <th style="border:1px solid #000; padding:4px;">α</th>
+         <th style="border:1px solid #000; padding:4px;">β</th>
+         <th style="border:1px solid #000; padding:4px;">α</th>
+         <th style="border:1px solid #000; padding:4px;">β</th>
+       </tr>
+       <tr>
+         <th style="border:1px solid #000; padding:4px;" colspan="4">Field Data</th>
+       </tr>
+     </thead>
 
-   * - Field Data
+     <tbody>
+       <!-- Field data rows -->
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Aspen Pit 1</td>
+         <td style="border:1px solid #000; padding:4px;">0.181</td>
+         <td style="border:1px solid #000; padding:4px;">25.7</td>
+         <td style="border:1px solid #000; padding:4px;">0.0360</td>
+         <td style="border:1px solid #000; padding:4px;">22.1</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Aspen Pit 2</td>
+         <td style="border:1px solid #000; padding:4px;">2.72</td>
+         <td style="border:1px solid #000; padding:4px;">10.4</td>
+         <td style="border:1px solid #000; padding:4px;">0.0538</td>
+         <td style="border:1px solid #000; padding:4px;">14.5</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Aspen Natural Soil</td>
+         <td style="border:1px solid #000; padding:4px;">0.152</td>
+         <td style="border:1px solid #000; padding:4px;">18.7</td>
+         <td style="border:1px solid #000; padding:4px;">0.00136</td>
+         <td style="border:1px solid #000; padding:4px;">28.4</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Aspen Mine Fill</td>
+         <td style="border:1px solid #000; padding:4px;">0.0473</td>
+         <td style="border:1px solid #000; padding:4px;">21.1</td>
+         <td style="border:1px solid #000; padding:4px;">0.128</td>
+         <td style="border:1px solid #000; padding:4px;">12.0</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Aspen Watershed</td>
+         <td style="border:1px solid #000; padding:4px;">0.0383</td>
+         <td style="border:1px solid #000; padding:4px;">19.7</td>
+         <td style="border:1px solid #000; padding:4px;">0.000495</td>
+         <td style="border:1px solid #000; padding:4px;">27.1</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Aspen Mine Source Area</td>
+         <td style="border:1px solid #000; padding:4px;">0.291</td>
+         <td style="border:1px solid #000; padding:4px;">14.3</td>
+         <td style="border:1px solid #000; padding:4px;">0.000201</td>
+         <td style="border:1px solid #000; padding:4px;">33.1</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Glenwood 1</td>
+         <td style="border:1px solid #000; padding:4px;">0.0345</td>
+         <td style="border:1px solid #000; padding:4px;">20.1</td>
+         <td style="border:1px solid #000; padding:4px;">0.00283</td>
+         <td style="border:1px solid #000; padding:4px;">23.0</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Glenwood 2</td>
+         <td style="border:1px solid #000; padding:4px;">0.0765</td>
+         <td style="border:1px solid #000; padding:4px;">16.9</td>
+         <td style="border:1px solid #000; padding:4px;">0.648</td>
+         <td style="border:1px solid #000; padding:4px;">8.2</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Glenwood 3</td>
+         <td style="border:1px solid #000; padding:4px;">0.000707</td>
+         <td style="border:1px solid #000; padding:4px;">29.8</td>
+         <td style="border:1px solid #000; padding:4px;">0.00632</td>
+         <td style="border:1px solid #000; padding:4px;">19.9</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Glenwood 4</td>
+         <td style="border:1px solid #000; padding:4px;">0.00172</td>
+         <td style="border:1px solid #000; padding:4px;">29.5</td>
+         <td style="border:1px solid #000; padding:4px;">0.000602</td>
+         <td style="border:1px solid #000; padding:4px;">33.1</td>
+       </tr>
 
-   * - Aspen Pit 1         | 0.181             | 25.7              | 0.0360            | 22.1
+       <!-- Divider row -->
+       <tr>
+         <td style="border:1px solid #000; padding:4px; text-align:center;" colspan="5">
+           Relationships Available from the Literature
+         </td>
+       </tr>
 
-   * - Aspen Pit 2         | 2.72              | 10.4              | 0.0538            | 14.5
+       <!-- Literature rows -->
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Iida (1938)*</td>
+         <td style="border:1px solid #000; padding:4px;">-</td>
+         <td style="border:1px solid #000; padding:4px;">-</td>
+         <td style="border:1px solid #000; padding:4px;">0.0000373</td>
+         <td style="border:1px solid #000; padding:4px;">36.6</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Dai et al. (1980)</td>
+         <td style="border:1px solid #000; padding:4px;">2.60</td>
+         <td style="border:1px solid #000; padding:4px;">17.48</td>
+         <td style="border:1px solid #000; padding:4px;">0.00750</td>
+         <td style="border:1px solid #000; padding:4px;">14.39</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Kang and Zhang (1980)</td>
+         <td style="border:1px solid #000; padding:4px;">1.75</td>
+         <td style="border:1px solid #000; padding:4px;">7.82</td>
+         <td style="border:1px solid #000; padding:4px;">0.0458</td>
+         <td style="border:1px solid #000; padding:4px;">8.29</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Qian et al. (1980)</td>
+         <td style="border:1px solid #000; padding:4px;">0.00136</td>
+         <td style="border:1px solid #000; padding:4px;">21.2</td>
+         <td style="border:1px solid #000; padding:4px;">-</td>
+         <td style="border:1px solid #000; padding:4px;">-</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Chien and Ma (1958)</td>
+         <td style="border:1px solid #000; padding:4px;">0.0588</td>
+         <td style="border:1px solid #000; padding:4px;">19.1–32.7</td>
+         <td style="border:1px solid #000; padding:4px;">-</td>
+         <td style="border:1px solid #000; padding:4px;">-</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Fei (1981)</td>
+         <td style="border:1px solid #000; padding:4px;">0.166</td>
+         <td style="border:1px solid #000; padding:4px;">25.6</td>
+         <td style="border:1px solid #000; padding:4px;">-</td>
+         <td style="border:1px solid #000; padding:4px;">-</td>
+       </tr>
 
-   * - Aspen Natural Soil  | 0.152             | 18.7              | 0.00136           | 28.4
+       <!-- Footnote row -->
+       <tr>
+         <td style="border:1px solid #000; padding:4px;" colspan="5">
+           <em>*See O'Brien (1986) for the references.</em>
+         </td>
+       </tr>
 
-   * - Aspen Mine Fill     | 0.0473            | 21.1              | 0.128             | 12.0
-
-   * - Aspen Watershed     | 0.0383            | 19.6              | 0.000495          | 27.1
-
-   * - Aspen Mine Source   | 0.291             | 14.3              | 0.000201          | 33.1Area                |                   |                   |
-       |
-
-   * - Glenwood 1          | 0.0345            | 20.1              | 0.00283           | 23.0
-
-   * - Glenwood 2          | 0.0765            | 16.9              | 0.648             | 6.20
-
-   * - Glenwood 3          | 0.000707          | 29.8              | 0.00632           | 19.9
-
-   * - Glenwood 4          | 0.00172           | 29.5              | 0.000602          | 33.1
-
-   * - Relationships Available from the Literature
-
-   * - Iida                | -                 | -                 | 0.0000373         | 36.6(1938)\ :sup:`\*`   |                   |                   |
-       |
-
-   * - Dai et al.
-       (1980)   | 2.60              | 17.48             | 0.00750           | 14.39
-
-   * - Kang and Zhang      | 1.75              | 7.82              | 0.0405            | 8.29(1980)              |                   |                   |
-       |
-
-   * - Qian et al.
-       (1980)  | 0.00136           | 21.2              | -                 |
-       -+-------------------+-------------------+-------------------+-------------------| 0.050             | 15.48             | -                 | -
-
-   * - Chien and Ma (1958) | 0.0588            | 19.1-32.7         | -                 | -
-
-   * - Fei (1981)          | 0.166             | 25.6              | -                 |
-       -+-------------------+-------------------+-------------------+-------------------| 0.00470           | 22.2              | -                 | -
-
-   * - :sup:`\*`\ See O’Brien (1986) for the references.
-
+     </tbody>
+   </table>
 
 *Conversion:* Shear Stress: 1 Pascal (PA) = 10 dynes/cm\ :sup:`2`
 
@@ -556,17 +661,19 @@ At the end of the simulation, the model reports on the amount of water and sedim
 of the water and sediment remaining on the fan or in the channel (storage).
 This total sediment volume should be reviewed to determine if this is a reasonable sediment yield for the watershed.
 The areal extent of mudflow inundation and the maximum flow depths and velocities are a function of the available sediment.
+
 .. image:: img/Simula004.jpg
 
-   Figure 3.
-   Dynamic Viscosity of Mudflow Samples Versus Volumetric Concentration
+*Figure 3.
+Dynamic Viscosity of Mudflow Samples Versus Volumetric Concentration*
+
 .. image:: img/Simula005.jpg
 
-   Figure 4.
-   Yield Stress of Mudflow Samples Versus Volumetric Concentration
+*Figure 4.
+Yield Stress of Mudflow Samples Versus Volumetric Concentration*
 
 Practical Guidelines for Analyzing the Potential for Hyperconcentrated Sediment Flows
-=====================================================================================
+---------------------------------------------------------------------------------------
 
 There are several simple guidelines that can be checked to determine the potential for a watershed to generate a mudflow.
 In addition, modeling hyperconcentrated sediment flows requires reasonable assumptions for the variables that control the physical flows processes.
@@ -617,15 +724,11 @@ losses due to infiltration or evaporation and storage remaining on the floodplai
 The routed sediment volume can then be compared with the potential sediment yield in the upstream watershed.
 The possible sources of sediment include:
 
-- Landslides.
-
-- Hillslope sloughing.
-
-- Channel bank failure.
-
-- Channel bed scour.
-
-- Overland sediment yield (includes rills and gullies).
+    - Landslides.
+    - Hillslope sloughing.
+    - Channel bank failure.
+    - Channel bed scour.
+    - Overland sediment yield (includes rills and gullies).
 
 Various techniques can be employed to predict sediment supply and should be checked with field observations.
 If landslide scarps or hillslope failure are evident, it is likely that these sediment loading mechanisms will occur during large infrequent storm
@@ -653,44 +756,38 @@ The highly variable nature of the sediment concentration gives rise to unsteady 
 replicated with any degree of certainty.
 When assigning sediment concentrations to a flood hydrograph the following guidelines are suggested:
 
-- The average sediment concentration should reflect the estimated water and sediment volumes for the design storm.
-
-- The sediment volume should not exceed the estimated maximum potential sediment yield observed for the basin.
-
-- The steep rising limb of the hydrograph should be bulked with the highest sediment concentrations to simulate the frontal wave.
-
-• The peak discharge should be assigned a sediment concentration slightly less than the
----------------------------------------------------------------------------------------
-
-   frontal wave to account for water dilution.
-
-- The rising and following limbs of the hydrographs should not have less than 20% sediment concentration by volume.
-
-- To generate a mudflow the average sediment concentration for the entire hydrograph should be in the range of 25% to 35% by volume with the frontal
-  wave peak concentration on the order of 45% to 53% concentration by volume.
+    - The average sediment concentration should reflect the estimated water and sediment volumes for the design storm.
+    - The sediment volume should not exceed the estimated maximum potential sediment yield observed for the basin.
+    - The steep rising limb of the hydrograph should be bulked with the highest sediment concentrations to simulate the frontal wave.
+    - The peak discharge should be assigned a sediment concentration slightly less than the frontal wave to account for water dilution.
+    - The rising and following limbs of the hydrographs should not have less than 20% sediment concentration by volume.
+    - To generate a mudflow the average sediment concentration for the entire hydrograph should be in the range of 25% to 35% by volume with the frontal
+      wave peak concentration on the order of 45% to 53% concentration by volume.
 
 The effects of bulking a flood hydrograph with high concentrations of sediment are multifaceted.
 In the following figure the 100-year design storm water flood and mudflow are shown for watershed near Colorado Springs, Colorado.
 The average sediment concentration is approximately 35% by volume with a peak concentration of 47% by volume.
+
 .. image:: img/Simula006.jpg
 
-   Figure 5.
-   Upstream Water and Mudflow Hydrograph
+*Figure 5.
+Upstream Water and Mudflow Hydrograph*
 
-   The hydrographs were routed downstream to outflow point of the basin (about 0.5 miles).
-   Figure 6 displays the resultant channel outflow hydrographs.
-   There are several important observations can be highlighted.
-   The mudflow moves slower than a water flood; the arrival of the peak water discharge occurs 0.08 hours sooner than the mudflow peak.
-   The mudflow peak discharge at the basin outflow exceeds the bulked peak water discharge for a sediment concentration of 50% by volume (a bulking
-   factor of two).
-   This infers that if the peak discharge for a conventional water flood analysis were conservatively bulked by 50% concentration by volume at the basin
-   outflow, the design mudflow discharge would be significantly underestimated.
-   This is because the hydrograph shape has been altered by the flood routing resulting in a steeper, slower moving rising limb.
-   The altered hydrograph shape results in a modified peak discharge that would exceed the bulked water hydrograph.
+The hydrographs were routed downstream to outflow point of the basin (about 0.5 miles).
+Figure 6 displays the resultant channel outflow hydrographs.
+There are several important observations can be highlighted.
+The mudflow moves slower than a water flood; the arrival of the peak water discharge occurs 0.08 hours sooner than the mudflow peak.
+The mudflow peak discharge at the basin outflow exceeds the bulked peak water discharge for a sediment concentration of 50% by volume (a bulking
+factor of two).
+This infers that if the peak discharge for a conventional water flood analysis were conservatively bulked by 50% concentration by volume at the basin
+outflow, the design mudflow discharge would be significantly underestimated.
+This is because the hydrograph shape has been altered by the flood routing resulting in a steeper, slower moving rising limb.
+The altered hydrograph shape results in a modified peak discharge that would exceed the bulked water hydrograph.
+
 .. image:: img/Simula007.jpg
 
-Figure 6. Channel Outflow Hydrographs
--------------------------------------
+*Figure 6.
+Channel Outflow Hydrographs*
 
 *Surface Conditions: Topography, buildings, obstructions, channels and vegetation* Topography effects local flow depth, velocity and deposition (or
 scour).
@@ -712,7 +809,7 @@ The key to accurate simulation is the selection of the sediment concentration by
 A balance should be sought between the assigned sediment concentration and the estimated potential sediment yield.
 
 Guidelines for the Selection of Rheological Parameters
-======================================================
+-------------------------------------------------------
 
 Each mudflow alluvial fan or tailings dam area or region has geology and soil conditions that will generate unique rheological fluid properties.
 Where resources are available, it is recommended that viscosity and yield stress as function of concentration be analyzed with a viscometer.
@@ -732,59 +829,53 @@ The variability of this data is primarily a function of the type and quantity of
 If rheological laboratory investigations are performed for a project site, the data should fall within the banded range given the diverse range of
 data collected worldwide.
 If a subjective judgment to select a set of rheological relationships is necessary, one of the following approach is recommended.
-A.
-If mudflow deposit field data of the fluid matrix is collected, this analysis is suggested:
 
-1. Observe the field post event conditions including deposits and available photos.
-   Determine if the mudflows appear to be very viscous or rather dilute.
-   Did the flow behave like wet cement or like a mud flood?
+A. If mudflow deposit field data of the fluid matrix is collected, this analysis is suggested:
 
-2. Collect undisturbed deposit samples and sieve the samples for the clay-silt/sand split to determine the percentage of fine sediment in the flow
-   material.
-   Additional soil analyses such as the Plastic Index and Liquid Limit may also be informative.
-
-3. Starting with a dry deposit sample of the fluid matrix material, re-wet the sample based on accurate measurements of the weight or volume of the
-   sediment sample and the added water to determine concentration by volume.
-   Record the observations by referencing Table
-   1.
-
-4. If it is determined that the flow was very viscous with a moderate yield stress, select a sample from Table 3 that will result in a viscosity and
-   yield stress in an appropriate range in Figures 3 and
-   4. Glenwood 4 is suggested as a typical type of flow material that will behave like wet cement.
-      Similarly, if it is assumed that the flow more resembled a mud flood with limited viscosity and yield stress, select parameters corresponding to a
-      sample such as the Aspen Natural Soil.
-      Compute the viscosity and yield stress for several different samples for a range of concentrations by volume and compare the results in a table.
+    1. Observe the field post event conditions including deposits and available photos.
+       Determine if the mudflows appear to be very viscous or rather dilute.
+       Did the flow behave like wet cement or like a mud flood?
+    2. Collect undisturbed deposit samples and sieve the samples for the clay-silt/sand split to determine the percentage of fine sediment in the flow
+       material.
+       Additional soil analyses such as the Plastic Index and Liquid Limit may also be informative.
+    3. Starting with a dry deposit sample of the fluid matrix material, re-wet the sample based on accurate measurements of the weight or volume of the
+       sediment sample and the added water to determine concentration by volume.
+       Record the observations by referencing Table 1.
+    4. If it is determined that the flow was very viscous with a moderate yield stress, select a sample from Table 3 that will result in a viscosity and
+       yield stress in an appropriate range in Figures 3 and
+       4. Glenwood 4 is suggested as a typical type of flow material that will behave like wet cement.
+       Similarly, if it is assumed that the flow more resembled a mud flood with limited viscosity and yield stress, select parameters corresponding to a
+       sample such as the Aspen Natural Soil.
+       Compute the viscosity and yield stress for several different samples for a range of concentrations by volume and compare the results in a table.
 
 B. If no field data is available and only a subjective interpretation of the mudflow fluid properties will be applied, then the following approach is
    recommended.
 
-1. Observe the field post event conditions including deposits and available photos.
-   Determine if the mudflows appear to be very viscous or rather dilute.
-   Did the flow behave like wet cement or like a mud flood? Did the flow cease? Are there frontal wave terminal berms or lateral boulder levee deposits?
-
-2. If the flow was very viscous with a moderate yield stress, select a sample from Table 3 that will result in a viscosity and yield stress in an
-   appropriate range in Figures 3 and 4.
-   Glenwood 4 is suggested as a typical type of flow material that will behave like wet cement.
-   Similarly, if it is assumed that the flow more resembled a mud flood with limited viscosity and yield stress, select parameters corresponding to a
-   sample such as the Aspen Natural Soil.
-   Compute the viscosity and yield stress for several different samples for a range of concentrations by volume and compare the results in a table.
-
-3. Run several FLO-2D mudflow simulations with different sample viscosity and yield stress relationship and analyze the ranges of flow hydraulics such as
-   area of inundation, maximum depths, maximum velocities, peak discharges, etc.
-   Determine the worst case scenario for you project conditions.
+    1. Observe the field post event conditions including deposits and available photos.
+       Determine if the mudflows appear to be very viscous or rather dilute.
+       Did the flow behave like wet cement or like a mud flood? Did the flow cease? Are there frontal wave terminal berms or lateral boulder levee deposits?
+    2. If the flow was very viscous with a moderate yield stress, select a sample from Table 3 that will result in a viscosity and yield stress in an
+       appropriate range in Figures 3 and 4.
+       Glenwood 4 is suggested as a typical type of flow material that will behave like wet cement.
+       Similarly, if it is assumed that the flow more resembled a mud flood with limited viscosity and yield stress, select parameters corresponding to a
+       sample such as the Aspen Natural Soil.
+       Compute the viscosity and yield stress for several different samples for a range of concentrations by volume and compare the results in a table.
+    3. Run several FLO-2D mudflow simulations with different sample viscosity and yield stress relationship and analyze the ranges of flow hydraulics such as
+       area of inundation, maximum depths, maximum velocities, peak discharges, etc.
+       Determine the worst case scenario for you project conditions.
 
 Dispersion Stress Considerations
-================================
+-------------------------------------
 
 For flows with high concentrations of non-cohesive sediment particles and relatively low viscosities and yield stresses, turbulence will dominate and
 dispersive stress can play a role in slowing down the velocity.
 Granular flows that can be prescribed by the dispersive stress relationship alone require that three simultaneous conditions be satisfied:
 
-1. The sediment concentration is very high (> 50% by volume).
+    1. The sediment concentration is very high (> 50% by volume).
 
-2. There are Large velocity gradients typically exceeding 10 s\ :sup:`-1`.
+    2. There are Large velocity gradients typically exceeding 10 s\ :sup:`-1`.
 
-3. The sediment particles are large in relationship to the flow depth (~ 10% of flow depth).
+    3. The sediment particles are large in relationship to the flow depth (~ 10% of flow depth).
 
 Julien and Lan (1991) proposed a dimensionless form of the quadratic rheological model:
 
