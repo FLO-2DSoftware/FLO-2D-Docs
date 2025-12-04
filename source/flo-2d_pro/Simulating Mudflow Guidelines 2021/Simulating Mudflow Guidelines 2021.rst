@@ -54,7 +54,7 @@ material, whereas the area on inundation by the fluid flow is dependent on the f
 The following discussion considers the fluid motion of hyperconcentrated sediment flows referred to as mudflows or mud floods.
 
 Flow Classification
-===================
+---------------------
 
 The vast majority of hyperconcentrated sediment flows that occur worldwide fall within a range of about 20 to 55 percent concentration by volume and
 most are associated with rainfall runoff.
@@ -88,9 +88,7 @@ The dominant property of a mudflow is the high viscosity which will result in sl
 High fluid matrix density can increase the buoyancy of large sediment particles from gravel to boulders which generally are just along for the ride,
 often being transported near the flow surface.
 The yield stress, is a measure of the internal fluid resistance to flow and will effect both flow initiation and cessation.
-
-*Table 1.
-Mudflow Behavior as a Function of Sediment Concentration*
+]
 
   .. raw:: html
 
@@ -246,13 +244,13 @@ Average and peak sediment concentrations for the flood hydrograph are important 
 Based on the previous discussion, hyperconcentrated sediment flows can be classified as either water flooding, mud floods, mudflows or landslides.
 The distinction between these flood events depends on sediment concentration measured either by weight or volume (Figure 1).
 
-|Simula002|
+.. image:: img/Simula002.jpg
 
-Figure 1.
-Classification of Hyperconcentrated Sediment Flows
+*Figure 1.
+Classification of Hyperconcentrated Sediment Flows*
 
 Physical Processes of Hyperconcentrated Sediment Flows
-======================================================
+----------------------------------------------------------
 
 Hyperconcentrated sediment flows involve the complex interaction of fluid and sediment processes such as turbulence, viscous shear, fluid-sediment
 particle momentum exchange, and sediment particle collision.
@@ -348,10 +346,10 @@ The last term is the sum of the dispersive and turbulent shear stresses and defi
 This term is a function of the square of the velocity gradient.
 A discussion of these stresses and their role in hyperconcentrated sediment flows can be found in Julien and O'Brien (1987, 1993).
 
-|Simula003|
+.. image:: img/Simula003.jpg
 
-Figure 2. Shear Stress as a Function of Shear Rate for Fluid Deformation Models
--------------------------------------------------------------------------------
+*Figure 2.
+Shear Stress as a Function of Shear Rate for Fluid Deformation Models*
 
 A mudflow model that incorporates only the Bingham stresses and ignores the inertial stresses assumes that the simulated mudflow is viscous.
 This assumption is not universally appropriate because all mud floods and some mudflows are turbulent with velocities as high as 25 fps (8 m/s).
@@ -389,30 +387,40 @@ In Table 2 for Kentucky Blue Grass with a slope of 0.01, K was estimated at 10,0
 A value of K = 2,285 was calibrated on the Rudd Creek, Utah mudflow for a residential area and has been used effectively for most urban studies.
 For laminar and transitional flows, turbulence is suppressed and the laminar flow resistance parameter K becomes important.
 
+*Table 2.
+Resistance Parameters for LaminarFlow\ :sup:`1`*
+
 .. list-table::
-   :widths: 100
+   :widths: 50 50
    :header-rows: 0
 
 
-   * - Table 2 Resistance Parameters for LaminarFlow\ :sup:`1`
+   * - Surface
+     - Range of K
 
-   * - Surface                                | Range of K
+   * - Concrete/asphalt
+     - 24 -108
 
-   * - Concrete/asphalt                       | 24 -108
+   * - Bare sand
+     - 30 - 120
 
-   * - Bare sand                              | 30 - 120
+   * - Graded surface
+     - 90 - 400
 
-   * - Graded surface                         | 90 - 400
+   * - Bare clay - loam soil, eroded
+     - 100 - 500
 
-   * - Bare clay - loam soil, eroded          | 100 - 500
+   * - Sparse vegetation
+     - 1,000 - 4,000
 
-   * - Sparse vegetation                      | 1,000 - 4,000
+   * - Short prairie grass
+     - 3,000 - 10,000
 
-   * - Short prairie grass                    | 3,000 - 10,000
-
-   * - Bluegrass sod                          | 7,000 - 50,000
+   * - Bluegrass sod
+     - 7,000 - 50,000
 
    * - :sup:`1` Woolhiser (1975)
+     -
 
 
 The flow resistance n\ :sub:`td` of the turbulent and dispersive shear stress components are combined into an equivalent Manning’s n-value for the
@@ -548,13 +556,11 @@ At the end of the simulation, the model reports on the amount of water and sedim
 of the water and sediment remaining on the fan or in the channel (storage).
 This total sediment volume should be reviewed to determine if this is a reasonable sediment yield for the watershed.
 The areal extent of mudflow inundation and the maximum flow depths and velocities are a function of the available sediment.
-
-|Simula004|
+.. image:: img/Simula004.jpg
 
    Figure 3.
    Dynamic Viscosity of Mudflow Samples Versus Volumetric Concentration
-
-|Simula005|
+.. image:: img/Simula005.jpg
 
    Figure 4.
    Yield Stress of Mudflow Samples Versus Volumetric Concentration
@@ -666,8 +672,7 @@ When assigning sediment concentrations to a flood hydrograph the following guide
 The effects of bulking a flood hydrograph with high concentrations of sediment are multifaceted.
 In the following figure the 100-year design storm water flood and mudflow are shown for watershed near Colorado Springs, Colorado.
 The average sediment concentration is approximately 35% by volume with a peak concentration of 47% by volume.
-
-   |Simula006|
+.. image:: img/Simula006.jpg
 
    Figure 5.
    Upstream Water and Mudflow Hydrograph
@@ -682,8 +687,7 @@ The average sediment concentration is approximately 35% by volume with a peak co
    outflow, the design mudflow discharge would be significantly underestimated.
    This is because the hydrograph shape has been altered by the flood routing resulting in a steeper, slower moving rising limb.
    The altered hydrograph shape results in a modified peak discharge that would exceed the bulked water hydrograph.
-
-   |Simula007|
+.. image:: img/Simula007.jpg
 
 Figure 6. Channel Outflow Hydrographs
 -------------------------------------
@@ -1002,21 +1006,3 @@ Part I: physical properties and laminar transport characteristics,” Ind.
 Eng.
 Chem., 55(110, 18-29.
 
-.. |Simula002| image:: media\Simula002.jpg
-   :width: 5.10333in
-   :height: 3.70833in
-.. |Simula003| image:: media\Simula003.jpg
-   :width: 5.26in
-   :height: 3.18667in
-.. |Simula004| image:: media\Simula004.jpg
-   :width: 6.49in
-   :height: 3.615in
-.. |Simula005| image:: media\Simula005.jpg
-   :width: 6.5in
-   :height: 4.21833in
-.. |Simula006| image:: media\Simula006.png
-   :width: 5.13333in
-   :height: 4.10667in
-.. |Simula007| image:: media\Simula007.png
-   :width: 5.86667in
-   :height: 4.17333in
