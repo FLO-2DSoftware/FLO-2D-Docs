@@ -409,17 +409,23 @@ To define the all the shear stress terms for use in the FLO-2D model, the follow
 By analogy, from the work of Meyer-Peter and Müller (1948) and Einstein (1950), the shear stress relationship is depth integrated and rewritten in the
 following form as a dimensionless slope:
 
-   *S f = S y + S v + S t d*
+.. math::
+   :label:
+
+   S_f = S_y + S_v + S_t + S_d
 
 where the total friction slope S\ :sub:`f` is the sum of the yield slope S\ :sub:`y`, the viscous slope S\ :sub:`v`, and the turbulent-dispersive
 slope S\ :sub:`td`.
 The viscous and turbulent-dispersive slope terms are written in terms of depth-averaged velocity V.
 The viscous slope can be written as:
 
-Sv = 8\ *K* γ ηm *V*\ h2
-~~~~~~~~~~~~~~~~~~~~~~~~
+.. math::
+   :label:
+
+   S_v = \frac{K\,\eta}{8\,\gamma_m}\,\frac{V}{h^{2}}
 
 where γ\ :sub:`m` is the specific weight of the sediment mixture.
+
 The resistance parameter K for laminar flow equals 24 for smooth wide rectangular channels but increases significantly (~ 50,000) with roughness and
 irregular cross section geometry.
 In Table 2 for Kentucky Blue Grass with a slope of 0.01, K was estimated at 10,000 (Chen, 1976).
@@ -465,15 +471,20 @@ Resistance Parameters for LaminarFlow*\ :sup:`1`
 The flow resistance n\ :sub:`td` of the turbulent and dispersive shear stress components are combined into an equivalent Manning’s n-value for the
 flow:
 
-*St d = n\ tdh24 /V\ 3 2*
+.. math::
+   :label:
+
+   S_{td} = \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}
 
 At very high concentrations, the dispersive stress arising from sediment particle contact increases the flow resistance n\ :sub:`td` by transferring
 more momentum flux to the boundary.
 To estimate this increase in flow resistance, the conventional turbulent flow resistance n-value n\ :sub:`t` is increased by an exponential function
 of the sediment concentration C\ :sub:`v`.
 
- ntd = nt b emCv
- ~~~~~~~~~~~~~~~
+.. math::
+   :label:
+
+   n_{td} = n_t\, b\, e^{m\, C_v}
 
 where: n\ :sub:`t` is the turbulent n-value, b is a coefficient (0.0538) and m is an exponent (6.0896).
 This equation was based on unpublished paper by Julien and O’Brien (1998) that relates the dispersive and turbulent resistance in hyperconcentrated
@@ -481,7 +492,13 @@ sediment flows as function of the ratio of the flow depth to the sediment grain 
 
 The friction slope components can then be combined in the following form:
 
-   *S f =* τ *yh + 8\ K* γ η\ *m h\ V\ 2 + n\ tdh24 /V\ 3 2* γ\ *m*
+.. math::
+   :label:
+
+   S_f
+   = \frac{\tau_y}{\gamma_m\, h}
+     + \frac{K\, \eta\, V}{8\, \gamma_m\, h^{2}}
+     + \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}
 
 A quadratic equation solution to the above friction slope equation has been formulated in the FLO-2D model to estimate the velocity for use in the
 momentum equation.
