@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Two Phase Flood Routing Guidelines 2023
+TWO PHASE FLOOD ROUTING GUIDELINES 2023
 ========================================
 
 Introduction
