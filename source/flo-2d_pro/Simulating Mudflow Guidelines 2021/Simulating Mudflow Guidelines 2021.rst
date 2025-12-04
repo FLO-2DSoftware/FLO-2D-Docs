@@ -229,16 +229,26 @@ The specific weight of the mudflow mixture :sub:`γm` is a function of the sedim
 
 Similarly the density of the mudflow mixture ρm is given by:
 
-ρm = ρ + Cv (ρs - ρ) and
+.. math::
+   :label:
 
-ρm = γm /g
+   \rho_m = \rho + C_v \left( \rho_s - \rho \right)
+
+ and
+
+.. math::
+   :label:
+
+   \rho_m = \frac{\gamma_m}{g}
 
 where g is gravitational acceleration.
 Finally, the volume of the total mixture of water and sediment in a mudflow can be determined by multiplying the water volume by the bulking factor.
 The bulking factor is simply:
 
-BF = 1./(1.
-- C\ :sub:`v`)
+.. math::
+   :label:
+
+   BF = \frac{1}{1 - C_v}
 
 It is apparent that the bulking factor is 2.0 for a sediment concentration by volume of 50%.
 Even small volumes of sediment in a flood increase the total flood volume.
