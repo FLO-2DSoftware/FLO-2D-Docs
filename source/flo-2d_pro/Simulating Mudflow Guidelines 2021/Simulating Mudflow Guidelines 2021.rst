@@ -350,20 +350,31 @@ intergranular pressure ps and the angle of repose φ of the material; C denotes 
 density of the mixture ρ\ :sub:`m`, the Prandtl mixing length l, the sediment size d\ :sub:`s` and a function of the volumetric sediment concentration
 Cv.
 Bagnold (1954) defined the function relationship f(ρm, Cv) as: where a\ :sub:`i` (~ 0.01) is an empirical coefficient and C\ :sub:`\*` is the maximum
-static volume concentration
+static volume concentration for the sediment particles.
 
- *C\**  *1/3* −2
+.. math::
+   :label:
 
-   *f(*\ ρ\ *m , Cv ) = ai* :sub:`ρ`\ *m* \ *Cv*  *- 1*\ 
+   f(\rho_m, C_v)
+   = a_i\,\rho_m
+     \left[
+       \left( \frac{C_*}{C_v} \right)^{1/3}
+       - 1
+     \right]^{-2}
 
-for the sediment particles.
 It should be noted that Takahashi (1979) found that the coefficient a\ :sub:`i` may vary over several orders of magnitude.
 Egashira et al.
 (1989) revised this relationship and suggested the following:
 
-*1/3*
+.. math::
+   :label:
 
-   *f(*\ ρ\ *s , C\ v ) = 12*\ :sup:`π` :sup:``\ :sub:``\ \ :sub:`π`\ :sup:`6 `\ \ :sub:`` sin\ *2* α\ *I* ρ\ *s (1- e\ 2\ n ) C\ v\ 1/3*
+   f(\rho_s, C_v)
+   = \frac{\pi}{12}
+     \left( \frac{6}{\pi} \right)^{1/3}
+     \sin^2 \alpha_I\,
+     \rho_s \left( 1 - e_n^{2} \right)\,
+     C_v^{1/3}
 
 where the energy restitution coefficient e\ :sub:`n` after impact ranges 0.70 < e\ :sub:`n` < 0.85 for sands, α\ :sub:`I` is the average particle
 impact angle and ρs is the mass density of sediment particles.
