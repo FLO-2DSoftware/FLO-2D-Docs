@@ -1,9 +1,10 @@
 .. vim: syntax=rst
 
-**Simulating Mudflow Guidelines**
+Simulating Mudflow Guidelines
+==============================
 
 Introduction
-============
+-------------
 
 There is a continuum in the physics of flowing water and sediment that ranges from clear water flow to landslides and despite our best efforts to
 characterize, classify and catalog different types of flow events, the delineation between fluid flow and soil mass movement is not definitive.
