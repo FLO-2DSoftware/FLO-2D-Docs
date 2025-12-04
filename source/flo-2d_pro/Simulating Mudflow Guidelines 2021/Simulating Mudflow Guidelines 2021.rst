@@ -232,9 +232,9 @@ Similarly the density of the mudflow mixture ρm is given by:
 .. math::
    :label:
 
-   \rho_m = \rho + C_v \left( \rho_s - \rho \right)
+    \rho_m = \rho + C_v \left( \rho_s - \rho \right)
 
- and
+and
 
 .. math::
    :label:
