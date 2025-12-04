@@ -21,117 +21,48 @@
 1.1 GDS Functionality
 ---------------------
 
-   The *GDS* system can perform the following functions: **Interactive Data Entry**
+The *GDS* system can perform the following functions: **Interactive Data Entry**
 
-- Interactive graphical editing of channels, streets, multiple channels, levees and buildings and other grid element attributes.
-
-- Input detention basins parameters.
-
-- Assign attributes to group of user selected grid elements
-
-- Assign reservoir or pounded water elevation for an initial condition on a portion of the grid system.
-
-- Select Channel Confluences (channel elements sharing discharge).
-  Including tributary elements that can be contiguous to either a left or right bank main channel element.
-
-- Assign spatially and temporally variable rainfall data.
-
-- Edit levee attributes using the Levee Express Editor.
+    - Interactive graphical editing of channels, streets, multiple channels, levees and buildings and other grid element attributes.
+    - Input detention basins parameters.
+    - Assign attributes to group of user selected grid elements
+    - Assign reservoir or pounded water elevation for an initial condition on a portion of the grid system.
+    - Select Channel Confluences (channel elements sharing discharge).
+      Including tributary elements that can be contiguous to either a left or right bank main channel element.
+    - Assign spatially and temporally variable rainfall data.
+    - Edit levee attributes using the Levee Express Editor.
 
 **Import Data**
 
-- Import HEC-1 hydrographs.
-
-- Import DTM points in ASCII format.
-
-- Import Shape files.
+    - Import HEC-1 hydrographs.
+    - Import DTM points in ASCII format.
+    - Import Shape files.
 
 **Data Processing**
 
-- Automatic generation of finite difference grid and selection of computation area from user defined polygons.
+    - Automatic generation of finite difference grid and selection of computation area from user defined polygons.
+    - Compute spatially variable Green-Ampt infiltration parameters using soil and land use shape files.
+    - Compute spatially variable Manning’s n-values using shape files.
+    - Convert *HEC-RAS* cross section data to *FLO-2D* channel cross section data format.
+    - Compute lengths for channel segments.
+    - Create the files to run a *FLO-2D* simulation
 
-- Compute spatially variable Green-Ampt infiltration parameters using soil and land use shape files.
+.. raw:: html
 
-- Compute spatially variable Manning’s n-values using shape files.
-
-- Convert *HEC-RAS* cross section data to *FLO-2D* channel cross section data format.
-
-- Compute lengths for channel segments.
-
-- Create the files to run a *FLO-2D* simulation
-
-.. _`cont.dat`:
-
-cont.dat:
-
-HYSTRUC.DAT
-
-.. _`toler.dat`:
-
-toler.dat:
-
-STREET.DAT
-
-.. _`inflow.dat`:
-
-inflow.dat:
-
-ARF.DAT
-
-.. _`outflow.dat`:
-
-outflow.dat:
-
-MULT.DAT
-
-.. _`rain.dat`:
-
-rain.dat:
-
-SED.DAT
-
-.. _`infil.dat`:
-
-infil.dat:
-
-LEVEE.DAT
-
-.. _`evapor.dat`:
-
-evapor.dat:
-
-FPXSEC.DAT
-
-.. _`chan.dat`:
-
-chan.dat:
-
-BREACH.DAT
-
-.. _`chanbank.dat`:
-
-chanbank.dat:
-
-FPLAIN.DAT
-
-.. _`xsec.dat`:
-
-xsec.dat:
-
-CADPTS.DAT.
-
-.. _`topo.dat`:
-
-topo.dat:
-
-M.DAT
-
-.. _`swmmflo.dat`:
-
-swmmflo.dat:
-
-SUPPLEMENT.DAT
-
+    <pre>
+        CONT.DAT        HYSTRUC.DAT
+        TOLER.DAT       STREET.DAT
+        INFLOW.DAT      ARF.DAT
+        OUTFLOW.DAT     MULT.DAT
+        RAIN.DAT        SED.DAT
+        INFIL.DAT       LEVEE.DAT
+        EVAPOR.DAT      FPXSEC.DAT
+        CHAN.DAT        BREACH.DAT
+        CHANBANK.DAT    FPLAIN.DAT
+        XSEC.DAT        CADPTS.DAT.
+        TOPO.DAT        M.DAT
+        SWMMFLO.DAT     SUPPLEMENT.DAT
+    <\pre>
 
 **Data Display and Visualization**
 
