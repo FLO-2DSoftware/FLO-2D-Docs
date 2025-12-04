@@ -1,5 +1,5 @@
-Help
-===================
+HELP
+====
 
 The FLO-2D Help button is used open this manual in a webpage.
 
