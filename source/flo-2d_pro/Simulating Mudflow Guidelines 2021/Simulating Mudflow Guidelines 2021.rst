@@ -509,7 +509,15 @@ The specific weight of the fluid matrix γm, yield stress τy and viscosity η v
 Unless a rheological analysis of the mudflow site depositional material is available, the following empirical relationships can be used to compute
 viscosity and yield stress: and
 
-   η *=* α\ *1 e* β\ *1 Cv* τ\ *y =* α\ *2 e* β\ *2 Cv*
+.. math::
+   :label:
+
+   \eta = \alpha_1\, e^{\beta_1\, C_v}
+
+.. math::
+   :label:
+
+   \tau_y = \alpha_2\, e^{\beta_2\, C_v}
 
 where α\ :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
 The viscosity and yield stress are shown to be functions of the volumetric sediment concentration C\ :sub:`v` of silts, clays and in some cases, fine
@@ -519,9 +527,6 @@ The viscosity of the fluid matrix is also a function of the percent and type of 
 Very viscous mudflows have high sediment concentrations and correspondingly high yield stresses and may result in laminar flow although laminar flows
 in nature are extremely rare.
 Less viscous flows (mud floods) are always turbulent.
-
-*TABLE 3.
-YIELD STRESS AND VISCOSITY AS A FUNCTION OF SEDIMENTCONCENTRATION*
 
 .. raw:: html
 
@@ -935,20 +940,23 @@ Granular flows that can be prescribed by the dispersive stress relationship alon
 
 Julien and Lan (1991) proposed a dimensionless form of the quadratic rheological model:
 
-τ\ :sup:`\*` = 1 + a (1 + T\ :sub:`d`) D\ :sub:`v`
---------------------------------------------------
+.. math::
+   :label:
 
-where: τ\ :sup:`\*` = Dimensionless excess shear stress.
-τ\ :sup:`\*` = (τ - τy)/η (du/dy).
-When τ\ :sup:`\*` = 1, the flow behaves as a Bingham fluid.
+   \tau^{*} = 1 + a\, (1 + T_d)\, D_v
 
-T\ :sub:`d` = Dimensionless turbulent-dispersive ratio.
-T\ :sub:`d` = (ρ\ :sub:`m` l\ :sup:`2`)/(a ρ\ :sub:`s` [λd\ :sub:`s`]\ :sup:`2`).
-When T\ :sub:`d` is large the flow is turbulent and when T\ :sub:`d` is small the flow is dispersive.
+where:
+    τ\ :sup:`\*` = Dimensionless excess shear stress.
+    τ\ :sup:`\*` = (τ - τy)/η (du/dy).
+    When τ\ :sup:`\*` = 1, the flow behaves as a Bingham fluid.
 
-D\ :sub:`v` = Dimensionless dispersive-viscous ration.
-D\ :sub:`v` = (a ρ\ :sub:`s` [λd\ :sub:`s`]\ :sup:`2`)/ η (du/dy).
-When D\ :sub:`v` is large the flow is dispersive and when D\ :sub:`v` is small the flow is viscous.
+    T\ :sub:`d` = Dimensionless turbulent-dispersive ratio.
+    T\ :sub:`d` = (ρ\ :sub:`m` l\ :sup:`2`)/(a ρ\ :sub:`s` [λd\ :sub:`s`]\ :sup:`2`).
+    When T\ :sub:`d` is large the flow is turbulent and when T\ :sub:`d` is small the flow is dispersive.
+
+    D\ :sub:`v` = Dimensionless dispersive-viscous ration.
+    D\ :sub:`v` = (a ρ\ :sub:`s` [λd\ :sub:`s`]\ :sup:`2`)/ η (du/dy).
+    When D\ :sub:`v` is large the flow is dispersive and when D\ :sub:`v` is small the flow is viscous.
 
 To apply these relationships the following guidelines are suggested (Julien and O’Brien, 1997):
 
