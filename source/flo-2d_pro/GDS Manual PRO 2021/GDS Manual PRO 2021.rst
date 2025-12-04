@@ -65,7 +65,7 @@ The *GDS* system can perform the following functions: **Interactive Data Entry**
         XSEC.DAT        CADPTS.DAT.
         TOPO.DAT        M.DAT
         SWMMFLO.DAT     SUPPLEMENT.DAT
-    <\pre>
+    </pre>
 
 **Data Display and Visualization**
 
@@ -272,7 +272,7 @@ The format of these files is as follows:
                 …
                 …
                 znrows1 znrows2 znrows3 ... znrowsncols /* values of last row*/
-    <\pre>
+    </pre>
 
 Rows are read from north to south.
 For example:
