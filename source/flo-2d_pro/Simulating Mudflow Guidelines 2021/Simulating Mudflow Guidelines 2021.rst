@@ -960,18 +960,18 @@ where:
 
 To apply these relationships the following guidelines are suggested (Julien and O’Brien, 1997):
 
-- If D\ :sub:`v` < 30, viscous shear stress is dominant and mudflows should be expected.
-
-- If D\ :sub:`v` > 400 and T\ :sub:`d` > 1, the turbulent shear stress is dominant and mud floods should occur.
-
-- If D\ :sub:`v` > 400 and T\ :sub:`d` < 1, the dispersive stress is dominant and granular flows are projected.
+    - If D\ :sub:`v` < 30, viscous shear stress is dominant and mudflows should be expected.
+    - If D\ :sub:`v` > 400 and T\ :sub:`d` > 1, the turbulent shear stress is dominant and mud floods should occur.
+    - If D\ :sub:`v` > 400 and T\ :sub:`d` < 1, the dispersive stress is dominant and granular flows are projected.
 
 A transition regime exists when 30 < D\ :sub:`v` < 400 in which all the quadratic rheological equation terms are not negligible.
 
 The turbulent-dispersive ratio T\ :sub:`d` can be rewritten as:
 
-Td = 0.1/ η (h/ds)
-------------------
+.. math::
+   :label:
+
+   T_d = \frac{0.1}{\eta \left( \frac{h}{d_s} \right)}
 
 where h/d\ :sub:`s` is the relative submergence of a sediment particle of grain size d\ :sub:`s`.
 This enables the following relationships to be highlighted:
