@@ -388,7 +388,7 @@ A value of K = 2,285 was calibrated on the Rudd Creek, Utah mudflow for a reside
 For laminar and transitional flows, turbulence is suppressed and the laminar flow resistance parameter K becomes important.
 
 *Table 2.
-Resistance Parameters for LaminarFlow\ :sup:`1`*
+Resistance Parameters for LaminarFlow*\ :sup:`1`
 
 .. list-table::
    :widths: 50 50
