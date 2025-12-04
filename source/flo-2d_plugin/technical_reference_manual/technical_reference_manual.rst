@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Technical Reference Manual
+TECHNICAL REFERENCE MANUAL
 ==========================
 
 Overview
