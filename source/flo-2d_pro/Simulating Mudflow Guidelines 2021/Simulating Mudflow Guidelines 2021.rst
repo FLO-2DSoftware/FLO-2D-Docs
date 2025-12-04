@@ -1059,7 +1059,7 @@ Prentice-Hall, Englewood Cliffs, NJ.
 Hashimoto, H., 1997.
 “A comparison between gravity flows of dry sand and sand-water mixtures,” *Recent Developments on Debris Flows*, Springer,
 A. Armanini and M.
-   Michiue (eds.), NY, NY.
+Michiue (eds.), NY, NY.
 
 Johnson, A., 1970.
 *Physical Processes in Geology.* San Francisco: Freeman, Cooper & Co.
