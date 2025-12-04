@@ -216,7 +216,7 @@ and C\ :sub:`v` is related to the sediment concentration by weight C\ :sub:`w` b
 .. math::
    :label:
 
-   C_v = \frac{C_w}{\gamma_s - C_w (\gamma_s - \gamma)}
+   C_v = \frac{C_w\gamma}{\gamma_s - C_w (\gamma_s - \gamma)}
 
 where γ = specific weight of the water and γs = specific weight of the sediment.
 The sediment concentration can also be expressed in parts per million (ppm) by dividing the concentration by weight C\ :sub:`w` by 10\ :sup:`6`.
