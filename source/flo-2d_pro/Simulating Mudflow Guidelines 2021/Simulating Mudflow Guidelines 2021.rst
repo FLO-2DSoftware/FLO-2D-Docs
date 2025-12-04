@@ -26,11 +26,11 @@ Fluid motion is considered to be Newtonian when the shear stress is a linear fun
 nonlinear and is more complex.
 NonNewtonian fluids may be divided into three categories:
 
-- Fluids with a non-linear relationship between shear stress and shear rate;
+    - Fluids with a non-linear relationship between shear stress and shear rate;
 
-- Fluids in which the shear stress not only depends on shear rate but is also a function of the time of shearing;
+    - Fluids in which the shear stress not only depends on shear rate but is also a function of the time of shearing;
 
-- Fluids that are viscoelastic and exhibit characteristics of both elastic solids and viscous fluids.
+    - Fluids that are viscoelastic and exhibit characteristics of both elastic solids and viscous fluids.
 
 Sediment particle motion that exhibits pore water pressure or significant dispersive stress falls into the category of bulk solids movement as either
 landslides or granular flows and should not be considered as fluid motion.
@@ -67,9 +67,8 @@ Flows with sediment concentrations less than 20% by volume are essentially water
 affected by the high concentration of suspended load (i.e.
 fine sediment wash load).
 
-With increasing sediment concentration, a water flood will evolve into a mud flood (see Table
+With increasing sediment concentration, a water flood will evolve into a mud flood (see Table1).
 
-1).
 The general range of sediment concentration in mud flood is 20% to 40 - 45% by volume.
 Mud floods may be difficult to discern from water floods and they look very similar in flow behavior as noted in Table 1, but the fluid properties of
 mud floods are definitively different from water floods with much higher viscosity and density.
@@ -89,42 +88,105 @@ High fluid matrix density can increase the buoyancy of large sediment particles 
 often being transported near the flow surface.
 The yield stress, is a measure of the internal fluid resistance to flow and will effect both flow initiation and cessation.
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+*Table 1.
+Mudflow Behavior as a Function of Sediment Concentration*
 
+  .. raw:: html
 
-   * - Table 1.
-       Mudflow Behavior as a Function of Sediment Concentration
+   <table style="border-collapse: collapse; width: 100%;">
 
-   * - | Sediment                                | Flow Characteristics|                                         || Concentration                           |+--------------------+--------------------+| by                 |    by Weight       ||                    |                    || Volume             |                    |
+     <caption><strong>Table 1. Mudflow Behavior as a Function of Sediment Concentration</strong></caption>
 
-   * - Landslide          | 0.65 - 0.80        | 0.83 - 0.91        |    Will not flow; failure by block|                    |                    |
-       sliding+--------------------+--------------------+-----------------------------------------| 0.55 - 0.65        | 0.76 - 0.83        |    Block
-       sliding failure with internal|                    |                    |    deformation during the slide; slow|                    |
-       |    creep prior to failure
+     <!-- HEADER ROW 1 -->
+     <tr>
+       <th style="border:1px solid #000; padding:4px;" rowspan="2"> </th>
+       <th style="border:1px solid #000; padding:4px;" colspan="2">Sediment Concentration</th>
+       <th style="border:1px solid #000; padding:4px;" rowspan="2">Flow Characteristics</th>
+     </tr>
 
-   * - Mudflow            | 0.48 - 0.55        | 0.72 - 0.76        |    Flow evident; slow creep sustained|                    |                    |
-       mudflow; plastic deformation under|                    |                    |    its own weight; cohesive; will not|                    |
-       |    spread on level surface+--------------------+--------------------+-----------------------------------------| 0.45 - 0.48        | 0.69 - 0.72
-       |    Flow spreading on level surface;|                    |                    |    cohesive flow; some mixing
+     <!-- HEADER ROW 2 -->
+     <tr>
+       <th style="border:1px solid #000; padding:4px;">by Volume</th>
+       <th style="border:1px solid #000; padding:4px;">by Weight</th>
+     </tr>
 
-   * - Mud Flood          | 0.40 - 0.45        | 0.65 - 0.69        |    Flow mixes easily; shows fluid|                    |                    |
-       properties in deformation; spreads|                    |                    |    on horizontal surface but maintains|                    |
-       |    an inclined fluid surface; large|                    |                    |    particle (boulder) setting; waves|                    |
-       |    appear but dissipate rapidly+--------------------+--------------------+-----------------------------------------| 0.35 - 0.40        | 0.59 -
-       0.65        |    Marked settling of gravels and|                    |                    |    cobbles; spreading nearly complete|                    |
-       |    on horizontal surface; liquid|                    |                    |    surface with two fluid phases|                    |
-       |    appears; waves travel on surface+--------------------+--------------------+-----------------------------------------| 0.30 - 0.35        | 0.54 -
-       0.59        |    Separation of water on surface;|                    |                    |    waves travel easily; most sand and|
-       |                    |    gravel has settled out and moves as|                    |                    |
-       bedload+--------------------+--------------------+-----------------------------------------| 0.20 - 0.30        | 0.41 - 0.54        |    Distinct
-       wave action; fluid surface;|                    |                    |    all particles resting on bed in|                    |                    |
-       quiescent fluid condition
+     <!-- LANDSLIDE (rowspan example) -->
+     <tr>
+       <td style="border:1px solid #000; padding:4px;" rowspan="2">
+         Landslide
+       </td>
+       <td style="border:1px solid #000; padding:4px;">0.65 - 0.80</td>
+       <td style="border:1px solid #000; padding:4px;">0.83 - 0.91</td>
+       <td style="border:1px solid #000; padding:4px;">
+         Will not flow; failure by block sliding
+       </td>
+     </tr>
+     <tr>
+       <td style="border:1px solid #000; padding:4px;">0.55 - 0.65</td>
+       <td style="border:1px solid #000; padding:4px;">0.76 - 0.83</td>
+       <td style="border:1px solid #000; padding:4px;">
+         Block sliding failure with internal deformation
+       </td>
+     </tr>
 
-   * - Water Flood     | < 0.20             | < 0.41             |    Water flood with conventional|                    |                    |    suspended
-       load and bedload
+     <!-- MUDFLOW (two-row example) -->
+     <tr>
+       <td style="border:1px solid #000; padding:4px;" rowspan="2">
+         Mudflow
+       </td>
+       <td style="border:1px solid #000; padding:4px;">0.48 - 0.55</td>
+       <td style="border:1px solid #000; padding:4px;">0.72 - 0.76</td>
+       <td style="border:1px solid #000; padding:4px;">
+         Flow evident; cohesive; slow creep
+       </td>
+     </tr>
+     <tr>
+       <td style="border:1px solid #000; padding:4px;">0.45 - 0.48</td>
+       <td style="border:1px solid #000; padding:4px;">0.69 - 0.72</td>
+       <td style="border:1px solid #000; padding:4px;">
+         Flow on level surface; some mixing
+       </td>
+     </tr>
 
+     <!-- MUDFLOOD (one-row example for structure) -->
+     <tr>
+       <td style="border:1px solid #000; padding:4px;" rowspan="3">
+         Mud Flood
+       </td>
+       <td style="border:1px solid #000; padding:4px;">0.40 - 0.45</td>
+       <td style="border:1px solid #000; padding:4px;">0.65 - 0.69</td>
+       <td style="border:1px solid #000; padding:4px;">
+         Flow mixes easily; large-particle setting
+       </td>
+     </tr>
+     <tr>
+       <td style="border:1px solid #000; padding:4px;">0.35 - 0.40</td>
+       <td style="border:1px solid #000; padding:4px;">0.59 - 0.65</td>
+       <td style="border:1px solid #000; padding:4px;">
+         Marked settling of gravels and cobbles
+       </td>
+     </tr>
+     <tr>
+       <td style="border:1px solid #000; padding:4px;">0.30 - 0.35</td>
+       <td style="border:1px solid #000; padding:4px;">0.54 - 0.59</td>
+       <td style="border:1px solid #000; padding:4px;">
+         Water separates; waves travel easily
+       </td>
+     </tr>
+
+     <!-- WATER FLOOD -->
+     <tr>
+       <td style="border:1px solid #000; padding:4px;">
+         Water Flood
+       </td>
+       <td style="border:1px solid #000; padding:4px;">&lt; 0.20</td>
+       <td style="border:1px solid #000; padding:4px;">&lt; 0.41</td>
+       <td style="border:1px solid #000; padding:4px;">
+         Water flood with suspended load
+       </td>
+     </tr>
+
+   </table>
 
 Granular flows are unique flow phenomena comprising principally of non-cohesive sediment particles with only a limited water volume.
 Granular flows are also referred to as dispersive flows because particle momentum is transferred by collision similar to billiard ball contact.
