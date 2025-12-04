@@ -32,7 +32,7 @@ FLO-2D Tech Support Account.
 
    <a href="https://flo-2d.sharefile.com/d-s2391e79911b64d809ef217d8e0a23d1d" target="_blank">Download FLO-2D Pro</a>
 
-Once the software is downloaded.  Go to Step 2.
+The sharefile folder contains the files and instructional videos needed to install FLO-2D Build 23.
 
 .. image:: ../img/Instructions/fullbuild23.png
 
