@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 2
+CHAPTER 2
 ==========
 
 FLO-2D Storm Drain Features

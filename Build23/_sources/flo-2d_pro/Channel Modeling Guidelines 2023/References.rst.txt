@@ -1,4 +1,4 @@
-References
+REFERENCES
 ============
 
 Chow, V. T., 1959. *Open-Channel Hydraulics*, McGraw-Hill Book Company, NY.

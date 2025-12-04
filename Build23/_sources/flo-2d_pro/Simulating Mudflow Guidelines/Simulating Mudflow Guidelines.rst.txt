@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Simulating Mudflow Guidelines
+SIMULATING MUDFLOW GUIDELINES
 ==============================
 
 Introduction

@@ -1,4 +1,4 @@
-View Options
+VIEW OPTIONS
 ============
 
 Screen Resolution Problems
