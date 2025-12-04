@@ -457,172 +457,168 @@ Create LEVEECRESTS.DAT" and the station calculation compares the length of the p
    \mathrm{WRF\_value}
    = 1 - \min\!\left( 1,\ \frac{\mathrm{Poly\_Length}(i)}{\mathrm{Levees\_Length}(i)} \right)
 
-   The stations (second column in LEVEECRESTS.DAT are then calculated from the distance from one levee center to the next levee center by multiplying it
-   by the WRF_value.
+The stations (second column in LEVEECRESTS.DAT are then calculated from the distance from one levee center to the next levee center by multiplying it
+by the WRF_value.
 
 3.2.17 Create Grid Shapefile (File Menu)
+
 .. image:: img/GDS040.jpg
-   This option will create a shape file of the computational domain.
-   It will only include the numbered grid elements.
-   The shapefile is saved in these three files.
-   mgrid.shp, mgrid.shx and mgrid.dbf.
+
+This option will create a shape file of the computational domain.
+It will only include the numbered grid elements.
+The shapefile is saved in these three files.
+mgrid.shp, mgrid.shx and mgrid.dbf.
 
 3.2.18 Import Image/Individual Image (File Menu)
+
 .. image:: img/GDS041.jpg
-   Use this command to import individual images such as aerial photos.
-   Images are selected one by one or multiple images at a time Shift-clicking or Crtl-clicking the image files.
+
+Use this command to import individual images such as aerial photos.
+Images are selected one by one or multiple images at a time Shift-clicking or Crtl-clicking the image files.
+
 .. image:: img/GDS042.jpg
-   Import images that have been created in following formats:
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
+Import images that have been created in following formats:
 
+.. raw:: html
 
-   * - **File Type**
-     - **Description**
-     - **Common Extensions**
+   <table style="border-collapse: collapse; width: 100%;">
+     <thead>
+       <tr>
+         <th style="border:1px solid #000; padding:4px;">File Type</th>
+         <th style="border:1px solid #000; padding:4px;">Description</th>
+         <th style="border:1px solid #000; padding:4px;">Common Extensions</th>
+       </tr>
+     </thead>
 
-   * - ARC/INFO Grid
-     - ArcInfo GRID files
-     - \*asc, \*.prj
+     <tbody>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">ARC/INFO Grid</td>
+         <td style="border:1px solid #000; padding:4px;">ArcInfo GRID files</td>
+         <td style="border:1px solid #000; padding:4px;">*.asc, *.prj</td>
+       </tr>
 
-   * - ADRG
-     - Digitized Raster Graphic
-     - \*.img, \*.ovr,\*.arc
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">ADRG</td>
+         <td style="border:1px solid #000; padding:4px;">Digitized Raster Graphic</td>
+         <td style="border:1px solid #000; padding:4px;">*.img, *.ovr, *.arc</td>
+       </tr>
 
-   * - ASRP/USRP
-     - DIGEST ASRP, A NATO Military format
-     - \*.img, \*.ovr, \*.
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">ASRP/USRP</td>
+         <td style="border:1px solid #000; padding:4px;">DIGEST ASRP, a NATO Military format</td>
+         <td style="border:1px solid #000; padding:4px;">*.img, *.ovr, *</td>
+       </tr>
 
-   * - BIL
-     - Band interleaved by line multiband images
-     - \*.bil
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">BIL</td>
+         <td style="border:1px solid #000; padding:4px;">Band interleaved by line multiband images</td>
+         <td style="border:1px solid #000; padding:4px;">*.bil</td>
+       </tr>
 
-   * - BIP
-     - Band interleaved by pixel multiband images
-     - \*.bip
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">BIP</td>
+         <td style="border:1px solid #000; padding:4px;">Band interleaved by pixel multiband images</td>
+         <td style="border:1px solid #000; padding:4px;">*.bip</td>
+       </tr>
 
-   * - BMP
-     - Windows bitmap
-     - \*.bmp, \*.dib
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">BMP</td>
+         <td style="border:1px solid #000; padding:4px;">Windows bitmap</td>
+         <td style="border:1px solid #000; padding:4px;">*.bmp, *.dib</td>
+       </tr>
 
-   * - BSQ
-     - Band sequential multiband images
-     - \*.bsq
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">BSQ</td>
+         <td style="border:1px solid #000; padding:4px;">Band sequential multiband images</td>
+         <td style="border:1px solid #000; padding:4px;">*.bsq</td>
+       </tr>
 
-   * - CADRG
-     - Compressed Arc Digitized Raster Graphics
-     - \*.\*
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">CADRG</td>
+         <td style="border:1px solid #000; padding:4px;">Compressed Arc Digitized Raster Graphics</td>
+         <td style="border:1px solid #000; padding:4px;">*.*, *</td>
+       </tr>
 
-   * - CIB
-     - Controlled Image Base
-     - \*.\*
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">CIB</td>
+         <td style="border:1px solid #000; padding:4px;">Controlled Image Base</td>
+         <td style="border:1px solid #000; padding:4px;">*.tif</td>
+       </tr>
 
-   * - CRPERDAS/IMAGINE
-     - Compressed Raster Product (Military GeoTIFF)
-     - \*.tif
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">CRP</td>
+         <td style="border:1px solid #000; padding:4px;">Compressed Raster Product (Military)</td>
+         <td style="border:1px solid #000; padding:4px;">*.gis, *.lan</td>
+       </tr>
 
-       \*.gis, \*.lan
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">ERDAS/IMAGINE</td>
+         <td style="border:1px solid #000; padding:4px;">TIFF with a Geo header</td>
+         <td style="border:1px solid #000; padding:4px;">*.tif, *.tfw, *.tiff</td>
+       </tr>
 
-   * - GeoTIFF
-     - TIFF with a Geo header
-     - \*.tif, \*.tff, \*.tiff
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">GIF</td>
+         <td style="border:1px solid #000; padding:4px;">Graphics Interchange Format</td>
+         <td style="border:1px solid #000; padding:4px;">*.gif</td>
+       </tr>
 
-   * - GIF
-     - Graphics Interchange Format
-     - \*.gif
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Image Catalogs</td>
+         <td style="border:1px solid #000; padding:4px;">Image catalog (collection of images)</td>
+         <td style="border:1px solid #000; padding:4px;">*.*</td>
+       </tr>
 
-   * - ImageCatalogs
-     - Image catalog (collection of images)
-     - \*.\*
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">IMPELL RLC</td>
+         <td style="border:1px solid #000; padding:4px;">Run-length compressed files</td>
+         <td style="border:1px solid #000; padding:4px;">*.rlc</td>
+       </tr>
 
-   * - IMPELL RLC
-     - Run-length compressed files
-     - \*.rlc
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">JPEG</td>
+         <td style="border:1px solid #000; padding:4px;">JPEG</td>
+         <td style="border:1px solid #000; padding:4px;">*.jpg, *.jpeg</td>
+       </tr>
 
-   * - JPEG
-     - JPEG
-     - \*.jpg, \*.jpeg
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">MrSID</td>
+         <td style="border:1px solid #000; padding:4px;">Multi-Resolution Seamless Image Database</td>
+         <td style="border:1px solid #000; padding:4px;">*.sid</td>
+       </tr>
 
-   * - MrSID
-     - Multi-Resolution Seamless Image Database
-     - \*.sid
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">NITF</td>
+         <td style="border:1px solid #000; padding:4px;">National Imagery Transfer Format</td>
+         <td style="border:1px solid #000; padding:4px;">*.ntf</td>
+       </tr>
 
-   * - NITF
-     - National Imagery Transfer Format
-     - \*.ntf
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">Sun raster file</td>
+         <td style="border:1px solid #000; padding:4px;">Sun raster image</td>
+         <td style="border:1px solid #000; padding:4px;">*.rs, *.ras, *.sun</td>
+       </tr>
 
-   * - Sun rasterfile
-     -
-     - \*.rs, \*.ras; \*.sun
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">SVF</td>
+         <td style="border:1px solid #000; padding:4px;">Single Variable File</td>
+         <td style="border:1px solid #000; padding:4px;">*.svf</td>
+       </tr>
 
-   * - SVF
-     - Single Variable File
-     - \*.svf
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">TIFF</td>
+         <td style="border:1px solid #000; padding:4px;">Tagged Image File Format</td>
+         <td style="border:1px solid #000; padding:4px;">*.tif, *.tiff</td>
+       </tr>
 
-   * - TIFF
-     - Tagged Image File Format
-     - \*.tif, \*.tff, \*.tiff
+     </tbody>
+   </table>
 
+The world file has the following general format:
 
-..
-
-   To correctly place the image or photo in a geo-referenced frame, it must be accompanied by a world file that contains geo-reference data.
-   This world file has an extension depending on the image and file type and according to the table below.
-   For example, an image with a file name *myimage.bmp*, must have a world file associated with it named *myimage.bmpw* or *myimage.bpw*
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
-
-   * - **File Extension**
-     - **World File Extension**
-
-   * - bmp
-     - bmpw or bpw
-
-   * - jpg; jpeg
-     - jpgw or jgw
-
-   * - tif; tff; tiff
-     - tfw
-
-   * - gis
-     - gsw
-
-   * - lan
-     - lnw
-
-   * - bil
-     - blw
-
-   * - bip
-     - bpw
-
-   * - bsq
-     - bqw
-
-   * - sid
-     - sdw
-
-   * - sun
-     - snw
-
-   * - rs; ras
-     - rsw
-
-   * - rlc
-     - rcw
-
-
-..
-
-   The world file has the following general format:
-
-   Line 1: This line has the dimension of a pixel in map units in the x-direction.
-   Lines 2, 3: These lines are the rotation terms (Not used in this release).
+Line 1: This line has the dimension of a pixel in map units in the x-direction.
+Lines 2, 3: These lines are the rotation terms (Not used in this release).
 
 .. list-table::
    :widths: 50 50
