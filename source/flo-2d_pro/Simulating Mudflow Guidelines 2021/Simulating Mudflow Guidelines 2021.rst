@@ -987,6 +987,44 @@ exceeds 53%.
          <td style="border:1px solid #000; padding:4px;">83.0</td>
          <td style="border:1px solid #000; padding:4px;">1.25</td>
        </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">0.56</td>
+         <td style="border:1px solid #000; padding:4px;">31.5</td>
+         <td style="border:1px solid #000; padding:4px;">99.8</td>
+         <td style="border:1px solid #000; padding:4px;">1.45</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">0.58</td>
+         <td style="border:1px solid #000; padding:4px;">50.8</td>
+         <td style="border:1px solid #000; padding:4px;">160.6</td>
+         <td style="border:1px solid #000; padding:4px;">2.15</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">0.60</td>
+         <td style="border:1px solid #000; padding:4px;">121.0</td>
+         <td style="border:1px solid #000; padding:4px;">382.6</td>
+         <td style="border:1px solid #000; padding:4px;">4.60</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:4px;">0.615</td>
+         <td style="border:1px solid #000; padding:4px;">∞</td>
+         <td style="border:1px solid #000; padding:4px;">∞</td>
+         <td style="border:1px solid #000; padding:4px;">∞</td>
+       </tr>
+
+       <!-- Footnote row INSIDE the table -->
+       <tr>
+         <td style="border:1px solid #000; padding:4px; text-align:left;" colspan="4">
+           C<sub>v</sub> = 0.56&nbsp;&nbsp; Maximum packing factor for spheres<br>
+           C<sub>v</sub> = 0.615&nbsp; Bagnold&#8217;s maximum sediment concentration<br>
+           C<sub>v</sub> = 0.74&nbsp;&nbsp; Natural soil porosity
+         </td>
+       </tr>
+
+     </tbody>
+   </table>
+
+
 
 **References**
 
@@ -1036,8 +1074,7 @@ Julien, P.Y.
 and J.S.
 O’Brien, 1998.
 “Dispersive and turbulent stresses in hyperconcentrated
-
-   sediment flows,” Unpublished paper.
+sediment flows,” Unpublished paper.
 
 Julien, P.Y.
 and Y.Q.
@@ -1064,15 +1101,13 @@ Julien, 1985.
 "Physical processes of hyperconcentrated sediment flows," Proc.
 of the ASCE Specialty Conf.
 on the Delineation of Landslides, Floods,
-
-   and Debris Flow Hazards in Utah, Utah Water Research Laboratory, Series UWRL/g85/03, 260-279.
+and Debris Flow Hazards in Utah, Utah Water Research Laboratory, Series UWRL/g85/03, 260-279.
 
 O'Brien, J.S.
 and P.Y.
 Julien, 1987.
 Discussion on "Mountain torrent erosion," By K.
-
-   Ashida in *Sediment Transport in Gravel-Bed Rivers*, John Wiley & Sons, 537-539.
+Ashida in *Sediment Transport in Gravel-Bed Rivers*, John Wiley & Sons, 537-539.
 
 O'Brien, J.S.
 and P.Y.
