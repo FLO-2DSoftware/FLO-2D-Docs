@@ -476,7 +476,7 @@ mgrid.shp, mgrid.shx and mgrid.dbf.
 Use this command to import individual images such as aerial photos.
 Images are selected one by one or multiple images at a time Shift-clicking or Crtl-clicking the image files.
 
-.. image:: img/GDS042.jpg
+.. image:: img/GDS042.png
 
 Import images that have been created in following formats:
 
@@ -695,926 +695,881 @@ An example world file format is:
     1032490
     </pre>
 
-.. raw:: html
-
-   <table style="border-collapse: collapse; width: 60%;">
-     <thead>
-       <tr>
-         <th style="border:1px solid #000; padding:4px;">File Extension</th>
-         <th style="border:1px solid #000; padding:4px;">World File Extension</th>
-       </tr>
-     </thead>
-
-     <tbody>
-       <tr>
-         <td style="padding:4px;">bmp</td>
-         <td style="padding:4px;">bmpw or bpw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">jpg; jpeg</td>
-         <td style="padding:4px;">jpgw or jgw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">tif; tff; tiff</td>
-         <td style="padding:4px;">tfw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">gis</td>
-         <td style="padding:4px;">gsw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">lan</td>
-         <td style="padding:4px;">lnw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">bil</td>
-         <td style="padding:4px;">blw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">bip</td>
-         <td style="padding:4px;">bpw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">bsq</td>
-         <td style="padding:4px;">bqw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">sid</td>
-         <td style="padding:4px;">sdw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">sun</td>
-         <td style="padding:4px;">snw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">rs; ras</td>
-         <td style="padding:4px;">rsw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">rlc</td>
-         <td style="padding:4px;">rcw</td>
-       </tr>
-     </tbody>
-   </table>
+3.2.19 Import Image/Group of Images (File Menu)
 
 .. image:: img/GDS043.jpg
 
 This command allows importing of several image files contained in a given subdirectory and part of an image catalog.
 First draw a polygon on the working region and then select an image catalog file.
+
 .. image:: img/GDS044.jpg
-   The catalog file may be in DBASE or ASCII format and has the following format:
 
-.. list-table::
-   :widths: 20 20 20 20 20
-   :header-rows: 0
+The catalog file may be in DBASE or ASCII format and has the following format:
 
+.. raw:: html
 
-   * - Image
-     - Xmin
-     - Ymin
-     - Xmax
-     - Ymax
+   <table style="border-collapse: collapse; width: 100%; border:1px solid #000;">
+     <thead>
+       <tr>
+         <th style="border:1px solid #000; padding:4px; text-align:left;">Image</th>
+         <th style="border:1px solid #000; padding:4px;">Xmin</th>
+         <th style="border:1px solid #000; padding:4px;">Ymin</th>
+         <th style="border:1px solid #000; padding:4px;">Xmax</th>
+         <th style="border:1px solid #000; padding:4px;">Ymax</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td style="padding:4px; text-align:left;">
+           C:\Projects\MaricopaCounty\Data\ 6401030-5.TIF
+         </td>
+         <td style="padding:4px;">640000</td>
+         <td style="padding:4px;">1000000</td>
+         <td style="padding:4px;">670000</td>
+         <td style="padding:4px;">1400000</td>
+       </tr>
+       <tr>
+         <td style="padding:4px; text-align:left;">
+           C:\Projects\MaricopaCounty\Data\ 6401035-5.TIF
+         </td>
+         <td style="padding:4px;">660000</td>
+         <td style="padding:4px;">1300000</td>
+         <td style="padding:4px;">770000</td>
+         <td style="padding:4px;">1500000</td>
+       </tr>
+       <tr>
+         <td style="padding:4px; text-align:left;">
+           \\Agua\IMF\Publico IMF\ 6401055-5.TIF
+         </td>
+         <td style="padding:4px;">630000</td>
+         <td style="padding:4px;">1300000</td>
+         <td style="padding:4px;">750000</td>
+         <td style="padding:4px;">1510000</td>
+       </tr>
+     </tbody>
+   </table>
 
-   * - C:\\Projects\\MaricopaCounty\\Data\\6401030-5.TIF
-     - 640000
-     - 1000000
-     - 670000
-     - 140000
-
-          0
-
-   * - C:\\ Projects\\MaricopaCounty\\Data\\6401035-5.TIF
-     - 660000
-     - 1300000
-     - 770000
-     - 150000
-
-          0
-
-   * - \\\\Agua\\IMF\\Publico IMF\\6401055-5.TIF
-     - 630000
-     - 1300000
-     - 750000
-     - 151000
-
-          0
-
-
-..
-
-   The first column is the file name including its path and the following four columns are the image coordinate limits.
-   The *GDS* will find all images from the catalog that are contained within or intersected by the user defined polygon and will retrieve the
-   corresponding images.
+The first column is the file name including its path and the following four columns are the image coordinate limits.
+The *GDS* will find all images from the catalog that are contained within or intersected by the user defined polygon and will retrieve the
+corresponding images.
 
 3.2.20 Import Elevation Points/ DTM Points… (File Menu)
+
 .. image:: img/GDS045.jpg
-   This command imports DTM elevation points from an existing file.
-   Several data files can be imported and the new points are appended to the existing data points.
-   The user can also mix or combine DTM points with points from ArcInfo ASCII grid files.
+
+This command imports DTM elevation points from an existing file.
+Several data files can be imported and the new points are appended to the existing data points.
+The user can also mix or combine DTM points with points from ArcInfo ASCII grid files.
 
 3.2.21 Individual ArcInfo ASCII Grid File (File Menu)
+
 .. image:: img/GDS046.jpg
-   Use this command to import ArcInfo ASCII grid files.
-   The user may import several grid files.
-   Any new points are added to the existing data.
-   You may also mix or combine ArcInfo ASCII data with DTM points.
+
+Use this command to import ArcInfo ASCII grid files.
+The user may import several grid files.
+Any new points are added to the existing data.
+You may also mix or combine ArcInfo ASCII data with DTM points.
 
 3.2.22 ArcInfo ASCII Grid File Catalog (File Menu)
+
 .. image:: img/GDS047.jpg
-   With this command you can import several ArcInfo ASCII grid files stored in any subdirectory.
-   First draw a polygon on the working region, then select a catalog file.
-   The catalog file may be in DBASE or ASCII format and has the following format:
 
-.. list-table::
-   :widths: 20 20 20 20 20
-   :header-rows: 0
+With this command you can import several ArcInfo ASCII grid files stored in any subdirectory.
+First draw a polygon on the working region, then select a catalog file.
+The catalog file may be in DBASE or ASCII format and has the following format:
 
+.. raw:: html
 
-   * - ASCII Grid File
-     - Xmin
-     - Ymin
-     - Xmax
-     - Ymax
+   <table style="border-collapse: collapse; width: 100%; border:1px solid #000;">
+     <thead>
+       <tr>
+         <th style="border:1px solid #000; padding:4px; text-align:left;">ASCII Grid File</th>
+         <th style="border:1px solid #000; padding:4px;">Xmin</th>
+         <th style="border:1px solid #000; padding:4px;">Ymin</th>
+         <th style="border:1px solid #000; padding:4px;">Xmax</th>
+         <th style="border:1px solid #000; padding:4px;">Ymax</th>
+       </tr>
+     </thead>
 
-   * - C:\\Projects\\MaricopaCounty\\Data\\grd2375-100.asc
-     - 640000
-     - 1000000
-     - 670000
-     - 1400000
+     <tbody>
+       <tr>
+         <td style="padding:4px; text-align:left;">
+           C:\Projects\MaricopaCounty\Data\grd2375-100.asc
+         </td>
+         <td style="padding:4px;">640000</td>
+         <td style="padding:4px;">1000000</td>
+         <td style="padding:4px;">670000</td>
+         <td style="padding:4px;">1400000</td>
+       </tr>
 
-   * - C:\\ Projects\\MaricopaCounty\\Data\\grd2376-100.asc
-     - 500000
-     - 1000000
-     - 900000
-     - 1500000
+       <tr>
+         <td style="padding:4px; text-align:left;">
+           C:\Projects\MaricopaCounty\Data\grd2376-100.asc
+         </td>
+         <td style="padding:4px;">500000</td>
+         <td style="padding:4px;">1000000</td>
+         <td style="padding:4px;">900000</td>
+         <td style="padding:4px;">1500000</td>
+       </tr>
 
-   * - \\\\Agua\\IMF\\Publico IMF\\grd2476-100.asc
-     - 510000
-     - 1000000
-     - 740000
-     - 1510000
+       <tr>
+         <td style="padding:4px; text-align:left;">
+           \\Agua\IMF\Publico IMF\grd2476-100.asc
+         </td>
+         <td style="padding:4px;">510000</td>
+         <td style="padding:4px;">1000000</td>
+         <td style="padding:4px;">740000</td>
+         <td style="padding:4px;">1510000</td>
+       </tr>
+     </tbody>
+   </table>
 
-
-..
-
-   The first column is the file name including the path name.
-   The following four columns are the coordinate data limits in each file.
-   The *GDS* will automatically find all data files that are contained within or intersected by the user defined polygon and will retrieve/display the
-   corresponding files.
-   Grid files generally contain a large number of points and loading may take several minutes, but once loaded, the points are quickly displayed.
-   If the display time becomes too long for a given large data point set, you can use the *Esc* key to stop the display process.
+The first column is the file name including the path name.
+The following four columns are the coordinate data limits in each file.
+The *GDS* will automatically find all data files that are contained within or intersected by the user defined polygon and will retrieve/display the
+corresponding files.
+Grid files generally contain a large number of points and loading may take several minutes, but once loaded, the points are quickly displayed.
+If the display time becomes too long for a given large data point set, you can use the *Esc* key to stop the display process.
 
 3.2.23 Import Shape File (File Menu)
+
 .. image:: img/GDS048.jpg
+
 This command will import ESRI shape files.
 
-   3.2.24 Import Rain ArcInfo ASCII Grid File (File Menu)
+3.2.24 Import Rain ArcInfo ASCII Grid File (File Menu)
+
 .. image:: img/GDS049.jpg
-   An ASCII grid file can be imported as a *FLO-2D* grid system or used to delineate other boundaries such as a rainfall gage grid system.
+
+An ASCII grid file can be imported as a *FLO-2D* grid system or used to delineate other boundaries such as a rainfall gage grid system.
 
 3.2.25 Import HEC-RAS Channels… (File Menu)
 
 This command allows importing channel reaches from geo-referenced *HEC-RAS* project.
-.. image:: img/GDS050.jpg
-   3.2.26 Import CAD Graphic … (File Menu)
 
-   Use this command to import DXF or DWG CAD files.
+.. image:: img/GDS050.jpg
+
+3.2.26 Import CAD Graphic … (File Menu)
+
+Use this command to import DXF or DWG CAD files.
+
 .. image:: img/GDS051.jpg
-3.2.27 Import Levees...
-(File Menu)
+
+3.2.27 Import Levees...(File Menu)
+
 .. image:: img/GDS052.jpg.. image:: img/GDS053.jpg
-   Use this command to import levee polyline vertices in the form of xyz space or coma delimited text file.
-   The file extension is \*.xyz.
+
+Use this command to import levee polyline vertices in the form of xyz space or coma delimited text file.
+The file extension is \*.xyz.
 
 3.2.28 Save Elevation Points (File Menu)
+
 .. image:: img/GDS054.jpg
-   After deleting any DTM points or adding points from multiple files, this command will save the remaining points to a single file.
+After deleting any DTM points or adding points from multiple files, this command will save the remaining points to a single file.
 
 3.2.29 Export… (File Menu)
-.. image:: img/GDS055.jpg
-   Use this command to export the current screen view to one of various image formats.
-   Click the *Export Command* and the following dialog box appears:
-.. image:: img/GDS056.jpg
-   Choose an image export format such as Bitmap, JPEG, etc and adjust the scale factor of the image to obtain better print quality.
-   When you click the Export button, input the image file name and select the directory to save the image as shown in the following file dialog box:
-.. image:: img/GDS057.jpg
-   3.2.30 Open Recent Projects (File Menu)
-.. image:: img/GDS058.jpg
-   This command allows the user to open recently opened projects.
 
-   3.2.31 Exit (File Menu)
+.. image:: img/GDS055.jpg
+
+Use this command to export the current screen view to one of various image formats.
+Click the *Export Command* and the following dialog box appears:
+
+.. image:: img/GDS056.jpg
+Choose an image export format such as Bitmap, JPEG, etc and adjust the scale factor of the image to obtain better print quality.
+When you click the Export button, input the image file name and select the directory to save the image as shown in the following file dialog box:
+
+.. image:: img/GDS057.jpg
+
+3.2.30 Open Recent Projects (File Menu)
+
+.. image:: img/GDS058.jpg
+
+This command allows the user to open recently opened projects.
+
+3.2.31 Exit (File Menu)
+
 .. image:: img/GDS059.jpg
-   This command ends the *GDS* session.
-   The *GDS* will prompt the user to save the current project.
+
+This command ends the *GDS* session.
+The *GDS* will prompt the user to save the current project.
 
 **3.3 View Menu Commands:**
 
 3.3.1 View All (View Menu)
+
 .. image:: img/GDS060.jpg
-   Use the *View All command* or click the View All |GDS061| icon to return the working region to its original full size.
-   To Zoom-in (increase the magnification), click in the working region and drag the mouse to outline the area of interest.
+
+Use the *View All command* or click the View All |GDS061| icon to return the working region to its original full size.
+To Zoom-in (increase the magnification), click in the working region and drag the mouse to outline the area of interest.
 
 3.3.2 Zoom Out Previous View (View Menu)
+
 .. image:: img/GDS062.jpg
-   Use the *Zoom Out* *Previous View* command or click the Zoom Out Previous View Button |GDS063| to return to the previous zoom extent
+
+Use the *Zoom Out* *Previous View* command or click the Zoom Out Previous View Button |GDS063| to return to the previous zoom extent
 
 3.3.3 Zoom Out 10% (View Menu)
+
 .. image:: img/GDS064.jpg
-   Use the Zoom Out 10% View command to reduce the current view 10% in size.
+
+Use the Zoom Out 10% View command to reduce the current view 10% in size.
 
 3.3.4 Pan (View Menu)
+
 .. image:: img/GDS065.jpg
+
 Use the *Pan* command or use the *Pan* Toolbar icon |GDS066| to move around within the working region view.
 Click and drag the mouse to pan around.
 Use the *View All* command (or toolbar icon) to return to a full view of the working region or click the Select icon |GDS017| to exit the pan mode.
 
 3.3.5 Layers List (View Menu)
+
 .. image:: img/GDS067.jpg
+
 This command opens the Layer dialog box.
+
 .. image:: img/GDS068.jpg
-   Layers may be visible or invisible.
-   Change the layer visible status by checking the *Visible* check box.
-   In the example above there are two active layers.
-   Use the icons to highlight and move between the various layers.
-   Click the *Apply* button to accept the changes.
-   Delete any layer by checking the *Delete* check box and then clicking the *Apply* button.
-   After any modifications to the layers, click Apply prior to clicking OK.
 
-and
+Layers may be visible or invisible.
+Change the layer visible status by checking the *Visible* check box.
+In the example above there are two active layers.
+Use the icons to highlight and move between the various layers.
+Click the *Apply* button to accept the changes.
+Delete any layer by checking the *Delete* check box and then clicking the *Apply* button.
+After any modifications to the layers, click Apply prior to clicking OK.
 
-   To enter the Layer Properties Dialog box double click an active layer.
-   The following dialog appears:
+To enter the Layer Properties Dialog box double click an active layer.
+The following dialog appears:
+
 .. image:: img/GDS069.jpg
-   This dialog box allows the user to modify layer colors, transparency, number of classes or divisions, add point captions, font styles, etc.
-   Use the *Adv label* option to add labels to DTM points in the Elevation layer.
 
-   Click the *Apply* button and then the *Close* button to accept the changes.
+This dialog box allows the user to modify layer colors, transparency, number of classes or divisions, add point captions, font styles, etc.
+Use the *Adv label* option to add labels to DTM points in the Elevation layer.
+
+Click the *Apply* button and then the *Close* button to accept the changes.
 
 3.3.6 Track Elevation Points (View Menu)
+
 .. image:: img/GDS070.jpg
-   This command queries individual terrain elevation points and displays the data for the selected point in the toolbar point elevation box.
-   The mouse cursor changes to the inquiry mode to show that this option is active\ |GDS071|.
+
+This command queries individual terrain elevation points and displays the data for the selected point in the toolbar point elevation box.
+The mouse cursor changes to the inquiry mode to show that this option is active\ |GDS071|.
+
 .. image:: img/GDS072.jpg
+
 3.3.7 Grid Element #’s, Elevations, and n-values and Curve Numbers (View Menu)
+
 .. image:: img/GDS073.jpg
-   Use these commands to display grid element numbers, elevations, Manning’s n-values or Curve Numbers inside the grid elements.
-   Each command can be toggled and used jointly to display three values.
-   Note that if the grid system is large, the numbers may not fit into the elements.
-   Zoom in to enlarge the view and to clearly see the element numbers.
-   In each element, the first number is the grid element number, the second is the terrain elevation and the third the Manning’s n value.
-   Manning's n-value and the SCS curve number are selected separately.
+
+Use these commands to display grid element numbers, elevations, Manning’s n-values or Curve Numbers inside the grid elements.
+Each command can be toggled and used jointly to display three values.
+Note that if the grid system is large, the numbers may not fit into the elements.
+Zoom in to enlarge the view and to clearly see the element numbers.
+In each element, the first number is the grid element number, the second is the terrain elevation and the third the Manning’s n value.
+Manning's n-value and the SCS curve number are selected separately.
+
 .. image:: img/GDS074.jpg
-3.3.8 Grid...
-(View Menu)
+
+3.3.8 Grid... (View Menu)
+
 .. image:: img/GDS075.jpg
+
 This command customizes the grid display.
 
 3.3.9 View Components (View Menu)
+
 .. image:: img/GDS076.jpg
-   These commands enable the user to view or hide *FLO-2D* components.
-   The component view can be toggled on or off in any combination.
-   These are some example views of the different *FLO-2D* components as represented in *GDS*:
 
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
+These commands enable the user to view or hide *FLO-2D* components.
+The component view can be toggled on or off in any combination.
+These are some example views of the different *FLO-2D* components as represented in *GDS*:
 
+.. image:: img/GDS266.jpg
 
-   * - **Component**
-     - **GDS Graphic Representation**
-     - **Component**
-     - **GDS Graphic Representation**
-
-   * - Channels
-     - |GDS077|
-     - Channel Confluence
-     - |GDS078|
-
-   * - ReductionFactors
-     - |GDS079|
-     - Infiltration
-     - |GDS080|
-
-   * - Streets
-     - |GDS081|
-     - No Exchange
-
-       nnel-Floodplain
-
-       ments
-     - |GDS082|
-
-   * - OutflowElements
-     - |GDS083|
-     - Floodplain Cross Sections
-     - |GDS084|
-
-   * - InflowElements
-     - |GDS085|
-     - Hydraulic Structures
-     - |GDS086|
-
-   * - Levees
-     - |GDS087|
-     - Watersheds
-     - |GDS088|
-
-   * - DetentionBasins
-     - |GDS089|
-     - Multiple Channels
-     - |GDS090|
-
-   * - WatercourseDirections
-     - |GDS091|
-     - Storm Drain Inlet
-
-       rm Drain ction and let
-     - |GDS092|
-.. image:: img/GDS093.jpg
 3.3.10 View Elevation Points (View Menu)
+
 .. image:: img/GDS094.jpg
-   Displays elevation points assigning colors as a function of elevation.
+
+Displays elevation points assigning colors as a function of elevation.
 
 3.3.11 Non-Interpolated Grid Elements (View Menu)
 
-   Displays non-interpolated grid elements.
-   These elements remained un-interpolated they did not have DTM elevation points within the grid element space during interpolation.
-   The user chose not to interpolate the elevation of grid elements that did not have any DTM points within the grid element space.
+Displays non-interpolated grid elements.
+These elements remained un-interpolated they did not have DTM elevation points within the grid element space during interpolation.
+The user chose not to interpolate the elevation of grid elements that did not have any DTM points within the grid element space.
 
 3.3.12 Manning’s n Values Rendering (View Menu)
 
 Plots colored hatched pattern on the elements according to the Manning’s n value.
+
 .. image:: img/GDS095.jpg
+
 3.3.13 Grid Element Elevation Rendering (View Menu)
 
-   Plots colored solid or hatched grid elements according to the elevations.
+Plots colored solid or hatched grid elements according to the elevations.
 
 3.3.14 Highlight Grid Element Number… (View Menu)
 
-   Enter a grid element number in the following dialog box to locate it in the *FLO-2D* grid.
-   When you click the *Highlight* button, the grid element will blink to identify it.
-   Note that if the selected element number is not in the current view, you may have to zoom out to see it.
+Enter a grid element number in the following dialog box to locate it in the *FLO-2D* grid.
+When you click the *Highlight* button, the grid element will blink to identify it.
+Note that if the selected element number is not in the current view, you may have to zoom out to see it.
 
 Use the “Zoom to” dropdown list to zoom in or zoom out.
 Or the “+” and “-“ buttons.
+
 3.3.15 Find the Lowest Cell in the Grid System (View Menu)
 
-   This command colors the 4th lowest grid elements.
+This command colors the 4th lowest grid elements.
 
 3.3.16 Cross Section Numbers… (View Menu)
 
-   This command displays cross section numbers for Natural Channels.
+This command displays cross section numbers for Natural Channels.
 
 3.3.17 Cells without Cross Section Numbers… (View Menu)
 
-   This command displays natural channel grid elements that do not have any assigned cross section.
-   The grid elements without cross sections assigned are highlighted in blue.
+This command displays natural channel grid elements that do not have any assigned cross section.
+The grid elements without cross sections assigned are highlighted in blue.
 
 3.3.18 Levee Polyline (View Menu)
+
 .. image:: img/GDS096.jpg
-   Use this command to view the polylines that were produced when the levee data was imported or created along a polyline.
+
+Use this command to view the polylines that were produced when the levee data was imported or created along a polyline.
 
 3.3.19 Redraw (View Menu)
-.. image:: img/GDS097.jpg
-   Use this command to redraw the visible objects in the working region.
 
-   **3.4 Design Menu Commands:**
+.. image:: img/GDS097.jpg
+
+Use this command to redraw the visible objects in the working region.
+
+**3.4 Design Menu Commands:**
 
 3.4.1 Elevation Points/Insert (Design Menu)
+
 .. image:: img/GDS098.jpg
-   Use this command (or the |GDS099| icon) to insert elevation data at selected points within the working region.
-   To use this tool:
 
-1. Select the *Elevation Points/Insert* command (Design menu) or the toolbar icon |GDS099| and click the left mouse button.
+Use this command (or the |GDS099| icon) to insert elevation data at selected points within the working region.
+To use this tool:
 
-2. A dialog box appears for the elevation entry in feet or meters.
-   Click *‘OK’* to accept the value.
+    1. Select the *Elevation Points/Insert* command (Design menu) or the toolbar icon |GDS099| and click the left mouse button.
+    2. A dialog box appears for the elevation entry in feet or meters.
+       Click *‘OK’* to accept the value.
 
-..
 .. image:: img/GDS100.jpg
-3. Click a point within the working region to assign this elevation data.
 
-4. Repeat step 3 as many times as needed.
+    3. Click a point within the working region to assign this elevation data.
+    4. Repeat step 3 as many times as needed.
 
 3.4.2 Elevation Points/Create Elevation Points Layer (Design Menu)
+
 .. image:: img/GDS101.jpg
-   To optimize display times, *GDS* does not automatically create the Elevation points layer.
-   Use this command to create the elevation point layer.
+
+To optimize display times, *GDS* does not automatically create the Elevation points layer.
+Use this command to create the elevation point layer.
 
 3.4.3 Elevation Points/Delete Elevation Points from Selected Area (Design Menu)
+
 .. image:: img/GDS102.jpg
+
 This command deletes elevation data points within the working region.
 To use this tool:
 
-1. Select the *Elevation Points/* *Delete Elevation Points from Selected Area* command (Design menu).
-
-2. Click OK, draw the polygon and select yes to delete the points within the polygon.
-
-3. To save the edited DTM points file, click the Save Elevation Points command (File Menu)
+    1. Select the *Elevation Points/* *Delete Elevation Points from Selected Area* command (Design menu).
+    2. Click OK, draw the polygon and select yes to delete the points within the polygon.
+    3. To save the edited DTM points file, click the Save Elevation Points command (File Menu)
 
 3.4.4 Elevation Points/Delete Elevation Points Outside Range (Design Menu)
+
 .. image:: img/GDS103.jpg
-   Deletes elevation data points outside a specified range.
+
+Deletes elevation data points outside a specified range.
 
 3.4.5 Grid Element Text Style (Design Menu)
 
-   Use these commands to edit the text styles for the grid element number, elevation, or Manning’s n-value.
-   Set the relative position of the number in the square grid element (upper, middle or down positions).
-   The Font Properties… button is used to change, font type, style, size, etc.
+Use these commands to edit the text styles for the grid element number, elevation, or Manning’s n-value.
+Set the relative position of the number in the square grid element (upper, middle or down positions).
+The Font Properties… button is used to change, font type, style, size, etc.
 
-   |GDS104|.
+.. image:: img/GDS104.jpg
 
 3.4.6 Channel Style (Design Menu)
 
-   Use this command will change the line width used to represent channels.
-   The *GDS* displays this dialog box to set the line width.
-   Click *Apply* and then ‘\ *OK’* to change to the selected channel line width display
+Use this command will change the line width used to represent channels.
+The *GDS* displays this dialog box to set the line width.
+Click *Apply* and then ‘\ *OK’* to change to the selected channel line width display
 
 3.4.7 Area Reduction Factor Style (Design Menu)
 
-   To change the display of area reduction factor in a grid element chose from Solid, Hollow (with boundary display of different pen widths) or Hatched
-   rendering with various hatching options.
-   Click *Apply* and then ‘\ *OK’* to change to the selected style.
+To change the display of area reduction factor in a grid element chose from Solid, Hollow (with boundary display of different pen widths) or Hatched
+rendering with various hatching options.
+Click *Apply* and then ‘\ *OK’* to change to the selected style.
 
-   **3.5 Grid Menu Commands:**
+**3.5 Grid Menu Commands:**
 
 3.5.1 Create Grid (Grid Menu)
+
 .. image:: img/GDS105.jpg
-   Command to create the grid system template of square elements for the *FLO-2D* model.
-   To use the *Create Grid* command:
 
-1. Select the *Create Grid* command (Grid menu).
+Command to create the grid system template of square elements for the *FLO-2D* model.
+To use the *Create Grid* command:
 
-2. A dialog box appears requesting the square grid element size or side length (ft or m):
+    1. Select the *Create Grid* command (Grid menu).
+    2. A dialog box appears requesting the square grid element size or side length (ft or m):
 
-..
 .. image:: img/GDS106.jpg
-3. Select *‘OK’* to accept the value.
 
-4. The *GDS* system will automatically overlay a grid template that is centered in the working region.
-   The grid elements will be centered on each node.
+    3. Select *‘OK’* to accept the value.
+    4. The *GDS* system will automatically overlay a grid template that is centered in the working region.
+       The grid elements will be centered on each node.
 
 3.5.2 Select/Grid Element (Grid Menu)
+
 .. image:: img/GDS107.jpg
-   Use this command (or the |GDS108| icon in the tool bar) to select one or more grid elements.
-   With the *Assign Parameters to Selection* command, assign attribute values to the selected grid elements.
-   To use the *Select / Grid element* command:
 
-1. Choose the *Select/Grid element* command (Grid menu).
+Use this command (or the |GDS108| icon in the tool bar) to select one or more grid elements.
+With the *Assign Parameters to Selection* command, assign attribute values to the selected grid elements.
+To use the *Select / Grid element* command:
 
-2. The cursor changes to a cross.
+    1. Choose the *Select/Grid element* command (Grid menu).
+    2. The cursor changes to a cross.
+    3. Click the grid element/s to select them.
+    4. Repeat step 3 for each selected element.
 
-3. Click the grid element/s to select them.
-
-4. Repeat step 3 for each selected element.
-
-..
-
-   To unselect previously selected elements, click them again.
-   To select a group of elements, press the *Shift* key simultaneously with the left mouse button and drag the mouse pointer over the desired elements.
-   To unselect a group of elements press the *Control* key and the left mouse button, then drag the mouse pointer over the elements you want to unselect.
-   When dragging the mouse over the grid elements, they are painted to indicate your selection.
-   After a grid element or group of elements is selected, use the *Assign Parameters to Selection* command to assign various attributes to the selected
-   elements.
+To unselect previously selected elements, click them again.
+To select a group of elements, press the *Shift* key simultaneously with the left mouse button and drag the mouse pointer over the desired elements.
+To unselect a group of elements press the *Control* key and the left mouse button, then drag the mouse pointer over the elements you want to unselect.
+When dragging the mouse over the grid elements, they are painted to indicate your selection.
+After a grid element or group of elements is selected, use the *Assign Parameters to Selection* command to assign various attributes to the selected
+elements.
 
 3.5.3 Select/Grid Elements Defined by Polygon (Grid Menu)
 
-   This command (or the |GDS109| icon in the tool bar) will select all the grid elements within a user defined polygon.
-   Attributes can then be assigned to the selected elements using the *Assign Parameters to Selection* command.
-   It may be necessary to create a grid layer first.
+This command (or the |GDS109| icon in the tool bar) will select all the grid elements within a user defined polygon.
+Attributes can then be assigned to the selected elements using the *Assign Parameters to Selection* command.
+It may be necessary to create a grid layer first.
 
 3.5.4 Select/Grid Elements Intersected by Shapefile (Grid Menu)
+
 .. image:: img/GDS110.jpg
-   Use this command to allow the use an imported polylines shapefile to intersect the grid domain to select grid elements.
-   The shapefile should have been previously imported using the command “File.
-   Import Shapefile…”
+Use this command to allow the use an imported polylines shapefile to intersect the grid domain to select grid elements.
+The shapefile should have been previously imported using the command “File.
+Import Shapefile…”
 
 3.5.5 Select/Inner Grid Elements (Grid Menu)
+
 .. image:: img/GDS111.jpg
-   This command will select all the grid elements within the computational domain and hatch them with diagonal lines.
-   Use the *Assign Parameters to Selection* command to assign various attributes to the selected elements.
+
+This command will select all the grid elements within the computational domain and hatch them with diagonal lines.
+Use the *Assign Parameters to Selection* command to assign various attributes to the selected elements.
 
 3.5.6 Select/Unselect All (Grid Menu)
+
 .. image:: img/GDS112.jpg
-   This command will unselect all the elements previously selected with the *Select* command.
-   The toolbar icon |GDS113| will also perform this function.
+
+This command will unselect all the elements previously selected with the *Select* command.
+The toolbar icon |GDS113| will also perform this function.
 
 3.5.7 Assign Parameters to Selection/Elevations (Grid Menu)
 
-   Assign an elevation to selected grid elements.
-   Enter an elevation value or enter a distance to raise or lower the elevation.
-   Use positive numbers to raise the elevation and negative numbers to lower the elevation.
-   Click *‘OK’* to change the elevation to the selected elements.
+Assign an elevation to selected grid elements.
+Enter an elevation value or enter a distance to raise or lower the elevation.
+Use positive numbers to raise the elevation and negative numbers to lower the elevation.
+Click *‘OK’* to change the elevation to the selected elements.
 
 3.5.8 Assign Parameters to Selection/Manning’s Coefficient (Grid Menu)
 
-   A Manning’s roughness coefficient (n-value) is assigned to the grid elements previously selected with the *Select* command.
-   A dialog box appears prompting you to enter the n-value:
+A Manning’s roughness coefficient (n-value) is assigned to the grid elements previously selected with the *Select* command.
+A dialog box appears prompting you to enter the n-value:
 
 3.5.9 Assign Parameters to Selection/Area and With Reduction Factors (Grid Menu)
-.. image:: img/GDS114.jpg
-   This command is used to assign area and width reduction attributes to the selected grid elements.
-   A dialog box appears prompting the user to enter the Area Reduction Factor (ARF) and the Width Reduction (WRF) factors:
-.. image:: img/GDS115.jpg
-   After clicking *‘OK’*, the assigned ARF and WRF values will appear graphically as follows:
-.. image:: img/GDS116.jpg
-   The colored cells indicate varying levels of storage loss (ARF values).
-   The colored lines reflect the varying levels of flow direction blockage (WRF values).
-   Eight potential flow directions for each grid element can be assigned to identify complete blockage.
-   It should be noted that each grid element can share discharge in eight directions.
 
-   3.5.10 Assign Parameters to Selection/Levee (Grid Menu)
+.. image:: img/GDS114.jpg
+
+This command is used to assign area and width reduction attributes to the selected grid elements.
+A dialog box appears prompting the user to enter the Area Reduction Factor (ARF) and the Width Reduction (WRF) factors:
+
+.. image:: img/GDS115.jpg
+
+After clicking *‘OK’*, the assigned ARF and WRF values will appear graphically as follows:
+
+.. image:: img/GDS116.jpg
+
+The colored cells indicate varying levels of storage loss (ARF values).
+The colored lines reflect the varying levels of flow direction blockage (WRF values).
+Eight potential flow directions for each grid element can be assigned to identify complete blockage.
+It should be noted that each grid element can share discharge in eight directions.
+
+3.5.10 Assign Parameters to Selection/Levee (Grid Menu)
+
 .. image:: img/GDS117.jpg
-   Use this command to assign levee and levee failure parameters to the selected grid elements.
-   A dialog box will appear with the grid element floodplain elevation across the levee in that flow direction for reference.
-   Click a check box to set up a levee for each selected direction.
-   A text box will appear just below each direction to input the levee crest elevation.
-   Note that the levee crest must be higher than the grid element elevation and the elevation of the grid element in the cut off direction.
-   Redundant levee cut off directions will not be accepted by the GDS or the FLO-2D model.
-   This dialog box can also be used to edit the grid element elevation.
+
+Use this command to assign levee and levee failure parameters to the selected grid elements.
+A dialog box will appear with the grid element floodplain elevation across the levee in that flow direction for reference.
+Click a check box to set up a levee for each selected direction.
+A text box will appear just below each direction to input the levee crest elevation.
+Note that the levee crest must be higher than the grid element elevation and the elevation of the grid element in the cut off direction.
+Redundant levee cut off directions will not be accepted by the GDS or the FLO-2D model.
+This dialog box can also be used to edit the grid element elevation.
+
 .. image:: img/GDS118.jpg
-   Each data entry is described below:
+
+Each data entry is described below:
 
 Incremental increase in crest elevation for all the levee nodes (RAISLEV)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Global incremental increase in levee crest elevation (ft or m) for all the levee grid elements.
+Global incremental increase in levee crest elevation (ft or m) for all the levee grid elements.
 
-   *Global Failure Mode* provides two modes of failure:
+    *Global Failure Mode* provides two modes of failure:
 
-   *Prescribed failure* used to provide predetermined breach data in the bottom part of the dialog or
+        *Prescribed failure* used to provide predetermined breach data in the bottom part of the dialog or
 
-   *Breach* *failure* where the model simulates the breach erosion from overtopping or piping.
-   In this case, breach parameters should be entered clicking the Open Breach Dialog button.
+        *Breach* *failure* where the model simulates the breach erosion from overtopping or piping.
+        In this case, breach parameters should be entered clicking the Open Breach Dialog button.
 
 Flow direction cutoff direction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Check buttons to define the flow direction (of the 8 possible overland flow directions) that will be cutoff by a levee.
+Check buttons to define the flow direction (of the 8 possible overland flow directions) that will be cutoff by a levee.
 
-   *Levee Crest Elevation* (LEVELEV)
+*Levee Crest Elevation* (LEVELEV)
 
-   Elevation (ft or m) of the top of the levee.
+Elevation (ft or m) of the top of the levee.
 
-   *Assign to all* button |GDS119|
+*Assign to all* button |GDS119|
 
-   Assigns the cutoff flow direction and levee crest elevation to all selected grid elements.
+Assigns the cutoff flow direction and levee crest elevation to all selected grid elements.
 
 Levee failure for this direction |GDS120|
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Enables input parameters to be assigned for levee prescribed failure modeling for the selected direction.
+Enables input parameters to be assigned for levee prescribed failure modeling for the selected direction.
 
 Elevation of prescribed failure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Assign the maximum water surface elevation at failure (FAILEVEL) if is different than the levee crest (LEVELEV).
-   This enables the levee to fail prior to being overtopped.
-   Set the FAILEVEL variable to zero to simulate levee failure when it is overtopped.
+Assign the maximum water surface elevation at failure (FAILEVEL) if is different than the levee crest (LEVELEV).
+This enables the levee to fail prior to being overtopped.
+Set the FAILEVEL variable to zero to simulate levee failure when it is overtopped.
 
 Duration (hrs) for failure after failure level is exceeded (FAILTIME)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Duration in hours until levee failure after the FAILEVEL elevation is exceeded by the flow depth.
-   Set this variable to zero if the level fails immediately when overtopped or when FAILEVEL is exceeded.
+Duration in hours until levee failure after the FAILEVEL elevation is exceeded by the flow depth.
+Set this variable to zero if the level fails immediately when overtopped or when FAILEVEL is exceeded.
 
 Base elevation of levee failure if different from floodplain elevation (LEVBASE)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   The final elevation of the levee after failure is completed.
-   This enables the levee to fail to an elevation that is different from the floodplain elevation.
-   Set this variable to zero if levee failure results in the complete levee failure to the floodplain elevation.
+The final elevation of the levee after failure is completed.
+This enables the levee to fail to an elevation that is different from the floodplain elevation.
+Set this variable to zero if levee failure results in the complete levee failure to the floodplain elevation.
 
 Initial levee breach width (FAILWIDTH)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   The initial flow width (ft or m) of levee failure.
-   This flow width relates to one of the eight flow directions and should be less than the length of an octagon side (length of the side of a grid
-   element x 0.4142).
+The initial flow width (ft or m) of levee failure.
+This flow width relates to one of the eight flow directions and should be less than the length of an octagon side (length of the side of a grid
+element x 0.4142).
 
-   *Vertical rate of levee breach opening* (FAILRATE)
+*Vertical rate of levee breach opening* (FAILRATE)
 
-   The rate of vertical levee failure (ft/hr or m/hr).
+The rate of vertical levee failure (ft/hr or m/hr).
 
 Horizontal rate of levee breach opening (FAILWIDRATE)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   The rate at which the levee breach widens (ft/hr or m/hr).
-   The breach stops increasing if the breach exceeds the grid element width for that direction.
+The rate at which the levee breach widens (ft/hr or m/hr).
+The breach stops increasing if the breach exceeds the grid element width for that direction.
 
-   3.5.11 Assign Parameters to Selection/Multiple Channels (Grid Menu)
+3.5.11 Assign Parameters to Selection/Multiple Channels (Grid Menu)
+
 .. image:: img/GDS121.jpg
-   This command is used to define multiple channels that simulate rill and gully flow on the floodplain.
-   For this component, concentrated rill and gully flow (flow in rectangular channel) rather than overland sheet flow will be simulated to route the flow
-   between designated floodplain grid elements.
-   The following dialog box is used to input the multiple channel data:
 
-   3.5.12 Assign Parameters to Selection/Inflow/Outflow Condition (Grid Menu)
+This command is used to define multiple channels that simulate rill and gully flow on the floodplain.
+For this component, concentrated rill and gully flow (flow in rectangular channel) rather than overland sheet flow will be simulated to route the flow
+between designated floodplain grid elements.
+The following dialog box is used to input the multiple channel data:
+
+3.5.12 Assign Parameters to Selection/Inflow/Outflow Condition (Grid Menu)
+
 .. image:: img/GDS122.jpg
-   Use this command to define inflow and outflow elements in selected grid elements.
-   The In/Out Condition dialog box allows editing these boundary conditions:
+
+Use this command to define inflow and outflow elements in selected grid elements.
+The In/Out Condition dialog box allows editing these boundary conditions:
+
 .. image:: img/GDS123.jpg
+
 3.5.12.1 Setting inflow nodes
 '''''''''''''''''''''''''''''
 
-   Clicking the first radio button will assign an inflow hydrograph to a grid element.
-   If there is a channel in the selected element, you can assign the hydrograph to either the channel or the floodplain.
-   When the user selects the radio button *‘Inflow element with hydrograph’,* the ‘\ *Hydrograph’* data group is activated.
-   The “\ *Read*\ ” button displays a dialog box to import a hydrograph with HEC-1, Tape21, HYD or ASCII files formats:
+Clicking the first radio button will assign an inflow hydrograph to a grid element.
+If there is a channel in the selected element, you can assign the hydrograph to either the channel or the floodplain.
+When the user selects the radio button *‘Inflow element with hydrograph’,* the ‘\ *Hydrograph’* data group is activated.
+The “\ *Read*\ ” button displays a dialog box to import a hydrograph with HEC-1, Tape21, HYD or ASCII files formats:
+
 .. image:: img/GDS124.jpg
-   The HEC-1 file option will display all the hydrographs at basin concentration points in a Corps of Engineers HEC-1 hydrologic model output file.
-   The user can select an inflow hydrograph from the HEC-1 file:
+
+The HEC-1 file option will display all the hydrographs at basin concentration points in a Corps of Engineers HEC-1 hydrologic model output file.
+The user can select an inflow hydrograph from the HEC-1 file:
+
 .. image:: img/GDS125.jpg
-   After selecting the HEC-1 hydrograph and clicking *‘OK’*, the hydrograph data are loaded into the
 
-   *Hydrograph* group table in the above dialog box.
-   \*.HYD files are ASCII files generated by the *GDS* to save the hydrograph data.
-   They are created with the “\ *Save Table*\ ” button.
-   The first line contains the initial and final time of the hydrograph selected with the “Select Time Interval” button.
-   The time and discharge discretized hydrograph pairs follow in two columns of data.
-   These files can be used to:
+After selecting the HEC-1 hydrograph and clicking *‘OK’*, the hydrograph data are loaded into the
 
-- Recover the hydrographs when a project is read from a TOP file;
+*Hydrograph* group table in the above dialog box.
+\*.HYD files are ASCII files generated by the *GDS* to save the hydrograph data.
+They are created with the “\ *Save Table*\ ” button.
+The first line contains the initial and final time of the hydrograph selected with the “Select Time Interval” button.
+The time and discharge discretized hydrograph pairs follow in two columns of data.
+These files can be used to:
 
-- Redefine the project area when the INFLOW.DAT becomes obsolete because the grid element numbers change.
-  The \*.HYD files enable the hydrographs to be recovered for assignment to new grid elements.
+    - Recover the hydrographs when a project is read from a TOP file;
+    - Redefine the project area when the INFLOW.DAT becomes obsolete because the grid element numbers change.
+      The \*.HYD files enable the hydrographs to be recovered for assignment to new grid elements.
+    - \*.HYD files permanently store hydrographs that could be imported to other projects or grid elements in the same project.
 
-- \*.HYD files permanently store hydrographs that could be imported to other projects or grid elements in the same project.
+The “\ *Edit*\ ” button can be used to edit hydrograph values, insert rows, delete rows, or sort rows in ascending order (time column).
+This button a displays an editor dialog box:
 
-..
-
-   The “\ *Edit*\ ” button can be used to edit hydrograph values, insert rows, delete rows, or sort rows in ascending order (time column).
-   This button a displays an editor dialog box:
 .. image:: img/GDS126.jpg
-   The “\ *View Graph*\ ” button of the above *In/Out Condition* dialog box plots the hydrograph in the following window:
+
+The “\ *View Graph*\ ” button of the above *In/Out Condition* dialog box plots the hydrograph in the following window:
+
 .. image:: img/GDS127.jpg
-   The user may select the initial and final time for the inflow hydrograph.
-   For example, selecting *Initial Time* = 10.0 hours and *Final Time* = 16.0 will redefine the hydrograph limits and in this eliminate a number of
-   unnecessary zero values on the rising and falling limbs of the hydrograph.
 
-   Inflow grid elements with assigned hydrographs are displayed in *GDS* with a distinct color for identification.
-   When the user selects “\ *No Inflow/Outflow condition*\ ” and clicks *‘OK’*, the grid element recovers its original color to indicate the absence of
-   an inflow or outflow node.
-   Inflow nodes and the linked hydrographs will be written to the INFLOW.DAT file.
-   Outflow nodes are assigned though the option “\ *Outflow element (no hydrograph)*\ ”.
-   The list of outflow nodes will be written to the OUTFLOW.DAT file.
+The user may select the initial and final time for the inflow hydrograph.
+For example, selecting *Initial Time* = 10.0 hours and *Final Time* = 16.0 will redefine the hydrograph limits and in this eliminate a number of
+unnecessary zero values on the rising and falling limbs of the hydrograph.
 
- Initial Assignment of Hydrographs
- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Inflow grid elements with assigned hydrographs are displayed in *GDS* with a distinct color for identification.
+When the user selects “\ *No Inflow/Outflow condition*\ ” and clicks *‘OK’*, the grid element recovers its original color to indicate the absence of
+an inflow or outflow node.
+Inflow nodes and the linked hydrographs will be written to the INFLOW.DAT file.
+Outflow nodes are assigned though the option “\ *Outflow element (no hydrograph)*\ ”.
+The list of outflow nodes will be written to the OUTFLOW.DAT file.
+
+Initial Assignment of Hydrographs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The initial assignment of hydrographs to inflow nodes has three options:
 
-1. *Project is created from FLO-2D project* (*GDS* command “\ *File.
-   New Project from FLO-2D Project*\ ”).
-   In this case INFLOW.DAT is used by the *GDS* system to assign hydrographs to pre-selected grid elements.
+    1. *Project is created from FLO-2D project* (*GDS* command “\ *File.
+       New Project from FLO-2D Project*\ ”).
+       In this case INFLOW.DAT is used by the *GDS* system to assign hydrographs to pre-selected grid elements.
 
-2. All other methods of creating a project.
-   The user will be required to create the grid system and then later right-click the selected inflow nodes to assign hydrographs as described above.
+    2. All other methods of creating a project.
+       The user will be required to create the grid system and then later right-click the selected inflow nodes to assign hydrographs as described above.
 
-..
+*3.5.12.2 Setting outflow nodes* These are the options for outflow nodes:
 
-   *3.5.12.2 Setting outflow nodes* These are the options for outflow nodes:
+*3.5.12.3 Outflow element (no hydrograph):*
 
-|GDS128|\ *3.5.12.3 Outflow element (no hydrograph):*
+.. image:: img/GDS128.jpg
 
-- Line ‘O’ for floodplain
+    - Line ‘O’ for floodplain
+    - Line ‘K’ for Channel
+    - An element containing an outflow node must have a lower elevation than the contiguous upstream elements.
+          o Floodplain element elevation will be reset to 0.1 ft lower than the lowest contiguous upstream element if the outflow node elevation is initially
+          higher. This change occurs automatically at runtime.
+          o Channel elements will generate an error in the GDS and when the engine is executed.
+            An error report is written to the error.chk file and the channel bed elevation must be manually adjusted.
 
-- Line ‘K’ for Channel
+For this outflow assignment, the outflow nodes discharge all the inflow to them off the grid system using an approximate normal depth flow condition.
+The outflow node is essentially a sink.
 
-- An element containing an outflow node must have a lower elevation than the contiguous upstream elements.
-  o Floodplain element elevation will be reset to 0.1 ft lower than the lowest contiguous upstream element if the outflow node elevation is initially
-  higher.
-  This change occurs automatically at runtime.
+*3.5.12.4 Outflow element with hydrograph (diversion):*
 
-  - Channel elements will generate an error in the GDS and when the engine is executed.
-    An error report is written to the error.chk file and the channel bed elevation must be manually adjusted.
+.. image:: img/GDS129.jpg
 
-..
-
-   For this outflow assignment, the outflow nodes discharge all the inflow to them off the grid system using an approximate normal depth flow condition.
-   The outflow node is essentially a sink.
-
-|GDS129|\ *3.5.12.4 Outflow element with hydrograph (diversion):*
-
-- This diversion data is written to the INFLOW.DAT file.
-
-- This option is for Channels only.
-
-- The grayed-out appearance for FP and FP/Channel, indicating that those 2 commands are unavailable
-
-- This option is used to account for irrigation or any other kind of diversion from a channel in a Time / Discharge (cfs or cms) relationship.
-
-- If the discharge in the channel does not meet the level of the discharge in the diversion hydrograph, the element will divert all of the water it can
-  take.
-
-- Any water that exceeds the diversion hydrograph will continue downstream.
+    - This diversion data is written to the INFLOW.DAT file.
+    - This option is for Channels only.
+    - The grayed-out appearance for FP and FP/Channel, indicating that those 2 commands are unavailable
+    - This option is used to account for irrigation or any other kind of diversion from a channel in a Time / Discharge (cfs or cms) relationship.
+    - If the discharge in the channel does not meet the level of the discharge in the diversion hydrograph, the element will divert all of the water it can
+      take.
+    - Any water that exceeds the diversion hydrograph will continue downstream.
 
 *3.5.12.5* Outflow element with stage-time relationship\ *:*
 
-   |GDS130|\ This option is for Channel and Floodplain.
+.. image:: img/GDS130.jpg
 
-- The grayed-out appearance for FP/Channel, indicating that command is unavailable
+This option is for Channel and Floodplain.
 
-- No ‘O’ or ‘K’ lines (type 1)
+    - The grayed-out appearance for FP/Channel, indicating that command is unavailable
+    - No ‘O’ or ‘K’ lines (type 1)
+    - Only ‘N’ lines for stage-time relationship.
+    - FP and channel elements will be different only on the third column of the ‘N’ lines, the identifier will be different:
 
-- Only ‘N’ lines for stage-time relationship.
+          o N Grid Cell FP_ID=0
+          o N Grid Cell Channel_ID=1
 
-- FP and channel elements will be different only on the third column of the ‘N’ lines, the identifier will be different:
+    - Use this type of outflow when the downstream stage will add water to the modeling surface as.
 
-  - N Grid Cell FP_ID=0 o N Grid Cell Channel_ID=1
+          o Tsunamis
+          o Storm stage
+          o Downstream flooding stage. i.e. Mississippi River
 
-- Use this type of outflow when the downstream stage will add water to the modeling surface as.
-  o Tsunamis o Storm stage
+    - The initial stage for each grid element should start at near ground elevation and ramp up to avoid volume conservation errors.
+    - If the stage is lower than the grid element elevation, it is reset to the grid element elevation at runtime until the time that it goes above the grid
+      element elevation.
 
-  - Downstream flooding stage.
-    i.e.
-    Mississippi River
-
-- The initial stage for each grid element should start at near ground elevation and ramp up to avoid volume conservation errors.
-
-- If the stage is lower than the grid element elevation, it is reset to the grid element elevation at runtime until the time that it goes above the grid
-  element elevation.
-
-..
 .. image:: img/GDS131.jpg
-   Use this water surface control to simulate flooding from storm surges/tsunamis or any type of water surface elevation control such as tidal effects or
-   time variable backwater conditions.
-   For example, it is possible to model the flooding in a coastal area produced by storm surges generated by tropical storms, hurricanes or tsunamis
-   where the ocean stage's rise and fall has a limited duration.
-   This condition can be assigned to nodes along the coastal boundary to simulate ocean flooding in an urban area.
-   The grid element with a stage-time relationship does not have to be along the red boundary.
+
+Use this water surface control to simulate flooding from storm surges/tsunamis or any type of water surface elevation control such as tidal effects or
+time variable backwater conditions.
+For example, it is possible to model the flooding in a coastal area produced by storm surges generated by tropical storms, hurricanes or tsunamis
+where the ocean stage's rise and fall has a limited duration.
+This condition can be assigned to nodes along the coastal boundary to simulate ocean flooding in an urban area.
+The grid element with a stage-time relationship does not have to be along the red boundary.
 
 *3.5.12.6 Outflow element with stage-time and free floodplain and channel:*
 
-   This option is for Channel or Floodplain.
+.. image:: img/GDS267.jpg
 
-Redundant ‘O’ or ‘K’ lines are needed depending on if
+This option is for Channel or Floodplain.
 
-the element is a FP cell or a channel cell.
+    • Grey out appearance for FP/Channel, indicating that
+      command is unavailable
+    • Redundant ‘O’ or ‘K’ lines are needed depending on if
+      the element is a FP cell or a channel cell.
+    • ‘N’ lines for stage-time relationship are needed.
+    • FP and channel elements will be different on the third
+      column of ‘N’ Line, the identifier will be different:
+        o N Grid Cell FP_ID=0
+        o N Grid Cell Channel_ID=1
+    • Use this configuration when a water surface elevation
+      along a boundary needs to be held like with Flood
+      Insurance Mapping.
+    • The initial stage for each grid element should start at
+      near ground elevation and ramp up to avoid volume
+      conservation errors.
+    • If the stage is lower than the grid element elevation, it is
+      reset to the grid element elevation at runtime until the
+      time that it goes above the grid element elevation.
 
-‘N’ lines for stage
+.. image:: img/GDS268.jpg
 
--
+This outflow condition is a combination of the stage-time relationship and normal depth outflow node for the either the floodplain or channel.
+In this case, the water surface elevation is held along the boundary by the stage-time relationship.
+Anything higher than the stage leaves the system through the same outflow node.
+The main difference between this outflow condition and the previous one is that it will not add water to the upstream grid system.
+The water is held at the node.
 
-time relationship are needed.
+*3.5.12.7 Channel outflow element (with stage-discharge):*
 
-FP and channel elements will be different on the third
+.. image:: img/GDS132.jpg
 
-column of ‘N’ Line, the identi
+This option is for channel outflow where a stage discharge relationship is known.
 
-fier will be different:
+    - Assign this outflow node to a gaged channel element at the end of a project or a bridge at the end of a project.
+    - Multiple curves can be used and a curve is valid up to the given depth.
+      That is why it is called a Max Depth.
+    - ‘H’ lines for discharge curve relationship are needed.
+          o Max Depth o Coefficient
+          o Exponent
 
-N Grid Cell FP_ID=0
+Use this option to assign a stage-discharge relationship to the channel.
+In this case, the channel outflow discharge will be controlled by assigned stage discharge pairs to simulate a weir, culvert or other water surface
+hydraulic control.
 
-N Grid Cell Channel_ID=1
+*3.5.12.8 Channel outflow element (with depth-discharge):*
 
-Use this configuration when a water surface elevation
+.. image:: img/GDS133.jpg
 
-along a boundary needs to be held like with Flood
+This option does not work.
+I believe it was supposed to be used to fill in the time / discharge method for a channel element with a known time / discharge data set.
+If a user needs to use the Time Discharge method, it is best to review the Data Input Manual.
 
-Insurance Mapping.
+Set it up in the OUTFLOW.DAT file as follows using a text editor.
+It is space delimited and all characters are capitalized.
 
-The initial stage for each grid element should start at
+.. raw:: html
 
-near ground elevation and ramp up to avoid volume
+    <pre>
+    K 1007
+    T 0.0 0.00
+    T 3.0 50.35
+    T 5.0 157.67
+    T 10.0 366.58
+    </pre>
 
-conservation errors.
+*3.5.12.9 Outflow node Q reported to INFLOWx.DAT:*
 
-If the stage is lower than the grid element elevation, it is
+.. image:: img/GDS134.jpg
 
-reset to the grid element elevation at runtime until the
+This option is used for capturing the discharge from an upstream model.
 
-time that it goes above the grid element elevation.
+    - See Lesson 13 for a tutorial on how to use this method.
+    - All flow captured by the outflow node will be written to a corresponding INFLOWx.DAT file.
+    - The two grid systems must overlap at the boundary to set the data up correctly.
 
-- Grey out appearance for FP/Channel, indicating that command is unavailable
+Use this option to assign a stage-discharge relationship to the channel.
+In this case, the channel outflow discharge will be controlled by assigned stage discharge pairs to simulate a weir, culvert or other water surface
+hydraulic control.
 
-..
+3.5.12.10 No Outflow Condition
+''''''''''''''''''''''''''''''''''''''
 
-   •
+.. image:: img/GDS135.jpg
 
-   •
-
-   •
-
-- o
-
-..
-
-   •
-
-   •
-
-   •
-
-   This outflow condition is a combination of the stage-time relationship and normal depth outflow node for the either the floodplain or channel.
-   In this case, the water surface elevation is held along the boundary by the stage-time relationship.
-   Anything higher than the stage leaves the system through the same outflow node.
-   The main difference between this outflow condition and the previous one is that it will not add water to the upstream grid system.
-   The water is held at the node.
-
-|GDS132|\ *3.5.12.7 Channel outflow element (with stage-discharge):*
-
-   This option is for channel outflow where a stage discharge relationship is known.
-
-- Assign this outflow node to a gaged channel element at the end of a project or a bridge at the end of a project.
-
-- Multiple curves can be used and a curve is valid up to the given depth.
-  That is why it is called a Max Depth.
-
-- ‘H’ lines for discharge curve relationship are needed.
-  o Max Depth o Coefficient
-
-..
-
-   o Exponent
-
-   Use this option to assign a stage-discharge relationship to the channel.
-   In this case, the channel outflow discharge will be controlled by assigned stage discharge pairs to simulate a weir, culvert or other water surface
-   hydraulic control.
-
-|GDS133|\ *3.5.12.8 Channel outflow element (with depth-discharge):*
-
-   This option does not work.
-   I believe it was supposed to be used to fill in the time / discharge method for a channel element with a known time / discharge data set.
-   If a user needs to use the Time Discharge method, it is best to review the Data Input Manual.
-
-   Set it up in the OUTFLOW.DAT file as follows using a text editor.
-   It is space delimited and all characters are capitalized.
-
-   K 1007
-
-   T 0.0 0.00
-
-   T 3.0 50.35
-
-   T 5.0 157.67
-
-   T 10.0 366.58
-
-|GDS134|\ *3.5.12.9 Outflow node Q reported to INFLOWx.DAT:*
-
-   This option is used for capturing the discharge from an upstream model.
-
-- See Lesson 13 for a tutorial on how to use this method.
-
-- All flow captured by the outflow node will be written to a corresponding INFLOWx.DAT file.
-
-- The two grid systems must overlap at the boundary to set the data up correctly.
-
-..
-
-   Use this option to assign a stage-discharge relationship to the channel.
-   In this case, the channel outflow discharge will be controlled by assigned stage discharge pairs to simulate a weir, culvert or other water surface
-   hydraulic control.
-
-|GDS135|\ 3.5.12.10 No Outflow Condition
-''''''''''''''''''''''''''''''''''''''''''
-
-   Use this option to clear the In/Out condition from any element.
-   Select the elements with either an inflow or outflow condition and click the radio button.
-   Click OK to delete the data from the INFLOW.DAT and OUTFLOW.DAT files.
+Use this option to clear the In/Out condition from any element.
+Select the elements with either an inflow or outflow condition and click the radio button.
+Click OK to delete the data from the INFLOW.DAT and OUTFLOW.DAT files.
 
 3.5.13 Parameters to Selection/Infiltration (Grid Menu)
+
 .. image:: img/GDS136.jpg
-   Use this option to assign infiltration data to the selected grid elements in the following dialog box:
+
+Use this option to assign infiltration data to the selected grid elements in the following dialog box:
+
 .. image:: img/GDS137.jpg
+
 3.5.14 Parameters to Selection/No Discharge Exchange (Grid Menu)
 
 Identify channel elements that will not exchange discharge with the floodplain (e.g.
 
-   channel culvert or enclosed channel where no floodplain inflow can occur).
+channel culvert or enclosed channel where no floodplain inflow can occur).
 
-   3.5.15 Assign Parameters to Selection/Time-Variant Groundwater Head (Grid Menu)
+3.5.15 Assign Parameters to Selection/Time-Variant Groundwater Head (Grid Menu)
+
 .. image:: img/GDS138.jpg
-   Use this command when using the *MODFLOW* groundwater flow model link to impose a time series of groundwater head at the selected nodes.
+
+Use this command when using the *MODFLOW* groundwater flow model link to impose a time series of groundwater head at the selected nodes.
 
 3.5.16 Parameters to Selection/Rigid Bed Element (Grid Menu)
-.. image:: img/GDS139.jpg
-   Setup elements that do not scour during the sediment transport simulation.
 
-   3.5.17 Assign Parameters to Selection/Variable Sediment Size Fraction (Grid Menu)
+.. image:: img/GDS139.jpg
+
+Setup elements that do not scour during the sediment transport simulation.
+
+3.5.17 Assign Parameters to Selection/Variable Sediment Size Fraction (Grid Menu)
 
 This command requires the definition of transport equations.
 See “Tools.
 Mud and Sediment Transport”
 
-   3.5.18 Assign Parameters to Selection/Limiting Froude Number (Grid Menu)
+3.5.18 Assign Parameters to Selection/Limiting Froude Number (Grid Menu)
 
-   Use this command to setup spatially variable limiting Froude numbers.
-   3.5.19 Assign Parameters to Selection/Cell Elevation Adjustment (Grid Menu)
+Use this command to setup spatially variable limiting Froude numbers.
+3.5.19 Assign Parameters to Selection/Cell Elevation Adjustment (Grid Menu)
+
 .. image:: img/GDS140.jpg
+
 Use this command to adjust elevations for the selected cells and their neighbors:
+
 .. image:: img/GDS141.jpg
-   3.5.20 Assign Parameters to Selection/Cell Tolerance (Grid Menu)
 
-   Assign cell tolerances to the selected cells.
+3.5.20 Assign Parameters to Selection/Cell Tolerance (Grid Menu)
 
-   3.5.21 Interpolate Elevation Points (Grid Menu)
+Assign cell tolerances to the selected cells.
 
-   Use this command to interpolate and assign all the grid element elevations in the computational domain.
-   The interpolated elevations are based on the imported DTM points or the elevation points that are added to the working region.
-   The interpolation options are selected in the *Options/Interpolation* command of the *Tools* menu.
-   The following table describes the interpolation method.
+3.5.21 Interpolate Elevation Points (Grid Menu)
+
+Use this command to interpolate and assign all the grid element elevations in the computational domain.
+The interpolated elevations are based on the imported DTM points or the elevation points that are added to the working region.
+The interpolation options are selected in the *Options/Interpolation* command of the *Tools* menu.
+The following table describes the interpolation method.
 
 .. list-table::
    :widths: 50 50
@@ -1635,16 +1590,14 @@ Use this command to adjust elevations for the selected cells and their neighbors
 
    * - Inverse distanceweighting formulaexponent
      - This is “n” in the Inverse Distance Weighting Formula:
-
-   * -
-     - *NDTM* 1  *Z j*  \ *j*\ =1 *rijn*  *Z* :sup:`=` *NDTM* 1   *rn*  *j*\ =1 *ij*  Where Z¯ is the interpolated grid element elevation, Z\ :sub:`j` is
+       *NDTM* 1  *Z j*  \ *j*\ =1 *rijn*  *Z* :sup:`=` *NDTM* 1   *rn*  *j*\ =1 *ij*  Where Z¯ is the interpolated grid element elevation, Z\ :sub:`j` is
        the elevation of DTM point :sub:`j`, r\ :sub:`ij` is the distance from the DTM point :sub:`j` to center of grid element :sub:`i` and NDTM is the total
        number of DTM points.
 
    * - No filtering (High or LowElevations)
      - No filtering is performed on the elevation points.
 
-   * - Maximum elevationdifference(High or Low Elevations)
+   * - Maximum elevation difference (High or Low Elevations)
      - For this option, the algorithm calculates a mean elevation using all the DTM and assigned elevation points within the interpolation radius.
        All those points that exceed the selected maximum elevation difference higher (or lower in the case of Low Elevation filter) than the mean are
        discarded and the mean elevation is recomputed and assigned to the grid element.
@@ -1654,96 +1607,92 @@ Use this command to adjust elevations for the selected cells and their neighbors
        (or lower in the case of the Low Elevation filter) than the standard deviation to determine the mean elevation to represent the grid element.
 
 
-..
+3.5.22 Interpolate Elevation Points from Multiple Elevation Files...
+(Grid Menu)
 
-   3.5.22 Interpolate Elevation Points from Multiple Elevation Files...
-   (Grid Menu)
+Use this command to interpolate and assign grid element elevations in the computational domain.
+The interpolated elevations are based on the imported LIDAR ASCII file.
+The interpolation options are selected in the *Options/Interpolation* command of the *Tools* menu.
 
-   Use this command to interpolate and assign grid element elevations in the computational domain.
-   The interpolated elevations are based on the imported LIDAR ASCII file.
-   The interpolation options are selected in the *Options/Interpolation* command of the *Tools* menu.
-
-   Previous versions of the FLO-2D Grid Developer System (GDS) provided a method to interpolate terrain elevations that required importing all points.
-   The original procedure was not able to process more than about 15 million points due to limitations on the development tools used to create GDS.
-   To circumvent this limitation and allow the processing of virtually unlimited number of elevation point data, FLO-2D Software has developed a new
-   method that does not require importing the points and significantly extends the model interpolation capability.
-   This section of the manual summarizes the functionality of the new tool and provides simple instructions how to use it.
-
-.. _data-requirements-1:
+Previous versions of the FLO-2D Grid Developer System (GDS) provided a method to interpolate terrain elevations that required importing all points.
+The original procedure was not able to process more than about 15 million points due to limitations on the development tools used to create GDS.
+To circumvent this limitation and allow the processing of virtually unlimited number of elevation point data, FLO-2D Software has developed a new
+method that does not require importing the points and significantly extends the model interpolation capability.
+This section of the manual summarizes the functionality of the new tool and provides simple instructions how to use it.
 
 Data requirements
 ^^^^^^^^^^^^^^^^^
 
-   The new interpolation tool reads data files in any of the following data ASCII formats.
+The new interpolation tool reads data files in any of the following data ASCII formats.
 
 1. Space or comma delimited ASCII files, 3 data values per line.
    These files contain three values on each line as follows:
 
-..
-
    X_Coordinate Y_Coordinate Elevation
 
-   Example of space delimited file:
+.. raw:: html
 
-   369941.27 1183607.125 4654.71
+    <pre>
+        Example of space delimited file:
+    369941.27 1183607.125 4654.71
+    369946.27 1183608.125 4654.50
+    369951.27 1183609.125 4654.29
+    </pre>
 
-   369946.27 1183608.125 4654.50
+.. raw:: html
 
-   369951.27 1183609.125 4654.29
-
-   Example of comma delimited file:
-
-   369941.27 , 1183607.125 , 4654.71
-
-   369946.27 , 1183608.125 , 4654.50
-
-   369951.27 , 1183609.125 , 4654.29
+    <pre>
+        Example of comma delimited file:
+    369941.27 , 1183607.125 , 4654.71
+    369946.27 , 1183608.125 , 4654.50
+    369951.27 , 1183609.125 , 4654.29
+    </pre>
 
 2. Space or comma delimited ASCII files, 5 data values per line.
    These files contain five values on each line as follows:
 
-..
-
    ID X_Coordinate Y_Coordinate Elevation Value
 
-   For this file format only the point coordinates and elevation value is used.
-   The first column (ID) and last column (Value) are ignored.
+For this file format only the point coordinates and elevation value is used.
+The first column (ID) and last column (Value) are ignored.
 
-   Example of space delimited file:
+.. raw:: html
 
-   X1 369941.27 1183607.125 4654.71 777
+    <pre>
+        Example of space delimited file:
+    X1 369941.27 1183607.125 4654.71 777
+    X2 369946.27 1183608.125 4654.50 717
+    X3 369951.27 1183609.125 4654.29 282
+    </pre>
 
-   X2 369946.27 1183608.125 4654.50 717
+.. raw:: html
 
-   X3 369951.27 1183609.125 4654.29 282
+    <pre>
+        Example of comma delimited file:
+X1,369941.27,1183607.125,4654.71,777
+X2,369946.27,1183608.125,4654.50,717
+X3,369951.27,1183609.125,4654.29, 282
+    </pre>
 
-   Example of comma delimited file:
+3. List of elevation data files ELEVFILES.DAT:
 
-   X1,369941.27,1183607.125,4654.71,777
+This optional file contains the list of files including path and name.
+It needs to be created by the user with any text editor program and facilitates handling hundreds or thousands of files which may be difficult to
+select using a standard MS-Windows file handling dialog box.
+Users may mix any of the supported formats, i.e., some files may be 3 column space delimited, and others five columns comma delimited, etc.
+All files must have.TXT extension.
 
-   X2,369946.27,1183608.125,4654.50,717
+.. raw:: html
 
-   X3,369951.27,1183609.125,4654.29, 282
+    <pre>
+        Example of ELEVFILES.DAT file:
+    C:\\Tracks\\PROJECTS\\FLO2D\\2009\\Goat2009\\dtm1.TXT
+    C:\\Tracks\\PROJECTS\\FLO2D\\2009\\Goat2009\\dtm2.TXT
+    C:\\Tracks\\PROJECTS\\FLO2D\\2009\\Goat2009\\dtm 5 columns1.TXT
+    C:\\Tracks\\PROJECTS\\FLO2D\\2009\\Goat2009\\dtm 5 columns2.TXT
+    </pre>
 
-   3. List of elevation data files ELEVFILES.DAT:
-
-   This optional file contains the list of files including path and name.
-   It needs to be created by the user with any text editor program and facilitates handling hundreds or thousands of files which may be difficult to
-   select using a standard MS-Windows file handling dialog box.
-   Users may mix any of the supported formats, i.e., some files may be 3 column space delimited, and others five columns comma delimited, etc.
-   All files must have.TXT extension.
-
-   Example of ELEVFILES.DAT file:
-
-   C:\\Tracks\\PROJECTS\\FLO2D\\2009\\Goat2009\\dtm1.TXT
-
-   C:\\Tracks\\PROJECTS\\FLO2D\\2009\\Goat2009\\dtm2.TXT
-
-   C:\\Tracks\\PROJECTS\\FLO2D\\2009\\Goat2009\\dtm 5 columns1.TXT
-
-   C:\\Tracks\\PROJECTS\\FLO2D\\2009\\Goat2009\\dtm 5 columns2.TXT
-
-   NOTE: All elevation ASCII files, regardless of their format must have extension .TXT.
+.. note:: All elevation ASCII files, regardless of their format must have extension .TXT.
 
 User instructions
 ^^^^^^^^^^^^^^^^^
