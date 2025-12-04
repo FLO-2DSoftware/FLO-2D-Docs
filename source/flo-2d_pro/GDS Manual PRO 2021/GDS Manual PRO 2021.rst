@@ -288,7 +288,7 @@ For example:
                 NODATA_value -9999
                 2477.259 2480.868 2486.877 2486.877 2487.308 2490.641 2493.438 2493.438
                 2493.438. . .
-<\pre>
+    </pre>
 
 The project area is automatically scaled from the minimum and maximum point coordinates.
 To import the ArcInfo ASCII Grid File (\*.ASC) file click this command in the *File* menu and choose the correct filename in your project
@@ -337,121 +337,125 @@ The working region and *FLO-2D* grid system are automatically scaled from the ex
 
 Use this option to import it to start a *FLO-2D* project when you have a Geo-referenced *HEC-RAS* project file (\*.prj) that includes channel reaches.
 The working region and *FLO-2D* grid system are automatically scaled from the existing HEC\ *-RAS* project file extents.
+
 .. image:: img/GDS030.jpg
+
 3.2.8 New Project/from Existing Levee File (File Menu)
+
 .. image:: img/GDS031.jpg
-   The levee file consists of sequences of polylines points defined by their coordinates and elevation, separated by commas or spaces (with empty
-   newlines between the polylines):
 
-   364440 1186051 4765
+The levee file consists of sequences of polylines points defined by their coordinates and elevation, separated by commas or spaces (with empty
+newlines between the polylines):
 
-   364817 1185937 4750
+.. raw:: html
 
-   365157 1185930 4742
+    <pre>
+    364440 1186051 4765
+    364817 1185937 4750
+    365157 1185930 4742
 
-   363190 1186215 4800
+    363190 1186215 4800
+    363320 1185891 4789
+    363710 1185875 4769
 
-   363320 1185891 4789
-
-   363710 1185875 4769
-
-   367261.53 1185897.38 4705.00
-
-   367274.59 1185885.00 4705.00
-
-   367289.69 1185872.63 4705.00
-
-   367304.13 1185866.50 4705.00
-
-   367322.69 1185866.50 4705.00
-
-   367339.16 1185865.75 4705.00
+    367261.53 1185897.38 4705.00
+    367274.59 1185885.00 4705.00
+    367289.69 1185872.63 4705.00
+    367304.13 1185866.50 4705.00
+    367322.69 1185866.50 4705.00
+    367339.16 1185865.75 4705.00
+    </pre>
 
 3.2.9 Open Existing FLO-2D Project … (File Menu)
 
-   Use this command to load the existing FLO-2D project from the data files.
-   The
+Use this command to load the existing FLO-2D project from the data files.
+The FPLAIN.DAT file is a reference file that the GDS and Mapper++ use to locate the .DAT and .OUT files.
 
-   FPLAIN.DAT file is a reference file that the GDS and Mapper++ use to locate the .DAT and .OUT files.
+3.2.10 Save FLO-2D Files (File Menu)
 
-   3.2.10 Save FLO-2D Files (File Menu)
 .. image:: img/GDS032.jpg
+
 This command is used to save the *FLO-2D* data files for use with the *FLO-2D* model.
 
-   **IMPORTANT NOTE:** *In order to save a project using this command, the Control Variables must be set.*
+.. important:: In order to save a project using this command, the Control Variables must be set.
 
 3.2.11 Run FLO-2D… (File Menu)
-.. image:: img/GDS033.jpg
-   Use this command to run the *FLO-2D* model from the *GDS*.
-   Click Run *FLO-2D,* the following dialog box will be displayed:
-.. image:: img/GDS034.jpg
-   In this dialog box, the control parameters can be selected for a *FLO-2D* simulation.
-   To start a basic overland flood simulation, the user must input the project simulation time (SIMUL) and the output interval (TOUT) in the Time Control
-   and Plot Variables frame.
-   Also check *Detailed Graphics* to display flood graphics during the model run.
-   To start the model, click the *Run FLO2D* button.
-   To save the *FLO-2D* input files (.DAT files) without running the model click the *Save FLO-2D input files* button.
 
-   Check the *Animate* Flow *within GDS* to plot animated flow depth while the model is running.
-   This feature displays the animated flooding over background aerial photos.
-   The *FLO-2D* simulation may be slowed down due to the graphic display of the aerial photo.
-   If only simple animation is required without background images, unselect the check button (as shown above) and the model simulation will run faster.
+.. image:: img/GDS033.jpg
+
+Use this command to run the *FLO-2D* model from the *GDS*.
+Click Run *FLO-2D,* the following dialog box will be displayed:
+
+.. image:: img/GDS034.jpg
+
+In this dialog box, the control parameters can be selected for a *FLO-2D* simulation.
+To start a basic overland flood simulation, the user must input the project simulation time (SIMUL) and the output interval (TOUT) in the Time Control
+and Plot Variables frame.
+Also check *Detailed Graphics* to display flood graphics during the model run.
+To start the model, click the *Run FLO2D* button.
+To save the *FLO-2D* input files (.DAT files) without running the model click the *Save FLO-2D input files* button.
+
+Check the *Animate* Flow *within GDS* to plot animated flow depth while the model is running.
+This feature displays the animated flooding over background aerial photos.
+The *FLO-2D* simulation may be slowed down due to the graphic display of the aerial photo.
+If only simple animation is required without background images, unselect the check button (as shown above) and the model simulation will run faster.
 
 3.2.12 Run Mapper (File Menu)
+
 .. image:: img/GDS035.jpg
-   This command initiates the *Mapper PRO or Mapper++* post-processor programs to create flood post production mapping.
-   Detailed instructions of the *Mapper* programs are presented in the separate manuals.
+
+This command initiates the *Mapper PRO or Mapper++* post-processor programs to create flood post production mapping.
+Detailed instructions of the *Mapper* programs are presented in the separate manuals.
 
 3.2.13 Run PROFILES (File Menu)
 
-   Use this command to run the PROFILES program, used to interpolate channel cross sections and slopes.
-.. image:: img/GDS036.jpg
-   3.2.14 Run RAIN (File Menu)
+Use this command to run the PROFILES program, used to interpolate channel cross sections and slopes.
 
-   Use this command to run the RAIN program.
+.. image:: img/GDS036.jpg
+
+3.2.14 Run RAIN (File Menu)
+
+Use this command to run the RAIN program.
+
 .. image:: img/GDS037.jpg
+
 3.2.15 Create FPLAIN.DAT and CADPTS.DAT Files (File Menu)
+
 .. image:: img/GDS038.jpg
-   This is an optional command to create only FPLAIN.DAT and CADPTS.DAT files required by *FLO-2D*.
-   These two topographic files are then created separately without the other required *FLO-2D* files.
-   This is procedure is appropriate when creating a grid system in segments for later compilation.
+
+This is an optional command to create only FPLAIN.DAT and CADPTS.DAT files required by *FLO-2D*.
+These two topographic files are then created separately without the other required *FLO-2D* files.
+This is procedure is appropriate when creating a grid system in segments for later compilation.
 
 3.2.16 Create LEVEECRESTS.DAT (File Menu)
+
 .. image:: img/GDS039.jpg
-   This file is used to verify levee length data.
-   The command exports levee and WFR stations and calculates a length to the station for the levee segment along a polyline.
 
-   An example of LEVEECRESTS.DAT:
+This file is used to verify levee length data.
+The command exports levee and WFR stations and calculates a length to the station for the levee segment along a polyline.
 
-Node Station Z X Y
+.. raw:: html
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+    <pre>
+        An example of LEVEECRESTS.DAT:
+        Node   Station   Z        X             Y
+        627    00.00     69.638   2226721.750   13565007.000
+        582    35.59     69.957   2226849.000   13565100.000
+        582    66.71     70.142   2226976.250   13565153.000
+        582    97.76     70.194   2227029.000   13565280.000
+    </pre>
 
+First the levee polyline is imported ("File.
+Import Levees...") and the levees are created.
+Then the user selects the command: "File.
+Create LEVEECRESTS.DAT" and the station calculation compares the length of the polyline (Poly_Length) and the total length of the levees
+(Levees_Length) to determine a WRF value to match the lengths:
 
-   * - 627 00.00
-     - 69.638 2226721.750 13565007.000
+.. math::
+   :label:
 
-   * - 582 35.59
-     - 69.957 2226849.000 13565100.000
-
-   * - 582 66.71
-     - 70.142 2226976.250 13565153.000
-
-   * - 582 97.76
-     - 70.194 2227029.000 13565280.000
-
-
-..
-
-   First the levee polyline is imported ("File.
-   Import Levees...") and the levees are created.
-   Then the user selects the command: "File.
-   Create LEVEECRESTS.DAT" and the station calculation compares the length of the polyline (Poly_Length) and the total length of the levees
-   (Levees_Length) to determine a WRF value to match the lengths:
-
-   WRF_value = 1 - Min(1, Poly_Length(i) / Levees_Length(i))
+   \mathrm{WRF\_value}
+   = 1 - \min\!\left( 1,\ \frac{\mathrm{Poly\_Length}(i)}{\mathrm{Levees\_Length}(i)} \right)
 
    The stations (second column in LEVEECRESTS.DAT are then calculated from the distance from one levee center to the next levee center by multiplying it
    by the WRF_value.
