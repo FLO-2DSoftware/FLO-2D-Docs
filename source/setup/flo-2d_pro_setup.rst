@@ -34,6 +34,8 @@ FLO-2D Tech Support Account.
 
 Once the software is downloaded.  Go to Step 2.
 
+.. image:: ../img/Instructions/fullbuild23.png
+
 Step 2: Run the Installer
 ----------------------------
 
