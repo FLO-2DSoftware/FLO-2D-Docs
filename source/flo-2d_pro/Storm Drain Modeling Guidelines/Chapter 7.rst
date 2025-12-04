@@ -1,10 +1,13 @@
 .. vim: syntax=rst
 
-Chapter 7 - Porting SWMM Data Files to a FLO-2D Storm Drain Model
-===========================================================================
+CHAPTER 7
+=========
+
+Porting a SWMM Model to the FLO-2D Storm Drain System
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Introduction
-^^^^^^^^^^^^^^^^
+''''''''''''
 
 This chapter describes the porting procedure to modify and adapt the input data for a ‘standalone’ EPA SWMM Version 5.0.022 to the FLO-2D Pro storm
 drain model.
@@ -17,15 +20,15 @@ Porting SWMM Data Files to a FLO-2D Storm Drain Model
 
 The modifications that must be made to the SWMM.inp file are discussed.
 
-Rain gages
+*Rain gages*
 
 Rain gages are not required in the FLO-2D Storm Drain Model.
 
-Subcatchments
+*Subcatchments*
 
 Subcatchments are not required in the FLO-2D Storm Drain Model.
 
-Inlets
+*Inlets*
 
 The required data for inlets are (Figure 60):
 
@@ -48,7 +51,7 @@ The required data for inlets are (Figure 60):
 *Figure 60.
 SWMM GUI Junction Dialog Box Showing the Required Data*
 
-Outfalls
+*Outfalls*
 
 Outfalls are terminal nodes in the drainage system used to define final downstream boundaries.
 Only a single link can be connected to an outfall node.
@@ -81,7 +84,7 @@ The required data includes (Figure 61):
 *Figure 61.
 SWMM GUI Outfall Dialog Box.*
 
-SWMM.ini
+*SWMM.ini*
 
 This file contains information about the model global settings and output and is saved by the QGIS plug-in and by the SWMM GUI.
 To enable the display of the FLO-2D storm drain results in the SWMM GUI the user must set the following lines as follows:
@@ -92,8 +95,8 @@ Saved=1
 
 Current=1
 
-SWMMFLO.DAT
 
+*SWMMFLO.DAT*
 
 This file contains the inlet geometry as well as the names/numbers that identify the paired inlet with the FLO-2D grid cells.
 It is created from the SWMM.inp file by the QGIS plug-in.

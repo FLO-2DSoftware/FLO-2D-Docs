@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Levee Dam and Wall Breach Guidelines
+LEVEE DAM AND WALL BREACH GUIDELINES
 ======================================
 
 Additional Resources
@@ -1399,10 +1399,10 @@ velocity V but applied a flow depth d variable exponent b that was a function of
 (English units)
 
 ::
-  
+
   where:
 
-      V = flow velocity 
+      V = flow velocity
       d = flow depth
       n = Manning’s friction coefficient
       S\ :sub:`f` = friction slope
@@ -1852,7 +1852,7 @@ Global Levee Data: Line ID, Fragility Curve ID, Probability of Failure (eg.
 
 Example:
 ::
-  
+
   C FS3 0.5
   P 3450 FS1 0.5
   P 3558 FS1 0.9

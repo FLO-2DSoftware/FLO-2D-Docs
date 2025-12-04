@@ -1,19 +1,18 @@
 .. vim: syntax=rst
 
-Chapter 4 - Guidelines Storm Drain Setup
-============================================
+CHAPTER 4
+---------
+
+Guidelines Storm Drain Setup
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To build a FLO-2D project with a storm drain, it is important to create a functional surface model first.
 This includes the following required components:
 
     - Computational domain
-
     - Grid elevation and roughness
-
     - Boundary conditions
-
     - Channels and culverts
-
     - Wall and buildings
 
 Once the surface model is ready, the storm drain can be added to the system using the FLO-2D Plugin.
@@ -26,17 +25,13 @@ Specific instructions for creating a storm drain in a FLO-2D urban environment a
 
     - A storm drain inlet/outfall should not be assigned to a completely blocked cell (ARF = 1); A reasonable amount of surface area should be available for
       the storm drain feature to interact with the surface water.
-
     - Higher roughness values can be assigned to floodplain elements with storm drain features (inlet or outfalls) to represent the storm drain flow
       disturbance around the inlet or outfall.
       This would help surface routing numerical stability.
-
     - Inlet rim elevations should match the floodplain elevation.
       For an inlet rating table, the inlet discharge is zero if the floodplain water surface elevation is less than the inlet rim elevation.
-
     - Levees and walls may isolate a storm drain feature in the model resulting in oscillating storm drain discharge.
       A review of the inlet/outfall location may be required.
-
     - Storm drain features should not be assigned to surface water inflow or outflow elements.
       There is an error message generated for this conflict.
 
@@ -360,15 +355,12 @@ After initial set up of the urban project, the following issues related to the s
     - Inlet locations:
 
       - Inlets must be inside the FLO-2D computational domain;
-
       - Inlets cannot be assigned to the interior channel elements;
-
       - Inlets that pick-up water from the street or overland should not be assigned to the channel left bank elements.
 
     - Inlet elevations:
 
       - Channels discharging to a storm drain inlet should have a invert elevation that matches the inlet invert elevation;
-
       - In most instances, the inlet should be set up as a vertical inlet in the SWMMFLO.DAT file using the Feature switch.
 
 Storm drain inlets should not be assigned to an interior channel element.

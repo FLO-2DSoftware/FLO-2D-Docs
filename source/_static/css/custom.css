@@ -1,12 +1,3 @@
-
-/* Custom styles for FLO-2D Documentation */
-/* .wy-nav-content {
-    max-width: 1200px;
-} */
-
-
-
-
 /* Custom styles for FLO-2D Documentation */
 .wy-nav-content {
     max-width: 1200px;
@@ -111,7 +102,6 @@ details.sd-dropdown summary svg {
     color: #444;
 }
 
-
 /* Changes made on 19th July 2025 to allow toggling methods for Green-Ampt Infiltration */
 
 /* Default closed arrow for all dropdowns */
@@ -134,12 +124,8 @@ details.sd-dropdown summary[aria-expanded="true"]::before {
     content: "▼";
 }
 
-
 /* 19/07/2025 image-text spacing */
 /* Add space after images to separate from following text */
 img {
     margin-bottom: 1em;
 }
-
-
-

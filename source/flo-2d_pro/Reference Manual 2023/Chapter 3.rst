@@ -1,9 +1,9 @@
 .. vim: syntax=rst
 
-Chapter 3. FLO-2D MODEL SYSTEM
+CHAPTER 3. FLO-2D MODEL SYSTEM
 ==============================
 
-3.1 Assumptions and Special Conditions
+Assumptions and Special Conditions
 --------------------------------------
 
    Conceptualization
@@ -102,7 +102,7 @@ This is the reason that FEMA FIS river studies typically do not require sediment
 Simulating a mobile bed can be more important for smaller floods, for alluvial fan flows and where channel avulsion or sediment deposition might
 change the flow path.
 
-3.2 Grid Element Size
+Grid Element Size
 ---------------------
 
 The FLO-2D model uses a square grid element to discretize the project domain.
@@ -295,7 +295,7 @@ The area of inundation is generally controlled by the volume of the inflow hydro
 A coarser grid system makes the edges more jagged, but the overall area of inundation is the about same.
 It the grid cell size is reduced by half the number of grid elements in model is quadrupled.
 
-3.3 Roughness Parameter Variability
+Roughness Parameter Variability
 -----------------------------------
 
 The constitutive fluid motion equations in the FLO-2D are the continuity equation and the momentum equation:
@@ -719,7 +719,7 @@ The components having the greatest effect on the area of inundation are as follo
    1.05.
    Mudflow should be simulated by assigning concentrations by volume to the inflow hydrographs and the XCONC factor should not be used.
 
-3.4 Inflow and Outflow Control
+Inflow and Outflow Control
 ------------------------------
 
 A discretized flood hydrograph from an upstream basin can be inflow either to the floodplain, channel, or both.
@@ -985,7 +985,7 @@ This typically occurs for numerical hydraulic models using a critical flow bound
 To avoid inconsistent results, do not assign double rows or columns of outflow nodes and only allow inflow from one side of the outflow node.
 Outflow nodes can also have either time-stage control or stage-discharge inflow boundary conditions.
 
-3.5 Floodplain Cross-sections
+Floodplain Cross-sections
 -----------------------------
 
 A floodplain cross-section analysis can be conducted by specifying grid elements in a cross-section in the FPXSEC.DAT file.
@@ -995,7 +995,7 @@ Both the flood hydrograph and flow hydraulics can be analyzed at cross-sections.
 The average cross-section hydraulics as well as the individual grid element hydraulics in the cross-section are summarized in cross-section output
 files.
 
-3.7 FLO-2D Plugin for QGIS
+FLO-2D Plugin for QGIS
 --------------------------
 
 QGIS is an open-source geographical information system that is free to all users.
@@ -1056,7 +1056,7 @@ all generated from this area.
 *Figure 27.
 Control Panel for Various FLO-2D Components.*
 
-3.8 Graphical Output Options
+Graphical Output Options
 ----------------------------
 
 A graphical display of the flow depths can be viewed on the screen during a FLO-2D simulation to visualize the progression of the floodwave over the
@@ -1133,7 +1133,7 @@ The MAPPER Pro features and functions are described in its own manual.
 *Figure 33.
 MAPPER PRO Plot of Maximum Depths.*
 
-3.9 Data Output Options
+Data Output Options
 -----------------------
 
 The FLO-2D model has several output files to help the user organize the results.

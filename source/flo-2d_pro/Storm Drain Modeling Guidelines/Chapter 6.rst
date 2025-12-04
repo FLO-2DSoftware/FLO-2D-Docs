@@ -1,10 +1,13 @@
 .. vim: syntax=rst
 
-Chapter 6 - Reviewing Storm Drain Model Results
-=================================================
+CHAPTER 6
+==========
+
+Reviewing Storm Drain Model Results
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Introduction
-^^^^^^^^^^^^^^^
+''''''''''''
 
 After a FLO-2D storm drain model is complete, the results can be reviewed with both the FLO2D QGIS program and the SWMM GUI.
 The QGIS displays the storm drain inflow and return flow hydrographs.

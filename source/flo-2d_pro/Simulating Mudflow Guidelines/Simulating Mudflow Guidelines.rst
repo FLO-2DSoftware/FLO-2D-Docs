@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Simulating Mudflow Guidelines
+SIMULATING MUDFLOW GUIDELINES
 ==============================
 
 Introduction
@@ -118,26 +118,42 @@ C\ :sub:`v` = volume of the sediment/(volume of water plus sediment)
 
 and C\ :sub:`v` is related to the sediment concentration by weight C\ :sub:`w` by:
 
-C\ :sub:`v` = C\ :sub:`w` γ/{γ\ :sub:`s` - C\ :sub:`w`\ (γ\ :sub:`s` - γ)}
+.. math::
+    :label:
+
+    C_v = C_w γ/{γ_s - C_w (γ_s - γ)}
 
 where γ = specific weight of the water and γ\ :sub:`s` = specific weight of the sediment.
 The sediment concentration can also be expressed in parts per million (ppm) by dividing the concentration by weight C\ :sub:`w` by 10\ :sup:`6`.
 The specific weight of the mudflow mixture γ\ :sub:`m` is a function of the sediment concentration by volume:
 
-γm = γ + Cv (γs - γ)
+.. math::
+    :label:
+
+    γ_m = γ + C_v (γ_s - γ)
 
 Similarly the density of the mudflow mixture ρm is given by:
 
-ρm = ρ + Cv (ρs - ρ) and
+.. math::
+    :label:
 
-ρ\ :sub:`m` = γ\ :sub:`m` /g
+    ρ_m = ρ + C_v (ρ_s - ρ)
+
+and
+
+.. math::
+    :label:
+
+    ρ_m = γ_m /g
 
 where g is gravitational acceleration.
 Finally, the volume of the total mixture of water and sediment in a mudflow can be determined by multiplying the water volume by the bulking factor.
 The bulking factor is simply:
 
-BF = 1./(1.
-- C\ :sub:`v`)
+.. math::
+    :label:
+
+    BF = 1./(1.- C_v)
 
 It is apparent that the bulking factor is 2.0 for a sediment concentration by volume of 50%.
 Even small volumes of sediment in a flood increase the total flood volume.
@@ -576,9 +592,7 @@ Where resources are available, it is recommended that viscosity and yield stress
 For most flood and mudflow hazard delineation projects, it is outside the scope of work or budget to design, fabricate and calibrate a mudflow
 viscometer.
 Commercially available viscometers that are designed to accommodate asphalt samples with low speeds could be used.
-Typically these viscometers cost in the range from $4,000 to $6,000 US (e.g. Brookfield
-
-AMETEK…see website: *https://www.brookfieldengineering.com/products/viscometers*).
+Typically these viscometers cost in the range from $4,000 to $6,000 US (e.g. Brookfield AMETEK…see website: *https://www.brookfieldengineering.com/products/viscometers*).
 It is necessary to collect an undisturbed mudflow sample deposit and dry and sieve it to extract the fluid matrix.
 
 In the absence of in-situ sample data, reasonable assumptions must be made to estimate the rheological properties as a function of sediment
@@ -590,6 +604,7 @@ The variability of this data is primarily a function of the type and quantity of
 If rheological laboratory investigations are performed for a project site, the data should fall within the banded range given the diverse range of
 data collected worldwide.
 If a subjective judgment to select a set of rheological relationships is necessary, one of the following approach is recommended.
+
 A. If mudflow deposit field data of the fluid matrix is collected, this analysis is suggested:
 
     1. Observe the field post event conditions including deposits and available photos.

@@ -1,7 +1,10 @@
 .. vim: syntax=rst
 
-Chapter 2 - FLO-2D Storm Drain Features
-==========================================
+CHAPTER 2
+==========
+
+FLO-2D Storm Drain Features
+-----------------------------
 
 Overview of Inlets and Outfalls
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -107,7 +110,6 @@ The following are the input parameters for a Type 1 inlet (Figure 28):
 The discharge is based on the flow depth in the F    LO-2D grid cell and the inlet geometry:
 
     - The inlet opening height (h), referred to as “Height” column 7 of the SWMMFLO.DAT.
-
     - The inlet opening length (L) specified as “Length,” column 5 of the SWMMFLO.DAT.
 
 The discharge is calculated using the weir and orifice equations as follows:
@@ -128,11 +130,8 @@ Type 2 - Curb Opening Inlet with Sag
 The following are the input parameters for a Type 2 inlet (Figure 29):
 
     - Weir coefficient: 2.30 (1.25 metric)
-
     - Curb opening length (L)
-
     - Curb opening height (h)
-
     - Curb opening sag width (W)
 
 .. image:: img/Chapter2/Chapte019.jpg
@@ -144,7 +143,10 @@ Conservatively, the weir or orifice discharge, whichever is smaller, is used for
 The inlet elevation is assumed to be equivalent to the grid element elevation.
 For weir flow (Johnson and Fred, 1984):
 
-   Q\ :sub:`w` = C(L + 1.8W)H\ :sup:`m`
+    .. math::
+        :label:
+
+        Q_w = C(L + 1.8W)H^m
 
 where:
 
@@ -158,9 +160,19 @@ where:
 
 Orifice flow can have two potential sag inlet conditions (Johnson and Fred, 1984):
 
-   If h ≥ H then Q\ :sub:`o` = C\ :sub:`d`\ A√2gH
+   If h ≥ H then:
 
-   If h < H then Q\ :sub:`o` = C\ :sub:`d` A√2g (H −h/2)
+    .. math::
+        :label:
+
+        Q_o = C_d A \sqrt{2 g H}
+
+   If h < H then:
+
+    .. math::
+        :label:
+
+        Q_o = C_d\ A \sqrt{\left(2g(H − \frac{h}{2}\right)}
 
 where:
 
@@ -190,11 +202,8 @@ Type 3 - Grate (Gutter) Inlet with/without Sag
 The following are the input parameters for a Type 3 inlet (Figure 30):
 
     - Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)
-
     - Grate perimeter (not including curb side)
-
     - Grate open area
-
     - Grate sag height (zero for at grade)
 
 *Note: Orifice flow coefficient = 0.67 (hardcoded) for all cases.*
@@ -209,9 +218,19 @@ The smaller of two discharges (weir or orifice) calculated for a grate (gutter) 
 
 *Weir Flow:*
 
-   If H ≤ h then: Q\ :sub:`w` = CPH\ :sup:`m`
+If H ≤ h then:
 
-If H > h then: Q\ :sub:`w` = CP (H + h/2)\ :sup:`m`
+    .. math::
+        :label:
+
+        Q_w = CPH^m
+
+If H > h then:
+
+    .. math::
+        :label:
+
+        Q_w = CP \left(H + \frac{h}{2}\right)^m
 
 where:
 
@@ -219,15 +238,29 @@ where:
 
     C = weir coefficient, ‘Inlet Weir Coeff.’ field in SWMMFLO.DAT
 
-    P = Grate perimeter ‘Perimeter’ field in SWMMFLO.DAT H = FLO-2D inlet element flow depth m = 1.5 horizontal weir exponent (hardcoded).
+    P = Grate perimeter ‘Perimeter’ field in SWMMFLO.DAT
+
+    H = FLO-2D inlet element flow depth
+
+    m = 1.5 horizontal weir exponent (hardcoded).
 
     h = sag height from the ‘Sag Height’ field of SWMMFLO.DAT.
 
 *Orifice Flow:*
 
-If H ≤ h then: Q\ :sub:`o` = C\ :sub:`d`\ A√2gH
+If H ≤ h then:
 
-If H > h then: Q\ :sub:`o` = C\ :sub:`d` A√2g (H + h/2)
+    .. math::
+        :label:
+
+        Q_o = C_d\ A \sqrt{2gH}
+
+If H > h then:
+
+    .. math::
+        :label:
+
+        Q_o = C_d A \sqrt{2g \left(H + \frac{h}{2}\right)}
 
 where:
 
@@ -286,11 +319,8 @@ Popped Manhole Cover (source: istock)*
 The required manhole input parameters are:
 
     - Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)
-
     - Manhole perimeter (manhole cover shapes can vary)
-
     - Manhole flow area (ft\ :sup:`2` or m\ :sup:`2`)
-
     - Surcharge depth (ft or m).
 
 A manhole is assumed to be level without sag and column 7 in the SWMMFLO.DAT is used to define the surcharge depth (ft or m).
@@ -308,9 +338,13 @@ The water depth (head) that represents the manhole cover weight can be estimated
 
 where:
 
-    d\ :sub:`s` = surcharge depth that pops the manhole cover w\ :sub:`m` = weight of the manhole cover
+    d\ :sub:`s` = surcharge depth that pops the manhole cover
 
-    A\ :sub:`m` = area of the circular manhole opening (πD\ :sup:`2`/4) γ\ :sub:`w` = clear water density 62.4 lb/ft\ :sup:`3` (1000 kg/m\ :sup:`3`)
+    w\ :sub:`m` = weight of the manhole cover
+
+    A\ :sub:`m` = area of the circular manhole opening (πD\ :sup:`2`/4)
+
+    γ\ :sub:`w` = clear water density 62.4 lb/ft\ :sup:`3` (1000 kg/m\ :sup:`3`)
 
 .. image:: img/Chapter2/Chapte013.jpg
 
@@ -324,17 +358,14 @@ Assuming a diameter of 2 ft (0.61 m) and a weight of 100 pounds, what surcharge 
 Solution:
 
 .. math::
-   :label:
 
    w_m = 100 lb (45.4 kg)
 
 .. math::
-   :label:
 
-   A_m = frac\ ({π2ft^2}{4}) = 3.14 ft^2(0.29 m^2)
+   A_m = (\frac{π(2ft)^2}{4}) = 3.14 ft^2(0.29 m^2)
 
 .. math::
-   :label:
 
    d_s = \frac {w_m} {A_m γ_w} = \frac {100lb}{3.14ft^2 \ 62.4lb/ft^3} ≈ \frac {45.4kg}{0.29m^2 \ 1000kg/m^3} ≈ 0.5 ft (0.16 m)
 
@@ -347,9 +378,8 @@ Table 4 presents some suggested surcharge depths.
    :widths: 50 50
    :header-rows: 0
 
-
-   * - Manhole Cover Representative Weight
-     - Surcharge Depth (ft)  (assuming 2 ft diameter)
+   * - **Manhole Cover Representative Weight**
+     - **Surcharge Depth (ft) (assuming 2 ft diameter)**
 
    * - 85 to 300 lb manhole cover unbolted
      - 0.4 to 1.5

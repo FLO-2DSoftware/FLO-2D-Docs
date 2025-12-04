@@ -1,7 +1,10 @@
 .. vim: syntax=rst
 
-Chapter 3 - FLO-2D Storm Drain Data Files
-==========================================
+CHAPTER 3
+==========
+
+FLO-2D Storm Drain Data Files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Input and Output File - General
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -16,12 +19,11 @@ The storm drain input data files can be created using any storm water user inter
 
 The following folders contain the storm drain model system:
 
-    - FLO-2D PRO folder in C:\\Program Files (x86)\\FLO-2D Pro.
+    - FLO-2D PRO folder in C:\\Program Files (x86).
       All executable program files for the FLO-2D model including pre- and post-processing and FLOPRO.exe are in this folder.
-    - FLO-2D PRO documentation folder in C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation.
+    - FLO-2D PRO documentation folder in C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation (My Documents).
       Manuals, Handout Documents, PowerPoint Presentations, and tutorials are in this directory.
-      
-    - Online documentation site: https://documentation.flo-2d.com/
+      Online documentation site: https://documentation.flo-2d.com/
 
 Data Input Files
 ^^^^^^^^^^^^^^^^
@@ -41,7 +43,7 @@ CONT.DAT
 
 This file contains the simulation control parameters:
 
-    - Set SWMM = 1 to initiate the storm drain component, review the DATA INPUT MANUAL CONT.DAT file for more information about this switch.
+    - Set SWMM = 1 to initiate the storm drain component, review the DATA INPUT MANUAL.DAT file for more information about this switch.
     - For no storm drain simulation, SWMM = 0 (default).
 
 SWMM.inp
