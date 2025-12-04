@@ -328,8 +328,9 @@ When written in terms of the shear rate (dv/dy) the following quadratic rheologi
 .. math::
    :label:
 
-   \tau = 2\,\tau_y\,\eta \left( \frac{dv}{dy} \right)
-          + C \left( \frac{dv}{dy} \right)
+   \tau = \tau_y
+          + \eta \left( \frac{dv}{dy} \right)
+          + C \left( \frac{dv}{dy} \right)^{2}
 
 where
 
@@ -343,7 +344,7 @@ and
 .. math::
    :label:
 
-   C = l_m + f(C_s, C_v)\, d^{2}
+   C = \rho_m\, l^{2} + f(\rho_m, C_v)\, d_s^{2}
 
 In these equations, η is the dynamic viscosity; τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τmc = pstanφ depends on the
 intergranular pressure ps and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which depends on the mass
@@ -412,7 +413,7 @@ following form as a dimensionless slope:
 .. math::
    :label:
 
-   S_f = S_y + S_v + S_t + S_d
+   S_f = S_y + S_v + S_{td}
 
 where the total friction slope S\ :sub:`f` is the sum of the yield slope S\ :sub:`y`, the viscous slope S\ :sub:`v`, and the turbulent-dispersive
 slope S\ :sub:`td`.
