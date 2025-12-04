@@ -482,7 +482,7 @@ Import images that have been created in following formats:
 
 .. raw:: html
 
-   <table style="border-collapse: collapse; width: 100%;">
+   <table style="border-collapse: collapse; width: 100%; border:1px solid #000;">
      <thead>
        <tr>
          <th style="border:1px solid #000; padding:4px;">File Type</th>
@@ -490,135 +490,210 @@ Import images that have been created in following formats:
          <th style="border:1px solid #000; padding:4px;">Common Extensions</th>
        </tr>
      </thead>
+     <tbody>
+       <tr>
+         <td style="padding:4px;">ARC/INFO Grid</td>
+         <td style="padding:4px;">ArcInfo GRID files</td>
+         <td style="padding:4px;">*.asc, *.prj</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">ADRG</td>
+         <td style="padding:4px;">Digitized Raster Graphic</td>
+         <td style="padding:4px;">*.img, *.ovr, *.arc</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">ASRP/USRP</td>
+         <td style="padding:4px;">DIGEST ASRP, a NATO Military format</td>
+         <td style="padding:4px;">*.img, *.ovr, *</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">BIL</td>
+         <td style="padding:4px;">Band interleaved by line multiband images</td>
+         <td style="padding:4px;">*.bil</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">BIP</td>
+         <td style="padding:4px;">Band interleaved by pixel multiband images</td>
+         <td style="padding:4px;">*.bip</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">BMP</td>
+         <td style="padding:4px;">Windows bitmap</td>
+         <td style="padding:4px;">*.bmp, *.dib</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">BSQ</td>
+         <td style="padding:4px;">Band sequential multiband images</td>
+         <td style="padding:4px;">*.bsq</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">CADRG</td>
+         <td style="padding:4px;">Compressed Arc Digitized Raster Graphics</td>
+         <td style="padding:4px;">*.*, *</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">CIB</td>
+         <td style="padding:4px;">Controlled Image Base</td>
+         <td style="padding:4px;">*.tif</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">CRP</td>
+         <td style="padding:4px;">Compressed Raster Product (Military)</td>
+         <td style="padding:4px;">*.gis, *.lan</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">ERDAS/IMAGINE</td>
+         <td style="padding:4px;">TIFF with a Geo header</td>
+         <td style="padding:4px;">*.tif, *.tfw, *.tiff</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">GeoTIFF</td>
+         <td style="padding:4px;">TIFF with geographic tags</td>
+         <td style="padding:4px;">*.tif</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">GIF</td>
+         <td style="padding:4px;">Graphics Interchange Format</td>
+         <td style="padding:4px;">*.gif</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">Image Catalogs</td>
+         <td style="padding:4px;">Image catalog (collection of images)</td>
+         <td style="padding:4px;">*.*</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">IMPELL RLC</td>
+         <td style="padding:4px;">Run-length compressed files</td>
+         <td style="padding:4px;">*.rlc</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">JPEG</td>
+         <td style="padding:4px;">JPEG</td>
+         <td style="padding:4px;">*.jpg, *.jpeg</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">MrSID</td>
+         <td style="padding:4px;">Multi-Resolution Seamless Image Database</td>
+         <td style="padding:4px;">*.sid</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">NITF</td>
+         <td style="padding:4px;">National Imagery Transfer Format</td>
+         <td style="padding:4px;">*.ntf</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">Sun raster file</td>
+         <td style="padding:4px;">Sun raster image</td>
+         <td style="padding:4px;">*.rs, *.ras, *.sun</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">SVF</td>
+         <td style="padding:4px;">Single Variable File</td>
+         <td style="padding:4px;">*.svf</td>
+       </tr>
+       <tr>
+         <td style="padding:4px;">TIFF</td>
+         <td style="padding:4px;">Tagged Image File Format</td>
+         <td style="padding:4px;">*.tif, *.tiff</td>
+       </tr>
+     </tbody>
+   </table>
+
+To correctly place the image or photo in a geo-referenced frame, it must be accompanied by a
+world file that contains geo-reference data. This world file has an extension depending on the
+image and file type and according to the table below. For example, an image with a file name
+myimage.bmp, must have a world file associated with it named myimage.bmpw or
+myimage.bpw
+
+.. raw:: html
+
+   <table style="border-collapse: collapse; width: 60%;">
+     <thead>
+       <tr>
+         <th style="border:1px solid #000; padding:4px;">File Extension</th>
+         <th style="border:1px solid #000; padding:4px;">World File Extension</th>
+       </tr>
+     </thead>
 
      <tbody>
        <tr>
-         <td style="border:1px solid #000; padding:4px;">ARC/INFO Grid</td>
-         <td style="border:1px solid #000; padding:4px;">ArcInfo GRID files</td>
-         <td style="border:1px solid #000; padding:4px;">*.asc, *.prj</td>
+         <td style="padding:4px;">bmp</td>
+         <td style="padding:4px;">bmpw or bpw</td>
        </tr>
-
        <tr>
-         <td style="border:1px solid #000; padding:4px;">ADRG</td>
-         <td style="border:1px solid #000; padding:4px;">Digitized Raster Graphic</td>
-         <td style="border:1px solid #000; padding:4px;">*.img, *.ovr, *.arc</td>
+         <td style="padding:4px;">jpg; jpeg</td>
+         <td style="padding:4px;">jpgw or jgw</td>
        </tr>
-
        <tr>
-         <td style="border:1px solid #000; padding:4px;">ASRP/USRP</td>
-         <td style="border:1px solid #000; padding:4px;">DIGEST ASRP, a NATO Military format</td>
-         <td style="border:1px solid #000; padding:4px;">*.img, *.ovr, *</td>
+         <td style="padding:4px;">tif; tff; tiff</td>
+         <td style="padding:4px;">tfw</td>
        </tr>
-
        <tr>
-         <td style="border:1px solid #000; padding:4px;">BIL</td>
-         <td style="border:1px solid #000; padding:4px;">Band interleaved by line multiband images</td>
-         <td style="border:1px solid #000; padding:4px;">*.bil</td>
+         <td style="padding:4px;">gis</td>
+         <td style="padding:4px;">gsw</td>
        </tr>
-
        <tr>
-         <td style="border:1px solid #000; padding:4px;">BIP</td>
-         <td style="border:1px solid #000; padding:4px;">Band interleaved by pixel multiband images</td>
-         <td style="border:1px solid #000; padding:4px;">*.bip</td>
+         <td style="padding:4px;">lan</td>
+         <td style="padding:4px;">lnw</td>
        </tr>
-
        <tr>
-         <td style="border:1px solid #000; padding:4px;">BMP</td>
-         <td style="border:1px solid #000; padding:4px;">Windows bitmap</td>
-         <td style="border:1px solid #000; padding:4px;">*.bmp, *.dib</td>
+         <td style="padding:4px;">bil</td>
+         <td style="padding:4px;">blw</td>
        </tr>
-
        <tr>
-         <td style="border:1px solid #000; padding:4px;">BSQ</td>
-         <td style="border:1px solid #000; padding:4px;">Band sequential multiband images</td>
-         <td style="border:1px solid #000; padding:4px;">*.bsq</td>
+         <td style="padding:4px;">bip</td>
+         <td style="padding:4px;">bpw</td>
        </tr>
-
        <tr>
-         <td style="border:1px solid #000; padding:4px;">CADRG</td>
-         <td style="border:1px solid #000; padding:4px;">Compressed Arc Digitized Raster Graphics</td>
-         <td style="border:1px solid #000; padding:4px;">*.*, *</td>
+         <td style="padding:4px;">bsq</td>
+         <td style="padding:4px;">bqw</td>
        </tr>
-
        <tr>
-         <td style="border:1px solid #000; padding:4px;">CIB</td>
-         <td style="border:1px solid #000; padding:4px;">Controlled Image Base</td>
-         <td style="border:1px solid #000; padding:4px;">*.tif</td>
+         <td style="padding:4px;">sid</td>
+         <td style="padding:4px;">sdw</td>
        </tr>
-
        <tr>
-         <td style="border:1px solid #000; padding:4px;">CRP</td>
-         <td style="border:1px solid #000; padding:4px;">Compressed Raster Product (Military)</td>
-         <td style="border:1px solid #000; padding:4px;">*.gis, *.lan</td>
+         <td style="padding:4px;">sun</td>
+         <td style="padding:4px;">snw</td>
        </tr>
-
        <tr>
-         <td style="border:1px solid #000; padding:4px;">ERDAS/IMAGINE</td>
-         <td style="border:1px solid #000; padding:4px;">TIFF with a Geo header</td>
-         <td style="border:1px solid #000; padding:4px;">*.tif, *.tfw, *.tiff</td>
+         <td style="padding:4px;">rs; ras</td>
+         <td style="padding:4px;">rsw</td>
        </tr>
-
        <tr>
-         <td style="border:1px solid #000; padding:4px;">GIF</td>
-         <td style="border:1px solid #000; padding:4px;">Graphics Interchange Format</td>
-         <td style="border:1px solid #000; padding:4px;">*.gif</td>
+         <td style="padding:4px;">rlc</td>
+         <td style="padding:4px;">rcw</td>
        </tr>
-
-       <tr>
-         <td style="border:1px solid #000; padding:4px;">Image Catalogs</td>
-         <td style="border:1px solid #000; padding:4px;">Image catalog (collection of images)</td>
-         <td style="border:1px solid #000; padding:4px;">*.*</td>
-       </tr>
-
-       <tr>
-         <td style="border:1px solid #000; padding:4px;">IMPELL RLC</td>
-         <td style="border:1px solid #000; padding:4px;">Run-length compressed files</td>
-         <td style="border:1px solid #000; padding:4px;">*.rlc</td>
-       </tr>
-
-       <tr>
-         <td style="border:1px solid #000; padding:4px;">JPEG</td>
-         <td style="border:1px solid #000; padding:4px;">JPEG</td>
-         <td style="border:1px solid #000; padding:4px;">*.jpg, *.jpeg</td>
-       </tr>
-
-       <tr>
-         <td style="border:1px solid #000; padding:4px;">MrSID</td>
-         <td style="border:1px solid #000; padding:4px;">Multi-Resolution Seamless Image Database</td>
-         <td style="border:1px solid #000; padding:4px;">*.sid</td>
-       </tr>
-
-       <tr>
-         <td style="border:1px solid #000; padding:4px;">NITF</td>
-         <td style="border:1px solid #000; padding:4px;">National Imagery Transfer Format</td>
-         <td style="border:1px solid #000; padding:4px;">*.ntf</td>
-       </tr>
-
-       <tr>
-         <td style="border:1px solid #000; padding:4px;">Sun raster file</td>
-         <td style="border:1px solid #000; padding:4px;">Sun raster image</td>
-         <td style="border:1px solid #000; padding:4px;">*.rs, *.ras, *.sun</td>
-       </tr>
-
-       <tr>
-         <td style="border:1px solid #000; padding:4px;">SVF</td>
-         <td style="border:1px solid #000; padding:4px;">Single Variable File</td>
-         <td style="border:1px solid #000; padding:4px;">*.svf</td>
-       </tr>
-
-       <tr>
-         <td style="border:1px solid #000; padding:4px;">TIFF</td>
-         <td style="border:1px solid #000; padding:4px;">Tagged Image File Format</td>
-         <td style="border:1px solid #000; padding:4px;">*.tif, *.tiff</td>
-       </tr>
-
      </tbody>
    </table>
 
 The world file has the following general format:
 
-Line 1: This line has the dimension of a pixel in map units in the x-direction.
-Lines 2, 3: These lines are the rotation terms (Not used in this release).
+.. raw:: html
+
+    <pre>
+    Line 1:      This line has the dimension of a pixel in map units in the x-direction.
+    Lines 2, 3:  These lines are the rotation terms (Not used in this release).
+    Line 4:      This value is always negative because the image space is top-down whereas the
+                 map space is bottom-up.
+    Line 5:      This line has the translation term; x-Origin (x-coordinate of the center of the
+                 upper left pixel).
+    Line 6:      This line has the translation term; y-Origin (y-coordinate of the center of the
+                 upper left pixel).
+    </pre>
+
+An example world file format is:
+
+.. raw:: html
+
+    <pre>
+    20
+    0
+    0
+    -20
+    637510
+    1032490
+    </pre>
 
 .. raw:: html
 
@@ -683,6 +758,7 @@ Lines 2, 3: These lines are the rotation terms (Not used in this release).
    </table>
 
 .. image:: img/GDS043.jpg
+
 This command allows importing of several image files contained in a given subdirectory and part of an image catalog.
 First draw a polygon on the working region and then select an image catalog file.
 .. image:: img/GDS044.jpg
