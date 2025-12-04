@@ -1697,163 +1697,214 @@ All files must have.TXT extension.
 User instructions
 ^^^^^^^^^^^^^^^^^
 
-   It is required that the user creates a FLO-2D grid and computational boundary prior to interpolation.
-   To interpolate use the Interpolate from Multiple Elevation Files… from the GDS Grid menu.
+It is required that the user creates a FLO-2D grid and computational boundary prior to interpolation.
+To interpolate use the Interpolate from Multiple Elevation Files… from the GDS Grid menu.
+
 .. image:: img/GDS142.jpg
-   That command will bring up a file selection dialog:
+
+That command will bring up a file selection dialog:
+
 .. image:: img/GDS143.jpg
-   There are two options:
+There are two options:
 
-1. Users can select an ELEVFILES.DAT file, if available, and import the list of elevation files in the format discussed in the previous section or
+    1. Users can select an ELEVFILES.DAT file, if available, and import the list of elevation files in the format discussed in the previous section or
+    2. Users can select the actual elevation data files.
+       It is necessary to change the default file extension to .TXT to select a group of ASCII elevation files.
 
-2. Users can select the actual elevation data files.
-   It is necessary to change the default file extension to .TXT to select a group of ASCII elevation files.
+For either option, clicking Open, displays the interpolation dialog box:
 
-..
-
-   For either option, clicking Open, displays the interpolation dialog box:
 .. image:: img/GDS144.jpg
-   There are two LiDAR interpolation options to choose from.
-   The default is *Use all available elevation points*, which will compute the interpolated elevations using all points within each grid element.
-   Selecting the *Use this % of elevation points* will calculate the elevation using the assigned subset of points on each grid element.
-   The % is a global value based on the average number of elevation points per grid element.
+
+There are two LiDAR interpolation options to choose from.
+The default is *Use all available elevation points*, which will compute the interpolated elevations using all points within each grid element.
+Selecting the *Use this % of elevation points* will calculate the elevation using the assigned subset of points on each grid element.
+The % is a global value based on the average number of elevation points per grid element.
 
 Interpolation method
 ^^^^^^^^^^^^^^^^^^^^
 
-   If the user selects Use all available elevation points option, the GDS will compute the grid element elevation using the elevation average of all
-   points on the element.
-   The GDS does not import or display the elevation points, but instead reads one point at a time, determines the grid element where the point is located
-   and computes the average elevation.
-   A similar procedure is followed if the user selects a subset of points but GDS will calculate the elevation using the indicated percentage of points
-   on the element.
+If the user selects Use all available elevation points option, the GDS will compute the grid element elevation using the elevation average of all
+points on the element.
+The GDS does not import or display the elevation points, but instead reads one point at a time, determines the grid element where the point is located
+and computes the average elevation.
+A similar procedure is followed if the user selects a subset of points but GDS will calculate the elevation using the indicated percentage of points
+on the element.
 
-   If no elevation points are found on an element or if the number of points is less than the specified percentage, a tag value of -9999 will be assigned
-   to that element.
-   Also the element will be highlighted in black as shown:
+If no elevation points are found on an element or if the number of points is less than the specified percentage, a tag value of -9999 will be assigned
+to that element.
+Also the element will be highlighted in black as shown:
+
 .. image:: img/GDS145.jpg
-   If there is at least one element without a calculated elevation, a dialog box will be displayed presenting three options to assign elevations to those
-   grid elements:
+
+If there is at least one element without a calculated elevation, a dialog box will be displayed presenting three options to assign elevations to those
+grid elements:
+
 .. image:: img/GDS146.jpg
-   The Interpolate from Nearest Grid Elements option will compute an elevation by assessing the elevation data in the neighboring 8 grid elements and
-   averaging the point elevations (-9999 values are not used).
-   The algorithm initiates from the periphery of a cluster of non-interpolated grid elements and proceeds to the interior of the cluster ensuring that at
-   the end of the procedure all grid elements will be assigned an elevation.
 
-   The user can assign a value to all -9999 grid elements using Assign this Value to all Noninterpolated Grid Elements.
-   The third option will leave all un-interpolated elements with the 9999 tag.
-   The user will need to double click and assign a desired elevation for each one.
+The Interpolate from Nearest Grid Elements option will compute an elevation by assessing the elevation data in the neighboring 8 grid elements and
+averaging the point elevations (-9999 values are not used).
+The algorithm initiates from the periphery of a cluster of non-interpolated grid elements and proceeds to the interior of the cluster ensuring that at
+the end of the procedure all grid elements will be assigned an elevation.
 
-   Important NOTE: *The GDS will initiate a FLO-2D model simulation if there are elements with the -9999 tag.
-   The new Non-Interpolated Grid Elements*
+The user can assign a value to all -9999 grid elements using Assign this Value to all Noninterpolated Grid Elements.
+The third option will leave all un-interpolated elements with the 9999 tag.
+The user will need to double click and assign a desired elevation for each one.
 
-   *command on the View menu turns on or off the black unassigned grid elements.*
+.. important:: The GDS will initiate a FLO-2D model simulation if there are elements with the -9999 tag.
+   The new Non-Interpolated Grid Elements command on the View menu turns on or off the black unassigned grid elements.*
 
-   3.5.23 Compute Green-Ampt Parameters (Grid Menu)
+3.5.23 Compute Green-Ampt Parameters (Grid Menu)
+
 .. image:: img/GDS147.jpg
-   This command is the starting point for the Green-Ampt parameter calculations.
-   There are several steps that have to be completed in a prescribed sequence.
-   The final result is the creation of the INFIL.DAT file containing the Green-Ampt infiltration parameters.
-   To initiate this procedure, you have to load a landuse shape file and a soil shape file and the corresponding soil and landuse tables must be
-   available.
-   In addition, the *FLO-2D* grid system data files must exist.
-   The general procedure is as follows:
 
-1. Load the land use shape file and table.
+This command is the starting point for the Green-Ampt parameter calculations.
+There are several steps that have to be completed in a prescribed sequence.
+The final result is the creation of the INFIL.DAT file containing the Green-Ampt infiltration parameters.
+To initiate this procedure, you have to load a landuse shape file and a soil shape file and the corresponding soil and landuse tables must be
+available.
+In addition, the *FLO-2D* grid system data files must exist.
+The general procedure is as follows:
 
-2. Load the soil shape file and table.
+    1. Load the land use shape file and table.
+    2. Load the soil shape file and table.
+    3. For each grid element compute hydraulic conductivity (*XKSAT)* average.
+    4. View the landuse and soil interface.
 
-3. For each grid element compute hydraulic conductivity (*XKSAT)* average.
+.. math::
+   :label:
 
-4. View the landuse and soil interface.
+   \overline{XKSAT}
+   = ALOG\!\left(
+       \frac{\sum A_i\, \log(XKSAT_i)}{A_{GE}}
+     \right)
 
-*XKSAT* = *ALOG*\ \ *A\ i* log(*XKSAT\ i* )\ :sup:``\ 
-
- *AGE* 
-
-   Where:
+Where:
 
    *XKSAT\ i* is obtained from the soil table and
 
    *A\ i* is subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* the grid element area.
 
-5. For each grid element, compute wetting front capillary suction PSIF according to the following regressions as a function of *XKSAT* (Generated from
-   Figure 4.3 of the Maricopa County Drainage Design Manual, Volume I).
+    5. For each grid element, compute wetting front capillary suction PSIF according to the following regressions as a function of *XKSAT* (Generated from
+       Figure 4.3 of the Maricopa County Drainage Design Manual, Volume I).
 
-.. _`xksat(in/hr)`:
+.. raw:: html
 
-xksat(in/hr):
+   <table style="border-collapse: collapse; width: 100%; border:1px solid #000;">
+     <thead>
+       <tr>
+         <th style="border:1px solid #000; padding:4px;">XKSAT (in/hr)</th>
+         <th style="border:1px solid #000; padding:4px;">PSIF (in)</th>
+       </tr>
+     </thead>
 
-PSIF (in)
-
-.. _`0.01xksat1.2`:
-
-0.01xksat1.2:
-
-PSIF=EXP(0.9813-0.439*Ln(XKSAT)+0.0051(Ln(xksat))\ :sup:`2`\ +0.0060(Ln(XKSAT))\ :sup:`3`)
-
+     <tbody>
+       <tr>
+         <td style="padding:4px; text-align:center;">
+           0.01 &le; XKSAT &le; 1.2
+         </td>
+         <td style="padding:4px; text-align:center;">
+           PSIF = EXP(0.9813 - 0.439 * Ln(XKSAT) + 0.0051 (Ln(xksat))<sup>2</sup> + 0.0060 (Ln(XKSAT))<sup>3</sup>)
+         </td>
+       </tr>
+     </tbody>
+   </table>
 
 6. For each grid element, compute volumetric soil moisture deficiency *(DTHETA)* according to the following table.
    The specific table used for DTHETA depends on the *saturation* field of the soil table (6th column).
 
-..
+Saturation = DRY
 
-   Saturation = DRY
+.. raw:: html
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+   <table style="border-collapse: collapse; width: 100%; border:1px solid #000; margin-bottom:10px;">
+     <thead>
+       <tr>
+         <th style="border:1px solid #000; padding:4px;">XKSAT (in/hr)</th>
+         <th style="border:1px solid #000; padding:4px;">DTHETA DRY</th>
+       </tr>
+     </thead>
+
+     <tbody>
+       <tr>
+         <td style="padding:4px; text-align:center;">0.01 &le; XKSAT &le; 0.15</td>
+         <td style="padding:4px; text-align:center;">DTHETA = EXP(-0.2394 + 0.3616&nbsp;Ln(XKSAT))</td>
+       </tr>
+
+       <tr>
+         <td style="padding:4px; text-align:center;">0.15 &lt; XKSAT &le; 0.25</td>
+         <td style="padding:4px; text-align:center;">DTHETA = EXP(-1.4122 - 0.2614&nbsp;Ln(XKSAT))</td>
+       </tr>
+
+       <tr>
+         <td style="padding:4px; text-align:center;">0.25 &lt; XKSAT &le; 1.2</td>
+         <td style="padding:4px; text-align:center;">DTHETA = 0.35</td>
+       </tr>
+     </tbody>
+   </table>
+
+   <div style="margin-bottom:25px;">Saturation = NORMAL</div>
+
+Saturation = NORMAL
+
+.. raw:: html
+
+   <table style="border-collapse: collapse; width: 100%; border:1px solid #000; margin-bottom:10px;">
+     <thead>
+       <tr>
+         <th style="border:1px solid #000; padding:4px;">XKSAT (in/hr)</th>
+         <th style="border:1px solid #000; padding:4px;">DTHETA NORMAL</th>
+       </tr>
+     </thead>
+
+     <tbody>
+       <tr>
+         <td style="padding:4px; text-align:center;">0.01 &le; XKSAT &le; 0.02</td>
+         <td style="padding:4px; text-align:center;">DTHETA = EXP(1.6094 + Ln(XKSAT))</td>
+       </tr>
+
+       <tr>
+         <td style="padding:4px; text-align:center;">0.02 &lt; XKSAT &le; 0.04</td>
+         <td style="padding:4px; text-align:center;">DTHETA = EXP(-0.0142 + 0.5850&nbsp;Ln(XKSAT))</td>
+       </tr>
+
+       <tr>
+         <td style="padding:4px; text-align:center;">0.04 &lt; XKSAT &le; 0.1</td>
+         <td style="padding:4px; text-align:center;">DTHETA = 0.15</td>
+       </tr>
+
+       <tr>
+         <td style="padding:4px; text-align:center;">0.1 &lt; XKSAT &le; 0.15</td>
+         <td style="padding:4px; text-align:center;">DTHETA = EXP(1.0038 + 1.2599&nbsp;Ln(XKSAT))</td>
+       </tr>
+
+       <tr>
+         <td style="padding:4px; text-align:center;">0.15 &lt; XKSAT &le; 0.4</td>
+         <td style="padding:4px; text-align:center;">DTHETA = 0.25</td>
+       </tr>
+
+       <tr>
+         <td style="padding:4px; text-align:center;">0.4 &lt; XKSAT &le; 1.2</td>
+         <td style="padding:4px; text-align:center;">DTHETA = EXP(-1.2342 + 0.1660&nbsp;Ln(XKSAT))</td>
+       </tr>
+     </tbody>
+   </table>
+
+   <div style="margin-bottom:25px;">Saturation = WET or SATURATED</div>
 
 
-   * - XKSAT (in/hr)
-     - DTHETA DRY
+Saturation = WET or SATURATED
 
-   * - 0.01  XKSAT 0.15
-     - DTHETA =EXP(-0.2394 + 0.3616 Ln(XKSAT))
+.. raw:: html
 
-   * - 0.15  XKSAT 0.25
-     - DTHETA =EXP(-1.4122 - 0.2614 Ln(XKSAT))
-
-   * - 0.25  XKSAT  1.2
-     - DTHETA = 0.35
-
-
-..
-
-   Saturation = NORMAL
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
-
-   * - XKSAT (in/hr)
-     - DTHETA NORMAL
-
-   * - 0.01  XKSAT 0.02
-     - DTHETA = EXP(1.6094 + Ln(XKSAT))
-
-   * - 0.02  XKSAT 0.04
-     - DTHETA = EXP(-0.0142 + 0.5850 Ln(XKSAT))
-
-   * - 0.04  XKSAT  0.1
-     - DTHETA = 0.15
-
-   * - 0.1  XKSAT  0.15
-     - DTHETA = EXP(1.0038 + 1.2599 Ln(XKSAT))
-
-   * - 0.15  XKSAT  0.4
-     - DTHETA = 0.25
-
-   * - 0.4  XKSAT 1.2
-     - DTHETA = EXP(-1.2342 + 0.1660 Ln(XKSAT))
-
-
-..
-
-   Saturation = WET or SATURATED
-
-   DTHETA = 0 for all XKSAT
+   <table style="border-collapse: collapse; width: 60%; border:1px solid #000; margin-top:10px;">
+     <tbody>
+       <tr>
+         <td style="padding:6px; text-align:center;">
+           <strong>DTHETA = 0 for all XKSAT</strong>
+         </td>
+       </tr>
+     </tbody>
+   </table>
 
 7. Adjust *XKSAT* (computed in step No.
    1) as a function of the vegetation cover VC from the 5th field of the landuse table when XSAT < 0.4 in/hr.
