@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 5
+CHAPTER 5
 ============
 
 Troubleshooting
