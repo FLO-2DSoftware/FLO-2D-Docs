@@ -28,9 +28,7 @@ nonlinear and is more complex.
 NonNewtonian fluids may be divided into three categories:
 
     - Fluids with a non-linear relationship between shear stress and shear rate;
-
     - Fluids in which the shear stress not only depends on shear rate but is also a function of the time of shearing;
-
     - Fluids that are viscoelastic and exhibit characteristics of both elastic solids and viscous fluids.
 
 Sediment particle motion that exhibits pore water pressure or significant dispersive stress falls into the category of bulk solids movement as either
@@ -200,7 +198,7 @@ As the landslides morph into mudflows, internal deformation becomes more promine
 Landslides require an initial failure surface and a factor of safety that has been reduced to one.
 
 Fluid Property Definitions
-==========================
+----------------------------
 
 There are several important sediment concentration relationships that help to define the nature of hyperconcentrated sediment flows.
 These relationships relate the sediment concentration by volume, sediment concentration by weight, the sediment density, the mudflow mixture density
@@ -208,17 +206,26 @@ and the bulking factor.
 When examining parameters related to mudflows, it is important to identify the reported sediment concentration either by weight or by volume.
 The sediment concentration by volume C\ :sub:`v` is given by:
 
-C\ :sub:`v` = volume of the sediment/(volume of water plus sediment)
+.. math::
+    :label:
+
+    C_v = volume of the sediment/(volume of water plus sediment)
 
 and C\ :sub:`v` is related to the sediment concentration by weight C\ :sub:`w` by:
 
-Cv = Cw γ/{γs - Cw(γs - γ)}
+.. math::
+   :label:
+
+   C_v = \frac{C_w}{\gamma_s - C_w (\gamma_s - \gamma)}
 
 where γ = specific weight of the water and γs = specific weight of the sediment.
 The sediment concentration can also be expressed in parts per million (ppm) by dividing the concentration by weight C\ :sub:`w` by 10\ :sup:`6`.
 The specific weight of the mudflow mixture :sub:`γm` is a function of the sediment concentration by volume:
 
-γm = γ + Cv (γs - γ)
+.. math::
+   :label:
+
+   \gamma_m = \gamma + C_v \left( \gamma_s - \gamma \right)
 
 Similarly the density of the mudflow mixture ρm is given by:
 
