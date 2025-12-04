@@ -186,7 +186,6 @@ The effects of the relationship between the structure headwater and tailwater is
 
 INOUTCONT parameter (0, 1, or 2) in the HYSTRUC.DAT file (Table 1).
 If INOUTCONT =2, headwater depth H\ :sub:`w` and tailwater T\ :sub:`w` can switch with submergence to allow flow to go upstream.
-The INOUTCONT parameter does not apply to the generalized culvert equations.
 
 **Table 1.
 Hydraulic Structure Rating Table Options**

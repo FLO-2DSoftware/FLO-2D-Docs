@@ -554,7 +554,6 @@ Hydraulic Structure Rating Table Options.*
 
 
 headwater depth H\ :sub:`w` and tailwater T\ :sub:`w` can switch with submergence to allow flow to go upstream.
-The INOUTCONT parameter does not apply to the generalized culvert equations.
 
 .. image:: img/Chapter2/Chapte024.jpg
 
