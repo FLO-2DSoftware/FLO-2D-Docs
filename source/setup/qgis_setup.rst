@@ -5,242 +5,244 @@ QGIS is an open-source geographic information system software designed for spati
 The FLO-2D Plugin uses QGIS tools to effectively prepare FLO-2D data,
 providing an enhanced modeling experience within a user-friendly environment.
 
-Opton A: QGIS 3.34 LTR Installation (Local OSGeo4W Build)
-===========================================================
+.. dropdown:: Option A: QGIS 3.34 LTR Installation (Local OSGeo4W Build)
 
-This section describes how to install QGIS 3.34 LTR using a local OSGeo4W
-package directory. This installation method allows fully offline setup and
-guarantees consistent software versions across all workstations.
 
-.. note::
-   These instructions assume the OSGeo4W installer and package directory
-   are available in a local folder, such as a USB drive or class materials
-   directory.
+   This section describes how to install QGIS 3.34 LTR using a local OSGeo4W
+   package directory. This installation method allows fully offline setup and
+   guarantees consistent software versions across all workstations.
 
-Step 1: Launch the OSGeo4W Installer
-------------------------------------
+   .. note::
+      These instructions assume the OSGeo4W installer and package directory
+      are available in a local folder, such as a USB drive or class materials
+      directory.
 
-Run ``osgeo4w-setup.exe`` from the local installation folder.
+   .. container:: h3 
+      Step 1: Launch OSGeo4W Setup
 
-.. image:: /img/Instructions/qgislocal012.png
-   :alt: OSGeo4W Setup - Choose Installation Type
-   :width: 600px
+   Run ``osgeo4w-setup.exe`` from the local installation folder.
+
+   .. image:: /img/Instructions/qgislocal012.png
+      :alt: OSGeo4W Setup - Choose Installation Type
+      :width: 600px
 
    Select **Advanced Install** to enable installation from a local package directory.
 
-Step 2: Select Installation Mode
---------------------------------
+   .. container:: h3
+      Step 2: Choose Installation Method
 
-Choose an installation method.
+   Choose an installation method.
 
-.. image:: /img/Instructions/qgislocal015.png
-   :alt: OSGeo4W Setup - Choose Download Source
-   :width: 600px
+   .. image:: /img/Instructions/qgislocal015.png
+      :alt: OSGeo4W Setup - Choose Download Source
+      :width: 600px
 
-Select **Install from Local Directory** and click **Next**.
+   Select **Install from Local Directory** and click **Next**.
 
-Step 3: Choose the Local Package Directory
-------------------------------------------
+   .. container:: h3
+      Step 3: Choose the Local Package Directory
 
-Specify the folder containing the OSGeo4W packages.
+   Specify the folder containing the OSGeo4W packages.
 
-.. image:: /img/Instructions/qgislocal017.png
-   :alt: OSGeo4W Setup - Select Local Package Directory
-   :width: 600px
+   .. image:: /img/Instructions/qgislocal017.png
+      :alt: OSGeo4W Setup - Select Local Package Directory
+      :width: 600px
 
-Set **Local Package Directory** to the folder containing the downloaded
-packages (e.g., ``Local OSGeo4W Installer``).  
-The directory will be created if it does not already exist.
+   Set **Local Package Directory** to the folder containing the downloaded
+   packages (e.g., ``Local OSGeo4W Installer``).  
+   The directory will be created if it does not already exist.
 
-Step 4: Select Installation Directory
--------------------------------------
+   .. container:: h3
+      Step 4: Select Installation Directory
 
-Choose the root directory for OSGeo4W.
+   Choose the root directory for OSGeo4W.
 
-.. image:: /img/Instructions/qgislocal016.png
-   :alt: OSGeo4W Setup - Choose Installation Directory
-   :width: 600px
+   .. image:: /img/Instructions/qgislocal016.png
+      :alt: OSGeo4W Setup - Choose Installation Directory
+      :width: 600px
 
-Recommended settings:
+   Recommended settings:
 
-- **Root Directory**: ``C:\OSGeo4W``
-- **Install For**: *Just Me* (unless admin access is available)
-- **Create icon on Desktop**: Enabled
-- **Add icon to Start Menu**: Enabled
+   - **Root Directory**: ``C:\OSGeo4W``
+   - **Install For**: *Just Me* (unless admin access is available)
+   - **Create icon on Desktop**: Enabled
+   - **Add icon to Start Menu**: Enabled
 
-Click **Next** to continue.
+   Click **Next** to continue.
 
-Step 5: Proceed to Package Selection
--------------------------------------
+   .. container:: h3
+      Step 5: Proceed to Package Selection
 
-OSGeo4W will scan the local directory for available packages and continue
-to the package selection screen.
+   OSGeo4W will scan the local directory for available packages and continue
+   to the package selection screen.
 
-.. image:: /img/Instructions/qgislocal014.png
-   :alt: OSGeo4W Setup - Local Package Directory Confirmation
-   :width: 600px
+   .. image:: /img/Instructions/qgislocal014.png
+      :alt: OSGeo4W Setup - Local Package Directory Confirmation
+      :width: 600px
 
-Confirm the directory and click **Next**.
+   Confirm the directory and click **Next**.
 
-Step 6: Begin Installation
---------------------------
+   .. container:: h3
+      Step 6: Begin Installation
 
-Once package selection and dependencies are resolved, installation proceeds.
+   Once package selection and dependencies are resolved, installation proceeds.
 
-.. image:: /img/Instructions/qgislocal013.png
-   :alt: OSGeo4W Installation Complete
-   :width: 600px
+   .. image:: /img/Instructions/qgislocal013.png
+      :alt: OSGeo4W Installation Complete
+      :width: 600px
 
-A confirmation message indicates that installation is complete. Select
-**Finish** to close the installer.
+   A confirmation message indicates that installation is complete. Select
+   **Finish** to close the installer.
 
-Step 7: Select the Required Packages
-------------------------------------
+   .. container:: h3
+      Step 7: Select the Required Packages
 
-Use the package selection interface to install QGIS and supporting libraries.
-Ensure that **View** is set to ``Category`` and **Curr** is selected under
-the version options.
+   Use the package selection interface to install QGIS and supporting libraries.
+   Ensure that **View** is set to ``Category`` and **Curr** is selected under
+   the version options.
 
-Step 7.1: Install HDF5
-~~~~~~~~~~~~~~~~~~~~~~
+   .. container:: h4
+      Step 7.1: Install HDF5
 
-Search for ``hdf5`` in the search bar.
+   Search for ``hdf5`` in the search bar.
 
-.. image:: /img/Instructions/qgislocal022.png
-   :alt: Select HDF5 package
-   :width: 600px
+   .. image:: /img/Instructions/qgislocal022.png
+      :alt: Select HDF5 package
+      :width: 600px
 
-Ensure that the ``hdf5`` runtime library is included.  
-OSGeo4W marks locally available packages as **Keep**, which is appropriate for
-an offline installation.
+   Ensure that the ``hdf5`` runtime library is included.  
+   OSGeo4W marks locally available packages as **Keep**, which is appropriate for
+   an offline installation.
 
-Step 7.2: Install QGIS 3.34 LTR
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   .. container:: h4
+      Step 7.2: Install QGIS 3.34 LTR
 
-Search for ``qgis``.
+   Search for ``qgis``.
 
-.. image:: /img/Instructions/qgislocal018.png
-   :alt: Select QGIS Desktop 3.34 LTR
-   :width: 600px
+   .. image:: /img/Instructions/qgislocal018.png
+      :alt: Select QGIS Desktop 3.34 LTR
+      :width: 600px
 
-Select the following components:
+   Select the following components:
 
-- ``qgis-ltr``: **QGIS Desktop (long term release)**
-- ``qgis-ltr-common``: Required shared libraries
+   - ``qgis-ltr``: **QGIS Desktop (long term release)**
+   - ``qgis-ltr-common``: Required shared libraries
 
-Ensure both items are set to **Keep**.
+   Ensure both items are set to **Keep**.
 
-Step 7.3: Install h5py
-~~~~~~~~~~~~~~~~~~~~~~
+   .. container:: h4
+      Step 7.3: Install h5py
+   
 
-Search for ``h5py``.
+   Search for ``h5py``.
 
-.. image:: /img/Instructions/qgislocal019.png
-   :alt: Select h5py Python library
-   :width: 600px
+   .. image:: /img/Instructions/qgislocal019.png
+      :alt: Select h5py Python library
+      :width: 600px
 
-Select:
+   Select:
 
-- ``python3-h5py``: Read/write capabilities for HDF5 files within Python
+   - ``python3-h5py``: Read/write capabilities for HDF5 files within Python
 
-Step 7.4: Install GRASS GIS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   .. container:: h4
+      Step 7.4: Install GRASS GIS
+   
 
-Search for ``grass``.
+   Search for ``grass``.
 
-.. image:: /img/Instructions/qgislocal020.png
-   :alt: Select GRASS GIS package
-   :width: 600px
+   .. image:: /img/Instructions/qgislocal020.png
+      :alt: Select GRASS GIS package
+      :width: 600px
 
-Select:
+   Select:
 
-- ``grass``: GRASS GIS 8.4, used by QGIS for advanced raster and vector tools
+   - ``grass``: GRASS GIS 8.4, used by QGIS for advanced raster and vector tools
 
-Step 7.5: Install PDAL
-~~~~~~~~~~~~~~~~~~~~~~
+   .. container:: h4
+      Step 7.5: Install PDAL
+   
+   Search for ``pdal``.
 
-Search for ``pdal``.
+   .. image:: /img/Instructions/qgislocal021.png
+      :alt: Select PDAL packages
+      :width: 600px
 
-.. image:: /img/Instructions/qgislocal021.png
-   :alt: Select PDAL packages
-   :width: 600px
+   Select the following components:
 
-Select the following components:
+   - ``pdal`` (executable)
+   - ``pdal-devel`` (development headers)
+   - ``pdal-libs`` (runtime)
+   - ``python3-pdal`` (Python bindings)
+   - ``python3-pdal-plugins`` (plugin set)
 
-- ``pdal`` (executable)
-- ``pdal-devel`` (development headers)
-- ``pdal-libs`` (runtime)
-- ``python3-pdal`` (Python bindings)
-- ``python3-pdal-plugins`` (plugin set)
+   Click **Next** to continue to dependency resolution.
 
-Click **Next** to continue to dependency resolution.
+   .. container:: h3
+      Step 8: Review Dependency Selections
+   
 
-Step 8: Review Dependency Selections
-------------------------------------
+   The OSGeo4W installer will automatically determine any linked libraries
+   required for the selected packages. Since installation is performed from a
+   local directory, only packages already downloaded will be used.
 
-The OSGeo4W installer will automatically determine any linked libraries
-required for the selected packages. Since installation is performed from a
-local directory, only packages already downloaded will be used.
+   Confirm the selections and continue.
 
-Confirm the selections and continue.
+   .. container:: h3
+      Step 9: Begin Installation
+   
+   The installer processes all selected components and places them in the chosen
+   OSGeo4W root directory.
 
-Step 9: Begin Installation
---------------------------
+   A progress window appears while packages are extracted and configured.
 
-The installer processes all selected components and places them in the chosen
-OSGeo4W root directory.
+   .. container:: h3
+      Step 10: Complete Installation
+   
+   After installation finishes, the final screen confirms successful completion.
 
-A progress window appears while packages are extracted and configured.
+   .. image:: /img/Instructions/qgislocal013.png
+      :alt: OSGeo4W Installation Complete
+      :width: 600px
 
-Step 10: Complete Installation
-------------------------------
+   Click **Finish** to close the installer.
 
-After installation finishes, the final screen confirms successful completion.
+   .. container:: h3
+      Step 11: Launch QGIS 3.34 LTR
 
-.. image:: /img/Instructions/qgislocal013.png
-   :alt: OSGeo4W Installation Complete
-   :width: 600px
+   Use the Start Menu or desktop icons created during installation. The following
+   applications become available:
 
-Click **Finish** to close the installer.
-
-Step 11: Launch QGIS 3.34 LTR
------------------------------
-
-Use the Start Menu or desktop icons created during installation. The following
-applications become available:
-
-- **QGIS Desktop 3.34 LTR**
-- **OSGeo4W Shell**
-- **GRASS GIS 8.4**
-- Additional tools installed through the OSGeo4W environment
+   - **QGIS Desktop 3.34 LTR**
+   - **OSGeo4W Shell**
+   - **GRASS GIS 8.4**
+   - Additional tools installed through the OSGeo4W environment
 
    
-Option B: QGIS Stand Alone Installation
------------------------------------------
+.. dropdown:: Option B: QGIS Stand Alone Installation
 
-Follow these instructions to set up QGIS.
+   Follow these instructions to set up a simpler version of QGIS.  The images say 3.28 but the steps are the same for 3.34 LTR.
 
-1. Double click the QGIS-OSGeo4W-3.28.11-1.msi file.
+   1. Double click the QGIS-OSGeo4W-3.28.11-1.msi file.
 
-2. Finish installing with the default settings.
+   2. Finish installing with the default settings.
 
-.. image:: ../img/Instructions/image8.png
-
-
-3. Open QGIS.
-
-.. image:: ../img/Instructions/Worksh002.png
+   .. image:: ../img/Instructions/image8.png
 
 
-4. Click Settings/Options
+   3. Open QGIS.
 
-.. image:: ../img/Instructions/image13.png
+   .. image:: ../img/Instructions/Worksh002.png
 
 
-5. Click the CRS tab and set the options as shown below.  Use CRS from first layer added.  Use Project CRS.  Click OK to
-   close the window.
+   4. Click Settings/Options
 
-.. image:: ../img/Instructions/image14.png
+   .. image:: ../img/Instructions/image13.png
+
+
+   5. Click the CRS tab and set the options as shown below.  Use CRS from first layer added.  Use Project CRS.  Click OK to
+      close the window.
+
+   .. image:: ../img/Instructions/image14.png
 
 
 Step 2: FLO-2D Plugin
