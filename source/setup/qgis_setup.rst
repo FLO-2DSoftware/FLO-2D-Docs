@@ -5,30 +5,45 @@ QGIS is an open-source geographic information system software designed for spati
 The FLO-2D Plugin uses QGIS tools to effectively prepare FLO-2D data,
 providing an enhanced modeling experience within a user-friendly environment.
 
-.. dropdown:: Option A: QGIS 3.34 LTR Installation (Local OSGeo4W Build)
+Step 1: QGIS Installation
+----------------------------
+There are two options for installing QGIS: using a local OSGeo4W package directory or a stand-alone installer.
 
+.. dropdown:: Option B: QGIS 3.34 LTR Installation (Local OSGeo4W)
 
    This section describes how to install QGIS 3.34 LTR using a local OSGeo4W
    package directory. This installation method allows fully offline setup and
    guarantees consistent software versions across all workstations.
 
+   .. container:: h3
+
+      Step 1: Get the Installer from Sharefile.
+
+   Log in to sharefile and navigate to the following location to download the
+   OSGeo4W installer and package directory:
+
+   .. image:: /img/Instructions/qgislocal011.png
+
    .. note::
       These instructions assume the OSGeo4W installer and package directory
-      are available in a local folder, such as a USB drive or class materials
-      directory.
+      are available in a local folder that is downloaded from sharefile:
 
-   .. container:: h3 
+      FLO-2D Pro Update\\Full Package\\Build 23\\QGIS Local Installer 3.34.11.
+
+   .. container:: h3
+
       Step 1: Launch OSGeo4W Setup
 
-   Run ``osgeo4w-setup.exe`` from the local installation folder.
+   .. image:: /img/Instructions/qgislocal010.png
+   
+   Run ``osgeo4w-setup.exe`` from the local installation folder. Select **Advanced Install** to enable installation from a local package directory.
 
    .. image:: /img/Instructions/qgislocal012.png
       :alt: OSGeo4W Setup - Choose Installation Type
       :width: 600px
 
-   Select **Advanced Install** to enable installation from a local package directory.
-
    .. container:: h3
+
       Step 2: Choose Installation Method
 
    Choose an installation method.
@@ -40,6 +55,7 @@ providing an enhanced modeling experience within a user-friendly environment.
    Select **Install from Local Directory** and click **Next**.
 
    .. container:: h3
+      
       Step 3: Choose the Local Package Directory
 
    Specify the folder containing the OSGeo4W packages.
@@ -53,6 +69,7 @@ providing an enhanced modeling experience within a user-friendly environment.
    The directory will be created if it does not already exist.
 
    .. container:: h3
+      
       Step 4: Select Installation Directory
 
    Choose the root directory for OSGeo4W.
@@ -71,6 +88,7 @@ providing an enhanced modeling experience within a user-friendly environment.
    Click **Next** to continue.
 
    .. container:: h3
+      
       Step 5: Proceed to Package Selection
 
    OSGeo4W will scan the local directory for available packages and continue
@@ -83,6 +101,7 @@ providing an enhanced modeling experience within a user-friendly environment.
    Confirm the directory and click **Next**.
 
    .. container:: h3
+      
       Step 6: Begin Installation
 
    Once package selection and dependencies are resolved, installation proceeds.
@@ -95,6 +114,7 @@ providing an enhanced modeling experience within a user-friendly environment.
    **Finish** to close the installer.
 
    .. container:: h3
+      
       Step 7: Select the Required Packages
 
    Use the package selection interface to install QGIS and supporting libraries.
@@ -102,6 +122,7 @@ providing an enhanced modeling experience within a user-friendly environment.
    the version options.
 
    .. container:: h4
+      
       Step 7.1: Install HDF5
 
    Search for ``hdf5`` in the search bar.
@@ -115,6 +136,7 @@ providing an enhanced modeling experience within a user-friendly environment.
    an offline installation.
 
    .. container:: h4
+      
       Step 7.2: Install QGIS 3.34 LTR
 
    Search for ``qgis``.
@@ -131,6 +153,7 @@ providing an enhanced modeling experience within a user-friendly environment.
    Ensure both items are set to **Keep**.
 
    .. container:: h4
+      
       Step 7.3: Install h5py
    
 
@@ -145,6 +168,7 @@ providing an enhanced modeling experience within a user-friendly environment.
    - ``python3-h5py``: Read/write capabilities for HDF5 files within Python
 
    .. container:: h4
+      
       Step 7.4: Install GRASS GIS
    
 
@@ -159,6 +183,7 @@ providing an enhanced modeling experience within a user-friendly environment.
    - ``grass``: GRASS GIS 8.4, used by QGIS for advanced raster and vector tools
 
    .. container:: h4
+      
       Step 7.5: Install PDAL
    
    Search for ``pdal``.
@@ -178,6 +203,7 @@ providing an enhanced modeling experience within a user-friendly environment.
    Click **Next** to continue to dependency resolution.
 
    .. container:: h3
+      
       Step 8: Review Dependency Selections
    
 
@@ -188,6 +214,7 @@ providing an enhanced modeling experience within a user-friendly environment.
    Confirm the selections and continue.
 
    .. container:: h3
+      
       Step 9: Begin Installation
    
    The installer processes all selected components and places them in the chosen
@@ -196,6 +223,7 @@ providing an enhanced modeling experience within a user-friendly environment.
    A progress window appears while packages are extracted and configured.
 
    .. container:: h3
+      
       Step 10: Complete Installation
    
    After installation finishes, the final screen confirms successful completion.
@@ -207,6 +235,7 @@ providing an enhanced modeling experience within a user-friendly environment.
    Click **Finish** to close the installer.
 
    .. container:: h3
+      
       Step 11: Launch QGIS 3.34 LTR
 
    Use the Start Menu or desktop icons created during installation. The following
@@ -218,9 +247,11 @@ providing an enhanced modeling experience within a user-friendly environment.
    - Additional tools installed through the OSGeo4W environment
 
    
-.. dropdown:: Option B: QGIS Stand Alone Installation
+.. dropdown:: Option C: QGIS Stand Alone Installation Older Versions
 
-   Follow these instructions to set up a simpler version of QGIS.  The images say 3.28 but the steps are the same for 3.34 LTR.
+   Follow these instructions to set up a older version of QGIS.  
+   
+   .. note:: The images reference QGIS verison 3.28 but the steps are the same for any stand alone version of QGIS.
 
    1. Double click the QGIS-OSGeo4W-3.28.11-1.msi file.
 
