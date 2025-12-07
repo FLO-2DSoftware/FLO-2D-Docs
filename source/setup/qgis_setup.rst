@@ -39,6 +39,8 @@ Choose one of the following methods:
    Choose a download site from the list provided. Any site can be used.
 
    .. image:: ../img/Instructions/qgisnetwork006.png
+
+   text
    
       .. container:: h3
 
