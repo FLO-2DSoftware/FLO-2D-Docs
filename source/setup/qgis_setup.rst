@@ -15,28 +15,30 @@ There are options for installing QGIS. Choose one of the following methods:
    The following method uses the OSGeo4W Network Installer to install the current QGIS LTR version and prepares the environment for adding 
    Python modules such as ``h5py`` and ``netCDF4``.
 
-   Download the OSGeo4W installer from:
+   Download the OSGeo4W installer:
 
    .. raw:: html
 
-      <a href="https://trac.osgeo.org/osgeo4w/" target="_blank" rel="noopener noreferrer">OSGeo4W Installer</a>
-
+      <a href="https://qgis.org/download/" target="_blank" rel="noopener noreferrer">OSGeo4W Installer</a>
 
    This option installs the latest QGIS Long-Term Release (LTR) using the OSGeo4W
-   Network Installer. This method downloads current packages directly from OSGeo4W
-   servers and ensures installation of the most current LTR version available.
+   Network Installer. 
 
-   .. container:: h3
+      .. container:: h3
 
       1. Launch the OSGeo4W Network Installer
 
    Run ``osgeo4w-setup.exe`` and choose **Express Installation** from the main menu.
+
+   .. image:: ../img/Instructions/qgisnetwork001.png
 
       .. container:: h3
 
       2. Select the download site.
 
    Choose a download site from the list provided. Any site can be used.
+
+   .. image:: ../img/Instructions/qgisnetwork006.png
    
    .. container:: h3
 
@@ -49,30 +51,69 @@ There are options for installing QGIS. Choose one of the following methods:
    * **GDAL**
    * **GRASS GIS** (optional)
 
+   .. image:: ../img/Instructions/qgisnetwork023.png
+
+
       .. container:: h3
 
       4. Accept the Dependencies
    
-   Complete the installation.  
-   The Python interpreter used by QGIS is installed under:
+   Install the dependencies when prompted.
+
+   .. image:: ../img/Instructions/qgisnetwork017.png
+
+         .. container:: h3
+
+      5. Accept the License Agreements
+   
+   Install the dependencies when prompted.
+
+   .. image:: ../img/Instructions/qgisnetwork018.png
+
+   The installation should start. This may take some time depending on 
+   your internet connection.
+
+   .. image:: ../img/Instructions/qgisnetwork019.png
+
+   Click the **Finish** button when the installation is complete.
+
+   .. image:: ../img/Instructions/qgisnetwork020.png
 
    .. container:: h3
 
-      5. Install Additional Python Modules
+      6. Install Additional Python Modules
    
    Run the OSGeo4W Setup program again and select **Advanced Install**.
 
-   Click next until you reach the package selection screen.
+   Click next until you reach the package selection screen. (Everything else should be default.)
+
+   Filter the package list by typing **h5py** in the search box. Click the Skip text to select the 
+   latest version for installation.
+
+   .. image:: ../img/Instructions/qgisnetwork011.png
+
+   Repeat the process for **netCDF4**.
+
+   .. image:: ../img/Instructions/qgisnetwork013.png
+
+   Accept any dependencies.
+
+   .. image:: ../img/Instructions/qgisnetwork024.png
+
+   Click Next and Finish to complete the installation.
+
+      .. container:: h3
+
+      7. Verify Installation
+
 
    Search for and select the following packages:
    * h5py 
    * netCDF4
 
-   Complete the installation including any Dependencies.
+   Run the OSGeo4W Shell from the Start Menu.
 
-   .. container:: h3
-
-      6. Verify Installation
+   .. image:: ../img/Instructions/qgisnetwork026.png
 
    Run the following commands inside the OSGeo4W Shell:
 
@@ -83,7 +124,8 @@ There are options for installing QGIS. Choose one of the following methods:
 
    A version number indicates a successful installation.
 
-   If an error is returned, OSGeo4W may not provide wheels for your Python version.
+   .. image:: ../img/Instructions/qgisnetwork025.png
+
 
 .. dropdown:: **Option B: QGIS Stand Alone Installation Older Versions**
 
