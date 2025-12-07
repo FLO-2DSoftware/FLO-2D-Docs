@@ -10,23 +10,23 @@ Step 1: QGIS Installation
 There are options for installing QGIS. Choose one of the following methods:
 
 .. dropdown:: **Option A – QGIS Latest Long-Term Release (Network Installation)**
-   :open:
-
-   The following method uses the OSGeo4W Network Installer to install the current QGIS LTR version and prepares the environment for adding 
+   
+   The following method uses the OSGeo4W Network Installer to install the current QGIS LTR version adds 
    Python modules such as ``h5py`` and ``netCDF4``.
+   
+      .. container:: h3
 
-   Download the OSGeo4W installer:
+         1. Download the OSGeo4W Installer:
 
    .. raw:: html
 
       <a href="https://qgis.org/download/" target="_blank" rel="noopener noreferrer">OSGeo4W Installer</a>
-
-   This option installs the latest QGIS Long-Term Release (LTR) using the OSGeo4W
-   Network Installer. 
+   
+   Choose the **OSGeo4W Network Installer** for 64-bit Windows.
 
       .. container:: h3
 
-      1. Launch the OSGeo4W Network Installer
+      2. Launch the OSGeo4W Network Installer
 
    Run ``osgeo4w-setup.exe`` and choose **Express Installation** from the main menu.
 
@@ -34,7 +34,7 @@ There are options for installing QGIS. Choose one of the following methods:
 
       .. container:: h3
 
-      2. Select the download site.
+      3. Select the download site.
 
    Choose a download site from the list provided. Any site can be used.
 
@@ -42,7 +42,7 @@ There are options for installing QGIS. Choose one of the following methods:
    
    .. container:: h3
 
-      3. Select Packages to Install
+      4. Select Packages to Install
 
    Enable the following items:
 
@@ -56,7 +56,7 @@ There are options for installing QGIS. Choose one of the following methods:
 
       .. container:: h3
 
-      4. Accept the Dependencies
+      5. Accept the Dependencies
    
    Install the dependencies when prompted.
 
@@ -64,7 +64,7 @@ There are options for installing QGIS. Choose one of the following methods:
 
          .. container:: h3
 
-      5. Accept the License Agreements
+      6. Accept the License Agreements
    
    Install the dependencies when prompted.
 
@@ -81,7 +81,7 @@ There are options for installing QGIS. Choose one of the following methods:
 
    .. container:: h3
 
-      6. Install Additional Python Modules
+      7. Install Additional Python Modules
    
    Run the OSGeo4W Setup program again and select **Advanced Install**.
 
@@ -104,8 +104,7 @@ There are options for installing QGIS. Choose one of the following methods:
 
       .. container:: h3
 
-      7. Verify Installation
-
+      8. Verify Installation
 
    Search for and select the following packages:
    * h5py 
