@@ -7,9 +7,9 @@ providing an enhanced modeling experience within a user-friendly environment.
 
 Step 1: QGIS Installation
 ----------------------------
-There are options for installing QGIS. Choose one of the following methods:
+Choose one of the following methods:
 
-.. dropdown:: **Option A – QGIS Latest Long-Term Release (Network Installation)**
+.. dropdown:: **Option A – QGIS Latest Long-Term Release (Recommended)**
    
    The following method uses the OSGeo4W Network Installer to install the current QGIS LTR version adds 
    Python modules such as ``h5py`` and ``netCDF4``.
@@ -24,9 +24,9 @@ There are options for installing QGIS. Choose one of the following methods:
    
    Choose the **OSGeo4W Network Installer** for 64-bit Windows.
 
-      .. container:: h3
+         .. container:: h3
 
-      2. Launch the OSGeo4W Network Installer
+         2. Launch the Installer
 
    Run ``osgeo4w-setup.exe`` and choose **Express Installation** from the main menu.
 
@@ -34,15 +34,15 @@ There are options for installing QGIS. Choose one of the following methods:
 
       .. container:: h3
 
-      3. Select the download site.
+         3. Select the download site.
 
    Choose a download site from the list provided. Any site can be used.
 
    .. image:: ../img/Instructions/qgisnetwork006.png
    
-   .. container:: h3
+      .. container:: h3
 
-      4. Select Packages to Install
+         4. Select Packages to Install
 
    Enable the following items:
 
@@ -56,7 +56,7 @@ There are options for installing QGIS. Choose one of the following methods:
 
       .. container:: h3
 
-      5. Accept the Dependencies
+         5. Accept the Dependencies
    
    Install the dependencies when prompted.
 
@@ -64,7 +64,7 @@ There are options for installing QGIS. Choose one of the following methods:
 
          .. container:: h3
 
-      6. Accept the License Agreements
+            6. Accept the License Agreements
    
    Install the dependencies when prompted.
 
@@ -126,7 +126,7 @@ There are options for installing QGIS. Choose one of the following methods:
    .. image:: ../img/Instructions/qgisnetwork025.png
 
 
-.. dropdown:: **Option B: QGIS Stand Alone Installation Older Versions**
+.. dropdown:: **Option B - QGIS Stand Alone Older Versions**
 
    Follow these instructions to set up a older version of QGIS.  
    
