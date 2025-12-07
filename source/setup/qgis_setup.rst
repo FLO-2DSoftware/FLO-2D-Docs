@@ -17,8 +17,10 @@ There are options for installing QGIS. Choose one of the following methods:
 
    Download the OSGeo4W installer from:
 
-   https://qgis.org/en/site/forusers/download.html
-      :target: _blank
+   .. raw:: html
+
+      <a href="https://trac.osgeo.org/osgeo4w/" target="_blank" rel="noopener noreferrer">OSGeo4W Installer</a>
+
 
    This option installs the latest QGIS Long-Term Release (LTR) using the OSGeo4W
    Network Installer. This method downloads current packages directly from OSGeo4W
