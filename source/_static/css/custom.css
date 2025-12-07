@@ -132,7 +132,5 @@ img {
 
 /* Add border to specific images when the 'bordered-img' class is applied */
 .bordered-img {
-    border: 3px solid #000;
-    border-radius: 2px;
-    background-color: white;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
 }
