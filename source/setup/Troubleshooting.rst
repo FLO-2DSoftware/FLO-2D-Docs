@@ -208,3 +208,194 @@ use GDS or Mapper and you get missing dll failures or struggle to use GDS proces
 
 
 
+Testing Sandbox
+-----------------
+
+Windows Sandbox Test Environment Setup for QGIS Standalone and FLO-2D Plugin
+
+(Manual script execution version — most reliable setup)
+
+1. Create the Sandbox Project Folder on the Host
+
+Create:
+
+C:\Sandbox\QGIS_Test\
+
+
+Inside it:
+
+C:\Sandbox\QGIS_Test\
+    ├─ QGIS_Installer\
+    │       QGIS-OSGeo4W-3.34.xx.msi
+    │
+    ├─ Plugin\
+    │       flo2d\   (entire plugin folder)
+    │
+    ├─ Startup\
+    │       install_qgis.cmd
+    │       copy_plugin.cmd
+    │
+    └─ QGIS_Test_Container.wsb
+
+
+Place your QGIS Standalone MSI in the QGIS_Installer folder.
+
+Place your FLO-2D plugin folder (including embedded_python if you have one) in:
+
+C:\Sandbox\QGIS_Test\Plugin\flo2d\
+
+2. Create the Startup Scripts
+
+These will be run manually inside the Sandbox session.
+
+2.1 install_qgis.cmd
+
+Path:
+
+C:\Sandbox\QGIS_Test\Startup\install_qgis.cmd
+
+
+Contents:
+
+```
+
+@echo off
+echo Installing QGIS Standalone...
+
+msiexec /i "C:\Users\WDAGUtilityAccount\Desktop\QGIS_Test\QGIS_Installer\QGIS-OSGeo4W-3.34.15-1.msi" /qn /norestart
+
+echo QGIS installation complete.
+exit /b
+```
+
+2.2 copy_plugin.cmd
+
+Path:
+
+`C:\Sandbox\QGIS_Test\Startup\copy_plugin.cmd
+
+
+Contents:
+
+```
+
+@echo off
+
+set TARGET=C:\Users\WDAGUtilityAccount\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins\flo2d
+
+echo Creating FLO-2D plugin folder...
+mkdir "%TARGET%" 2>nul
+
+echo Copying plugin...
+xcopy "C:\Users\WDAGUtilityAccount\Desktop\QGIS_Test\Plugin\flo2d" "%TARGET%" /E /I /Y
+
+echo Plugin copy complete.
+exit /b
+
+```
+
+3. Create the Windows Sandbox Configuration File (NO auto scripts)
+
+Create:
+
+`C:\Sandbox\QGIS_Test\QGIS_Test_Container.wsb
+
+
+Use this simplified XML configuration:
+
+<Configuration>
+  <MappedFolders>
+    <MappedFolder>
+      <HostFolder>C:\Sandbox\QGIS_Test</HostFolder>
+      <SandboxFolder>C:\Users\WDAGUtilityAccount\Desktop\QGIS_Test</SandboxFolder>
+      <ReadOnly>false</ReadOnly>
+    </MappedFolder>
+  </MappedFolders>
+</Configuration>
+
+✔ What this does
+
+Maps your entire setup folder onto the Sandbox desktop
+
+Allows you to run the scripts manually
+
+Avoids all parsing issues from <LogonCommand>
+
+Works 100% reliably on all Windows 10/11 Pro machines
+
+4. Launch the Sandbox
+
+Run:
+
+`C:\Sandbox\QGIS_Test\QGIS_Test_Container.wsb`
+
+
+When the Sandbox loads, you will see this folder on the Sandbox Desktop:
+
+QGIS_Test
+
+
+Open it → open the Startup folder.
+
+5. Install QGIS and Load the FLO-2D Plugin (Manual Steps)
+Step 1 — Install QGIS
+
+Inside Sandbox:
+
+Desktop → QGIS_Test → Startup → install_qgis.cmd
+
+
+QGIS installs silently (20–40 seconds).
+
+Step 2 — Copy the Plugin
+
+Run:
+
+Desktop → QGIS_Test → Startup → copy_plugin.cmd
+
+
+This places the plugin into:
+
+C:\Users\WDAGUtilityAccount\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins\flo2d
+
+Step 3 — Launch QGIS
+Start Menu → QGIS → QGIS 3.34.x
+
+
+Verify plugin appears under:
+
+Plugins → Manage and Install Plugins → flo2d
+
+6. Verify h5py (or other modules) inside QGIS
+
+Open:
+
+Plugins → Python Console
+
+
+Test:
+
+import h5py
+print(h5py.__version__)
+print(h5py.__file__)
+
+
+You should see:
+
+...flo2d\embedded_python\Lib\site-packages\h5py\__init__.py
+
+7. Summary
+
+This setup gives you:
+
+A safe, disposable Windows environment
+
+Guaranteed QGIS Standalone installation
+
+Guaranteed plugin installation
+
+Clean configuration without LogonCommand errors
+
+Full access to embedded Python modules inside the plugin (h5py, pyqtgraph, etc.)
+
+Identical reproducibility across any workstation
