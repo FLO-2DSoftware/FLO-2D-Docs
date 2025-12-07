@@ -57,7 +57,7 @@ Choose one of the following methods:
 
    .. image:: ../img/Instructions/qgisnetwork023.png
       :width: 600px
-      :style: border:3px;
+      :class: bordered-img
 
    .. container:: h3
 
