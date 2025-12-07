@@ -53,7 +53,7 @@ Choose one of the following methods:
 
    .. image:: ../img/Instructions/qgisnetwork023.png
 
-
+   text
       .. container:: h3
 
          5. Accept the Dependencies
