@@ -10,41 +10,40 @@ Step 1: QGIS Installation
 Choose one of the following methods:
 
 .. dropdown:: **Option A – QGIS Latest Long-Term Release (Recommended)**
-   
-   The following method uses the OSGeo4W Network Installer to install the current QGIS LTR version adds 
-   Python modules such as ``h5py`` and ``netCDF4``.
-   
-      .. container:: h3
+   :open:
 
-         1. Download the OSGeo4W Installer:
+   The following method uses the OSGeo4W Network Installer to install the current QGIS LTR version and
+   adds Python modules such as ``h5py`` and ``netCDF4``.
+
+   .. container:: h3
+
+      1. Download the OSGeo4W Installer
 
    .. raw:: html
 
       <a href="https://qgis.org/download/" target="_blank" rel="noopener noreferrer">OSGeo4W Installer</a>
-   
+
    Choose the **OSGeo4W Network Installer** for 64-bit Windows.
 
-         .. container:: h3
+   .. container:: h3
 
-         2. Launch the Installer
+      2. Launch the Installer
 
    Run ``osgeo4w-setup.exe`` and choose **Express Installation** from the main menu.
 
    .. image:: ../img/Instructions/qgisnetwork001.png
 
-      .. container:: h3
+   .. container:: h3
 
-         3. Select the download site.
+      3. Select the download site
 
    Choose a download site from the list provided. Any site can be used.
 
    .. image:: ../img/Instructions/qgisnetwork006.png
 
-   text
-   
-      .. container:: h3
+   .. container:: h3
 
-         4. Select Packages to Install
+      4. Select Packages to Install
 
    Enable the following items:
 
@@ -55,25 +54,23 @@ Choose one of the following methods:
 
    .. image:: ../img/Instructions/qgisnetwork023.png
 
-   text
-      .. container:: h3
+   .. container:: h3
 
-         5. Accept the Dependencies
-   
+      5. Accept the Dependencies
+
    Install the dependencies when prompted.
 
    .. image:: ../img/Instructions/qgisnetwork017.png
 
-         .. container:: h3
+   .. container:: h3
 
-            6. Accept the License Agreements
-   
-   Install the dependencies when prompted.
+      6. Accept the License Agreements
+
+   Accept the license agreements to continue.
 
    .. image:: ../img/Instructions/qgisnetwork018.png
 
-   The installation should start. This may take some time depending on 
-   your internet connection.
+   The installation should start. This may take some time depending on your internet connection.
 
    .. image:: ../img/Instructions/qgisnetwork019.png
 
@@ -84,13 +81,13 @@ Choose one of the following methods:
    .. container:: h3
 
       7. Install Additional Python Modules
-   
+
    Run the OSGeo4W Setup program again and select **Advanced Install**.
 
-   Click next until you reach the package selection screen. (Everything else should be default.)
+   Click Next until reaching the package selection screen.
 
-   Filter the package list by typing **h5py** in the search box. Click the Skip text to select the 
-   latest version for installation.
+   Filter the package list by typing **h5py** in the search box.  
+   Click the *Skip* text to select the latest version for installation.
 
    .. image:: ../img/Instructions/qgisnetwork011.png
 
@@ -104,15 +101,16 @@ Choose one of the following methods:
 
    Click Next and Finish to complete the installation.
 
-      .. container:: h3
+   .. container:: h3
 
       8. Verify Installation
 
    Search for and select the following packages:
-   * h5py 
-   * netCDF4
 
-   Run the OSGeo4W Shell from the Start Menu.
+   * ``h5py``
+   * ``netCDF4``
+
+   Run the **OSGeo4W Shell** from the Start Menu.
 
    .. image:: ../img/Instructions/qgisnetwork026.png
 
