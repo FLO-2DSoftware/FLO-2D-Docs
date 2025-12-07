@@ -133,4 +133,5 @@ img {
 /* Add border to specific images when the 'bordered-img' class is applied */
 .bordered-img {
     border: 3px solid #000;
+    background-color: white;
 }
