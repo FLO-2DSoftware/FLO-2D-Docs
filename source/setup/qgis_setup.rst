@@ -10,7 +10,6 @@ Step 1: QGIS Installation
 Choose one of the following methods:
 
 .. dropdown:: **Option A – QGIS Latest Long-Term Release (Recommended)**
-   :open:
 
    The following method uses the OSGeo4W Network Installer to install the current QGIS LTR version and
    adds Python modules such as ``h5py`` and ``netCDF4``.
