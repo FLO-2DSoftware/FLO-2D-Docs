@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 5 – Realtime Rainfall Data &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lesson 6 – Hydraulic Structures" href="Lesson%206.html" />
+    <link rel="prev" title="Lesson 4 – Buildings, Walls and Wall Failure" href="Lesson%204.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Self-Help Kit v0.10.115</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Lesson 5 – Realtime Rainfall Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#required-data">Required Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-by-step-procedure">Step-by-Step Procedure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-setup-the-project">Step 1: Setup the project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-rain-editor">Step 2: Rain editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-import-rainfall-data">Step 3: Import rainfall data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-export-the-project">Step 4: Export the project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-transfer-the-rain-dat-and-raincell-dat-files">Step 5: Transfer the RAIN.DAT and RAINCELL.DAT files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-6-run-the-simulation">Step 6: Run the simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Coastal-Flooding/index.html">Coastal Flooding v0.10.115</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Self-Help Kit v0.10.115</a></li>
+      <li class="breadcrumb-item active">Lesson 5 – Realtime Rainfall Data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/self-help-kit/Lesson 5.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lesson-5-realtime-rainfall-data">
+<h1>Lesson 5 – Realtime Rainfall Data<a class="headerlink" href="#lesson-5-realtime-rainfall-data" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Lesson 5 outlines the process of setting up realtime rainfall data in the raincell.dat file.
+It is important to perform this tutorial on a Lesson 1 skeleton project.
+Finish Lesson 1 through Step 5 before performing the following steps.</p>
+<p>This video shows the full process of this tutorial.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B1ujp_ODrKE" frameborder="0" allowfullscreen></iframe></section>
+<section id="required-data">
+<h2>Required Data<a class="headerlink" href="#required-data" title="Link to this heading"></a></h2>
+<p>The lesson makes use of QGIS Lesson 1 and rainfall data *.ASC files in QGIS Lesson 5.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File</strong></p></td>
+<td><p><strong>Content</strong></p></td>
+<td><p><strong>Location</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>*.asc</p></td>
+<td><p>ASCII Grid File</p></td>
+<td><p>QGIS Lesson 5</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.rfc</p></td>
+<td><p>Rainfall Catalog File</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Project Location C:\Users\Public\Documents\FLO-2D Pro Documentation\Example Projects\QGIS Tutorials</p>
+<p>Check these folders to ensure the data is available before starting the lesson.</p>
+</section>
+<section id="step-by-step-procedure">
+<h2>Step-by-Step Procedure<a class="headerlink" href="#step-by-step-procedure" title="Link to this heading"></a></h2>
+<p>To build RAIN.DAT and RAINCELL.DAT following these steps.</p>
+<ol class="arabic simple">
+<li><p>Complete QGIS Lesson 1 to Step 5;</p></li>
+<li><p>Set up the rain editor;</p></li>
+<li><p>Import the rainfall data;</p></li>
+<li><p>Export the project;</p></li>
+<li><p>Transfer RAIN.DAT and RAINCELL.DAT files;</p></li>
+<li><p>Run the simulation.</p></li>
+</ol>
+</section>
+<section id="step-1-setup-the-project">
+<h2>Step 1: Setup the project<a class="headerlink" href="#step-1-setup-the-project" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Set up a “Skeleton Project”.
+RAINCELL.DAT is a large file and it is not necessary to keep it in the regular project GeoPackage.
+It will slow the model down and the RAINCELL.DAT is not a file that needs to be regenerated.</p></li>
+<li><p>Follow the QGIS Lesson 1 steps up to Step 5.</p></li>
+</ol>
+</section>
+<section id="step-2-rain-editor">
+<h2>Step 2: Rain editor<a class="headerlink" href="#step-2-rain-editor" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Set up the Rain Editor widget by checking the Simulate Rainfall, Building Rain and Realtime Rainfall check boxes.</p></li>
+</ol>
+<img alt="../../_images/Worksh132.png" src="../../_images/Worksh132.png" />
+</section>
+<section id="step-3-import-rainfall-data">
+<h2>Step 3: Import rainfall data<a class="headerlink" href="#step-3-import-rainfall-data" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the Import Realtime Rainfall ASCII files button.</p></li>
+</ol>
+<img alt="../../_images/Worksh133.png" src="../../_images/Worksh133.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the folder to import the data.</p></li>
+</ol>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 5</p>
+<ol class="arabic simple">
+<li><p>The plugin will read the catalog file and the ASCII grid files and interpolate the realtime rainfall data to the grid.</p></li>
+<li><p>The data processing takes time.
+Track the the progress by the processor by how many auxillary files exist.</p></li>
+</ol>
+<img alt="../../_images/Worksh134.png" src="../../_images/Worksh134.png" />
+<ol class="arabic simple" start="3">
+<li><p>Once the processing is complete, click OK to close the dialog box.</p></li>
+</ol>
+<img alt="../../_images/Worksh135.png" src="../../_images/Worksh135.png" />
+</section>
+<section id="step-4-export-the-project">
+<h2>Step 4: Export the project<a class="headerlink" href="#step-4-export-the-project" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>This is a good point to save project.
+Refer to Step 9 in Lesson 1.</p></li>
+</ol>
+<img alt="../../_images/Worksh083.png" src="../../_images/Worksh083.png" />
+<ol class="arabic simple" start="2">
+<li><p>Export the data files to the Project Folder in QGIS Lesson 5.</p></li>
+</ol>
+<img alt="../../_images/Worksh021.png" src="../../_images/Worksh021.png" />
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 5\Lesson 5 Export</p>
+<ol class="arabic simple" start="3">
+<li><p>All GDS data files will be created in the selected project folder, including RAIN.DAT and RAINCELL.DAT files.</p></li>
+</ol>
+<img alt="../../_images/Worksh136.png" src="../../_images/Worksh136.png" />
+</section>
+<section id="step-5-transfer-the-rain-dat-and-raincell-dat-files">
+<h2>Step 5: Transfer the RAIN.DAT and RAINCELL.DAT files<a class="headerlink" href="#step-5-transfer-the-rain-dat-and-raincell-dat-files" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>To use the new Rainfall data it needs to be transferred to a project folder.
+This project can be started by adding the FLOPRO.EXE Engine to the folder or by calling it from the Plugin.</p></li>
+<li><p>Copy the RAIN.DAT and RAINCELL.DAT files to the Lesson 4 Export folder.</p></li>
+<li><p>Replace the original RAIN.DAT file.</p></li>
+</ol>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 4\QGIS Lesson 4 Export</p>
+<img alt="../../_images/Worksh137.png" src="../../_images/Worksh137.png" />
+</section>
+<section id="step-6-run-the-simulation">
+<h2>Step 6: Run the simulation<a class="headerlink" href="#step-6-run-the-simulation" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the Run FLO-2D Icon.</p></li>
+</ol>
+<img alt="../../_images/Worksh0052.png" src="../../_images/Worksh0052.png" />
+<ol class="arabic simple" start="2">
+<li><p>Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.</p></li>
+</ol>
+<img alt="../../_images/Worksh138.png" src="../../_images/Worksh138.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Lesson%204.html" class="btn btn-neutral float-left" title="Lesson 4 – Buildings, Walls and Wall Failure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Lesson%206.html" class="btn btn-neutral float-right" title="Lesson 6 – Hydraulic Structures" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="Lesson 5.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapping Results &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Review Results" href="Run%20and%20Review.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../self-help-kit/index.html">Self-Help Kit v0.10.115</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Coastal Flooding v0.10.115</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Hydrology.html">Hydrology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Channel.html">Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Culverts.html">Culverts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Mapping Results</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-simplify-map">Step 1. Simplify map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-import-a-map-with-rasterizor">Step 5. Import a map with Rasterizor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-6-mapcrafter">Step 6. MapCrafter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-import-results-from-mesh-tool">Step 2. Import results from mesh tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-load-the-layer-style-panel">Step 3. Load the Layer Style panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-animate-the-flooding-update">Step 4. Animate the flooding - Update</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Coastal Flooding v0.10.115</a></li>
+      <li class="breadcrumb-item active">Mapping Results</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/Coastal-Flooding/Mapping.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mapping-results">
+<h1>Mapping Results<a class="headerlink" href="#mapping-results" title="Link to this heading"></a></h1>
+<p>Required Data</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*.out</p></td>
+<td><p>FLO-2D output files</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.out</p></td>
+<td><p>TIMDEP time series output</p></td>
+</tr>
+</tbody>
+</table>
+<p>Path: …\Coastal Training\Project Data\Project Export Folder</p>
+<section id="step-1-simplify-map">
+<h2>Step 1. Simplify map<a class="headerlink" href="#step-1-simplify-map" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Uncheck unnecessary layers like Grid and Elevation, and Google Hybrid.</p></li>
+<li><p>Set up the layers.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Collapse all layers</p></li>
+<li><p>Click the Layers Styling button.</p></li>
+<li><p>Right click the Layers area and create a
+new Group called Results.</p></li>
+</ul>
+<img alt="../../_images/managelayers2.gif" src="../../_images/managelayers2.gif" />
+</section>
+<section id="step-5-import-a-map-with-rasterizor">
+<h2>Step 5. Import a map with Rasterizor<a class="headerlink" href="#step-5-import-a-map-with-rasterizor" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Review files that can be loaded</p></li>
+<li><p>Load a file</p></li>
+<li><p>Load an alternate file</p></li>
+<li><p>Create a difference map</p></li>
+</ol>
+</section>
+<section id="step-6-mapcrafter">
+<h2>Step 6. MapCrafter<a class="headerlink" href="#step-6-mapcrafter" title="Link to this heading"></a></h2>
+<p>Todo:</p>
+<p>Load Maps</p>
+<p>Load Review if available</p>
+<p>Load Layout</p>
+<ol class="arabic simple" start="9">
+<li><p>Click the export PDF Button</p></li>
+</ol>
+<img alt="../../_images/map012.png" src="../../_images/map012.png" />
+<ol class="arabic simple" start="10">
+<li><p>Save the PDF.</p></li>
+</ol>
+<img alt="../../_images/map013.png" src="../../_images/map013.png" />
+<ol class="arabic simple" start="11">
+<li><p>Set the following parameters:</p></li>
+</ol>
+<img alt="../../_images/map014.png" src="../../_images/map014.png" />
+<ol class="arabic simple" start="12">
+<li><p>Load the pdf to review it.</p></li>
+</ol>
+<img alt="../../_images/map016.png" src="../../_images/map016.png" />
+<ol class="arabic simple" start="13">
+<li><p>The map detail is very solid and the resolution is good.</p></li>
+</ol>
+<img alt="../../_images/map015.png" src="../../_images/map015.png" />
+</section>
+<section id="step-2-import-results-from-mesh-tool">
+<h2>Step 2. Import results from mesh tool<a class="headerlink" href="#step-2-import-results-from-mesh-tool" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the Data Management button.</p></li>
+</ol>
+<img alt="../../_images/map002.png" src="../../_images/map002.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the Mesh option.</p></li>
+<li><p>Navigate to the FLO-2D Project folder and select the DEPTH.OUT file.</p></li>
+<li><p>Click Add and select the 2D layer and click OK.</p></li>
+</ol>
+<img alt="../../_images/datamanagermesh.gif" src="../../_images/datamanagermesh.gif" />
+<ol class="arabic simple" start="5">
+<li><p>Drag the New Layer and drop it into the Results Group.</p></li>
+</ol>
+</section>
+<section id="step-3-load-the-layer-style-panel">
+<h2>Step 3. Load the Layer Style panel<a class="headerlink" href="#step-3-load-the-layer-style-panel" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Dock the layer styling panel with the FLO-2D widgets.</p></li>
+<li><p>Select the Depth layer in the Results Group.</p></li>
+<li><p>Drag the edge of the Layer Styling Panel slightly to the left to make it
+wider.</p></li>
+<li><p>Click the multi-colored block next to Depth to load Depth from
+the mesh layer.</p></li>
+</ol>
+<p>Update image</p>
+<img alt="../../_images/map003.png" src="../../_images/map003.png" />
+</section>
+<section id="step-4-animate-the-flooding-update">
+<h2>Step 4. Animate the flooding - Update<a class="headerlink" href="#step-4-animate-the-flooding-update" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Update.</p></li>
+<li><p>Change the min depth to 0.25ft.</p></li>
+<li><p>Change the color ramp to Blues.</p></li>
+<li><p>Move down and change the Mode to Equal Interval.</p></li>
+<li><p>Change the number of classes to 5.</p></li>
+<li><p>Check Clip out of Range Values.</p></li>
+</ol>
+<img alt="../../_images/map004.png" src="../../_images/map004.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Run%20and%20Review.html" class="btn btn-neutral float-left" title="Review Results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="Mapping.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

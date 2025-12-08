@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hazus Tool &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Tailings Dam Tool" href="Tailings%20Dam%20Tool.html" />
+    <link rel="prev" title="Levee Tool Walls" href="Levee%20Tool%20Walls.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">FLO-2D Plugin</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">User Manual</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../installation-instructions/index.html">QGIS General Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin-features/index.html">Plugin Features</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Toolbar</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="FLO-2D%20Toolbar.html">FLO-2D Toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FLO-2D%20Settings.html">FLO-2D Plugin Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Run%20FLO-2D.html">Run FLO-2D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Import%20Geo%20Package.html">Import a Geo Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Import%20Data%20Files.html">Import FLO-2D Data Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Import%20Selected%20Component%20Files.html">Import Selected Component Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Export%20Project.html">Export Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Import%20RAS%20Channel.html">Import HEC-RAS Channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Control%20Variables.html">Control Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Schematic%20to%20User%20Converter.html">Schematic to User Converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="User%20to%20Schematic%20Converter.html">User to Schematic Converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Channel%20Profile.html">Channel Profile Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FLO-2D%20Info%20Tool.html">FLO-2D Info Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Grid%20Info%20Tool.html">Grid Info Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Levee%20Tool.html">Levee Elevation Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Levee%20Tool%20Walls.html">Levee Tool Walls</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Hazus Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Tailings%20Dam%20Tool.html">Tailings Dam Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mud%20and%20Sediment%20Transport%20Tool.html">Mud and Sediment Transport Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Debug%20Tool.html">Debug Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Help.html">Help</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../widgets/index.html">Widgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../post-development-grid-modification/Post%20Development%20Grid%20Modification.html">Post Development Grid Modification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../technical_reference_manual.html">Technical Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Plugin</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">User Manual</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Toolbar</a></li>
+      <li class="breadcrumb-item active">Hazus Tool</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/flo-2d_plugin/user_manual/toolbar/Hazus Tool.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="hazus-tool">
+<h1>Hazus Tool<a class="headerlink" href="#hazus-tool" title="Link to this heading"></a></h1>
+<p>The Hazus tool is used to generate water surface elevation or flow depth
+rasters for the FEMA Hazus program.</p>
+<img alt="../../../_images/hazustool.png" src="../../../_images/hazustool.png" />
+<section id="building-layer">
+<h2>Building Layer<a class="headerlink" href="#building-layer" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Add building
+layer from a shapefile.</p></li>
+<li><p>Click Open
+Data Source Manager button.</p></li>
+</ol>
+<img alt="../../../_images/hazustool30.png" src="../../../_images/hazustool30.png" />
+<ol class="arabic simple" start="3">
+<li><p>Navigate to
+the building shapefile and add it to the map.</p></li>
+</ol>
+<img alt="../../../_images/hazustool2.png" src="../../../_images/hazustool2.png" />
+</section>
+<section id="import-depth-and-water-surface-layers">
+<h2>Import Depth and Water Surface Layers<a class="headerlink" href="#import-depth-and-water-surface-layers" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Add a depth
+layer and a water surface layer.</p></li>
+<li><p>Click Open
+Data Source Manager button.</p></li>
+</ol>
+<img alt="../../../_images/hazustool30.png" src="../../../_images/hazustool30.png" />
+<ol class="arabic simple" start="3">
+<li><p>Fill the form as shown in
+the following image:</p></li>
+</ol>
+<img alt="../../../_images/hazustool29.png" src="../../../_images/hazustool29.png" />
+<ol class="arabic simple" start="4">
+<li><p>Repeat this process
+for the DEPFP.OUT file.</p></li>
+</ol>
+</section>
+<section id="assign-water-elevation-and-depth-to-the-grid-layer">
+<h2>Assign Water Elevation and Depth to the Grid Layer<a class="headerlink" href="#assign-water-elevation-and-depth-to-the-grid-layer" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>On the Grid Tools widget select
+the Assign water elevations/flow depths to grid from points layer button.</p></li>
+</ol>
+<img alt="../../../_images/hazustool6.png" src="../../../_images/hazustool6.png" />
+<ol class="arabic simple" start="2">
+<li><p>Edit the dialog box as
+shown below and click the Assign to selected grid field button.</p></li>
+</ol>
+<img alt="../../../_images/hazustool7.png" src="../../../_images/hazustool7.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click OK to
+close the dialog box.</p></li>
+</ol>
+<img alt="../../../_images/hazustool8.png" src="../../../_images/hazustool8.png" />
+<ol class="arabic simple" start="4">
+<li><p>Repeat the process
+for the Depth layer.</p></li>
+<li><p>On the Grid Tools
+widget select the Assign water elevations/flow depths to grid from points layer button.</p></li>
+</ol>
+<img alt="../../../_images/hazustool6.png" src="../../../_images/hazustool6.png" />
+<ol class="arabic simple" start="6">
+<li><p>Edit the dialog box as
+shown below and click the Assign to selected grid field button.</p></li>
+</ol>
+<img alt="../../../_images/hazustool9.png" src="../../../_images/hazustool9.png" />
+<ol class="arabic simple" start="7">
+<li><p>Click OK to
+close the dialog box.</p></li>
+</ol>
+<img alt="../../../_images/hazustool8.png" src="../../../_images/hazustool8.png" />
+</section>
+<section id="intersect-building-layer-to-grid">
+<h2>Intersect Building Layer to Grid<a class="headerlink" href="#intersect-building-layer-to-grid" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Use the QGIS Vector
+Menu to set up the intersection. Click Vector&gt;GeoProcessing Tools&gt;Intersection.</p></li>
+</ol>
+<img alt="../../../_images/hazustool10.png" src="../../../_images/hazustool10.png" />
+<ol class="arabic simple" start="2">
+<li><p>Set up the intersection dialog
+box as shown below. Click Run to make the intersection. This process adds the Intersection layer to the map automatically.</p></li>
+</ol>
+<img alt="../../../_images/hazustool11.png" src="../../../_images/hazustool11.png" />
+</section>
+<section id="review-intersection-layer">
+<h2>Review Intersection Layer<a class="headerlink" href="#review-intersection-layer" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>The new Intersection layer
+has fields from both the Buildings and Grid layers:</p></li>
+</ol>
+<img alt="../../../_images/hazustool12.png" src="../../../_images/hazustool12.png" />
+<ol class="arabic simple" start="2">
+<li><p>Each building polygon that intersects
+the grid has several partitions (polygons) with different elevations.
+The following building has 7 partitions with different data from each grid:</p></li>
+</ol>
+<img alt="../../../_images/hazustool13.jpeg" src="../../../_images/hazustool13.jpeg" />
+<ol class="arabic simple" start="3">
+<li><p>Each partition of the building has,
+different field values. For example, HOUSE_ID “1” in the Features Table,
+has different ‘elevation’, ‘water_elev’, and ‘flow_depth’:</p></li>
+</ol>
+<img alt="../../../_images/hazustool14.png" src="../../../_images/hazustool14.png" />
+</section>
+<section id="homogenize-the-intersection-layer">
+<h2>Homogenize the Intersection Layer<a class="headerlink" href="#homogenize-the-intersection-layer" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Select the HAZUS
+button in the FLO-2D Toolbar.</p></li>
+</ol>
+<img alt="../../../_images/hazustool15.png" src="../../../_images/hazustool15.png" />
+<ol class="arabic simple" start="2">
+<li><p>Fill the dialog box as
+shown below and click the Compute and Show Building Statistics button.</p></li>
+</ol>
+<img alt="../../../_images/hazustool16.png" src="../../../_images/hazustool16.png" />
+<p><strong>Note: The ‘Finished floor global adjustment factor’ value will be added
+to the ground elevations, if selected.</strong></p>
+<ol class="arabic simple" start="3">
+<li><p>Click OK to close
+the message dialog box.</p></li>
+</ol>
+<img alt="../../../_images/hazustool17.png" src="../../../_images/hazustool17.png" />
+<ol class="arabic simple" start="4">
+<li><p>The Hazus tool calculates the
+statistics of the buildings polygons. It computes the following data for each building.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Ground elevation (min, max, mean);</p></li>
+<li><p>First floor elevation (min, max, mean);</p></li>
+<li><p>Water surface elevation (min, max, mean);</p></li>
+<li><p>Depth (min, max, mean).</p></li>
+</ul>
+<img alt="../../../_images/hazustool18.png" src="../../../_images/hazustool18.png" />
+<img alt="../../../_images/hazustool19.png" src="../../../_images/hazustool19.png" />
+</section>
+<section id="join-building-statistics-table-to-building-polygons">
+<h2>Join Building Statistics Table to Building Polygons<a class="headerlink" href="#join-building-statistics-table-to-building-polygons" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Right click the Buildings
+layer and click Properties. Add a Join to the layer. Click OK and Close the Properties window.</p></li>
+</ol>
+<img alt="../../../_images/hazustool20.png" src="../../../_images/hazustool20.png" />
+<img alt="../../../_images/hazustool21.png" src="../../../_images/hazustool21.png" />
+<ol class="arabic simple" start="2">
+<li><p>Save the Buildings Layer to a
+shapefile. Select the Save As… to a location and name the file.</p></li>
+</ol>
+<p><strong>Note: The style of this new layer can be edited to help the user review
+the data. The attributes can be sorted and arranged to help track
+outliers or bad data. Use the field calculator to perform additional
+statistical analysis on the data in this layer.</strong></p>
+<img alt="../../../_images/hazustool22.png" src="../../../_images/hazustool22.png" />
+<img alt="../../../_images/hazustool23.png" src="../../../_images/hazustool23.png" />
+<ol class="arabic simple" start="3">
+<li><p>Now, the Buildings Shapefile
+has “join” fields from the Buildings Statistics table:</p></li>
+</ol>
+<img alt="../../../_images/hazustool24.png" src="../../../_images/hazustool24.png" />
+</section>
+<section id="rasterize-the-buildings">
+<h2>Rasterize the Buildings<a class="headerlink" href="#rasterize-the-buildings" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>On the Main QGIS Menu,
+click Processing&gt;Toolbox.</p></li>
+</ol>
+<img alt="../../../_images/hazustool25.png" src="../../../_images/hazustool25.png" />
+<ol class="arabic simple" start="2">
+<li><p>Enter the search term Rasterize
+in the Processing Toolbox search field. Double click the Saga Rasterize tool. Saga&gt;Raster Creation Tools&gt;Rasterize.</p></li>
+</ol>
+<img alt="../../../_images/hazustool26.png" src="../../../_images/hazustool26.png" />
+<ol class="arabic simple" start="3">
+<li><p>Change the dialog
+box as shown below and click Run.</p></li>
+</ol>
+<img alt="../../../_images/hazustool27.png" src="../../../_images/hazustool27.png" />
+<ol class="arabic simple" start="4">
+<li><p>This example uses 10 ft. pixel resolution.
+The user can change this value to the desired resolution to better fit the buildings.
+This raster can be used with the FEMA Hazus software. Any other rasters that Hazus
+requires can be generated with the same methodology.</p></li>
+</ol>
+<img alt="../../../_images/hazustool28.png" src="../../../_images/hazustool28.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Levee%20Tool%20Walls.html" class="btn btn-neutral float-left" title="Levee Tool Walls" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Tailings%20Dam%20Tool.html" class="btn btn-neutral float-right" title="Tailings Dam Tool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="Hazus Tool.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

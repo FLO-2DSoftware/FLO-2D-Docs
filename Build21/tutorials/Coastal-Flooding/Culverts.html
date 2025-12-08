@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Culverts &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Storm Drain - Shapefile Development" href="Storm%20Drain%20Shapefile%20Development.html" />
+    <link rel="prev" title="Channel" href="Channel.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../self-help-kit/index.html">Self-Help Kit v0.10.115</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Coastal Flooding v0.10.115</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Hydrology.html">Hydrology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Channel.html">Channel</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Culverts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#required-data">Required Data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Mapping.html">Mapping Results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Coastal Flooding v0.10.115</a></li>
+      <li class="breadcrumb-item active">Culverts</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/Coastal-Flooding/Culverts.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="culverts">
+<h1>Culverts<a class="headerlink" href="#culverts" title="Link to this heading"></a></h1>
+<p><strong>Overview</strong></p>
+<p>This tutorial outlines the process of creating hydraulic structures with generalized culvert equations.</p>
+<section id="required-data">
+<h2>Required Data<a class="headerlink" href="#required-data" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*.shp</p></td>
+<td><p>Culvert Data</p></td>
+</tr>
+</tbody>
+</table>
+<p>Path: …\Coastal Training\Project Data\Culverts</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zv5fN8_JQ0I" frameborder="0" allowfullscreen></iframe><section id="step-1-import-data">
+<h3>Step 1: Import data<a class="headerlink" href="#step-1-import-data" title="Link to this heading"></a></h3>
+<p>Start by cleaning up the map space so the next layer will be easy to see.</p>
+<ol class="arabic simple">
+<li><p>Uncheck the User Left bank, Right Bank Cross section layers.</p></li>
+<li><p>Check the Elevation Layer.</p></li>
+<li><p>Click the Structure Lines layer to activate it.  It is in the User Layers Group.</p></li>
+<li><p>Drag the Culvert Data.shp onto the map space.</p></li>
+</ol>
+<img alt="../../_images/culv001.png" src="../../_images/culv001.png" />
+</section>
+<section id="step-2-format-the-data-layers">
+<h3>Step 2: Format the data layers<a class="headerlink" href="#step-2-format-the-data-layers" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Double click the Culvert Data layer</p></li>
+<li><p>Change the symbology to Arrow.</p></li>
+<li><p>Set the Labels to structname.</p></li>
+</ol>
+<img alt="../../_images/culv002.png" src="../../_images/culv002.png" />
+<ol class="arabic simple" start="4">
+<li><p>This helps identify the structure and show the flow direction.</p></li>
+</ol>
+<img alt="../../_images/culv003.png" src="../../_images/culv003.png" />
+</section>
+<section id="step-3-build-the-structures-into-the-user-layers">
+<h3>Step 3: Build the structures into the User Layers.<a class="headerlink" href="#step-3-build-the-structures-into-the-user-layers" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Use the Structure Editor to add all of the new structures.</p></li>
+<li><p>Collapse the Widgets, open the Structures Editor, and click the Add a Structure button.</p></li>
+</ol>
+<img alt="../../_images/culv004.png" src="../../_images/culv004.png" />
+<p><strong>Digitizing process:</strong></p>
+<ol class="arabic simple" start="3">
+<li><p>Left click the inlet node (upstream node)</p></li>
+<li><p>Left click the outlet node (downstream node)</p></li>
+<li><p>Right Click to finish the polyline.
+Click OK to close the attribute window.</p></li>
+<li><p>Watch the gif for a cycle.  Notice how the inlet and outlet position try to take advantage of the cells with the
+lower elevations.  The positioning is not perfect.  It is aligned to the cell that most closely represents the invert.</p></li>
+</ol>
+<img alt="../../_images/addculverts.gif" src="../../_images/addculverts.gif" />
+</section>
+<section id="step-4-assign-the-structure-attributes">
+<h3>Step 4: Assign the structure attributes<a class="headerlink" href="#step-4-assign-the-structure-attributes" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Click Save in the Structures Widget and check the center box.</p></li>
+</ol>
+<img alt="../../_images/culv006.png" src="../../_images/culv006.png" />
+<ol class="arabic simple" start="2">
+<li><p>Open the Culvert Data attribute table.
+The attributes will help fill out the data for each structure.</p></li>
+</ol>
+<img alt="../../_images/culv005.png" src="../../_images/culv005.png" />
+<ol class="arabic simple" start="3">
+<li><p>Use the following Image or the attribute table to fill out the culvert variables.</p></li>
+<li><p>If the following image is not clear, right click it
+and open it in a new tab.</p></li>
+</ol>
+<img alt="../../_images/culv007.png" src="../../_images/culv007.png" />
+<ol class="arabic simple" start="5">
+<li><p>For Culvert Equations, extra data is needed in the Table Editor.  If the following image is not clear, right click it
+and open it in a new tab. The new plugin also has a Mult_Barrel option.  Set Mutl_Barrel to 1.</p></li>
+</ol>
+<img alt="../../_images/culv008.png" src="../../_images/culv008.png" />
+<ol class="arabic simple" start="6">
+<li><p>Schematize the structure data and click Yes to replace the data.</p></li>
+</ol>
+<img alt="../../_images/culv009.png" src="../../_images/culv009.png" />
+<img alt="../../_images/Module045.png" src="../../_images/Module045.png" />
+</section>
+<section id="step-6-save-and-export">
+<h3>Step 6: Save, and export<a class="headerlink" href="#step-6-save-and-export" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>This is a good point to save project.</p></li>
+</ol>
+<img alt="../../_images/Module046.png" src="../../_images/Module046.png" />
+<ol class="arabic simple" start="2">
+<li><p>Export the data files to the Project Folder in QGIS Lesson 6 Export.</p></li>
+</ol>
+<img alt="../../_images/Module047.png" src="../../_images/Module047.png" />
+<ol class="arabic simple" start="3">
+<li><p>All data files will be created in the selected project folder.</p></li>
+</ol>
+<img alt="../../_images/culv010.png" src="../../_images/culv010.png" />
+<img alt="../../_images/culv011.png" src="../../_images/culv011.png" />
+</section>
+<section id="step-7-create-a-backup-file">
+<h3>Step 7: Create a backup file<a class="headerlink" href="#step-7-create-a-backup-file" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Close QGIS.</p></li>
+<li><p>Open the project folder.  Select the Coastal Project.gpkg and Coastal Project.qgz files.  Right click them and
+click Sent to/Compressed (zipped) folder.</p></li>
+</ol>
+<img alt="../../_images/creategrid019.png" src="../../_images/creategrid019.png" />
+<ol class="arabic simple" start="3">
+<li><p>Name the zipped file.
+It is good to choose a name that identifies project progress.
+For Example: <strong>CulvertsOK.zip</strong></p></li>
+</ol>
+<img alt="../../_images/culv012.png" src="../../_images/culv012.png" />
+<ol class="arabic simple" start="4">
+<li><p>Open QGIS and reload the project.</p></li>
+</ol>
+<img alt="../../_images/creategrid021.png" src="../../_images/creategrid021.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click yes to load the model.</p></li>
+</ol>
+<img alt="../../_images/creategrid022.png" src="../../_images/creategrid022.png" />
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Channel.html" class="btn btn-neutral float-left" title="Channel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Storm%20Drain%20Shapefile%20Development.html" class="btn btn-neutral float-right" title="Storm Drain - Shapefile Development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="Culverts.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

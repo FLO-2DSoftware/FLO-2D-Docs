@@ -1,0 +1,205 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailings Dam Tool &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Mud and Sediment Transport Tool" href="Mud%20and%20Sediment%20Transport%20Tool.html" />
+    <link rel="prev" title="Hazus Tool" href="Hazus%20Tool.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">FLO-2D Plugin</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">User Manual</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../installation-instructions/index.html">QGIS General Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin-features/index.html">Plugin Features</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Toolbar</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="FLO-2D%20Toolbar.html">FLO-2D Toolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FLO-2D%20Settings.html">FLO-2D Plugin Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Run%20FLO-2D.html">Run FLO-2D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Import%20Geo%20Package.html">Import a Geo Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Import%20Data%20Files.html">Import FLO-2D Data Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Import%20Selected%20Component%20Files.html">Import Selected Component Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Export%20Project.html">Export Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Import%20RAS%20Channel.html">Import HEC-RAS Channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Control%20Variables.html">Control Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Schematic%20to%20User%20Converter.html">Schematic to User Converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="User%20to%20Schematic%20Converter.html">User to Schematic Converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Channel%20Profile.html">Channel Profile Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FLO-2D%20Info%20Tool.html">FLO-2D Info Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Grid%20Info%20Tool.html">Grid Info Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Levee%20Tool.html">Levee Elevation Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Levee%20Tool%20Walls.html">Levee Tool Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Hazus%20Tool.html">Hazus Tool</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Tailings Dam Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mud%20and%20Sediment%20Transport%20Tool.html">Mud and Sediment Transport Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Debug%20Tool.html">Debug Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Help.html">Help</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../widgets/index.html">Widgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../post-development-grid-modification/Post%20Development%20Grid%20Modification.html">Post Development Grid Modification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../technical_reference_manual.html">Technical Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Plugin</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">User Manual</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Toolbar</a></li>
+      <li class="breadcrumb-item active">Tailings Dam Tool</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/flo-2d_plugin/user_manual/toolbar/Tailings Dam Tool.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tailings-dam-tool">
+<h1>Tailings Dam Tool<a class="headerlink" href="#tailings-dam-tool" title="Link to this heading"></a></h1>
+<p>The tailings dam tool button will load the tailings dam executable in the Project Folder.</p>
+<img alt="../../../_images/run006-115.png" src="../../../_images/run006-115.png" />
+<p>Assign the FLO-2D Pro folder to the first field.  This is where the Tailings Dam Tool program should be located.
+If it is not there, please install Build 21.</p>
+<p><a class="reference external" href="https://documentation.flo-2d.com/Intro/Set-up.html">FLO-2D Setup</a></p>
+<p>Assign the location where the INFLOW.DAT file should be saved to the Project Folder.  This should be the same location
+where all of the *.DAT files will be saved.</p>
+<p>For a full tutorial, please visit this page:</p>
+<p><a class="reference external" href="https://documentation.flo-2d.com/Advanced-Lessons/Module%207.html">Tailing Dam Tutoiral</a></p>
+<p><a class="reference external" href="https://flo-2d.com/contact/">Contact-Us</a> to get the data for the tutorial.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Hazus%20Tool.html" class="btn btn-neutral float-left" title="Hazus Tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Mud%20and%20Sediment%20Transport%20Tool.html" class="btn btn-neutral float-right" title="Mud and Sediment Transport Tool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="Tailings Dam Tool.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

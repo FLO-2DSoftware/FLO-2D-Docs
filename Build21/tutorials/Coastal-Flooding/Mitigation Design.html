@@ -1,0 +1,448 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mitigation Design &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Review Results" href="Run%20and%20Review.html" />
+    <link rel="prev" title="Urban Features" href="Urban%20Features.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../self-help-kit/index.html">Self-Help Kit v0.10.115</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Coastal Flooding v0.10.115</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Hydrology.html">Hydrology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Channel.html">Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Culverts.html">Culverts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Mitigation Design</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-load-the-data">Step 1. Load the data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-load-open-street-map">Step 2. Load Open Street Map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-run-osm-downloader">Step 3. Run OSM Downloader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-open-data-connection">Step 4. Open data connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-modify-highway-41">Step 5. Modify Highway 41</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-6-reset-channel-elevation">Step 6. Reset channel elevation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-7-improve-a-culvert">Step 7. Improve a culvert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-8-coco1-pump">Step 8. Coco1 pump</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-9-save-and-export">Step 9. Save and export</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Mapping.html">Mapping Results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Coastal Flooding v0.10.115</a></li>
+      <li class="breadcrumb-item active">Mitigation Design</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/Coastal-Flooding/Mitigation Design.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mitigation-design">
+<h1>Mitigation Design<a class="headerlink" href="#mitigation-design" title="Link to this heading"></a></h1>
+<p><strong>Overview</strong></p>
+<p>Coastal flood mitigation practices include improving drainage, identifying critical infrastructure, protecting evacuation routes, protecting, and restoring natural flood barriers. This lesson cannot cover the topic fully but can help show how QGIS and FLO-2D can be used to study mitigation plans. Mitigation models can help determine if potential designs are successful. Mitigation methods can include:</p>
+<ul class="simple">
+<li><p>Protect critical infrastructure</p></li>
+<li><p>Raise structure, roadways, and seawalls</p></li>
+<li><p>Improve culverts, tide gates, and pumps</p></li>
+<li><p>Modify base flood elevation for new construction</p></li>
+<li><p>Improve basin storage</p></li>
+<li><p>Restore natural flood management</p></li>
+<li><p>Improve drainage maintenance plans</p></li>
+</ul>
+<p><strong>Required Data</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>File</p></th>
+<th class="head"><p>Content</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*.shp</p></td>
+<td><p>Highway Centerline</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.shp</p></td>
+<td><p>Mitigation Polygon</p></td>
+</tr>
+<tr class="row-even"><td><p>*.tif</p></td>
+<td><p>Elevation</p></td>
+</tr>
+</tbody>
+</table>
+<p>Path: …\Coastal Training\Project Data\Mitigation Design</p>
+<section id="step-1-load-the-data">
+<h2>Step 1. Load the data<a class="headerlink" href="#step-1-load-the-data" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Collapse all Layers.</p></li>
+</ol>
+<img alt="../../_images/mitdz001.png" src="../../_images/mitdz001.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the External Data Group.</p></li>
+<li><p>Drag the Mitigation and Highway shapefiles onto the map.</p></li>
+</ol>
+<img alt="../../_images/mitdz002.png" src="../../_images/mitdz002.png" />
+<ol class="arabic simple" start="4">
+<li><p>Change the symbology of the new layers to make them more visible.</p></li>
+</ol>
+<img alt="../../_images/mitdz003.png" src="../../_images/mitdz003.png" />
+<img alt="../../_images/mitdz004.png" src="../../_images/mitdz004.png" />
+</section>
+<section id="step-2-load-open-street-map">
+<h2>Step 2. Load Open Street Map<a class="headerlink" href="#step-2-load-open-street-map" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click Quick Map Services and load the Open Street Map Standard.</p></li>
+</ol>
+<img alt="../../_images/mitdz005.png" src="../../_images/mitdz005.png" />
+<ol class="arabic simple" start="2">
+<li><p>Organize the Map Layers.</p></li>
+<li><p>Uncheck Aerial images and elevation.</p></li>
+</ol>
+<img alt="../../_images/mitdz006.png" src="../../_images/mitdz006.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Open Street Map is useful to help find important features as it has
+excellent symbology. This map source is a raster so it does not have
+selectable attributes like a vector layer. It is still helpful for
+map browsing.</p>
+</div>
+</section>
+<section id="step-3-run-osm-downloader">
+<h2>Step 3. Run OSM Downloader<a class="headerlink" href="#step-3-run-osm-downloader" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Right click the blank area at the bottom of the layers list.</p></li>
+<li><p>Add a new group called OSM Download.</p></li>
+</ol>
+<img alt="../../_images/mitdz007.png" src="../../_images/mitdz007.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click the new group and then Click the OSM Downloader icon.</p></li>
+<li><p>Use the mouse to draw a rectangle around the project area.</p></li>
+</ol>
+<img alt="../../_images/mitdz008.png" src="../../_images/mitdz008.png" />
+<ol class="arabic simple" start="5">
+<li><p>The downloader will download vectorized map data from the OSM
+database.</p></li>
+<li><p>Save the data as OSM Download.osm file in the Mitigation folder.</p></li>
+</ol>
+<img alt="../../_images/mitdz009.png" src="../../_images/mitdz009.png" />
+<ol class="arabic simple" start="7">
+<li><p>The Open Street Map layers are now vectorized into polygons, points,
+and polylines.</p></li>
+</ol>
+<img alt="../../_images/mitdz010.png" src="../../_images/mitdz010.png" />
+</section>
+<section id="step-4-open-data-connection">
+<h2>Step 4. Open data connection<a class="headerlink" href="#step-4-open-data-connection" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ArcGIS Online services can be loaded into QGIS maps. This allows
+users to connect to data that is hosted on local, state, and federal
+government sites.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Click Layers &gt;&gt; Add Layer &gt;&gt; Add ArcGIS REST Server Layer.</p></li>
+</ol>
+<img alt="../../_images/mitdz011.png" src="../../_images/mitdz011.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the Load button and find the Open Data Connection.xml file in
+the Mitigation folder.</p></li>
+</ol>
+<img alt="../../_images/mitdz012.png" src="../../_images/mitdz012.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click Select All and Import.</p></li>
+</ol>
+<img alt="../../_images/mitdz013.png" src="../../_images/mitdz013.png" />
+<ol class="arabic simple" start="4">
+<li><p>Any of these layers can be added to the map.</p></li>
+</ol>
+<img alt="../../_images/mitdz014.png" src="../../_images/mitdz014.png" />
+<ol class="arabic simple" start="5">
+<li><p>Here is an example of the Structures layer.</p></li>
+</ol>
+<img alt="../../_images/mitdz015.png" src="../../_images/mitdz015.png" />
+<ol class="arabic simple" start="6">
+<li><p>Any new REST connection can be created even if it requires
+authentication.</p></li>
+</ol>
+<img alt="../../_images/mitdz016.png" src="../../_images/mitdz016.png" />
+</section>
+<section id="step-5-modify-highway-41">
+<h2>Step 5. Modify Highway 41<a class="headerlink" href="#step-5-modify-highway-41" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Now that some data loading methods have been identified, proceed with
+some simple mitigation changes.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Any mitigation change can relieve flooding locally while increasing
+flooding in other areas. Always use a project area that is large
+enough to show potential flood changes downstream or away from the
+mitigation location.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Collapse the OSM Download group and uncheck it.</p></li>
+<li><p>Click the Highway Centerline layer.</p></li>
+<li><p>Click the Select button.</p></li>
+<li><p>Use the select tool to select Highway 41 polyline.</p></li>
+</ol>
+<img alt="../../_images/mitdz017.png" src="../../_images/mitdz017.png" />
+<ol class="arabic simple" start="5">
+<li><p>Collapse the FLO-2D Widgets and open the Grid Tools Widget.</p></li>
+<li><p>Select the Correct Grid Elevation button.</p></li>
+</ol>
+<img alt="../../_images/mitdz018.png" src="../../_images/mitdz018.png" />
+<ol class="arabic simple" start="7">
+<li><p>Fill the window as shown below and click OK.</p></li>
+</ol>
+<img alt="../../_images/mitdz019.png" src="../../_images/mitdz019.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a simple way to raise grid element elevation. It uses a
+correction tool to add or subtract elevation from a group of cells
+that are within buffer.</p>
+</div>
+</section>
+<section id="step-6-reset-channel-elevation">
+<h2>Step 6. Reset channel elevation<a class="headerlink" href="#step-6-reset-channel-elevation" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Zoom to the end of the channel and click the Mitigation Polygon
+Layer.</p></li>
+<li><p>Click the Select button.</p></li>
+<li><p>Select the Polygon that covers the end of the channel.</p></li>
+</ol>
+<img alt="../../_images/mitdz020.png" src="../../_images/mitdz020.png" />
+<ol class="arabic simple" start="4">
+<li><p>Collapse the Widgets and open Grid Tools.</p></li>
+<li><p>Click the Correct Grid Elevation button.</p></li>
+</ol>
+<img alt="../../_images/mitdz021.png" src="../../_images/mitdz021.png" />
+<ol class="arabic simple" start="6">
+<li><p>Fill the form as shown below and click OK.</p></li>
+</ol>
+<img alt="../../_images/mitdz022.png" src="../../_images/mitdz022.png" />
+<ol class="arabic simple" start="7">
+<li><p>Close the message when the grid elevation correction is complete.</p></li>
+</ol>
+<img alt="../../_images/mitdz023.png" src="../../_images/mitdz023.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This step can set or re-set the elevation of grid elements within a
+polygon. Use it to correct elevation for new grading or new basin
+design. Use it to correct elevation along a channel or at a headwall.
+It is a very versatile tool.</p>
+</div>
+</section>
+<section id="step-7-improve-a-culvert">
+<h2>Step 7. Improve a culvert<a class="headerlink" href="#step-7-improve-a-culvert" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Select culvert CU10.</p></li>
+<li><p>Change the width to 5 ft and multiple barrels to 3.</p></li>
+<li><p>Click the Schematize Culverts button.</p></li>
+</ol>
+<img alt="../../_images/mitdz024.png" src="../../_images/mitdz024.png" />
+</section>
+<section id="step-8-coco1-pump">
+<h2>Step 8. Coco1 pump<a class="headerlink" href="#step-8-coco1-pump" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Select Coco1.</p></li>
+<li><p>Add a pump to this system by modifying the rating table.</p></li>
+<li><p>Assume the pump uses a steady flow of 100 cfs.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a larger pump is used, any value can be applied to match the
+discharge of the pump plus the discharge of the flow through the
+gated weir.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Add 100 cfs to the depths above 5ft. This means the pump will turn on
+at 5 ft of depth.</p></li>
+</ol>
+<img alt="../../_images/mitdz025.png" src="../../_images/mitdz025.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Since step 6 and 7 did not change the position of a culvert, the
+Schematize button is not needed. The tables were automatically
+updated when the data was modified in the widget and table editor.</p>
+</div>
+</section>
+<section id="step-9-save-and-export">
+<h2>Step 9. Save and export<a class="headerlink" href="#step-9-save-and-export" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>This is a good point to save project.</p></li>
+</ol>
+<img alt="../../_images/mitdz026.png" src="../../_images/mitdz026.png" />
+<ol class="arabic simple" start="2">
+<li><p>Export the data files to the Mitigation Test folder.</p></li>
+</ol>
+<img alt="../../_images/mitdz027.png" src="../../_images/mitdz027.png" />
+<ol class="arabic simple" start="3">
+<li><p>All data files will be created in the selected project folder.</p></li>
+</ol>
+<img alt="../../_images/mitdz028.png" src="../../_images/mitdz028.png" />
+<img alt="../../_images/mitdz029.png" src="../../_images/mitdz029.png" />
+<ol class="arabic simple" start="4">
+<li><p>It is not necessary to schematize the storm drain system since no
+work was added to the storm drain. Click Yes to continue.</p></li>
+</ol>
+<img alt="../../_images/mitdz030.png" src="../../_images/mitdz030.png" />
+<ol class="arabic simple" start="5">
+<li><p>No changes are needed for this project. Click OK to continue and
+close the next few messages.</p></li>
+</ol>
+<img alt="../../_images/mitdz031.png" src="../../_images/mitdz031.png" />
+<img alt="../../_images/mitdz032.png" src="../../_images/mitdz032.png" />
+<img alt="../../_images/mitdz033.png" src="../../_images/mitdz033.png" />
+<ol class="arabic simple" start="6">
+<li><p>The project has now been exported.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Urban%20Features.html" class="btn btn-neutral float-left" title="Urban Features" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Run%20and%20Review.html" class="btn btn-neutral float-right" title="Review Results" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="Mitigation Design.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

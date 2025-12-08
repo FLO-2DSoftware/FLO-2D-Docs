@@ -1,0 +1,379 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Storm Drain Setup &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Urban Features" href="Urban%20Features.html" />
+    <link rel="prev" title="Storm Drain - Shapefile Development" href="Storm%20Drain%20Shapefile%20Development.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../self-help-kit/index.html">Self-Help Kit v0.10.115</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Coastal Flooding v0.10.115</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Hydrology.html">Hydrology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Channel.html">Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Culverts.html">Culverts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Storm Drain Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-select-components-from-shapefile">Step 1: Select components from shapefile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-calculate-the-conduit-node-connections">Step 2: Calculate the conduit node connections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-import-rating-tables">Step 3: Import rating tables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-schematize-storm-drain-components">Step 4: Schematize storm drain components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-export-swmm-inp-file">Step 5: Export SWMM.INP file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-6-export-the-project">Step 6: Export the project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-7-run-the-simulation">Step 7: Run the simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-8-create-a-backup-file">Step 8: Create a backup file</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Mapping.html">Mapping Results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Coastal Flooding v0.10.115</a></li>
+      <li class="breadcrumb-item active">Storm Drain Setup</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/Coastal-Flooding/Storm Drain Setup.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="storm-drain-setup">
+<h1>Storm Drain Setup<a class="headerlink" href="#storm-drain-setup" title="Link to this heading"></a></h1>
+<p>Required Data</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Point shapefile</p></td>
+<td><p>Inlets Junctions</p></td>
+</tr>
+<tr class="row-odd"><td><p>Polyline shapefile</p></td>
+<td><p>Conduits</p></td>
+</tr>
+<tr class="row-even"><td><p>Point shapefile</p></td>
+<td><p>Outfall</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.txt</p></td>
+<td><p>Type 4 Rating Tables</p></td>
+</tr>
+</tbody>
+</table>
+<p>Path:  …\Coastal Training\Project Data\Storm Drain</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Jc8zF4Sn3IM" frameborder="0" allowfullscreen></iframe><section id="step-1-select-components-from-shapefile">
+<h2>Step 1: Select components from shapefile<a class="headerlink" href="#step-1-select-components-from-shapefile" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Collapse the widgets, select the Storm Drain Editor.</p></li>
+<li><p>Click the Select components from shapefile layer button.</p></li>
+</ol>
+<img alt="../../_images/sd007.png" src="../../_images/sd007.png" />
+<ol class="arabic simple" start="3">
+<li><p>Use the Editor to select the fields from 3 shapefiles.  Take care with the purple MaxDepthF.
+That is the final field.</p></li>
+</ol>
+<img alt="../../_images/sd008.png" src="../../_images/sd008.png" />
+<img alt="../../_images/sd009.png" src="../../_images/sd009.png" />
+<img alt="../../_images/sd010.png" src="../../_images/sd010.png" />
+<ol class="arabic simple" start="4">
+<li><p>Once all features are assigned, click on Assign Selected Inlets/Junctions, Outfalls and Conduits to create the data
+structures of the Storm Drain Components.</p></li>
+<li><p>The following message will be displayed.
+Click OK.</p></li>
+</ol>
+<img alt="../../_images/sd011.png" src="../../_images/sd011.png" />
+</section>
+<section id="step-2-calculate-the-conduit-node-connections">
+<h2>Step 2: Calculate the conduit node connections<a class="headerlink" href="#step-2-calculate-the-conduit-node-connections" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the Auto-assign conduits nodes button.
+This step will fill the upstream and downstream node connections between conduits.
+In order for this step to be successful, the conduits must be oriented from upstream to downstream.
+See the arrows on the conduits.</p></li>
+</ol>
+<img alt="../../_images/sd013.png" src="../../_images/sd013.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click Yes and OK.</p></li>
+</ol>
+<img alt="../../_images/sd012.png" src="../../_images/sd012.png" />
+</section>
+<section id="step-3-import-rating-tables">
+<h2>Step 3: Import rating tables<a class="headerlink" href="#step-3-import-rating-tables" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the Import Rating Table button</p></li>
+</ol>
+<img alt="../../_images/sd015.png" src="../../_images/sd015.png" />
+<ol class="arabic simple" start="2">
+<li><p>Navigate to the I4 tables.  Select all of the files and click Open.</p></li>
+</ol>
+<p>Path: …\Coastal Training\Project Data\Storm drain\Type 4 Rating Tables</p>
+<img alt="../../_images/sd014.png" src="../../_images/sd014.png" />
+<ol class="arabic simple" start="3">
+<li><p>If an error message appears, the path was not rectified and the rating table check file was not written.
+Repeat opening the files and the path will be fixed.</p></li>
+</ol>
+<img alt="../../_images/sd016a.png" src="../../_images/sd016a.png" />
+<ol class="arabic simple" start="4">
+<li><p>The table was imported and assigned to the correct inlet nodes.  Click OK to close the message.</p></li>
+</ol>
+<img alt="../../_images/sd016.png" src="../../_images/sd016.png" />
+</section>
+<section id="step-4-schematize-storm-drain-components">
+<h2>Step 4: Schematize storm drain components<a class="headerlink" href="#step-4-schematize-storm-drain-components" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click on Schematize Storm Drain Components in the Storm Drain Editor widget.</p></li>
+</ol>
+<img alt="../../_images/sd017.png" src="../../_images/sd017.png" />
+<ol class="arabic simple" start="2">
+<li><p>Once the storm drain components are schematized, the following dialog will appear.
+Click OK to close.</p></li>
+</ol>
+<img alt="../../_images/sd018.png" src="../../_images/sd018.png" />
+<ol class="arabic simple" start="3">
+<li><p>The storm drain components are now part of the schematized layers in the project.</p></li>
+</ol>
+<img alt="../../_images/sd019.png" src="../../_images/sd019.png" />
+<ol class="arabic simple" start="4">
+<li><p>Individual Inlets, Junctions, Outfalls and Conduits can be viewed and edited in the various dialog boxes.</p></li>
+</ol>
+<img alt="../../_images/sd020a.png" src="../../_images/sd020a.png" />
+<ol class="arabic simple" start="5">
+<li><p>The dialog boxes allow the user to select any node or link and review or edit it’s variables.  The box also
+automatically pans the map to the node or link that is selected.</p></li>
+</ol>
+<img alt="../../_images/sd020.png" src="../../_images/sd020.png" />
+<img alt="../../_images/sd020b.png" src="../../_images/sd020b.png" />
+</section>
+<section id="step-5-export-swmm-inp-file">
+<h2>Step 5: Export SWMM.INP file<a class="headerlink" href="#step-5-export-swmm-inp-file" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click on Export SWMM.INP button in the Storm Drain Editor widget.</p></li>
+</ol>
+<img alt="../../_images/Module277.png" src="../../_images/Module277.png" />
+<ol class="arabic simple" start="2">
+<li><p>Browse to the Project Export Folder.  Create a new folder called Storm Drain Test</p></li>
+<li><p>Save the SWMM.INP file.
+The *.INP file should be named as ‘SWMM.INP’, no other names will be read by FLO-2D model.
+Click Save.</p></li>
+</ol>
+<img alt="../../_images/sd021.png" src="../../_images/sd021.png" />
+<ol class="arabic simple" start="3">
+<li><p>The Storm Drain Control Dialog is displayed.</p></li>
+<li><p>The control parameters can be entered.</p></li>
+<li><p>The time, date, flow units and other data are hardwired from the FLO-2D surface Control Dialog.</p></li>
+<li><p>All gray out data in the control dialog is hardwired.</p></li>
+<li><p>The data is default for FLO-2D.
+The report_step can be set to any desired value.</p></li>
+</ol>
+<img alt="../../_images/sd022.png" src="../../_images/sd022.png" />
+<ol class="arabic simple" start="8">
+<li><p>A dialog displays stating the features that were written to the *.INP file.
+Click OK.</p></li>
+</ol>
+<img alt="../../_images/sd023.png" src="../../_images/sd023.png" />
+</section>
+<section id="step-6-export-the-project">
+<h2>Step 6: Export the project<a class="headerlink" href="#step-6-export-the-project" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Export the rest of the FLO-2D data files including the new storm drain files.</p></li>
+</ol>
+<img alt="../../_images/sd027.png" src="../../_images/sd027.png" />
+<img alt="../../_images/sd024.png" src="../../_images/sd024.png" />
+<img alt="../../_images/sd025.png" src="../../_images/sd025.png" />
+<ol class="arabic simple" start="3">
+<li><p>The remaining data files have been exported.</p></li>
+</ol>
+<img alt="../../_images/sd026.png" src="../../_images/sd026.png" />
+</section>
+<section id="step-7-run-the-simulation">
+<h2>Step 7: Run the simulation<a class="headerlink" href="#step-7-run-the-simulation" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the Run FLO-2D Icon.</p></li>
+</ol>
+<img alt="../../_images/chan054.png" src="../../_images/chan054.png" />
+<ol class="arabic simple" start="2">
+<li><p>Set the FLO-2D Folder.
+C:\program files (x86)\flo-2d pro</p></li>
+<li><p>Set the Project Folder.</p></li>
+</ol>
+<p>Path: …\Coastal Training\Project Runs\Storm Drain Test</p>
+<ol class="arabic simple" start="4">
+<li><p>Click OK.</p></li>
+</ol>
+<img alt="../../_images/sd028.png" src="../../_images/sd028.png" />
+<ol class="arabic simple" start="5">
+<li><p>This is a good point to save project.</p></li>
+</ol>
+<img alt="../../_images/chan053.png" src="../../_images/chan053.png" />
+</section>
+<section id="step-8-create-a-backup-file">
+<h2>Step 8: Create a backup file<a class="headerlink" href="#step-8-create-a-backup-file" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Close QGIS.</p></li>
+<li><p>Open the project folder.  Select the Coastal Project.gpkg and Coastal Project.qgz files.  Right click them and
+click Sent to/Compressed (zipped) folder.</p></li>
+</ol>
+<img alt="../../_images/creategrid019.png" src="../../_images/creategrid019.png" />
+<ol class="arabic simple" start="3">
+<li><p>Name the zipped file.
+It is good to choose a name that identifies project progress.
+For Example: <strong>SDOK.zip</strong></p></li>
+</ol>
+<img alt="../../_images/sd029.png" src="../../_images/sd029.png" />
+<ol class="arabic simple" start="4">
+<li><p>Open QGIS and reload the project.</p></li>
+</ol>
+<img alt="../../_images/creategrid021.png" src="../../_images/creategrid021.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click yes to load the model.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Storm%20Drain%20Shapefile%20Development.html" class="btn btn-neutral float-left" title="Storm Drain - Shapefile Development" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Urban%20Features.html" class="btn btn-neutral float-right" title="Urban Features" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="Storm Drain Setup.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 1 Part 2 – Project Recovery Methods &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lesson 1 Part 3 – Hydrology" href="Lesson%201%20Part%203.html" />
+    <link rel="prev" title="Lesson 1 Part 1 – Getting Started" href="Lesson%201%20Part%201.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Self-Help Kit v0.10.115</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Lesson 1 Part 2 – Project Recovery Methods</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#required-data">Required Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-organize-the-map-layers">Step 1: Organize the map layers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-create-a-recovery-file">Step 2: Create a recovery file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-recover-a-project">Step 3: Recover a project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-open-the-project">Step 4: Open the project</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Coastal-Flooding/index.html">Coastal Flooding v0.10.115</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Self-Help Kit v0.10.115</a></li>
+      <li class="breadcrumb-item active">Lesson 1 Part 2 – Project Recovery Methods</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/self-help-kit/Lesson 1 Part 2.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lesson-1-part-2-project-recovery-methods">
+<h1>Lesson 1 Part 2 – Project Recovery Methods<a class="headerlink" href="#lesson-1-part-2-project-recovery-methods" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Think of this as making a backup of a document.  It is a simple method to protect the data in case something goes wrong
+in the next lessons.  Once a user gains more experience, this method won’t be as important.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RkHTA2kJPk8" frameborder="0" allowfullscreen></iframe></section>
+<section id="required-data">
+<h2>Required Data<a class="headerlink" href="#required-data" title="Link to this heading"></a></h2>
+<p>The lesson has a QGIS project file, Geopackage file, FLO-2D Data Export files and FLO-2D Project Run files.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File</strong></p></td>
+<td><p><strong>Content</strong></p></td>
+<td><p><strong>Location</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Lesson 1.qgz</p></td>
+<td><p>QGIS file</p></td>
+<td><p>QGIS Lesson 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lesson 1.gpkg</p></td>
+<td><p>FLO-2D GeoPackage</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>*.DAT files</p></td>
+<td><p>FLO-2D data files</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Project Location C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials</p>
+<p>Check these folders to ensure the data is available before starting the lesson.
+Lesson 1, Part 1 should be completed first.</p>
+</section>
+<section id="step-1-organize-the-map-layers">
+<h2>Step 1: Organize the map layers<a class="headerlink" href="#step-1-organize-the-map-layers" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Manage the map layers by grouping the data from Lesson 1 Part 1 to a group called Project Data.</p></li>
+<li><p>Right click Project Domain and click Move to Bottom.</p></li>
+<li><p>Select Elevation and Manning_n layers and right click them.  Click Move Out of Group.</p></li>
+<li><p>Select Elevation and Manning_n layers and right click them.  Click Move to bottom.</p></li>
+<li><p>Select Project Domain, Elevation, and Manning_n and right click them.  Click Group Selected.</p></li>
+<li><p>Name the group Project Data.</p></li>
+<li><p>This GIF image will show an animation of the process.</p></li>
+</ol>
+<img alt="../../_images/maplayers.gif" src="../../_images/maplayers.gif" />
+<ol class="arabic simple" start="8">
+<li><p>Simplify the Layers Groups.</p></li>
+<li><p>Select the Boundary layers.  Right click and click Group Selected.  Name the group Boundary.</p></li>
+</ol>
+<img alt="../../_images/maplayers001.png" src="../../_images/maplayers001.png" />
+<ol class="arabic simple" start="10">
+<li><p>Select the Channel layers.  Right click the layers and click Group Selected.  Name the group channel.</p></li>
+<li><p>Select the Storm Drain layers.  Right click the layers and click Group Selected.  Name the group Storm Drain.</p></li>
+</ol>
+<img alt="../../_images/maplayers002.png" src="../../_images/maplayers002.png" />
+<ol class="arabic simple" start="12">
+<li><p>Select less commonly used layers and group them as Not Used.</p></li>
+</ol>
+<img alt="../../_images/maplayers003.png" src="../../_images/maplayers003.png" />
+<ol class="arabic simple" start="13">
+<li><p>Select the less commonly used tables and group them as Tables Not Used.</p></li>
+</ol>
+<img alt="../../_images/maplayers004.png" src="../../_images/maplayers004.png" />
+</section>
+<section id="step-2-create-a-recovery-file">
+<h2>Step 2: Create a recovery file<a class="headerlink" href="#step-2-create-a-recovery-file" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>If the QGIS is still open, save and close it.</p></li>
+<li><p>Find QGIS Lesson 1 in a File Browser.
+Select the Lesson 1.gpkg and Lesson 1.qgz files and zip them.
+This will create a recovery file.</p></li>
+<li><p>Name the zipped file.
+It is good to choose a name that identifies project progress.
+For Example: Lesson 1 Part 1 Complete.zip.</p></li>
+<li><p>Repeat this step after any time a Backup or Recovery Point is desired.</p></li>
+</ol>
+<img alt="../../_images/Worksh024.png" src="../../_images/Worksh024.png" />
+</section>
+<section id="step-3-recover-a-project">
+<h2>Step 3: Recover a project<a class="headerlink" href="#step-3-recover-a-project" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Don’t complete this step unless a project is corrupted.  A corrupted project means the user cannot continue
+with steps of a lesson.</p>
+</div>
+<ol class="arabic simple">
+<li><p>In the Lesson 1 Folder, select Lesson 1.gpkg and Lesson 1.qgz and delete them both.</p></li>
+</ol>
+<img alt="../../_images/Worksh025.png" src="../../_images/Worksh025.png" />
+<ol class="arabic simple" start="2">
+<li><p>Extract the recovery files.
+The example below uses Lesson 1 Recovery Files.zip.</p></li>
+</ol>
+<img alt="../../_images/Worksh026.png" src="../../_images/Worksh026.png" />
+<ol class="arabic simple" start="3">
+<li><p>Change the name of the path so the file can be extracted directly to the Lesson 1 folder.</p></li>
+</ol>
+<img alt="../../_images/Worksh027.png" src="../../_images/Worksh027.png" />
+</section>
+<section id="step-4-open-the-project">
+<h2>Step 4: Open the project<a class="headerlink" href="#step-4-open-the-project" title="Link to this heading"></a></h2>
+<img alt="../../_images/Worksh0021.png" src="../../_images/Worksh0021.png" />
+<ol class="arabic simple">
+<li><p>Open QGIS and drag Lesson 1.qgz onto the map space the file in QGIS and Load the Project into the FLO-2D Plugin.</p></li>
+</ol>
+<img alt="../../_images/Worksh157.png" src="../../_images/Worksh157.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click Yes to load the plugin.</p></li>
+</ol>
+<img alt="../../_images/Worksh158.png" src="../../_images/Worksh158.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the project path changes, the plugin will recognize the path change and try to load the model from the new
+path.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the project path changes but an old geopackage remains in the previous path, it will be loaded and can
+corrupt the project.  Delete old gpkg and qgz files that may corrupt the project.</p>
+</div>
+<img alt="../../_images/Worksh030.png" src="../../_images/Worksh030.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Lesson%201%20Part%201.html" class="btn btn-neutral float-left" title="Lesson 1 Part 1 – Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Lesson%201%20Part%203.html" class="btn btn-neutral float-right" title="Lesson 1 Part 3 – Hydrology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="Lesson 1 Part 2.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

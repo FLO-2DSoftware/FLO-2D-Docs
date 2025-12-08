@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boundary Conditions and Buildings &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Dam and Levee Tool" href="damlevee.html" />
+    <link rel="prev" title="Hydrology" href="hydrology.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../self-help-kit/index.html">Self-Help Kit v0.10.115</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tailings Dam Modeling Tutorial</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="computerset.html">Computer set-up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project.html">Project Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hydrology.html">Hydrology</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Boundary Conditions and Buildings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-outflow-boundary">Step 1: Outflow boundary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-add-buildings">Step 2: Add Buildings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-export-and-run">Step 3: Export and run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-load-new-results">Step 4: Load new results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-compare-results">Step 5: Compare results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-6-organize-the-map-layers">Step 6: Organize the map layers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="damlevee.html">Dam and Levee Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mudflow.html">Mudflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Coastal-Flooding/index.html">Coastal Flooding v0.10.115</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Tailings Dam Modeling Tutorial</a></li>
+      <li class="breadcrumb-item active">Boundary Conditions and Buildings</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/Tailings/boundary.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="boundary-conditions-and-buildings">
+<h1>Boundary Conditions and Buildings<a class="headerlink" href="#boundary-conditions-and-buildings" title="Link to this heading"></a></h1>
+<p><strong>Overview</strong></p>
+<p>The last lesson demonstrated how to set up a hydrological project.
+However, the water was accumulating at the downstream region of the
+watershed. This lesson will outline how to add a floodplain outflow
+boundary condition.</p>
+<p><strong>Required Files</strong></p>
+<p>This lesson does not require any external data.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The lesson is missing Building application but the video shows the process.</p>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1zLon_Z52nE?si=Gd_s3OC5aVvkqrCl"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><section id="step-1-outflow-boundary">
+<h2>Step 1: Outflow boundary<a class="headerlink" href="#step-1-outflow-boundary" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Locate the downstream end of the watershed.</p></li>
+</ol>
+<img alt="../../_images/tdboundary01.png" src="../../_images/tdboundary01.png" />
+<ol class="arabic simple" start="2">
+<li><p>Expand the Boundary Condition Editor, select the BC type as outflow
+and click on Add Polygon BC.</p></li>
+</ol>
+<img alt="../../_images/tdboundary02.png" src="../../_images/tdboundary02.png" />
+<ol class="arabic simple" start="3">
+<li><p>Draw a polygon at the downstream end of the watershed. This polygon
+will add boundary conditions only to the cells at the limit of the
+watershed.</p></li>
+</ol>
+<img alt="../../_images/tdboundary03.png" src="../../_images/tdboundary03.png" />
+<ol class="arabic simple" start="4">
+<li><p>Right click anywhere on the map to finish editing this polygon.
+Select the type as Outflow.</p></li>
+</ol>
+<img alt="../../_images/tdboundary04.png" src="../../_images/tdboundary04.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click on Save Current BC under Boundary Condition Editor.</p></li>
+</ol>
+<img alt="../../_images/tdboundary05.png" src="../../_images/tdboundary05.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click OK to close the message.</p></li>
+</ol>
+<img alt="../../_images/tdboundary06.png" src="../../_images/tdboundary06.png" />
+<ol class="arabic simple" start="7">
+<li><p>Select the Outflow type as 1. Floodplain outflow (no hydrograph) and
+click on Schematize Boundary Conditions.</p></li>
+</ol>
+<img alt="../../_images/tdboundary07.png" src="../../_images/tdboundary07.png" />
+<ol class="arabic simple" start="8">
+<li><p>Click OK to close the message. The number of boundary conditions
+schematized may change depending on the size of the polygon drawn. It
+is OK if the number of outflows does not match this image.</p></li>
+</ol>
+<img alt="../../_images/tdboundary08.png" src="../../_images/tdboundary08.png" />
+</section>
+<section id="step-2-add-buildings">
+<h2>Step 2: Add Buildings<a class="headerlink" href="#step-2-add-buildings" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Open the 3. Boundary/data folder and drag the file Buildings.shp onto
+the map space.</p></li>
+</ol>
+<img alt="../../_images/tdboundary09.png" src="../../_images/tdboundary09.png" />
+<ol class="arabic simple" start="2">
+<li><p>These buildings were extracted from a plugin called OSM downloader.
+OSM downloader will download all polygons from Open Street Map. The
+MultiPolyons from OSM downloader must be extracted to a Buildings
+shapefile and saved with the correct Project CRS.</p></li>
+<li><p>The new layer has all landuse polygons. The buildings are separated,
+and any non-building polygons must be deleted.</p></li>
+<li><p>If a building is missing from the map, it can be added using the
+Shape Digitizing tool.</p></li>
+<li><p>Edit the Buildings layer and add a Rectangular polygon to cover the
+buildings in the Aerial images.</p></li>
+</ol>
+<img alt="../../_images/tdboundary010.png" src="../../_images/tdboundary010.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click the collapse button and then expand Grid Tools. Click the
+calculate ARF WRF button to add buildings to the grid. Set the
+Collapse, ARF, and WRF buttons and click OK.</p></li>
+<li><p>The collapse field switch will allow the building to collapse if the
+flooding exceeds a certain depth on the building cell.</p></li>
+<li><p>The ARF field tells the algorithm to apply the volume displacement
+for the building on the grid element.</p></li>
+<li><p>The WRF field tells the algorithm to apply the flow redirection
+around the grid element if a building is on the edge of a grid
+element.</p></li>
+</ol>
+<img alt="../../_images/tdboundary011.png" src="../../_images/tdboundary011.png" />
+<img alt="../../_images/tdboundary012.png" src="../../_images/tdboundary012.png" />
+<ol class="arabic simple" start="10">
+<li><p>Turn on the ARF switch.</p></li>
+</ol>
+<img alt="../../_images/tdboundary013.png" src="../../_images/tdboundary013.png" />
+</section>
+<section id="step-3-export-and-run">
+<h2>Step 3: Export and run<a class="headerlink" href="#step-3-export-and-run" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the main Save icon on the QGIS toolbar.</p></li>
+</ol>
+<img alt="../../_images/tdboundary014.png" src="../../_images/tdboundary014.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the FLO-2D Data Export icon.</p></li>
+</ol>
+<img alt="../../_images/tdboundary015.png" src="../../_images/tdboundary015.png" />
+<ol class="arabic simple" start="3">
+<li><p>Make sure that the Outflow Elements is checked.</p></li>
+</ol>
+<img alt="../../_images/tdboundary016.png" src="../../_images/tdboundary016.png" />
+<ol class="arabic simple">
+<li><p>Set the export folder to Export Boundary Conditions. The Project
+Folder on the Run Settings is automatically updated to the new Export
+Boundary Conditions folder and it does not need to be updated.</p></li>
+<li><p>Click on the Run FLO-2D icon to run the simulation.</p></li>
+</ol>
+<img alt="../../_images/tdboundary017.png" src="../../_images/tdboundary017.png" />
+<ol class="arabic simple" start="3">
+<li><p>Check the simulation summary for any errors.</p></li>
+</ol>
+<img alt="../../_images/tdboundary018.png" src="../../_images/tdboundary018.png" />
+</section>
+<section id="step-4-load-new-results">
+<h2>Step 4: Load new results<a class="headerlink" href="#step-4-load-new-results" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Create the new final depth map with Rasterizor.</p></li>
+</ol>
+<img alt="../../_images/tdboundary019.png" src="../../_images/tdboundary019.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the FINALDEP.OUT file in the Export Boundary Conditions
+folder. Name the layer Final Depth BC, select the Output Directory as
+the Export Boundary Conditions folder and select Depth as style.</p></li>
+</ol>
+<img alt="../../_images/tdboundary020.png" src="../../_images/tdboundary020.png" />
+<img alt="../../_images/tdboundary021.png" src="../../_images/tdboundary021.png" />
+<ol class="arabic simple" start="3">
+<li><p>Switch to the Compare Outputs tab and calculate the Hydrology Final
+Depth – Boundary Final Depth to calculate the difference between the
+rasters.</p></li>
+<li><p>Close Rasterizor.</p></li>
+</ol>
+<img alt="../../_images/tdboundary022.png" src="../../_images/tdboundary022.png" />
+</section>
+<section id="step-5-compare-results">
+<h2>Step 5: Compare results<a class="headerlink" href="#step-5-compare-results" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Compare the downstream results.</p></li>
+</ol>
+<img alt="../../_images/tdboundary023.png" src="../../_images/tdboundary023.png" />
+<ol class="arabic simple" start="2">
+<li><p>The water accumulates at the downstream end of the watershed when no
+outflow boundary condition is set. This is possible to visualize in
+the darker blue values on the left screenshot. When the outflow
+boundary condition is set, the water flows out the computational
+domain, showing whiter values. The boundary condition is normal
+depth.</p></li>
+</ol>
+</section>
+<section id="step-6-organize-the-map-layers">
+<h2>Step 6: Organize the map layers<a class="headerlink" href="#step-6-organize-the-map-layers" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Group the External Data and the Results and move the Aerials and
+Elevation maps to the bottom of the map.</p></li>
+</ol>
+<img alt="../../_images/tdboundary024.png" src="../../_images/tdboundary024.png" />
+<ol class="arabic simple" start="2">
+<li><p>Save and close QGIS because the next lesson uses a different project.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="hydrology.html" class="btn btn-neutral float-left" title="Hydrology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="damlevee.html" class="btn btn-neutral float-right" title="Dam and Levee Tool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/tutorials/Tailings/boundary.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="boundary.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

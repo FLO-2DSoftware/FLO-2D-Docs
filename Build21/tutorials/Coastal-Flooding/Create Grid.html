@@ -1,0 +1,388 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create a Grid &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Hydrology" href="Hydrology.html" />
+    <link rel="prev" title="Coastal Set-Up" href="Coastal%20Set-Up.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../self-help-kit/index.html">Self-Help Kit v0.10.115</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Coastal Flooding v0.10.115</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Create a Grid</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-set-up-the-flo-2d-project">Step 1: Set up the FLO-2D project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-create-the-grid">Step 2: Create the grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-save-the-project">Step 3: Save the project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-assign-grid-elevation">Step 4: Assign grid elevation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-assign-roughness-data">Step 5: Assign roughness data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-6-assign-control-variables">Step 6: Assign Control Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-7-save-the-project">Step 7: Save the project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-8-create-a-backup-file">Step 8: Create a backup file</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Hydrology.html">Hydrology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Channel.html">Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Culverts.html">Culverts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Mapping.html">Mapping Results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Coastal Flooding v0.10.115</a></li>
+      <li class="breadcrumb-item active">Create a Grid</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/Coastal-Flooding/Create Grid.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="create-a-grid">
+<h1>Create a Grid<a class="headerlink" href="#create-a-grid" title="Link to this heading"></a></h1>
+<p><strong>Overview</strong></p>
+<p>This module will outline how create a grid using QGIS, FLO-2D Plugin and project data.  Calculate elevation and
+roughness to the grid.</p>
+<p><strong>Required Data</strong></p>
+<p>The required data is in the Coastal 2D Training Folder.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*.tif</p></td>
+<td><p>Elevation Raster</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.shp</p></td>
+<td><p>Project AOI</p></td>
+</tr>
+<tr class="row-even"><td><p>*.shp</p></td>
+<td><p>Manning_n</p></td>
+</tr>
+</tbody>
+</table>
+<p>Path:  …\Coastal 2D Training\Project Data\AOI</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nyX01bFoUBA" frameborder="0" allowfullscreen></iframe><section id="step-1-set-up-the-flo-2d-project">
+<h2>Step 1: Set up the FLO-2D project<a class="headerlink" href="#step-1-set-up-the-flo-2d-project" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Open QGIS 3.22.9 or newer.</p></li>
+<li><p>Drag the Project Area of Interest shapefile onto the map.</p></li>
+</ol>
+<p>Path: …\Coastal 2D Training\Project Data\AOI</p>
+<img alt="../../_images/aoi.png" src="../../_images/aoi.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click the Set-up button.</p></li>
+</ol>
+<img alt="../../_images/creategrid001.png" src="../../_images/creategrid001.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click create.</p></li>
+</ol>
+<img alt="../../_images/creategrid002.png" src="../../_images/creategrid002.png" />
+<ol class="arabic simple" start="5">
+<li><p>Save the geopackage file to the project folder.</p></li>
+<li><p>Name the file Coastal Project.gpkg.</p></li>
+</ol>
+<p>Path: …\Coastal 2D Training\Coastal Project.gpkg</p>
+<ol class="arabic simple" start="7">
+<li><p>Set the project CRS to Florida East HARN USft.
+Filter the list with an EPSG code: 2881.
+Select EPSG: 2881 and click OK.</p></li>
+</ol>
+<img alt="../../_images/creategrid003.png" src="../../_images/creategrid003.png" />
+<ol class="arabic simple" start="8">
+<li><p>Wait for the geopackage to write and check the accuracy of the project settings and click OK.</p></li>
+</ol>
+<img alt="../../_images/creategrid004.png" src="../../_images/creategrid004.png" />
+</section>
+<section id="step-2-create-the-grid">
+<h2>Step 2: Create the grid<a class="headerlink" href="#step-2-create-the-grid" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>From the Grid Tools widget, select Create Grid.</p></li>
+</ol>
+<img alt="../../_images/creategrid005.png" src="../../_images/creategrid005.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the Project Domain layer, and the Cell Size field and click OK.</p></li>
+</ol>
+<img alt="../../_images/creategrid006.png" src="../../_images/creategrid006.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Project Area of Interest is a simple template. If your own project doesn’t have a polygon layer that
+represents the project area, one can be digitized into the Computational Domain Layer.
+In order to align the grid to a raster, load the raster file into the dialog box.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Click OK to close.
+The grid is complete.</p></li>
+</ol>
+<img alt="../../_images/creategrid007.png" src="../../_images/creategrid007.png" />
+</section>
+<section id="step-3-save-the-project">
+<h2>Step 3: Save the project<a class="headerlink" href="#step-3-save-the-project" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the main Save button on the QGIS toolbar.</p></li>
+</ol>
+<img alt="../../_images/creategrid008.png" src="../../_images/creategrid008.png" />
+<ol class="arabic simple" start="2">
+<li><p>Navigate to the coastal folder, name the project Coastal Project.qgz and click Save.</p></li>
+</ol>
+<p>Path: …\Coastal 2D Training\Coastal Project.qgz</p>
+</section>
+<section id="step-4-assign-grid-elevation">
+<h2>Step 4: Assign grid elevation<a class="headerlink" href="#step-4-assign-grid-elevation" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Uncheck the Project Area of Interest Layer.</p></li>
+<li><p>Click the Computational Domain Layer</p></li>
+</ol>
+<img alt="../../_images/creategrid011.png" src="../../_images/creategrid011.png" />
+<ol class="arabic simple" start="3">
+<li><p>Import the elevation file.
+Open the project folder and drag the Elevation Raster.tif file onto the map space.</p></li>
+</ol>
+<p>\Coastal 2D Training\Project Data\AOI\Elevation Raster.tif</p>
+<img alt="../../_images/creategrid009.png" src="../../_images/creategrid009.png" />
+<ol class="arabic simple" start="4">
+<li><p>Move the elevation raster layer to the bottom of the layers list and click it to activate the Elevation layer.</p></li>
+</ol>
+<img alt="../../_images/moveelevationtobottom.gif" src="../../_images/moveelevationtobottom.gif" />
+<ol class="arabic simple" start="5">
+<li><p>To interpolate the elevation to a grid layer from a raster layer, use the Sample Grid Elevation button.</p></li>
+</ol>
+<img alt="../../_images/creategrid010.png" src="../../_images/creategrid010.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click on the Sample Grid Elevation button and enter the required data in the dialog fields and click OK.</p></li>
+<li><p>Sampling Done dialog box will appear once the process is complete.
+Click OK to close it.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use the Fill NoData option if the elevation raster is missing data such as buildings.  This method uses the
+GDAL Warp processing tool.  To learn more about GDAL Warp, visit this page:</p>
+<p><a class="reference external" href="https://gdal.org/programs/gdalwarp.html">https://gdal.org/programs/gdalwarp.html</a></p>
+</div>
+<img alt="../../_images/creategrid012.png" src="../../_images/creategrid012.png" />
+<img alt="../../_images/Worksh154.png" src="../../_images/Worksh154.png" />
+</section>
+<section id="step-5-assign-roughness-data">
+<h2>Step 5: Assign roughness data<a class="headerlink" href="#step-5-assign-roughness-data" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Open the project folder and drag the Mannings_n.shp file onto the map space.</p></li>
+</ol>
+<img alt="../../_images/creategrid013.png" src="../../_images/creategrid013.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the Sample Roughness button.</p></li>
+</ol>
+<img alt="../../_images/creategrid014.png" src="../../_images/creategrid014.png" />
+<ol class="arabic simple" start="3">
+<li><p>Fill the dialog box and click OK.</p></li>
+</ol>
+<img alt="../../_images/creategrid015.png" src="../../_images/creategrid015.png" />
+<ol class="arabic simple" start="4">
+<li><p>Once the sample is complete, the following window will appear.
+Close the window.  It is OK if your time is different from the time in the following image.</p></li>
+</ol>
+<img alt="../../_images/creategrid016.png" src="../../_images/creategrid016.png" />
+<ol class="arabic simple" start="5">
+<li><p>The roughness values and elevations are assigned to the grid layer in the Schematized Layers group.  Use the
+Grid Info Tool to see individual values for each cell.</p></li>
+<li><p>Click the Grid Info button and then click <strong>any grid element</strong> in the map area.</p></li>
+</ol>
+<img alt="../../_images/creategrid017.png" src="../../_images/creategrid017.png" />
+<img alt="../../_images/creategrid018.png" src="../../_images/creategrid018.png" />
+</section>
+<section id="step-6-assign-control-variables">
+<h2>Step 6: Assign Control Variables<a class="headerlink" href="#step-6-assign-control-variables" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the Set Control Parameters Button.</p></li>
+</ol>
+<img alt="../../_images/creategrid023.png" src="../../_images/creategrid023.png" />
+<ol class="arabic simple" start="2">
+<li><p>Fill the dialog box using the two figures below.
+Save the data to the GeoPackage with the Save button.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The variable descriptions and additional instructions are presented in the Data Input Manual.</p>
+</div>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\flo_help\Manuals\Data Input Manual PRO.pdf</p>
+<img alt="../../_images/Worksh018.png" src="../../_images/Worksh018.png" />
+<img alt="../../_images/Worksh019.png" src="../../_images/Worksh019.png" />
+</section>
+<section id="step-7-save-the-project">
+<h2>Step 7: Save the project<a class="headerlink" href="#step-7-save-the-project" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the main Save button on the QGIS toolbar.</p></li>
+</ol>
+<img alt="../../_images/Worksh011.png" src="../../_images/Worksh011.png" />
+</section>
+<section id="step-8-create-a-backup-file">
+<h2>Step 8: Create a backup file<a class="headerlink" href="#step-8-create-a-backup-file" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Close QGIS.</p></li>
+<li><p>Open the project folder.  Select the Coastal Project.gpkg and Coastal Project.qgz files.  Right click them and
+click Sent to/Compressed (zipped) folder.</p></li>
+</ol>
+<img alt="../../_images/creategrid019.png" src="../../_images/creategrid019.png" />
+<ol class="arabic simple" start="3">
+<li><p>Name the zipped file.
+It is good to choose a name that identifies project progress.
+For Example: Elevation and nvalue OK.zip</p></li>
+</ol>
+<img alt="../../_images/creategrid020.png" src="../../_images/creategrid020.png" />
+<ol class="arabic simple" start="4">
+<li><p>Open QGIS and reload the project.</p></li>
+</ol>
+<img alt="../../_images/creategrid021.png" src="../../_images/creategrid021.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click yes to load the model.</p></li>
+</ol>
+<img alt="../../_images/creategrid022.png" src="../../_images/creategrid022.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Coastal%20Set-Up.html" class="btn btn-neutral float-left" title="Coastal Set-Up" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Hydrology.html" class="btn btn-neutral float-right" title="Hydrology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="Create Grid.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

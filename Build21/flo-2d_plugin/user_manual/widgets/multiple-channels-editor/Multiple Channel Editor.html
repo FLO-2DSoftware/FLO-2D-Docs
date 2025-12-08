@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiple Channels Editor &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Post Development Grid Modification" href="../../post-development-grid-modification/Post%20Development%20Grid%20Modification.html" />
+    <link rel="prev" title="Levees Breach Editor" href="../levees-breach-editor/Levees%20Breach%20Editor.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Plugin</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">User Manual</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../installation-instructions/index.html">QGIS General Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin-features/index.html">Plugin Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Widgets</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../pre-processing-tools/Pre-Processing%20Tools.html">Pre-Processing Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/Create%20a%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/Sample%20Elevation%20from%20Raster.html">Sample Elevation from Raster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/Sample%20Elevation%20GDAL%20Grid%20Method.html">Sample Elevation GDAL Grid Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/Sample%20Elevation%20from%20Points%20and%20LiDAR.html">Sample Elevation from Points and LiDAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/Elevation%20Correction%20Tool.html">Elevation Correction Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/Sample%20Roughness.html">Sample Roughness</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/Area%20and%20Width%20Reduction.html">Area and Width Reduction – Buildings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/Spatial%20TOL.html">Spatial TOL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/Spatial%20Limiting%20Froude.html">Spatial Limiting Froude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/Spatial%20Shallow%20n.html">Spatial Shallow n</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/Gutters.html">Gutters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/No%20Exchange%20Channel.html">No Exchange Channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../grid-tools/Hazus%20Layers.html">Assign Results from Points Layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../profile-tool/Profile%20Tool.html">Profile Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cross-sections-editor/Cross%20Sections%20Editor.html">Cross Sections Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary-condition-editor/Boundary%20Condition%20Editor.html">Boundary Condition Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../initial-condition-editor/Initial%20Condition%20Editor.html">Initial Condition Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rain-editor/Rain%20Editor.html">Rain Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../schematized-channel-editor/Schematized%20Channel%20Editor.html">Schematized Channel Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hydraulic-structure-editor/Hydraulic%20Structure%20Editor.html">Hydraulic Structure Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../street-editor/Street%20Editor.html">Street Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../floodplain-cross-section-editor/Floodplain%20Cross%20Section%20Editor.html">Floodplain Cross Section Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../infiltration-editor/Infiltration%20Editor.html">Infiltration Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../storm-drain-editor/Storm%20Drain.html">Storm Drain Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../levees-breach-editor/Levees%20Breach%20Editor.html">Levees Breach Editor</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Multiple Channels Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../post-development-grid-modification/Post%20Development%20Grid%20Modification.html">Post Development Grid Modification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual.html">Technical Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Plugin</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">User Manual</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Widgets</a></li>
+      <li class="breadcrumb-item active">Multiple Channels Editor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/flo-2d_plugin/user_manual/widgets/multiple-channels-editor/Multiple Channel Editor.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="multiple-channels-editor">
+<h1>Multiple Channels Editor<a class="headerlink" href="#multiple-channels-editor" title="Link to this heading"></a></h1>
+<p>Multiple channel system is used to represent rill and gully flow in an effort make the time of concentration more effective
+on a floodplain.</p>
+<p>An overview of the tool is discussed below but see the tutorial for a more detailed description of how to set up the data
+using QGIS.
+<a class="reference external" href="https://documentation.flo-2d.com/Advanced-Lessons/Module%205%20Part%203.html">https://documentation.flo-2d.com/Advanced-Lessons/Module%205%20Part%203.html</a></p>
+<p>-The Build 22 Data Input Manual has detailed instructions on each variable.</p>
+<p>-The Build 22 FLO-2D Reference Manual has specific information on how FLO-2D models rill and gully flow.</p>
+<p>The manuals are installed on the computer along with
+the Build 22 Update and can be found here:</p>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\flo_help\Manuals</p>
+<section id="global-data">
+<h2>Global Data<a class="headerlink" href="#global-data" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>The multiple channel
+is used to set up the global parameters for the MULT.DAT and SIMPLE_MULT.DAT files.</p></li>
+</ol>
+<img alt="../../../../_images/mutipl002.png" src="../../../../_images/mutipl002.png" />
+<ol class="arabic simple" start="2">
+<li><p>The data is saved to
+the multiple channel global parameters table.</p></li>
+</ol>
+<img alt="../../../../_images/mutipl002a.png" src="../../../../_images/mutipl002a.png" />
+</section>
+<section id="multiple-channel-lines">
+<h2>Multiple Channel Lines<a class="headerlink" href="#multiple-channel-lines" title="Link to this heading"></a></h2>
+<p>The Multiple Channel Lines layer is used to set the path of the multiple channels.
+This layer is in the User Layers group.</p>
+<ol class="arabic simple">
+<li><p>Highlight the Multiple Channel Lines layer and click the QGIS vector
+polyline editor pencil in the toolbar.</p></li>
+</ol>
+<img alt="../../../../_images/mutipl003.png" src="../../../../_images/mutipl003.png" />
+<ol class="arabic simple" start="2">
+<li><p>Use polylines to digitize the drainages,
+rills or gullies in the project area.</p></li>
+</ol>
+<img alt="../../../../_images/mutipl009.png" src="../../../../_images/mutipl009.png" />
+<ol class="arabic simple" start="3">
+<li><p>Assign the width, depth,
+channel connection, and n-value variable attributes to each line.</p></li>
+</ol>
+<img alt="../../../../_images/mutipl005.png" src="../../../../_images/mutipl005.png" />
+<ol class="arabic simple" start="4">
+<li><p>Save and close the editor to commit the data to the geopackage using a sql trigger.
+This will automatically write the data to the Multiple Tables and assign the grid elements.</p></li>
+</ol>
+<img alt="../../../../_images/mutipl004.png" src="../../../../_images/mutipl004.png" />
+<ol class="arabic simple" start="5">
+<li><p>Any edits to the polyline will result in an update to the table data.</p></li>
+</ol>
+</section>
+<section id="simple-multiple-channel-lines">
+<h2>Simple Multiple Channel Lines<a class="headerlink" href="#simple-multiple-channel-lines" title="Link to this heading"></a></h2>
+<p>The Simple Multiple Channel Lines layer is used to set the path of the multiple channels that only require a single attribute.
+This layer is also in the User Layers group.</p>
+<ol class="arabic simple">
+<li><p>Highlight the Simple Mult. Channel Lines layer and click the QGIS vector
+polyline editor pencil in the toolbar.</p></li>
+</ol>
+<img alt="../../../../_images/mutipl010.png" src="../../../../_images/mutipl010.png" />
+<ol class="arabic simple" start="2">
+<li><p>Use polylines to digitize the drainages,
+rills or gullies in the project area.</p></li>
+</ol>
+<img alt="../../../../_images/mutipl011.png" src="../../../../_images/mutipl011.png" />
+<ol class="arabic simple" start="3">
+<li><p>This layer uses a global n-value attribute only so no spatial data is required for individual lines.</p></li>
+</ol>
+<img alt="../../../../_images/mutipl012.png" src="../../../../_images/mutipl012.png" />
+<ol class="arabic simple" start="4">
+<li><p>Save and close the editor to commit the data to the geopackage using a sql trigger.
+This will automatically write the data to the Multiple Tables and assign the grid elements.</p></li>
+</ol>
+<img alt="../../../../_images/mutipl013.png" src="../../../../_images/mutipl013.png" />
+<ol class="arabic simple" start="5">
+<li><p>Any edits to the polyline will result in an update to the table data.</p></li>
+</ol>
+</section>
+<section id="multiple-channel-areas">
+<h2>Multiple Channel Areas<a class="headerlink" href="#multiple-channel-areas" title="Link to this heading"></a></h2>
+<p>This layer is activated when data is imported into the geopackage from an existing MULTCHAN.DAT file.  It is not used
+for editorial purposes.</p>
+<img alt="../../../../_images/mutipl014.png" src="../../../../_images/mutipl014.png" />
+</section>
+<section id="export-mult-dat-files">
+<h2>Export MULT.DAT Files<a class="headerlink" href="#export-mult-dat-files" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>To export the MULT.DAT file,
+check the Multiple Channel checkbox and click save.</p></li>
+</ol>
+<img alt="../../../../_images/mutipl008.png" src="../../../../_images/mutipl008.png" />
+<ol class="arabic simple" start="2">
+<li><p>The MULT.DAT file will be
+written the next time the project data is exported.</p></li>
+</ol>
+<img alt="../../../../_images/mutipl015.png" src="../../../../_images/mutipl015.png" />
+<img alt="../../../../_images/mutipl016.png" src="../../../../_images/mutipl016.png" />
+<ol class="arabic simple" start="3">
+<li><p>The data files are MULT.DAT and SIMPLE_MULT.DAT and can be reviewed in the Data Input Manual Build 22.</p></li>
+</ol>
+<img alt="../../../../_images/mutipl017.png" src="../../../../_images/mutipl017.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../levees-breach-editor/Levees%20Breach%20Editor.html" class="btn btn-neutral float-left" title="Levees Breach Editor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../post-development-grid-modification/Post%20Development%20Grid%20Modification.html" class="btn btn-neutral float-right" title="Post Development Grid Modification" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../../../Build25/flo-2d_plugin/user_manual/widgets/multiple-channels-editor/Multiple Channel Editor.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../../../Build23/flo-2d_plugin/user_manual/widgets/multiple-channels-editor/Multiple Channel Editor.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="Multiple Channel Editor.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

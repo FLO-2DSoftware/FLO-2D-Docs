@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshooting &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FLO-2D Pro" href="../flo-2d_pro/index.html" />
+    <link rel="prev" title="GDS - Mapper Install Instructions" href="gds_mapper.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FLO-2D Installation &amp; Setup</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="flo-2d_pro_setup.html">FLO-2D Pro Install Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qgis_setup.html">Install QGIS and the FLO-2D Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gds_mapper.html">GDS - Mapper Install Instructions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation-test">Installation Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flo-2d-pro-troubleshooting">FLO-2D Pro Troubleshooting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#data-errors">Data Errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fortran-errors">Fortran Errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#drive-errors">Drive Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#flo-2d-plugin-and-qgis-errors">FLO-2D Plugin and QGIS Errors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#flo-2d-plugin-error">FLO-2D Plugin Error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python-error">Python Error</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gds-and-mapper-troubleshooting">GDS and Mapper Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">FLO-2D Installation &amp; Setup</a></li>
+      <li class="breadcrumb-item active">Troubleshooting</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/setup/troubleshooting.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="troubleshooting">
+<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h1>
+<p>This short troubleshooting guide might help resolve some issues but if you are stuck please reach out via our contact form.</p>
+<p><a href="https://flo-2d.com/contact/" target="_blank">Contact Form</a></p>
+<section id="installation-test">
+<h2>Installation Test<a class="headerlink" href="#installation-test" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Test FLO-2D engine by running a model from a project folder.  Copy the Run for Project files from</p>
+<p>C:\Program Files (x86)\FLO-2D PRO\Run for Project Folder</p>
+</li>
+</ol>
+<img alt="../_images/installtest01.png" src="../_images/installtest01.png" />
+<ol class="arabic" start="2">
+<li><p>Paste the files into any project folder with *.DAT files like Barn.</p>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\Example Projects\Barn Mudflow</p>
+</li>
+</ol>
+<img alt="../_images/installtest02.png" src="../_images/installtest02.png" />
+<ol class="arabic simple" start="3">
+<li><p>Double click FLOPRO.EXE to start a test run.</p></li>
+<li><p>If the computer is activated with the professional version, this message will appear.</p></li>
+</ol>
+<img alt="../_images/installtest03.png" src="../_images/installtest03.png" />
+<ol class="arabic simple" start="5">
+<li><p>If the computer isn’t activated, this message will appear.</p></li>
+</ol>
+<img alt="../_images/installtest04.png" src="../_images/installtest04.png" />
+<ol class="arabic simple" start="6">
+<li><p>Any other message might need some troubleshooting.  Find the related issue below.</p></li>
+</ol>
+</section>
+<section id="flo-2d-pro-troubleshooting">
+<h2>FLO-2D Pro Troubleshooting<a class="headerlink" href="#flo-2d-pro-troubleshooting" title="Link to this heading"></a></h2>
+<p>If something isn’t working, do not uninstall FLO-2D.  That is rarely a correct way to fix the installation.
+email FLO-2D via the <a href="https://flo-2d.com/contact/" target="_blank">Contact Form</a> for support.</p>
+<section id="data-errors">
+<h3>Data Errors<a class="headerlink" href="#data-errors" title="Link to this heading"></a></h3>
+<p>Most FLO-2D errors stem from data errors in the *.dat or *.hdf5.  These files contain the data used by the engine
+during a simulation.  Error messages are typically written to the FLO-2D *.chk files.  These ascii files can be read
+using any text editor but FLO-2D Software recommends NotePad++ or any program that has column editing mode.</p>
+<dl class="simple">
+<dt>The check files are:</dt><dd><ul class="simple">
+<li><p>ERROR.CHK</p></li>
+<li><p>STORMDRAIN_ERROR.CHK</p></li>
+<li><p>ARF_ADJUSTMENT.CHK</p></li>
+<li><p>CHANBANKEL.CHK</p></li>
+<li><p>CHANNEL.CHK</p></li>
+<li><p>UndergOUTFALLS.CHK</p></li>
+</ul>
+</dd>
+<dt>Check files contain:</dt><dd><ul class="simple">
+<li><p>Notes</p></li>
+<li><p>Warnings</p></li>
+<li><p>Errors</p></li>
+</ul>
+</dd>
+</dl>
+<p>If the simulation stops with an error message, review the check files for errors.  Notes and warnings will not stop a
+simulation.</p>
+<dl class="simple">
+<dt>Troubleshooting Help:</dt><dd><ul class="simple">
+<li><p>FLO-2D Data Input Manual Chapter 7</p></li>
+<li><p>Storm Drain Guidelines</p></li>
+<li><p>FLO-2D Plugin Technical Reference Manual</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="fortran-errors">
+<h3>Fortran Errors<a class="headerlink" href="#fortran-errors" title="Link to this heading"></a></h3>
+<p>Fortran error messages appear when the FLO-2D engine (flopro.exe) gets a data format or character that is not
+recognized. The error messages contain references that point to the file causing the problems.</p>
+<p><strong>Example 1</strong></p>
+<p>In the following image, vc2005con.dll and swmm_startif.f90 are listed in the error message.
+This indicates that the error is in the storm drain files.</p>
+<img alt="../_images/fortran.png" src="../_images/fortran.png" />
+<p><strong>Example 2</strong></p>
+<p>In the following image, hydrst.f90 is listed in the error message.
+This indicates that the error is in the hydraulic structure system.</p>
+<img alt="../_images/fortran2.png" src="../_images/fortran2.png" />
+<p>Check the data in the files for errors that could disrupt flopro.exe.</p>
+</section>
+<section id="drive-errors">
+<h3>Drive Errors<a class="headerlink" href="#drive-errors" title="Link to this heading"></a></h3>
+<p><strong>OneDrive</strong></p>
+<p>Running a model on a drive that is using OneDrive sync can disrupt the processing.
+Do not run long models on directories using OneDrive sync.</p>
+<p><strong>External Drives</strong></p>
+<p>Running a model on an external drive might slow a model down or be disrupted by a drive related issue such as
+maintenance or connection disruptions.  Do not run long models on an external drive.</p>
+<p><strong>Virtual Machines</strong></p>
+<p>Running a model on a Virtual Machine is a good practice.  Windows OS is required.  Install and activate FLO-2D on the
+VM.  Visual studio redistributable packages must be installed.  VMs may be slower than running on a good computer.</p>
+</section>
+</section>
+<section id="flo-2d-plugin-and-qgis-errors">
+<h2>FLO-2D Plugin and QGIS Errors<a class="headerlink" href="#flo-2d-plugin-and-qgis-errors" title="Link to this heading"></a></h2>
+<p>Error messages related to the FLO-2D Plugin may appear as Python Errors, or an error messages reported by the FLO-2D
+plugin.</p>
+<section id="flo-2d-plugin-error">
+<h3>FLO-2D Plugin Error<a class="headerlink" href="#flo-2d-plugin-error" title="Link to this heading"></a></h3>
+<p>FLO-2D Plugin errors messages appear in error message windows.  If the error message isn’t helpful,
+more troubleshooting ideas are sometimes available in the individual sections of the user manual.  For example, if
+an error message appeared during Create Grid, see the Troubleshooting section of Create a Grid.</p>
+<img alt="../_images/trouble002.png" src="../_images/trouble002.png" />
+<p>Plugin error messages are also listed in the FLO-2D Plugin Technical Reference manual.  Find it here:</p>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\flo_help\Manuals</p>
+</section>
+<section id="python-error">
+<h3>Python Error<a class="headerlink" href="#python-error" title="Link to this heading"></a></h3>
+<p>Python error messages have clues about the location of the error.</p>
+<p>In this case, the error points to a problem with the FLO-2D Plugin.  Use the contact form to send a request to fix the
+but.</p>
+<p>Some error messages are related incorrect data in the QGIS vector or raster layers.  In those cases, use Chat GPT or the
+Stack Exchange to get ideas on how to fix a layer.</p>
+<img alt="../_images/trouble001.png" src="../_images/trouble001.png" />
+</section>
+</section>
+<section id="gds-and-mapper-troubleshooting">
+<h2>GDS and Mapper Troubleshooting<a class="headerlink" href="#gds-and-mapper-troubleshooting" title="Link to this heading"></a></h2>
+<p>GDS and Mapper are written in Visual Basic code.  Visual basic has been obsolete code for more than a decade.
+Because of SysWOW (System Windows on Windows), old programs can be used but are challenging to install.
+Some computers won’t have any issues and others simply will not run GDS and Mapper because things like
+Microsoft Data Access (MDAC) and Data Access Objects (DAO) will not load or be recognized by the computer.</p>
+<p>FLO-2D solved this issue by upgrading to QGIS and the FLO-2D Plugin.  If you still want to
+use GDS or Mapper and you get missing dll failures or struggle to use GDS processors, this section may help.</p>
+<ol class="arabic simple">
+<li><p>GDS might not be connected to it’s MapObjects dlls.  These are the objects that do things like load images, load
+tables, intersect shapefiles, and create the grid.  The fault will look like this:</p></li>
+</ol>
+<img alt="../_images/gdsfault01.png" src="../_images/gdsfault01.png" />
+<ol class="arabic" start="2">
+<li><p>If this fault shows up, delete the contents of this folder and run the FLO-2D Pro Setup Installer - MapObjects section again.</p>
+<p>C:\Program Files(x86)\Common Files\ESRI</p>
+<p>Don’t worry, these old files are not used by ArcGIS Desktop or ArcGIS Pro.</p>
+</li>
+<li><p>GDS might give an error message when the user tries to set up a new project using Define Working Region….
+A path correction will fix this fault.  When a new project doesn’t have a project path, it tries to write data
+to the C:\Program Filex(x86)\FLO-2D Pro path.  This path is protected by Admin Rights.</p></li>
+</ol>
+<img alt="../_images/gdsfault03.png" src="../_images/gdsfault03.png" />
+<ol class="arabic simple" start="4">
+<li><p>The error message that appears states something about admin rights or permissions.  Correct it by applying a project
+path in GDS\Tools\Options\Directory Paths</p></li>
+</ol>
+<img alt="../_images/gdsfault04.png" src="../_images/gdsfault04.png" />
+<ol class="arabic simple" start="5">
+<li><p>GDS and Mapper may have overflow or out of memory error messages.  This is not a correctable fault.
+They are both 32-bit programs and have limitations related to the memory they can use.  This varies by computer
+and by screen size so if you get this fault on one computer, it may not show up on an older computer.</p></li>
+</ol>
+<img alt="../_images/gdsfault05.png" src="../_images/gdsfault05.png" />
+<ol class="arabic simple" start="5">
+<li><p>GDS and Mapper default settings are for computers in the USA.  It may be necessary to adjust the number separator.
+If an error message appears about the number separator, use the Control Panel\Clock and Region\Additional Settings
+to set the decimal separator to a “.”.  International users might want to use QGIS so this is not necessary.</p></li>
+</ol>
+<img alt="../_images/gdsfault06.png" src="../_images/gdsfault06.png" />
+<ol class="arabic simple" start="6">
+<li><p>Sometimes the Microsoft Data Access program doesn’t install correctly and GDS cannot find the MDAC dlls.
+It may be possible to reinstall the MDAC setup program.
+<a href="https://flo-2d.sharefile.com/d-sca2c917fcb9d424091e9faa8272b29b8" target="_blank">Download GDS Patch.</a></p></li>
+</ol>
+<ol class="arabic simple" start="7">
+<li><p>GDS Tutorials are no longer part of the FLO-2D Pro Setup.  To get the GDS and Mapper Tutorials, Run this installer:
+<a href="https://flo-2d.sharefile.com/d-s6907dafe3ebc4abab8aa6ad4df386a2c" target="_blank">Download GDS Tutorials.</a></p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gds_mapper.html" class="btn btn-neutral float-left" title="GDS - Mapper Install Instructions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../flo-2d_pro/index.html" class="btn btn-neutral float-right" title="FLO-2D Pro" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="troubleshooting.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,393 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Set-Up &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Hydrology" href="hydrology.html" />
+    <link rel="prev" title="Computer set-up" href="computerset.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../self-help-kit/index.html">Self-Help Kit v0.10.115</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tailings Dam Modeling Tutorial</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="computerset.html">Computer set-up</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Project Set-Up</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-open-qgis-and-load-project-domain">Step 1: Open QGIS and load project domain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-create-the-geopackage">Step 2: Create the GeoPackage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-create-the-grid">Step 3: Create the grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-interpolate-the-elevation">Step 4: Interpolate the elevation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-assign-roughness">Step 5: Assign roughness</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-6-configure-layers">Step 6: Configure layers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hydrology.html">Hydrology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boundary.html">Boundary Conditions and Buildings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="damlevee.html">Dam and Levee Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mudflow.html">Mudflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Coastal-Flooding/index.html">Coastal Flooding v0.10.115</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Tailings Dam Modeling Tutorial</a></li>
+      <li class="breadcrumb-item active">Project Set-Up</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/Tailings/project.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="project-set-up">
+<h1>Project Set-Up<a class="headerlink" href="#project-set-up" title="Link to this heading"></a></h1>
+<p><strong>Overview</strong></p>
+<p>This step will outline the process of setting up a FLO-2D project using
+the Plugin for QGIS. Setting up the computational domain, creating a
+grid, interpolating elevation data and spatially variable roughness.</p>
+<p><strong>Required Data</strong></p>
+<p>This step makes use of terrain elevation data, project domain, and
+roughness data. The required data is available here:</p>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example
+Projects\ Tailings Dam Breach Workshop\</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>File</p></th>
+<th class="head"><p>Content</p></th>
+<th class="head"><p>Location</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Elevation Pre
+Disaster.tif</p></td>
+<td><p>Digital terrain raster</p></td>
+<td><p>..\2. Project
+Setup\Data</p></td>
+</tr>
+<tr class="row-odd"><td><p>Project Domain
+TD.shp</p></td>
+<td><p>Polygon for project
+domain</p></td>
+<td><p>..\ 2. Project
+Setup\Data</p></td>
+</tr>
+<tr class="row-even"><td><p>Landuse TD.shp</p></td>
+<td><p>Shapefile for spatially
+variable roughness</p></td>
+<td><p>..\ 2. Project
+Setup\Data</p></td>
+</tr>
+</tbody>
+</table>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I5B6x8QH7XM?si=tbEnL30Dtl_2_eQY"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><section id="step-1-open-qgis-and-load-project-domain">
+<h2>Step 1: Open QGIS and load project domain<a class="headerlink" href="#step-1-open-qgis-and-load-project-domain" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Search the start menu and run the QGIS Desktop program. Look for QGIS
+version 3.22 <strong>or higher</strong>.</p></li>
+</ol>
+<img alt="../../_images/tdproject01.png" src="../../_images/tdproject01.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the New Project icon to load a new map.</p></li>
+</ol>
+<img alt="../../_images/tdproject02.png" src="../../_images/tdproject02.png" />
+<ol class="arabic simple" start="3">
+<li><p>Open the project folder and drag the file Project Domain TD.shp onto
+the map space. This will set the CRS to the correct EPSG code. The
+code should be 29101.</p></li>
+</ol>
+<img alt="../../_images/tdproject03.png" src="../../_images/tdproject03.png" />
+</section>
+<section id="step-2-create-the-geopackage">
+<h2>Step 2: Create the GeoPackage<a class="headerlink" href="#step-2-create-the-geopackage" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the Settings icon.</p></li>
+</ol>
+<img alt="../../_images/tdproject04.png" src="../../_images/tdproject04.png" />
+<ol class="arabic simple" start="2">
+<li><p>Fill out the dialog box as shown below. Set the Grid cell size to 30
+m. Click Create.</p></li>
+<li><p>Save the geopackage file to the project folder. Name the file
+Tailings Dam.gpkg.</p></li>
+</ol>
+<img alt="../../_images/tdproject05.png" src="../../_images/tdproject05.png" />
+<ol class="arabic simple" start="4">
+<li><p>Set the project CRS to SAD69 / Brazil Polyconic (m). Filter the list
+with an <strong>EPSG code: 29101</strong>. Select EPSG: 29101 and click OK.</p></li>
+</ol>
+<img alt="../../_images/tdproject06.png" src="../../_images/tdproject06.png" />
+<ol class="arabic simple" start="5">
+<li><p>Wait for the geopackage to write and check the accuracy of the
+project settings and click OK.</p></li>
+</ol>
+<img alt="../../_images/tdproject07.png" src="../../_images/tdproject07.png" />
+<ol class="arabic simple" start="6">
+<li><p>The project should look like this:</p></li>
+</ol>
+<img alt="../../_images/tdproject08.png" src="../../_images/tdproject08.png" />
+<ol class="arabic simple" start="7">
+<li><p>Click the Collapse button and then expand the Grid Tools Widget.</p></li>
+</ol>
+<img alt="../../_images/tdproject09.png" src="../../_images/tdproject09.png" />
+</section>
+<section id="step-3-create-the-grid">
+<h2>Step 3: Create the grid<a class="headerlink" href="#step-3-create-the-grid" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>From the Grid Tools widget, click Create Grid.</p></li>
+</ol>
+<img alt="../../_images/tdproject010.png" src="../../_images/tdproject010.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the Project Domain TD layer, and the Cell Size field and click
+OK. Click OK to close the Grid information window.</p></li>
+</ol>
+<img alt="../../_images/tdproject011.png" src="../../_images/tdproject011.png" />
+<ol class="arabic simple" start="3">
+<li><p>Save the project. Click the main Save icon on the QGIS toolbar.</p></li>
+</ol>
+<img alt="../../_images/tdproject012.png" src="../../_images/tdproject012.png" />
+<ol class="arabic simple" start="4">
+<li><p>Navigate to the project folder, name the project Tailings Dam.qgz and
+click Save.</p></li>
+</ol>
+</section>
+<section id="step-4-interpolate-the-elevation">
+<h2>Step 4: Interpolate the elevation<a class="headerlink" href="#step-4-interpolate-the-elevation" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Collapse the FLO-2D Project Layers.</p></li>
+<li><p>Select the Project Domain Layer so that it is active.</p></li>
+<li><p>Drag the Elevation Pre Disaster.tif onto the map.</p></li>
+</ol>
+<img alt="../../_images/tdproject013.png" src="../../_images/tdproject013.png" />
+<ol class="arabic simple" start="4">
+<li><p>Uncheck the Project Domain Layer and drag it to the bottom of the
+Layers List.</p></li>
+<li><p>Drag the Elevation layer to the bottom of the list.</p></li>
+<li><p>The map should look like the following image.</p></li>
+</ol>
+<img alt="../../_images/tdproject014.png" src="../../_images/tdproject014.png" />
+<ol class="arabic simple" start="7">
+<li><p>To interpolate the elevation to the grid layer from a raster layer,
+use the Sample Grid Elevation icon.</p></li>
+</ol>
+<img alt="../../_images/tdproject015.png" src="../../_images/tdproject015.png" />
+<ol class="arabic simple" start="8">
+<li><p>Click on the Sample Grid Elevation icon and enter the required data
+in the dialog fields and click OK. Click the OK box to close the
+Sampling Done dialog box.</p></li>
+</ol>
+<img alt="../../_images/tdproject016.png" src="../../_images/tdproject016.png" />
+<img alt="../../_images/tdproject017.png" src="../../_images/tdproject017.png" />
+<ol class="arabic simple" start="9">
+<li><p>The Render elev button will show if the process worked correctly.</p></li>
+</ol>
+<img alt="../../_images/tdproject018.png" src="../../_images/tdproject018.png" />
+</section>
+<section id="step-5-assign-roughness">
+<h2>Step 5: Assign roughness<a class="headerlink" href="#step-5-assign-roughness" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>To assign roughness data, open the project folder and drag the
+Landuse TD.shp file onto the map space.</p></li>
+</ol>
+<p>Important Note: New layers are placed on top of the Active layer. If a
+layer is added to the map and lost, look in the FLO-2D groups to find
+it. A good practice is to select the layer elevation layer before adding
+new data. Then the elevation data wont’ cover the new layer.</p>
+<img alt="../../_images/tdproject019.png" src="../../_images/tdproject019.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the Sample roughness icon.</p></li>
+</ol>
+<img alt="../../_images/tdproject020.png" src="../../_images/tdproject020.png" />
+<ol class="arabic simple" start="3">
+<li><p>Fill the dialog box and click OK. Click OK to close the next message
+window.</p></li>
+</ol>
+<img alt="../../_images/tdproject021.png" src="../../_images/tdproject021.png" />
+<img alt="../../_images/tdproject022.png" src="../../_images/tdproject022.png" />
+<ol class="arabic simple" start="4">
+<li><p>The roughness values and elevations are assigned to the grid layer in
+the Schematized Layers group. Right click the Grid layer and click
+Open Attribute Table to see the data.</p></li>
+</ol>
+<img alt="../../_images/tdproject023.png" src="../../_images/tdproject023.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click the Set Control Parameters Icon to assign the control
+variables.</p></li>
+</ol>
+<img alt="../../_images/tdproject024.png" src="../../_images/tdproject024.png" />
+<ol class="arabic simple" start="6">
+<li><p>Fill the dialog box using the two figures below and save the data to
+the GeoPackage with the Save icon. The variable descriptions and
+additional instructions are presented in the Data Input Manual. The
+drag bar will expose the save button.</p></li>
+</ol>
+<img alt="../../_images/tdproject025.png" src="../../_images/tdproject025.png" />
+<img alt="../../_images/tdproject026.png" src="../../_images/tdproject026.png" />
+<ol class="arabic simple" start="7">
+<li><p>Save the project.</p></li>
+</ol>
+<img alt="../../_images/tdproject027.png" src="../../_images/tdproject027.png" />
+</section>
+<section id="step-6-configure-layers">
+<h2>Step 6: Configure layers<a class="headerlink" href="#step-6-configure-layers" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Move the extra data to the bottom of the layers list.</p></li>
+</ol>
+<img alt="../../_images/tdproject028.png" src="../../_images/tdproject028.png" />
+<ol class="arabic simple" start="2">
+<li><p>Expand the FLO-2D User Layers and Group the Boundary Conditions and
+Channels. Select the layers to be grouped. Right click and click
+Group Selected. Name the group to finish!</p></li>
+</ol>
+<img alt="../../_images/tdproject029.png" src="../../_images/tdproject029.png" />
+<ol class="arabic simple" start="3">
+<li><p>Group all the layers that will not be needed into a group called Not
+Used.</p></li>
+<li><p>This procedure makes it easier to find layers that are more commonly
+used.</p></li>
+</ol>
+<img alt="../../_images/tdproject030.png" src="../../_images/tdproject030.png" />
+<ol class="arabic simple" start="5">
+<li><p>Repeat the procedure with the tables that are not needed.</p></li>
+<li><p>Click the QGIS save button to save this configuration.</p></li>
+</ol>
+<img alt="../../_images/tdproject031.png" src="../../_images/tdproject031.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="computerset.html" class="btn btn-neutral float-left" title="Computer set-up" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="hydrology.html" class="btn btn-neutral float-right" title="Hydrology" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/tutorials/Tailings/project.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="project.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

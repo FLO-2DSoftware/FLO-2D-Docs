@@ -1,0 +1,523 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 6 – Hydraulic Structures &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tailings Dam Modeling Tutorial" href="../Tailings/index.html" />
+    <link rel="prev" title="Lesson 5 – Realtime Rainfall Data" href="Lesson%205.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Self-Help Kit v0.10.115</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Lesson 6 – Hydraulic Structures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#part-1-culverts-with-rating-tables">Part 1 - Culverts with Rating Tables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#part-2-culverts-with-culvert-equations">Part 2 – Culverts with Culvert Equations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Coastal-Flooding/index.html">Coastal Flooding v0.10.115</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Self-Help Kit v0.10.115</a></li>
+      <li class="breadcrumb-item active">Lesson 6 – Hydraulic Structures</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/self-help-kit/Lesson 6.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lesson-6-hydraulic-structures">
+<h1>Lesson 6 – Hydraulic Structures<a class="headerlink" href="#lesson-6-hydraulic-structures" title="Link to this heading"></a></h1>
+<section id="part-1-culverts-with-rating-tables">
+<h2>Part 1 - Culverts with Rating Tables<a class="headerlink" href="#part-1-culverts-with-rating-tables" title="Link to this heading"></a></h2>
+<p><strong>Overview</strong></p>
+<p>Lesson 6 Part 1 outlines the process of creating hydraulic structures with rating tables and generalized culvert equations.
+This lesson needs a channel so please use the data from QGIS Lesson 2, 3, or 4 to run through this tutorial.</p>
+<p>This video shows the full process of this tutorial.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/H02oR4bySw4" frameborder="0" allowfullscreen></iframe><section id="required-data">
+<h3>Required Data<a class="headerlink" href="#required-data" title="Link to this heading"></a></h3>
+<p>The lesson can start from QGIS Lesson 2, 3, or 4 and hydraulic structure shapefile and structure data files in QGIS Lesson 6.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File</strong></p></td>
+<td><p><strong>Content</strong></p></td>
+<td><p><strong>Location</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>*.shp</p></td>
+<td><p>Hydraulic Structures</p></td>
+<td><p>QGIS Lesson 6</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.txt</p></td>
+<td><p>Culvert Tables</p></td>
+<td><p>QGIS Lesson 6\Culvert Tables</p></td>
+</tr>
+</tbody>
+</table>
+<p>Project Location C:\Users\Public\Documents\FLO-2D Pro Documentation\Example Projects\QGIS Tutorials</p>
+<p>Check these folders to ensure the data is available before starting the lesson.</p>
+</section>
+<section id="step-by-step-procedure">
+<h3>Step-by-Step Procedure<a class="headerlink" href="#step-by-step-procedure" title="Link to this heading"></a></h3>
+<p>To build HYSTRUC.DAT following these steps.</p>
+<ol class="arabic simple">
+<li><p>Open Lesson 2, 3, or 4 qgz file;</p></li>
+<li><p>Import the Hydraulic Structures shapefile;</p></li>
+<li><p>Build the structures into the User Layers;</p></li>
+<li><p>Assign the structure attributes;</p></li>
+<li><p>Assign the rating tables;</p></li>
+<li><p>Schematize the data;</p></li>
+<li><p>Export and project;</p></li>
+<li><p>Run the simulation.</p></li>
+</ol>
+</section>
+<section id="step-1-open-qgis-and-load-the-project">
+<h3>Step 1: Open QGIS and Load the Project<a class="headerlink" href="#step-1-open-qgis-and-load-the-project" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Search the start menu and run the “QGIS Desktop” program.</p></li>
+</ol>
+<img alt="../../_images/culv0011.png" src="../../_images/culv0011.png" />
+<ol class="arabic simple" start="2">
+<li><p>Load QGIS Lesson 1</p></li>
+</ol>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Lesson 1.qgz</p>
+<img alt="../../_images/clvt0001.png" src="../../_images/clvt0001.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This lesson can be started after Lesson 2 is complete.</p>
+</div>
+</section>
+<section id="step-2-import-data">
+<h3>Step 2: Import data<a class="headerlink" href="#step-2-import-data" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Start by cleaning up the map space so the next layer will be easy to see.</p></li>
+<li><p>Uncheck the User Left Bank Lines, Right Bank Lines, and Cross Sections layers;</p></li>
+<li><p>Uncheck the Blocked Areas;</p></li>
+<li><p>Uncheck the Storm Drain User Layers;</p></li>
+<li><p>Click the User Boundary Conditions Layer to activate this layer;</p></li>
+<li><p>Drag the Hydraulic Structures onto the map space.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the image is blurry, use Firefox or open the image in a new tab.</p>
+</div>
+<img alt="../../_images/clvt002.png" src="../../_images/clvt002.png" />
+</section>
+<section id="step-3-format-the-data-layers">
+<h3>Step 3: Format the data layers<a class="headerlink" href="#step-3-format-the-data-layers" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Open the Attributes Table on the Hydraulic Structures Layer.</p></li>
+</ol>
+<img alt="../../_images/clvt003.png" src="../../_images/clvt003.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select structure 130, and 131 and click Zoom map to selected rows button.
+This will zoom the map to these two structures.</p></li>
+</ol>
+<img alt="../../_images/clvt004.png" src="../../_images/clvt004.png" />
+<p><strong>Label the Hydraulic Structures layer.</strong></p>
+<ol class="arabic simple" start="3">
+<li><p>Double click the Hydraulic Structures layer</p></li>
+<li><p>Set the Labels like the following image.</p></li>
+<li><p>This shows which culvert is being reviewed.</p></li>
+</ol>
+<img alt="../../_images/clvt005.png" src="../../_images/clvt005.png" />
+<p><strong>Change the layer Symbology</strong></p>
+<ol class="arabic simple" start="6">
+<li><p>Change the tab to Symbology</p></li>
+<li><p>Set the Symbol Layer Type to Arrow</p></li>
+<li><p>Uncheck Curved Arrows</p></li>
+<li><p>This shows the flow direction of each structure.</p></li>
+</ol>
+<img alt="../../_images/clvt006.png" src="../../_images/clvt006.png" />
+</section>
+<section id="step-4-build-the-culverts-into-the-user-layers-structure-lines">
+<h3>Step 4: Build the culverts into the User Layers Structure Lines<a class="headerlink" href="#step-4-build-the-culverts-into-the-user-layers-structure-lines" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Use the Structure Editor to add all of the new structures.</p></li>
+<li><p>Digitize all of the structures.</p></li>
+<li><p>Click the Save icon to confirm that close the digitizing tool and load the data.</p></li>
+</ol>
+<img alt="../../_images/clvt007.png" src="../../_images/clvt007.png" />
+<p><strong>Digitizing process:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Left click the inlet node (upstream node)</p></li>
+<li><p>Left click the outlet node (downstream node)</p></li>
+<li><p>Right Click to finish the polyine.</p></li>
+<li><p>Click OK to finish the feature.</p></li>
+</ul>
+</div></blockquote>
+<img alt="../../_images/clvt008.png" src="../../_images/clvt008.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click Save in the Structures Widget to load the data into the dialog box.</p></li>
+</ol>
+<img alt="../../_images/clvt009.png" src="../../_images/clvt009.png" />
+</section>
+<section id="step-5-assign-the-structure-attributes">
+<h3>Step 5: Assign the structure attributes<a class="headerlink" href="#step-5-assign-the-structure-attributes" title="Link to this heading"></a></h3>
+<p><strong>Complete the Structure Fields</strong></p>
+<ol class="arabic simple">
+<li><p>Load the Hydraulic Structures Attribute table.
+The attributes will help fill out each structure table.</p></li>
+<li><p>Check the center button.</p></li>
+<li><p>Select the first structure.</p></li>
+<li><p>Rename the Structure with the “A” button.</p></li>
+<li><p>Fill the Type and Rating fields</p></li>
+<li><p>Move to the next structure and repeat the process.</p></li>
+</ol>
+<img alt="../../_images/clvt010.png" src="../../_images/clvt010.png" />
+<ol class="arabic simple" start="7">
+<li><p>Schematize the structure data.</p></li>
+</ol>
+<img alt="../../_images/clvt011.png" src="../../_images/clvt011.png" />
+</section>
+<section id="step-6-assign-the-rating-tables">
+<h3>Step 6: Assign the rating tables<a class="headerlink" href="#step-6-assign-the-rating-tables" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Click the Import Rating Tables button</p></li>
+</ol>
+<img alt="../../_images/clvt012.png" src="../../_images/clvt012.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the rating tables from the project folder.</p></li>
+<li><p>Click open.</p></li>
+</ol>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 6\Culverts Tables</p>
+<img alt="../../_images/clvt013.png" src="../../_images/clvt013.png" />
+<ol class="arabic simple" start="4">
+<li><p>The data has been imported.  Switch to another structure in the list if the table and plot does not update.</p></li>
+</ol>
+<img alt="../../_images/clvt014.png" src="../../_images/clvt014.png" />
+</section>
+<section id="step-7-schematize-the-data">
+<h3>Step 7: Schematize the data<a class="headerlink" href="#step-7-schematize-the-data" title="Link to this heading"></a></h3>
+<p>Schematize the structure data and click Yes to replace the data.</p>
+<img alt="../../_images/clvt015.png" src="../../_images/clvt015.png" />
+<img alt="../../_images/clvt016.png" src="../../_images/clvt016.png" />
+</section>
+</section>
+<section id="part-2-culverts-with-culvert-equations">
+<h2>Part 2 – Culverts with Culvert Equations<a class="headerlink" href="#part-2-culverts-with-culvert-equations" title="Link to this heading"></a></h2>
+<p>This tutorial will illustrate how to use QGIS table editor and the FLO-2D plugin to manage and edit culvert data.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5XFkNQ6z8Oc" frameborder="0" allowfullscreen></iframe><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The accompanying YouTube video shows several more advanced ideas for modeling culverts.  The tutorial focus is
+on the generalized culvert equation.</p>
+<ul class="simple">
+<li><p>Advanced channel culvert modeling</p></li>
+<li><p>Simple storm drain</p></li>
+<li><p>When to use tailwater switches.</p></li>
+<li><p>How to use the head reference elevation.</p></li>
+</ul>
+</div>
+<section id="step-1-setup-the-project">
+<h3>Step 1: Setup the project<a class="headerlink" href="#step-1-setup-the-project" title="Link to this heading"></a></h3>
+<p>Get the data: <a class="reference external" href="https://flo-2d.sharefile.com/d-s05913b9b6c0149c1a93cec4fe52d7bb5">https://flo-2d.sharefile.com/d-s05913b9b6c0149c1a93cec4fe52d7bb5</a></p>
+<ol class="arabic simple">
+<li><p>Download and extract the data from the link above.</p></li>
+</ol>
+</section>
+<section id="step-2-review-culvert-009">
+<h3>Step 2: Review culvert 009<a class="headerlink" href="#step-2-review-culvert-009" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Zoom to the northeast basin as shown by the yellow box.</p></li>
+<li><p>Find the culvert.</p></li>
+</ol>
+<img alt="../../_images/clvt023.png" src="../../_images/clvt023.png" />
+<ol class="arabic simple" start="3">
+<li><p>Turn on the Elevation layer and set the elevation style to hillshade.  If the elevation layer is missing, load it
+from lesson 1.</p></li>
+</ol>
+<img alt="../../_images/culv0011.png" src="../../_images/culv0011.png" />
+<ol class="arabic simple" start="4">
+<li><p>Notice the blue polygon.  It covers the centroid of the grid.  The gif shows how to build one.  This polygon is used
+identify the grid that needs an elevation correction.  It can be more than one but in this case 1 is sufficient.</p></li>
+</ol>
+<img alt="../../_images/culv002.gif" src="../../_images/culv002.gif" />
+<ol class="arabic simple" start="5">
+<li><p>The elevation correction will be applied in a later step.  Step 2.4 sets shows how to set up the correction.</p></li>
+<li><p>Click the measure tool and measure the length of the culvert.</p></li>
+</ol>
+<img alt="../../_images/culv0031.png" src="../../_images/culv0031.png" />
+<ol class="arabic simple" start="7">
+<li><p>Review the culvert geometry.</p>
+<ul class="simple">
+<li><p>Circular pipe culvert</p></li>
+<li><p>48” diameter</p></li>
+<li><p>3 barrels</p></li>
+<li><p>Square headwall</p></li>
+</ul>
+</li>
+</ol>
+<img alt="../../_images/culv0041.png" src="../../_images/culv0041.png" />
+</section>
+<section id="step-3-complete-the-structure-data">
+<h3>Step 3: Complete the structure data<a class="headerlink" href="#step-3-complete-the-structure-data" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select CULV_009 in the structure editor.</p>
+<ul class="simple">
+<li><p>Rating = Culvert equation</p></li>
+<li><p>Length = 252ft</p></li>
+<li><p>Diameter = 4ft</p></li>
+</ul>
+</li>
+</ol>
+<img alt="../../_images/culv0051.png" src="../../_images/culv0051.png" />
+<ol class="arabic simple" start="2">
+<li><p>TYPEC = 2 circular pipe.</p></li>
+</ol>
+<img alt="../../_images/clvt024.png" src="../../_images/clvt024.png" />
+<ol class="arabic simple" start="3">
+<li><p>TYPEEN = 1 square edge with headwall.</p></li>
+<li><p>CULVERTN = 0.018</p></li>
+<li><p>KE = 0.50</p></li>
+</ol>
+<img alt="../../_images/culv0061.png" src="../../_images/culv0061.png" />
+<p>source: Hydraulic Design of Highway Culverts - HDS-5-Third Edition</p>
+<ol class="arabic simple" start="6">
+<li><p>CUBASE = 0ft</p></li>
+<li><p>MULTBARRELS = 3</p></li>
+</ol>
+<img alt="../../_images/culv0071.png" src="../../_images/culv0071.png" />
+</section>
+<section id="step-4-review-culvert-122">
+<h3>Step 4: Review culvert 122<a class="headerlink" href="#step-4-review-culvert-122" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Check the Center box and change the structure to CULV_122.</p></li>
+</ol>
+<img alt="../../_images/culv0081.png" src="../../_images/culv0081.png" />
+<ol class="arabic simple" start="2">
+<li><p>The map is centered on the CULV_122.</p></li>
+<li><p>In this culvert, the elevation polygon was applied to the whole basin.</p></li>
+<li><p>Note how the blue polygon covers the centroid of the cells that will be modified.  This correction is applied to the
+attenuation basin and the stilling basin.</p></li>
+</ol>
+<img alt="../../_images/culv0091.png" src="../../_images/culv0091.png" />
+<ol class="arabic simple" start="5">
+<li><p>The culvert has a stilling basin just upstream with a levee applied to control the water surface.  The grid element
+elevation is set to min by the blue polygon and the levee elevation is set to the crest of the weir.  The water will
+flow over the levee and fill the stilling basin before it flows through the culvert.</p></li>
+<li><p>The levee elevation is 1396.48ft.</p></li>
+<li><p>The culvert length 100ft.</p></li>
+</ol>
+<img alt="../../_images/culv0101.png" src="../../_images/culv0101.png" />
+<ol class="arabic simple" start="8">
+<li><p>The entrance type is box culvert with wingwalls 30 to 70 degrees.</p></li>
+</ol>
+<img alt="../../_images/culv011a.png" src="../../_images/culv011a.png" />
+</section>
+<section id="step-5-complete-the-structure-data">
+<h3>Step 5: Complete the structure data<a class="headerlink" href="#step-5-complete-the-structure-data" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select CULV_122.</p>
+<ul class="simple">
+<li><p>Rating = Culvert equation</p></li>
+<li><p>Length = 100ft</p></li>
+<li><p>Diameter = 5ft</p></li>
+</ul>
+</li>
+</ol>
+<img alt="../../_images/culv008a.png" src="../../_images/culv008a.png" />
+<ol class="arabic simple" start="7">
+<li><p>The culvert dimensions</p>
+<ul class="simple">
+<li><p>TYPEC = 1 Box culvert</p></li>
+<li><p>TYPEEN = 1 Wingwall 30 to 70 Square Head at Crown</p></li>
+<li><p>CULVERTN = 0.018</p></li>
+<li><p>KE = 0.4</p></li>
+<li><p>CUBASE = 8ft</p></li>
+<li><p>MULTBARRELS = 1</p></li>
+</ul>
+</li>
+</ol>
+<img alt="../../_images/culv0121.png" src="../../_images/culv0121.png" />
+</section>
+<section id="step-6-save-export-and-run">
+<h3>Step 6: Save, export, and run<a class="headerlink" href="#step-6-save-export-and-run" title="Link to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The accompanying YouTube video shows several more advanced ideas for modeling culverts.</p>
+<ul class="simple">
+<li><p>Advanced channel culvert modeling</p></li>
+<li><p>Simple storm drain</p></li>
+<li><p>When to use tailwater switches.</p></li>
+<li><p>How to use the head reference elevation.</p></li>
+</ul>
+</div>
+<ol class="arabic simple">
+<li><p>Save the project.</p></li>
+</ol>
+<img alt="../../_images/clvt025.png" src="../../_images/clvt025.png" />
+<ol class="arabic simple" start="2">
+<li><p>Export the data files to the Advanced Class Folder Module 2 Export.</p></li>
+</ol>
+<img alt="../../_images/clvt026.png" src="../../_images/clvt026.png" />
+<img alt="../../_images/clvt027.png" src="../../_images/clvt027.png" />
+<img alt="../../_images/clvt028.png" src="../../_images/clvt028.png" />
+<img alt="../../_images/clvt029.png" src="../../_images/clvt029.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the Run FLO-2D Icon.</p></li>
+</ol>
+<img alt="../../_images/clvt030.png" src="../../_images/clvt030.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click OK to start the simulation.</p></li>
+</ol>
+<img alt="../../_images/clvt031.png" src="../../_images/clvt031.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The end of the YouTube video will cover hydraulic structure review.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Lesson%205.html" class="btn btn-neutral float-left" title="Lesson 5 – Realtime Rainfall Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Tailings/index.html" class="btn btn-neutral float-right" title="Tailings Dam Modeling Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="Lesson 6.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

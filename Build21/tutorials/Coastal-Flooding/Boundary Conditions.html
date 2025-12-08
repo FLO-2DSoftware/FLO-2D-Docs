@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boundary Conditions &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Channel" href="Channel.html" />
+    <link rel="prev" title="Hydrology" href="Hydrology.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../self-help-kit/index.html">Self-Help Kit v0.10.115</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Coastal Flooding v0.10.115</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Hydrology.html">Hydrology</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Boundary Conditions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-prepare-the-map">Step 1: Prepare the map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-set-up-the-boundary-polygon">Step 2: Set up the boundary polygon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-save-export-and-run">Step 3. Save, export, and run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-create-a-backup-file">Step 4: Create a backup file</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Channel.html">Channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Culverts.html">Culverts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Mapping.html">Mapping Results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Coastal Flooding v0.10.115</a></li>
+      <li class="breadcrumb-item active">Boundary Conditions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/Coastal-Flooding/Boundary Conditions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="boundary-conditions">
+<h1>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Link to this heading"></a></h1>
+<p><strong>Overview</strong></p>
+<p>This module will outline how to add a storm tide to the boundary of the project.</p>
+<p><strong>Required Data</strong></p>
+<p>The required data is in project data folder.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*.txt</p></td>
+<td><p>Tide table</p></td>
+</tr>
+</tbody>
+</table>
+<p>Path:  …\Coastal 2D Training\Project Data\Boundary Conditions</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JsD6c7VjuCQ" frameborder="0" allowfullscreen></iframe><section id="step-1-prepare-the-map">
+<h2>Step 1: Prepare the map<a class="headerlink" href="#step-1-prepare-the-map" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Uncheck the following layers:</p>
+<ul class="simple">
+<li><p>Soil Training</p></li>
+<li><p>LandUse Training</p></li>
+</ul>
+</li>
+<li><p>Check Elevation Raster</p></li>
+<li><p>Double click the Elevation Raster layer.  Set the symbology to Hillshade and click OK.</p></li>
+</ol>
+<img alt="../../_images/bc001.png" src="../../_images/bc001.png" />
+</section>
+<section id="step-2-set-up-the-boundary-polygon">
+<h2>Step 2: Set up the boundary polygon<a class="headerlink" href="#step-2-set-up-the-boundary-polygon" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Use the mouse wheel to zoom to the west side of the project where the water leaves the grid.
+Roll the mouse wheel in and out to zoom.  Click the mouse wheel to drag the map.</p></li>
+</ol>
+<img alt="../../_images/bc002.png" src="../../_images/bc002.png" />
+<ol class="arabic simple" start="2">
+<li><p>Collapse the FLO-2D widgets and click Boundary Condition Editor.</p></li>
+</ol>
+<img alt="../../_images/hydrology013.png" src="../../_images/hydrology013.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click the polygon button and draw a polygon across the Cocohatchee outlet.</p></li>
+<li><p>Right click to close the polygon.  Set the type to Outflow and click OK.</p></li>
+</ol>
+<img alt="../../_images/bc003.png" src="../../_images/bc003.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click the Boundary Condition Editor Save button.  Set the BC type to Outflow.  Set the Outflow type to 5.</p></li>
+</ol>
+<img alt="../../_images/bc004.png" src="../../_images/bc004.png" />
+<ol class="arabic simple" start="6">
+<li><p>In the project folder, open the storm tide text file in NotePad.</p></li>
+</ol>
+<p>Path: …\Coastal 2D Training\Project Data\Boundary Conditions\Simple Tide Table.txt</p>
+<ol class="arabic simple" start="7">
+<li><p>Ctrl-A will select all of the data.</p></li>
+<li><p>Ctrl-C will copy the data.</p></li>
+<li><p>Press Ctrl-W will close the file.</p></li>
+</ol>
+<img alt="../../_images/copytide.gif" src="../../_images/copytide.gif" />
+<ol class="arabic simple" start="10">
+<li><p>Click on the first cell of the FLO-2D Table Editor and click the Paste Button.</p></li>
+<li><p>Set the first stage to -3.5ft.  This will allow the boundary to fill slowly and help prevent instability.</p></li>
+</ol>
+<img alt="../../_images/pastetidestage.gif" src="../../_images/pastetidestage.gif" />
+<ol class="arabic simple" start="12">
+<li><p>Name the time series and click the Schematize button.</p></li>
+</ol>
+<img alt="../../_images/bc005.png" src="../../_images/bc005.png" />
+<ol class="arabic simple" start="13">
+<li><p>The boundary should look like this:</p></li>
+</ol>
+<img alt="../../_images/bc006.png" src="../../_images/bc006.png" />
+<ol class="arabic simple" start="14">
+<li><p>This data will be saved to the OUTFLOW.DAT file.</p></li>
+</ol>
+</section>
+<section id="step-3-save-export-and-run">
+<h2>Step 3. Save, export, and run<a class="headerlink" href="#step-3-save-export-and-run" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>This is a good point to save project.</p></li>
+</ol>
+<img alt="../../_images/Module046.png" src="../../_images/Module046.png" />
+<ol class="arabic simple" start="2">
+<li><p>It is not necessary to set Control Variables for Boundary Conditions.</p></li>
+<li><p>If the project is still running, close it.</p></li>
+</ol>
+<img alt="../../_images/bc011.png" src="../../_images/bc011.png" />
+<ol class="arabic simple" start="4">
+<li><p>Export the data files.</p></li>
+</ol>
+<img alt="../../_images/Module089.png" src="../../_images/Module089.png" />
+<img alt="../../_images/bc008.png" src="../../_images/bc008.png" />
+<ol class="arabic simple" start="5">
+<li><p>Save the data to the Project Folder and click OK to close the message.</p></li>
+</ol>
+<img alt="../../_images/bc009.png" src="../../_images/bc009.png" />
+<ol class="arabic simple" start="6">
+<li><p>Run the model.  It isn’t necessary to apply Run Settings this time.  The Export button updated the settings.</p></li>
+</ol>
+<img alt="../../_images/runengine.png" src="../../_images/runengine.png" />
+<ol class="arabic simple" start="7">
+<li><p>Let the project run and continue on to the next step.</p></li>
+</ol>
+</section>
+<section id="step-4-create-a-backup-file">
+<h2>Step 4: Create a backup file<a class="headerlink" href="#step-4-create-a-backup-file" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Close QGIS.</p></li>
+<li><p>Open the project folder.  Select the Coastal Project.gpkg and Coastal Project.qgz files.  Right click them and
+click Sent to/Compressed (zipped) folder.</p></li>
+</ol>
+<img alt="../../_images/creategrid019.png" src="../../_images/creategrid019.png" />
+<ol class="arabic simple" start="3">
+<li><p>Name the zipped file.
+It is good to choose a name that identifies project progress.
+For Example: <strong>BCOK.zip</strong></p></li>
+</ol>
+<img alt="../../_images/bc010.png" src="../../_images/bc010.png" />
+<ol class="arabic simple" start="4">
+<li><p>Open QGIS and reload the project.</p></li>
+</ol>
+<img alt="../../_images/creategrid021.png" src="../../_images/creategrid021.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click yes to load the model.</p></li>
+</ol>
+<img alt="../../_images/creategrid022.png" src="../../_images/creategrid022.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Hydrology.html" class="btn btn-neutral float-left" title="Hydrology" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Channel.html" class="btn btn-neutral float-right" title="Channel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="Boundary Conditions.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

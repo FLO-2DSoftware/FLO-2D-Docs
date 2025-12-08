@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hydrology &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Boundary Conditions and Buildings" href="boundary.html" />
+    <link rel="prev" title="Project Set-Up" href="project.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../self-help-kit/index.html">Self-Help Kit v0.10.115</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tailings Dam Modeling Tutorial</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="computerset.html">Computer set-up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project.html">Project Set-Up</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Hydrology</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-load-google-aerial-image">Step 1: Load google aerial image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-set-up-rainfall">Step 2: Set up rainfall</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-set-up-infiltration">Step 3: Set up infiltration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-control-variables">Step 4: Control variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-export-and-run-the-model">Step 5: Export and run the model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-6-load-results">Step 6: Load results</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boundary.html">Boundary Conditions and Buildings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="damlevee.html">Dam and Levee Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mudflow.html">Mudflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Coastal-Flooding/index.html">Coastal Flooding v0.10.115</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Tailings Dam Modeling Tutorial</a></li>
+      <li class="breadcrumb-item active">Hydrology</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/Tailings/hydrology.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="hydrology">
+<h1>Hydrology<a class="headerlink" href="#hydrology" title="Link to this heading"></a></h1>
+<p><strong>Overview</strong></p>
+<p>This lesson will outline the process for setting up a rainfall runoff
+model using a 24-hour Probable Maximum Precipitation (PMP) and spatially
+variable infiltration data.</p>
+<p><strong>Required Files</strong></p>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example
+Projects\Tailings Dam Workshop</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>File</p></th>
+<th class="head"><p>Content</p></th>
+<th class="head"><p>Location</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Rainfall
+Distribution.DAT</p></td>
+<td><p>Rainfall distribution curve</p></td>
+<td><p>..\3.
+Hydrology\data</p></td>
+</tr>
+<tr class="row-odd"><td><p>Land Use TD.shp</p></td>
+<td><p>Shapefile for land use</p></td>
+<td><p>..\2. Project
+Setup\data</p></td>
+</tr>
+<tr class="row-even"><td><p>Aerial
+Pre-Disaster.tif</p></td>
+<td><p>Aerial image pre-disaster</p></td>
+<td><p>..\3.
+Hydrology\data</p></td>
+</tr>
+</tbody>
+</table>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SvdYiiFeNTE?si=ScmUAt5EMmA0GhF2"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><section id="step-1-load-google-aerial-image">
+<h2>Step 1: Load google aerial image<a class="headerlink" href="#step-1-load-google-aerial-image" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Use Quick Map Services Plugin with the Contributed Pack to load
+aerial images into the layer. This image is relatively current.</p></li>
+</ol>
+<img alt="../../_images/tdhydro01.png" src="../../_images/tdhydro01.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the Google layer and drag the Aerial – Pre Disaster.tif onto
+the Map.</p></li>
+</ol>
+<img alt="../../_images/tdhydro02.png" src="../../_images/tdhydro02.png" />
+</section>
+<section id="step-2-set-up-rainfall">
+<h2>Step 2: Set up rainfall<a class="headerlink" href="#step-2-set-up-rainfall" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Collapse all FLO-2D Widgets and Expand the Rain Editor.</p></li>
+</ol>
+<img alt="../../_images/tdhydro03.png" src="../../_images/tdhydro03.png" />
+<ol class="arabic simple" start="2">
+<li><p>Check Simulate rainfall and add 421 mm to the total storm rainfall.</p></li>
+<li><p>Click the Import icon and load Rainfall Distribution.DAT</p></li>
+<li><p>The file is in 3. Hydrology/Data</p></li>
+</ol>
+<img alt="../../_images/tdhydro04.png" src="../../_images/tdhydro04.png" />
+<img alt="../../_images/tdhydro05.png" src="../../_images/tdhydro05.png" />
+<ol class="arabic simple" start="5">
+<li><p>The rainfall data is imported into the FLO-2D Table Editor.</p></li>
+</ol>
+<img alt="../../_images/tdhydro06.png" src="../../_images/tdhydro06.png" />
+<ol class="arabic simple" start="6">
+<li><p>This method assigns uniform rainfall to every grid element. The
+rainfall is added to the grid as a depth over time. The depth is
+interpolated linearly for every timestep that falls between data
+points in the Rainfall time series table. The data is saved to
+RAIN.DAT file when the project is exported.</p></li>
+</ol>
+</section>
+<section id="step-3-set-up-infiltration">
+<h2>Step 3: Set up infiltration<a class="headerlink" href="#step-3-set-up-infiltration" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the Collapse all button to shrink all widgets.</p></li>
+</ol>
+<img alt="../../_images/tdhydro07.png" src="../../_images/tdhydro07.png" />
+<ol class="arabic simple" start="2">
+<li><p>To assign infiltration data, expand the Infiltration Editor and click
+the Global Infiltration icon.</p></li>
+</ol>
+<img alt="../../_images/tdhydro08.png" src="../../_images/tdhydro08.png" />
+<ol class="arabic simple" start="3">
+<li><p>Check the Global SCS switch and fill the global variables. The Global
+variables will be used for any cell that is not defined by the S
+lines in the spatially variable data assigned to INFIL.DAT.</p></li>
+</ol>
+<img alt="../../_images/tdhydro09.png" src="../../_images/tdhydro09.png" />
+<ol class="arabic simple" start="4">
+<li><p>On the Infiltration Editor click Calculate SCS CN.</p></li>
+</ol>
+<img alt="../../_images/tdhydro010.png" src="../../_images/tdhydro010.png" />
+<ol class="arabic simple" start="5">
+<li><p>Specify the attributes as shown in the following image and click OK.</p></li>
+</ol>
+<img alt="../../_images/tdhydro011.png" src="../../_images/tdhydro011.png" />
+<img alt="../../_images/tdhydro012.png" src="../../_images/tdhydro012.png" />
+</section>
+<section id="step-4-control-variables">
+<h2>Step 4: Control variables<a class="headerlink" href="#step-4-control-variables" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the Control Parameters Icon. Make sure the Rain and
+Infiltration switches are turned on. Click Save to Close.</p></li>
+</ol>
+<img alt="../../_images/tdhydro013.png" src="../../_images/tdhydro013.png" />
+<img alt="../../_images/tdhydro014.png" src="../../_images/tdhydro014.png" />
+</section>
+<section id="step-5-export-and-run-the-model">
+<h2>Step 5: Export and run the model<a class="headerlink" href="#step-5-export-and-run-the-model" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the main Save icon on the QGIS toolbar.</p></li>
+</ol>
+<img alt="../../_images/tdhydro015.png" src="../../_images/tdhydro015.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the FLO-2D Data Export icon.</p></li>
+</ol>
+<img alt="../../_images/tdhydro016.png" src="../../_images/tdhydro016.png" />
+<ol class="arabic simple" start="3">
+<li><p>Review the image and Click OK</p></li>
+</ol>
+<img alt="../../_images/tdhydro017.png" src="../../_images/tdhydro017.png" />
+<ol class="arabic simple" start="4">
+<li><p>Create a folder named Export Hydrology and export the project. Once
+the project is exported click OK to close the export message.</p></li>
+</ol>
+<img alt="../../_images/tdhydro018.png" src="../../_images/tdhydro018.png" />
+<ol class="arabic simple" start="5">
+<li><p>Before running FLO-2D for the first time, the Run Settings must be
+configured. Click on the drop-down arrow at the right of Run
+Simulation and click on Run Settings.</p></li>
+</ol>
+<img alt="../../_images/tdhydro019.png" src="../../_images/tdhydro019.png" />
+<ol class="arabic simple" start="6">
+<li><p>The Run Settings is used to configure the FLO-2D executable path and
+the export folder where the FLO-2D required input files are saved.
+Set the FLO-2D Folder to the FLO-2D PRO folder: C:\Program Files
+(x86)\FLO-2D PRO and the Project Folder to the Export Hydrology
+folder. Click OK to close the message.</p></li>
+</ol>
+<img alt="../../_images/tdhydro020.png" src="../../_images/tdhydro020.png" />
+<img alt="../../_images/tdhydro021.png" src="../../_images/tdhydro021.png" />
+<p>The Project Folder is automatically updated to the export folder every
+time data is exported. If the user wants to run FLO-2D from another
+export folder, the Project Folder on the Run Settings must be
+configured.</p>
+<ol class="arabic simple" start="7">
+<li><p>Click on the Run FLO-2D icon to run the simulation.</p></li>
+</ol>
+<img alt="../../_images/tdhydro022.png" src="../../_images/tdhydro022.png" />
+<ol class="arabic simple" start="8">
+<li><p>The model runs in Text Mode. When it is finished, check the
+simulation summary data for possible errors and click close.</p></li>
+</ol>
+<img alt="../../_images/tdhydro023.png" src="../../_images/tdhydro023.png" />
+<img alt="../../_images/tdhydro024.png" src="../../_images/tdhydro024.png" />
+</section>
+<section id="step-6-load-results">
+<h2>Step 6: Load results<a class="headerlink" href="#step-6-load-results" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>To visualize the results, open the FLO-2D-Rasterizor plugin.</p></li>
+</ol>
+<img alt="../../_images/tdhydro025.png" src="../../_images/tdhydro025.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the FINALDEP.OUT file in the Export Hydrology folder. The app
+will select the project CRS. Name the layer as Final Depth Hydrology,
+select the Output Directory as the Export Hydrology folder and set
+the style to Depth.</p></li>
+</ol>
+<img alt="../../_images/tdhydro026.png" src="../../_images/tdhydro026.png" />
+<img alt="../../_images/tdhydro027.png" src="../../_images/tdhydro027.png" />
+<p>Rasterizor can be used on other *.out files. It is limited to files
+with GE X Y N format. Those are Grid element number, xcoord, ycoord, and
+n is the reported variable. Output file descriptions are available in
+the Data Input Manual Chapter 5.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="project.html" class="btn btn-neutral float-left" title="Project Set-Up" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="boundary.html" class="btn btn-neutral float-right" title="Boundary Conditions and Buildings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/tutorials/Tailings/hydrology.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="hydrology.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create a Grid &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Sample Elevation from Raster" href="Sample%20Elevation%20from%20Raster.html" />
+    <link rel="prev" title="Pre-Processing Tools" href="../pre-processing-tools/Pre-Processing%20Tools.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Plugin</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">User Manual</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../installation-instructions/index.html">QGIS General Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin-features/index.html">Plugin Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Widgets</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../pre-processing-tools/Pre-Processing%20Tools.html">Pre-Processing Tools</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Create a Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Sample%20Elevation%20from%20Raster.html">Sample Elevation from Raster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Sample%20Elevation%20GDAL%20Grid%20Method.html">Sample Elevation GDAL Grid Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Sample%20Elevation%20from%20Points%20and%20LiDAR.html">Sample Elevation from Points and LiDAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Elevation%20Correction%20Tool.html">Elevation Correction Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Sample%20Roughness.html">Sample Roughness</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Area%20and%20Width%20Reduction.html">Area and Width Reduction – Buildings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Spatial%20TOL.html">Spatial TOL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Spatial%20Limiting%20Froude.html">Spatial Limiting Froude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Spatial%20Shallow%20n.html">Spatial Shallow n</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Gutters.html">Gutters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="No%20Exchange%20Channel.html">No Exchange Channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Hazus%20Layers.html">Assign Results from Points Layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../profile-tool/Profile%20Tool.html">Profile Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cross-sections-editor/Cross%20Sections%20Editor.html">Cross Sections Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary-condition-editor/Boundary%20Condition%20Editor.html">Boundary Condition Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../initial-condition-editor/Initial%20Condition%20Editor.html">Initial Condition Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rain-editor/Rain%20Editor.html">Rain Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../schematized-channel-editor/Schematized%20Channel%20Editor.html">Schematized Channel Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hydraulic-structure-editor/Hydraulic%20Structure%20Editor.html">Hydraulic Structure Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../street-editor/Street%20Editor.html">Street Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../floodplain-cross-section-editor/Floodplain%20Cross%20Section%20Editor.html">Floodplain Cross Section Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../infiltration-editor/Infiltration%20Editor.html">Infiltration Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../storm-drain-editor/Storm%20Drain.html">Storm Drain Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../levees-breach-editor/Levees%20Breach%20Editor.html">Levees Breach Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiple-channels-editor/Multiple%20Channel%20Editor.html">Multiple Channels Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../post-development-grid-modification/Post%20Development%20Grid%20Modification.html">Post Development Grid Modification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual.html">Technical Reference Manual</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Plugin</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">User Manual</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Widgets</a></li>
+      <li class="breadcrumb-item active">Create a Grid</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/flo-2d_plugin/user_manual/widgets/grid-tools/Create a Grid.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="create-a-grid">
+<h1>Create a Grid<a class="headerlink" href="#create-a-grid" title="Link to this heading"></a></h1>
+<p>The system is limited to one domain.
+The limits of the grid are defined by a single polygon.
+This polygon can be digitized in the Computational Domain layer or it can be added from an external polygon layer such as an Area of Interest
+shapefile with a single polygon.
+Both methods are described below.</p>
+<section id="method-1-grid-from-an-external-polygon">
+<h2>Method 1: Grid From an External Polygon<a class="headerlink" href="#method-1-grid-from-an-external-polygon" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>This method will use a shapefile
+with 1 polygon that represents the model area.</p></li>
+<li><p>Click the Create Grid
+button.</p></li>
+</ol>
+<img alt="../../../../_images/create006.png" src="../../../../_images/create006.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the shapefile and an
+attribute for cell size and click OK.</p></li>
+</ol>
+<img alt="../../../../_images/create002.png" src="../../../../_images/create002.png" />
+<ol class="arabic simple" start="3">
+<li><p>Optionally, select the elevation
+source to align the grid to a raster pixel.</p></li>
+<li><p>The tool will add a polygon
+to the Computational Domain layer and then create the grid.</p></li>
+<li><p>The optional raster alignment
+will align the grid to the pixels of a raster.</p></li>
+</ol>
+</section>
+<section id="method-2-grid-from-the-computational-domain">
+<h2>Method 2: Grid from the Computational Domain<a class="headerlink" href="#method-2-grid-from-the-computational-domain" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Select the Computational
+Domain layer in the Layers Panel&gt;User Layers.</p></li>
+</ol>
+<img alt="../../../../_images/create003.png" src="../../../../_images/create003.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the Toggle Editing
+button from the QGIS Toolbar to activate the editor and then click the Add Polygon Feature button to create a polygon.</p></li>
+</ol>
+<img alt="../../../../_images/create004.png" src="../../../../_images/create004.png" />
+<ol class="arabic simple" start="3">
+<li><p>Digitize the polygon in the map canvas and right click to close the polygon.
+Set the grid element size and click OK to complete the polygon.</p></li>
+</ol>
+<img alt="../../../../_images/create009.png" src="../../../../_images/create009.png" />
+<ol class="arabic simple" start="4">
+<li><p>Save the layer and turn off the
+editor by clicking the Editor tool to toggle it off.</p></li>
+</ol>
+<img alt="../../../../_images/create005.png" src="../../../../_images/create005.png" />
+<ol class="arabic simple" start="5">
+<li><p>From the Grid Tools widget,
+select Create Grid.</p></li>
+</ol>
+<img alt="../../../../_images/create006.png" src="../../../../_images/create006.png" />
+<ol class="arabic simple" start="6">
+<li><p>If this is a new project, the grid system will be created automatically.
+If this is a current project, the user will be asked to overwrite the current grid system.
+Click Yes to continue or No to cancel.
+Once the grid system is generated, the Grid created! message will appear.
+Click OK to close.</p></li>
+</ol>
+<img alt="../../../../_images/create010.png" src="../../../../_images/create010.png" />
+<ol class="arabic simple" start="7">
+<li><p>If the grid system is not as expected,
+edit the Computational Domain layer and repeat the Create Grid process.</p></li>
+<li><p>Each time the grid system is replaced,
+the elevation and roughness data are also reset and must be recalculated.</p></li>
+<li><p>The grid system data is
+saved to the Grid Schematic Layer as shown below.</p></li>
+</ol>
+<img alt="../../../../_images/create007.png" src="../../../../_images/create007.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../pre-processing-tools/Pre-Processing%20Tools.html" class="btn btn-neutral float-left" title="Pre-Processing Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Sample%20Elevation%20from%20Raster.html" class="btn btn-neutral float-right" title="Sample Elevation from Raster" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../../../Build25/flo-2d_plugin/user_manual/widgets/grid-tools/Create a Grid.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../../../Build23/flo-2d_plugin/user_manual/widgets/grid-tools/Create a Grid.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="Create a Grid.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

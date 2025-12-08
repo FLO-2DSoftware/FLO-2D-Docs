@@ -1,0 +1,958 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Chapter 3 &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="4. Chapter 4" href="Chapter%204.html" />
+    <link rel="prev" title="2. Chapter 2" href="Chapter%202.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Channel%20Guidelines%202021/index.html">FLO-2D Channel Guidelines 2021</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">FLO-2D Storm Drain Manual 2021</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Chapter%201.html">1. Chapter 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">2. Chapter 2</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3. Chapter 3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#flo-2d-storm-drain-data-files">3.1. FLO-2D Storm Drain Data Files</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%204.html">4. Chapter 4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%205.html">5. Chapter 5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%206.html">6. Chapter 6</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%207.html">7. Chapter 7</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%208.html">8. Chapter 8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="References.html">9. References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines%202021/Hydraulic%20Structures%20Guidelines%202021.html">FLO-2D Hydraulic Structure Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html">Simulating Mudflow Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro</a></li>
+          <li class="breadcrumb-item"><a href="index.html">FLO-2D Storm Drain Manual 2021</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3. </span>Chapter 3</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/flo-2d_pro/FLO-2D Storm Drain Manual 2021/Chapter 3.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chapter-3">
+<h1><span class="section-number">3. </span>Chapter 3<a class="headerlink" href="#chapter-3" title="Link to this heading"></a></h1>
+<section id="flo-2d-storm-drain-data-files">
+<h2><span class="section-number">3.1. </span>FLO-2D Storm Drain Data Files<a class="headerlink" href="#flo-2d-storm-drain-data-files" title="Link to this heading"></a></h2>
+<section id="input-and-output-file-general">
+<h3><span class="section-number">3.1.1. </span>Input and Output File - General<a class="headerlink" href="#input-and-output-file-general" title="Link to this heading"></a></h3>
+<p>This chapter describes the input and output data and their format for the FLO-2D storm drain component.
+The storm drain input data files can be created using any storm water user interface GUI.
+Graphical User Interfaces that can be used to create the stUI options are: FLO-2D QGIS plug-in, GDS, EPA SWMM 5, inpPINS, Autodesk Storm and Sanitary
+Analysis and Civil 3D Storm and Sanitary Analysis.</p>
+<p>The following folders contain the storm drain model system:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>FLO-2D PRO folder in C:\Program Files (x86).
+All executable program files for the FLO-2D model including pre- and post-processing and the FLOPRO.exe are located in this folder.</p></li>
+<li><p>FLO-2D PRO documentation folder in C:\Users\Public\Documents\FLO-2D PRO Documentation (My Documents).
+Manuals, Handout Documents, PowerPoint Presentations and tutorials are located in this directory.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="data-input-files">
+<h3><span class="section-number">3.1.2. </span>Data Input Files<a class="headerlink" href="#data-input-files" title="Link to this heading"></a></h3>
+<p>The FLO-2D data input files are generated by the QGIS plug-in or the GDS.
+The QGIS plug-in creates all the storm drain data files, for more information review the FLO-2D Plugin User’s Manual document.
+The GDS tool reads the SWMM.inp file (*.INP file cannot be created in GDS) and pairs the inlets with grid elements.
+GDS creates the associated storm drain data files needed for a FLO-2D Storm Drain simulation (SWMMFLO.DAT, SWMMOUTF.DAT and SWMMFLORT.DAT).
+Typically, the FLO-2D grid system is prepared prior to developing the storm drain model.
+The QGIS plug-in or the GDS will generate the files needed to run the FLO-2D Storm drain model.
+The following data files have to be created to run a FLO-2D storm drain simulation.</p>
+<section id="cont-dat">
+<h4><span class="section-number">3.1.2.1. </span>CONT.DAT<a class="headerlink" href="#cont-dat" title="Link to this heading"></a></h4>
+<p>This file contains the simulation control parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Set SWMM = 1 to initiate the storm drain component, review the DATA INPUT MANUAL.DAT file for more information about this switch.</p></li>
+<li><p>For no storm drain simulation, SWMM = 0 (default).</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="swmm-inp">
+<h4><span class="section-number">3.1.2.2. </span>SWMM.inp<a class="headerlink" href="#swmm-inp" title="Link to this heading"></a></h4>
+<p>SWMM.inp is the input file that contains most of the storm drain project data.
+It includes pipe network geometry, inlet/outlet and junction locations, simulation control settings and hydraulic routing properties.
+The pipe network components in the SWMM.inp have to be created with QGIS plug-in or other third-party storm drain software like SWMM GUI.
+Table 5 lists the section data in the SWMM.inp file.
+GDS does not create the SWMM.INP file but it reads the file.
+Each section of the SWMM.inp file begins with a keyword.</p>
+<p><strong>Table 5.
+Sections that Enclose Data in the SWMM.inp (Rossman, 2005)</strong></p>
+<table style="border-collapse: collapse; width: 70%;">
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[TITLE]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Project title</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[OPTIONS]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Analysis options</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[REPORT]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Output reporting instructions</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[FILES]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Interface file options</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[JUNCTIONS]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Junction node information</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[OUTFALLS]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Outfall node information</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[DIVIDERS]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Flow divider node information</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[STORAGE]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Storage node information</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[CONDUITS]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Conduit link information</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[PUMPS]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Pump link information</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[ORIFICES]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Orifice link information</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[WEIRS]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Weir link information</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[OUTLETS]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Outlet link information</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[XSECTIONS]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Conduit, orifice, and weir cross-section geometry</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[TRANSECTS]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Transect geometry for conduits with irregular cross-sections</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[LOSSES]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Conduit entrance/exit losses and flap valves</td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 4px;">[CONTROLS]</td>
+      <td style="border: 1px solid #000; padding: 4px;">Rules that control pump and regulator operation</td>
+    </tr>
+  </tbody>
+</table><p>Rules that control pump and regulator operation</p>
+<p>The structure of the SWMM.inp file follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Sections appear in any arbitrary order in the input (*.inp) file.
+Section keywords can appear in mixed lower- and upper-case letters.
+Only the first four characters (plus the open bracket) are used to distinguish one keyword from another (e.g., [DIVIDERS] and [Divi] are equivalent).</p></li>
+<li><p>Not all sections must be present on each project.</p></li>
+<li><p>Each section can contain one or more lines of data.</p></li>
+<li><p>Blank lines may appear anywhere in the file.</p></li>
+<li><p>A semicolon (;) can be used to indicate that comment follows, not data.
+This sometimes generate reading errors in the storm drain code.</p></li>
+<li><p>Data items can appear in any column of a line.</p></li>
+<li><p>The data is ordered creating a tabular appearance complete with column headings.</p></li>
+<li><p>When listing the format of a line of data, mandatory keywords are shown in boldface while optional items appear in parentheses.</p></li>
+<li><p>A list of keywords separated by a slash (YES/NO) means that only one of the words should appear in the data line.</p></li>
+<li><p>In the [OPTIONS] section, flow units can be selected as either cubic feet per second (CFS), gallons per minute (GPM), million gallons per day (MGD), cubic meters per second (CMS), liters per second, (LPS), or million liters per day
+(MLD). If cubic feet or gallons are chosen for flow units then US units are used for all other quantities.
+If cubic meters or liters are chosen then metric units apply to all other quantities.
+The default flow units are CFS.</p></li>
+</ul>
+</div></blockquote>
+<p>SWMM.inp Example</p>
+<p>The typical structure of a SWMM.inp file can be shown as follows:</p>
+<pre>
+[TITLE]
+INP file created on 10/17/2014 9:30:50 AM by FLO-2D Team Title/Notes:
+
+[OPTIONS]
+FLOW_UNITS      CFS
+INFILTRATION    HORTON
+FLOW_ROUTING    DYNWAVE
+START_DATE      03/25/2013
+START_TIME      00:00:00
+REPORT_START_DATE   03/25/2013
+REPORT_START_TIME   00:00:00
+END_DATE        03/25/2013
+END_TIME        00:24:00
+SWEEP_START     01/01
+SWEEP_END       12/31
+DRY_DAYS        0
+REPORT_STEP     00:01:30
+WET_STEP        00:01:00
+DRY_STEP        00:01:00
+ROUTING_STEP    0.05
+ALLOW_PONDING   YES
+INERTIAL_DAMPING    PARTIAL
+VARIABLE_STEP   0.00
+LENGTHENING_STEP    0
+MIN_SURFAREA    0
+NORMAL_FLOW_LIMITED BOTH
+SKIP_STEADY_STATE   NO
+FORCE_MAIN_EQUATION D-W
+LINK_OFFSETS    DEPTH
+MIN_SLOPE       0
+
+[EVAPORATION]
+;;Type      Parameters
+;;---------- ----------
+CONSTANT    0.0
+DRY_ONLY    NO
+
+[JUNCTIONS]
+;;         Invert   Max.    Init.   Surchage    Ponded
+;; Name    Elev.    Depth   Depth   Depth       Area
+;; ----    ------   ------  ------  ---------   -------
+I1CP1C14    1264.35 6.34    0         0          0
+
+[OUTFALLS]
+;;         Invert   Outfall    Stage/Table   Tide
+;; Name    Elev.    Type        Time Series  Gate
+;;-------------- ---------- ---------- ---------- ----
+OUTFALL  1254.20    FREE                      NO
+
+[CONDUITS]
+;;      Inlet   Outlet          Manning     Inlet   Outlet  Init.   Max.
+;;Name  Node    Node    Length     N        Offset  Offset  Flow    Flow
+;;-------------- ---------------- ---------------- ---------- ----------
+C1      PJ1C1   FOUTFALL  176     0.013       0        0      0     0
+
+[XSECTIONS]
+;;Link  Shape   Geom1   Geom2   Geom3   Geom4   Barrels
+;;-------------- ------------ ---------------- ---------
+C1    CIRCULAR   10       0       0       0       1
+
+[LOSSES]
+;;Link  Inlet   Outlet  Average   Flap Gate
+;;-------------- ---------- ---------- ---------- ----------
+
+[REPORT]
+INPUT   YES
+CONTROLS    YES
+NODES   ALL
+LINKS   ALL
+
+[TAGS]
+
+[MAP]
+DIMENSIONS  696350.607  908521.547  697144.791  909040.891
+Units   None
+
+[COORDINATES]
+;;Node      X-Coord     Y-Coord
+;;-------------- ------------------ ------------------
+I1CP1C14   696446.346  908983.021
+
+[VERTICES]
+;;Link  X-Coord  Y-Coord
+;;-------------- ------------------ ------------------
+</pre></section>
+<section id="swmmflo-dat">
+<h4><span class="section-number">3.1.2.3. </span>SWMMFLO.DAT<a class="headerlink" href="#swmmflo-dat" title="Link to this heading"></a></h4>
+<p>A node must have an ID starting with an ‘I’ to differentiate the inlet from a junction.
+Surface water discharge is only shared between nodes that have the correct ID assigned in the *.inp file.
+Inlets are automatically paired by the QGIS plug-in or GDS to a corresponding FLO-2D grid element.
+The SWMMFLO.DAT file contains the inlet geometry as well as the names or numbers that identify the inlet that is paired with the grid cell (Table 6).</p>
+<p><strong>Table 6.
+SWMMFLO.DAT Variables</strong></p>
+<div style="border:2px solid black; padding:5px; display:inline-block;">
+    <div><i><pre>                                   SWMMFLO.DAT File Variables</pre></i></div>
+    <hr style="margin:4px 0;border:2px solid black;">
+<pre>
+Line 1 to Number of Inlets (JT):
+SWMMCHAR=‘D’ SWMM_JT(JT) SWMM_IDEN(JT) INTYPE(JT) SWMMlength(JT)
+SWMMwidth(JT) SWMMheight(JT) SWMMcoeff(JT) FLAPGATE(JT)CURBHEIGHT(JT)
+
+Notes:
+Multiple Inlets (SWMM_IDEN(JT)) assigned to the same grid cell(SWMM_JT(JT)) constitutes a data error.
+An Inlet (SWMM_IDEN(JT)) assigned to more than one grid cell(SWMM_JT(JT)) constitutes a data error.
+</pre>
+</div><br><br><p>The Table 7 outlines the required data in the SWMMFLO.DAT.</p>
+<p><strong>Table 7.
+SWMMFLO.DAT Input File Example</strong></p>
+<div style="border:2px solid black; padding:5px; display:inline-block;">
+    <div><i><pre>                   SWMMFLO.DAT</pre></i></div>
+    <hr style="margin:4px 0;border:2px solid black;">
+<pre>
+D 452161 I19CP1SEMDRHRL 1   12  0   0.417  3  0  0
+D 451297 I20CP1SEMDRHRL 1   4.8 0   0.417  3  0  0
+D 451302 I21CP1SEMDRHRL 1   12  0   0.417  3  0  0
+D 450875 I21CP2SEMDRHRL 3   6   4.4 0      3  0  0
+D 441072 I22CP1SEMDRHRL 1   12  0   0.417  3  0  0
+D 440649 I22CP2SEMDRHRL 3   5   3.0 0      3  0  0
+</pre>
+</div><br><br><p>Table 8 lists the variable descriptions for the SWMMFLO.DAT file:</p>
+<p><strong>Table 8.
+SWMMFLO.DAT Input Variable Descriptions</strong></p>
+<p>(i) = Integer variable (r) = Real variable (c) = Character</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Variable</strong></p></td>
+<td><p><strong>Format</strong></p></td>
+<td><p><strong>Range</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>SWMMCHAR</p></td>
+<td><p>c</p></td>
+<td><p>–</p></td>
+<td><p>Character Line Identifier</p></td>
+</tr>
+<tr class="row-odd"><td><p>SWMM_JT(JT)</p></td>
+<td><p>i</p></td>
+<td><p>–</p></td>
+<td><p>Cell Grid paired with the Inlet</p></td>
+</tr>
+<tr class="row-even"><td><p>SWMM_IDEN(JT)</p></td>
+<td><p>c</p></td>
+<td><p>–</p></td>
+<td><p>Inlet Name</p></td>
+</tr>
+<tr class="row-odd"><td><p>INTYPE(JT)</p></td>
+<td><p>i</p></td>
+<td><p>1, 2, 3, 4 or</p>
+<p>5</p>
+</td>
+<td><p>Type of inlet:</p>
+<p>1: Curb opening inlet at grade 2: Curb opening inlet with sag</p>
+<p>3: Grate (gutter) inlet with/without sag</p>
+</td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td><p>4: Unique inlet with stage-discharge rating table</p>
+<p>5: Manhole</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>SWMMlength(JT)</p></td>
+<td><p>r</p></td>
+<td><p>0.01- ∞</p></td>
+<td><p>Curb opening length for INTYPE= 1 or 2</p>
+<p>Grate perimeter (not including curb side) for</p>
+<p>INTYPE= 3</p>
+<p>For INTYPE = 4 (set to 0 – not needed)</p>
+<p>Manhole perimeter for INTYPE = 5</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>SWMMwidth(JT)</p></td>
+<td><p>r</p></td>
+<td><p>0.01- ∞</p></td>
+<td><p>For INTYPE = 1 (set to 0 – not needed)</p>
+<p>Curb opening sag width for INTYPE=2</p>
+<p>Grate open area for INTYPE=3</p>
+<p>For INTYPE = 4 (set to 0 – not needed)</p>
+<p>Manhole flow area for INTYPE = 5</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>SWMMheight(JT)</p></td>
+<td><p>r</p></td>
+<td><p>0.01- ∞</p></td>
+<td><p>Curb opening height for INTYPE=1</p>
+<p>Curb opening height for INTYPE=2</p>
+<p>Grate sag height for INTYPE = 3</p>
+<p>For INTYPE = 4 (set to 0 – not needed)</p>
+<p>Surcharge depth for INTYPE=5</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>SWMMcoeff(JT)</p></td>
+<td><p>r</p></td>
+<td><p>2.8-3.3</p></td>
+<td><p>Recommended weir coefficients are:</p>
+<p>For INTYPE= 1,3 and 5: Range 2.8 to 3.2</p>
+<p>For INTYPE=2: 2.3</p>
+<p>For INTYPE = 4 (set to 0 – not needed)</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>FLAPGATE(JT)</p></td>
+<td><p>i</p></td>
+<td><p>0, 1, or 2</p></td>
+<td><p>For INTYPE = 4:</p>
+<ol class="arabic simple">
+<li><p>= default, no flap gate, no vertical inlet opening</p></li>
+<li><p>= vertical inlet opening</p></li>
+<li><p>= flapgate, controls outlet node discharge</p></li>
+</ol>
+<p>For a fake outfall INTYPE = 1, 2, 3 and 5 can be 0 or 2</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>CURBHEIGHT(JT)</p></td>
+<td><p>r</p></td>
+<td><p>0.01- ∞</p></td>
+<td><p>Curb height used to calculate discharge on inlets for all INTYPE</p></td>
+</tr>
+</tbody>
+</table>
+<p>QGIS plugin creates the SWMMFLO.DAT file, review FLO-2D Plugin User’s Manual and FLO-2D Plugin Technical Reference Manual for more information.</p>
+<p>To create the SWMMFLO.DAT in GDS, go Tools | Storm Drain | View Storm Drain Inlets Dialog command.
+Browse for the SWMM.inp file using the GDS Window “Select a Storm Drain *.inp file” as it is shown in Figure 43.</p>
+<img alt="../../_images/Chapte0033.jpg" src="../../_images/Chapte0033.jpg" />
+<p><em>Figure 43.
+GDS Open *.inp File</em></p>
+<p>The GDS will read the *.inp data file and those junctions which names start with an ‘I’ is identified by the GDS.
+The data from the storm drain file will then be paired with the data in the SWMMFLO.DAT file.
+Enter the inlet geometry and save the SWMMFLO.DAT file.
+The SWMMFLO.DAT file dialog box is shown in Figure 44.</p>
+<img alt="../../_images/Chapte0043.jpg" src="../../_images/Chapte0043.jpg" />
+<p><em>Figure 44.
+GDS Enter Storm Drain Inlet Geometry Data</em></p>
+<p>The typical structure of a SWMMFLO.DAT file is shown in Figure 45.</p>
+<img alt="../../_images/Chapte0053.jpg" src="../../_images/Chapte0053.jpg" />
+<p><em>Figure 45.
+Typical SWMMFLO.DAT Input Data File</em></p>
+</section>
+<section id="swmmoutf-dat">
+<h4><span class="section-number">3.1.2.4. </span>SWMMOUTF.DAT<a class="headerlink" href="#swmmoutf-dat" title="Link to this heading"></a></h4>
+<p>This file lists the outfall data, including the name of the outfall, the grid paired with the outfall and the switch (0 or 1) that allow the flow to
+discharge to the surface or out of the system.</p>
+<p>QGIS plugin creates the SWMMOUTF.DAT file, review FLO-2D Plugin User’s Manual and FLO-2D Plugin Technical Reference Manual for more information.</p>
+<p>In the GDS, the option to allow the outfall discharge to be returned to the surface water can be selected by checking the ‘Allow Discharge’ box in
+Figure 46..
+This is the ‘Free’ outfall condition.
+Unchecking the ‘Allow Discharge’ box (‘off’) forces outfall discharge to be removed from the complete model system.</p>
+<img alt="../../_images/Chapte0064.jpg" src="../../_images/Chapte0064.jpg" />
+<p><em>Figure 46.
+GDS Dialog Box for Storm Drain Outfall Switch</em></p>
+<p>The required data in the SWMMOUTF.DAT is shown in Table 9 and Table 10:</p>
+<p><strong>Table 9.
+SWMMOUTF.DAT Variables</strong></p>
+<div style="border:2px solid black; padding:5px; display:inline-block;">
+    <div><i><pre>                       SWMMOUTF.DAT File Variables</pre></i></div>
+    <hr style="margin:4px 0;border:2px solid black;">
+<pre>Line 1 to Number of Outfalls (JT):*OUTF_NAME(JT) OUTF_GRID(JT) OUTF_FLO2DVOL(JT)</pre>
+</div><br><br><p><strong>Table 10.
+SWMMOUTF.DAT Input File Example</strong></p>
+<div style="border:2px solid black; padding:5px; display:inline-block;">
+    <div><i><pre>                       SWMMOUTF.DAT File Example</pre></i></div>
+    <hr style="margin:4px 0;border:2px solid black;">
+<pre>OF1 72565 1OF2 98863 0OF3 97479 1OF4 51882 1OF5 216195 0OF7 382089 1</pre>
+</div><br><br><p>Table 11 lists the variables and the description for the SWMMOUTF.DAT file:</p>
+<p><strong>Table 11.
+SWMMOUTF.DAT Input Variable Descriptions</strong></p>
+<p>(i) = integer variable (r) = real variable (c) = character</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Variable</p></td>
+<td><p>Format</p></td>
+<td><p>Range</p></td>
+<td><p>Descriptions</p></td>
+</tr>
+<tr class="row-even"><td><p><em>OUTF_NAME(JT)</em></p></td>
+<td><p>c</p></td>
+<td><p>–</p></td>
+<td><p>Outfall name</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>OUTF_GRID(JT)</em></p></td>
+<td><p>i</p></td>
+<td><p>–</p></td>
+<td><p>Cell grid paired with the outfall</p></td>
+</tr>
+<tr class="row-even"><td><p><em>OUTF_FLO2DVOL(JT)</em></p></td>
+<td><p>i</p></td>
+<td><p>0: off or</p>
+<p>1: on</p>
+</td>
+<td><p>Allow discharge from the storm drain to FLO-2D</p></td>
+</tr>
+</tbody>
+</table>
+<p>SWMMOUTF.DAT file should contain the list of outfalls in the same order as it appears on the SWMM.inp.
+When the outfall order is modified in the SWMM.inp file because an outfall node was added or deleted, the list of outfall nodes in the QGIS plug-in or
+in the GDS should be edited and the SWMMOUTF.DAT file saved.
+The functionality of the outfall nodes is as follows:</p>
+<ul class="simple">
+<li><p>If the outfall discharge is ‘off’ the outfall will discharge off the complete model system.
+No discharge is returned from the storm drain to the surface water.</p></li>
+<li><p>If the outfall discharge switch is ‘on’ the surface water elevation and storm drain pressure head are compared and the outfall will discharge until
+WSE is equal or greater than the storm drain head.
+The outfall flow drains back to the surface water.</p></li>
+<li><p>Potential backflow into the outfall pipe will depend on the comparison of the WSEL, the storm drain pressure head and the tide gate assignment.</p></li>
+</ul>
+</section>
+<section id="swmmflort-dat">
+<h4><span class="section-number">3.1.2.5. </span>SWMMFLORT.DAT<a class="headerlink" href="#swmmflort-dat" title="Link to this heading"></a></h4>
+<p>The SWMMFLORT.DAT file contains a list of the rating table data only for those inlets that are non-typical inlets assigned as Type 4 in the storm
+drain system.</p>
+<p>QGIS plugin creates the SWMMFLORT.DAT file by automatically reading the rating table from a file for each inlet type 4.
+For a more detailed information review the FLO-2D Plugin User’s Manual and the FLO-2D Plugin Technical Reference Manual.</p>
+<p>In the GDS this option (INTYPE = 4 in the SWMMFLO.DAT) is assigned in the inlet geometry dialog box (Figure 47.).
+The rating table is used throughout the simulation without adjustment.</p>
+<img alt="../../_images/Chapte0072.jpg" src="../../_images/Chapte0072.jpg" />
+<p><em>Figure 47.
+GDS Dialog Box for Entering Rating Table data for INTYPE 4</em></p>
+<p>The structure of a SWMMFLORT.DAT file is:</p>
+<blockquote>
+<div><p>ID Grid Cell</p>
+<p>ID Depth Discharge</p>
+<p>ID Depth Discharge</p>
+<p>ID Depth Discharge</p>
+<p>…</p>
+</div></blockquote>
+<p>The first pair of numbers should be zero depth and zero discharge.
+This is repeated from 1 to number of storm drain inlets with INTYPE= 4 (Table 12).</p>
+<p><strong>Table 12.
+SWMMFLORT.DAT Variables</strong></p>
+<div style="border:2px solid black; padding:5px; display:inline-block;">
+    <div><i><pre>               SWMMFLORT.DAT File Variables</pre></i></div>
+    <hr style="margin:4px 0;border:2px solid black;">
+<pre>
+Line 1 to Number of INTYPE 4 (JTSWMM(JT)):
+
+
+SWMMCHARRT GRIDCELL SWMMType4ID
+
+SWMMCHARRT DEPTHSWMMRT(JTSWMM(JT),K) QSWMMRT(JTSWMM(JT),K)
+</pre>
+</div><br><br><p>The required data in the SWMMFLORT.DAT is listed in Table 12 and Table 13.</p>
+<p><strong>Table 13.
+SWMMFLORT.DAT Input File Example</strong></p>
+<div style="border:2px solid black; padding:5px; display:inline-block;">
+    <div><i><pre>SWMMFLORT.DAT File Example</pre></i></div>
+    <hr style="margin:4px 0;border:2px solid black;">
+<pre>
+D 153076 I4-85
+
+N 0.00 0.00
+
+N 0.70 10.00
+
+N 1.12 20.00
+
+N 1.46 30.00
+
+N 1.77 40.00
+
+N 2.06 50.00
+
+N 2.32 60.00
+
+N 2.57 70.00
+
+N 2.81 80.00
+
+D 199236 I4-196
+
+N 0.00 0.00
+
+N 0.79 10.00
+
+N 1.19 20.00
+
+N 1.56 30.00
+
+N 1.89 40.00
+
+N 2.19 50.00
+
+N 2.47 60.00
+
+N 2.74 70.00
+</pre>
+</div><br><br><p>Table 14 lists the description of the variables for the SWMMFLORT.DAT file.</p>
+<p>(i) = Integer variable (r) = real variable (c) = character</p>
+<p><strong>Table 14.
+SWMMFLORT.DAT Input Variable Descriptions</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Variable</p></td>
+<td><p>Format</p></td>
+<td><p>Range</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><p>SWMMCHARRT</p></td>
+<td><p>C</p></td>
+<td><p>D or N</p></td>
+<td><p>D: line with the grid cell paired with the</p>
+<p>INTYPE 4</p>
+<p>N: line with the rating table data</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>SWMMType4ID</p></td>
+<td><p>c</p></td>
+<td><p>–</p></td>
+<td><p>Name of Type 4 Inlet</p></td>
+</tr>
+<tr class="row-even"><td><p>GRIDCELL</p></td>
+<td><p>i</p></td>
+<td><p>–</p></td>
+<td><p>Cell Grid paired with the INTYPE 4</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEPTHSWMMRT(JTSWMM(JT),K)</p></td>
+<td><p>r</p></td>
+<td><p>0.00- ∞</p></td>
+<td><p>Depth (ft or m) for the rating table</p></td>
+</tr>
+<tr class="row-even"><td><p>QSWMMRT(JTSWMM(JT),K)</p></td>
+<td><p>r</p></td>
+<td><p>0.00- ∞</p></td>
+<td><p>Discharge (cfs or cms) for the rating table</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sdclogging-dat">
+<h4><span class="section-number">3.1.2.6. </span>SDCLOGGING.DAT<a class="headerlink" href="#sdclogging-dat" title="Link to this heading"></a></h4>
+<p>A clogging factor was created to simulate the debris reduction of the inlet capacity.</p>
+<p>QGIS plugin creates the SDCLOGGING.DAT file for inlet type 1,2,3,4 or 5.
+For a more detailed information about the methodology review the FLO-2D Plugin User’s Manual and the FLO-2D Plugin Technical Reference Manual.</p>
+<p>This option (INTYPE = 1,2,3,4 or 5 in the SWMMFLO.DAT) is assigned by the GDS in the inlet geometry dialog box (Figure 48.).</p>
+<p>The SDCLOGGING.DAT file contains the data with the following format:</p>
+<pre>
+ID  Grid Cell   Inlet ID    Clogging Factor - C<sub>f</sub>(%) Time for clogging -T<sub>c</sub>(hr)
+
+D   2694           I1           25                              0.50
+D   2409           I2           50                              3.25
+
+</pre><img alt="../../_images/Chapte0083.jpg" src="../../_images/Chapte0083.jpg" />
+<p><em>Figure 48.
+GDS Dialog Box for Entering clogging factor data.</em></p>
+</section>
+<section id="swmm-ini">
+<h4><span class="section-number">3.1.2.7. </span>SWMM.ini<a class="headerlink" href="#swmm-ini" title="Link to this heading"></a></h4>
+<p>After a project is saved in the storm drain GUI, the control settings file SWMM.ini will automatically be generated.
+This file has the same name as the project file and the extension *.ini.
+It contains global settings and model output options such as map display, legend colors and intervals, object default values, etc.
+To enable the display of results in the storm drain GUI the user must set the last two lines in Figure 49 as shown.</p>
+<img alt="../../_images/Chapte0091.jpg" src="../../_images/Chapte0091.jpg" />
+<p><em>Figure 49.
+SWMM.ini file.</em></p>
+</section>
+</section>
+<section id="output-files">
+<h3><span class="section-number">3.1.3. </span>Output files<a class="headerlink" href="#output-files" title="Link to this heading"></a></h3>
+<p>With the successful completion of a FLO-2D storm drain simulation, the storm drain output files will be created in the simulation folder.
+Table 15 list the storm drain output files and the description.</p>
+<p><strong>Table 15.
+List of the Storm Drain Data Output Files and Description</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Output File</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>SWMM.RPT</p></td>
+<td><p>Output report file generated by the storm drain model at the end of a simulation containing</p>
+<p>the pipe routing results for each output interval.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>SWMM.OUT</p></td>
+<td><p>Output file in a binary format that contains the storm drain results.</p>
+<p>This file is similar to the SWMM.RPT file and it is used by the SWMM GUI to interactively</p>
+<p>create time series plots and tables, profile plots, and</p>
+<p>statistical analyses of the results.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>SWMMQIN.OUT</p></td>
+<td><p>Reports the inflow and return flow discharge for each storm drain inlet.</p>
+<p>The reported discharges may be different from those in the SWMM.RPT file</p>
+<p>since the storm drain results include lateral pipe inflow and outflow.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>SWMMOUTFIN.OUT</p></td>
+<td><p>This file reports the outfall hydrographs for return flow to the surface water system.</p>
+<p>This file lists the grid or channel element in the first line followed by the time and discharge pairs.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>FPRIMELEV.OUT</p></td>
+<td><p>This output file reports the differences in elevation between the rim/invert elevation</p>
+<p>in the SWMM.inp file and the FLO-2D grid element elevation.</p>
+<p>This file should be reviewed to evaluate the elevations representing the inlet reference.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>StormDrain_ERROR.CHK</p></td>
+<td><p>This output file reports the storm drain error and warning messages.</p>
+<p>They were removed from the ERROR.CHK file.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>SDManholePopUp.OUT</p></td>
+<td><p>This output file reports the information for the manhole popping in the storm drain system.</p>
+<p>The information reported is: manhole name, time of occurrence, elevation comparison for the popping.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ManholePop.OUT</p></td>
+<td><p>This output file reports the information for the manhole popping in the storm drain system in a table.</p>
+<p>The information reported is: X coordinate, Y coordinate, grid cell, manhole name,</p>
+<p>time of occurrence, pressure head, rim + surcharge depth, WSE.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>FPLAIN_SDElev.RGH</p></td>
+<td><p>Changes in elevation (FPRIMELEV.OUT) are reported to the FPLAIN_SDElev.RGH file.</p>
+<p>Replace the FPLAIN.DAT file to apply the changes to the next simulation</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>TOPO_SDElev.RGH</p></td>
+<td><p>Changes in elevation (FPRIMELEV.OUT) are reported in the TOPO_SDElev.RGH.</p>
+<p>Replace the TOPO.DAT file to apply the changes to the next simulation.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>UndergOUTFALLS.CHK</p></td>
+<td><p>This output file reports the underground outfalls, the invert elevation of the outfall,</p>
+<p>the grid cell elevation and the difference between them.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>SUMMARY.OUT</p></td>
+<td><p>Volume conservation, run time, and final disposition of the volumes between the model components are reported in this file.</p>
+<p>The storm drain volume is reported as:</p>
+<ol class="arabic">
+<li><p>Storm Drain Inflow in the inflow volume that flows from surface water to storm drain</p>
+<p>system through inlets and outfalls (compare total w/SWMM.rpt Wet Weather Inflow):</p>
+<blockquote>
+<div><ul>
+<li><p>SURFACE TO STORM DRAIN SYSTEM THROUGH INLETS: Volume that flows from surface water to</p>
+<p>storm drain network through the inlets.</p>
+</li>
+<li><p>SURFACE TO STORM DRAIN THROUGH OUTFALLS: Volume that flows from surface water to storm drain</p>
+<p>network through the outfalls as backwater.</p>
+</li>
+<li><p>DIRECT INFLOW RECEIVED AT INLETS: volume that enters the system from outside of the domain.</p></li>
+<li><p>TOTAL INFLOW (compare w/SWMM.rpt Wet Weather Inflow).</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Storm Drain Outflow from Outfalls is the volume that leaves the storm drain system through</p>
+<p>outfalls (compare total w/SWMM.rpt External Outflow):</p>
+<blockquote>
+<div><ul>
+<li><p>STORM DRAIN TO SURFACE THROUGH OUTFALLS: Volume that flows from the storm drain to the surface</p>
+<p>water through the outfalls. Only those outfalls that were turned ‘on’ in the SWMMOUTF.DAT will</p>
+<p>discharge the volume back to the surface layer.</p>
+</li>
+<li><p>STORM DRAIN OUTFALL (OFF SYSTEM): Volume that flows off the storm drain through the outfalls.</p>
+<p>Only those outfalls that were turn ‘off’ in the SWMMOUTF.DAT will discharge the volume off the storm drain system.</p>
+</li>
+<li><p>TOTAL OUTFLOW (compare w/SWMM.rpt External Outflow)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Storm Drain Return Flow to Surface</p>
+<blockquote>
+<div><ul>
+<li><p>STORM DRAIN RETURN FLOW TO SURFACE THROUGH INLETS: Volume that returns to the surface water through inlets.</p></li>
+<li><p>TOTAL STORM DRAIN RETURN FLOW + OUTFLOW: Volume that returns to the surface water from the storm</p>
+<p>drain network plus outflow. Return volume is possible when the storm drain pressure head is greater</p>
+<p>than both the RIM elevation and the FLO-2D water surface elevation in the inlet grid element.</p>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>STORM DRAIN SYSTEM STORAGE: volume in the pipe system at the end of the simulation.</p>
+<p>This volume is extracted from the swmm.RPT file.</p>
+</li>
+<li><p>STORM DRAIN RETURN FLOW + OUTFLOW + STORAGE</p></li>
+<li><p>STORM DRAIN MASS BALANCE: mass balance volume conservation calculated as:</p></li>
+</ol>
+<p>Total Inflow - Total Outflow - Total Storm Drain Return Flow - Storm Drain System Storage</p>
+<ol class="arabic" start="7">
+<li><p>Extracted from Storm Drain File (swmm.rpt):</p>
+<blockquote>
+<div><ul>
+<li><p>WET WEATHER INFLOW: Compare with Storm Drain Inflow.</p></li>
+<li><p>EXTERNAL INFLOW: Other node inflows in addition to any surface runoff such as direct inflows</p>
+<p>as user-defined time series, dry weather inflows that are continuous inflows as base flows,</p>
+<p>and rainfall dependent infiltration/inflow (RDII).</p>
+</li>
+<li><p>EXTERNAL OUTFLOW: Compare with Storm Drain Outflow from Outfalls.</p></li>
+<li><p>Return Flow to Surface: Compare with STORM DRAIN RETURN FLOW TO SURFACE THROUGH INLETS.</p></li>
+<li><p>Total Storm Drain Storage (nodes + links): Sum of the storage.</p></li>
+<li><p>Continuity Error (%)</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td><p>CHVOLUME.OUT</p></td>
+<td><p>This file reports the channel flow distribution including inflow, outflow, overbank flow,</p>
+<p>infiltration losses and volume conservation.</p>
+<p>This includes the volumes for channel outflow to the storm drain and channel inflow from the storm drain.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ERROR.CHK</p></td>
+<td><p>This FLO-2D file contains input data error warnings and messages for the surface model.</p>
+<p>This file should be reviewed for messages after each simulation.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Chapter%202.html" class="btn btn-neutral float-left" title="2. Chapter 2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Chapter%204.html" class="btn btn-neutral float-right" title="4. Chapter 4" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="Chapter 3.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

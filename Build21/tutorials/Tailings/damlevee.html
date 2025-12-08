@@ -1,0 +1,601 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dam and Levee Tool &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Mudflow" href="mudflow.html" />
+    <link rel="prev" title="Boundary Conditions and Buildings" href="boundary.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../self-help-kit/index.html">Self-Help Kit v0.10.115</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tailings Dam Modeling Tutorial</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="computerset.html">Computer set-up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="project.html">Project Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hydrology.html">Hydrology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boundary.html">Boundary Conditions and Buildings</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Dam and Levee Tool</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-interpolate-elevation-pre-disaster-modified">Step 1: Interpolate Elevation Pre-Disaster Modified</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-create-dam">Step 2: Create dam</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-create-reservoir">Step 3: Create reservoir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-run-the-simulation">Step 4: Run the simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-check-the-reservoir-volume">Step 5: Check the reservoir volume</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-6-set-up-breach-failure">Step 6: Set up breach failure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-7-add-cross-sections">Step 7: Add cross sections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-8-export-and-run">Step 8: Export and run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-9-check-the-breach">Step 9: Check the breach</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mudflow.html">Mudflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Coastal-Flooding/index.html">Coastal Flooding v0.10.115</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Tailings Dam Modeling Tutorial</a></li>
+      <li class="breadcrumb-item active">Dam and Levee Tool</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/Tailings/damlevee.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dam-and-levee-tool">
+<h1>Dam and Levee Tool<a class="headerlink" href="#dam-and-levee-tool" title="Link to this heading"></a></h1>
+<p><strong>Overview</strong></p>
+<p>This lesson will outline the process of setting up a dam with the Levee
+Tool, filling the reservoir with clear water, defining prescribed breach
+conditions, and running a simple, clear water breach model. The clear
+water model establishes that the reservoir and dam are set up correctly.</p>
+<p><strong>Required Files</strong></p>
+<p>The step makes use of Elevation Post Disaster and the Dam Crest. The
+required data is available at C:\Users\Public\Documents\FLO-2D PRO
+Documentation\Example Projects\Tailings Dam Breach Workshop\data\</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>File</p></th>
+<th class="head"><p>Content</p></th>
+<th class="head"><p>Location</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Elevation Pre Disaster
+- Modified.tif</p></td>
+<td><p>Elevation Pre
+Disaster -
+Modified</p></td>
+<td><p>..\6. Dam and
+Levee\data</p></td>
+</tr>
+<tr class="row-odd"><td><p>Dam Crest.shp</p></td>
+<td><p>Dam crest</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Elevation
+Correction.shp</p></td>
+<td><p>Elevation
+Correction</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Cross Sections.shp</p></td>
+<td><p>Cross sections</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This video discusses why we apply different modeling practices in an area that was a Stack Collapse.</p>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E7y-4EXxsyQ?si=aDiKiiKm-_TE0gyl"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This video shows how to set up a clear water dam and breach it using prescribed failure rates.  It’s the
+primary modeling test before adding tailings to the model.  This is not a stack collapse.  That is another lesson.</p>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gCxcbwSAgBs?si=LwUOdq3iLmno1FSI"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><section id="step-1-interpolate-elevation-pre-disaster-modified">
+<h2>Step 1: Interpolate Elevation Pre-Disaster Modified<a class="headerlink" href="#step-1-interpolate-elevation-pre-disaster-modified" title="Link to this heading"></a></h2>
+<p>The Pre Disaster DEM was modified using the FLO-2D Dam Removal
+Pre-processing tools. This is not covered in this workshop for the sake
+of brevity. More information can be found on the FLO-2D Plugin user
+manual.</p>
+<ol class="arabic simple">
+<li><p>Drag the Elevation Pre Disaster - Modified.tif file onto the map
+space.</p></li>
+</ol>
+<img alt="../../_images/damlevee01.png" src="../../_images/damlevee01.png" />
+<ol class="arabic simple" start="2">
+<li><p>To interpolate the elevation to the grid layer from a raster layer,
+use the Sample Grid Elevation icon.</p></li>
+</ol>
+<img alt="../../_images/damlevee02.png" src="../../_images/damlevee02.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click on the Sample Grid Elevation icon and enter the required data
+in the dialog fields and click OK.</p></li>
+</ol>
+<img alt="../../_images/damlevee03.png" src="../../_images/damlevee03.png" />
+<img alt="../../_images/damlevee04.png" src="../../_images/damlevee04.png" />
+</section>
+<section id="step-2-create-dam">
+<h2>Step 2: Create dam<a class="headerlink" href="#step-2-create-dam" title="Link to this heading"></a></h2>
+<p>The extent of this dam is not realistic because this wasn’t a dam. It
+was stacked tailings. This lesson shows how to define a Tailings Dam.
+Another lesson will show how to set up stacks for failure.</p>
+<ol class="arabic simple">
+<li><p>Add the Dam Crest.shp onto map and zoom into the Tailings Dam.</p></li>
+</ol>
+<img alt="../../_images/damlevee05.png" src="../../_images/damlevee05.png" />
+<ol class="arabic simple" start="2">
+<li><p>Create the levee by selecting the Levee Lines under User Layers on
+the Layers.</p></li>
+</ol>
+<img alt="../../_images/damlevee06.png" src="../../_images/damlevee06.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click Toggle Editing to start editing and then click on Add Line
+Feature to draw the Levee.</p></li>
+</ol>
+<img alt="../../_images/damlevee07.png" src="../../_images/damlevee07.png" />
+<ol class="arabic simple" start="4">
+<li><p>Draw the Levee line following the Dam Crest layer template.</p></li>
+<li><p>Use the roller wheel on the mouse to zoom in and out while editing.</p></li>
+<li><p>Use roller wheel click and drag function to pan while editing.</p></li>
+</ol>
+<img alt="../../_images/damlevee08.png" src="../../_images/damlevee08.png" />
+<ol class="arabic simple" start="7">
+<li><p>Right click to finish drawing the levee line. Fill the data as the
+following picture.</p></li>
+</ol>
+<img alt="../../_images/damlevee09.png" src="../../_images/damlevee09.png" />
+<ol class="arabic simple" start="8">
+<li><p>Click the Create Levees button.</p></li>
+</ol>
+<img alt="../../_images/damlevee010.png" src="../../_images/damlevee010.png" />
+<ol class="arabic simple" start="9">
+<li><p>Check only User levee lines and click Create Schematic Layers from
+User Layers button. Click ok to close the message.</p></li>
+</ol>
+<img alt="../../_images/damlevee011.png" src="../../_images/damlevee011.png" />
+<img alt="../../_images/damlevee012.png" src="../../_images/damlevee012.png" />
+<p>The levee should look like this . The red lines are cutoff lines that
+prevent tailings deposits and water from moving downstream. They
+represent an thin vertical wall with a uniform elevation.</p>
+<img alt="../../_images/damlevee013.png" src="../../_images/damlevee013.png" />
+</section>
+<section id="step-3-create-reservoir">
+<h2>Step 3: Create reservoir<a class="headerlink" href="#step-3-create-reservoir" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>An initial condition is set to fill the reservoir when FLO-2D PRO.exe
+initiates the simulation.</p></li>
+</ol>
+<ol class="arabic simple">
+<li><p>Click the collapse widgets button and open the Initial Condition
+Editor widget.</p></li>
+</ol>
+<img alt="../../_images/damlevee014.png" src="../../_images/damlevee014.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the add reservoir button.</p></li>
+</ol>
+<img alt="../../_images/damlevee015.png" src="../../_images/damlevee015.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click anywhere within the reservoir and fill the form with the
+following data. Click OK to close the data.</p></li>
+</ol>
+<p>Do not use the Snapping Tool on this layer. The point will snap to the
+corner of a grid element and 4 reservoir nodes will be created.</p>
+<img alt="../../_images/damlevee016.png" src="../../_images/damlevee016.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click the Save button first and the Schematize button.</p></li>
+</ol>
+<img alt="../../_images/damlevee017.png" src="../../_images/damlevee017.png" />
+<img alt="../../_images/damlevee018.png" src="../../_images/damlevee018.png" />
+<ol class="arabic simple" start="5">
+<li><p>Make sure only one grid element is schematized. Click OK.</p></li>
+<li><p>It should look like this.</p></li>
+</ol>
+<img alt="../../_images/damlevee019.png" src="../../_images/damlevee019.png" />
+<ol class="arabic simple" start="7">
+<li><p>This data is saved to the INFLOW.DAT file when the model is exported.</p></li>
+</ol>
+<img alt="../../_images/damlevee020.png" src="../../_images/damlevee020.png" />
+</section>
+<section id="step-4-run-the-simulation">
+<h2>Step 4: Run the simulation<a class="headerlink" href="#step-4-run-the-simulation" title="Link to this heading"></a></h2>
+<p>Reports estimate that approximately 9.7 million cubic meters of material
+were involved in the failure. Therefore, the total storage of the
+reservoir should be in this range. This test shows how to see the
+reservoir volume and make sure the reservoir is not leaking.</p>
+<ol class="arabic simple">
+<li><p>Open the Control Parameters. Adjust the Simulation time for a quick
+simulation, check the Levees and uncheck Rainfall and Infiltration
+processes for this and the forthcoming runs. Click save.</p></li>
+</ol>
+<img alt="../../_images/damlevee021.png" src="../../_images/damlevee021.png" />
+<ol class="arabic simple" start="8">
+<li><p>Click the main Save icon on the QGIS toolbar.</p></li>
+</ol>
+<img alt="../../_images/damlevee022.png" src="../../_images/damlevee022.png" />
+<ol class="arabic simple" start="9">
+<li><p>Click the FLO-2D Data Export icon, set the export folder to Export
+Reservoir. The Project Folder on the Run Settings is automatically
+updated to the new Export Reservoir folder and it does not need to be
+updated.</p></li>
+</ol>
+<img alt="../../_images/damlevee023.png" src="../../_images/damlevee023.png" />
+<ol class="arabic simple" start="10">
+<li><p>Make sure to uncheck Rain and Infiltration and to check Levees.</p></li>
+</ol>
+<img alt="../../_images/damlevee024.png" src="../../_images/damlevee024.png" />
+<ol class="arabic simple" start="11">
+<li><p>Click on the Run FLO-2D icon to run the simulation.</p></li>
+</ol>
+<img alt="../../_images/damlevee025.png" src="../../_images/damlevee025.png" />
+<ol class="arabic simple" start="12">
+<li><p>Check the simulation summary.</p></li>
+</ol>
+<img alt="../../_images/damlevee026.png" src="../../_images/damlevee026.png" />
+</section>
+<section id="step-5-check-the-reservoir-volume">
+<h2>Step 5: Check the reservoir volume<a class="headerlink" href="#step-5-check-the-reservoir-volume" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>It is possible to check if the reservoir is filled or overfilled by
+using Maxplot and FLO-2D-Rasterizor.</p></li>
+<li><p><strong>MaxPlot:</strong> click on the drop-down arrow at the right of Run
+Simulation and click on Run MaxPlot.</p></li>
+</ol>
+<img alt="../../_images/damlevee027.png" src="../../_images/damlevee027.png" />
+<ol class="arabic simple" start="3">
+<li><p><strong>MaxPlot:</strong> Select the Floodplain Maximum Flow Depths – Fluid and
+click OK.</p></li>
+</ol>
+<img alt="../../_images/damlevee028.png" src="../../_images/damlevee028.png" />
+<ol class="arabic simple" start="4">
+<li><p><strong>MaxPlot:</strong> Check for any water flowing out the reservoir. In this
+case, there is no water flowing out the reservoir that was setup.</p></li>
+</ol>
+<img alt="../../_images/damlevee029.png" src="../../_images/damlevee029.png" />
+<ol class="arabic simple" start="5">
+<li><p><strong>FLO-2D-Rasterizor:</strong> Open the Rasterizor plugin to check the
+results as the previous lessons.</p></li>
+</ol>
+<img alt="../../_images/damlevee030.png" src="../../_images/damlevee030.png" />
+<ol class="arabic simple" start="6">
+<li><p><strong>FLO-2D-Rasterizor:</strong> Using this method, it is also possible to
+visualize that the water is not flowing out the reservoir.</p></li>
+<li><p>Here is a sample of the INFLOW.DAT and the SUMMARY.OUT.</p></li>
+</ol>
+<img alt="../../_images/damlevee031.png" src="../../_images/damlevee031.png" />
+<ol class="arabic simple" start="8">
+<li><p>The volume stored in the reservoir is close to the reported storage
+volume. Minor adjustments to the reservoir elevation will achieve the
+reported volume.</p></li>
+<li><p>The reservoir test showed that the reservoir was set up correctly.</p></li>
+</ol>
+</section>
+<section id="step-6-set-up-breach-failure">
+<h2>Step 6: Set up breach failure<a class="headerlink" href="#step-6-set-up-breach-failure" title="Link to this heading"></a></h2>
+<p>Set up the levee grid failure condition in QGIS. This location can
+represent a weak point on a dam: spillways, stilling basins, sag,
+deformation, or erosion, boreholes, ends points, etc.</p>
+<p>It is important to start the breach from the correct side of the levee
+feature. The breach must be asigned to a levee cutoff that can fail. The
+grid elemet must contain water. The red arrows are places where a breach
+will not work. The green arrows are locations where a breach will work.</p>
+<img alt="../../_images/damlevee032.png" src="../../_images/damlevee032.png" />
+<ol class="arabic simple">
+<li><p>Using the Grid Info Tool, pick a grid element that has a levee with a
+configuration that will allow the breach.</p></li>
+</ol>
+<img alt="../../_images/damlevee033.png" src="../../_images/damlevee033.png" />
+<ol class="arabic simple" start="13">
+<li><p>Click the collapse button from the FLO-2D widget.</p></li>
+<li><p>Open Levees and Breach Editor.</p></li>
+<li><p>Select radio button for Prescribed Failure and click Levee Grid
+elements.</p></li>
+</ol>
+<img alt="../../_images/damlevee034.png" src="../../_images/damlevee034.png" />
+<ol class="arabic simple" start="16">
+<li><p>Enter levee grid element ID in the Individual Levee Data dialog and
+use the eye button to get to the selected levee element. Zoom in and
+zoom out can help to locate the grid.</p></li>
+<li><p>Click the breach failure <strong>direction</strong> <strong>elevation</strong> <strong>box.</strong> When
+the box changes color, it is selected for failure editing.</p></li>
+<li><p>Fill the form and Apply Change and Close.</p></li>
+</ol>
+<img alt="../../_images/damlevee035.png" src="../../_images/damlevee035.png" />
+<p>This method is a simple test case to analyze the clear water levee
+failure routing mechanism. It doesn’t require very much data to initiate
+a failure. Once this method is working as desired, advanced failure
+methods can be applied to the dam or stacks.</p>
+</section>
+<section id="step-7-add-cross-sections">
+<h2>Step 7: Add cross sections<a class="headerlink" href="#step-7-add-cross-sections" title="Link to this heading"></a></h2>
+<p>The cross sections are used to compute hydrographs for flow crossing a
+line of cells, including floodplain, channel and street flow elements.
+The floodplain editor sets the FPXSEC.DAT file. The lines should be
+horizontal, vertical or diagonal to the grid elements. If the line is
+not very close to the grid alignment, the intersector may have trouble
+finding the correct alignment.</p>
+<ol class="arabic simple">
+<li><p>Add the Cross Sections.shp layer onto map.</p></li>
+</ol>
+<img alt="../../_images/damlevee036.png" src="../../_images/damlevee036.png" />
+<ol class="arabic simple" start="2">
+<li><p>Expand the Floodplain Cross Sections Editor and click on Add user
+floodplain cross-section.</p></li>
+</ol>
+<img alt="../../_images/damlevee037.png" src="../../_images/damlevee037.png" />
+<ol class="arabic simple" start="3">
+<li><p>Starting from the most upstream cross section to downstream, zoom
+into the first cross section. Following the Cross Sections layer,
+draw the cross section. Right click to finish drawing the cross
+section and name this cross section “Cross Section 1”.</p></li>
+</ol>
+<img alt="../../_images/damlevee038.png" src="../../_images/damlevee038.png" />
+<ol class="arabic simple" start="4">
+<li><p>Repeat this process to the other 4 cross sections. At the end, click
+on Save added floodplain cross-section.</p></li>
+</ol>
+<img alt="../../_images/damlevee039.png" src="../../_images/damlevee039.png" />
+<ol class="arabic simple" start="5">
+<li><p>The flow direction most perpendicular to the polyline must be
+assigned. Select each Floodplain XS name on the dropdown and set the
+flow direction as the table below.</p></li>
+</ol>
+<img alt="../../_images/damlevee040.png" src="../../_images/damlevee040.png" />
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Cross section name</p></th>
+<th class="head"><p>Flow direction</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Cross Section 1</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cross Section 2</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>Cross Section 3</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cross Section 4</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-even"><td><p>Cross Section 5</p></td>
+<td><p>7</p></td>
+</tr>
+</tbody>
+</table>
+<p>Make sure that each cross section is assigned to a number 1 – 8 that is
+a flow direction most perpendicular to the polyline. An incorrect
+direction will result in incorrect discharge calculation.</p>
+<ol class="arabic simple" start="6">
+<li><p>Once all the flow directions are set, click on Schematize floodplain
+cross sections.</p></li>
+</ol>
+<img alt="../../_images/damlevee041.png" src="../../_images/damlevee041.png" />
+<ol class="arabic simple" start="7">
+<li><p>Click OK to close the message.</p></li>
+</ol>
+<img alt="../../_images/damlevee042.png" src="../../_images/damlevee042.png" />
+<ol class="arabic simple" start="8">
+<li><p>Uncheck the external Cross Sections layer and check if the cross
+sections were added correctly. The project should look like this.</p></li>
+</ol>
+<img alt="../../_images/damlevee043.png" src="../../_images/damlevee043.png" />
+</section>
+<section id="step-8-export-and-run">
+<h2>Step 8: Export and run<a class="headerlink" href="#step-8-export-and-run" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Open the Control Variables and adjust the Time Control and Plot
+Variables.</p></li>
+</ol>
+<img alt="../../_images/damlevee044.png" src="../../_images/damlevee044.png" />
+<ol class="arabic simple">
+<li><p>Click the main Save icon on the QGIS toolbar.</p></li>
+</ol>
+<img alt="../../_images/damlevee045.png" src="../../_images/damlevee045.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the FLO-2D Data Export icon, set the export folder to Export
+Breach. The Project Folder on the Run Settings is automatically
+updated to the new Export Breach folder and it does not need to be
+updated.</p></li>
+</ol>
+<img alt="../../_images/damlevee046.png" src="../../_images/damlevee046.png" />
+<ol class="arabic simple" start="3">
+<li><p>Uncheck rain and infiltration and click OK.</p></li>
+</ol>
+<img alt="../../_images/damlevee047.png" src="../../_images/damlevee047.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click on the Run FLO-2D icon to run the simulation.</p></li>
+</ol>
+<img alt="../../_images/damlevee048.png" src="../../_images/damlevee048.png" />
+<ol class="arabic simple" start="5">
+<li><p>Check the simulation summary. Close the window when the run is
+complete.</p></li>
+</ol>
+<img alt="../../_images/damlevee049.png" src="../../_images/damlevee049.png" />
+</section>
+<section id="step-9-check-the-breach">
+<h2>Step 9: Check the breach<a class="headerlink" href="#step-9-check-the-breach" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Use FLO-2D-Rasterizor to check depth.out results to see the max flow
+depth.</p></li>
+</ol>
+<img alt="../../_images/damlevee050.png" src="../../_images/damlevee050.png" />
+<ol class="arabic simple" start="2">
+<li><p>To review floodplain cross sections hydrographs, use Hydrog. Open the
+dropdown menu by clicking on the arrow close to Run Simulation and
+open the Run Hydrog.</p></li>
+</ol>
+<img alt="../../_images/damlevee051.png" src="../../_images/damlevee051.png" />
+<ol class="arabic simple" start="3">
+<li><p>On the Hydrog, click on Plot Cross Section Hydrographs.</p></li>
+</ol>
+<img alt="../../_images/damlevee052.png" src="../../_images/damlevee052.png" />
+<ol class="arabic simple" start="4">
+<li><p>Select the first cross section for plotting and click OK.</p></li>
+</ol>
+<img alt="../../_images/damlevee053.png" src="../../_images/damlevee053.png" />
+<ol class="arabic simple" start="5">
+<li><p>The graph shows the Discharge on the y-axis and the time in the
+x-axis.</p></li>
+</ol>
+<img alt="../../_images/damlevee054.png" src="../../_images/damlevee054.png" />
+<img alt="../../_images/damlevee055.png" src="../../_images/damlevee055.png" />
+<ol class="arabic simple" start="6">
+<li><p>Using the New Hydrograph window, it is possible to navigate between
+upstream and downstream cross sections to check for any issues.</p></li>
+</ol>
+<p>The clear water test shows that the breach and reservoir parameters are
+set up correctly. It is a simpler case and once the prescribed breach is
+working correctly, the tailings case is less likely to require
+troubleshooting.</p>
+<p>Note that as the class progresses the changes in the modeling results
+can be compared by the maps loaded from FLO-2DRasterizor. Keep the maps
+organized for easy review of changes.</p>
+<img alt="../../_images/damlevee056.png" src="../../_images/damlevee056.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="boundary.html" class="btn btn-neutral float-left" title="Boundary Conditions and Buildings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mudflow.html" class="btn btn-neutral float-right" title="Mudflow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/tutorials/Tailings/damlevee.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="damlevee.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

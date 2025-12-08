@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson 4 – Buildings, Walls and Wall Failure &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=732abb26" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lesson 5 – Realtime Rainfall Data" href="Lesson%205.html" />
+    <link rel="prev" title="Lesson 3 – Create a Storm Drain System Using Shapefiles" href="Lesson%203.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Self-Help Kit v0.10.115</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Lesson 4 – Buildings, Walls and Wall Failure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#required-data">Required Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-by-step-procedure">Step-by-Step Procedure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-open-project-qgis-and-load-the-flo-2d-plugin-data">Step 1: Open project QGIS and load the FLO-2D Plugin data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-assign-buildings">Step 2: Assign buildings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-assign-walls">Step 3: Assign walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-export-the-project">Step 4: Export the project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-run-the-simulation">Step 5: Run the simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Coastal-Flooding/index.html">Coastal Flooding v0.10.115</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Self-Help Kit v0.10.115</a></li>
+      <li class="breadcrumb-item active">Lesson 4 – Buildings, Walls and Wall Failure</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/self-help-kit/Lesson 4.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lesson-4-buildings-walls-and-wall-failure">
+<h1>Lesson 4 – Buildings, Walls and Wall Failure<a class="headerlink" href="#lesson-4-buildings-walls-and-wall-failure" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Lesson 4 will outline the process of setting up buildings and walls and defining wall failure parameters in a FLO-2D
+project using the Plugin for QGIS.  Apply these instructions after Lesson 1, 2 or 3 are completed.</p>
+<p>This video shows the full process of this tutorial.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/guHbOgtpAnM" frameborder="0" allowfullscreen></iframe></section>
+<section id="required-data">
+<h2>Required Data<a class="headerlink" href="#required-data" title="Link to this heading"></a></h2>
+<p>The lesson makes use of buildings and walls shapefiles.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File</strong></p></td>
+<td><p><strong>Content</strong></p></td>
+<td><p><strong>Location</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Buildings.shp</p></td>
+<td><p>Building shapefile</p></td>
+<td><p>QGIS Lesson 4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Walls.shp</p></td>
+<td><p>Walls shapefile</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Project Location C:\Users\Public\Documents\FLO-2D Pro Documentation\Example Projects\QGIS Tutorials</p>
+<p>Check these folders to ensure the data is available before starting the lesson.</p>
+</section>
+<section id="step-by-step-procedure">
+<h2>Step-by-Step Procedure<a class="headerlink" href="#step-by-step-procedure" title="Link to this heading"></a></h2>
+<p>To setup a FLO-2D flood simulation use these steps.</p>
+<ol class="arabic simple">
+<li><p>Open Lesson 1, 2 or 3 completed project;</p></li>
+<li><p>Assign buildings;</p></li>
+<li><p>Assign walls;</p></li>
+<li><p>Save and export;</p></li>
+<li><p>Run the simulation.</p></li>
+</ol>
+</section>
+<section id="step-1-open-project-qgis-and-load-the-flo-2d-plugin-data">
+<h2>Step 1: Open project QGIS and load the FLO-2D Plugin data<a class="headerlink" href="#step-1-open-project-qgis-and-load-the-flo-2d-plugin-data" title="Link to this heading"></a></h2>
+<img alt="../../_images/Worksh0021.png" src="../../_images/Worksh0021.png" />
+<p>Search the start menu and run the “QGIS Desktop” program.</p>
+<p>QGIS Lesson 1, 2 or 3 can be used to for this project.
+Click Open Project and navigate to Example Projects.
+If QGIS Lesson 1, 2 or 3 are complete, choose any of these files to continue with Lesson 4.
+This tutorial will continue from Lesson 3.</p>
+<img alt="../../_images/Worksh055.png" src="../../_images/Worksh055.png" />
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\QGIS Lesson 1.qgz</p>
+<ol class="arabic simple">
+<li><p>Click Yes in the FLO-2D window to Load the model.</p></li>
+</ol>
+<img alt="../../_images/Worksh114.png" src="../../_images/Worksh114.png" />
+</section>
+<section id="step-2-assign-buildings">
+<h2>Step 2: Assign buildings<a class="headerlink" href="#step-2-assign-buildings" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The video at the top of this tutorial shows how to remove, add or modify the building polygons.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Drag the Buildings.shp shapefile onto the map space.</p></li>
+</ol>
+<img alt="../../_images/Worksh116.png" src="../../_images/Worksh116.png" />
+<p>The Buildings.shp shapefile needs 3 Attributes.</p>
+<img alt="../../_images/Worksh116a.png" src="../../_images/Worksh116a.png" />
+<p>These fields represent switches to set the calculation control for each building.</p>
+<ul class="simple">
+<li><p>Collapse = 0 will ignore building collapse settings.</p></li>
+<li><p>Collapse = 1 will apply the control for building collapse.
+If building collapse is needed, look in the Data Input manual for an extra data file.</p></li>
+<li><p>ARF = 0 will ignore the ARF calculation.</p></li>
+<li><p>ARF = 1 will calculate the ARF calculation.</p></li>
+<li><p>WRF = 0 will ignore the spatially variable WRF but apply a T line to any totally blocked cell.</p></li>
+<li><p>WRF = 1 will calculate the spatially variable WRF and apply a T line to any totally blocked cell.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Click the Evaluate Reduction Factors (ARF and WRF) icon.</p></li>
+</ol>
+<img alt="../../_images/Worksh117.png" src="../../_images/Worksh117.png" />
+<ol class="arabic simple" start="3">
+<li><p>Set up the parameters and click OK</p></li>
+</ol>
+<img alt="../../_images/Worksh118.png" src="../../_images/Worksh118.png" />
+<ol class="arabic simple" start="4">
+<li><p>Close OK the window.</p></li>
+</ol>
+<img alt="../../_images/Worksh119.png" src="../../_images/Worksh119.png" />
+<ol class="arabic simple" start="5">
+<li><p>The new layers show ARFs and Blocked Areas Polygons.</p></li>
+</ol>
+<img alt="../../_images/Worksh119a.png" src="../../_images/Worksh119a.png" />
+</section>
+<section id="step-3-assign-walls">
+<h2>Step 3: Assign walls<a class="headerlink" href="#step-3-assign-walls" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The video at the top of this tutorial shows how to add, delete, or modify wall polylines.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Clean the map.  Uncheck Buildings (user layer) and ARF/WRF (schema layer).  This will improve map loading speed.</p></li>
+<li><p>Click Boundary Condition Points in the User Layer group.  Drag the file Walls.shp into the map space.</p></li>
+</ol>
+<img alt="../../_images/Worksh120.png" src="../../_images/Worksh120.png" />
+<ol class="arabic simple" start="3">
+<li><p>If the walls are hard to see, make an adjustment to the symbology properties.  Double click Walls layer to open the
+properties window.</p></li>
+</ol>
+<img alt="../../_images/Worksh120a.png" src="../../_images/Worksh120a.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click the Levee Elevation Tool from the FLO-2D Toolbar and click the Add Walls to User Levee Lines button.</p></li>
+</ol>
+<img alt="../../_images/Worksh121.png" src="../../_images/Worksh121.png" />
+<img alt="../../_images/Worksh122.png" src="../../_images/Worksh122.png" />
+<ol class="arabic simple" start="5">
+<li><p>Set the wall elevation and failure fields and click Add Walls to User Levee Lines.</p></li>
+<li><p>Check Levee Failure</p></li>
+</ol>
+<img alt="../../_images/Worksh123.png" src="../../_images/Worksh123.png" />
+<ol class="arabic simple" start="7">
+<li><p>The levees were added to the user layer.
+Click OK.</p></li>
+</ol>
+<img alt="../../_images/Worksh124.png" src="../../_images/Worksh124.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If an error message was displayed, move the Walls Layer to the User Layer Group.</p>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>Click the Levee Elevation Tool from the FLO-2D Toolbar and click the Create Schematic Layers from User Levees button.</p></li>
+</ol>
+<img alt="../../_images/Worksh125.png" src="../../_images/Worksh125.png" />
+<ol class="arabic simple" start="9">
+<li><p>In this case, only levee lines are used.
+Uncheck elevation polygons if it is checked.</p></li>
+</ol>
+<img alt="../../_images/Worksh126.png" src="../../_images/Worksh126.png" />
+<ol class="arabic simple" start="10">
+<li><p>Duplicate levees were identified.
+Remove them by clicking Yes.</p></li>
+</ol>
+<img alt="../../_images/Worksh127.png" src="../../_images/Worksh127.png" />
+<ol class="arabic simple" start="11">
+<li><p>Once the process is complete, the following image will appear.  Click OK to close it.</p></li>
+</ol>
+<img alt="../../_images/Worksh128.png" src="../../_images/Worksh128.png" />
+<ol class="arabic simple" start="12">
+<li><p>The FLO-2D walls are shown by the red cutoff marks.  Visually inspecting them can help QC the data.</p></li>
+</ol>
+<img alt="../../_images/Worksh128a.png" src="../../_images/Worksh128a.png" />
+<ol class="arabic simple" start="13">
+<li><p>Turn on levee failure by clicking the prescribed failure checkbox on the Levee Failure Widget.</p></li>
+</ol>
+<img alt="../../_images/Worksh128b.png" src="../../_images/Worksh128b.png" />
+</section>
+<section id="step-4-export-the-project">
+<h2>Step 4: Export the project<a class="headerlink" href="#step-4-export-the-project" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the Set Control Parameters icon and enter the data in the FLO-2D Toolbar.
+The following dialog will be displayed, make sure the Area Reduction Factors and Levees component switches are selected.</p></li>
+</ol>
+<img alt="../../_images/Worksh017.png" src="../../_images/Worksh017.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click Save.</p></li>
+</ol>
+<img alt="../../_images/Worksh129.png" src="../../_images/Worksh129.png" />
+<ol class="arabic simple" start="3">
+<li><p>This is a good point to save the project.</p></li>
+</ol>
+<img alt="../../_images/Worksh083.png" src="../../_images/Worksh083.png" />
+<ol class="arabic simple" start="4">
+<li><p>Export the data files to the project folder in QGIS Lesson 4.</p></li>
+</ol>
+<img alt="../../_images/Worksh021.png" src="../../_images/Worksh021.png" />
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 4\QGIS Lesson 4 Export</p>
+<img alt="../../_images/Worksh163.png" src="../../_images/Worksh163.png" />
+<ol class="arabic simple" start="5">
+<li><p>Complete the export by saving the swmm.inp file and clicking through all the remaining messages.</p></li>
+</ol>
+<img alt="../../_images/Worksh130.png" src="../../_images/Worksh130.png" />
+</section>
+<section id="step-5-run-the-simulation">
+<h2>Step 5: Run the simulation<a class="headerlink" href="#step-5-run-the-simulation" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the Run FLO-2D Icon.</p></li>
+</ol>
+<img alt="../../_images/Worksh0052.png" src="../../_images/Worksh0052.png" />
+<ol class="arabic simple" start="2">
+<li><p>Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.</p></li>
+</ol>
+<img alt="../../_images/Worksh131.png" src="../../_images/Worksh131.png" />
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h3>
+<p>This is the completion of a tutorial for adding buildings and walls to a model that is ready to run.
+This tutorial can be applied to any project once the grid and elevation is assigned.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Lesson%203.html" class="btn btn-neutral float-left" title="Lesson 3 – Create a Storm Drain System Using Shapefiles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Lesson%205.html" class="btn btn-neutral float-right" title="Lesson 5 – Realtime Rainfall Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="Lesson 4.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
