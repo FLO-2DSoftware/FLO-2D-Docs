@@ -72,6 +72,14 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#gds-and-mapper-troubleshooting">GDS and Mapper Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testing-sandbox">Testing Sandbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-the-sandbox-project-folder-on-the-host">1. Create the Sandbox Project Folder on the Host</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-the-startup-scripts">2. Create the Startup Scripts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-the-windows-sandbox-configuration-file">3. Create the Windows Sandbox Configuration File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#launch-the-sandbox">4. Launch the Sandbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-qgis-and-load-the-flo-2d-plugin">5. Install QGIS and Load the FLO-2D Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verify-h5py-or-other-modules-inside-qgis">6. Verify h5py (or other modules) inside QGIS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#summary">7. Summary</a></li>
 </ul>
 </li>
 </ul>
@@ -273,6 +281,143 @@ It may be possible to reinstall the MDAC setup program.
 <li><p>GDS Tutorials are no longer part of the FLO-2D Pro Setup.  To get the GDS and Mapper Tutorials, Run this installer:
 <a href="https://flo-2d.sharefile.com/d-s6907dafe3ebc4abab8aa6ad4df386a2c" target="_blank">Download GDS Tutorials.</a></p></li>
 </ol>
+</section>
+<section id="testing-sandbox">
+<h2>Testing Sandbox<a class="headerlink" href="#testing-sandbox" title="Link to this heading"></a></h2>
+<p>Windows Sandbox Test Environment Setup for QGIS Standalone and FLO-2D Plugin
+(Manual script execution version — most reliable setup)</p>
+</section>
+<section id="create-the-sandbox-project-folder-on-the-host">
+<h2>1. Create the Sandbox Project Folder on the Host<a class="headerlink" href="#create-the-sandbox-project-folder-on-the-host" title="Link to this heading"></a></h2>
+<p>Create:</p>
+<p><code class="docutils literal notranslate"><span class="pre">C:\Sandbox\QGIS_Test\</span></code></p>
+<p>Inside it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>C:\Sandbox\QGIS_Test\
+    ├─ QGIS_Installer\
+    │       QGIS-OSGeo4W-3.34.xx.msi
+    │
+    ├─ Plugin\
+    │       flo2d\   (entire plugin folder)
+    │
+    ├─ Startup\
+    │       install_qgis.cmd
+    │       copy_plugin.cmd
+    │
+    └─ QGIS_Test_Container.wsb
+</pre></div>
+</div>
+<p>Place the QGIS Standalone MSI in:</p>
+<p><code class="docutils literal notranslate"><span class="pre">C:\Sandbox\QGIS_Test\QGIS_Installer</span></code></p>
+<p>Place the FLO-2D plugin folder (including <code class="docutils literal notranslate"><span class="pre">embedded_python</span></code> if present) in:</p>
+<p><code class="docutils literal notranslate"><span class="pre">C:\Sandbox\QGIS_Test\Plugin\flo2d\</span></code></p>
+</section>
+<section id="create-the-startup-scripts">
+<h2>2. Create the Startup Scripts<a class="headerlink" href="#create-the-startup-scripts" title="Link to this heading"></a></h2>
+<p>These will be run manually inside the Sandbox session.</p>
+<p>### 2.1 install_qgis.cmd</p>
+<p>Path:</p>
+<p><code class="docutils literal notranslate"><span class="pre">C:\Sandbox\QGIS_Test\Startup\install_qgis.cmd</span></code></p>
+<p>Contents:</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="p">@</span><span class="k">echo</span> off
+<span class="k">echo</span> Installing QGIS Standalone...
+
+msiexec /i <span class="s2">&quot;C:\Users\WDAGUtilityAccount\Desktop\QGIS_Test\QGIS_Installer\QGIS-OSGeo4W-3.34.15-1.msi&quot;</span> /qn /norestart
+
+<span class="k">echo</span> QGIS installation complete.
+<span class="k">exit</span> /b
+</pre></div>
+</div>
+<p>### 2.2 copy_plugin.cmd</p>
+<p>Path:</p>
+<p><code class="docutils literal notranslate"><span class="pre">C:\Sandbox\QGIS_Test\Startup\copy_plugin.cmd</span></code></p>
+<p>Contents:</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="p">@</span><span class="k">echo</span> off
+
+<span class="k">set</span> <span class="nv">TARGET</span><span class="p">=</span>C:\Users\WDAGUtilityAccount\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins\flo2d
+
+<span class="k">echo</span> Creating FLO-2D plugin folder...
+<span class="k">mkdir</span> <span class="s2">&quot;</span><span class="nv">%TARGET%</span><span class="s2">&quot;</span> <span class="mi">2</span><span class="p">&gt;</span>nul
+
+<span class="k">echo</span> Copying plugin...
+xcopy <span class="s2">&quot;C:\Users\WDAGUtilityAccount\Desktop\QGIS_Test\Plugin\flo2d&quot;</span> <span class="s2">&quot;</span><span class="nv">%TARGET%</span><span class="s2">&quot;</span> /E /I /Y
+
+<span class="k">echo</span> Plugin copy complete.
+<span class="k">exit</span> /b
+</pre></div>
+</div>
+</section>
+<section id="create-the-windows-sandbox-configuration-file">
+<h2>3. Create the Windows Sandbox Configuration File<a class="headerlink" href="#create-the-windows-sandbox-configuration-file" title="Link to this heading"></a></h2>
+<p>Create:</p>
+<p><code class="docutils literal notranslate"><span class="pre">C:\Sandbox\QGIS_Test\QGIS_Test_Container.wsb</span></code></p>
+<p>Use this simplified XML configuration:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Configuration&gt;</span>
+<span class="w">  </span><span class="nt">&lt;MappedFolders&gt;</span>
+<span class="w">    </span><span class="nt">&lt;MappedFolder&gt;</span>
+<span class="w">      </span><span class="nt">&lt;HostFolder&gt;</span>C:\Sandbox\QGIS_Test<span class="nt">&lt;/HostFolder&gt;</span>
+<span class="w">      </span><span class="nt">&lt;SandboxFolder&gt;</span>C:\Users\WDAGUtilityAccount\Desktop\QGIS_Test<span class="nt">&lt;/SandboxFolder&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ReadOnly&gt;</span>false<span class="nt">&lt;/ReadOnly&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/MappedFolder&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/MappedFolders&gt;</span>
+<span class="nt">&lt;/Configuration&gt;</span>
+</pre></div>
+</div>
+<p><strong>What this does</strong></p>
+<ul class="simple">
+<li><p>Maps your entire setup folder onto the Sandbox desktop</p></li>
+<li><p>Allows manual execution of scripts</p></li>
+<li><p>Avoids all XML parsing issues related to <code class="docutils literal notranslate"><span class="pre">&lt;LogonCommand&gt;</span></code></p></li>
+<li><p>Works reliably on Windows 10/11 Pro</p></li>
+</ul>
+</section>
+<section id="launch-the-sandbox">
+<h2>4. Launch the Sandbox<a class="headerlink" href="#launch-the-sandbox" title="Link to this heading"></a></h2>
+<p>Run:</p>
+<p><code class="docutils literal notranslate"><span class="pre">C:\Sandbox\QGIS_Test\QGIS_Test_Container.wsb</span></code></p>
+<p>When the Sandbox loads, you will see:</p>
+<p><code class="docutils literal notranslate"><span class="pre">QGIS_Test</span></code> on the Desktop.</p>
+<p>Open it → then open the <strong>Startup</strong> folder.</p>
+</section>
+<section id="install-qgis-and-load-the-flo-2d-plugin">
+<h2>5. Install QGIS and Load the FLO-2D Plugin<a class="headerlink" href="#install-qgis-and-load-the-flo-2d-plugin" title="Link to this heading"></a></h2>
+<p>### Step 1 — Install QGIS</p>
+<p>Inside Sandbox:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Desktop</span> <span class="pre">→</span> <span class="pre">QGIS_Test</span> <span class="pre">→</span> <span class="pre">Startup</span> <span class="pre">→</span> <span class="pre">install_qgis.cmd</span></code></p>
+<p>QGIS installs silently (20–40 seconds).</p>
+<p>### Step 2 — Copy the Plugin</p>
+<p>Run:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Desktop</span> <span class="pre">→</span> <span class="pre">QGIS_Test</span> <span class="pre">→</span> <span class="pre">Startup</span> <span class="pre">→</span> <span class="pre">copy_plugin.cmd</span></code></p>
+<p>This places the plugin into:</p>
+<p><code class="docutils literal notranslate"><span class="pre">C:\Users\WDAGUtilityAccount\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins\flo2d</span></code></p>
+<p>### Step 3 — Launch QGIS</p>
+<p><code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">Menu</span> <span class="pre">→</span> <span class="pre">QGIS</span> <span class="pre">→</span> <span class="pre">QGIS</span> <span class="pre">3.34.x</span></code></p>
+<p>Verify plugin appears under:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Plugins</span> <span class="pre">→</span> <span class="pre">Manage</span> <span class="pre">and</span> <span class="pre">Install</span> <span class="pre">Plugins</span> <span class="pre">→</span> <span class="pre">flo2d</span></code></p>
+</section>
+<section id="verify-h5py-or-other-modules-inside-qgis">
+<h2>6. Verify h5py (or other modules) inside QGIS<a class="headerlink" href="#verify-h5py-or-other-modules-inside-qgis" title="Link to this heading"></a></h2>
+<p>Open:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Plugins</span> <span class="pre">→</span> <span class="pre">Python</span> <span class="pre">Console</span></code></p>
+<p>Test:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">h5py</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h5py</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">h5py</span><span class="o">.</span><span class="vm">__file__</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You should see something like:</p>
+<p><code class="docutils literal notranslate"><span class="pre">...\flo2d\embedded_python\Lib\site-packages\h5py\__init__.py</span></code></p>
+</section>
+<section id="summary">
+<h2>7. Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<p>This setup provides:</p>
+<ul class="simple">
+<li><p>A safe, disposable Windows environment</p></li>
+<li><p>Guaranteed QGIS Standalone installation</p></li>
+<li><p>Guaranteed FLO-2D plugin installation</p></li>
+<li><p>No dependency on <code class="docutils literal notranslate"><span class="pre">LogonCommand</span></code> auto-run scripts</p></li>
+<li><p>Full access to embedded Python modules</p></li>
+<li><p>Identical reproducibility across any workstation</p></li>
+</ul>
 </section>
 </section>
 
