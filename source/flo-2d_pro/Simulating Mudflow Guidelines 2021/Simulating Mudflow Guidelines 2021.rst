@@ -736,14 +736,14 @@ Yield Stress of Mudflow Samples Versus Volumetric Concentration*
 
 Practical Guidelines for Analyzing the Potential for Hyperconcentrated Sediment Flows
 ---------------------------------------------------------------------------------------
-
+g
 There are several simple guidelines that can be checked to determine the potential for a watershed to generate a mudflow.
 In addition, modeling hyperconcentrated sediment flows requires reasonable assumptions for the variables that control the physical flows processes.
 These variables include the volume of water and sediment, sediment concentration, physical surface conditions, fluid and sediment properties.
 These guidelines, variables and how to estimate and apply them will be briefly discussed.
 
- *Watershed inspection*
- ----------------------
+*Watershed inspection*
+-----------------------
 
 The first check involves a watershed inspection for loose boulders, debris in the basin channel.
 This usually requires an on-ground inspection.
