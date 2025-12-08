@@ -1,4 +1,4 @@
-Install QGIS and the FLO-2D Plugin
+QGIS and FLO-2D Plugin Install Instructions
 ============================================
 
 QGIS is an open-source geographic information system software designed for spatial data analysis and visualization.
@@ -149,7 +149,7 @@ Choose one of the following methods:
       :class: bordered-img
 
 
-.. dropdown:: **Option B - QGIS Stand Alone Older Versions**
+.. dropdown:: **Option B – QGIS Stand Alone Older Versions**
 
    Follow these instructions to set up an older version of QGIS. 
 
@@ -159,12 +159,12 @@ Choose one of the following methods:
 
       <a href="https://download.osgeo.org/qgis/win64/" target="_blank" rel="noopener noreferrer">QGIS Installer Archive</a>
    
+   .. note:: The images reference QGIS version 3.28 but the steps are the same for any stand alone version of QGIS.
+      
    .. image:: ../img/Instructions/archive.png
       :width: 600px
       :class: bordered-img
    
-   .. note:: The images reference QGIS version 3.28 but the steps are the same for any stand alone version of QGIS.
-
    1. Double click the QGIS installer.
 
    2. Finish installing with the default settings.
@@ -173,39 +173,38 @@ Choose one of the following methods:
       :width: 600px
       :class: bordered-img
 
-   3. Open QGIS.
-
-   .. image:: ../img/Instructions/Worksh002.png
-      :width: 600px
-      :class: bordered-img
-
-   4. Click **Settings → Options**.
-
-   .. image:: ../img/Instructions/image13.png
-      :width: 600px
-      :class: bordered-img
-
-   5. Click the CRS tab and set the options shown below.
-
-   .. image:: ../img/Instructions/image14.png
-      :width: 600px
-      :class: bordered-img
-
-
 Step 2: FLO-2D Plugin
 ----------------------
 
 With QGIS installed it is time to add the FLO-2D plugin and a few other helpful plugins.
 
-1. Navigate to the Plugin Manager.
+1. Open QGIS.
+
+.. image:: ../img/Instructions/Worksh002.png
+   :width: 600px
+   :class: bordered-img
+
+2. Click **Settings → Options**.
+
+.. image:: ../img/Instructions/image13.png
+   :width: 600px
+   :class: bordered-img
+
+3. Click the CRS tab and set the options shown below.
+
+.. image:: ../img/Instructions/image14.png
+   :width: 600px
+   :class: bordered-img
+
+4. Navigate to the Plugin Manager.
 
 .. image:: ../img/Instructions/image10.png
    :width: 600px
    :class: bordered-img
 
-2. Install the FLO-2D Plugin from a ZIP file.
+5. Install the FLO-2D Plugin from a ZIP file.
 
-3. Plugin Location: ``C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\QGIS Plugins``
+6. Plugin Location: ``C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\QGIS Plugins``
 
 .. image:: ../img/Instructions/image12a.png
    :width: 600px
