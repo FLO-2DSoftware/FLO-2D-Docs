@@ -132,3 +132,7 @@ img {
     margin-bottom: 1em;
 }
 
+/* Add border to specific images when the 'bordered-img' class is applied */
+.bordered-img {
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
