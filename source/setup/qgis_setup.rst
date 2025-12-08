@@ -97,10 +97,10 @@ Choose one of the following methods:
 
    Run the OSGeo4W Setup program again and select **Advanced Install**.
 
-   Click Next until reaching the package selection screen.
+   Click **Next** until reaching the package selection screen.
 
    Filter the package list by typing **h5py** in the search box.  
-   Click the *Skip* text to select the latest version for installation.
+   Click the **Skip** button to select the latest version for installation.
 
    .. image:: ../img/Instructions/qgisnetwork011.png
       :width: 600px
@@ -118,7 +118,7 @@ Choose one of the following methods:
       :width: 600px
       :class: bordered-img
 
-   Click Next and Finish to complete the installation.
+   Click **Next** and **Finish** to complete the installation.
 
    .. container:: h3
 
@@ -151,7 +151,17 @@ Choose one of the following methods:
 
 .. dropdown:: **Option B - QGIS Stand Alone Older Versions**
 
-   Follow these instructions to set up an older version of QGIS.  
+   Follow these instructions to set up an older version of QGIS. 
+
+   Get an old stand alone installer from the QGIS download archive:
+
+   .. raw:: html
+
+      <a href="https://download.osgeo.org/qgis/win64/" target="_blank" rel="noopener noreferrer">QGIS Installer Archive</a>
+   
+   .. image:: ../img/Instructions/archive.png
+      :width: 600px
+      :class: bordered-img
    
    .. note:: The images reference QGIS version 3.28 but the steps are the same for any stand alone version of QGIS.
 
