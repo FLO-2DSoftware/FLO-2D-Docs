@@ -693,6 +693,7 @@ The weighting factor 𝜎 varies as:
 
                 𝜎 = 0.                  𝑓𝑜𝑟 𝐹𝑟 > 1.0
     </pre>
+
 The inertial terms are multiplied by σ when they are added into the solution of the momentum equation for each timestep and conduit.
 The Froude number is calculated at the midpoint depth in the conduit.
 This solution (DAMPEN) produces more stable results around the critical stage of the flow, but retains the essential accuracy of the fully dynamic
@@ -912,7 +913,7 @@ whenever the flow regime is supercritical.
 FLO-2D storm drain model uses the water surface slope and Froude number to determine when supercritical flow occurs in a conduit.
 
 Surcharge conditions
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
 A node is defined to be in a surcharged condition when its water level exceeds the crown of the highest conduit connected to it.
 Under this condition the surface area of any closed conduits would be zero and equation for the change in the pressure head would no longer be
