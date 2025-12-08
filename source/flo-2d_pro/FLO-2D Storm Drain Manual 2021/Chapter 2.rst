@@ -402,7 +402,7 @@ Table 4 presents some suggested surcharge depths.
 
 
 Storm Drain Outfalls
-''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^
 
 A variety of outfall conditions are available.
 For the outfall to discharge back to the surface water, the boundary condition must be set to ‘free’ in the the WMM.inp file and the ‘allow discharge’
@@ -462,7 +462,7 @@ Outfall is assumed to be located at ground elevation.
 Outfall Location with Respect the Channel Left Bank Elements.*
 
 Elevations and Datum
-''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^
 
 The elevation and location of the inlets and outfalls are required to exchange flow with the surface water.
 The floodplain water surface elevation is compared to the storm drain pressure head based on a common reference such as the inlet rim elevation, inlet
@@ -522,7 +522,7 @@ They are reported to the FPLAIN_SDElev.RGH and TOPO_SDElev.RGH TOPO_SDElev.RGH f
 elevation adjustments to the next simulation.
 
 Conduit Offsets
-'''''''''''''''
+^^^^^^^^^^^^^^^
 
 The swmm.inp file uses offset heights to connect the conduits to the nodes.
 The inlet and outlet offsets can be zero if there is no offset or any height above zero to set the offset.
