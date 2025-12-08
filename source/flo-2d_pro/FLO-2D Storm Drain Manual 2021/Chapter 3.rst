@@ -145,9 +145,9 @@ The structure of the SWMM.inp file follows:
     - When listing the format of a line of data, mandatory keywords are shown in boldface while optional items appear in parentheses.
     - A list of keywords separated by a slash (YES/NO) means that only one of the words should appear in the data line.
     - In the [OPTIONS] section, flow units can be selected as either cubic feet per second (CFS), gallons per minute (GPM), million gallons per day (MGD), cubic meters per second (CMS), liters per second, (LPS), or million liters per day
-    (MLD). If cubic feet or gallons are chosen for flow units then US units are used for all other quantities.
-    If cubic meters or liters are chosen then metric units apply to all other quantities.
-    The default flow units are CFS.
+      (MLD). If cubic feet or gallons are chosen for flow units then US units are used for all other quantities.
+      If cubic meters or liters are chosen then metric units apply to all other quantities.
+      The default flow units are CFS.
 
 SWMM.inp Example
 
@@ -845,10 +845,10 @@ List of the Storm Drain Data Output Files and Description**
               water through the outfalls. Only those outfalls that were turned ‘on’ in the SWMMOUTF.DAT will
 
               discharge the volume back to the surface layer.
-           - STORM DRAIN OUTFALL (OFF SYSTEM): Volume that flows off the storm drain through the outfalls.
+            - STORM DRAIN OUTFALL (OFF SYSTEM): Volume that flows off the storm drain through the outfalls.
 
-             Only those outfalls that were turn ‘off’ in the SWMMOUTF.DAT will discharge the volume off the storm drain system.
-           - TOTAL OUTFLOW (compare w/SWMM.rpt External Outflow)
+              Only those outfalls that were turn ‘off’ in the SWMMOUTF.DAT will discharge the volume off the storm drain system.
+            - TOTAL OUTFLOW (compare w/SWMM.rpt External Outflow)
 
        3. Storm Drain Return Flow to Surface
 
