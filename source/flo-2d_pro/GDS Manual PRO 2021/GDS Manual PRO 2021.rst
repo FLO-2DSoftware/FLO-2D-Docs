@@ -2656,55 +2656,56 @@ C:\\Models\\FLO2D_2002\\Maricopa2002\\Raindata2\\rain13h.dat
 
 C:\\Models\\FLO2D_2002\\Maricopa2002\\Raindata2\\rain14h.dat
 
-   In this case, the beginning date of the storm is 6/12/2002 and the storm beginning time is 13:00 hours.
-   The storm ending date and time is 6/12/2002 and 14:00 hours.
-   The time interval between rainfall data files is 60 minutes and there are two rain grid files in the list.
-   The rainfall file format is the standard ArcInfo ASCII grid with the values corresponding to rainfall depths.
-   Each file corresponds to a rainfall depth at a specific time for the rainfall grid system.
-   The rainfall grid file (e.g. NEXRAD data) is prepared outside the *FLO-2D* software system.
-   This file may be based on the rainfall gage distribution.
-   This rainfall distribution over the rainfall grid has to be transformed into spatially varied rainfall assigned to grid elements in the *FLO-2D* grid
-   system.
-   This is accomplished using the variable rainfall interpolation algorithm in the *GDS* program.
-   Once the ArcInfo ASCII file is read, the following dialog box permits adjustment of rainfall grid interpolation parameters.
+In this case, the beginning date of the storm is 6/12/2002 and the storm beginning time is 13:00 hours.
+The storm ending date and time is 6/12/2002 and 14:00 hours.
+The time interval between rainfall data files is 60 minutes and there are two rain grid files in the list.
+The rainfall file format is the standard ArcInfo ASCII grid with the values corresponding to rainfall depths.
+Each file corresponds to a rainfall depth at a specific time for the rainfall grid system.
+The rainfall grid file (e.g. NEXRAD data) is prepared outside the *FLO-2D* software system.
+This file may be based on the rainfall gage distribution.
+This rainfall distribution over the rainfall grid has to be transformed into spatially varied rainfall assigned to grid elements in the *FLO-2D* grid
+system.
+This is accomplished using the variable rainfall interpolation algorithm in the *GDS* program.
+Once the ArcInfo ASCII file is read, the following dialog box permits adjustment of rainfall grid interpolation parameters.
+
 .. image:: img/GDS179.jpg
-.. _`option`:
 
-option:
+    * - option
+      - Description
 
-Description
+    * - Minimum number of rain grid points to
+        consider in the vicinity of each grid
+        element.
 
-.. _`minimumnumberofraingridpointstoconsiderinthevicinityofeachgridelement.`:
+      - To calculate the interpolated rainfall depth for each FLO-2D
+        grid element, the algorithm uses at least this minimum number
+        of points closest to the grid element.
 
-minimumnumberofraingridpointstoconsiderinthevicinityofeachgridelement.:
+    * - Radius of interpolation (proportional to
+        grid element size).
 
-To calculate the interpolated rainfall depth for each *FLO-2D* grid element, the algorithm uses at least this minimum number of points closest to the
-grid element.
+      - This radius defines a circle around each grid element based on
+        a multiple of the grid elements size. Only rainfall grid points
+        inside this radius are considered in the interpolation process. If
+        the number of rainfall grid points is insufficient, then the circle
+        is automatically enlarged until at least the minimum number of
+        points is found.
 
-.. _`radiusofinterpolation(proportionaltogridelementsize).`:
+After the interpolation is complete, choose the RAINCELL.DAT file location to save results.
+The RAINCELL.DAT file is then used by the *FLO-2D* model to simulate the rainstorm.
+The IREALRAIN variable switch in the *FLO-2D* RAIN.DAT file has to be set to 1 ‘on’ to simulate a real-time storm using the RAINCELL.DAT file.
 
-radiusofinterpolation(proportionaltogridelementsize).:
-
-This radius defines a circle around each grid element based on a multiple of the grid elements size.
-Only rainfall grid points inside this radius are considered in the interpolation process.
-If the number of rainfall grid points is insufficient, then the circle is automatically enlarged until at least the minimum number of points is found.
-
-
-..
-
-   After the interpolation is complete, choose the RAINCELL.DAT file location to save results.
-   The RAINCELL.DAT file is then used by the *FLO-2D* model to simulate the rainstorm.
-   The IREALRAIN variable switch in the *FLO-2D* RAIN.DAT file has to be set to 1 ‘on’ to simulate a real-time storm using the RAINCELL.DAT file.
 .. image:: img/GDS180.jpg
-   The format of the RAINCELL.DAT is as follows:
 
-   Line 1: Beginning date and time, ending date and time, time interval (in minutes) and number of time intervals.
+The format of the RAINCELL.DAT is as follows:
 
-   Line 2: Grid element number and the total rainfall depth at that time.
-   This line is repeated for each *FLO-2D* grid element.
+    Line 1: Beginning date and time, ending date and time, time interval (in minutes) and number of time intervals.
 
-   Successive rainfall data for the entire grid system follows for the number of time-interval groups.
-   For the example above, there would be two sets of rainfall data for the entire grid system.
+    Line 2: Grid element number and the total rainfall depth at that time.
+    This line is repeated for each *FLO-2D* grid element.
+
+Successive rainfall data for the entire grid system follows for the number of time-interval groups.
+For the example above, there would be two sets of rainfall data for the entire grid system.
 
 .. raw:: html
 
