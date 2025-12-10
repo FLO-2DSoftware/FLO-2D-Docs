@@ -1588,6 +1588,8 @@ Assign cell tolerances to the selected cells.
 
 3.5.21 Interpolate Elevation Points (Grid Menu)
 
+.. image:: img/GDS294.jpg
+
 Use this command to interpolate and assign all the grid element elevations in the computational domain.
 The interpolated elevations are based on the imported DTM points or the elevation points that are added to the working region.
 The interpolation options are selected in the *Options/Interpolation* command of the *Tools* menu.
