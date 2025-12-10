@@ -1059,6 +1059,9 @@ To use this tool:
 
     1. Select the *Elevation Points/* *Delete Elevation Points from Selected Area* command (Design menu).
     2. Click OK, draw the polygon and select yes to delete the points within the polygon.
+
+    .. image:: img/GDS281.jpg
+
     3. To save the edited DTM points file, click the Save Elevation Points command (File Menu)
 
 3.4.4 Elevation Points/Delete Elevation Points Outside Range (Design Menu)
