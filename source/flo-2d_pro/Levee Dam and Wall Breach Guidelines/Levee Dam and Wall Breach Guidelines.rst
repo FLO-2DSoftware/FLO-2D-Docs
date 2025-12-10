@@ -3,6 +3,9 @@
 LEVEE DAM AND WALL BREACH GUIDELINES
 ======================================
 
+Overview
+----------------
+
 Additional Resources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -14,8 +17,8 @@ Data, tutorials and examples related to hydraulic structures can be found in the
     - Dam Breach Tutorials and Tailings Dam Tutorials
     - Example Projects: Rio Grande Riverine
 
-Overview
-----------------
+FLO-2D Levee Component
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The FLO-2D levee component confines flow on the floodplain surface by blocking one or more of the eight flow directions.
 The FLO-2D model conserves volume and this includes volume stored by the levee component and water routed through a levee breach.
