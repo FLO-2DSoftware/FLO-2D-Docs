@@ -1523,7 +1523,6 @@ In this case, the channel outflow discharge will be controlled by assigned stage
 hydraulic control.
 
 3.5.12.10 No Outflow Condition
-''''''''''''''''''''''''''''''''''''''
 
 .. image:: img/GDS135.jpg
 
@@ -1540,6 +1539,8 @@ Use this option to assign infiltration data to the selected grid elements in the
 .. image:: img/GDS137.jpg
 
 3.5.14 Parameters to Selection/No Discharge Exchange (Grid Menu)
+
+.. image:: img/GDS290.jpg
 
 Identify channel elements that will not exchange discharge with the floodplain (e.g.
 
