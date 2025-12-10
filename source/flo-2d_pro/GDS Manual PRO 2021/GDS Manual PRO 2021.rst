@@ -855,7 +855,10 @@ The *GDS* will prompt the user to save the current project.
 
 .. image:: img/GDS060.png
 
-Use the *View All command* or click the View All |GDS061| icon to return the working region to its original full size.
+.. |elev_insert_icon| image:: img/GDS061.jpg
+   :height: 14px
+
+Use the *View All command* or click the View All |elev_insert_icon| icon to return the working region to its original full size.
 To Zoom-in (increase the magnification), click in the working region and drag the mouse to outline the area of interest.
 
 3.3.2 Zoom Out Previous View (View Menu)
@@ -874,7 +877,10 @@ Use the Zoom Out 10% View command to reduce the current view 10% in size.
 
 .. image:: img/GDS065.png
 
-Use the *Pan* command or use the *Pan* Toolbar icon |GDS066| to move around within the working region view.
+.. |elev_insert_icon| image:: img/GDS066.jpg
+   :height: 14px
+
+Use the *Pan* command or use the *Pan* Toolbar icon |elev_insert_icon| to move around within the working region view.
 Click and drag the mouse to pan around.
 Use the *View All* command (or toolbar icon) to return to a full view of the working region or click the Select icon |GDS017| to exit the pan mode.
 
@@ -1006,7 +1012,6 @@ Use this command to redraw the visible objects in the working region.
 
 .. |elev_insert_icon| image:: img/GDS099.jpg
    :height: 14px
-   :alt: Elevation Insert
 
 
 Use this command (or the |elev_insert_icon| icon) to insert elevation data at selected points within the working region.
@@ -1041,7 +1046,7 @@ To use this tool:
 
 3.4.4 Elevation Points/Delete Elevation Points Outside Range (Design Menu)
 
-.. image:: img/GDS103.jpg
+.. image:: img/GDS103.png
 
 Deletes elevation data points outside a specified range.
 
@@ -1069,7 +1074,7 @@ Click *Apply* and then ‘\ *OK’* to change to the selected style.
 
 3.5.1 Create Grid (Grid Menu)
 
-.. image:: img/GDS105.jpg
+.. image:: img/GDS105.png
 
 Command to create the grid system template of square elements for the *FLO-2D* model.
 To use the *Create Grid* command:
@@ -1087,7 +1092,10 @@ To use the *Create Grid* command:
 
 .. image:: img/GDS107.jpg
 
-Use this command (or the |GDS108| icon in the tool bar) to select one or more grid elements.
+.. |elev_insert_icon| image:: img/GDS108.jpg
+   :height: 14px
+
+Use this command (or the |elev_insert_icon| icon in the tool bar) to select one or more grid elements.
 With the *Assign Parameters to Selection* command, assign attribute values to the selected grid elements.
 To use the *Select / Grid element* command:
 
@@ -1105,13 +1113,17 @@ elements.
 
 3.5.3 Select/Grid Elements Defined by Polygon (Grid Menu)
 
-This command (or the |GDS109| icon in the tool bar) will select all the grid elements within a user defined polygon.
+.. |elev_insert_icon| image:: img/GDS109.jpg
+   :height: 14px
+
+This command (or the |elev_insert_icon| icon in the tool bar) will select all the grid elements within a user defined polygon.
 Attributes can then be assigned to the selected elements using the *Assign Parameters to Selection* command.
 It may be necessary to create a grid layer first.
 
 3.5.4 Select/Grid Elements Intersected by Shapefile (Grid Menu)
 
 .. image:: img/GDS110.jpg
+
 Use this command to allow the use an imported polylines shapefile to intersect the grid domain to select grid elements.
 The shapefile should have been previously imported using the command “File.
 Import Shapefile…”
@@ -1254,7 +1266,7 @@ The following dialog box is used to input the multiple channel data:
 
 3.5.12 Assign Parameters to Selection/Inflow/Outflow Condition (Grid Menu)
 
-.. image:: img/GDS122.jpg
+.. image:: img/GDS122.png
 
 Use this command to define inflow and outflow elements in selected grid elements.
 The In/Out Condition dialog box allows editing these boundary conditions:
@@ -1269,12 +1281,12 @@ If there is a channel in the selected element, you can assign the hydrograph to 
 When the user selects the radio button *‘Inflow element with hydrograph’,* the ‘\ *Hydrograph’* data group is activated.
 The “\ *Read*\ ” button displays a dialog box to import a hydrograph with HEC-1, Tape21, HYD or ASCII files formats:
 
-.. image:: img/GDS124.jpg
+.. image:: img/GDS124.png
 
 The HEC-1 file option will display all the hydrographs at basin concentration points in a Corps of Engineers HEC-1 hydrologic model output file.
 The user can select an inflow hydrograph from the HEC-1 file:
 
-.. image:: img/GDS125.jpg
+.. image:: img/GDS125.png
 
 After selecting the HEC-1 hydrograph and clicking *‘OK’*, the hydrograph data are loaded into the
 
@@ -1293,11 +1305,11 @@ These files can be used to:
 The “\ *Edit*\ ” button can be used to edit hydrograph values, insert rows, delete rows, or sort rows in ascending order (time column).
 This button a displays an editor dialog box:
 
-.. image:: img/GDS126.jpg
+.. image:: img/GDS126.png
 
 The “\ *View Graph*\ ” button of the above *In/Out Condition* dialog box plots the hydrograph in the following window:
 
-.. image:: img/GDS127.jpg
+.. image:: img/GDS127.png
 
 The user may select the initial and final time for the inflow hydrograph.
 For example, selecting *Initial Time* = 10.0 hours and *Final Time* = 16.0 will redefine the hydrograph limits and in this eliminate a number of
@@ -1375,7 +1387,7 @@ This option is for Channel and Floodplain.
     - If the stage is lower than the grid element elevation, it is reset to the grid element elevation at runtime until the time that it goes above the grid
       element elevation.
 
-.. image:: img/GDS131.jpg
+.. image:: img/GDS131.png
 
 Use this water surface control to simulate flooding from storm surges/tsunamis or any type of water surface elevation control such as tidal effects or
 time variable backwater conditions.
@@ -1957,7 +1969,7 @@ This command will compute the Manning’s n-values based on the information in a
 With a project open, first import a Manning’s n-value shape file using the *Import Shape File* command on the File menu.
 When you click the *Compute Manning Coefficients* command, the following dialog box appears:
 
-.. image:: img/GDS155.jpg
+.. image:: img/GDS155.png
 
 Select the Manning shape file name (MANNING.SHP in this case) and the Manning coefficient field (N_VALUE in this case) and click *‘OK’* to calculate
 Manning coefficients for each grid element.
@@ -2334,7 +2346,7 @@ Then use the *Grid/Compute SCS Curve Number/From Single Shape File…* command
 
 In the dialog box, select the Curve Number Shape file (LANDSOIL.SHP in this example) and the Curve Number Field (CurveNum in this example):
 
-.. image:: img/GDS158.jpg
+.. image:: img/GDS158.png
 
 *GDS* will intersect the shape file polygons with the grid elements and determine the area weighted average value for each grid element.
 
@@ -2348,7 +2360,7 @@ Number/From Multiple Shape Files* command
 
 The following dialog box will be displayed:
 
-.. image:: img/GDS159.jpg
+.. image:: img/GDS159.png
 
     1. Select the Hydrologic Soil Group Shape File and soil group field (landsoil.shp and LandSoil respectively in this example).
 
@@ -2367,7 +2379,7 @@ Double-clicking on any grid element the new Infiltration dialog box will display
 
 3.5.26 Compute Width and Area Reduction Factors … (Grid Menu)
 
-.. image:: img/GDS160.jpg
+.. image:: img/GDS160.png
 
 This command will compute the ARF and WRF factors from a polygon shape file of the buildings.
 The correction factor is a percentage and each ARF or WRF variable that is computed will be reduced by a multiplicative percentage factor.
@@ -2391,7 +2403,7 @@ The ARF-WRF assignment tool requires the following data:
 For each grid element (cell), the GDS finds all Shape File polygon intersections with the cell.
 The following figure shows an example where three polygons (building polygons) intersect a cell defining three areas A, B and C:
 
-.. image:: img/GDS161.jpg
+.. image:: img/GDS161.png
 
 Area Reduction Factor
 ^^^^^^^^^^^^^^^^^^^^^
@@ -2600,7 +2612,7 @@ A dialog box will appear prompting you to input a value for the refresh rate of 
 This command may be used to edit the default directories used by the *FLO-2D* model.
 The following dialog box appears:
 
-.. image:: img/GDS169.jpg
+.. image:: img/GDS169.png
 
 Input the desired new directory paths and then click *Apply*.
 
@@ -2608,7 +2620,7 @@ Input the desired new directory paths and then click *Apply*.
 
 .. image:: img/GDS170.jpg
 
-.. image:: img/GDS171.jpg
+.. image:: img/GDS171.png
 
 This tool computes the distance along a user-input polyline.
 After clicking on the *Measure Distance along Line Command,* draw a polyline using the mouse and double click at the end point of the polyline.
@@ -2626,7 +2638,7 @@ The points will be displayed on the screen.
 To compute the average of the grid rainfall depth, draw a polygon and then only the rainfall points inside the polygon will be used in the
 calculation.
 
-.. image:: img/GDS173.jpg
+.. image:: img/GDS173.png
 
 The following figure displays a *FLO-2D* grid system boundary, the ASCII rainfall point depth grid and the drawn polygon to compute that average
 rainfall depth over the *FLO-2D* grid system.
@@ -2635,12 +2647,14 @@ rainfall depth over the *FLO-2D* grid system.
 
 To compute the average rainfall depth, choose the appropriate ArcInfo grid file from the file list in the following dialog box:
 
-.. image:: img/GDS175.jpg
+.. image:: img/GDS175.png
 
 The following message will identify the number of grid points used to compute the average rainfall depth RTT value.
 The RAIN.DAT file RTT value will be updated.
 
-.. image:: img/GDS176.jpg.. image:: img/GDS177.jpg
+.. image:: img/GDS176.png
+
+.. image:: img/GDS177.png
 
 3.6.6 Interpolate Variable Rainfall (Tools Menu)
 
