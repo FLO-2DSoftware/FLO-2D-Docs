@@ -2597,55 +2597,67 @@ than the standard deviation when recalculating grid element mean elevation.
 
 2. Options…/Change Refresh Count (Tools Menu)
 
-..
-
-   Use this command to speed up the redraw (refresh) rate for large projects.
-   The refresh rate specifies how often the screen is updated when drawing maps.
-   If there are 1000 vertices to draw and the refresh rate is 500, then the screen will be refreshed twice.
-   A higher refresh rate results in faster draw times while a lower rate results a smoother draw appearance.
-   A dialog box will appear prompting you to input a value for the refresh rate of the map or image:
+Use this command to speed up the redraw (refresh) rate for large projects.
+The refresh rate specifies how often the screen is updated when drawing maps.
+If there are 1000 vertices to draw and the refresh rate is 500, then the screen will be refreshed twice.
+A higher refresh rate results in faster draw times while a lower rate results a smoother draw appearance.
+A dialog box will appear prompting you to input a value for the refresh rate of the map or image:
 
 3. Options…/Directory Paths (Tools Menu)
+
 .. image:: img/GDS168.jpg
-   This command may be used to edit the default directories used by the *FLO-2D* model.
-   The following dialog box appears:
+
+This command may be used to edit the default directories used by the *FLO-2D* model.
+The following dialog box appears:
+
 .. image:: img/GDS169.jpg
-   Input the desired new directory paths and then click *Apply*.
+
+Input the desired new directory paths and then click *Apply*.
 
 4. Measure Distance along Line (Tools Menu)
 
-..
-
    |GDS170| |GDS171|
 
-   This tool computes the distance along a user-input polyline.
-   After clicking on the *Measure Distance along Line Command,* draw a polyline using the mouse and double click at the end point of the polyline.
-   *GDS* will display the length of the polyline as shown below:
+This tool computes the distance along a user-input polyline.
+After clicking on the *Measure Distance along Line Command,* draw a polyline using the mouse and double click at the end point of the polyline.
+*GDS* will display the length of the polyline as shown below:
 
 5. Compute Average Point Rainfall Depth (Tools Menu)
+
 .. image:: img/GDS172.jpg
-   Use this command to compute Total Point Rainfall Depth (RTT in RAIN.DAT file).
-   *Note: It is required that a RAIN.DAT file exist in the project folder.* An ArcInfo ASCII grid file with rainfall data must be previously imported to
-   the *GDS*.
-   The format of this file is the standard ASCII grid with the values corresponding to rainfall depths.
-   The points will be displayed on the screen.
-   To compute the average of the grid rainfall depth, draw a polygon and then only the rainfall points inside the polygon will be used in the
-   calculation.
+
+Use this command to compute Total Point Rainfall Depth (RTT in RAIN.DAT file).
+*Note: It is required that a RAIN.DAT file exist in the project folder.* An ArcInfo ASCII grid file with rainfall data must be previously imported to
+the *GDS*.
+The format of this file is the standard ASCII grid with the values corresponding to rainfall depths.
+The points will be displayed on the screen.
+To compute the average of the grid rainfall depth, draw a polygon and then only the rainfall points inside the polygon will be used in the
+calculation.
+
 .. image:: img/GDS173.jpg
-   The following figure displays a *FLO-2D* grid system boundary, the ASCII rainfall point depth grid and the drawn polygon to compute that average
-   rainfall depth over the *FLO-2D* grid system.
+
+The following figure displays a *FLO-2D* grid system boundary, the ASCII rainfall point depth grid and the drawn polygon to compute that average
+rainfall depth over the *FLO-2D* grid system.
+
 .. image:: img/GDS174.jpg
-   To compute the average rainfall depth, choose the appropriate ArcInfo grid file from the file list in the following dialog box:
+
+To compute the average rainfall depth, choose the appropriate ArcInfo grid file from the file list in the following dialog box:
+
 .. image:: img/GDS175.jpg
-   The following message will identify the number of grid points used to compute the average rainfall depth RTT value.
-   The RAIN.DAT file RTT value will be updated.
+
+The following message will identify the number of grid points used to compute the average rainfall depth RTT value.
+The RAIN.DAT file RTT value will be updated.
+
 .. image:: img/GDS176.jpg.. image:: img/GDS177.jpg
+
 3.6.6 Interpolate Variable Rainfall (Tools Menu)
+
 .. image:: img/GDS178.jpg
-   This command will interpolate temporal rainfall for each *FLO-2D* grid element, based on spatially varied rainfall data in an ArcInfo ASCII grid file
-   format.
-   A file must be prepared that contains the storm beginning and ending dates and times, time interval of the rainfall data files (in minutes), number of
-   reporting storm time intervals (one rainfall data file per interval) and the file name and location.
+
+This command will interpolate temporal rainfall for each *FLO-2D* grid element, based on spatially varied rainfall data in an ArcInfo ASCII grid file
+format.
+A file must be prepared that contains the storm beginning and ending dates and times, time interval of the rainfall data files (in minutes), number of
+reporting storm time intervals (one rainfall data file per interval) and the file name and location.
 Each subsequent rainfall data file will list the rainfall depth at a rain gage grid location (i.e.
 rainfall grid not the *FLO-2D* grid system) at that specific time.
 For example:
@@ -2672,26 +2684,40 @@ Once the ArcInfo ASCII file is read, the following dialog box permits adjustment
 
 .. image:: img/GDS179.jpg
 
-    * - option
-      - Description
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
 
-    * - Minimum number of rain grid points to
-        consider in the vicinity of each grid
-        element.
+   * - option
+     - Description
 
-      - To calculate the interpolated rainfall depth for each FLO-2D
-        grid element, the algorithm uses at least this minimum number
-        of points closest to the grid element.
+   * - Minimum number of rain grid points to
 
-    * - Radius of interpolation (proportional to
-        grid element size).
+       consider in the vicinity of each grid
 
-      - This radius defines a circle around each grid element based on
-        a multiple of the grid elements size. Only rainfall grid points
-        inside this radius are considered in the interpolation process. If
-        the number of rainfall grid points is insufficient, then the circle
-        is automatically enlarged until at least the minimum number of
-        points is found.
+       element.
+
+    - To calculate the interpolated rainfall depth for each FLO-2D
+
+      grid element, the algorithm uses at least this minimum number
+
+      of points closest to the grid element.
+
+   * - Radius of interpolation (proportional to
+
+       grid element size).
+
+     - This radius defines a circle around each grid element based on
+
+       a multiple of the grid elements size. Only rainfall grid points
+
+       inside this radius are considered in the interpolation process. If
+
+       the number of rainfall grid points is insufficient, then the circle
+
+       is automatically enlarged until at least the minimum number of
+
+       points is found.
 
 After the interpolation is complete, choose the RAINCELL.DAT file location to save results.
 The RAINCELL.DAT file is then used by the *FLO-2D* model to simulate the rainstorm.
