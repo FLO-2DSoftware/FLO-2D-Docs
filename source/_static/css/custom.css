@@ -136,3 +136,24 @@ img {
 .bordered-img {
     box-shadow: 0 0 8px rgba(0,0,0,0.5);
 }
+/* Zebra striping for all Sphinx tables */
+table.docutils tbody tr:nth-child(odd) {
+    background-color: #626466;
+}
+
+table.docutils tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* Keep header white */
+table.docutils thead tr th {
+    background-color: #ffffff !important;
+    font-weight: bold;
+}
+
+/* Optional: add light borders for clarity */
+table.docutils th,
+table.docutils td {
+    border: 1px solid #cccccc;
+    padding: 6px 8px;
+}
