@@ -1603,32 +1603,63 @@ The following table describes the interpolation method.
    * - **Option**
      - **Description**
 
-   * - Minimum number of DTMpoints to consider in thevicinity of each gridelement
-     - To calculate the interpolated elevation that will represent each grid element, the algorithm analyzes at least the minimum number of points closest to
-       the grid element node.
+   * - Minimum number of DTMpoints to consider in the vicinity of each
 
-   * - Radius of interpolation(proportional to gridelement size)
-     - This radius defines a circle around each grid element node based on a multiple of the grid elements side.
-       Only DTM or assigned elevation points inside this radius are considered in the interpolation process.
-       If no elevations point exists, the circle is automatically enlarged until at least the minimum number of points is found.
+       grid element
+     - To calculate the interpolated elevation that will represent each
 
-   * - Inverse distanceweighting formulaexponent
+       grid element, the algorithm analyzes at least the minimum number
+
+       of points closest to the grid element node.
+
+   * - Radius of interpolation(proportional to grid element size)
+     - This radius defines a circle around each grid element node based
+
+       on a multiple of the grid elements side.
+
+       Only DTM or assigned elevation points inside this radius are
+
+       considered in the interpolation process.
+
+       If no elevations point exists, the circle is automatically enlarged
+
+       until at least the minimum number of points is found.
+
+   * - Inverse distance weighting formula exponent
      - This is “n” in the Inverse Distance Weighting Formula:
-       *NDTM* 1  *Z j*  \ *j*\ =1 *rijn*  *Z* :sup:`=` *NDTM* 1   *rn*  *j*\ =1 *ij*  Where Z¯ is the interpolated grid element elevation, Z\ :sub:`j` is
-       the elevation of DTM point :sub:`j`, r\ :sub:`ij` is the distance from the DTM point :sub:`j` to center of grid element :sub:`i` and NDTM is the total
-       number of DTM points.
+
+       *NDTM* 1  *Z j*  \ *j*\ =1 *rijn*  *Z* :sup:`=` *NDTM* 1   *rn*  *j*\ =1 *ij*
+
+       Where Z¯ is the interpolated grid element elevation, Z\ :sub:`j` is
+
+       the elevation of DTM point :sub:`j`, r\ :sub:`ij` is the distance from
+
+       the DTM point :sub:`j` to center of grid element :sub:`i` and NDTM is the
+
+       total number of DTM points.
 
    * - No filtering (High or LowElevations)
      - No filtering is performed on the elevation points.
 
    * - Maximum elevation difference (High or Low Elevations)
-     - For this option, the algorithm calculates a mean elevation using all the DTM and assigned elevation points within the interpolation radius.
-       All those points that exceed the selected maximum elevation difference higher (or lower in the case of Low Elevation filter) than the mean are
+     - For this option, the algorithm calculates a mean elevation using all
+
+       the DTM and assigned elevation points within the interpolation radius.
+
+       All those points that exceed the selected maximum elevation difference
+
+       higher (or lower in the case of Low Elevation filter) than the mean are
+
        discarded and the mean elevation is recomputed and assigned to the grid element.
 
    * - Standard deviationdifference(High or Low Elevations)
-     - The interpolation algorithm calculates the standard deviation of DTM point elevations and then neglects all those points whose elevations are higher
-       (or lower in the case of the Low Elevation filter) than the standard deviation to determine the mean elevation to represent the grid element.
+     - The interpolation algorithm calculates the standard deviation of DTM point
+
+       elevations and then neglects all those points whose elevations are higher
+
+       (or lower in the case of the Low Elevation filter) than the standard
+
+       deviation to determine the mean elevation to represent the grid element.
 
 
 3.5.22 Interpolate Elevation Points from Multiple Elevation Files...
