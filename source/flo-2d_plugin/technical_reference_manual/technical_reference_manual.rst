@@ -1098,8 +1098,9 @@ system.
 The storm drain engine then routes the flow in the pipe network and calculates potential return flow to the surface water system (Figure 42).
 
 The :ref:`Storm Drain Editor <storm-drain-editor>` application and setup
-are well documented in the FLO-2D Plugin User Manual and a detailed tutorial is available `online.
-:ref:`self-help-gila-1-storm-drain`
+are well documented in the FLO-2D Plugin User Manual
+
+A detailed tutorial is available :ref:`Storm Drain Tutorial <self-help-gila-1-storm-drain>`
 
 .. image:: ../img/technical_reference_manual/tech_ref_manual042.jpg
 
