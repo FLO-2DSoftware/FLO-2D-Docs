@@ -1927,23 +1927,25 @@ Where:
 
 8. For each grid element compute the initial abstraction *IABSTR*:
 
-*IABSTR* =\ *A\ i* (*IA\ i* )\ :sup:``\ 
+.. math::
+    :label:
 
- *AGE* 
+    IABSTR = \left( \frac{\sum{A_i (IA_i)}}{A_{GE}} \right)
 
-   Where:
+Where:
 
    *IA\ i* is the initial abstraction in the subarea *A\ i* intercepted by the element and is based on the 3\ :sup:`rd` column of the landuse table;
 
    The intercepted subareas are computed using the land use shape file and *IABSTR* is added to the INFIL.DAT file for each element.
 
-   Compute effective impervious area (%) for each grid element *(RTIMP)*.
+Compute effective impervious area (%) for each grid element *(RTIMP)*.
 
-*RTIMP*\ \_1=\ *A\ i* (*RTIMPS* \*\ *EFF*)\ :sup:`i `\ 
+.. math::
+    :label:
 
- *AGE* 
+    RTIMP\_1 = \left( \frac{\sum{A_i (RTIMPS \cdot EFF)_i}}{A_{GE}} \right)
 
-   Where:
+Where:
 
    *Ai* is determined from the soil shape file;
 
@@ -1951,134 +1953,135 @@ Where:
 
    *RIMPS* is the percent rock outcrop obtained from the 4\ :sup:`th` column of the soil table.
 
-*RTIMP* = *RTIMP*\ \_1+\ *A\ i* (*RTIMPL*)\ :sup:`i `\ 
+.. math::
+    :label:
 
- *AGE* 
+    RTIMP = RTIMP\_1 + \left( \frac{\sum{A_i (RTIMPL)_i}}{A_{GE}} \right)
 
-   Where:
+Where:
 
    *Ai* is obtained from land use shape file and
 
    *A\ GE* is the grid element area and *RTIMPL* is obtained from the 4\ :sup:`th` column of the land use table.
 
-   The steps to complete Green-Ampt parameter computation are as follows.
-   Open the Compute Green Ampt Parameters Dialog box as it was shown above.
+The steps to complete Green-Ampt parameter computation are as follows.
+Open the Compute Green Ampt Parameters Dialog box as it was shown above.
 
-   Load the land use shape file and table and select the field as shown:
-.. image:: img/GDS148.jpg.. image:: img/GDS149.jpg
-   Load the soil shape file and table and select the field as shown:
+Load the land use shape file and table and select the field as shown:
+
+.. image:: img/GDS148.jpg
+
+.. image:: img/GDS149.jpg
+
+Load the soil shape file and table and select the field as shown:
+
 .. image:: img/GDS150.jpg
-   Click *‘Compute Green-Ampt’* to compute.
-   This procedure may take several minutes depending on the number of grid elements and the number of landuse polygons.
+
+Click *‘Compute Green-Ampt’* to compute.
+This procedure may take several minutes depending on the number of grid elements and the number of landuse polygons.
+
 .. image:: img/GDS151.jpg
-   Next you can view the polygon intersections.
-.. image:: img/GDS152.jpg.. image:: img/GDS153.jpg
+
+Next you can view the polygon intersections.
+
+.. image:: img/GDS152.jpg
+
+.. image:: img/GDS153.jpg
+
 3.5.24 Compute Manning Coefficients… (Grid Menu)
+
 .. image:: img/GDS154.jpg
-   This command will compute the Manning’s n-values based on the information in a roughness shape file.
-   With a project open, first import a Manning’s n-value shape file using the *Import Shape File* command on the File menu.
-   When you click the *Compute Manning Coefficients* command, the following dialog box appears:
+
+This command will compute the Manning’s n-values based on the information in a roughness shape file.
+With a project open, first import a Manning’s n-value shape file using the *Import Shape File* command on the File menu.
+When you click the *Compute Manning Coefficients* command, the following dialog box appears:
+
 .. image:: img/GDS155.jpg
-   Select the Manning shape file name (MANNING.SHP in this case) and the Manning coefficient field (N_VALUE in this case) and click *‘OK’* to calculate
-   Manning coefficients for each grid element.
-   Please note that the n-value data will be written to the FPNVALUE.DAT when the FLO2D files have been saved.
+
+Select the Manning shape file name (MANNING.SHP in this case) and the Manning coefficient field (N_VALUE in this case) and click *‘OK’* to calculate
+Manning coefficients for each grid element.
+Please note that the n-value data will be written to the FPNVALUE.DAT when the FLO2D files have been saved.
 
 3.5.25 Compute SCS Curve Number … (Grid Menu)
 
-   This command will compute the Curve Number for each grid element based on information contained in shape files.
+This command will compute the Curve Number for each grid element based on information contained in shape files.
 
-   The SCS runoff curve number loss method is a function of the total rainfall depth and the empirical curve number parameter which ranges from 1 to 100
-   and is a function of hydrologic soil type, land use and treatment, surface condition and antecedent moisture condition.
-   The method was developed on 24 hour hydrograph data on mild slope eastern rural watersheds in the United States although runoff curve numbers have
-   been calibrated or estimated for urban areas, agricultural lands and semi-arid range lands.
-   The SCS CN method does not account for variation in rainfall intensity.
-   The method was developed for predicting rainfall runoff from ungaged watersheds and its attractiveness lies in its simplicity.
-   For large basins (especially semiarid basins), the method tends to over predict runoff using the standard curve number tables which has unique or
-   variable infiltration characteristics such as channels (Ponce, 1989).
+The SCS runoff curve number loss method is a function of the total rainfall depth and the empirical curve number parameter which ranges from 1 to 100
+and is a function of hydrologic soil type, land use and treatment, surface condition and antecedent moisture condition.
+The method was developed on 24 hour hydrograph data on mild slope eastern rural watersheds in the United States although runoff curve numbers have
+been calibrated or estimated for urban areas, agricultural lands and semi-arid range lands.
+The SCS CN method does not account for variation in rainfall intensity.
+The method was developed for predicting rainfall runoff from ungaged watersheds and its attractiveness lies in its simplicity.
+For large basins (especially semiarid basins), the method tends to over predict runoff using the standard curve number tables which has unique or
+variable infiltration characteristics such as channels (Ponce, 1989).
 
 Assigning Curve Numbers to Grid Elements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   The general procedure is to assign curve numbers in the *GDS* and then run the *FLO-2D* model with the infiltration component “turned on” and the
-   infiltration switch set the SCS-CN option.
-   The following options are available to assign curve numbers to grid elements:
+The general procedure is to assign curve numbers in the *GDS* and then run the *FLO-2D* model with the infiltration component “turned on” and the
+infiltration switch set the SCS-CN option.
+The following options are available to assign curve numbers to grid elements:
 
-1. Select area using a polygon and assigning a CN number.
-   In this case the CN's are assumed known.
-
-2. Import a CN polygon shape file and intercept the shape file polygons with the grid elements and interpolate the weighted average computed CN’s.
-   In this case the CN numbers are known.
-
-3. Import three polygon shape files for hydrologic soil group (HSG), land cover, and impervious cover and the *GDS* will incept, interpolate and compute
-   the CN’s for
-
-..
-
-   each grid element based on the Pima County procedure.
-   In this case the CN are not known
+    1. Select area using a polygon and assigning a CN number.
+       In this case the CN's are assumed known.
+    2. Import a CN polygon shape file and intercept the shape file polygons with the grid elements and interpolate the weighted average computed CN’s.
+       In this case the CN numbers are known.
+    3. Import three polygon shape files for hydrologic soil group (HSG), land cover, and impervious cover and the *GDS* will incept, interpolate and compute
+       the CN’s for each grid element based on the Pima County procedure.
+       In this case the CN are not known
 
 Determining CN’s Using the Pima County Method
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   *GDS* uses the Pima County Method to determine the CN’s using polygon shape files (SF) for soil, land cover and impervious cover.
-   Using this shape file data with the accompany attribute tables, the polygon intersection with the grid element are determined to assign a hydrologic
-   soil group, percent cover density and impervious area for each grid element.
-   Then the CN’s are computed using various formulas depending on soil groups and the results are written to the *FLO-2D* INFIL.DAT file.
-   The following procedure is applied:
+*GDS* uses the Pima County Method to determine the CN’s using polygon shape files (SF) for soil, land cover and impervious cover.
+Using this shape file data with the accompany attribute tables, the polygon intersection with the grid element are determined to assign a hydrologic
+soil group, percent cover density and impervious area for each grid element.
+Then the CN’s are computed using various formulas depending on soil groups and the results are written to the *FLO-2D* INFIL.DAT file.
+The following procedure is applied:
 
-1. Import soil, land cover and impervious cover shape files to the *GDS* graphical project environment.
+    1. Import soil, land cover and impervious cover shape files to the *GDS* graphical project environment.
+    2. Select the ID for the HSG from Soil shape file (landsoil.shp).
+       The attribute may have both soil and group and the percentage for each group (e.g. B31%C69%Desert Brush).
+       For each polygon the following attribute information is required:
 
-2. Select the ID for the HSG from Soil shape file (landsoil.shp).
-   The attribute may have both soil and group and the percentage for each group (e.g. B31%C69%Desert Brush).
-   For each polygon the following attribute information is required:
+       a. Cover type (e.g. Desert Brush)
+       b. Soil group (e.g. B and C)
+       c. Percentage of soil groups (B=35% and C = 69%).
+          If only the group is given (e.g. B) then assume 100%.
 
-   a. Cover type (e.g. Desert Brush)
+    3. Select ID for Cover density percentage from land cover shape file (land.shp).
+    4. Select ID for impervious areas from impervious cover shape file (imperv.shp)
+    5. Determine polygon intersections with each grid element for each SF (soil, land cover and impervious cover) and determine the area weighed average of
+       each variable:
 
-   b. Soil group (e.g. B and C)
+       *Var*\ =\ *A\ i\ Var\ i*
 
-   c. Percentage of soil groups (B=35% and C = 69%).
-      If only the group is given (e.g. B) then assume 100%.
+       *A\ GE* Where:
 
-3. Select ID for Cover density percentage from land cover shape file (land.shp).
+       *Var\ i* is the current variable from the shape file; *A\ i* is subarea intercepted by the grid element and
 
-4. Select ID for impervious areas from impervious cover shape file (imperv.shp)
+       *A\ GE* the grid element area.
 
-5. Determine polygon intersections with each grid element for each SF (soil, land cover and impervious cover) and determine the area weighed average of
-   each variable:
+       At the end of this process each grid element has been assigned:
 
-..
+            a. HSG from Soil shape file.
+            b. Cover density percentage CD.
+            c. Impervious area.
 
-   *Var*\ =\ *A\ i\ Var\ i*
+    6. Use formulas in Table 1 to determine CN using CD and the corresponding soil group (e.g. CN = (CN soil B \* (B%) + CN soil C \* (C%) + %impervious\*
+       99)/100) where: CN for impervious area is 99 and areas for each soil group within a grid element need to be adjusted depending on the impervious area:
+       B% = B%(in SF) \* (100-%impervious), etc.
+    7. Write CN results to the INFIL.DAT.
 
-   *A\ GE* Where:
+To determine CN’s, functional relationships were derived from Figure D-1 of the Pima County Hydrology Procedures (Appendix D) reproduced here:
 
-   *Var\ i* is the current variable from the shape file; *A\ i* is subarea intercepted by the grid element and
-
-   *A\ GE* the grid element area.
-
-   At the end of this process each grid element has been assigned:
-
-a. HSG from Soil shape file.
-
-b. Cover density percentage CD.
-
-c. Impervious area.
-
-6. Use formulas in Table 1 to determine CN using CD and the corresponding soil group (e.g. CN = (CN soil B \* (B%) + CN soil C \* (C%) + %impervious\*
-   99)/100) where: CN for impervious area is 99 and areas for each soil group within a grid element need to be adjusted depending on the impervious area:
-   B% = B%(in SF) \* (100-%impervious), etc.
-
-7. Write CN results to the INFIL.DAT.
-
-..
-
-   To determine CN’s, functional relationships were derived from Figure D-1 of the Pima County Hydrology Procedures (Appendix D) reproduced here:
 .. image:: img/GDS156.jpg
-   Figure D-1 of Pima County Hydrologic Procedures Relating CN to Hydrologic Soil Cover and Density
 
-   These relationships are summarized in the following table.
+Figure D-1 of Pima County Hydrologic Procedures Relating CN to Hydrologic Soil Cover and Density
 
-   Table 1: Relationships for Evaluating the CN Based on Hydrologic Soil Cover and Cover Density
+These relationships are summarized in the following table.
+
+Table 1: Relationships for Evaluating the CN Based on Hydrologic Soil Cover and Cover Density
 
 .. list-table::
    :widths: 12 12 12 12 12 12 12 12
@@ -2346,32 +2349,33 @@ c. Impervious area.
      -
      -
 
+For each soil group, a different formula was developed that calculates CN from the Cover
 
-..
+Density (CD).
+For straight line segments a linear equation was used to represent that soil cover.
+For curved segments of the Excel curve fitting routines to determine the best-fit coefficients to represent the soil cover.
+Errors were estimated for each formula.
+Table 2 summarizes the validation and errors for each soil group set of formulas:
 
-   For each soil group, a different formula was developed that calculates CN from the Cover
+In the *GDS* *Grid* menu there is a new command titled: *Compute SCS Curve Number*.
+This has two options: From *Single Shape File…* and *From Multiple Shape Files*.
 
-   Density (CD).
-   For straight line segments a linear equation was used to represent that soil cover.
-   For curved segments of the Excel curve fitting routines to determine the best-fit coefficients to represent the soil cover.
-   Errors were estimated for each formula.
-   Table 2 summarizes the validation and errors for each soil group set of formulas:
-
-   In the *GDS* *Grid* menu there is a new command titled: *Compute SCS Curve Number*.
-   This has two options: From *Single Shape File…* and *From Multiple Shape Files*.
 .. image:: img/GDS157.jpg
+
 Assignment of CN’s Based on a Single Shape File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Using this option, the *GDS* will determine the CN for each grid element based on a user provided polygon shape file that contains a CN for each
-   polygon.
-   First import the shape file using the *Import Shape File…* command in the *GDS* *File* menu.
+Using this option, the *GDS* will determine the CN for each grid element based on a user provided polygon shape file that contains a CN for each
+polygon.
+First import the shape file using the *Import Shape File…* command in the *GDS* *File* menu.
 
 Then use the *Grid/Compute SCS Curve Number/From Single Shape File…* command
 
-   In the dialog box, select the Curve Number Shape file (LANDSOIL.SHP in this example) and the Curve Number Field (CurveNum in this example):
+In the dialog box, select the Curve Number Shape file (LANDSOIL.SHP in this example) and the Curve Number Field (CurveNum in this example):
+
 .. image:: img/GDS158.jpg
-   *GDS* will intersect the shape file polygons with the grid elements and determine the area weighted average value for each grid element.
+
+*GDS* will intersect the shape file polygons with the grid elements and determine the area weighted average value for each grid element.
 
 Computation of CN’s Base on a Multiple Shape Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2381,7 +2385,7 @@ It is necessary to import three polygon shape files for HSG, Land cover, and Imp
 After these shape file have been imported using the *Import Shape File…* command in the *GDS* *File* menu, then use the *Grid/Compute SCS Curve
 Number/From Multiple Shape Files* command
 
-   The following dialog box will be displayed:
+The following dialog box will be displayed:
 
 .. image:: img/GDS159.jpg
 
@@ -2512,12 +2516,12 @@ Complete the polyline by doubling clicking on the final vertex and then click *�
 Use this command to select the computational domain.
 Once the flow domain is outlined with a closed boundary, identify computational domain (potential flow surface).
 
-1. Choose the *Setup Computational Area* command.
-   The cursor changes to a cross.
-2. Click any grid element inside the closed area of the computational domain.
-   If the computational domain area is closed, an acceptance message appears.
-   If the boundary elements do not completely enclose an area, you will be informed that the area is still open.
-   Additional boundary grid elements must then be marked to completely close the computational domain.
+    1. Choose the *Setup Computational Area* command.
+       The cursor changes to a cross.
+    2. Click any grid element inside the closed area of the computational domain.
+       If the computational domain area is closed, an acceptance message appears.
+       If the boundary elements do not completely enclose an area, you will be informed that the area is still open.
+       Additional boundary grid elements must then be marked to completely close the computational domain.
 
 If the boundary is edited, the computational domain can be re-generated by clicking on an interior grid element within the domain using the *Click
 Inside Modeling Area* command.
