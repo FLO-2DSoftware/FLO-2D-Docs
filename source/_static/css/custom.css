@@ -137,7 +137,7 @@ img {
 
 /* Zebra striping for all Sphinx tables */
 table.docutils tbody tr:nth-child(odd) {
-    background-color: #eef2f7;
+    background-color: #626466;
 }
 
 table.docutils tbody tr:nth-child(even) {
