@@ -3532,6 +3532,8 @@ GDS* will allow you to enter, modify and view the Inlets as well as run EPA SWMM
 
 .. image:: img/GDS258.jpg
 
+.. image:: img/GDS335.jpg
+
 This command will open the EPA SWMM 5.0 program.
 Create a .inp file and save it to the project folder.
 Then use the Control Panel to load make the SWMMFLO.DAT file.
@@ -3544,40 +3546,46 @@ This option runs the EPA SWMM GUI 5.0.
 It the link is not working copy the Epaswmm5.exe file from the EPA SWMM 5.0 folder to the FLO-2D Pro folder.
 
 3.6.34.2 View Storm Drain Inlets Dialog (Tools Menu)
-''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+.. image:: img/GDS336.jpg
+
+.. image:: img/GDS337.jpg
 
 This option loads the contents of the SWMMFLO.DAT file to be edited.
 The inlets can be edited here and the max depths can be edited here or in the swmm.inp.
 
+.. image:: img/GDS338.jpg
+
 3.6.34.3 View Outfall Nodes Dialog (Tools Menu/Storm Drain)
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+.. image:: img/GDS339.jpg
 
 This option generates the data written to the SWMMOUTF.DAT file.
 
 3.6.34.4 Storm Drain Display Option (Tools Menu/Storm Drain)
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 .. image:: img/GDS260.jpg
 
 These options define how the storm drain system appears on the GDS display window.
 
 3.6.34.5 Storm Drain Discharge Display (Tools Menu/Storm Drain)
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+.. image:: img/GDS341.jpg
 
 This option allows the user to review the inlet discharge hydrographs or print them to \*.jpg image files.
 Choose from this project to display on screen or from external project to save all projects to file.
 
-.. image:: img/GDS261.png
+.. image:: img/GDS340.jpg
 
 3.6.34.6 Grade Lines (Tools Menu/Storm Drain)
-'''''''''''''''''''''''''''''''''''''''''''''
+
+.. image:: img/GDS342.jpg
 
 This option allows the user to review the grade lines for the conduits.
 
 .. image:: img/GDS262.jpg
 
 **4.7 Contents (Help Menu)**
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: img/GDS263.jpg
 
