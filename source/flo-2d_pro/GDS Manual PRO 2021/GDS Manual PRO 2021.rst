@@ -915,7 +915,7 @@ The mouse cursor changes to the inquiry mode to show that this option is active\
 
 3.3.7 Grid Element #’s, Elevations, and n-values and Curve Numbers (View Menu)
 
-.. image:: img/GDS073.jpg
+.. image:: img/GDS073png
 
 Use these commands to display grid element numbers, elevations, Manning’s n-values or Curve Numbers inside the grid elements.
 Each command can be toggled and used jointly to display three values.
@@ -944,7 +944,7 @@ These are some example views of the different *FLO-2D* components as represented
 
 3.3.10 View Elevation Points (View Menu)
 
-.. image:: img/GDS094.jpg
+.. image:: img/GDS094.png
 
 Displays elevation points assigning colors as a function of elevation.
 
@@ -958,7 +958,7 @@ The user chose not to interpolate the elevation of grid elements that did not ha
 
 Plots colored hatched pattern on the elements according to the Manning’s n value.
 
-.. image:: img/GDS095.jpg
+.. image:: img/GDS095.png
 
 3.3.13 Grid Element Elevation Rendering (View Menu)
 
@@ -988,13 +988,13 @@ The grid elements without cross sections assigned are highlighted in blue.
 
 3.3.18 Levee Polyline (View Menu)
 
-.. image:: img/GDS096.jpg
+.. image:: img/GDS096.png
 
 Use this command to view the polylines that were produced when the levee data was imported or created along a polyline.
 
 3.3.19 Redraw (View Menu)
 
-.. image:: img/GDS097.jpg
+.. image:: img/GDS097.png
 
 Use this command to redraw the visible objects in the working region.
 
@@ -1011,7 +1011,7 @@ To use this tool:
     2. A dialog box appears for the elevation entry in feet or meters.
        Click *‘OK’* to accept the value.
 
-.. image:: img/GDS100.jpg
+.. image:: img/GDS100.png
 
     3. Click a point within the working region to assign this elevation data.
     4. Repeat step 3 as many times as needed.
@@ -1046,7 +1046,7 @@ Use these commands to edit the text styles for the grid element number, elevatio
 Set the relative position of the number in the square grid element (upper, middle or down positions).
 The Font Properties… button is used to change, font type, style, size, etc.
 
-.. image:: img/GDS104.jpg
+.. image:: img/GDS104.png
 
 3.4.6 Channel Style (Design Menu)
 
@@ -1072,7 +1072,7 @@ To use the *Create Grid* command:
     1. Select the *Create Grid* command (Grid menu).
     2. A dialog box appears requesting the square grid element size or side length (ft or m):
 
-.. image:: img/GDS106.jpg
+.. image:: img/GDS106.png
 
     3. Select *‘OK’* to accept the value.
     4. The *GDS* system will automatically overlay a grid template that is centered in the working region.
