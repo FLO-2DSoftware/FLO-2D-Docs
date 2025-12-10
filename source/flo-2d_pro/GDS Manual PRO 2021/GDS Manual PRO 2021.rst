@@ -607,67 +607,22 @@ image and file type and according to the table below. For example, an image with
 myimage.bmp, must have a world file associated with it named myimage.bmpw or
 myimage.bpw
 
-.. raw:: html
-
-   <table style="border-collapse: collapse; width: 60%;">
-     <thead>
-       <tr>
-         <th style="border:1px solid #000; padding:4px;">File Extension</th>
-         <th style="border:1px solid #000; padding:4px;">World File Extension</th>
-       </tr>
-     </thead>
-
-     <tbody>
-       <tr>
-         <td style="padding:4px;">bmp</td>
-         <td style="padding:4px;">bmpw or bpw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">jpg; jpeg</td>
-         <td style="padding:4px;">jpgw or jgw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">tif; tff; tiff</td>
-         <td style="padding:4px;">tfw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">gis</td>
-         <td style="padding:4px;">gsw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">lan</td>
-         <td style="padding:4px;">lnw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">bil</td>
-         <td style="padding:4px;">blw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">bip</td>
-         <td style="padding:4px;">bpw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">bsq</td>
-         <td style="padding:4px;">bqw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">sid</td>
-         <td style="padding:4px;">sdw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">sun</td>
-         <td style="padding:4px;">snw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">rs; ras</td>
-         <td style="padding:4px;">rsw</td>
-       </tr>
-       <tr>
-         <td style="padding:4px;">rlc</td>
-         <td style="padding:4px;">rcw</td>
-       </tr>
-     </tbody>
-   </table>
++-------------------+-------------------------+
+| File Extension    | World File Extension    |
++===================+=========================+
+| bmp               | bmpw or bpw             |
+| jpg; jpeg         | jpgw or jgw             |
+| tif; tff; tiff    | tfw                     |
+| gis               | gsw                     |
+| lan               | lnw                     |
+| bil               | blw                     |
+| bip               | bpw                     |
+| bsq               | bqw                     |
+| sid               | sdw                     |
+| sun               | snw                     |
+| rs; ras           | rsw                     |
+| rlc               | rcw                     |
++-------------------+-------------------------+
 
 The world file has the following general format:
 
