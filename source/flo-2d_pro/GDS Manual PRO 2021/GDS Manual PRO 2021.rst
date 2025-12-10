@@ -813,7 +813,7 @@ Use this command to import DXF or DWG CAD files.
 
 3.2.27 Import Levees...(File Menu)
 
-.. image:: img/GDS052.jpg.. image:: img/GDS053.jpg
+.. image:: img/GDS052.jpg.. image:: img/GDS053.png
 
 Use this command to import levee polyline vertices in the form of xyz space or coma delimited text file.
 The file extension is \*.xyz.
@@ -830,11 +830,11 @@ After deleting any DTM points or adding points from multiple files, this command
 Use this command to export the current screen view to one of various image formats.
 Click the *Export Command* and the following dialog box appears:
 
-.. image:: img/GDS056.jpg
+.. image:: img/GDS056.png
 Choose an image export format such as Bitmap, JPEG, etc and adjust the scale factor of the image to obtain better print quality.
 When you click the Export button, input the image file name and select the directory to save the image as shown in the following file dialog box:
 
-.. image:: img/GDS057.jpg
+.. image:: img/GDS057.png
 
 3.2.30 Open Recent Projects (File Menu)
 
@@ -853,26 +853,26 @@ The *GDS* will prompt the user to save the current project.
 
 3.3.1 View All (View Menu)
 
-.. image:: img/GDS060.jpg
+.. image:: img/GDS060.png
 
 Use the *View All command* or click the View All |GDS061| icon to return the working region to its original full size.
 To Zoom-in (increase the magnification), click in the working region and drag the mouse to outline the area of interest.
 
 3.3.2 Zoom Out Previous View (View Menu)
 
-.. image:: img/GDS062.jpg
+.. image:: img/GDS062.png
 
 Use the *Zoom Out* *Previous View* command or click the Zoom Out Previous View Button |GDS063| to return to the previous zoom extent
 
 3.3.3 Zoom Out 10% (View Menu)
 
-.. image:: img/GDS064.jpg
+.. image:: img/GDS064.png
 
 Use the Zoom Out 10% View command to reduce the current view 10% in size.
 
 3.3.4 Pan (View Menu)
 
-.. image:: img/GDS065.jpg
+.. image:: img/GDS065.png
 
 Use the *Pan* command or use the *Pan* Toolbar icon |GDS066| to move around within the working region view.
 Click and drag the mouse to pan around.
@@ -880,11 +880,11 @@ Use the *View All* command (or toolbar icon) to return to a full view of the wor
 
 3.3.5 Layers List (View Menu)
 
-.. image:: img/GDS067.jpg
+.. image:: img/GDS067.png
 
 This command opens the Layer dialog box.
 
-.. image:: img/GDS068.jpg
+.. image:: img/GDS068.png
 
 Layers may be visible or invisible.
 Change the layer visible status by checking the *Visible* check box.
@@ -897,7 +897,7 @@ After any modifications to the layers, click Apply prior to clicking OK.
 To enter the Layer Properties Dialog box double click an active layer.
 The following dialog appears:
 
-.. image:: img/GDS069.jpg
+.. image:: img/GDS069.png
 
 This dialog box allows the user to modify layer colors, transparency, number of classes or divisions, add point captions, font styles, etc.
 Use the *Adv label* option to add labels to DTM points in the Elevation layer.
@@ -906,7 +906,7 @@ Click the *Apply* button and then the *Close* button to accept the changes.
 
 3.3.6 Track Elevation Points (View Menu)
 
-.. image:: img/GDS070.jpg
+.. image:: img/GDS070.png
 
 This command queries individual terrain elevation points and displays the data for the selected point in the toolbar point elevation box.
 The mouse cursor changes to the inquiry mode to show that this option is active\ |GDS071|.
