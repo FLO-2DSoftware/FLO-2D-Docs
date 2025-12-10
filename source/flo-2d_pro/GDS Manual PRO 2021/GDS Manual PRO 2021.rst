@@ -2581,9 +2581,6 @@ Dialog Box Options:
 
        points is found.
 
-
-MMMMMMMMMMMMMMMMMMMMMMMMM
-
    * - Inverse distance weighting formula exponent
 
      - This is “n” in the Inverse Distance Weighting Formula:
