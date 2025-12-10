@@ -2706,195 +2706,183 @@ If the number of rainfall grid points is insufficient, then the circle is automa
    Successive rainfall data for the entire grid system follows for the number of time-interval groups.
    For the example above, there would be two sets of rainfall data for the entire grid system.
 
-   60 2 6/12/2002 1:00:00 PM 6/12/2002 2:00:00 PM
+.. raw:: html
 
-1. 1.8538
+    <pre>
+        60 2 6/12/2002 1:00:00 PM 6/12/2002 2:00:00 PM
+        1     1.8538
+        2     1.8537
+         .      .
+        1234   2.272
+        1235   2.2709
+        1      1.4794
+        2      1.4791
+         .       .
+        1234   1.6294
+        1235   1.6286
+    </pre>
 
-2. 1.8537
-
-**.
-.**
-
-1234.
-2.272
-
-1235.
-2.2709
-
-1. 1.4794
-
-2. 1.4791
-
-**.
-.**
-
-1234.
-1.6294
-
-1235.
-1.6286
-
-..
-
-   In this above example the beginning date is 6/12/2002 the beginning time 1:00 PM, the ending date 6/12/2002 and the ending time 2:00 PM.
-   The time interval between files is 60 minutes, there are two time intervals and 1235 grid elements.
-   The rainfall depth for grid element number 1 at time 1:00 PM is 1.8538 in.
-   Successive grid element rainfall depths follow.
-   For the second time interval, the rainfall depth for the first grid element is 1.4794 in and the rest of the grid elements follow.
-   If the grid system has been prepared in International Units (meters), then the rainfall data file should be prepared in mm.
+In this above example the beginning date is 6/12/2002 the beginning time 1:00 PM, the ending date 6/12/2002 and the ending time 2:00 PM.
+The time interval between files is 60 minutes, there are two time intervals and 1235 grid elements.
+The rainfall depth for grid element number 1 at time 1:00 PM is 1.8538 in.
+Successive grid element rainfall depths follow.
+For the second time interval, the rainfall depth for the first grid element is 1.4794 in and the rest of the grid elements follow.
+If the grid system has been prepared in International Units (meters), then the rainfall data file should be prepared in mm.
 
 3.6.7 Levee Express Editor (Tools Menu)
+
 .. image:: img/GDS181.jpg
-   The Levee Express Editor facilitates assigning levee attributes for individual grid elements.
 
-   You can use the Levee Express Editor to create or edit a levee.
-   This tool will help you to assign levee crest elevations directly from the DTM point data base, if the DTM points are dense enough to represent the
-   levee crest.
-   If a number of DTM points fall on the top of the levee, the average of the five highest DTM points can be used to represent the levee crest.
+The Levee Express Editor facilitates assigning levee attributes for individual grid elements.
+You can use the Levee Express Editor to create or edit a levee.
+This tool will help you to assign levee crest elevations directly from the DTM point data base, if the DTM points are dense enough to represent the
+levee crest.
+If a number of DTM points fall on the top of the levee, the average of the five highest DTM points can be used to represent the levee crest.
 
-   When you click this command or on the toolbar icon |GDS182| for an existing levee the following floating dialog appears:
+When you click this command or on the toolbar icon |GDS182| for an existing levee the following floating dialog appears:
+
 .. image:: img/GDS183.jpg
-   When you double click a grid element that has a levee, the dialog will show the Maximum Point elevation of the DTM points inside the element, the
-   average of the highest 5 DTM points in the element and the surrounding grid element elevations.
-   Use the text boxes and the *Assign to Element* button to assign the levee crest elevations.
-   Compare the Maximum Point Elevation (Max.
-   Pt.
-   Elev.) and the Average of the Five Highest Points (Ave.
-   High (5) Pts.) with the upstream and downstream assigned levee crest elevations to assign the levee crest elevation for the given grid element.
+
+When you double click a grid element that has a levee, the dialog will show the Maximum Point elevation of the DTM points inside the element, the
+average of the highest 5 DTM points in the element and the surrounding grid element elevations.
+Use the text boxes and the *Assign to Element* button to assign the levee crest elevations.
+Compare the Maximum Point Elevation (Max.
+Pt.
+Elev.) and the Average of the Five Highest Points (Ave.
+High (5) Pts.) with the upstream and downstream assigned levee crest elevations to assign the levee crest elevation for the given grid element.
 
 3.6.8 Floating Variables Express Editor (Tools Menu)
+
 .. image:: img/GDS184.jpg
-   This command opens the Floating Variables Express Editor that allows interactive editing of Area and Width Reduction Factors (ARF,WRF), Infiltration
-   parameters and Multiple Channel Data.
-   While the dialog remains open, the user can double click any element so that the data corresponding to the active tab will be loaded and can be
-   edited.
+
+This command opens the Floating Variables Express Editor that allows interactive editing of Area and Width Reduction Factors (ARF,WRF), Infiltration
+parameters and Multiple Channel Data.
+While the dialog remains open, the user can double click any element so that the data corresponding to the active tab will be loaded and can be
+edited.
+
 .. image:: img/GDS185.jpg
+
 3.6.9 Create Channel Segment with a Polyline (Tools Menu)
+
 .. image:: img/GDS186.jpg
-   This command creates the channel network in an existing *FLO-2D* grid system using a polyline as described below:
 
-1. On the Tool menu click Create Channel Segment with a Polyline
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This command creates the channel network in an existing *FLO-2D* grid system using a polyline as described below:
 
-2. The mouse pointer changes to a cross.
+    1. On the Tool menu click Create Channel Segment with a Polyline.
+    2. The mouse pointer changes to a cross.
+    3. Click the first (upstream) grid element of the segment and then just draw a polyline using clicks.
+       Use a background image to locate the channel with respect to the grid system.
+       Channel elements are joined by arrows to visualize the channel location:
 
-3. Click the first (upstream) grid element of the segment and then just draw a polyline using clicks.
-   Use a background image to locate the channel with respect to the grid system.
-   Channel elements are joined by arrows to visualize the channel location:
 .. image:: img/GDS187.jpg
-   Click apply to accept the new channel segment.
+
+Click apply to accept the new channel segment.
+
 .. image:: img/GDS188.jpg.. image:: img/GDS189.jpg
-   To edit channel geometry parameters, click a channel segment.
-   A submenu appears with several options:
+
+To edit channel geometry parameters, click a channel segment.
+A submenu appears with several options:
+
 .. image:: img/GDS190.jpg
-   Select *Edit Channel Segment Parameters* and to display the Channel Segment dialog box:
+
+Select *Edit Channel Segment Parameters* and to display the Channel Segment dialog box:
+
 .. image:: img/GDS191.jpg
-   The channel data is governed by the following rules (refer to the CHAN.DAT file description in the *FLO-2D* Data Input Manual for more detailed
-   discussion):
 
-1. *Maximum Froude Number*: Set the channel roughness to a reasonable n-value and then set the FROUDC variable to an appropriate value (e.g. 0.95 to
-   ensure subcritical flow).
-   *FLO-2D* will adjust the roughness values according to the limiting Froude number criteria.
+The channel data is governed by the following rules (refer to the CHAN.DAT file description in the *FLO-2D* Data Input Manual for more detailed
+discussion):
 
-2. *Roughness adjustment coefficient*: This coefficient is used for depth variable Manning’s n-values.
-   This value can range from 0.00 to 0.4.
+    1. *Maximum Froude Number*: Set the channel roughness to a reasonable n-value and then set the FROUDC variable to an appropriate value (e.g. 0.95 to
+       ensure subcritical flow).
+       *FLO-2D* will adjust the roughness values according to the limiting Froude number criteria.
+    2. *Roughness adjustment coefficient*: This coefficient is used for depth variable Manning’s n-values.
+       This value can range from 0.00 to 0.4.
+    3. *Compute scour/deposition with sediment transport routine*: This is a check box to compute sediment transport in the channel segment.
+       Checked the box if sediment transport is to be computed.
+       In addition, ISED must be turned “On” in CONT.DAT.
+    4. *Initial flow depth*: When the *initial flow depth for all channel nodes* is > 0, an initial depth is specified for all the channel elements in that
+       segment.
+       Checking the *Initial Flow* check box |GDS192| requires assigning starting and ending water surface elevations for the channel segment beginning
+       with element *1\ st node* and ending with element *last node.*
+       Interpolated water surface elevations are assigned to the channel elements in that segment based on the channel length.
+    5. Each row in the “Channel Geometry” table corresponds to a channel grid element.
+    6. The “Geometry Regression Relationships” data table is enabled only when a variable geometry channel element of type “V” is selected in the “Channel
+       Geometry” table.
+    7. Depending on the channel element data base some columns may be disabled.
+    8. The editing of channel element data in each segment is achieved by pressing the “Edit” button.
+       Interact with the table in the following dialog window to edit the channel element data (node, extension direction, roughness and length):
 
-3. *Compute scour/deposition with sediment transport routine*: This is a check box to compute sediment transport in the channel segment.
-   Checked the box if sediment transport is to be computed.
-   In addition, ISED must be turned “On” in CONT.DAT.
+Additional channel data instruction comments can be found in the CHAN.DAT file descriptions.
+A few comments are highlighted here:
 
-4. *Initial flow depth*: When the *initial flow depth for all channel nodes* is > 0, an initial depth is specified for all the channel elements in that
-   segment.
-   Checking the *Initial Flow* check box |GDS192| requires assigning starting and ending water surface elevations for the channel segment beginning
-   with element *1\ st node* and ending with element *last node.*
+    - Dividing the channel into segments may simplify reviewing the results.
+      Organize the channel segments and elements from upstream to downstream with the inflow grid element being the first grid element in the file or
+      segment.
+    - The key to channel routing is to balance the relationship between the slope, flow area and roughness.
+      Channel routing is more stable if surveyed cross section data is used.
+      Review the PROFILES program instructions for cross section and channel bed slope interpolation.
+    - If channel geometry is being simulated with regression relationships (SHAPE = ‘V’), then the area (A) versus depth (d) power relationships (A = ad\
+      :sup:`b`) coefficients (a) and exponents (b) must be specified.
+      Similar relationships are required for wetted perimeter and top width.
+      If two power relationships are used to represent a natural
 
-..
+cross section, then the maximum depth (*Depth for 2\ nd relationship variable*) to which the first relationship applies must be specified.
+Some rules for applying the second variable area channel geometry relationships follow:
 
-   Interpolated water surface elevations are assigned to the channel elements in that segment based on the channel length.
+    i.   The second regression applies when the flow depth is greater than *Depth for 2\ nd relationship variable*, but does not include the lower flow area.
+         The two variable area cross section relationships are unique and separate.
+         The total cross section flow area is the sum of the lower flow and upper (second relationship) flow areas.
+         The channel top width is computed directly from the second relationship.
+         The area, wetted perimeter and top width are evaluated using the upper flow depth given by: (total depth - *Depth for 2\ nd relationship variable*).
+         To analyze the upper channel geometry using the XSEC program, only the cross section coordinates above the *Depth for 2\ nd relationship variable* are
+         used.
+    ii.  Channel geometry relationships apply only to flow depths that are less than the channel depth (lower than the top of bank).
+         When the flow depth exceeds the top of bank, then the channel geometry above bank is evaluated as a rectangle.
+    iii. Abrupt transitions between contiguous channel elements should be avoided unless they actually exist.
+    iv.  A preprocessor program XSEC is available in the *FLO-2D* subdirectory to determine the regression coefficient and exponents.
 
-5. Each row in the “Channel Geometry” table corresponds to a channel grid element.
+            - Channel elements that are contiguous but do not share discharge (e.g. parallel channels) must be identified with the NOFLO1 and NOFLO2 variables.
+              List each pair of contiguous channel elements only once.
+            - Channel elements that will not share discharge will the floodplain have to be identified by the NOEXCHANGE parameter.
+            - To improve the timing of the floodwave progress through the system, a depth variable roughness can be assigned on a reach basis.
+              The basic equation for the channel element roughness n\ :sub:`d` as function of flow depth is:
 
-6. The “Geometry Regression Relationships” data table is enabled only when a variable geometry channel element of type “V” is selected in the “Channel
-   Geometry” table.
+.. math::
+    :label:
 
-7. Depending on the channel element data base some columns may be disabled.
+    n_d = n_r r_c e-(r2 depth/dmax)
 
-8. The editing of channel element data in each segment is achieved by pressing the “Edit” button.
-   Interact with the table in the following dialog window to edit the channel element data (node, extension direction, roughness and length):
-
-..
-
-   Additional channel data instruction comments can be found in the CHAN.DAT file descriptions.
-   A few comments are highlighted here:
-
-- Dividing the channel into segments may simplify reviewing the results.
-  Organize the channel segments and elements from upstream to downstream with the inflow grid element being the first grid element in the file or
-  segment.
-
-- The key to channel routing is to balance the relationship between the slope, flow area and roughness.
-  Channel routing is more stable if surveyed cross section data is used.
-  Review the PROFILES program instructions for cross section and channel bed slope interpolation.
-
-- If channel geometry is being simulated with regression relationships (SHAPE = ‘V’), then the area (A) versus depth (d) power relationships (A = ad\
-  :sup:`b`) coefficients (a) and exponents (b) must be specified.
-  Similar relationships are required for wetted perimeter and top width.
-  If two power relationships are used to represent a natural
-
-..
-
-   cross section, then the maximum depth (*Depth for 2\ nd relationship variable*) to which the first relationship applies must be specified.
-   Some rules for applying the second variable area channel geometry relationships follow:
-
-i.   The second regression applies when the flow depth is greater than *Depth for 2\ nd relationship variable*, but does not include the lower flow area.
-   The two variable area cross section relationships are unique and separate.
-   The total cross section flow area is the sum of the lower flow and upper (second relationship) flow areas.
-   The channel top width is computed directly from the second relationship.
-   The area, wetted perimeter and top width are evaluated using the upper flow depth given by: (total depth - *Depth for 2\ nd relationship variable*).
-   To analyze the upper channel geometry using the XSEC program, only the cross section coordinates above the *Depth for 2\ nd relationship variable* are
-   used.
-
-ii.
-Channel geometry relationships apply only to flow depths that are less than the channel depth (lower than the top of bank).
-When the flow depth exceeds the top of bank, then the channel geometry above bank is evaluated as a rectangle.
-
-iii.
-Abrupt transitions between contiguous channel elements should be avoided unless they actually exist.
-
-iv.
-A preprocessor program XSEC is available in the *FLO-2D* subdirectory to determine the regression coefficient and exponents.
-
-- Channel elements that are contiguous but do not share discharge (e.g. parallel channels) must be identified with the NOFLO1 and NOFLO2 variables.
-  List each pair of contiguous channel elements only once.
-
-- Channel elements that will not share discharge will the floodplain have to be identified by the NOEXCHANGE parameter.
-
-- To improve the timing of the floodwave progress through the system, a depth variable roughness can be assigned on a reach basis.
-  The basic equation for the channel element roughness n\ :sub:`d` as function of flow depth is:
-
-n\ :sub:`d` = n\ :sub:`b` r\ :sub:`c` e-(r2 depth/dmax)
-
-   where:
+where:
 
    n\ :sub:`b` = bankfull discharge roughness depth = flow depth dmax = bankfull flow depth
 
    r2 = roughness adjustment coefficient prescribed by the user (range:
    0. to 0.4) r\ :sub:`c` = 1./e\ :sup:`-r2`
 
-   This equation prescribes that the variable depth channel roughness is equal to the bankfull roughness at bankfull discharge.
-   If the user assigns a roughness adjustment coefficient r2 for a given reach, the roughness will increase with a decrease in flow depth.
-   A higher coefficient increases the roughness.
+This equation prescribes that the variable depth channel roughness is equal to the bankfull roughness at bankfull discharge.
+If the user assigns a roughness adjustment coefficient r2 for a given reach, the roughness will increase with a decrease in flow depth.
+A higher coefficient increases the roughness.
 
-   To modify the channel elements in the channel segment, select the *Modify Channel Segment* Command:
+To modify the channel elements in the channel segment, select the *Modify Channel Segment* Command:
+
 .. image:: img/GDS193.jpg
-   To modify the channel, click and drag the mouse from the last element in the channel segment.
 
-   To delete an entire selected channel segment, select the *Delete Channel Segment* command:
+To modify the channel, click and drag the mouse from the last element in the channel segment.
+
+To delete an entire selected channel segment, select the *Delete Channel Segment* command:
+
 .. image:: img/GDS194.jpg
-   If the channel segment has assigned inflow hydrographs the following warning will appear:
+
+If the channel segment has assigned inflow hydrographs the following warning will appear:
+
 .. image:: img/GDS195.jpg
-   If you select Yes, you will need to click the inflow node(s) that was assigned to the segment and reassigned to the floodplain instead.
+
+If you select Yes, you will need to click the inflow node(s) that was assigned to the segment and reassigned to the floodplain instead.
+
 .. image:: img/GDS196.jpg
-   Click to reverse the channel direction.
+
+Click to reverse the channel direction.
+
 .. image:: img/GDS197.jpg
 
 .. image:: img/GDS198.jpg
@@ -2911,7 +2899,9 @@ The zoom, pan and edit features are also available with this tool.
 To Realign the right bank elements use the Realign Extensions tool.
 It has the same capabilities as the realign channel tool.
 
-.. image:: img/GDS201.jpg.. image:: img/GDS202.jpg
+.. image:: img/GDS201.jpg
+
+.. image:: img/GDS202.jpg
 
 To see a plot of the cross section associated with each channel element.
 Click the Plot Cross Section option.
@@ -2919,7 +2909,9 @@ Click the Plot Cross Section option.
 Use this tool to assign cross sections to specified channel elements.
 The prev and next button is used to select the channel element and the drop down box is used to select the cross section.
 
-.. image:: img/GDS203.jpg.. image:: img/GDS204.jpg
+.. image:: img/GDS203.jpg
+
+.. image:: img/GDS204.jpg
 
 Click 3-D Plot to see a 3-D graphic of the channel segment.
 This tool helps with cross section data quality control.
