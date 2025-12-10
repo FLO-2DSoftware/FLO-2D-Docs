@@ -154,9 +154,9 @@ The *GDS* may require or use the following data:
 
 **2.1 Left Button actions (one-click)**
 
-   Zoom-in on the working region by selecting a rectangular area for a zoom view.
-   Click the left mouse button to position the cursor on one the vertices of the desired area and drag the mouse to the opposite vertex.
-   The rectangle appears to outline the selected zoom area.
+Zoom-in on the working region by selecting a rectangular area for a zoom view.
+Click the left mouse button to position the cursor on one the vertices of the desired area and drag the mouse to the opposite vertex.
+The rectangle appears to outline the selected zoom area.
 
 .. image:: img/GDS003.jpg
 
@@ -166,7 +166,7 @@ When the button is released, the selected rectangular area is magnified to the f
 
 Clicking on a street or channel segment will display a submenu that allows editing, modifying or deleting the segment.
 
-.. image:: img/GDS005.jpg
+.. image:: img/GDS005.png
 
 **2.2 Left Button actions (double-click)**
 
@@ -191,7 +191,7 @@ The input description for the FLO-2D inflow or outflow data is explained in chap
 
 Click Create Reservoir Water Elevation for Element …
 
-.. image:: img/GDS009.jpg
+.. image:: img/GDS009.png
 
 This dialog box allows the user to define a reservoir.
 The reservoir is defined by clicking an element within the banks of the reservoir and setting a water surface elevation.
