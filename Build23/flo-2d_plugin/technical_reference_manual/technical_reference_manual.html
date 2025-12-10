@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TECHNICAL REFERENCE MANUAL &mdash; FLO-2D Pro Documentation  documentation</title>
+  <title>Technical Reference Manual &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
@@ -60,7 +60,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro Resource Center 2023</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Plugin Gila: Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../user_manual/index.html">User Manual</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">TECHNICAL REFERENCE MANUAL</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Technical Reference Manual</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#data-file-structure">Data File Structure</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#geopackage-file">GeoPackage File</a></li>
@@ -293,7 +293,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">FLO-2D Plugin Gila: Documentation</a></li>
-      <li class="breadcrumb-item active">TECHNICAL REFERENCE MANUAL</li>
+      <li class="breadcrumb-item active">Technical Reference Manual</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/flo-2d_plugin/technical_reference_manual/technical_reference_manual.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -304,7 +304,7 @@
            <div itemprop="articleBody">
              
   <section id="technical-reference-manual">
-<h1>TECHNICAL REFERENCE MANUAL<a class="headerlink" href="#technical-reference-manual" title="Link to this heading"></a></h1>
+<h1>Technical Reference Manual<a class="headerlink" href="#technical-reference-manual" title="Link to this heading"></a></h1>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
 <p>The FLO-2D Plugin for QGIS is a tool to develop, format, analyze, and display data used by the FLO-2D Flood Model.
@@ -362,14 +362,14 @@ The code is stored in the flo2d directory of the qgis/python/plugins folder (Fig
 Plugin Folder.</em></p>
 <p>The code can be viewed, queried and edited with any text editor including UltraEdit, Notepad++ or Textpad.
 The files include the following:</p>
-<blockquote>
-<div><p>*.png – icon files</p>
-<p>*.py – python code files</p>
-<p>*.qml – QGIS layer styles</p>
-<p>*.svg – icon files</p>
-<p>*.sql – SQL code relational database information</p>
-<p>*.ui – QT Creator window editor</p>
-</div></blockquote>
+<ul class="simple">
+<li><p>*.png – icon files</p></li>
+<li><p>*.py – python code files</p></li>
+<li><p>*.qml – QGIS layer styles</p></li>
+<li><p>*.svg – icon files</p></li>
+<li><p>*.sql – SQL code relational database information</p></li>
+<li><p>*.ui – QT Creator window editor</p></li>
+</ul>
 <p>The plugin is organized into utility-based directories for plugin files that perform specific functions.
 For example, there is a folder for the toolbar and one for the sidebar widgets.</p>
 <p>The plugin code is built with Pycharm, and Eclipse.
@@ -1169,9 +1169,9 @@ FLO-2D calculates the surface water depth at grid cells.
 Those cells that contain the storm drain inlets use the surface water depth and the inlet geometry, to compute the discharge inflow to the storm drain
 system.
 The storm drain engine then routes the flow in the pipe network and calculates potential return flow to the surface water system (Figure 42).</p>
-<p>The <a class="reference external" href="https://flo-2dsoftware.github.io/qgis-flo-2d-plugin/widgets/storm-drainer-editor/Storm%20Drain.html">Storm Drain Editor</a> application and setup
-are well documented in the FLO-2D Plugin User Manual and a detailed tutorial is available <a class="reference external" href="https://documentation.flo-2d.com/Workshops/Lesson%203.html">online.</a> This document will discuss data management and important algorithms in the
-calculators.</p>
+<p>The <a class="reference internal" href="../user_manual/widgets/storm-drain-editor/index.html#storm-drain-editor"><span class="std std-ref">Storm Drain Editor</span></a> application and setup
+are well documented in the FLO-2D Plugin User Manual</p>
+<p>A detailed tutorial is available <a class="reference internal" href="../../tutorials/Self-Help-Gila/5-Storm%20Drain.html#self-help-gila-1-storm-drain"><span class="std std-ref">Storm Drain Tutorial</span></a></p>
 <img alt="../../_images/tech_ref_manual042.jpg" src="../../_images/tech_ref_manual042.jpg" />
 <p><em>Figure 42.
 Storm Drain Layout in QGIS.</em></p>
@@ -1294,13 +1294,16 @@ calculates statistics for the building.</p></li>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
-<p>Library of Congress, 2017.
-Geopackage Encoding Standard (OGC), version 1.0, <a class="reference external" href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000419.shtml">https://www.loc.gov/preservation/digital/formats/fdd/fdd000419.shtml</a></p>
-<p>Python Software Foundation, 2018.
-The Python Tutorial, Python English 2.7.15 Documentation, <a class="reference external" href="https://docs.python.org/2.7/tutorial">https://docs.python.org/2.7/tutorial</a></p>
-<p>Flood Control District of Maricopa County, 2018, Drainage Design Manual for Maricopa County, Arizona Hydrology.</p>
-<p>Flood Control District of Maricopa County, 2023, Drainage Design Manual for Maricopa County, Arizona Hydrology.</p>
-</section>
+<p><strong>Open Geospatial Consortium (OGC), 2023.</strong>
+GeoPackage Encoding Standard, Version 1.3.
+<a href="https://www.ogc.org/standard/geopackage/" target="_blank">https://www.ogc.org/standard/geopackage/</a>
+</p><p><strong>Python Software Foundation, 2023.</strong>
+The Python Tutorial, Python 3.12 Documentation.
+<a href="https://docs.python.org/3/tutorial/" target="_blank">https://docs.python.org/3/tutorial/</a>
+</p><p><strong>Flood Control District of Maricopa County (FCDMC), 2023.</strong>
+Drainage Design Manual for Maricopa County, Arizona – Hydrology.
+<em>(Accessed 2023; no stable public URL provided.)</em>
+</p></section>
 <section id="appendix-a-geopackage-structure">
 <h2>Appendix A GeoPackage Structure<a class="headerlink" href="#appendix-a-geopackage-structure" title="Link to this heading"></a></h2>
 <section id="all-schem-bc">

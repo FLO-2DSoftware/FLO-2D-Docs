@@ -1,3 +1,5 @@
+.. _storm-drain-editor:
+
 Storm Drain Editor
 =====================
 

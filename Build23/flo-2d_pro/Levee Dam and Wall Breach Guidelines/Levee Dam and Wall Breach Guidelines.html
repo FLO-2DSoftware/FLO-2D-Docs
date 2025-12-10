@@ -64,44 +64,57 @@
 <li class="toctree-l2"><a class="reference internal" href="../Storm%20Drain%20Modeling%20Guidelines/index.html">STORM DRAIN MODELING GUIDELINES</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/Hydraulic%20Structures%20Guidelines.html">HYDRAULIC STRUCTURE GUIDELINES</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">LEVEE DAM AND WALL BREACH GUIDELINES</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#additional-resources">Additional Resources</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#levee-and-dam-breach-failure">Levee and Dam Breach Failure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#general">General</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#prescribed-levee-and-dam-failure">Prescribed Levee and Dam Failure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#levee-and-dam-predicted-breach-erosion">Levee and Dam Predicted Breach Erosion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pipe-breach">Pipe Breach</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#overtopping-and-channel-breach">Overtopping and Channel Breach</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#dam-collapse">Dam Collapse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#levee-overtopping-without-failure">Levee Overtopping without Failure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#submergence">Submergence</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#prescribed-levee-breach-input-data">Prescribed Levee Breach Input Data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#maximum">Maximum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#additional-resources">Additional Resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flo-2d-levee-component">FLO-2D Levee Component</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#urban-wall-failure-collapse">Urban Wall Failure (Collapse)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#wall-failure-modes">Wall Failure Modes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#wall-overtopping-without-failure">Wall Overtopping without Failure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#wall-collapse">Wall Collapse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#wall-failure-guidelines">Wall Failure Guidelines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#wall-failure-troubleshooting">Wall Failure Troubleshooting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#predicted-breach-erosion-input-data">Predicted Breach Erosion Input Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#breach-erosion-parameter-sensitivity">Breach Erosion Parameter Sensitivity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#breach-modeling-approach">Breach Modeling Approach</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#reservoir-routing">Reservoir Routing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#a-new-friction-slope-equation">A New Friction Slope Equation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#starting-reservoir-water-surface-elevation-and-n-value-assignment">Starting Reservoir Water Surface Elevation and n-value Assignment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#reservoir-dead-pool">Reservoir Dead Pool</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#filling-a-basin-or-reservoir-during-the-simulation">Filling a Basin or Reservoir during the Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#levee-and-dam-breach-failure">Levee and Dam Breach Failure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general">General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prescribed-levee-and-dam-failure">Prescribed Levee and Dam Failure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#levee-and-dam-predicted-breach-erosion">Levee and Dam Predicted Breach Erosion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pipe-breach">Pipe Breach</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#overtopping-and-channel-breach">Overtopping and Channel Breach</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dam-collapse">Dam Collapse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#levee-overtopping-without-failure">Levee Overtopping without Failure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#submergence">Submergence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prescribed-levee-breach-input-data">Prescribed Levee Breach Input Data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#urban-wall-failure-collapse">Urban Wall Failure (Collapse)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#wall-failure-modes">Wall Failure Modes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wall-overtopping-without-failure">Wall Overtopping without Failure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wall-collapse">Wall Collapse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wall-failure-guidelines">Wall Failure Guidelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wall-failure-troubleshooting">Wall Failure Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#breach-erosion-failure-fread-method">Breach Erosion Failure (FREAD Method)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#predicted-breach-erosion-input-data">Predicted Breach Erosion Input Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#breach-erosion-parameter-sensitivity">Breach Erosion Parameter Sensitivity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#breach-modeling-approach">Breach Modeling Approach</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reservoir-routing">Reservoir Routing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a-new-friction-slope-equation">A New Friction Slope Equation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#starting-reservoir-water-surface-elevation-and-n-value-assignment">Starting Reservoir Water Surface Elevation and n-value Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reservoir-dead-pool">Reservoir Dead Pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filling-a-basin-or-reservoir-during-the-simulation">Filling a Basin or Reservoir during the Simulation</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#levee-breach-numerical-instability">Levee Breach Numerical Instability</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#dam-breach-floodwave-reporting-for-hazard-mapping">Dam Breach Floodwave Reporting for Hazard Mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#flood-wave-output">Flood Wave Output</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#floodplain-cross-section">Floodplain Cross Section</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#levee-fragility-curves">Levee Fragility Curves</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#application-of-the-levee-fragility-curves-in-the-flo-2d-model">Application of the Levee Fragility Curves in the FLO-2D Model</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#flo-2d-fragility-curve-modeling-results">FLO-2D Fragility Curve Modeling Results</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#benefits-of-using-the-levee-fragility-curves-for-flood-hazard-mapping">Benefits of Using the Levee Fragility Curves for Flood Hazard Mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dam-breach-floodwave-reporting-for-hazard-mapping">Dam Breach Floodwave Reporting for Hazard Mapping</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#flood-wave-output">Flood Wave Output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#floodplain-cross-section">Floodplain Cross Section</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#levee-fragility-curves">Levee Fragility Curves</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#application-of-the-levee-fragility-curves-in-the-flo-2d-model">Application of the Levee Fragility Curves in the FLO-2D Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flo-2d-fragility-curve-modeling-results">FLO-2D Fragility Curve Modeling Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#benefits-of-using-the-levee-fragility-curves-for-flood-hazard-mapping">Benefits of Using the Levee Fragility Curves for Flood Hazard Mapping</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
 </ul>
 </li>
@@ -140,8 +153,10 @@
              
   <section id="levee-dam-and-wall-breach-guidelines">
 <h1>LEVEE DAM AND WALL BREACH GUIDELINES<a class="headerlink" href="#levee-dam-and-wall-breach-guidelines" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
 <section id="additional-resources">
-<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading"></a></h2>
+<h3>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading"></a></h3>
 <p>Data, tutorials and examples related to hydraulic structures can be found in the following locations:</p>
 <blockquote>
 <div><ul class="simple">
@@ -153,8 +168,8 @@
 </ul>
 </div></blockquote>
 </section>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<section id="flo-2d-levee-component">
+<h3>FLO-2D Levee Component<a class="headerlink" href="#flo-2d-levee-component" title="Link to this heading"></a></h3>
 <p>The FLO-2D levee component confines flow on the floodplain surface by blocking one or more of the eight flow directions.
 The FLO-2D model conserves volume and this includes volume stored by the levee component and water routed through a levee breach.
 The terms dam and levee are earthen embankments that are used interchangeably in this document when discussing breach failure.
@@ -189,11 +204,11 @@ If the levee failure is instantaneous, the hydraulic structure flow is also term
 <p><em>Figure 1.
 Levees are Displayed in Red and the Channel in Blue in the GDS Program.</em></p>
 </section>
+</section>
 <section id="levee-and-dam-breach-failure">
 <h2>Levee and Dam Breach Failure<a class="headerlink" href="#levee-and-dam-breach-failure" title="Link to this heading"></a></h2>
-</section>
 <section id="general">
-<h2>General<a class="headerlink" href="#general" title="Link to this heading"></a></h2>
+<h3>General<a class="headerlink" href="#general" title="Link to this heading"></a></h3>
 <p>FLO-2D can simulate levee and dam breach failures.
 This may encompass the gradual erosion of a dam or levee or the instantaneous collapse of a flood wall.
 Dam and levee breaches are time dependent and nonlinear phenomena that vary with the non-homogenous embankment materials.
@@ -223,7 +238,7 @@ Example of Levee Breach Urban Flooding.</em></p>
 Example of a Proposed Domestic Water Supply Reservoir Breach Failure.</em></p>
 </section>
 <section id="prescribed-levee-and-dam-failure">
-<h2>Prescribed Levee and Dam Failure<a class="headerlink" href="#prescribed-levee-and-dam-failure" title="Link to this heading"></a></h2>
+<h3>Prescribed Levee and Dam Failure<a class="headerlink" href="#prescribed-levee-and-dam-failure" title="Link to this heading"></a></h3>
 <p>For the prescribed levee failure routine, the breach can enlarge vertically and horizontally or fail instantaneously.
 The initial breach width is hardcoded in the model to 1 ft (0.3 m).
 This initial breach width extends from the breach invert to the crest.
@@ -273,7 +288,7 @@ A typical rate of breach width decrease is shown in Figure 4.</p>
 Prescribed Breach Horizontal Rate Decrease with Decreasing Shear Stress.</em></p>
 </section>
 <section id="levee-and-dam-predicted-breach-erosion">
-<h2>Levee and Dam Predicted Breach Erosion<a class="headerlink" href="#levee-and-dam-predicted-breach-erosion" title="Link to this heading"></a></h2>
+<h3>Levee and Dam Predicted Breach Erosion<a class="headerlink" href="#levee-and-dam-predicted-breach-erosion" title="Link to this heading"></a></h3>
 <p>The breach erosion component was added to the FLO-2D model to predict a realistic assessment of a levee or dam failure in concert with the downstream
 flooding.
 The National Weather Service (NWS) BREACH model by Fread (1988) served as the template for the FLO-2D breach erosion component.
@@ -333,7 +348,7 @@ be the dam or levee crest elevation minus the assigned breach elevation (Initial
 </div></blockquote>
 </section>
 <section id="pipe-breach">
-<h2>Pipe Breach<a class="headerlink" href="#pipe-breach" title="Link to this heading"></a></h2>
+<h3>Pipe Breach<a class="headerlink" href="#pipe-breach" title="Link to this heading"></a></h3>
 <p>If the user specifies a breach elevation, pipe flow will be initiated when the upstream water surface exceeds the specified pipe invert elevation.
 The pipe breach discharge is computed as weir flow with a user specified weir coefficient.
 The discharge is then used to compute velocity and depth as Darcy-Weisbach flow in a rectangular pipe.
@@ -348,7 +363,7 @@ channel flow ensues through the breach.</p>
 Pipe Breach Failure.</em></p>
 </section>
 <section id="overtopping-and-channel-breach">
-<h2>Overtopping and Channel Breach<a class="headerlink" href="#overtopping-and-channel-breach" title="Link to this heading"></a></h2>
+<h3>Overtopping and Channel Breach<a class="headerlink" href="#overtopping-and-channel-breach" title="Link to this heading"></a></h3>
 <p>Channel flow through the breach can occur if the pipe roof collapse or if the flow overtops the dam or levee.
 The channel discharge is calculated by the broadcrested weir equation and similar to the pipe failure, the eroded sediment volume is uniformly removed
 from the bed and sides of the rectangular channel (Figure 6).
@@ -361,7 +376,7 @@ connected levee grids.</p>
 Overtopping and Channel Breach Erosion.</em></p>
 </section>
 <section id="dam-collapse">
-<h2>Dam Collapse<a class="headerlink" href="#dam-collapse" title="Link to this heading"></a></h2>
+<h3>Dam Collapse<a class="headerlink" href="#dam-collapse" title="Link to this heading"></a></h3>
 <p>Breach enlargement is also possible through a sudden collapse of the upper portion of the dam.
 The collapse would consist of a wedge shaped mass of embankment material.
 This collapse or blow-out is caused by the water pressure on the upstream side of the wedge which eventually exceeds the shear forces of friction and
@@ -373,7 +388,7 @@ A flow chart of the basic computation scheme for the breach component is shown i
 Breach Schematic Flow Chart.</em></p>
 </section>
 <section id="levee-overtopping-without-failure">
-<h2>Levee Overtopping without Failure<a class="headerlink" href="#levee-overtopping-without-failure" title="Link to this heading"></a></h2>
+<h3>Levee Overtopping without Failure<a class="headerlink" href="#levee-overtopping-without-failure" title="Link to this heading"></a></h3>
 <p>Levee overtopping can occur without breach failure.
 Floodplain features such as roadway or railroad embankments, concrete walls and levees with riprap can be overtopped without erosion or failing.
 The discharge from levee overtopping is shared between two cells with the levee assignment on the border between them.
@@ -396,7 +411,7 @@ This is to accommodate non-uniform crest elevations and minute discharges that w
 Typically, if the flow is greater than about 0.1 ft, the discharge will be significant.</p>
 </section>
 <section id="submergence">
-<h2>Submergence<a class="headerlink" href="#submergence" title="Link to this heading"></a></h2>
+<h3>Submergence<a class="headerlink" href="#submergence" title="Link to this heading"></a></h3>
 <p>The levee weir coefficient is variable as a function of the headwater based on the U.S.
 Department of</p>
 <p>Transportation criteria (Hydraulic Design of Highway Culverts; Publication Number FHWA-HIF-12-026 revised 2012) as shown in Figure 9.
@@ -412,7 +427,7 @@ Schematic of the Levee Overtopping Flow.</em></p>
 Levee Overtopping Tailwater Submergence.</em></p>
 </section>
 <section id="prescribed-levee-breach-input-data">
-<h2>Prescribed Levee Breach Input Data<a class="headerlink" href="#prescribed-levee-breach-input-data" title="Link to this heading"></a></h2>
+<h3>Prescribed Levee Breach Input Data<a class="headerlink" href="#prescribed-levee-breach-input-data" title="Link to this heading"></a></h3>
 <p>The prescribed breach failure is recommended over the breach erosion failure because the physical process of sediment scour in hyperconcentrated
 sediment flows is poorly understood and simplistically mathematically represented.
 The prescribed levee failure is shown schematically in Figure 11.</p>
@@ -434,8 +449,6 @@ The required data includes:</p>
 <img alt="../../_images/Levee026.jpg" src="../../_images/Levee026.jpg" />
 <p><em>Figure 12
 GDS Prescribed Breach Dialog Box.</em></p>
-<section id="maximum">
-<h3>Maximum<a class="headerlink" href="#maximum" title="Link to this heading"></a></h3>
 <p>Levee breaches can be located based on the water surface elevation.
 Multiple failure can occur simultaneously in the levee system.
 The levee failure will initiate when the water surface exceeds an assigned elevation for a given duration.
@@ -592,9 +605,8 @@ Wall Collapse. (FCDMC, 2018).</em></p>
 <img alt="../../_images/Levee028.jpg" src="../../_images/Levee028.jpg" />
 <p><em>Figure 15
 Walls are Displayed by the Thin Red Lines.</em></p>
-</section>
 <section id="wall-failure-modes">
-<h2>Wall Failure Modes<a class="headerlink" href="#wall-failure-modes" title="Link to this heading"></a></h2>
+<h3>Wall Failure Modes<a class="headerlink" href="#wall-failure-modes" title="Link to this heading"></a></h3>
 <p>There are two failure modes for walls and levees: 1) Prescribed failure using vertical and horizontal rates of breach expansion; 2) Predicted breach
 erosion of earthen embankments using sediment transport capacity equations.
 For wall collapse, the prescribed failure mode is the only tool that is used.
@@ -627,7 +639,7 @@ width of the grid element.</p></li>
 </div></blockquote>
 </section>
 <section id="wall-overtopping-without-failure">
-<h2>Wall Overtopping without Failure<a class="headerlink" href="#wall-overtopping-without-failure" title="Link to this heading"></a></h2>
+<h3>Wall Overtopping without Failure<a class="headerlink" href="#wall-overtopping-without-failure" title="Link to this heading"></a></h3>
 <p>Concrete or block walls can be overtopped without failing.
 Overtopping discharge is shared between two cells with the wall assignment on their border.
 In Figure 16 the overtopping discharge Q is computed using the conventional broad-crested weir equation:</p>
@@ -650,7 +662,7 @@ These modifications make the discharge transition more gradual and reduce the po
 Levee Overtopping Tailwater Submergence.</em></p>
 </section>
 <section id="wall-collapse">
-<h2>Wall Collapse<a class="headerlink" href="#wall-collapse" title="Link to this heading"></a></h2>
+<h3>Wall Collapse<a class="headerlink" href="#wall-collapse" title="Link to this heading"></a></h3>
 <p>Wall collapse data can be entered in either the QGIS or GDS (Figure 18 in red box).
 The required data includes:</p>
 <blockquote>
@@ -676,7 +688,7 @@ Wall Collapse Height.
 Wall Collapse Height.(FCDMC).</em></p>
 </section>
 <section id="wall-failure-guidelines">
-<h2>Wall Failure Guidelines<a class="headerlink" href="#wall-failure-guidelines" title="Link to this heading"></a></h2>
+<h3>Wall Failure Guidelines<a class="headerlink" href="#wall-failure-guidelines" title="Link to this heading"></a></h3>
 <p>The following table presents the wall failure guidelines, controls and data checks.</p>
 <p><em>Table 2.
 Wall Failure Guidelines</em></p>
@@ -790,7 +802,7 @@ levee crest elevation.</p>
 </table>
 </section>
 <section id="wall-failure-troubleshooting">
-<h2>Wall Failure Troubleshooting<a class="headerlink" href="#wall-failure-troubleshooting" title="Link to this heading"></a></h2>
+<h3>Wall Failure Troubleshooting<a class="headerlink" href="#wall-failure-troubleshooting" title="Link to this heading"></a></h3>
 <p>Wall failure can often result in a high discharge (high velocities and flow depths) immediately downstream of the wall.
 If the discharge through the breach exceeds the upstream flow to the breach and the storage behind the wall is limited, the wall collapse could result
 in numerical instability.
@@ -966,7 +978,7 @@ the DEPRESSDEPTH value.</p></li>
 </div></blockquote>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h3>
 <p>Distribution of shallow unconfined flooding in urban areas is often controlled by block walls that isolate residential lots or entire neighborhoods.
 Flow across streets can be restricted by sound walls.
 Flood storage behind walls will delay the arrival of the floodwave to downstream areas.
@@ -983,8 +995,11 @@ The two critical conditions to avoid are wall failure elevations that are lower 
 elevations that are higher that the wall failure elevation but with insufficient static pressure to collapse the wall.
 These conditions are resolved are runtime in the model but should be avoided in the data files.</p>
 </section>
+</section>
+<section id="breach-erosion-failure-fread-method">
+<h2>Breach Erosion Failure (FREAD Method)<a class="headerlink" href="#breach-erosion-failure-fread-method" title="Link to this heading"></a></h2>
 <section id="predicted-breach-erosion-input-data">
-<h2>Predicted Breach Erosion Input Data<a class="headerlink" href="#predicted-breach-erosion-input-data" title="Link to this heading"></a></h2>
+<h3>Predicted Breach Erosion Input Data<a class="headerlink" href="#predicted-breach-erosion-input-data" title="Link to this heading"></a></h3>
 <p>The dam breach erosion component provides an opportunity to simulate the physical processes of breach widening through scour.
 Nine out of the eleven sediment transport equations in the FLO-2D can be used to compute the breach erosion including:</p>
 <blockquote>
@@ -1057,7 +1072,7 @@ The downstream breach flood hydrograph is automatically bulked (BF) for the leve
 <p>BF = 1./(1.– C<sub>v</sub>)</p>
 </section>
 <section id="breach-erosion-parameter-sensitivity">
-<h2>Breach Erosion Parameter Sensitivity<a class="headerlink" href="#breach-erosion-parameter-sensitivity" title="Link to this heading"></a></h2>
+<h3>Breach Erosion Parameter Sensitivity<a class="headerlink" href="#breach-erosion-parameter-sensitivity" title="Link to this heading"></a></h3>
 <p>The primary breach erosion parameters are:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1097,7 +1112,7 @@ Breach Parameter Sensitivity.</em></p>
 <img alt="../../_images/Levee015.jpg" src="../../_images/Levee015.jpg" />
 </section>
 <section id="breach-modeling-approach">
-<h2>Breach Modeling Approach<a class="headerlink" href="#breach-modeling-approach" title="Link to this heading"></a></h2>
+<h3>Breach Modeling Approach<a class="headerlink" href="#breach-modeling-approach" title="Link to this heading"></a></h3>
 <p>The following steps are recommended for developing a FLO-2D dam breach simulation:</p>
 <blockquote>
 <div><ul>
@@ -1162,6 +1177,7 @@ Example of the Large Dam Breach Hydrograph.</em></p>
 Breach Output File Example.*</em></p>
 <img alt="../../_images/Levee017.jpg" src="../../_images/Levee017.jpg" />
 </section>
+</section>
 <section id="reservoir-routing">
 <h2>Reservoir Routing<a class="headerlink" href="#reservoir-routing" title="Link to this heading"></a></h2>
 <p>Deep water slow velocity movement in reservoir, detention basins or other ponded features in a twodimension model represents a unique condition for
@@ -1185,9 +1201,8 @@ flow velocity results in radical variation in the flow direction, water surface 
 The objective is compute an average velocity of less than 1.0 fps (0.3 mps) for ponded on the order 20 ft (6.73 m) or greater when the difference in
 the water surface elevation is on the order of 0.1 ft (0.03 m) or less representing near equilibrium conditions.
 In the FLO-2D model, the ponded conditions arise when the depth is equal to or exceeds the grid element side length.</p>
-</section>
 <section id="a-new-friction-slope-equation">
-<h2>A New Friction Slope Equation<a class="headerlink" href="#a-new-friction-slope-equation" title="Link to this heading"></a></h2>
+<h3>A New Friction Slope Equation<a class="headerlink" href="#a-new-friction-slope-equation" title="Link to this heading"></a></h3>
 <p>Typically, reservoir routing is done by applying a diffusive wave method such as Muskingum-Cunge (kinematic wave) requiring rating tables, cross
 section data and slope.
 Initially reservoir draining was simulated using high n-values with the existing FLO-2D momentum equation to have a representative depth-averaged grid
@@ -1219,7 +1234,7 @@ both grid elements sharing flow are reservoir elements with a starting water sur
 greater than the grid element side.</p>
 </section>
 <section id="starting-reservoir-water-surface-elevation-and-n-value-assignment">
-<h2>Starting Reservoir Water Surface Elevation and n-value Assignment<a class="headerlink" href="#starting-reservoir-water-surface-elevation-and-n-value-assignment" title="Link to this heading"></a></h2>
+<h3>Starting Reservoir Water Surface Elevation and n-value Assignment<a class="headerlink" href="#starting-reservoir-water-surface-elevation-and-n-value-assignment" title="Link to this heading"></a></h3>
 <p>A reservoir can be simulated at the outset of a FLO-2D simulation.
 To assign a starting reservoir water surface, select a grid element inside the reservoir using the GDS and right click with the mouse to enter an
 elevation (Figure 24).
@@ -1235,7 +1250,7 @@ At the start of the simulation, the reservoir will have a flat-water surface ele
 This is a relatively stable condition and the ensuing reservoir drainage or filling will occur without numerical instability.</p>
 </section>
 <section id="reservoir-dead-pool">
-<h2>Reservoir Dead Pool<a class="headerlink" href="#reservoir-dead-pool" title="Link to this heading"></a></h2>
+<h3>Reservoir Dead Pool<a class="headerlink" href="#reservoir-dead-pool" title="Link to this heading"></a></h3>
 <p>Some reservoir storage (Figure 25) may have been excavated below ground level with embankments above ground.
 This may be the case for domestic water supply reservoirs.
 If the dam foundation or lowest beach elevation is higher that a portion of the reservoir bed elevation, then some water will be left in the reservoir
@@ -1252,7 +1267,7 @@ The dead pool represents permanent storage that does not contribute to downstrea
 Reservoir Starting Water Surface Elevation Node Shown in Blue-Green.</em></p>
 </section>
 <section id="filling-a-basin-or-reservoir-during-the-simulation">
-<h2>Filling a Basin or Reservoir during the Simulation<a class="headerlink" href="#filling-a-basin-or-reservoir-during-the-simulation" title="Link to this heading"></a></h2>
+<h3>Filling a Basin or Reservoir during the Simulation<a class="headerlink" href="#filling-a-basin-or-reservoir-during-the-simulation" title="Link to this heading"></a></h3>
 <p>When a detention basin or other storage facility is filled during a flood simulation, the grid element water surface can be variable and relatively
 large velocities may be reported.
 To initiate the above revision to the Manning’s regression equation, simply assign n-value greater than 0.250 to the potentially ponded area,
@@ -1272,6 +1287,7 @@ Review and accept the new n-values in ROUGH.OUT at the end of the simulation.</p
 velocities in the reservoir.
 If computed high velocities persist in the basin, increase the n-values and set the DEPTOL parameter.
 At the end of the simulation, if the basin has stored water without inflow or outflow, the grid element water surfaces should be relatively flat.</p>
+</section>
 </section>
 <section id="levee-breach-numerical-instability">
 <h2>Levee Breach Numerical Instability<a class="headerlink" href="#levee-breach-numerical-instability" title="Link to this heading"></a></h2>
@@ -1435,9 +1451,8 @@ generated during a FLO-2D model simulation.
 FLO-2D is a twodimensional flood routing model that doesn’t use 1-D floodplain cross sections as is the case for HEC-RAS models.
 Each grid element has a unique flow depth and 8-directions of flow velocity for each computation timestep.
 For that reason, hazard map preparation may require a unique depiction of some of the floodwave characteristics.</p>
-</section>
 <section id="flood-wave-output">
-<h2>Flood Wave Output<a class="headerlink" href="#flood-wave-output" title="Link to this heading"></a></h2>
+<h3>Flood Wave Output<a class="headerlink" href="#flood-wave-output" title="Link to this heading"></a></h3>
 <p>To facilitate mapping the CalEMA floodwave parameters, an output file (FLOODWAVETIME.OUT) is generated by FLO-2D at the end of the flood simulation.
 This file has the following format:</p>
 <p><em>Node X-coord Y-coord Floodwave Arrival Time Flood Time Peak Time Deflood Time Max WS</em></p>
@@ -1460,7 +1475,7 @@ The dam breach initialization is based on the first incremental change in flow d
 If a channel is assigned to the grid element, the maximum water surface for either the channel or the floodplain is reported.</p>
 </section>
 <section id="floodplain-cross-section">
-<h2>Floodplain Cross Section<a class="headerlink" href="#floodplain-cross-section" title="Link to this heading"></a></h2>
+<h3>Floodplain Cross Section<a class="headerlink" href="#floodplain-cross-section" title="Link to this heading"></a></h3>
 <p>The peak discharge for a selected floodplain cross section or for each channel element is reported in</p>
 <p>HYCROSS.OUT or HYCHAN.OUT respectively.
 The floodplain maximum width is available only for assigned FLO2D floodplain cross sections in the HYCROSS.OUT file.</p>
@@ -1474,6 +1489,7 @@ The remaining file can then be renamed to DEPFP.OUT and plotted in Mapper or Max
 An alternative method to create the parameter maps is to import the resulting file to GIS or CADD program.</p>
 <p>If no levee or dam breach is simulated with the FLO-2D model, the FLOODWAVETIME.OUT file is still populated with output data with a start time related
 to the commencement of the flood model (hour 0.0).</p>
+</section>
 </section>
 <section id="levee-fragility-curves">
 <h2>Levee Fragility Curves<a class="headerlink" href="#levee-fragility-curves" title="Link to this heading"></a></h2>
@@ -1531,9 +1547,8 @@ below the levee crest in feet or meters (y-axis).</p>
 <span class="n">FS4</span> <span class="mf">1.00</span> <span class="mf">0.0</span>
 </pre></div>
 </div>
-</section>
 <section id="application-of-the-levee-fragility-curves-in-the-flo-2d-model">
-<h2>Application of the Levee Fragility Curves in the FLO-2D Model<a class="headerlink" href="#application-of-the-levee-fragility-curves-in-the-flo-2d-model" title="Link to this heading"></a></h2>
+<h3>Application of the Levee Fragility Curves in the FLO-2D Model<a class="headerlink" href="#application-of-the-levee-fragility-curves-in-the-flo-2d-model" title="Link to this heading"></a></h3>
 <p>The California Department of Water Resources (DWR) can apply the levee fragility curves in the Central Valley Floodplain Evaluation and Delineation
 project to delineate and map potential flood hazards.
 FLO-2D was uniquely suited to utilizing the levee fragility curves.
@@ -1560,7 +1575,7 @@ The following levee fragility curve data is assigned by the user in the FLO-2D m
 reaches of levee fragility curves in the FLO-2D model in a spatially variable analysis.</p>
 </section>
 <section id="flo-2d-fragility-curve-modeling-results">
-<h2>FLO-2D Fragility Curve Modeling Results<a class="headerlink" href="#flo-2d-fragility-curve-modeling-results" title="Link to this heading"></a></h2>
+<h3>FLO-2D Fragility Curve Modeling Results<a class="headerlink" href="#flo-2d-fragility-curve-modeling-results" title="Link to this heading"></a></h3>
 <p>When the levee fragility curves are applied to a levee system, the results show that the levee breach can occur anywhere in the system at varying
 times depending of the selection of the fragility curve and the prescribe probability of failure.
 The FLO-2D levee breach model initiates piping when the predicted unconfined flood water reached the prescribed elevation for a defined duration.
@@ -1577,7 +1592,7 @@ FLO-2D Levee Breach Simulation in Progress Using Levee Fragility Curves.
 (Right: Levee Simultaneously Breaching in 2 Locations; Left: Levee Breach Expanding.)</em></p>
 </section>
 <section id="benefits-of-using-the-levee-fragility-curves-for-flood-hazard-mapping">
-<h2>Benefits of Using the Levee Fragility Curves for Flood Hazard Mapping<a class="headerlink" href="#benefits-of-using-the-levee-fragility-curves-for-flood-hazard-mapping" title="Link to this heading"></a></h2>
+<h3>Benefits of Using the Levee Fragility Curves for Flood Hazard Mapping<a class="headerlink" href="#benefits-of-using-the-levee-fragility-curves-for-flood-hazard-mapping" title="Link to this heading"></a></h3>
 <p>The levee fragility curves define the relationship between geotechnical and flood hazard as well as identify the levee risk associated with potential
 levee failure.
 A series of FLO-2D simulations with different failure probability assignments (eg.
@@ -1591,6 +1606,7 @@ By assigning different levee fragility curves and levee failure probability in t
 The FLO-2D fragility curve method combines flood risk, geotechnical levee characteristics and flood routing hydraulics for a spatial assessment of
 levee failure corresponding with the actual floodwave progression.
 This represents a significant step in accurate hazard mapping.</p>
+</section>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>

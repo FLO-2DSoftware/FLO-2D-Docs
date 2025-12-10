@@ -1,10 +1,8 @@
 User Manual
 ============
 
-Continuous enhancements and refinements are in progress for the FLO-2D Plugin.
-Users can choose from two versions:
+This is the user manual for the FLO-2D Plugin Gila v1.0.0.
 
-FLO-2D Plugin v0.10.115 (current release)
 FLO-2D Plugin Gila v1.0.0
 
 Updates aim to deliver increased functionality, efficiency, and overall performance for FLO-2D modeling.
