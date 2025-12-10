@@ -219,6 +219,8 @@ The user is prompted for the coordinates that define the project working region.
    If there is a project open when this command is selected, the GDS will prompt you to save the current project.
    It is OK to open more than one GDS at a time.
 
+.. image:: img/GDS270.jpg
+
 The following table explains the required variables:
 
 .. list-table::
