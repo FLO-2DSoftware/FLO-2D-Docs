@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 
-CHAPTER 6
-==========
+CHAPTER 6 - Reviewing Storm Drain Model Results
+===========================================================
 
 Reviewing Storm Drain Model Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

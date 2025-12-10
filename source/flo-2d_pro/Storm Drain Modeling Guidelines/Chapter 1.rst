@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 
-CHAPTER 1
-==========
+CHAPTER 1 - FLO-2D Storm Drain Overview
+=========================================
 
 FLO-2D Storm Drain Overview
 ----------------------------------

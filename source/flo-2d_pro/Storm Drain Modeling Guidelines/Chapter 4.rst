@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 
-CHAPTER 4
----------
+CHAPTER 4 - Guidelines Storm Drain Setup
+==========================================
 
 Guidelines Storm Drain Setup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
