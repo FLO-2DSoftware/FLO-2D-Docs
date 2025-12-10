@@ -1004,10 +1004,15 @@ Use this command to redraw the visible objects in the working region.
 
 .. image:: img/GDS098.jpg
 
-Use this command (or the |GDS099| icon) to insert elevation data at selected points within the working region.
+.. |elev_insert_icon| image:: img/GDS099.jpg
+   :height: 14px
+   :alt: Elevation Insert
+
+
+Use this command (or the |elev_insert_icon| icon) to insert elevation data at selected points within the working region.
 To use this tool:
 
-    1. Select the *Elevation Points/Insert* command (Design menu) or the toolbar icon |GDS099| and click the left mouse button.
+    1. Select the *Elevation Points/Insert* command (Design menu) or the toolbar icon |elev_insert_icon| and click the left mouse button.
     2. A dialog box appears for the elevation entry in feet or meters.
        Click *‘OK’* to accept the value.
 
