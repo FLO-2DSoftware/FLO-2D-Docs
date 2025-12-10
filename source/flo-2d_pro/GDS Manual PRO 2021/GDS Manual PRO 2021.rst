@@ -1066,11 +1066,15 @@ To use this tool:
 
 3.4.4 Elevation Points/Delete Elevation Points Outside Range (Design Menu)
 
+.. image:: img/GDS282.jpg
+
 .. image:: img/GDS103.png
 
 Deletes elevation data points outside a specified range.
 
 3.4.5 Grid Element Text Style (Design Menu)
+
+.. image:: img/GDS284.jpg
 
 Use these commands to edit the text styles for the grid element number, elevation, or Manning’s n-value.
 Set the relative position of the number in the square grid element (upper, middle or down positions).
@@ -1080,11 +1084,15 @@ The Font Properties… button is used to change, font type, style, size, etc.
 
 3.4.6 Channel Style (Design Menu)
 
+.. image:: img/GDS285.jpg
+
 Use this command will change the line width used to represent channels.
 The *GDS* displays this dialog box to set the line width.
 Click *Apply* and then ‘\ *OK’* to change to the selected channel line width display
 
 3.4.7 Area Reduction Factor Style (Design Menu)
+
+.. image:: img/GDS286.jpg
 
 To change the display of area reduction factor in a grid element chose from Solid, Hollow (with boundary display of different pen widths) or Hatched
 rendering with various hatching options.
@@ -1094,7 +1102,7 @@ Click *Apply* and then ‘\ *OK’* to change to the selected style.
 
 3.5.1 Create Grid (Grid Menu)
 
-.. image:: img/GDS105.png
+.. image:: img/GDS105.jpg
 
 Command to create the grid system template of square elements for the *FLO-2D* model.
 To use the *Create Grid* command:
@@ -1102,7 +1110,7 @@ To use the *Create Grid* command:
     1. Select the *Create Grid* command (Grid menu).
     2. A dialog box appears requesting the square grid element size or side length (ft or m):
 
-.. image:: img/GDS106.png
+    .. image:: img/GDS106.png
 
     3. Select *‘OK’* to accept the value.
     4. The *GDS* system will automatically overlay a grid template that is centered in the working region.
@@ -1132,6 +1140,8 @@ After a grid element or group of elements is selected, use the *Assign Parameter
 elements.
 
 3.5.3 Select/Grid Elements Defined by Polygon (Grid Menu)
+
+.. image:: img/GDS287.jpg
 
 .. |elev_insert_icon| image:: img/GDS109.jpg
    :height: 14px
@@ -1173,6 +1183,8 @@ Use positive numbers to raise the elevation and negative numbers to lower the el
 Click *‘OK’* to change the elevation to the selected elements.
 
 3.5.8 Assign Parameters to Selection/Manning’s Coefficient (Grid Menu)
+
+.. image:: img/GDS289.jpg
 
 A Manning’s roughness coefficient (n-value) is assigned to the grid elements previously selected with the *Select* command.
 A dialog box appears prompting you to enter the n-value:
@@ -1232,12 +1244,18 @@ Check buttons to define the flow direction (of the 8 possible overland flow dire
 
 Elevation (ft or m) of the top of the levee.
 
-*Assign to all* button |GDS119|
+.. |elev_insert_icon| image:: img/GDS119.jpg
+   :height: 14px
+
+*Assign to all* button |elev_insert_icon|
 
 Assigns the cutoff flow direction and levee crest elevation to all selected grid elements.
 
-Levee failure for this direction |GDS120|
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. |elev_insert_icon| image:: img/GDS120.jpg
+   :height: 14px
+
+Levee failure for this direction |elev_insert_icon|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Enables input parameters to be assigned for levee prescribed failure modeling for the selected direction.
 
@@ -1361,15 +1379,15 @@ The initial assignment of hydrographs to inflow nodes has three options:
 
 *3.5.12.3 Outflow element (no hydrograph):*
 
-.. image:: img/GDS128.jpg
+    .. image:: img/GDS128.jpg
 
     - Line ‘O’ for floodplain
     - Line ‘K’ for Channel
     - An element containing an outflow node must have a lower elevation than the contiguous upstream elements.
-          o Floodplain element elevation will be reset to 0.1 ft lower than the lowest contiguous upstream element if the outflow node elevation is initially
+        - Floodplain element elevation will be reset to 0.1 ft lower than the lowest contiguous upstream element if the outflow node elevation is initially
           higher. This change occurs automatically at runtime.
-          o Channel elements will generate an error in the GDS and when the engine is executed.
-            An error report is written to the error.chk file and the channel bed elevation must be manually adjusted.
+        - Channel elements will generate an error in the GDS and when the engine is executed.
+          An error report is written to the error.chk file and the channel bed elevation must be manually adjusted.
 
 For this outflow assignment, the outflow nodes discharge all the inflow to them off the grid system using an approximate normal depth flow condition.
 The outflow node is essentially a sink.
