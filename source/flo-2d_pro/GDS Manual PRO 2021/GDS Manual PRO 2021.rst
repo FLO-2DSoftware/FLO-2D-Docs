@@ -1394,7 +1394,7 @@ The outflow node is essentially a sink.
 
 *3.5.12.4 Outflow element with hydrograph (diversion):*
 
-.. image:: img/GDS129.jpg
+    .. image:: img/GDS129.jpg
 
     - This diversion data is written to the INFLOW.DAT file.
     - This option is for Channels only.
