@@ -892,10 +892,16 @@ This command opens the Layer dialog box.
 
 .. image:: img/GDS068.png
 
+.. |elev_insert_icon| image:: img/image74.jpg
+   :height: 14px
+
+.. |elev_icon| image:: img/image75.jpg
+   :height: 14px
+
 Layers may be visible or invisible.
 Change the layer visible status by checking the *Visible* check box.
 In the example above there are two active layers.
-Use the icons to highlight and move between the various layers.
+Use the |elev_insert_icon| and |elev_icon| icons to highlight and move between the various layers.
 Click the *Apply* button to accept the changes.
 Delete any layer by checking the *Delete* check box and then clicking the *Apply* button.
 After any modifications to the layers, click Apply prior to clicking OK.
