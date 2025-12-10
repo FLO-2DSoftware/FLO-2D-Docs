@@ -1038,7 +1038,7 @@ To use this tool:
     2. A dialog box appears for the elevation entry in feet or meters.
        Click *‘OK’* to accept the value.
 
-.. image:: img/GDS100.png
+    .. image:: img/GDS100.png
 
     3. Click a point within the working region to assign this elevation data.
     4. Repeat step 3 as many times as needed.
