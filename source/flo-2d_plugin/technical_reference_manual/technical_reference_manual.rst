@@ -1260,15 +1260,27 @@ The requirements and calculations are outlined below for each layer.
 References
 -----------
 
-Library of Congress, 2017.
-Geopackage Encoding Standard (OGC), version 1.0, https://www.loc.gov/preservation/digital/formats/fdd/fdd000419.shtml
+.. raw:: html
 
-Python Software Foundation, 2018.
-The Python Tutorial, Python English 2.7.15 Documentation, https://docs.python.org/2.7/tutorial
+    <p><strong>Open Geospatial Consortium (OGC), 2023.</strong>
+    GeoPackage Encoding Standard, Version 1.3.
+    <a href="https://www.ogc.org/standard/geopackage/" target="_blank">https://www.ogc.org/standard/geopackage/</a>
+    </p>
 
-Flood Control District of Maricopa County, 2018, Drainage Design Manual for Maricopa County, Arizona Hydrology.
+.. raw:: html
 
-Flood Control District of Maricopa County, 2023, Drainage Design Manual for Maricopa County, Arizona Hydrology.
+    <p><strong>Python Software Foundation, 2023.</strong>
+    The Python Tutorial, Python 3.12 Documentation.
+    <a href="https://docs.python.org/3/tutorial/" target="_blank">https://docs.python.org/3/tutorial/</a>
+    </p>
+
+.. raw:: html
+
+    <p><strong>Flood Control District of Maricopa County (FCDMC), 2023.</strong>
+    Drainage Design Manual for Maricopa County, Arizona – Hydrology.
+    <em>(Accessed 2023; no stable public URL provided.)</em>
+    </p>
+
 
 
 Appendix A GeoPackage Structure
