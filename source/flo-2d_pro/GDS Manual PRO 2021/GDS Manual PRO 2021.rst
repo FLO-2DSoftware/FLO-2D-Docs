@@ -1724,9 +1724,9 @@ The first column (ID) and last column (Value) are ignored.
 
     <pre>
         Example of comma delimited file:
-X1,369941.27,1183607.125,4654.71,777
-X2,369946.27,1183608.125,4654.50,717
-X3,369951.27,1183609.125,4654.29, 282
+    X1,369941.27,1183607.125,4654.71,777
+    X2,369946.27,1183608.125,4654.50,717
+    X3,369951.27,1183609.125,4654.29, 282
     </pre>
 
 3. List of elevation data files ELEVFILES.DAT:
@@ -2038,6 +2038,10 @@ This procedure may take several minutes depending on the number of grid elements
 .. image:: img/GDS151.jpg
 
 Next you can view the polygon intersections.
+
+.. image:: img/GDS295.jpg
+
+.. image:: img/GDS296.jpg
 
 .. image:: img/GDS152.jpg
 
