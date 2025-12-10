@@ -75,10 +75,10 @@ The files include the following:
 
 - \*.png – icon files
 - \*.py – python code files
--\*.qml – QGIS layer styles
--\*.svg – icon files
--\*.sql – SQL code relational database information
--\*.ui – QT Creator window editor
+- \*.qml – QGIS layer styles
+- \*.svg – icon files
+- \*.sql – SQL code relational database information
+- \*.ui – QT Creator window editor
 
 The plugin is organized into utility-based directories for plugin files that perform specific functions.
 For example, there is a folder for the toolbar and one for the sidebar widgets.
@@ -1097,10 +1097,9 @@ Those cells that contain the storm drain inlets use the surface water depth and 
 system.
 The storm drain engine then routes the flow in the pipe network and calculates potential return flow to the surface water system (Figure 42).
 
-The `Storm Drain Editor <https://flo-2dsoftware.github.io/qgis-flo-2d-plugin/widgets/storm-drainer-editor/Storm%20Drain.html>`__ application and setup
+The :ref:`Storm Drain Editor <storm-drain-editor>` application and setup
 are well documented in the FLO-2D Plugin User Manual and a detailed tutorial is available `online.
-<https://documentation.flo-2d.com/Workshops/Lesson%203.html>`__ This document will discuss data management and important algorithms in the
-calculators.
+:ref:`self-help-gila-1-storm-drain`
 
 .. image:: ../img/technical_reference_manual/tech_ref_manual042.jpg
 
