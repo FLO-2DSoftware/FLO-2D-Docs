@@ -813,7 +813,9 @@ Use this command to import DXF or DWG CAD files.
 
 3.2.27 Import Levees...(File Menu)
 
-.. image:: img/GDS052.jpg.. image:: img/GDS053.png
+.. image:: img/GDS052.jpg
+
+.. image:: img/GDS053.png
 
 Use this command to import levee polyline vertices in the form of xyz space or coma delimited text file.
 The file extension is \*.xyz.
@@ -865,7 +867,10 @@ To Zoom-in (increase the magnification), click in the working region and drag th
 
 .. image:: img/GDS062.png
 
-Use the *Zoom Out* *Previous View* command or click the Zoom Out Previous View Button |GDS063| to return to the previous zoom extent
+.. |zoom_out_previous_view_icon| image:: img/GDS063.jpg
+   :height: 14px
+
+Use the *Zoom Out* *Previous View* command or click the Zoom Out Previous View Button |zoom_out_previous_view_icon| to return to the previous zoom extent
 
 3.3.3 Zoom Out 10% (View Menu)
 
@@ -882,7 +887,11 @@ Use the Zoom Out 10% View command to reduce the current view 10% in size.
 
 Use the *Pan* command or use the *Pan* Toolbar icon |pan_icon| to move around within the working region view.
 Click and drag the mouse to pan around.
-Use the *View All* command (or toolbar icon) to return to a full view of the working region or click the Select icon |GDS017| to exit the pan mode.
+
+.. |select_icon| image:: img/GDS066.jpg
+   :height: 14px
+
+Use the *View All* command (or toolbar icon) to return to a full view of the working region or click the Select icon |select_icon| to exit the pan mode.
 
 3.3.5 Layers List (View Menu)
 
@@ -920,8 +929,11 @@ Click the *Apply* button and then the *Close* button to accept the changes.
 
 .. image:: img/GDS070.png
 
+.. |individual_terrain_elevation_icon| image:: img/GDS071.jpg
+   :height: 14_px
+
 This command queries individual terrain elevation points and displays the data for the selected point in the toolbar point elevation box.
-The mouse cursor changes to the inquiry mode to show that this option is active\ |GDS071|.
+The mouse cursor changes to the inquiry mode to show that this option is active\ |individual_terrain_elevation_icon|.
 
 .. image:: img/GDS072.jpg
 
@@ -1442,22 +1454,23 @@ The grid element with a stage-time relationship does not have to be along the re
 
 This option is for Channel or Floodplain.
 
-    • Grey out appearance for FP/Channel, indicating that
+    - Grey out appearance for FP/Channel, indicating that
       command is unavailable
-    • Redundant ‘O’ or ‘K’ lines are needed depending on if
+    - Redundant ‘O’ or ‘K’ lines are needed depending on if
       the element is a FP cell or a channel cell.
-    • ‘N’ lines for stage-time relationship are needed.
-    • FP and channel elements will be different on the third
+    - ‘N’ lines for stage-time relationship are needed.
+    - FP and channel elements will be different on the third
       column of ‘N’ Line, the identifier will be different:
-        o N Grid Cell FP_ID=0
-        o N Grid Cell Channel_ID=1
-    • Use this configuration when a water surface elevation
+
+        - N Grid Cell FP_ID=0
+        - N Grid Cell Channel_ID=1
+    - Use this configuration when a water surface elevation
       along a boundary needs to be held like with Flood
       Insurance Mapping.
-    • The initial stage for each grid element should start at
+    - The initial stage for each grid element should start at
       near ground elevation and ramp up to avoid volume
       conservation errors.
-    • If the stage is lower than the grid element elevation, it is
+    - If the stage is lower than the grid element elevation, it is
       reset to the grid element elevation at runtime until the
       time that it goes above the grid element elevation.
 
