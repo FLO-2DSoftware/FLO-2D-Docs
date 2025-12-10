@@ -2895,431 +2895,522 @@ n\ :sub:`d` = n\ :sub:`b` r\ :sub:`c` e-(r2 depth/dmax)
    If you select Yes, you will need to click the inflow node(s) that was assigned to the segment and reassigned to the floodplain instead.
 .. image:: img/GDS196.jpg
    Click to reverse the channel direction.
-.. image:: img/GDS197.jpg.. image:: img/GDS198.jpg.. image:: img/GDS199.jpg
-100
+.. image:: img/GDS197.jpg
 
-% zoom
+.. image:: img/GDS198.jpg
 
-Pan
+.. image:: img/GDS199.jpg
 
-Edit
+.. image:: img/GDS269.jpg
 
-Channel
+Realign left bank channel elements by clicking and dragging the blue dots.
+The zoom, pan and edit features are also available with this tool.
 
-Add Point
-
-x, y Coord.
-
-Activate Zoom
-
-Prev.
-Zoom
-
-   Realign left bank channel elements by clicking and dragging the blue dots.
-   The zoom, pan and edit features are also available with this tool.
 .. image:: img/GDS200.jpg
-   To Realign the right bank elements use the Realign Extensions tool.
-   It has the same capabilities as the realign channel tool.
+
+To Realign the right bank elements use the Realign Extensions tool.
+It has the same capabilities as the realign channel tool.
+
 .. image:: img/GDS201.jpg.. image:: img/GDS202.jpg
-   To see a plot of the cross section associated with each channel element.
-   Click the Plot Cross Section option.
 
-   Use this tool to assign cross sections to specified channel elements.
-   The prev and next button is used to select the channel element and the drop down box is used to select the cross section.
+To see a plot of the cross section associated with each channel element.
+Click the Plot Cross Section option.
+
+Use this tool to assign cross sections to specified channel elements.
+The prev and next button is used to select the channel element and the drop down box is used to select the cross section.
+
 .. image:: img/GDS203.jpg.. image:: img/GDS204.jpg
-   Click 3-D Plot to see a 3-D graphic of the channel segment.
-   This tool helps with cross section data quality control.
+
+Click 3-D Plot to see a 3-D graphic of the channel segment.
+This tool helps with cross section data quality control.
+
 .. image:: img/GDS205.jpg
-   Click Clear Problematic Right Banks to delete right bank assignments that will cause an error in the model.
-   The banks must be reassigned.
 
-   3.6.10 Select Channel Confluences (Tools Menu)
+Click Clear Problematic Right Banks to delete right bank assignments that will cause an error in the model.
+The banks must be reassigned.
 
-   Instead of assigning those channel elements that are contiguous but do not share discharge (NOFLOC’s), FLO-2D Pro version model assigns channel
-   connections that share discharge from upstream to downstream.
+3.6.10 Select Channel Confluences (Tools Menu)
 
-   Channel confluences are defined to share flow by assigning connections between cells and the selection of those connections should observe the
-   following general rules:
+Instead of assigning those channel elements that are contiguous but do not share discharge (NOFLOC’s), FLO-2D Pro version model assigns channel
+connections that share discharge from upstream to downstream.
 
-- Confluences on a given channel element will be possible as an upstream, downstream or tributary/split connection
+Channel confluences are defined to share flow by assigning connections between cells and the selection of those connections should observe the
+following general rules:
 
-- A tributary/split channel element should be the last channel element listed on the particular channel segment and must be contiguous to the main
-  channel.
-  In cannot be separated by one or more floodplain elements from the main channel.
+    - Confluences on a given channel element will be possible as an upstream, downstream or tributary/split connection
+    - A tributary/split channel element should be the last channel element listed on the particular channel segment and must be contiguous to the main
+      channel.
+      In cannot be separated by one or more floodplain elements from the main channel.
+    - The tributary element can also be contiguous to either a left or right bank main channel element, if that is the case the connection will be defined
+      between the tributary/split channel element and the main channel right bank element (respectively).
+      FLO-2D model will find the left bank channel element at model runtime.
 
-- The tributary element can also be contiguous to either a left or right bank main channel element, if that is the case the connection will be defined
-  between the tributary/split channel element and the main channel right bank element (respectively).
-  FLO-2D model will find the left bank channel element at model runtime.
+Connections for the channel confluences can be assigned opening the following dialog box that will list Tributary/Split Channel data entry field
+column and Main Channel data entry field column:
 
-..
-
-   Connections for the channel confluences can be assigned opening the following dialog box that will list Tributary/Split Channel data entry field
-   column and Main Channel data entry field column:
 .. image:: img/GDS206.jpg
-   User can select, add, delete or modify channel confluence elements using the options available on the following dialog:
+
+User can select, add, delete or modify channel confluence elements using the options available on the following dialog:
 
 3.6.11 Create a Cross Section (Tools Menu)
+
 .. image:: img/GDS207.jpg
-   Use this tool to cut a cross section from elevation data.
-   Elevation data must be loaded.
-   Click Tools/Channels/Create a Cross Section.
-   Create an elevation layer if necessary and then click and draw a line to define a cross section.
 
-   Then assign the cross section to the N – natural channel.
-   The red arrows point out the cross section as seen by the small black dotted line.
-   The green arrow shows the channel element the cross section is assigned to.
-   Repeat the process along the channel where ever a cross section is needed.
-   Depending on the data, the cross sections might need adjustments.
+Use this tool to cut a cross section from elevation data.
+Elevation data must be loaded.
+Click Tools/Channels/Create a Cross Section.
+Create an elevation layer if necessary and then click and draw a line to define a cross section.
+
+Then assign the cross section to the N – natural channel.
+The red arrows point out the cross section as seen by the small black dotted line.
+The green arrow shows the channel element the cross section is assigned to.
+Repeat the process along the channel where ever a cross section is needed.
+Depending on the data, the cross sections might need adjustments.
+
 .. image:: img/GDS208.jpg
-   The following dialog allows the user to select a cross section number and name, determine the number of station / elevation pairs and to assign the
-   write-to text file.
 
-   All data is appended to the xsec.dat file.
-   Start with a blank xsec.dat file.
+The following dialog allows the user to select a cross section number and name, determine the number of station / elevation pairs and to assign the
+write-to text file.
+
+All data is appended to the xsec.dat file.
+Start with a blank xsec.dat file.
 
 3.6.12 Assign a HEC-RAS Cross Section to a Channel Element (Tools Menu)
+
 .. image:: img/GDS209.jpg
-   Use the File menu to import a HEC-RAS cross section.
-   To manually assign a HEC-RAS cross section to a channel element, select the tool menu feature.
-   Then select a HEC-RAS cross section and a channel element.
-   Repeat the process until complete.
+
+Use the File menu to import a HEC-RAS cross section.
+To manually assign a HEC-RAS cross section to a channel element, select the tool menu feature.
+Then select a HEC-RAS cross section and a channel element.
+Repeat the process until complete.
 
 3.6.13 Auto Assign HEC-RAS Cross Section to Channel Elements (Tools Menu)
+
 .. image:: img/GDS210.jpg
-   This feature will automatically assign the cross sections from HEC-RAS to the FLO-2D Channel.
+
+This feature will automatically assign the cross sections from HEC-RAS to the FLO-2D Channel.
 
 3.6.14 Convert HEC-RAS Xsec to FLO-2D (Tools Menu)
+
 .. image:: img/GDS211.jpg
-   This feature will read cross section data available in *HEC-RAS* format, convert it to *FLO2D* format and save it to XSEC.DAT files.
-   The *GDS* reads the *HEC-RAS* file, locates the cross section key words, extracts the x, y, z data from each cross section and reformat the cross
-   section data for the XSEC.DAT file.
-   When this process is completed, another file dialog box appears to let the user select the location of the output XSEC.DAT file.
+
+This feature will read cross section data available in *HEC-RAS* format, convert it to *FLO2D* format and save it to XSEC.DAT files.
+The *GDS* reads the *HEC-RAS* file, locates the cross section key words, extracts the x, y, z data from each cross section and reformat the cross
+section data for the XSEC.DAT file.
+When this process is completed, another file dialog box appears to let the user select the location of the output XSEC.DAT file.
 
 3.6.15 Convert HEC-RAS Channels to FLO-2D Channel Segments (Tools Menu)
+
 .. image:: img/GDS212.jpg
+
 This feature will convert the HEC-RAS reaches to FLO-2D channel segments.
 
 3.6.16 Delete HEC-RAS Channels (Tools Menu)
+
 .. image:: img/GDS213.jpg
+
 This feature is used to delete HEC-RAS channel from the grid system.
 
 3.6.17 Delete HEC-RAS Cross Sections (Tools Menu)
+
 .. image:: img/GDS214.jpg
-   Use this option to delete HEC-RAS cross sections that are not needed.
+
+Use this option to delete HEC-RAS cross sections that are not needed.
 
 3.6.18 Create Street Segment (Tools Menu)
+
 .. image:: img/GDS215.jpg
-   This command enables the creation of the streets in an existing *FLO-2D* grid system using point and click tools as described below:
 
-1. On the *Tool menu* click *Create Street Segment.*
+This command enables the creation of the streets in an existing *FLO-2D* grid system using point and click tools as described below:
 
-2. The mouse pointer changes to a cross.
+    1. On the *Tool menu* click *Create Street Segment.*
+    2. The mouse pointer changes to a cross.
+    3. To add a new grid element to the street, click first grid element of the street segment.
+       Then while holding the left mouse button down, the system selects street elements as the user moves over the grid system.
+       A background map or aerial photograph image can be used to locate the streets.
+       The streets are identified by green elements and with a solid continuous line when been generated in the *GDS*.
 
-3. To add a new grid element to the street, click first grid element of the street segment.
-   Then while holding the left mouse button down, the system selects street elements as the user moves over the grid system.
-   A background map or aerial photograph image can be used to locate the streets.
-   The streets are identified by green elements and with a solid continuous line when been generated in the *GDS*.
 .. image:: img/GDS216.jpg
-   As the street development progresses from one grid element to the next, only the eight adjacent elements can be accessed (see above figure).
-   When the mouse pointer is located near the center of the next element to be selected, a solid line arrow will appear to indicate that the element will
-   be added to the street.
-   The user can backup the pointer over the segment to unselect street grid elements.
-   No mouse clicks are necessary, it is only necessary to move the mouse pointer over the desired elements.
-   To finish the street element selection, the user double-clicks with the left mouse button.
 
-   The street data assignment is not complete until the user assigns the street flow direction, street widths and n-values in the street editor dialog
-   box.
-   When the user clicks on an existing street, the street line will be colored in red and the following options appear:
+As the street development progresses from one grid element to the next, only the eight adjacent elements can be accessed (see above figure).
+When the mouse pointer is located near the center of the next element to be selected, a solid line arrow will appear to indicate that the element will
+be added to the street.
+The user can backup the pointer over the segment to unselect street grid elements.
+No mouse clicks are necessary, it is only necessary to move the mouse pointer over the desired elements.
+To finish the street element selection, the user double-clicks with the left mouse button.
+
+The street data assignment is not complete until the user assigns the street flow direction, street widths and n-values in the street editor dialog
+box.
+When the user clicks on an existing street, the street line will be colored in red and the following options appear:
+
 .. image:: img/GDS217.jpg
-   To edit the street data, select *Edit Street Parameters* to display the Street Parameters dialog box:
+
+To edit the street data, select *Edit Street Parameters* to display the Street Parameters dialog box:
+
 .. image:: img/GDS218.jpg
-   The Street Parameter dialog box can also be accessed by left mouse button click a grid element with streets and clicking on the *Street Element*
-   button.
-   The street flow directions in the lower left of the dialog box are required data and must be assigned after completing the Create Street Option above
-   (Task 3 above).
-   Instructions for entering street follow:
 
-1.  *Global n-value for street flow* - Global n-value that is assigned to all the street elements.
+The Street Parameter dialog box can also be accessed by left mouse button click a grid element with streets and clicking on the *Street Element*
+button.
+The street flow directions in the lower left of the dialog box are required data and must be assigned after completing the Create Street Option above
+(Task 3 above).
+Instructions for entering street follow:
 
-2.  *Maximum Street Froude number -* When the computed Froude number for the street flow exceeds this limiting street Froude number, the n-value is
-   increased by 0.001 for that street element.
+    1.  *Global n-value for street flow* - Global n-value that is assigned to all the street elements.
 
-3.  *Global street width* - Global assignment of street width (ft or m) for all street elements.
-   This street width is superseded by individual street widths if the individual street width is greater than zero (see *Flow direction from center of
-   node and street width* check boxes).
+    2.  *Maximum Street Froude number -* When the computed Froude number for the street flow exceeds this limiting street Froude number, the n-value is
+       increased by 0.001 for that street element.
 
-4.  *Global curb height* - Global street curb height (ft or m).
-   If the street curb height is exceeded by the flow depth, overland flow will result in the grid element containing the street.
-   This value is used to assign a street curb height globally to all street elements.
+    3.  *Global street width* - Global assignment of street width (ft or m) for all street elements.
+       This street width is superseded by individual street widths if the individual street width is greater than zero (see *Flow direction from center of
+       node and street width* check boxes).
 
-5.  *Inflow hydrograph will enter the streets rather than floodplain node* - Check this box to have the inflow hydrograph enter the street rather than
-   the floodplain portion of the grid element.
+    4.  *Global curb height* - Global street curb height (ft or m).
+       If the street curb height is exceeded by the flow depth, overland flow will result in the grid element containing the street.
+       This value is used to assign a street curb height globally to all street elements.
 
-6.  *Curb height* - Optional curb height (ft or m) for an individual street element that supersedes the *global curb height*.
+    5.  *Inflow hydrograph will enter the streets rather than floodplain node* - Check this box to have the inflow hydrograph enter the street rather than
+       the floodplain portion of the grid element.
 
-7.  *Elevation* - Optional individual street element elevation (ft or m).
-   This elevation will supersede the floodplain grid element elevation.
-   If this value is zero, the model will assign the street elevation as grid element floodplain elevation minus the curb height.
+    6.  *Curb height* - Optional curb height (ft or m) for an individual street element that supersedes the *global curb height*.
 
-8.  *N-value* - Optional street n-value for the individual street segments within a given grid element.
-   This value supersedes the *Global n-value for street flow*.
-   If individual street nvalue is zero, the global value will be assigned to the grid element street segment.
+    7.  *Elevation* - Optional individual street element elevation (ft or m).
+       This elevation will supersede the floodplain grid element elevation.
+       If this value is zero, the model will assign the street elevation as grid element floodplain elevation minus the curb height.
 
-9.  *Street name* - Character name of the street.
-   Up to 15 characters can be used.
-   The street name is not used in the *FLO-2D* model.
+    8.  *N-value* - Optional street n-value for the individual street segments within a given grid element.
+       This value supersedes the *Global n-value for street flow*.
+       If individual street nvalue is zero, the global value will be assigned to the grid element street segment.
 
-10.
-*Flow direction from center of node and street width* - Streets emanate from the center of the grid element in a star pattern of eight potential flow
-directions as show below.
+    9. *Street name* - Character name of the street.
+       Up to 15 characters can be used.
+       The street name is not used in the *FLO-2D* model.
+
+    10. *Flow direction from center of node and street width* - Streets emanate from the center of the grid element in a star pattern of eight potential flow
+        directions as show below.
+
 .. image:: img/GDS219.jpg
-   When a given flow direction box is checked, a text box appears direct below the *flow direction check box* to input the optional grid element street
-   width for that street flow direction ISTDIR:
+
+When a given flow direction box is checked, a text box appears direct below the *flow direction check box* to input the optional grid element street
+width for that street flow direction ISTDIR:
+
 .. image:: img/GDS220.jpg
-   By setting the text box to zero, the *Global street width* will be assigned to that street segment.
 
-   Additional street data instruction comments can be found in the STREET.DAT file descriptions later in the manual.
-   A few comments are highlighted here.
+By setting the text box to zero, the *Global street width* will be assigned to that street segment.
 
-- Drawing the street outline with the Create Street Option does not complete the data assignment.
-  You must click the street and add the global street parameters, street flow directions and individual street element parameters if they are different
-  from the global parameters.
+Additional street data instruction comments can be found in the STREET.DAT file descriptions later in the manual.
+A few comments are highlighted here.
 
-- The street depth, width and n-values can be assigned globally for all the street grid elements.
-  The street depth, width and elevation can also be assigned for individual grid elements in the street local data form by setting these values greater
-  than zero.
+    - Drawing the street outline with the Create Street Option does not complete the data assignment.
+      You must click the street and add the global street parameters, street flow directions and individual street element parameters if they are different
+      from the global parameters.
+    - The street depth, width and n-values can be assigned globally for all the street grid elements.
+      The street depth, width and elevation can also be assigned for individual grid elements in the street local data form by setting these values greater
+      than zero.
+    - If the street elevation is different from the representative grid elevation assigned in the FPLAIN.DAT file, it should be specified in the Street
+      Local Form otherwise the street elevation will be the floodplain elevation minus the curb height.
+      These elevations are then used to determine the street slope.
+    - The street width should be less than the side of the grid element.
+      The overall floodplain surface area of the grid minus the streets surface area must be at least 5% of the original surface area (grid element width
+      squared).
+      If the street surface area consumes the entire grid element surface area, consider leaving out the smaller, less significant streets, reducing the
+      street widths or transferring one street to a neighboring grid element.
 
-- If the street elevation is different from the representative grid elevation assigned in the FPLAIN.DAT file, it should be specified in the Street
-  Local Form otherwise the street elevation will be the floodplain elevation minus the curb height.
-  These elevations are then used to determine the street slope.
-
-- The street width should be less than the side of the grid element.
-  The overall floodplain surface area of the grid minus the streets surface area must be at least 5% of the original surface area (grid element width
-  squared).
-  If the street surface area consumes the entire grid element surface area, consider leaving out the smaller, less significant streets, reducing the
-  street widths or transferring one street to a neighboring grid element.
-
-..
-
-   The street is assumed to extend from the center of the grid element to the grid element boundary in the eight flow directions.
-   A street that crosses the entire grid element is assigned two street sections and directions.
+The street is assumed to extend from the center of the grid element to the grid element boundary in the eight flow directions.
+A street that crosses the entire grid element is assigned two street sections and directions.
 
 3.6.19 Create Street Segment with a Polyline (Tools Menu)
+
 .. image:: img/GDS221.jpg
-   With this command you can create a street segment using simple mouse point and clicks.
-   First click *Create Street Segment with a Polyline* command; the cursor will change to a cross and as you click the mouse, the street segment will be
-   progressively created.
-   To complete the segment, double-click.
+
+With this command you can create a street segment using simple mouse point and clicks.
+First click *Create Street Segment with a Polyline* command; the cursor will change to a cross and as you click the mouse, the street segment will be
+progressively created.
+To complete the segment, double-click.
 
 3.6.20 Create Levee Segment with a Polyline (Tools Menu)
+
 .. image:: img/GDS222.jpg
-   With this command you can create a levee segment using simple mouse point and clicks.
-   First click *Create Levee Segment with a Polyline* command; the cursor will change to a cross and as you click the mouse, the levee segment will be
-   progressively created.
-   To complete the segment, double-click.
+
+With this command you can create a levee segment using simple mouse point and clicks.
+First click *Create Levee Segment with a Polyline* command; the cursor will change to a cross and as you click the mouse, the levee segment will be
+progressively created.
+To complete the segment, double-click.
 
 3.6.21 Create Detention Basin (Tools Menu)
 
-   This command will help to design detention basins for flood mitigation.
-   The detention basin is created by adjusting the grid element topography to reflect the detention basin depression.
-   No special *FLO-2D* components or data are necessary to utilize the detention basin feature.
+This command will help to design detention basins for flood mitigation.
+The detention basin is created by adjusting the grid element topography to reflect the detention basin depression.
+No special *FLO-2D* components or data are necessary to utilize the detention basin feature.
+
 .. image:: img/GDS223.jpg
-   The procedure to create a detention basin depression in the grid system topography is as follows:
+
+The procedure to create a detention basin depression in the grid system topography is as follows:
 
 1. The user selects the *Create Detention Basin* Command.
 
 2. The system displays the following message:
+
 .. image:: img/GDS224.jpg
+
 3. The user draws the polygon that defines the detention basin perimeter.
    The polygon is closed by double clicking on the last vertex of the polygon.
 
 4. The *GDS* will then request for the detention basin volume (ft\ :sup:`3` or m\ :sup:`3`):
 
-..
 .. image:: img/GDS225.jpg
+
 5. Input the desired volume and click *‘OK’*.
    The system will subtract a uniform depth (*Detention basin height*) from all the elements included in the detention basin polygon until the detention
    basin volume is matched.
    The floodplain element elevations are lowered to account for the *Detention basin volume*.
 
-..
+If the user clicks on the detention basin polygons, the following menu appears:
 
-   If the user clicks on the detention basin polygons, the following menu appears:
 .. image:: img/GDS226.jpg
-   When you click *View Detention Basin* the following message is displayed:
+
+When you click *View Detention Basin* the following message is displayed:
+
 .. image:: img/GDS227.jpg
+
 3.6.22 Mud and Sediment Transport (Tools Menu)
+
 .. image:: img/GDS228.jpg
-   This command allows entering mud flow or sediment transport data using the following dialog box.
+
+This command allows entering mud flow or sediment transport data using the following dialog box.
+
 .. image:: img/GDS229.jpg
+
 3.6.23 Evaporation (Tools Menu)
 
 3.6.24 MODFLO-2D Simulation (Tools Menu)
+
 .. image:: img/GDS230.jpg
-   This command allows entering data to simulate surface and groundwater flow using the *MODFLOW* integration.
-   There following tabbed dialog box provides input fields for a subset of *MODFLOW* data.
-   A separate manual explain in full the capabilities of the *FLO-2D* *MODFLOW* link, also called *MODFLO*-2D.
+
+This command allows entering data to simulate surface and groundwater flow using the *MODFLOW* integration.
+There following tabbed dialog box provides input fields for a subset of *MODFLOW* data.
+A separate manual explain in full the capabilities of the *FLO-2D* *MODFLOW* link, also called *MODFLO*-2D.
+
 .. image:: img/GDS231.jpg
+
 3.6.25 Hydraulic Structures (Tools Menu)
+
 .. image:: img/GDS232.jpg
-   The Hydraulic Structures command allows entering data required to simulate culverts, bridges and any other hydraulic structure that can be represented
-   with a rating table or rating curve.
+
+The Hydraulic Structures command allows entering data required to simulate culverts, bridges and any other hydraulic structure that can be represented
+with a rating table or rating curve.
+
 .. image:: img/GDS233.jpg
+
 3.6.26 Rain (Tools Menu)
 
 The Rain command allows entering data to simulate rainfall input over the FLO-2D grid.
 
 3.6.27 Breach (Tools Menu)
+
 .. image:: img/GDS234.jpg
+
 This command is used to enter levee breach data for the computed breach option.
 
 Global Breach Data
 ^^^^^^^^^^^^^^^^^^
 
-   Global breach data is used to input the dam or levee geometry and soil data in order to simulate an NWS Breach erosion condition.
-   The model uses the global data along points of a levee or dam that meet a specific depth or time to breach criteria.
+Global breach data is used to input the dam or levee geometry and soil data in order to simulate an NWS Breach erosion condition.
+The model uses the global data along points of a levee or dam that meet a specific depth or time to breach criteria.
+
 .. image:: img/GDS235.jpg
+
 Individual Breach Data
 ^^^^^^^^^^^^^^^^^^^^^^
 
-   Individual breach data is used to input the dam or levee geometry and soil data in order to simulate an NWS Breach erosion condition at a
-   predetermined location.
-   The model uses the breach data assigned to a specific location to breach at a specified elevation or time.
+Individual breach data is used to input the dam or levee geometry and soil data in order to simulate an NWS Breach erosion condition at a
+predetermined location.
+The model uses the breach data assigned to a specific location to breach at a specified elevation or time.
+
 .. image:: img/GDS236.jpg
+
 Levee Fragility Curve Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Levee fragility curves are used to determine a levee breach location based on data entered spatially along a levee profile.
-   The fragility data is based on the existing levee condition and will activate a failure via erosional breach or prescribed failure once a certain
-   depth criteria is met.
+Levee fragility curves are used to determine a levee breach location based on data entered spatially along a levee profile.
+The fragility data is based on the existing levee condition and will activate a failure via erosional breach or prescribed failure once a certain
+depth criteria is met.
+
 .. image:: img/GDS237.jpg
-   3.6.28 Drainage Basin Tools (Tools Menu)
-.. image:: img/GDS238.jpg.. image:: img/GDS239.jpg.. image:: img/GDS240.jpg.. image:: img/GDS241.jpg.. image:: img/GDS242.jpg.. image:: img/GDS243.jpg
-   3.6.29 Create Floodplain Cross Sections (Tools Menu)
+
+3.6.28 Drainage Basin Tools (Tools Menu)
+
+.. image:: img/GDS238.jpg
+
+.. image:: img/GDS239.jpg
+
+.. image:: img/GDS240.jpg
+
+.. image:: img/GDS241.jpg
+
+.. image:: img/GDS242.jpg
+
+.. image:: img/GDS243.jpg
+
+3.6.29 Create Floodplain Cross Sections (Tools Menu)
+
 .. image:: img/GDS244.jpg
-   This command will enable selection of grid elements for a floodplain cross section so that the *FLO-2D* model will calculate a hydrograph and compile
-   hydraulic results for the flow across the cross section.
-   You can create the cross section in an existing *FLO-2D* grid using point and click tools as described below:
+
+This command will enable selection of grid elements for a floodplain cross section so that the *FLO-2D* model will calculate a hydrograph and compile
+hydraulic results for the flow across the cross section.
+You can create the cross section in an existing *FLO-2D* grid using point and click tools as described below:
 
 1. On the *Tool menu* click *Create Floodplain Cross Sections.*
 
 2. The mouse pointer changes to a cross.
 
 3. Locate and position the mouse over the first grid element in a line of grid elements that will constitute the cross section.
-   Click his first grid element of the cross section and then while holding the left mouse button down select the cross section grid elements as you move
-   the mouse over the grid system.
-   Cross section elements are joined by lines to visualize the cross section location.
-   As the cross section development progresses from one element to the next, only the eight adjacent elements can be accessed.
-   When the mouse pointer is near the center of the next element to be selected, a solid arrow appears to indicate that that element is the next one in
-   the segment.
-   The user can backup the pointer over the segment to unselect channel grid elements.
-   No clicks are necessary, the users only needs to sweep the pointer over the desired elements.
-   The cross section is completed when the user double-clicks with the left mouse button.
+Click his first grid element of the cross section and then while holding the left mouse button down select the cross section grid elements as you move
+the mouse over the grid system.
+Cross section elements are joined by lines to visualize the cross section location.
+As the cross section development progresses from one element to the next, only the eight adjacent elements can be accessed.
+When the mouse pointer is near the center of the next element to be selected, a solid arrow appears to indicate that that element is the next one in
+the segment.
+The user can backup the pointer over the segment to unselect channel grid elements.
+No clicks are necessary, the users only needs to sweep the pointer over the desired elements.
+The cross section is completed when the user double-clicks with the left mouse button.
+
 .. image:: img/GDS245.jpg
+
 4. Cross sections must be consists of grid elements in a continuous straight line and can only be in the four directions as indicated below:
 
-..
 .. image:: img/GDS246.jpg
-   To edit the floodplain cross section grid elements, click a cross section.
-   A short-cut menu appears with three options as shown:
+
+To edit the floodplain cross section grid elements, click a cross section.
+A short-cut menu appears with three options as shown:
+
 .. image:: img/GDS247.jpg
-   Select *Edit Floodplain Cross Section* to display the floodplain cross section dialog box:
+
+Select *Edit Floodplain Cross Section* to display the floodplain cross section dialog box:
+
 .. image:: img/GDS248.jpg
-   In the left data table are the grid elements that form the cross section.
-   In the right data table of the dialog box, select the direction for discharge calculation.
-   The cross section discharge will be computed for the selected flow direction that is perpendicular to the line of cross section grid elements.
-   The model will create three output files:
 
-   CROSSQ.OUT - This file contains the element grid hydrographs for each of the floodplain elements in the cross section.
-   The time and discharge are listed for each output interval.
+In the left data table are the grid elements that form the cross section.
+In the right data table of the dialog box, select the direction for discharge calculation.
+The cross section discharge will be computed for the selected flow direction that is perpendicular to the line of cross section grid elements.
+The model will create three output files:
 
-   CROSSMAX.OUT - This file lists the maximum discharge, maximum flow depth and time of occurrence for each grid element specified in the cross section
-   analysis.
+CROSSQ.OUT - This file contains the element grid hydrographs for each of the floodplain elements in the cross section.
+The time and discharge are listed for each output interval.
 
-   HYCROSS.OUT - The output interval time, top width, depth, velocity and discharge are listed for each cross section.
-   The discharge passing the cross section of grid elements is compiled as a hydrograph.
-   The cross section maximum discharge and the individual grid elements are written to the CROSSMAX.OUT file.
+CROSSMAX.OUT - This file lists the maximum discharge, maximum flow depth and time of occurrence for each grid element specified in the cross section
+analysis.
 
-   3.6.30 Surface Elevations Profile (Tools Menu)
+HYCROSS.OUT - The output interval time, top width, depth, velocity and discharge are listed for each cross section.
+The discharge passing the cross section of grid elements is compiled as a hydrograph.
+The cross section maximum discharge and the individual grid elements are written to the CROSSMAX.OUT file.
+
+3.6.30 Surface Elevations Profile (Tools Menu)
+
 .. image:: img/GDS249.jpg
+
 3.6.31 Levee Profile (Tools Menu)
+
 .. image:: img/GDS250.jpg
-   This tool will display levee crest elevation profile of a selected levee segment along with the corresponding grid element ground elevations.
-   To activate this tool, click the command *Levee Profile* and then click one of the grid elements that contain a levee.
-   *GDS* will determine the continuity of the levee and change the levee color to dark green to identify the selected elements as shown in the figure
-   below.
+
+This tool will display levee crest elevation profile of a selected levee segment along with the corresponding grid element ground elevations.
+To activate this tool, click the command *Levee Profile* and then click one of the grid elements that contain a levee.
+*GDS* will determine the continuity of the levee and change the levee color to dark green to identify the selected elements as shown in the figure
+below.
+
 .. image:: img/GDS251.jpg
-   Then *GDS* will display the levee profile as shown in the following plot:
+
+Then *GDS* will display the levee profile as shown in the following plot:
+
 .. image:: img/GDS252.jpg
-   Using this *Formatting* Menu on the tool bar, the *GDS* will display the following dialog box so that you can customize the plot including the minimum
-   and maximum elevations (Y-axis), legend position and angle of labels.
+
+Using this *Formatting* Menu on the tool bar, the *GDS* will display the following dialog box so that you can customize the plot including the minimum
+and maximum elevations (Y-axis), legend position and angle of labels.
+
 .. image:: img/GDS253.jpg
+
 3.6.32 Street Profile (Tools Menu)
 
-   This command will create a street and ground elevation profile.
-   To access this tool, click the *Street Profile* Command and click any street element.
-   The *GDS* will display the street profile as shown:
+This command will create a street and ground elevation profile.
+To access this tool, click the *Street Profile* Command and click any street element.
+The *GDS* will display the street profile as shown:
+
 .. image:: img/GDS254.jpg
-   Similar to the *Levee Profile Command*, use the *Formatting* command on the tool bar to display the following dialog box to customize the plot
-   including the minimum and maximum elevations (Y-axis), Legend position and angle of labels.
+
+Similar to the *Levee Profile Command*, use the *Formatting* command on the tool bar to display the following dialog box to customize the plot
+including the minimum and maximum elevations (Y-axis), Legend position and angle of labels.
 
 3.6.33 Create Storage Volume Rating Tables (Tools Menu)
 
-   This tool will create storage volume rating tables to keep watershed depression storage defined by the DTM points data.
-   The depression storage accuracy can be retained by generating a depth-volume storage rating table for each selected grid element.
+This tool will create storage volume rating tables to keep watershed depression storage defined by the DTM points data.
+The depression storage accuracy can be retained by generating a depth-volume storage rating table for each selected grid element.
 
-   To activate this tool, click the command *Create Storage Volume Rating Tables* and then click on *Compute Rating Curves*.
-   *GDS* will calculate the rating tables and generate an outrc.dat file that contains the potential storage for each cell.
+To activate this tool, click the command *Create Storage Volume Rating Tables* and then click on *Compute Rating Curves*.
+*GDS* will calculate the rating tables and generate an outrc.dat file that contains the potential storage for each cell.
+
 .. image:: img/GDS255.jpg.. image:: img/GDS256.jpg
+
 3.6.34 Storm Drain (Tools Menu)
 
-   FLO-2D will compute the surface water depth at prescribed grid elements with storm drains and will compute the discharge inflow to the storm drain
-   based input storm drain geometry.
-   The Storm Drain model 5.1 will then compute the pipe network flows and potential return flow to the surface water.
-   To activate this tool, click the command *Storm Drain.
-   GDS* will allow you to enter, modify and view the Inlets as well as run EPA SWMM GUI 5.0 using the following dialogs:
+FLO-2D will compute the surface water depth at prescribed grid elements with storm drains and will compute the discharge inflow to the storm drain
+based input storm drain geometry.
+The Storm Drain model 5.1 will then compute the pipe network flows and potential return flow to the surface water.
+To activate this tool, click the command *Storm Drain.
+GDS* will allow you to enter, modify and view the Inlets as well as run EPA SWMM GUI 5.0 using the following dialogs:
+
 .. image:: img/GDS257.jpg.. image:: img/GDS258.jpg
-   This command will open the EPA SWMM 5.0 program.
-   Create a .inp file and save it to the project folder.
-   Then use the Control Panel to load make the SWMMFLO.DAT file.
 
- 3.6.34.1 Run Storm Drain GUI… (Tools Menu/Storm Drain)
- ''''''''''''''''''''''''''''''''''''''''''''''''''''''
+This command will open the EPA SWMM 5.0 program.
+Create a .inp file and save it to the project folder.
+Then use the Control Panel to load make the SWMMFLO.DAT file.
+
+3.6.34.1 Run Storm Drain GUI… (Tools Menu/Storm Drain)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
 .. image:: img/GDS259.jpg
-   This option runs the EPA SWMM GUI 5.0.
-   It the link is not working copy the Epaswmm5.exe file from the EPA SWMM 5.0 folder to the FLO-2D Pro folder.
 
- 3.6.34.2 View Storm Drain Inlets Dialog (Tools Menu)
- ''''''''''''''''''''''''''''''''''''''''''''''''''''
+This option runs the EPA SWMM GUI 5.0.
+It the link is not working copy the Epaswmm5.exe file from the EPA SWMM 5.0 folder to the FLO-2D Pro folder.
 
-   This option loads the contents of the SWMMFLO.DAT file to be edited.
-   The inlets can be edited here and the max depths can be edited here or in the swmm.inp.
+3.6.34.2 View Storm Drain Inlets Dialog (Tools Menu)
+''''''''''''''''''''''''''''''''''''''''''''''''''''
 
- 3.6.34.3 View Outfall Nodes Dialog (Tools Menu/Storm Drain)
- '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+This option loads the contents of the SWMMFLO.DAT file to be edited.
+The inlets can be edited here and the max depths can be edited here or in the swmm.inp.
+
+3.6.34.3 View Outfall Nodes Dialog (Tools Menu/Storm Drain)
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 This option generates the data written to the SWMMOUTF.DAT file.
 
- 3.6.34.4 Storm Drain Display Option (Tools Menu/Storm Drain)
- ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+3.6.34.4 Storm Drain Display Option (Tools Menu/Storm Drain)
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
 .. image:: img/GDS260.jpg
+
 These options define how the storm drain system appears on the GDS display window.
 
- 3.6.34.5 Storm Drain Discharge Display (Tools Menu/Storm Drain)
- '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+3.6.34.5 Storm Drain Discharge Display (Tools Menu/Storm Drain)
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-   This option allows the user to review the inlet discharge hydrographs or print them to \*.jpg image files.
-   Choose from this project to display on screen or from external project to save all projects to file.
+This option allows the user to review the inlet discharge hydrographs or print them to \*.jpg image files.
+Choose from this project to display on screen or from external project to save all projects to file.
+
 .. image:: img/GDS261.jpg
- 3.6.34.6 Grade Lines (Tools Menu/Storm Drain)
- '''''''''''''''''''''''''''''''''''''''''''''
+
+3.6.34.6 Grade Lines (Tools Menu/Storm Drain)
+'''''''''''''''''''''''''''''''''''''''''''''
 
 This option allows the user to review the grade lines for the conduits.
+
 .. image:: img/GDS262.jpg
+
 **4.7 Contents (Help Menu)**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 .. image:: img/GDS263.jpg
-   The Help Contents Command accesses a .pdf version of this manual.
-   The FLO-2D Software links to the website and the About… opens the welcome message.
-   The welcome message shows the activation status and alerts a user if the subscription needs to be renewed.
+
+The Help Contents Command accesses a .pdf version of this manual.
+The FLO-2D Software links to the website and the About… opens the welcome message.
+The welcome message shows the activation status and alerts a user if the subscription needs to be renewed.
+
 .. image:: img/GDS264.jpg
