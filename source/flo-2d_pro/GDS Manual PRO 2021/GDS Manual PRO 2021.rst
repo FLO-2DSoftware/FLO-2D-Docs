@@ -3497,6 +3497,8 @@ and maximum elevations (Y-axis), legend position and angle of labels.
 
 3.6.32 Street Profile (Tools Menu)
 
+.. image:: img/GDS329.jpg
+
 This command will create a street and ground elevation profile.
 To access this tool, click the *Street Profile* Command and click any street element.
 The *GDS* will display the street profile as shown:
@@ -3514,9 +3516,9 @@ The depression storage accuracy can be retained by generating a depth-volume sto
 To activate this tool, click the command *Create Storage Volume Rating Tables* and then click on *Compute Rating Curves*.
 *GDS* will calculate the rating tables and generate an outrc.dat file that contains the potential storage for each cell.
 
-.. image:: img/GDS255.jpg
+.. image:: img/GDS330.jpg
 
-.. image:: img/GDS256.png
+.. image:: img/GDS331.jpg
 
 3.6.34 Storm Drain (Tools Menu)
 
@@ -3526,14 +3528,15 @@ The Storm Drain model 5.1 will then compute the pipe network flows and potential
 To activate this tool, click the command *Storm Drain.
 GDS* will allow you to enter, modify and view the Inlets as well as run EPA SWMM GUI 5.0 using the following dialogs:
 
-.. image:: img/GDS257.jpg.. image:: img/GDS258.jpg
+.. image:: img/GDS257.jpg
+
+.. image:: img/GDS258.jpg
 
 This command will open the EPA SWMM 5.0 program.
 Create a .inp file and save it to the project folder.
 Then use the Control Panel to load make the SWMMFLO.DAT file.
 
 3.6.34.1 Run Storm Drain GUI… (Tools Menu/Storm Drain)
-''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 .. image:: img/GDS259.jpg
 
