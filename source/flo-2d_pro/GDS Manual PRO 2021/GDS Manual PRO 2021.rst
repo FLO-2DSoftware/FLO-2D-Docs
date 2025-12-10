@@ -1628,7 +1628,7 @@ The following table describes the interpolation method.
    * - Inverse distance weighting formula exponent
      - This is “n” in the Inverse Distance Weighting Formula:
 
-       *NDTM* 1  *Z j*  \ *j*\ =1 *rijn*  *Z* :sup:`=` *NDTM* 1   *rn*  *j*\ =1 *ij*
+       :math:`\bar{Z} = \frac{\sum_{j=1}^{NDTM} Z_j r_{ij}^{-n}}{\sum_{j=1}^{NDTM} r_{ij}^{-n}}`
 
        Where Z¯ is the interpolated grid element elevation, Z\ :sub:`j` is
 
