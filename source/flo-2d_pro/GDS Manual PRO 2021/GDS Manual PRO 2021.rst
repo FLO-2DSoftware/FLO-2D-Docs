@@ -2983,22 +2983,20 @@ A few comments are highlighted here:
     - If channel geometry is being simulated with regression relationships (SHAPE = ‘V’), then the area (A) versus depth (d) power relationships (A = ad\
       :sup:`b`) coefficients (a) and exponents (b) must be specified.
       Similar relationships are required for wetted perimeter and top width.
-      If two power relationships are used to represent a natural
+      If two power relationships are used to represent a natural cross section, then the maximum depth (*Depth for 2\ nd relationship variable*) to which the first relationship applies must be specified.
+      Some rules for applying the second variable area channel geometry relationships follow:
 
-cross section, then the maximum depth (*Depth for 2\ nd relationship variable*) to which the first relationship applies must be specified.
-Some rules for applying the second variable area channel geometry relationships follow:
-
-    i.   The second regression applies when the flow depth is greater than *Depth for 2\ nd relationship variable*, but does not include the lower flow area.
-         The two variable area cross section relationships are unique and separate.
-         The total cross section flow area is the sum of the lower flow and upper (second relationship) flow areas.
-         The channel top width is computed directly from the second relationship.
-         The area, wetted perimeter and top width are evaluated using the upper flow depth given by: (total depth - *Depth for 2\ nd relationship variable*).
-         To analyze the upper channel geometry using the XSEC program, only the cross section coordinates above the *Depth for 2\ nd relationship variable* are
-         used.
-    ii.  Channel geometry relationships apply only to flow depths that are less than the channel depth (lower than the top of bank).
-         When the flow depth exceeds the top of bank, then the channel geometry above bank is evaluated as a rectangle.
-    iii. Abrupt transitions between contiguous channel elements should be avoided unless they actually exist.
-    iv.  A preprocessor program XSEC is available in the *FLO-2D* subdirectory to determine the regression coefficient and exponents.
+        i.   The second regression applies when the flow depth is greater than *Depth for 2\ nd relationship variable*, but does not include the lower flow area.
+             The two variable area cross section relationships are unique and separate.
+             The total cross section flow area is the sum of the lower flow and upper (second relationship) flow areas.
+             The channel top width is computed directly from the second relationship.
+             The area, wetted perimeter and top width are evaluated using the upper flow depth given by: (total depth - *Depth for 2\ nd relationship variable*).
+             To analyze the upper channel geometry using the XSEC program, only the cross section coordinates above the *Depth for 2\ nd relationship variable* are
+             used.
+        ii.  Channel geometry relationships apply only to flow depths that are less than the channel depth (lower than the top of bank).
+             When the flow depth exceeds the top of bank, then the channel geometry above bank is evaluated as a rectangle.
+        iii. Abrupt transitions between contiguous channel elements should be avoided unless they actually exist.
+        iv.  A preprocessor program XSEC is available in the *FLO-2D* subdirectory to determine the regression coefficient and exponents.
 
             - Channel elements that are contiguous but do not share discharge (e.g. parallel channels) must be identified with the NOFLO1 and NOFLO2 variables.
               List each pair of contiguous channel elements only once.
@@ -3007,9 +3005,9 @@ Some rules for applying the second variable area channel geometry relationships 
               The basic equation for the channel element roughness n\ :sub:`d` as function of flow depth is:
 
 .. math::
-    :label:
+   :label:
 
-    n_d = n_r r_c e-(r2 depth/dmax)
+   n_d = n_b\, r_c\, e^{-\left( r2\ depth / dmax \right)}
 
 where:
 
@@ -3053,6 +3051,9 @@ Click to reverse the channel direction.
 Realign left bank channel elements by clicking and dragging the blue dots.
 The zoom, pan and edit features are also available with this tool.
 
+.. image:: img/GDS310.jpg
+
+
 .. image:: img/GDS200.jpg
 
 To Realign the right bank elements use the Realign Extensions tool.
@@ -3064,6 +3065,8 @@ It has the same capabilities as the realign channel tool.
 
 To see a plot of the cross section associated with each channel element.
 Click the Plot Cross Section option.
+
+.. image:: img/GDS311.jpg
 
 Use this tool to assign cross sections to specified channel elements.
 The prev and next button is used to select the channel element and the drop down box is used to select the cross section.
@@ -3103,6 +3106,8 @@ column and Main Channel data entry field column:
 
 User can select, add, delete or modify channel confluence elements using the options available on the following dialog:
 
+.. image:: img/GDS312.jpg
+
 3.6.11 Create a Cross Section (Tools Menu)
 
 .. image:: img/GDS207.jpg
@@ -3111,6 +3116,8 @@ Use this tool to cut a cross section from elevation data.
 Elevation data must be loaded.
 Click Tools/Channels/Create a Cross Section.
 Create an elevation layer if necessary and then click and draw a line to define a cross section.
+
+.. image:: img/GDS313.jpg
 
 Then assign the cross section to the N – natural channel.
 The red arrows point out the cross section as seen by the small black dotted line.
@@ -3123,6 +3130,8 @@ Depending on the data, the cross sections might need adjustments.
 The following dialog allows the user to select a cross section number and name, determine the number of station / elevation pairs and to assign the
 write-to text file.
 
+.. image:: img/GDS314.jpg
+
 All data is appended to the xsec.dat file.
 Start with a blank xsec.dat file.
 
@@ -3134,6 +3143,8 @@ Use the File menu to import a HEC-RAS cross section.
 To manually assign a HEC-RAS cross section to a channel element, select the tool menu feature.
 Then select a HEC-RAS cross section and a channel element.
 Repeat the process until complete.
+
+.. image:: img/GDS315.jpg
 
 3.6.13 Auto Assign HEC-RAS Cross Section to Channel Elements (Tools Menu)
 
@@ -3333,6 +3344,8 @@ This command allows entering mud flow or sediment transport data using the follo
 
 3.6.23 Evaporation (Tools Menu)
 
+.. image:: img/GDS317.jpg
+
 3.6.24 MODFLO-2D Simulation (Tools Menu)
 
 .. image:: img/GDS230.jpg
@@ -3354,6 +3367,8 @@ with a rating table or rating curve.
 
 3.6.26 Rain (Tools Menu)
 
+.. image:: img/GDS318.jpg
+
 The Rain command allows entering data to simulate rainfall input over the FLO-2D grid.
 
 3.6.27 Breach (Tools Menu)
@@ -3363,7 +3378,6 @@ The Rain command allows entering data to simulate rainfall input over the FLO-2D
 This command is used to enter levee breach data for the computed breach option.
 
 Global Breach Data
-^^^^^^^^^^^^^^^^^^
 
 Global breach data is used to input the dam or levee geometry and soil data in order to simulate an NWS Breach erosion condition.
 The model uses the global data along points of a levee or dam that meet a specific depth or time to breach criteria.
@@ -3371,7 +3385,6 @@ The model uses the global data along points of a levee or dam that meet a specif
 .. image:: img/GDS235.png
 
 Individual Breach Data
-^^^^^^^^^^^^^^^^^^^^^^
 
 Individual breach data is used to input the dam or levee geometry and soil data in order to simulate an NWS Breach erosion condition at a
 predetermined location.
@@ -3380,7 +3393,6 @@ The model uses the breach data assigned to a specific location to breach at a sp
 .. image:: img/GDS236.png
 
 Levee Fragility Curve Data
-^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Levee fragility curves are used to determine a levee breach location based on data entered spatially along a levee profile.
 The fragility data is based on the existing levee condition and will activate a failure via erosional breach or prescribed failure once a certain
@@ -3390,17 +3402,21 @@ depth criteria is met.
 
 3.6.28 Drainage Basin Tools (Tools Menu)
 
-.. image:: img/GDS238.jpg
+.. image:: img/GDS321.jpg
 
-.. image:: img/GDS239.jpg
+.. image:: img/GDS322.jpg
 
-.. image:: img/GDS240.jpg
+.. image:: img/GDS323.jpg
 
-.. image:: img/GDS241.jpg
+.. image:: img/GDS324.jpg
 
-.. image:: img/GDS242.jpg
+.. image:: img/GDS325.jpg
 
-.. image:: img/GDS243.png
+.. image:: img/GDS326.jpg
+
+.. image:: img/GDS327.jpg
+
+.. image:: img/GDS328.jpg
 
 3.6.29 Create Floodplain Cross Sections (Tools Menu)
 
@@ -3415,15 +3431,15 @@ You can create the cross section in an existing *FLO-2D* grid using point and cl
 2. The mouse pointer changes to a cross.
 
 3. Locate and position the mouse over the first grid element in a line of grid elements that will constitute the cross section.
-Click his first grid element of the cross section and then while holding the left mouse button down select the cross section grid elements as you move
-the mouse over the grid system.
-Cross section elements are joined by lines to visualize the cross section location.
-As the cross section development progresses from one element to the next, only the eight adjacent elements can be accessed.
-When the mouse pointer is near the center of the next element to be selected, a solid arrow appears to indicate that that element is the next one in
-the segment.
-The user can backup the pointer over the segment to unselect channel grid elements.
-No clicks are necessary, the users only needs to sweep the pointer over the desired elements.
-The cross section is completed when the user double-clicks with the left mouse button.
+   Click his first grid element of the cross section and then while holding the left mouse button down select the cross section grid elements as you move
+   the mouse over the grid system.
+   Cross section elements are joined by lines to visualize the cross section location.
+   As the cross section development progresses from one element to the next, only the eight adjacent elements can be accessed.
+   When the mouse pointer is near the center of the next element to be selected, a solid arrow appears to indicate that that element is the next one in
+   the segment.
+   The user can backup the pointer over the segment to unselect channel grid elements.
+   No clicks are necessary, the users only needs to sweep the pointer over the desired elements.
+   The cross section is completed when the user double-clicks with the left mouse button.
 
 .. image:: img/GDS245.jpg
 
