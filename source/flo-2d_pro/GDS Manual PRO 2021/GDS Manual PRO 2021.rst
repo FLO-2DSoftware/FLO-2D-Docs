@@ -930,7 +930,7 @@ Click the *Apply* button and then the *Close* button to accept the changes.
 .. image:: img/GDS070.png
 
 .. |individual_terrain_elevation_icon| image:: img/GDS071.jpg
-   :height: 14_px
+   :height: 14px
 
 This command queries individual terrain elevation points and displays the data for the selected point in the toolbar point elevation box.
 The mouse cursor changes to the inquiry mode to show that this option is active\ |individual_terrain_elevation_icon|.
