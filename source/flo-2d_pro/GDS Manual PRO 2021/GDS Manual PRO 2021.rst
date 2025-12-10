@@ -2467,7 +2467,7 @@ Double-clicking on any grid element the new Infiltration dialog box will display
 
 3.5.26 Compute Width and Area Reduction Factors … (Grid Menu)
 
-.. image:: img/GDS297.png
+.. image:: img/GDS297.jpg
 
 .. image:: img/GDS160.png
 
@@ -2521,6 +2521,8 @@ To calculate the Width Reduction Factor for this cell the GDS performs the follo
 The grid element or cell is divided into 9 subcells.
 Each subcell is intersected with the polygons on the cell.
 For example in the following configuration the SE WRF is computed based on the yellow area of the polygon:
+
+.. image:: img/GDS298.jpg
 
 The shaded AreaSE is used to calculate the SE WRF as follows:
 
