@@ -2114,6 +2114,7 @@ The following procedure is applied:
        each variable:
 
     .. math::
+        :label:
 
         Var = \frac{\sum A_i Var_i}{A_{GE}}
 
@@ -2439,7 +2440,6 @@ In the dialog box, select the Curve Number Shape file (LANDSOIL.SHP in this exam
 *GDS* will intersect the shape file polygons with the grid elements and determine the area weighted average value for each grid element.
 
 Computation of CN’s Base on a Multiple Shape Files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This option computes the CN’s based on the method explained in above sections.
 It is necessary to import three polygon shape files for HSG, Land cover, and Impervious cover.
@@ -2448,7 +2448,7 @@ Number/From Multiple Shape Files* command
 
 The following dialog box will be displayed:
 
-.. image:: img/GDS159.png
+    .. image:: img/GDS159.png
 
     1. Select the Hydrologic Soil Group Shape File and soil group field (landsoil.shp and LandSoil respectively in this example).
 
@@ -2466,6 +2466,8 @@ Double-clicking on any grid element the new Infiltration dialog box will display
 *FLO-2D* Infiltration Computation Using the SCS Curve Number Method *GDS* will create the new INFIL.DAT data file with the CN for all grid elements.
 
 3.5.26 Compute Width and Area Reduction Factors … (Grid Menu)
+
+.. image:: img/GDS297.png
 
 .. image:: img/GDS160.png
 
@@ -2488,25 +2490,31 @@ The ARF-WRF assignment tool requires the following data:
     1. FLO-2D data files for a basic overland flood simulation and
     2. A polygon Shape File where each polygon represents a building or obstruction to the flow Computation Method
 
+Computation Method
+
 For each grid element (cell), the GDS finds all Shape File polygon intersections with the cell.
 The following figure shows an example where three polygons (building polygons) intersect a cell defining three areas A, B and C:
 
 .. image:: img/GDS161.png
 
 Area Reduction Factor
-^^^^^^^^^^^^^^^^^^^^^
 
 To calculate the Area Reduction Factor for this cell GDS performs the following operations:
 
-Total_Intersected_Area = AreaA + AreaB + AreaC
+.. math::
+   :label:
 
-Area_Reduction_Factor = Total_Intersected_Area /Cell_Area
+   Total\_Intersected\_Area = AreaA + AreaB + AreaC
+
+.. math::
+   :label:
+
+   Area\_Reduction\_Factor = \frac{Total\_Intersected\_Area}{Cell\_Area}
 
 Where AreaA is the intersected area of polygon A with the cell, and AreaB and AreaC are defined accordingly.
 Cell_Area is the Grid Element area.
 
 Width Reduction Factor
-^^^^^^^^^^^^^^^^^^^^^^
 
 To calculate the Width Reduction Factor for this cell the GDS performs the following operations:
 
