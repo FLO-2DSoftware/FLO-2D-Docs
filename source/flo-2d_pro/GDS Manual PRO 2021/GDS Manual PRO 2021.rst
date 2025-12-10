@@ -1560,13 +1560,18 @@ Setup elements that do not scour during the sediment transport simulation.
 
 3.5.17 Assign Parameters to Selection/Variable Sediment Size Fraction (Grid Menu)
 
+.. image:: img/GDS291.jpg
+
 This command requires the definition of transport equations.
 See “Tools.
 Mud and Sediment Transport”
 
 3.5.18 Assign Parameters to Selection/Limiting Froude Number (Grid Menu)
 
+.. image:: img/GDS292.jpg
+
 Use this command to setup spatially variable limiting Froude numbers.
+
 3.5.19 Assign Parameters to Selection/Cell Elevation Adjustment (Grid Menu)
 
 .. image:: img/GDS140.jpg
@@ -1576,6 +1581,8 @@ Use this command to adjust elevations for the selected cells and their neighbors
 .. image:: img/GDS141.jpg
 
 3.5.20 Assign Parameters to Selection/Cell Tolerance (Grid Menu)
+
+.. image:: img/GDS293.jpg
 
 Assign cell tolerances to the selected cells.
 
