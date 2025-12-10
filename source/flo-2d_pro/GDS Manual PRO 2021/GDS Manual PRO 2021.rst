@@ -927,7 +927,7 @@ The mouse cursor changes to the inquiry mode to show that this option is active\
 
 3.3.7 Grid Element #’s, Elevations, and n-values and Curve Numbers (View Menu)
 
-.. image:: img/GDS073png
+.. image:: img/GDS073.png
 
 Use these commands to display grid element numbers, elevations, Manning’s n-values or Curve Numbers inside the grid elements.
 Each command can be toggled and used jointly to display three values.
