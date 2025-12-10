@@ -2562,13 +2562,11 @@ These boundary grid elements are not used in a *FLO-2D* model flood simulation a
 files.
 To use the *Define Boundary Grid Elements* command:
 
-1. Select the *Define Boundary Grid Elements* *(Element by Element)* command (Grid menu).
-   The mouse pointer changes to a cross.
-
-2. Select the boundary grid elements.
-   The grid element color will change to red.
-
-3. Repeat step 2 as many times as needed to select or edit boundary grid elements.
+    1. Select the *Define Boundary Grid Elements* *(Element by Element)* command (Grid menu).
+       The mouse pointer changes to a cross.
+    2. Select the boundary grid elements.
+       The grid element color will change to red.
+    3. Repeat step 2 as many times as needed to select or edit boundary grid elements.
 
 To undo this operation simply click again on a previously marked grid element.
 To mark a group of grid elements press the **Shift** key and the left mouse button and then drag the mouse pointer over the desired grid elements.
@@ -2586,6 +2584,8 @@ command.
 
 Select this command after the grid system has been generated.
 When you click *Draw Line*, the following dialog box appears:
+
+.. image:: img/GDS303.jpg
 
 Click *‘OK’* and proceed to draw a polyline with a series of left mouse button clicks.
 Complete the polyline by doubling clicking on the final vertex and then click *‘Yes’* in the following dialog box to generate the boundary elements.
@@ -2631,7 +2631,9 @@ Use this command to create the grid layer and continue with grid element attribu
 
 **3.6** **Tools Menu Commands:**
 
-1. Options…/Interpolation… (Tools Menu)
+3.6.1. Options…/Interpolation… (Tools Menu)
+
+.. image:: img/GDS305.jpg
 
 This command defines the various options that control the interpolation process.
 When command is selected, a dialog box appears to adjust the various interpolation parameters:
@@ -2705,7 +2707,9 @@ Dialog Box Options:
 
        element mean elevation.
 
-2. Options…/Change Refresh Count (Tools Menu)
+3.6.2. Options…/Change Refresh Count (Tools Menu)
+
+.. image:: img/GDS306.jpg
 
 Use this command to speed up the redraw (refresh) rate for large projects.
 The refresh rate specifies how often the screen is updated when drawing maps.
@@ -2713,7 +2717,7 @@ If there are 1000 vertices to draw and the refresh rate is 500, then the screen 
 A higher refresh rate results in faster draw times while a lower rate results a smoother draw appearance.
 A dialog box will appear prompting you to input a value for the refresh rate of the map or image:
 
-3. Options…/Directory Paths (Tools Menu)
+3.6.3. Options…/Directory Paths (Tools Menu)
 
 .. image:: img/GDS168.jpg
 
@@ -2724,7 +2728,7 @@ The following dialog box appears:
 
 Input the desired new directory paths and then click *Apply*.
 
-4. Measure Distance along Line (Tools Menu)
+3.6.4. Measure Distance along Line (Tools Menu)
 
 .. image:: img/GDS170.jpg
 
@@ -2734,7 +2738,7 @@ This tool computes the distance along a user-input polyline.
 After clicking on the *Measure Distance along Line Command,* draw a polyline using the mouse and double click at the end point of the polyline.
 *GDS* will display the length of the polyline as shown below:
 
-5. Compute Average Point Rainfall Depth (Tools Menu)
+3.6.5. Compute Average Point Rainfall Depth (Tools Menu)
 
 .. image:: img/GDS172.jpg
 
@@ -2948,10 +2952,17 @@ discussion):
     3. *Compute scour/deposition with sediment transport routine*: This is a check box to compute sediment transport in the channel segment.
        Checked the box if sediment transport is to be computed.
        In addition, ISED must be turned “On” in CONT.DAT.
+
+    .. |elev_insert_icon| image:: img/GDS192.jpg
+       :height: 14px
+
     4. *Initial flow depth*: When the *initial flow depth for all channel nodes* is > 0, an initial depth is specified for all the channel elements in that
        segment.
-       Checking the *Initial Flow* check box |GDS192| requires assigning starting and ending water surface elevations for the channel segment beginning
+       Checking the *Initial Flow* check box |elev_insert_icon| requires assigning starting and ending water surface elevations for the channel segment beginning
        with element *1\ st node* and ending with element *last node.*
+
+       .. image:: img/GDS307.jpg
+
        Interpolated water surface elevations are assigned to the channel elements in that segment based on the channel length.
     5. Each row in the “Channel Geometry” table corresponds to a channel grid element.
     6. The “Geometry Regression Relationships” data table is enabled only when a variable geometry channel element of type “V” is selected in the “Channel
