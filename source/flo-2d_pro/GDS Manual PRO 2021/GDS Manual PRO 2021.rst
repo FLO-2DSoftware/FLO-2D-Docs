@@ -2526,19 +2526,29 @@ For example in the following configuration the SE WRF is computed based on the y
 
 The shaded AreaSE is used to calculate the SE WRF as follows:
 
-SE Width Reduction Factor = AreaSE / Area_of_SubCell
+.. math::
+   :label:
+
+   SE\ Width\ Reduction\ Factor = \frac{AreaSE}{Area\_of\_SubCell}
+
 
 This algorithm accounts for the effect of width reduction factor even when the building or polygon is not intersecting the actual SE element side.
 
 3.5.27 Compute Limiting Froude Numbers … (Grid Menu)
 
+.. image:: img/GDS299.jpg
+
 This command will compute the limiting Froude number for each grid element based on information contained in shape files.
 
 3.5.28 Compute Cell Tolerances… (Grid Menu)
 
+.. image:: img/GDS300.jpg
+
 This command will compute cell tolerances for each selected grid element based on information contained in shape files.
 
 3.5.29 Compute Horton Variables… (Grid Menu)
+
+.. image:: img/GDS301.jpg
 
 This command will compute and assign Horton values to cells intersected by the shapefile polygons based on the information contained in the variables
 selected in the shapefiles.
