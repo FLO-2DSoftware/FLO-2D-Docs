@@ -966,6 +966,8 @@ Displays non-interpolated grid elements.
 These elements remained un-interpolated they did not have DTM elevation points within the grid element space during interpolation.
 The user chose not to interpolate the elevation of grid elements that did not have any DTM points within the grid element space.
 
+.. image:: img/GDS272.jpg
+
 3.3.12 Manning’s n Values Rendering (View Menu)
 
 Plots colored hatched pattern on the elements according to the Manning’s n value.
@@ -974,9 +976,13 @@ Plots colored hatched pattern on the elements according to the Manning’s n val
 
 3.3.13 Grid Element Elevation Rendering (View Menu)
 
+.. image:: img/GDS273.jpg
+
 Plots colored solid or hatched grid elements according to the elevations.
 
 3.3.14 Highlight Grid Element Number… (View Menu)
+
+.. image:: img/GDS274.jpg
 
 Enter a grid element number in the following dialog box to locate it in the *FLO-2D* grid.
 When you click the *Highlight* button, the grid element will blink to identify it.
@@ -989,11 +995,17 @@ Or the “+” and “-“ buttons.
 
 This command colors the 4th lowest grid elements.
 
+.. image:: img/GDS275.jpg
+
 3.3.16 Cross Section Numbers… (View Menu)
 
 This command displays cross section numbers for Natural Channels.
 
+.. image:: img/GDS276.jpg
+
 3.3.17 Cells without Cross Section Numbers… (View Menu)
+
+.. image:: img/GDS277.jpg
 
 This command displays natural channel grid elements that do not have any assigned cross section.
 The grid elements without cross sections assigned are highlighted in blue.
