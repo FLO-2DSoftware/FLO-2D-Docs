@@ -1013,7 +1013,6 @@ Use this command to redraw the visible objects in the working region.
 .. |elev_insert_icon| image:: img/GDS099.jpg
    :height: 14px
 
-
 Use this command (or the |elev_insert_icon| icon) to insert elevation data at selected points within the working region.
 To use this tool:
 
@@ -1139,8 +1138,11 @@ Use the *Assign Parameters to Selection* command to assign various attributes to
 
 .. image:: img/GDS112.jpg
 
+.. |elev_insert_icon| image:: img/GDS113.jpg
+   :height: 14px
+
 This command will unselect all the elements previously selected with the *Select* command.
-The toolbar icon |GDS113| will also perform this function.
+The toolbar icon |elev_insert_icon| will also perform this function.
 
 3.5.7 Assign Parameters to Selection/Elevations (Grid Menu)
 
@@ -2774,7 +2776,10 @@ This tool will help you to assign levee crest elevations directly from the DTM p
 levee crest.
 If a number of DTM points fall on the top of the levee, the average of the five highest DTM points can be used to represent the levee crest.
 
-When you click this command or on the toolbar icon |GDS182| for an existing levee the following floating dialog appears:
+.. |elev_insert_icon| image:: img/GDS182.jpg
+   :height: 14px
+
+When you click this command or on the toolbar icon |elev_insert_icon| for an existing levee the following floating dialog appears:
 
 .. image:: img/GDS183.jpg
 
@@ -2813,7 +2818,9 @@ This command creates the channel network in an existing *FLO-2D* grid system usi
 
 Click apply to accept the new channel segment.
 
-.. image:: img/GDS188.jpg.. image:: img/GDS189.jpg
+.. image:: img/GDS188.jpg
+
+.. image:: img/GDS189.png
 
 To edit channel geometry parameters, click a channel segment.
 A submenu appears with several options:
@@ -2822,7 +2829,7 @@ A submenu appears with several options:
 
 Select *Edit Channel Segment Parameters* and to display the Channel Segment dialog box:
 
-.. image:: img/GDS191.jpg
+.. image:: img/GDS191.png
 
 The channel data is governed by the following rules (refer to the CHAN.DAT file description in the *FLO-2D* Data Input Manual for more detailed
 discussion):
@@ -2910,7 +2917,7 @@ To delete an entire selected channel segment, select the *Delete Channel Segment
 
 If the channel segment has assigned inflow hydrographs the following warning will appear:
 
-.. image:: img/GDS195.jpg
+.. image:: img/GDS195.png
 
 If you select Yes, you will need to click the inflow node(s) that was assigned to the segment and reassigned to the floodplain instead.
 
@@ -2936,7 +2943,7 @@ It has the same capabilities as the realign channel tool.
 
 .. image:: img/GDS201.jpg
 
-.. image:: img/GDS202.jpg
+.. image:: img/GDS202.png
 
 To see a plot of the cross section associated with each channel element.
 Click the Plot Cross Section option.
@@ -2946,7 +2953,7 @@ The prev and next button is used to select the channel element and the drop down
 
 .. image:: img/GDS203.jpg
 
-.. image:: img/GDS204.jpg
+.. image:: img/GDS204.png
 
 Click 3-D Plot to see a 3-D graphic of the channel segment.
 This tool helps with cross section data quality control.
@@ -3074,7 +3081,7 @@ When the user clicks on an existing street, the street line will be colored in r
 
 To edit the street data, select *Edit Street Parameters* to display the Street Parameters dialog box:
 
-.. image:: img/GDS218.jpg
+.. image:: img/GDS218.png
 
 The Street Parameter dialog box can also be accessed by left mouse button click a grid element with streets and clicking on the *Street Element*
 button.
@@ -3177,14 +3184,14 @@ The procedure to create a detention basin depression in the grid system topograp
 
 2. The system displays the following message:
 
-.. image:: img/GDS224.jpg
+.. image:: img/GDS224.png
 
 3. The user draws the polygon that defines the detention basin perimeter.
    The polygon is closed by double clicking on the last vertex of the polygon.
 
 4. The *GDS* will then request for the detention basin volume (ft\ :sup:`3` or m\ :sup:`3`):
 
-.. image:: img/GDS225.jpg
+.. image:: img/GDS225.png
 
 5. Input the desired volume and click *‘OK’*.
    The system will subtract a uniform depth (*Detention basin height*) from all the elements included in the detention basin polygon until the detention
@@ -3197,7 +3204,7 @@ If the user clicks on the detention basin polygons, the following menu appears:
 
 When you click *View Detention Basin* the following message is displayed:
 
-.. image:: img/GDS227.jpg
+.. image:: img/GDS227.png
 
 3.6.22 Mud and Sediment Transport (Tools Menu)
 
@@ -3217,7 +3224,7 @@ This command allows entering data to simulate surface and groundwater flow using
 There following tabbed dialog box provides input fields for a subset of *MODFLOW* data.
 A separate manual explain in full the capabilities of the *FLO-2D* *MODFLOW* link, also called *MODFLO*-2D.
 
-.. image:: img/GDS231.jpg
+.. image:: img/GDS231.png
 
 3.6.25 Hydraulic Structures (Tools Menu)
 
@@ -3244,7 +3251,7 @@ Global Breach Data
 Global breach data is used to input the dam or levee geometry and soil data in order to simulate an NWS Breach erosion condition.
 The model uses the global data along points of a levee or dam that meet a specific depth or time to breach criteria.
 
-.. image:: img/GDS235.jpg
+.. image:: img/GDS235.png
 
 Individual Breach Data
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -3253,7 +3260,7 @@ Individual breach data is used to input the dam or levee geometry and soil data 
 predetermined location.
 The model uses the breach data assigned to a specific location to breach at a specified elevation or time.
 
-.. image:: img/GDS236.jpg
+.. image:: img/GDS236.png
 
 Levee Fragility Curve Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3262,7 +3269,7 @@ Levee fragility curves are used to determine a levee breach location based on da
 The fragility data is based on the existing levee condition and will activate a failure via erosional breach or prescribed failure once a certain
 depth criteria is met.
 
-.. image:: img/GDS237.jpg
+.. image:: img/GDS237.png
 
 3.6.28 Drainage Basin Tools (Tools Menu)
 
@@ -3276,7 +3283,7 @@ depth criteria is met.
 
 .. image:: img/GDS242.jpg
 
-.. image:: img/GDS243.jpg
+.. image:: img/GDS243.png
 
 3.6.29 Create Floodplain Cross Sections (Tools Menu)
 
@@ -3314,7 +3321,7 @@ A short-cut menu appears with three options as shown:
 
 Select *Edit Floodplain Cross Section* to display the floodplain cross section dialog box:
 
-.. image:: img/GDS248.jpg
+.. image:: img/GDS248.png
 
 In the left data table are the grid elements that form the cross section.
 In the right data table of the dialog box, select the direction for discharge calculation.
@@ -3348,12 +3355,12 @@ below.
 
 Then *GDS* will display the levee profile as shown in the following plot:
 
-.. image:: img/GDS252.jpg
+.. image:: img/GDS252.png
 
 Using this *Formatting* Menu on the tool bar, the *GDS* will display the following dialog box so that you can customize the plot including the minimum
 and maximum elevations (Y-axis), legend position and angle of labels.
 
-.. image:: img/GDS253.jpg
+.. image:: img/GDS253.png
 
 3.6.32 Street Profile (Tools Menu)
 
@@ -3374,7 +3381,9 @@ The depression storage accuracy can be retained by generating a depth-volume sto
 To activate this tool, click the command *Create Storage Volume Rating Tables* and then click on *Compute Rating Curves*.
 *GDS* will calculate the rating tables and generate an outrc.dat file that contains the potential storage for each cell.
 
-.. image:: img/GDS255.jpg.. image:: img/GDS256.jpg
+.. image:: img/GDS255.jpg
+
+.. image:: img/GDS256.png
 
 3.6.34 Storm Drain (Tools Menu)
 
@@ -3422,7 +3431,7 @@ These options define how the storm drain system appears on the GDS display windo
 This option allows the user to review the inlet discharge hydrographs or print them to \*.jpg image files.
 Choose from this project to display on screen or from external project to save all projects to file.
 
-.. image:: img/GDS261.jpg
+.. image:: img/GDS261.png
 
 3.6.34.6 Grade Lines (Tools Menu/Storm Drain)
 '''''''''''''''''''''''''''''''''''''''''''''
