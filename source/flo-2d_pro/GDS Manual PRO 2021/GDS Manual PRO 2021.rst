@@ -2538,62 +2538,84 @@ you want to unmark.
 
 ..
 
-   This command defines the various options that control the interpolation process.
-   When command is selected, a dialog box appears to adjust the various interpolation parameters:
+This command defines the various options that control the interpolation process.
+When command is selected, a dialog box appears to adjust the various interpolation parameters:
 
-   Dialog Box Options:
+Dialog Box Options:
 
-.. _`option`:
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
 
-option:
+   * - Option
+     - Description
 
-Description
+   * - Minimum number of DTM points to
 
-.. _`minimumnumberofdtmpointstoconsiderinthevicinityofeachgridelement`:
+       consider in the vicinity of each grid element
 
-minimumnumberofdtmpointstoconsiderinthevicinityofeachgridelement:
+     - To calculate an interpolated elevation from random DTM points that
 
-To calculate an interpolated elevation from random DTM points that will represent each grid element, the algorithm will use at least this minimum
-number of DTM points closest to the grid element center.
+       will represent each grid element, the algorithm will use at least this
 
-.. _`radiusofinterpolation(proportionaltogridelementsize)`:
+       minimum number of DTM points closest to the grid element center.
 
-radiusofinterpolation(proportionaltogridelementsize):
+   * - Radius of interpolation (proportional to grid
 
-The radius defines a circle around each grid element node that is multiple of the element size.
-Only the DTM points inside the radius are interpolated.
-If an insufficient number of elevation points are within the circle, it is expanded until at least the minimum number of points is found.
+       element size)
 
-.. _`inversedistanceweightingformulaexponent`:
+     - The radius defines a circle around each grid element node that is
 
-inversedistanceweightingformulaexponent:
+       multiple of the element size. Only the DTM points inside the radius
 
-This is “n” in the Inverse Distance Weighting Formula:  *NDTM* 1  \ *j*\ =1 *Z j rijn*  *Z* :sup:`=` *NDTM* 1  \ *j*\ =1 *rijn*
+       are interpolated. If an insufficient number of elevation points are
 
-Where Z¯ is the interpolated grid element elevation, Z\ :sub:`j` is the elevation of DTM point :sub:`j`, r\ :sub:`ij` is the distance from the DTM
-point :sub:`j` to center of grid element :sub:`i` and NDTM is the total number of DTM points.
+       within the circle, it is expanded until at least the minimum number of
 
-.. _`nofiltering(highorlowelevations)`:
+       points is found.
 
-nofiltering(highorlowelevations):
+   * - Inverse distance weighting formula
 
-No filtering is performed on the elevation points.
+       exponent
 
-.. _`maximumelevationdifference(foreitherhighorlowelevations)`:
+     - This is “n” in the Inverse Distance Weighting Formula:
 
-maximumelevationdifference(foreitherhighorlowelevations):
+       *NDTM* 1  \ *j*\ =1 *Z j rijn*  *Z* :sup:`=` *NDTM* 1  \ *j*\ =1 *rijn*
 
-For this option, the algorithm calculates a mean elevation using all the DTM and any assigned elevation points within the interpolation radius.
-All those points that exceed the selected maximum elevation difference either higher or lower than the mean are discarded and the mean elevation is
-recomputed and assigned to the grid element.
+       Where Z¯ is the interpolated grid element elevation, Z\ :sub:`j`
 
-.. _`standarddeviationdifference(foreitherhighorlowelevations)`:
+       is the elevation of DTM point :sub:`j`,
 
-standarddeviationdifference(foreitherhighorlowelevations):
+       r\ :sub:`ij` is the distance from the DTM point :sub:`j` to center of grid element :sub:`i`
 
-The algorithm first calculates the DTM point elevation standard deviation and then neglects all those points whose elevations are higher (or lower)
-than the standard deviation when recalculating grid element mean elevation.
+       and NDTM is the total number of DTM points.
 
+   * - No filtering (High or Low Elevations)
+     - No filtering is performed on the elevation points.
+
+   * - Maximum elevation difference
+
+      (For either High or Low Elevations)
+
+     - For this option, the algorithm calculates a mean elevation using all the
+
+       DTM and any assigned elevation points within the interpolation
+
+       radius. All those points that exceed the selected maximum elevation
+
+       difference either higher or lower than the mean are discarded and the
+
+       mean elevation is recomputed and assigned to the grid element.
+
+   * - Standard deviation difference (For Either High or Low Elevations)
+
+     - The algorithm first calculates the DTM point elevation standard
+
+       deviation and then neglects all those points whose elevations are
+
+       higher (or lower) than the standard deviation when recalculating grid
+
+       element mean elevation.
 
 2. Options…/Change Refresh Count (Tools Menu)
 
