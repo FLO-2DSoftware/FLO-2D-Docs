@@ -2646,15 +2646,17 @@ than the standard deviation when recalculating grid element mean elevation.
    format.
    A file must be prepared that contains the storm beginning and ending dates and times, time interval of the rainfall data files (in minutes), number of
    reporting storm time intervals (one rainfall data file per interval) and the file name and location.
-   Each subsequent rainfall data file will list the rainfall depth at a rain gage grid location (i.e.
-   rainfall grid not the *FLO-2D* grid system) at that specific time.
-   For example:
+Each subsequent rainfall data file will list the rainfall depth at a rain gage grid location (i.e.
+rainfall grid not the *FLO-2D* grid system) at that specific time.
+For example:
 
-15 72 6/12/2002 13:00 6/12/2002 14:00 60 2
+.. raw:: html
 
-C:\\Models\\FLO2D_2002\\Maricopa2002\\Raindata2\\rain13h.dat
-
-C:\\Models\\FLO2D_2002\\Maricopa2002\\Raindata2\\rain14h.dat
+    <pre>
+    15 72 6/12/2002 13:00 6/12/2002 14:00 60 2
+    C:\\Models\\FLO2D_2002\\Maricopa2002\\Raindata2\\rain13h.dat
+    C:\\Models\\FLO2D_2002\\Maricopa2002\\Raindata2\\rain14h.dat
+    </pre>
 
 In this case, the beginning date of the storm is 6/12/2002 and the storm beginning time is 13:00 hours.
 The storm ending date and time is 6/12/2002 and 14:00 hours.
