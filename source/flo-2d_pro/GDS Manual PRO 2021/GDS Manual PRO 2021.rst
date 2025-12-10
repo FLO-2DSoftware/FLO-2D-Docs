@@ -601,8 +601,8 @@ Import images that have been created in following formats:
      </tbody>
    </table>
 
-To correctly place the image or photo in a geo-referenced frame, it must be accompanied by a
-world file that contains geo-reference data. This world file has an extension depending on the
+To correctly place the image or photo in a geo-referenced frame, it must be accompanied by a world
+file that contains geo-reference data. This world file has an extension depending on the
 image and file type and according to the table below. For example, an image with a file name
 myimage.bmp, must have a world file associated with it named myimage.bmpw or
 myimage.bpw
