@@ -2113,9 +2113,11 @@ The following procedure is applied:
     5. Determine polygon intersections with each grid element for each SF (soil, land cover and impervious cover) and determine the area weighed average of
        each variable:
 
-       *Var*\ =\ *A\ i\ Var\ i*
+    .. math::
 
-       *A\ GE* Where:
+        Var = \frac{\sum A_i Var_i}{A_{GE}}
+
+    Where:
 
        *Var\ i* is the current variable from the shape file; *A\ i* is subarea intercepted by the grid element and
 
