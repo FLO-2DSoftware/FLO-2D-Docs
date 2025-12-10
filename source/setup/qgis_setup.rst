@@ -155,11 +155,12 @@ Choose one of the following methods:
 
    Get an old stand alone installer from the QGIS download archive:
 
-   .. raw:: html
+      .. raw:: html
 
-      <a href="https://download.osgeo.org/qgis/win64/" target="_blank" rel="noopener noreferrer">QGIS Installer Archive</a>
+         <a href="https://download.osgeo.org/qgis/win64/" target="_blank" rel="noopener noreferrer">QGIS Installer Archive</a>
    
-   .. note:: The images reference QGIS version 3.28 but the steps are the same for any stand alone version of QGIS.
+   
+   .. note:: The images reference QGIS version 3.34 and 3.28 but the steps are the same for any stand alone version of QGIS.
       
    .. image:: ../img/Instructions/archive.png
       :width: 600px
@@ -176,7 +177,12 @@ Choose one of the following methods:
 Step 2: FLO-2D Plugin
 ----------------------
 
-With QGIS installed it is time to add the FLO-2D plugin and a few other helpful plugins.
+Setup QGIS and install the FLO-2D Plugin.
+
+.. important::
+
+   This step should be performed by the End User.  If it is done on an Admin account, the profile will only be 
+   available on that account.
 
 1. Open QGIS.
 
@@ -204,7 +210,15 @@ With QGIS installed it is time to add the FLO-2D plugin and a few other helpful 
 
 5. Install the FLO-2D Plugin from a ZIP file.
 
-6. Plugin Location: ``C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\QGIS Plugins``
+6. Get the Plugin. 
+
+   .. raw:: html
+
+      <a href="https://flo-2d.com/qgis-plugin/" target="_blank" rel="noopener noreferrer">Download FLO-2D Plugin</a>
+
+7. Install the Plugin.
+
+   Click the **Install from ZIP** tab → Browse to the downloaded ZIP file → **Install Plugin**.
 
 .. image:: ../img/Instructions/image12a.png
    :width: 600px
