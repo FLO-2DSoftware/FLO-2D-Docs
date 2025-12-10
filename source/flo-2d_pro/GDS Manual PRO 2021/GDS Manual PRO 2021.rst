@@ -2376,101 +2376,106 @@ Then use the *Grid/Compute SCS Curve Number/From Single Shape File…* command
 Computation of CN’s Base on a Multiple Shape Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   This option computes the CN’s based on the method explained in above sections.
-   It is necessary to import three polygon shape files for HSG, Land cover, and Impervious cover.
-   After these shape file have been imported using the *Import Shape File…* command in the *GDS* *File* menu, then use the *Grid/Compute SCS Curve
-   Number/From Multiple Shape Files* command
+This option computes the CN’s based on the method explained in above sections.
+It is necessary to import three polygon shape files for HSG, Land cover, and Impervious cover.
+After these shape file have been imported using the *Import Shape File…* command in the *GDS* *File* menu, then use the *Grid/Compute SCS Curve
+Number/From Multiple Shape Files* command
 
    The following dialog box will be displayed:
+
 .. image:: img/GDS159.jpg
-1. Select the Hydrologic Soil Group Shape File and soil group field (landsoil.shp and LandSoil respectively in this example).
 
-2. Select the Land Cover Shape File and land cover attribute field (land.shp and cov_dens respectively in this example).
+    1. Select the Hydrologic Soil Group Shape File and soil group field (landsoil.shp and LandSoil respectively in this example).
 
-3. Select the Impervious Area Shape File and impervious ID filed (Imperv.shp and IMP respectively in this example).
+    2. Select the Land Cover Shape File and land cover attribute field (land.shp and cov_dens respectively in this example).
 
-4. Click OK.
+    3. Select the Impervious Area Shape File and impervious ID filed (Imperv.shp and IMP respectively in this example).
 
-..
+    4. Click OK.
 
-   *GDS* will intersect the shape files polygons with the grid elements and determine the area weighted average value for each grid element, based on the
-   derived formulas previously discussed.
-   Double-clicking on any grid element the new Infiltration dialog box will display the CN calculated for that element.
-   *GDS* will create the new INFIL.DAT data file with the new CN’s for all grid elements.
+*GDS* will intersect the shape files polygons with the grid elements and determine the area weighted average value for each grid element, based on the
+derived formulas previously discussed.
+Double-clicking on any grid element the new Infiltration dialog box will display the CN calculated for that element.
+*GDS* will create the new INFIL.DAT data file with the new CN’s for all grid elements.
 
-   *FLO-2D* Infiltration Computation Using the SCS Curve Number Method *GDS* will create the new INFIL.DAT data file with the CN for all grid elements.
+*FLO-2D* Infiltration Computation Using the SCS Curve Number Method *GDS* will create the new INFIL.DAT data file with the CN for all grid elements.
 
-   3.5.26 Compute Width and Area Reduction Factors … (Grid Menu)
+3.5.26 Compute Width and Area Reduction Factors … (Grid Menu)
+
 .. image:: img/GDS160.jpg
-   This command will compute the ARF and WRF factors from a polygon shape file of the buildings.
-   The correction factor is a percentage and each ARF or WRF variable that is computed will be reduced by a multiplicative percentage factor.
 
-   GDS ARF-WRF assignment from Shape Files
+This command will compute the ARF and WRF factors from a polygon shape file of the buildings.
+The correction factor is a percentage and each ARF or WRF variable that is computed will be reduced by a multiplicative percentage factor.
 
-   Loss of flood storage due to buildings and other urban features can be graphically assigned through the Grid Developer System (GDS) using individual
-   or polygon grid element selection.
-   A new GDS procedure permits the automatic assignment of Area Reduction Factors (ARF) and Width Reduction Factors (WRF) from a polygon Shape File.
-   The GDS will compute ARFs and WRFs assuming the polygons fully block the grid element corresponding surface areas, but also allows for global
-   adjustments of either ARFs or WRFs based on user defined blockage percentages (fractions).
-   This document summarizes the functionality of the new tool and provides instructions how to use it.
+GDS ARF-WRF assignment from Shape Files
 
-   Data requirements
+Loss of flood storage due to buildings and other urban features can be graphically assigned through the Grid Developer System (GDS) using individual
+or polygon grid element selection.
+A new GDS procedure permits the automatic assignment of Area Reduction Factors (ARF) and Width Reduction Factors (WRF) from a polygon Shape File.
+The GDS will compute ARFs and WRFs assuming the polygons fully block the grid element corresponding surface areas, but also allows for global
+adjustments of either ARFs or WRFs based on user defined blockage percentages (fractions).
+This document summarizes the functionality of the new tool and provides instructions how to use it.
 
-   The ARF-WRF assignment tool requires the following data:
+Data requirements
 
-1. FLO-2D data files for a basic overland flood simulation and
+The ARF-WRF assignment tool requires the following data:
 
-2. A polygon Shape File where each polygon represents a building or obstruction to the flow Computation Method
+    1. FLO-2D data files for a basic overland flood simulation and
+    2. A polygon Shape File where each polygon represents a building or obstruction to the flow Computation Method
 
 For each grid element (cell), the GDS finds all Shape File polygon intersections with the cell.
 The following figure shows an example where three polygons (building polygons) intersect a cell defining three areas A, B and C:
+
 .. image:: img/GDS161.jpg
+
 Area Reduction Factor
 ^^^^^^^^^^^^^^^^^^^^^
 
-   To calculate the Area Reduction Factor for this cell GDS performs the following operations:
+To calculate the Area Reduction Factor for this cell GDS performs the following operations:
 
-   Total_Intersected_Area = AreaA + AreaB + AreaC
+Total_Intersected_Area = AreaA + AreaB + AreaC
 
 Area_Reduction_Factor = Total_Intersected_Area /Cell_Area
 
-   Where AreaA is the intersected area of polygon A with the cell, and AreaB and AreaC are defined accordingly.
-   Cell_Area is the Grid Element area.
+Where AreaA is the intersected area of polygon A with the cell, and AreaB and AreaC are defined accordingly.
+Cell_Area is the Grid Element area.
 
 Width Reduction Factor
 ^^^^^^^^^^^^^^^^^^^^^^
 
-   To calculate the Width Reduction Factor for this cell the GDS performs the following operations:
+To calculate the Width Reduction Factor for this cell the GDS performs the following operations:
 
 The grid element or cell is divided into 9 subcells.
 Each subcell is intersected with the polygons on the cell.
 For example in the following configuration the SE WRF is computed based on the yellow area of the polygon:
 
-   The shaded AreaSE is used to calculate the SE WRF as follows:
+The shaded AreaSE is used to calculate the SE WRF as follows:
 
-   SE Width Reduction Factor = AreaSE / Area_of_SubCell
+SE Width Reduction Factor = AreaSE / Area_of_SubCell
 
-   This algorithm accounts for the effect of width reduction factor even when the building or polygon is not intersecting the actual SE element side.
+This algorithm accounts for the effect of width reduction factor even when the building or polygon is not intersecting the actual SE element side.
 
-   3.5.27 Compute Limiting Froude Numbers … (Grid Menu)
+3.5.27 Compute Limiting Froude Numbers … (Grid Menu)
 
-   This command will compute the limiting Froude number for each grid element based on information contained in shape files.
+This command will compute the limiting Froude number for each grid element based on information contained in shape files.
 
 3.5.28 Compute Cell Tolerances… (Grid Menu)
 
-   This command will compute cell tolerances for each selected grid element based on information contained in shape files.
+This command will compute cell tolerances for each selected grid element based on information contained in shape files.
 
 3.5.29 Compute Horton Variables… (Grid Menu)
 
-   This command will compute and assign Horton values to cells intersected by the shapefile polygons based on the information contained in the variables
-   selected in the shapefiles.
+This command will compute and assign Horton values to cells intersected by the shapefile polygons based on the information contained in the variables
+selected in the shapefiles.
 
-   3.5.30 Define Boundary Grid Elements/Element by Element (Grid Menu)
+3.5.30 Define Boundary Grid Elements/Element by Element (Grid Menu)
+
 .. image:: img/GDS162.jpg
-   Use this command to mark or edit the grid elements that will constitute the computational domain boundary.
-   These boundary grid elements are not used in a *FLO-2D* model flood simulation and are not included in either the FPLAIN.DAT, TOPO.DAT or CADPTS.DAT
-   files.
-   To use the *Define Boundary Grid Elements* command:
+
+Use this command to mark or edit the grid elements that will constitute the computational domain boundary.
+These boundary grid elements are not used in a *FLO-2D* model flood simulation and are not included in either the FPLAIN.DAT, TOPO.DAT or CADPTS.DAT
+files.
+To use the *Define Boundary Grid Elements* command:
 
 1. Select the *Define Boundary Grid Elements* *(Element by Element)* command (Grid menu).
    The mouse pointer changes to a cross.
@@ -2583,7 +2588,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMM
 
      - This is “n” in the Inverse Distance Weighting Formula:
 
-       *NDTM* 1  \ *j*\ =1 *Z j rijn*  *Z* :sup:`=` *NDTM* 1  \ *j*\ =1 *rijn*
+       :math:`\bar{Z} = \frac{\sum_{j=1}^{NDTM} Z_j r_{ij}^{-n}}{\sum_{j=1}^{NDTM} r_{ij}^{-n}
 
        Where Z¯ is the interpolated grid element elevation, Z\ :sub:`j`
 
