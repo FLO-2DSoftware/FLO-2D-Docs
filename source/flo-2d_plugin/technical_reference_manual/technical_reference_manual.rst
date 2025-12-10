@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-TECHNICAL REFERENCE MANUAL
+Technical Reference Manual
 ==========================
 
 Overview
@@ -73,17 +73,12 @@ Plugin Folder.*
 The code can be viewed, queried and edited with any text editor including UltraEdit, Notepad++ or Textpad.
 The files include the following:
 
-   \*.png – icon files
-
-   \*.py – python code files
-
-   \*.qml – QGIS layer styles
-
-   \*.svg – icon files
-
-   \*.sql – SQL code relational database information
-
-   \*.ui – QT Creator window editor
+- \*.png – icon files
+- \*.py – python code files
+-\*.qml – QGIS layer styles
+-\*.svg – icon files
+-\*.sql – SQL code relational database information
+-\*.ui – QT Creator window editor
 
 The plugin is organized into utility-based directories for plugin files that perform specific functions.
 For example, there is a folder for the toolbar and one for the sidebar widgets.
