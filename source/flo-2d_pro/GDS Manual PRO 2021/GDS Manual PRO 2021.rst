@@ -855,10 +855,10 @@ The *GDS* will prompt the user to save the current project.
 
 .. image:: img/GDS060.png
 
-.. |elev_insert_icon| image:: img/GDS061.jpg
+.. |view_all_icon| image:: img/GDS061.jpg
    :height: 14px
 
-Use the *View All command* or click the View All |elev_insert_icon| icon to return the working region to its original full size.
+Use the *View All command* or click the View All |view_all_icon| icon to return the working region to its original full size.
 To Zoom-in (increase the magnification), click in the working region and drag the mouse to outline the area of interest.
 
 3.3.2 Zoom Out Previous View (View Menu)
@@ -877,10 +877,10 @@ Use the Zoom Out 10% View command to reduce the current view 10% in size.
 
 .. image:: img/GDS065.png
 
-.. |elev_insert_icon| image:: img/GDS066.jpg
+.. |pan_icon| image:: img/GDS066.jpg
    :height: 14px
 
-Use the *Pan* command or use the *Pan* Toolbar icon |elev_insert_icon| to move around within the working region view.
+Use the *Pan* command or use the *Pan* Toolbar icon |pan_icon| to move around within the working region view.
 Click and drag the mouse to pan around.
 Use the *View All* command (or toolbar icon) to return to a full view of the working region or click the Select icon |GDS017| to exit the pan mode.
 
@@ -892,16 +892,16 @@ This command opens the Layer dialog box.
 
 .. image:: img/GDS068.png
 
-.. |elev_insert_icon| image:: img/image74.jpg
+.. |up_arrow_icon| image:: img/image74.jpg
    :height: 14px
 
-.. |elev_icon| image:: img/image75.jpg
+.. |down_arrow_icon| image:: img/image75.jpg
    :height: 14px
 
 Layers may be visible or invisible.
 Change the layer visible status by checking the *Visible* check box.
 In the example above there are two active layers.
-Use the |elev_insert_icon| and |elev_icon| icons to highlight and move between the various layers.
+Use the |up_arrow_icon| and |down_arrow_icon| icons to highlight and move between the various layers.
 Click the *Apply* button to accept the changes.
 Delete any layer by checking the *Delete* check box and then clicking the *Apply* button.
 After any modifications to the layers, click Apply prior to clicking OK.
@@ -1120,10 +1120,10 @@ To use the *Create Grid* command:
 
 .. image:: img/GDS107.jpg
 
-.. |elev_insert_icon| image:: img/GDS108.jpg
+.. |select_one_or_more_grid_elements_icon| image:: img/GDS108.jpg
    :height: 14px
 
-Use this command (or the |elev_insert_icon| icon in the tool bar) to select one or more grid elements.
+Use this command (or the |select_one_or_more_grid_elements_icon| icon in the tool bar) to select one or more grid elements.
 With the *Assign Parameters to Selection* command, assign attribute values to the selected grid elements.
 To use the *Select / Grid element* command:
 
@@ -1143,10 +1143,10 @@ elements.
 
 .. image:: img/GDS287.jpg
 
-.. |elev_insert_icon| image:: img/GDS109.jpg
+.. |select_all_grid_elements_inside_polygon_icon| image:: img/GDS109.jpg
    :height: 14px
 
-This command (or the |elev_insert_icon| icon in the tool bar) will select all the grid elements within a user defined polygon.
+This command (or the |select_all_grid_elements_inside_polygon_icon| icon in the tool bar) will select all the grid elements within a user defined polygon.
 Attributes can then be assigned to the selected elements using the *Assign Parameters to Selection* command.
 It may be necessary to create a grid layer first.
 
@@ -1169,11 +1169,11 @@ Use the *Assign Parameters to Selection* command to assign various attributes to
 
 .. image:: img/GDS112.jpg
 
-.. |elev_insert_icon| image:: img/GDS113.jpg
+.. |unselect_all_grid_elements_icon| image:: img/GDS113.jpg
    :height: 14px
 
 This command will unselect all the elements previously selected with the *Select* command.
-The toolbar icon |elev_insert_icon| will also perform this function.
+The toolbar icon |unselect_all_grid_elements_icon| will also perform this function.
 
 3.5.7 Assign Parameters to Selection/Elevations (Grid Menu)
 
@@ -1244,18 +1244,17 @@ Check buttons to define the flow direction (of the 8 possible overland flow dire
 
 Elevation (ft or m) of the top of the levee.
 
-.. |elev_insert_icon| image:: img/GDS119.jpg
+.. |assign_to_all_icon| image:: img/GDS119.jpg
    :height: 14px
 
-*Assign to all* button |elev_insert_icon|
+*Assign to all* button |assign_to_all_icon|
 
 Assigns the cutoff flow direction and levee crest elevation to all selected grid elements.
 
-.. |elev_insert_icon| image:: img/GDS120.jpg
+.. |assign_levee_input_parameters_icon| image:: img/GDS120.jpg
    :height: 14px
 
-Levee failure for this direction |elev_insert_icon|
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Levee failure for this direction |assign_levee_input_parameters_icon|
 
 Enables input parameters to be assigned for levee prescribed failure modeling for the selected direction.
 
@@ -2886,10 +2885,10 @@ This tool will help you to assign levee crest elevations directly from the DTM p
 levee crest.
 If a number of DTM points fall on the top of the levee, the average of the five highest DTM points can be used to represent the levee crest.
 
-.. |elev_insert_icon| image:: img/GDS182.jpg
+.. |levee_floating_dialogue_icon| image:: img/GDS182.jpg
    :height: 14px
 
-When you click this command or on the toolbar icon |elev_insert_icon| for an existing levee the following floating dialog appears:
+When you click this command or on the toolbar icon |levee_floating_dialogue_icon| for an existing levee the following floating dialog appears:
 
 .. image:: img/GDS183.jpg
 
@@ -2953,12 +2952,12 @@ discussion):
        Checked the box if sediment transport is to be computed.
        In addition, ISED must be turned “On” in CONT.DAT.
 
-    .. |elev_insert_icon| image:: img/GDS192.jpg
+    .. |initial_flow_icon| image:: img/GDS192.jpg
        :height: 14px
 
     4. *Initial flow depth*: When the *initial flow depth for all channel nodes* is > 0, an initial depth is specified for all the channel elements in that
        segment.
-       Checking the *Initial Flow* check box |elev_insert_icon| requires assigning starting and ending water surface elevations for the channel segment beginning
+       Checking the *Initial Flow* check box |initial_flow_icon| requires assigning starting and ending water surface elevations for the channel segment beginning
        with element *1\ st node* and ending with element *last node.*
 
        .. image:: img/GDS307.jpg
