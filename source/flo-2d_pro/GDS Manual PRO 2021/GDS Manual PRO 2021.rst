@@ -2616,7 +2616,9 @@ Input the desired new directory paths and then click *Apply*.
 
 4. Measure Distance along Line (Tools Menu)
 
-   |GDS170| |GDS171|
+.. image:: img/GDS170.jpg
+
+.. image:: img/GDS171.jpg
 
 This tool computes the distance along a user-input polyline.
 After clicking on the *Measure Distance along Line Command,* draw a polyline using the mouse and double click at the end point of the polyline.
@@ -2688,7 +2690,7 @@ Once the ArcInfo ASCII file is read, the following dialog box permits adjustment
    :widths: 50 50
    :header-rows: 0
 
-   * - option
+   * - Option
      - Description
 
    * - Minimum number of rain grid points to
@@ -2697,11 +2699,11 @@ Once the ArcInfo ASCII file is read, the following dialog box permits adjustment
 
        element.
 
-    - To calculate the interpolated rainfall depth for each FLO-2D
+     - To calculate the interpolated rainfall depth for each FLO-2D
 
-      grid element, the algorithm uses at least this minimum number
+       grid element, the algorithm uses at least this minimum number
 
-      of points closest to the grid element.
+       of points closest to the grid element.
 
    * - Radius of interpolation (proportional to
 
