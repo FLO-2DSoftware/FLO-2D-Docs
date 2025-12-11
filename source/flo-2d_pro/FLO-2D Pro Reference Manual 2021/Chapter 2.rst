@@ -101,16 +101,20 @@ previous timestep.
 The convective acceleration term is evaluated as the difference in the flow velocity across the grid element from the previous timestep.
 For example, the local acceleration term (1/g*∂V/∂t) for grid element 251 in the east (2) direction converts to:
 
-   ∆(V\ :sub:`t` – V\ :sub:`t-1`)\ :sub:`251` ∕(g \* ∆t)
+.. math::
+   :label:
 
-   where V\ :sub:`t` is the velocity in the east direction for grid element 251 at time t, V\ :sub:`t-1` is the velocity at the previous timestep (t-1)
-   in the east direction, ∆t is the timestep in seconds, and g is the acceleration due to gravity.
-   A similar construct for the convective acceleration term
+   \frac{\Delta (V_t - V_{t-1})_{251}}{g\, \Delta t}
 
-   (V\ :sub:`x`/g*∂V/∂x) can be made where V\ :sub:`2` is the velocity in the east direction and V\ :sub:`4` is the velocity in the west direction for
-   grid element 251:
+where V\ :sub:`t` is the velocity in the east direction for grid element 251 at time t, V\ :sub:`t-1` is the velocity at the previous timestep (t-1)
+in the east direction, ∆t is the timestep in seconds, and g is the acceleration due to gravity.
+A similar construct for the convective acceleration term (V\ :sub:`x`/g*∂V/∂x) can be made where V\ :sub:`2` is the velocity in the east direction and V\ :sub:`4` is the velocity in the west direction for
+grid element 251:
 
-   V\ :sub:`2` \* ∆(V\ :sub:`2` – V\ :sub:`4`)\ :sub:`251` ∕(g \* ∆x)
+.. math::
+   :label:
+
+   \frac{V_2\, \Delta (V_2 - V_4)_{251}}{g\, \Delta x}
 
 The discharge across the grid element boundary is computed by multiplying the velocity times the cross sectional flow area.
 After the discharge is computed for all eight directions, the net change in discharge (sum of the discharge in the eight flow directions) in or out of
@@ -118,16 +122,19 @@ the grid element is multiplied by the timestep to determine the net change in th
 This net change in volume is then divided by the available surface area (A\ :sub:`surf` = storage area) on the grid element to obtain the increase or
 decrease in flow depth ∆h for the timestep.
 
-  *Q\ i+\ x 1 = Q\ n + Q\ e + Q\ s + Q\ w + Q\ ne + Q\ se + Q\ sw + Q\ nw* = *Asurf* ∆h/∆t
- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. math::
+   :label: discharge_balance
 
-   where:
+   \sum Q_x^{t+1} = Q_n + Q_e + Q_s + Q_w + Q_{ne} + Q_{se} + Q_{sw} + Q_{nw}
+                   = A_{surf}\, \frac{\Delta h}{\Delta t}
 
-   Q\ :sub:`x` = discharge across one boundary
+where:
 
-A\ :sub:`surf` = surface area of one grid element
+    Q\ :sub:`x` = discharge across one boundary
 
-∆h/∆t = change in flow depth in a grid element during one timestep
+    A\ :sub:`surf` = surface area of one grid element
+
+    ∆h/∆t = change in flow depth in a grid element during one timestep
 
 The channel routing integration is performed in essentially the same manner except that the flow depth is a function of the channel cross section
 geometry and there are usually only one upstream and one downstream channel grid element for sharing discharge.
