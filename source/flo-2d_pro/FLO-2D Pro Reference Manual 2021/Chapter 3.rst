@@ -180,10 +180,10 @@ The first constraint is the discharge flux into a grid element.
 Discretizing the inflow hydrograph to a model for the computational timestep ∆t can result in a slug of discharge ∆Q to the inflow node on the rising
 limb of the hydrograph that could be severe (*Figure* 13).
 
-|Chapte002|
+.. image:: img/Chapter3/Chapte002.jpg
 
-   *Figure 13.
-   Discharge Hydrograph.*
+*Figure 13.
+Discharge Hydrograph.*
 
 Steep rising hydrographs and small grid elements can result in slow models.
 Very small timesteps may be required for a sufficiently small inflow volume to avoid numerical instability.
@@ -206,11 +206,17 @@ estimate of the peak discharge can be used.
 Based on FLO-2D model experience, the relationship of the peak discharge Q\ :sub:`Peak` divided by the surface area of one grid element A\ :sub:`surf`
 for a fast model should be on the order of:
 
-   Q\ :sub:`peak`/A\ :sub:`surf` ~ 3 cfs/ft\ :sup:`2` or 1 cms/m\ :sup:`2`
+.. math::
+   :label:
+
+   \frac{Q_{peak}}{A_{surf}} \sim 3\ \text{cfs/ft}^2 \quad \text{or} \quad 1\ \text{cms/m}^2
 
 or for a slow model:
 
-   Q\ :sub:`peak`/A\ :sub:`surf` ~ 10 cfs/ft\ :sup:`2` or 3 cms/m\ :sup:`2`
+.. math::
+   :label:
+
+   \frac{Q_{peak}}{A_{surf}} \sim 10\ \text{cfs/ft}^2 \quad \text{or} \quad 3\ \text{cms/m}^2
 
 Within this range, the closer this discharge to surface area ratio is to 3 cfs/ft\ :sup:`2` the faster the model will run.
 A Q\ :sub:`peak`/A\ :sub:`surf` over 10 cfs/ft\ :sup:`2` will result in an excruciatingly slow model.
@@ -219,23 +225,28 @@ A small grid element size can also result in a huge number of grid elements for 
 inflow discharge flux.
 The table below gives a general idea of the model speed in relationship to the number of grid elements.
 
+*Table 2.
+Grid System Size vs Model Speed.*
+
 .. list-table::
    :widths: 100
    :header-rows: 0
 
 
-   * - **Table 2.
-       Grid System Size vs Model Speed.**
+   * - Number of Cells
+     - Model Simulation Speed
 
-   * - Number of Cells                     | Model Simulation Speed
+   * - < 500,000
+     - Fast ~ minutes - 1 hrs
 
-   * - < 500,000                           | Fast ~ minutes - 1 hrs
+   * - 500,000 - 1,000,000                 |
+     - Moderate ~ 1 - 4 hours
 
-   * - 500,000 - 1,000,000                 | Moderate ~ 1 - 4 hours
+   * - 1,000,000 - 2,000,000
+     - Slow ~ 4 - 8 hours
 
-   * - 1,000,000 - 2,000,000               | Slow ~ 4 - 8 hours
-
-   * - > 2,000,000                         | > 8 hrs (overnight)
+   * - > 2,000,000
+     - > 8 hrs (overnight)
 
 
 There are several other factors that contribute to the model speed regardless of the number of grid elements including model components for channels
@@ -269,13 +280,10 @@ urban model.
 It is necessary to balance the cell size with the discharge flux.
 Consider the following:
 
-- Model runtime;
-
-- Model accuracy and detail;
-
-- The time it takes to prepare and edit the model components;
-
-- The number of required simulations.
+    - Model runtime;
+    - Model accuracy and detail;
+    - The time it takes to prepare and edit the model components;
+    - The number of required simulations.
 
 Selecting a small grid element size less than 15 ft or 5 m for large projects is not recommended.
 Typically, the DTM data resolution does not justify using grid elements that small and further accuracy is lost when the results are mapped.
@@ -289,11 +297,18 @@ Roughness Parameter Variability
 
 The constitutive fluid motion equations in the FLO-2D are the continuity equation and the momentum equation:
 
-   \ *h +*  *h V = i*
+.. math::
+   :label:
 
-\ *t* \ *x*
+   \frac{\partial h}{\partial t} + \frac{\partial (hV)}{\partial x} = i
 
-   *= S\ o -* \ *h - V* \ *V - 1* :sup:`\ V` *S f* \ *x g* \ *x g* \ *t*
+.. math::
+   :label:
+
+   S_f = S_o
+         - \frac{\partial h}{\partial x}
+         - \frac{V}{g}\, \frac{\partial V}{\partial x}
+         - \frac{1}{g}\, \frac{\partial V}{\partial t}
 
 where h is the flow depth and V is the depth-averaged velocity in one of the eight flow directions x for a computational timestep ∂t and g is the
 gravitational acceleration.
@@ -313,12 +328,19 @@ For practical purposes natural uniform flow is almost always turbulent implying 
 turbulent boundary layer is fully developed.
 There a number of uniform flow mean velocity equations for open channels and Manning’s equation is the best known of these:
 
-   V = 1.486/n R2/3 Sf1/2
+.. math::
+   :label:
+
+   V = \frac{1.486}{n}\, R^{2/3}\, S_f^{1/2}
+
 
 where R = hydraulic radius, S\ :sub:`f` = friction slope, n = Manning’s roughness coefficient.
 For wide cross section flow the hydraulic radius approaches the flow depth and the flow area can be expressed as a power function of the flow depth:
 
-   A = a h\ :sup:`b`
+.. math::
+   :label:
+
+   A = a\, h^{b}
 
 where a and b are a regressed coefficient and exponent respectively.
 The hydraulic radius exponent value (0.667) in Manning’s equation has been known to vary over a range from about 0.59 to 0.85 depending primarily on
@@ -328,7 +350,11 @@ expansion/contraction, vegetation, obstructions, and flow depth.
 
 The discharge Q is a function of three variables, flow area slope and roughness when computing a solution to the equations of motion:
 
-   Q = f (A\ :sup:`~2.0`, S\ :sub:`o`\ :sup:`0.5`, 1/n)
+.. math::
+   :label:
+
+   Q = f(A^{-2.0},\ S_o^{0.5},\ 1/n)
+
 
 Since the discharge is function of the square root of the slope, the rate of change in the discharge is not overly sensitive to change in slope.
 Similarly, the discharge is only inversely proportional to the roughness coefficient.
@@ -349,7 +375,10 @@ If the model computational timestep exceeds the Courant relationship timestep, t
 decrement occurs.
 Mathematically the Courant relationship is given by:
 
-   V + c = C Δx /Δt
+.. math::
+   :label:
+
+   V + c = \frac{C\, \Delta x}{\Delta t}
 
 Where C = Courant Number (C ≤ 1.0); Δx = FLO-2D square grid element width (distance between node centers); V = depth averaged velocity; and c =
 floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the flow depth above the thalweg.
@@ -362,7 +391,10 @@ values less than 1.0.
 The FLO-2D default Courant number is 0.6 which will provide a numerically stable model for most applications.
 Rearranging the CFL relationship, the model computes the Courant timestep Δt as:
 
-   Δt = C Δx / (V + c)
+ .. math::
+   :label:
+
+   \Delta t = \frac{C\, \Delta x}{V + c}
 
 Numerical instability occurs when the computational timestep is too large or the rate of change in the timestep is too large and too much volume
 enters or leaves a grid element (discharge flux).
@@ -372,7 +404,10 @@ Numerical surging may cause spikes in the discharge hydrograph, adverse water su
 velocities or Froude numbers [F\ :sub:`r` = V/(gh)\ :sup:`1/2`].
 Substituting the Froude number F\ :sub:`r` for the velocity, the relationship between the Courant number and the Froude number is:
 
-   C = c (F\ :sub:`r` + 1)/ Δx /Δt
+.. math::
+   :label:
+
+   C = \frac{c\, (F_{r} + 1)}{\Delta x\, \Delta t}
 
 It is demonstrated with these equations that there is a unique relationship between discharge, n-value, Froude number and numerical stability (Courant
 number) with varying flow depths.
