@@ -718,157 +718,250 @@ The following table presents the wall failure guidelines, controls and data chec
 *Table 2.
 Wall Failure Guidelines*
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+.. raw:: html
 
+   <table style="border-collapse: collapse; width: 100%;">
+     <caption><strong>Wall Failure Guidelines</strong></caption>
+     <thead>
+       <tr>
+         <th style="border: 1px solid #000; padding: 4px;">Wall Data</th>
+         <th style="border: 1px solid #000; padding: 4px;">Model Data or Flow Condition</th>
+       </tr>
+     </thead>
+     <tbody>
 
-   * - Wall Data
-     - Model Data or Flow Condition
+       <!-- WALL DATA BLOCK 1 -->
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="11">
+           Wall is defined<br>
+           by grid<br>
+           element, flow<br>
+           direction<br>
+           blocked by the<br>
+           levee and levee<br>
+           crest elevation
+         </td>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Model checks to make sure the crest elevation is higher than the grid element
+           elevation on both sides of the levee.
+         </td>
+       </tr>
 
-   * - Wall is defined
-by grid
-element, flow
-direction
-blocked by the
-levee and levee
-crest elevation.
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Model checks if the wall is on the grid system domain boundary with no grid element
+           on the other side of the levee. A warning message is generated.
+         </td>
+       </tr>
 
-Model checks to make sure the crest elevation is higher than the grid element
-elevation on both sides of the levee.
-Model checks if the wall is on the grid system domain boundary with no grid element
-on the other side of the levee. A warning message is generated.
-The wall must be continuous without breaks. No flow leakage thru the levee system.
-Requires review of output.
-If the ground elevations on each side of the wall are different by more than 0.5 ft,
-the cell with the higher elevation are set to lower grid element elevation.
-If the failure elevation is lower than either ground elevation, the failure elevation is
-reset to 3 ft above the lowest ground elevation.
-Model checks if the wall is assigned to outflow nodes. This will generate an error
-message.
-A warning message is generated for a wall assigned to hydraulic structure inflow or
-outflow nodes.
-If 3-D polyline point data is used to assign the wall, WRF values are automatically
-assigned to element sides to match the actual wall length.
-Model checks interpolated floodplain elevations on each side of the wall.
-Set ILEVFAIL = 1 for wall failure.
-If wall failure grid element is negative, the failure data for that element applies to all
-the wall elements and blocked flow directions. In this case, the global failure data
-needs only to be assigned to one element.
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The wall must be continuous without breaks. No flow leakage thru the levee system.
+           Requires review of output.
+         </td>
+       </tr>
 
-Prescribed Wall
-Failure Data
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the ground elevations on each side of the wall are different by more than 0.5 ft,
+           the cell with the higher elevation are set to lower grid element elevation.
+         </td>
+       </tr>
 
-Wall failure is defined by flow direction, water surface elevation to initiate failure,
-cumulative duration that the failure elevation is exceeded before initiating failure
-(typically zero), failure base elevation (typically zero), maximum breach width
-(typically zero), and vertical and horizontal rates of breach widening (typically both
-are zero).
-The initial breach width = 1.0 ft (0.3 m) is hardwired.
-If failure elevation = 0, the collapse begins immediately when the wall is overtopped.
-Otherwise, the wall failure is initiated when the water surface exceeds the assigned
-failure elevation. If the failure elevation is less than 10 ft (3 m), the failure elevation
-is the distance below the crest elevation. In this case, the failure elevation = crest
-elevation - failure elevation. If the failure data has been globally assigned, the
-breach initiation can occur for all the grid element sides with walls when the water
-surface exceeds the global failure elevation.
-If the failure duration time = 0, breach failure initiates immediately.
-If the wall is to fail at an appropriate distance below the crest after being inundated
-for a reasonable duration, assign values to both the failure elevation and failure
-25
-duration time.
-If the failure base elevation = 0, the final wall failure elevation is equal to the
-floodplain grid element elevation on the opposite side of the wall.
-For a progressive wall failure, assign the vertical and horizontal rates.
-If the vertical and horizontal rates of failure are zero, the levee (wall) fails
-instantaneously for the entire grid element side width.
-If the maximum failure width is longer than the grid element side, the breach
-will extend into adjacent grid elements until the maximum failure width is
-equaled or the wall ends. For instantaneous failure, every grid element side
-levee that will collapse must be assigned.
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the failure elevation is lower than either ground elevation, the failure elevation is
+           reset to 3 ft above the lowest ground elevation.
+         </td>
+       </tr>
 
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Model checks if the wall is assigned to outflow nodes. This will generate an error
+           message.
+         </td>
+       </tr>
 
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           A warning message is generated for a wall assigned to hydraulic structure inflow or
+           outflow nodes.
+         </td>
+       </tr>
 
-Wall is defined by grid element, |    Model checks to make sure the crest elevation isflow direction blocked by the    |    higher than the grid
-       element elevation on both sideslevee and levee crest elevation.
-       |    of the levee.+----------------------------------------------------------|    Model checks if the wall is on the grid system domain|    boundary
-       with no grid element on the other side of|    the levee.
-       A warning message is generated.+----------------------------------------------------------|    The wall must be continuous without breaks.
-       No flow|    leakage thru the levee system.
-       Requires review of|    output.+----------------------------------------------------------|    If the ground elevations on each side of the wall are|
-       different by more than 0.5 ft, the cell with the|    higher elevation are set to lower grid element|
-       elevation.+----------------------------------------------------------|    If the failure elevation is lower than either ground|    elevation, the
-       failure elevation is reset to 3 ft|    above the lowest ground elevation.+----------------------------------------------------------| Model checks if
-       the wall is assigned to outflow nodes.| This will generate an error message.+----------------------------------------------------------|    A warning
-       message is generated for a wall assigned to|    hydraulic structure inflow or outflow
-       nodes.+----------------------------------------------------------|    If 3-D polyline point data is used to assign the|    wall, WRF values are
-       automatically assigned to|    element sides to match the actual wall length.+----------------------------------------------------------|    Model
-       checks interpolated floodplain elevations on|    each side of the wall.+----------------------------------------------------------|    Set ILEVFAIL =
-       1 for wall failure.+----------------------------------------------------------|    If wall failure grid element is negative, the failure|    data for
-       that element applies to all the wall|    elements and blocked flow directions.
-       In this case,|    the global failure data needs only to be assigned to|    one element.
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If 3-D polyline point data is used to assign the wall, WRF values are automatically
+           assigned to element sides to match the actual wall length.
+         </td>
+       </tr>
 
-   * - Prescribed Wall                  |    Wall failure is defined by flow direction, water|    surface elevation to initiate failure, cumulativeFailure
-       Data                     |    duration that the failure elevation is exceeded|    before initiating failure (typically zero), failure|    base
-       elevation (typically zero), maximum breach width|    (typically zero), and vertical and horizontal rates|    of breach widening (typically both are
-       zero).+----------------------------------------------------------|    The initial breach width = 1.0 ft (0.3 m) is|
-       hardwired.+----------------------------------------------------------|    If failure elevation = 0, the collapse begins|    immediately when the wall
-       is overtopped.
-       Otherwise,|    the wall failure is initiated when the water surface|    exceeds the assigned failure elevation.
-       If the|    failure elevation is less than 10 ft (3 m), the|    failure elevation is the distance below the crest|    elevation.
-       In this case, the failure elevation =|    crest elevation - failure elevation.
-       If the failure|    data has been globally assigned, the breach|    initiation can occur for all the grid element sides|    with walls when the water
-       surface exceeds the global|    failure elevation.+----------------------------------------------------------|    If the failure duration time = 0,
-       breach failure|    initiates immediately.+----------------------------------------------------------|    If the wall is to fail at an appropriate
-       distance|    below the crest after being inundated for a|    reasonable duration, assign values to both the|    failure elevation and failure
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Model checks interpolated floodplain elevations on each side of the wall.
+         </td>
+       </tr>
 
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Set ILEVFAIL = 1 for wall failure.
+         </td>
+       </tr>
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If wall failure grid element is negative, the failure data for that element applies to all
+           the wall elements and blocked flow directions. In this case, the global failure data
+           needs only to be assigned to one element.
+         </td>
+       </tr>
 
+       <!-- WALL FAILURE DATA BLOCK -->
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="9">
+           Prescribed Wall<br>
+           Failure Data
+         </td>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Wall failure is defined by flow direction, water surface elevation to initiate failure,
+           cumulative duration that the failure elevation is exceeded before initiating failure
+           (typically zero), failure base elevation (typically zero), maximum breach width
+           (typically zero), and vertical and horizontal rates of breach widening (typically both
+           are zero).
+         </td>
+       </tr>
 
-   * -
-     - duration time.
-       ---------------------------------------------------------- If the failure base elevation = 0, the final wall failure elevation is equal to the
-       floodplain grid element elevation on the opposite side of the wall.
-       ---------------------------------------------------------- For a progressive wall failure, assign the vertical and horizontal rates.
-       ---------------------------------------------------------- If the vertical and horizontal rates of failure are zero, the levee (wall) fails
-       instantaneously for the entire grid element side width.
-       ---------------------------------------------------------- If the maximum failure width is longer than the grid element side, the breach will extend
-       into adjacent grid elements until the maximum failure width is equaled or the wall ends.
-       For instantaneous failure, every grid element side levee that will collapse must be assigned.
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The initial breach width = 1.0 ft (0.3 m) is hardwired.
+         </td>
+       </tr>
 
-   * - WallOvertoppingDischarge
-     - The flow depth on the wall must exceed a hardcoded tolerance value equal to 0.1 ft (0.03 m) to enable the overtopping discharge to be computed.
-       ---------------------------------------------------------- Flow over the wall is computed using the broadcrested weir equation with a variable weir
-       coefficient that depends on the headwater depth.
-       The headwater depth depends on whether one or both of the water surface elevations are greater than the crest.
-       If the headwater depth > 3 ft (1.0 m), then the weir coefficient is 3.09.
-       If the headwater depth < 3 ft (1.0 m), the coefficient can range from 2.5 and 3.09.
-       ---------------------------------------------------------- If the ratio of the tailwater to the headwater is greater than 0.8, then the discharge is
-       multiplied by a submergence factor that is less than 1.0 based on the submergence curves (Figure 3).
-       ---------------------------------------------------------- The overtopping discharge in all possible directions including the peak discharge are
-       reported in the LEVOVERTOP.OUT file.
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If failure elevation = 0, the collapse begins immediately when the wall is overtopped.
+           Otherwise, the wall failure is initiated when the water surface exceeds the assigned
+           failure elevation. If the failure elevation is less than 10 ft (3 m), the failure elevation
+           is the distance below the crest elevation. In this case, the failure elevation = crest
+           elevation - failure elevation. If the failure data has been globally assigned, the
+           breach initiation can occur for all the grid element sides with walls when the water
+           surface exceeds the global failure elevation.
+         </td>
+       </tr>
 
-   * - Wall BreachDischarge
-     - The flow depth on the wall breach must exceed a tolerance value of 0.1 ft (0.03 m) for the breach discharge to be computed.
-       The flow depth is based on the highest water surface and the wall failure elevation.
-       ---------------------------------------------------------- Breach discharge is computed with a broadcrested weir equation with a variable coefficient
-       that depends on the headwater depth above the breach elevation.
-       The headwater depth depends on whether one or both of the water surface elevations are greater than the breach elevation.
-       If the headwater depth > 3 ft (1.0 m), then the levee weir coefficient = 3.09.
-       If the headwater depth < 3 ft (1.0 m), the weir coefficient can range between 2.5 and 3.09.
-       ---------------------------------------------------------- If the ratio of the tailwater to headwater above the breach elevation is greater than 0.8,
-       then the discharge is multiplied by a submergence factor (> 1.0) based on the submergence curves.
-       ---------------------------------------------------------- If the wall fails instantaneously to the base elevation, the flow is computed by the
-       overland flow routine using the side width of the grid system.
-       ---------------------------------------------------------- If the wall breach progressively widens and extends to other contiguous element sides, the
-       discharge is based on the computed breach width using the horizontal breach rate.
-       ---------------------------------------------------------- When the vertical breach has reached the wall base elevation, the maximum shear stress on
-       the breach is computed.
-       Subsequently the original horizontal breach rate is reduced by the ratio of the current shear stress to the maximum shear stress on the breach.
-       ---------------------------------------------------------- The breach discharge and breach geometry is reported in the LEVEE.OUT file.
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the failure duration time = 0, breach failure initiates immediately.
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the wall is to fail at an appropriate distance below the crest after being inundated
+           for a reasonable duration, assign values to both the failure elevation and failure
+           duration time.
+         </td>
+       </tr>
+
+       <!-- WALL OVERTOPPING -->
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="5">
+           Wall<br>Overtopping<br>Discharge
+         </td>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The flow depth on the wall must exceed a hardcoded tolerance value equal to 0.1 ft
+           (0.03 m) to enable the overtopping discharge to be computed.
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Flow over the wall is computed using the broadcrested weir equation with a variable
+           weir coefficient that depends on the headwater depth. The headwater depth
+           depends on whether one or both of the water surface elevations are greater than
+           the crest. If the headwater depth &gt; 3 ft (1.0 m), then the weir coefficient is 3.09. If
+           the headwater depth &lt; 3 ft (1.0 m), the coefficient can range from 2.5 and 3.09.
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the ratio of the tailwater to the headwater is greater than 0.8, then the discharge is
+           multiplied by a submergence factor that is less than 1.0 based on the submergence
+           curves (Figure 3).
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The overtopping discharge in all possible directions including the peak discharge are
+           reported in the LEVOVERTOP.OUT file.
+         </td>
+       </tr>
+
+       <!-- WALL BREACH -->
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="9">
+           Wall Breach<br>Discharge
+         </td>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The flow depth on the wall breach must exceed a tolerance value of 0.1 ft (0.03 m)
+           for the breach discharge to be computed. The flow depth is based on the highest
+           water surface and the wall failure elevation.
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Breach discharge is computed with a broadcrested weir equation with a variable
+           coefficient that depends on the headwater depth above the breach elevation. The
+           headwater depth depends on whether one or both of the water surface elevations
+           are greater than the breach elevation. If the headwater depth &gt; 3 ft (1.0 m), then the
+           levee weir coefficient = 3.09. If the headwater depth &lt; 3 ft (1.0 m), the
+           coefficient can range between 2.5 and 3.09.
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the ratio of the tailwater to headwater above the breach elevation is greater than
+           0.8, then the discharge is multiplied by a submergence factor (&gt; 1.0) based on the
+           submergence curves.
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the wall fails instantaneously to the base elevation, the flow is computed by the
+           overland flow routine using the side width of the grid system.
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the wall breach progressively widens and extends to other contiguous element
+           sides, the discharge is based on the computed breach width using the horizontal
+           breach rate.
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           When the vertical breach has reached the wall base elevation, the maximum shear
+           stress on the breach is computed. Subsequently the original horizontal breach rate
+           is reduced by the ratio of the current shear stress to the maximum shear stress on
+           the breach.
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The breach discharge and breach geometry is reported in the LEVEE.OUT file.
+         </td>
+       </tr>
+
+     </tbody>
+   </table>
 
 
 Wall Failure Troubleshooting
@@ -1632,12 +1725,12 @@ Example:
 .. raw:: html
 
     <pre>
-C FS3 0.5
-P 3450 FS1 0.5
-P 3558 FS1 0.9
-P 3559 FS2 0.7
-P 3669 FS3 0.5
-P 3670 FS4 0.5
+    C FS3 0.5
+    P 3450 FS1 0.5
+    P 3558 FS1 0.9
+    P 3559 FS2 0.7
+    P 3669 FS3 0.5
+    P 3670 FS4 0.5
     </pre>
 
 This data assignment enables the user to specify either global fragility curve data for the entire levee system or individual levee grid elements or
@@ -1655,7 +1748,6 @@ Figure 2 shows a FLO-2D simulation of levee breaching in progressing at two loca
 fragility curves.
 In this figure, the levee embankment extends from the red FLO-2D grid system boundary to the urban area in the center of the image in Figure 27.
 FLO-2D Levee Breach Simulation in Progress Using Levee Fragility Curves (Right: Levee Simultaneously Breaching in 2 Locations; Left:
-
 Levee Breaches Expanding)
 
 .. image:: img/Levee021.jpg
