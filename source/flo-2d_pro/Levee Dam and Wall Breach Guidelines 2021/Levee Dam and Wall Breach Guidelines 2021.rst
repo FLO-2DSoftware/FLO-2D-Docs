@@ -571,6 +571,8 @@ Prescribed Breach Failure Controls and Guidelines*
            The breach discharge and breach geometry is reported in the LEVEE.OUT file.
          </td>
        </tr>
+     </tbody>
+   </table>
 
 Urban Wall Failure (Collapse)
 -------------------------------------
