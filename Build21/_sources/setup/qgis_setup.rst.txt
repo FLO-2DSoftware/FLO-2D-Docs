@@ -1,9 +1,14 @@
-Install QGIS and the FLO-2D Plugin
+QGIS and the FLO-2D Plugin Installation
 ============================================
 
 QGIS is an open-source geographic information system software designed for spatial data analysis and visualization.
+
 The FLO-2D Plugin uses QGIS tools to effectively prepare FLO-2D data,
 providing an enhanced modeling experience within a user-friendly environment.
+
+Get QGIS installer.
+
+.. image:: img/Instructions/fullbuild.png
 
 Step 1: QGIS Installer
 -----------------------------------
@@ -75,11 +80,3 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: img/Instructions/image9.png
 
-QGIS Server Installer Method
-----------------------------
-
-If you need to import or export hdf5 files, please use this method for installing QGIS.
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/I-Nk2kd2Ukw" frameborder="0" allowfullscreen></iframe>

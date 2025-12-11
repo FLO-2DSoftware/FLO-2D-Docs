@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chapter 3 &mdash; FLO-2D Pro Documentation  documentation</title>
+  <title>Chapter 3 - Troubleshooting &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
@@ -28,8 +28,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="FLO-2D Storm Drain Manual 2021" href="../FLO-2D%20Storm%20Drain%20Manual%202021/index.html" />
-    <link rel="prev" title="Chapter 2" href="Chapter%202.html" /> 
+    <link rel="next" title="References" href="ref.html" />
+    <link rel="prev" title="Chapter 2 - Guidelines" href="Chapter%202.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,21 +55,22 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center 2021</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">FLO-2D Channel Guidelines 2021</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="Chapter%201.html">Chapter 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">Chapter 2</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Chapter 3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%201.html">Chapter 1 - Channel Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">Chapter 2 - Guidelines</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Chapter 3 - Troubleshooting</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#channel-troubleshooting">Channel Troubleshooting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#references">References</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="ref.html">References</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Storm%20Drain%20Manual%202021/index.html">FLO-2D Storm Drain Manual 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines%202021/Hydraulic%20Structures%20Guidelines%202021.html">FLO-2D Hydraulic Structure Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html">Simulating Mudflow Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html#references">References</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
@@ -90,9 +91,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center 2021</a></li>
           <li class="breadcrumb-item"><a href="index.html">FLO-2D Channel Guidelines 2021</a></li>
-      <li class="breadcrumb-item active">Chapter 3</li>
+      <li class="breadcrumb-item active">Chapter 3 - Troubleshooting</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/flo-2d_pro/FLO-2D Channel Guidelines 2021/Chapter 3.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -102,8 +103,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="chapter-3">
-<h1>Chapter 3<a class="headerlink" href="#chapter-3" title="Link to this heading"></a></h1>
+  <section id="chapter-3-troubleshooting">
+<h1>Chapter 3 - Troubleshooting<a class="headerlink" href="#chapter-3-troubleshooting" title="Link to this heading"></a></h1>
 <section id="channel-troubleshooting">
 <h2>Channel Troubleshooting<a class="headerlink" href="#channel-troubleshooting" title="Link to this heading"></a></h2>
 <p>When a FLO-2D model simulation is complete, the first check for accuracy should be the volume conservation reported in SUMMARY.OUT and CHVOLUME.OUT.
@@ -116,7 +117,7 @@ First make copies of the affected data files and then remove any inflow and outf
 The removal of any channel elements (segments or tributaries) from the CHAN.DAT file would require that the XSEC.DAT and CHANBANK.DAT files also be
 modified by eliminating the corresponding cross sections and right banks.
 Another method for isolating a portion of the channel is to establish a new temporary inflow and outflow node in a short reach of channel (Figure 69).</p>
-<img alt="../../_images/Chapte0022.jpg" src="../../_images/Chapte0022.jpg" />
+<img alt="../../_images/Chapte0022.jpg" class="bordered-image" src="../../_images/Chapte0022.jpg" />
 <p><em>Figure 69.
 Isolate a Short Portion of the Channel.</em></p>
 <p>Fixing a volume conservation error could entail adjusting the channel cross sections, reviewing the bank elevations, adjusting the hydraulic
@@ -130,7 +131,7 @@ discharge in PROFILES (Figure 70), reviewing CHANMAX.OUT or VELTIMEC.OUT.
 The most sensitive model scenario is a wide channel with small grid elements where the channel left and right banks are separate by ten or more grid
 elements.
 In this situation, the channel element conveyance capacity is relatively small because the channel length is short compared to the channel width.</p>
-<img alt="../../_images/Chapte0031.png" src="../../_images/Chapte0031.png" />
+<img alt="../../_images/Chapte0031.png" class="bordered-image" src="../../_images/Chapte0031.png" />
 <p><em>Figure 70.
 TIME.OUT and Profiles - Peak Discharge.</em></p>
 <p>For example, a channel on the order of 800 ft wide was simulated on a grid system of 20 ft elements in Phoenix.
@@ -141,7 +142,7 @@ Very small timesteps, less than 0.5 seconds were required to maintain numerical 
 To avoid small timesteps with such a large channel, it is necessary to select larger grid elements when generating the grid system.
 The choice of the grid element size has to be based on the project priority; either accurate channel flood routing or predicting the floodplain
 inundation in detail.</p>
-<img alt="../../_images/Chapte0041.jpg" src="../../_images/Chapte0041.jpg" />
+<img alt="../../_images/Chapte0041.jpg" class="bordered-image" src="../../_images/Chapte0041.jpg" />
 <p><em>Figure 71.
 Wide Large Channel Assigned to a Small Grid System.</em></p>
 <p>To compute smoother hydraulics between two channel grid elements the options are to adjust the bed slope, the cross section flow area or the roughness
@@ -153,27 +154,27 @@ Adjust the channel geometry so that the maximum change in flow area between chan
 <p>To improve the channel component performance, the following steps should be taken:</p>
 <p>Review PROFILES peak discharge plots or the output files CHANMAX.OUT or VELTIMEC.OUT.
 Look for any channel elements with numerical surging (note spike – Figure 72).</p>
-<img alt="../../_images/Chapte0051.jpg" src="../../_images/Chapte0051.jpg" />
+<img alt="../../_images/Chapte0051.jpg" class="bordered-image" src="../../_images/Chapte0051.jpg" />
 <p><em>Figure 72.
 Channel Numerical Instability – Peak Discharge vs Channel Distance.</em></p>
 <p>Review and adjust the bed slope with the PROFILES program.
 Adverse bed slopes are acceptable, but flat beds, spikes and other inconsistences should be reviewed (Figure 73 – red ovals).
 In a highly modified or constructed urban environment, this channel profile may be appropriate, but it should be edited if necessary to achieve a
 stable more realistic model.</p>
-<img alt="../../_images/Chapte0062.jpg" src="../../_images/Chapte0062.jpg" />
+<img alt="../../_images/Chapte0062.jpg" class="bordered-image" src="../../_images/Chapte0062.jpg" />
 <p><em>Figure 73.
 Review the Channel Bed Slope for Irregularities.</em></p>
 <p>Reduce the variability between channel element cross section flow areas.
 Avoid abrupt cross section transitions between channel elements.
 Adjust the channel cross section geometry in the PROFILES program.
 Figure 74 A and B shows the change in channel shape between two contiguous channel elements with the same approximate bankfull flow area.</p>
-<img alt="../../_images/Chapte007.png" src="../../_images/Chapte007.png" />
+<img alt="../../_images/Chapte007.png" class="bordered-image" src="../../_images/Chapte007.png" />
 <p><em>Figure 74 A and B.
 Change in Channel Geometry between Two Contiguous Channel Elements.</em>]</p>
 <p>Figure 75 A - D show four consecutive channel elements with a bankfull flow area that varies from 4,600 ft<sup>2</sup> to 3,300 ft<sup>2</sup> to 3,250
 ft<sup>2</sup> back to 4,100 ft<sup>2</sup>.
 This is about a 33% change in bankfull conveyance capacity.</p>
-<img alt="../../_images/Chapte009.jpg" src="../../_images/Chapte009.jpg" />
+<img alt="../../_images/Chapte009.jpg" class="bordered-image" src="../../_images/Chapte009.jpg" />
 <p><em>Figure 75.
 A-D Change in Bankfull Flow Area between Four Consecutive Channel Elements.</em></p>
 <p>For the entire channel segment, the flow area varies from 223 ft<sup>2</sup> to 7,817 ft<sup>2</sup> with an average cross section flow area of 3,507 ft<sup>2</sup> as displayed in the PROFILES program n-value interpolation dialog box (<strong>Error! Reference source not found.</strong>).
@@ -181,7 +182,7 @@ For a channel that should have approximately the same conveyance capacity, this 
 This indicates that each cross section in the model needs to be reviewed.</p>
 <p>To improve numerical stability, increase the roughness in wide, shallow cross sections and decrease the roughness in narrow deep channel grid elements.
 Review the channel element roughness variation upstream and downstream of channel elements with spikes in discharge (Figure 76).</p>
-<img alt="../../_images/Chapte0081.jpg" src="../../_images/Chapte0081.jpg" />
+<img alt="../../_images/Chapte0081.jpg" class="bordered-image" src="../../_images/Chapte0081.jpg" />
 <p><em>Figure 76.
 Variable n-value System Profiles.</em></p>
 <p>Select a longer channel length within the channel grid element to allow more storage (Increase the lengths in the red outline in Table 5.
@@ -205,36 +206,14 @@ capacity).
 Selecting a grid element size in proportion to the channel flow area and anticipated peak discharge is the most appropriate way to avoid a very slow
 model.</p>
 </section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
-<p>Chow, V.T., 1959.
-Open-Channel Hydraulics, McGraw-Hill Book Company, NY.</p>
-<p>Grant, G.E., 1997.
-“Critical flow constraints flow hydraulics in mobile-bed streams: A new hypothesis,” Water Resources Research, Vol.33, No.2, 349-358.</p>
-<p>Jia, Y., 1990.
-“Minimum Froude Number and the Equilibrium of Alluvial Sand Rivers,” Earth Surface Processes and Landforms, John Wiley &amp; Sons, London, Vol.
-15, 199-200.</p>
-<p>Julien, P.Y., 1995.
-<em>Erosion and Sedimentation</em>, Cambridge University Press, NY.</p>
-<p>Simons, D.B.
-and F.
-Senturk, 1976.
-<em>Sediment Transport Technology</em>, Water Resources Publications, Ft.
-Collins, CO.</p>
-<p>U.S.
-Department of Transportation, Federal Highway Administration, 2005.
-“Hydraulic Design of Highway Culverts,” Pub.
-No.
-FHWA-NHI-01-020, National Technical Information Service, Springfield, VA.</p>
-</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Chapter%202.html" class="btn btn-neutral float-left" title="Chapter 2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../FLO-2D%20Storm%20Drain%20Manual%202021/index.html" class="btn btn-neutral float-right" title="FLO-2D Storm Drain Manual 2021" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Chapter%202.html" class="btn btn-neutral float-left" title="Chapter 2 - Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ref.html" class="btn btn-neutral float-right" title="References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

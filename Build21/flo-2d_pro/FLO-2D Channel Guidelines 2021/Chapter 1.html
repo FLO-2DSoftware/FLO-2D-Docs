@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chapter 1 &mdash; FLO-2D Pro Documentation  documentation</title>
+  <title>Chapter 1 - Channel Development &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
@@ -30,7 +30,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Chapter 2" href="Chapter%202.html" />
+    <link rel="next" title="Chapter 2 - Guidelines" href="Chapter%202.html" />
     <link rel="prev" title="FLO-2D Channel Guidelines 2021" href="index.html" /> 
 </head>
 
@@ -57,23 +57,25 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center 2021</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">FLO-2D Channel Guidelines 2021</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Chapter 1</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Chapter 1 - Channel Development</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#channel-overview">Channel Overview</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#channel-geometry-length-and-roughness">Channel Geometry, Length and Roughness</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#channel-floodplain-flow-exchange">Channel – Floodplain Flow Exchange</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#channel-numerical-stability-and-volume-conservation">Channel Numerical Stability and Volume Conservation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">Chapter 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Chapter%203.html">Chapter 3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">Chapter 2 - Guidelines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%203.html">Chapter 3 - Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref.html">References</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Storm%20Drain%20Manual%202021/index.html">FLO-2D Storm Drain Manual 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines%202021/Hydraulic%20Structures%20Guidelines%202021.html">FLO-2D Hydraulic Structure Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html">Simulating Mudflow Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html#references">References</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
@@ -94,9 +96,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center 2021</a></li>
           <li class="breadcrumb-item"><a href="index.html">FLO-2D Channel Guidelines 2021</a></li>
-      <li class="breadcrumb-item active">Chapter 1</li>
+      <li class="breadcrumb-item active">Chapter 1 - Channel Development</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/flo-2d_pro/FLO-2D Channel Guidelines 2021/Chapter 1.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -106,8 +108,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="chapter-1">
-<h1>Chapter 1<a class="headerlink" href="#chapter-1" title="Link to this heading"></a></h1>
+  <section id="chapter-1-channel-development">
+<h1>Chapter 1 - Channel Development<a class="headerlink" href="#chapter-1-channel-development" title="Link to this heading"></a></h1>
 <p>This document supplements the FLO-2D Reference Manual, Data Input Manual and training materials such as the webinars and videos, lessons and short
 course PowerPoint presentations.
 It presents guidelines and information that are designed to assist the user in developing a model with a detailed 1-D channel.
@@ -115,34 +117,42 @@ Here is a list of other available references for channel modeling: C:\users\Publ
 <ul>
 <li><p>Data Input Manual</p>
 <blockquote>
-<div><p>˖ Chan.dat, chanbank.dat, xsec.dat
-˖ Profiles.exe processor program overview
-˖ Channel output files</p>
+<div><ul class="simple">
+<li><p>Chan.dat, chanbank.dat, xsec.dat</p></li>
+<li><p>Profiles.exe processor program overview</p></li>
+<li><p>Channel output files</p></li>
+</ul>
 </div></blockquote>
 </li>
 <li><p>Workshop Lessons</p>
 <blockquote>
-<div><p>˖ Lesson 3 – Simple geometry and confluence
-˖ Lesson 4 – Simple cross section converter
-˖ Lesson 5 – Profiles.exe overview and example
-˖ Lesson 8 – Import from HEC-RAS
-˖ Lesson 14 – Advanced natural channel modeling</p>
+<div><ul class="simple">
+<li><p>Lesson 3 – Simple geometry and confluence</p></li>
+<li><p>Lesson 4 – Simple cross section converter</p></li>
+<li><p>Lesson 5 – Profiles.exe overview and example</p></li>
+<li><p>Lesson 8 – Import from HEC-RAS</p></li>
+<li><p>Lesson 14 – Advanced natural channel modeling</p></li>
+</ul>
 </div></blockquote>
 </li>
 <li><p>QGIS Workshop Lessons</p>
 <blockquote>
-<div><p>˖ Lesson 2 – Import from HEC-RAS</p>
+<div><ul class="simple">
+<li><p>Lesson 2 – Import from HEC-RAS</p></li>
+</ul>
 </div></blockquote>
 </li>
 <li><p>Example Projects w/Channels</p>
 <blockquote>
-<div><p>˖ Urban example
-˖ Lesson 15 – natural channel with levee
-˖ Alawai
-˖ Rio Grande
-˖ Goat
-˖ Aqueduct
-˖ Sediment transport</p>
+<div><ul class="simple">
+<li><p>Urban example</p></li>
+<li><p>Lesson 15 – natural channel with levee</p></li>
+<li><p>Alawai</p></li>
+<li><p>Rio Grande</p></li>
+<li><p>Goat</p></li>
+<li><p>Aqueduct</p></li>
+<li><p>Sediment transport</p></li>
+</ul>
 </div></blockquote>
 </li>
 </ul>
@@ -150,10 +160,12 @@ Here is a list of other available references for channel modeling: C:\users\Publ
 <ul>
 <li><p>Videos</p>
 <blockquote>
-<div><p>˖ Basic channels
-˖ Advanced channel modeling
-˖ Channel optimization
-˖ Advanced natural channels</p>
+<div><ul class="simple">
+<li><p>Basic channels</p></li>
+<li><p>Advanced channel modeling</p></li>
+<li><p>Channel optimization</p></li>
+<li><p>Advanced natural channels</p></li>
+</ul>
 </div></blockquote>
 </li>
 </ul>
@@ -168,7 +180,7 @@ The flow is routed between channel elements by solving the full dynamic wave mom
 The average flow path length between two channel elements is on the order of the length of the grid element and this precludes a profile plot of a
 hydraulic jumps over a short distance.
 The flow transition between subcritical and supercritical flow is based on the average conditions between two channel elements.</p>
-<img alt="../../_images/Chapte002.jpg" src="../../_images/Chapte002.jpg" />
+<img alt="../../_images/Chapte002.jpg" class="bordered-image" src="../../_images/Chapte002.jpg" />
 <p><em>Figure 1.
 Channel Flow is One-Dimensional – No Vertical or Horizontal Velocity Distribution</em></p>
 <p>River flow is simulated with rectangular, trapezoidal or natural channel cross sections.
@@ -183,10 +195,10 @@ Channel elements must be contiguous to be able to share discharge.</p>
 <p>There are four channel geometry options:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>R - Rectangular</p></li>
-<li><p>T - Trapezoidal</p></li>
-<li><p>N - Natural</p></li>
-<li><p>V - Regression Equation (not recommended except for unique cases)</p></li>
+<li><p>R – Rectangular</p></li>
+<li><p>T – Trapezoidal</p></li>
+<li><p>N – Natural</p></li>
+<li><p>V – Regression Equation (not recommended except for unique cases)</p></li>
 </ul>
 </div></blockquote>
 <p>The channel cross section options are rectangular, trapezoidal and natural.
@@ -206,7 +218,7 @@ For data file example refer to the FLO-2D Data Input Manual.</p>
 <section id="rectangular">
 <h3><em>Rectangular</em><a class="headerlink" href="#rectangular" title="Link to this heading"></a></h3>
 <p>The rectangular channel geometry is defined by width, depth and length of channel inside the grid element (Figure 2).</p>
-<img alt="../../_images/Chapte003.jpg" src="../../_images/Chapte003.jpg" />
+<img alt="../../_images/Chapte003.jpg" class="bordered-image" src="../../_images/Chapte003.jpg" />
 <p><em>Figure 2.
 Rectangular Channel Geometry.</em></p>
 <div class="admonition note">
@@ -218,7 +230,7 @@ Rectangular Channel Geometry.</em></p>
 <h3><em>Trapezoidal</em><a class="headerlink" href="#trapezoidal" title="Link to this heading"></a></h3>
 <p>Similarly, the trapezoidal channels are defined by bottom width, channel depth and side slopes (ratio of horizontal to vertical) (Figure 3).
 Again, the channel length is the length inside the grid element.</p>
-<img alt="../../_images/Chapte026.png" src="../../_images/Chapte026.png" />
+<img alt="../../_images/Chapte026.png" class="bordered-image" src="../../_images/Chapte026.png" />
 <p><em>Figure 3.
 Trapezoidal Channel Geometry.</em></p>
 <p>For small channels, urban channels, or channels with unknown detailed geometry or lack of survey data, a rectangular or trapezoidal cross section
@@ -246,10 +258,10 @@ The vertical slices stop at the lowest top of bank.
 For flow depths above this the cross section is extended vertically.
 This data constitutes a channel geometry rating table for each cross section.
 The cross section data in the XSEC.DAT file can be automatically assigned from a GEO-RAS geometry file using the GDS.</p>
-<img alt="../../_images/Chapte004.jpg" src="../../_images/Chapte004.jpg" />
+<img alt="../../_images/Chapte004.jpg" class="bordered-image" src="../../_images/Chapte004.jpg" />
 <p><em>Figure 4.
 Natural Channel Cross Section Data.</em></p>
-<img alt="../../_images/Chapte024.png" src="../../_images/Chapte024.png" />
+<img alt="../../_images/Chapte024.png" class="bordered-image" src="../../_images/Chapte024.png" />
 <p><em>Figure 5.
 Natural Shape Cross Section Geometry</em></p>
 <p>Natural river cross sections should be spaced to represent a uniform river reach that may encompass any number of channel elements.
@@ -264,7 +276,7 @@ to share discharge to the floodplain.
 Each bank element can have a unique elevation.
 If the two bank elevations are different in the CHAN.DAT file, the model automatically splits the channel into two elements even if the channel would
 fit into one grid element.</p>
-<img alt="../../_images/Chapte021.png" src="../../_images/Chapte021.png" />
+<img alt="../../_images/Chapte021.png" class="bordered-image" src="../../_images/Chapte021.png" />
 <p><em>Figure 6
 Channel Extension over Several Grid Elements</em></p>
 <p>There are three options for establishing the channel bank elevation to bed elevation relationship:</p>
@@ -297,7 +309,7 @@ For channel flow to occur through a reach of river, the channel elements must be
 drawn along the left bank to select the left bank elements and then the individual cross sections can be identified with the appropriate channel bank
 element (Figure 7).
 This process is completely automated if a GEO-RAS geometry file can be imported with the cross section data.</p>
-<img alt="../../_images/Chapte005.png" src="../../_images/Chapte005.png" />
+<img alt="../../_images/Chapte005.png" class="bordered-image" src="../../_images/Chapte005.png" />
 <p><em>Figure 7.
 Channel Delineation.</em></p>
 </section>
@@ -309,7 +321,7 @@ elements.
 In the GDS, the surveyed or known cross sections are assigned to corresponding channel elements where they are located, the rest of the channel
 elements have a zero assigned as the cross section number (Figure 8).
 A shapefile of cross section locations can be used to help identify the cross section to channel element placement.</p>
-<img alt="../../_images/Chapte006.jpg" src="../../_images/Chapte006.jpg" />
+<img alt="../../_images/Chapte006.jpg" class="bordered-image" src="../../_images/Chapte006.jpg" />
 <p><em>Figure 8.
 Cross Section Assignment.</em></p>
 <p>When the cross sections have all been assigned the channel bed profile looks like a staircase (Figure 9 top) because the channel elements without a
@@ -321,7 +333,7 @@ The cross section geometry interpolation has two loops.
 The first loop interpolates only the cross section shape and the second loop is a weighted flow area adjustment to achieve a more uniform rate of
 change in the flow area between interpolated cross sections.
 The original cross sections are not edited.</p>
-<img alt="../../_images/Chapte022.png" src="../../_images/Chapte022.png" />
+<img alt="../../_images/Chapte022.png" class="bordered-image" src="../../_images/Chapte022.png" />
 <p><em>Figure 9.
 Channel Bed Profile Examples</em></p>
 </section>
@@ -339,7 +351,7 @@ Re-interpolating the bed slope can be accomplished in the Profiles program for l
 <p>Once the channel geometry has been assigned and interpolated, the right bank elements can be assigned using a GDS menu command (Figure 10).
 After the assignment, the right or left banks can be realigned to the better represent the bank locations in the aerial image using mouse point and
 click commands.</p>
-<img alt="../../_images/Chapte007.jpg" src="../../_images/Chapte007.jpg" />
+<img alt="../../_images/Chapte007.jpg" class="bordered-image" src="../../_images/Chapte007.jpg" />
 <p><em>Figure 10.
 Right Bank Assignment and Realignment.</em></p>
 </section>
@@ -347,13 +359,13 @@ Right Bank Assignment and Realignment.</em></p>
 <h4>Channel Length Adjustment<a class="headerlink" href="#channel-length-adjustment" title="Link to this heading"></a></h4>
 <p>The channel length within each grid element is initially estimated as a straight line for a half grid element and is reported in the GDS dialog box
 (Figure 11).</p>
-<img alt="../../_images/Chapte008.jpg" src="../../_images/Chapte008.jpg" />
+<img alt="../../_images/Chapte008.jpg" class="bordered-image" src="../../_images/Chapte008.jpg" />
 <p><em>Figure 11.
 Channel Segment Length and Segment Number.</em></p>
 <p>This value is based on the position of each grid element with respect to its contiguous upstream and downstream neighbors.
 The length is the sum half the length of the grid element from the center of the node to the edge or corner closest to the upstream or downstream node
 (Figure 12).</p>
-<img alt="../../_images/Chapte009.png" src="../../_images/Chapte009.png" />
+<img alt="../../_images/Chapte009.png" class="bordered-image" src="../../_images/Chapte009.png" />
 <p><em>Figure 12.
 Channel Length for 3 Channel Elements.</em></p>
 <p>The total channel length in the dialog box represents the sum of the individual grid element channel lengths.
@@ -365,7 +377,7 @@ The total bankfull channel volume is the sum of all the channel element cross se
 Adjusting the channel element lengths to have an accurate total channel volume will improve the relationship between the flood volume in the channel
 and the flood volume on the floodplain.
 Figure 13 shows the total distance of the channel in the GDS and the isolated channel lengths in the CHAN.DAT file.</p>
-<img alt="../../_images/Chapte010.jpg" src="../../_images/Chapte010.jpg" />
+<img alt="../../_images/Chapte010.jpg" class="bordered-image" src="../../_images/Chapte010.jpg" />
 <p><em>Figure 13.
 Channel Length.</em></p>
 </section>
@@ -406,11 +418,11 @@ When the remnant ripples in the photo are covered by a flow of 0.1 ft, n-value =
 When computing velocity for shallow flow depths on the order of 0.1 ft or smaller (tolerance TOL value), unique n-values should be used.
 In lieu of using different velocity equations, one for deeper flow and one for shallow flow, it is necessary to compensate for overpredicting the low
 flow velocity by assigning higher shallow n-values or by using depth variable n-value adjustment or both.</p>
-<img alt="../../_images/Chapte023.png" src="../../_images/Chapte023.png" />
+<img alt="../../_images/Chapte023.png" class="bordered-image" src="../../_images/Chapte023.png" />
 <p><em>Figure 14.
 Low Flow vs. Bank Full Discharge.</em></p>
 <p>A channel roughness adjustment can be assigned in the CHAN.DAT file to estimate the n-value at depths below bankfull discharge (Figure 15 – red box).</p>
-<img alt="../../_images/Chapte011.png" src="../../_images/Chapte011.png" />
+<img alt="../../_images/Chapte011.png" class="bordered-image" src="../../_images/Chapte011.png" />
 <p><em>Figure 15.
 Channel Control Variables.</em></p>
 <p>The n-value assigned in CHAN.DAT should represent the flow roughness near bankfull flow.
@@ -423,13 +435,13 @@ If only one n-value is assigned representing bankfull discharge, the Caballo dam
 station in El Paso (107 miles downstream) 6 to 8 hours too soon.
 Similarly, matching the measured hydrographs at the Jensen, Utah gage from diurnal power plant releases at Flaming Gorge Dam would not be possible
 without the depth integrated n-value adjustment (Figure 18).</p>
-<img alt="../../_images/Chapte012.jpg" src="../../_images/Chapte012.jpg" />
+<img alt="../../_images/Chapte012.jpg" class="bordered-image" src="../../_images/Chapte012.jpg" />
 <p><em>Figure 16.
 Depth Variable Roughness.</em></p>
-<img alt="../../_images/Chapte013.jpg" src="../../_images/Chapte013.jpg" />
+<img alt="../../_images/Chapte013.jpg" class="bordered-image" src="../../_images/Chapte013.jpg" />
 <p><em>Figure 17.
 Dam Release Hydrograph El Paso, TX.</em></p>
-<img alt="../../_images/Chapte014.jpg" src="../../_images/Chapte014.jpg" />
+<img alt="../../_images/Chapte014.jpg" class="bordered-image" src="../../_images/Chapte014.jpg" />
 <p><em>Figure 18.
 Dam Release Hydrograph Jenson, UT.</em> <sup>1</sup></p>
 <p>The applicability of Manning’s equation to a given flow condition depends on the relative submergence of the roughness elements (d/k<sub>s</sub>) where
@@ -497,7 +509,7 @@ The slope is the given by path length (a function of the available floodplain su
 elevation and the top of bank elevation.
 Overbank discharge or return flow to the channel is computed using the floodplain assigned roughness.
 The overland flow can enter a previously dry channel.</p>
-<img alt="../../_images/Chapte015.png" src="../../_images/Chapte015.png" />
+<img alt="../../_images/Chapte015.png" class="bordered-image" src="../../_images/Chapte015.png" />
 <p><em>Figure 19.
 Channel Floodplain Flow Exchange.</em></p>
 <p>Channel flow is exchanged with the floodplain grid elements in a separate routine after the channel and floodplain flow subroutines have been
@@ -528,7 +540,7 @@ The channel routing is similar to the HEC-RAS assessment of channel cross sectio
 It does not significantly change the potential for overbank discharge exchange with the floodplain.
 It only slightly increases the flow area for channel hydraulic computations.
 The channel conveyance flow area for a natural channel is increased by the green space in Figure 20.</p>
-<img alt="../../_images/Chapte025.png" src="../../_images/Chapte025.png" />
+<img alt="../../_images/Chapte025.png" class="bordered-image" src="../../_images/Chapte025.png" />
 <p><em>Figure 20.
 Vertical Extension of the Lowest Top of Bank to the Highest Top of Bank.</em></p>
 </section>
@@ -592,10 +604,10 @@ The CHANMAX.OUT file lists the maximum discharge, maximum stage and time of occu
 The HYDROG program plotted hydrographs (Figure 21) can also reveal channel surging.
 Typically steep rising hydrographs and small channel storage cause the most frequent surging issues (Figure 22).
 The rate of change in the discharge flux (ΔQ/Δt) is the culprit.</p>
-<img alt="../../_images/Chapte016.jpg" src="../../_images/Chapte016.jpg" />
+<img alt="../../_images/Chapte016.jpg" class="bordered-image" src="../../_images/Chapte016.jpg" />
 <p><em>Figure 21.
 Surging Observed in a Channel Element Hydrograph.</em></p>
-<img alt="../../_images/Chapte017.jpg" src="../../_images/Chapte017.jpg" />
+<img alt="../../_images/Chapte017.jpg" class="bordered-image" src="../../_images/Chapte017.jpg" />
 <p><em>Figure 22.
 Steep Rising Hydrograph.</em></p>
 <p>A steep rising hydrograph, intense rainfall, or severe overland flow to the channel may cause instability near the inflow node or at any location in
@@ -610,7 +622,7 @@ To eliminate channel surging, perform the following steps:</p>
 Use limiting Froude number FROUDC.</p></li>
 </ol>
 </div></blockquote>
-<img alt="../../_images/Chapte018.jpg" src="../../_images/Chapte018.jpg" />
+<img alt="../../_images/Chapte018.jpg" class="bordered-image" src="../../_images/Chapte018.jpg" />
 <p><em>Figure 23.
 Check the Channel Bed Profile for Data Errors.</em></p>
 <p>The Froude number is important for several reasons:</p>
@@ -718,13 +730,13 @@ Volume conservation errors are almost always data errors and typically grow with
 A volume conservation error that is greater than 0.001 percent can be improved.
 A successful simulation generally has a volume conservation error less than 0.000100 percent.
 The volume conservation accounting can be reviewed in the SUMMARY.OUT (Figure 24) as shown below for a project that had excellent volume conservation.</p>
-<img alt="../../_images/Chapte019.png" src="../../_images/Chapte019.png" />
+<img alt="../../_images/Chapte019.png" class="bordered-image" src="../../_images/Chapte019.png" />
 <p><em>Figure 24.
 SUMMARY.OUT Example.</em></p>
 <p>The CHVOLUME.OUT file reports the channel volume conservation.
 Usually if there is a volume conservation error it is in the channel and both CHVOLUME.OUT and SUMMARY.OUT will report the same error.
 CHVOLUME.OUT (Figure 25) is listed below:</p>
-<img alt="../../_images/Chapte020.jpg" src="../../_images/Chapte020.jpg" />
+<img alt="../../_images/Chapte020.jpg" class="bordered-image" src="../../_images/Chapte020.jpg" />
 <p><em>Figure 25.
 CHVOLUME.OUT Example.</em></p>
 <p>Channel data issues that might lead to a volume conservation error include:</p>
@@ -748,7 +760,7 @@ Troubleshooting channel volume conservation errors is discussed in Chapter 3.</p
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="FLO-2D Channel Guidelines 2021" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Chapter%202.html" class="btn btn-neutral float-right" title="Chapter 2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Chapter%202.html" class="btn btn-neutral float-right" title="Chapter 2 - Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
