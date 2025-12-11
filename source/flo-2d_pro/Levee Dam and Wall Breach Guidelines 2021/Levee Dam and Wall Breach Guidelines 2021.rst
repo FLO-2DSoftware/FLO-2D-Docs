@@ -1644,7 +1644,7 @@ This data assignment enables the user to specify either global fragility curve d
 reaches of levee fragility curves in the FLO-2D model in a spatially variable analysis.
 
 FLO-2D Fragility Curve Modeling Results
----------------------------------------
+----------------------]-----------------
 
 When the levee fragility curves are applied to a levee system, the results show that the levee breach can occur anywhere in the system at varying
 times depending of the selection of the fragility curve and the prescribe probability of failure.
@@ -1658,11 +1658,11 @@ FLO-2D Levee Breach Simulation in Progress Using Levee Fragility Curves (Right: 
 
 Levee Breaches Expanding)
 
-|Levee021|
+.. image:: img/Levee021.jpg
 
-   **Figure 27.
-   FLO-2D Levee Breach Simulation in Progress Using Levee Fragility Curves.
-   (Right: Levee Simultaneously Breaching in 2 Locations; Left: Levee Breach Expanding.)**
+*Figure 27.
+FLO-2D Levee Breach Simulation in Progress Using Levee Fragility Curves.
+(Right: Levee Simultaneously Breaching in 2 Locations; Left: Levee Breach Expanding.)*
 
 Benefits of Using the Levee Fragility Curves for Flood Hazard Mapping
 ---------------------------------------------------------------------
