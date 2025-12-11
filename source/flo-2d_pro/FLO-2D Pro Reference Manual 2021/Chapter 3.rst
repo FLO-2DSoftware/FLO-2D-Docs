@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 3. FLO-2D MODEL SYSTEM
+CHAPTER 3. FLO-2D MODEL SYSTEM
 ==============================
 
 Assumptions and Special Conditions
@@ -72,41 +72,20 @@ power function of the depth.
 It is possible to compute reasonable or accurate water surface elevations in a ponded water condition with FLO-2D, but high Manning’s n-values should
 be applied to keep the depth integrated flow velocity below 1 fps (0.33 mps).
 
-Figure a.
-Open Channel
+.. image:: img/Chapter3/Chapte035.jpg
 
--
-
-Logarithmic
-
-Figure b.
-Ponded Water
-
-d
-
-V
-
-V
-
-d
-
-Average Velocity
-
-   *Figure 12.
-   Vertical Velocity Profiles.*
+*Figure 12.
+Vertical Velocity Profiles.*
 
 Basic Assumptions
 ~~~~~~~~~~~~~~~~~
 
 The inherent assumptions in a FLO-2D simulation are:
 
-- Steady flow for the duration of the timestep;
-
-- Hydrostatic pressure distribution;
-
-- Hydraulic roughness is based on steady, uniform turbulent flow resistance;
-
-- A channel element is represented by uniform channel geometry and roughness.
+    - Steady flow for the duration of the timestep;
+    - Hydrostatic pressure distribution;
+    - Hydraulic roughness is based on steady, uniform turbulent flow resistance;
+    - A channel element is represented by uniform channel geometry and roughness.
 
 These assumptions are self-explanatory but they remind us that the flow conditions between grid elements are being averaged.
 For more information on reservoir routing and ponded flow, look at the Levee, Dam, and Wall Breach Guidelines.
@@ -175,7 +154,10 @@ The timestep for the selected spatial spacing and the Courant number are not sma
 system.
 In the FLO-2D model the Courant number limits the timestep Δt by:
 
-   Δt = C Δx / (V + c)
+.. math::
+   :label:
+
+   \Delta t = \frac{C\, \Delta x}{V + c}
 
 where:
 

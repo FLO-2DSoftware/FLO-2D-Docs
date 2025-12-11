@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 2. FLO-2D MODEL THEORY
+CHAPTER 2. FLO-2D MODEL THEORY
 ==================================
 
 FLO-2D is a simple volume conservation model.
@@ -221,7 +221,7 @@ All the inflow volume, outflow volume, change in storage or loss from the grid s
 conservation is computed.
 Results are written to the output files or to the screen at user specified output time intervals.
 
-.. image:: img/Chapter2/Chapte008.jpg
+.. image:: img/Chapter2/Chapte009.jpg
 
 *Figure 6.
 FLO-2D Stability Criteria Flow Chart.*
