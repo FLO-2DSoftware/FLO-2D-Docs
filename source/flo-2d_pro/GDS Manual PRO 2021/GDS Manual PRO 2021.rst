@@ -3239,37 +3239,37 @@ Instructions for entering street follow:
     1.  *Global n-value for street flow* - Global n-value that is assigned to all the street elements.
 
     2.  *Maximum Street Froude number -* When the computed Froude number for the street flow exceeds this limiting street Froude number, the n-value is
-       increased by 0.001 for that street element.
+        increased by 0.001 for that street element.
 
     3.  *Global street width* - Global assignment of street width (ft or m) for all street elements.
-       This street width is superseded by individual street widths if the individual street width is greater than zero (see *Flow direction from center of
-       node and street width* check boxes).
+        This street width is superseded by individual street widths if the individual street width is greater than zero (see *Flow direction from center of
+        node and street width* check boxes).
 
     4.  *Global curb height* - Global street curb height (ft or m).
-       If the street curb height is exceeded by the flow depth, overland flow will result in the grid element containing the street.
-       This value is used to assign a street curb height globally to all street elements.
+        If the street curb height is exceeded by the flow depth, overland flow will result in the grid element containing the street.
+        This value is used to assign a street curb height globally to all street elements.
 
     5.  *Inflow hydrograph will enter the streets rather than floodplain node* - Check this box to have the inflow hydrograph enter the street rather than
-       the floodplain portion of the grid element.
+        the floodplain portion of the grid element.
 
     6.  *Curb height* - Optional curb height (ft or m) for an individual street element that supersedes the *global curb height*.
 
     7.  *Elevation* - Optional individual street element elevation (ft or m).
-       This elevation will supersede the floodplain grid element elevation.
-       If this value is zero, the model will assign the street elevation as grid element floodplain elevation minus the curb height.
+        This elevation will supersede the floodplain grid element elevation.
+        If this value is zero, the model will assign the street elevation as grid element floodplain elevation minus the curb height.
 
     8.  *N-value* - Optional street n-value for the individual street segments within a given grid element.
-       This value supersedes the *Global n-value for street flow*.
-       If individual street nvalue is zero, the global value will be assigned to the grid element street segment.
+        This value supersedes the *Global n-value for street flow*.
+        If individual street nvalue is zero, the global value will be assigned to the grid element street segment.
 
     9. *Street name* - Character name of the street.
        Up to 15 characters can be used.
        The street name is not used in the *FLO-2D* model.
 
     10. *Flow direction from center of node and street width* - Streets emanate from the center of the grid element in a star pattern of eight potential flow
-        directions as show below.
+        directions as shown below.
 
-.. image:: img/GDS219.jpg
+        .. image:: img/GDS219.jpg
 
 When a given flow direction box is checked, a text box appears direct below the *flow direction check box* to input the optional grid element street
 width for that street flow direction ISTDIR:
