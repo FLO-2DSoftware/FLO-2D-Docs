@@ -1182,7 +1182,7 @@ Earlier versions of the FLO-2D model ignored the ground or water surface elevati
 potential static pressure failure.
 Error and warning messages were established for these elevation conditions.
 
-.. image:: img/Levee013.jpg
+.. image:: img/Levee013.png
 
 *Figure 20.
 Levee or Wall Configuration with Uneven Ground Elevations.*
