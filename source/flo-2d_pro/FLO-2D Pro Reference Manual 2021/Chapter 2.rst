@@ -457,22 +457,20 @@ Post-processor program review of the graphical display of the channel hydrograph
 surface elevation profile might also reveal numerical surging.
 The following approach is suggested for making adjustments to speed up the model or slow down the model to eliminate numerical instability:
 
-1. If the model has no numerical surging or unreasonable maximum velocities and it is desired to have the model run faster, increase the TIME_ACCEL
-   parameter from 0.1 to 0.25 and run the model again.
-   If the model runs faster and the results still don’t indicate any numerical instability, then increase TIME_ACCEL to 0.3 or 0.4.
-   Some numerical instability may begin to appear in VELTIMFP.OUT when TIME_ACCEL is 0.4 - 0.5 or higher.
-
-2. Once unreasonable velocities or Froude numbers are noted, decrease the TIME_ACCEL by 0.05.
-   Review the mode runtime at the end of the SUMMARY.OUT file and do the various numerical instability checks.
-   At this point, a pattern will probably be apparent and the optimum Courant number and TIME_ACCEL parameter can be achieved.
-   If the model becomes numerically stable with the decreased TIME_ACCEL, it may be possible to increase the Courant number to achieve a slightly faster
-   model.
-
-3. If the model has some initial numerical instability, leave the TIME_ACCEL at the default value of 0.1 and decrease the Courant Number from 0.6 to 0.5
-   to 0.4 over several runs until the numerical instability is eliminated.
-   Data adjustments to eliminate numerical surging might include increasing n-values using the limiting Froude number and the ROUGH.OUT file.
-   Depressed grid elements, hydraulic structure rating tables, deep ponded water or steep slopes may also contribute to unreasonably high maximum
-   velocities.
+    1. If the model has no numerical surging or unreasonable maximum velocities and it is desired to have the model run faster, increase the TIME_ACCEL
+       parameter from 0.1 to 0.25 and run the model again.
+       If the model runs faster and the results still don’t indicate any numerical instability, then increase TIME_ACCEL to 0.3 or 0.4.
+       Some numerical instability may begin to appear in VELTIMFP.OUT when TIME_ACCEL is 0.4 - 0.5 or higher.
+    2. Once unreasonable velocities or Froude numbers are noted, decrease the TIME_ACCEL by 0.05.
+       Review the mode runtime at the end of the SUMMARY.OUT file and do the various numerical instability checks.
+       At this point, a pattern will probably be apparent and the optimum Courant number and TIME_ACCEL parameter can be achieved.
+       If the model becomes numerically stable with the decreased TIME_ACCEL, it may be possible to increase the Courant number to achieve a slightly faster
+       model.
+    3. If the model has some initial numerical instability, leave the TIME_ACCEL at the default value of 0.1 and decrease the Courant Number from 0.6 to 0.5
+       to 0.4 over several runs until the numerical instability is eliminated.
+       Data adjustments to eliminate numerical surging might include increasing n-values using the limiting Froude number and the ROUGH.OUT file.
+       Depressed grid elements, hydraulic structure rating tables, deep ponded water or steep slopes may also contribute to unreasonably high maximum
+       velocities.
 
 Following each flood simulation, the TIME.OUT file should be reviewed to determine which of the grid elements are frequently exceeding the Courant
 timestep and contributing to a slow model speed.
@@ -496,10 +494,10 @@ This may occur more frequently with hydraulic structure inflow nodes.
 
 .. image:: img/Chapter2/Chapte006.jpg
 
-   *Figure 9.
-   TOL Definition.*
+*Figure 9.
+TOL Definition.*
 
-   Grid Element Depression Storage that Must Be Filled Before Volume is Exchanged with Another Element
+Grid Element Depression Storage that Must Be Filled Before Volume is Exchanged with Another Element
 
 Previous Methods for Addressing Volume Evacuation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -527,20 +525,15 @@ Evacuated Element Revisions
 
 Several codes revisions were made to simplify and automate the model response to evacuated elements including:
 
-- The separate computational loop for evaluating the evacuated cells was eliminated.
-
-- The limitation on the number of times (1,000) that evacuated elements were encountered was eliminated.
-  The number of times each floodplain or channel element is now evacuated is listed in the EVACUATEDxx.OUT files.
-
-- Evacuated element n-values are increased by 0.001 to a limit of 0.250 for both the floodplain and channel.
-
-- The model terminates the current timestep loop and reduces the timestep by 1 percent.
-
-- The evacuated channel element TOL value is increased to 0.2 ft (0.067) if TOL is less than 0.2 ft (0.067 m) and increases the TOL by 0.02 ft (0.006 m)
-  if greater than 0.2 up to a maximum value of 0.4 ft (0.122 m).
-
-- The floodplain evacuated element TOL value is increased to 0.1 ft (0.03) if TOL is less than 0.1 ft (0.03 m) and increases the TOL to 0.25 ft (0.076
-  m) if greater than 0.1 ft (0.03 m).
+    - The separate computational loop for evaluating the evacuated cells was eliminated.
+    - The limitation on the number of times (1,000) that evacuated elements were encountered was eliminated.
+      The number of times each floodplain or channel element is now evacuated is listed in the EVACUATEDxx.OUT files.
+    - Evacuated element n-values are increased by 0.001 to a limit of 0.250 for both the foodplain and channel.
+    - The model terminates the current timestep loop and reduces the timestep by 1 percent.
+    - The evacuated channel element TOL value is increased to 0.2 ft (0.067) if TOL is less than 0.2 ft (0.067 m) and increases the TOL by 0.02 ft (0.006 m)
+      if greater than 0.2 up to a maximum value of 0.4 ft (0.122 m).
+    - The floodplain evacuated element TOL value is increased to 0.1 ft (0.03) if TOL is less than 0.1 ft (0.03 m) and increases the TOL to 0.25 ft (0.076
+      m) if greater than 0.1 ft (0.03 m).
 
 The focus is to adjust the flood hydraulics and the depression storage rather than the timestep for evacuated elements at shallow flows.
 
@@ -551,9 +544,7 @@ First review the SUMMARY.OUT and CHVOLUME.OUT file to see if there is any volume
 Volume conservation error is not always related to evacuated elements, but it could be.
 Reviewing the EVACUATEDFP.OUT and EVACUATEDCH>OUT files and the TIME.OUT file will further help to identify if the model is not conserving volume in
 response to the evacuated elements.
-If
-
-EVACUATEDxx.OUT are empty or non-existent, the volume conservation error is being cause by some other component of the model.
+If EVACUATEDxx.OUT are empty or non-existent, the volume conservation error is being cause by some other component of the model.
 If the grid elements in these files are correlated, then review the ROUGH.OUT file to see if the same elements have increased n-values.
 When it appears that there are evacuated elements that are impacting the model performance, then it is necessary to review these elements in detail in
 terms of their attributes (n-values, elevations) or components (ARF-values, streets, infiltration, etc.) and make some adjustments.
@@ -568,7 +559,10 @@ the model.
 It is even more important when considering mobile bed channels such as alluvial fans or high bedload rivers.
 The dimensionless Froude number Fr is given by:
 
-   Fr = α :sup:`0.5` V/(gd)\ :sup:`0.5`
+.. math::
+   :label:
+
+   Fr = \alpha^{0.5}\, \frac{V}{(g d)^{0.5}}
 
 Where:
 
@@ -584,7 +578,10 @@ the relationship between the velocity and flow depth.
 
 For essentially steady and uniform flow, the Manning’s n value is defined would be defined by:
 
-   n = (0.262/Fr) d0.17 So 0.5
+.. math::
+   :label:
+
+   n = \left( \frac{0.262}{Fr} \right) d^{0.17}\, S_o^{0.5}
 
 indicating that the flow roughness is inversely proportional the Froude number.
 By assuming a reasonable limiting Froude number, the n value can be estimated from the normal depth and slope for a given flow discharge.
@@ -593,27 +590,29 @@ In the FLO-2D model, the suggested n-value is based on either bankfull discharge
 (roughness is fully submerged).
 Suggested typical limiting Froude numbers are defined in Table 1.
 
+*Table 1.
+Range of Values Limiting Froude.*
+
 .. list-table::
-   :widths: 50 50
+   :widths: 30 30 40
    :header-rows: 0
 
 
-   * -
-     - **Table 1.
-       Range of Values Limiting Froude.**
-
    * - **Tool**
-     - **Flat or Mild Slope (large    | **Steep Slope (alluvial fans rivers and floodplains)**      | and watersheds)**
+     - **Flat or Mild Slope (large rivers and floodplains)**
+     - **Steep Slope (alluvial fans and watersheds)**
 
    * - Channels
-     - 0.4 – 0.6                      | 0.7 – 1.05
+     - 0.4 – 0.6
+     - 0.7 – 1.05
 
-   * - Overlandflow
-     - 0.5 – 0.8                      | 0.7 – 0.95 |
+   * - Overland flow
+     - 0.5 – 0.8
+     - 0.7 – 0.95
 
    * - Streets
-     - 0.9 – 1.2                      | 1.1 – 1.5
-
+     - 0.9 – 1.2
+     - 1.1 – 1.5
 
 Similar values are also reported in the CVFED FLO-2D Application Guide.
 If the limiting Froude number is exceeded, the grid element n-value increases by 0.001 for the next timestep.
