@@ -1007,54 +1007,162 @@ Evidence of numerical surging in wall collapse discharge includes:
    **Table 2.
    Numerical Surging Troubleshooting**
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. raw:: html
 
+   <table style="border-collapse: collapse; width: 100%;">
+     <caption><strong>Numerical Surging Troubleshooting</strong></caption>
+     <thead>
+       <tr>
+         <th style="border: 1px solid #000; padding: 4px;">Condition</th>
+         <th style="border: 1px solid #000; padding: 4px;">Resolution</th>
+       </tr>
+     </thead>
+     <tbody>
 
-   * - Numerical Surging Troubleshooting
+       <!-- WALL FAILURE HIGH VELOCITIES -->
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="5">
+           Wall Failure<br>
+           High Velocities
+         </td>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Review the floodplain elevations and n-values on each side of the levee.
+           The elevations need to represent the floodplain elevation and not depressions
+           associated with channels or elevated topography as a result of levee crest
+           elevations. Increase the n-values to reduce unreasonable velocities.
+         </td>
+       </tr>
 
-   * - Condition                           |    Resolution
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Revise the wall failure parameters (e.g., reduce the wall failure elevation).
+         </td>
+       </tr>
 
-   * - Wall Failure                        |    Review the floodplain elevations and n-values on each|    side of the levee.
-       The elevations need to representHigh Velocities                     |    the floodplain elevation and not depressions|    associated with channels or
-       elevated topography as a|    result of levee crest elevations.
-       Increase the|    n-values to reduce unreasonable velocities.+----------------------------------------------------------|    Revise the wall failure
-       parameters (e.g. reduce the|    wall failure elevation).+----------------------------------------------------------|    Tailwater may the cause of
-       numerical surging.
-       Most|    tailwater conditions are accounted for in the FLO-2D|    model.
-       Review the potential tailwater conditions to|    determine if wall failure submergence is appropriate.|    Increase the n-values associated with the
-       downstream|    elements to reduce high velocities near the failure|    location.+----------------------------------------------------------|
-       Downstream water surface controls may artificially|    lower the water surface elevation near the breach.|    This may include outflow node time-
-       stage|    relationships, flow constrictions, hydraulic|    structure rating tables, tidal affects or main|    channel flow.
-       Variable downstream controls require|    specific needs.+----------------------------------------------------------|    Numerical surging or high
-       maximum velocities may be|    the result of limited storage area.
-       Reduce or|    eliminate surface area reduction (ARF-values) in the|    wall elements which may have very little surface area|    for storage.
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Tailwater may be the cause of numerical surging. Most tailwater conditions are
+           accounted for in the FLO-2D model. Review the potential tailwater conditions to
+           determine if wall failure submergence is appropriate. Increase the n-values
+           associated with the downstream elements to reduce high velocities near the
+           failure location.
+         </td>
+       </tr>
 
-   * - Combined Wall                       |    Hydraulic structures may be used to allow flow to go|    through a wall connecting contiguous grid
-       elements.Failure and                         |    This might simulate a drainage hole in a block wall|    or a culvert under a wall.
-       While the wall is intactHydraulic                           |    the flow based on the hydraulic structure rating|    table or curve must include the
-       flow over the wall.Structure                           |    If the rating table is poorly matched with the|    upstream inflow conditions, surging may
-       ensue.
-       The|    rating table or curve must be modified.
-       Refer to the|    Hydraulic Structure Guidelines document for more|    details.+----------------------------------------------------------|    If the
-       wall fails instantaneously, the hydraulic|    structure flow is terminated and the flow is computed|    as overland flow.
-       If numerical surging is observed|    increase the nvalues or review the topography.+----------------------------------------------------------|    If
-       the combined hydraulic structure and wall is|    causing either volume conservation error or numerical|    instability, follow this protocol:||    1.
-       Turn off the hydraulic structures in CONT.DAT and|    run the model until the
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Downstream water surface controls may artificially lower the water surface
+           elevation near the breach. This may include outflow node time-stage
+           relationships, flow constrictions, hydraulic structure rating tables, tidal affects,
+           or main channel flow. Variable downstream controls require specific needs.
+         </td>
+       </tr>
 
-   * - |    problem occurs.|| 2. Turn off the levees in CONT.DAT and run the model|    only until the time that the problem occurs.|| 3. If the problem is in the hydraulic structures,|    isolate the structures that appear to be the problem.+----------------------------------------------------------|    To isolate a hydraulic structure with numerical|    instability, put a simple inflow hydrograph (for|    steady flow) several grid elements upstream of the|    structure. Put a line of outflow elements downstream|    of the structure and turn off all the other inflow|    hydrographs and rainfall. Make sure that the steady|    flow discharge through the structure matches the|    assigned stage or depth.
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Numerical surging or high maximum velocities may be the result of limited storage
+           area. Reduce or eliminate surface area reduction (ARF-values) in the wall elements
+           which may have very little surface area for storage.
+         </td>
+       </tr>
 
-   * - |    If the instability issue cannot be resolved, it may|    be possible to move the hydraulic structure to the|    next grid element without a loss of accuracy or|    mapping resolution for the maximum water surface|    elevation. It might also be possible to eliminate the|    wall and replace it with WRF value.+----------------------------------------------------------|    The model automatically adjusts the hydraulic|    structure rating table and writes the revised table|    pairs to an output file. If instability persists,|    review the revised rating table and make further|    adjustments. Typically, the instability is related to|    the lower flows and there are insufficient rating|    table pairs to define the rating table for the lower|    discharges. Review the HYDROSTRUCT.OUT file to|    determine if there is numerical instability in the|    rating table or curve.+----------------------------------------------------------|    Downstream ponding or time-stage water surface|    controls may result in upstream flow through|    structure. Set the INOUTCONT = 1 in the HYSTRUC.DAT|    file to allow upstream flow.
+       <!-- COMBINED WALL FAILURE + HYDRAULIC STRUCTURE -->
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="7">
+           Combined Wall<br>
+           Failure and<br>
+           Hydraulic<br>
+           Structure
+         </td>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Hydraulic structures may be used to allow flow to go through a wall connecting
+           contiguous grid elements. This might simulate a drainage hole in a block wall or a
+           culvert under a wall. While the wall is intact the flow based on the hydraulic
+           structure rating table or curve must include the flow over the wall.
+           If the rating table is poorly matched with the upstream inflow conditions, surging
+           may ensue. The rating table or curve must be modified. Refer to the Hydraulic
+           Structure Guidelines document for more details.
+         </td>
+       </tr>
 
-   * - Wall                             | The potential for surging associated with overtopping| discharges was reduced by:Overtopping
-       || - Adding tailwater submergence criteria;Discharge                        || - Reverting to overland flow when the water surfaces are|   much higher
-       than the crest;|| - Assigning the appropriate reference elevation to|   establish headwater and tailwater depths.|| ..||    If surging is observed,
-       check the floodplain|    elevations for accuracy on each side of the wall and|    increase the n-values in both cells.
-       If there are|    shallow depths on one side of the wall and deep|    depths on the other with flow over the crest,|    equilibrating the grid element
-       elevations should|    eliminate surging.+----------------------------------------------------------|    Some numerical surging can be eliminated by
-       forcing|    smaller timesteps.
-       Reduce the floodplain Courant|    number or TIME_ACCEL parameter.
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the wall fails instantaneously, the hydraulic structure flow is terminated and the
+           flow is computed as overland flow. If numerical surging is observed increase the
+           n-values or review the topography.
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the combined hydraulic structure and wall is causing either volume conservation
+           error or numerical instability, follow this protocol:<br>
+           1. Turn off the hydraulic structures in CONT.DAT and run the model until the
+             problem occurs.<br>
+           2. Turn off the levees in CONT.DAT and run the model only until the time that
+             the problem occurs.<br>
+           3. If the problem is in the hydraulic structures, isolate the structures that
+             appear to be the problem.
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           To isolate a hydraulic structure with numerical instability, put a simple inflow
+           hydrograph (for steady flow) several grid elements upstream of the structure.
+           Put a line of outflow elements downstream of the structure and turn off all the
+           other inflow hydrographs and rainfall. Make sure that the steady flow discharge
+           through the structure matches the assigned stage or depth.
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the instability issue cannot be resolved, it may be possible to move the hydraulic
+           structure to the next grid element without a loss of accuracy or mapping resolution
+           for the maximum water surface elevation. It might also be possible to eliminate the
+           wall and replace it with WRF value.
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The model automatically adjusts the hydraulic structure rating table and writes the
+           revised table pairs to an output file. If instability persists, review the revised rating
+           table and make further adjustments. Typically, the instability is related to the lower
+           flows and there are insufficient rating table pairs to define the rating table for the
+           lower discharges. Review the HYDROSTRUCT.OUT file to determine if there is
+           numerical instability in the rating table or curve.
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Downstream ponding or time-stage water surface controls may result in upstream
+           flow through structure. Set the INOUTCONT = 1 in the HYSTRUC.DAT file to allow
+           upstream flow.
+         </td>
+       </tr>
+
+       <!-- WALL OVERTOPPING DISCHARGE -->
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="2">
+           Wall<br>
+           Overtopping<br>
+           Discharge
+         </td>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The potential for surging associated with overtopping discharges was reduced by:<br>
+           • Adding tailwater submergence criteria;<br>
+           • Reverting to overland flow when the water surfaces are much higher than the crest;<br>
+           • Assigning the appropriate reference elevation to establish headwater and tailwater depths.<br><br>
+           If surging is observed, check the floodplain elevations for accuracy on each side of the
+           wall and increase the n-values in both cells. If there are shallow depths on one side of
+           the wall and deep depths on the other with flow over the crest, equilibrating the grid
+           element elevations should eliminate surging.
+         </td>
+       </tr>
+
 
 
 The primary data issue with a wall collapse occurs is a wall is assigned along the boundary of two grid elements that are significantly different in
