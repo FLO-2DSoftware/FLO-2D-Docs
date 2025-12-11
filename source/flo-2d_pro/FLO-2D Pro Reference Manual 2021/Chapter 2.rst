@@ -143,12 +143,10 @@ This simplifies and reduces the number of steps in the solution algorithm.
 Each direction is visited only once during a sweep of the grid system domain and involves two grid elements whereas a grid element index requires each
 grid element to be visited (Figure 4).
 
-   |Chapte002|
+.. image:: img/Chapter2/Chapte002.jpg
 
-   *Figure 4.
-   Flow Direction.*
-
-7 Chapter 2
+*Figure 4.
+Flow Direction.*
 
 Flow Direction is the Computational Index not the Grid Element Number.
 To summarize, the solution algorithm incorporates the following steps:
