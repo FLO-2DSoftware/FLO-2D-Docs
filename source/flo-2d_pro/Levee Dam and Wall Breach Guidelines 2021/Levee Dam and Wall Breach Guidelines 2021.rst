@@ -605,7 +605,7 @@ The use of a hydraulic structure in contiguous grid elements separated by a wall
 represented by the hydraulic structure rating table for that flow direction.
 When the wall fails instantaneously, the hydraulic structure flow is also terminated, and the model reverts to overland flow calculations.
 
-.. image:: img/Levee009.jpg
+.. image:: img/Levee009.png
 
 *Figure 14.
 Wall Collapse. (FCDMC, 2018)*
