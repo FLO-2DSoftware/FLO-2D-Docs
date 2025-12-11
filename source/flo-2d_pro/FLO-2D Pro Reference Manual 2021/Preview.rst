@@ -67,11 +67,9 @@ The user can keep current on the FLO-2D model and processor program updates, tra
 
 *FLO-2D Software, Inc.*
 
-*P.O.
-Box 66*
+*P.O.Box 66*
 
 *Nutrioso, AZ 85932*
 
 *Phone: (928) 339-1935*
 
-Email: *contact@flo-2d.com*
