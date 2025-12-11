@@ -1211,5 +1211,5 @@ Thomas, D.G., 1963.
 “Non-Newtonian suspensions.
 Part I: physical properties and laminar transport characteristics,” Ind.
 Eng.
-Chem., 55(110, 18-29.
+Chem., 55(110), 18-29.
 
