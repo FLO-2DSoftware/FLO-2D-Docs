@@ -1,4 +1,4 @@
-FLO-2D Installation & Setup Build 21
+FLO-2D Installation & Setup 
 ======================================
 
 .. toctree::
