@@ -346,101 +346,231 @@ Table 1 outlines the potential controls.
 *Table 1.
 Prescribed Breach Failure Controls and Guidelines*
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. raw:: html
 
-
-   * - **Prescribed Breach Failure Controls and Guidelines**
-
-   * - **Levee Data**                   |    **Model Data or Flow Condition**
-
-   * - Levee Data                       | Model checks to make sure the crest elevation| is higher than the grid element elevation onLevee is defined by grid
-       | both sides of the levee.element, flow direction blocked  |by the levee and levee crest     |elevation.
-       |+-------------------------------------------------| Model checks if the levee is on the grid system| domain boundary with no grid element on the|
-       other side of the levee.
-       A warning message is| generated.+-------------------------------------------------| The levee must continuous without breaks.
-       No| flow leakage thru the levee system.
-       Requires| review of output.+-------------------------------------------------|    Model checks if the levee is assigned to|    outflow nodes.
-       This will generate an error|    message.+-------------------------------------------------| The model generates a warning message for| levees assigned
-       to hydraulic structure inflow| or outflow nodes.+-------------------------------------------------| If 3-D polyline point data is used to assign| the
-       levee, WRF values are
-
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
-
-   * -
-     - automatically assigned to levee element sides to match the actual levee length.
-       ------------------------------------------------- User should check floodplain elevations on each side of the levee to represent ground elevations.
-       Interpolated ground elevations may be higher due to the DTM points on the levee crest.
-       ------------------------------------------------- Set ILEVFAIL = 0, no levee failure  Set ILEVFAIL = 1, prescribed levee failure,  Set ILEVFAIL = 2,
-       for breach erosion failure.
-       ------------------------------------------------- If prescribed failure levee grid element is negative, the failure data for that element is assumed
-       to be global and applies to all the levee elements and blocked flow directions.
-       In this case, the failure data needs only to be assigned to one element.
-
-   * - PrescribedLevee FailureData
-     - Levee breach failure is defined by failure direction, elevation of water surface to initiate failure, the duration that the failure elevation is
-       exceeded before initiating failure, failure base elevation, maximum breach width, and vertical and horizontal rates of breach widening.
-       ------------------------------------------------- The initial breach width = 1.0 ft (0.3 m) is hardwired.
-       ------------------------------------------------- If failure elevation = 0., the levee breach failure begins immediately when overtopped.
-       Otherwise, the levee breach is initiated when the water surface exceeds the assigned failure elevation by 0.1 ft (0.03 m).
-       If the failure elevation is < 10 ft, the failure elevation is the distance below the crest elevation.
-       In this case, the failure elevation = crest elevation - failure elevation.
-       If the failure data has been globally assigned, the breach initiation can occur for all the grid element sides with levees when the water surface
-       exceeds the global failure elevation.
-       ------------------------------------------------- If the failure duration time = 0., breach failure initiates immediately.
-       ------------------------------------------------- If the levee is to fail at an appropriate distance below the crest after being inundated for a
-       reasonable duration, assign values to both the failure elevation and failure duration time.
-       ------------------------------------------------- If the failure base elevation = 0., the final levee breach elevation is equal to the floodplain grid
-       element elevation on the opposite side of the levee.
-       ------------------------------------------------- For a progressive levee failure, assign the vertical and horizontal breach rates.
-       ------------------------------------------------- If the vertical and horizontal rates of failure are zero, the levee (wall) fails instantaneously for
-       the entire grid element side width.
-       ------------------------------------------------- If the maximum failure width is longer than the grid element side, the breach
-
-   * -
-     - will extend into adjacent grid elements until the maximum failure width is ------------------------------------------------- equaled or the levee ends.
-       For instantaneous failure, every grid element side levee that will collapse must be assigned.
-
-   * - LeveeOvertoppingDischarge
-     - The flow depth on the levee crest must exceed a hardcoded tolerance value equal to 0.1 ft (0.3 m) to enable the overtopping discharge to be computed.
-       ------------------------------------------------- Flow over the levee is computed using the conventional broadcrested weir equation with a variable
-       weir coefficient that depends on the headwater depth.
-       The headwater depth depends on whether one or both of the water surface elevations are greater than the crest.
-       If the headwater depth > 3ft, then the
-
-   * -
-     - weir coefficient is 3.09.
-       If the headwater depth < 3., the weir coefficient can range between 2.5 and 3.09.
-       ------------------------------------------------- If the ratio of the tailwater to the headwater is greater than 0.8, then the discharge is multiplied
-       by a submergence factor that is less than 1.0 based on the submergence curves (Figure 8).
-       ------------------------------------------------- The overtopping discharge in all possible directions including the peak discharge are reported in
-       the LEVOVERTOP.OUT file.
-
-   * - Levee BreachDischarge
-     - The flow depth on the levee breach must exceed a tolerance value of 0.1 ft (0.3 m) for the breach discharge to be computed.
-       The flow depth is based on the highest water surface and the levee breach elevation.
-       ------------------------------------------------- Breach discharge is computed with a broadcrested weir equation with a variable coefficient that
-       depends on the headwater depth above the breach elevation.
-       The headwater depth depends on whether one or both of the water surface elevations are greater than the breach elevation.
-       If the headwater depth > 3 ft, then the levee weir coefficient = 3.09.
-       If the headwater depth < 3., the weir coefficient can range between 2.5 and 3.09.
-       ------------------------------------------------- If the ratio of the tailwater to the headwater above the breach elevation is greater than 0.8, then
-       the discharge is multiplied by a submergence factor that is less than 1.0 based on the submergence curves.
-       ------------------------------------------------- If the levee (wall) fails instantaneously to the levee base elevation, the flow is computed by the
-       overland flow routine using the side width of the grid system.
-       ------------------------------------------------- If the levee breach progressively widens and extends to other contiguous levee element sides, the
-       discharge is based on the computed breach width using the horizontal breach rate.
-       ------------------------------------------------- When the vertical breach has reached the levee base elevation, the maximum shear stress on the
-       breach is computed.
-       Subsequently the original horizontal breach rate is reduced by the ratio of the current shear stress to the maximum shear stress on the breach (Figure
-       12).
-       ------------------------------------------------- The breach discharge and breach geometry is reported in the LEVEE.OUT file.
-
+   <table style="border-collapse: collapse; width: 100%;">
+     <caption><strong>Prescribed Breach Failure Controls and Guidelines</strong></caption>
+     <thead>
+       <tr>
+         <th style="border: 1px solid #000; padding: 4px;">Levee Data</th>
+         <th style="border: 1px solid #000; padding: 4px;">Model Data or Flow Condition</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="9">
+           Levee Data<br><br>
+           Levee is defined by grid element,<br>
+           flow direction blocked by the<br>
+           levee and levee crest elevation.
+         </td>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Model checks to make sure the crest elevation is higher than the grid element
+           elevation on both sides of the levee.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Model checks if the levee is on the grid system domain boundary with no grid
+           element on the other side of the levee. A warning message is generated.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The levee must continuous without breaks. No flow leakage thru the levee
+           system. Requires review of output.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Model checks if the levee is assigned to outflow nodes. This will generate an
+           error message.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The model generates a warning message for levees assigned to hydraulic
+           structure inflow or outflow nodes.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If 3-D polyline point data is used to assign the levee, WRF values are
+           automatically assigned to levee element sides to match the actual levee length.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           User should check floodplain elevations on each side of the levee to represent
+           ground elevations. Interpolated ground elevations may be higher due to the
+           DTM points on the levee crest.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Set ILEVFAIL = 0, no levee failure<br>
+           Set ILEVFAIL = 1, prescribed levee failure,<br>
+           Set ILEVFAIL = 2, for breach erosion failure.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If prescribed failure levee grid element is negative, the failure data for that
+           element is assumed to be global and applies to all the levee elements and
+           blocked flow directions. In this case, the failure data needs only to be assigned
+           to one element.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="9">
+           Prescribed Levee Failure Data
+         </td>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Levee breach failure is defined by failure direction, elevation of water surface to
+           initiate failure, the duration that the failure elevation is exceeded before
+           initiating failure, failure base elevation, maximum breach width, and vertical and
+           horizontal rates of breach widening.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The initial breach width = 1.0 ft (0.3 m) is hardwired.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If failure elevation = 0., the levee breach failure begins immediately when
+           overtopped. Otherwise, the levee breach is initiated when the water surface
+           exceeds the assigned failure elevation by 0.1 ft (0.03 m). If the failure elevation
+           is < 10 ft, the failure elevation is the distance below the crest elevation. In this
+           case, the failure elevation = crest elevation - failure elevation. If the failure data
+           has been globally assigned, the breach initiation can occur for all the grid
+           element sides with levees when the water surface exceeds the global failure
+           elevation.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the failure duration time = 0., breach failure initiates immediately.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the levee is to fail at an appropriate distance below the crest after being
+           inundated for a reasonable duration, assign values to both the failure elevation
+           and failure duration time.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the failure base elevation = 0., the final levee breach elevation is equal to the
+           floodplain grid element elevation on the opposite side of the levee.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           For a progressive levee failure, assign the vertical and horizontal breach rates.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the vertical and horizontal rates of failure are zero, the levee (wall) fails
+           instantaneously for the entire grid element side width.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the maximum failure width is longer than the grid element side, the breach
+           will extend into adjacent grid elements until the maximum failure width is
+           equaled or the levee ends. For instantaneous failure, every grid element side
+           levee that will collapse must be assigned.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="4">
+           Levee Overtopping Discharge
+         </td>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The flow depth on the levee crest must exceed a hardcoded tolerance value
+           equal to 0.1 ft (0.3 m) to enable the overtopping discharge to be computed.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           Flow over the levee is computed using the conventional broadcrested weir
+           equation with a variable weir coefficient that depends on the headwater depth.
+           The headwater depth depends on whether one or both of the water surface
+           elevations are greater than the crest. If the headwater depth > 3ft, then the
+           weir coefficient is 3.09. If the headwater depth < 3., the weir coefficient can
+           range between 2.5 and 3.09.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the ratio of the tailwater to the headwater is greater than 0.8, then the
+           discharge is multiplied by a submergence factor that is less than 1.0 based on
+           the submergence curves (Figure 8).
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The overtopping discharge in all possible directions including the peak discharge
+           are reported in the LEVOVERTOP.OUT file.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="7">
+           Levee Breach Discharge
+         </td>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The flow depth on the levee breach must exceed a tolerance value of 0.1 ft (0.3
+           m) for the breach discharge to be computed. The flow depth is based on the
+           highest water surface and the levee breach elevation.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+          Breach discharge is computed with a broadcrested weir equation with a variable
+          coefficient that depends on the headwater depth above the breach elevation.
+          The headwater depth depends on whether one or both of the water surface
+          elevations are greater than the breach elevation. If the headwater depth > 3 ft,
+          then the levee weir coefficient = 3.09. If the headwater depth < 3., the weir
+          coefficient can range between 2.5 and 3.09.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the ratio of the tailwater to the headwater above the breach elevation is
+           greater than 0.8, then the discharge is multiplied by a submergence factor that
+           is less than 1.0 based on the submergence curves.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the levee (wall) fails instantaneously to the levee base elevation, the flow is
+           computed by the overland flow routine using the side width of the grid system.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the levee breach progressively widens and extends to other contiguous levee
+           element sides, the discharge is based on the computed breach width using the
+           horizontal breach rate.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           When the vertical breach has reached the levee base elevation, the maximum
+           shear stress on the breach is computed. Subsequently the original horizontal
+           breach rate is reduced by the ratio of the current shear stress to the maximum
+           shear stress on the breach (Figure 12).
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           The breach discharge and breach geometry is reported in the LEVEE.OUT file.
+         </td>
+       </tr>
 
 Urban Wall Failure (Collapse)
 -------------------------------------
