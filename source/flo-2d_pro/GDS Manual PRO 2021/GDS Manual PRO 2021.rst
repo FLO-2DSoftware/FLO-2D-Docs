@@ -1774,6 +1774,7 @@ To interpolate use the Interpolate from Multiple Elevation Files… from the GDS
 That command will bring up a file selection dialog:
 
 .. image:: img/GDS143.jpg
+
 There are two options:
 
     1. Users can select an ELEVFILES.DAT file, if available, and import the list of elevation files in the format discussed in the previous section or
