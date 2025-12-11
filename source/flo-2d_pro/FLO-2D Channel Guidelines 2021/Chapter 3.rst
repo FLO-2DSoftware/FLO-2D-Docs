@@ -18,6 +18,7 @@ modified by eliminating the corresponding cross sections and right banks.
 Another method for isolating a portion of the channel is to establish a new temporary inflow and outflow node in a short reach of channel (Figure 69).
 
 .. image:: img/Chapter3/Chapte002.jpg
+  :class: bordered-image
 
 *Figure 69.
 Isolate a Short Portion of the Channel.*
@@ -36,6 +37,7 @@ elements.
 In this situation, the channel element conveyance capacity is relatively small because the channel length is short compared to the channel width.
 
 .. image:: img/Chapter3/Chapte003.png
+  :class: bordered-image
 
 *Figure 70.
 TIME.OUT and Profiles - Peak Discharge.*
@@ -50,6 +52,7 @@ The choice of the grid element size has to be based on the project priority; eit
 inundation in detail.
 
 .. image:: img/Chapter3/Chapte004.jpg
+  :class: bordered-image
 
 *Figure 71.
 Wide Large Channel Assigned to a Small Grid System.*
@@ -67,6 +70,7 @@ Review PROFILES peak discharge plots or the output files CHANMAX.OUT or VELTIMEC
 Look for any channel elements with numerical surging (note spike – Figure 72).
 
 .. image:: img/Chapter3/Chapte005.jpg
+  :class: bordered-image
 
 *Figure 72.
 Channel Numerical Instability – Peak Discharge vs Channel Distance.*
@@ -77,6 +81,7 @@ In a highly modified or constructed urban environment, this channel profile may 
 stable more realistic model.
 
 .. image:: img/Chapter3/Chapte006.jpg
+  :class: bordered-image
 
 *Figure 73.
 Review the Channel Bed Slope for Irregularities.*
@@ -87,6 +92,7 @@ Adjust the channel cross section geometry in the PROFILES program.
 Figure 74 A and B shows the change in channel shape between two contiguous channel elements with the same approximate bankfull flow area.
 
 .. image:: img/Chapter3/Chapte007.png
+  :class: bordered-image
 
 *Figure 74 A and B.
 Change in Channel Geometry between Two Contiguous Channel Elements.*]
@@ -96,6 +102,7 @@ ft\ :sup:`2` back to 4,100 ft\ :sup:`2`.
 This is about a 33% change in bankfull conveyance capacity.
 
 .. image:: img/Chapter3/Chapte009.jpg
+  :class: bordered-image
 
 *Figure 75.
 A-D Change in Bankfull Flow Area between Four Consecutive Channel Elements.*
@@ -109,6 +116,7 @@ To improve numerical stability, increase the roughness in wide, shallow cross se
 Review the channel element roughness variation upstream and downstream of channel elements with spikes in discharge (Figure 76).
 
 .. image:: img/Chapter3/Chapte008.jpg
+  :class: bordered-image
 
 *Figure 76.
 Variable n-value System Profiles.*
