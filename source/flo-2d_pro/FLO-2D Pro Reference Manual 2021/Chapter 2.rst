@@ -151,69 +151,62 @@ Flow Direction.*
 Flow Direction is the Computational Index not the Grid Element Number.
 To summarize, the solution algorithm incorporates the following steps:
 
-1. For a given flow direction location in the grid system, the average flow geometry, roughness and slope between two grid elements are computed.
-2. The flow depth d\ :sub:`x` for computing the velocity across a grid boundary for the next timestep (i+1) is estimated from the previous timestep i
-   using a linear estimate (the average depth between two elements).
+    1. For a given flow direction location in the grid system, the average flow geometry, roughness and slope between two grid elements are computed.
+    2. The flow depth d\ :sub:`x` for computing the velocity across a grid boundary for the next timestep (i+1) is estimated from the previous timestep i
+       using a linear estimate (the average depth between two elements).
 
-    .. math::
-        :label:
+        .. math::
+            :label:
 
-        d_x^{t+1} = d_x^{t} + d_{x+1}^{t}
+            d_x^{t+1} = d_x^{t} + d_{x+1}^{t}
 
-3. The flow direction first velocity overland, 1-D channel or street estimate is computed using the diffusive wave equation.
-   The only unknown diffusive wave equation variable is the velocity.
-4. The predicted diffusive wave velocity for the current timestep is used as a seed in the NewtonRaphson method to solve the full dynamic wave equation
-   for the velocity.
-   It should be noted that for hyperconcentrated sediment flows such as mud and debris flows, the velocity calculations include the additional viscous
-   and yield stress terms.
-5. The discharge Q across the boundary is computed by multiplying the velocity by the cross sectional flow area.
-   For overland flow, the flow width is adjusted by the width reduction factors (WRFs).
+    3. The flow direction first velocity overland, 1-D channel or street estimate is computed using the diffusive wave equation.
+       The only unknown diffusive wave equation variable is the velocity.
+    4. The predicted diffusive wave velocity for the current timestep is used as a seed in the NewtonRaphson method to solve the full dynamic wave equation
+       for the velocity.
+       It should be noted that for hyperconcentrated sediment flows such as mud and debris flows, the velocity calculations include the additional viscous
+       and yield stress terms.
+    5. The discharge Q across the boundary is computed by multiplying the velocity by the cross sectional flow area.
+       For overland flow, the flow width is adjusted by the width reduction factors (WRFs).
 
-   The incremental discharge for the timestep across the eight boundaries (or upstream and downstream channel elements) are summed:
+       The incremental discharge for the timestep across the eight boundaries (or upstream and downstream channel elements) are summed:
 
-    .. math::
-       :label:
+        .. math::
+           :label:
 
-       \Delta Q_x^{t+1}
-       = Q_n + Q_e + Q_s + Q_w + Q_{ne} + Q_{se} + Q_{sw} + Q_{nw}
+           \Delta Q_x^{t+1}
+           = Q_n + Q_e + Q_s + Q_w + Q_{ne} + Q_{se} + Q_{sw} + Q_{nw}
 
-   and the change in volume (net discharge x timestep) is distributed over the available storage area within the grid or channel element to determine an
-   incremental increase in the flow depth.
+       and the change in volume (net discharge x timestep) is distributed over the available storage area within the grid or channel element to determine an
+       incremental increase in the flow depth.
 
-    .. math::
-       :label:
+        .. math::
+           :label:
 
-       \Delta d_x^{t+1}
-       = \frac{\Delta Q_x^{t+1}\, \Delta t}{A_{surf}}
+           \Delta d_x^{t+1}
+           = \frac{\Delta Q_x^{t+1}\, \Delta t}{A_{surf}}
 
-   where ΔQ\ :sub:`x` is the net change in discharge in the eight floodplain directions for the grid element for the timestep Δt between time i and i + 1.
-   See Figure 5.
+       where ΔQ\ :sub:`x` is the net change in discharge in the eight floodplain directions for the grid element for the timestep Δt between time i and i + 1.
+       See Figure 5.
 
-6. The numerical stability criteria are then checked for the new flow depth.
-   If the Courant number stability criteria is exceeded, the timestep is reduced to the Courant number computed timestep, all the previous timestep
-   computations are discarded and the velocity computations begin again with the first computational flow direction.
-7. The simulation progresses with increasing timesteps using a timestep algorithm until the stability criteria are exceeded again.
+    6. The numerical stability criteria are then checked for the new flow depth.
+       If the Courant number stability criteria is exceeded, the timestep is reduced to the Courant number computed timestep, all the previous timestep
+       computations are discarded and the velocity computations begin again with the first computational flow direction.
+    7. The simulation progresses with increasing timesteps using a timestep algorithm until the stability criteria are exceeded again.
 
-..
+.. image:: img/Chapter2/Chapte003.jpg
 
-   |Chapte003|
-
-   *Figure 5.
-   Discharge Flux across Grid Element Boundaries.*
-
-9 Chapter 2
-^^^^^^^^^^^
+*Figure 5.
+Discharge Flux across Grid Element Boundaries.*
 
 To accomplish the discharge exchange between grid elements based on the flow direction, the model sets up an array of side connections at runtime as
 shown in Figure 6.
 These flow directions are only accessed once during a timestep instead of the dual visitation required by searching for contiguous elements.
 This approach facilitates additional parallel processing for model speedup and has the additional benefits of:
 
-- Reducing the required discharge computations by about 40% increasing model speed.
-
-- Ignoring completely blocked sides.
-
-- Eliminating NOFLOC assignment for channels.
+    - Reducing the required discharge computations by about 40% increasing model speed.
+    - Ignoring completely blocked sides.
+    - Eliminating NOFLOC assignment for channels.
 
 In this computation sequence, the grid system inflow discharge and rainfall are computed first, and then the channel flow is computed.
 Next, if streets are being simulated, the street discharge is computed and finally, overland flow in 8-directions is determined (Figure 6).
@@ -228,68 +221,10 @@ All the inflow volume, outflow volume, change in storage or loss from the grid s
 conservation is computed.
 Results are written to the output files or to the screen at user specified output time intervals.
 
-Channel, Overland
+.. image:: img/Chapter2/Chapte008.jpg
 
-or Street
-
-**FLO**
-
-**-**
-
-**D Timestep**
-
-**2**
-
-**Incrementing and Decrementing Scheme**
-
-Incremental
-
-Depth Criteria
-
-Compute New
-
-Flow Depth
-
-Reset Hydraulics, Restart
-
-Routing
-
-Increase Timestep
-
-Decrease Timestep.
-
-(
-
-If minimum timestep is
-
-insufficient for stability 3
-
-consecutive times, the user is
-
-prompted to decrease the
-
-minimum timestep).
-
-Update Hydraulics and
-
-Continue with Flood
-
-Numerical Stability
-
-Criteria S
-
-atisfied
-
-Yes
-
-No
-
-Yes
-
-No
-
-   *Figure 6.
-   FLO-2D Stability Criteria Flow Chart.*
+*Figure 6.
+FLO-2D Stability Criteria Flow Chart.*
 
 The FLO-2D flood routing scheme proceeds on the basis that the timestep is sufficiently small to insure numerical stability (i.e.
 no numerical surging).
@@ -306,9 +241,12 @@ in one timestep Δt (Fletcher, 1990).
 FLO-2D uses the CFL condition for the floodplain, channel and street routing.
 The timestep Δt is limited by:
 
-   Δt = C Δx / (βV + c)
+.. math::
+   :label:
 
-   where:
+   \Delta t = C\, \Delta x \,/\, (\beta V + c)
+
+where:
 
    C is the Courant number (C ≤ 1.0)
 
@@ -344,10 +282,9 @@ This replaced the method of a large timestep decrease followed by more numerous 
 Results show there was a significant increase in runtime model speed up from 15 to 40%.
 The stability criteria are applied as follows:
 
-- Separate Courant number assignment for floodplain, channel and street flow.
-
-- Automated spatial variation in the floodplain, channel or street Courant number within a specified range depending on the whether the Courant number
-  criteria was exceeded or not exceeded.
+    - Separate Courant number assignment for floodplain, channel and street flow.
+    - Automated spatial variation in the floodplain, channel or street Courant number within a specified range depending on the whether the Courant number
+      criteria was exceeded or not exceeded.
 
 It should be noted that the obsolete stability parameters DEPTOL (% change in flow depth) and WAVEMAX (dynamic wave) stability criteria has been
 eliminated.
@@ -361,9 +298,12 @@ criteria, the timestep is incremented by the TIME_ACCEL (default 1.0) + 0.001.
 So if the timestep was 0.5, then the next timestep would be increased to 0.501 seconds.
 If the timestep is greater than 1 second, then the timestep increment is:
 
-   DSEC = DSEC + TIME_ACCEL*0.0085/XFAST
+.. math::
+   :label:
 
-   where:
+   DSEC = DSEC + TIME\_ACCEL \times 0.0085 / XFAST
+
+where:
 
    DSEC = computational timestep in seconds
 
@@ -410,15 +350,18 @@ one timestep Δt.
 If the model computational timestep exceeds the Courant relationship timestep, the stability criteria is exceeded and a timestep decrement occurs.
 Mathematically the Courant relationship is given by:
 
-   V + c = C Δx /Δt
+.. math::
+   :label:
+
+   V + c = \frac{C\, \Delta x}{\Delta t}
 
 where:
 
-C = Courant Number (C ≤ 1.0)
+    C = Courant Number (C ≤ 1.0)
 
-   Δx = FLO-2D square grid element width (distance between node centers) V = depth averaged velocity
+    Δx = FLO-2D square grid element width (distance between node centers) V = depth averaged velocity
 
-   c = floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the flow depth above the thalweg.
+    c = floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the flow depth above the thalweg.
 
 This equation relates the progression of the floodwave (V + c) to the discretized model in space and time.
 The Courant number C can vary from 0.1 to 1.0, and a value of 1.0 will enable the model to have the largest possible timestep.
@@ -428,7 +371,10 @@ values less than 1.0.
 The FLO-2D default Courant number is 0.6 which will provide a numerically stable model for most applications.
 Rearranging the CFL relationship, the model computes the Courant timestep Δt as:
 
-   Δt = C Δx / (V + c)
+.. math::
+   :label:
+
+   \Delta t = \frac{C\, \Delta x}{V + c}
 
 Numerical instability occurs when the computational timestep is too large or the rate of change in the timestep is too large and too much volume
 enters or leaves a grid element (discharge flux).
@@ -440,12 +386,12 @@ Unreasonable maximum velocities are easy to identify because the VELTIM_x.OUT fi
 The first several reported maximum velocities should not be significantly greater than the rest of the file as in the case of node 4887 in the
 VELTIMFP.OUT file below.
 
-|Chapte004|
+.. image:: img/Chapter2/Chapte004.jpg
 
    *Figure 7.
    Numerical Surging in a Channel Element Hydrograph.*
 
-|Chapte005|
+.. image:: img/Chapter2/Chapte005.jpg
 
    *Figure 8.
    File Sample VELTIMFP.OUT.*
@@ -455,14 +401,13 @@ Using the Courant Number and Timestep Accelerator Parameter
 
 The global Courant Number is assigned in the TOLER.DAT file line 2 as follows:
 
-Line 1.
-0.1  (TOL; the DEPTOL parameter is not required)
+.. raw:: html
 
-Line 2.
-C 0.6 0.5 0.5 (floodplain, channel and street COURANT numbers)
-
-Line 3.
-T 0.1 (TIME_ACCEL; referred to as ‘timestep accelerator’)
+    <pre>
+        Line 1.      0.1    00                     (TOL; the DEPTOL parameter is not required)
+        Line 2.       C     0.6      0.5    0.5    (floodplain, channel and street COURANT numbers)
+        Line 3.       T     0.1                    (TIME_ACCEL; referred to as ‘timestep accelerator’)
+    </pre>
 
 where C is a line character identifier and the Courant number for floodplain, channel and street are entered.
 The Courant number should only be assigned for those components that are used.
@@ -549,7 +494,7 @@ The FLO-2D model has an explicit numerical scheme that exchanges flow with conti
 shallow flows to completely drain an element of volume if the outflow exceeds the inflow plus storage.
 This may occur more frequently with hydraulic structure inflow nodes.
 
-|Chapte006|
+.. image:: img/Chapter2/Chapte006.jpg
 
    *Figure 9.
    TOL Definition.*
@@ -850,7 +795,7 @@ increases (Figure 1).
 The limiting factor is the cost of distributing the necessary data for sequential fractionalization of the instructions to higher orders of
 processors.
 
-|Chapte007|
+.. image:: img/Chapter2/Chapte007.jpg
 
 *Figure 10.
 Model Speedup with Multiple Processors as a Function of the Parallelized Portion of the Code (en.wikipedia.org).*
@@ -905,7 +850,7 @@ If you discover that the model is running at 10% CPU usage, however, there may b
 enable the FLO-2D simulation to have high priority and more computer resources.
 A dedicated computer for FLO-2D simulations is recommended.
 
-|Chapte008|
+.. image:: img/Chapter2/Chapte008.jpg
 
 *Figure 11.
 Setting the FLO-2D Model Runtime Priority to ‘High’ in the Task Manager.*
@@ -979,24 +924,3 @@ At the present time, however, graphene computers are still on the drawing board.
 FLO-2D is keeping abreast of these developments to achieve the best modeling speed and efficiency while being the lowest cost commercial flood model
 available.
 
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 1.24375in
-   :height: 1.06201in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 8.69792in
-   :height: 5.85417in
-.. |Chapte004| image:: media\Chapte004.jpg
-   :width: 6.5in
-   :height: 2.76528in
-.. |Chapte005| image:: media\Chapte005.jpg
-   :width: 3.84556in
-   :height: 3.65069in
-.. |Chapte006| image:: media\Chapte006.jpg
-   :width: 6.48958in
-   :height: 2.67708in
-.. |Chapte007| image:: media\Chapte007.jpg
-   :width: 5.58333in
-   :height: 4.36431in
-.. |Chapte008| image:: media\Chapte008.jpg
-   :width: 5.25694in
-   :height: 4.78069in
