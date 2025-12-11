@@ -34,7 +34,7 @@ Download Build 21 Installer:
 
 .. |ProSetup_Download| raw:: html
 
-   <a href="https://flo-2d.sharefile.com/d-s2391e79911b64d809ef217d8e0a23d1d" target="_blank">Download FLO-2D Pro</a>
+   <a href="https://flo-2d.sharefile.com/" target="_blank">Sharefile Login</a>
 
 Once the software is downloaded.  Go to Step 2.
 
@@ -58,8 +58,7 @@ Install FLO-2D using the following instructions.  Admin Rights Required.
 .. image:: img/Instructions/image3.png
 
 
-4. If FLO-2D is already installed, this installer will remove the FLO-2D Pro folder and rename the
-   FLO-2D Documentation folder.
+4. Click **Yes** to run silently and **No** to see the installation steps.
 
 .. image:: img/Instructions/image6.png
 
@@ -103,4 +102,4 @@ The activator is stored in the FLO-2D.ShareFile.com account. It requires Admin R
 3. FLO-2D uses a **Site** license.  It can be installed and activated on any computer in the office that holds the
    license.  The license agreement is saved to the Documentation folder along with the rest of the FLO-2D Documentation.
 
-C:\\users\\user\\public\\documents\\FLO-2D Pro Documentation
+C:\\users\\public\\documents\\FLO-2D Pro Documentation
