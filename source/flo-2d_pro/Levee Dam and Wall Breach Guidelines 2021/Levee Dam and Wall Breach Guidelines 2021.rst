@@ -986,7 +986,6 @@ Wall Failure Guidelines*
            The breach discharge and breach geometry is reported in the LEVEE.OUT file.
          </td>
        </tr>
-
      </tbody>
    </table>
 
@@ -1162,7 +1161,8 @@ Evidence of numerical surging in wall collapse discharge includes:
            element elevations should eliminate surging.
          </td>
        </tr>
-
+     </tbody>
+   </table>
 
 
 The primary data issue with a wall collapse occurs is a wall is assigned along the boundary of two grid elements that are significantly different in
