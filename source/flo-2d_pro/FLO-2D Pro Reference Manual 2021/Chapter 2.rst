@@ -632,9 +632,15 @@ The equilibrium sand bed morphology tends to minimize the Froude number (Jia, 19
 
 The limiting Froude number for mobile bed conditions can be approximated by (Grant, 1997):
 
-   Fr = 3.85 S\ :sup:`0.33` gravel bed (τ :sup:`\*`\ :sub:`cr` = 0.03)
+.. math::
+   :label:
 
-   Fr = 5.18 S\ :sup:`0.11` sand bed (τ :sup:`\*`\ :sub:`cr` = 0.06)
+   Fr = 3.85\, S^{0.33} \quad (\tau_{cr} = 0.03)
+
+.. math::
+   :label:
+
+   Fr = 5.18\, S^{0.11} \quad (\tau_{cr} = 0.06)
 
 Roughness n-values include many factors: n = n1 + n2 + n3 + n4 + …such as friction drag, vegetation, expansion/contraction, bed forms, flow in bends,
 unsteady and non-uniform flow.
@@ -650,9 +656,19 @@ For practical purposes natural uniform flow is also turbulent implying that a st
 boundary layer is fully developed.
 There a number of uniform flow mean velocity equations for open channels and Manning’s equation is the best known of these:
 
-   V = 1.486/n R\ :sup:`2/3` S\ :sup:`1/2`
+ .. math::
+   :label:
 
-where V = velocity, R = hydraulic radius, S = friction slope, n = Manning’s roughness coefficient.
+   V = \frac{1.486}{n}\, R^{2/3} S^{1/2}
+
+where
+    V = velocity,
+
+    R = hydraulic radius,
+
+    S = friction slope,
+
+    n = Manning’s roughness coefficient.
 
 The hydraulic radius exponent value (0.667) has been known to vary over a range from about 0.59 to 0.85 depending primarily on channel geometry and
 roughness (Chow, 1959).
@@ -669,7 +685,10 @@ The displacement thickness is generally 1/8 (rough) to 1/10 (smooth) of the turb
 If the flow is very shallow roughness elements may protrude through the laminar sublayer and into the flow.
 Flows are considered hydraulically rough if the grain size or roughness element is greater than 6 times the laminar boundary layer:
 
-   δ = 11.6 ν/u\ :sub:`\*`
+.. math::
+   :label:
+
+   \delta = 11.6\, \frac{\nu}{u_*}
 
 where ν = kinematic viscosity and u\ :sub:`\*` = shear velocity
 
@@ -677,14 +696,25 @@ The applicability of Manning’s equation to a given flow condition depends on t
 k\ :sub:`s` is the effective roughness height.
 In general, Manning’s equation is appropriate for a relative submergence (Julien, 1995):
 
-   R/k\ :sub:`s` > 100
+.. math::
+   :label:
+
+   \frac{R}{k_s} > 100
 
 which will correspond to the Manning-Stickler fixed bed roughness as function of sediment size D relationship (Simons and Senturk, 1976):
 
-   n = D\ :sup:`1/6`/21.1
+ .. math::
+   :label:
+
+   n = \frac{D^{1/6}}{21.1}
 
 For lower a submergence value (R/k\ :sub:`s` < 100), the logarithmic form of the resistance equation should be used (Julien, 1995).
-For flow transporting sediment in suspension, the flow will be primarily turbulent if R/k\ :sub:`s` > 70
+For flow transporting sediment in suspension, the flow will be primarily turbulent if
+
+.. math::
+   :label:
+
+   \frac{R}{k_s} > 70
 
 Typical roughness height for grain size bed material can range from 0.0015 ft for rough concrete to 0.01 ft for coarse sand or uniform earth channels.
 In this case Manning’s equation for a coarse sand plane bed would be applicable to about 0.7 ft.
@@ -743,31 +773,26 @@ For FLO-2D urban simulations where the number of grid elements may exceed 2,000,
 the-art PC gaming computer in the price range of $2,000 to $3,500 is suggested.
 One example of a 2019 off-the-shelf gaming computer has the following specs:
 
-- Operating system: Windows 10 (64-bit)
-
-- Processor: Intel Core i9-9900K Cores: 8 \| Threads: 16
-
-- Process clock speed: 3.60 GHz (base clock); 5.0GHz (turbo clock) with overclocking
-
-- Memory RAM: 32.0 GB or more Graphics: NVIDIA Graphic Card GeForce
+    - Operating system: Windows 10 (64-bit)
+    - Processor: Intel Core i9-9900K Cores: 8 \| Threads: 16
+    - Process clock speed: 3.60 GHz (base clock); 5.0GHz (turbo clock) with overclocking
+    - Memory RAM: 32.0 GB or more Graphics: NVIDIA Graphic Card GeForce
 
 The Flood Control District of Maricopa County recently tested two computers for comparison with the following specifications:
 
-   Computer 1:
+.. raw:: html
 
-   CPU i7-8700k 6c @4.9GHz
+    <pre>
+        Computer 1:
+           CPU i7-8700k 6c @4.9GHz
+           16GB DDR4 RAM @2666MHz
+           1TB NVME PCIE SSD
 
-   16GB DDR4 RAM @2666MHz
-
-   1TB NVME PCIE SSD
-
-   Computer 2:
-
-   CPU i9-7940X 14c @3.9GHz
-
-   64GB DDR4 RAM @3000MHz
-
-   500GB NVME PCIE SSD
+        Computer 2:
+           CPU i9-7940X 14c @3.9GHz
+           64GB DDR4 RAM @3000MHz
+           500GB NVME PCIE SSD
+    </pre>
 
 Multiple overclocks simulations were performed on both computers, pushing the overclock speeds limits while maintaining a safe overclock condition.
 Computer 2 performed better when running the stock CPU and RAM settings.
