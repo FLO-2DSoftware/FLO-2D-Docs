@@ -155,29 +155,36 @@ To summarize, the solution algorithm incorporates the following steps:
 2. The flow depth d\ :sub:`x` for computing the velocity across a grid boundary for the next timestep (i+1) is estimated from the previous timestep i
    using a linear estimate (the average depth between two elements).
 
-   *dix+1 = dix + dix*\ +1
+    .. math::
+        :label:
+
+        d_x^{t+1} = d_x^{t} + d_{x+1}^{t}
 
 3. The flow direction first velocity overland, 1-D channel or street estimate is computed using the diffusive wave equation.
    The only unknown diffusive wave equation variable is the velocity.
-
 4. The predicted diffusive wave velocity for the current timestep is used as a seed in the NewtonRaphson method to solve the full dynamic wave equation
    for the velocity.
    It should be noted that for hyperconcentrated sediment flows such as mud and debris flows, the velocity calculations include the additional viscous
    and yield stress terms.
-
 5. The discharge Q across the boundary is computed by multiplying the velocity by the cross sectional flow area.
    For overland flow, the flow width is adjusted by the width reduction factors (WRFs).
 
-..
-
    The incremental discharge for the timestep across the eight boundaries (or upstream and downstream channel elements) are summed:
 
-   \ *Q\ i\ x\ +1\ =Q\ n + Q\ e + Q\ s + Q\ w + Q\ ne + Q\ se + Q\ sw + Q\ nw*
+    .. math::
+       :label:
+
+       \Delta Q_x^{t+1}
+       = Q_n + Q_e + Q_s + Q_w + Q_{ne} + Q_{se} + Q_{sw} + Q_{nw}
 
    and the change in volume (net discharge x timestep) is distributed over the available storage area within the grid or channel element to determine an
    incremental increase in the flow depth.
 
-\ *d i\ x\ +1 =* \ *Q\ i\ x\ +1*\ \ *t /Asurf*
+    .. math::
+       :label:
+
+       \Delta d_x^{t+1}
+       = \frac{\Delta Q_x^{t+1}\, \Delta t}{A_{surf}}
 
    where ΔQ\ :sub:`x` is the net change in discharge in the eight floodplain directions for the grid element for the timestep Δt between time i and i + 1.
    See Figure 5.
@@ -185,7 +192,6 @@ To summarize, the solution algorithm incorporates the following steps:
 6. The numerical stability criteria are then checked for the new flow depth.
    If the Courant number stability criteria is exceeded, the timestep is reduced to the Courant number computed timestep, all the previous timestep
    computations are discarded and the velocity computations begin again with the first computational flow direction.
-
 7. The simulation progresses with increasing timesteps using a timestep algorithm until the stability criteria are exceeded again.
 
 ..
