@@ -863,9 +863,36 @@ Wall Failure Guidelines*
          </td>
        </tr>
 
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the failure base elevation = 0, the final wall failure elevation is equal to the
+           floodplain grid element elevation on the opposite side of the wall.
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           For a progressive wall failure, assign the vertical and horizontal rates.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the vertical and horizontal rates of failure are zero, the levee (wall) fails
+           instantaneously for the entire grid element side width.
+         </td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">
+           If the maximum failure width is longer than the grid element side, the breach
+           will extend into adjacent grid elements until the maximum failure width is
+           equaled or the wall ends. For instantaneous failure, every grid element side
+           levee that will collapse must be assigned.
+         </td>
+       </tr>
+
        <!-- WALL OVERTOPPING -->
        <tr>
-         <td style="border: 1px solid #000; padding: 4px;" rowspan="5">
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="4">
            Wall<br>Overtopping<br>Discharge
          </td>
          <td style="border: 1px solid #000; padding: 4px;">
@@ -901,7 +928,7 @@ Wall Failure Guidelines*
 
        <!-- WALL BREACH -->
        <tr>
-         <td style="border: 1px solid #000; padding: 4px;" rowspan="9">
+         <td style="border: 1px solid #000; padding: 4px;" rowspan="7">
            Wall Breach<br>Discharge
          </td>
          <td style="border: 1px solid #000; padding: 4px;">
@@ -962,7 +989,6 @@ Wall Failure Guidelines*
 
      </tbody>
    </table>
-
 
 Wall Failure Troubleshooting
 ----------------------------
