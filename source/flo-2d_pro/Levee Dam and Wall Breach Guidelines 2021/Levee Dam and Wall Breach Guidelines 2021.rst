@@ -1551,10 +1551,8 @@ Muskingum – Cunge Variable Definitions.*
          <td style="border: 1px solid #000; padding: 4px;">0.</td>
          <td style="border: 1px solid #000; padding: 4px;">0.</td>
        </tr>
-
      </tbody>
    </table>
-
 
 Applying this equation in its slightly different forms in different depth and friction slope regimes will predict reasonable flow velocities where
 both grid elements sharing flow are reservoir elements with a starting water surface elevation and the average depth between the grid elements is
