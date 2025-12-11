@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 
 
-**Chapter 1. INTRODUCTION**
+CHAPTER 1. INTRODUCTION
 ===========================
 
 This Reference Manual discusses the physical processes of flooding.
@@ -9,7 +9,7 @@ It is designed to acquaint the user with the model theory, finite difference alg
 potential flood scenarios.
 A reference list is provided for further reading.
 
-*Evolution of the FLO-2D Model*
+Evolution of the FLO-2D Model
 -------------------------------
 
 The first version of the FLO-2D model was called MUDFLOW.
@@ -37,10 +37,8 @@ seconds).
 Typical applications have grid elements that range from 10 ft (3 m) to 500 ft (130 m) on a side and the number of grid elements is limited only by the
 computer resources and runtime.
 
-1 Chapter 1
-
 Modeling the Hydrologic System with FLO-2D
-------------------------------------------
+-------------------------------------------
 
 The FLO-2D model has components for rainfall, channel flow, overland flow, street flow, infiltration, levees, sediment transport, storm drain and
 other features.
@@ -78,18 +76,15 @@ This reveals the ultimate disposition of inflow volume either as a loss to the s
 channel storage, or as outflow off the grid system.
 The inflow volume dictates the area of inundation and will control model calibration to available post flood data if replicating an historical storm.
 
-|Chapte002|
+.. image:: img/Chapter1/Chapte002.jpg
 
-   *Figure 1.
-   Physical Processes Simulated by FLO-2D.*
+*Figure 1.
+Physical Processes Simulated by FLO-2D.*
 
-3 Chapter 1
-~~~~~~~~~~~
+.. image:: img/Chapter1/Chapte003.jpg
 
-|Chapte003|
-
-   *Figure 2.
-   Channel – Floodplain Interface.*
+*Figure 2.
+Channel – Floodplain Interface.*
 
 Getting Started on a Project – A Brief Overview
 -----------------------------------------------
@@ -122,19 +117,7 @@ The user can specify the temporal and spatial output detail including the outflo
 display of the flood progression over the grid system.
 After the preliminary FLO-2D runs, the user can apply the output options to determine required level of output detail.
 
-5 Chapter 1
+.. image:: img/Chapter1/Chapte004.png
 
-|Chapte004|
-
-   *Figure 3.
-   FLO-2D Flow Chart.*
-
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 8.5725in
-   :height: 5.71667in
-.. |Chapte003| image:: media\Chapte003.jpg
-   :width: 9.04167in
-   :height: 5.6875in
-.. |Chapte004| image:: media\Chapte004.png
-   :width: 6.56in
-   :height: 8.21in
+*Figure 3.
+FLO-2D Flow Chart.*
