@@ -1610,7 +1610,7 @@ The interpolation options are selected in the *Options/Interpolation* command of
 The following table describes the interpolation method.
 
 .. |idw_eq| image:: img/idw_equation.jpg
-   :height: 50px
+   :height: 70px
    :align: middle
 
 .. list-table::
@@ -2691,7 +2691,7 @@ Dialog Box Options:
 
      - This is “n” in the Inverse Distance Weighting Formula:
 
-       :math:`\bar{Z} = \frac{\sum_{j=1}^{NDTM} Z_j \frac{1}{r_{ij}^{n}}}{\sum_{j=1}^{NDTM} r_{ij}^{n}`
+       |idw_eq|
 
        Where Z¯ is the interpolated grid element elevation, Z\ :sub:`j`
 
