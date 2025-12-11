@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-**Chapter 2. FLO-2D MODEL THEORY**
+Chapter 2. FLO-2D MODEL THEORY
 ==================================
 
 FLO-2D is a simple volume conservation model.
@@ -10,16 +10,23 @@ Flood routing in two dimensions is accomplished through a numerical integration 
 either a water flood or a hyperconcentrated sediment flow.
 A discussion of the governing equations follows.
 
-*Governing Equations*
+Governing Equations
 ---------------------
 
 The constitutive fluid motion equations include the continuity equation and the momentum equation:
 
-   \ *h +*  *h V = i*
+.. math::
+   :label:
 
-\ *t* \ *x*
+   \frac{\partial h}{\partial t} + \frac{\partial\, hV}{\partial x} = i
 
-   *S f = S\ o -* :sup:`\ h` *- V* :sup:`\ V` *- 1* :sup:`\ V` \ *x g* \ *x g* \ *t*
+.. math::
+   :label: friction_slope_equation
+
+   S_f = S_o
+         - \frac{\partial h}{\partial x}
+         - \frac{V}{g}\, \frac{\partial V}{\partial x}
+         - \frac{1}{g}\, \frac{\partial V}{\partial t}
 
 where h is the flow depth and V is the depth-averaged velocity in one of the eight flow directions x.
 The excess rainfall intensity (i) may be nonzero on the flow surface.
@@ -39,15 +46,15 @@ Understanding, the relative magnitude of the acceleration components to the bed 
 Henderson (1966) computed the relative magnitude of momentum equation terms for a moderately steep alluvial channel and a fast-rising hydrograph as
 follows:
 
-Bed Pressure Convective Local
+.. raw:: html
 
-Slope Gradient Acceleration Acceleration
+    <pre>
+                                  Bed      Pressure    Convective        Local
+                                 Slope     Gradient    Acceleration    Acceleration
 
-Momentum Equation Term: S\ :sub:`o` ∂h/∂x V∂V/g∂x ∂V/g∂t
-
-Magnitude (ft/mi) 26 0.5 0.12 - 0.25 0.05
-
-5 Chapter 2
+    Momentum Equation Term:       So        ∂h/∂x         V∂V/g∂x        ∂V/g∂t
+    Magnitude (ft/mi)             26          0.5         0.12 - 0.25     0.05
+    </pre>
 
 This illustrates that the application of the kinematic wave (S\ :sub:`o` = S\ :sub:`f`) on moderately steep slopes with relatively steady, uniform
 flow is sufficient to model floodwave progression and the contribution of the pressure gradient and the acceleration terms can be neglected.
