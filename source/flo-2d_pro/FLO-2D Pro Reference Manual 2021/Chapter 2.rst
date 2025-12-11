@@ -152,11 +152,8 @@ Flow Direction is the Computational Index not the Grid Element Number.
 To summarize, the solution algorithm incorporates the following steps:
 
 1. For a given flow direction location in the grid system, the average flow geometry, roughness and slope between two grid elements are computed.
-
 2. The flow depth d\ :sub:`x` for computing the velocity across a grid boundary for the next timestep (i+1) is estimated from the previous timestep i
    using a linear estimate (the average depth between two elements).
-
-..
 
    *dix+1 = dix + dix*\ +1
 
