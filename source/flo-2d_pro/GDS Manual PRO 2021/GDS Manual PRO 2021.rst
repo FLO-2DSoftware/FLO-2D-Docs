@@ -2687,7 +2687,7 @@ Dialog Box Options:
 
      - This is “n” in the Inverse Distance Weighting Formula:
 
-       :math:`\bar{Z} = \frac{\sum_{j=1}^{NDTM} Z_j \frac{1}{r_{ij}^{n}}}{\sum_{j=1}^{NDTM} r_{ij}^{-n}`
+       :math:`\bar{Z} = \frac{\sum_{j=1}^{NDTM} Z_j \frac{1}{r_{ij}^{nn}}}{\sum_{j=1}^{NDTM} r_{ij}^{nn}`
 
        Where Z¯ is the interpolated grid element elevation, Z\ :sub:`j`
 
