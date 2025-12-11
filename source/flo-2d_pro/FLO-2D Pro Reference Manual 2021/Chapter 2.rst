@@ -388,13 +388,13 @@ VELTIMFP.OUT file below.
 
 .. image:: img/Chapter2/Chapte004.jpg
 
-   *Figure 7.
-   Numerical Surging in a Channel Element Hydrograph.*
+*Figure 7.
+Numerical Surging in a Channel Element Hydrograph.*
 
 .. image:: img/Chapter2/Chapte005.jpg
 
-   *Figure 8.
-   File Sample VELTIMFP.OUT.*
+*Figure 8.
+File Sample VELTIMFP.OUT.*
 
 Using the Courant Number and Timestep Accelerator Parameter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
