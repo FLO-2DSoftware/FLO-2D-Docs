@@ -1472,52 +1472,88 @@ where:
 *Table 5.
 Muskingum – Cunge Variable Definitions.*
 
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
+.. raw:: html
 
+   <table style="border-collapse: collapse; width: 100%; text-align: center;">
+     <caption><strong>Muskingum – Cunge Variable Definitions</strong></caption>
+     <thead>
+       <tr style="background-color: #d0d0d0;">
+         <th style="border: 1px solid #000; padding: 4px;">d/side</th>
+         <th style="border: 1px solid #000; padding: 4px;">S<sub>f</sub></th>
+         <th style="border: 1px solid #000; padding: 4px;">B</th>
+         <th style="border: 1px solid #000; padding: 4px;">a1</th>
+         <th style="border: 1px solid #000; padding: 4px;">b1</th>
+         <th style="border: 1px solid #000; padding: 4px;">c1</th>
+       </tr>
+     </thead>
 
-   * -
-     - **Muskingum – Cunge Variable Definitions**
-     -
-     -
+     <tbody>
 
-   * - d/side
-     - S\ :sub:`f`   | B            | a1
-     - b1
-     - c1
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">&lt; 1.0</td>
+         <td style="border: 1px solid #000; padding: 4px;">&lt; 0.000001</td>
+         <td style="border: 1px solid #000; padding: 4px;"></td>
+         <td style="border: 1px solid #000; padding: 4px;"></td>
+         <td style="border: 1px solid #000; padding: 4px;">V = 0.</td>
+         <td style="border: 1px solid #000; padding: 4px;"></td>
+       </tr>
 
-   * - < 1.0
-     - < 0.000001    |              | ---------------+--------------+-------------- > 0.000001    | 0.45         | 0.
-     - V = 0.
-     --------
-     -
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;"></td>
+         <td style="border: 1px solid #000; padding: 4px;">&gt; 0.000001</td>
+         <td style="border: 1px solid #000; padding: 4px;">0.45</td>
+         <td style="border: 1px solid #000; padding: 4px;">0.</td>
+         <td style="border: 1px solid #000; padding: 4px;">0.</td>
+         <td style="border: 1px solid #000; padding: 4px;">0.</td>
+       </tr>
 
-   * - > 1.0
-     - < 0.000001    |              |
-     - V = 0.
-     -
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;">&gt; 1.0</td>
+         <td style="border: 1px solid #000; padding: 4px;">&lt; 0.000001</td>
+         <td style="border: 1px solid #000; padding: 4px;"></td>
+         <td style="border: 1px solid #000; padding: 4px;"></td>
+         <td style="border: 1px solid #000; padding: 4px;">V = 0.</td>
+         <td style="border: 1px solid #000; padding: 4px;></td>
+       </tr>
 
-   * -
-     - 0.000001 <    | 1.55         | 0.5 S\ :sub:`f` < |              | 0.0002        |              |
-     - 0.0004
-     - 1.0
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;"></td>
+         <td style="border: 1px solid #000; padding: 4px;">0.000001 &lt; S<sub>f</sub> &lt; 0.0002</td>
+         <td style="border: 1px solid #000; padding: 4px;">1.55</td>
+         <td style="border: 1px solid #000; padding: 4px;">0.5</td>
+         <td style="border: 1px solid #000; padding: 4px;">0.0004</td>
+         <td style="border: 1px solid #000; padding: 4px;">1.0</td>
+       </tr>
 
-   * -
-     - 0.0002 <      | 1.55         | 0.5 S\ :sub:`f` < |              | 0.01          |              |
-     - 0.0004
-     - 30.
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;"></td>
+         <td style="border: 1px solid #000; padding: 4px;">0.0002 &lt; S<sub>f</sub> &lt; 0.01</td>
+         <td style="border: 1px solid #000; padding: 4px;">1.55</td>
+         <td style="border: 1px solid #000; padding: 4px;">0.5</td>
+         <td style="border: 1px solid #000; padding: 4px;">0.0004</td>
+         <td style="border: 1px solid #000; padding: 4px;">30.</td>
+       </tr>
 
-   * -
-     - 0.01 <        | 1.25         | -0.5 S\ :sub:`f` < |              | 0.1           |              |
-     - -0.0004
-     - -30.
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;"></td>
+         <td style="border: 1px solid #000; padding: 4px;">0.01 &lt; S<sub>f</sub> &lt; 0.1</td>
+         <td style="border: 1px solid #000; padding: 4px;">1.25</td>
+         <td style="border: 1px solid #000; padding: 4px;">-0.5</td>
+         <td style="border: 1px solid #000; padding: 4px;">-0.0004</td>
+         <td style="border: 1px solid #000; padding: 4px;">-30.</td>
+       </tr>
 
-   * -
-     - S\ :sub:`f` > | 0.667        | 0.
-       0.10          |              |
-     - 0.
-     - 0.
+       <tr>
+         <td style="border: 1px solid #000; padding: 4px;"></td>
+         <td style="border: 1px solid #000; padding: 4px;">S<sub>f</sub> &gt; 0.10</td>
+         <td style="border: 1px solid #000; padding: 4px;">0.667</td>
+         <td style="border: 1px solid #000; padding: 4px;">0.</td>
+         <td style="border: 1px solid #000; padding: 4px;">0.</td>
+         <td style="border: 1px solid #000; padding: 4px;">0.</td>
+       </tr>
+
+     </tbody>
+   </table>
 
 
 Applying this equation in its slightly different forms in different depth and friction slope regimes will predict reasonable flow velocities where
