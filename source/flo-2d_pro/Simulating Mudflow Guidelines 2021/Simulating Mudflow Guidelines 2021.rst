@@ -198,7 +198,7 @@ As the landslides morph into mudflows, internal deformation becomes more promine
 Landslides require an initial failure surface and a factor of safety that has been reduced to one.
 
 Fluid Property Definitions
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are several important sediment concentration relationships that help to define the nature of hyperconcentrated sediment flows.
 These relationships relate the sediment concentration by volume, sediment concentration by weight, the sediment density, the mudflow mixture density
@@ -267,7 +267,7 @@ The distinction between these flood events depends on sediment concentration mea
 Classification of Hyperconcentrated Sediment Flows*
 
 Physical Processes of Hyperconcentrated Sediment Flows
-----------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Hyperconcentrated sediment flows involve the complex interaction of fluid and sediment processes such as turbulence, viscous shear, fluid-sediment
 particle momentum exchange, and sediment particle collision.
@@ -734,16 +734,19 @@ Dynamic Viscosity of Mudflow Samples Versus Volumetric Concentration*
 *Figure 4.
 Yield Stress of Mudflow Samples Versus Volumetric Concentration*
 
-Practical Guidelines for Analyzing the Potential for Hyperconcentrated Sediment Flows
----------------------------------------------------------------------------------------
-g
+Guidelines  
+-----------
+
+Analyzing the Potential for Hyperconcentrated Sediment Flows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 There are several simple guidelines that can be checked to determine the potential for a watershed to generate a mudflow.
 In addition, modeling hyperconcentrated sediment flows requires reasonable assumptions for the variables that control the physical flows processes.
 These variables include the volume of water and sediment, sediment concentration, physical surface conditions, fluid and sediment properties.
 These guidelines, variables and how to estimate and apply them will be briefly discussed.
 
-*Watershed inspection*
------------------------
+Watershed inspection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The first check involves a watershed inspection for loose boulders, debris in the basin channel.
 This usually requires an on-ground inspection.
@@ -757,8 +760,8 @@ In the upper watershed, aerial photos as well as on the ground inspection may re
 erosion.
 Fire and overgrazing can contribute to increased sediment loading during subsequent infrequent large storms.
 
-*Volume of water and sediment*
-------------------------------
+Volume of water and sediment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The area of inundation, flow depths and velocities are primarily a function of the sediment and water volumes.
 Flood hydrology and sediment yield have to be analyzed.
@@ -870,7 +873,7 @@ area of inundation.
 The key to accurate simulation is the selection of the sediment concentration by volume assigned to the flood hydrograph.
 A balance should be sought between the assigned sediment concentration and the estimated potential sediment yield.
 
-Guidelines for the Selection of Rheological Parameters
+Selection of Rheological Parameters
 -------------------------------------------------------
 
 Each mudflow alluvial fan or tailings dam area or region has geology and soil conditions that will generate unique rheological fluid properties.
@@ -927,7 +930,7 @@ B. If no field data is available and only a subjective interpretation of the mud
        Determine the worst case scenario for you project conditions.
 
 Dispersion Stress Considerations
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For flows with high concentrations of non-cohesive sediment particles and relatively low viscosities and yield stresses, turbulence will dominate and
 dispersive stress can play a role in slowing down the velocity.
@@ -1089,10 +1092,8 @@ exceeds 53%.
      </tbody>
    </table>
 
-
-
-
-**References**
+References
+=====================
 
 Bagnold, R.A., 1954.
 "Experiments on a gravity-free dispersion of large solid spheres in a Newtonian fluid under shear," *Proc.
