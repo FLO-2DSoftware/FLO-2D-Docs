@@ -1609,7 +1609,7 @@ The interpolated elevations are based on the imported DTM points or the elevatio
 The interpolation options are selected in the *Options/Interpolation* command of the *Tools* menu.
 The following table describes the interpolation method.
 
-.. |idw_eq| image:: img/idw_equation.png
+.. |idw_eq| image:: img/idw_equation.jpg
    :height: 30px
    :align: middle
 
