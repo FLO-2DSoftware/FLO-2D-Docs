@@ -1646,7 +1646,7 @@ The following table describes the interpolation method.
    * - Inverse distance weighting formula exponent
      - This is “n” in the Inverse Distance Weighting Formula:
 
-       |idw_eq/
+       |idw_eq|
 
        Where Z¯ is the interpolated grid element elevation, Z\ :sub:`j` is
 
