@@ -823,6 +823,7 @@ The file extension is \*.xyz.
 3.2.28 Save Elevation Points (File Menu)
 
 .. image:: img/GDS054.jpg
+
 After deleting any DTM points or adding points from multiple files, this command will save the remaining points to a single file.
 
 3.2.29 Export… (File Menu)
@@ -833,6 +834,7 @@ Use this command to export the current screen view to one of various image forma
 Click the *Export Command* and the following dialog box appears:
 
 .. image:: img/GDS056.png
+
 Choose an image export format such as Bitmap, JPEG, etc and adjust the scale factor of the image to obtain better print quality.
 When you click the Export button, input the image file name and select the directory to save the image as shown in the following file dialog box:
 
