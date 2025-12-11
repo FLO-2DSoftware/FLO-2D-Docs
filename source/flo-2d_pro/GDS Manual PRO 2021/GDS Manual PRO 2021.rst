@@ -2689,7 +2689,7 @@ Dialog Box Options:
 
        :math:`\bar{Z} = \frac{\sum_{j=1}^{NDTM} Z_j \frac{1}{r_{ij}^{nn}}}{\sum_{j=1}^{NDTM} r_{ij}^{nn}`
 
-       Where Z¯ is the interpolated grid element elevation, Z\ :sub:`j`
+       Where vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv Z¯ is the interpolated grid element elevation, Z\ :sub:`j`
 
        is the elevation of DTM point :sub:`j`,
 
