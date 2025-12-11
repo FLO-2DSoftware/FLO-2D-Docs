@@ -1610,7 +1610,7 @@ The interpolation options are selected in the *Options/Interpolation* command of
 The following table describes the interpolation method.
 
 .. |idw_eq| image:: img/idw_equation.jpg
-   :height: 1.2em
+   :height: 50px
    :align: middle
 
 .. list-table::
