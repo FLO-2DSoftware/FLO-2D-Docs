@@ -250,7 +250,7 @@ Step 3: Additional Plugins
 This concludes the installation and setup.  
 Tutorial data is located here:
 
-``C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials``
+``C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials``
 
 .. image:: img/Instructions/image9.png
    :width: 600px
