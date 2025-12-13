@@ -1095,7 +1095,7 @@ FLOPRO.EXE reads the grid, elevation, and Manning’s n data as follows: The mod
         .. raw:: html
 
             where:<br>
-                n<sub>b</sub> = = bankfull discharge roughness depth = flow depth<br>
+                n<sub>b</sub> = bankfull discharge roughness depth = flow depth<br>
                 dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
 To turn off the depth variable roughness set AMANN = -99.
@@ -1777,7 +1777,7 @@ OUTFLOW HYDROGRAPH DATA
     .. math::
         :label:
 
-        Q = a hb
+        Q = a h^b
 
     where the coefficient (a) and exponent (b) are required input and h is the flow depth. The coefficient (a) and
     exponent (b) can be used to established critical flow at the outflow grids.
