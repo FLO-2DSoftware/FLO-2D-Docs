@@ -1,3 +1,5 @@
+.. _tutorials-index:
+
 FLO-2D Gila Tutorials
 =========================
 

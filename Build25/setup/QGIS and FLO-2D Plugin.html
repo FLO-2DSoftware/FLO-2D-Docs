@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Install QGIS and the FLO-2D Plugin &mdash; FLO-2D Pro Documentation  documentation</title>
+  <title>QGIS and FLO-2D Plugin Install Instructions &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
@@ -56,11 +56,10 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">FLO-2D Installation and Setup</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="FLO-2D%20Pro.html">FLO-2D Pro Installation Instructions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Install QGIS and the FLO-2D Plugin</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#step-1-qgis-installer">Step 1: QGIS Installer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-2-flo-2d-gila-plugin">Step 2: FLO-2D Gila Plugin</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">QGIS and FLO-2D Plugin Install Instructions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-qgis-installation">Step 1: QGIS Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-flo-2d-plugin">Step 2: FLO-2D Plugin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#step-3-additional-plugins">Step 3: Additional Plugins</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#qgis-server-installer-method">QGIS Server Installer Method</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="GDS%20and%20Mapper%20Install%20Instructions.html">GDS - Mapper Install Instructions</a></li>
@@ -88,7 +87,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">FLO-2D Installation and Setup</a></li>
-      <li class="breadcrumb-item active">Install QGIS and the FLO-2D Plugin</li>
+      <li class="breadcrumb-item active">QGIS and FLO-2D Plugin Install Instructions</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/setup/QGIS and FLO-2D Plugin.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -98,51 +97,180 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="install-qgis-and-the-flo-2d-plugin">
-<h1>Install QGIS and the FLO-2D Plugin<a class="headerlink" href="#install-qgis-and-the-flo-2d-plugin" title="Link to this heading"></a></h1>
+  <section id="qgis-and-flo-2d-plugin-install-instructions">
+<h1>QGIS and FLO-2D Plugin Install Instructions<a class="headerlink" href="#qgis-and-flo-2d-plugin-install-instructions" title="Link to this heading"></a></h1>
 <p>QGIS is an open-source geographic information system software designed for spatial data analysis and visualization.
 The FLO-2D Plugin uses QGIS tools to effectively prepare FLO-2D data,
 providing an enhanced modeling experience within a user-friendly environment.</p>
-<section id="step-1-qgis-installer">
-<h2>Step 1: QGIS Installer<a class="headerlink" href="#step-1-qgis-installer" title="Link to this heading"></a></h2>
-<p>Follow these instructions to set up QGIS.</p>
+<section id="step-1-qgis-installation">
+<h2>Step 1: QGIS Installation<a class="headerlink" href="#step-1-qgis-installation" title="Link to this heading"></a></h2>
+<p>Choose one of the following methods:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>Option A – QGIS Latest Long-Term Release (Recommended)</strong></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The following method uses the OSGeo4W Network Installer to install the current QGIS LTR version and
+adds Python modules such as <code class="docutils literal notranslate"><span class="pre">h5py</span></code> and <code class="docutils literal notranslate"><span class="pre">netCDF4</span></code>.</p>
+<div class="h3 docutils container">
 <ol class="arabic simple">
-<li><p>Double click the QGIS-OSGeo4W-3.34.9-1.msi file.</p></li>
-<li><p>Finish installing with the default settings.</p></li>
+<li><p class="sd-card-text">Download the OSGeo4W Installer</p></li>
 </ol>
-<img alt="../_images/image88.png" src="../_images/image88.png" />
+</div>
+<a href="https://qgis.org/download/" target="_blank" rel="noopener noreferrer">OSGeo4W Installer</a><p class="sd-card-text">Choose the <strong>OSGeo4W Network Installer</strong> for 64-bit Windows.</p>
+<div class="h3 docutils container">
+<ol class="arabic simple" start="2">
+<li><p class="sd-card-text">Launch the Installer</p></li>
+</ol>
+</div>
+<p class="sd-card-text">Run <code class="docutils literal notranslate"><span class="pre">osgeo4w-setup.exe</span></code> and choose <strong>Express Installation</strong> from the main menu.</p>
+<a class="bordered-img reference internal image-reference" href="../_images/qgisnetwork001.png"><img alt="../_images/qgisnetwork001.png" class="bordered-img" src="../_images/qgisnetwork001.png" style="width: 600px;" />
+</a>
+<div class="h3 docutils container">
 <ol class="arabic simple" start="3">
+<li><p class="sd-card-text">Select the download site</p></li>
+</ol>
+</div>
+<p class="sd-card-text">Choose a download site from the list provided.</p>
+<a class="bordered-img reference internal image-reference" href="../_images/qgisnetwork006.png"><img alt="../_images/qgisnetwork006.png" class="bordered-img" src="../_images/qgisnetwork006.png" style="width: 600px;" />
+</a>
+<div class="h3 docutils container">
+<ol class="arabic simple" start="4">
+<li><p class="sd-card-text">Select Packages to Install</p></li>
+</ol>
+</div>
+<p class="sd-card-text">Enable the following items:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>QGIS</strong> (optional)</p></li>
+<li><p class="sd-card-text"><strong>QGIS (LTR)</strong></p></li>
+<li><p class="sd-card-text"><strong>GDAL</strong></p></li>
+<li><p class="sd-card-text"><strong>GRASS GIS</strong> (optional)</p></li>
+</ul>
+<a class="bordered-img reference internal image-reference" href="../_images/qgisnetwork023.png"><img alt="../_images/qgisnetwork023.png" class="bordered-img" src="../_images/qgisnetwork023.png" style="width: 600px;" />
+</a>
+<div class="h3 docutils container">
+<ol class="arabic simple" start="5">
+<li><p class="sd-card-text">Accept the Dependencies</p></li>
+</ol>
+</div>
+<p class="sd-card-text">Install the dependencies when prompted.</p>
+<a class="bordered-img reference internal image-reference" href="../_images/qgisnetwork017.png"><img alt="../_images/qgisnetwork017.png" class="bordered-img" src="../_images/qgisnetwork017.png" style="width: 600px;" />
+</a>
+<div class="h3 docutils container">
+<ol class="arabic simple" start="6">
+<li><p class="sd-card-text">Accept the License Agreements</p></li>
+</ol>
+</div>
+<p class="sd-card-text">Accept the license agreements to continue.</p>
+<a class="bordered-img reference internal image-reference" href="../_images/qgisnetwork018.png"><img alt="../_images/qgisnetwork018.png" class="bordered-img" src="../_images/qgisnetwork018.png" style="width: 600px;" />
+</a>
+<p class="sd-card-text">The installation should start. This may take some time depending on your internet connection.</p>
+<a class="bordered-img reference internal image-reference" href="../_images/qgisnetwork019.png"><img alt="../_images/qgisnetwork019.png" class="bordered-img" src="../_images/qgisnetwork019.png" style="width: 600px;" />
+</a>
+<p class="sd-card-text">Click the <strong>Finish</strong> button when the installation is complete.</p>
+<a class="bordered-img reference internal image-reference" href="../_images/qgisnetwork020.png"><img alt="../_images/qgisnetwork020.png" class="bordered-img" src="../_images/qgisnetwork020.png" style="width: 600px;" />
+</a>
+<div class="h3 docutils container">
+<ol class="arabic simple" start="7">
+<li><p class="sd-card-text">Install Additional Python Modules</p></li>
+</ol>
+</div>
+<p class="sd-card-text">Run the OSGeo4W Setup program again and select <strong>Advanced Install</strong>.</p>
+<p class="sd-card-text">Click <strong>Next</strong> until reaching the package selection screen.</p>
+<p class="sd-card-text">Filter the package list by typing <strong>h5py</strong> in the search box.
+Click the <strong>Skip</strong> button to select the latest version for installation.</p>
+<a class="bordered-img reference internal image-reference" href="../_images/qgisnetwork011.png"><img alt="../_images/qgisnetwork011.png" class="bordered-img" src="../_images/qgisnetwork011.png" style="width: 600px;" />
+</a>
+<p class="sd-card-text">Repeat the process for <strong>netCDF4</strong>.</p>
+<a class="bordered-img reference internal image-reference" href="../_images/qgisnetwork013.png"><img alt="../_images/qgisnetwork013.png" class="bordered-img" src="../_images/qgisnetwork013.png" style="width: 600px;" />
+</a>
+<p class="sd-card-text">Accept any dependencies.</p>
+<a class="bordered-img reference internal image-reference" href="../_images/qgisnetwork024.png"><img alt="../_images/qgisnetwork024.png" class="bordered-img" src="../_images/qgisnetwork024.png" style="width: 600px;" />
+</a>
+<p class="sd-card-text">Click <strong>Next</strong> and <strong>Finish</strong> to complete the installation.</p>
+<div class="h3 docutils container">
+<ol class="arabic simple" start="8">
+<li><p class="sd-card-text">Verify Installation</p></li>
+</ol>
+</div>
+<p class="sd-card-text">Search for and select the following packages:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">h5py</span></code></p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">netCDF4</span></code></p></li>
+</ul>
+<p class="sd-card-text">Run the <strong>OSGeo4W Shell</strong> from the Start Menu.</p>
+<a class="bordered-img reference internal image-reference" href="../_images/qgisnetwork026.png"><img alt="../_images/qgisnetwork026.png" class="bordered-img" src="../_images/qgisnetwork026.png" style="width: 600px;" />
+</a>
+<p class="sd-card-text">Run the following commands inside the OSGeo4W Shell:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;import h5py; print(&#39;h5py:&#39;, h5py.__version__)&quot;</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;import netCDF4; print(&#39;netCDF4:&#39;, netCDF4.__version__)&quot;</span>
+</pre></div>
+</div>
+<p class="sd-card-text">A version number indicates a successful installation.</p>
+<a class="bordered-img reference internal image-reference" href="../_images/qgisnetwork025.png"><img alt="../_images/qgisnetwork025.png" class="bordered-img" src="../_images/qgisnetwork025.png" style="width: 600px;" />
+</a>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>Option B – QGIS Stand Alone Older Versions</strong></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Follow these instructions to set up an older version of QGIS.</p>
+<p class="sd-card-text">Get an old stand alone installer from the QGIS download archive:</p>
+<blockquote>
+<div><a href="https://download.osgeo.org/qgis/win64/" target="_blank" rel="noopener noreferrer">QGIS Installer Archive</a></div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="sd-card-text">The images reference QGIS version 3.34 and 3.28 but the steps are the same for any stand alone version of QGIS.</p>
+</div>
+<a class="bordered-img reference internal image-reference" href="../_images/archive.png"><img alt="../_images/archive.png" class="bordered-img" src="../_images/archive.png" style="width: 600px;" />
+</a>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Double click the QGIS installer.</p></li>
+<li><p class="sd-card-text">Finish installing with the default settings.</p></li>
+</ol>
+<a class="bordered-img reference internal image-reference" href="../_images/image88.png"><img alt="../_images/image88.png" class="bordered-img" src="../_images/image88.png" style="width: 600px;" />
+</a>
+</div>
+</details></section>
+<section id="step-2-flo-2d-plugin">
+<h2>Step 2: FLO-2D Plugin<a class="headerlink" href="#step-2-flo-2d-plugin" title="Link to this heading"></a></h2>
+<p id="flo2d-plugin-step">Setup QGIS and install the FLO-2D Plugin.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This step should be performed by the End User.  If it is done on an Admin account, the profile will only be
+available on that account.</p>
+</div>
+<ol class="arabic simple">
 <li><p>Open QGIS.</p></li>
 </ol>
-<img alt="../_images/Worksh002.png" src="../_images/Worksh002.png" />
-<ol class="arabic simple" start="4">
-<li><p>Click Settings/Options</p></li>
-</ol>
-<img alt="../_images/image1310.png" src="../_images/image1310.png" />
-<ol class="arabic simple" start="5">
-<li><p>Click the CRS tab and set the options as shown below.  Use CRS from first layer added.  Use Project CRS.  Click OK to
-close the window.</p></li>
-</ol>
-<img alt="../_images/image1414.png" src="../_images/image1414.png" />
-</section>
-<section id="step-2-flo-2d-gila-plugin">
-<span id="flo2d-plugin-step"></span><h2>Step 2: FLO-2D Gila Plugin<a class="headerlink" href="#step-2-flo-2d-gila-plugin" title="Link to this heading"></a></h2>
-<p>With QGIS installed it is time to add the FLO-2D plugin and a few other handy plugins.</p>
-<ol class="arabic simple">
-<li><p>Navigate to the plugin manager.</p></li>
-</ol>
-<img alt="../_images/image108.png" src="../_images/image108.png" />
+<a class="bordered-img reference internal image-reference" href="../_images/Worksh002.png"><img alt="../_images/Worksh002.png" class="bordered-img" src="../_images/Worksh002.png" style="width: 600px;" />
+</a>
 <ol class="arabic simple" start="2">
-<li><p>Install the FLO-2D Plugin from a zip file.</p></li>
-<li><p>Plugin Location C:\Users\Public\Documents\FLO-2D PRO Documentation\QGIS Plugins</p></li>
+<li><p>Click <strong>Settings → Options</strong>.</p></li>
 </ol>
-<img alt="../_images/image12a.png" src="../_images/image12a.png" />
+<a class="bordered-img reference internal image-reference" href="../_images/image1310.png"><img alt="../_images/image1310.png" class="bordered-img" src="../_images/image1310.png" style="width: 600px;" />
+</a>
+<ol class="arabic simple" start="3">
+<li><p>Click the <strong>CRS</strong> tab and set the options shown below.</p></li>
+</ol>
+<a class="bordered-img reference internal image-reference" href="../_images/image1414.png"><img alt="../_images/image1414.png" class="bordered-img" src="../_images/image1414.png" style="width: 600px;" />
+</a>
+<ol class="arabic" start="4">
+<li><p>Get the Plugin.</p>
+<a href="https://flo-2d.com/qgis-plugin/" target="_blank" rel="noopener noreferrer">Download FLO-2D Plugin</a></li>
+<li><p>Navigate to the Plugin Manager.</p></li>
+</ol>
+<a class="bordered-img reference internal image-reference" href="../_images/image108.png"><img alt="../_images/image108.png" class="bordered-img" src="../_images/image108.png" style="width: 600px;" />
+</a>
+<ol class="arabic" start="6">
+<li><p>Install the Plugin.</p>
+<p>Click the <strong>Install from ZIP</strong> tab → Browse to the downloaded ZIP file → <strong>Install Plugin</strong>.</p>
+</li>
+</ol>
+<a class="bordered-img reference internal image-reference" href="../_images/image12a.png"><img alt="../_images/image12a.png" class="bordered-img" src="../_images/image12a.png" style="width: 600px;" />
+</a>
 </section>
 <section id="step-3-additional-plugins">
 <h2>Step 3: Additional Plugins<a class="headerlink" href="#step-3-additional-plugins" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>These are also some recommended plugins.  Install them using the All Menu.</p></li>
-</ol>
+<li><p>These recommended plugins can be installed from the <strong>All Plugins</strong> menu:</p>
 <ul class="simple">
 <li><p>FLO-2D Rasterizor</p></li>
 <li><p>FLO-2D MapCrafter</p></li>
@@ -150,21 +278,23 @@ close the window.</p></li>
 <li><p>Profile Tool</p></li>
 <li><p>Curve Number Generator</p></li>
 </ul>
-<img alt="../_images/image1112.png" src="../_images/image1112.png" />
-<ol class="arabic simple" start="2">
-<li><p>Quick Map Services requires one more step.  Click Quick Map Services icon and click Settings.
-On the settings window, go to More Services and click Get Contributed pack.  On the Visibility window, uncheck the
-unwanted maps.  Watch this Gif to see the process.</p></li>
+</li>
 </ol>
-<img alt="../_images/image15.gif" src="../_images/image15.gif" />
-<p>This concludes the installation and setup.  The tutorial data is here:</p>
-<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials</p>
-<img alt="../_images/image94.png" src="../_images/image94.png" />
+<a class="bordered-img reference internal image-reference" href="../_images/image1112.png"><img alt="../_images/image1112.png" class="bordered-img" src="../_images/image1112.png" style="width: 600px;" />
+</a>
+<ol class="arabic" start="2">
+<li><p>Quick Map Services requires an additional step.</p>
+<p>Click the QMS icon → Settings → More Services → <strong>Get Contributed Pack</strong>.</p>
+</li>
+</ol>
+<a class="bordered-img reference internal image-reference" href="../_images/image15.gif"><img alt="../_images/image15.gif" class="bordered-img" src="../_images/image15.gif" style="width: 600px;" />
+</a>
+<p>This concludes the installation and setup.
+Tutorial data is located here:</p>
+<p><code class="docutils literal notranslate"><span class="pre">C:\Users\Public\Documents\FLO-2D</span> <span class="pre">PRO</span> <span class="pre">Documentation\Example</span> <span class="pre">Projects\QGIS</span> <span class="pre">Tutorials</span></code></p>
+<a class="bordered-img reference internal image-reference" href="../_images/image94.png"><img alt="../_images/image94.png" class="bordered-img" src="../_images/image94.png" style="width: 600px;" />
+</a>
 </section>
-<section id="qgis-server-installer-method">
-<h2>QGIS Server Installer Method<a class="headerlink" href="#qgis-server-installer-method" title="Link to this heading"></a></h2>
-<p>If you need to import or export hdf5 files, please use this method for installing QGIS.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/I-Nk2kd2Ukw" frameborder="0" allowfullscreen></iframe></section>
 </section>
 
 

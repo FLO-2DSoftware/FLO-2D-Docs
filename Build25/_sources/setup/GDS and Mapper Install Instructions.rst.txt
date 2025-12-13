@@ -1,3 +1,5 @@
+.. _gds-mapper-install-instructions:
+
 GDS - Mapper Install Instructions
 ======================================
 

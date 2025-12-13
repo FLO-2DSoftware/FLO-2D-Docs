@@ -76,9 +76,9 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual/index.html">FLO-2D Pro Reference Manual</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Channel%20Modeling%20Guidelines/index.html">Channel Modeling Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Storm%20Drain%20Modeling%20Guidelines/index.html">Storm Drain Modeling Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/index.html">Hydraulic Structures Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/index.html">Levee Dam and Wall Breach Guidelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Storm%20Drain%20Modeling%20Guidelines/index.html">Storm Drain Modeling Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines/index.html">Simulating Mudflow Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Flood%20Routing%20Guidelines/index.html">Two Phase Flood Routing Guidelines</a></li>
 </ul>
@@ -1008,14 +1008,14 @@ runtime. This may require only an increase in TIME_ACCEL.</p></li>
 Note: FPLAIN.DAT is a list of the grid element and its bordering grid elements. Zeros indicate
 boundary elements.
 
-                                                                Line 1:
-                                                                1 = grid element,
-                                                                0 = cell to the north,
-                                                                2 = cell to the east,
-                                                                10 = cell to the south,
-                                                                0 = cell to the west
-                                                                0.060 = n-value for the cell
-                                                                4005.23 = cell elevation
+  Line 1:
+  1 = grid element,
+  0 = cell to the north,
+  2 = cell to the east,
+  10 = cell to the south,
+  0 = cell to the west
+  0.060 = n-value for the cell
+  4005.23 = cell elevation
 
     <div style="border: 0px solid black; display: inline-block; padding: 0px;">
       <strong>Example Grid</strong>
@@ -1155,7 +1155,7 @@ The model automatically computes a depth variable roughness for depths less than
 <div><div class="math notranslate nohighlight" id="equation-flo-2d-pro-data-input-manual-pro-2025-chapter-4-2">
 <span class="eqno">(4.3)<a class="headerlink" href="#equation-flo-2d-pro-data-input-manual-pro-2025-chapter-4-2" title="Link to this equation"></a></span>\[n_d = n_b \, ^* \, 1.5 \, ^* \, e^{-(\frac{0.4 depth}{dmax})}\]</div>
 where:<br>
-    n\ :sub:`b` = bankfull discharge roughness depth = flow depth<br>
+    n<sub>b</sub> = bankfull discharge roughness depth = flow depth<br>
     dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)</div></blockquote>
 </li>
 </ol>
@@ -1734,9 +1734,16 @@ upstream elements.</p></li>
 <li><p>Channel boundary outflow condition may be established by specifying a stagedischarge relationship given by;</p>
 <blockquote>
 <div><div class="math notranslate nohighlight" id="equation-flo-2d-pro-data-input-manual-pro-2025-chapter-4-3">
-<span class="eqno">(4.4)<a class="headerlink" href="#equation-flo-2d-pro-data-input-manual-pro-2025-chapter-4-3" title="Link to this equation"></a></span>\[Q = a hb\]</div>
-<p>where the coefficient (a) and exponent (b) are required input and h is the flow depth. The coefficient (a) and
-exponent (b) can be used to established critical flow at the outflow grids.</p>
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-flo-2d-pro-data-input-manual-pro-2025-chapter-4-3" title="Link to this equation"></a></span>\[Q = a h^b\]</div>
+<dl class="simple">
+<dt>where:</dt><dd><ul class="simple">
+<li><p>a = coefficient,</p></li>
+<li><p>b = exponent,</p></li>
+<li><p>h = flow depth,</p></li>
+</ul>
+</dd>
+</dl>
+<p>The coefficient (a) and exponent (b) can be used to established critical flow at the outflow grids.</p>
 </div></blockquote>
 </li>
 <li><p>A discretized time-stage relationship can be employed to specify a water surface elevation for at various channel or
@@ -5407,7 +5414,7 @@ Distinguishing flows mixing from breaches, flood hydrographs, rainfall is imposs
 <li><p>Wall failure procedures are defined in the guidelines listed above.
 The procedures for setting up walls and wall failure, wall failure and grid element elevations, walls and ARFs, and the automatic controls applied by
 the FLO-2D engine are all explained in the guidelines.
-A wall failure tutorial is available online in the Self-Help Kit at <a class="reference external" href="https://documentation.flo-2.com/html">https://documentation.flo-2.com/html</a>.</p></li>
+A wall failure tutorial is available online in the Self-Help Kit at <a class="reference internal" href="../../tutorials/Self-Help-Kit-Gila/index.html#self-help-kit-gila"><span class="std std-ref">Self Help Tutorials</span></a>.</p></li>
 <li><p>Levee failure criteria:</p>
 <blockquote>
 <div><ul class="simple">

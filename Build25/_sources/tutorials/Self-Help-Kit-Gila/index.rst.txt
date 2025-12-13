@@ -1,3 +1,5 @@
+.. _self-help-kit-gila:
+
 Self-Help Kit Gila
 ========================
 

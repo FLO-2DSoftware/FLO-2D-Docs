@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 
-Chapter 3
-=========
+CHAPTER 3 - CHANNEL REVIEW AND TROUBLESHOOTING
+===============================================
 
 Channel Review and Troubleshooting
 ----------------------------------
