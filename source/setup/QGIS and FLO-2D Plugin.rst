@@ -177,6 +177,8 @@ Choose one of the following methods:
 Step 2: FLO-2D Plugin
 ----------------------
 
+.. _flo2d_plugin_step:
+
 Setup QGIS and install the FLO-2D Plugin.
 
 .. important::
