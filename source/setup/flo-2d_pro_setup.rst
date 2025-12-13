@@ -77,7 +77,12 @@ Install FLO-2D using the following instructions.  Admin Rights Required.
 Step 3: Run the Activator
 ----------------------------
 
-The activator is stored in the FLO-2D.ShareFile.com account. It requires Admin Rights to run.
+The activator is stored in the tech support account. It requires Admin Rights to run.
+
+.. important::
+
+   The activator name tag is MM-YY where MM is the month and YY is the year of purchase. Don't run an activator from previous years.
+
 
 |Activator|
 
@@ -97,5 +102,5 @@ The activator is stored in the FLO-2D.ShareFile.com account. It requires Admin R
 3. FLO-2D uses a site license.  It can be installed and activated on any computer in the office that holds the
    license.  The license agreement is saved to the Documentation folder along with the rest of the FLO-2D Documentation.
 
-C:\\users\\user\\public\\documents\\FLO-2D Pro Documentation
+C:\\users\\public\\documents\\FLO-2D Pro Documentation
 
