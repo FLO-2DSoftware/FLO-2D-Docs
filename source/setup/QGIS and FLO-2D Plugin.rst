@@ -30,7 +30,7 @@ Choose one of the following methods:
 
    Run ``osgeo4w-setup.exe`` and choose **Express Installation** from the main menu.
 
-   .. image:: ../img/Instructions/qgisnetwork001.png
+   .. image:: img/Instructions/qgisnetwork001.png
       :width: 600px
       :class: bordered-img
 
@@ -40,7 +40,7 @@ Choose one of the following methods:
 
    Choose a download site from the list provided.
 
-   .. image:: ../img/Instructions/qgisnetwork006.png
+   .. image:: img/Instructions/qgisnetwork006.png
       :width: 600px
       :class: bordered-img
 
@@ -55,7 +55,7 @@ Choose one of the following methods:
    * **GDAL**
    * **GRASS GIS** (optional)
 
-   .. image:: ../img/Instructions/qgisnetwork023.png
+   .. image:: img/Instructions/qgisnetwork023.png
       :width: 600px
       :class: bordered-img
 
@@ -65,7 +65,7 @@ Choose one of the following methods:
 
    Install the dependencies when prompted.
 
-   .. image:: ../img/Instructions/qgisnetwork017.png
+   .. image:: img/Instructions/qgisnetwork017.png
       :width: 600px
       :class: bordered-img
 
@@ -75,19 +75,19 @@ Choose one of the following methods:
 
    Accept the license agreements to continue.
 
-   .. image:: ../img/Instructions/qgisnetwork018.png
+   .. image:: img/Instructions/qgisnetwork018.png
       :width: 600px
       :class: bordered-img
 
    The installation should start. This may take some time depending on your internet connection.
 
-   .. image:: ../img/Instructions/qgisnetwork019.png
+   .. image:: img/Instructions/qgisnetwork019.png
       :width: 600px
       :class: bordered-img
 
    Click the **Finish** button when the installation is complete.
 
-   .. image:: ../img/Instructions/qgisnetwork020.png
+   .. image:: img/Instructions/qgisnetwork020.png
       :width: 600px
       :class: bordered-img
 
@@ -102,19 +102,19 @@ Choose one of the following methods:
    Filter the package list by typing **h5py** in the search box.  
    Click the **Skip** button to select the latest version for installation.
 
-   .. image:: ../img/Instructions/qgisnetwork011.png
+   .. image:: img/Instructions/qgisnetwork011.png
       :width: 600px
       :class: bordered-img
 
    Repeat the process for **netCDF4**.
 
-   .. image:: ../img/Instructions/qgisnetwork013.png
+   .. image:: img/Instructions/qgisnetwork013.png
       :width: 600px
       :class: bordered-img
 
    Accept any dependencies.
 
-   .. image:: ../img/Instructions/qgisnetwork024.png
+   .. image:: img/Instructions/qgisnetwork024.png
       :width: 600px
       :class: bordered-img
 
@@ -131,7 +131,7 @@ Choose one of the following methods:
 
    Run the **OSGeo4W Shell** from the Start Menu.
 
-   .. image:: ../img/Instructions/qgisnetwork026.png
+   .. image:: img/Instructions/qgisnetwork026.png
       :width: 600px
       :class: bordered-img
 
@@ -144,7 +144,7 @@ Choose one of the following methods:
 
    A version number indicates a successful installation.
 
-   .. image:: ../img/Instructions/qgisnetwork025.png
+   .. image:: img/Instructions/qgisnetwork025.png
       :width: 600px
       :class: bordered-img
 
@@ -162,7 +162,7 @@ Choose one of the following methods:
    
    .. note:: The images reference QGIS version 3.34 and 3.28 but the steps are the same for any stand alone version of QGIS.
       
-   .. image:: ../img/Instructions/archive.png
+   .. image:: img/Instructions/archive.png
       :width: 600px
       :class: bordered-img
    
@@ -170,7 +170,7 @@ Choose one of the following methods:
 
    2. Finish installing with the default settings.
 
-   .. image:: ../img/Instructions/image8.png
+   .. image:: img/Instructions/image8.png
       :width: 600px
       :class: bordered-img
 
@@ -186,19 +186,19 @@ Setup QGIS and install the FLO-2D Plugin.
 
 1. Open QGIS.
 
-.. image:: ../img/Instructions/Worksh002.png
+.. image:: img/Instructions/Worksh002.png
    :width: 600px
    :class: bordered-img
 
 2. Click **Settings → Options**.
 
-.. image:: ../img/Instructions/image13.png
+.. image:: img/Instructions/image13.png
    :width: 600px
    :class: bordered-img
 
 3. Click the **CRS** tab and set the options shown below.
 
-.. image:: ../img/Instructions/image14.png
+.. image:: img/Instructions/image14.png
    :width: 600px
    :class: bordered-img
 
@@ -210,7 +210,7 @@ Setup QGIS and install the FLO-2D Plugin.
 
 5. Navigate to the Plugin Manager.
 
-.. image:: ../img/Instructions/image10.png
+.. image:: img/Instructions/image10.png
    :width: 600px
    :class: bordered-img
 
@@ -218,7 +218,7 @@ Setup QGIS and install the FLO-2D Plugin.
 
    Click the **Install from ZIP** tab → Browse to the downloaded ZIP file → **Install Plugin**.
 
-.. image:: ../img/Instructions/image12a.png
+.. image:: img/Instructions/image12a.png
    :width: 600px
    :class: bordered-img
 
@@ -234,7 +234,7 @@ Step 3: Additional Plugins
    - Profile Tool  
    - Curve Number Generator  
 
-.. image:: ../img/Instructions/image11.png
+.. image:: img/Instructions/image11.png
    :width: 600px
    :class: bordered-img
 
@@ -242,7 +242,7 @@ Step 3: Additional Plugins
 
    Click the QMS icon → Settings → More Services → **Get Contributed Pack**.
 
-.. image:: ../img/Instructions/image15.gif
+.. image:: img/Instructions/image15.gif
    :width: 600px
    :class: bordered-img
 
@@ -252,6 +252,6 @@ Tutorial data is located here:
 
 ``C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials``
 
-.. image:: ../img/Instructions/image9.png
+.. image:: img/Instructions/image9.png
    :width: 600px
    :class: bordered-img
