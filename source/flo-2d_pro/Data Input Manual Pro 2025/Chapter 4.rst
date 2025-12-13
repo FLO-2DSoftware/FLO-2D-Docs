@@ -1779,8 +1779,12 @@ OUTFLOW HYDROGRAPH DATA
 
         Q = a h^b
 
-    where the coefficient (a) and exponent (b) are required input and h is the flow depth. The coefficient (a) and
-    exponent (b) can be used to established critical flow at the outflow grids.
+    where:
+      - a = coefficient,
+      - b = exponent,
+      - h = flow depth,
+
+    The coefficient (a) and exponent (b) can be used to established critical flow at the outflow grids.
 
 4. A discretized time-stage relationship can be employed to specify a water surface elevation for at various channel or
    floodplain locations in the grid system.
@@ -1808,8 +1812,6 @@ OUTFLOW HYDROGRAPH DATA
    Up to nine separate additional grid systems can be used.
    If only one downstream grid system will have the inflow hydrographs, set OUTCHAR = O1 for those boundary outflow nodes.
    The CADPTS.DAT file for the downstream grid system must be included in the project folder as CADPTSDS1.
-
-
 
 .. raw:: html
 
@@ -6050,7 +6052,7 @@ LEVEE AND FAILURE DATA
 10. Wall failure procedures are defined in the guidelines listed above.
     The procedures for setting up walls and wall failure, wall failure and grid element elevations, walls and ARFs, and the automatic controls applied by
     the FLO-2D engine are all explained in the guidelines.
-    A wall failure tutorial is available online in the Self-Help Kit at https://documentation.flo-2.com/html.
+    A wall failure tutorial is available online in the Self-Help Kit at :ref:`Self Help Tutorials <self-help-kit-gila>`.
 
 11. Levee failure criteria:
 
