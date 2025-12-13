@@ -12,7 +12,7 @@ There are several workshop lessons located in the FLO-2D Documentation subdirect
 
 **QGIS/FLO-2D Plugin Lessons**
 
-Access lessons here: :ref:'Self-Help Kit Gila <self-help-kit-gila>'
+:ref:`Self-Help Kit Gila <self-help-kit-gila>`
 
    *QGIS Lesson 1 – Getting Started*
 
