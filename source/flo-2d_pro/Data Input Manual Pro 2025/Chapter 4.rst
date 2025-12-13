@@ -930,14 +930,14 @@ FLOODPLAIN GRID ELEMENT DATA
     Note: FPLAIN.DAT is a list of the grid element and its bordering grid elements. Zeros indicate
     boundary elements.
 
-                                                                    Line 1:
-                                                                    1 = grid element,
-                                                                    0 = cell to the north,
-                                                                    2 = cell to the east,
-                                                                    10 = cell to the south,
-                                                                    0 = cell to the west
-                                                                    0.060 = n-value for the cell
-                                                                    4005.23 = cell elevation
+      Line 1:
+      1 = grid element,
+      0 = cell to the north,
+      2 = cell to the east,
+      10 = cell to the south,
+      0 = cell to the west
+      0.060 = n-value for the cell
+      4005.23 = cell elevation
 
         <div style="border: 0px solid black; display: inline-block; padding: 0px;">
           <strong>Example Grid</strong>
