@@ -104,6 +104,9 @@ The MapCrafter documentation is maintained on the MapCrafter wiki.
 
     <a href="https://github.com/FLO-2DSoftware/FLO-2DMapCrafter/wiki" target="_blank">FLO-2D MapCrafter Wiki</a>
 
+MapCrafter allows users to visualize FLO-2D results in a GIS environment.
+Users can create flood inundation maps, velocity maps, and other thematic maps based on FLO-2D simulation outputs.
+
 .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/DIM_Pro_2025_Chapter6_008.png
 
 In addition to mapping FLO-2D results, MapCrafter can also help users design map layouts for printing high resolution mapping pdfs.
