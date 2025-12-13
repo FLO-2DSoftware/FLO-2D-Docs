@@ -18,7 +18,7 @@ can tackle any diverse flooding problem including:
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/3xvNGsB69tY" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3_M_YrUcg7s" frameborder="0" allowfullscreen></iframe>
 
 Step 1: Download the Software
 -------------------------------------------
@@ -30,9 +30,11 @@ FLO-2D Tech Support Account.
 
 .. |ProSetup_Download| raw:: html
 
-   <a href="https://flo-2d.sharefile.com/d-s2391e79911b64d809ef217d8e0a23d1d" target="_blank">Download FLO-2D Pro</a>
+   <a href="https://flo-2d.sharefile.com/" target="_blank">Download FLO-2D Pro</a>
 
 Once the software is downloaded.  Go to Step 2.
+
+.. image:: img/Instructions/fullbuild.png
 
 Step 2: Run the Installer
 ----------------------------
@@ -54,29 +56,28 @@ Install FLO-2D using the following instructions.  Admin Rights Required.
 .. image:: img/Instructions/image5.png
 
 
-4. If FLO-2D is already installed, this installer will remove the FLO-2D Pro folder and rename the
-   FLO-2D Documentation folder.
-
-.. image:: img/Instructions/image6.png
-
-
-5. Check all options and click next.
+4. Check all options and click next.
 
 .. image:: img/Instructions/image15a.png
 
 
-6. Click Next and Install to run the installer.
+5. Click Next and Install to run the installer.
 
 .. image:: img/Instructions/image16.png
 
 
-7. The Microsoft Visual C++ redistribution packages are embedded in the FLO-2D installer.  They install passively,
+6. The Microsoft Visual C++ redistribution packages are embedded in the FLO-2D installer.  They install passively,
    but may request a restart.
 
 Step 3: Run the Activator
 ----------------------------
 
-The activator is stored in the FLO-2D.ShareFile.com account. It requires Admin Rights to run.
+The activator is stored in the tech support account. It requires Admin Rights to run.
+
+.. important::
+
+   The activator folder is labeled MM-YY. and the file is named Activator FLO-2D MM.YY.exe. Be sure to run
+   the correct version.
 
 |Activator|
 
