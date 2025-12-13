@@ -1095,7 +1095,7 @@ FLOPRO.EXE reads the grid, elevation, and Manning’s n data as follows: The mod
         .. raw:: html
 
             where:<br>
-                n\ :sub:`b` = bankfull discharge roughness depth = flow depth<br>
+                :math:`n_b` = = bankfull discharge roughness depth = flow depth<br>
                 dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
 To turn off the depth variable roughness set AMANN = -99.
