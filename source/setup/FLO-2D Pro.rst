@@ -76,8 +76,7 @@ The activator is stored in the tech support account. It requires Admin Rights to
 
 .. important::
 
-   The activator folder is labeled MM-YY. and the file is named Activator FLO-2D MM.YY.exe. Be sure to run
-   the correct version.
+   The activator name tag is MM-YY where MM is the month and YY is the year of purchase. Don't run an activator from previous years.
 
 |Activator|
 
@@ -97,4 +96,4 @@ The activator is stored in the tech support account. It requires Admin Rights to
 3. FLO-2D uses a site license.  It can be installed and activated on any computer in the office that holds the
    license.  The license agreement is saved to the Documentation folder along with the rest of the FLO-2D Documentation.
 
-C:\\users\\user\\public\\documents\\FLO-2D Pro Documentation
+C:\\users\\public\\documents\\FLO-2D Pro Documentation
