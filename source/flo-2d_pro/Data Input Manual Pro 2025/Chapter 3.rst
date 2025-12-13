@@ -15,16 +15,22 @@ QGIS FLO-2D PLUGIN
 
 The FLO-2D Plugin for Quantum Geographical Interface System (QGIS) is a program developed to generate FLO-2D data files using QGIS.
 This program has separate documentation available in the FLO-2D Documentation subdirectory.
-Tutorials and sample projects are available at https://documentation.flo-2d.com.
+Tutorials and sample projects are available at :ref:`Tutorials <tutorials-index>`.
 
 GDS
 ----
 
 The grid developer system (GDS) is a GIS program used to create and edit the FLO-2D grid system and its attributes.
-As of October 2023, the GDS and Map- per are now distributed separately from FLO-2D.
+As of October 2023, the GDS and Mapper are now distributed separately from FLO-2D.
+
 These legacy tools are aging and their Visual Basic code has an unknown life limit for Microsoft operating systems.
-If a user requires these tools, they can be downloaded via the FLO-2D Sharefile account.
-The GDS has a separate reference manual.
+
+If a user requires these tools, they can be downloaded via the FLO-2D Sharefile account. 
+
+:ref:`Install GDS <gds-mapper-install-instructions>`
+
+The GDS has a separate reference manual that is installed with the GDS program.
+
 In addition, there are a number of GDS tutorials and workshop lessons that are available to install if desired.
 The tutorial and GDS/Mapper installer are in the Sharefile FLO-2D Pro Update folder.
 A Sharefile account is given to all end users and IT Admin.
@@ -36,7 +42,8 @@ The PROFILES processor program displays the channel slope and permits interactiv
 bed elevation, channel depth, channel n-values and channel geometry.
 It will display the channel cross-section geometry and interpolate the slope and cross-section geometry
 between surveyed cross-sections.
-PRO- FILES can also be used to view output water surface profiles (see the Post-Processor Programs Section).
+
+PROFILES can also be used to view output water surface profiles :ref:`Profiles Section <profiles-section>`.
 Run Profiles from the FLO-2D Plugin.
 
 Before using the PROFILES program, the basic FLO-2D files plus the CHAN.

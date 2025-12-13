@@ -152,6 +152,8 @@ The following plot displays the combined channel and floodplain maximum flow dep
 
 .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/DIM_Pro_2025_Chapter6_012.png
 
+.. _profiles-section:
+
 Profiles
 ------------
 
