@@ -100,7 +100,9 @@ FLO-2D MapCrafter is the primary post processing tool for FLO-2D software.
 It is a QGIS plugin and can be accessed via the QGIS Plugin Directory using the Plugin Manager.
 The MapCrafter documentation is maintained on the MapCrafter wiki.
 
-https://github.com/FLO-2DSoftware/FLO-2DMapCrafter/wiki
+.. raw:: html
+
+    <a href="https://github.com/FLO-2DSoftware/FLO-2DMapCrafter/wiki" target="_blank">FLO-2D MapCrafter Wiki</a>
 
 .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/DIM_Pro_2025_Chapter6_008.png
 
