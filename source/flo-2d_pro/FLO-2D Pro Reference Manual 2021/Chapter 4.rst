@@ -2629,7 +2629,7 @@ The range for spatially variable TOL assignment when LID is added to depression 
 Spatially Variable TOL Value Format in TOLSPATIAL.DAT.*
 
 Using the LID Tool Results
-''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After a FLO-2D simulation with the spatially variable TOL grid element assignment, the primary effect will be greater water retention on those grid
 elements with TOL values that are higher than TOLGLOBAL.
@@ -2682,7 +2682,7 @@ Building Rainfall Runoff
 ------------------------
 
 Building Runoff
-^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~
 
 It is a FLO-2D model option to simulate rainfall runoff from buildings.
 Buildings are represented by Area Reduction Factors (ARFs) and Width Reduction Factors (WRFs) in the FLO-2D model.
@@ -2785,7 +2785,7 @@ Maximum Flow Velocities on the Alluvial Fan.*
 Maximum Flow Velocities.*
 
 Downspout
-^^^^^^^^^
+~~~~~~~~~~
 
 The building location selected for this project is shown in Figure 91.
 The red lines in these figures are levees and represent a parapet wall surrounding the entire building roof.
@@ -2820,7 +2820,7 @@ Building Roof Element Elevation Editing.*
 Grid Element Levee Crest Elevation Editing.*
 
 Adjust Roof Slope
-'''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^
 
 A sloped roof can be established by modifying the roof elevations.
 Individual grid element elevations can be edited by double clicking a given cell and using the elevation field (Figure 94).
@@ -2867,7 +2867,7 @@ Figure 99.
 Completed Roof Element Elevation Slope Interpolation.*
 
 Downspout Hydraulics
-''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^
 
 The downspout discharge can be simulated as a hydraulic structure identifying the inlet node on the roof and the outlet node on the ground and
 assigning an inlet control rating table.
@@ -2922,7 +2922,7 @@ Any number of downspouts can be simulated in any location on the building roof.
 Hydraulic Structure Dialog Box with Entered Downspout Data.*
 
 Verification Testing of the Building Roof Runoff Enhancements
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The building runoff enhancements were tested in two projects.
 Since both projects showed an identical response on different scales, only the results of the small scale, more detailed project will be presented.
@@ -3119,8 +3119,8 @@ The three new tools were tested extensively with a flat and sloped roof to valid
 
 There are no required data file revisions to use these new building rainfall tools.
 
- Gutter Tool
- -----------
+Gutter Tool
+-----------
 
 The street gutters are designed to convey shallow flow during storm runoff less than or equal to the design discharge without traffic interruption.
 Typical curb and gutter cross sections have a triangular shape created by the cross slope associated with the street or road crown.
@@ -3166,7 +3166,7 @@ This coefficient (~ 5 x n-value) is analogous to the shallow flow n-value in FLO
 For a street n-value of 0.02, the (0.188) coefficient would be equivalent to applying a 0.1 shallow flow n-value (SHALLOWN).
 
 Gutter Flow
-^^^^^^^^^^^
+~~~~~~~~~~~~~
 
 Street gutter flow is defined in the Figure 106 where h = curb height.
 
@@ -3300,7 +3300,7 @@ This will enable the accurate analysis of bridge constricted floodplain and rive
 Unsteady Non-Uniform Flow through a Bridge Constriction.*
 
 Bridge Flow
-^^^^^^^^^^^
+~~~~~~~~~~~~~
 
 There are three basic flow conditions through a bridge: free surface flow, pressure flow and pressure flow plus deck overtopping flow.
 Pressure flow, which occurs when the deck or superstructure is submerged, is defined as either sluice gate or orifice flow.
@@ -3411,7 +3411,7 @@ Bridge Deck Overflow with Guardrail*
                                            (Llano River Bridge Collapse, CBS Austin).
 
 Bridge Flow Modeling
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The FLO-2D modeling approach and equations for the different types of bridge flow are discussed in this section.
 The objective is to compute the bridge discharge that will consist of either:
@@ -3442,7 +3442,7 @@ still assigned and the two bridge cross sections are required.
 FLO-2D Model Bridge Inflow and Outflow Elements Separated Grid Elements.*
 
 Free Surface Flow
-'''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^
 
 The most frequent discharge through a bridge is subcritical low flow or free surface flow.
 Typically, the bridge constricts the channel with abutments and piers, has higher flow resistance, and increases the wetted perimeter resulting in a
@@ -3543,7 +3543,7 @@ The following assumptions have been acknowledged as potentially limiting the acc
          (ranging up to 1.5).
 
 Sluice Gate Flow
-''''''''''''''''
+^^^^^^^^^^^^^^^^^^^
 
 Once the water surface level reaches the low chord or soffit of the bridge, the water surface control switches from the channel to the bridge and the
 discharge mimics a sluice gate flow (Figure 3b).
@@ -3618,7 +3618,7 @@ with a correlation coefficient R\ :sup:`2` = 0.61.
 This equation is used in the FLO-2D model.
 
 Orifice Flow
-''''''''''''
+^^^^^^^^^^^^^^^^
 
 Orifice flow is defined by a pressure flow condition through the bridge where both the upstream and downstream water surface elevations are above the
 low chord (Y\ :sub:`u` > Z, Y\ :sub:`d` > Z) indicating a drowned opening (Figure 3d).
@@ -3662,7 +3662,7 @@ This equation is used in the FLO-2D model and results in a coefficient variabili
 This is compared with the sluice gate flow discharge coefficient, which ranges from about 0.4 to 0.5 as shown in Figure 9.
 
 Pressure Flow Plus Weir Flow
-''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once the flow is above the deck, then the total discharge through bridge Q\ :sub:`T` is the sum of the pressure flow (sluice gate or orifice flow)
 plus the weir flow over the bridge deck:
@@ -3709,7 +3709,7 @@ The weir coefficient, however, is not dimensionless since it is a function of th
 To convert from English to metric, multiply the weir coefficient C by 0.552.
 
 Modeling Bridge Flow with FLO-2D
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The bridge flow routine in FLO-2D is called by the hydraulic structures component which establishes the inflow and outflow nodes, the headwater,
 tailwater and submergence conditions, and the components for discharge exchange (floodplain to floodplain, channel to channel, floodplain to channel,
@@ -3722,7 +3722,7 @@ Then the free surface, pressure flow or weir flow equations compute the bridge d
 elements by the model’s routing algorithm.
 
 Data Requirements and Parameter Definition
-''''''''''''''''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Two lines of data in the HYSTRUC.DAT file (B-lines) and two cross sections are required for each bridge being simulated.
 The original S-Line in HYSTRUC.DAT identifies the bridge inflow and outflow nodes and its association with the either the channel or the floodplain.
@@ -3943,7 +3943,7 @@ Two coefficients proposed by Chow (1959) and Hamill (1999) are not used in the b
 The coefficients have minimum and maximum limits based the Appendix figures.
 
 Discharge Computations
-^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The free surface flow routine appears to be minutely detailed and overly complicated.
 The free surface flow is not as important as the pressure and weir flow, especially if the free surface flow is not overbank.
@@ -3987,7 +3987,7 @@ If it is possible that the flow will accelerate through the bridge as in the cas
 culvert using the FLO-2D generalized culvert equations routine.
 
 Summary
-^^^^^^^
+~~~~~~~~~
 
 The objective of the FLO-2D bridge routine is to compute the discharge through the bridge based on the physical configuration and features of the
 bridge.
