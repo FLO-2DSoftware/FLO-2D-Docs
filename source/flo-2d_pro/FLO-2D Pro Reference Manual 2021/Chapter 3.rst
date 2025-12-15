@@ -229,7 +229,7 @@ The table below gives a general idea of the model speed in relationship to the n
 Grid System Size vs Model Speed.*
 
 .. list-table::
-   :widths: 100
+   :widths: 50 50
    :header-rows: 0
 
 
@@ -247,7 +247,6 @@ Grid System Size vs Model Speed.*
 
    * - > 2,000,000
      - > 8 hrs (overnight)
-
 
 There are several other factors that contribute to the model speed regardless of the number of grid elements including model components for channels
 flow, urban complexity, a storm drain system, or ground water modeling.
