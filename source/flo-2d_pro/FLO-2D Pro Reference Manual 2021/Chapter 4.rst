@@ -92,6 +92,7 @@ Overland Flow Manning's n Roughness Values.* \ :sup:`1`
 
    * - Sparse rangeland with debris
      - 0% cover 0.09 - 0.34
+
        20 % cover   0.05 - 0.25                                           |
 
    * - Plowed or tilled fields
@@ -110,7 +111,7 @@ Overland Flow Manning's n Roughness Values.* \ :sup:`1`
 
          No till (60 - 100% residue cover)
 
-     -
+     - \
          0.008 - 0.012
 
          0.06 - 0.22
@@ -627,21 +628,19 @@ Maximum Allowable ARF Values.*
 
 
    * - **Grid Element Size (ft)**
-**Max ARF**
+     - **Max ARF**
 
    * - Cell Side > 50
-0.95
+     - 0.95
 
    * - 20 < Cell Side < 50
-0.90
+     - 0.90
 
    * - 20 > Cell Side
-0.85
+     - 0.85
 
 
-..
-
-   A grid element of 10 ft will thereby have at least 15 square ft of surface area.
+A grid element of 10 ft will thereby have at least 15 square ft of surface area.
 
 |Chapte006|
 
