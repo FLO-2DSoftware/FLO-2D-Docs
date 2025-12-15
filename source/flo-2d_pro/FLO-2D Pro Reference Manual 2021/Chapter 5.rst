@@ -21,7 +21,7 @@ This length should be compared to channel centerline distance of model project r
 Finally, predicted water surface elevations are based on the channel roughness values and calibrating the model roughness with known discharges and
 surveyed water surfaces will finalize the channel flood routing accuracy.
 
-
+.. image:: img/Chapter5/Chapte009.jpg
 
 *Figure 127.
 Middle Rio Grande and Rio Chama Confluence Model.*
@@ -67,11 +67,9 @@ Spatially variable rainfall may inundate areas outside the primary flood path.
 It is possible to model detention basins using either the grid element elevation or levees to define the basin storage area.
 An appropriate grid element size should be selected to generate enough interior elements to adequately simulate the basin.
 
-*Figure*
+.. image:: img/Chapter5/Chapte010.jpg
 
-*128*
-
-*.
+*Figure 128.
 Unconfined Alluvial Fan Flooding*
 
 Watershed Rainfall Runoff Simulation
@@ -113,8 +111,10 @@ hydraulic structures (culverts, bridges and weirs), rainfall, infiltration, buil
 Area drainage master plans in the Phoenix area are being completed with FLO-2D using grid systems on the order of 1.8 million elements.
 Urban grid element size is typically 20 ft, however, ten foot elements have been used with high resolution topographic data bases (Figure 129).
 
-   *Figure 129.
-   Urban flooding with Street Flow and Building Obstruction (1 million 10 ft elements)*
+.. image:: img/Chapter5/Chapte011.jpg
+
+*Figure 129.
+Urban flooding with Street Flow and Building Obstruction (1 million 10 ft elements)*
 
 A critical component of the urban flood model is the storm drain.
 The FLO-2D storm drain component is fully integrated with the surface water system including channels and detention basins (Figure 130).
@@ -126,15 +126,15 @@ Figure 130 shows velocity vector and flow depth results in an urban area with th
 Typically, the storm drain capacity is minor compared to the 100-year flood volume, the relations between return period flooding and the storm drain
 effectiveness can be tested for the more frequent events.
 
-|Chapte002|
+.. image:: img/Chapter5/Chapte002.jpg
 
-   *Figure 130.
-   Urban Model with Streets, Buildings and Storm Drains*
+*Figure 130.
+Urban Model with Streets, Buildings and Storm Drains*
 
-|Chapte003|
+.. image:: img/Chapter5/Chapte003.jpg
 
-   *Figure 131.
-   Urban Model Results with Storm Drains*
+*Figure 131.
+Urban Model Results with Storm Drains*
 
 Coastal Flooding
 ----------------
@@ -144,85 +144,76 @@ Storm surge inundation in urban areas requires detailed modeling of features coa
 The impact on coastal urban storm drain systems with ocean outfalls from combined sea level rise and storm surge can be simulated with a FLO2D model.
 Urban coastal flooding is controlled by:
 
-- Volume of ocean water coming inland, flood volume and volume conservation
-
-- Sediment bulking (add 20% volume)
-
-- Flood mitigation – sea walls and levees
-
-- Loss of storage due to buildings
-
-- Street flow to urban outlying areas
-
-- Channel flow and storage
-
-- Loss of storm drain capacity with sea level rise
+    - Volume of ocean water coming inland, flood volume and volume conservation
+    - Sediment bulking (add 20% volume)
+    - Flood mitigation – sea walls and levees
+    - Loss of storage due to buildings
+    - Street flow to urban outlying areas
+    - Channel flow and storage
+    - Loss of storm drain capacity with sea level rise
 
 To simulate storm surges a time-stage relationship at the shoreline grid elements is required.
 This table can include high tides as a well as multiple surge waves.
 A time-stage relationship (Table 15) can also be used to simulate a short duration tsunami event.
 A typical time-stage relationship is shown below.
 
+*Table 15.
+Stage Time Relationship.*
+
 .. list-table::
-   :widths: 100
+   :widths: 50 50
    :header-rows: 0
 
 
-   * - **Table 15.
-       Stage Time Relationship.**
+   * - **Time (hrs)**
+     - **Stage (ft)**
 
-   * - **Time (hrs)**                                 |    **Stage (ft)**
+   * - 0.0
+     - 0.43
 
-   * - 0.0                                            | 0.43
+   * - 5.0
+     - 0.75
 
-   * - 5.0                                            | 0.75
+   * - 11.0
+     - 1.29
 
-   * - 11.0                                           | 1.29
+   * - 16.0
+     - 6.63
 
-   * - 16.0                                           | 6.63
+   * - 24.0
+     - 0.38
 
-   * - 24.0                                           | 0.38
-
-   * - 36.0                                           | 0.62
-
+   * - 36.0
+     - 0.62
 
 In addition to the time-stage relationship, the model features that may define a coastal flood model are:
 
-- Rainfall
-
-- Streets
-
-- Storm drain system
-
-- Levees or flood walls
-
-- Estuary channels and drainage canals
-
-- Roughness
-
-- Hydraulic structures (culverts and bridges)
-
-- Buildings
+    - Rainfall
+    - Streets
+    - Storm drain system
+    - Levees or flood walls
+    - Estuary channels and drainage canals
+    - Roughness
+    - Hydraulic structures (culverts and bridges)
+    - Buildings
 
 A FLO-2D storm surge model was prepared for the Florida Keys using the ocean time-stage relationship associated with 2005 Hurricane Wilma (
 
-|Chapte004|
+.. image:: img/Chapter5/Chapte004.jpg
 
 Figure 132).
+
 Using these area of inundation results, the products associated with coastal flood models include:
 
-- Prediction of the overland progression of the hurricane surge through urban area.
+    - Prediction of the overland progression of the hurricane surge through urban area.
+    - Risk/hazard assessment on urban development and infrastructure (storm drain system).
+    - Estimate groundwater level rise and its impact on drainage and utilities.
+    - Automatically estimate storm surge damage and mitigation costs.
 
-- Risk/hazard assessment on urban development and infrastructure (storm drain system).
+.. image:: img/Chapter5/Chapte004.jpg
 
-- Estimate groundwater level rise and its impact on drainage and utilities.
-
-- Automatically estimate storm surge damage and mitigation costs.
-
-|Chapte004|
-
-   Figure 132.
-   Hurricane Wilma 2005 Predicted Storm Surge in the Florida Keys
+*Figure 132.
+Hurricane Wilma 2005 Predicted Storm Surge in the Florida Keys*
 
 Model Results – What Constitutes a Successful Flood Simulation?
 ---------------------------------------------------------------
@@ -230,11 +221,9 @@ Model Results – What Constitutes a Successful Flood Simulation?
 When a FLO-2D simulation is completed, how do you know if the simulation was successful or accurate? There are three keys to a successful project
 application:
 
-- Volume conservation
-
-- Area of inundation
-
-- Maximum velocities and numerical surging
+    - Volume conservation
+    - Area of inundation
+    - Maximum velocities and numerical surging
 
 Volume must be conserved for both the overland flow and channel flow.
 If the storage plus outflow volume was not conserved on the order of 0.0001 percent or better of the inflow volume, then it will be necessary to
@@ -320,15 +309,11 @@ If the bridge has guard rails or debris, the selected weir coefficient should be
 Typically, overtopping flow is shallow, but for a long bridge the overflow discharge can be significant.
 An assumption of weir flow to represent over deck discharge can only be an approximation because of a number of factors that are not limited to:
 
-- Tailwater submergence;
-
-- Variable deck elevation;
-
-- Unsteady flow conditions;
-
-- Guardrail supports causing blockage and spatially variable flow;
-
-- Debris blockage.
+    - Tailwater submergence;
+    - Variable deck elevation;
+    - Unsteady flow conditions;
+    - Guardrail supports causing blockage and spatially variable flow;
+    - Debris blockage.
 
 The bridge discharge computations will be performed inside the FLO-2D routing algorithm for the floodplain and 1-D channel components in conjunction
 with the existing hydraulic structure routine.
@@ -364,36 +349,36 @@ A discharge of 20,000 cfs will not overtop any of the bridges in the Middle Rio 
 All the bridges were reviewed, and the Los Lunas Bridge was selected to review the computed discharge hydraulics with both HEC-RAS and FLO-2D models
 (Figure 133 and Figure 134).
 
-|Chapte005|
+.. image:: img/Chapter5/Chapte005.jpg
 
-   *Figure 133.
-   Plan View of the Los Lunas Bridge.*
+*Figure 133.
+Plan View of the Los Lunas Bridge.*
 
-|Chapte006|
+.. image:: img/Chapter5/Chapte006.jpg
 
-   *Figure 134.
-   View Downstream through Los Lunas Bridge (Wolf Engineering).*
+*Figure 134.
+View Downstream through Los Lunas Bridge (Wolf Engineering).*
 
-   Figure 2
+                                                                            Figure 2
 
 The Los Lunas Bridge spans a most of the Rio Grande active floodplain between the levees and has 16 sets of bridge pilings as shown in Figure
 2. The HEC-RAS model of the bridge include 2 upstream cross sections and 3 downstream cross sections (Figure 135).
-   The bridge deck is about 90 ft wide.
+The bridge deck is about 90 ft wide.
 
-|Chapte007|
+.. image:: img/Chapter5/Chapte007.jpg
 
-   *Figure 135.
-   HEC-RAS Cross Sections and Stationing (Wolf Engineering).*
+*Figure 135.
+HEC-RAS Cross Sections and Stationing (Wolf Engineering).*
 
 The bridge geometry and cross section plots are shown in Figure 136 with the blocked areas due to the approach roadway and bridge decking.
 Both the deck soffit and roadway are curved with a difference of 1 ft between the minimum and maximum elevations.
 The low chord and weir were represented by an average elevation.
 The split channel with the island can be viewed in bridge cross section and in Figure 133.
 
-|Chapte008|
+.. image:: img/Chapter5/Chapte008.jpg
 
-   *Figure 136.
-   Los Lunas HEC-RAS Bridge*
+*Figure 136.
+Los Lunas HEC-RAS Bridge*
 
 The original FLO-2D model rating table had 40 stage-discharge pairs ranging from 10 to 20,000 cfs.
 For this comparison, the HEC-RAS Los Lunas bridge model was run with only 7 discharges ranging from 100 cfs to 45,000 cfs (Figure 137).
@@ -401,49 +386,41 @@ The vertical lines in the active channel area below the bridge soffit are the ro
 At 45,000 cfs the bridge deck was barely overtopped in the HEC-RAS model (blues horizontal lines in Figure 5).
 The seven steady flow discharges used in the two models were:
 
-   100 cfs 1,000 cfs 2,500 cfs 5,000 cfs, 10,000 cfs, 20,000 cfs, 45,000 cfs
+            100 cfs 1,000 cfs 2,500 cfs 5,000 cfs, 10,000 cfs, 20,000 cfs, 45,000 cfs
 
-|Chapte009|
+.. image:: img/Chapter5/Chapte009.jpg
 
-   *Figure 137.
-   Los Lunas Bridge HEC-RAS Water Surface Elevations.*
+*Figure 137.
+Los Lunas Bridge HEC-RAS Water Surface Elevations.*
 
 The FLO-2D was run with the seven discharges assigned to an inflow channel element about 16 channel elements upstream of the bridge.
 Outflow nodes were assigned to a channel element about 9 channel elements downstream of the bridge and to the channel element just upstream of the
 inflow node.
 The inflow hydrograph to achieve steady was assigned as follows:
 
-Time (hrs) Q (cfs)
+.. raw:: html
 
-0.0 0.0
-
-   2.0 1,000 100.
-   1,000
+    <pre>
+            Time (hrs)     Q (cfs)
+            0.0            0.0
+            2.0           1,000
+            100.          1,000
+    </pre>
 
 The FLO-2D model was run for a simulation time of 6 hrs which was sufficient to achieve steady discharge at the bridge.
 The model was also setup with the following data and assumptions:
 
-- Identical channel n-values (0.032);
-
-- Spatially variable overbank FLO-2D n-values that did not match the HEC-RAS model;
-
-- The upstream channel and bridge cross sections in the HEC-RAS model;
-
-- The rest of the channel cross sections were the original ones in the FLO-2D model;
-
-- Type 1 bridge configuration with no abutment or embankment slopes (vertical);
-
-- Average low chord and deck elevations as determined from Figure 4;
-
-- Deck length, bridge opening, and bridge width were determining from the HEC-RAS cross section;
-
-- Pile width was the sum of the 16 sets of individual pile widths;
-
-- No flow angle of attach with the bridge;
-
-- No coefficient variation for Froude number which ranges from 0.2 to 0.3;
-
-- No assignment for overall free surface flow discharge coefficient (to be computed).
+    - Identical channel n-values (0.032);
+    - Spatially variable overbank FLO-2D n-values that did not match the HEC-RAS model;
+    - The upstream channel and bridge cross sections in the HEC-RAS model;
+    - The rest of the channel cross sections were the original ones in the FLO-2D model;
+    - Type 1 bridge configuration with no abutment or embankment slopes (vertical);
+    - Average low chord and deck elevations as determined from Figure 4;
+    - Deck length, bridge opening, and bridge width were determining from the HEC-RAS cross section;
+    - Pile width was the sum of the 16 sets of individual pile widths;
+    - No flow angle of attach with the bridge;
+    - No coefficient variation for Froude number which ranges from 0.2 to 0.3;
+    - No assignment for overall free surface flow discharge coefficient (to be computed).
 
 Model Comparison Results
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -457,21 +434,18 @@ The BRIDGE_DISCHARGE.OUT and HYDROSTRUCT.OUT files verified that the steady stat
 channel conveyance capacity of about 5,000 cfs.
 The only FLO-2D model revisions were:
 
-- Adjustments were made to several channel element Mannings n-values.
-  These n-value revisions were less than 0.005.
-
-- Outflow nodes were added upstream and downstream of the bridge to having to use the entire Rio Grande model.
+    - Adjustments were made to several channel element Mannings n-values.
+      These n-value revisions were less than 0.005.
+    - Outflow nodes were added upstream and downstream of the bridge to having to use the entire Rio Grande model.
 
 No attempt was made to accommodate the HEC-RAS model 1-D constraints with respect to the floodplain conditions including roadway approach, levee
 overtopping, or flow upstream or downstream past the outflow nodes.
 The following FLO-2D limitations were noted with respect to the overbank floodplain discharge:
 
-- Floodplain storage was not filled to match the HEC-RAS 1-D steady flow inundation.
-  No floodplain outflow nodes were assigned, and floodplain flow bypassed the channel outflow nodes both upstream and downstream.
-
-- Overbank flow upstream re-entered the channel and flowed upstream in the channel.
-
-- Downstream overbank flow bypassed the outflow node and re-entered the channel.
+    - Floodplain storage was not filled to match the HEC-RAS 1-D steady flow inundation.
+      No floodplain outflow nodes were assigned, and floodplain flow bypassed the channel outflow nodes both upstream and downstream.\
+    - Overbank flow upstream re-entered the channel and flowed upstream in the channel.
+    - Downstream overbank flow bypassed the outflow node and re-entered the channel.
 
 Of the three flow regimes, free surface flow, pressure flow and weir flow plus pressure flow, the most critical comparison is for the free surface
 flow regime water surface elevation because this computation is the most complex and detailed.
@@ -494,220 +468,30 @@ outflow nodes, but the sole purpose of this effort would be to match the over de
 At this discharge, however, since the channel conveyance capacity is only about 5,000 cfs, most of the stage would reflect the floodplain conditions
 not the bridge.
 
-4848
+.. image:: img/Chapter5/Chapte012.jpg
 
-4850
+*Figure 138.
+Los Lunas Bridge Stage-Discharge Relationship Cross Section 1.*
 
-4852
+.. image:: img/Chapter5/Chapte013.jpg
 
-4854
+*Figure 139.
+Los Lunas Bridge Stage-Discharge Relationship Cross Section 2.*
 
-4856
+.. image:: img/Chapter5/Chapte014.jpg
 
-4858
+*Figure 140.
+Los Lunas Bridge Stage-Discharge Relationship Cross Section 3.*
 
-4860
+.. image:: img/Chapter5/Chapte015.jpg
 
-4862
+*Figure 141.
+Los Lunas Bridge Stage-Discharge Relationship Cross Section 4.*
 
-4864
+.. image:: img/Chapter5/Chapte016.jpg
 
-0
-
-10000
-
-20000
-
-30000
-
-40000
-
-50000
-
-Elevation
-
-Discharge (cfs)
-
-Cross Section 1 645 ft Upstream of Bridge
-
-'HEC-RAS'
-
-FLO-2D
-
-   *Figure 138.
-   Los Lunas Bridge Stage-Discharge Relationship Cross Section 1.*
-
-4848
-
-4850
-
-4852
-
-4854
-
-4856
-
-4858
-
-4860
-
-4862
-
-4864
-
-0
-
-10000
-
-20000
-
-30000
-
-40000
-
-50000
-
-Elevation
-
-Discharge (cfs)
-
-Cross Secion 2 45 ft Upstream of Bridge
-
-'HEC-RAS'
-
-FLO-2D
-
-   *Figure 139.
-   Los Lunas Bridge Stage-Discharge Relationship Cross Section 2.*
-
-4846
-
-4848
-
-4850
-
-4852
-
-4854
-
-4856
-
-4858
-
-4860
-
-4862
-
-0
-
-10000
-
-20000
-
-30000
-
-40000
-
-50000
-
-Elevation
-
-Discharge (cfs)
-
-Cross Section 3 45 ft Downstream of Bridge
-
-'HEC-RAS'
-
-FLO-2D
-
-   *Figure 140.
-   Los Lunas Bridge Stage-Discharge Relationship Cross Section 3.*
-
-4846
-
-4848
-
-4850
-
-4852
-
-4854
-
-4856
-
-4858
-
-4860
-
-4862
-
-0
-
-10000
-
-20000
-
-30000
-
-40000
-
-50000
-
-Elevation
-
-Discharge (cfs)
-
-Cross Section 4 955 ft Downstream of Bridge
-
-'HEC-RAS'
-
-FLO-2D
-
-   *Figure 141.
-   Los Lunas Bridge Stage-Discharge Relationship Cross Section 4.*
-
-4846
-
-4848
-
-4850
-
-4852
-
-4854
-
-4856
-
-4858
-
-4860
-
-4862
-
-0
-
-10000
-
-20000
-
-30000
-
-40000
-
-50000
-
-Elevation
-
-Discharge (cfs)
-
-Cross Section 5 1255 ft Downstream of Bridge
-
-'HEC-RAS'
-
-FLO-2D
-
-   *Figure 142.
-   Los Lunas Bridge Stage-Discharge Relationship Cross Section 5.*
+*Figure 142.
+Los Lunas Bridge Stage-Discharge Relationship Cross Section 5.*
 
 Downstream of the bridge, the FLO-2D and HEC-RAS stages do not match very well, particularly at the higher flows.
 This is because the FLO-2D model outflow node water surface elevation did not match the HEC-RAS water surface near cross section 5.
@@ -715,8 +499,10 @@ The FLO-2D channel outflow node pulls down the inchannel water surface, but much
 Since the downstream water surface elevations were not important and did not affect the upstream stagedischarge, the additional effort required to
 match the model downstream stages was not considered.
 
-   *Figure 143.
-   FLO-2D Maximum Depth for a Discharge of 45,000 cfs.*
+.. image:: img/Chapter5/Chapte017.jpg
+
+*Figure 143.
+FLO-2D Maximum Depth for a Discharge of 45,000 cfs.*
 
 Discussion
 ^^^^^^^^^^
