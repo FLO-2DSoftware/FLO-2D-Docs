@@ -1555,176 +1555,269 @@ volume is 7.5% greater than if the flood was considered to be only water.
 
 These basic relationships will be valuable when analyzing mudflow simulations.
 Most mudflow studies require estimates of the sediment concentration by volume and the bulking factor to describe the magnitude of the event.
-   Average and peak sediment concentrations for the flood hydrograph are important variables for mitigation design.
+Average and peak sediment concentrations for the flood hydrograph are important variables for mitigation design.
 
-   The full range of sediment flows span from water flooding to mud floods, mudflows and landslides.
-   The distinction between these flood events depends on sediment concentration measured either by weight or volume (Figure 58).
-   Sediment concentration by volume expressed as a percentage is the most commonly used measure.
-   Table 11 lists the four different categories of hyperconcentrated sediment flows and their dominant flow characteristics.
-   This Table 11 was developed from the laboratory data using actual mudflow deposits.
-   Some variation in the delineation of the different flow classifications should be expected based on the sample geology.
+The full range of sediment flows span from water flooding to mud floods, mudflows and landslides.
+The distinction between these flood events depends on sediment concentration measured either by weight or volume (Figure 58).
+Sediment concentration by volume expressed as a percentage is the most commonly used measure.
+Table 11 lists the four different categories of hyperconcentrated sediment flows and their dominant flow characteristics.
+This Table 11 was developed from the laboratory data using actual mudflow deposits.
+Some variation in the delineation of the different flow classifications should be expected based on the sample geology.
 
-   *Figure 58.
-   Classification of Hyperconcentrated Sediment Flows.*
+.. image:: img/Chapter4/Chapter068.jpg
 
-   Initial attempts to simulate debris flows were accomplished with one-dimensional flow routing models.
-   DeLeon and Jeppson (1982) modeled laminar water flows with enhanced friction factors.
-   Spatially varied, steady-state Newtonian flow was assumed, and flow cessation could not be simulated.
-   Schamber and MacArthur (1985) created a one-dimensional finite element model for mudflows using the Bingham rheological model to evaluate the shear
-   stresses of a nonNewtonian fluid.
-   O'Brien (1986) designed a one-dimensional mudflow model for watershed channels that also utilized the Bingham model.
-   In 1986, MacArthur and Schamber presented a two-dimensional finite element model for application to simplified overland topography (Corps, 1988).
-   The fluid properties were modeled as a Bingham fluid whose shear stress is a function of the fluid viscosity and yield strength.
+*Figure 58.
+Classification of Hyperconcentrated Sediment Flows.*
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+Initial attempts to simulate debris flows were accomplished with one-dimensional flow routing models.
+DeLeon and Jeppson (1982) modeled laminar water flows with enhanced friction factors.
+Spatially varied, steady-state Newtonian flow was assumed, and flow cessation could not be simulated.
+Schamber and MacArthur (1985) created a one-dimensional finite element model for mudflows using the Bingham rheological model to evaluate the shear
+stresses of a nonNewtonian fluid.
+O'Brien (1986) designed a one-dimensional mudflow model for watershed channels that also utilized the Bingham model.
+In 1986, MacArthur and Schamber presented a two-dimensional finite element model for application to simplified overland topography (Corps, 1988).
+The fluid properties were modeled as a Bingham fluid whose shear stress is a function of the fluid viscosity and yield strength.
 
+.. raw:: html
 
-   * - **Table 11.
-       Mudflow Behavior as a Function of Sediment Concentration.**
+   <table style="border-collapse: collapse; width: 100%; border: 3px solid #000;">
+     <caption style="caption-side: top; font-weight: bold; padding: 6px 0;">
+       Table 11. Mudflow Behavior as a Function of Sediment Concentration.
+     </caption>
 
-   * - | Sediment Concentration                  | Flow Characteristics+--------------------+--------------------+|    by Volume       | by Weight          |
+     <thead>
+       <tr>
+         <th rowspan="2" style="border:1px solid #000; padding:6px; background:#e6e6e6;"></th>
+         <th colspan="2" style="border:1px solid #000; padding:6px; background:#e6e6e6; text-align:center;">
+           Sediment Concentration
+         </th>
+         <th rowspan="2" style="border:1px solid #000; padding:6px; background:#e6e6e6; text-align:center;">
+           Flow Characteristics
+         </th>
+       </tr>
+       <tr>
+         <th style="border:1px solid #000; padding:6px; background:#e6e6e6; text-align:center;">
+           by Volume
+         </th>
+         <th style="border:1px solid #000; padding:6px; background:#e6e6e6; text-align:center;">
+           by Weight
+         </th>
+       </tr>
+     </thead>
 
-   * - Landslide          |    0.65 - 0.80     | 0.83 - 0.91        | Will not flow; failure by block|                    |                    |
-       sliding+--------------------+--------------------+---------------------------------------|    0.55 - 0.65     | 0.76 - 0.83        | Block sliding
-       failure with internal|                    |                    | deformation during the slide; slow|                    |                    | creep
-       prior to failure
+     <tbody>
+       <!-- Landslide -->
+       <tr>
+         <td rowspan="2" style="border:1px solid #000; padding:6px; text-align:center;">Landslide</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">0.65 - 0.80</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">0.83 - 0.91</td>
+         <td style="border:1px solid #000; padding:6px;">
+           Will not flow; failure by block sliding
+         </td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">0.55 - 0.65</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">0.76 - 0.83</td>
+         <td style="border:1px solid #000; padding:6px;">
+           Block sliding failure with internal deformation during the slide; slow creep prior to failure
+         </td>
+       </tr>
 
-   * - Mudflow            |    0.48 - 0.55     | 0.72 - 0.76        | Flow evident; slow creep sustained|                    |                    | mudflow;
-       plastic deformation under|                    |                    | its own weight; cohesive; will not|                    |                    |
-       spread on level surface+--------------------+--------------------+---------------------------------------|    0.45 - 0.48     | 0.69 - 0.72        |
-       Flow spreading on level surface;|                    |                    | cohesive flow; some mixing
+       <!-- Mudflow -->
+       <tr>
+         <td rowspan="2" style="border:1px solid #000; padding:6px; text-align:center;">Mudflow</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">0.48 - 0.55</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">0.72 - 0.76</td>
+         <td style="border:1px solid #000; padding:6px;">
+           Flow evident; slow creep sustained mudflow; plastic deformation under its own weight; cohesive; will not spread on level surface
+         </td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">0.45 - 0.48</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">0.69 - 0.72</td>
+         <td style="border:1px solid #000; padding:6px;">
+           Flow spreading on level surface; cohesive flow; some mixing
+         </td>
+       </tr>
 
-   * - Mud Flood          |    0.40 - 0.45     | 0.65 - 0.69        | Flow mixes easily; shows fluid|                    |                    | properties in
-       deformation; spreads on|                    |                    | horizontal surface but maintains an|                    |                    |
-       inclined fluid surface; large|                    |                    | particle (boulder) setting; waves|                    |                    |
-       appear but dissipate rapidly+--------------------+--------------------+---------------------------------------|    0.35 - 0.40     | 0.59 - 0.65
-       | Marked settling of gravels and|                    |                    | cobbles; spreading nearly complete on|                    |
-       | horizontal surface; liquid surface|                    |                    | with two fluid phases appears; waves|                    |
-       | travel on surface+--------------------+--------------------+---------------------------------------|    0.30 - 0.35     | 0.54 - 0.59        |
-       Separation of water on surface; waves|                    |                    | travel easily; most sand and gravel|                    |
-       | has settled out and moves as bedload+--------------------+--------------------+---------------------------------------|    0.20 - 0.30     | 0.41 -
-       0.54        | Distinct wave action; fluid surface;|                    |                    | all particles resting on bed in|                    |
-       | quiescent fluid condition
+       <!-- Mud Flood -->
+       <tr>
+         <td rowspan="4" style="border:1px solid #000; padding:6px; text-align:center;">Mud Flood</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">0.40 - 0.45</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">0.65 - 0.69</td>
+         <td style="border:1px solid #000; padding:6px;">
+           Flow mixes easily; shows fluid properties in deformation; spreads on horizontal surface but maintains an inclined fluid surface; large particle (boulder) setting; waves appear but dissipate rapidly
+         </td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">0.35 - 0.40</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">0.59 - 0.65</td>
+         <td style="border:1px solid #000; padding:6px;">
+           Marked settling of gravels and cobbles; spreading nearly complete on horizontal surface; liquid surface with two fluid phases appears; waves travel on surface
+         </td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">0.30 - 0.35</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">0.54 - 0.59</td>
+         <td style="border:1px solid #000; padding:6px;">
+           Separation of water on surface; waves travel easily; most sand and gravel has settled out and moves as bedload
+         </td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">0.20 - 0.30</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">0.41 - 0.54</td>
+         <td style="border:1px solid #000; padding:6px;">
+           Distinct wave action; fluid surface; all particles resting on bed in quiescent fluid condition
+         </td>
+       </tr>
 
-   * - Water Flood     | < 0.20             | < 0.41             | Water flood with conventional|                    |                    | suspended load
-       and bedload
+       <!-- Water Flood -->
+       <tr>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">Water Flood</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">&lt; 0.20</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">&lt; 0.41</td>
+         <td style="border:1px solid #000; padding:6px;">
+           Water flood with conventional suspended load and bedload
+         </td>
+       </tr>
+     </tbody>
+   </table>
 
+Takahashi and Tsujimoto (1985) proposed a two-dimensional finite difference model for debris flows based a dilatant fluid model coupled with Coulomb
+flow resistance.
+The dilatant fluid model was derived from Bagnold's dispersive stress theory (1954) that describes the stress resulting from the collision of sediment
+particles.
+Later, Takahashi and Nakagawa (1989) modified the debris flow model to include turbulence.
 
-..
+O'Brien and Julien (1988), Julien and Lan (1991), and Major and Pierson (1992) investigated mudflows with high concentrations of fine sediment in the
+fluid matrix.
+These studies showed that mudflows behave as Bingham fluids with low shear rates (<10 s\ :sup:`-1`).
+In fluid matrices with low sediment concentrations, turbulent stresses dominate in the core flow.
+High concentrations of non-cohesive particles combined with low concentrations of fine particles are required to generate dispersive stress.
+The quadratic shear stress model proposed by O'Brien and Julien (1985) describes the continuum of flow regimes from viscous to turbulent/dispersive
+flow.
 
-   Takahashi and Tsujimoto (1985) proposed a two-dimensional finite difference model for debris flows based a dilatant fluid model coupled with Coulomb
-   flow resistance.
-   The dilatant fluid model was derived from Bagnold's dispersive stress theory (1954) that describes the stress resulting from the collision of sediment
-   particles.
-   Later, Takahashi and Nakagawa (1989) modified the debris flow model to include turbulence.
+Hyperconcentrated sediment flows involve the complex interaction of fluid and sediment processes including turbulence, viscous shear, fluid-sediment
+particle momentum exchange, and sediment particle collision.
+Sediment particles can collide, grind, and rotate in their movement past each other.
+Fine sediment cohesion controls the nonNewtonian behavior of the fluid matrix.
+This cohesion contributes to the yield stress τ\ :sub:`y` which must be exceeded by an applied stress in order to initiate fluid motion.
+By combining the yield stress and viscous stress components, the well-known Bingham rheological model is prescribed.
 
-   O'Brien and Julien (1988), Julien and Lan (1991), and Major and Pierson (1992) investigated mudflows with high concentrations of fine sediment in the
-   fluid matrix.
-   These studies showed that mudflows behave as Bingham fluids with low shear rates (<10 s\ :sup:`-1`).
-   In fluid matrices with low sediment concentrations, turbulent stresses dominate in the core flow.
-   High concentrations of non-cohesive particles combined with low concentrations of fine particles are required to generate dispersive stress.
-   The quadratic shear stress model proposed by O'Brien and Julien (1985) describes the continuum of flow regimes from viscous to turbulent/dispersive
-   flow.
+For large rates of shear such as might occur on steep alluvial fans (10 s\ :sup:`-1` to 50 s\ :sup:`-1`), turbulent stresses may be generated.
+In turbulent flow an additional shear stress component, the dispersive stress, can arise from the collision of sediment particles.
+Dispersive stress occurs when non-cohesive sediment particles dominate the flow and the percentage of cohesive fine sediment (silts and clays) is
+small.
+With increasing high concentrations of fine sediment, fluid turbulence and particle impact will be suppressed, and viscous flow will occur.
+Sediment concentration in a given flood event can vary dramatically and as a result viscous and turbulent stresses may alternately dominate, producing
+flow surges.
 
-   Hyperconcentrated sediment flows involve the complex interaction of fluid and sediment processes including turbulence, viscous shear, fluid-sediment
-   particle momentum exchange, and sediment particle collision.
-   Sediment particles can collide, grind, and rotate in their movement past each other.
-   Fine sediment cohesion controls the nonNewtonian behavior of the fluid matrix.
-   This cohesion contributes to the yield stress τ\ :sub:`y` which must be exceeded by an applied stress in order to initiate fluid motion.
-   By combining the yield stress and viscous stress components, the well-known Bingham rheological model is prescribed.
+FLO-2D routes mudflows as a fluid continuum by predicting viscous fluid motion as function of sediment concentration.
+A quadratic rheologic model for predicting viscous and yield stresses as function of sediment concentration is employed and sediment continuity is
+observed.
+As sediment concentration changes for a given grid element, dilution effects, mudflow cessation and the remobilization of deposits are simulated.
+Mudflows are dominated by viscous and dispersive stresses and constitute a very different phenomenon than those processes of suspended sediment load
+and bedload in conventional sediment transport.
+In should be noted that the sediment transport and mudflow components **cannot** be used together in a FLO-2D simulation.
 
-   For large rates of shear such as might occur on steep alluvial fans (10 s\ :sup:`-1` to 50 s\ :sup:`-1`), turbulent stresses may be generated.
-   In turbulent flow an additional shear stress component, the dispersive stress, can arise from the collision of sediment particles.
-   Dispersive stress occurs when non-cohesive sediment particles dominate the flow and the percentage of cohesive fine sediment (silts and clays) is
-   small.
-   With increasing high concentrations of fine sediment, fluid turbulence and particle impact will be suppressed, and viscous flow will occur.
-   Sediment concentration in a given flood event can vary dramatically and as a result viscous and turbulent stresses may alternately dominate, producing
-   flow surges.
+The shear stress in hyperconcentrated sediment flows, including those described as debris flows, mudflows and mud floods, can be calculated from the
+summation of five shear stress components.
+The total shear stress τ depends on the cohesive yield stress τ\ :sub:`c`, the Mohr-Coulomb shear τ\ :sub:`mc`, the viscous shear stress :math:`\tau_v \,(\eta\, \mathrm{d}v/\mathrm{d}y)`, the turbulent shear stress :math:`\tau_t`, and the dispersive shear stress :math:`\tau_d`.
 
-   FLO-2D routes mudflows as a fluid continuum by predicting viscous fluid motion as function of sediment concentration.
-   A quadratic rheologic model for predicting viscous and yield stresses as function of sediment concentration is employed and sediment continuity is
-   observed.
-   As sediment concentration changes for a given grid element, dilution effects, mudflow cessation and the remobilization of deposits are simulated.
-   Mudflows are dominated by viscous and dispersive stresses and constitute a very different phenomenon than those processes of suspended sediment load
-   and bedload in conventional sediment transport.
-   In should be noted that the sediment transport and mudflow components **cannot** be used together in a FLO-2D simulation.
+.. math::
+   :label:
 
-   The shear stress in hyperconcentrated sediment flows, including those described as debris flows, mudflows and mud floods, can be calculated from the
-   summation of five shear stress components.
-   The total shear stress τ depends on the cohesive yield stress τ\ :sub:`c`, the Mohr-Coulomb shear τ\ :sub:`mc`, the viscous shear stress τ\ :sub:`v`
-   ( dv/dy), the turbulent shear stress τ\ :sub:`t`, and the dispersive shear stress τ\ :sub:`d`.
-    *=* \ *c +* \ *mc +* \ *v +* \ *t +* \ :sub:`d`
+   \tau = \tau_c + \tau_{mc} + \tau_v + \tau_t + \tau_d
 
-   When written in terms of shear rates (dv/dy), the following quadratic rheological model can be defined (O'Brien and Julien, 1985):
+When written in terms of shear rates (dv/dy), the following quadratic rheological model can be defined (O'Brien and Julien, 1985):
 
-   *2*
+.. math::
+   :label:
 
-    *dv*\   *dv*\   *=* \ *y +*   *dy*\ \ :sub:`` *+ C* \ :sub:`` *dy*\ \ :sub:``
+   \tau = \tau_y + \eta \left( \frac{dv}{dy} \right)
+          + C \left( \frac{dv}{dy} \right)^2
 
-   where
+where
 
-*C =* \ *m l\ 2 + f (*\ \ *m , C\ v ) d\ 2\ s*
+.. math::
+   :label:
 
-   and
+   C = \rho_m\, l^2 + f(\rho_m, C_v)\, d_s^2
 
-\ *y =* \ *c +* \ *mc*
+and
 
-   In these equations η is the dynamic viscosity; τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ
-   depends on the intergranular pressure p\ :sub:`s` and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which
-   depends on the mass density of the mixture ρ\ :sub:`m`, the Prandtl mixing length l, the sediment size d\ :sub:`s` and a function of the volumetric
-   sediment concentration C\ :sub:`v`.
+.. math::
+   :label:
 
-   Bagnold (1954) defined the functional relationship f(ρ\ :sub:`m`, C\ :sub:`v`) in the above equation as:
+   \tau_y = \tau_c + \tau_{mc}
 
-   *f(*\ \ *m , C\ v ) = a\ i* \ *m* \ :sub:``\ \ *C\** \ :sub:`` *1/3 - 1*\ \ :sub:``
+In these equations η is the dynamic viscosity; τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ
+depends on the intergranular pressure p\ :sub:`s` and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which
+depends on the mass density of the mixture ρ\ :sub:`m`, the Prandtl mixing length l, the sediment size d\ :sub:`s` and a function of the volumetric
+sediment concentration C\ :sub:`v`.
 
-\ :sub:``\ \ *Cv*  
+Bagnold (1954) defined the functional relationship f(ρ\ :sub:`m`, C\ :sub:`v`) in the above equation as:
 
-   where a\ :sub:`i` (~ 0.01) is an empirical coefficient and C\ :sub:`\*` is the maximum static volume concentration for the sediment particles.
-   It should be noted that Takahashi (1979) found that the coefficient a\ :sub:`i` may vary over several orders of magnitude.
-   Egashira et al.
-   (1989) revised this relationship and suggested the following:
+.. math::
+   :label:
 
-   *1/3*
+   f(\rho_m, C_v)
+   = a_i\, \rho_m
+     \left[
+       \left( \frac{C_*}{C_v} \right)^{1/3}
+       - 1
+     \right]
 
-   *f(*\ \ *s , C\ v ) =* :sup:`` :sup:``\  :sup:`6 `\  sin *2* \ *I* \ *s (1- e\ 2\ n ) C\ v\ 1/3*
+where a\ :sub:`i` (~ 0.01) is an empirical coefficient and C\ :sub:`\*` is the maximum static volume concentration for the sediment particles.
+It should be noted that Takahashi (1979) found that the coeffigcient a\ :sub:`i` may vary over several orders of magnitude.
+Egashira et al.
+(1989) revised this relationship and suggested the following:
 
-*12* 
+.. math::
+   :label:
 
-   where the energy restitution coefficient e\ :sub:`n` after impact ranges 0.70 < e\ :sub:`n` < 0.85 for sands, α\ :sub:`I` is the average particle
-   impact angle and ρ\ :sub:`s` is the mass density of sediment particles.
+   f(\rho_s, C_v)
+   = \frac{\pi}{12}
+     \left( \frac{6}{\pi} \right)^{1/3}
+     \sin^2 \alpha_i\,
+     \rho_s\,
+     (1 - e_n^{2})\,
+     C_v^{1/3}
 
-   The first two stress terms in the above quadratic rheological model are referred to as the Bingham shear stresses (Figure 59).
-   The sum of the yield stress and viscous stress define the total shear stress of a cohesive mudflow in a viscous flow regime.
-   The last term is the sum of the dispersive and turbulent shear stresses and defines an inertial flow regime for a mud flood.
-   This term is a function of the square of the velocity gradient.
-   A discussion of these stresses and their role in hyperconcentrated sediment flows can be found in Julien and O'Brien (1987, 1993).
+where the energy restitution coefficient e\ :sub:`n` after impact ranges 0.70 < e\ :sub:`n` < 0.85 for sands, α\ :sub:`I` is the average particle
+impact angle and ρ\ :sub:`s` is the mass density of sediment particles.
 
-   A mudflow model that incorporates only the Bingham stresses and ignores the inertial stresses assumes that the simulated flow is dominated by viscous
-   stresses.
-   This assumption is not universally appropriate because all mud floods and some mudflows are very turbulent with velocities as high as 25 fps (8 m/s).
+The first two stress terms in the above quadratic rheological model are referred to as the Bingham shear stresses (Figure 59).
+The sum of the yield stress and viscous stress define the total shear stress of a cohesive mudflow in a viscous flow regime.
+The last term is the sum of the dispersive and turbulent shear stresses and defines an inertial flow regime for a mud flood.
+This term is a function of the square of the velocity gradient.
+A discussion of these stresses and their role in hyperconcentrated sediment flows can be found in Julien and O'Brien (1987, 1993).
 
-   Even mudflows with concentrations up to 40% by volume can be highly turbulent (O'Brien, 1986).
-   Depending on the fluid matrix properties, the viscosity and yield stresses for high sediment concentrations can still be relatively small compared to
-   the turbulent stresses.
-   If the flow is controlled primarily by the viscous stress, it will result in lower velocities.
-   Conversely, if the viscosity and yield stresses are small, the turbulent stress will dominate, and the velocities will be higher.
+A mudflow model that incorporates only the Bingham stresses and ignores the inertial stresses assumes that the simulated flow is dominated by viscous
+stresses.
+This assumption is not universally appropriate because all mud floods and some mudflows are very turbulent with velocities as high as 25 fps (8 m/s).
 
-   To delineate the role of turbulent and dispersive forces in sand and water mixtures, Hashimoto (1997) developed simplified criteria involving only
-   flow depth d and sediment size D\ :sub:`i`.
-   When d/D\ :sub:`i` < 30, the intergranular forces are dominant.
-   If d/D\ :sub:`i` > 100, inertial forces dominate.
-   In the range 30 < d/D\ :sub:`i` < 100 both forces play an important role in the momentum exchange.
-   It should be noted, that sediment concentration is a critical factor that is not accounted for in this criterion.
+Even mudflows with concentrations up to 40% by volume can be highly turbulent (O'Brien, 1986).
+Depending on the fluid matrix properties, the viscosity and yield stresses for high sediment concentrations can still be relatively small compared to
+the turbulent stresses.
+If the flow is controlled primarily by the viscous stress, it will result in lower velocities.
+Conversely, if the viscosity and yield stresses are small, the turbulent stress will dominate, and the velocities will be higher.
 
-   *Figure 59.
-   Shear Stress as a Function of Shear Rate for Fluid Deformation Models.*
+To delineate the role of turbulent and dispersive forces in sand and water mixtures, Hashimoto (1997) developed simplified criteria involving only
+flow depth d and sediment size D\ :sub:`i`.
+When d/D\ :sub:`i` < 30, the intergranular forces are dominant.
+If d/D\ :sub:`i` > 100, inertial forces dominate.
+In the range 30 < d/D\ :sub:`i` < 100 both forces play an important role in the momentum exchange.
+It should be noted, that sediment concentration is a critical factor that is not accounted for in this criterion.
 
-   To define all the shear stress terms for use in the FLO-2D model, the following approach was taken.
-   By analogy, from the work of Meyer-Peter and Müller (1948) and Einstein (1950), the shear stress relationship is depth integrated and rewritten in the
-   following form as a dimensionless slope:
+.. image:: img/Chapter4/chapte069.jpg
+
+*Figure 59.
+Shear Stress as a Function of Shear Rate for Fluid Deformation Models.*
+
+To define all the shear stress terms for use in the FLO-2D model, the following approach was taken.
+By analogy, from the work of Meyer-Peter and Müller (1948) and Einstein (1950), the shear stress relationship is depth integrated and rewritten in the
+following form as a dimensionless slope:
 
 *S f = S y + S v + S t d*
 
