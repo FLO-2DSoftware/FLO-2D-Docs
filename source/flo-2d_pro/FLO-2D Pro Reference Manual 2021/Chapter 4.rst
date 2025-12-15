@@ -78,15 +78,20 @@ n-value
    * - Shrubs and forest litter, pasture
 0.30 - 0.40
 
-   * - Average grass cover                                    |    0.20 - 0.40
+   * - Average grass cover
+0.20 - 0.40
 
-   * - Poor grass cover on rough surface                      |    0.20 - 0.30
+   * - Poor grass cover on rough surface
+0.20 - 0.30
 
-   * - Short prairie grass                                    |    0.10 - 0.20
+   * - Short prairie grass
+0.10 - 0.20
 
-   * - Sparse vegetation                                      |    0.05 - 0.13
+   * - Sparse vegetation
+0.05 - 0.13
 
-   * - Sparse rangeland with debris                           |    0.09 - 0.34|0% cover                                               |    0.05 - 0.25|20 %
+   * - Sparse rangeland with debris
+0.09 - 0.34|0% cover                                               |    0.05 - 0.25|20 %
        cover                                             |
 
    * - Plowed or tilled fields                                |    0.008 - 0.012|Fallow - no residue                                    |    0.06 - 0.22 0.06
