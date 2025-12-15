@@ -3028,46 +3028,90 @@ LEVEE OVERTOPPING DISCHARGE (CFS OR CMS): POSITIVE DISCHARGE REPRESENTS INFLOW T
                     5.90    -0.66               0.00    0.00    0.00    0.00    -0.66   0.00    0.00    0.00
                     6.00    -0.65               0.00    0.00    0.00    0.00    -0.65   0.00    0.00    0.00
     </pre>
-   The final test simulation combines the sloped roof with a downspout in grid element 22365.
-   The inlet (red oval) maximum water surface is lowered by the downspout water discharge as shown in Figure 105.
-   The downspout outlet element 21990 (blue oval) has an increased maximum water surface when compared with Figure 103 and Figure 104.
+
+The final test simulation combines the sloped roof with a downspout in grid element 22365.
+The inlet (red oval) maximum water surface is lowered by the downspout water discharge as shown in Figure 105.
+The downspout outlet element 21990 (blue oval) has an increased maximum water surface when compared with Figure 103 and Figure 104.
+
+.. image:: img/Chapter4/Chapte091.jpg
 
 *Figure 105.
-Maximum Flow Depth and Water Surface Elevation.
-(Sloped Roof with a Downspout).*
+Maximum Flow Depth and Water Surface Elevation. (Sloped Roof with a Downspout).*
 
-   The discharge out of the downspout is reported below from the HYDROSTRUCT.OUT file.
+The discharge out of the downspout is reported below from the HYDROSTRUCT.OUT file.
 
-   STRUCTURE OUTFLOW DISCHARGE
+.. raw:: html
 
-   INFLOW AND OUTFLOW DISCHARGE MAY BE DIFFERENT IF STRUCTURE IS A LONG CULVERT OR IF OUTFLOW
+    <pre>
+    STRUCTURE OUTFLOW DISCHARGE
+    INFLOW AND OUTFLOW DISCHARGE MAY BE DIFFERENT IF STRUCTURE IS A LONG CULVERT OR IF OUTFLOW
+    COMBINES MULTIPLE CULVERTS
+                    OUTFLOW DISCHARGE IS REPORTED AS NEGATIVE
 
-   COMBINES MULTIPLE CULVERTS
-
-   OUTFLOW DISCHARGE IS REPORTED AS NEGATIVE
-
-   FLOODPLAIN GRID ELEMENTS TIME (HRS) DISCHARGE (CFS OR CMS)
-
-   THE MAXIMUM DISCHARGE FOR: Downspout STRUCTURE NO.
-   1 IS: 0.94 AT TIME: 4.91
-
-   INFLOW NODE: 22365 OUTFLOW NODE: 21990
-
-   0.10 0.00 0.00 0.20 0.00 0.00 0.30 0.00 0.00 0.40 0.00 0.00 0.50 0.00 0.00 0.60 0.00 0.00 0.70 0.00 0.00 0.80 0.00 0.00 0.90 0.00 0.00 1.00 0.00 0.00
-   1.10 0.00 0.00 1.20 0.00 0.00 1.30 0.00 0.00 1.40 0.00 0.00 1.50 0.00 0.00
-
-   1.60 0.00 0.00
-
-   1.70 0.04 -0.04 1.80 0.07 -0.07 1.90 0.08 -0.08 2.00 0.10 -0.10 2.10 0.13 -0.13
-
-   2.20 0.14 -0.14
-
-   2.30 0.14 -0.14 2.40 0.15 -0.15 2.50 0.15 -0.15 2.60 0.16 -0.16 2.70 0.16 -0.16 2.80 0.17 -0.17 2.90 0.16 -0.16 3.00 0.16 -0.16 3.10 0.16 -0.16 3.20
-   0.17 -0.17 3.30 0.17 -0.17 3.40 0.22 -0.22 3.50 0.27 -0.27 3.60 0.34 -0.34 3.70 0.46 -0.46 3.80 0.51 -0.51 3.90 0.64 -0.64 4.00 0.76 -0.76 4.10 0.83
-   -0.83 4.20 0.86 -0.86 4.30 0.89 -0.89 4.40 0.91 -0.91 4.50 0.91 -0.91 4.60 0.91 -0.91 4.70 0.92 -0.92 4.80 0.93 -0.93 4.90 0.94 -0.94 5.00 0.94 -0.94
-   5.10 0.93 -0.93 5.20 0.91 -0.91 5.30 0.88 -0.88 5.40 0.87 -0.87 5.50 0.86 -0.86 5.60 0.86 -0.86 5.70 0.85 -0.85 5.80 0.85 -0.85 5.90 0.82 -0.82
-
-   6.00 0.79 -0.79
+      FLOODPLAIN GRID ELEMENTS    TIME (HRS)    DISCHARGE (CFS OR CMS)
+    THE MAXIMUM DISCHARGE FOR: Downspout    STRUCTURE NO. 1 IS: 0.94 AT TIME: 4.91
+                        INFLOW NODE: 22365    OUTFLOW NODE: 21990
+                     0.10       0.00        0.00
+                     0.20       0.00        0.00
+                     0.30       0.00        0.00
+                     0.40       0.00        0.00
+                     0.50       0.00        0.00
+                     0.60       0.00        0.00
+                     0.70       0.00        0.00
+                     0.80       0.00        0.00
+                     0.90       0.00        0.00
+                     1.00       0.00        0.00
+                     1.10       0.00        0.00
+                     1.20       0.00        0.00
+                     1.30       0.00        0.00
+                     1.40       0.00        0.00
+                     1.50       0.00        0.00
+                     1.60       0.00        0.00
+                     1.70       0.04        -0.04
+                     1.80       0.07        -0.07
+                     1.90       0.08        -0.08
+                     2.00       0.10        -0.10
+                     2.10       0.13        -0.13
+                     2.20       0.14        -0.14
+                     2.30       0.14        -0.14
+                     2.40       0.15        -0.15
+                     2.50       0.15        -0.15
+                     2.60       0.16        -0.16
+                     2.70       0.16        -0.16
+                     2.80       0.17        -0.17
+                     2.90       0.16        -0.16
+                     3.00       0.16        -0.16
+                     3.10       0.16        -0.16
+                     3.20       0.17        -0.17
+                     3.30       0.17        -0.17
+                     3.40       0.22        -0.22
+                     3.50       0.27        -0.27
+                     3.60       0.34        -0.34
+                     3.70       0.46        -0.46
+                     3.80       0.51        -0.51
+                     3.90       0.64        -0.64
+                     4.00       0.76        -0.76
+                     4.10       0.83        -0.83
+                     4.20       0.86        -0.86
+                     4.30       0.89        -0.89
+                     4.40       0.91        -0.91
+                     4.50       0.91        -0.91
+                     4.60       0.91        -0.91
+                     4.70       0.92        -0.92
+                     4.80       0.93        -0.93
+                     4.90       0.94        -0.94
+                     5.00       0.94        -0.94
+                     5.10       0.93        -0.93
+                     5.20       0.91        -0.91
+                     5.30       0.88        -0.88
+                     5.40       0.87        -0.87
+                     5.50       0.86        -0.86
+                     5.60       0.86        -0.86
+                     5.70       0.85        -0.85
+                     5.80       0.85        -0.85
+                     5.90       0.82        -0.82
+                     6.00       0.79        -0.79
+    </pre>
 
    The FLO-2D model simulation of rainfall runoff from building roofs has been modified to allow parapet walls (levees) to store rainfall water, enable
    the parapet walls to be overtopped and discharge storm off the roof through a downspout.
