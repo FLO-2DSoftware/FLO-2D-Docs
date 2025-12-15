@@ -201,9 +201,7 @@ A FLO-2D storm surge model was prepared for the Florida Keys using the ocean tim
 
 .. image:: img/Chapter5/Chapte004.jpg
 
-Figure 132).
-
-Using these area of inundation results, the products associated with coastal flood models include:
+Figure 132). Using these area of inundation results, the products associated with coastal flood models include:
 
     - Prediction of the overland progression of the hurricane surge through urban area.
     - Risk/hazard assessment on urban development and infrastructure (storm drain system).
