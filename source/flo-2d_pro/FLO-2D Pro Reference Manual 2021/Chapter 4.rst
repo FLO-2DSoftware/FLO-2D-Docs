@@ -146,7 +146,7 @@ Overland Flow Manning's n Roughness Values.* \ :sup:`1`
        19, 1997 with modifications.
      -
 
-.. image:: img/Chapter4/Chapte002.jpg
+.. image:: img/Chapter4/Chapte002.png
 
 *Figure 35.
 Overland Flow Routing Subroutine Flow Chart.*
@@ -782,11 +782,94 @@ Initial Abstraction.*
        :sup:`2`\ W.
        T.Fullerton, Masters Thesis, CSU, 1983.
 
+.. raw:: html
 
- Green-Ampt Infiltration
- ~~~~~~~~~~~~~~~~~~~~~~~
+   <table style="border-collapse: collapse; width: 100%; border: 2px solid #000;">
+     <caption style="caption-side: top; font-weight: bold; padding: 6px 0;">
+       Table 6. Initial Abstraction.
+     </caption>
 
-   The Green-Ampt (1911) equation was selected to compute infiltration losses in the FLO-2D model because it is sensitive to rainfall intensity.
+     <thead>
+       <tr>
+         <th style="border: 1px solid #000; padding: 6px; background: #e6e6e6; text-align: center;">Surface Cover</th>
+         <th style="border: 1px solid #000; padding: 6px; background: #e6e6e6; text-align: center;">Abstraction (inches)</th>
+       </tr>
+     </thead>
+
+     <tbody>
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px; vertical-align: top;">
+           Natural<sup>1</sup><br>
+           &nbsp;&nbsp;&nbsp;&nbsp;Desert and rangeland<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;Hillslopes Sonoran desert<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;Mountain with vegetation
+         </td>
+         <td style="border: 1px solid #000; padding: 6px; vertical-align: top; text-align: right;">
+           0.35<br>
+           0.15<br>
+           0.25
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px; vertical-align: top;">
+           Developed &ndash; Residential<sup>1</sup><br>
+           &nbsp;&nbsp;&nbsp;&nbsp;Lawns<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;Desert landscape<br>
+           &nbsp;&nbsp;&nbsp;&nbsp;Pavement
+         </td>
+         <td style="border: 1px solid #000; padding: 6px; vertical-align: top; text-align: right;">
+           0.20<br>
+           0.10<br>
+           0.05
+         </td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px;">Agricultural fields and pasture</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: right;">0.50</td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px;">Conifers<sup>2</sup></td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: right;">0.01 - 0.36</td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px;">Hardwoods<sup>2</sup></td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: right;">0.001 - 0.08</td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px;">Shrubs<sup>2</sup></td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: right;">0.01 - 0.08</td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px;">Grass<sup>2</sup></td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: right;">0.04 - 0.06</td>
+       </tr>
+
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px;">Forest floor<sup>2</sup></td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: right;">0.02 - 0.44</td>
+       </tr>
+     </tbody>
+
+     <tfoot>
+       <tr>
+         <td colspan="2" style="border-top: 2px solid #000; padding: 6px; font-size: 90%;">
+           <sup>1</sup>Maricopa County Drainage Design Manual, 1992.<br>
+           <sup>2</sup>W. T. Fullerton, Masters Thesis, CSU, 1983.
+         </td>
+       </tr>
+     </tfoot>
+   </table>
+
+Green-Ampt Infiltration
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The Green-Ampt (1911) equation was selected to compute infiltration losses in the FLO-2D model because it is sensitive to rainfall intensity.
    When the rainfall exceeds the potential infiltration, then runoff is generated.
    The infiltration continues after the rainfall has ceased until all the available water has runoff or has been infiltrated.
    The Green-Ampt equation is based on the following assumptions:
