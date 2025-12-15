@@ -3113,641 +3113,652 @@ The discharge out of the downspout is reported below from the HYDROSTRUCT.OUT fi
                      6.00       0.79        -0.79
     </pre>
 
-   The FLO-2D model simulation of rainfall runoff from building roofs has been modified to allow parapet walls (levees) to store rainfall water, enable
-   the parapet walls to be overtopped and discharge storm off the roof through a downspout.
-   The FLO-2D code was edited to create these enhancements and a new executable program was compiled.
-   The primary revisions involved allowing component interaction with the completely blocked grid elements representing the buildings (ARF = 1).
-   The three new tools were tested extensively with a flat and sloped roof to validate that:
+The FLO-2D model simulation of rainfall runoff from building roofs has been modified to allow parapet walls (levees) to store rainfall water, enable
+the parapet walls to be overtopped and discharge storm off the roof through a downspout.
+The FLO-2D code was edited to create these enhancements and a new executable program was compiled.
+The primary revisions involved allowing component interaction with the completely blocked grid elements representing the buildings (ARF = 1).
+The three new tools were tested extensively with a flat and sloped roof to validate that:
 
-- Rainfall was accurately predicted to accumulate on a flat roof;
+    - Rainfall was accurately predicted to accumulate on a flat roof;
+    - Rainfall runoff was predicted to flow to the lowest cell on a slope roof;
+    - Rainfall runoff flowed to the lowest roof cell and overtopped a low parapet wall;
+    - Roof storage was discharged through a downspout located at the lowest roof cell.
 
-- Rainfall runoff was predicted to flow to the lowest cell on a slope roof;
-
-- Rainfall runoff flowed to the lowest roof cell and overtopped a low parapet wall;
-
-- Roof storage was discharged through a downspout located at the lowest roof cell.
-
-..
-
-   There are no required data file revisions to use these new building rainfall tools.
+There are no required data file revisions to use these new building rainfall tools.
 
  Gutter Tool
  -----------
 
-   The street gutters are designed to convey shallow flow during storm runoff less than or equal to the design discharge without traffic interruption.
-   Typical curb and gutter cross sections have a triangular shape created by the cross slope associated with the street or road crown.
-   Gutter cross slopes can range from flat to 8%.
-   For the FLO-2D street routing, the triangular shape is assumed to have a 2 percent straight cross slope.
-   The gutter flow will be exchanged with other upstream and downstream street gutter elements, the sidewalk (which is part of street gutter element),
-   and other street elements (not having a gutter).
-   Floodplain flow is exchange with the gutter elements through the sidewalk.
-   The Dept.
-   of Transportation Urban Drainage Design Manual (revised 2013) presents a gutter flow capacity equation that is used for computing flow in triangular
-   channels.
-   DOT Equation 4.2 is given as:
+The street gutters are designed to convey shallow flow during storm runoff less than or equal to the design discharge without traffic interruption.
+Typical curb and gutter cross sections have a triangular shape created by the cross slope associated with the street or road crown.
+Gutter cross slopes can range from flat to 8%.
+For the FLO-2D street routing, the triangular shape is assumed to have a 2 percent straight cross slope.
+The gutter flow will be exchanged with other upstream and downstream street gutter elements, the sidewalk (which is part of street gutter element),
+and other street elements (not having a gutter).
+Floodplain flow is exchange with the gutter elements through the sidewalk.
+The Dept.
+of Transportation Urban Drainage Design Manual (revised 2013) presents a gutter flow capacity equation that is used for computing flow in triangular channels.
+DOT Equation 4.2 is given as:
 
-Q = (Ku/n) Sx1.67 SL0.5 T2.67
+.. math::
+   :label:
 
-   where:
+   Q = \left( \frac{K_u}{n} \right)\, S_x^{1.67}\, S_L^{0.5}\, T^{2.67}
 
-   K\ :sub:`u` = 0.56 in English units n = Manning’s roughness
+where:
 
-Q = discharge (cfs)
+    K\ :sub:`u` = 0.56 in English units n = Manning’s roughness
 
-T = flow top width (ft) = d/S\ :sub:`x` where d = flow depth at the curb
+    Q = discharge (cfs)
 
-S\ :sub:`x` = cross slope (ft/ft)
+    T = flow top width (ft) = d/S\ :sub:`x` where d = flow depth at the curb
 
-   S\ :sub:`L` = street longitudinal slope (ft/ft)
+    S\ :sub:`x` = cross slope (ft/ft)
 
-   This DOT equation is Mannings equation for normal flow depth (steady, uniform flow) with an additional coefficient of 0.188:
+    S\ :sub:`L` = street longitudinal slope (ft/ft)
 
-   Q = VA = (1.486/n) d\ :sup:`0.67` S\ :sub:`L`\ :sup:`0.5` A (0.188)
+This DOT equation is Mannings equation for normal flow depth (steady, uniform flow) with an additional coefficient of 0.188:
 
-   where:
+.. math::
+   :label:
 
-A = flow area = 0.5 d T (ft\ :sup:`2`) area of a triangle
+   Q = V A = \left( \frac{1.486}{n} \right)\, d^{0.67}\, S_L^{0.5}\, A\, (0.188)
 
-   The 0.188 coefficient accounts for the hydraulic radius of a wide channel where the top width is more than 40 times the flow depth.
-   This coefficient (~ 5 x n-value) is analogous to the shallow flow n-value in FLO-2D for flow depths less than 0.5 ft.
-   For a street n-value of 0.02, the (0.188) coefficient would be equivalent to applying a 0.1 shallow flow n-value (SHALLOWN).
+where:
+
+    A = flow area = 0.5 d T (ft\ :sup:`2`) area of a triangle
+
+The 0.188 coefficient accounts for the hydraulic radius of a wide channel where the top width is more than 40 times the flow depth.
+This coefficient (~ 5 x n-value) is analogous to the shallow flow n-value in FLO-2D for flow depths less than 0.5 ft.
+For a street n-value of 0.02, the (0.188) coefficient would be equivalent to applying a 0.1 shallow flow n-value (SHALLOWN).
 
 Gutter Flow
 ^^^^^^^^^^^
 
-   Street gutter flow is defined in the Figure 106 where h = curb height.
+Street gutter flow is defined in the Figure 106 where h = curb height.
 
-|Chapte037|
+.. image:: img/Chapter4/Chapte037.jpg
 
-   *Figure 106.
-   Gutter Diagram.*
+*Figure 106.
+Gutter Diagram.*
 
-   The gutter flow can be shared in all eight flow directions (Figure 107):
+The gutter flow can be shared in all eight flow directions (Figure 107):
 
-|Chapte038|
+.. image:: img/Chapter4/Chapte038.jpg
 
-   *Figure 107.
-   Street and Gutter Flow Diagram.*
+*Figure 107.
+Street and Gutter Flow Diagram.*
 
-   The street elements are floodplain elements with appropriate elevations and n-values to represent street flow.
-   The discharge exchange can occur between street elements, between street and floodplain elements (outside the street), between gutter elements and
-   street elements or between gutter elements and floodplain elements.
-   To share flow between gutter elements and floodplain elements, the flow must first overtop the curb and be exchanged with the sidewalk.
-   The sidewalk is at least 10% of the side of the grid element.
-   If the assigned street width is greater than 0.9 times the grid element side, then the width is limited to 0.9 times the side.
-   When the flow depth exceeds the curb height and the water surface elevation on the sidewalk, the flow is shared from the gutter element to the
-   sidewalk.
-   If the water surface elevation on the sidewalk exceeds the TOL value and is higher than the gutter water surface elevation, then the flow is shared
-   from the sidewalk to the gutter.
-   The flow is shared between the gutter element and the contiguous floodplain elements using the floodplain flow depth and the gutter element sidewalk
-   flow depth.
+The street elements are floodplain elements with appropriate elevations and n-values to represent street flow.
+The discharge exchange can occur between street elements, between street and floodplain elements (outside the street), between gutter elements and
+street elements or between gutter elements and floodplain elements.
+To share flow between gutter elements and floodplain elements, the flow must first overtop the curb and be exchanged with the sidewalk.
+The sidewalk is at least 10% of the side of the grid element.
+If the assigned street width is greater than 0.9 times the grid element side, then the width is limited to 0.9 times the side.
+When the flow depth exceeds the curb height and the water surface elevation on the sidewalk, the flow is shared from the gutter element to the
+sidewalk.
+If the water surface elevation on the sidewalk exceeds the TOL value and is higher than the gutter water surface elevation, then the flow is shared
+from the sidewalk to the gutter.
+The flow is shared between the gutter element and the contiguous floodplain elements using the floodplain flow depth and the gutter element sidewalk
+flow depth.
 
-   Flow from the gutter to the sidewalk inside the gutter element is depicted in Figure 108.
+Flow from the gutter to the sidewalk inside the gutter element is depicted in Figure 108.
 
-   Gutter WSE = FPE + d;
+.. math::
+   :label:
 
-   Sidewalk elevation = FPE + H
+   \text{Gutter WSE} = \text{FPE} + d,
 
-|Chapte039|
+.. math::
+   :label:
 
-   *Figure 108.
-   Flow Distribution Street to Sidewalk.*
+   \text{Sidewalk elevation} = \text{FPE} + H
 
-   Flow from the sidewalk to the gutter inside the gutter element Sidewalk is depicted in Figure 109.
-   WSE = FPE + h + FPD; Gutter WSE = FPE + d
+.. image:: img/Chapter4/Chapte039.jpg
 
-|Chapte040|
+*Figure 108.
+Flow Distribution Street to Sidewalk.*
 
-   *Figure 109.
-   Flow Distribution Sidewalk to Street.*
+Flow from the sidewalk to the gutter inside the gutter element Sidewalk is depicted in Figure 109.
+WSE = FPE + h + FPD; Gutter WSE = FPE + d
 
-   **Results:**
+.. image:: img/Chapter4/Chapte040.jpg
 
-   In the following example (Figure 110) the gutter elements are displayed in brown.
-   The gutter elements are only assigned to the north side of the street in a single line along one street running east to west.
-   Approximately two-thirds of the length of the street, the street is shift one row to the north.
-   The inflow element is at the start of the street on the left side (green element).
-   The inflow discharge is initial zero cfs, increases to 10 cfs in 0.1 hrs and steady at 10 cfs for the 1 hr flow simulation.
-   No rainfall or infiltration are simulated.
-   Buildings and walls are simulated.
+*Figure 109.
+Flow Distribution Sidewalk to Street.*
 
-|Chapte041|
+**Results:**
 
-   *Figure 110.
-   Gutter Elements with Storm Drain.*
+In the following example (Figure 110) the gutter elements are displayed in brown.
+The gutter elements are only assigned to the north side of the street in a single line along one street running east to west.
+Approximately two-thirds of the length of the street, the street is shift one row to the north.
+The inflow element is at the start of the street on the left side (green element).
+The inflow discharge is initial zero cfs, increases to 10 cfs in 0.1 hrs and steady at 10 cfs for the 1 hr flow simulation.
+No rainfall or infiltration are simulated.
+Buildings and walls are simulated.
 
-   The gutter flow maximum depth results shown below indicate that with the gutter the flow is confined to the street elements and the volume is further
-   distributed downstream.
-   The flow has less spreading between the street and floodplain elements along the street with the gutter flow.
+.. image:: img/Chapter4/Chapte041.jpg
 
-   The results without the gutter are shown Figure 111:
+*Figure 110.
+Gutter Elements with Storm Drain.*
 
-|Chapte042|
+The gutter flow maximum depth results shown below indicate that with the gutter the flow is confined to the street elements and the volume is further
+distributed downstream.
+The flow has less spreading between the street and floodplain elements along the street with the gutter flow.
 
-   *Figure 111.
-   Flow Depth without Gutter*
+The results without the gutter are shown Figure 111:
 
-   The gutter flow results are displayed in the Figure 112.
+.. image:: img/Chapter4/Chapte042.jpg
 
-|Chapte043|
+*Figure 111.
+Flow Depth without Gutter*
 
-   *Figure 112.
-   Flow Depth with Gutter.*
+The gutter flow results are displayed in the Figure 112.
 
- Bridge Routine
- --------------
+.. image:: img/Chapter4/Chapte043.jpg
 
-   Many bridge hydraulic analyses are conducted using steady state peak flow conditions where the objective is to predict the maximum water surface
-   elevation profile upstream of the bridge and through the bridge.
-   Typically, most bridge design and flood conveyance analyses have been performed with HEC-2 or HEC-RAS where a prescribed discharge (peak Q) is
-   presumed and the water surface elevation is computed.
-   In a two-dimensional flood routing model, the opposite is required; the upstream and downstream flow depths and water surface elevations are known and
-   the discharge through the bridge is computed.
-   In a FLO-2D flood simulation, the focus is to predict the discharge between two grid elements and to spatially distribute the flood volume.
-   As such, the bridge component is a link between two grid elements (channel or floodplain) and the discharge through the bridge is computed by
-   representing the various physical features of the bridge that constrict the flow (see Figure 113).
+*Figure 112.
+Flow Depth with Gutter.*
 
-   |Chapte044|
+Bridge Routine
+--------------
 
-   *Figure 113.
-   Constricted Flow through a Bridge (Tom Imbrigiotta, USGS).*
+Many bridge hydraulic analyses are conducted using steady state peak flow conditions where the objective is to predict the maximum water surface
+elevation profile upstream of the bridge and through the bridge.
+Typically, most bridge design and flood conveyance analyses have been performed with HEC-2 or HEC-RAS where a prescribed discharge (peak Q) is
+presumed and the water surface elevation is computed.
+In a two-dimensional flood routing model, the opposite is required; the upstream and downstream flow depths and water surface elevations are known and
+the discharge through the bridge is computed.
+In a FLO-2D flood simulation, the focus is to predict the discharge between two grid elements and to spatially distribute the flood volume.
+As such, the bridge component is a link between two grid elements (channel or floodplain) and the discharge through the bridge is computed by
+representing the various physical features of the bridge that constrict the flow (see Figure 113).
 
-   The head loss or energy loss through a bridge (referred to as the afflux) is generated from three primary sources:
+.. image:: img/Chapter4/Chapte044.jpg
 
-- Flow expansion from the bridge downstream;
+*Figure 113.
+Constricted Flow through a Bridge (Tom Imbrigiotta, USGS).*
 
-- Flow resistance associated with surface friction (piers, abutments and soffit when submerged) and other roughness conditions included, but not limited
-  to, bed forms, vegetation, non-uniform flow (scour holes and piers);
+The head loss or energy loss through a bridge (referred to as the afflux) is generated from three primary sources:
 
-- Flow contraction by the bridge configuration.
+    - Flow expansion from the bridge downstream;
+    - Flow resistance associated with surface friction (piers, abutments and soffit when submerged) and other roughness conditions included, but not limited
+      to, bed forms, vegetation, non-uniform flow (scour holes and piers);
+    - Flow contraction by the bridge configuration.
 
-..
+The energy loss attributed to flow expansion is presumed to be about twice the contraction energy loss (Hamill, 1999).
+It should be noted, however, that uniform flow in the river reach upstream of the bridge is the exception rather than the conventionally assumed
+condition which complicates the prediction of the water surface profile that is associated with the head loss.
 
-   The energy loss attributed to flow expansion is presumed to be about twice the contraction energy loss (Hamill, 1999).
-   It should be noted, however, that uniform flow in the river reach upstream of the bridge is the exception rather than the conventionally assumed
-   condition which complicates the prediction of the water surface profile that is associated with the head loss.
+The objective in applying the bridge routine in FLO-2D is not to provide a detailed flow field through the bridge and predict scour around piers, but
+rather to accurately assess the relationship between upstream/downstream water surface elevations of the two grid elements linked by the bridge, and
+to compute the discharge passing between them.
+In this manner, the flow can be assessed as onedimensional with no variation in water surface elevation in the bridge cross section.
+The average flow velocity through the bridge is depth integrated.
+The FLO-2D model does not support a grid system draped over the bridge cross section and the flow field around bridge piers is not computed.
+Scour holes are not predicted since the water volume stored in the scour holes is negligible compared to the volume of water passing through bridge.
+The primary result of the FLO-2D bridge routine for unsteady flow is to assess the deviation from the approximate normal depth flow condition through
+the bridge that results in an upstream backwater effect.
+This will enable the accurate analysis of bridge constricted floodplain and river reaches that exhibit non-uniform and unsteady flow conditions
+(Figure 114).
 
-   The objective in applying the bridge routine in FLO-2D is not to provide a detailed flow field through the bridge and predict scour around piers, but
-   rather to accurately assess the relationship between upstream/downstream water surface elevations of the two grid elements linked by the bridge, and
-   to compute the discharge passing between them.
-   In this manner, the flow can be assessed as onedimensional with no variation in water surface elevation in the bridge cross section.
-   The average flow velocity through the bridge is depth integrated.
-   The FLO-2D model does not support a grid system draped over the bridge cross section and the flow field around bridge piers is not computed.
-   Scour holes are not predicted since the water volume stored in the scour holes is negligible compared to the volume of water passing through bridge.
-   The primary result of the FLO-2D bridge routine for unsteady flow is to assess the deviation from the approximate normal depth flow condition through
-   the bridge that results in an upstream backwater effect.
-   This will enable the accurate analysis of bridge constricted floodplain and river reaches that exhibit non-uniform and unsteady flow conditions
-   (Figure 114).
+.. image:: img/Chapter4/Chapte045.jpg
 
-|Chapte045|
-
-   *Figure 114.
-   Unsteady Non-Uniform Flow through a Bridge Constriction.*
+*Figure 114.
+Unsteady Non-Uniform Flow through a Bridge Constriction.*
 
 Bridge Flow
 ^^^^^^^^^^^
 
-   There are three basic flow conditions through a bridge: free surface flow, pressure flow and pressure flow plus deck overtopping flow.
-   Pressure flow, which occurs when the deck or superstructure is submerged, is defined as either sluice gate or orifice flow.
-   Flow through a bridge constriction is a function of the upstream headwater and downstream tailwater elevations (water surface slope), the extent of
-   the constriction (cross section variation), the bridge geometry (flow area, wetted perimeter, low chord, etc.) and various site factors such as
-   vegetation encroachment, bed scour, and riprap.
-   Similar bridges at different locations experience different flow conditions for the same discharge.
-   The flow may be subcritical or supercritical, although supercritical flow may be limited to a bridge with a concrete apron or bedrock substrate.
-   Subcritical flow is the most prevalent flow regime as bridge constrictions typically reduce upstream velocities and cause backwater effects as opposed
-   to flow acceleration through the bridge.
-   Five types of subcritical bridge flow are shown in Figure 115 though Figure 119 where the flow depth at the bridge Y\ :sub:`z` required to submerge
-   the bridge opening is greater than about 1.1 \* Z (distance from the bed to the bridge low chord) (Chow, 1959 and Hamill, 1999).
+There are three basic flow conditions through a bridge: free surface flow, pressure flow and pressure flow plus deck overtopping flow.
+Pressure flow, which occurs when the deck or superstructure is submerged, is defined as either sluice gate or orifice flow.
+Flow through a bridge constriction is a function of the upstream headwater and downstream tailwater elevations (water surface slope), the extent of
+the constriction (cross section variation), the bridge geometry (flow area, wetted perimeter, low chord, etc.) and various site factors such as
+vegetation encroachment, bed scour, and riprap.
+Similar bridges at different locations experience different flow conditions for the same discharge.
+The flow may be subcritical or supercritical, although supercritical flow may be limited to a bridge with a concrete apron or bedrock substrate.
+Subcritical flow is the most prevalent flow regime as bridge constrictions typically reduce upstream velocities and cause backwater effects as opposed
+to flow acceleration through the bridge.
+Five types of subcritical bridge flow are shown in Figure 115 though Figure 119 where the flow depth at the bridge Y\ :sub:`z` required to submerge
+the bridge opening is greater than about 1.1 \* Z (distance from the bed to the bridge low chord) (Chow, 1959 and Hamill, 1999).
 
-|Chapte046|
+.. image:: img/Chapter4/Chapte046.jpg
 
-   *Figure 115.
-   Type 1 Flow: Free surface, subcritical flow*
+*Figure 115.
+Type 1 Flow: Free surface, subcritical flow*
 
-   (Z > Yu > Yd).
+.. math::
+   :label:
 
-|Chapte047|
+   (Z > Y_u > Y_d)
 
-   *Figure 116.
-   Type 2 Flow: Inlet submerged, outlet free surface, partially full, sluice gate flow*
+.. image:: img/Chapter4/Chapte047.jpg
 
-   (Yu > Z > Yd).
+*Figure 116.
+Type 2 Flow: Inlet submerged, outlet free surface, partially full, sluice gate flow*
 
-|Chapte048|
+.. math::
+   :label:
 
-   *Figure 117.
-   Type 3 Flow: Inlet submerged, outlet submerged, opening full, sluice gate-orifice transition flow*
+   (Y_u > Z > Y_d)
 
-   (Yu > Z > Yd).
+.. image:: img/Chapter4/Chapte048.jpg
 
-|Chapte049|
+*Figure 117.
+Type 3 Flow: Inlet submerged, outlet submerged, opening full, sluice gate-orifice transition flow*
 
-   *Figure 118.
-   Type 4 Flow: Inlet submerged, outlet submerged, orifice flow*
+.. math::
+   :label:
 
-   (Yu > Yd > Z).
+   (Y_u > Z > Y_d)
 
-|Chapte050|
+.. image:: img/Chapter4/Chapte049.jpg
 
-   *Figure 119.
-   Type 5 Flow: Inlet submerged, outlet submerged, deck overflow*
+*Figure 118.
+Type 4 Flow: Inlet submerged, outlet submerged, orifice flow*
 
-   (Yu > Yd > Z).
+.. math::
+   :label:
 
-   Type 1 flow is the most common flow in terms of frequency since the bridge is designed to pass a selected design flood event.
-   The design flood may have a backwater condition extending some distance upstream.
-   Sluice gate flow (Type 2) occurs when the upstream opening is submerged, but the downstream water surface elevation is below the bridge soffit.
-   For this case, the discharge through the bridge depends on the upstream water surface elevation and the bridge geometry and the downstream water
-   surface elevation is irrelevant.
-   The submergence of the upstream opening may be sporadic until the upstream flow depth (Y\ :sub:`u`) is ten percent greater than the bridge low chord
-   elevation.
-   As the water surface level approaches the low chord, the discharge becomes highly turbulent and fluctuates rapidly, alternating between free surface
-   flow and pressure flow (Type 3 flow as shown in Figure 120).
-   The transition between sluice gate flow and orifice flow is unique to the bridge and may be temporally variable with scour, deposition or debris
-   blockage.
-   Based on project applications, sluice gate flow may persist until the upstream flow depth is 1.5 times or greater than the depth to the low chord.
+   (Y_u > Y_d > Z)
 
-   |Chapte051|
+.. image:: img/Chapter4/Chapte050.jpg
 
-   *Figure 120.
-   Pressure Flow with the Water Surface above the Low Chord Elevation*
+*Figure 119.
+Type 5 Flow: Inlet submerged, outlet submerged, deck overflow*
 
-   (M.
-   Huard, USGS).
+.. math::
+   :label:
 
-   Once the bridge inlet has been permanently submerged, a rapid increase in upstream water surface may occur resulting in submergence of both the
-   upstream and downstream openings and the bridge cross section flowing full.
-   This is defined as drowned orifice flow (Type 4) and can only happen when both upstream and downstream water surface elevations exceed the 1.1 times Z
-   (height of the bridge opening).
-   Since the downstream water prevents the efficient flow through the bridge, upstream flooding can quickly ensue.
-   In this case, the discharge control is a combination of the bridge structure and the channel characteristics.
+   (Y_u > Y_d > Z)
 
-   When the flow begins to overtop the bridge, the discharge is the sum of the pressure flow plus the deck overflow (Type 5 flow, Figure 5).
-   This is typically modeled as broadcrested weir flow with a coefficient in the range of 2.65 to 3.21.
-   If the bridge has guard rails or debris, the selected weir coefficient should be conservatively low.
-   Typically, overtopping flow is shallow, but for a long bridge the overflow discharge can be significant.
-   An assumption of weir flow to represent overdeck discharge can only be an approximation because of several factors that are not limited to:
+Type 1 flow is the most common flow in terms of frequency since the bridge is designed to pass a selected design flood event.
+The design flood may have a backwater condition extending some distance upstream.
+Sluice gate flow (Type 2) occurs when the upstream opening is submerged, but the downstream water surface elevation is below the bridge soffit.
+For this case, the discharge through the bridge depends on the upstream water surface elevation and the bridge geometry and the downstream water
+surface elevation is irrelevant.
+The submergence of the upstream opening may be sporadic until the upstream flow depth (Y\ :sub:`u`) is ten percent greater than the bridge low chord
+elevation.
+As the water surface level approaches the low chord, the discharge becomes highly turbulent and fluctuates rapidly, alternating between free surface
+flow and pressure flow (Type 3 flow as shown in Figure 120).
+The transition between sluice gate flow and orifice flow is unique to the bridge and may be temporally variable with scour, deposition or debris
+blockage.
+Based on project applications, sluice gate flow may persist until the upstream flow depth is 1.5 times or greater than the depth to the low chord.
 
-- Tailwater submergence;
+.. image:: img/Chapter4/Chapte051.jpg
 
-- Variable deck elevation;
+*Figure 120.
+Pressure Flow with the Water Surface above the Low Chord Elevation*
 
-- Unsteady flow conditions;
+                                    (M. Huard, USGS).
 
-- Guardrail supports causing blockage and spatially variable flow;
+Once the bridge inlet has been permanently submerged, a rapid increase in upstream water surface may occur resulting in submergence of both the
+upstream and downstream openings and the bridge cross section flowing full.
+This is defined as drowned orifice flow (Type 4) and can only happen when both upstream and downstream water surface elevations exceed the 1.1 times Z
+(height of the bridge opening).
+Since the downstream water prevents the efficient flow through the bridge, upstream flooding can quickly ensue.
+In this case, the discharge control is a combination of the bridge structure and the channel characteristics.
 
-- Debris blockage.
+When the flow begins to overtop the bridge, the discharge is the sum of the pressure flow plus the deck overflow (Type 5 flow, Figure 5).
+This is typically modeled as broadcrested weir flow with a coefficient in the range of 2.65 to 3.21.
+If the bridge has guard rails or debris, the selected weir coefficient should be conservatively low.
+Typically, overtopping flow is shallow, but for a long bridge the overflow discharge can be significant.
+An assumption of weir flow to represent overdeck discharge can only be an approximation because of several factors that are not limited to:
 
-|Chapte052|
+    - Tailwater submergence;
+    - Variable deck elevation;
+    - Unsteady flow conditions;
+    - Guardrail supports causing blockage and spatially variable flow;
+    - Debris blockage.
 
-   *Figure 121.
-   Bridge Deck Overflow with Guardrail*
+.. image:: img/Chapter4/Chapte052.jpg
 
-   (Llano River Bridge Collapse, CBS Austin).
+*Figure 121.
+Bridge Deck Overflow with Guardrail*
+
+                ]   (Llano River Bridge Collapse, CBS Austin).
 
 Bridge Flow Modeling
 ^^^^^^^^^^^^^^^^^^^^
 
-   The FLO-2D modeling approach and equations for the different types of bridge flow are discussed in this section.
-   The objective is to compute the bridge discharge that will consist of either:
+The FLO-2D modeling approach and equations for the different types of bridge flow are discussed in this section.
+The objective is to compute the bridge discharge that will consist of either:
 
-- Free surface flow
+    - Free surface flow
+    - Pressure flow
+    - Weir flow (overtopping) plus pressure flow
 
-- Pressure flow
+The effect of submergence from rising downstream tailwater is also determine by the FLO-2D model.
 
-- Weir flow (overtopping) plus pressure flow
+The bridge discharge computations will be performed inside the FLO-2D routing algorithm for the floodplain and 1-D channel components in conjunction
+with the existing hydraulic structure routine.
+The full dynamic wave momentum equation is applied to route flow between any two contiguous floodplain or channel grid elements.
+The velocity (and hence the discharge) is computed at one of eight floodplain flow directional boundaries between two cells.
+Prior to the bridge routine, the discharge for the bridge (or any hydraulic structure) located between two cells was computed only with a rating curve
+or table.
+The hydraulic structure inflow and outflow elements do not have to be contiguous (Figure 122).
+In the bridge flow modeling component, the free surface flow, pressure flow and deck overflow will replace the rating curve or table.
+The model will identify the flow condition, compute the appropriate discharge and exchange the discharge volume between the inflow and outflow nodes.
+As previously discussed, the flow discharge is controlled by the upstream headwater in the inflow node, the channel and bridge geometry and roughness,
+and tailwater water elevation in the outflow node.
+In the case where a bridge is located on the floodplain (such as a wash) spanning several elements, an inflow and outflow node (or multiple nodes) are
+still assigned and the two bridge cross sections are required.
 
-..
+.. image:: img/Chapter4/Chapte092.jpg
 
-   The effect of submergence from rising downstream tailwater is also determine by the FLO-2D model.
-
-   The bridge discharge computations will be performed inside the FLO-2D routing algorithm for the floodplain and 1-D channel components in conjunction
-   with the existing hydraulic structure routine.
-   The full dynamic wave momentum equation is applied to route flow between any two contiguous floodplain or channel grid elements.
-   The velocity (and hence the discharge) is computed at one of eight floodplain flow directional boundaries between two cells.
-   Prior to the bridge routine, the discharge for the bridge (or any hydraulic structure) located between two cells was computed only with a rating curve
-   or table.
-   The hydraulic structure inflow and outflow elements do not have to be contiguous (Figure 122).
-   In the bridge flow modeling component, the free surface flow, pressure flow and deck overflow will replace the rating curve or table.
-   The model will identify the flow condition, compute the appropriate discharge and exchange the discharge volume between the inflow and outflow nodes.
-   As previously discussed, the flow discharge is controlled by the upstream headwater in the inflow node, the channel and bridge geometry and roughness,
-   and tailwater water elevation in the outflow node.
-   In the case where a bridge is located on the floodplain (such as a wash) spanning several elements, an inflow and outflow node (or multiple nodes) are
-   still assigned and the two bridge cross sections are required.
-
-Bridge Inflow Node
-
-Bridge Outflow
-
-   *Figure 122.
-   FLO-2D Model Bridge Inflow and Outflow Elements Separated Grid Elements.*
+*Figure 122.
+FLO-2D Model Bridge Inflow and Outflow Elements Separated Grid Elements.*
 
 Free Surface Flow
 '''''''''''''''''
 
-   The most frequent discharge through a bridge is subcritical low flow or free surface flow.
-   Typically, the bridge constricts the channel with abutments and piers, has higher flow resistance, and increases the wetted perimeter resulting in a
-   departure from upstream normal flow depth condition (backwater effect.
-   The method to evaluate the discharge is referred to as the 1950’s USGS method based on extensive laboratory and field tests as presented in Chow
-   (1959) and Hamill (1999).
-   This procedure was originally documented in Chow (1959) and is widely applied for subcritical flow in a solution of the energy and continuity
-   equations.
-   Various bridge configurations are considered in the method which includes piers, wingwalls, flow skew, entrance effects, submergence and two cross
-   sections.
-   The upstream cross section should be located beyond the influence of the bridge (Xsec 1 in Figure 7).
-   Cross section 2 should be located at the bridge minimum cross section flow area (Xsec 2 in Figure 7).
-   The USGS method assumes that the bridge constriction is a discharge-stage control given by an equation in which the discharge is expressed as a
-   function of the flow area, head loss across the bridge (∆h in Figure 7), and a coefficient of contraction as discussed below.
-   The complete derivation of the free surface (flow below the low chord) equation can be reviewed in either Hamill (1999) or Chow (1959).
+The most frequent discharge through a bridge is subcritical low flow or free surface flow.
+Typically, the bridge constricts the channel with abutments and piers, has higher flow resistance, and increases the wetted perimeter resulting in a
+departure from upstream normal flow depth condition (backwater effect.
+The method to evaluate the discharge is referred to as the 1950’s USGS method based on extensive laboratory and field tests as presented in Chow
+(1959) and Hamill (1999).
+This procedure was originally documented in Chow (1959) and is widely applied for subcritical flow in a solution of the energy and continuity
+equations.
+Various bridge configurations are considered in the method which includes piers, wingwalls, flow skew, entrance effects, submergence and two cross
+sections.
+The upstream cross section should be located beyond the influence of the bridge (Xsec 1 in Figure 7).
+Cross section 2 should be located at the bridge minimum cross section flow area (Xsec 2 in Figure 7).
+The USGS method assumes that the bridge constriction is a discharge-stage control given by an equation in which the discharge is expressed as a
+function of the flow area, head loss across the bridge (∆h in Figure 7), and a coefficient of contraction as discussed below.
+The complete derivation of the free surface (flow below the low chord) equation can be reviewed in either Hamill (1999) or Chow (1959).
 
-   The subcritical discharge Q through constrictions equation is given in Chow’s (1959) book *Open Channel* *Flow* (p.
-   479, Eqn 17-15) as:
+The subcritical discharge Q through constrictions equation is given in Chow’s (1959) book *Open Channel* *Flow* (p.
+479, Eqn 17-15) as:
 
-   Q = C A\ :sub:`2` {2g (∆h – h\ :sub:`f` + α\ :sub:`1` V\ :sub:`1`\ :sup:`2`/2g)}\ :sup:`0.5`
+.. math::
+   :label:
 
-   where:
+   Q = C A_2 \left\{ 2 g \left( \Delta h - h_f + \alpha_1 \frac{V_1^{2}}{2 g} \right) \right\}^{0.5}
 
-A\ :sub:`2` = flow area at cross section 2 (Figure 7 downstream end of bridge)
+where:
 
-   ∆h = y\ :sub:`1` – y\ :sub:`2` y\ :sub:`1` depth upstream of bridge – y\ :sub:`2` depth at downstream end of bridge h\ :sub:`f` = frictional loss
+    A\ :sub:`2` = flow area at cross section 2 (Figure 7 downstream end of bridge)
 
-   α\ :sub:`1` = energy coefficient at cross section 1 V\ :sub:`1` = depth averaged velocity at cross section 1 g = gravitational acceleration
+    ∆h = y\ :sub:`1` – y\ :sub:`2` y\ :sub:`1` depth upstream of bridge – y\ :sub:`2` depth at downstream end of bridge h\ :sub:`f` = frictional loss
 
-   C = C\ :sub:`c` / (α\ :sub:`2` + k\ :sub:`e` + k\ :sub:`p`)\ :sup:`0.5`; C\ :sub:`c` = coefficient of contraction, α\ :sub:`2` = energy coefficient at
-   cross section 2, k\ :sub:`e` = eddy loss coefficient, k\ :sub:`p` = non-hydrostatic pressure coefficient
+    α\ :sub:`1` = energy coefficient at cross section 1 V\ :sub:`1` = depth averaged velocity at cross section 1 g = gravitational acceleration
 
-   The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959, p.
-   490) in English units:
+    C = C\ :sub:`c` / (α\ :sub:`2` + k\ :sub:`e` + k\ :sub:`p`)\ :sup:`0.5`; C\ :sub:`c` = coefficient of contraction, α\ :sub:`2` = energy coefficient at
+        cross section 2, k\ :sub:`e` = eddy loss coefficient, k\ :sub:`p` = non-hydrostatic pressure coefficient
 
-Q = 8.02 C A\ :sub:`2` (∆h/β)\ :sup:`0.5` (1)
+The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959, p.
+490) in English units:
 
-   where:
+.. math::
+   :label:
 
-   β = 1 - α\ :sub:`1` C\ :sup:`2` (A\ :sub:`2` /A\ :sub:`1`)\ :sup:`2` + 2gC\ :sup:`2` (A\ :sub:`2`/K\ :sub:`2`)\ :sup:`2` (L\ :sub:`B` +L\ :sub:`1-2`
-   K\ :sub:`2`/K\ :sub:`1`);
+   Q = 8.02\, C\, A_2 \left( \frac{\Delta h}{\beta} \right)^{0.5}
 
-   L\ :sub:`B` = length of contracted reach
+where:
 
-   L\ :sub:`1-2` = length of the reach from cross section 1 to cross section 2 (Figure 7)
+    β = 1 - α\ :sub:`1` C\ :sup:`2` (A\ :sub:`2` /A\ :sub:`1`)\ :sup:`2` + 2gC\ :sup:`2` (A\ :sub:`2`/K\ :sub:`2`)\ :sup:`2` (L\ :sub:`B` +L\ :sub:`1-2`
+        K\ :sub:`2`/K\ :sub:`1`);
 
-   K\ :sub:`1` and K\ :sub:`2` = conveyance at cross sections 1 and 2; K\ :sub:`1` = 1.486/n A\ :sub:`1` R\ :sub:`1`\ :sup:`0.67`; K\ :sub:`2` = 1.486/n
-   A\ :sub:`2` R\ :sub:`2`\ :sup:`0.67` n = Manning’s n-value through the contracted reach
+    L\ :sub:`B` = length of contracted reach
 
-   A\ :sub:`1`, R\ :sub:`1` and A\ :sub:`2`, R\ :sub:`2` are the cross section flow areas and hydraulic radiuses respectively (Figure 123).
+    L\ :sub:`1-2` = length of the reach from cross section 1 to cross section 2 (Figure 7)
+
+    K\ :sub:`1` and K\ :sub:`2` = conveyance at cross sections 1 and 2; K\ :sub:`1` = 1.486/n A\ :sub:`1` R\ :sub:`1`\ :sup:`0.67`; K\ :sub:`2` = 1.486/n
+                                  A\ :sub:`2` R\ :sub:`2`\ :sup:`0.67` n = Manning’s n-value through the contracted reach
+
+    A\ :sub:`1`, R\ :sub:`1` and A\ :sub:`2`, R\ :sub:`2` are the cross section flow areas and hydraulic radiuses respectively (Figure 123).
+
+
+.. image:: img/Chapter4/Chapte093.jpg
 
 *Figure 123.
 Conceptual Bridge Plan and Profile with River Cross Sections.*
 
-   To apply this free surface flow equation, the type of bridge opening (one of four) must be selected and the bridge parameters and coefficients must be
-   determined.
-   The USGS figures for the four bridge types used to determine the coefficients are presented in the Appendix as reproduced from Hamill (1999).
-   The relationships between the bridge parameters in Appendix figures that are used to evaluate the coefficients are hardcoded into the FLO-2D model in
-   tabular form for linear interpolation.
-   Conceptually, the role of the bridge coefficients is to represent a resistance to flow that will decrease the discharge similar to the Manning’s n
-   roughness coefficient with the exception that a decrease in the bridge coefficients will have the same effect as an increase in the Manning’s n-value.
+To apply this free surface flow equation, the type of bridge opening (one of four) must be selected and the bridge parameters and coefficients must be
+determined.
+The USGS figures for the four bridge types used to determine the coefficients are presented in the Appendix as reproduced from Hamill (1999).
+The relationships between the bridge parameters in Appendix figures that are used to evaluate the coefficients are hardcoded into the FLO-2D model in
+tabular form for linear interpolation.
+Conceptually, the role of the bridge coefficients is to represent a resistance to flow that will decrease the discharge similar to the Manning’s n roughness coefficient with the exception that a decrease in the bridge coefficients will have the same effect as an increase in the Manning’s n-value.
 
-   The USGS bridge discharge method embodies a number of assumptions both theoretically and practically to simplify the required data.
-   The following assumptions have been acknowledged as potentially limiting the accuracy of the modeling approach.
+The USGS bridge discharge method embodies a number of assumptions both theoretically and practically to simplify the required data.
+The following assumptions have been acknowledged as potentially limiting the accuracy of the modeling approach.
 
-i.   Two cross sections will be used to represent the bridge.
-   If there is no 1-D FLO-2D channel, the cross sections are still required data (BRIDGE_XSEC.DAT file).
-   For a 1-D channel, the bridge cross sections can be represented by existing channel cross sections with the first cross section being the bridge
-   inflow node channel cross section.
-   This cross section should represent essentially normal depth upstream of the bridge (beyond backwater effects).
-   The length between the two cross sections (UPLENGTH12 – L\ :sub:`1-2` in Figure 7) can be adjusted and can be longer than a grid element side length
-   if the cell size is too short to extend to the normal flow depth conditions.
-
-ii.
-The bridge flow will be exchanged between the upstream inflow and downstream outflow elements (INFLONOD or OUTFLONOD in HYSTRUC.DAT file) for either
-the channel or floodplain.
-Conceptually the bridge will be located between these two elements and share discharge between them.
-The inflow and outflow nodes don’t have to be contiguous.
-The bridge cross section will constitute the boundary between these elements.
-
-iii.
-If there is widespread floodplain flooding, the upstream cross section should be limited to the 1-D channel top of banks.
-For a bridge on the floodplain with no channel, the cross section should be limited to a perceived channel width or the bridge opening width.
-The cross section should not encompass the entire valley floodplain.
-
-iv.
-The flow depth at the bridge is defined by the upstream inflow element water surface elevation and the bridge cross section thalweg in cross section 2
-(Figure 7).
-This is not entirely accurate, since the water surface will vary from the upstream cross section to the bridge cross section, but water surface
-elevation at the bridge is not computed directly by the model.
-Given the potential of backwater effects, however, the impact of the variable water surface elevation on the flow depth will not be significant.
-
-v.   The water surface head difference will be assessed from the upstream inflow node headwater and the downstream outflow node tailwater.
-
-vi.
-The bridge will assume to have the same constriction coefficients and losses regardless of whether the flow is upstream or downstream.
-
-vii.
-A velocity coefficient of α\ :sub:`1` = 1.3 is assumed and hardcoded for natural streams from Chow (1959, p.
-28) representing an average of lower values (α\ :sub:`1` ~ 1.1) for large uniform prismatic and higher values for small nonuniform natural channels
-(ranging up to 1.5).
+    i.   Two cross sections will be used to represent the bridge.
+         If there is no 1-D FLO-2D channel, the cross sections are still required data (BRIDGE_XSEC.DAT file).
+         For a 1-D channel, the bridge cross sections can be represented by existing channel cross sections with the first cross section being the bridge
+         inflow node channel cross section.
+         This cross section should represent essentially normal depth upstream of the bridge (beyond backwater effects).
+         The length between the two cross sections (UPLENGTH12 – L\ :sub:`1-2` in Figure 7) can be adjusted and can be longer than a grid element side length
+         if the cell size is too short to extend to the normal flow depth conditions.
+    ii.  The bridge flow will be exchanged between the upstream inflow and downstream outflow elements (INFLONOD or OUTFLONOD in HYSTRUC.DAT file) for either
+         the channel or floodplain.
+         Conceptually the bridge will be located between these two elements and share discharge between them.
+         The inflow and outflow nodes don’t have to be contiguous.
+         The bridge cross section will constitute the boundary between these elements.
+    iii. If there is widespread floodplain flooding, the upstream cross section should be limited to the 1-D channel top of banks.
+         For a bridge on the floodplain with no channel, the cross section should be limited to a perceived channel width or the bridge opening width.
+         The cross section should not encompass the entire valley floodplain.
+    iv. The flow depth at the bridge is defined by the upstream inflow element water surface elevation and the bridge cross section thalweg in cross section 2
+        (Figure 7).
+        This is not entirely accurate, since the water surface will vary from the upstream cross section to the bridge cross section, but water surface
+        elevation at the bridge is not computed directly by the model.
+        Given the potential of backwater effects, however, the impact of the variable water surface elevation on the flow depth will not be significant.
+    v.   The water surface head difference will be assessed from the upstream inflow node headwater and the downstream outflow node tailwater.
+    vi.  The bridge will assume to have the same constriction coefficients and losses regardless of whether the flow is upstream or downstream.
+    vii. A velocity coefficient of α\ :sub:`1` = 1.3 is assumed and hardcoded for natural streams from Chow (1959, p.
+         28) representing an average of lower values (α\ :sub:`1` ~ 1.1) for large uniform prismatic and higher values for small nonuniform natural channels
+         (ranging up to 1.5).
 
 Sluice Gate Flow
 ''''''''''''''''
 
-   Once the water surface level reaches the low chord or soffit of the bridge, the water surface control switches from the channel to the bridge and the
-   discharge mimics a sluice gate flow (Figure 3b).
-   In general, sluice gate flow applies only when the water level is on the upstream bridge face, but the highly turbulent transition to orifice flow is
-   obscure with potential for drowning the downstream opening (Figure 3c).
-   In a stage-discharge plot, the free surface channel flow and the bridge flow rapidly diverge as the water surface approaches the soffit (Figure 8).
-   The difference between the two water surfaces is the afflux.
-   The bridge flow in this figure is concave upwards above the soffit.
-   Sluice gate discharge Q\ :sub:`p` (pressure flow) is described by the equation:
+Once the water surface level reaches the low chord or soffit of the bridge, the water surface control switches from the channel to the bridge and the
+discharge mimics a sluice gate flow (Figure 3b).
+In general, sluice gate flow applies only when the water level is on the upstream bridge face, but the highly turbulent transition to orifice flow is
+obscure with potential for drowning the downstream opening (Figure 3c).
+In a stage-discharge plot, the free surface channel flow and the bridge flow rapidly diverge as the water surface approaches the soffit (Figure 8).
+The difference between the two water surfaces is the afflux.
+The bridge flow in this figure is concave upwards above the soffit.
+Sluice gate discharge Q\ :sub:`p` (pressure flow) is described by the equation:
 
-Q\ :sub:`p` = CA\ :sub:`b` (2g ∆H)\ :sup:`0.5` (2)
+.. math::
+   :label:
 
-   where:
+   Q_p = C A_b\, (2 g\, \Delta H)^{0.5}
 
-   C = coefficient of discharge (0.3 to 0.6 dimensionless, Figure 124) A\ :sub:`b` = cross section flow area through the bridge opening g = gravitational
-   acceleration
+where:
 
-   ∆H = energy gradient from upstream to tailwater elevation Y\ :sub:`c` given by (see Figure 116):
+    C = coefficient of discharge (0.3 to 0.6 dimensionless, Figure 124) A\ :sub:`b` = cross section flow area through the bridge opening g = gravitational
+        acceleration
 
-   Y\ :sub:`u` – Y + V\ :sub:`u`\ :sup:`2`/2g
+    ∆H = energy gradient from upstream to tailwater elevation Y\ :sub:`c` given by (see Figure 116):
 
-|Chapte053|
+.. math::
+   :label:
 
-   *Figure 124.
-   Stage-Discharge Variation between Free Surface Flow and Bridge Flow (Hamill, 1999; p.
-   53).*
+   Y_u - Y + \frac{V_u^{2}}{2 g}
 
-   For subcritical flow the velocity head term V\ :sub:`u`\ :sup:`2`/2g (including the velocity coefficient) can be ignored and lowest flow depth Y
-   through the bridge will vary from approximately Z/2 to the downstream tailwater elevation (Figure 116 and Figure 117).
-   Figure 125 indicates a range of 0.27 to 0.50 for the sluice gate coefficient as a function of the low chord submergence, however, Hamill (1999, Figure
-   2.11, p.
-   55) indicates that the coefficient can approach 0.6 depending on the bridge configuration.
+.. image:: img/Chapter4/Chapte053.jpg
 
-|Chapte054|
+*Figure 124.
+Stage-Discharge Variation between Free Surface Flow and Bridge Flow (Hamill, 1999; p.53).*
 
-   *Figure 125.
-   Sluice Gate Discharge Coefficient as Function of the Low Chord Submergence (FHA, 2012).*
+For subcritical flow the velocity head term V\ :sub:`u`\ :sup:`2`/2g (including the velocity coefficient) can be ignored and lowest flow depth Y
+through the bridge will vary from approximately Z/2 to the downstream tailwater elevation (Figure 116 and Figure 117).
+Figure 125 indicates a range of 0.27 to 0.50 for the sluice gate coefficient as a function of the low chord submergence, however, Hamill (1999, Figure
+2.11, p. 55) indicates that the coefficient can approach 0.6 depending on the bridge configuration.
 
-   An important aspect of sluice gate flow is that there is a transition between sluice gate flow and free surface flow and again between sluice gate
-   flow and drowned orifice flow (discussed below).
-   These transitions are unique for each channel and bridge site.
-   There may also be a hysteresis effect between the rising and recession limbs of the hydrograph.
-   Factors that contribute to the variability in the transition flow zone (establishment of submergence) are numerous but can include an inclined bridge
-   low chord.
-   Ideally, the transition from free surface flow to sluice gate flow as noted in the literature, extends to a submergence level of Y\ :sub:`u`/Z = 1.1,
-   but practically it may be as high as Y\ :sub:`u`/Z = 1.5 depending on the bridge configuration and its hydraulic performance.
+.. image:: img/Chapter4/Chapte054.jpg
 
-   It should be mentioned that the above sluice gate equation (Hamill, 1999), differs from the vertical sluice gate discharge equation which is also
-   occasionally applied to bridge flow.
-   For the vertical sluice gate case, the assumed discharge is a function of the square root of the difference between upstream uniform flow depth and
-   some percentage of the gate opening.
-   Oskuyi and Salmasi (2012) presented a vertical sluice gate coefficient relationship with limited variability over a range of flows:
+*Figure 125.
+Sluice Gate Discharge Coefficient as Function of the Low Chord Submergence (FHA, 2012).*
 
-   C = 0.445 (Y\ :sub:`u`/Z)\ :sup:`0.122`
+An important aspect of sluice gate flow is that there is a transition between sluice gate flow and free surface flow and again between sluice gate
+flow and drowned orifice flow (discussed below).
+These transitions are unique for each channel and bridge site.
+There may also be a hysteresis effect between the rising and recession limbs of the hydrograph.
+Factors that contribute to the variability in the transition flow zone (establishment of submergence) are numerous but can include an inclined bridge
+low chord.
+Ideally, the transition from free surface flow to sluice gate flow as noted in the literature, extends to a submergence level of Y\ :sub:`u`/Z = 1.1,
+but practically it may be as high as Y\ :sub:`u`/Z = 1.5 depending on the bridge configuration and its hydraulic performance.
 
-   which is plotted as the green line in Figure 9.
-   The FHA curve in Figure 9 has a regressed relationship of:
+It should be mentioned that the above sluice gate equation (Hamill, 1999), differs from the vertical sluice gate discharge equation which is also
+occasionally applied to bridge flow.
+For the vertical sluice gate case, the assumed discharge is a function of the square root of the difference between upstream uniform flow depth and
+some percentage of the gate opening.
+Oskuyi and Salmasi (2012) presented a vertical sluice gate coefficient relationship with limited variability over a range of flows:
 
-   C = 0.341 (Y\ :sub:`u`/Z)\ :sup:`0.931`
+.. math::
+   :label:
 
-   with a correlation coefficient R\ :sup:`2` = 0.61.
-   This equation is used in the FLO-2D model.
+   C = 0.445 \left( \frac{Y_u}{Z} \right)^{0.122}
+
+which is plotted as the green line in Figure 9.
+The FHA curve in Figure 9 has a regressed relationship of:
+
+.. math::
+   :label:
+
+   C = 0.341 \left( \frac{Y_u}{Z} \right)^{0.931}
+
+with a correlation coefficient R\ :sup:`2` = 0.61.
+This equation is used in the FLO-2D model.
 
 Orifice Flow
 ''''''''''''
 
-   Orifice flow is defined by a pressure flow condition through the bridge where both the upstream and downstream water surface elevations are above the
-   low chord (Y\ :sub:`u` > Z, Y\ :sub:`d` > Z) indicating a drowned opening (Figure 3d).
-   The orifice equation for discharge is:
+Orifice flow is defined by a pressure flow condition through the bridge where both the upstream and downstream water surface elevations are above the
+low chord (Y\ :sub:`u` > Z, Y\ :sub:`d` > Z) indicating a drowned opening (Figure 3d).
+The orifice equation for discharge is:
 
-Q\ :sub:`p` = CA\ :sub:`b` (2g ∆H)\ :sup:`0.5` (3)
+.. math::
+   :label:
 
-   where:
+   Q_p = C A_b\, (2 g\, \Delta H)^{0.5}
 
-C = Coefficient of discharge
+where:
 
-A\ :sub:`b` = Bridge opening cross section flow area
+    C = Coefficient of discharge
 
-   ∆H = difference between the energy gradient elevation upstream and tailwater downstream
+    A\ :sub:`b` = Bridge opening cross section flow area
 
-   In this equation, which is similar to the sluice gate equation, ∆H is given by the difference in the headwater Y\ :sub:`u` and tailwater Y\ :sub:`d`
-   plus the velocity head V\ :sub:`u`\ :sup:`2`/2g, which again is assumed to be negligible for subcritical flow (at least when considering the
-   variability of the coefficient).
-   The orifice coefficient of discharge C, as determined by experiment, ranges from 0.7 to 0.9 (USCOE HEC, 1995).
-   A value of 0.8 is recommended for a typical two- to four-lane concrete girder bridge coefficient (Hoggan, 1989; p.
-   401).
-   Hamill (1999) plots data from actual bridge flow and other sources to demonstrate the variation of the coefficient of discharge with submergence
-   (Figure 10).
+    ∆H = difference between the energy gradient elevation upstream and tailwater downstream
 
-   |Chapte055|
+In this equation, which is similar to the sluice gate equation, ∆H is given by the difference in the headwater Y\ :sub:`u` and tailwater Y\ :sub:`d`
+plus the velocity head V\ :sub:`u`\ :sup:`2`/2g, which again is assumed to be negligible for subcritical flow (at least when considering the
+variability of the coefficient).
+The orifice coefficient of discharge C, as determined by experiment, ranges from 0.7 to 0.9 (USCOE HEC, 1995).
+A value of 0.8 is recommended for a typical two- to four-lane concrete girder bridge coefficient (Hoggan, 1989; p.
+401).
+Hamill (1999) plots data from actual bridge flow and other sources to demonstrate the variation of the coefficient of discharge with submergence
+(Figure 10).
 
-   *Figure 126.
-   Orifice Coefficient of Discharge as Function of Low Chord Submergence (Hamill, 1999).*
+.. image:: img/Chapter4/Chapte055.jpg
 
-   The regressed relationship of the data in Figure 10 for Y\ :sub:`u`/Z > 1.25 is given by:
+*Figure 126.
+Orifice Coefficient of Discharge as Function of Low Chord Submergence (Hamill, 1999).*
 
-   C = 0.80 (Y\ :sub:`u`/Z)\ :sup:`-0.184`
+The regressed relationship of the data in Figure 10 for Y\ :sub:`u`/Z > 1.25 is given by:
 
-   This equation is used in the FLO-2D model and results in a coefficient variability in the range of 0.7 to 0.8.
-   This is compared with the sluice gate flow discharge coefficient, which ranges from about 0.4 to 0.5 as shown in Figure 9.
+.. math::
+   :label:
+
+   C = 0.80 \left( \frac{Y_u}{Z} \right)^{-0.184}
+
+This equation is used in the FLO-2D model and results in a coefficient variability in the range of 0.7 to 0.8.
+This is compared with the sluice gate flow discharge coefficient, which ranges from about 0.4 to 0.5 as shown in Figure 9.
 
 Pressure Flow Plus Weir Flow
 ''''''''''''''''''''''''''''
 
-   Once the flow is above the deck, then the total discharge through bridge Q\ :sub:`T` is the sum of the pressure flow (sluice gate or orifice flow)
-   plus the weir flow over the bridge deck:
+Once the flow is above the deck, then the total discharge through bridge Q\ :sub:`T` is the sum of the pressure flow (sluice gate or orifice flow)
+plus the weir flow over the bridge deck:
 
-   Q\ :sub:`T` = Q\ :sub:`p` + Q\ :sub:`w`
+.. math::
+   :label:
 
-   Broadcrested weir flow is generally used to represent flow over a bridge deck as given by:
+   Q_T = Q_p + Q_w
 
-   Q\ :sub:`w` = C L\ :sub:`c` ∆H\ :sup:`1.5`
+Broadcrested weir flow is generally used to represent flow over a bridge deck as given by:
 
-   where:
+.. math::
+   :label:
 
-   C = Broadcrested weir discharge coefficient which varies from 2.6 to 3.1
+   Q_w = C\, L_c\, \Delta H^{1.5}
 
-   ∆H = energy grade line between headwater and roadway crest elevation (or railing) or tailwater L\ :sub:`c` = crest length
+where:
 
-   Broadcrested weir flow representing bridge overflow is usually justified because flow across the crest (roadway) is considered broad and the flow
-   depth on the bridge is shallow.
-   When combined with the pressure flow, the overtopping flow will result in equal energy loss.
-   If the tailwater drowns out the weir control, then a submergence factor in the FLO-2D hydraulic structure routine will be applied to the discharge.
-   Submergence generally becomes an issue when the tailwater depth divided by the headwater depth approaches 0.80.
-   Since a bridge deck is not an ideal smooth broadcrested weir, a lower coefficient of discharge in the range of 2.6 to 2.8 is suggested (FHA, 2012).
-   Some consideration should be given to the deck railing configuration.
-   Is the deck railing segmented and spanning the entire bridge? Does it have multiple rails or is it solid? Are there walkways that are elevated above
-   the road bed? Is the bridge deck inclined, sloping from one side to the other? Can debris collect on the deck railing? All these possible flow
-   conditions will decrease the broadcrested weir coefficient.
+    C = Broadcrested weir discharge coefficient which varies from 2.6 to 3.1
 
-   It is important to note the difference between the weir coefficient C and a discharge coefficient C\ :sub:`q`.
-   The weir coefficient is a lumped parameter that is based on the weir’s characteristics and includes the discharge coefficient.
+    ∆H = energy grade line between headwater and roadway crest elevation (or railing) or tailwater L\ :sub:`c` = crest length
 
-   C = 2/3 C\ :sub:`q` (2g)\ :sup:`0.5`
+Broadcrested weir flow representing bridge overflow is usually justified because flow across the crest (roadway) is considered broad and the flow
+depth on the bridge is shallow.
+When combined with the pressure flow, the overtopping flow will result in equal energy loss.
+If the tailwater drowns out the weir control, then a submergence factor in the FLO-2D hydraulic structure routine will be applied to the discharge.
+Submergence generally becomes an issue when the tailwater depth divided by the headwater depth approaches 0.80.
+Since a bridge deck is not an ideal smooth broadcrested weir, a lower coefficient of discharge in the range of 2.6 to 2.8 is suggested (FHA, 2012).
+Some consideration should be given to the deck railing configuration.
+Is the deck railing segmented and spanning the entire bridge? Does it have multiple rails or is it solid? Are there walkways that are elevated above
+the road bed? Is the bridge deck inclined, sloping from one side to the other? Can debris collect on the deck railing? All these possible flow
+conditions will decrease the broadcrested weir coefficient.
 
-   The discharge coefficient C\ :sub:`q` is same in both English and SI (metric) units and is dimensionless.
-   The weir coefficient, however, is not dimensionless since it is a function of the gravitational acceleration g (ft/s\ :sup:`2` or m/s\ :sup:`2`).
-   To convert from English to metric, multiply the weir coefficient C by 0.552.
+It is important to note the difference between the weir coefficient C and a discharge coefficient C\ :sub:`q`.
+The weir coefficient is a lumped parameter that is based on the weir’s characteristics and includes the discharge coefficient.
+
+.. math::
+   :label:
+
+   C = \frac{2}{3}\, C_q\, (2 g)^{0.5}
+
+The discharge coefficient C\ :sub:`q` is same in both English and SI (metric) units and is dimensionless.
+The weir coefficient, however, is not dimensionless since it is a function of the gravitational acceleration g (ft/s\ :sup:`2` or m/s\ :sup:`2`).
+To convert from English to metric, multiply the weir coefficient C by 0.552.
 
 Modeling Bridge Flow with FLO-2D
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   The bridge flow routine in FLO-2D is called by the hydraulic structures component which establishes the inflow and outflow nodes, the headwater,
-   tailwater and submergence conditions, and the components for discharge exchange (floodplain to floodplain, channel to channel, floodplain to channel,
-   or channel to floodplain).
-   The rating curve and table data that is normally assigned for FLO-2D bridge flow is not required.
-   As previously mentioned, the bridge inflow and outflow nodes do not have to be contiguous in the grid system.
-   They can be separated by several grid elements to represent a four-lane highway bridge.
-   In the FLO-2D model, the discharge is routed to the inflow node to determine the headwater and flow depth conditions.
-   Then the free surface, pressure flow or weir flow equations compute the bridge discharge to the outflow node, which is then routed to the downstream
-   elements by the model’s routing algorithm.
+The bridge flow routine in FLO-2D is called by the hydraulic structures component which establishes the inflow and outflow nodes, the headwater,
+tailwater and submergence conditions, and the components for discharge exchange (floodplain to floodplain, channel to channel, floodplain to channel,
+or channel to floodplain).
+The rating curve and table data that is normally assigned for FLO-2D bridge flow is not required.
+As previously mentioned, the bridge inflow and outflow nodes do not have to be contiguous in the grid system.
+They can be separated by several grid elements to represent a four-lane highway bridge.
+In the FLO-2D model, the discharge is routed to the inflow node to determine the headwater and flow depth conditions.
+Then the free surface, pressure flow or weir flow equations compute the bridge discharge to the outflow node, which is then routed to the downstream
+elements by the model’s routing algorithm.
 
 Data Requirements and Parameter Definition
 ''''''''''''''''''''''''''''''''''''''''''
 
-   Two lines of data in the HYSTRUC.DAT file (B-lines) and two cross sections are required for each bridge being simulated.
-   The original S-Line in HYSTRUC.DAT identifies the bridge inflow and outflow nodes and its association with the either the channel or the floodplain.
-   The rating curve or table switch in the SLine is set to 3 (ICURVTABLE(i) =3) to define a bridge analysis for that structure.
-   The S-Line is then followed by two B-lines where (i) is the bridge number in HYSTRUC.DAT.
+Two lines of data in the HYSTRUC.DAT file (B-lines) and two cross sections are required for each bridge being simulated.
+The original S-Line in HYSTRUC.DAT identifies the bridge inflow and outflow nodes and its association with the either the channel or the floodplain.
+The rating curve or table switch in the SLine is set to 3 (ICURVTABLE(i) =3) to define a bridge analysis for that structure.
+The S-Line is then followed by two B-lines where (i) is the bridge number in HYSTRUC.DAT.
 
-   The first B-line of data in the HYSTRUC.DAT file provides the user with the opportunity to directly assign the free surface low flow discharge
-   coefficients.
-   The second B-line includes the various bridge parameters such as low chord, deck length, pier width, etc.
+The first B-line of data in the HYSTRUC.DAT file provides the user with the opportunity to directly assign the free surface low flow discharge
+coefficients.
+The second B-line includes the various bridge parameters such as low chord, deck length, pier width, etc.
 
-1) **B IBTYPE(i), COEFFP(i), C_PRIME_USER(i), KF_COEF(i), KWW_COEF(i), KPHI_COEF(i), KY_COEF(i), KX_COEF(i), KJ_COEF(i)**
+    1) **B IBTYPE(i), COEFFP(i), C_PRIME_USER(i), KF_COEF(i), KWW_COEF(i), KPHI_COEF(i), KY_COEF(i), KX_COEF(i), KJ_COEF(i)**
 
-2) **B BOPENING(i), BLENGTH(i), BN_VALUE(i), UPLENGTH12(i), LOWCHORD(i), DECKHT(i), DECKLENGTH(i), PIERWIDTH(i), SLUICECOEFADJ(i),**
-
-..
-
-   **ORIFICECOEFADJ(i), COEFFWEIRB(i), WINGWALL_ANGLE(i), PHI_ANGLE(i), LBTOEABUT(i), RBTOEABUT(i)**
+    2) **B BOPENING(i), BLENGTH(i), BN_VALUE(i), UPLENGTH12(i), LOWCHORD(i), DECKHT(i), DECKLENGTH(i), PIERWIDTH(i), SLUICECOEFADJ(i),**
+       **ORIFICECOEFADJ(i), COEFFWEIRB(i), WINGWALL_ANGLE(i), PHI_ANGLE(i), LBTOEABUT(i), RBTOEABUT(i)**
 
 A. typical HYSTRUCT.DAT file for a bridge would be as follows:
 
-..
+.. raw:: html
 
-   S Name 0 3 631 625 1 0.0 0 0 B 1 0.
-   0.
-   0.
-   0.
-   1.
-   1.
-   1.
-   1.
+    <pre>
+        S Name      0 3  631    625 1  0.0 0 0
+        B 1  0. 0. 0. 0. 1. 1. 1. 1.
+        B 15. 40. 0.05 40. 1378.00 1380.00 22.00 0. 0. 0.50 3.05 0. 0. 1376.5 1377.2
+    </pre>
 
-B. 15.
-   40.
-   0.05 40.
-   1378.00 1380.00 22.00 0.
-   0.
-   0.50 3.05 0.
-   0.
-   1376.5 1377.2
-
-..
-
-   These parameters are defined in Table 14 and are used to compute the coefficients for free surface flow presented in the Appendix.
-   The Appendix figure showing the relationships with the bridge configuration are used to interpolate the free surface coefficients from the data
-   entered in Line B-2.
-   All the Appendix figures were digitized and are hardcoded into the model.
+These parameters are defined in Table 14 and are used to compute the coefficients for free surface flow presented in the Appendix.
+The Appendix figure showing the relationships with the bridge configuration are used to interpolate the free surface coefficients from the data
+entered in Line B-2.
+All the Appendix figures were digitized and are hardcoded into the model.
 
 **Table 14.
 Bridge Parameters (B-Lines in HYSTRUC.DAT)**
@@ -3899,42 +3910,88 @@ Bridge Parameters (B-Lines in HYSTRUC.DAT)**
      - at bridge coefficien
      - is either not important or has no effect.
 
+.. raw:: html
 
-..
+   <table style="border-collapse: collapse; width: 100%; border: 3px solid #000;">
+     <thead>
+       <tr>
+         <th style="border:1px solid #000; padding:6px; background:#e6e6e6;">VARIABLE</th>
+         <th style="border:1px solid #000; padding:6px; background:#e6e6e6;">FMT</th>
+         <th style="border:1px solid #000; padding:6px; background:#e6e6e6;">RANGE</th>
+         <th style="border:1px solid #000; padding:6px; background:#e6e6e6;">DESCRIPTION</th>
+       </tr>
+     </thead>
 
-   The two cross sections are located: 1) Upstream of the bridge where essentially normal depth occurs (upstream of the bridge backwater effects); and 2)
-   At the bridge to reflect the channel contraction and low chord.
-   The cross section data is listed in the BRIDGE_XSEC.DAT file.
-   The two required bridge cross sections are shown in Figure 7.
-   This data is necessary regardless of whether there are 1-D channel cross sections or no surveyed cross sections associated with a bridge on the
-   floodplain.
-   The bridge cross section can be located anywhere in the bridge that defines the bridge contraction.
-   The upstream cross section is located by the distance L\ :sub:`1-2` (Figure 7).
-   The pier or pile widths are not entered in the cross section data.
-   The sum of all the pier or pile widths (PIERWIDTH) is entered in the B-line data in HYSTRUC.DAT (Table 1).
-   The cross section data is entered in the BRIDGE_XSEC.DAT file in the ASCII format below (data separated by spaces).
-   In line 1, X indicates the start of a new bridge cross section and the number 631 is bridge inflow node grid element number.
-   The remaining lines are station from the left top of bank, upstream bed elevation at the given station, and the bridge station bed elevation.
+     <tbody>
+       <tr><td style="border:1px solid #000; padding:6px;">STRUCHAR</td><td style="border:1px solid #000; padding:6px; text-align:center;">c</td><td style="border:1px solid #000; padding:6px; text-align:center;">B</td><td style="border:1px solid #000; padding:6px;">Character identifier for the bridge routine</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">IBTYPE</td><td style="border:1px solid #000; padding:6px; text-align:center;">i</td><td style="border:1px solid #000; padding:6px; text-align:center;">1 – 4</td><td style="border:1px solid #000; padding:6px;">Type of bridge configuration (see Appendix figures)</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">COEFF*</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.1 – 1.0</td><td style="border:1px solid #000; padding:6px;">Overall bridge discharge coefficient – assigned or computed (default = 0.)</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">C_PRIME_USER*</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.5 – 1.0</td><td style="border:1px solid #000; padding:6px;">Baseline bridge discharge coefficient to be adjusted with detail coefficients</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">KF_COEF*</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.9 – 1.1</td><td style="border:1px solid #000; padding:6px;">Froude number coefficient – assigned or computed (= 0.)</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">KWW_COEF*</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">1.0 – 1.13</td><td style="border:1px solid #000; padding:6px;">Wingwall coefficient – assigned or computed (= 0.)</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">KPHI_COEF*</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.7 – 1.0</td><td style="border:1px solid #000; padding:6px;">Flow angle with bridge coefficient – assigned or computed (= 0.)</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">KY_COEF*</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.85 – 1.0</td><td style="border:1px solid #000; padding:6px;">Coefficient associated with sloping embankments and vertical abutments (= 0.)</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">KX_COEF*</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">1.0 – 1.13</td><td style="border:1px solid #000; padding:6px;">Coefficient associated with sloping abutments – assigned or computed (= 0.)</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">KJ_COEF*</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.6 – 1.0</td><td style="border:1px solid #000; padding:6px;">Coefficient associated with pier and piles – assigned or computed (= 0.)</td></tr>
 
-   X 631
+       <tr><td colspan="4" style="border-top:3px solid #000;"></td></tr>
 
-   0.00 1380.00 1385.00
+       <tr><td style="border:1px solid #000; padding:6px;">BOPENING</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.0 – ∞</td><td style="border:1px solid #000; padding:6px;">Bridge opening width (ft or m). See Figure 7.</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">BLENGTH</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.0 – ∞</td><td style="border:1px solid #000; padding:6px;">Bridge length from upstream edge to downstream abutment (ft or m)</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">BN_VALUE</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.030 – 0.200</td><td style="border:1px solid #000; padding:6px;">Bridge reach n-value (typical channel n-value for the bridge cross section)</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">UPLENGTH12</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.0 – ∞</td><td style="border:1px solid #000; padding:6px;">Distance to upstream cross section unaffected by bridge backwater (ft or m)</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">LOWCHORD</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.0 – ∞</td><td style="border:1px solid #000; padding:6px;">Average elevation of the low chord (ft or m)</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">DECKHT</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.0 – ∞</td><td style="border:1px solid #000; padding:6px;">Average elevation of the top of the deck railing for overflow flow (ft or m)</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">DECKLENGTH</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.0 – ∞</td><td style="border:1px solid #000; padding:6px;">Deck weir length (ft or m)</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">PIERWIDTH</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.0 – ∞</td><td style="border:1px solid #000; padding:6px;">Combined pier or pile cross section width (flow blockage width in ft or m)</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">SLUICECOEFADJ</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.0 – 2.0</td><td style="border:1px solid #000; padding:6px;">Adjustment factor to raise or lower the sluice gate coefficient which is 0.33 for Yu/z = 1.0</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">ORIFICECOEFADJ</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.0 – 2.0</td><td style="border:1px solid #000; padding:6px;">Adjustment factor to raise or lower the orifice flow coefficient which is 0.80 for Yu/z = 1.0</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">COEFFWEIR</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">2.65 – 3.21</td><td style="border:1px solid #000; padding:6px;">Weir coefficient for flow over the bridge deck. For metric: COEFFWEIRB × 0.552</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">WINGWALL_ANGLE</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">30° – 60°</td><td style="border:1px solid #000; padding:6px;">Angle the wingwall makes with the abutment perpendicular to the flow</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">PHI_ANGLE</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">0° – 45°</td><td style="border:1px solid #000; padding:6px;">Angle the flow makes with the bridge alignment perpendicular to the flow</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">LTOEABUT</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">ELEVATION</td><td style="border:1px solid #000; padding:6px;">Toe elevation of the left abutment (ft or m)</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">RTOEABUT</td><td style="border:1px solid #000; padding:6px; text-align:center;">r</td><td style="border:1px solid #000; padding:6px; text-align:center;">ELEVATION</td><td style="border:1px solid #000; padding:6px;">Toe elevation of the right abutment (ft or m)</td></tr>
+     </tbody>
 
-   0.60 1378.70 1378.46
+     <tfoot>
+       <tr>
+         <td colspan="4" style="border-top:2px solid #000; padding:6px; font-size:90%;">
+           * If the coefficient is assigned 1.0, that bridge coefficient is either not important or has no effect.
+         </td>
+       </tr>
+     </tfoot>
+   </table>
 
-   5.00 1377.00 1376.96
+The two cross sections are located: 1) Upstream of the bridge where essentially normal depth occurs (upstream of the bridge backwater effects); and 2)
+At the bridge to reflect the channel contraction and low chord.
+The cross section data is listed in the BRIDGE_XSEC.DAT file.
+The two required bridge cross sections are shown in Figure 7.
+This data is necessary regardless of whether there are 1-D channel cross sections or no surveyed cross sections associated with a bridge on the
+floodplain.
+The bridge cross section can be located anywhere in the bridge that defines the bridge contraction.
+The upstream cross section is located by the distance L\ :sub:`1-2` (Figure 7).
+The pier or pile widths are not entered in the cross section data.
+The sum of all the pier or pile widths (PIERWIDTH) is entered in the B-line data in HYSTRUC.DAT (Table 1).
+The cross section data is entered in the BRIDGE_XSEC.DAT file in the ASCII format below (data separated by spaces).
+In line 1, X indicates the start of a new bridge cross section and the number 631 is bridge inflow node grid element number.
+The remaining lines are station from the left top of bank, upstream bed elevation at the given station, and the bridge station bed elevation.
 
-   5.50 1376.85 1376.68
+.. raw:: html
 
-   6.00 1376.75 1376.46
-
-   12.65 1376.70 1376.46 15.85 1376.78 1376.51
-
-   18.95 1377.20 1377.00
-
-   20.65 1378.15 1377.26 22.00 1378.70 1378.44
-
-   22.10 1380.00 1385.00
+    <pre>
+    X 631
+     0.00  1380.00 1385.00
+     0.60  1378.70 1378.46
+     5.00  1377.00 1376.96
+     5.50  1376.85 1376.68
+     6.00  1376.75 1376.46
+     12.65 1376.70 1376.46
+     15.85 1376.78 1376.51
+     18.95 1377.20 1377.00
+     20.65 1378.15 1377.26
+     22.00 1378.70 1378.44
+     22.10 1380.00 1385.00
+    </pre>
 
    The bridge cross section is referenced to the upstream cross section stations.
    The bridge cross section contraction corresponds to the abutments or channel bank elevations under the bridge deck.
