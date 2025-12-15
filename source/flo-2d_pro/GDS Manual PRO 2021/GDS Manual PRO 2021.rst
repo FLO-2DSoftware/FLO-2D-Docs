@@ -3028,10 +3028,13 @@ A few comments are highlighted here:
 
 where:
 
-   n\ :sub:`b` = bankfull discharge roughness depth = flow depth dmax = bankfull flow depth
+   n\ :sub:`b` = bankfull discharge roughness
 
-   r2 = roughness adjustment coefficient prescribed by the user (range:
-   0. to 0.4) r\ :sub:`c` = 1./e\ :sup:`-r2`
+   depth = flow depth
+
+   dmax = bankfull flow depth
+
+   r2 = roughness adjustment coefficient prescribed by the user (range:0. to 0.4) r\ :sub:`c` = 1./e\ :sup:`-r2`
 
 This equation prescribes that the variable depth channel roughness is equal to the bankfull roughness at bankfull discharge.
 If the user assigns a roughness adjustment coefficient r2 for a given reach, the roughness will increase with a decrease in flow depth.
@@ -3394,14 +3397,14 @@ The Rain command allows entering data to simulate rainfall input over the FLO-2D
 
 This command is used to enter levee breach data for the computed breach option.
 
-Global Breach Data
+*Global Breach Data*
 
 Global breach data is used to input the dam or levee geometry and soil data in order to simulate an NWS Breach erosion condition.
 The model uses the global data along points of a levee or dam that meet a specific depth or time to breach criteria.
 
 .. image:: img/GDS235.png
 
-Individual Breach Data
+*Individual Breach Data*
 
 Individual breach data is used to input the dam or levee geometry and soil data in order to simulate an NWS Breach erosion condition at a
 predetermined location.
@@ -3409,7 +3412,7 @@ The model uses the breach data assigned to a specific location to breach at a sp
 
 .. image:: img/GDS236.png
 
-Levee Fragility Curve Data
+*Levee Fragility Curve Data*
 
 Levee fragility curves are used to determine a levee breach location based on data entered spatially along a levee profile.
 The fragility data is based on the existing levee condition and will activate a failure via erosional breach or prescribed failure once a certain
@@ -3443,26 +3446,26 @@ This command will enable selection of grid elements for a floodplain cross secti
 hydraulic results for the flow across the cross section.
 You can create the cross section in an existing *FLO-2D* grid using point and click tools as described below:
 
-1. On the *Tool menu* click *Create Floodplain Cross Sections.*
+    1. On the *Tool menu* click *Create Floodplain Cross Sections.*
 
-2. The mouse pointer changes to a cross.
+    2. The mouse pointer changes to a cross.
 
-3. Locate and position the mouse over the first grid element in a line of grid elements that will constitute the cross section.
-   Click his first grid element of the cross section and then while holding the left mouse button down select the cross section grid elements as you move
-   the mouse over the grid system.
-   Cross section elements are joined by lines to visualize the cross section location.
-   As the cross section development progresses from one element to the next, only the eight adjacent elements can be accessed.
-   When the mouse pointer is near the center of the next element to be selected, a solid arrow appears to indicate that that element is the next one in
-   the segment.
-   The user can backup the pointer over the segment to unselect channel grid elements.
-   No clicks are necessary, the users only needs to sweep the pointer over the desired elements.
-   The cross section is completed when the user double-clicks with the left mouse button.
+    3. Locate and position the mouse over the first grid element in a line of grid elements that will constitute the cross section.
+       Click his first grid element of the cross section and then while holding the left mouse button down select the cross section grid elements as you move
+       the mouse over the grid system.
+       Cross section elements are joined by lines to visualize the cross section location.
+       As the cross section development progresses from one element to the next, only the eight adjacent elements can be accessed.
+       When the mouse pointer is near the center of the next element to be selected, a solid arrow appears to indicate that that element is the next one in
+       the segment.
+       The user can backup the pointer over the segment to unselect channel grid elements.
+       No clicks are necessary, the users only needs to sweep the pointer over the desired elements.
+       The cross section is completed when the user double-clicks with the left mouse button.
 
-.. image:: img/GDS245.jpg
+    .. image:: img/GDS245.jpg
 
-4. Cross sections must be consists of grid elements in a continuous straight line and can only be in the four directions as indicated below:
+    4. Cross sections must be consists of grid elements in a continuous straight line and can only be in the four directions as indicated below:
 
-.. image:: img/GDS246.jpg
+    .. image:: img/GDS246.jpg
 
 To edit the floodplain cross section grid elements, click a cross section.
 A short-cut menu appears with three options as shown:
@@ -3555,14 +3558,14 @@ This command will open the EPA SWMM 5.0 program.
 Create a .inp file and save it to the project folder.
 Then use the Control Panel to load make the SWMMFLO.DAT file.
 
-3.6.34.1 Run Storm Drain GUI… (Tools Menu/Storm Drain)
+*3.6.34.1 Run Storm Drain GUI… (Tools Menu/Storm Drain)*
 
 .. image:: img/GDS259.jpg
 
 This option runs the EPA SWMM GUI 5.0.
 It the link is not working copy the Epaswmm5.exe file from the EPA SWMM 5.0 folder to the FLO-2D Pro folder.
 
-3.6.34.2 View Storm Drain Inlets Dialog (Tools Menu)
+*3.6.34.2 View Storm Drain Inlets Dialog (Tools Menu)*
 
 .. image:: img/GDS336.jpg
 
@@ -3573,19 +3576,19 @@ The inlets can be edited here and the max depths can be edited here or in the sw
 
 .. image:: img/GDS338.jpg
 
-3.6.34.3 View Outfall Nodes Dialog (Tools Menu/Storm Drain)
+*3.6.34.3 View Outfall Nodes Dialog (Tools Menu/Storm Drain)*
 
 .. image:: img/GDS339.jpg
 
 This option generates the data written to the SWMMOUTF.DAT file.
 
-3.6.34.4 Storm Drain Display Option (Tools Menu/Storm Drain)
+*3.6.34.4 Storm Drain Display Option (Tools Menu/Storm Drain)*
 
 .. image:: img/GDS260.jpg
 
 These options define how the storm drain system appears on the GDS display window.
 
-3.6.34.5 Storm Drain Discharge Display (Tools Menu/Storm Drain)
+*3.6.34.5 Storm Drain Discharge Display (Tools Menu/Storm Drain)*
 
 .. image:: img/GDS341.jpg
 
@@ -3594,7 +3597,7 @@ Choose from this project to display on screen or from external project to save a
 
 .. image:: img/GDS340.jpg
 
-3.6.34.6 Grade Lines (Tools Menu/Storm Drain)
+*3.6.34.6 Grade Lines (Tools Menu/Storm Drain)*
 
 .. image:: img/GDS342.jpg
 
