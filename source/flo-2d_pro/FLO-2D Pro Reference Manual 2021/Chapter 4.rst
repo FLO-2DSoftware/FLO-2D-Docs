@@ -928,82 +928,60 @@ Green-Ampt Infiltration - Hydraulic Conductivity and Porosity.*
      </tfoot>
    </table>
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
 
+*Table 8.
+Green-Ampt Infiltration - Soil Suction.*
 
-   * - **Table 8.
-     - Green-Ampt Infiltration - Soil Suction.**
+.. raw:: html
 
-   * - Classification           |    (in)\ :sup:`1`           |    (in)\ :sup:`2`           |
-     - (in)\ :sup:`3`
+   <table style="border-collapse: collapse; width: 100%; border: 3px solid #000;">
+     <caption style="caption-side: top; font-weight: bold; padding: 6px 0;">
+       Table 8. Green-Ampt Infiltration - Soil Suction.
+     </caption>
 
-   * - sand and loamy sand      |    2.4                      |    1.9-2.4                  |
-     -
+     <thead>
+       <tr>
+         <th style="border: 1px solid #000; padding: 6px; background: #eee;">Classification</th>
+         <th style="border: 1px solid #000; padding: 6px; background: #eee;">(in)<sup>1</sup></th>
+         <th style="border: 1px solid #000; padding: 6px; background: #eee;">(in)<sup>2</sup></th>
+         <th style="border: 1px solid #000; padding: 6px; background: #eee;">(in)<sup>3</sup></th>
+       </tr>
+     </thead>
 
-   * - sandy loam               |    4.3                      |    4.3                      |
-     -
+     <tbody>
+       <tr><td style="border:1px solid #000; padding:6px;">sand and loamy sand</td><td style="border:1px solid #000; padding:6px; text-align:center;">2.4</td><td style="border:1px solid #000; padding:6px; text-align:center;">1.9-2.4</td><td style="border:1px solid #000; padding:6px; text-align:center;"></td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">sandy loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">4.3</td><td style="border:1px solid #000; padding:6px; text-align:center;">4.3</td><td style="border:1px solid #000; padding:6px; text-align:center;"></td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">3.5</td><td style="border:1px solid #000; padding:6px; text-align:center;">3.5</td><td style="border:1px solid #000; padding:6px; text-align:center;"></td></tr>
 
-   * - Loam                     |    3.5                      |    3.5                      |
-     -
+       <tr><td style="border:1px solid #000; padding:6px;">silty loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">6.6</td><td style="border:1px solid #000; padding:6px; text-align:center;">6.6</td><td style="border:1px solid #000; padding:6px; text-align:center;"></td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Silt</td><td style="border:1px solid #000; padding:6px; text-align:center;">7.5</td><td style="border:1px solid #000; padding:6px; text-align:center;"></td><td style="border:1px solid #000; padding:6px; text-align:center;"></td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">sandy clay loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">8.6</td><td style="border:1px solid #000; padding:6px; text-align:center;">8.6</td><td style="border:1px solid #000; padding:6px; text-align:center;"></td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">clay loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">8.2</td><td style="border:1px solid #000; padding:6px; text-align:center;">8.2</td><td style="border:1px solid #000; padding:6px; text-align:center;"></td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">silty clay loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">10.8</td><td style="border:1px solid #000; padding:6px; text-align:center;">10.8</td><td style="border:1px solid #000; padding:6px; text-align:center;"></td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">sandy clay</td><td style="border:1px solid #000; padding:6px; text-align:center;">9.4</td><td style="border:1px solid #000; padding:6px; text-align:center;">9.4</td><td style="border:1px solid #000; padding:6px; text-align:center;"></td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">silty clay</td><td style="border:1px solid #000; padding:6px; text-align:center;">11.5</td><td style="border:1px solid #000; padding:6px; text-align:center;">11.5</td><td style="border:1px solid #000; padding:6px; text-align:center;"></td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Clay</td><td style="border:1px solid #000; padding:6px; text-align:center;">12.4</td><td style="border:1px solid #000; padding:6px; text-align:center;">12.5</td><td style="border:1px solid #000; padding:6px; text-align:center;"></td></tr>
 
-   * - silty loam                  |    6.6                      |    6.6                      |
-     -
+       <tr><td style="border:1px solid #000; padding:6px;">Nickel gravel-sand loam</td><td style="border:1px solid #000;"></td><td style="border:1px solid #000;"></td><td style="border:1px solid #000; padding:6px; text-align:center;">2.0 - 4.5</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Ida silt loam</td><td style="border:1px solid #000;"></td><td style="border:1px solid #000;"></td><td style="border:1px solid #000; padding:6px; text-align:center;">2.0 - 3.5</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Poudre fine sand</td><td style="border:1px solid #000;"></td><td style="border:1px solid #000;"></td><td style="border:1px solid #000; padding:6px; text-align:center;">2.0 - 4.5</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Plainfield sand</td><td style="border:1px solid #000;"></td><td style="border:1px solid #000;"></td><td style="border:1px solid #000; padding:6px; text-align:center;">3.5 - 5.0</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Yolo light clay</td><td style="border:1px solid #000;"></td><td style="border:1px solid #000;"></td><td style="border:1px solid #000; padding:6px; text-align:center;">5.5 - 10.0</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Columbia sandy loam</td><td style="border:1px solid #000;"></td><td style="border:1px solid #000;"></td><td style="border:1px solid #000; padding:6px; text-align:center;">8.0 - 9.5</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Guelph loam</td><td style="border:1px solid #000;"></td><td style="border:1px solid #000;"></td><td style="border:1px solid #000; padding:6px; text-align:center;">8.0 - 13.0</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Muren fine clay</td><td style="border:1px solid #000;"></td><td style="border:1px solid #000;"></td><td style="border:1px solid #000; padding:6px; text-align:center;">15.0 - 20.0</td></tr>
+     </tbody>
 
-   * - Silt                        |    7.5                      |                             |
-     -
-
-   * - sandy clay loam             |    8.6                      |    8.6                      |
-     -
-
-   * - clay loam                   |    8.2                      |    8.2                      |
-     -
-
-   * - silty clay loam             |    10.8                     |    10.8                     |
-     -
-
-   * - sandy clay                  |    9.4                      |    9.4                      |
-     -
-
-   * - silty clay                  |    11.5                     |    11.5                     |
-     -
-
-   * - Clay                        |    12.4                     |    12.5                     |
-     -
-
-   * - Nickel gravel-sand loam     |                             |                             |    2.0 - 4.5
-     -
-
-   * - Ida silt loam               |                             |                             |    2.0 - 3.5
-     -
-
-   * - Poudre fine sand            |                             |                             |    2.0 - 4.5
-     -
-
-   * - Plainfield sand             |                             |                             |    3.5 - 5.0
-     -
-
-   * - Yolo light clay             |                             |                             | 5.5 - 10.0
-     -
-
-   * - Columbia sandy loam         |                             |                             |    8.0 - 9.5
-     -
-
-   * - Guelph loam                 |                             |                             | 8.0 - 13.0
-     -
-
-   * - Muren fine clay             |                             |                             |    15.0 - 20.
-     -
-
-   * - :sup:`1`\ Maricopa County Drainage Design Manual, 1992.:sup:`2`\ James, W.P., Warinner, J., Reedy, M., Water Resources Bulletin Vol.
-       28, 1992.:sup:`3`\ W.
-       T.
-       Fullerton, Masters Thesis, CSU, 1983.
-     -
-
-
-..
+     <tfoot>
+       <tr>
+         <td colspan="4" style="border-top:2px solid #000; padding:6px; font-size:90%;">
+           <sup>1</sup>Maricopa County Drainage Design Manual, 1992.<br>
+           <sup>2</sup>James, W.P., Warinner, J., Reedy, M., Water Resources Bulletin Vol. 28, 1992.<br>
+           <sup>3</sup>W. T. Fullerton, Masters Thesis, CSU, 1983.
+         </td>
+       </tr>
+     </tfoot>
+   </table>
 
    The volumetric moisture deficiency is evaluated as the difference between the initial and final soil saturation conditions (See Table 9).
    Depression storage is an initial loss from the surface flow (TOL value).
