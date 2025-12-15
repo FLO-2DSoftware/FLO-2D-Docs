@@ -62,55 +62,87 @@ Typical overland flow roughness values (Manning’s n coefficients) are shown in
 Overland Flow Manning's n Roughness Values.* \ :sup:`1`
 
 .. list-table::
-   :widths: 100
+   :widths: 50 50
    :header-rows: 0
 
 
    * - Surface
-n-value
+     - n-value
 
    * - Dense turf
-0.17 - 0.80
+     - 0.17 - 0.80
 
    * - Bermuda and dense grass, dense vegetation
-0.17 - 0.48
+     - 0.17 - 0.48
 
    * - Shrubs and forest litter, pasture
-0.30 - 0.40
+     - 0.30 - 0.40
 
    * - Average grass cover
-0.20 - 0.40
+     - 0.20 - 0.40
 
    * - Poor grass cover on rough surface
-0.20 - 0.30
+     - 0.20 - 0.30
 
    * - Short prairie grass
-0.10 - 0.20
+     - 0.10 - 0.20
 
    * - Sparse vegetation
-0.05 - 0.13
+     - 0.05 - 0.13
 
    * - Sparse rangeland with debris
-0.09 - 0.34|0% cover                                               |    0.05 - 0.25|20 %
-       cover                                             |
+     - 0% cover 0.09 - 0.34
+       20 % cover   0.05 - 0.25                                           |
 
-   * - Plowed or tilled fields                                |    0.008 - 0.012|Fallow - no residue                                    |    0.06 - 0.22 0.06
-       - 0.16 0.30 -|    0.50 0.04 - 0.10 0.07 - 0.17Conventional tillage                                   ||    0.17 - 0.47Chisel plow
-       ||Fall disking                                           ||No till - no residue                                   ||No till (20 - 40% residue cover)
-       ||No till (60 - 100% residue cover)                      |
+   * - Plowed or tilled fields
 
-   * - Open ground with debris                                |    0.10 - 0.20
+         Fallow - no residue
 
-   * - Shallow glow on asphalt or concrete (0.25" to 1.0")    |    0.10 - 0.15
+         Conventional tillage
 
-   * - Fallow fields                                          |    0.08 - 0.12
+         Chisel plow
 
-   * - Open ground, no debris                                 |    0.04 - 0.10
+         Fall disking
 
-   * - Asphalt or concrete                                    |    0.02 - 0.05
+         No till - no residue
+
+         No till (20 - 40% residue cover)
+
+         No till (60 - 100% residue cover)
+
+     -
+         0.008 - 0.012
+
+         0.06 - 0.22
+
+         0.06 - 0.16
+
+         0.30 - 0.50
+
+         0.04 - 0.10
+
+         0.07 - 0.17
+
+         0.17 - 0.47
+
+   * - Open ground with debris
+     - 0.10 - 0.20
+
+   * - Shallow glow on asphalt or concrete (0.25" to 1.0")
+     - 0.10 - 0.15
+
+   * - Fallow fields
+     - 0.08 - 0.12
+
+   * - Open ground, no debris
+     - 0.04 - 0.10
+
+   * - Asphalt or concrete
+     - 0.02 - 0.05
 
    * - :sup:`1`\ Adapted from COE, HEC-1 Manual, 1990 and the COE, Technical Engineering and DesignGuide, No.
        19, 1997 with modifications.
+     -
 
 
 ..
