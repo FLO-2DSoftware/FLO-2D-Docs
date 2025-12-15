@@ -763,7 +763,7 @@ the data format (see the Data Input Manual for the variable description).
 *Figure 15.
 INFLOW.DAT File Example.*
 
-.. image:: img/Chapter3/Chapte037.jpg
+.. image:: img/Chapter3/Chapte043.jpg
 
 *Figure 16.
 Typical Inflow Flood Hydrograph with Mudflow Sediment Concentration by Volume.*
