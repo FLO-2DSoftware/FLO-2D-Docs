@@ -1819,168 +1819,228 @@ To define all the shear stress terms for use in the FLO-2D model, the following 
 By analogy, from the work of Meyer-Peter and Müller (1948) and Einstein (1950), the shear stress relationship is depth integrated and rewritten in the
 following form as a dimensionless slope:
 
-*S f = S y + S v + S t d*
+.. math::
+   :label:
 
-   where the total friction slope S\ :sub:`f` is the sum of the yield slope S\ :sub:`y`, the viscous slope S\ :sub:`v`, and the turbulentdispersive slope
-   S\ :sub:`td`.
-   The viscous and turbulent-dispersive slope terms are written in terms of depth- averaged velocity V.
-   The viscous slope can be written as:
+   S_f = S_y + S_v + S_{td}
 
-*S\ v = 8K*  :sup:``\ *m V\ h\ 2*
+where the total friction slope S\ :sub:`f` is the sum of the yield slope S\ :sub:`y`, the viscous slope S\ :sub:`v`, and the turbulentdispersive slope
+S\ :sub:`td`.
+The viscous and turbulent-dispersive slope terms are written in terms of depth- averaged velocity V.
+The viscous slope can be written as:
 
-   where γ\ :sub:`m` is the specific weight of the sediment mixture.
-   The resistance parameter K for laminar flow equals 24 for smooth wide rectangular channels but increases significantly (~ 50,000) with roughness and
-   irregular cross section geometry.
+.. math::
+   :label:
 
-   In Table 12 for Kentucky Blue Grass with a slope of 0.01, K was estimated at 10,000 (Chen, 1976).
-   A value of K = 2,285 was calibrated on the Rudd Creek, Utah mudflow for a residential area and has been used effectively for most urban studies.
-   For laminar and transitional flows, turbulence is suppressed and the laminar flow resistance parameter K becomes important.
-   In the FLO-2D model if K = 0 in the SED.DAT file, the value of K is automatically computed from the Manning’s n-value.
+   S_v = \frac{K}{8\, \gamma_m}\, \frac{\eta\, V}{h^2}
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+where γ\ :sub:`m` is the specific weight of the sediment mixture.
+The resistance parameter K for laminar flow equals 24 for smooth wide rectangular channels but increases significantly (~ 50,000) with roughness and
+irregular cross section geometry.
 
+In Table 12 for Kentucky Blue Grass with a slope of 0.01, K was estimated at 10,000 (Chen, 1976).
+A value of K = 2,285 was calibrated on the Rudd Creek, Utah mudflow for a residential area and has been used effectively for most urban studies.
+For laminar and transitional flows, turbulence is suppressed and the laminar flow resistance parameter K becomes important.
+In the FLO-2D model if K = 0 in the SED.DAT file, the value of K is automatically computed from the Manning’s n-value.
 
-   * - **Table 12.
-       Resistance Parameters for Laminar Flow.\ 1**
+.. raw:: html
 
-   * - Surface                                | Range of K
+   <table style="border-collapse: collapse; width: 100%; border: 3px solid #000;">
+     <caption style="caption-side: top; font-weight: bold; padding: 6px 0;">
+       Table 12. Resistance Parameters for Laminar Flow.<sup>1</sup>
+     </caption>
 
-   * - Concrete/asphalt                       | 24 -108
+     <thead>
+       <tr>
+         <th style="border: 1px solid #000; padding: 6px; background: #e6e6e6; text-align: center;">
+           Surface
+         </th>
+         <th style="border: 1px solid #000; padding: 6px; background: #e6e6e6; text-align: center;">
+           Range of K
+         </th>
+       </tr>
+     </thead>
 
-   * - Bare sand                              | 30 - 120
+     <tbody>
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px;">Concrete/asphalt</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">24 - 108</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px;">Bare sand</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">30 - 120</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px;">Graded surface</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">90 - 400</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px;">Bare clay - loam soil, eroded</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">100 - 500</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px;">Sparse vegetation</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">1,000 - 4,000</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px;">Short prairie grass</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">3,000 - 10,000</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px;">Bluegrass sod</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">7,000 - 50,000</td>
+       </tr>
+     </tbody>
 
-   * - Graded surface                         | 90 - 400
+     <tfoot>
+       <tr>
+         <td colspan="2" style="border-top: 2px solid #000; padding: 6px; font-size: 90%;">
+           <sup>1</sup>Woolhiser (1975)
+         </td>
+       </tr>
+     </tfoot>
+   </table>
 
-   * - Bare clay - loam soil, eroded          | 100 - 500
+The flow resistance n\ :sub:`td` of the turbulent and dispersive shear stress components are combined into an equivalent Manning’s n-value for the
+flow:
 
-   * - Sparse vegetation                      | 1,000 - 4,000
+.. math::
+   :label:
 
-   * - Short prairie grass                    | 3,000 - 10,000
+   S_{td} = \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}
 
-   * - Bluegrass sod                          | 7,000 - 50,000
+At very high concentrations, the dispersive stress arising from sediment particle contact increases the flow resistance n\ :sub:`td` by transferring
+more momentum flux to the boundary.
+To estimate this increase in flow resistance, the conventional turbulent flow resistance n-value n\ :sub:`t` is increased by an exponential function
+of the sediment concentration C\ :sub:`v`:
 
-   * - :sup:`1` Woolhiser (1975)
+.. math::
+   :label:
 
+   n_{td} = n_t\, b\, e^{m C_v}
 
-..
+where: n\ :sub:`t` is the turbulent n-value and b is a coefficient (0.0538) and m is an exponent (6.0896).
+This equation was based on unpublished paper by Julien and O’Brien (1998) that relates the dispersive and turbulent resistance in hyperconcentrated
+sediment flows as function of the ratio of the flow depth to the sediment grain size.
+The friction slope components can then be combined in the following form:
 
-   The flow resistance n\ :sub:`td` of the turbulent and dispersive shear stress components are combined into an equivalent Manning’s n-value for the
-   flow:
+.. math::
+   :label:
 
-*= n\ td24 V/3 2*
+   S_f = \frac{\tau_y}{\gamma_m\, h}
+         + \frac{K}{8\, \gamma_m}\, \frac{\eta\, V}{h^{2}}
+         + \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}
 
-*St d*
+A quadratic equation solution to the friction slope equation has been formulated in the FLO-2D model to estimate the velocity for use in the momentum
+equation.
+The estimated velocity represents the flow velocity computed across the floodplain or channel element boundary using the average flow depth between
+the elements.
+Reasonable values of K and Manning’s n-value can be assumed for the channel and overland flow resistance.
+The specific weight of the fluid matrix γ\ :sub:`m`, yield stress τ\ :sub:`y` and viscosity η vary principally with sediment concentration.
+Unless a rheological analysis of the mudflow site material is available, the following empirical relationships can be used to compute viscosity and
+yield stress:
 
-*h*
+.. math::
+   :label:
 
-   At very high concentrations, the dispersive stress arising from sediment particle contact increases the flow resistance n\ :sub:`td` by transferring
-   more momentum flux to the boundary.
-   To estimate this increase in flow resistance, the conventional turbulent flow resistance n-value n\ :sub:`t` is increased by an exponential function
-   of the sediment concentration C\ :sub:`v`:
-
-   *ntd = nt b emCv*
-
-   where: n\ :sub:`t` is the turbulent n-value and b is a coefficient (0.0538) and m is an exponent (6.0896).
-   This equation was based on unpublished paper by Julien and O’Brien (1998) that relates the dispersive and turbulent resistance in hyperconcentrated
-   sediment flows as function of the ratio of the flow depth to the sediment grain size.
-   The friction slope components can then be combined in the following form:
-
- *=*  *y\ h + 8K*  \ *m hV\ 2 + n\ tdh\ 2\ 4 /\ V\ 3 2*
- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-   *S f*
-
-   \ *m*
-
-   A quadratic equation solution to the friction slope equation has been formulated in the FLO-2D model to estimate the velocity for use in the momentum
-   equation.
-   The estimated velocity represents the flow velocity computed across the floodplain or channel element boundary using the average flow depth between
-   the elements.
-   Reasonable values of K and Manning’s n-value can be assumed for the channel and overland flow resistance.
-   The specific weight of the fluid matrix γ\ :sub:`m`, yield stress τ\ :sub:`y` and viscosity η vary principally with sediment concentration.
-   Unless a rheological analysis of the mudflow site material is available, the following empirical relationships can be used to compute viscosity and
-   yield stress:
-
-\ *y =* \ *2 e* \ *2 Cv*
+   \tau_y = \alpha_2\, e^{\beta_2\, C_v}
 
 and
 
- *=* \ *1 e* \ *1 Cv*
+.. math::
+   :label:
 
-   where α\ :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
-   The viscosity (poises) and yield stress (dynes/cm\ :sup:`2`) are shown to be exponential functions of the volumetric sediment concentration C\
-   :sub:`v` of silts and clays (and in some cases, fine sands) and do not include larger clastic material rafted along with the flow (Table 13 and Figure
-   60 and Figure 61).
+   \eta = \alpha_1\, e^{\beta_1\, C_v}
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+where α\ :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
+The viscosity (poises) and yield stress (dynes/cm\ :sup:`2`) are shown to be exponential functions of the volumetric sediment concentration C\
+:sub:`v` of silts and clays (and in some cases, fine sands) and do not include larger clastic material rafted along with the flow (Table 13 and Figure
+60 and Figure 61).
 
+.. raw:: html
 
-   * - **Table 13.
-       Yield Stress and Viscosity as a Function of Sediment Concentration.**
+   <table style="border-collapse: collapse; width: 100%; border: 3px solid #000;">
+     <caption style="caption-side: top; font-weight: bold; padding: 6px 0;">
+       Table 13. Yield Stress and Viscosity as a Function of Sediment Concentration.
+     </caption>
 
-   * - **Source**       |    \ :sub:`y` = \ *e*\ :sup:`Cv`   |     = \ *e*\ :sup:`Cv` (poises)|    (dynes/cm\ :sup:`2`)
-       |+-------------------+-------------------+-------------------+-------------------|                  |                  |                  | 
+     <thead>
+       <tr>
+         <th rowspan="2" style="border:1px solid #000; padding:6px; background:#e6e6e6; text-align:center;">
+           Source
+         </th>
+         <th colspan="2" style="border:1px solid #000; padding:6px; background:#e6e6e6; text-align:center;">
+           &tau;<sub>y</sub> = &alpha;e<sup>&beta;C<sub>v</sub></sup> (dynes/cm<sup>2</sup>)
+         </th>
+         <th colspan="2" style="border:1px solid #000; padding:6px; background:#e6e6e6; text-align:center;">
+           &eta; = &alpha;e<sup>&beta;C<sub>v</sub></sup> (poises)
+         </th>
+       </tr>
+       <tr>
+         <th style="border:1px solid #000; padding:6px; background:#e6e6e6; text-align:center;">&alpha;</th>
+         <th style="border:1px solid #000; padding:6px; background:#e6e6e6; text-align:center;">&beta;</th>
+         <th style="border:1px solid #000; padding:6px; background:#e6e6e6; text-align:center;">&alpha;</th>
+         <th style="border:1px solid #000; padding:6px; background:#e6e6e6; text-align:center;">&beta;</th>
+       </tr>
+     </thead>
 
-   * - **Field Data**
+     <tbody>
+       <tr>
+         <td colspan="5" style="border:1px solid #000; padding:6px; text-align:center; font-style:italic; font-weight:bold;">
+           Field Data
+         </td>
+       </tr>
 
-   * - Aspen Pit 1         |    0.181          |    25.7           |    0.0360         |    22.1
+       <tr><td style="border:1px solid #000; padding:6px;">Aspen Pit 1</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.181</td><td style="border:1px solid #000; padding:6px; text-align:center;">25.7</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.0360</td><td style="border:1px solid #000; padding:6px; text-align:center;">22.1</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Aspen Pit 2</td><td style="border:1px solid #000; padding:6px; text-align:center;">2.72</td><td style="border:1px solid #000; padding:6px; text-align:center;">10.4</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.0538</td><td style="border:1px solid #000; padding:6px; text-align:center;">14.5</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Aspen Natural Soil</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.152</td><td style="border:1px solid #000; padding:6px; text-align:center;">18.7</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.00136</td><td style="border:1px solid #000; padding:6px; text-align:center;">28.4</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Aspen Mine Fill</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.0473</td><td style="border:1px solid #000; padding:6px; text-align:center;">21.1</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.128</td><td style="border:1px solid #000; padding:6px; text-align:center;">12.0</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Aspen Watershed</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.0383</td><td style="border:1px solid #000; padding:6px; text-align:center;">19.6</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.000495</td><td style="border:1px solid #000; padding:6px; text-align:center;">27.1</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Aspen Mine Source Area</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.291</td><td style="border:1px solid #000; padding:6px; text-align:center;">14.3</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.000201</td><td style="border:1px solid #000; padding:6px; text-align:center;">33.1</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Glenwood 1</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.0345</td><td style="border:1px solid #000; padding:6px; text-align:center;">20.1</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.00283</td><td style="border:1px solid #000; padding:6px; text-align:center;">23.0</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Glenwood 2</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.0765</td><td style="border:1px solid #000; padding:6px; text-align:center;">16.9</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.648</td><td style="border:1px solid #000; padding:6px; text-align:center;">6.20</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Glenwood 3</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.000707</td><td style="border:1px solid #000; padding:6px; text-align:center;">29.8</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.00632</td><td style="border:1px solid #000; padding:6px; text-align:center;">19.9</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Glenwood 4</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.00172</td><td style="border:1px solid #000; padding:6px; text-align:center;">29.5</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.000602</td><td style="border:1px solid #000; padding:6px; text-align:center;">33.1</td></tr>
 
-   * - Aspen Pit 2         |    2.72           |    10.4           |    0.0538         |    14.5
+       <tr>
+         <td colspan="5" style="border:1px solid #000; padding:6px; text-align:center; font-style:italic; font-weight:bold;">
+           Relationships Available from the Literature
+         </td>
+       </tr>
 
-   * - Aspen Natural Soil  |    0.152          |    18.7           |    0.00136        |    28.4
+       <tr><td style="border:1px solid #000; padding:6px;">Iida (1938)<sup>*</sup></td><td style="border:1px solid #000; text-align:center;">–</td><td style="border:1px solid #000; text-align:center;">–</td><td style="border:1px solid #000; text-align:center;">0.0000373</td><td style="border:1px solid #000; text-align:center;">36.6</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Dai et al. (1980)</td><td style="border:1px solid #000; text-align:center;">2.60</td><td style="border:1px solid #000; text-align:center;">17.48</td><td style="border:1px solid #000; text-align:center;">0.00750</td><td style="border:1px solid #000; text-align:center;">14.39</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Kang and Zhang (1980)</td><td style="border:1px solid #000; text-align:center;">1.75</td><td style="border:1px solid #000; text-align:center;">7.82</td><td style="border:1px solid #000; text-align:center;">0.0405</td><td style="border:1px solid #000; text-align:center;">8.29</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Qian et al. (1980)</td><td style="border:1px solid #000; text-align:center;">0.00136</td><td style="border:1px solid #000; text-align:center;">21.2</td><td style="border:1px solid #000; text-align:center;">–</td><td style="border:1px solid #000; text-align:center;">–</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;"></td><td style="border:1px solid #000; text-align:center;">0.050</td><td style="border:1px solid #000; text-align:center;">15.48</td><td style="border:1px solid #000; text-align:center;">–</td><td style="border:1px solid #000; text-align:center;">–</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Chien and Ma (1958)</td><td style="border:1px solid #000; text-align:center;">0.0588</td><td style="border:1px solid #000; text-align:center;">19.1–32.7</td><td style="border:1px solid #000; text-align:center;">–</td><td style="border:1px solid #000; text-align:center;">–</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Fei (1981)</td><td style="border:1px solid #000; text-align:center;">0.166</td><td style="border:1px solid #000; text-align:center;">25.6</td><td style="border:1px solid #000; text-align:center;">–</td><td style="border:1px solid #000; text-align:center;">–</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;"></td><td style="border:1px solid #000; text-align:center;">0.00470</td><td style="border:1px solid #000; text-align:center;">22.2</td><td style="border:1px solid #000; text-align:center;">–</td><td style="border:1px solid #000; text-align:center;">–</td></tr>
+     </tbody>
 
-   * - Aspen Mine Fill     |    0.0473         |    21.1           |    0.128          |    12.0
+     <tfoot>
+       <tr>
+         <td colspan="5" style="border-top:2px solid #000; padding:6px; font-size:90%;">
+           <sup>*</sup>See O’Brien (1986) for the references.<br>
+           <strong>Conversion:</strong><br>
+           Shear Stress: 1 Pascal (Pa) = 10 dynes/cm<sup>2</sup><br>
+           Viscosity: 1 Pa·s = 10 dynes·sec/cm<sup>2</sup> = 10 poises
+         </td>
+       </tr>
+     </tfoot>
+   </table>
 
-   * - Aspen Watershed     |    0.0383         |    19.6           |    0.000495       |    27.1
+.. image:: img/Chapter4/Chapter070.jpg
 
-   * - Aspen Mine Source   |    0.291          |    14.3           |    0.000201       |    33.1Area                |                   |                   |
-       |
+*Figure 60.
+Dynamic Viscosity of Mudflow Samples versus Volumetric Concentration.*
 
-   * - Glenwood 1          |    0.0345         |    20.1           |    0.00283        |    23.0
+.. image:: img/Chapter4/Chapter070.jpg
 
-   * - Glenwood 2          |    0.0765         |    16.9           |    0.648          |    6.20
+*Figure 61.
+Yield Stress of Mudflow Samples versus Volumetric Concentration.*
 
-   * - Glenwood 3          |    0.000707       |    29.8           |    0.00632        |    19.9
-
-   * - Glenwood 4          |    0.00172        |    29.5           |    0.000602       |    33.1
-
-   * - **Relationships Available from the Literature**
-
-   * - Iida                |    -              |    -              |    0.0000373      |    36.6(1938)\ :sup:`\*`   |                   |                   |
-       |
-
-   * - Dai et al.
-       (1980)   |    2.60           |    17.48          |    0.00750        | 14.39
-
-   * - Kang and Zhang      |    1.75           |    7.82           |    0.0405         |    8.29(1980)              |                   |                   |
-       |
-
-   * - Qian et al.
-       (1980)  |    0.00136        |    21.2           |    -              |
-       -+-------------------+-------------------+-------------------+-------------------|    0.050          |    15.48          |    -              |    -
-
-   * - Chien and Ma (1958) |    0.0588         |    19.1-32.7      |    -              |    -
-
-   * - Fei (1981)          |    0.166          |    25.6           |    -              |
-       -+-------------------+-------------------+-------------------+-------------------|    0.00470        |    22.2           |    -              |    -
-
-   * - :sup:`\*`\ See O’Brien (1986) for the references.*Conversion:* Shear Stress: 1 Pascal (PA) = 10 dynes/cm\ :sup:`2`Viscosity: 1 PAs = 10 dynes-sec/cm\
-       :sup:`2` = 10 poises
-
-
-..
-
-   *Figure 60.
-   Dynamic Viscosity of Mudflow Samples versus Volumetric Concentration.*
-
-   *Figure 61.
-   Yield Stress of Mudflow Samples versus Volumetric Concentration.*
-
-   The viscosity of the fluid matrix is also a function of the type and percentage of silts and clays and the fluid temperature.
+The viscosity of the fluid matrix is also a function of the type and percentage of silts and clays and the fluid temperature.
    Very viscous mudflows have high sediment concentrations and correspondingly high yield stresses and may result in laminar flow although laminar flows
    in nature are extremely rare.
    Less viscous flows (mud floods) are always turbulent.
