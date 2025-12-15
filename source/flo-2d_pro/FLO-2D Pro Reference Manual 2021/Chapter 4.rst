@@ -875,58 +875,58 @@ To utilize the Green-Ampt model, hydraulic conductivity, soil suction, volumetri
 area must be specified.
 Typical hydraulic conductivity, porosity and soil suction parameters are presented in Table 7 and Table 8.
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+*Table 7.
+Green-Ampt Infiltration - Hydraulic Conductivity and Porosity.*
 
+.. raw:: html
 
-   * - **Table 7.
-       Green-Ampt Infiltration - Hydraulic Conductivity and Porosity.**
+   <table style="border-collapse: collapse; width: 100%; border: 3px solid #000;">
+     <caption style="caption-side: top; font-weight: bold; padding: 6px 0;">
+       Table 7. Green-Ampt Infiltration - Hydraulic Conductivity and Porosity.
+     </caption>
 
-   * - Classification    | (in/hr)\ :sup:`1` | (in/hr)\ :sup:`2` | (in/hr)\ :sup:`3`   | Porosity\ :sup:`4`
+     <thead>
+       <tr>
+         <th style="border: 1px solid #000; padding: 6px; background: #eee;">Classification</th>
+         <th style="border: 1px solid #000; padding: 6px; background: #eee;">(in/hr)<sup>1</sup></th>
+         <th style="border: 1px solid #000; padding: 6px; background: #eee;">(in/hr)<sup>2</sup></th>
+         <th style="border: 1px solid #000; padding: 6px; background: #eee;">(in/hr)<sup>3</sup></th>
+         <th style="border: 1px solid #000; padding: 6px; background: #eee;">Porosity<sup>4</sup></th>
+       </tr>
+     </thead>
 
-   * - sand and loamy    | 1.20              | 1.21 - 4.14       | 2.41 - 8.27         | 0.437sand              |                   |                   |
-       |
+     <tbody>
+       <tr><td style="border:1px solid #000; padding:6px;">sand and loamy sand</td><td style="border:1px solid #000; padding:6px; text-align:center;">1.20</td><td style="border:1px solid #000; padding:6px; text-align:center;">1.21 - 4.14</td><td style="border:1px solid #000; padding:6px; text-align:center;">2.41 - 8.27</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.437</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">sandy loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.40</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.51</td><td style="border:1px solid #000; padding:6px; text-align:center;">1.02</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.437</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.25</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.26</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.52</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.463</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">silty loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.15</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.14</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.27</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.501</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">silt</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.10</td><td style="border:1px solid #000; padding:6px; text-align:center;"></td><td style="border:1px solid #000; padding:6px; text-align:center;"></td><td style="border:1px solid #000; padding:6px; text-align:center;"></td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">sandy clay loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.06</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.09</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.17</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.398</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">clay loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.04</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.05</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.09</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.464</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">silty clay loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.04</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.03</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.06</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.471</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">sandy clay</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.02</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.03</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.05</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.430</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">silty clay</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.02</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.02</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.04</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.479</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">clay</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.01</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.01</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.02</td><td style="border:1px solid #000; padding:6px; text-align:center;">0.475</td></tr>
 
-   * - sandy loam        | 0.40              | 0.51              | 1.02                | 0.437
+       <tr><td style="border:1px solid #000; padding:6px;">very slow</td><td style="border:1px solid #000;"></td><td style="border:1px solid #000;"></td><td style="border:1px solid #000; text-align:center;">&lt; 0.06<sup>3</sup></td><td style="border:1px solid #000;"></td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">slow</td><td style="border:1px solid #000;"></td><td style="border:1px solid #000;"></td><td style="border:1px solid #000; text-align:center;">0.06 - 0.20<sup>3</sup></td><td style="border:1px solid #000;"></td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">moderately slow</td><td style="border:1px solid #000;"></td><td style="border:1px solid #000;"></td><td style="border:1px solid #000; text-align:center;">0.20 - 0.63<sup>3</sup></td><td style="border:1px solid #000;"></td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">moderate</td><td style="border:1px solid #000;"></td><td style="border:1px solid #000;"></td><td style="border:1px solid #000; text-align:center;">0.63 - 2.0<sup>3</sup></td><td style="border:1px solid #000;"></td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">rapid</td><td style="border:1px solid #000;"></td><td style="border:1px solid #000;"></td><td style="border:1px solid #000; text-align:center;">2.0 - 6.3<sup>3</sup></td><td style="border:1px solid #000;"></td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">very rapid</td><td style="border:1px solid #000;"></td><td style="border:1px solid #000;"></td><td style="border:1px solid #000; text-align:center;">&gt; 6.3<sup>3</sup></td><td style="border:1px solid #000;"></td></tr>
+     </tbody>
 
-   * - loam              | 0.25              | 0.26              | 0.52                | 0.463
-
-   * - silty loam        | 0.15              | 0.14              | 0.27                | 0.501
-
-   * - silt              | 0.10              |                   |                     |
-
-   * - sandy clay loam   | 0.06              | 0.09              | 0.17                | 0.398
-
-   * - clay loam         | 0.04              | 0.05              | 0.09                | 0.464
-
-   * - silty clay loam   | 0.04              | 0.03              | 0.06                | 0.471
-
-   * - sandy clay        | 0.02              | 0.03              | 0.05                | 0.430
-
-   * - silty clay        | 0.02              | 0.02              | 0.04                | 0.479
-
-   * - clay              | 0.01              | 0.01              | 0.02                | 0.475
-
-   * - very slow         |                   |                   | < 0.06\ :sup:`3`    |
-
-   * - slow              |                   |                   | 0.06-.20\ :sup:`3`  |
-
-   * - moderately slow   |                   |                   | 0.20-0.63\ :sup:`3` |
-
-   * - moderate          |                   |                   | 0.63-2.0\ :sup:`3`  |
-
-   * - rapid             |                   |                   | 2.0-6.3\ :sup:`3`   |
-
-   * - very rapid        |                   |                   | > 6.3\ :sup:`3`     |
-
-   * - :sup:`1`\ Maricopa County Drainage Design Manual, 1992.:sup:`2`\ James, et.
-       al., Water Resources Bulletin Vol.
-       28, 1992.:sup:`3`\ W.
-       T.
-       Fullerton, Masters Thesis, CSU, 1983.:sup:`4`\ COE Technical Engineering and Design Guide, No.
-       19, 1997
-
+     <tfoot>
+       <tr>
+         <td colspan="5" style="border-top:2px solid #000; padding:6px; font-size:90%;">
+           <sup>1</sup>Maricopa County Drainage Design Manual, 1992.<br>
+           <sup>2</sup>James, et. al., Water Resources Bulletin Vol. 28, 1992.<br>
+           <sup>3</sup>W. T. Fullerton, Masters Thesis, CSU, 1983.<br>
+           <sup>4</sup>COE Technical Engineering and Design Guide, No. 19, 1997.
+         </td>
+       </tr>
+     </tfoot>
+   </table>
 
 .. list-table::
    :widths: 50 50
