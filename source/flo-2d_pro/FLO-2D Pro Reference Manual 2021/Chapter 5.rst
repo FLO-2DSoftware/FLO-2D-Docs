@@ -131,7 +131,7 @@ effectiveness can be tested for the more frequent events.
 *Figure 130.
 Urban Model with Streets, Buildings and Storm Drains*
 
-.. image:: img/Chapter5/Chapte003.jpg
+.. image:: img/Chapter5/Chapte003.png
 
 *Figure 131.
 Urban Model Results with Storm Drains*
