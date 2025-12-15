@@ -252,8 +252,7 @@ A new project is created by importing the DTM elevation points from an existing 
 To import the DTM (\*.PTS) file click this command in the *File* menu and chose the correct filename in your project subdirectory.
 The working region is automatically scaled from the minimum and maximum point coordinates.
 
-3.2.3 New Project/from Existing ArcInfo ASCII Grid File...
-(File Menu)
+3.2.3 New Project/from Existing ArcInfo ASCII Grid File... (File Menu)
 
 .. image:: img/GDS025.jpg
 
@@ -335,7 +334,7 @@ The save button will overwrite the unloaded component data file.
 This option provides a way to start a *GDS* project by importing a DXF or DWG CAD file.
 The working region and *FLO-2D* grid system are automatically scaled from the existing CAD file extents.
 
-3.2.7 New Project/from Existing HEC-RAS .PRJ File (File Menu)
+*3.2.7 New Project/from Existing HEC-RAS .PRJ File (File Menu)*
 
 Use this option to import it to start a *FLO-2D* project when you have a Geo-referenced *HEC-RAS* project file (\*.prj) that includes channel reaches.
 The working region and *FLO-2D* grid system are automatically scaled from the existing HEC\ *-RAS* project file extents.
@@ -1315,7 +1314,7 @@ For this component, concentrated rill and gully flow (flow in rectangular channe
 between designated floodplain grid elements.
 The following dialog box is used to input the multiple channel data:
 
-3.5.12 Assign Parameters to Selection/Inflow/Outflow Condition (Grid Menu)
+*3.5.12 Assign Parameters to Selection/Inflow/Outflow Condition (Grid Menu)*
 
 .. image:: img/GDS122.png
 
@@ -1324,8 +1323,7 @@ The In/Out Condition dialog box allows editing these boundary conditions:
 
 .. image:: img/GDS123.jpg
 
-3.5.12.1 Setting inflow nodes
-'''''''''''''''''''''''''''''
+*3.5.12.1 Setting inflow nodes*
 
 Clicking the first radio button will assign an inflow hydrograph to a grid element.
 If there is a channel in the selected element, you can assign the hydrograph to either the channel or the floodplain.
@@ -1405,8 +1403,6 @@ The outflow node is essentially a sink.
 
 *3.5.12.4 Outflow element with hydrograph (diversion):*
 
-    .. image:: img/GDS129.jpg
-
     - This diversion data is written to the INFLOW.DAT file.
     - This option is for Channels only.
     - The grayed-out appearance for FP and FP/Channel, indicating that those 2 commands are unavailable
@@ -1414,6 +1410,8 @@ The outflow node is essentially a sink.
     - If the discharge in the channel does not meet the level of the discharge in the diversion hydrograph, the element will divert all of the water it can
       take.
     - Any water that exceeds the diversion hydrograph will continue downstream.
+
+    .. image:: img/GDS129.jpg
 
 *3.5.12.5* Outflow element with stage-time relationship\ *:*
 
@@ -1534,7 +1532,7 @@ Use this option to assign a stage-discharge relationship to the channel.
 In this case, the channel outflow discharge will be controlled by assigned stage discharge pairs to simulate a weir, culvert or other water surface
 hydraulic control.
 
-3.5.12.10 No Outflow Condition
+*3.5.12.10 No Outflow Condition*
 
 .. image:: img/GDS135.jpg
 
