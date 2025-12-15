@@ -80,11 +80,9 @@ of Transportation, Publication No.
 FHWA-HIF-12-018.
 
 Federal Emergency Management Agency, 2003, “Guidelines and Specifications for Flood Hazard
-
-   Mapping Partners, Appendix G: Guidance for Alluvial Fan Flooding Analysis and Mapping.”
-
-   Fletcher, C.A.J., 1990.
-   *Computational Techniques for Fluid Dynamics, Volume I*, 2\ :sup:`nd` ed., SpringerVelag, New York.
+Mapping Partners, Appendix G: Guidance for Alluvial Fan Flooding Analysis and Mapping.”
+Fletcher, C.A.J., 1990.
+*Computational Techniques for Fluid Dynamics, Volume I*, 2\ :sup:`nd` ed., SpringerVelag, New York.
 
 FLO-2D, 2018.
 “Levee, Dam, and Wall Breach Guidelines.” Build No 18.
@@ -303,31 +301,21 @@ Theurer, 1982.
 of Hyd.
 Eng., ASCE, 108(6), 747-757.
 
-Schamber, D.R.
-and R.C.
-MacArthur, 1985.
+Schamber, D.R. and R.C. MacArthur, 1985.
 "One-dimensional model for mudflows," Proc.
-of the ASCE Spec.
-Conf.
-on Hydraulics and Hydrology in the Small Computer Age, V.
-2, 1334-39.
+of the ASCE Spec. Conf.
+on Hydraulics and Hydrology in the Small Computer Age, V. 2, 1334-39.
 
 Schumm, S.A., 1977.
 *The Fluvial System*, John Wiley & Sons, Inc., New York, NY.
 
-Schumm, S.A., M.D.
-Harvey, and C.C.
-Watson, 1984.
+Schumm, S.A., M.D. Harvey, and C.C. Watson, 1984.
 *Incised Channels, Morphology, Dynamics and* *Control*, Water Resources Publications, Littleton, CO.
 
-Simons, D.B.
-and F.
-Senturk, 1976.
+Simons, D.B. and F. Senturk, 1976.
 *Sediment Transport Technology*, Water Resource Publications, Fort Collins, CO.
 
-Shen, H.W.
-and J.Y.
-Lu, 1983.
+Shen, H.W. and J.Y. Lu, 1983.
 “Development of predictions of bed armoring,” J.
 of Hydraulic Engineering, ASCE, 109(4), 611 - 629.
 
@@ -360,10 +348,7 @@ of the Japan - China (Taipai) Joint Seminar on Natural Hazard Mitigation, Kyoto,
 Toffaleti, F.B., 1969.
 “Definitive computations of sand discharge in rivers,” J.
 of the Hyd.
-Div., ASCE, V.
-95, no.
-HY1, pp.
-225-246.
+Div., ASCE, V. 95, no. HY1, pp. 225-246.
 
 Urban Drainage and Flood Control District (UDFCD), 2008.
 “Drainage Criteria Manual,” Denver, Colorado.
@@ -407,10 +392,7 @@ P.Y.
 Julien, and E.V.
 Richardson, 1988.
 “Suspension of large concentrations of sand,” J.
-Hyd.
-Eng., ASCE, 114, no.
-8, pp.
-888-898.
+Hyd. Eng., ASCE, 114, no. 8, pp. 888-898.
 
 Woolhiser, D.A., 1975.
 "Simulation of Unsteady Overland Flow," in *Unsteady Flow in Open Channels*, Mahmood, K.
@@ -418,20 +400,14 @@ and Yevjevich, V.
 eds., Water Resources Publications, Fort Collins, CO.
 
 Yang, C.T., 1973.
-“Incipient motion and sediment transport,” J.
-of Hyd Div.
-ASCE, V.
-99, no.
-HY10, pp.
-1679-1704.
+“Incipient motion and sediment transport,” J. of Hyd Div. ASCE, V. 99, no. HY10, pp. 1679-1704.
 
 Yang, C.T., 1996.
 Sediment Transport, Theory and Practice,” McGraw-Hill, New York, N.Y.
 
 Zeller, M. E. and W. T.
 Fullerton, 1983.
-“A Theoretically Derived Sediment Transport Equation for SandBed Channels in Arid Regions,” Proceedings of the D.
-B.
+“A Theoretically Derived Sediment Transport Equation for SandBed Channels in Arid Regions,” Proceedings of the D. B.
 Simons Symposium on Erosion and Sedimentation,
 R. M. Li and P. F.
 Lagasse, eds., Colorado State University and ASCE.
