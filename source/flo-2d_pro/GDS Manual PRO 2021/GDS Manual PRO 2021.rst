@@ -441,9 +441,13 @@ The command exports levee and WFR stations and calculates a length to the statio
     <pre>
         An example of LEVEECRESTS.DAT:
         Node   Station   Z        X             Y
+
         627    00.00     69.638   2226721.750   13565007.000
+
         582    35.59     69.957   2226849.000   13565100.000
+
         582    66.71     70.142   2226976.250   13565153.000
+
         582    97.76     70.194   2227029.000   13565280.000
     </pre>
 
@@ -1237,77 +1241,70 @@ This dialog box can also be used to edit the grid element elevation.
 
 Each data entry is described below:
 
-Incremental increase in crest elevation for all the levee nodes (RAISLEV)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Incremental increase in crest elevation for all the levee nodes (RAISLEV)*
 
-Global incremental increase in levee crest elevation (ft or m) for all the levee grid elements.
+    Global incremental increase in levee crest elevation (ft or m) for all the levee grid elements.
 
-    *Global Failure Mode* provides two modes of failure:
+*Global Failure Mode* provides two modes of failure:
 
-        *Prescribed failure* used to provide predetermined breach data in the bottom part of the dialog or
+    *Prescribed failure* used to provide predetermined breach data in the bottom part of the dialog or
 
-        *Breach* *failure* where the model simulates the breach erosion from overtopping or piping.
-        In this case, breach parameters should be entered clicking the Open Breach Dialog button.
+    *Breach* *failure* where the model simulates the breach erosion from overtopping or piping.
+    In this case, breach parameters should be entered clicking the Open Breach Dialog button.
 
-Flow direction cutoff direction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Flow direction cutoff direction*
 
-Check buttons to define the flow direction (of the 8 possible overland flow directions) that will be cutoff by a levee.
+    Check buttons to define the flow direction (of the 8 possible overland flow directions) that will be cutoff by a levee.
 
 *Levee Crest Elevation* (LEVELEV)
 
-Elevation (ft or m) of the top of the levee.
+    Elevation (ft or m) of the top of the levee.
 
-.. |assign_to_all_icon| image:: img/GDS119.jpg
-   :height: 14px
+    .. |assign_to_all_icon| image:: img/GDS119.jpg
+       :height: 14px
 
 *Assign to all* button |assign_to_all_icon|
 
-Assigns the cutoff flow direction and levee crest elevation to all selected grid elements.
+    Assigns the cutoff flow direction and levee crest elevation to all selected grid elements.
 
-.. |assign_levee_input_parameters_icon| image:: img/GDS120.jpg
-   :height: 14px
+    .. |assign_levee_input_parameters_icon| image:: img/GDS120.jpg
+       :height: 14px
 
-Levee failure for this direction |assign_levee_input_parameters_icon|
+*Levee failure for this direction* |assign_levee_input_parameters_icon|
 
-Enables input parameters to be assigned for levee prescribed failure modeling for the selected direction.
+    Enables input parameters to be assigned for levee prescribed failure modeling for the selected direction.
 
-Elevation of prescribed failure
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Elevation of prescribed failure*
 
-Assign the maximum water surface elevation at failure (FAILEVEL) if is different than the levee crest (LEVELEV).
-This enables the levee to fail prior to being overtopped.
-Set the FAILEVEL variable to zero to simulate levee failure when it is overtopped.
+    Assign the maximum water surface elevation at failure (FAILEVEL) if is different than the levee crest (LEVELEV).
+    This enables the levee to fail prior to being overtopped.
+    Set the FAILEVEL variable to zero to simulate levee failure when it is overtopped.
 
-Duration (hrs) for failure after failure level is exceeded (FAILTIME)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Duration (hrs) for failure after failure level is exceeded* (FAILTIME)
 
-Duration in hours until levee failure after the FAILEVEL elevation is exceeded by the flow depth.
-Set this variable to zero if the level fails immediately when overtopped or when FAILEVEL is exceeded.
+    Duration in hours until levee failure after the FAILEVEL elevation is exceeded by the flow depth.
+    Set this variable to zero if the level fails immediately when overtopped or when FAILEVEL is exceeded.
 
-Base elevation of levee failure if different from floodplain elevation (LEVBASE)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Base elevation of levee failure if different from floodplain elevation* (LEVBASE)
 
-The final elevation of the levee after failure is completed.
-This enables the levee to fail to an elevation that is different from the floodplain elevation.
-Set this variable to zero if levee failure results in the complete levee failure to the floodplain elevation.
+    The final elevation of the levee after failure is completed.
+    This enables the levee to fail to an elevation that is different from the floodplain elevation.
+    Set this variable to zero if levee failure results in the complete levee failure to the floodplain elevation.
 
-Initial levee breach width (FAILWIDTH)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Initial levee breach width* (FAILWIDTH)
 
-The initial flow width (ft or m) of levee failure.
-This flow width relates to one of the eight flow directions and should be less than the length of an octagon side (length of the side of a grid
-element x 0.4142).
+    The initial flow width (ft or m) of levee failure.
+    This flow width relates to one of the eight flow directions and should be less than the length of an octagon side (length of the side of a grid
+    element x 0.4142).
 
 *Vertical rate of levee breach opening* (FAILRATE)
 
-The rate of vertical levee failure (ft/hr or m/hr).
+    The rate of vertical levee failure (ft/hr or m/hr).
 
-Horizontal rate of levee breach opening (FAILWIDRATE)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Horizontal rate of levee breach opening* (FAILWIDRATE)
 
-The rate at which the levee breach widens (ft/hr or m/hr).
-The breach stops increasing if the breach exceeds the grid element width for that direction.
+    The rate at which the levee breach widens (ft/hr or m/hr).
+    The breach stops increasing if the breach exceeds the grid element width for that direction.
 
 3.5.11 Assign Parameters to Selection/Multiple Channels (Grid Menu)
 
