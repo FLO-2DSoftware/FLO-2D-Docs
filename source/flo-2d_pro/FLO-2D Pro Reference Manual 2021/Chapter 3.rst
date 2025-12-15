@@ -934,7 +934,7 @@ Other outflow guidelines include:
     - Channel outflow can also be established by a stage-discharge.
       This option can be used when channel outflow occurs at a hydraulic structure or when a known stage-discharge relationship is available.
 
-.. image:: img/Chapter3/Chapte008.jpg
+.. image:: img/Chapter3/Chapte008.png
 
 *Figure 24.
 Outflow node assignment and stacked nodes.*
