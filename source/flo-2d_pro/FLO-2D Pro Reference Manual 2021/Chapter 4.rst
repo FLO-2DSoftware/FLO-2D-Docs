@@ -144,84 +144,76 @@ Overland Flow Manning's n Roughness Values.* \ :sup:`1`
        19, 1997 with modifications.
      -
 
+.. image:: img/Chapter4/Chapte002.jpg
 
-..
+*Figure 35.
+Overland Flow Routing Subroutine Flow Chart.*
 
-   |Chapte002|
+Streets serving as conveyance features are important for distributing the flow to other project areas.
+Streets can be modeled either as 1-D rectangular channels or as impervious grid elements with low nvalues.
+If the two or more grid elements fit inside a street because the grid elements are 10 ft square or less, then assigning appropriate elevations and
+n-values to the grid elements will enable street flow.
+These street elements can be assigned with shape files either with QGIS plug-in tool or with the GDS (Figure 36).
+To make the floodplain elements represent the street:
 
-   *Figure 35.
-   Overland Flow Routing Subroutine Flow Chart.*
+    - Assign n-values in an acceptable range for street irregularities, breaks-in-slope, unsteady and non-uniform flow (0.02 to 0.035);
+    - Select a spatially variable limiting Froude number in the range from 1.5 to 2.5;
+    - Review and adjust the street profile.
 
-   Streets serving as conveyance features are important for distributing the flow to other project areas.
-   Streets can be modeled either as 1-D rectangular channels or as impervious grid elements with low nvalues.
-   If the two or more grid elements fit inside a street because the grid elements are 10 ft square or less, then assigning appropriate elevations and
-   n-values to the grid elements will enable street flow.
-   These street elements can be assigned with shape files either with QGIS plug-in tool or with the GDS (Figure 36).
-   To make the floodplain elements represent the street:
-
-- Assign n-values in an acceptable range for street irregularities, breaks-in-slope, unsteady and non-uniform flow (0.02 to 0.035);
-
-- Select a spatially variable limiting Froude number in the range from 1.5 to 2.5;
-
-- Review and adjust the street profile.
-
-..
-
-   To adjust the street profile, there are two GDS tools: 1) Interpolate elevations downslope and for the street crown.
-   It will also assign minimum curb elevations to the floodplain elevations outside the street.
-   2) Draw a polyline and interpolate the elevations using the profile tool.
-   For more street editing options and details see the GDS manual or the street editing white paper.
+To adjust the street profile, there are two GDS tools: 1) Interpolate elevations downslope and for the street crown.
+It will also assign minimum curb elevations to the floodplain elevations outside the street.
+2) Draw a polyline and interpolate the elevations using the profile tool.
+For more street editing options and details see the GDS manual or the street editing white paper.
 
 **Storm Drains**
 
-   *Figure 36.
-   Editing Grid Elements to Represent Streets.*
+.. image:: img/Chapter4/Chapte056.jpg
 
-   Some of the floodplain or watershed depression storage defined by the DTM point data base is lost in the upscale averaging of the discretized FLO-2D
-   grid surface.
-   This depression storage accuracy can be retained by generating a depth-volume storage rating table for each grid element.
-   The GDS will automatically create the rating table if there are sufficient DTM points for a rating table (e.g. a threshold of 20 points or more are
-   required depending on the topographic setting of the domain).
-   An OUTRC.DAT file lists the potential storage for each cell.
-   The algorithm divides the grid element in subcells where the storage volume is calculated as a function of the stage above the lowest DTM point
-   (Figure 37).
-   At runtime the FLO-2D model will compute a flow depth based on the storage volume from the rating table.
-   As the cell depression volume fills and eventually spills to other grid elements, the storage retention is infiltrated.
-   The unique attributes of this routine to improve shallow flow runoff are:
+*Figure 36.
+Editing Grid Elements to Represent Streets.*
 
-- At runtime, the flow depth is based on the stage-volume rating table until the cell is filled.
+Some of the floodplain or watershed depression storage defined by the DTM point data base is lost in the upscale averaging of the discretized FLO-2D
+grid surface.
+This depression storage accuracy can be retained by generating a depth-volume storage rating table for each grid element.
+The GDS will automatically create the rating table if there are sufficient DTM points for a rating table (e.g. a threshold of 20 points or more are
+required depending on the topographic setting of the domain).
+An OUTRC.DAT file lists the potential storage for each cell.
+The algorithm divides the grid element in subcells where the storage volume is calculated as a function of the stage above the lowest DTM point
+(Figure 37).
+At runtime the FLO-2D model will compute a flow depth based on the storage volume from the rating table.
+As the cell depression volume fills and eventually spills to other grid elements, the storage retention is infiltrated.
+The unique attributes of this routine to improve shallow flow runoff are:
 
-- A minimum number of DTM points within each grid element are required to assign the storage rating table; otherwise the model uses the TOL value for
-  the depression storage.
+    - At runtime, the flow depth is based on the stage-volume rating table until the cell is filled.
+    - A minimum number of DTM points within each grid element are required to assign the storage rating table; otherwise the model uses the TOL value for
+      the depression storage.
+    - The rating table is created only for those grid cells that do not contain a street or channel or that have an area reduction factor (ARF) less than
+      0.5.
+    - If a grid element has a rating table, the cell elevation will be equal to the lowest DTM point used in the calculation of the rating table.
 
-- The rating table is created only for those grid cells that do not contain a street or channel or that have an area reduction factor (ARF) less than
-  0.5.
+For a complete discussion of this grid element rating table stage-volume tool, refer to the GDS manual.
 
-- If a grid element has a rating table, the cell elevation will be equal to the lowest DTM point used in the calculation of the rating table.
+.. image:: img/Chapter4/Chapte057.jpg
 
-..
+*Figure 37.
+Stage-Volume Rating Table for Assigning Flow Depths.*
 
-   For a complete discussion of this grid element rating table stage-volume tool, refer to the GDS manual.
+Some FLO-2D projects have been modeled using grid elements inside of the channel.
+In this case, the channel component is not used and instead the FLO-2D grid system is draped over the channel portion of the topography.
+While these projects have been conducted with some success, there are several modeling concerns that should be addressed.
+The FLO-2D model was developed to be able to exchange 1-D channel overbank discharge with the floodplain grid elements.
+For this reason, the model works well on large flood events and large grid elements.
+When small grid elements are used inside of a channel with confined flow and large discharges and flow depths, the model may run slow.
+In addition, there will be zero water surface slope between some grid elements.
+It should be noted that the application of the Manning’s equation for uniform open channel flow to compute the friction slope is no longer valid as
+the depth average velocity approaches zero (ponded flow condition).
+The resulting water surface elevations can be accurately predicted but will display some variation across the channel.
 
-   *Figure 37.
-   Stage-Volume Rating Table for Assigning Flow Depths.*
+Channel Flow
+------------
 
-   Some FLO-2D projects have been modeled using grid elements inside of the channel.
-   In this case, the channel component is not used and instead the FLO-2D grid system is draped over the channel portion of the topography.
-   While these projects have been conducted with some success, there are several modeling concerns that should be addressed.
-   The FLO-2D model was developed to be able to exchange 1-D channel overbank discharge with the floodplain grid elements.
-   For this reason, the model works well on large flood events and large grid elements.
-   When small grid elements are used inside of a channel with confined flow and large discharges and flow depths, the model may run slow.
-   In addition, there will be zero water surface slope between some grid elements.
-   It should be noted that the application of the Manning’s equation for uniform open channel flow to compute the friction slope is no longer valid as
-   the depth average velocity approaches zero (ponded flow condition).
-   The resulting water surface elevations can be accurately predicted but will display some variation across the channel.
-
- Channel Flow
- ------------
-
-   The full channel guidelines are in the Manuals folder.
-   Channel flow is simulated as one-dimensional in the downstream direction.
+The full channel guidelines are in the Manuals folder.
+Channel flow is simulated as one-dimensional in the downstream direction.
    Average flow hydraulics of velocity and depth define the discharge between channel grid elements.
    Secondary currents, dispersion and super elevation in channel bends are not modeled with the 1-D channel component.
    The governing equations of continuity and momentum were presented in Section 2.1.
