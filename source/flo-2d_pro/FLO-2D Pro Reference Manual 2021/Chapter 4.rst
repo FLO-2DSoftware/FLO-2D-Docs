@@ -112,6 +112,7 @@ Overland Flow Manning's n Roughness Values.* \ :sup:`1`
          No till (60 - 100% residue cover)
 
      - \
+
          0.008 - 0.012
 
          0.06 - 0.22
@@ -586,7 +587,7 @@ Each section has a length of one-half the grid element side or diagonal.
 A grid element may contain one or more streets and the streets may intersect.
 Street roughness values, street widths, elevations and curb heights can be modified on a grid element or street section basis in the GDS program.
 
-.. image:: img/Chapter4/Chapte063.jpg
+.. image:: img/Chapter4/Chapte064.jpg
 
 *Figure 47.
 Streets Depicted in Green in the GDS Program.*
@@ -642,184 +643,120 @@ Maximum Allowable ARF Values.*
 
 A grid element of 10 ft will thereby have at least 15 square ft of surface area.
 
-|Chapte006|
+.. image:: img/Chapter4/Chapte006.jpg
 
-   *Figure 48.
-   ARF Assignments for Buildings with Walls, Storm Drain and Background Image.*
+*Figure 48.
+ARF Assignments for Buildings with Walls, Storm Drain and Background Image.*
 
-   *Figure 49.
-   Color Depiction of ARF and WRF Factors.*
+.. image:: img/Chapter4/Chapte065.jpg
 
-   Two building options are rainfall runoff from building roofs and building collapse.
-   Rainfall can collect on building roofs using levees to represent parapet walls and be routed to downspouts represented by hydraulic structure rating
-   curves (Figure 50 and Figure 51).
+*Figure 49.
+Color Depiction of ARF and WRF Factors.*
 
-|Chapte007|
+Two building options are rainfall runoff from building roofs and building collapse.
+Rainfall can collect on building roofs using levees to represent parapet walls and be routed to downspouts represented by hydraulic structure rating
+curves (Figure 50 and Figure 51).
 
-   *Figure 50.
-   Roof Rainfall Runoff Routed to a Downspout.*
+.. image:: img/Chapter4/Chapte007.jpg
 
-|Chapte008|
+*Figure 50.
+Roof Rainfall Runoff Routed to a Downspout.*
 
-   *Figure 51.
-   Roof Downspout and Parapet Walls for Roof Storage.*
+.. image:: img/Chapter4/Chapte008.jpg
 
-   A conservative approach is taken to predict the potential collapse of buildings.
-   Based on vulnerability curves of depth versus velocity (Figure 52), when the computed threshold depth is exceeded by flood flow depth associated with
-   a predicted velocity, the building area reduction factor ARF value is reset to zero enabling the flow to go through the grid element and fill it with
-   flood storage.
-   The building collapse routine is triggered by assigning grid element building vulnerability curves in BUILDING_COLLAPSE.DAT or by assigning a negative
-   ARF values for either a totally blocked or partially blocked grid element.
+*Figure 51.
+Roof Downspout and Parapet Walls for Roof Storage.*
 
-*Figure*
+A conservative approach is taken to predict the potential collapse of buildings.
+Based on vulnerability curves of depth versus velocity (Figure 52), when the computed threshold depth is exceeded by flood flow depth associated with
+a predicted velocity, the building area reduction factor ARF value is reset to zero enabling the flow to go through the grid element and fill it with
+flood storage.
+The building collapse routine is triggered by assigning grid element building vulnerability curves in BUILDING_COLLAPSE.DAT or by assigning a negative
+ARF values for either a totally blocked or partially blocked grid element.
 
-*52*
+.. image:: img/Chapter4/Chapte066.jpg
 
-*.
-Building Collapse Vulnerability Curves*
+*Figure 52.
+Building Collapse Vulnerability Curves.*
 
-*.*
+Rainfall Runoff
+---------------
 
-0.00
+Rainfall runoff can be routed to the channel system and then the river flood hydraulics can be computed in the same flood simulation.
+The watershed hydrology and the river routing can also be modeled separately with FLO-2D.
+Rainfall on the alluvial fan or floodplain can make a significant contribution to the total flood volume.
+Some fan or floodplain surface areas are similar in size to the upstream watershed areas.
+In these cases, the excess rainfall may be equivalent to the volume of the inflow hydrograph from the upstream watershed.
+The fan rainfall/runoff may precede or lag the arrival of the floodwave from the upstream watershed.
 
-2.00
+The storm rainfall is discretized as a cumulative percent of the total.
+This discretization of the storm hyetograph is established through local rainfall data, the NOAA Atlas or through regional drainage criteria that
+defines storm duration, intensity and distribution.
+The rainfall can be uniform or spatially variable over the grid system.
+Often in a FLO-2D simulation the first upstream flood inflow hydrograph timestep corresponds to the first rainfall incremental timestep.
+By altering the storm time distribution on the fan or floodplain, the rainfall can lag or precede the rainfall in the upstream basin depending on the
+direction of the storm movement over the basin.
+The storm can also have a different total rainfall than that occurring in the upstream basin.
 
-4.00
+There are a number of options to simulate variable rainfall including a moving storm, spatially variable depth area reduction assignment, or even
+grid-based rain gage data from an actual storm event.
+Storms can be spatially varied over the grid system with areas of intense or light rainfall.
+Storms can also move over the grid system by assigning storm speed and direction.
+A rainfall distribution can be selected from several predefined distributions.
 
-6.00
+Historical storms can be assigned to the entire grid system.
+If calibrated or adjusted Next-Generation Radar (NEXRAD) data is available, the NEXRAD pixel rainfall for a given time interval can be automatically
+interpolated to the FLO-2D grid system using the GDS.
+Each grid element will be assigned a rainfall total for the NEXRAD time interval and the rainfall is then interpolated by the model for each
+computational timestep.
+The result is spatially and temporally variable rainfall-runoff from the grid system.
+An example of the application of NEXRAD rainfall on an alluvial fan and watershed near Tucson, Arizona is shown in Figure 53.
+You can accomplish the same result with gridded network data from a system of rain gages.
+After the GDS interpolation, each FLO-2D grid element will have a rainfall hyetograph to represent the storm.
+This is the ultimate temporal and spatial discretization of a storm event and the resulting flood replication has proven to be very accurate.
 
-8.00
+As previously discussed, runoff from building roofs is another rainfall feature.
+Setting IRAINBUILDING = 1 in RAIN.DAT will enable the rainfall on the surface area reduced portion of the grid element identified as a building (area
+reduction factor - ARF value) to be contributed to the surface water on a grid element (Figure 53).
+The roof runoff in dense urban areas can constitute a significant percentage of the total storm volume when it is added directly to the ground surface
+volume.
+The building ARF values are in addition to the RTIMP impervious surface infiltration assignment.
 
-10.00
+.. image:: img/Chapter4/Chapte067.jpg
 
-12.00
+*Figure 53.
+Flooding Replicated from NEXRAD Data near Tucson, Arizona.*
 
-14.00
+Infiltration and Abstraction
+----------------------------
 
-16.00
-
-18.00
-
-0.00
-
-5.00
-
-10.00
-
-15.00
-
-20.00
-
-25.00
-
-30.00
-
-**D**
-
-**e**
-
-**p**
-
-**t**
-
-**h**
-
-**(**
-
-**f**
-
-**t**
-
-**)**
-
-**Velocity (fps)**
-
-poor
-
-moderate
-
-good
-
-Clausen & Clark G
-
-Clausen & Clark R
-
- Rainfall Runoff
- ---------------
-
-   Rainfall runoff can be routed to the channel system and then the river flood hydraulics can be computed in the same flood simulation.
-   The watershed hydrology and the river routing can also be modeled separately with FLO-2D.
-   Rainfall on the alluvial fan or floodplain can make a significant contribution to the total flood volume.
-   Some fan or floodplain surface areas are similar in size to the upstream watershed areas.
-   In these cases, the excess rainfall may be equivalent to the volume of the inflow hydrograph from the upstream watershed.
-   The fan rainfall/runoff may precede or lag the arrival of the floodwave from the upstream watershed.
-
-   The storm rainfall is discretized as a cumulative percent of the total.
-   This discretization of the storm hyetograph is established through local rainfall data, the NOAA Atlas or through regional drainage criteria that
-   defines storm duration, intensity and distribution.
-   The rainfall can be uniform or spatially variable over the grid system.
-   Often in a FLO-2D simulation the first upstream flood inflow hydrograph timestep corresponds to the first rainfall incremental timestep.
-   By altering the storm time distribution on the fan or floodplain, the rainfall can lag or precede the rainfall in the upstream basin depending on the
-   direction of the storm movement over the basin.
-   The storm can also have a different total rainfall than that occurring in the upstream basin.
-
-   There are a number of options to simulate variable rainfall including a moving storm, spatially variable depth area reduction assignment, or even
-   grid-based rain gage data from an actual storm event.
-   Storms can be spatially varied over the grid system with areas of intense or light rainfall.
-   Storms can also move over the grid system by assigning storm speed and direction.
-   A rainfall distribution can be selected from several predefined distributions.
-
-   Historical storms can be assigned to the entire grid system.
-   If calibrated or adjusted Next-Generation Radar (NEXRAD) data is available, the NEXRAD pixel rainfall for a given time interval can be automatically
-   interpolated to the FLO-2D grid system using the GDS.
-   Each grid element will be assigned a rainfall total for the NEXRAD time interval and the rainfall is then interpolated by the model for each
-   computational timestep.
-   The result is spatially and temporally variable rainfall-runoff from the grid system.
-   An example of the application of NEXRAD rainfall on an alluvial fan and watershed near Tucson, Arizona is shown in Figure 53.
-   You can accomplish the same result with gridded network data from a system of rain gages.
-   After the GDS interpolation, each FLO-2D grid element will have a rainfall hyetograph to represent the storm.
-   This is the ultimate temporal and spatial discretization of a storm event and the resulting flood replication has proven to be very accurate.
-
-   As previously discussed, runoff from building roofs is another rainfall feature.
-   Setting IRAINBUILDING = 1 in RAIN.DAT will enable the rainfall on the surface area reduced portion of the grid element identified as a building (area
-   reduction factor - ARF value) to be contributed to the surface water on a grid element (Figure 53).
-   The roof runoff in dense urban areas can constitute a significant percentage of the total storm volume when it is added directly to the ground surface
-   volume.
-   The building ARF values are in addition to the RTIMP impervious surface infiltration assignment.
-
-   *Figure 53.
-   Flooding Replicated from NEXRAD Data near Tucson, Arizona.*
-
- Infiltration and Abstraction
- ----------------------------
-
-   Precipitation losses, abstraction (interception) and infiltration are simulated in the FLO-2D model.
-   Infiltration is simulated using either the Green-Ampt infiltration model, the SCS curve number method, or the Horton model.
-   The infiltration parameters can be globally assigned or have grid system spatial variation.
-   Typically, unique hydraulic conductivity and soil suction values for each grid element define the spatially variation.
-   No infiltration is calculated for assigned streets, buildings or impervious surfaces in the grid elements.
-   Channel infiltration can be also be simulated.
-   Although channel bed and bank seepage are usually only minor portion of the total infiltration losses in the system, it can affect the floodwave
-   progression in an ephemeral channel.
-   The surface area of a natural channel is used to approximate the wetted perimeter to compute the infiltration volume.
+Precipitation losses, abstraction (interception) and infiltration are simulated in the FLO-2D model.
+Infiltration is simulated using either the Green-Ampt infiltration model, the SCS curve number method, or the Horton model.
+The infiltration parameters can be globally assigned or have grid system spatial variation.
+Typically, unique hydraulic conductivity and soil suction values for each grid element define the spatially variation.
+No infiltration is calculated for assigned streets, buildings or impervious surfaces in the grid elements.
+Channel infiltration can be also be simulated.
+Although channel bed and bank seepage are usually only minor portion of the total infiltration losses in the system, it can affect the floodwave
+progression in an ephemeral channel.
+The surface area of a natural channel is used to approximate the wetted perimeter to compute the infiltration volume.
 
 Abstraction
 ~~~~~~~~~~~
 
-   Precipitation losses, initial abstraction (interception and depression storage) and infiltration, are simulated in the FLO-2D model.
-   The initial abstraction is filled prior to simulating infiltration and typical initial abstraction values are presented in **Table 6**.
-   Surface depression storage (TOL parameter in TOLER.DAT) is an initial loss (a portion of the initial abstraction) from the potential surface flow.
-   This is the volume of water stored in small surface depressions (puddles) that does not become part of the overland runoff or infiltration.
-   The assignment of initial abstraction should consider the depression storage represented by the TOL value and be appropriately reduced.
-   The TOL parameter can be spatially variable with a unique value assigned to each grid element.
+Precipitation losses, initial abstraction (interception and depression storage) and infiltration, are simulated in the FLO-2D model.
+The initial abstraction is filled prior to simulating infiltration and typical initial abstraction values are presented in **Table 6**.
+Surface depression storage (TOL parameter in TOLER.DAT) is an initial loss (a portion of the initial abstraction) from the potential surface flow.
+This is the volume of water stored in small surface depressions (puddles) that does not become part of the overland runoff or infiltration.
+The assignment of initial abstraction should consider the depression storage represented by the TOL value and be appropriately reduced.
+The TOL parameter can be spatially variable with a unique value assigned to each grid element.
+
+*Table 6.
+Initial Abstraction.*
 
 .. list-table::
-   :widths: 100
+   :widths: 50 50
    :header-rows: 0
 
-
-   * - **Table 6.
-       Initial Abstraction.**
 
    * - Surface Cover                         |    Abstraction (inches)
 
@@ -4225,169 +4162,3 @@ Summary
    routines are necessarily more accurate.
    A primary focus of the bridge routine application should be to achieve numerical stability for the bridge flow over a wide range of unsteady, non-
    uniform discharges.
-
-.. |Chapte002| image:: media\Chapte002.png
-   :width: 6.51in
-   :height: 8.51667in
-.. |Chapte003| image:: media\Chapte003.png
-   :width: 5.05347in
-   :height: 2.17986in
-.. |Chapte003| image:: media\Chapte003.png
-   :width: 5.05347in
-   :height: 2.17986in
-.. |Chapte004| image:: media\Chapte004.jpg
-   :width: 4.93819in
-   :height: 2.49972in
-.. |Chapte005| image:: media\Chapte005.jpg
-   :width: 4.66042in
-   :height: 2.5in
-.. |Chapte006| image:: media\Chapte006.jpg
-   :width: 5.90611in
-   :height: 3.87431in
-.. |Chapte007| image:: media\Chapte007.jpg
-   :width: 5.84278in
-   :height: 2.82778in
-.. |Chapte008| image:: media\Chapte008.jpg
-   :width: 6.5in
-   :height: 2.44028in
-.. |Chapte009| image:: media\Chapte009.jpg
-   :width: 6.125in
-   :height: 3.44792in
-.. |Chapte010| image:: media\Chapte010.jpg
-   :width: 5.58333in
-   :height: 3.40625in
-.. |Chapte011| image:: media\Chapte011.png
-   :width: 5.24333in
-   :height: 2.74333in
-.. |Chapte012| image:: media\Chapte012.png
-   :width: 5.94722in
-   :height: 3.4in
-.. |Chapte013| image:: media\Chapte013.jpg
-   :width: 5.01875in
-   :height: 3.95806in
-.. |Chapte014| image:: media\Chapte014.jpg
-   :width: 4.82222in
-   :height: 2.72889in
-.. |Chapte015| image:: media\Chapte015.jpg
-   :width: 5.16042in
-   :height: 3.0625in
-.. |Chapte016| image:: media\Chapte016.jpg
-   :width: 2in
-   :height: 2.01042in
-.. |Chapte017| image:: media\Chapte017.png
-   :width: 3.66597in
-   :height: 2.73125in
-.. |Chapte018| image:: media\Chapte018.png
-   :width: 4.05167in
-   :height: 3.375in
-.. |Chapte019| image:: media\Chapte019.jpg
-   :width: 4.02083in
-   :height: 3.55139in
-.. |Chapte020| image:: media\Chapte020.png
-   :width: 3.82222in
-   :height: 2.49972in
-.. |Chapte021| image:: media\Chapte021.jpg
-   :width: 4.02917in
-   :height: 2.94514in
-.. |Chapte022| image:: media\Chapte022.png
-   :width: 2.89028in
-   :height: 1.58111in
-.. |Chapte023| image:: media\Chapte023.jpg
-   :width: 0.92685in
-   :height: 2.02986in
-.. |Chapte024| image:: media\Chapte024.jpg
-   :width: 4.92056in
-   :height: 3.16736in
-.. |Chapte025| image:: media\Chapte025.jpg
-   :width: 5.84722in
-   :height: 3.51014in
-.. |Chapte026| image:: media\Chapte026.jpg
-   :width: 4.59361in
-   :height: 4.18194in
-.. |Chapte027| image:: media\Chapte027.jpg
-   :width: 6.5in
-   :height: 3.85278in
-.. |Chapte028| image:: media\Chapte028.jpg
-   :width: 6.5in
-   :height: 5.56181in
-.. |Chapte029| image:: media\Chapte029.jpg
-   :width: 3.14847in
-   :height: 2.59028in
-.. |Chapte030| image:: media\Chapte030.jpg
-   :width: 4.47847in
-   :height: 3.12778in
-.. |Chapte031| image:: media\Chapte031.jpg
-   :width: 3.45972in
-   :height: 3.61458in
-.. |Chapte032| image:: media\Chapte032.jpg
-   :width: 3.31in
-   :height: 1.93611in
-.. |Chapte033| image:: media\Chapte033.jpg
-   :width: 2.59375in
-   :height: 1.92292in
-.. |Chapte034| image:: media\Chapte034.jpg
-   :width: 3.94333in
-   :height: 2.30347in
-.. |Chapte035| image:: media\Chapte035.jpg
-   :width: 3.18528in
-   :height: 3.31736in
-.. |Chapte036| image:: media\Chapte036.png
-   :width: 6.71389in
-   :height: 4.93403in
-.. |Chapte037| image:: media\Chapte037.png
-   :width: 4.93403in
-   :height: 0.65972in
-.. |Chapte038| image:: media\Chapte038.png
-   :width: 8.00056in
-   :height: 3.67153in
-.. |Chapte039| image:: media\Chapte039.png
-   :width: 6.60597in
-   :height: 0.87153in
-.. |Chapte040| image:: media\Chapte040.png
-   :width: 6.94722in
-   :height: 1.08681in
-.. |Chapte041| image:: media\Chapte041.jpg
-   :width: 6.4in
-   :height: 3.04139in
-.. |Chapte042| image:: media\Chapte042.jpg
-   :width: 4.60694in
-   :height: 3.49944in
-.. |Chapte043| image:: media\Chapte043.jpg
-   :width: 4.62639in
-   :height: 3.5in
-.. |Chapte044| image:: media\Chapte044.jpg
-   :width: 4.03889in
-   :height: 5.38514in
-.. |Chapte045| image:: media\Chapte045.jpg
-   :width: 6.5in
-   :height: 3.13403in
-.. |Chapte046| image:: media\Chapte046.jpg
-   :width: 6.5in
-   :height: 2.36111in
-.. |Chapte047| image:: media\Chapte047.jpg
-   :width: 6.5in
-   :height: 2.40347in
-.. |Chapte048| image:: media\Chapte048.jpg
-   :width: 6.5in
-   :height: 2.30417in
-.. |Chapte049| image:: media\Chapte049.jpg
-   :width: 6.5in
-   :height: 2.14792in
-.. |Chapte050| image:: media\Chapte050.jpg
-   :width: 6.5in
-   :height: 2.51667in
-.. |Chapte051| image:: media\Chapte051.jpg
-   :width: 3.9in
-   :height: 2.92486in
-.. |Chapte052| image:: media\Chapte052.jpg
-   :width: 4.53583in
-   :height: 2.55139in
-.. |Chapte053| image:: media\Chapte053.jpg
-   :width: 3.36625in
-   :height: 4.16944in
-.. |Chapte054| image:: media\Chapte054.jpg
-   :width: 6.4882in
-   :height: 4.16583in
-.. |Chapte055| image:: media\Chapte055.jpg
-   :width: 3.97778in
-   :height: 2.87458in
