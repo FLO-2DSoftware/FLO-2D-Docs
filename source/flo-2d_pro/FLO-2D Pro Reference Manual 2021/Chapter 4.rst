@@ -58,9 +58,6 @@ It is also a function of flow depth.
 Typical overland flow roughness values (Manning’s n coefficients) are shown in Table 4.
 
 
-*Table 4.
-Overland Flow Manning's n Roughness Values.* \ :sup:`1`
-
 .. raw:: html
 
    <table style="border-collapse: collapse; width: 100%; border: 2px solid #000;">
@@ -135,6 +132,10 @@ Overland Flow Manning's n Roughness Values.* \ :sup:`1`
        </tr>
      </tfoot>
    </table>
+
+.. raw:: html
+
+    <br><br>
 
 .. image:: img/Chapter4/Chapte002.png
 
@@ -824,6 +825,10 @@ The TOL parameter can be spatially variable with a unique value assigned to each
      </tfoot>
    </table>
 
+.. raw:: html
+
+    <br><br>
+
 Green-Ampt Infiltration
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -842,9 +847,6 @@ A derivation of the Green-Ampt infiltration method can be found in Fullerton (19
 To utilize the Green-Ampt model, hydraulic conductivity, soil suction, volumetric moisture deficiency, soil storage depth and the percent impervious
 area must be specified.
 Typical hydraulic conductivity, porosity and soil suction parameters are presented in Table 7 and Table 8.
-
-*Table 7.
-Green-Ampt Infiltration - Hydraulic Conductivity and Porosity.*
 
 .. raw:: html
 
@@ -896,9 +898,9 @@ Green-Ampt Infiltration - Hydraulic Conductivity and Porosity.*
      </tfoot>
    </table>
 
+.. raw:: html
 
-*Table 8.
-Green-Ampt Infiltration - Soil Suction.*
+    <br><br>
 
 .. raw:: html
 
@@ -951,9 +953,13 @@ Green-Ampt Infiltration - Soil Suction.*
      </tfoot>
    </table>
 
-   The volumetric moisture deficiency is evaluated as the difference between the initial and final soil saturation conditions (See Table 9).
-   Depression storage is an initial loss from the surface flow (TOL value).
-   This is the amount of water stored in small surface depressions that does not become part of the overland runoff or infiltration.
+.. raw:: html
+
+    <br><br>
+
+The volumetric moisture deficiency is evaluated as the difference between the initial and final soil saturation conditions (See Table 9).
+Depression storage is an initial loss from the surface flow (TOL value).
+This is the amount of water stored in small surface depressions that does not become part of the overland runoff or infiltration.
 
 .. raw:: html
 
@@ -992,6 +998,10 @@ Green-Ampt Infiltration - Soil Suction.*
        </tr>
      </tfoot>
    </table>
+
+.. raw:: html
+
+    <br><br>
 
 Infiltration Depth Limitation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1130,6 +1140,10 @@ The UDFCD (2008) has recommended Horton parameters based on the NRCS hydrologic 
        </tr>
      </tbody>
    </table>
+
+.. raw:: html
+
+    <br><br>
 
 Evaporation
 -----------
@@ -1651,6 +1665,10 @@ The fluid properties were modeled as a Bingham fluid whose shear stress is a fun
      </tbody>
    </table>
 
+.. raw:: html
+
+    <br><br>
+
 Takahashi and Tsujimoto (1985) proposed a two-dimensional finite difference model for debris flows based a dilatant fluid model coupled with Coulomb
 flow resistance.
 The dilatant fluid model was derived from Bagnold's dispersive stress theory (1954) that describes the stress resulting from the collision of sediment
@@ -1869,6 +1887,10 @@ In the FLO-2D model if K = 0 in the SED.DAT file, the value of K is automaticall
      </tfoot>
    </table>
 
+.. raw:: html
+
+    <br><br>
+
 The flow resistance n\ :sub:`td` of the turbulent and dispersive shear stress components are combined into an equivalent Manning’s n-value for the
 flow:
 
@@ -1998,6 +2020,9 @@ The viscosity (poises) and yield stress (dynes/cm\ :sup:`2`) are shown to be exp
      </tfoot>
    </table>
 
+.. raw:: html
+
+    <br><br>
 
 .. image:: img/Chapter4/Chapte070.jpg
 
@@ -3728,9 +3753,6 @@ The Appendix figure showing the relationships with the bridge configuration are 
 entered in Line B-2.
 All the Appendix figures were digitized and are hardcoded into the model.
 
-*Table 14.
-Bridge Parameters (B-Lines in HYSTRUC.DAT)*
-
 .. raw:: html
 
    <table style="border-collapse: collapse; width: 100%; border: 3px solid #000;">
@@ -3783,6 +3805,9 @@ Bridge Parameters (B-Lines in HYSTRUC.DAT)*
      </tfoot>
    </table>
 
+.. raw:: html
+
+    <br><br>
 
 The two cross sections are located: 1) Upstream of the bridge where essentially normal depth occurs (upstream of the bridge backwater effects); and 2)
 At the bridge to reflect the channel contraction and low chord.
