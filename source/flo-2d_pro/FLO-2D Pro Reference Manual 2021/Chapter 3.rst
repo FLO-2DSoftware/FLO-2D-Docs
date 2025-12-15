@@ -432,22 +432,40 @@ The displacement thickness is generally 1/8 (rough) to 1/10 (smooth) of the turb
 If the flow is very shallow, roughness elements may protrude through the laminar sublayer and into the flow.
 Flows are considered hydraulically rough if the grain size or roughness element is greater than 6 times the laminar boundary layer:
 
-   δ = 11.6 ν/u\ :sub:`\*`
+.. math::
+   :label:
 
-where ν = kinematic viscosity and u\ :sub:`\*` = shear velocity
+   \delta = 11.6\, \frac{\nu}{u_*}
+
+where
+
+    ν = kinematic viscosity and
+
+    u\ :sub:`\*` = shear velocity
 
 The applicability of Manning’s equation to a given flow condition depends on the relative submergence of the roughness elements (R/k\ :sub:`s`) where
 k\ :sub:`s` is the effective roughness height.
 In general, Manning’s equation is appropriate for a relative submergence (Julien, 1995):
 
-   R/k\ :sub:`s` > 100
+.. math::
+   :label:
+
+   \frac{R}{k_s} > 100
 
 which will correspond to the Manning-Stickler fixed bed roughness as function of sediment size D relationship (Simons and Senturk, 1976):
 
-   n = D\ :sup:`1/6`/21.1
+.. math::
+   :label:
+
+   n = \frac{D^{1/6}}{21.1}
 
 For lower a submergence value (R/k\ :sub:`s` < 100), the logarithmic form of the resistance equation should be used (Julien, 1995).
-For flow transporting sediment in suspension, the flow will be primarily turbulent if R/k\ :sub:`s` > 70
+For flow transporting sediment in suspension, the flow will be primarily turbulent if
+
+.. math::
+   :label:
+
+   \frac{R}{k_s} > 70
 
 Typical roughness height for grain size bed material can range from 0.0015 ft for rough concrete to 0.01 ft for coarse sand or uniform earth channels.
 In this case Manning’s equation for a coarse sand plane bed would be applicable to about 0.7 ft.
@@ -472,13 +490,10 @@ FLO-2D n-Values Adjustments
 The FLO-2D model has the ability to adjust n-values during a simulation to maintain a reasonable maximum Froude and improve numerical stability.
 There are four n-value adjustment tools:
 
-1. Global and spatially variable shallow n-value;
-
-2. Depth integrated n-value;
-
-3. Courant number n-value adjustments;
-
-4. Limiting Froude number n-value adjustments.
+    1. Global and spatially variable shallow n-value;
+    2. Depth integrated n-value;
+    3. Courant number n-value adjustments;
+    4. Limiting Froude number n-value adjustments.
 
 **SHALLOW n-values:** If shallow flow has low n-values that result in unreasonably high velocities, the existing water volume stored on the grid
 element can be evacuated in one timestep.
@@ -493,11 +508,16 @@ flow in fields.
 **Depth Integrated n-values:** To improve the timing of the floodwave progression through the grid system, a depth variable roughness can be assigned.
 The equation for the grid element roughness n\ :sub:`d` as function of flow depth is:
 
-n\ :sub:`d` = n\ :sub:`b` \*1.5 \* e –(0.4 depth/dmax)
+.. math::
+   :label:
 
-   n\ :sub:`b` = bankfull discharge roughness depth = computed model flow depth
+   n_d = n_b \cdot 1.5\, e^{-0.4\, \mathrm{depth}/d_{max}}
 
-   dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
+where
+
+    n\ :sub:`b` = bankfull discharge roughness depth = computed model flow depth
+
+    dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
 This equation prescribes that the variable depth floodplain roughness is equal to the assigned flow roughness for the complete submergence of all
 roughness (assumed to be 3 ft or 1 m) and it is applied by the model as a default condition.
@@ -511,26 +531,15 @@ For example, at 1 ft (0.3 m), the computed roughness will be approximately 1.3 t
 Using the depth integrated roughness may reduce unexpected high Froude numbers.
 As the flow depth increases from a dry bed condition, the following rules apply:
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+.. raw:: html
 
-
-   * - 0.0 < SHALLOWN < 0.1
-     - SHALLOWN = 0.1
-
-   * - 0.0 < flow depth < 0.2 ft (0.06 m)
-     - n = SHALLOWN value
-
-   * - 0.2 ft (0.06 m) < flow depth < 0.5 ft(0.15 m)
-     - n = SHALLOWN/2.
-
-   * - 0.5 ft (0.15 m) < flow depth < 3 ft(1 m)
-     - n = n\ :sub:`b` \*1.5 \* e-(0.4 depth/dmax)
-
-   * - 3 ft (1 m) < flow depth
-     - n = assigned value in MANNINGS_N.DAT
-
+    <pre>
+        0.0 < SHALLOWN < 0.1                                       SHALLOWN = 0.1
+        0.0 < flow depth < 0.2 ft (0.06 m)                         n = SHALLOWN value
+        0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m)             n = SHALLOWN/2.
+        0.5 ft (0.15 m) < flow depth < 3 ft (1 m)                  n = nb *1.5 * e-(0.4 depth/dmax)
+        3 ft (1 m) < flow depth                                    n = assigned value in MANNINGS_N.DAT
+    </pre>
 
 **Courant Number n-value Adjustments:** When the Courant number timestep is exceeded for a given cell, the model makes an n-value adjustment for the
 next computation routing loop through grid system.
@@ -539,23 +548,14 @@ continues downstream.
 The Courant number n-value adjustments are based on the number of times (N) that a specific grid element has consecutive timestep decrements as
 follows:
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+.. raw:: html
 
-
-   * - 3 < N ≤ 5
-     - n-value increased by 0.005
-
-   * - 6 < N ≤ 10
-     - n-value increased by 0.002
-
-   * - 11 < N
-     - n-value increased by 0.001
-
-   * - If n-value > 0.2
-     - n-value = 0.2
-
+    <pre>
+                3 < N ≤ 5           n-value increased by 0.005
+                6 < N ≤ 10          n-value increased by 0.002
+                11 < N              n-value increased by 0.001
+                If n-value > 0.2    n-value = 0.2
+    </pre>
 
 The n-value adjustments based on exceeding the Courant number timestep are turned ‘off’ or not applied during a model simulation if AMANN = -99 in
 CONT.DAT.
@@ -567,38 +567,14 @@ It is the ratio of flow velocity to the floodwave celerity and also relates the 
 There is an upper limit to the Froude number for both channel and overland flow for various conditions that should not be exceeded.
 Typical upper limits for Froude numbers include:
 
-.. _`majorrivers:`:
+.. raw:: html
 
-majorrivers::
-
-0.3 – 0.6
-
-(not a steep watershed river)
-
-.. _`floodplain:`:
-
-floodplain::
-
-0.5 – 0.8
-
-(grasslands, fields, not a urban environment)
-
-.. _`alluvialfans:`:
-
-alluvialfans::
-
-0.9 – 1.1
-
-(steep slope, sediment transport mobile bed)
-
-.. _`streetflow:`:
-
-streetflow::
-
-1.1 – 1.5
-
-(uniform slope and pavement conditions)
-
+    <pre>
+            Major rivers:     0.3 – 0.6      (not a steep watershed river)
+            Floodplain:       0.5 – 0.8      (grasslands, fields, not a urban environment)
+            Alluvial fans:    0.9 – 1.1      (steep slope, sediment transport mobile bed)
+            Street flow:      1.1 – 1.5      (uniform slope and pavement conditions)
+    </pre>
 
 There are exceptions to this general range of limiting Froude numbers, but the user has the option of assigning a global overland limiting Froude
 number (FROUDL in CONT.DAT), a channel limiting Froude number by reach, or a spatially variable floodplain limiting Froude number (FPFROUDE.DAT).
@@ -607,8 +583,15 @@ For mobile bed conditions on alluvial fans, as the slope increases, competent fl
 As the flow accelerates to critical depth, more sediment is entrained and the hydraulic oscillate with rapid energy dissipation and severe bed erosion.
 The flow is forced to stay around critical flow conditions by incipient motion thresholds which define the limiting Froude (Grant, 1997):
 
-   F\ :sub:`r` = 3.85 S\ :sub:`o`\ :sup:`0.33` gravel bed (τ\ :sup:`\*`\ :sub:`cr` = 0.03) F\ :sub:`r` = 5.18 S\ :sub:`o`\ :sup:`0.11` sand bed (τ\
-   :sup:`\*`\ :sub:`cr` = 0.06)
+.. math::
+   :label:
+
+   Fr = 3.85\, S_o^{0.33} \quad \text{gravel bed } (\tau_{cr} = 0.03)
+
+.. math::
+   :label:
+
+   Fr = 5.18\, S_o^{0.11} \quad \text{sand bed } (\tau_{cr} = 0.06)
 
 where: τ\ :sup:`\*`\ :sub:`cr` is the critical shear stress for incipient motion for different size bed material.
 
@@ -620,13 +603,14 @@ When the limiting Froude number for a given grid element is exceeded, the n-valu
 
 Percent increase over the original n-value incremental increase in n-value (additive)
 
-0.2 > % increase 0.0005
+.. raw:: html
 
-0.2 < % increase < 0.5 0.0002
-
-0.5 < % increase < 1.0 0.0001
-
-1.0 < % increase < 2.0 0.00005
+    <pre>
+        0.2 > % increase          0.0005
+        0.2 < % increase < 0.5    0.0002
+        0.5 < % increase < 1.0    0.0001
+        1.0 < % increase < 2.0    0.00005
+    </pre>
 
 When the limiting Froude number is no longer exceeded the n-value is reduced by -0.0002 until the initially assigned n-value is reached.
 The maximum n-values (if different from the originally assigned nvalue) are reported to the ROUGH.OUT file.
@@ -729,8 +713,10 @@ element.
 Stage-time relationships provide opportunity to simulate coastal flooding related to ocean storm surge, hurricane surges or tsunamis (Figure 14).
 In addition, the backwater effects of tidal variation on river and estuary flooding can be model.
 
-   *Figure 14.
-   Tsunami Wave Progression Overland in an Urban Area (Waikiki Beach, Hawaii).*
+.. image:: img/Chapter3/Chapte036.jpg
+
+*Figure 14.
+Tsunami Wave Progression Overland in an Urban Area (Waikiki Beach, Hawaii).*
 
 Inflow and Outflow Node Guidelines
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
