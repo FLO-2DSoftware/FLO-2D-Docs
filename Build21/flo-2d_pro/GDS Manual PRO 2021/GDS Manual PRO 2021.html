@@ -1,0 +1,3002 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GDS Manual PRO 2021 &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=2104470d" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"tex": {"tags": "none", "useLabelIds": true}, "options": {"displayAlign": "right"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Levee Dam and Wall Breach Guidelines" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021/Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021.html" />
+    <link rel="prev" title="Simulating Mudflow Guidelines" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center 2021</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Pro%20Reference%20Manual%202021/index.html">FLO-2D Pro Reference Manual 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Channel%20Guidelines%202021/index.html">FLO-2D Channel Guidelines 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Storm%20Drain%20Manual%202021/index.html">FLO-2D Storm Drain Manual 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines%202021/Hydraulic%20Structures%20Guidelines%202021.html">FLO-2D Hydraulic Structure Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html">Simulating Mudflow Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html#references">References</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">GDS Manual PRO 2021</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gds-functionality">1.1 GDS Functionality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-tools-and-enhancements">1.2 New Tools and Enhancements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-requirements">1.3 Data Requirements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mouse-button-commands"><strong>Mouse Button Commands</strong></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#toolbar-and-menus"><strong>Toolbar and Menus</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021/Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021.html">Levee Dam and Wall Breach Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center 2021</a></li>
+      <li class="breadcrumb-item active">GDS Manual PRO 2021</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/flo-2d_pro/GDS Manual PRO 2021/GDS Manual PRO 2021.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gds-manual-pro-2021">
+<h1>GDS Manual PRO 2021<a class="headerlink" href="#gds-manual-pro-2021" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The <em>FLO-2D</em> Grid Developer System (<em>GDS</em>) is a GIS integrated software tool used to facilitate the creation of all required data to run the <em>FLO-2D</em>
+model.
+GDS simplifies construction of the finite difference grid system and allows graphical editing of its attributes and components.
+The <em>GDS</em> will overlay the grid system on a digital terrain map or a Digital Terrain Model (DTM) set of points and will interpolate and assign
+elevations to the grid elements.
+It will establish geographical boundaries, import background images and photos, and it will automatically generate the data files required to run the
+model.</p>
+<p><em>GDS</em> can also run the <em>FLO-2D</em> model once the data files have been created.
+One of primary functions of the <em>GDS</em> is to graphically edit grid elements attributes such as streets, flow obstructions, levees, rainfall,
+evaporation, infiltration, channels, hydraulic structures, sediment transport and mud flow parameters, detention basins, and n-values interactively
+using mouse point and click events.
+The data is validated to minimize common input errors.
+For GIS integration GDS makes extensive use of ESRI MapObjects© Version 2.4 GIS software controls.</p>
+</section>
+<section id="gds-functionality">
+<h2>1.1 GDS Functionality<a class="headerlink" href="#gds-functionality" title="Link to this heading"></a></h2>
+<p>The <em>GDS</em> system can perform the following functions: <strong>Interactive Data Entry</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Interactive graphical editing of channels, streets, multiple channels, levees and buildings and other grid element attributes.</p></li>
+<li><p>Input detention basins parameters.</p></li>
+<li><p>Assign attributes to group of user selected grid elements</p></li>
+<li><p>Assign reservoir or pounded water elevation for an initial condition on a portion of the grid system.</p></li>
+<li><p>Select Channel Confluences (channel elements sharing discharge).
+Including tributary elements that can be contiguous to either a left or right bank main channel element.</p></li>
+<li><p>Assign spatially and temporally variable rainfall data.</p></li>
+<li><p>Edit levee attributes using the Levee Express Editor.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Import Data</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Import HEC-1 hydrographs.</p></li>
+<li><p>Import DTM points in ASCII format.</p></li>
+<li><p>Import Shape files.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Data Processing</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Automatic generation of finite difference grid and selection of computation area from user defined polygons.</p></li>
+<li><p>Compute spatially variable Green-Ampt infiltration parameters using soil and land use shape files.</p></li>
+<li><p>Compute spatially variable Manning’s n-values using shape files.</p></li>
+<li><p>Convert <em>HEC-RAS</em> cross section data to <em>FLO-2D</em> channel cross section data format.</p></li>
+<li><p>Compute lengths for channel segments.</p></li>
+<li><p>Create the files to run a <em>FLO-2D</em> simulation</p></li>
+</ul>
+</div></blockquote>
+<pre>
+    CONT.DAT        HYSTRUC.DAT
+    TOLER.DAT       STREET.DAT
+    INFLOW.DAT      ARF.DAT
+    OUTFLOW.DAT     MULT.DAT
+    RAIN.DAT        SED.DAT
+    INFIL.DAT       LEVEE.DAT
+    EVAPOR.DAT      FPXSEC.DAT
+    CHAN.DAT        BREACH.DAT
+    CHANBANK.DAT    FPLAIN.DAT
+    XSEC.DAT        CADPTS.DAT.
+    TOPO.DAT        M.DAT
+    SWMMFLO.DAT     SUPPLEMENT.DAT
+</pre><p><strong>Data Display and Visualization</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Display components.</p></li>
+<li><p>Show channel extension directions.</p></li>
+<li><p>Display interpolated elevation map.</p></li>
+<li><p>Display n-Manning’s map.</p></li>
+<li><p>Display street and levee profiles.</p></li>
+<li><p>Display grid element numbers, elevations and Manning’s n coefficients on the grid system.</p></li>
+<li><p>Zoom and pan.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>GIS integration</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Import ESRI shape file format data such as land use, soil types, Manning roughness coefficients and FP Limiting Froude numbers.</p></li>
+<li><p>Import ESRI ArcInfo ASCII grid files containing terrain elevations and NOAA rainfall data.</p></li>
+<li><p>Import multiple geo-referenced aerial photos in various graphic formats such as TIFF, BMP, JPG, MrSID and others as background the grid system.</p></li>
+<li><p>Customize multiple layer display and layer properties.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="new-tools-and-enhancements">
+<h2>1.2 New Tools and Enhancements<a class="headerlink" href="#new-tools-and-enhancements" title="Link to this heading"></a></h2>
+<p><strong>Watershed Delineation</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Calculate watershed courses.</p></li>
+<li><p>Find the watershed for a given cell.</p></li>
+<li><p>Drainage basin smoothing.</p></li>
+<li><p>Find lowest cell.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Culvert Equations</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Define culvert equations.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Channels</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Define channel confluences,</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Storm Drain Interface</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Interface FLO-2D with Storm Drain at runtime.</p></li>
+<li><p>Define catch basins in GDS.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Interpolation</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Interpolate spatially variable limiting Froude numbers from shape files.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Visualization</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Polyline data drawn and recorded when channels, streets or levees are created.</p></li>
+<li><p>STORM DRAIN interface elements.</p></li>
+<li><p>Cross section numbers plotted.</p></li>
+<li><p>Lowest cells in the grid system plotted.</p></li>
+<li><p>Cells without cross sections plotted.</p></li>
+<li><p>Reservoir water elevations plotted.</p></li>
+<li><p>Grid element curve numbers displayed as text.</p></li>
+<li><p>Supplement.dat file restores images, shape files and polylines to project when opened.</p></li>
+</ul>
+</div></blockquote>
+<p>There are a number of <em>GDS</em> tutorials with examples to help you learn the various commands, features and tools.
+These tutorials are available on the <em>FLO-2D</em> installation.
+There are also example projects provided to work through with the tutorials.</p>
+</section>
+<section id="data-requirements">
+<h2>1.3 Data Requirements<a class="headerlink" href="#data-requirements" title="Link to this heading"></a></h2>
+<p><em>GDS</em> data are introduced through Windows dialog boxes and are stored in files for later retrieval.
+User input data is validated to avoid out-of-range values.
+Default or recommended values are frequently displayed when the dialog boxes open.
+The <em>GDS</em> may require or use the following data:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Terrain elevation data represented as random topographic points (DTM);</p></li>
+<li><p>Terrain elevation data in ASCII grid files;</p></li>
+<li><p>Study region limits (coordinates);</p></li>
+<li><p>Manning’s roughness (n-value) shape files;</p></li>
+<li><p>Soil shape files and tables;</p></li>
+<li><p>Land use shape files and tables;</p></li>
+<li><p>Image files in any of the following format: BMP, JPG, ArcInfo INFO Grid, GeoTIFF TIFF with a Geo header, Image Catalogs, JPEG, MrSID, TIFF, JPEG, BMP;</p></li>
+<li><p>Rainfall gage data in ASCII grid files;</p></li>
+<li><p>Flood inflow hydrographs.</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>For the GDS system to function properly, the MS-Windows environment decimal symbol must be set to decimal point “.” And the digit
+grouping symbol to comma”,”. Set these options in the Control Panel/Regional and Language Options/Regional Options/Formats/Additional settings/Numbers// dialog box:</p>
+</div>
+<img alt="../../_images/GDS002.jpg" src="../../_images/GDS002.jpg" />
+<section id="mouse-button-commands">
+<h3><strong>Mouse Button Commands</strong><a class="headerlink" href="#mouse-button-commands" title="Link to this heading"></a></h3>
+<p><strong>2.1 Left Button actions (one-click)</strong></p>
+<p>Zoom-in on the working region by selecting a rectangular area for a zoom view.
+Click the left mouse button to position the cursor on one the vertices of the desired area and drag the mouse to the opposite vertex.
+The rectangle appears to outline the selected zoom area.</p>
+<img alt="../../_images/GDS003.jpg" src="../../_images/GDS003.jpg" />
+<p>When the button is released, the selected rectangular area is magnified to the full screen.</p>
+<img alt="../../_images/GDS004.jpg" src="../../_images/GDS004.jpg" />
+<p>Clicking on a street or channel segment will display a submenu that allows editing, modifying or deleting the segment.</p>
+<img alt="../../_images/GDS005.png" src="../../_images/GDS005.png" />
+<p><strong>2.2 Left Button actions (double-click)</strong></p>
+<p>After the grid system has been created and the grid element elevations assigned, double-click any grid element to display the following dialog box:</p>
+<img alt="../../_images/GDS006.jpg" src="../../_images/GDS006.jpg" />
+<p>This dialog box is used to edit elevation, n-value, limiting Froude number, and tolerance for any grid element.
+There are buttons to edit the grid element attributes such as levees, infiltration, streets, etc.</p>
+<p><strong>2.3 Right Button actions</strong></p>
+<p>After the grid system has been created and the grid element elevations assigned, you can right-click a grid element to display the following short cut
+menu:</p>
+<img alt="../../_images/GDS007.jpg" src="../../_images/GDS007.jpg" />
+<p>Clicking In/Out Condition for Element … and the inflow/outflow dialog box is displayed.
+The input description for the FLO-2D inflow or outflow data is explained in chapter 5.</p>
+<img alt="../../_images/GDS008.jpg" src="../../_images/GDS008.jpg" />
+<p>Click Create Reservoir Water Elevation for Element …</p>
+<img alt="../../_images/GDS009.png" src="../../_images/GDS009.png" />
+<p>This dialog box allows the user to define a reservoir.
+The reservoir is defined by clicking an element within the banks of the reservoir and setting a water surface elevation.
+At runtime, the FLO.EXE will find each element that is lower than the water surface elevation and fill it to that specified elevation.</p>
+</section>
+<section id="toolbar-and-menus">
+<h3><strong>Toolbar and Menus</strong><a class="headerlink" href="#toolbar-and-menus" title="Link to this heading"></a></h3>
+<p>This section describes the <em>GDS</em> commands in the information toolbar and main Menu.</p>
+<p><strong>3.1 Toolbar</strong></p>
+<img alt="../../_images/GDS010.jpg" src="../../_images/GDS010.jpg" />
+<img alt="../../_images/GDS265.jpg" src="../../_images/GDS265.jpg" />
+<p><strong>3.2 File Menu Commands:</strong></p>
+<p>3.2.1 Define Working Region (File Menu)</p>
+<p>This command creates a new project.
+The user is prompted for the coordinates that define the project working region.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Only one project can open at a time in a single GDS execution.
+If there is a project open when this command is selected, the GDS will prompt you to save the current project.
+It is OK to open more than one GDS at a time.</p>
+</div>
+<img alt="../../_images/GDS270.jpg" src="../../_images/GDS270.jpg" />
+<p>The following table explains the required variables:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>OPTION</strong></p></td>
+<td><p><strong>DESCRIPTION</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>X (Upper RightCorner)</p></td>
+<td><p>The X coordinate of the upper right hand corner that defines the working region.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Y (Upper RightCorner)</p></td>
+<td><p>The Y coordinate of the upper right hand corner that defines the working region.</p></td>
+</tr>
+<tr class="row-even"><td><p>X (Lower LeftCorner)</p></td>
+<td><p>The X coordinate of the lower left hand corner that defines the working region.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Y (Lower LeftCorner)</p></td>
+<td><p>The Y coordinate of the lower left hand corner that defines the working region.</p></td>
+</tr>
+</tbody>
+</table>
+<p>3.2.2 New Project/from DTM Elevation Points (File Menu)</p>
+<img alt="../../_images/GDS024.jpg" src="../../_images/GDS024.jpg" />
+<p>A new project is created by importing the DTM elevation points from an existing file.
+To import the DTM (*.PTS) file click this command in the <em>File</em> menu and chose the correct filename in your project subdirectory.
+The working region is automatically scaled from the minimum and maximum point coordinates.</p>
+<p>3.2.3 New Project/from Existing ArcInfo ASCII Grid File… (File Menu)</p>
+<img alt="../../_images/GDS025.jpg" src="../../_images/GDS025.jpg" />
+<p>Using this command, a new project is created by importing the terrain elevation points from an existing ArcInfo ASCII grid file.
+The format of these files is as follows:</p>
+<pre>
+            ncols /* Number of columns in the grid */
+            nrows /* Number of rows in the grid */
+            xllcorner x /* Lower left x coordinate of grid */
+            yllcorner y /* Lower left x coordinate of grid */
+            cellsize size /* Grid cell size */
+            NODATRA_value NODATA /* value of an empty grid cell */
+            z11 z12 z13 ... z1ncols /* values of row 1 */
+            z21 z22 z23 ... z2ncols /* values of row 2 */
+            …
+            …
+            znrows1 znrows2 znrows3 ... znrowsncols /* values of last row*/
+</pre><p>Rows are read from north to south.
+For example:</p>
+<pre>
+            ncols 388
+            nrows 461
+            xllcorner 674070.85270015
+            yllcorner 1000118.1562353
+            cellsize 100
+            NODATA_value -9999
+            2477.259 2480.868 2486.877 2486.877 2487.308 2490.641 2493.438 2493.438
+            2493.438. . .
+</pre><p>The project area is automatically scaled from the minimum and maximum point coordinates.
+To import the ArcInfo ASCII Grid File (*.ASC) file click this command in the <em>File</em> menu and choose the correct filename in your project
+subdirectory.</p>
+<p>3.2.4 New Project/from Existing Shapefile… (File Menu)</p>
+<img alt="../../_images/GDS026.jpg" src="../../_images/GDS026.jpg" />
+<p>A new project can be created by importing an ESRI <em>PointZ</em> Shape file.
+The working region is automatically scaled from coordinate data in the shape file.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>GDS is only able to extract data from PointZ shape files, not from polygon or line shape files.
+Polygon and Polyline shape files can be converted into PointZ shape files.</p>
+</div>
+<p>3.2.5 New Project/from FLO-2D Project … (File Menu)</p>
+<img alt="../../_images/GDS027.jpg" src="../../_images/GDS027.jpg" />
+<p>A new project grid system can be created by importing an existing <em>FLO-2D</em> project.
+The working region and the <em>FLO-2D</em> grid are automatically scaled from the minimum and maximum coordinate points.
+To use this option, click this command in the <em>File</em> menu and chose the FPLAIN.DAT file in your project subdirectory.
+The CONT.DAT data file must exist in the subdirectory.
+An existing project may have various components that have already been developed such as channels, streets, levees, etc.
+The components that you want to import can be identified in the FLO-2D Components dialog box.</p>
+<img alt="../../_images/GDS028.jpg" src="../../_images/GDS028.jpg" />
+<p>Only existing components will be available, otherwise the corresponding check boxes will be grayed out.
+Existing component data (such as reduction factors or levees) can be graphically edited by simply clicking on the grid element with the left mouse
+button.
+A dialog box will appear so that you can select the component for editing.
+This editing procedure is different from the procedure creating new components such as streets or channels.</p>
+<p>If the user unchecks the component or unchecks “View Components”, the component will not be loaded and cannot be edited or saved.
+The save button will overwrite the unloaded component data file.</p>
+<p>3.2.6 New Project/from Existing CAD File (File Menu)</p>
+<img alt="../../_images/GDS029.jpg" src="../../_images/GDS029.jpg" />
+<p>This option provides a way to start a <em>GDS</em> project by importing a DXF or DWG CAD file.
+The working region and <em>FLO-2D</em> grid system are automatically scaled from the existing CAD file extents.</p>
+<p><em>3.2.7 New Project/from Existing HEC-RAS .PRJ File (File Menu)</em></p>
+<p>Use this option to import it to start a <em>FLO-2D</em> project when you have a Geo-referenced <em>HEC-RAS</em> project file (*.prj) that includes channel reaches.
+The working region and <em>FLO-2D</em> grid system are automatically scaled from the existing HEC<em>-RAS</em> project file extents.</p>
+<img alt="../../_images/GDS030.jpg" src="../../_images/GDS030.jpg" />
+<p>3.2.8 New Project/from Existing Levee File (File Menu)</p>
+<img alt="../../_images/GDS031.jpg" src="../../_images/GDS031.jpg" />
+<p>The levee file consists of sequences of polylines points defined by their coordinates and elevation, separated by commas or spaces (with empty
+newlines between the polylines):</p>
+<pre>
+364440 1186051 4765
+364817 1185937 4750
+365157 1185930 4742
+
+363190 1186215 4800
+363320 1185891 4789
+363710 1185875 4769
+
+367261.53 1185897.38 4705.00
+367274.59 1185885.00 4705.00
+367289.69 1185872.63 4705.00
+367304.13 1185866.50 4705.00
+367322.69 1185866.50 4705.00
+367339.16 1185865.75 4705.00
+</pre><p>3.2.9 Open Existing FLO-2D Project … (File Menu)</p>
+<p>Use this command to load the existing FLO-2D project from the data files.
+The FPLAIN.DAT file is a reference file that the GDS and Mapper++ use to locate the .DAT and .OUT files.</p>
+<p>3.2.10 Save FLO-2D Files (File Menu)</p>
+<img alt="../../_images/GDS032.jpg" src="../../_images/GDS032.jpg" />
+<p>This command is used to save the <em>FLO-2D</em> data files for use with the <em>FLO-2D</em> model.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>In order to save a project using this command, the Control Variables must be set.</p>
+</div>
+<p>3.2.11 Run FLO-2D… (File Menu)</p>
+<img alt="../../_images/GDS033.jpg" src="../../_images/GDS033.jpg" />
+<p>Use this command to run the <em>FLO-2D</em> model from the <em>GDS</em>.
+Click Run <em>FLO-2D,</em> the following dialog box will be displayed:</p>
+<img alt="../../_images/GDS034.jpg" src="../../_images/GDS034.jpg" />
+<p>In this dialog box, the control parameters can be selected for a <em>FLO-2D</em> simulation.
+To start a basic overland flood simulation, the user must input the project simulation time (SIMUL) and the output interval (TOUT) in the Time Control
+and Plot Variables frame.
+Also check <em>Detailed Graphics</em> to display flood graphics during the model run.
+To start the model, click the <em>Run FLO2D</em> button.
+To save the <em>FLO-2D</em> input files (.DAT files) without running the model click the <em>Save FLO-2D input files</em> button.</p>
+<p>Check the <em>Animate</em> Flow <em>within GDS</em> to plot animated flow depth while the model is running.
+This feature displays the animated flooding over background aerial photos.
+The <em>FLO-2D</em> simulation may be slowed down due to the graphic display of the aerial photo.
+If only simple animation is required without background images, unselect the check button (as shown above) and the model simulation will run faster.</p>
+<p>3.2.12 Run Mapper (File Menu)</p>
+<img alt="../../_images/GDS035.jpg" src="../../_images/GDS035.jpg" />
+<p>This command initiates the <em>Mapper PRO or Mapper++</em> post-processor programs to create flood post production mapping.
+Detailed instructions of the <em>Mapper</em> programs are presented in the separate manuals.</p>
+<p>3.2.13 Run PROFILES (File Menu)</p>
+<p>Use this command to run the PROFILES program, used to interpolate channel cross sections and slopes.</p>
+<img alt="../../_images/GDS036.jpg" src="../../_images/GDS036.jpg" />
+<p>3.2.14 Run RAIN (File Menu)</p>
+<p>Use this command to run the RAIN program.</p>
+<img alt="../../_images/GDS037.jpg" src="../../_images/GDS037.jpg" />
+<p>3.2.15 Create FPLAIN.DAT and CADPTS.DAT Files (File Menu)</p>
+<img alt="../../_images/GDS038.jpg" src="../../_images/GDS038.jpg" />
+<p>This is an optional command to create only FPLAIN.DAT and CADPTS.DAT files required by <em>FLO-2D</em>.
+These two topographic files are then created separately without the other required <em>FLO-2D</em> files.
+This is procedure is appropriate when creating a grid system in segments for later compilation.</p>
+<p>3.2.16 Create LEVEECRESTS.DAT (File Menu)</p>
+<img alt="../../_images/GDS039.jpg" src="../../_images/GDS039.jpg" />
+<p>This file is used to verify levee length data.
+The command exports levee and WFR stations and calculates a length to the station for the levee segment along a polyline.</p>
+<pre>
+    An example of LEVEECRESTS.DAT:
+    Node   Station   Z        X             Y
+
+    627    00.00     69.638   2226721.750   13565007.000
+
+    582    35.59     69.957   2226849.000   13565100.000
+
+    582    66.71     70.142   2226976.250   13565153.000
+
+    582    97.76     70.194   2227029.000   13565280.000
+</pre><p>First the levee polyline is imported (“File.
+Import Levees…”) and the levees are created.
+Then the user selects the command: “File.
+Create LEVEECRESTS.DAT” and the station calculation compares the length of the polyline (Poly_Length) and the total length of the levees
+(Levees_Length) to determine a WRF value to match the lengths:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-0">
+<span class="eqno">(123)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-0" title="Link to this equation"></a></span>\[\mathrm{WRF\_value}
+= 1 - \min\!\left( 1,\ \frac{\mathrm{Poly\_Length}(i)}{\mathrm{Levees\_Length}(i)} \right)\]</div>
+<p>The stations (second column in LEVEECRESTS.DAT are then calculated from the distance from one levee center to the next levee center by multiplying it
+by the WRF_value.</p>
+<p>3.2.17 Create Grid Shapefile (File Menu)</p>
+<img alt="../../_images/GDS040.jpg" src="../../_images/GDS040.jpg" />
+<p>This option will create a shape file of the computational domain.
+It will only include the numbered grid elements.
+The shapefile is saved in these three files.
+mgrid.shp, mgrid.shx and mgrid.dbf.</p>
+<p>3.2.18 Import Image/Individual Image (File Menu)</p>
+<img alt="../../_images/GDS041.jpg" src="../../_images/GDS041.jpg" />
+<p>Use this command to import individual images such as aerial photos.
+Images are selected one by one or multiple images at a time Shift-clicking or Crtl-clicking the image files.</p>
+<img alt="../../_images/GDS042.png" src="../../_images/GDS042.png" />
+<p>Import images that have been created in following formats:</p>
+<table style="border-collapse: collapse; width: 100%; border:1px solid #000;">
+  <thead>
+    <tr>
+      <th style="border:1px solid #000; padding:4px;">File Type</th>
+      <th style="border:1px solid #000; padding:4px;">Description</th>
+      <th style="border:1px solid #000; padding:4px;">Common Extensions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:4px;">ARC/INFO Grid</td>
+      <td style="padding:4px;">ArcInfo GRID files</td>
+      <td style="padding:4px;">*.asc, *.prj</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">ADRG</td>
+      <td style="padding:4px;">Digitized Raster Graphic</td>
+      <td style="padding:4px;">*.img, *.ovr, *.arc</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">ASRP/USRP</td>
+      <td style="padding:4px;">DIGEST ASRP, a NATO Military format</td>
+      <td style="padding:4px;">*.img, *.ovr, *</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">BIL</td>
+      <td style="padding:4px;">Band interleaved by line multiband images</td>
+      <td style="padding:4px;">*.bil</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">BIP</td>
+      <td style="padding:4px;">Band interleaved by pixel multiband images</td>
+      <td style="padding:4px;">*.bip</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">BMP</td>
+      <td style="padding:4px;">Windows bitmap</td>
+      <td style="padding:4px;">*.bmp, *.dib</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">BSQ</td>
+      <td style="padding:4px;">Band sequential multiband images</td>
+      <td style="padding:4px;">*.bsq</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">CADRG</td>
+      <td style="padding:4px;">Compressed Arc Digitized Raster Graphics</td>
+      <td style="padding:4px;">*.*, *</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">CIB</td>
+      <td style="padding:4px;">Controlled Image Base</td>
+      <td style="padding:4px;">*.tif</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">CRP</td>
+      <td style="padding:4px;">Compressed Raster Product (Military)</td>
+      <td style="padding:4px;">*.gis, *.lan</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">ERDAS/IMAGINE</td>
+      <td style="padding:4px;">TIFF with a Geo header</td>
+      <td style="padding:4px;">*.tif, *.tfw, *.tiff</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">GeoTIFF</td>
+      <td style="padding:4px;">TIFF with geographic tags</td>
+      <td style="padding:4px;">*.tif</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">GIF</td>
+      <td style="padding:4px;">Graphics Interchange Format</td>
+      <td style="padding:4px;">*.gif</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">Image Catalogs</td>
+      <td style="padding:4px;">Image catalog (collection of images)</td>
+      <td style="padding:4px;">*.*</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">IMPELL RLC</td>
+      <td style="padding:4px;">Run-length compressed files</td>
+      <td style="padding:4px;">*.rlc</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">JPEG</td>
+      <td style="padding:4px;">JPEG</td>
+      <td style="padding:4px;">*.jpg, *.jpeg</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">MrSID</td>
+      <td style="padding:4px;">Multi-Resolution Seamless Image Database</td>
+      <td style="padding:4px;">*.sid</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">NITF</td>
+      <td style="padding:4px;">National Imagery Transfer Format</td>
+      <td style="padding:4px;">*.ntf</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">Sun raster file</td>
+      <td style="padding:4px;">Sun raster image</td>
+      <td style="padding:4px;">*.rs, *.ras, *.sun</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">SVF</td>
+      <td style="padding:4px;">Single Variable File</td>
+      <td style="padding:4px;">*.svf</td>
+    </tr>
+    <tr>
+      <td style="padding:4px;">TIFF</td>
+      <td style="padding:4px;">Tagged Image File Format</td>
+      <td style="padding:4px;">*.tif, *.tiff</td>
+    </tr>
+  </tbody>
+</table><p>To correctly place the image or photo in a geo-referenced frame, it must be accompanied by a world
+file that contains geo-reference data. This world file has an extension depending on the
+image and file type and according to the table below. For example, an image with a file name
+myimage.bmp, must have a world file associated with it named myimage.bmpw or myimage.bpw</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>File Extension</p></th>
+<th class="head"><p>World File Extension</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>bmp
+jpg; jpeg
+tif; tff; tiff
+gis
+lan
+bil
+bip
+bsq
+sid
+sun
+rs; ras
+rlc</p></td>
+<td><p>bmpw or bpw
+jpgw or jgw
+tfw
+gsw
+lnw
+blw
+bpw
+bqw
+sdw
+snw
+rsw
+rcw</p></td>
+</tr>
+</tbody>
+</table>
+<p>The world file has the following general format:</p>
+<pre>
+Line 1:      This line has the dimension of a pixel in map units in the x-direction.
+Lines 2, 3:  These lines are the rotation terms (Not used in this release).
+Line 4:      This value is always negative because the image space is top-down whereas the
+             map space is bottom-up.
+Line 5:      This line has the translation term; x-Origin (x-coordinate of the center of the
+             upper left pixel).
+Line 6:      This line has the translation term; y-Origin (y-coordinate of the center of the
+             upper left pixel).
+</pre><p>An example world file format is:</p>
+<pre>
+20
+0
+0
+-20
+637510
+1032490
+</pre><p>3.2.19 Import Image/Group of Images (File Menu)</p>
+<img alt="../../_images/GDS043.jpg" src="../../_images/GDS043.jpg" />
+<p>This command allows importing of several image files contained in a given subdirectory and part of an image catalog.
+First draw a polygon on the working region and then select an image catalog file.</p>
+<img alt="../../_images/GDS044.jpg" src="../../_images/GDS044.jpg" />
+<p>The catalog file may be in DBASE or ASCII format and has the following format:</p>
+<table style="border-collapse: collapse; width: 100%; border:1px solid #000;">
+  <thead>
+    <tr>
+      <th style="border:1px solid #000; padding:4px; text-align:left;">Image</th>
+      <th style="border:1px solid #000; padding:4px;">Xmin</th>
+      <th style="border:1px solid #000; padding:4px;">Ymin</th>
+      <th style="border:1px solid #000; padding:4px;">Xmax</th>
+      <th style="border:1px solid #000; padding:4px;">Ymax</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:4px; text-align:left;">
+        C:\Projects\MaricopaCounty\Data\ 6401030-5.TIF
+      </td>
+      <td style="padding:4px;">640000</td>
+      <td style="padding:4px;">1000000</td>
+      <td style="padding:4px;">670000</td>
+      <td style="padding:4px;">1400000</td>
+    </tr>
+    <tr>
+      <td style="padding:4px; text-align:left;">
+        C:\Projects\MaricopaCounty\Data\ 6401035-5.TIF
+      </td>
+      <td style="padding:4px;">660000</td>
+      <td style="padding:4px;">1300000</td>
+      <td style="padding:4px;">770000</td>
+      <td style="padding:4px;">1500000</td>
+    </tr>
+    <tr>
+      <td style="padding:4px; text-align:left;">
+        \\Agua\IMF\Publico IMF\ 6401055-5.TIF
+      </td>
+      <td style="padding:4px;">630000</td>
+      <td style="padding:4px;">1300000</td>
+      <td style="padding:4px;">750000</td>
+      <td style="padding:4px;">1510000</td>
+    </tr>
+  </tbody>
+</table><p>The first column is the file name including its path and the following four columns are the image coordinate limits.
+The <em>GDS</em> will find all images from the catalog that are contained within or intersected by the user defined polygon and will retrieve the
+corresponding images.</p>
+<p>3.2.20 Import Elevation Points/ DTM Points… (File Menu)</p>
+<img alt="../../_images/GDS045.jpg" src="../../_images/GDS045.jpg" />
+<p>This command imports DTM elevation points from an existing file.
+Several data files can be imported and the new points are appended to the existing data points.
+The user can also mix or combine DTM points with points from ArcInfo ASCII grid files.</p>
+<p>3.2.21 Individual ArcInfo ASCII Grid File (File Menu)</p>
+<img alt="../../_images/GDS046.jpg" src="../../_images/GDS046.jpg" />
+<p>Use this command to import ArcInfo ASCII grid files.
+The user may import several grid files.
+Any new points are added to the existing data.
+You may also mix or combine ArcInfo ASCII data with DTM points.</p>
+<p>3.2.22 ArcInfo ASCII Grid File Catalog (File Menu)</p>
+<img alt="../../_images/GDS047.jpg" src="../../_images/GDS047.jpg" />
+<p>With this command you can import several ArcInfo ASCII grid files stored in any subdirectory.
+First draw a polygon on the working region, then select a catalog file.
+The catalog file may be in DBASE or ASCII format and has the following format:</p>
+<table style="border-collapse: collapse; width: 100%; border:1px solid #000;">
+  <thead>
+    <tr>
+      <th style="border:1px solid #000; padding:4px; text-align:left;">ASCII Grid File</th>
+      <th style="border:1px solid #000; padding:4px;">Xmin</th>
+      <th style="border:1px solid #000; padding:4px;">Ymin</th>
+      <th style="border:1px solid #000; padding:4px;">Xmax</th>
+      <th style="border:1px solid #000; padding:4px;">Ymax</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style="padding:4px; text-align:left;">
+        C:\Projects\MaricopaCounty\Data\grd2375-100.asc
+      </td>
+      <td style="padding:4px;">640000</td>
+      <td style="padding:4px;">1000000</td>
+      <td style="padding:4px;">670000</td>
+      <td style="padding:4px;">1400000</td>
+    </tr>
+
+    <tr>
+      <td style="padding:4px; text-align:left;">
+        C:\Projects\MaricopaCounty\Data\grd2376-100.asc
+      </td>
+      <td style="padding:4px;">500000</td>
+      <td style="padding:4px;">1000000</td>
+      <td style="padding:4px;">900000</td>
+      <td style="padding:4px;">1500000</td>
+    </tr>
+
+    <tr>
+      <td style="padding:4px; text-align:left;">
+        \\Agua\IMF\Publico IMF\grd2476-100.asc
+      </td>
+      <td style="padding:4px;">510000</td>
+      <td style="padding:4px;">1000000</td>
+      <td style="padding:4px;">740000</td>
+      <td style="padding:4px;">1510000</td>
+    </tr>
+  </tbody>
+</table><p>The first column is the file name including the path name.
+The following four columns are the coordinate data limits in each file.
+The <em>GDS</em> will automatically find all data files that are contained within or intersected by the user defined polygon and will retrieve/display the
+corresponding files.
+Grid files generally contain a large number of points and loading may take several minutes, but once loaded, the points are quickly displayed.
+If the display time becomes too long for a given large data point set, you can use the <em>Esc</em> key to stop the display process.</p>
+<p>3.2.23 Import Shape File (File Menu)</p>
+<img alt="../../_images/GDS048.jpg" src="../../_images/GDS048.jpg" />
+<p>This command will import ESRI shape files.</p>
+<p>3.2.24 Import Rain ArcInfo ASCII Grid File (File Menu)</p>
+<img alt="../../_images/GDS049.jpg" src="../../_images/GDS049.jpg" />
+<p>An ASCII grid file can be imported as a <em>FLO-2D</em> grid system or used to delineate other boundaries such as a rainfall gage grid system.</p>
+<p>3.2.25 Import HEC-RAS Channels… (File Menu)</p>
+<p>This command allows importing channel reaches from geo-referenced <em>HEC-RAS</em> project.</p>
+<img alt="../../_images/GDS050.jpg" src="../../_images/GDS050.jpg" />
+<p>3.2.26 Import CAD Graphic … (File Menu)</p>
+<p>Use this command to import DXF or DWG CAD files.</p>
+<img alt="../../_images/GDS051.jpg" src="../../_images/GDS051.jpg" />
+<p>3.2.27 Import Levees…(File Menu)</p>
+<img alt="../../_images/GDS052.jpg" src="../../_images/GDS052.jpg" />
+<img alt="../../_images/GDS053.png" src="../../_images/GDS053.png" />
+<p>Use this command to import levee polyline vertices in the form of xyz space or coma delimited text file.
+The file extension is *.xyz.</p>
+<p>3.2.28 Save Elevation Points (File Menu)</p>
+<img alt="../../_images/GDS054.jpg" src="../../_images/GDS054.jpg" />
+<p>After deleting any DTM points or adding points from multiple files, this command will save the remaining points to a single file.</p>
+<p>3.2.29 Export… (File Menu)</p>
+<img alt="../../_images/GDS055.jpg" src="../../_images/GDS055.jpg" />
+<p>Use this command to export the current screen view to one of various image formats.
+Click the <em>Export Command</em> and the following dialog box appears:</p>
+<img alt="../../_images/GDS056.png" src="../../_images/GDS056.png" />
+<p>Choose an image export format such as Bitmap, JPEG, etc and adjust the scale factor of the image to obtain better print quality.
+When you click the Export button, input the image file name and select the directory to save the image as shown in the following file dialog box:</p>
+<img alt="../../_images/GDS057.png" src="../../_images/GDS057.png" />
+<p>3.2.30 Open Recent Projects (File Menu)</p>
+<img alt="../../_images/GDS058.jpg" src="../../_images/GDS058.jpg" />
+<p>This command allows the user to open recently opened projects.</p>
+<p>3.2.31 Exit (File Menu)</p>
+<img alt="../../_images/GDS059.jpg" src="../../_images/GDS059.jpg" />
+<p>This command ends the <em>GDS</em> session.
+The <em>GDS</em> will prompt the user to save the current project.</p>
+<p><strong>3.3 View Menu Commands:</strong></p>
+<p>3.3.1 View All (View Menu)</p>
+<img alt="../../_images/GDS060.png" src="../../_images/GDS060.png" />
+<p>Use the <em>View All command</em> or click the View All <a class="reference internal" href="../../_images/GDS061.jpg"><img alt="view_all_icon" src="../../_images/GDS061.jpg" style="height: 14px;" /></a> icon to return the working region to its original full size.
+To Zoom-in (increase the magnification), click in the working region and drag the mouse to outline the area of interest.</p>
+<p>3.3.2 Zoom Out Previous View (View Menu)</p>
+<img alt="../../_images/GDS062.png" src="../../_images/GDS062.png" />
+<p>Use the <em>Zoom Out</em> <em>Previous View</em> command or click the Zoom Out Previous View Button <a class="reference internal" href="../../_images/GDS063.jpg"><img alt="zoom_out_previous_view_icon" src="../../_images/GDS063.jpg" style="height: 14px;" /></a> to return to the previous zoom extent</p>
+<p>3.3.3 Zoom Out 10% (View Menu)</p>
+<img alt="../../_images/GDS064.png" src="../../_images/GDS064.png" />
+<p>Use the Zoom Out 10% View command to reduce the current view 10% in size.</p>
+<p>3.3.4 Pan (View Menu)</p>
+<img alt="../../_images/GDS065.png" src="../../_images/GDS065.png" />
+<p>Use the <em>Pan</em> command or use the <em>Pan</em> Toolbar icon <a class="reference internal" href="../../_images/GDS066.jpg"><img alt="pan_icon" src="../../_images/GDS066.jpg" style="height: 14px;" /></a> to move around within the working region view.
+Click and drag the mouse to pan around.</p>
+<p>Use the <em>View All</em> command (or toolbar icon) to return to a full view of the working region or click the Select icon <a class="reference internal" href="../../_images/GDS066.jpg"><img alt="select_icon" src="../../_images/GDS066.jpg" style="height: 14px;" /></a> to exit the pan mode.</p>
+<p>3.3.5 Layers List (View Menu)</p>
+<img alt="../../_images/GDS067.png" src="../../_images/GDS067.png" />
+<p>This command opens the Layer dialog box.</p>
+<img alt="../../_images/GDS068.png" src="../../_images/GDS068.png" />
+<p>Layers may be visible or invisible.
+Change the layer visible status by checking the <em>Visible</em> check box.
+In the example above there are two active layers.
+Use the <a class="reference internal" href="../../_images/image74.jpg"><img alt="up_arrow_icon" src="../../_images/image74.jpg" style="height: 14px;" /></a> and <a class="reference internal" href="../../_images/image75.jpg"><img alt="down_arrow_icon" src="../../_images/image75.jpg" style="height: 14px;" /></a> icons to highlight and move between the various layers.
+Click the <em>Apply</em> button to accept the changes.
+Delete any layer by checking the <em>Delete</em> check box and then clicking the <em>Apply</em> button.
+After any modifications to the layers, click Apply prior to clicking OK.</p>
+<p>To enter the Layer Properties Dialog box double click an active layer.
+The following dialog appears:</p>
+<img alt="../../_images/GDS069.png" src="../../_images/GDS069.png" />
+<p>This dialog box allows the user to modify layer colors, transparency, number of classes or divisions, add point captions, font styles, etc.
+Use the <em>Adv label</em> option to add labels to DTM points in the Elevation layer.</p>
+<p>Click the <em>Apply</em> button and then the <em>Close</em> button to accept the changes.</p>
+<p>3.3.6 Track Elevation Points (View Menu)</p>
+<img alt="../../_images/GDS070.png" src="../../_images/GDS070.png" />
+<p>This command queries individual terrain elevation points and displays the data for the selected point in the toolbar point elevation box.
+The mouse cursor changes to the inquiry mode to show that this option is active<a class="reference internal" href="../../_images/GDS071.jpg"><img alt="individual_terrain_elevation_icon" src="../../_images/GDS071.jpg" style="height: 14px;" /></a>.</p>
+<img alt="../../_images/GDS072.jpg" src="../../_images/GDS072.jpg" />
+<p>3.3.7 Grid Element #’s, Elevations, and n-values and Curve Numbers (View Menu)</p>
+<img alt="../../_images/GDS073.png" src="../../_images/GDS073.png" />
+<p>Use these commands to display grid element numbers, elevations, Manning’s n-values or Curve Numbers inside the grid elements.
+Each command can be toggled and used jointly to display three values.
+Note that if the grid system is large, the numbers may not fit into the elements.
+Zoom in to enlarge the view and to clearly see the element numbers.
+In each element, the first number is the grid element number, the second is the terrain elevation and the third the Manning’s n value.
+Manning’s n-value and the SCS curve number are selected separately.</p>
+<img alt="../../_images/GDS074.jpg" src="../../_images/GDS074.jpg" />
+<p>3.3.8 Grid… (View Menu)</p>
+<img alt="../../_images/GDS075.jpg" src="../../_images/GDS075.jpg" />
+<p>This command customizes the grid display.</p>
+<p>3.3.9 View Components (View Menu)</p>
+<img alt="../../_images/GDS076.jpg" src="../../_images/GDS076.jpg" />
+<p>These commands enable the user to view or hide <em>FLO-2D</em> components.
+The component view can be toggled on or off in any combination.
+These are some example views of the different <em>FLO-2D</em> components as represented in <em>GDS</em>:</p>
+<img alt="../../_images/GDS266.jpg" src="../../_images/GDS266.jpg" />
+<p>3.3.10 View Elevation Points (View Menu)</p>
+<img alt="../../_images/GDS094.png" src="../../_images/GDS094.png" />
+<p>Displays elevation points assigning colors as a function of elevation.</p>
+<p>3.3.11 Non-Interpolated Grid Elements (View Menu)</p>
+<p>Displays non-interpolated grid elements.
+These elements remained un-interpolated they did not have DTM elevation points within the grid element space during interpolation.
+The user chose not to interpolate the elevation of grid elements that did not have any DTM points within the grid element space.</p>
+<img alt="../../_images/GDS272.jpg" src="../../_images/GDS272.jpg" />
+<p>3.3.12 Manning’s n Values Rendering (View Menu)</p>
+<p>Plots colored hatched pattern on the elements according to the Manning’s n value.</p>
+<img alt="../../_images/GDS095.png" src="../../_images/GDS095.png" />
+<p>3.3.13 Grid Element Elevation Rendering (View Menu)</p>
+<img alt="../../_images/GDS273.jpg" src="../../_images/GDS273.jpg" />
+<p>Plots colored solid or hatched grid elements according to the elevations.</p>
+<p>3.3.14 Highlight Grid Element Number… (View Menu)</p>
+<img alt="../../_images/GDS274.jpg" src="../../_images/GDS274.jpg" />
+<p>Enter a grid element number in the following dialog box to locate it in the <em>FLO-2D</em> grid.
+When you click the <em>Highlight</em> button, the grid element will blink to identify it.
+Note that if the selected element number is not in the current view, you may have to zoom out to see it.</p>
+<p>Use the “Zoom to” dropdown list to zoom in or zoom out.
+Or the “+” and “-“ buttons.</p>
+<p>3.3.15 Find the Lowest Cell in the Grid System (View Menu)</p>
+<p>This command colors the 4th lowest grid elements.</p>
+<img alt="../../_images/GDS275.jpg" src="../../_images/GDS275.jpg" />
+<p>3.3.16 Cross Section Numbers… (View Menu)</p>
+<p>This command displays cross section numbers for Natural Channels.</p>
+<img alt="../../_images/GDS276.jpg" src="../../_images/GDS276.jpg" />
+<p>3.3.17 Cells without Cross Section Numbers… (View Menu)</p>
+<img alt="../../_images/GDS277.jpg" src="../../_images/GDS277.jpg" />
+<p>This command displays natural channel grid elements that do not have any assigned cross section.
+The grid elements without cross sections assigned are highlighted in blue.</p>
+<p>3.3.18 Levee Polyline (View Menu)</p>
+<img alt="../../_images/GDS096.png" src="../../_images/GDS096.png" />
+<p>Use this command to view the polylines that were produced when the levee data was imported or created along a polyline.</p>
+<p>3.3.19 Redraw (View Menu)</p>
+<img alt="../../_images/GDS097.png" src="../../_images/GDS097.png" />
+<p>Use this command to redraw the visible objects in the working region.</p>
+<p><strong>3.4 Design Menu Commands:</strong></p>
+<p>3.4.1 Elevation Points/Insert (Design Menu)</p>
+<img alt="../../_images/GDS098.jpg" src="../../_images/GDS098.jpg" />
+<p>Use this command (or the <a class="reference internal" href="../../_images/GDS099.jpg"><img alt="elev_insert_icon" src="../../_images/GDS099.jpg" style="height: 14px;" /></a> icon) to insert elevation data at selected points within the working region.
+To use this tool:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Select the <em>Elevation Points/Insert</em> command (Design menu) or the toolbar icon <a class="reference internal" href="../../_images/GDS099.jpg"><img alt="elev_insert_icon" src="../../_images/GDS099.jpg" style="height: 14px;" /></a> and click the left mouse button.</p></li>
+<li><p>A dialog box appears for the elevation entry in feet or meters.
+Click <em>‘OK’</em> to accept the value.</p></li>
+</ol>
+<img alt="../../_images/GDS100.png" src="../../_images/GDS100.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click a point within the working region to assign this elevation data.</p></li>
+<li><p>Repeat step 3 as many times as needed.</p></li>
+</ol>
+</div></blockquote>
+<p>3.4.2 Elevation Points/Create Elevation Points Layer (Design Menu)</p>
+<img alt="../../_images/GDS101.jpg" src="../../_images/GDS101.jpg" />
+<p>To optimize display times, <em>GDS</em> does not automatically create the Elevation points layer.
+Use this command to create the elevation point layer.</p>
+<p>3.4.3 Elevation Points/Delete Elevation Points from Selected Area (Design Menu)</p>
+<img alt="../../_images/GDS102.jpg" src="../../_images/GDS102.jpg" />
+<p>This command deletes elevation data points within the working region.
+To use this tool:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Select the <em>Elevation Points/</em> <em>Delete Elevation Points from Selected Area</em> command (Design menu).</p></li>
+<li><p>Click OK, draw the polygon and select yes to delete the points within the polygon.</p></li>
+</ol>
+<img alt="../../_images/GDS281.jpg" src="../../_images/GDS281.jpg" />
+<ol class="arabic simple" start="3">
+<li><p>To save the edited DTM points file, click the Save Elevation Points command (File Menu)</p></li>
+</ol>
+</div></blockquote>
+<p>3.4.4 Elevation Points/Delete Elevation Points Outside Range (Design Menu)</p>
+<img alt="../../_images/GDS282.jpg" src="../../_images/GDS282.jpg" />
+<img alt="../../_images/GDS103.png" src="../../_images/GDS103.png" />
+<p>Deletes elevation data points outside a specified range.</p>
+<p>3.4.5 Grid Element Text Style (Design Menu)</p>
+<img alt="../../_images/GDS284.jpg" src="../../_images/GDS284.jpg" />
+<p>Use these commands to edit the text styles for the grid element number, elevation, or Manning’s n-value.
+Set the relative position of the number in the square grid element (upper, middle or down positions).
+The Font Properties… button is used to change, font type, style, size, etc.</p>
+<img alt="../../_images/GDS104.png" src="../../_images/GDS104.png" />
+<p>3.4.6 Channel Style (Design Menu)</p>
+<img alt="../../_images/GDS285.jpg" src="../../_images/GDS285.jpg" />
+<p>Use this command will change the line width used to represent channels.
+The <em>GDS</em> displays this dialog box to set the line width.
+Click <em>Apply</em> and then ‘<em>OK’</em> to change to the selected channel line width display</p>
+<p>3.4.7 Area Reduction Factor Style (Design Menu)</p>
+<img alt="../../_images/GDS286.jpg" src="../../_images/GDS286.jpg" />
+<p>To change the display of area reduction factor in a grid element chose from Solid, Hollow (with boundary display of different pen widths) or Hatched
+rendering with various hatching options.
+Click <em>Apply</em> and then ‘<em>OK’</em> to change to the selected style.</p>
+<p><strong>3.5 Grid Menu Commands:</strong></p>
+<p>3.5.1 Create Grid (Grid Menu)</p>
+<img alt="../../_images/GDS105.jpg" src="../../_images/GDS105.jpg" />
+<p>Command to create the grid system template of square elements for the <em>FLO-2D</em> model.
+To use the <em>Create Grid</em> command:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Select the <em>Create Grid</em> command (Grid menu).</p></li>
+<li><p>A dialog box appears requesting the square grid element size or side length (ft or m):</p></li>
+</ol>
+<img alt="../../_images/GDS106.png" src="../../_images/GDS106.png" />
+<ol class="arabic simple" start="3">
+<li><p>Select <em>‘OK’</em> to accept the value.</p></li>
+<li><p>The <em>GDS</em> system will automatically overlay a grid template that is centered in the working region.
+The grid elements will be centered on each node.</p></li>
+</ol>
+</div></blockquote>
+<p>3.5.2 Select/Grid Element (Grid Menu)</p>
+<img alt="../../_images/GDS107.jpg" src="../../_images/GDS107.jpg" />
+<p>Use this command (or the <a class="reference internal" href="../../_images/GDS108.jpg"><img alt="select_one_or_more_grid_elements_icon" src="../../_images/GDS108.jpg" style="height: 14px;" /></a> icon in the tool bar) to select one or more grid elements.
+With the <em>Assign Parameters to Selection</em> command, assign attribute values to the selected grid elements.
+To use the <em>Select / Grid element</em> command:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Choose the <em>Select/Grid element</em> command (Grid menu).</p></li>
+<li><p>The cursor changes to a cross.</p></li>
+<li><p>Click the grid element/s to select them.</p></li>
+<li><p>Repeat step 3 for each selected element.</p></li>
+</ol>
+</div></blockquote>
+<p>To unselect previously selected elements, click them again.
+To select a group of elements, press the <em>Shift</em> key simultaneously with the left mouse button and drag the mouse pointer over the desired elements.
+To unselect a group of elements press the <em>Control</em> key and the left mouse button, then drag the mouse pointer over the elements you want to unselect.
+When dragging the mouse over the grid elements, they are painted to indicate your selection.
+After a grid element or group of elements is selected, use the <em>Assign Parameters to Selection</em> command to assign various attributes to the selected
+elements.</p>
+<p>3.5.3 Select/Grid Elements Defined by Polygon (Grid Menu)</p>
+<img alt="../../_images/GDS287.jpg" src="../../_images/GDS287.jpg" />
+<p>This command (or the <a class="reference internal" href="../../_images/GDS109.jpg"><img alt="select_all_grid_elements_inside_polygon_icon" src="../../_images/GDS109.jpg" style="height: 14px;" /></a> icon in the tool bar) will select all the grid elements within a user defined polygon.
+Attributes can then be assigned to the selected elements using the <em>Assign Parameters to Selection</em> command.
+It may be necessary to create a grid layer first.</p>
+<p>3.5.4 Select/Grid Elements Intersected by Shapefile (Grid Menu)</p>
+<img alt="../../_images/GDS110.jpg" src="../../_images/GDS110.jpg" />
+<p>Use this command to allow the use an imported polylines shapefile to intersect the grid domain to select grid elements.
+The shapefile should have been previously imported using the command “File.
+Import Shapefile…”</p>
+<p>3.5.5 Select/Inner Grid Elements (Grid Menu)</p>
+<img alt="../../_images/GDS111.jpg" src="../../_images/GDS111.jpg" />
+<p>This command will select all the grid elements within the computational domain and hatch them with diagonal lines.
+Use the <em>Assign Parameters to Selection</em> command to assign various attributes to the selected elements.</p>
+<p>3.5.6 Select/Unselect All (Grid Menu)</p>
+<img alt="../../_images/GDS112.jpg" src="../../_images/GDS112.jpg" />
+<p>This command will unselect all the elements previously selected with the <em>Select</em> command.
+The toolbar icon <a class="reference internal" href="../../_images/GDS113.jpg"><img alt="unselect_all_grid_elements_icon" src="../../_images/GDS113.jpg" style="height: 14px;" /></a> will also perform this function.</p>
+<p>3.5.7 Assign Parameters to Selection/Elevations (Grid Menu)</p>
+<p>Assign an elevation to selected grid elements.
+Enter an elevation value or enter a distance to raise or lower the elevation.
+Use positive numbers to raise the elevation and negative numbers to lower the elevation.
+Click <em>‘OK’</em> to change the elevation to the selected elements.</p>
+<p>3.5.8 Assign Parameters to Selection/Manning’s Coefficient (Grid Menu)</p>
+<img alt="../../_images/GDS289.jpg" src="../../_images/GDS289.jpg" />
+<p>A Manning’s roughness coefficient (n-value) is assigned to the grid elements previously selected with the <em>Select</em> command.
+A dialog box appears prompting you to enter the n-value:</p>
+<p>3.5.9 Assign Parameters to Selection/Area and With Reduction Factors (Grid Menu)</p>
+<img alt="../../_images/GDS114.jpg" src="../../_images/GDS114.jpg" />
+<p>This command is used to assign area and width reduction attributes to the selected grid elements.
+A dialog box appears prompting the user to enter the Area Reduction Factor (ARF) and the Width Reduction (WRF) factors:</p>
+<img alt="../../_images/GDS115.jpg" src="../../_images/GDS115.jpg" />
+<p>After clicking <em>‘OK’</em>, the assigned ARF and WRF values will appear graphically as follows:</p>
+<img alt="../../_images/GDS116.jpg" src="../../_images/GDS116.jpg" />
+<p>The colored cells indicate varying levels of storage loss (ARF values).
+The colored lines reflect the varying levels of flow direction blockage (WRF values).
+Eight potential flow directions for each grid element can be assigned to identify complete blockage.
+It should be noted that each grid element can share discharge in eight directions.</p>
+<p>3.5.10 Assign Parameters to Selection/Levee (Grid Menu)</p>
+<img alt="../../_images/GDS117.jpg" src="../../_images/GDS117.jpg" />
+<p>Use this command to assign levee and levee failure parameters to the selected grid elements.
+A dialog box will appear with the grid element floodplain elevation across the levee in that flow direction for reference.
+Click a check box to set up a levee for each selected direction.
+A text box will appear just below each direction to input the levee crest elevation.
+Note that the levee crest must be higher than the grid element elevation and the elevation of the grid element in the cut off direction.
+Redundant levee cut off directions will not be accepted by the GDS or the FLO-2D model.
+This dialog box can also be used to edit the grid element elevation.</p>
+<img alt="../../_images/GDS118.jpg" src="../../_images/GDS118.jpg" />
+<p>Each data entry is described below:</p>
+<p><em>Incremental increase in crest elevation for all the levee nodes (RAISLEV)</em></p>
+<blockquote>
+<div><p>Global incremental increase in levee crest elevation (ft or m) for all the levee grid elements.</p>
+</div></blockquote>
+<p><em>Global Failure Mode</em> provides two modes of failure:</p>
+<blockquote>
+<div><p><em>Prescribed failure</em> used to provide predetermined breach data in the bottom part of the dialog or</p>
+<p><em>Breach</em> <em>failure</em> where the model simulates the breach erosion from overtopping or piping.
+In this case, breach parameters should be entered clicking the Open Breach Dialog button.</p>
+</div></blockquote>
+<p><em>Flow direction cutoff direction</em></p>
+<blockquote>
+<div><p>Check buttons to define the flow direction (of the 8 possible overland flow directions) that will be cutoff by a levee.</p>
+</div></blockquote>
+<p><em>Levee Crest Elevation</em> (LEVELEV)</p>
+<blockquote>
+<div><p>Elevation (ft or m) of the top of the levee.</p>
+</div></blockquote>
+<p><em>Assign to all</em> button <a class="reference internal" href="../../_images/GDS119.jpg"><img alt="assign_to_all_icon" src="../../_images/GDS119.jpg" style="height: 14px;" /></a></p>
+<blockquote>
+<div><p>Assigns the cutoff flow direction and levee crest elevation to all selected grid elements.</p>
+</div></blockquote>
+<p><em>Levee failure for this direction</em> <a class="reference internal" href="../../_images/GDS120.jpg"><img alt="assign_levee_input_parameters_icon" src="../../_images/GDS120.jpg" style="height: 14px;" /></a></p>
+<blockquote>
+<div><p>Enables input parameters to be assigned for levee prescribed failure modeling for the selected direction.</p>
+</div></blockquote>
+<p><em>Elevation of prescribed failure</em></p>
+<blockquote>
+<div><p>Assign the maximum water surface elevation at failure (FAILEVEL) if is different than the levee crest (LEVELEV).
+This enables the levee to fail prior to being overtopped.
+Set the FAILEVEL variable to zero to simulate levee failure when it is overtopped.</p>
+</div></blockquote>
+<p><em>Duration (hrs) for failure after failure level is exceeded</em> (FAILTIME)</p>
+<blockquote>
+<div><p>Duration in hours until levee failure after the FAILEVEL elevation is exceeded by the flow depth.
+Set this variable to zero if the level fails immediately when overtopped or when FAILEVEL is exceeded.</p>
+</div></blockquote>
+<p><em>Base elevation of levee failure if different from floodplain elevation</em> (LEVBASE)</p>
+<blockquote>
+<div><p>The final elevation of the levee after failure is completed.
+This enables the levee to fail to an elevation that is different from the floodplain elevation.
+Set this variable to zero if levee failure results in the complete levee failure to the floodplain elevation.</p>
+</div></blockquote>
+<p><em>Initial levee breach width</em> (FAILWIDTH)</p>
+<blockquote>
+<div><p>The initial flow width (ft or m) of levee failure.
+This flow width relates to one of the eight flow directions and should be less than the length of an octagon side (length of the side of a grid
+element x 0.4142).</p>
+</div></blockquote>
+<p><em>Vertical rate of levee breach opening</em> (FAILRATE)</p>
+<blockquote>
+<div><p>The rate of vertical levee failure (ft/hr or m/hr).</p>
+</div></blockquote>
+<p><em>Horizontal rate of levee breach opening</em> (FAILWIDRATE)</p>
+<blockquote>
+<div><p>The rate at which the levee breach widens (ft/hr or m/hr).
+The breach stops increasing if the breach exceeds the grid element width for that direction.</p>
+</div></blockquote>
+<p>3.5.11 Assign Parameters to Selection/Multiple Channels (Grid Menu)</p>
+<img alt="../../_images/GDS121.jpg" src="../../_images/GDS121.jpg" />
+<p>This command is used to define multiple channels that simulate rill and gully flow on the floodplain.
+For this component, concentrated rill and gully flow (flow in rectangular channel) rather than overland sheet flow will be simulated to route the flow
+between designated floodplain grid elements.
+The following dialog box is used to input the multiple channel data:</p>
+<p><em>3.5.12 Assign Parameters to Selection/Inflow/Outflow Condition (Grid Menu)</em></p>
+<img alt="../../_images/GDS122.png" src="../../_images/GDS122.png" />
+<p>Use this command to define inflow and outflow elements in selected grid elements.
+The In/Out Condition dialog box allows editing these boundary conditions:</p>
+<img alt="../../_images/GDS123.jpg" src="../../_images/GDS123.jpg" />
+<p><em>3.5.12.1 Setting inflow nodes</em></p>
+<p>Clicking the first radio button will assign an inflow hydrograph to a grid element.
+If there is a channel in the selected element, you can assign the hydrograph to either the channel or the floodplain.
+When the user selects the radio button <em>‘Inflow element with hydrograph’,</em> the ‘<em>Hydrograph’</em> data group is activated.
+The “<em>Read</em>” button displays a dialog box to import a hydrograph with HEC-1, Tape21, HYD or ASCII files formats:</p>
+<img alt="../../_images/GDS124.png" src="../../_images/GDS124.png" />
+<p>The HEC-1 file option will display all the hydrographs at basin concentration points in a Corps of Engineers HEC-1 hydrologic model output file.
+The user can select an inflow hydrograph from the HEC-1 file:</p>
+<img alt="../../_images/GDS125.png" src="../../_images/GDS125.png" />
+<p>After selecting the HEC-1 hydrograph and clicking <em>‘OK’</em>, the hydrograph data are loaded into the</p>
+<p><em>Hydrograph</em> group table in the above dialog box.
+*.HYD files are ASCII files generated by the <em>GDS</em> to save the hydrograph data.
+They are created with the “<em>Save Table</em>” button.
+The first line contains the initial and final time of the hydrograph selected with the “Select Time Interval” button.
+The time and discharge discretized hydrograph pairs follow in two columns of data.
+These files can be used to:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Recover the hydrographs when a project is read from a TOP file;</p></li>
+<li><p>Redefine the project area when the INFLOW.DAT becomes obsolete because the grid element numbers change.
+The *.HYD files enable the hydrographs to be recovered for assignment to new grid elements.</p></li>
+<li><p>*.HYD files permanently store hydrographs that could be imported to other projects or grid elements in the same project.</p></li>
+</ul>
+</div></blockquote>
+<p>The “<em>Edit</em>” button can be used to edit hydrograph values, insert rows, delete rows, or sort rows in ascending order (time column).
+This button a displays an editor dialog box:</p>
+<img alt="../../_images/GDS126.png" src="../../_images/GDS126.png" />
+<p>The “<em>View Graph</em>” button of the above <em>In/Out Condition</em> dialog box plots the hydrograph in the following window:</p>
+<img alt="../../_images/GDS127.png" src="../../_images/GDS127.png" />
+<p>The user may select the initial and final time for the inflow hydrograph.
+For example, selecting <em>Initial Time</em> = 10.0 hours and <em>Final Time</em> = 16.0 will redefine the hydrograph limits and in this eliminate a number of
+unnecessary zero values on the rising and falling limbs of the hydrograph.</p>
+<p>Inflow grid elements with assigned hydrographs are displayed in <em>GDS</em> with a distinct color for identification.
+When the user selects “<em>No Inflow/Outflow condition</em>” and clicks <em>‘OK’</em>, the grid element recovers its original color to indicate the absence of
+an inflow or outflow node.
+Inflow nodes and the linked hydrographs will be written to the INFLOW.DAT file.
+Outflow nodes are assigned though the option “<em>Outflow element (no hydrograph)</em>”.
+The list of outflow nodes will be written to the OUTFLOW.DAT file.</p>
+<p><em>Initial Assignment of Hydrographs</em></p>
+<p>The initial assignment of hydrographs to inflow nodes has three options:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><em>Project is created from FLO-2D project</em> (<em>GDS</em> command “<em>File.
+New Project from FLO-2D Project</em>”).
+In this case INFLOW.DAT is used by the <em>GDS</em> system to assign hydrographs to pre-selected grid elements.</p></li>
+<li><p>All other methods of creating a project.
+The user will be required to create the grid system and then later right-click the selected inflow nodes to assign hydrographs as described above.</p></li>
+</ol>
+</div></blockquote>
+<p><em>3.5.12.2 Setting outflow nodes</em></p>
+<blockquote>
+<div><p>These are the options for outflow nodes:</p>
+</div></blockquote>
+<p><em>3.5.12.3 Outflow element (no hydrograph):</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Line ‘O’ for floodplain</p></li>
+<li><p>Line ‘K’ for Channel</p></li>
+<li><dl class="simple">
+<dt>An element containing an outflow node must have a lower elevation than the contiguous upstream elements.</dt><dd><ul>
+<li><p>Floodplain element elevation will be reset to 0.1 ft lower than the lowest contiguous upstream element if the outflow node elevation is initially
+higher. This change occurs automatically at runtime.</p></li>
+<li><p>Channel elements will generate an error in the GDS and when the engine is executed.
+An error report is written to the error.chk file and the channel bed elevation must be manually adjusted.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<img alt="../../_images/GDS128.jpg" src="../../_images/GDS128.jpg" />
+</div></blockquote>
+<p>For this outflow assignment, the outflow nodes discharge all the inflow to them off the grid system using an approximate normal depth flow condition.
+The outflow node is essentially a sink.</p>
+<p><em>3.5.12.4 Outflow element with hydrograph (diversion):</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>This diversion data is written to the INFLOW.DAT file.</p></li>
+<li><p>This option is for Channels only.</p></li>
+<li><p>The grayed-out appearance for FP and FP/Channel, indicating that those 2 commands are unavailable</p></li>
+<li><p>This option is used to account for irrigation or any other kind of diversion from a channel in a Time / Discharge (cfs or cms) relationship.</p></li>
+<li><p>If the discharge in the channel does not meet the level of the discharge in the diversion hydrograph, the element will divert all of the water it can
+take.</p></li>
+<li><p>Any water that exceeds the diversion hydrograph will continue downstream.</p></li>
+</ul>
+<img alt="../../_images/GDS129.jpg" src="../../_images/GDS129.jpg" />
+</div></blockquote>
+<p><em>3.5.12.5</em> Outflow element with stage-time relationship<em>:</em></p>
+<img alt="../../_images/GDS130.jpg" src="../../_images/GDS130.jpg" />
+<p>This option is for Channel and Floodplain.</p>
+<blockquote>
+<div><ul>
+<li><p>The grayed-out appearance for FP/Channel, indicating that command is unavailable</p></li>
+<li><p>No ‘O’ or ‘K’ lines (type 1)</p></li>
+<li><p>Only ‘N’ lines for stage-time relationship.</p></li>
+<li><p>FP and channel elements will be different only on the third column of the ‘N’ lines, the identifier will be different:</p>
+<blockquote>
+<div><p>o N Grid Cell FP_ID=0
+o N Grid Cell Channel_ID=1</p>
+</div></blockquote>
+</li>
+<li><p>Use this type of outflow when the downstream stage will add water to the modeling surface as.</p>
+<blockquote>
+<div><p>o Tsunamis
+o Storm stage
+o Downstream flooding stage. i.e. Mississippi River</p>
+</div></blockquote>
+</li>
+<li><p>The initial stage for each grid element should start at near ground elevation and ramp up to avoid volume conservation errors.</p></li>
+<li><p>If the stage is lower than the grid element elevation, it is reset to the grid element elevation at runtime until the time that it goes above the grid
+element elevation.</p></li>
+</ul>
+</div></blockquote>
+<img alt="../../_images/GDS131.png" src="../../_images/GDS131.png" />
+<p>Use this water surface control to simulate flooding from storm surges/tsunamis or any type of water surface elevation control such as tidal effects or
+time variable backwater conditions.
+For example, it is possible to model the flooding in a coastal area produced by storm surges generated by tropical storms, hurricanes or tsunamis
+where the ocean stage’s rise and fall has a limited duration.
+This condition can be assigned to nodes along the coastal boundary to simulate ocean flooding in an urban area.
+The grid element with a stage-time relationship does not have to be along the red boundary.</p>
+<p><em>3.5.12.6 Outflow element with stage-time and free floodplain and channel:</em></p>
+<img alt="../../_images/GDS267.jpg" src="../../_images/GDS267.jpg" />
+<p>This option is for Channel or Floodplain.</p>
+<blockquote>
+<div><ul>
+<li><p>Grey out appearance for FP/Channel, indicating that
+command is unavailable</p></li>
+<li><p>Redundant ‘O’ or ‘K’ lines are needed depending on if
+the element is a FP cell or a channel cell.</p></li>
+<li><p>‘N’ lines for stage-time relationship are needed.</p></li>
+<li><p>FP and channel elements will be different on the third
+column of ‘N’ Line, the identifier will be different:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>N Grid Cell FP_ID=0</p></li>
+<li><p>N Grid Cell Channel_ID=1</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Use this configuration when a water surface elevation
+along a boundary needs to be held like with Flood
+Insurance Mapping.</p></li>
+<li><p>The initial stage for each grid element should start at
+near ground elevation and ramp up to avoid volume
+conservation errors.</p></li>
+<li><p>If the stage is lower than the grid element elevation, it is
+reset to the grid element elevation at runtime until the
+time that it goes above the grid element elevation.</p></li>
+</ul>
+</div></blockquote>
+<img alt="../../_images/GDS268.jpg" src="../../_images/GDS268.jpg" />
+<p>This outflow condition is a combination of the stage-time relationship and normal depth outflow node for the either the floodplain or channel.
+In this case, the water surface elevation is held along the boundary by the stage-time relationship.
+Anything higher than the stage leaves the system through the same outflow node.
+The main difference between this outflow condition and the previous one is that it will not add water to the upstream grid system.
+The water is held at the node.</p>
+<p><em>3.5.12.7 Channel outflow element (with stage-discharge):</em></p>
+<img alt="../../_images/GDS132.jpg" src="../../_images/GDS132.jpg" />
+<p>This option is for channel outflow where a stage discharge relationship is known.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Assign this outflow node to a gaged channel element at the end of a project or a bridge at the end of a project.</p></li>
+<li><p>Multiple curves can be used and a curve is valid up to the given depth.
+That is why it is called a Max Depth.</p></li>
+<li><dl class="simple">
+<dt>‘H’ lines for discharge curve relationship are needed.</dt><dd><p>o Max Depth o Coefficient
+o Exponent</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<p>Use this option to assign a stage-discharge relationship to the channel.
+In this case, the channel outflow discharge will be controlled by assigned stage discharge pairs to simulate a weir, culvert or other water surface
+hydraulic control.</p>
+<p><em>3.5.12.8 Channel outflow element (with depth-discharge):</em></p>
+<img alt="../../_images/GDS133.jpg" src="../../_images/GDS133.jpg" />
+<p>This option does not work.
+I believe it was supposed to be used to fill in the time / discharge method for a channel element with a known time / discharge data set.
+If a user needs to use the Time Discharge method, it is best to review the Data Input Manual.</p>
+<p>Set it up in the OUTFLOW.DAT file as follows using a text editor.
+It is space delimited and all characters are capitalized.</p>
+<pre>
+K 1007
+T 0.0 0.00
+T 3.0 50.35
+T 5.0 157.67
+T 10.0 366.58
+</pre><p><em>3.5.12.9 Outflow node Q reported to INFLOWx.DAT:</em></p>
+<img alt="../../_images/GDS134.jpg" src="../../_images/GDS134.jpg" />
+<p>This option is used for capturing the discharge from an upstream model.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>See Lesson 13 for a tutorial on how to use this method.</p></li>
+<li><p>All flow captured by the outflow node will be written to a corresponding INFLOWx.DAT file.</p></li>
+<li><p>The two grid systems must overlap at the boundary to set the data up correctly.</p></li>
+</ul>
+</div></blockquote>
+<p>Use this option to assign a stage-discharge relationship to the channel.
+In this case, the channel outflow discharge will be controlled by assigned stage discharge pairs to simulate a weir, culvert or other water surface
+hydraulic control.</p>
+<p><em>3.5.12.10 No Outflow Condition</em></p>
+<img alt="../../_images/GDS135.jpg" src="../../_images/GDS135.jpg" />
+<p>Use this option to clear the In/Out condition from any element.
+Select the elements with either an inflow or outflow condition and click the radio button.
+Click OK to delete the data from the INFLOW.DAT and OUTFLOW.DAT files.</p>
+<p>3.5.13 Parameters to Selection/Infiltration (Grid Menu)</p>
+<img alt="../../_images/GDS136.jpg" src="../../_images/GDS136.jpg" />
+<p>Use this option to assign infiltration data to the selected grid elements in the following dialog box:</p>
+<img alt="../../_images/GDS137.jpg" src="../../_images/GDS137.jpg" />
+<p>3.5.14 Parameters to Selection/No Discharge Exchange (Grid Menu)</p>
+<img alt="../../_images/GDS290.jpg" src="../../_images/GDS290.jpg" />
+<p>Identify channel elements that will not exchange discharge with the floodplain (e.g.</p>
+<p>channel culvert or enclosed channel where no floodplain inflow can occur).</p>
+<p>3.5.15 Assign Parameters to Selection/Time-Variant Groundwater Head (Grid Menu)</p>
+<img alt="../../_images/GDS138.jpg" src="../../_images/GDS138.jpg" />
+<p>Use this command when using the <em>MODFLOW</em> groundwater flow model link to impose a time series of groundwater head at the selected nodes.</p>
+<p>3.5.16 Parameters to Selection/Rigid Bed Element (Grid Menu)</p>
+<img alt="../../_images/GDS139.jpg" src="../../_images/GDS139.jpg" />
+<p>Setup elements that do not scour during the sediment transport simulation.</p>
+<p>3.5.17 Assign Parameters to Selection/Variable Sediment Size Fraction (Grid Menu)</p>
+<img alt="../../_images/GDS291.jpg" src="../../_images/GDS291.jpg" />
+<p>This command requires the definition of transport equations.
+See “Tools.
+Mud and Sediment Transport”</p>
+<p>3.5.18 Assign Parameters to Selection/Limiting Froude Number (Grid Menu)</p>
+<img alt="../../_images/GDS292.jpg" src="../../_images/GDS292.jpg" />
+<p>Use this command to setup spatially variable limiting Froude numbers.</p>
+<p>3.5.19 Assign Parameters to Selection/Cell Elevation Adjustment (Grid Menu)</p>
+<img alt="../../_images/GDS140.jpg" src="../../_images/GDS140.jpg" />
+<p>Use this command to adjust elevations for the selected cells and their neighbors:</p>
+<img alt="../../_images/GDS141.jpg" src="../../_images/GDS141.jpg" />
+<p>3.5.20 Assign Parameters to Selection/Cell Tolerance (Grid Menu)</p>
+<img alt="../../_images/GDS293.jpg" src="../../_images/GDS293.jpg" />
+<p>Assign cell tolerances to the selected cells.</p>
+<p>3.5.21 Interpolate Elevation Points (Grid Menu)</p>
+<img alt="../../_images/GDS294.jpg" src="../../_images/GDS294.jpg" />
+<p>Use this command to interpolate and assign all the grid element elevations in the computational domain.
+The interpolated elevations are based on the imported DTM points or the elevation points that are added to the working region.
+The interpolation options are selected in the <em>Options/Interpolation</em> command of the <em>Tools</em> menu.
+The following table describes the interpolation method.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Option</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Minimum number of DTMpoints to consider in the vicinity of each</p>
+<p>grid element</p>
+</td>
+<td><p>To calculate the interpolated elevation that will represent each</p>
+<p>grid element, the algorithm analyzes at least the minimum number</p>
+<p>of points closest to the grid element node.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Radius of interpolation(proportional to grid element size)</p></td>
+<td><p>This radius defines a circle around each grid element node based</p>
+<p>on a multiple of the grid elements side.</p>
+<p>Only DTM or assigned elevation points inside this radius are</p>
+<p>considered in the interpolation process.</p>
+<p>If no elevations point exists, the circle is automatically enlarged</p>
+<p>until at least the minimum number of points is found.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Inverse distance weighting formula exponent</p></td>
+<td><p>This is “n” in the Inverse Distance Weighting Formula:</p>
+<p><a class="reference internal" href="../../_images/idw_equation.jpg"><img alt="idw_eq" class="align-middle" src="../../_images/idw_equation.jpg" style="height: 70px;" /></a></p>
+<p>Where Z¯ is the interpolated grid element elevation, Z<sub>j</sub> is</p>
+<p>the elevation of DTM point <sub>j</sub>, r<sub>ij</sub> is the distance from</p>
+<p>the DTM point <sub>j</sub> to center of grid element <sub>i</sub> and NDTM is the</p>
+<p>total number of DTM points.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>No filtering (High or LowElevations)</p></td>
+<td><p>No filtering is performed on the elevation points.</p></td>
+</tr>
+<tr class="row-even"><td><p>Maximum elevation difference (High or Low Elevations)</p></td>
+<td><p>For this option, the algorithm calculates a mean elevation using all</p>
+<p>the DTM and assigned elevation points within the interpolation radius.</p>
+<p>All those points that exceed the selected maximum elevation difference</p>
+<p>higher (or lower in the case of Low Elevation filter) than the mean are</p>
+<p>discarded and the mean elevation is recomputed and assigned to the grid element.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Standard deviationdifference(High or Low Elevations)</p></td>
+<td><p>The interpolation algorithm calculates the standard deviation of DTM point</p>
+<p>elevations and then neglects all those points whose elevations are higher</p>
+<p>(or lower in the case of the Low Elevation filter) than the standard</p>
+<p>deviation to determine the mean elevation to represent the grid element.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>3.5.22 Interpolate Elevation Points from Multiple Elevation Files…
+(Grid Menu)</p>
+<p>Use this command to interpolate and assign grid element elevations in the computational domain.
+The interpolated elevations are based on the imported LIDAR ASCII file.
+The interpolation options are selected in the <em>Options/Interpolation</em> command of the <em>Tools</em> menu.</p>
+<p>Previous versions of the FLO-2D Grid Developer System (GDS) provided a method to interpolate terrain elevations that required importing all points.
+The original procedure was not able to process more than about 15 million points due to limitations on the development tools used to create GDS.
+To circumvent this limitation and allow the processing of virtually unlimited number of elevation point data, FLO-2D Software has developed a new
+method that does not require importing the points and significantly extends the model interpolation capability.
+This section of the manual summarizes the functionality of the new tool and provides simple instructions how to use it.</p>
+<section id="id1">
+<h4>Data requirements<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
+<p>The new interpolation tool reads data files in any of the following data ASCII formats.</p>
+<ol class="arabic">
+<li><p>Space or comma delimited ASCII files, 3 data values per line.
+These files contain three values on each line as follows:</p>
+<p>X_Coordinate Y_Coordinate Elevation</p>
+</li>
+</ol>
+<pre>
+    Example of space delimited file:
+369941.27 1183607.125 4654.71
+369946.27 1183608.125 4654.50
+369951.27 1183609.125 4654.29
+</pre><pre>
+    Example of comma delimited file:
+369941.27 , 1183607.125 , 4654.71
+369946.27 , 1183608.125 , 4654.50
+369951.27 , 1183609.125 , 4654.29
+</pre><ol class="arabic" start="2">
+<li><p>Space or comma delimited ASCII files, 5 data values per line.
+These files contain five values on each line as follows:</p>
+<p>ID X_Coordinate Y_Coordinate Elevation Value</p>
+</li>
+</ol>
+<p>For this file format only the point coordinates and elevation value is used.
+The first column (ID) and last column (Value) are ignored.</p>
+<pre>
+    Example of space delimited file:
+X1 369941.27 1183607.125 4654.71 777
+X2 369946.27 1183608.125 4654.50 717
+X3 369951.27 1183609.125 4654.29 282
+</pre><pre>
+    Example of comma delimited file:
+X1,369941.27,1183607.125,4654.71,777
+X2,369946.27,1183608.125,4654.50,717
+X3,369951.27,1183609.125,4654.29, 282
+</pre><ol class="arabic simple" start="3">
+<li><p>List of elevation data files ELEVFILES.DAT:</p></li>
+</ol>
+<p>This optional file contains the list of files including path and name.
+It needs to be created by the user with any text editor program and facilitates handling hundreds or thousands of files which may be difficult to
+select using a standard MS-Windows file handling dialog box.
+Users may mix any of the supported formats, i.e., some files may be 3 column space delimited, and others five columns comma delimited, etc.
+All files must have.TXT extension.</p>
+<pre>
+    Example of ELEVFILES.DAT file:
+C:\\Tracks\\PROJECTS\\FLO2D\\2009\\Goat2009\\dtm1.TXT
+C:\\Tracks\\PROJECTS\\FLO2D\\2009\\Goat2009\\dtm2.TXT
+C:\\Tracks\\PROJECTS\\FLO2D\\2009\\Goat2009\\dtm 5 columns1.TXT
+C:\\Tracks\\PROJECTS\\FLO2D\\2009\\Goat2009\\dtm 5 columns2.TXT
+</pre><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All elevation ASCII files, regardless of their format must have extension .TXT.</p>
+</div>
+</section>
+<section id="user-instructions">
+<h4>User instructions<a class="headerlink" href="#user-instructions" title="Link to this heading"></a></h4>
+<p>It is required that the user creates a FLO-2D grid and computational boundary prior to interpolation.
+To interpolate use the Interpolate from Multiple Elevation Files… from the GDS Grid menu.</p>
+<img alt="../../_images/GDS142.jpg" src="../../_images/GDS142.jpg" />
+<p>That command will bring up a file selection dialog:</p>
+<img alt="../../_images/GDS143.jpg" src="../../_images/GDS143.jpg" />
+<p>There are two options:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Users can select an ELEVFILES.DAT file, if available, and import the list of elevation files in the format discussed in the previous section or</p></li>
+<li><p>Users can select the actual elevation data files.
+It is necessary to change the default file extension to .TXT to select a group of ASCII elevation files.</p></li>
+</ol>
+</div></blockquote>
+<p>For either option, clicking Open, displays the interpolation dialog box:</p>
+<img alt="../../_images/GDS144.jpg" src="../../_images/GDS144.jpg" />
+<p>There are two LiDAR interpolation options to choose from.
+The default is <em>Use all available elevation points</em>, which will compute the interpolated elevations using all points within each grid element.
+Selecting the <em>Use this % of elevation points</em> will calculate the elevation using the assigned subset of points on each grid element.
+The % is a global value based on the average number of elevation points per grid element.</p>
+</section>
+<section id="interpolation-method">
+<h4>Interpolation method<a class="headerlink" href="#interpolation-method" title="Link to this heading"></a></h4>
+<p>If the user selects Use all available elevation points option, the GDS will compute the grid element elevation using the elevation average of all
+points on the element.
+The GDS does not import or display the elevation points, but instead reads one point at a time, determines the grid element where the point is located
+and computes the average elevation.
+A similar procedure is followed if the user selects a subset of points but GDS will calculate the elevation using the indicated percentage of points
+on the element.</p>
+<p>If no elevation points are found on an element or if the number of points is less than the specified percentage, a tag value of -9999 will be assigned
+to that element.
+Also the element will be highlighted in black as shown:</p>
+<img alt="../../_images/GDS145.jpg" src="../../_images/GDS145.jpg" />
+<p>If there is at least one element without a calculated elevation, a dialog box will be displayed presenting three options to assign elevations to those
+grid elements:</p>
+<img alt="../../_images/GDS146.jpg" src="../../_images/GDS146.jpg" />
+<p>The Interpolate from Nearest Grid Elements option will compute an elevation by assessing the elevation data in the neighboring 8 grid elements and
+averaging the point elevations (-9999 values are not used).
+The algorithm initiates from the periphery of a cluster of non-interpolated grid elements and proceeds to the interior of the cluster ensuring that at
+the end of the procedure all grid elements will be assigned an elevation.</p>
+<p>The user can assign a value to all -9999 grid elements using Assign this Value to all Noninterpolated Grid Elements.
+The third option will leave all un-interpolated elements with the 9999 tag.
+The user will need to double click and assign a desired elevation for each one.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The GDS will initiate a FLO-2D model simulation if there are elements with the -9999 tag.
+The new Non-Interpolated Grid Elements command on the View menu turns on or off the black unassigned grid elements.*</p>
+</div>
+<p>3.5.23 Compute Green-Ampt Parameters (Grid Menu)</p>
+<img alt="../../_images/GDS147.jpg" src="../../_images/GDS147.jpg" />
+<p>This command is the starting point for the Green-Ampt parameter calculations.
+There are several steps that have to be completed in a prescribed sequence.
+The final result is the creation of the INFIL.DAT file containing the Green-Ampt infiltration parameters.
+To initiate this procedure, you have to load a landuse shape file and a soil shape file and the corresponding soil and landuse tables must be
+available.
+In addition, the <em>FLO-2D</em> grid system data files must exist.
+The general procedure is as follows:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Load the land use shape file and table.</p></li>
+<li><p>Load the soil shape file and table.</p></li>
+<li><p>For each grid element compute hydraulic conductivity (<em>XKSAT)</em> average.</p></li>
+<li><p>View the landuse and soil interface.</p></li>
+</ol>
+</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-1">
+<span class="eqno">(124)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-1" title="Link to this equation"></a></span>\[\overline{XKSAT}
+= ALOG\!\left(
+    \frac{\sum A_i\, \log(XKSAT_i)}{A_{GE}}
+  \right)\]</div>
+<p>Where:</p>
+<blockquote>
+<div><p><em>XKSATi</em> is obtained from the soil table and</p>
+<p><em>Ai</em> is subarea intercepted by the grid element from the 3<sup>rd</sup> column of the landuse table and <em>AGE</em> the grid element area.</p>
+<blockquote>
+<div><ol class="arabic simple" start="5">
+<li><p>For each grid element, compute wetting front capillary suction PSIF according to the following regressions as a function of <em>XKSAT</em> (Generated from
+Figure 4.3 of the Maricopa County Drainage Design Manual, Volume I).</p></li>
+</ol>
+</div></blockquote>
+</div></blockquote>
+<table style="border-collapse: collapse; width: 100%; border:1px solid #000;">
+  <thead>
+    <tr>
+      <th style="border:1px solid #000; padding:4px;">XKSAT (in/hr)</th>
+      <th style="border:1px solid #000; padding:4px;">PSIF (in)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style="padding:4px; text-align:center;">
+        0.01 &le; XKSAT &le; 1.2
+      </td>
+      <td style="padding:4px; text-align:center;">
+        PSIF = EXP(0.9813 - 0.439 * Ln(XKSAT) + 0.0051 (Ln(xksat))<sup>2</sup> + 0.0060 (Ln(XKSAT))<sup>3</sup>)
+      </td>
+    </tr>
+  </tbody>
+</table><ol class="arabic simple" start="6">
+<li><p>For each grid element, compute volumetric soil moisture deficiency <em>(DTHETA)</em> according to the following table.
+The specific table used for DTHETA depends on the <em>saturation</em> field of the soil table (6th column).</p></li>
+</ol>
+<p>Saturation = DRY</p>
+<table style="border-collapse: collapse; width: 100%; border:1px solid #000; margin-bottom:10px;">
+  <thead>
+    <tr>
+      <th style="border:1px solid #000; padding:4px;">XKSAT (in/hr)</th>
+      <th style="border:1px solid #000; padding:4px;">DTHETA DRY</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style="padding:4px; text-align:center;">0.01 &le; XKSAT &le; 0.15</td>
+      <td style="padding:4px; text-align:center;">DTHETA = EXP(-0.2394 + 0.3616&nbsp;Ln(XKSAT))</td>
+    </tr>
+
+    <tr>
+      <td style="padding:4px; text-align:center;">0.15 &lt; XKSAT &le; 0.25</td>
+      <td style="padding:4px; text-align:center;">DTHETA = EXP(-1.4122 - 0.2614&nbsp;Ln(XKSAT))</td>
+    </tr>
+
+    <tr>
+      <td style="padding:4px; text-align:center;">0.25 &lt; XKSAT &le; 1.2</td>
+      <td style="padding:4px; text-align:center;">DTHETA = 0.35</td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="margin-bottom:25px;">Saturation = NORMAL</div><p>Saturation = NORMAL</p>
+<table style="border-collapse: collapse; width: 100%; border:1px solid #000; margin-bottom:10px;">
+  <thead>
+    <tr>
+      <th style="border:1px solid #000; padding:4px;">XKSAT (in/hr)</th>
+      <th style="border:1px solid #000; padding:4px;">DTHETA NORMAL</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td style="padding:4px; text-align:center;">0.01 &le; XKSAT &le; 0.02</td>
+      <td style="padding:4px; text-align:center;">DTHETA = EXP(1.6094 + Ln(XKSAT))</td>
+    </tr>
+
+    <tr>
+      <td style="padding:4px; text-align:center;">0.02 &lt; XKSAT &le; 0.04</td>
+      <td style="padding:4px; text-align:center;">DTHETA = EXP(-0.0142 + 0.5850&nbsp;Ln(XKSAT))</td>
+    </tr>
+
+    <tr>
+      <td style="padding:4px; text-align:center;">0.04 &lt; XKSAT &le; 0.1</td>
+      <td style="padding:4px; text-align:center;">DTHETA = 0.15</td>
+    </tr>
+
+    <tr>
+      <td style="padding:4px; text-align:center;">0.1 &lt; XKSAT &le; 0.15</td>
+      <td style="padding:4px; text-align:center;">DTHETA = EXP(1.0038 + 1.2599&nbsp;Ln(XKSAT))</td>
+    </tr>
+
+    <tr>
+      <td style="padding:4px; text-align:center;">0.15 &lt; XKSAT &le; 0.4</td>
+      <td style="padding:4px; text-align:center;">DTHETA = 0.25</td>
+    </tr>
+
+    <tr>
+      <td style="padding:4px; text-align:center;">0.4 &lt; XKSAT &le; 1.2</td>
+      <td style="padding:4px; text-align:center;">DTHETA = EXP(-1.2342 + 0.1660&nbsp;Ln(XKSAT))</td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="margin-bottom:25px;">Saturation = WET or SATURATED</div><p>Saturation = WET or SATURATED</p>
+<table style="border-collapse: collapse; width: 60%; border:1px solid #000; margin-top:10px;">
+  <tbody>
+    <tr>
+      <td style="padding:6px; text-align:center;">
+        <strong>DTHETA = 0 for all XKSAT</strong>
+      </td>
+    </tr>
+  </tbody>
+</table><ol class="arabic simple" start="7">
+<li><p>Adjust <em>XKSAT</em> (computed in step No.
+1) as a function of the vegetation cover VC from the 5th field of the landuse table when XSAT &lt; 0.4 in/hr.
+This requires a computation of the ratio the hydraulic conductivity for the vegetative cover to the bare ground hydraulic conductivity (C<sub>K</sub>):</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-2">
+<span class="eqno">(125)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-2" title="Link to this equation"></a></span>\[C_k = \frac{VC_k - 10}{90} + 1\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-3">
+<span class="eqno">(126)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-3" title="Link to this equation"></a></span>\[XKSATC = XKSAT \sum_{k} P_k\, C_k\]</div>
+<p>Where:</p>
+<blockquote>
+<div><p>P<sub>k</sub> is the percentage of the area within the grid element corresponding to C<sub>k</sub> and XKSATC for each grid element is written to the
+INFIL.DAT file.</p>
+</div></blockquote>
+<ol class="arabic simple" start="8">
+<li><p>For each grid element compute the initial abstraction <em>IABSTR</em>:</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-4">
+<span class="eqno">(127)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-4" title="Link to this equation"></a></span>\[IABSTR = \left( \frac{\sum{A_i (IA_i)}}{A_{GE}} \right)\]</div>
+<p>Where:</p>
+<blockquote>
+<div><p><em>IAi</em> is the initial abstraction in the subarea <em>Ai</em> intercepted by the element and is based on the 3<sup>rd</sup> column of the landuse table;</p>
+<p>The intercepted subareas are computed using the land use shape file and <em>IABSTR</em> is added to the INFIL.DAT file for each element.</p>
+</div></blockquote>
+<p>Compute effective impervious area (%) for each grid element <em>(RTIMP)</em>.</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-5">
+<span class="eqno">(128)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-5" title="Link to this equation"></a></span>\[RTIMP\_1 = \left( \frac{\sum{A_i (RTIMPS \cdot EFF)_i}}{A_{GE}} \right)\]</div>
+<p>Where:</p>
+<blockquote>
+<div><p><em>Ai</em> is determined from the soil shape file;</p>
+<p><em>AGE</em> is the grid element area, effective impervious area <em>EFF</em> is obtained from the 5<sup>th</sup> column of the soil table and</p>
+<p><em>RIMPS</em> is the percent rock outcrop obtained from the 4<sup>th</sup> column of the soil table.</p>
+</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-6">
+<span class="eqno">(129)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-6" title="Link to this equation"></a></span>\[RTIMP = RTIMP\_1 + \left( \frac{\sum{A_i (RTIMPL)_i}}{A_{GE}} \right)\]</div>
+<p>Where:</p>
+<blockquote>
+<div><p><em>A</em><sub>i</sub> is obtained from land use shape file and</p>
+<p><em>A</em><sub>GE</sub> is the grid element area and <em>RTIMPL</em> is obtained from the 4<sup>th</sup> column of the land use table.</p>
+</div></blockquote>
+<p>The steps to complete Green-Ampt parameter computation are as follows.
+Open the Compute Green Ampt Parameters Dialog box as it was shown above.</p>
+<p>Load the land use shape file and table and select the field as shown:</p>
+<img alt="../../_images/GDS148.jpg" src="../../_images/GDS148.jpg" />
+<img alt="../../_images/GDS149.jpg" src="../../_images/GDS149.jpg" />
+<p>Load the soil shape file and table and select the field as shown:</p>
+<img alt="../../_images/GDS150.jpg" src="../../_images/GDS150.jpg" />
+<p>Click <em>‘Compute Green-Ampt’</em> to compute.
+This procedure may take several minutes depending on the number of grid elements and the number of landuse polygons.</p>
+<img alt="../../_images/GDS151.jpg" src="../../_images/GDS151.jpg" />
+<p>Next you can view the polygon intersections.</p>
+<img alt="../../_images/GDS295.jpg" src="../../_images/GDS295.jpg" />
+<img alt="../../_images/GDS296.jpg" src="../../_images/GDS296.jpg" />
+<img alt="../../_images/GDS152.jpg" src="../../_images/GDS152.jpg" />
+<img alt="../../_images/GDS153.jpg" src="../../_images/GDS153.jpg" />
+<p>3.5.24 Compute Manning Coefficients… (Grid Menu)</p>
+<img alt="../../_images/GDS154.jpg" src="../../_images/GDS154.jpg" />
+<p>This command will compute the Manning’s n-values based on the information in a roughness shape file.
+With a project open, first import a Manning’s n-value shape file using the <em>Import Shape File</em> command on the File menu.
+When you click the <em>Compute Manning Coefficients</em> command, the following dialog box appears:</p>
+<img alt="../../_images/GDS155.png" src="../../_images/GDS155.png" />
+<p>Select the Manning shape file name (MANNING.SHP in this case) and the Manning coefficient field (N_VALUE in this case) and click <em>‘OK’</em> to calculate
+Manning coefficients for each grid element.
+Please note that the n-value data will be written to the FPNVALUE.DAT when the FLO2D files have been saved.</p>
+<p>3.5.25 Compute SCS Curve Number … (Grid Menu)</p>
+<p>This command will compute the Curve Number for each grid element based on information contained in shape files.</p>
+<p>The SCS runoff curve number loss method is a function of the total rainfall depth and the empirical curve number parameter which ranges from 1 to 100
+and is a function of hydrologic soil type, land use and treatment, surface condition and antecedent moisture condition.
+The method was developed on 24 hour hydrograph data on mild slope eastern rural watersheds in the United States although runoff curve numbers have
+been calibrated or estimated for urban areas, agricultural lands and semi-arid range lands.
+The SCS CN method does not account for variation in rainfall intensity.
+The method was developed for predicting rainfall runoff from ungaged watersheds and its attractiveness lies in its simplicity.
+For large basins (especially semiarid basins), the method tends to over predict runoff using the standard curve number tables which has unique or
+variable infiltration characteristics such as channels (Ponce, 1989).</p>
+<p><em>Assigning Curve Numbers to Grid Elements</em></p>
+<p>The general procedure is to assign curve numbers in the <em>GDS</em> and then run the <em>FLO-2D</em> model with the infiltration component “turned on” and the
+infiltration switch set the SCS-CN option.
+The following options are available to assign curve numbers to grid elements:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Select area using a polygon and assigning a CN number.
+In this case the CN’s are assumed known.</p></li>
+<li><p>Import a CN polygon shape file and intercept the shape file polygons with the grid elements and interpolate the weighted average computed CN’s.
+In this case the CN numbers are known.</p></li>
+<li><p>Import three polygon shape files for hydrologic soil group (HSG), land cover, and impervious cover and the <em>GDS</em> will incept, interpolate and compute
+the CN’s for each grid element based on the Pima County procedure.
+In this case the CN are not known</p></li>
+</ol>
+</div></blockquote>
+<p><em>Determining CN’s Using the Pima County Method</em></p>
+<p><em>GDS</em> uses the Pima County Method to determine the CN’s using polygon shape files (SF) for soil, land cover and impervious cover.
+Using this shape file data with the accompany attribute tables, the polygon intersection with the grid element are determined to assign a hydrologic
+soil group, percent cover density and impervious area for each grid element.
+Then the CN’s are computed using various formulas depending on soil groups and the results are written to the <em>FLO-2D</em> INFIL.DAT file.
+The following procedure is applied:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Import soil, land cover and impervious cover shape files to the <em>GDS</em> graphical project environment.</p></li>
+<li><p>Select the ID for the HSG from Soil shape file (landsoil.shp).
+The attribute may have both soil and group and the percentage for each group (e.g. B31%C69%Desert Brush).
+For each polygon the following attribute information is required:</p>
+<ol class="loweralpha simple">
+<li><p>Cover type (e.g. Desert Brush)</p></li>
+<li><p>Soil group (e.g. B and C)</p></li>
+<li><p>Percentage of soil groups (B=35% and C = 69%).
+If only the group is given (e.g. B) then assume 100%.</p></li>
+</ol>
+</li>
+<li><p>Select ID for Cover density percentage from land cover shape file (land.shp).</p></li>
+<li><p>Select ID for impervious areas from impervious cover shape file (imperv.shp)</p></li>
+<li><p>Determine polygon intersections with each grid element for each SF (soil, land cover and impervious cover) and determine the area weighed average of
+each variable:</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-7">
+<span class="eqno">(130)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-7" title="Link to this equation"></a></span>\[Var = \frac{\sum A_i Var_i}{A_{GE}}\]</div>
+<p>Where:</p>
+<blockquote>
+<div><p><em>Var</em><sub>i</sub> is the current variable from the shape file;</p>
+<p><em>A</em><sub>i</sub> is subarea intercepted by the grid element and</p>
+<p><em>A</em><sub>GE</sub> the grid element area.</p>
+</div></blockquote>
+<p>At the end of this process each grid element has been assigned:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>HSG from Soil shape file.</p></li>
+<li><p>Cover density percentage CD.</p></li>
+<li><p>Impervious area.</p></li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple" start="6">
+<li><p>Use formulas in Table 1 to determine CN using CD and the corresponding soil group (e.g. CN = (CN soil B * (B%) + CN soil C * (C%) + %impervious*
+99)/100) where: CN for impervious area is 99 and areas for each soil group within a grid element need to be adjusted depending on the impervious area:
+B% = B%(in SF) * (100-%impervious), etc.</p></li>
+<li><p>Write CN results to the INFIL.DAT.</p></li>
+</ol>
+</div></blockquote>
+<p>To determine CN’s, functional relationships were derived from Figure D-1 of the Pima County Hydrology Procedures (Appendix D) reproduced here:</p>
+<img alt="../../_images/GDS156.jpg" src="../../_images/GDS156.jpg" />
+<p>Figure D-1 of Pima County Hydrologic Procedures Relating CN to Hydrologic Soil Cover and Density</p>
+<p>These relationships are summarized in the following table.</p>
+<p>Table 1: Relationships for Evaluating the CN Based on Hydrologic Soil Cover and Cover Density</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>HSC</strong></p></td>
+<td></td>
+<td></td>
+<td><p><strong>Cover density (CD) Range</strong></p></td>
+<td><p><strong>Formula</strong></p></td>
+<td><p><strong>A</strong></p></td>
+<td><p><strong>B</strong></p></td>
+<td><p><strong>C</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>DESERT BUSH</strong></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p><strong>D</strong></p></td>
+<td><p>0-50</p></td>
+<td><p>CN = A * CD + B</p></td>
+<td><p>-0.08</p></td>
+<td><p>93</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p><strong>C</strong></p></td>
+<td><p>0-50</p></td>
+<td><p>CN = A * CD + B</p></td>
+<td><p>-0.08</p></td>
+<td><p>90</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p><strong>B</strong></p></td>
+<td><p>0-50</p></td>
+<td><p>CN = A * CD + B</p></td>
+<td><p>-0.07</p></td>
+<td><p>84</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>HERBACEOUS</strong></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p><strong>D</strong></p></td>
+<td><p>0-80</p></td>
+<td><p>CN = A * CD + B</p></td>
+<td><p>-0.0875</p></td>
+<td><p>93</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p><strong>C</strong></p></td>
+<td><p>0-80</p></td>
+<td><p>CN = A * CD + B</p></td>
+<td><p>-0.1875</p></td>
+<td><p>90</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p><strong>B</strong></p></td>
+<td><p>0-80</p></td>
+<td><p>CN = A * CD + B</p></td>
+<td><p>-0.2625</p></td>
+<td><p>84</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>MONTAIN BRUSH</strong></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p><strong>D</strong></p></td>
+<td><p>0-80</p></td>
+<td><p>CN = A * CD^2 + B * CD + C</p></td>
+<td><p>-0.0013</p></td>
+<td><p>-0.1737</p></td>
+<td><p>95</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p><strong>C</strong></p></td>
+<td><p>0-80</p></td>
+<td><p>CN = A * CD^2 + B * CD + C</p></td>
+<td><p>-0.0014</p></td>
+<td><p>-0.2942</p></td>
+<td><p>90</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p><strong>B</strong></p></td>
+<td><p>0-80</p></td>
+<td><p>CN = A * CD^2 + B * CD + C</p></td>
+<td><p>-0.0025</p></td>
+<td><p>-0.3522</p></td>
+<td><p>83</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>JUNIPER-GRASS</strong></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p><strong>D</strong></p></td>
+<td><p>0-80</p></td>
+<td><p>CN = A * CD + B</p></td>
+<td><p>-0.1125</p></td>
+<td><p>93</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p><strong>C</strong></p></td>
+<td><p>0-80</p></td>
+<td><p>CN = A * CD + B</p></td>
+<td><p>-0.34375</p></td>
+<td><p>90.5</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p><strong>B</strong></p></td>
+<td><p>0-80</p></td>
+<td><p>CN = A * CD + B</p></td>
+<td><p>-0.525</p></td>
+<td><p>84</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>PONDEROSAPINE</strong></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p><strong>C</strong></p></td>
+<td><p>0-10</p></td>
+<td><p>CN = A * CD^2 + B * CD + C</p></td>
+<td><p>0.08</p></td>
+<td><p>-1.9</p></td>
+<td><p>91</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td><p>10-80</p></td>
+<td><p>CN = A * CD + B</p></td>
+<td><p>-0.242857</p></td>
+<td><p>82.42857</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p><strong>B</strong></p></td>
+<td><p>0-10</p></td>
+<td><p>CN = A * CD^2 + B * CD + C</p></td>
+<td><p>0.1</p></td>
+<td><p>-2.4</p></td>
+<td><p>84</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td><p>10-80</p></td>
+<td><p>CN = A * CD + B</p></td>
+<td><p>-0.3</p></td>
+<td><p>73</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Legend</strong></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>HSC</p></td>
+<td><p>Hydrologic</p></td>
+<td><p>Soil Cover</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>CN</p></td>
+<td><p>Curve Numb</p></td>
+<td><p>r</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>CD</p></td>
+<td><p>Cover Dens</p></td>
+<td><p>ty (%)</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>A, B</p></td>
+<td><p>Constants</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>For each soil group, a different formula was developed that calculates CN from the Cover</p>
+<p>Density (CD).
+For straight line segments a linear equation was used to represent that soil cover.
+For curved segments of the Excel curve fitting routines to determine the best-fit coefficients to represent the soil cover.
+Errors were estimated for each formula.
+Table 2 summarizes the validation and errors for each soil group set of formulas:</p>
+<p>In the <em>GDS</em> <em>Grid</em> menu there is a new command titled: <em>Compute SCS Curve Number</em>.
+This has two options: From <em>Single Shape File…</em> and <em>From Multiple Shape Files</em>.</p>
+<img alt="../../_images/GDS157.jpg" src="../../_images/GDS157.jpg" />
+<p><em>Assignment of CN’s Based on a Single Shape File</em></p>
+<p>Using this option, the <em>GDS</em> will determine the CN for each grid element based on a user provided polygon shape file that contains a CN for each
+polygon.
+First import the shape file using the <em>Import Shape File…</em> command in the <em>GDS</em> <em>File</em> menu.</p>
+<p>Then use the <em>Grid/Compute SCS Curve Number/From Single Shape File…</em> command</p>
+<p>In the dialog box, select the Curve Number Shape file (LANDSOIL.SHP in this example) and the Curve Number Field (CurveNum in this example):</p>
+<img alt="../../_images/GDS158.png" src="../../_images/GDS158.png" />
+<p><em>GDS</em> will intersect the shape file polygons with the grid elements and determine the area weighted average value for each grid element.</p>
+<p><em>Computation of CN’s Base on a Multiple Shape Files</em></p>
+<p>This option computes the CN’s based on the method explained in above sections.
+It is necessary to import three polygon shape files for HSG, Land cover, and Impervious cover.
+After these shape file have been imported using the <em>Import Shape File…</em> command in the <em>GDS</em> <em>File</em> menu, then use the <em>Grid/Compute SCS Curve
+Number/From Multiple Shape Files</em> command</p>
+<p>The following dialog box will be displayed:</p>
+<blockquote>
+<div><img alt="../../_images/GDS159.png" src="../../_images/GDS159.png" />
+<ol class="arabic simple">
+<li><p>Select the Hydrologic Soil Group Shape File and soil group field (landsoil.shp and LandSoil respectively in this example).</p></li>
+<li><p>Select the Land Cover Shape File and land cover attribute field (land.shp and cov_dens respectively in this example).</p></li>
+<li><p>Select the Impervious Area Shape File and impervious ID filed (Imperv.shp and IMP respectively in this example).</p></li>
+<li><p>Click OK.</p></li>
+</ol>
+</div></blockquote>
+<p><em>GDS</em> will intersect the shape files polygons with the grid elements and determine the area weighted average value for each grid element, based on the
+derived formulas previously discussed.
+Double-clicking on any grid element the new Infiltration dialog box will display the CN calculated for that element.
+<em>GDS</em> will create the new INFIL.DAT data file with the new CN’s for all grid elements.</p>
+<p><em>FLO-2D</em> Infiltration Computation Using the SCS Curve Number Method <em>GDS</em> will create the new INFIL.DAT data file with the CN for all grid elements.</p>
+<p>3.5.26 Compute Width and Area Reduction Factors … (Grid Menu)</p>
+<img alt="../../_images/GDS297.jpg" src="../../_images/GDS297.jpg" />
+<img alt="../../_images/GDS160.png" src="../../_images/GDS160.png" />
+<p>This command will compute the ARF and WRF factors from a polygon shape file of the buildings.
+The correction factor is a percentage and each ARF or WRF variable that is computed will be reduced by a multiplicative percentage factor.</p>
+<p><em>GDS ARF-WRF assignment from Shape Files</em></p>
+<p>Loss of flood storage due to buildings and other urban features can be graphically assigned through the Grid Developer System (GDS) using individual
+or polygon grid element selection.
+A new GDS procedure permits the automatic assignment of Area Reduction Factors (ARF) and Width Reduction Factors (WRF) from a polygon Shape File.
+The GDS will compute ARFs and WRFs assuming the polygons fully block the grid element corresponding surface areas, but also allows for global
+adjustments of either ARFs or WRFs based on user defined blockage percentages (fractions).
+This document summarizes the functionality of the new tool and provides instructions how to use it.</p>
+<p><em>Data requirements</em></p>
+<p>The ARF-WRF assignment tool requires the following data:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>FLO-2D data files for a basic overland flood simulation and</p></li>
+<li><p>A polygon Shape File where each polygon represents a building or obstruction to the flow Computation Method</p></li>
+</ol>
+</div></blockquote>
+<p><em>Computation Method</em></p>
+<p>For each grid element (cell), the GDS finds all Shape File polygon intersections with the cell.
+The following figure shows an example where three polygons (building polygons) intersect a cell defining three areas A, B and C:</p>
+<img alt="../../_images/GDS161.png" src="../../_images/GDS161.png" />
+<p><em>Area Reduction Factor</em></p>
+<p>To calculate the Area Reduction Factor for this cell GDS performs the following operations:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-8">
+<span class="eqno">(131)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-8" title="Link to this equation"></a></span>\[Total\_Intersected\_Area = AreaA + AreaB + AreaC\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-9">
+<span class="eqno">(132)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-9" title="Link to this equation"></a></span>\[Area\_Reduction\_Factor = \frac{Total\_Intersected\_Area}{Cell\_Area}\]</div>
+<p>Where AreaA is the intersected area of polygon A with the cell, and AreaB and AreaC are defined accordingly.
+Cell_Area is the Grid Element area.</p>
+<p><em>Width Reduction Factor</em></p>
+<p>To calculate the Width Reduction Factor for this cell the GDS performs the following operations:</p>
+<p>The grid element or cell is divided into 9 subcells.
+Each subcell is intersected with the polygons on the cell.
+For example in the following configuration the SE WRF is computed based on the yellow area of the polygon:</p>
+<img alt="../../_images/GDS298.jpg" src="../../_images/GDS298.jpg" />
+<p>The shaded AreaSE is used to calculate the SE WRF as follows:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-10">
+<span class="eqno">(133)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-10" title="Link to this equation"></a></span>\[SE\ Width\ Reduction\ Factor = \frac{AreaSE}{Area\_of\_SubCell}\]</div>
+<p>This algorithm accounts for the effect of width reduction factor even when the building or polygon is not intersecting the actual SE element side.</p>
+<p>3.5.27 Compute Limiting Froude Numbers … (Grid Menu)</p>
+<img alt="../../_images/GDS299.jpg" src="../../_images/GDS299.jpg" />
+<p>This command will compute the limiting Froude number for each grid element based on information contained in shape files.</p>
+<p>3.5.28 Compute Cell Tolerances… (Grid Menu)</p>
+<img alt="../../_images/GDS300.jpg" src="../../_images/GDS300.jpg" />
+<p>This command will compute cell tolerances for each selected grid element based on information contained in shape files.</p>
+<p>3.5.29 Compute Horton Variables… (Grid Menu)</p>
+<img alt="../../_images/GDS301.jpg" src="../../_images/GDS301.jpg" />
+<p>This command will compute and assign Horton values to cells intersected by the shapefile polygons based on the information contained in the variables
+selected in the shapefiles.</p>
+<p>3.5.30 Define Boundary Grid Elements/Element by Element (Grid Menu)</p>
+<img alt="../../_images/GDS162.jpg" src="../../_images/GDS162.jpg" />
+<p>Use this command to mark or edit the grid elements that will constitute the computational domain boundary.
+These boundary grid elements are not used in a <em>FLO-2D</em> model flood simulation and are not included in either the FPLAIN.DAT, TOPO.DAT or CADPTS.DAT
+files.
+To use the <em>Define Boundary Grid Elements</em> command:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Select the <em>Define Boundary Grid Elements</em> <em>(Element by Element)</em> command (Grid menu).
+The mouse pointer changes to a cross.</p></li>
+<li><p>Select the boundary grid elements.
+The grid element color will change to red.</p></li>
+<li><p>Repeat step 2 as many times as needed to select or edit boundary grid elements.</p></li>
+</ol>
+</div></blockquote>
+<p>To undo this operation simply click again on a previously marked grid element.
+To mark a group of grid elements press the <strong>Shift</strong> key and the left mouse button and then drag the mouse pointer over the desired grid elements.
+To deselect any group of grid elements, press the <strong>Ctrl</strong> key and with the left mouse button depressed, drag the mouse pointer over the grid elements
+you want to unmark.</p>
+<p>3.5.31 Define Boundary Grid Elements/ Draw Line (Grid Menu)</p>
+<p>The boundary grid elements can also be identified by drawing a line around the computation domain.
+This command automates the process of defining the boundary elements.
+After the boundary grid elements have been marked with the line, they can be edited with the <em>Define Boundary Grid Elements/Element by Element</em>
+command.</p>
+<img alt="../../_images/GDS163.jpg" src="../../_images/GDS163.jpg" />
+<p>Select this command after the grid system has been generated.
+When you click <em>Draw Line</em>, the following dialog box appears:</p>
+<img alt="../../_images/GDS303.jpg" src="../../_images/GDS303.jpg" />
+<p>Click <em>‘OK’</em> and proceed to draw a polyline with a series of left mouse button clicks.
+Complete the polyline by doubling clicking on the final vertex and then click <em>‘Yes’</em> in the following dialog box to generate the boundary elements.</p>
+<p>3.5.32 Setup Computational Area/Click Inside Modeling Area (Grid Menu)</p>
+<img alt="../../_images/GDS164.jpg" src="../../_images/GDS164.jpg" />
+<p>Use this command to select the computational domain.
+Once the flow domain is outlined with a closed boundary, identify computational domain (potential flow surface).</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Choose the <em>Setup Computational Area</em> command.
+The cursor changes to a cross.</p></li>
+<li><p>Click any grid element inside the closed area of the computational domain.
+If the computational domain area is closed, an acceptance message appears.
+If the boundary elements do not completely enclose an area, you will be informed that the area is still open.
+Additional boundary grid elements must then be marked to completely close the computational domain.</p></li>
+</ol>
+</div></blockquote>
+<p>If the boundary is edited, the computational domain can be re-generated by clicking on an interior grid element within the domain using the <em>Click
+Inside Modeling Area</em> command.
+This command will erase any interpolated data.</p>
+<p>3.5.33 Setup Computational Area/ Define Modeling Boundary with Polygon (Grid Menu)</p>
+<p>The computational domain can be defined by drawing a polygon to identify the boundary cells.</p>
+<img alt="../../_images/GDS165.jpg" src="../../_images/GDS165.jpg" />
+<p>3.5.34 Setup Computational Area/ Define Modeling Boundary from Shapefile…(Grid Menu)</p>
+<img alt="../../_images/GDS166.jpg" src="../../_images/GDS166.jpg" />
+<p>A polygon from an imported shapefile can be used to define the boundary.</p>
+<p>3.5.35 Create Grid Layer (Grid Menu)</p>
+<img alt="../../_images/GDS167.jpg" src="../../_images/GDS167.jpg" />
+<p>This command will create the grid layer.
+When loading an existing <em>FLO-2D</em> project the grid layer is not created.
+Some component editor functions require the grid layer and a message will prompt the user to create this layer.
+Use this command to create the grid layer and continue with grid element attribute editing.</p>
+<p><strong>3.6</strong> <strong>Tools Menu Commands:</strong></p>
+<p>3.6.1. Options…/Interpolation… (Tools Menu)</p>
+<img alt="../../_images/GDS305.jpg" src="../../_images/GDS305.jpg" />
+<p>This command defines the various options that control the interpolation process.
+When command is selected, a dialog box appears to adjust the various interpolation parameters:</p>
+<p>Dialog Box Options:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Option</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><p>Minimum number of DTM points to</p>
+<p>consider in the vicinity of each grid element</p>
+</td>
+<td><p>To calculate an interpolated elevation from random DTM points that</p>
+<p>will represent each grid element, the algorithm will use at least this</p>
+<p>minimum number of DTM points closest to the grid element center.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Radius of interpolation (proportional to grid element size)</p></td>
+<td><p>The radius defines a circle around each grid element node that is</p>
+<p>multiple of the element size. Only the DTM points inside the radius</p>
+<p>are interpolated. If an insufficient number of elevation points are</p>
+<p>within the circle, it is expanded until at least the minimum number of</p>
+<p>points is found.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>Inverse distance weighting formula exponent</p></td>
+<td><p>This is “n” in the Inverse Distance Weighting Formula:</p>
+<p><a class="reference internal" href="../../_images/idw_equation.jpg"><img alt="idw_eq" class="align-middle" src="../../_images/idw_equation.jpg" style="height: 70px;" /></a></p>
+<p>Where Z¯ is the interpolated grid element elevation, Z<sub>j</sub></p>
+<p>is the elevation of DTM point <sub>j</sub>,</p>
+<p>r<sub>ij</sub> is the distance from the DTM point <sub>j</sub> to center of grid</p>
+<p>element <sub>i</sub> and NDTM is the total number of DTM points.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>No filtering (High or Low Elevations)</p></td>
+<td><p>No filtering is performed on the elevation points.</p></td>
+</tr>
+<tr class="row-even"><td><p>Maximum elevation difference (For either High or Low Elevations)</p></td>
+<td><p>For this option, the algorithm calculates a mean elevation using all the</p>
+<p>DTM and any assigned elevation points within the interpolation</p>
+<p>radius. All those points that exceed the selected maximum elevation</p>
+<p>difference either higher or lower than the mean are discarded and the</p>
+<p>mean elevation is recomputed and assigned to the grid element.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Standard deviation difference (For Either High or Low Elevations)</p></td>
+<td><p>The algorithm first calculates the DTM point elevation standard</p>
+<p>deviation and then neglects all those points whose elevations are</p>
+<p>higher (or lower) than the standard deviation when recalculating grid</p>
+<p>element mean elevation.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>3.6.2. Options…/Change Refresh Count (Tools Menu)</p>
+<img alt="../../_images/GDS306.jpg" src="../../_images/GDS306.jpg" />
+<p>Use this command to speed up the redraw (refresh) rate for large projects.
+The refresh rate specifies how often the screen is updated when drawing maps.
+If there are 1000 vertices to draw and the refresh rate is 500, then the screen will be refreshed twice.
+A higher refresh rate results in faster draw times while a lower rate results a smoother draw appearance.
+A dialog box will appear prompting you to input a value for the refresh rate of the map or image:</p>
+<p>3.6.3. Options…/Directory Paths (Tools Menu)</p>
+<img alt="../../_images/GDS168.jpg" src="../../_images/GDS168.jpg" />
+<p>This command may be used to edit the default directories used by the <em>FLO-2D</em> model.
+The following dialog box appears:</p>
+<img alt="../../_images/GDS169.png" src="../../_images/GDS169.png" />
+<p>Input the desired new directory paths and then click <em>Apply</em>.</p>
+<p>3.6.4. Measure Distance along Line (Tools Menu)</p>
+<img alt="../../_images/GDS170.jpg" src="../../_images/GDS170.jpg" />
+<img alt="../../_images/GDS171.png" src="../../_images/GDS171.png" />
+<p>This tool computes the distance along a user-input polyline.
+After clicking on the <em>Measure Distance along Line Command,</em> draw a polyline using the mouse and double click at the end point of the polyline.
+<em>GDS</em> will display the length of the polyline as shown below:</p>
+<p>3.6.5. Compute Average Point Rainfall Depth (Tools Menu)</p>
+<img alt="../../_images/GDS172.jpg" src="../../_images/GDS172.jpg" />
+<p>Use this command to compute Total Point Rainfall Depth (RTT in RAIN.DAT file).
+<em>Note: It is required that a RAIN.DAT file exist in the project folder.</em> An ArcInfo ASCII grid file with rainfall data must be previously imported to
+the <em>GDS</em>.
+The format of this file is the standard ASCII grid with the values corresponding to rainfall depths.
+The points will be displayed on the screen.
+To compute the average of the grid rainfall depth, draw a polygon and then only the rainfall points inside the polygon will be used in the
+calculation.</p>
+<img alt="../../_images/GDS173.png" src="../../_images/GDS173.png" />
+<p>The following figure displays a <em>FLO-2D</em> grid system boundary, the ASCII rainfall point depth grid and the drawn polygon to compute that average
+rainfall depth over the <em>FLO-2D</em> grid system.</p>
+<img alt="../../_images/GDS174.jpg" src="../../_images/GDS174.jpg" />
+<p>To compute the average rainfall depth, choose the appropriate ArcInfo grid file from the file list in the following dialog box:</p>
+<img alt="../../_images/GDS175.png" src="../../_images/GDS175.png" />
+<p>The following message will identify the number of grid points used to compute the average rainfall depth RTT value.
+The RAIN.DAT file RTT value will be updated.</p>
+<img alt="../../_images/GDS176.png" src="../../_images/GDS176.png" />
+<img alt="../../_images/GDS177.png" src="../../_images/GDS177.png" />
+<p>3.6.6 Interpolate Variable Rainfall (Tools Menu)</p>
+<img alt="../../_images/GDS178.jpg" src="../../_images/GDS178.jpg" />
+<p>This command will interpolate temporal rainfall for each <em>FLO-2D</em> grid element, based on spatially varied rainfall data in an ArcInfo ASCII grid file
+format.
+A file must be prepared that contains the storm beginning and ending dates and times, time interval of the rainfall data files (in minutes), number of
+reporting storm time intervals (one rainfall data file per interval) and the file name and location.
+Each subsequent rainfall data file will list the rainfall depth at a rain gage grid location (i.e.
+rainfall grid not the <em>FLO-2D</em> grid system) at that specific time.
+For example:</p>
+<pre>
+15 72 6/12/2002 13:00 6/12/2002 14:00 60 2
+C:\\Models\\FLO2D_2002\\Maricopa2002\\Raindata2\\rain13h.dat
+C:\\Models\\FLO2D_2002\\Maricopa2002\\Raindata2\\rain14h.dat
+</pre><p>In this case, the beginning date of the storm is 6/12/2002 and the storm beginning time is 13:00 hours.
+The storm ending date and time is 6/12/2002 and 14:00 hours.
+The time interval between rainfall data files is 60 minutes and there are two rain grid files in the list.
+The rainfall file format is the standard ArcInfo ASCII grid with the values corresponding to rainfall depths.
+Each file corresponds to a rainfall depth at a specific time for the rainfall grid system.
+The rainfall grid file (e.g. NEXRAD data) is prepared outside the <em>FLO-2D</em> software system.
+This file may be based on the rainfall gage distribution.
+This rainfall distribution over the rainfall grid has to be transformed into spatially varied rainfall assigned to grid elements in the <em>FLO-2D</em> grid
+system.
+This is accomplished using the variable rainfall interpolation algorithm in the <em>GDS</em> program.
+Once the ArcInfo ASCII file is read, the following dialog box permits adjustment of rainfall grid interpolation parameters.</p>
+<img alt="../../_images/GDS179.jpg" src="../../_images/GDS179.jpg" />
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Option</p></td>
+<td><p>Description</p></td>
+</tr>
+<tr class="row-even"><td><p>Minimum number of rain grid points to</p>
+<p>consider in the vicinity of each grid</p>
+<p>element.</p>
+</td>
+<td><p>To calculate the interpolated rainfall depth for each FLO-2D</p>
+<p>grid element, the algorithm uses at least this minimum number</p>
+<p>of points closest to the grid element.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Radius of interpolation (proportional to</p>
+<p>grid element size).</p>
+</td>
+<td><p>This radius defines a circle around each grid element based on</p>
+<p>a multiple of the grid elements size. Only rainfall grid points</p>
+<p>inside this radius are considered in the interpolation process. If</p>
+<p>the number of rainfall grid points is insufficient, then the circle</p>
+<p>is automatically enlarged until at least the minimum number of</p>
+<p>points is found.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>After the interpolation is complete, choose the RAINCELL.DAT file location to save results.
+The RAINCELL.DAT file is then used by the <em>FLO-2D</em> model to simulate the rainstorm.
+The IREALRAIN variable switch in the <em>FLO-2D</em> RAIN.DAT file has to be set to 1 ‘on’ to simulate a real-time storm using the RAINCELL.DAT file.</p>
+<img alt="../../_images/GDS180.jpg" src="../../_images/GDS180.jpg" />
+<p>The format of the RAINCELL.DAT is as follows:</p>
+<blockquote>
+<div><p>Line 1: Beginning date and time, ending date and time, time interval (in minutes) and number of time intervals.</p>
+<p>Line 2: Grid element number and the total rainfall depth at that time.
+This line is repeated for each <em>FLO-2D</em> grid element.</p>
+</div></blockquote>
+<p>Successive rainfall data for the entire grid system follows for the number of time-interval groups.
+For the example above, there would be two sets of rainfall data for the entire grid system.</p>
+<pre>
+    60 2 6/12/2002 1:00:00 PM 6/12/2002 2:00:00 PM
+    1     1.8538
+    2     1.8537
+     .      .
+    1234   2.272
+    1235   2.2709
+    1      1.4794
+    2      1.4791
+     .       .
+    1234   1.6294
+    1235   1.6286
+</pre><p>In this above example the beginning date is 6/12/2002 the beginning time 1:00 PM, the ending date 6/12/2002 and the ending time 2:00 PM.
+The time interval between files is 60 minutes, there are two time intervals and 1235 grid elements.
+The rainfall depth for grid element number 1 at time 1:00 PM is 1.8538 in.
+Successive grid element rainfall depths follow.
+For the second time interval, the rainfall depth for the first grid element is 1.4794 in and the rest of the grid elements follow.
+If the grid system has been prepared in International Units (meters), then the rainfall data file should be prepared in mm.</p>
+<p>3.6.7 Levee Express Editor (Tools Menu)</p>
+<img alt="../../_images/GDS181.jpg" src="../../_images/GDS181.jpg" />
+<p>The Levee Express Editor facilitates assigning levee attributes for individual grid elements.
+You can use the Levee Express Editor to create or edit a levee.
+This tool will help you to assign levee crest elevations directly from the DTM point data base, if the DTM points are dense enough to represent the
+levee crest.
+If a number of DTM points fall on the top of the levee, the average of the five highest DTM points can be used to represent the levee crest.</p>
+<p>When you click this command or on the toolbar icon <a class="reference internal" href="../../_images/GDS182.jpg"><img alt="levee_floating_dialogue_icon" src="../../_images/GDS182.jpg" style="height: 14px;" /></a> for an existing levee the following floating dialog appears:</p>
+<img alt="../../_images/GDS183.jpg" src="../../_images/GDS183.jpg" />
+<p>When you double click a grid element that has a levee, the dialog will show the Maximum Point elevation of the DTM points inside the element, the
+average of the highest 5 DTM points in the element and the surrounding grid element elevations.
+Use the text boxes and the <em>Assign to Element</em> button to assign the levee crest elevations.
+Compare the Maximum Point Elevation (Max.
+Pt.
+Elev.) and the Average of the Five Highest Points (Ave.
+High (5) Pts.) with the upstream and downstream assigned levee crest elevations to assign the levee crest elevation for the given grid element.</p>
+<p>3.6.8 Floating Variables Express Editor (Tools Menu)</p>
+<img alt="../../_images/GDS184.jpg" src="../../_images/GDS184.jpg" />
+<p>This command opens the Floating Variables Express Editor that allows interactive editing of Area and Width Reduction Factors (ARF,WRF), Infiltration
+parameters and Multiple Channel Data.
+While the dialog remains open, the user can double click any element so that the data corresponding to the active tab will be loaded and can be
+edited.</p>
+<img alt="../../_images/GDS185.jpg" src="../../_images/GDS185.jpg" />
+<p>3.6.9 Create Channel Segment with a Polyline (Tools Menu)</p>
+<img alt="../../_images/GDS186.jpg" src="../../_images/GDS186.jpg" />
+<p>This command creates the channel network in an existing <em>FLO-2D</em> grid system using a polyline as described below:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>On the Tool menu click Create Channel Segment with a Polyline.</p></li>
+<li><p>The mouse pointer changes to a cross.</p></li>
+<li><p>Click the first (upstream) grid element of the segment and then just draw a polyline using clicks.
+Use a background image to locate the channel with respect to the grid system.
+Channel elements are joined by arrows to visualize the channel location:</p></li>
+</ol>
+</div></blockquote>
+<img alt="../../_images/GDS187.jpg" src="../../_images/GDS187.jpg" />
+<p>Click apply to accept the new channel segment.</p>
+<img alt="../../_images/GDS188.jpg" src="../../_images/GDS188.jpg" />
+<img alt="../../_images/GDS189.png" src="../../_images/GDS189.png" />
+<p>To edit channel geometry parameters, click a channel segment.
+A submenu appears with several options:</p>
+<img alt="../../_images/GDS190.jpg" src="../../_images/GDS190.jpg" />
+<p>Select <em>Edit Channel Segment Parameters</em> and to display the Channel Segment dialog box:</p>
+<img alt="../../_images/GDS191.png" src="../../_images/GDS191.png" />
+<p>The channel data is governed by the following rules (refer to the CHAN.DAT file description in the <em>FLO-2D</em> Data Input Manual for more detailed
+discussion):</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><em>Maximum Froude Number</em>: Set the channel roughness to a reasonable n-value and then set the FROUDC variable to an appropriate value (e.g. 0.95 to
+ensure subcritical flow).
+<em>FLO-2D</em> will adjust the roughness values according to the limiting Froude number criteria.</p></li>
+<li><p><em>Roughness adjustment coefficient</em>: This coefficient is used for depth variable Manning’s n-values.
+This value can range from 0.00 to 0.4.</p></li>
+<li><p><em>Compute scour/deposition with sediment transport routine</em>: This is a check box to compute sediment transport in the channel segment.
+Checked the box if sediment transport is to be computed.
+In addition, ISED must be turned “On” in CONT.DAT.</p></li>
+</ol>
+<ol class="arabic" start="4">
+<li><p><em>Initial flow depth</em>: When the <em>initial flow depth for all channel nodes</em> is &gt; 0, an initial depth is specified for all the channel elements in that
+segment.
+Checking the <em>Initial Flow</em> check box <a class="reference internal" href="../../_images/GDS192.jpg"><img alt="initial_flow_icon" src="../../_images/GDS192.jpg" style="height: 14px;" /></a> requires assigning starting and ending water surface elevations for the channel segment beginning
+with element <em>1st node</em> and ending with element <em>last node.</em></p>
+<img alt="../../_images/GDS307.jpg" src="../../_images/GDS307.jpg" />
+<p>Interpolated water surface elevations are assigned to the channel elements in that segment based on the channel length.</p>
+</li>
+<li><p>Each row in the “Channel Geometry” table corresponds to a channel grid element.</p></li>
+<li><p>The “Geometry Regression Relationships” data table is enabled only when a variable geometry channel element of type “V” is selected in the “Channel
+Geometry” table.</p></li>
+<li><p>Depending on the channel element data base some columns may be disabled.</p></li>
+<li><p>The editing of channel element data in each segment is achieved by pressing the “Edit” button.
+Interact with the table in the following dialog window to edit the channel element data (node, extension direction, roughness and length):</p></li>
+</ol>
+</div></blockquote>
+<p>Additional channel data instruction comments can be found in the CHAN.DAT file descriptions.
+A few comments are highlighted here:</p>
+<blockquote>
+<div><ul>
+<li><p>Dividing the channel into segments may simplify reviewing the results.
+Organize the channel segments and elements from upstream to downstream with the inflow grid element being the first grid element in the file or
+segment.</p></li>
+<li><p>The key to channel routing is to balance the relationship between the slope, flow area and roughness.
+Channel routing is more stable if surveyed cross section data is used.
+Review the PROFILES program instructions for cross section and channel bed slope interpolation.</p></li>
+<li><p>If channel geometry is being simulated with regression relationships (SHAPE = ‘V’), then the area (A) versus depth (d) power relationships (A = ad<sup>b</sup>) coefficients (a) and exponents (b) must be specified.
+Similar relationships are required for wetted perimeter and top width.
+If two power relationships are used to represent a natural cross section, then the maximum depth (<em>Depth for 2nd relationship variable</em>) to which the first relationship applies must be specified.
+Some rules for applying the second variable area channel geometry relationships follow:</p>
+<blockquote>
+<div><ol class="lowerroman simple">
+<li><p>The second regression applies when the flow depth is greater than <em>Depth for 2nd relationship variable</em>, but does not include the lower flow area.
+The two variable area cross section relationships are unique and separate.
+The total cross section flow area is the sum of the lower flow and upper (second relationship) flow areas.
+The channel top width is computed directly from the second relationship.
+The area, wetted perimeter and top width are evaluated using the upper flow depth given by: (total depth - <em>Depth for 2nd relationship variable</em>).
+To analyze the upper channel geometry using the XSEC program, only the cross section coordinates above the <em>Depth for 2nd relationship variable</em> are
+used.</p></li>
+<li><p>Channel geometry relationships apply only to flow depths that are less than the channel depth (lower than the top of bank).
+When the flow depth exceeds the top of bank, then the channel geometry above bank is evaluated as a rectangle.</p></li>
+<li><p>Abrupt transitions between contiguous channel elements should be avoided unless they actually exist.</p></li>
+<li><p>A preprocessor program XSEC is available in the <em>FLO-2D</em> subdirectory to determine the regression coefficient and exponents.</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>Channel elements that are contiguous but do not share discharge (e.g. parallel channels) must be identified with the NOFLO1 and NOFLO2 variables.
+List each pair of contiguous channel elements only once.</p></li>
+<li><p>Channel elements that will not share discharge will the floodplain have to be identified by the NOEXCHANGE parameter.</p></li>
+<li><p>To improve the timing of the floodwave progress through the system, a depth variable roughness can be assigned on a reach basis.
+The basic equation for the channel element roughness n<sub>d</sub> as function of flow depth is:</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-11">
+<span class="eqno">(134)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-11" title="Link to this equation"></a></span>\[n_d = n_b\, r_c\, e^{-\left( r2\ depth / dmax \right)}\]</div>
+<p>where:</p>
+<blockquote>
+<div><p>n<sub>b</sub> = bankfull discharge roughness</p>
+<p>depth = flow depth</p>
+<p>dmax = bankfull flow depth</p>
+<p>r2 = roughness adjustment coefficient prescribed by the user (range:0. to 0.4) r<sub>c</sub> = 1./e<sup>-r2</sup></p>
+</div></blockquote>
+<p>This equation prescribes that the variable depth channel roughness is equal to the bankfull roughness at bankfull discharge.
+If the user assigns a roughness adjustment coefficient r2 for a given reach, the roughness will increase with a decrease in flow depth.
+A higher coefficient increases the roughness.</p>
+<p>To modify the channel elements in the channel segment, select the <em>Modify Channel Segment</em> Command:</p>
+<img alt="../../_images/GDS193.jpg" src="../../_images/GDS193.jpg" />
+<p>To modify the channel, click and drag the mouse from the last element in the channel segment.</p>
+<p>To delete an entire selected channel segment, select the <em>Delete Channel Segment</em> command:</p>
+<img alt="../../_images/GDS194.jpg" src="../../_images/GDS194.jpg" />
+<p>If the channel segment has assigned inflow hydrographs the following warning will appear:</p>
+<img alt="../../_images/GDS195.png" src="../../_images/GDS195.png" />
+<p>If you select Yes, you will need to click the inflow node(s) that was assigned to the segment and reassigned to the floodplain instead.</p>
+<img alt="../../_images/GDS196.jpg" src="../../_images/GDS196.jpg" />
+<p>Click to reverse the channel direction.</p>
+<img alt="../../_images/GDS197.jpg" src="../../_images/GDS197.jpg" />
+<img alt="../../_images/GDS198.jpg" src="../../_images/GDS198.jpg" />
+<img alt="../../_images/GDS199.jpg" src="../../_images/GDS199.jpg" />
+<img alt="../../_images/GDS269.jpg" src="../../_images/GDS269.jpg" />
+<p>Realign left bank channel elements by clicking and dragging the blue dots.
+The zoom, pan and edit features are also available with this tool.</p>
+<img alt="../../_images/GDS310.jpg" src="../../_images/GDS310.jpg" />
+<img alt="../../_images/GDS200.jpg" src="../../_images/GDS200.jpg" />
+<p>To Realign the right bank elements use the Realign Extensions tool.
+It has the same capabilities as the realign channel tool.</p>
+<img alt="../../_images/GDS201.jpg" src="../../_images/GDS201.jpg" />
+<img alt="../../_images/GDS202.png" src="../../_images/GDS202.png" />
+<p>To see a plot of the cross section associated with each channel element.
+Click the Plot Cross Section option.</p>
+<img alt="../../_images/GDS311.jpg" src="../../_images/GDS311.jpg" />
+<p>Use this tool to assign cross sections to specified channel elements.
+The prev and next button is used to select the channel element and the drop down box is used to select the cross section.</p>
+<img alt="../../_images/GDS203.jpg" src="../../_images/GDS203.jpg" />
+<img alt="../../_images/GDS204.png" src="../../_images/GDS204.png" />
+<p>Click 3-D Plot to see a 3-D graphic of the channel segment.
+This tool helps with cross section data quality control.</p>
+<img alt="../../_images/GDS205.jpg" src="../../_images/GDS205.jpg" />
+<p>Click Clear Problematic Right Banks to delete right bank assignments that will cause an error in the model.
+The banks must be reassigned.</p>
+<p>3.6.10 Select Channel Confluences (Tools Menu)</p>
+<p>Instead of assigning those channel elements that are contiguous but do not share discharge (NOFLOC’s), FLO-2D Pro version model assigns channel
+connections that share discharge from upstream to downstream.</p>
+<p>Channel confluences are defined to share flow by assigning connections between cells and the selection of those connections should observe the
+following general rules:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Confluences on a given channel element will be possible as an upstream, downstream or tributary/split connection</p></li>
+<li><p>A tributary/split channel element should be the last channel element listed on the particular channel segment and must be contiguous to the main
+channel.
+In cannot be separated by one or more floodplain elements from the main channel.</p></li>
+<li><p>The tributary element can also be contiguous to either a left or right bank main channel element, if that is the case the connection will be defined
+between the tributary/split channel element and the main channel right bank element (respectively).
+FLO-2D model will find the left bank channel element at model runtime.</p></li>
+</ul>
+</div></blockquote>
+<p>Connections for the channel confluences can be assigned opening the following dialog box that will list Tributary/Split Channel data entry field
+column and Main Channel data entry field column:</p>
+<img alt="../../_images/GDS206.jpg" src="../../_images/GDS206.jpg" />
+<p>User can select, add, delete or modify channel confluence elements using the options available on the following dialog:</p>
+<img alt="../../_images/GDS312.jpg" src="../../_images/GDS312.jpg" />
+<p>3.6.11 Create a Cross Section (Tools Menu)</p>
+<img alt="../../_images/GDS207.jpg" src="../../_images/GDS207.jpg" />
+<p>Use this tool to cut a cross section from elevation data.
+Elevation data must be loaded.
+Click Tools/Channels/Create a Cross Section.
+Create an elevation layer if necessary and then click and draw a line to define a cross section.</p>
+<img alt="../../_images/GDS313.jpg" src="../../_images/GDS313.jpg" />
+<p>Then assign the cross section to the N – natural channel.
+The red arrows point out the cross section as seen by the small black dotted line.
+The green arrow shows the channel element the cross section is assigned to.
+Repeat the process along the channel where ever a cross section is needed.
+Depending on the data, the cross sections might need adjustments.</p>
+<img alt="../../_images/GDS208.jpg" src="../../_images/GDS208.jpg" />
+<p>The following dialog allows the user to select a cross section number and name, determine the number of station / elevation pairs and to assign the
+write-to text file.</p>
+<img alt="../../_images/GDS314.jpg" src="../../_images/GDS314.jpg" />
+<p>All data is appended to the xsec.dat file.
+Start with a blank xsec.dat file.</p>
+<p>3.6.12 Assign a HEC-RAS Cross Section to a Channel Element (Tools Menu)</p>
+<img alt="../../_images/GDS209.jpg" src="../../_images/GDS209.jpg" />
+<p>Use the File menu to import a HEC-RAS cross section.
+To manually assign a HEC-RAS cross section to a channel element, select the tool menu feature.
+Then select a HEC-RAS cross section and a channel element.
+Repeat the process until complete.</p>
+<img alt="../../_images/GDS315.jpg" src="../../_images/GDS315.jpg" />
+<p>3.6.13 Auto Assign HEC-RAS Cross Section to Channel Elements (Tools Menu)</p>
+<img alt="../../_images/GDS210.jpg" src="../../_images/GDS210.jpg" />
+<p>This feature will automatically assign the cross sections from HEC-RAS to the FLO-2D Channel.</p>
+<p>3.6.14 Convert HEC-RAS Xsec to FLO-2D (Tools Menu)</p>
+<img alt="../../_images/GDS211.jpg" src="../../_images/GDS211.jpg" />
+<p>This feature will read cross section data available in <em>HEC-RAS</em> format, convert it to <em>FLO2D</em> format and save it to XSEC.DAT files.
+The <em>GDS</em> reads the <em>HEC-RAS</em> file, locates the cross section key words, extracts the x, y, z data from each cross section and reformat the cross
+section data for the XSEC.DAT file.
+When this process is completed, another file dialog box appears to let the user select the location of the output XSEC.DAT file.</p>
+<p>3.6.15 Convert HEC-RAS Channels to FLO-2D Channel Segments (Tools Menu)</p>
+<img alt="../../_images/GDS212.jpg" src="../../_images/GDS212.jpg" />
+<p>This feature will convert the HEC-RAS reaches to FLO-2D channel segments.</p>
+<p>3.6.16 Delete HEC-RAS Channels (Tools Menu)</p>
+<img alt="../../_images/GDS213.jpg" src="../../_images/GDS213.jpg" />
+<p>This feature is used to delete HEC-RAS channel from the grid system.</p>
+<p>3.6.17 Delete HEC-RAS Cross Sections (Tools Menu)</p>
+<img alt="../../_images/GDS214.jpg" src="../../_images/GDS214.jpg" />
+<p>Use this option to delete HEC-RAS cross sections that are not needed.</p>
+<p>3.6.18 Create Street Segment (Tools Menu)</p>
+<img alt="../../_images/GDS215.jpg" src="../../_images/GDS215.jpg" />
+<p>This command enables the creation of the streets in an existing <em>FLO-2D</em> grid system using point and click tools as described below:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>On the <em>Tool menu</em> click <em>Create Street Segment.</em></p></li>
+<li><p>The mouse pointer changes to a cross.</p></li>
+<li><p>To add a new grid element to the street, click first grid element of the street segment.
+Then while holding the left mouse button down, the system selects street elements as the user moves over the grid system.
+A background map or aerial photograph image can be used to locate the streets.
+The streets are identified by green elements and with a solid continuous line when been generated in the <em>GDS</em>.</p></li>
+</ol>
+</div></blockquote>
+<img alt="../../_images/GDS216.jpg" src="../../_images/GDS216.jpg" />
+<p>As the street development progresses from one grid element to the next, only the eight adjacent elements can be accessed (see above figure).
+When the mouse pointer is located near the center of the next element to be selected, a solid line arrow will appear to indicate that the element will
+be added to the street.
+The user can backup the pointer over the segment to unselect street grid elements.
+No mouse clicks are necessary, it is only necessary to move the mouse pointer over the desired elements.
+To finish the street element selection, the user double-clicks with the left mouse button.</p>
+<p>The street data assignment is not complete until the user assigns the street flow direction, street widths and n-values in the street editor dialog
+box.
+When the user clicks on an existing street, the street line will be colored in red and the following options appear:</p>
+<img alt="../../_images/GDS217.jpg" src="../../_images/GDS217.jpg" />
+<p>To edit the street data, select <em>Edit Street Parameters</em> to display the Street Parameters dialog box:</p>
+<img alt="../../_images/GDS218.png" src="../../_images/GDS218.png" />
+<p>The Street Parameter dialog box can also be accessed by left mouse button click a grid element with streets and clicking on the <em>Street Element</em>
+button.
+The street flow directions in the lower left of the dialog box are required data and must be assigned after completing the Create Street Option above
+(Task 3 above).
+Instructions for entering street follow:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p><em>Global n-value for street flow</em> - Global n-value that is assigned to all the street elements.</p></li>
+<li><p><em>Maximum Street Froude number -</em> When the computed Froude number for the street flow exceeds this limiting street Froude number, the n-value is
+increased by 0.001 for that street element.</p></li>
+<li><p><em>Global street width</em> - Global assignment of street width (ft or m) for all street elements.
+This street width is superseded by individual street widths if the individual street width is greater than zero (see <em>Flow direction from center of
+node and street width</em> check boxes).</p></li>
+<li><p><em>Global curb height</em> - Global street curb height (ft or m).
+If the street curb height is exceeded by the flow depth, overland flow will result in the grid element containing the street.
+This value is used to assign a street curb height globally to all street elements.</p></li>
+<li><p><em>Inflow hydrograph will enter the streets rather than floodplain node</em> - Check this box to have the inflow hydrograph enter the street rather than
+the floodplain portion of the grid element.</p></li>
+<li><p><em>Curb height</em> - Optional curb height (ft or m) for an individual street element that supersedes the <em>global curb height</em>.</p></li>
+<li><p><em>Elevation</em> - Optional individual street element elevation (ft or m).
+This elevation will supersede the floodplain grid element elevation.
+If this value is zero, the model will assign the street elevation as grid element floodplain elevation minus the curb height.</p></li>
+<li><p><em>N-value</em> - Optional street n-value for the individual street segments within a given grid element.
+This value supersedes the <em>Global n-value for street flow</em>.
+If individual street nvalue is zero, the global value will be assigned to the grid element street segment.</p></li>
+<li><p><em>Street name</em> - Character name of the street.
+Up to 15 characters can be used.
+The street name is not used in the <em>FLO-2D</em> model.</p></li>
+<li><p><em>Flow direction from center of node and street width</em> - Streets emanate from the center of the grid element in a star pattern of eight potential flow
+directions as shown below.</p>
+<img alt="../../_images/GDS219.jpg" src="../../_images/GDS219.jpg" />
+</li>
+</ol>
+</div></blockquote>
+<p>When a given flow direction box is checked, a text box appears direct below the <em>flow direction check box</em> to input the optional grid element street
+width for that street flow direction ISTDIR:</p>
+<img alt="../../_images/GDS220.jpg" src="../../_images/GDS220.jpg" />
+<p>By setting the text box to zero, the <em>Global street width</em> will be assigned to that street segment.</p>
+<p>Additional street data instruction comments can be found in the STREET.DAT file descriptions later in the manual.
+A few comments are highlighted here.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Drawing the street outline with the Create Street Option does not complete the data assignment.
+You must click the street and add the global street parameters, street flow directions and individual street element parameters if they are different
+from the global parameters.</p></li>
+<li><p>The street depth, width and n-values can be assigned globally for all the street grid elements.
+The street depth, width and elevation can also be assigned for individual grid elements in the street local data form by setting these values greater
+than zero.</p></li>
+<li><p>If the street elevation is different from the representative grid elevation assigned in the FPLAIN.DAT file, it should be specified in the Street
+Local Form otherwise the street elevation will be the floodplain elevation minus the curb height.
+These elevations are then used to determine the street slope.</p></li>
+<li><p>The street width should be less than the side of the grid element.
+The overall floodplain surface area of the grid minus the streets surface area must be at least 5% of the original surface area (grid element width
+squared).
+If the street surface area consumes the entire grid element surface area, consider leaving out the smaller, less significant streets, reducing the
+street widths or transferring one street to a neighboring grid element.</p></li>
+</ul>
+</div></blockquote>
+<p>The street is assumed to extend from the center of the grid element to the grid element boundary in the eight flow directions.
+A street that crosses the entire grid element is assigned two street sections and directions.</p>
+<p>3.6.19 Create Street Segment with a Polyline (Tools Menu)</p>
+<img alt="../../_images/GDS221.jpg" src="../../_images/GDS221.jpg" />
+<p>With this command you can create a street segment using simple mouse point and clicks.
+First click <em>Create Street Segment with a Polyline</em> command; the cursor will change to a cross and as you click the mouse, the street segment will be
+progressively created.
+To complete the segment, double-click.</p>
+<p>3.6.20 Create Levee Segment with a Polyline (Tools Menu)</p>
+<img alt="../../_images/GDS222.jpg" src="../../_images/GDS222.jpg" />
+<p>With this command you can create a levee segment using simple mouse point and clicks.
+First click <em>Create Levee Segment with a Polyline</em> command; the cursor will change to a cross and as you click the mouse, the levee segment will be
+progressively created.
+To complete the segment, double-click.</p>
+<p>3.6.21 Create Detention Basin (Tools Menu)</p>
+<p>This command will help to design detention basins for flood mitigation.
+The detention basin is created by adjusting the grid element topography to reflect the detention basin depression.
+No special <em>FLO-2D</em> components or data are necessary to utilize the detention basin feature.</p>
+<img alt="../../_images/GDS223.jpg" src="../../_images/GDS223.jpg" />
+<p>The procedure to create a detention basin depression in the grid system topography is as follows:</p>
+<ol class="arabic simple">
+<li><p>The user selects the <em>Create Detention Basin</em> Command.</p></li>
+<li><p>The system displays the following message:</p></li>
+</ol>
+<img alt="../../_images/GDS224.png" src="../../_images/GDS224.png" />
+<ol class="arabic simple" start="3">
+<li><p>The user draws the polygon that defines the detention basin perimeter.
+The polygon is closed by double clicking on the last vertex of the polygon.</p></li>
+<li><p>The <em>GDS</em> will then request for the detention basin volume (ft<sup>3</sup> or m<sup>3</sup>):</p></li>
+</ol>
+<img alt="../../_images/GDS225.png" src="../../_images/GDS225.png" />
+<ol class="arabic simple" start="5">
+<li><p>Input the desired volume and click <em>‘OK’</em>.
+The system will subtract a uniform depth (<em>Detention basin height</em>) from all the elements included in the detention basin polygon until the detention
+basin volume is matched.
+The floodplain element elevations are lowered to account for the <em>Detention basin volume</em>.</p></li>
+</ol>
+<p>If the user clicks on the detention basin polygons, the following menu appears:</p>
+<img alt="../../_images/GDS226.jpg" src="../../_images/GDS226.jpg" />
+<p>When you click <em>View Detention Basin</em> the following message is displayed:</p>
+<img alt="../../_images/GDS227.png" src="../../_images/GDS227.png" />
+<p>3.6.22 Mud and Sediment Transport (Tools Menu)</p>
+<img alt="../../_images/GDS228.jpg" src="../../_images/GDS228.jpg" />
+<p>This command allows entering mud flow or sediment transport data using the following dialog box.</p>
+<img alt="../../_images/GDS229.jpg" src="../../_images/GDS229.jpg" />
+<p>3.6.23 Evaporation (Tools Menu)</p>
+<img alt="../../_images/GDS317.jpg" src="../../_images/GDS317.jpg" />
+<p>3.6.24 MODFLO-2D Simulation (Tools Menu)</p>
+<img alt="../../_images/GDS230.jpg" src="../../_images/GDS230.jpg" />
+<p>This command allows entering data to simulate surface and groundwater flow using the <em>MODFLOW</em> integration.
+There following tabbed dialog box provides input fields for a subset of <em>MODFLOW</em> data.
+A separate manual explain in full the capabilities of the <em>FLO-2D</em> <em>MODFLOW</em> link, also called <em>MODFLO</em>-2D.</p>
+<img alt="../../_images/GDS231.png" src="../../_images/GDS231.png" />
+<p>3.6.25 Hydraulic Structures (Tools Menu)</p>
+<img alt="../../_images/GDS232.jpg" src="../../_images/GDS232.jpg" />
+<p>The Hydraulic Structures command allows entering data required to simulate culverts, bridges and any other hydraulic structure that can be represented
+with a rating table or rating curve.</p>
+<img alt="../../_images/GDS233.jpg" src="../../_images/GDS233.jpg" />
+<p>3.6.26 Rain (Tools Menu)</p>
+<img alt="../../_images/GDS318.jpg" src="../../_images/GDS318.jpg" />
+<p>The Rain command allows entering data to simulate rainfall input over the FLO-2D grid.</p>
+<p>3.6.27 Breach (Tools Menu)</p>
+<img alt="../../_images/GDS234.jpg" src="../../_images/GDS234.jpg" />
+<p>This command is used to enter levee breach data for the computed breach option.</p>
+<p><em>Global Breach Data</em></p>
+<p>Global breach data is used to input the dam or levee geometry and soil data in order to simulate an NWS Breach erosion condition.
+The model uses the global data along points of a levee or dam that meet a specific depth or time to breach criteria.</p>
+<img alt="../../_images/GDS235.png" src="../../_images/GDS235.png" />
+<p><em>Individual Breach Data</em></p>
+<p>Individual breach data is used to input the dam or levee geometry and soil data in order to simulate an NWS Breach erosion condition at a
+predetermined location.
+The model uses the breach data assigned to a specific location to breach at a specified elevation or time.</p>
+<img alt="../../_images/GDS236.png" src="../../_images/GDS236.png" />
+<p><em>Levee Fragility Curve Data</em></p>
+<p>Levee fragility curves are used to determine a levee breach location based on data entered spatially along a levee profile.
+The fragility data is based on the existing levee condition and will activate a failure via erosional breach or prescribed failure once a certain
+depth criteria is met.</p>
+<img alt="../../_images/GDS237.png" src="../../_images/GDS237.png" />
+<p>3.6.28 Drainage Basin Tools (Tools Menu)</p>
+<img alt="../../_images/GDS321.jpg" src="../../_images/GDS321.jpg" />
+<img alt="../../_images/GDS322.jpg" src="../../_images/GDS322.jpg" />
+<img alt="../../_images/GDS323.jpg" src="../../_images/GDS323.jpg" />
+<img alt="../../_images/GDS324.jpg" src="../../_images/GDS324.jpg" />
+<img alt="../../_images/GDS325.jpg" src="../../_images/GDS325.jpg" />
+<img alt="../../_images/GDS326.jpg" src="../../_images/GDS326.jpg" />
+<img alt="../../_images/GDS327.jpg" src="../../_images/GDS327.jpg" />
+<img alt="../../_images/GDS328.jpg" src="../../_images/GDS328.jpg" />
+<p>3.6.29 Create Floodplain Cross Sections (Tools Menu)</p>
+<img alt="../../_images/GDS244.jpg" src="../../_images/GDS244.jpg" />
+<p>This command will enable selection of grid elements for a floodplain cross section so that the <em>FLO-2D</em> model will calculate a hydrograph and compile
+hydraulic results for the flow across the cross section.
+You can create the cross section in an existing <em>FLO-2D</em> grid using point and click tools as described below:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>On the <em>Tool menu</em> click <em>Create Floodplain Cross Sections.</em></p></li>
+<li><p>The mouse pointer changes to a cross.</p></li>
+<li><p>Locate and position the mouse over the first grid element in a line of grid elements that will constitute the cross section.
+Click his first grid element of the cross section and then while holding the left mouse button down select the cross section grid elements as you move
+the mouse over the grid system.
+Cross section elements are joined by lines to visualize the cross section location.
+As the cross section development progresses from one element to the next, only the eight adjacent elements can be accessed.
+When the mouse pointer is near the center of the next element to be selected, a solid arrow appears to indicate that that element is the next one in
+the segment.
+The user can backup the pointer over the segment to unselect channel grid elements.
+No clicks are necessary, the users only needs to sweep the pointer over the desired elements.
+The cross section is completed when the user double-clicks with the left mouse button.</p></li>
+</ol>
+<img alt="../../_images/GDS245.jpg" src="../../_images/GDS245.jpg" />
+<ol class="arabic simple" start="4">
+<li><p>Cross sections must be consists of grid elements in a continuous straight line and can only be in the four directions as indicated below:</p></li>
+</ol>
+<img alt="../../_images/GDS246.jpg" src="../../_images/GDS246.jpg" />
+</div></blockquote>
+<p>To edit the floodplain cross section grid elements, click a cross section.
+A short-cut menu appears with three options as shown:</p>
+<img alt="../../_images/GDS247.jpg" src="../../_images/GDS247.jpg" />
+<p>Select <em>Edit Floodplain Cross Section</em> to display the floodplain cross section dialog box:</p>
+<img alt="../../_images/GDS248.png" src="../../_images/GDS248.png" />
+<p>In the left data table are the grid elements that form the cross section.
+In the right data table of the dialog box, select the direction for discharge calculation.
+The cross section discharge will be computed for the selected flow direction that is perpendicular to the line of cross section grid elements.
+The model will create three output files:</p>
+<p>CROSSQ.OUT - This file contains the element grid hydrographs for each of the floodplain elements in the cross section.
+The time and discharge are listed for each output interval.</p>
+<p>CROSSMAX.OUT - This file lists the maximum discharge, maximum flow depth and time of occurrence for each grid element specified in the cross section
+analysis.</p>
+<p>HYCROSS.OUT - The output interval time, top width, depth, velocity and discharge are listed for each cross section.
+The discharge passing the cross section of grid elements is compiled as a hydrograph.
+The cross section maximum discharge and the individual grid elements are written to the CROSSMAX.OUT file.</p>
+<p>3.6.30 Surface Elevations Profile (Tools Menu)</p>
+<img alt="../../_images/GDS249.jpg" src="../../_images/GDS249.jpg" />
+<p>3.6.31 Levee Profile (Tools Menu)</p>
+<img alt="../../_images/GDS250.jpg" src="../../_images/GDS250.jpg" />
+<p>This tool will display levee crest elevation profile of a selected levee segment along with the corresponding grid element ground elevations.
+To activate this tool, click the command <em>Levee Profile</em> and then click one of the grid elements that contain a levee.
+<em>GDS</em> will determine the continuity of the levee and change the levee color to dark green to identify the selected elements as shown in the figure
+below.</p>
+<img alt="../../_images/GDS251.jpg" src="../../_images/GDS251.jpg" />
+<p>Then <em>GDS</em> will display the levee profile as shown in the following plot:</p>
+<img alt="../../_images/GDS252.png" src="../../_images/GDS252.png" />
+<p>Using this <em>Formatting</em> Menu on the tool bar, the <em>GDS</em> will display the following dialog box so that you can customize the plot including the minimum
+and maximum elevations (Y-axis), legend position and angle of labels.</p>
+<img alt="../../_images/GDS253.png" src="../../_images/GDS253.png" />
+<p>3.6.32 Street Profile (Tools Menu)</p>
+<img alt="../../_images/GDS329.jpg" src="../../_images/GDS329.jpg" />
+<p>This command will create a street and ground elevation profile.
+To access this tool, click the <em>Street Profile</em> Command and click any street element.
+The <em>GDS</em> will display the street profile as shown:</p>
+<img alt="../../_images/GDS254.jpg" src="../../_images/GDS254.jpg" />
+<p>Similar to the <em>Levee Profile Command</em>, use the <em>Formatting</em> command on the tool bar to display the following dialog box to customize the plot
+including the minimum and maximum elevations (Y-axis), Legend position and angle of labels.</p>
+<p>3.6.33 Create Storage Volume Rating Tables (Tools Menu)</p>
+<p>This tool will create storage volume rating tables to keep watershed depression storage defined by the DTM points data.
+The depression storage accuracy can be retained by generating a depth-volume storage rating table for each selected grid element.</p>
+<p>To activate this tool, click the command <em>Create Storage Volume Rating Tables</em> and then click on <em>Compute Rating Curves</em>.
+<em>GDS</em> will calculate the rating tables and generate an outrc.dat file that contains the potential storage for each cell.</p>
+<img alt="../../_images/GDS330.jpg" src="../../_images/GDS330.jpg" />
+<img alt="../../_images/GDS331.jpg" src="../../_images/GDS331.jpg" />
+<p>3.6.34 Storm Drain (Tools Menu)</p>
+<p>FLO-2D will compute the surface water depth at prescribed grid elements with storm drains and will compute the discharge inflow to the storm drain
+based input storm drain geometry.
+The Storm Drain model 5.1 will then compute the pipe network flows and potential return flow to the surface water.
+To activate this tool, click the command <em>Storm Drain.
+GDS</em> will allow you to enter, modify and view the Inlets as well as run EPA SWMM GUI 5.0 using the following dialogs:</p>
+<img alt="../../_images/GDS257.jpg" src="../../_images/GDS257.jpg" />
+<img alt="../../_images/GDS258.jpg" src="../../_images/GDS258.jpg" />
+<img alt="../../_images/GDS335.jpg" src="../../_images/GDS335.jpg" />
+<p>This command will open the EPA SWMM 5.0 program.
+Create a .inp file and save it to the project folder.
+Then use the Control Panel to load make the SWMMFLO.DAT file.</p>
+<p><em>3.6.34.1 Run Storm Drain GUI… (Tools Menu/Storm Drain)</em></p>
+<img alt="../../_images/GDS259.jpg" src="../../_images/GDS259.jpg" />
+<p>This option runs the EPA SWMM GUI 5.0.
+It the link is not working copy the Epaswmm5.exe file from the EPA SWMM 5.0 folder to the FLO-2D Pro folder.</p>
+<p><em>3.6.34.2 View Storm Drain Inlets Dialog (Tools Menu)</em></p>
+<img alt="../../_images/GDS336.jpg" src="../../_images/GDS336.jpg" />
+<img alt="../../_images/GDS337.jpg" src="../../_images/GDS337.jpg" />
+<p>This option loads the contents of the SWMMFLO.DAT file to be edited.
+The inlets can be edited here and the max depths can be edited here or in the swmm.inp.</p>
+<img alt="../../_images/GDS338.jpg" src="../../_images/GDS338.jpg" />
+<p><em>3.6.34.3 View Outfall Nodes Dialog (Tools Menu/Storm Drain)</em></p>
+<img alt="../../_images/GDS339.jpg" src="../../_images/GDS339.jpg" />
+<p>This option generates the data written to the SWMMOUTF.DAT file.</p>
+<p><em>3.6.34.4 Storm Drain Display Option (Tools Menu/Storm Drain)</em></p>
+<img alt="../../_images/GDS260.jpg" src="../../_images/GDS260.jpg" />
+<p>These options define how the storm drain system appears on the GDS display window.</p>
+<p><em>3.6.34.5 Storm Drain Discharge Display (Tools Menu/Storm Drain)</em></p>
+<img alt="../../_images/GDS341.jpg" src="../../_images/GDS341.jpg" />
+<p>This option allows the user to review the inlet discharge hydrographs or print them to *.jpg image files.
+Choose from this project to display on screen or from external project to save all projects to file.</p>
+<img alt="../../_images/GDS340.jpg" src="../../_images/GDS340.jpg" />
+<p><em>3.6.34.6 Grade Lines (Tools Menu/Storm Drain)</em></p>
+<img alt="../../_images/GDS342.jpg" src="../../_images/GDS342.jpg" />
+<p>This option allows the user to review the grade lines for the conduits.</p>
+<img alt="../../_images/GDS262.jpg" src="../../_images/GDS262.jpg" />
+<p><strong>4.7 Contents (Help Menu)</strong></p>
+<img alt="../../_images/GDS263.jpg" src="../../_images/GDS263.jpg" />
+<p>The Help Contents Command accesses a .pdf version of this manual.
+The FLO-2D Software links to the website and the About… opens the welcome message.
+The welcome message shows the activation status and alerts a user if the subscription needs to be renewed.</p>
+<img alt="../../_images/GDS264.jpg" src="../../_images/GDS264.jpg" />
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html" class="btn btn-neutral float-left" title="Simulating Mudflow Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021/Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021.html" class="btn btn-neutral float-right" title="Levee Dam and Wall Breach Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build21
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="../../../Build25/index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="GDS Manual PRO 2021.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

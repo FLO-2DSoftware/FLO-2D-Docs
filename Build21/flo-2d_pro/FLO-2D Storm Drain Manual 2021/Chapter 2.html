@@ -59,6 +59,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center 2021</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Pro%20Reference%20Manual%202021/index.html">FLO-2D Pro Reference Manual 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Channel%20Guidelines%202021/index.html">FLO-2D Channel Guidelines 2021</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">FLO-2D Storm Drain Manual 2021</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="Chapter%201.html">1. Chapter 1</a></li>
@@ -78,6 +79,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines%202021/Hydraulic%20Structures%20Guidelines%202021.html">FLO-2D Hydraulic Structure Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html">Simulating Mudflow Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html#references">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GDS%20Manual%20PRO%202021/GDS%20Manual%20PRO%202021.html">GDS Manual PRO 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021/Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021.html">Levee Dam and Wall Breach Guidelines</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
@@ -132,7 +135,7 @@ not connected to the surface water system.
 The water surface elevation is determined at each junction for each computational timestep based on the junction geometry and the flow hydraulics.
 Figure 25 is a profile of closed conduit system with three inlets, one junction and one outfall.
 The figure displays a peak water surface elevation for the 10 year return period storm.</p>
-<img alt="../../_images/Chapte0024.jpg" src="../../_images/Chapte0024.jpg" />
+<img alt="../../_images/Chapte0028.jpg" src="../../_images/Chapte0028.jpg" />
 <p><em>Figure 25.
 Profile of Typical Closed Conduit System</em></p>
 <p>Inlets are nodes that collect surface water from the FLO-2D grid element.
@@ -142,7 +145,7 @@ Storm drain inlets are depicted by the QGIS and GDS as blue in Figure 26 and Fig
 <p><em>Figure 26.
 Storm Drain System Represented in the GDS Graphic Display.
 Inlets are blue and junctions are green.</em></p>
-<img alt="../../_images/Chapte0032.jpg" src="../../_images/Chapte0032.jpg" />
+<img alt="../../_images/Chapte0034.jpg" src="../../_images/Chapte0034.jpg" />
 <p><em>Figure 27.
 Storm Drain System Represented in the QGIS Graphic Display.
 Inlets are blue and outfalls are green.</em></p>
@@ -155,10 +158,10 @@ If the outfall discharge is returned to the surface water, the water surface is 
 An outfall to a retention basin is shown in Figure 28.
 The boundary condition for this outfall would vary with the basin water surface.
 In Figure 29 the pipe outfall discharges into a channel and may have a potential backwater condition.</p>
-<img alt="../../_images/Chapte0042.jpg" src="../../_images/Chapte0042.jpg" />
+<img alt="../../_images/Chapte0046.jpg" src="../../_images/Chapte0046.jpg" />
 <p><em>Figure 28.
 Outfall Discharge Retention Basin</em></p>
-<img alt="../../_images/Chapte018.png" src="../../_images/Chapte018.png" />
+<img alt="../../_images/Chapte0181.png" src="../../_images/Chapte0181.png" />
 <p><em>Figure 29.
 GDS Image of Storm Drain System with Outfall OF185 Discharging to a Channel</em></p>
 <section id="storm-drain-inlets">
@@ -171,10 +174,10 @@ For curb and grate inlets, the inlet geometry is assigned, and the discharge is 
 available storm drain capacity.
 For slotted drains, combination inlets and other non-typical inlets, a rating table must be generated with discharge as a function of headwater depth
 (Figure 30 and Figure 31).</p>
-<img alt="../../_images/Chapte0052.jpg" src="../../_images/Chapte0052.jpg" />
+<img alt="../../_images/Chapte0055.jpg" src="../../_images/Chapte0055.jpg" />
 <p><em>Figure 30.
 Combination Curb Opening Inlet with Sag and a Grate</em></p>
-<img alt="../../_images/Chapte0063.jpg" src="../../_images/Chapte0063.jpg" />
+<img alt="../../_images/Chapte0067.jpg" src="../../_images/Chapte0067.jpg" />
 <p><em>Figure 31.
 Combination of a Curb Opening at Grade with a Grate</em></p>
 <p>The manhole is a special inlet type that represents a service access point to the storm drain system.
@@ -225,7 +228,7 @@ Curb Opening at Grade (Type 1 inlet)</em></p>
 <li><p>Curb opening sag width (W)</p></li>
 </ul>
 </div></blockquote>
-<img alt="../../_images/Chapte0201.png" src="../../_images/Chapte0201.png" />
+<img alt="../../_images/Chapte0202.png" src="../../_images/Chapte0202.png" />
 <p><em>Figure 33.
 Curb Opening with Sag (Type 2 Inlet, Johnson and Fred, 1984)</em></p>
 <p>Conservatively, the weir or orifice discharge, whichever is smaller, is used for the curb opening with sag.
@@ -283,7 +286,7 @@ For weir flow (Johnson and Fred, 1984):</p>
 <p class="admonition-title">Note</p>
 <p>Orifice flow coefficient = 0.67 (hardcoded) for all cases.</p>
 </div>
-<img alt="../../_images/Chapte0082.jpg" src="../../_images/Chapte0082.jpg" />
+<img alt="../../_images/Chapte0085.jpg" src="../../_images/Chapte0085.jpg" />
 <p><em>Figure 34.
 Grate Inlet in a Street (Type 3 Inlet, Johnson and Fred, 1984)</em></p>
 <p>The smaller of two discharges (weir or orifice) calculated for a grate (gutter) inlet with/without sag is applied for the inlet discharge computation
@@ -341,7 +344,7 @@ Grate Inlet in a Street (Type 3 Inlet, Johnson and Fred, 1984)</em></p>
 <p>Inlets that cannot be represented by Types 1, 2 or 3 can have an inflow discharge defined by a rating table.
 Some storm drain inlets may include entrance types similar to that of a culvert with a vertical opening (Figure 35.).
 In this case the rim elevation would be ignored as the flows are exchanged based on the invert elevation.</p>
-<img alt="../../_images/Chapte0102.jpg" src="../../_images/Chapte0102.jpg" />
+<img alt="../../_images/Chapte0105.jpg" src="../../_images/Chapte0105.jpg" />
 <p><em>Figure 35.
 Storm Drain Vertical Inlet with a Culvert Entrance</em></p>
 <p>The following are the input parameters for a Type 4 inlet that are entered in the SWMMFLORT.DAT file:</p>
@@ -356,7 +359,7 @@ Storm drains under high pressure during flooding can result in the manhole cover
 and Figure 37).
 The FLO-2D storm drain component can simulate covers popping through the application of a surcharge depth.
 Once the manhole cover has been popped, it remains off and the manhole becomes a Type 3 inlet.</p>
-<img alt="../../_images/Chapte011.jpg" src="../../_images/Chapte011.jpg" />
+<img alt="../../_images/Chapte0111.jpg" src="../../_images/Chapte0111.jpg" />
 <p><em>Figure 36.
 Popped Manhole Cover (source: istock)</em></p>
 <p>The required manhole input parameters are:</p>
@@ -385,7 +388,7 @@ Manhole covers are typically circular but can be found in other shapes.</p>
 <p>γ<sub>w</sub> = clear water density 62.4 lb/ft<sup>3</sup> (1000 kg/m<sup>3</sup>)</p>
 </div></blockquote>
 </div></blockquote>
-<img alt="../../_images/Chapte0123.jpg" src="../../_images/Chapte0123.jpg" />
+<img alt="../../_images/Chapte0124.jpg" src="../../_images/Chapte0124.jpg" />
 <p><em>Figure 37.
 Popped Manhole Cover with Pressure Head (Source: istock)</em></p>
 <p>To calculate the surcharge depth for manhole cover shown in Figure 36.
@@ -437,7 +440,7 @@ Flow into the outfall can occur based on the water surface elevation but may be 
 Normal, fixed, tidal or time series type of SWMM outfalls will discharge the flow off the storm drain system.
 In Figure 38, the outfall has a free flow condition but when the river is high, the outfall may be submerged.
 The location and elevation of the outfall can be assigned in the QGIS.</p>
-<img alt="../../_images/Chapte0133.jpg" src="../../_images/Chapte0133.jpg" />
+<img alt="../../_images/Chapte0135.jpg" src="../../_images/Chapte0135.jpg" />
 <p><em>Figure 38.
 Storm Drain Free Outfall Condition (source: istock)</em></p>
 <p>During the simulation FLO-2D compares the downstream water surface elevations with the storm drain pressure head to control the flow in or out of the
@@ -446,7 +449,7 @@ This may result in backwater pressure on the pipe network.
 In the case of ponded flow as in detention or retention basins, the outfall might be submerged but still have sufficient pressure to discharge out of
 the storm drain network (Figure 39).
 When the retention basin water surface is high enough, water can enter the outfall and flow upstream in the pipe.</p>
-<img alt="../../_images/Chapte0143.jpg" src="../../_images/Chapte0143.jpg" />
+<img alt="../../_images/Chapte0145.jpg" src="../../_images/Chapte0145.jpg" />
 <p><em>Figure 39.
 Outfall Discharging into a Retention Basin</em></p>
 <p>The discharge at the outfall is controlled as follows:</p>
@@ -471,7 +474,7 @@ initial tailwater depth.</p>
 SWMMOUTF.DAT is equal to 2 instead of 1,then the storm drain outfall would be connected to the surface layer but no initial underwater tailwater depth
 condition is imposed, and the outfall discharge to the surface based on the comparison between PH with the FLO-2D water Surface Elevation.
 Outfall is assumed to be located at ground elevation.</p>
-<img alt="../../_images/Chapte0151.jpg" src="../../_images/Chapte0151.jpg" />
+<img alt="../../_images/Chapte0153.jpg" src="../../_images/Chapte0153.jpg" />
 <p><em>Figure 40.
 Outfall Location with Respect the Channel Left Bank Elements.</em></p>
 </section>
@@ -482,7 +485,7 @@ The floodplain water surface elevation is compared to the storm drain pressure h
 invert elevation (Vertical Type 4 Inlets) or the outfall invert elevation.
 It is possible that the elevations of the closed conduit system may have a different datum than that applied to the FLO-2D surface topography.
 The elevation of each inlet rim and outfall invert should be reviewed especially for unique conditions such as combination inlets (Figure 41).</p>
-<img alt="../../_images/Chapte0163.jpg" src="../../_images/Chapte0163.jpg" />
+<img alt="../../_images/Chapte0165.jpg" src="../../_images/Chapte0165.jpg" />
 <p><em>Figure 41.
 Diagram of a Combination Inlet Rim Elevation.</em></p>
 <p>For curb opening inlets at grade (Type 1), curb opening inlets with sag (Type 2), grates with or without sag (Type 3) and manholes (Type 5), the
@@ -538,7 +541,7 @@ elevation adjustments to the next simulation.</p>
 <h3><span class="section-number">2.1.5. </span>Conduit Offsets<a class="headerlink" href="#conduit-offsets" title="Link to this heading"></a></h3>
 <p>The swmm.inp file uses offset heights to connect the conduits to the nodes.
 The inlet and outlet offsets can be zero if there is no offset or any height above zero to set the offset.</p>
-<img alt="../../_images/Chapte0171.png" src="../../_images/Chapte0171.png" />
+<img alt="../../_images/Chapte0172.png" src="../../_images/Chapte0172.png" />
 <p><em>Figure 42.
 Offsets in a Pipe System.
 Blue rectangles are the nodes that connect pipes.</em></p>

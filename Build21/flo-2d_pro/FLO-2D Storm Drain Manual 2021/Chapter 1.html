@@ -59,6 +59,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center 2021</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Pro%20Reference%20Manual%202021/index.html">FLO-2D Pro Reference Manual 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Channel%20Guidelines%202021/index.html">FLO-2D Channel Guidelines 2021</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">FLO-2D Storm Drain Manual 2021</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">1. Chapter 1</a><ul>
@@ -92,6 +93,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines%202021/Hydraulic%20Structures%20Guidelines%202021.html">FLO-2D Hydraulic Structure Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html">Simulating Mudflow Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html#references">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GDS%20Manual%20PRO%202021/GDS%20Manual%20PRO%202021.html">GDS Manual PRO 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021/Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021.html">Levee Dam and Wall Breach Guidelines</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
@@ -145,7 +148,7 @@ The FLO-2D model will compute the storm drain inflow discharge based on the pred
 This inlet-controlled discharge will then be routed as storm drain pipe discharge.
 The storm drain return flow to the surface water system is exchanged through storm drain inlets/outlets and outfalls.
 The complete conceptualized flood routing system is shown in Figure 1.</p>
-<img alt="../../_images/Chapte0023.jpg" src="../../_images/Chapte0023.jpg" />
+<img alt="../../_images/Chapte0027.jpg" src="../../_images/Chapte0027.jpg" />
 <p><em>Figure 1.
 Conceptualized FLO-2D Model System with a Storm Drain Component.</em></p>
 <p>The FLO-2D storm drain component can be visualized in layers.
@@ -176,7 +179,7 @@ model is started.
 Following a successful simulation of the surface water and storm water integrated model, the storm drain results can be reviewed in either the QGIS,
 GDS (Figure 3) or in the EPA SWMM GUI.
 Junctions are shown in green and Inlets are blue.</p>
-<img alt="../../_images/Chapte0031.jpg" src="../../_images/Chapte0031.jpg" />
+<img alt="../../_images/Chapte0033.jpg" src="../../_images/Chapte0033.jpg" />
 <p><em>Figure 3.
 A Typical Storm Drain System as Viewed in the GDS</em></p>
 </section>
@@ -296,7 +299,7 @@ Figure 11:</p>
 <li><p>No return flow.</p></li>
 </ul>
 </div></blockquote>
-<img alt="../../_images/Chapte0041.png" src="../../_images/Chapte0041.png" />
+<img alt="../../_images/Chapte0042.png" src="../../_images/Chapte0042.png" />
 <p><em>Figure 4.
 Inlet No Return Flow.</em></p>
 <p><em>Storm drain pressure head &gt; FLO-2D WSE &gt; rim elevation:</em></p>
@@ -308,7 +311,7 @@ Inlet No Return Flow.</em></p>
 <li><p>Water leaves the storm drain system.</p></li>
 </ul>
 </div></blockquote>
-<img alt="../../_images/Chapte0051.png" src="../../_images/Chapte0051.png" />
+<img alt="../../_images/Chapte0052.png" src="../../_images/Chapte0052.png" />
 <p><em>Figure 5.
 Inlet with Return Flow</em></p>
 <p><em>FLO-2D WSE &gt; Storm drain pressure head&gt; rim elevation:</em></p>
@@ -346,7 +349,7 @@ WSE Greater than Inlet Pressure Head.</em></p>
 <li><p>Higher head due to high water surface elevations may force the flow to the outfalls instead of overflowing the inlets and manholes.</p></li>
 </ul>
 </div></blockquote>
-<img alt="../../_images/Chapte0081.png" src="../../_images/Chapte0081.png" />
+<img alt="../../_images/Chapte0082.png" src="../../_images/Chapte0082.png" />
 <p><em>Figure 8.
 High Pressure Head at an Inlet.</em></p>
 </section>
@@ -378,7 +381,7 @@ greater than zero (see Figure 10).</p>
 <li><p>Return flow.</p></li>
 </ul>
 </div></blockquote>
-<img alt="../../_images/Chapte0101.jpg" src="../../_images/Chapte0101.jpg" />
+<img alt="../../_images/Chapte0104.jpg" src="../../_images/Chapte0104.jpg" />
 <p><em>Figure 10.
 Surface Water and Pipe Capacity.</em></p>
 </section>
@@ -392,7 +395,7 @@ Surface Water and Pipe Capacity.</em></p>
 <li><p>Return flow to system.</p></li>
 </ul>
 </div></blockquote>
-<img alt="../../_images/Chapte0112.png" src="../../_images/Chapte0112.png" />
+<img alt="../../_images/Chapte0113.png" src="../../_images/Chapte0113.png" />
 <p><em>Figure 11.
 Manhole under Pressure with Return Flow.</em></p>
 </section>
@@ -440,7 +443,7 @@ An artificial head equal to the ground elevation is assigned to the outfall node
 This artificial head causes the pipe to fill, and the artificial volume is accounted for in the storm drain model.
 When the model runs, the inflow may be added to either the outfall grid element or the upstream storm drain pipe network and the flow can go either in
 or out of the outfall pipe based on the pressure head.</p>
-<img alt="../../_images/Chapte0122.jpg" src="../../_images/Chapte0122.jpg" />
+<img alt="../../_images/Chapte0123.jpg" src="../../_images/Chapte0123.jpg" />
 <p><em>Figure 12.
 Initial Condition for an Underground (Underwater) Storm Drain Outfall</em></p>
 <p>Typically, an outfall has an invert elevation equal to or greater than the floodplain, channel or street elevations.
@@ -522,7 +525,7 @@ Using an assumed 2% street cross slope results in a higher depth (more head) on 
 The curb height can be entered in the SWMMFLO.DAT file to make this adjustment automatically for each inlet.
 The curb inlet flow assignment is the same concept as the Street Gutter Flow feature (requires GUTTER.DAT file) that can be applied to gutters in
 streets without storm drain inlets.</p>
-<img alt="../../_images/Chapte0221.png" src="../../_images/Chapte0221.png" />
+<img alt="../../_images/Chapte0222.png" src="../../_images/Chapte0222.png" />
 <p><em>Figure 13.
 Curb Inlet Water Depth Profile Adjustment</em></p>
 <p>Definitions:</p>
@@ -535,7 +538,7 @@ Curb Inlet Water Depth Profile Adjustment</em></p>
 <blockquote>
 <div><p>1/2 base (L) x height (0.02 x L) x side L = 0.5 x 0.02 x L<sup>3</sup> = 0.01 L<sup>3</sup></p>
 </div></blockquote>
-<img alt="../../_images/Chapte0132.jpg" src="../../_images/Chapte0132.jpg" />
+<img alt="../../_images/Chapte0134.jpg" src="../../_images/Chapte0134.jpg" />
 <p><em>Figure 14.
 Volume Conversion - Square Floodplain Grid Element to Right Triangle at 2% Slope</em></p>
 <p>To calculate flow depth on the storm drain inlet:</p>
@@ -575,19 +578,19 @@ The selected method allows the pressure head to be exponentially reduced over to
 <img alt="../../_images/Chapte0241.png" src="../../_images/Chapte0241.png" />
 <p><em>Figure 15.
 Water Elevation Profile at 03:17:00.</em></p>
-<img alt="../../_images/Chapte0142.jpg" src="../../_images/Chapte0142.jpg" />
+<img alt="../../_images/Chapte0144.jpg" src="../../_images/Chapte0144.jpg" />
 <p><em>Figure 16.
 Inlet Pressure Head - No Pressure Head Dampening is Applied</em></p>
 <img alt="../../_images/Chapte0251.png" src="../../_images/Chapte0251.png" />
 <p><em>Figure 17.
 Water Elevation Profile at 03:18:00.</em></p>
-<img alt="../../_images/Chapte015.jpg" src="../../_images/Chapte015.jpg" />
+<img alt="../../_images/Chapte0152.jpg" src="../../_images/Chapte0152.jpg" />
 <p><em>Figure 18.
 Inlet Pressure Head with Dampening up to 1.25 Times the Lateral Pipe Diameter.</em></p>
 <img alt="../../_images/Chapte0261.png" src="../../_images/Chapte0261.png" />
 <p><em>Figure 19.
 Water Elevation Profile at 03:18:00.</em></p>
-<img alt="../../_images/Chapte0162.jpg" src="../../_images/Chapte0162.jpg" />
+<img alt="../../_images/Chapte0164.jpg" src="../../_images/Chapte0164.jpg" />
 <p><em>Figure 20.
 Inlet Pressure Head with Dampening up to RIM Elevation</em></p>
 </section>
@@ -611,7 +614,7 @@ The inlet discharge is calculated and then reduced using the clogging factor in 
 </div></blockquote>
 <p>This methodology is recommended for single inlets by entities such as the Colorado Department of Transportation and the cities of Denver and Las Vegas.
 Figure 21 and Figure 22 show the reduced discharge for a Type 2 inlet using a clogging factor of 50% at time 0.5 hrs.</p>
-<img alt="../../_images/Chapte0171.jpg" src="../../_images/Chapte0171.jpg" />
+<img alt="../../_images/Chapte0172.jpg" src="../../_images/Chapte0172.jpg" />
 <p><em>Figure 21.
 Type 2 Inlet Discharge versus Time</em></p>
 <img alt="../../_images/Chapte0182.jpg" src="../../_images/Chapte0182.jpg" />
@@ -624,7 +627,7 @@ Table 2 shows the FCDMC catch basin clogging factors for predicting inlet discha
 The clogging factor data file can be created in the SWMMFLO.DAT data dialog for all types of inlets.</p>
 <p><strong>Table 2.
 FCDMC Catch Basin Clogging Factors (FCDMC, 2018)</strong></p>
-<img alt="../../_images/Chapte0191.jpg" src="../../_images/Chapte0191.jpg" />
+<img alt="../../_images/Chapte0192.jpg" src="../../_images/Chapte0192.jpg" />
 </section>
 <section id="reduction-of-return-flow-to-surface">
 <h2><span class="section-number">1.12. </span>Reduction of Return Flow to Surface<a class="headerlink" href="#reduction-of-return-flow-to-surface" title="Link to this heading"></a></h2>
@@ -732,7 +735,7 @@ an additional equation is necessary (Figure 23):</p>
 <p>∑As = surface area contributed by the conduits connected to the node.</p>
 <p>∑Q = net flow at Node J contributed by all connected conduits plus external inflows</p>
 </div></blockquote>
-<img alt="../../_images/Chapte023.jpg" src="../../_images/Chapte023.jpg" />
+<img alt="../../_images/Chapte0231.jpg" src="../../_images/Chapte0231.jpg" />
 <p><em>Figure 23.
 Node-Link Representation of a Drainage System (Roesner et al, 1992)</em></p>
 </section>

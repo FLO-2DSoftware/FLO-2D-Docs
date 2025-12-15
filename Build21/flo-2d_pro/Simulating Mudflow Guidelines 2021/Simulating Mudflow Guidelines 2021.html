@@ -30,7 +30,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="FLO-2D Plugin" href="../../flo-2d_plugin/index.html" />
+    <link rel="next" title="GDS Manual PRO 2021" href="../GDS%20Manual%20PRO%202021/GDS%20Manual%20PRO%202021.html" />
     <link rel="prev" title="FLO-2D Hydraulic Structure Guidelines" href="../Hydraulic%20Structures%20Guidelines%202021/Hydraulic%20Structures%20Guidelines%202021.html" /> 
 </head>
 
@@ -59,6 +59,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center 2021</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Pro%20Reference%20Manual%202021/index.html">FLO-2D Pro Reference Manual 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Channel%20Guidelines%202021/index.html">FLO-2D Channel Guidelines 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Storm%20Drain%20Manual%202021/index.html">FLO-2D Storm Drain Manual 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines%202021/Hydraulic%20Structures%20Guidelines%202021.html">FLO-2D Hydraulic Structure Guidelines</a></li>
@@ -83,6 +84,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GDS%20Manual%20PRO%202021/GDS%20Manual%20PRO%202021.html">GDS Manual PRO 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021/Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021.html">Levee Dam and Wall Breach Guidelines</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
@@ -308,26 +311,26 @@ and the bulking factor.
 When examining parameters related to mudflows, it is important to identify the reported sediment concentration either by weight or by volume.
 The sediment concentration by volume C<sub>v</sub> is given by:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-0">
-<span class="eqno">(13)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-0" title="Link to this equation"></a></span>\[C_v = \frac {volume \, of \, the \, sediment}{volume \, of \, water \, plus \, sediment}\]</div>
+<span class="eqno">(102)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-0" title="Link to this equation"></a></span>\[C_v = \frac {volume \, of \, the \, sediment}{volume \, of \, water \, plus \, sediment}\]</div>
 <p>and C<sub>v</sub> is related to the sediment concentration by weight C<sub>w</sub> by:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-1">
-<span class="eqno">(14)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-1" title="Link to this equation"></a></span>\[C_v = \frac{C_w\gamma}{\gamma_s - C_w (\gamma_s - \gamma)}\]</div>
+<span class="eqno">(103)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-1" title="Link to this equation"></a></span>\[C_v = \frac{C_w\gamma}{\gamma_s - C_w (\gamma_s - \gamma)}\]</div>
 <p>where γ = specific weight of the water and γs = specific weight of the sediment.
 The sediment concentration can also be expressed in parts per million (ppm) by dividing the concentration by weight C<sub>w</sub> by 10<sup>6</sup>.
 The specific weight of the mudflow mixture <sub>γm</sub> is a function of the sediment concentration by volume:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-2">
-<span class="eqno">(15)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-2" title="Link to this equation"></a></span>\[\gamma_m = \gamma + C_v \left( \gamma_s - \gamma \right)\]</div>
+<span class="eqno">(104)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-2" title="Link to this equation"></a></span>\[\gamma_m = \gamma + C_v \left( \gamma_s - \gamma \right)\]</div>
 <p>Similarly the density of the mudflow mixture ρm is given by:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-3">
-<span class="eqno">(16)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-3" title="Link to this equation"></a></span>\[ \rho_m = \rho + C_v \left( \rho_s - \rho \right)\]</div>
+<span class="eqno">(105)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-3" title="Link to this equation"></a></span>\[ \rho_m = \rho + C_v \left( \rho_s - \rho \right)\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-4">
-<span class="eqno">(17)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-4" title="Link to this equation"></a></span>\[\rho_m = \frac{\gamma_m}{g}\]</div>
+<span class="eqno">(106)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-4" title="Link to this equation"></a></span>\[\rho_m = \frac{\gamma_m}{g}\]</div>
 <p>where g is gravitational acceleration.
 Finally, the volume of the total mixture of water and sediment in a mudflow can be determined by multiplying the water volume by the bulking factor.
 The bulking factor is simply:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-5">
-<span class="eqno">(18)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-5" title="Link to this equation"></a></span>\[BF = \frac{1}{1 - C_v}\]</div>
+<span class="eqno">(107)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-5" title="Link to this equation"></a></span>\[BF = \frac{1}{1 - C_v}\]</div>
 <p>It is apparent that the bulking factor is 2.0 for a sediment concentration by volume of 50%.
 Even small volumes of sediment in a flood increase the total flood volume.
 A concentration of 7% by volume for a conventional river bedload and suspended results in a bulking factor of 1.075 indicating that the flood volume
@@ -389,18 +392,18 @@ flow surges.</p>
 The total shear stress τ depends on the cohesive yield stress τc, the Mohr-Coulomb shear τmc, the viscous shear stress τv (η dv/dy), the turbulent
 shear stress τt, and the dispersive shear stress τd.</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-6">
-<span class="eqno">(19)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-6" title="Link to this equation"></a></span>\[\tau = \tau_c + \tau_{mc} + \tau_v + \tau_t + \tau_d\]</div>
+<span class="eqno">(108)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-6" title="Link to this equation"></a></span>\[\tau = \tau_c + \tau_{mc} + \tau_v + \tau_t + \tau_d\]</div>
 <p>When written in terms of the shear rate (dv/dy) the following quadratic rheological model can be defined (O’Brien and Julien, 1985):</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-7">
-<span class="eqno">(20)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-7" title="Link to this equation"></a></span>\[\tau = \tau_y
+<span class="eqno">(109)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-7" title="Link to this equation"></a></span>\[\tau = \tau_y
        + \eta \left( \frac{dv}{dy} \right)
        + C \left( \frac{dv}{dy} \right)^{2}\]</div>
 <p>where</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-8">
-<span class="eqno">(21)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-8" title="Link to this equation"></a></span>\[\tau_y = \tau_c + \tau_{mc}\]</div>
+<span class="eqno">(110)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-8" title="Link to this equation"></a></span>\[\tau_y = \tau_c + \tau_{mc}\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-9">
-<span class="eqno">(22)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-9" title="Link to this equation"></a></span>\[C = \rho_m\, l^{2} + f(\rho_m, C_v)\, d_s^{2}\]</div>
+<span class="eqno">(111)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-9" title="Link to this equation"></a></span>\[C = \rho_m\, l^{2} + f(\rho_m, C_v)\, d_s^{2}\]</div>
 <p>In these equations, η is the dynamic viscosity; τ<sub>c</sub> is the cohesive yield strength; the Mohr Coulomb stress τmc = pstanφ depends on the
 intergranular pressure ps and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which depends on the mass
 density of the mixture ρ<sub>m</sub>, the Prandtl mixing length l, the sediment size d<sub>s</sub> and a function of the volumetric sediment concentration
@@ -408,7 +411,7 @@ Cv.
 Bagnold (1954) defined the function relationship f(ρm, Cv) as: where a<sub>i</sub> (~ 0.01) is an empirical coefficient and C<sub>*</sub> is the maximum
 static volume concentration for the sediment particles.</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-10">
-<span class="eqno">(23)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-10" title="Link to this equation"></a></span>\[f(\rho_m, C_v)
+<span class="eqno">(112)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-10" title="Link to this equation"></a></span>\[f(\rho_m, C_v)
 = a_i\,\rho_m
   \left[
     \left( \frac{C_*}{C_v} \right)^{1/3}
@@ -418,7 +421,7 @@ static volume concentration for the sediment particles.</p>
 Egashira et al.
 (1989) revised this relationship and suggested the following:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-11">
-<span class="eqno">(24)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-11" title="Link to this equation"></a></span>\[f(\rho_s, C_v)
+<span class="eqno">(113)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-11" title="Link to this equation"></a></span>\[f(\rho_s, C_v)
 = \frac{\pi}{12}
   \left( \frac{6}{\pi} \right)^{1/3}
   \sin^2 \alpha_I\,
@@ -451,13 +454,13 @@ It should be noted, however, that sediment concentration is a critical factor th
 By analogy, from the work of Meyer-Peter and Müller (1948) and Einstein (1950), the shear stress relationship is depth integrated and rewritten in the
 following form as a dimensionless slope:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-12">
-<span class="eqno">(25)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-12" title="Link to this equation"></a></span>\[S_f = S_y + S_v + S_{td}\]</div>
+<span class="eqno">(114)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-12" title="Link to this equation"></a></span>\[S_f = S_y + S_v + S_{td}\]</div>
 <p>where the total friction slope S<sub>f</sub> is the sum of the yield slope S<sub>y</sub>, the viscous slope S<sub>v</sub>, and the turbulent-dispersive
 slope S<sub>td</sub>.
 The viscous and turbulent-dispersive slope terms are written in terms of depth-averaged velocity V.
 The viscous slope can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-13">
-<span class="eqno">(26)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-13" title="Link to this equation"></a></span>\[S_v = \frac{K\,\eta}{8\,\gamma_m}\,\frac{V}{h^{2}}\]</div>
+<span class="eqno">(115)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-13" title="Link to this equation"></a></span>\[S_v = \frac{K\,\eta}{8\,\gamma_m}\,\frac{V}{h^{2}}\]</div>
 <p>where γ<sub>m</sub> is the specific weight of the sediment mixture.</p>
 <p>The resistance parameter K for laminar flow equals 24 for smooth wide rectangular channels but increases significantly (~ 50,000) with roughness and
 irregular cross section geometry.
@@ -504,19 +507,19 @@ Resistance Parameters for LaminarFlow</em><sup>1</sup></p>
 <p>The flow resistance n<sub>td</sub> of the turbulent and dispersive shear stress components are combined into an equivalent Manning’s n-value for the
 flow:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-14">
-<span class="eqno">(27)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-14" title="Link to this equation"></a></span>\[S_{td} = \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}\]</div>
+<span class="eqno">(116)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-14" title="Link to this equation"></a></span>\[S_{td} = \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}\]</div>
 <p>At very high concentrations, the dispersive stress arising from sediment particle contact increases the flow resistance n<sub>td</sub> by transferring
 more momentum flux to the boundary.
 To estimate this increase in flow resistance, the conventional turbulent flow resistance n-value n<sub>t</sub> is increased by an exponential function
 of the sediment concentration C<sub>v</sub>.</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-15">
-<span class="eqno">(28)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-15" title="Link to this equation"></a></span>\[n_{td} = n_t\, b\, e^{m\, C_v}\]</div>
+<span class="eqno">(117)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-15" title="Link to this equation"></a></span>\[n_{td} = n_t\, b\, e^{m\, C_v}\]</div>
 <p>where: n<sub>t</sub> is the turbulent n-value, b is a coefficient (0.0538) and m is an exponent (6.0896).
 This equation was based on unpublished paper by Julien and O’Brien (1998) that relates the dispersive and turbulent resistance in hyperconcentrated
 sediment flows as function of the ratio of the flow depth to the sediment grain size.</p>
 <p>The friction slope components can then be combined in the following form:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-16">
-<span class="eqno">(29)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-16" title="Link to this equation"></a></span>\[S_f
+<span class="eqno">(118)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-16" title="Link to this equation"></a></span>\[S_f
 = \frac{\tau_y}{\gamma_m\, h}
   + \frac{K\, \eta\, V}{8\, \gamma_m\, h^{2}}
   + \frac{n_{td}^{2}\, V^{2}}{h^{4/3}}\]</div>
@@ -529,9 +532,9 @@ The specific weight of the fluid matrix γm, yield stress τy and viscosity η v
 Unless a rheological analysis of the mudflow site depositional material is available, the following empirical relationships can be used to compute
 viscosity and yield stress: and</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-17">
-<span class="eqno">(30)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-17" title="Link to this equation"></a></span>\[\eta = \alpha_1\, e^{\beta_1\, C_v}\]</div>
+<span class="eqno">(119)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-17" title="Link to this equation"></a></span>\[\eta = \alpha_1\, e^{\beta_1\, C_v}\]</div>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-18">
-<span class="eqno">(31)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-18" title="Link to this equation"></a></span>\[\tau_y = \alpha_2\, e^{\beta_2\, C_v}\]</div>
+<span class="eqno">(120)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-18" title="Link to this equation"></a></span>\[\tau_y = \alpha_2\, e^{\beta_2\, C_v}\]</div>
 <p>where α<sub>i</sub> and β<sub>i</sub> are empirical coefficients defined by laboratory experiment (O’Brien and Julien, 1988).
 The viscosity and yield stress are shown to be functions of the volumetric sediment concentration C<sub>v</sub> of silts, clays and in some cases, fine
 sands and do not include larger clastic material rafted along with the flow (Table 3 and Figs.
@@ -937,7 +940,7 @@ Granular flows that can be prescribed by the dispersive stress relationship alon
 </div></blockquote>
 <p>Julien and Lan (1991) proposed a dimensionless form of the quadratic rheological model:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-19">
-<span class="eqno">(32)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-19" title="Link to this equation"></a></span>\[\tau^{*} = 1 + a\, (1 + T_d)\, D_v\]</div>
+<span class="eqno">(121)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-19" title="Link to this equation"></a></span>\[\tau^{*} = 1 + a\, (1 + T_d)\, D_v\]</div>
 <dl>
 <dt>where:</dt><dd><p>τ<sup>*</sup> = Dimensionless excess shear stress.
 τ<sup>*</sup> = (τ - τy)/η (du/dy).
@@ -961,7 +964,7 @@ When D<sub>v</sub> is large the flow is dispersive and when D<sub>v</sub> is sma
 <p>A transition regime exists when 30 &lt; D<sub>v</sub> &lt; 400 in which all the quadratic rheological equation terms are not negligible.</p>
 <p>The turbulent-dispersive ratio T<sub>d</sub> can be rewritten as:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-20">
-<span class="eqno">(33)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-20" title="Link to this equation"></a></span>\[T_d = \frac{0.1}{\eta \left( \frac{h}{d_s} \right)}\]</div>
+<span class="eqno">(122)<a class="headerlink" href="#equation-flo-2d-pro-simulating-mudflow-guidelines-2021-simulating-mudflow-guidelines-2021-20" title="Link to this equation"></a></span>\[T_d = \frac{0.1}{\eta \left( \frac{h}{d_s} \right)}\]</div>
 <p>where h/d<sub>s</sub> is the relative submergence of a sediment particle of grain size d<sub>s</sub>.
 This enables the following relationships to be highlighted:</p>
 <p>T<sub>d</sub> &gt; 1, the turbulent shear stress is dominant and h/d<sub>s</sub> &gt; 70 (small dispersive stress) T<sub>d</sub> &lt; 1, the turbulent shear stress
@@ -1178,7 +1181,7 @@ Chem., 55(110), 18-29.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../Hydraulic%20Structures%20Guidelines%202021/Hydraulic%20Structures%20Guidelines%202021.html" class="btn btn-neutral float-left" title="FLO-2D Hydraulic Structure Guidelines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../flo-2d_plugin/index.html" class="btn btn-neutral float-right" title="FLO-2D Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../GDS%20Manual%20PRO%202021/GDS%20Manual%20PRO%202021.html" class="btn btn-neutral float-right" title="GDS Manual PRO 2021" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

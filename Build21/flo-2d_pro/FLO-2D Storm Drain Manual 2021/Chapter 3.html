@@ -57,6 +57,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center 2021</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Pro%20Reference%20Manual%202021/index.html">FLO-2D Pro Reference Manual 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Channel%20Guidelines%202021/index.html">FLO-2D Channel Guidelines 2021</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">FLO-2D Storm Drain Manual 2021</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="Chapter%201.html">1. Chapter 1</a></li>
@@ -76,6 +77,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines%202021/Hydraulic%20Structures%20Guidelines%202021.html">FLO-2D Hydraulic Structure Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html">Simulating Mudflow Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html#references">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GDS%20Manual%20PRO%202021/GDS%20Manual%20PRO%202021.html">GDS Manual PRO 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021/Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021.html">Levee Dam and Wall Breach Guidelines</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
@@ -482,18 +485,18 @@ SWMMFLO.DAT Input Variable Descriptions</strong></p>
 <p>QGIS plugin creates the SWMMFLO.DAT file, review FLO-2D Plugin User’s Manual and FLO-2D Plugin Technical Reference Manual for more information.</p>
 <p>To create the SWMMFLO.DAT in GDS, go Tools | Storm Drain | View Storm Drain Inlets Dialog command.
 Browse for the SWMM.inp file using the GDS Window “Select a Storm Drain *.inp file” as it is shown in Figure 43.</p>
-<img alt="../../_images/Chapte0033.jpg" src="../../_images/Chapte0033.jpg" />
+<img alt="../../_images/Chapte0035.jpg" src="../../_images/Chapte0035.jpg" />
 <p><em>Figure 43.
 GDS Open *.inp File</em></p>
 <p>The GDS will read the *.inp data file and those junctions which names start with an ‘I’ is identified by the GDS.
 The data from the storm drain file will then be paired with the data in the SWMMFLO.DAT file.
 Enter the inlet geometry and save the SWMMFLO.DAT file.
 The SWMMFLO.DAT file dialog box is shown in Figure 44.</p>
-<img alt="../../_images/Chapte0043.jpg" src="../../_images/Chapte0043.jpg" />
+<img alt="../../_images/Chapte0047.jpg" src="../../_images/Chapte0047.jpg" />
 <p><em>Figure 44.
 GDS Enter Storm Drain Inlet Geometry Data</em></p>
 <p>The typical structure of a SWMMFLO.DAT file is shown in Figure 45.</p>
-<img alt="../../_images/Chapte0053.jpg" src="../../_images/Chapte0053.jpg" />
+<img alt="../../_images/Chapte0056.jpg" src="../../_images/Chapte0056.jpg" />
 <p><em>Figure 45.
 Typical SWMMFLO.DAT Input Data File</em></p>
 </section>
@@ -506,7 +509,7 @@ discharge to the surface or out of the system.</p>
 Figure 46..
 This is the ‘Free’ outfall condition.
 Unchecking the ‘Allow Discharge’ box (‘off’) forces outfall discharge to be removed from the complete model system.</p>
-<img alt="../../_images/Chapte0064.jpg" src="../../_images/Chapte0064.jpg" />
+<img alt="../../_images/Chapte0068.jpg" src="../../_images/Chapte0068.jpg" />
 <p><em>Figure 46.
 GDS Dialog Box for Storm Drain Outfall Switch</em></p>
 <p>The required data in the SWMMOUTF.DAT is shown in Table 9 and Table 10:</p>
@@ -579,7 +582,7 @@ drain system.</p>
 For a more detailed information review the FLO-2D Plugin User’s Manual and the FLO-2D Plugin Technical Reference Manual.</p>
 <p>In the GDS this option (INTYPE = 4 in the SWMMFLO.DAT) is assigned in the inlet geometry dialog box (Figure 47.).
 The rating table is used throughout the simulation without adjustment.</p>
-<img alt="../../_images/Chapte0072.jpg" src="../../_images/Chapte0072.jpg" />
+<img alt="../../_images/Chapte0076.jpg" src="../../_images/Chapte0076.jpg" />
 <p><em>Figure 47.
 GDS Dialog Box for Entering Rating Table data for INTYPE 4</em></p>
 <p>The structure of a SWMMFLORT.DAT file is:</p>
@@ -711,7 +714,7 @@ ID  Grid Cell   Inlet ID    Clogging Factor - C<sub>f</sub>(%) Time for clogging
 D   2694           I1           25                              0.50
 D   2409           I2           50                              3.25
 
-</pre><img alt="../../_images/Chapte0083.jpg" src="../../_images/Chapte0083.jpg" />
+</pre><img alt="../../_images/Chapte0086.jpg" src="../../_images/Chapte0086.jpg" />
 <p><em>Figure 48.
 GDS Dialog Box for Entering clogging factor data.</em></p>
 </section>
@@ -721,7 +724,7 @@ GDS Dialog Box for Entering clogging factor data.</em></p>
 This file has the same name as the project file and the extension *.ini.
 It contains global settings and model output options such as map display, legend colors and intervals, object default values, etc.
 To enable the display of results in the storm drain GUI the user must set the last two lines in Figure 49 as shown.</p>
-<img alt="../../_images/Chapte0091.jpg" src="../../_images/Chapte0091.jpg" />
+<img alt="../../_images/Chapte0095.jpg" src="../../_images/Chapte0095.jpg" />
 <p><em>Figure 49.
 SWMM.ini file.</em></p>
 </section>

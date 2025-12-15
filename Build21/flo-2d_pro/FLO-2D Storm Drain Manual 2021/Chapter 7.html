@@ -57,6 +57,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center 2021</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Pro%20Reference%20Manual%202021/index.html">FLO-2D Pro Reference Manual 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Channel%20Guidelines%202021/index.html">FLO-2D Channel Guidelines 2021</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">FLO-2D Storm Drain Manual 2021</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="Chapter%201.html">1. Chapter 1</a></li>
@@ -76,6 +77,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines%202021/Hydraulic%20Structures%20Guidelines%202021.html">FLO-2D Hydraulic Structure Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html">Simulating Mudflow Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html#references">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GDS%20Manual%20PRO%202021/GDS%20Manual%20PRO%202021.html">GDS Manual PRO 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021/Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021.html">Levee Dam and Wall Breach Guidelines</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
@@ -146,7 +149,7 @@ o Ideally the elevations in the *.inp file should match those of the grid system
 </li>
 </ul>
 </div></blockquote>
-<img alt="../../_images/Chapte0067.jpg" src="../../_images/Chapte0067.jpg" />
+<img alt="../../_images/Chapte00611.jpg" src="../../_images/Chapte00611.jpg" />
 <p><em>Figure 79.
 SWMM GUI Junction Dialog Box Showing the Required Data</em></p>
 <p><em>Outfalls</em></p>
@@ -175,7 +178,7 @@ the flow off the storm drain system.</p></li>
 <li><p>Tide gate: Set to ‘NO’ for the outfalls to exchange flows with the surface water.</p></li>
 </ul>
 </div></blockquote>
-<img alt="../../_images/Chapte0075.jpg" src="../../_images/Chapte0075.jpg" />
+<img alt="../../_images/Chapte0079.jpg" src="../../_images/Chapte0079.jpg" />
 <p><em>Figure 80.
 SWMM GUI Outfall Dialog Box.</em></p>
 <p><strong>SWMM.ini</strong></p>
@@ -201,16 +204,16 @@ FLO-2D engine performs all the surface flood routing.</p></li>
 </div></blockquote>
 <p>After the SWMM.inp file has been edited, the storm drain command can be called from the GDS (Figure 81.),
 QGIS plug-in can also be used to create the Storm Drain data files, review FLO-2D Plugin User’s Manual for more details.</p>
-<img alt="../../_images/Chapte0027.jpg" src="../../_images/Chapte0027.jpg" />
+<img alt="../../_images/Chapte00211.jpg" src="../../_images/Chapte00211.jpg" />
 <p><em>Figure 81.
 GDS Storm Drain Commands</em></p>
 <p>The FLO-2D Graphical User Interface (GUI) then locates and reads the SWMM.inp file (Figure 82.)
 and loads the SWMM inlet nodes and associates them with a FLO-2D grid element as shown in Figure 83.
 At this point the storm drain geometry can be entered in the GUI.</p>
-<img alt="../../_images/Chapte0036.jpg" src="../../_images/Chapte0036.jpg" />
+<img alt="../../_images/Chapte0038.jpg" src="../../_images/Chapte0038.jpg" />
 <p><em>Figure 82.
 Reading the SWMM.inp File in the GDS.</em></p>
-<img alt="../../_images/Chapte0045.jpg" src="../../_images/Chapte0045.jpg" />
+<img alt="../../_images/Chapte0049.jpg" src="../../_images/Chapte0049.jpg" />
 <p><em>Figure 83.
 GDS dialog Inlet Geometry Data</em></p>
 <p><strong>SWMMOUTF.DAT</strong></p>
@@ -220,7 +223,7 @@ The FLO-2D GUI reads the outfall nodes from the SWMM.inp file, paired the outfal
 If the ‘OFF’ option is selected, the outfall node is treated as a regular outfall in SWMM discharging flow off the pipe network system.
 To create this file, run the GDS and go to Tools | Storm Drain | View Outfall Nodes Dialog command (Figure 84.).
 The dialog can then be used to turn ‘ON’ or ‘OFF’ the outfall nodes and save the SWMMOUTF.DAT file.</p>
-<img alt="../../_images/Chapte0085.jpg" src="../../_images/Chapte0085.jpg" />
+<img alt="../../_images/Chapte0088.jpg" src="../../_images/Chapte0088.jpg" />
 <p><em>Figure 84.
 GDS Outfall Dialog Box Command</em></p>
 <p><em>Simulation Options</em></p>
@@ -231,7 +234,7 @@ GDS Outfall Dialog Box Command</em></p>
 <li><p>The remaining storm drain parameters should be selected in accordance with the SWMM User’s Manual (Figure 85).</p></li>
 </ul>
 </div></blockquote>
-<img alt="../../_images/Chapte0055.jpg" src="../../_images/Chapte0055.jpg" />
+<img alt="../../_images/Chapte0058.jpg" src="../../_images/Chapte0058.jpg" />
 <p><em>Figure 85.
 SWMM Dialog with the General Tab Selections</em></p>
 </section>

@@ -57,6 +57,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center 2021</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Pro%20Reference%20Manual%202021/index.html">FLO-2D Pro Reference Manual 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Channel%20Guidelines%202021/index.html">FLO-2D Channel Guidelines 2021</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">FLO-2D Storm Drain Manual 2021</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="Chapter%201.html">1. Chapter 1</a></li>
@@ -76,6 +77,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines%202021/Hydraulic%20Structures%20Guidelines%202021.html">FLO-2D Hydraulic Structure Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html">Simulating Mudflow Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html#references">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GDS%20Manual%20PRO%202021/GDS%20Manual%20PRO%202021.html">GDS Manual PRO 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021/Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021.html">Levee Dam and Wall Breach Guidelines</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
@@ -470,10 +473,10 @@ This system shows that the bed elevation of the channel is equal to the invert e
 <li><p>Inlet Elevation = 296.3 ft</p></li>
 </ul>
 </div></blockquote>
-<img alt="../../_images/Chapte0025.jpg" src="../../_images/Chapte0025.jpg" />
+<img alt="../../_images/Chapte0029.jpg" src="../../_images/Chapte0029.jpg" />
 <p><em>Figure 50.
 Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet</em></p>
-<img alt="../../_images/Chapte0034.jpg" src="../../_images/Chapte0034.jpg" />
+<img alt="../../_images/Chapte0036.jpg" src="../../_images/Chapte0036.jpg" />
 <p><em>Figure 51.
 Elevation of a Trapezoidal 1-D Channel Discharging to a Storm Drain Inlet</em></p>
 <p>Figure 52 shows a storm drain system interfacing with a channel system.
@@ -485,7 +488,7 @@ function of the following:</p>
 <li><p>Channel bank elevation = inlet rim elevation (typical design)</p></li>
 </ul>
 </div></blockquote>
-<img alt="../../_images/Chapte0042.png" src="../../_images/Chapte0042.png" />
+<img alt="../../_images/Chapte0043.png" src="../../_images/Chapte0043.png" />
 <p><em>Figure 52.
 Complex Interaction between a Storm Drain Pipe and 1-D Channel</em></p>
 <p>To connect a storm drain outfall to a channel element the following issues should be addressed:</p>
@@ -497,7 +500,7 @@ Complex Interaction between a Storm Drain Pipe and 1-D Channel</em></p>
 </div></blockquote>
 <p>Figure 53 shows a complex storm drain – channel system where a channel feeds the storm drain as an inlet and flow returns to surface channel
 downstream.</p>
-<img alt="../../_images/Chapte0052.png" src="../../_images/Chapte0052.png" />
+<img alt="../../_images/Chapte0053.png" src="../../_images/Chapte0053.png" />
 <p><em>Figure 53.
 Complex Flow Exchange between a Storm Drain System and 1-D Channel</em></p>
 <p>Storm drain outfalls are assigned to the channel left bank element.
@@ -505,7 +508,7 @@ For most cases, the outfall invert elevation would be assigned to the channel el
 If the coordinates in the SWMM.inp file are the left bank element channel coordinates, then the QGIS Plugin or the GDS will automatically assign the
 outfall node to the left bank element.
 The outfall should be correctly paired to the left bank element in the SWMMOUTF.DAT (Figure 54).</p>
-<img alt="../../_images/Chapte0065.jpg" src="../../_images/Chapte0065.jpg" />
+<img alt="../../_images/Chapte0069.jpg" src="../../_images/Chapte0069.jpg" />
 <p><em>Figure 54.
 Typical Configuration of a Storm Drain Outfall Discharging to a Natural Channel</em></p>
 <p>The coordinates of the different storm drain components from the SWMM.inp file are paired to the grid elements in the surface layer.
@@ -517,7 +520,7 @@ The outfall should not be assigned to the left bank floodplain element.
 If the outfall physically discharges to the floodplain elevation instead of the channel bed elevation, assign the outfall position to a contiguous
 element that is not a channel bank element.
 Assignment of the outfall to a right bank element, or a channel interior element will generate an error message.</p>
-<img alt="../../_images/Chapte0073.jpg" src="../../_images/Chapte0073.jpg" />
+<img alt="../../_images/Chapte0077.jpg" src="../../_images/Chapte0077.jpg" />
 <p><em>Figure 55.
 Outfall Nodes Paired to Interior Channel Elements by GDS</em></p>
 <p>The outfall invert elevation can be less than the channel thalweg elevations (underground), and the storm drain would be assumed to be underwater with
@@ -533,7 +536,7 @@ The artificial volume is accounted for in the storm drain model.
 When the model runs, inflow may be added to either the outfall grid element or the upstream storm drain pipe network and the flow can go either in or
 out of the outfall pipe based on the pressure head (Figure 56).
 To account for volume conservation, the storm drain outflow that represents inflow volume to a FLO-2D channel is reported in the CHVOLUME.OUT file.</p>
-<img alt="../../_images/Chapte0082.png" src="../../_images/Chapte0082.png" />
+<img alt="../../_images/Chapte0083.png" src="../../_images/Chapte0083.png" />
 <p><em>Figure 56.
 Underground Outfall Condition</em></p>
 <p>Water will flow in or out of the outfall pipe based on the relationship between the water surface elevation and pipe pressure head.
@@ -541,7 +544,7 @@ Water can enter the storm drain when the water surface elevation is greater than
 pressure head is above the water surface elevation.
 This behavior can introduce oscillations in the system that can be explained as a respond to the surface water and storm drain pressure interaction
 (Figure 57).</p>
-<img alt="../../_images/Chapte0092.jpg" src="../../_images/Chapte0092.jpg" />
+<img alt="../../_images/Chapte0096.jpg" src="../../_images/Chapte0096.jpg" />
 <p><em>Figure 57.
 Inlet and Outfall Pressure Head Variation Cause Pipe Discharge Oscillations</em></p>
 </section>
