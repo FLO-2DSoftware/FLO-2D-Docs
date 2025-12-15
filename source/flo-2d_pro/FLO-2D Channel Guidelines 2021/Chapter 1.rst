@@ -411,7 +411,7 @@ The depth integrated roughness is given by the equation:
 .. math::
     :label:
 
-    n_d = n_b r_c e^{–(r2 depth/dmax)}
+    n_d = n_b r_c e^{–(r2 \, depth/dmax)}
 
 where:
 
