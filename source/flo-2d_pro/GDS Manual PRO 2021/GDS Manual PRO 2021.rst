@@ -1373,8 +1373,7 @@ Inflow nodes and the linked hydrographs will be written to the INFLOW.DAT file.
 Outflow nodes are assigned though the option “\ *Outflow element (no hydrograph)*\ ”.
 The list of outflow nodes will be written to the OUTFLOW.DAT file.
 
-Initial Assignment of Hydrographs
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Initial Assignment of Hydrographs*
 
 The initial assignment of hydrographs to inflow nodes has three options:
 
@@ -1385,11 +1384,11 @@ The initial assignment of hydrographs to inflow nodes has three options:
     2. All other methods of creating a project.
        The user will be required to create the grid system and then later right-click the selected inflow nodes to assign hydrographs as described above.
 
-*3.5.12.2 Setting outflow nodes* These are the options for outflow nodes:
+*3.5.12.2 Setting outflow nodes*
+
+    These are the options for outflow nodes:
 
 *3.5.12.3 Outflow element (no hydrograph):*
-
-    .. image:: img/GDS128.jpg
 
     - Line ‘O’ for floodplain
     - Line ‘K’ for Channel
@@ -1398,6 +1397,8 @@ The initial assignment of hydrographs to inflow nodes has three options:
           higher. This change occurs automatically at runtime.
         - Channel elements will generate an error in the GDS and when the engine is executed.
           An error report is written to the error.chk file and the channel bed elevation must be manually adjusted.
+
+    .. image:: img/GDS128.jpg
 
 For this outflow assignment, the outflow nodes discharge all the inflow to them off the grid system using an approximate normal depth flow condition.
 The outflow node is essentially a sink.
