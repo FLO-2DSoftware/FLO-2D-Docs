@@ -1511,34 +1511,50 @@ The sediment concentration by volume C\ :sub:`v` is given by:
 
 C\ :sub:`v` is related to the sediment concentration by weight C\ :sub:`w` by:
 
-   C\ :sub:`v` = C\ :sub:`w`\ γ/ {γ\ :sub:`s` - C\ :sub:`w`\ (γ\ :sub:`s` - γ)}
+.. math::
+   :label:
 
-   where γ = specific weight of the water and γ\ :sub:`s` = specific weight of the sediment.
-   The sediment concentration can also be expressed in parts per million (ppm) by multiplying the concentration by weight C\ :sub:`w` by 10\ :sup:`6`.
-   The specific weight of the mudflow mixture γ\ :sub:`m` is a function of the sediment concentration by volume:
+   C_v = \frac{C_w\, \gamma}{\gamma_s - C_w\, (\gamma_s - \gamma)}
 
-   γ\ :sub:`m` = γ + C\ :sub:`v`\ (γ\ :sub:`s` - γ)
+where γ = specific weight of the water and γ\ :sub:`s` = specific weight of the sediment.
+The sediment concentration can also be expressed in parts per million (ppm) by multiplying the concentration by weight C\ :sub:`w` by 10\ :sup:`6`.
+The specific weight of the mudflow mixture γ\ :sub:`m` is a function of the sediment concentration by volume:
 
-   Similarly the density of the mudflow mixture ρ\ :sub:`m` is given by:
+.. math::
+   :label:
 
-   ρ\ :sub:`m` = ρ + C\ :sub:`v` (ρ\ :sub:`s` - ρ)
+   \gamma_m = \gamma + C_v\, (\gamma_s - \gamma)
 
-   and
+Similarly the density of the mudflow mixture ρ\ :sub:`m` is given by:
 
-   ρ\ :sub:`m` = γ\ :sub:`m` /g
+.. math::
+   :label:
 
-   where g is gravitational acceleration.
-   Finally, the total mixture volume of water and sediment can be determined by multiplying the water volume by the bulking factor.
-   The bulking factor is simply:
+   \rho_m = \rho + C_v\, (\rho_s - \rho)
 
-   BF = 1/(1 - C\ :sub:`v`)
+and
 
-   The bulking factor is 2.0 for a sediment concentration by volume of 50%.
-   A sediment concentration of 7% by volume for a conventional river bedload and suspended results in a bulking factor of 1.075 indicating that the flood
-   volume is 7.5% greater than if the flood was considered to be only water.
+.. math::
+   :label:
 
-   These basic relationships will be valuable when analyzing mudflow simulations.
-   Most mudflow studies require estimates of the sediment concentration by volume and the bulking factor to describe the magnitude of the event.
+   \rho_m = \frac{\gamma_m}{g}
+
+where g is gravitational acceleration.
+
+Finally, the total mixture volume of water and sediment can be determined by multiplying the water volume by the bulking factor.
+The bulking factor is simply:
+
+.. math::
+   :label:
+
+   BF = \frac{1}{1 - C_v}
+
+The bulking factor is 2.0 for a sediment concentration by volume of 50%.
+A sediment concentration of 7% by volume for a conventional river bedload and suspended results in a bulking factor of 1.075 indicating that the flood
+volume is 7.5% greater than if the flood was considered to be only water.
+
+These basic relationships will be valuable when analyzing mudflow simulations.
+Most mudflow studies require estimates of the sediment concentration by volume and the bulking factor to describe the magnitude of the event.
    Average and peak sediment concentrations for the flood hydrograph are important variables for mitigation design.
 
    The full range of sediment flows span from water flooding to mud floods, mudflows and landslides.
