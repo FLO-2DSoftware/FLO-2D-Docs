@@ -3,8 +3,8 @@
 Chapter 4. MODEL COMPONENTS
 ===========================
 
- Model Features
- --------------
+Model Features
+--------------
 
 The primary FLO-2D flood routing features and attributes are:
 
@@ -37,8 +37,8 @@ the user can learn about how the flood project responds to mitigation or sensiti
 Model component selection should focus on those physical features that will significantly affect the volume distribution and area of inundation.
 A brief description of the FLO-2D components follows.
 
- Overland Flow
- -------------
+Overland Flow
+-------------
 
 The simplest FLO-2D model is overland flow on an alluvial fan or floodplain.
 Typical overland flow as reflects the water surface elevation, roughness and 8-direction flow path.
@@ -214,145 +214,139 @@ Channel Flow
 
 The full channel guidelines are in the Manuals folder.
 Channel flow is simulated as one-dimensional in the downstream direction.
-   Average flow hydraulics of velocity and depth define the discharge between channel grid elements.
-   Secondary currents, dispersion and super elevation in channel bends are not modeled with the 1-D channel component.
-   The governing equations of continuity and momentum were presented in Section 2.1.
+Average flow hydraulics of velocity and depth define the discharge between channel grid elements.
+Secondary currents, dispersion and super elevation in channel bends are not modeled with the 1-D channel component.
+The governing equations of continuity and momentum were presented in Section 2.1.
 
-   River channel flow is simulated with either rectangular or trapezoidal or surveyed cross sections and is routed with the dynamic wave momentum
-   equation.
-   The channels are represented in the CHAN.DAT by a grid element, cross section geometry that defines the relationship between the thalweg elevation and
-   the bank elevations, average cross section roughness, and the length of channel within the grid element.
-   Channel slope is computed as the difference between the channel element thalweg elevation divided by the half the sum of the channel lengths within
-   the channel elements.
-   Channel elements must be contiguous to be able to share discharge.
-   A tributary confluence is assigned by select the two channel element pairs (tributary and main channel) in the CHAN.DAT file.
+River channel flow is simulated with either rectangular or trapezoidal or surveyed cross sections and is routed with the dynamic wave momentum
+equation.
+The channels are represented in the CHAN.DAT by a grid element, cross section geometry that defines the relationship between the thalweg elevation and
+the bank elevations, average cross section roughness, and the length of channel within the grid element.
+Channel slope is computed as the difference between the channel element thalweg elevation divided by the half the sum of the channel lengths within
+the channel elements.
+Channel elements must be contiguous to be able to share discharge.
+A tributary confluence is assigned by select the two channel element pairs (tributary and main channel) in the CHAN.DAT file.
 
-   The channel width can be larger than the grid element and may encompass several elements (Figure 38).
-   If the channel width is greater than the grid element width, the model extends the channel into neighboring grid elements.
-   A channel may be 1,000 ft (300 m) wide and the grid element only 300 ft (100 m) square.
-   The model also makes sure that there is sufficient floodplain surface area after assigning the right bank.
-   The channel interacts with the bank elements to share discharge to the floodplain.
-   Each bank can have a unique elevation.
-   If the two bank elevations are different in the CHAN.DAT file, the model automatically splits the channel into two elements even if the channel would
-   fit into one grid element.
+The channel width can be larger than the grid element and may encompass several elements (Figure 38).
+If the channel width is greater than the grid element width, the model extends the channel into neighboring grid elements.
+A channel may be 1,000 ft (300 m) wide and the grid element only 300 ft (100 m) square.
+The model also makes sure that there is sufficient floodplain surface area after assigning the right bank.
+The channel interacts with the bank elements to share discharge to the floodplain.
+Each bank can have a unique elevation.
+If the two bank elevations are different in the CHAN.DAT file, the model automatically splits the channel into two elements even if the channel would
+fit into one grid element.
 
-   *Figure 38.
-   Channel Extension Over Several Grid Elements.*
+.. image:: img/Chapter4/Chapte058.jpg
 
-   There are three options for establishing the bank elevation in relationship to the channel bed elevation (thalweg) and the floodplain elevation in the
-   CHAN.DAT file:
+*Figure 38.
+Channel Extension Over Several Grid Elements.*
 
-1. The channel grid element bed elevation is determined by subtracting the assigned channel thalweg depth from the floodplain elevation.
-   This is appropriate for rectangular and trapezoidal cross sections.
+There are three options for establishing the bank elevation in relationship to the channel bed elevation (thalweg) and the floodplain elevation in the
+CHAN.DAT file:
 
-2. A bank elevation is assigned in the CHAN.DAT file and the channel bed elevation is computed by subtracting the channel depth from the lowest bank
-   elevation.
-   This is appropriated for rectangular and trapezoidal cross sections.
+    1. The channel grid element bed elevation is determined by subtracting the assigned channel thalweg depth from the floodplain elevation.
+       This is appropriate for rectangular and trapezoidal cross sections.
+    2. A bank elevation is assigned in the CHAN.DAT file and the channel bed elevation is computed by subtracting the channel depth from the lowest bank
+       elevation.
+       This is appropriated for rectangular and trapezoidal cross sections.
+    3. A surveyed cross section data base is assigned in XSEC.DAT and the model automatically assigns the top-of-bank elevation.
 
-3. A surveyed cross section data base is assigned in XSEC.DAT and the model automatically assigns the top-of-bank elevation.
+When using cross section data for the channel geometry, option 3 should be applied.
 
-..
+In river simulations, the important components include channel routing, the channel-floodplain interaction, hydraulic structures and levees.
+These components are described in more detail in the following sections.
+The basic procedure for creating a FLO-2D river simulation is as follows:
 
-   When using cross section data for the channel geometry, option 3 should be applied.
+*Select Channel Cross Sections.* Surveyed river cross sections should be spaced to represent a uniform river reach that may encompass a number of
+channel elements, say 5 to 10 elements.
+Geo-referenced surveyed cross section station and elevation data can be entered directly into the model data files or the data can be defined by
+setting the highest bank to an arbitrary elevation.
+For channel design purposes, a rectangular or trapezoidal cross section may be selected.
+To use surveyed cross section data, an XSEC.DAT file has to be created with all cross section station and elevation data.
+The cross sections are then assigned to a channel element in the CHAN.DAT.
+The relationship between the flow depth and channel geometry (flow area and wetted perimeter) is based on an interpolation of depth and flow area
+between vertical slices that constitute a channel geometry rating table for each cross section.
+The cross section data in the XSEC.DAT file can be automatically assigned from HEC-RAS file using the GDS.
 
-   In river simulations, the important components include channel routing, the channel-floodplain interaction, hydraulic structures and levees.
-   These components are described in more detail in the following sections.
-   The basic procedure for creating a FLO-2D river simulation is as follows:
+*Locate the Channel Element with Respect to the Grid System.* Using the GDS and an aerial photo, the channels can be assigned to a grid element.
+For channel flow to occur through a reach of river, the channel elements must be neighbors.
 
-   *Select Channel Cross Sections.* Surveyed river cross sections should be spaced to represent a uniform river reach that may encompass a number of
-   channel elements, say 5 to 10 elements.
-   Geo-referenced surveyed cross section station and elevation data can be entered directly into the model data files or the data can be defined by
-   setting the highest bank to an arbitrary elevation.
-   For channel design purposes, a rectangular or trapezoidal cross section may be selected.
-   To use surveyed cross section data, an XSEC.DAT file has to be created with all cross section station and elevation data.
-   The cross sections are then assigned to a channel element in the CHAN.DAT.
-   The relationship between the flow depth and channel geometry (flow area and wetted perimeter) is based on an interpolation of depth and flow area
-   between vertical slices that constitute a channel geometry rating table for each cross section.
-   The cross section data in the XSEC.DAT file can be automatically assigned from HEC-RAS file using the GDS.
+*Adjust the Channel Bed Slope and Interpolate the Cross Sections.* Each channel element is assigned a cross section in the CHAN.DAT file.
+Typically, there are only a few cross sections and many channel elements, so each cross section will be assigned to several channel elements.
+When the cross sections have all been assigned the channel profile looks like a staircase because the channel elements with the same cross section
+have identical bed elevations.
+The channel slope and cross section shape can then be interpolated by using a command in the GDS, QGIS Plug-in or in the PROFILES program that adjusts
+and assigns a cross section with a linear bed slope for each channel element.
+The cross section interpolation is based a weighted flow area adjustment to achieve a more uniform rate of change in the flow area.
 
-   *Locate the Channel Element with Respect to the Grid System.* Using the GDS and an aerial photo, the channels can be assigned to a grid element.
-   For channel flow to occur through a reach of river, the channel elements must be neighbors.
-
-   *Adjust the Channel Bed Slope and Interpolate the Cross Sections.* Each channel element is assigned a cross section in the CHAN.DAT file.
-   Typically, there are only a few cross sections and many channel elements, so each cross section will be assigned to several channel elements.
-   When the cross sections have all been assigned the channel profile looks like a staircase because the channel elements with the same cross section
-   have identical bed elevations.
-   The channel slope and cross section shape can then be interpolated by using a command in the GDS, QGIS Plug-in or in the PROFILES program that adjusts
-   and assigns a cross section with a linear bed slope for each channel element.
-   The cross section interpolation is based a weighted flow area adjustment to achieve a more uniform rate of change in the flow area.
-
-   The user has several other options for setting up the channel data file including grouping the channel elements into segments, specifying initial flow
-   depths, identifying contiguous channel elements that do not share discharge, assigning limiting Froude numbers and depth variable n-value adjustments.
+The user has several other options for setting up the channel data file including grouping the channel elements into segments, specifying initial flow
+depths, identifying contiguous channel elements that do not share discharge, assigning limiting Froude numbers and depth variable n-value adjustments.
 
 Channel-Floodplain Interface
 ----------------------------
 
-   Channel flow is exchanged with the floodplain grid elements in a separate routine after the channel, street and floodplain flow subroutines have been
-   completed (see the Flow Chart in Figure 3).
-   When the channel conveyance capacity is exceeded, an overbank discharge is computed.
-   If the channel flow is less than bankfull discharge and there is no flow on the floodplain, then the channel-floodplain interface routine is not
-   called.
-   The channel-floodplain flow exchange is limited by the available exchange volume in the channel or by the available storage volume on the floodplain.
-   The interface routine is internal to the model and there are no data requirements for its application.
-   This subroutine also computes the flow exchange between the street and the floodplain.
+Channel flow is exchanged with the floodplain grid elements in a separate routine after the channel, street and floodplain flow subroutines have been
+completed (see the Flow Chart in Figure 3).
+When the channel conveyance capacity is exceeded, an overbank discharge is computed.
+If the channel flow is less than bankfull discharge and there is no flow on the floodplain, then the channel-floodplain interface routine is not
+called.
+The channel-floodplain flow exchange is limited by the available exchange volume in the channel or by the available storage volume on the floodplain.
+The interface routine is internal to the model and there are no data requirements for its application.
+This subroutine also computes the flow exchange between the street and the floodplain.
 
-   The channel-floodplain exchange is computed for each channel bank element and is based on the potential water surface elevation difference between the
-   channel and the floodplain grid element containing either channel bank (Figure 2).
-   The velocity of either the channel overbank or the return flow to the channel is computed using the diffusive wave momentum equation.
-   It is assumed that the overbank flow velocity is relatively small and thus the acceleration terms are negligible.
-   For return flow to the channel, if the channel water surface is less than the bank elevation, the bank elevation is used to compute the return flow
-   velocity.
-   Overbank discharge or return flow to the channel is computed using the floodplain assigned roughness.
-   The overland flow can enter a previously dry channel.
+The channel-floodplain exchange is computed for each channel bank element and is based on the potential water surface elevation difference between the
+channel and the floodplain grid element containing either channel bank (Figure 2).
+The velocity of either the channel overbank or the return flow to the channel is computed using the diffusive wave momentum equation.
+It is assumed that the overbank flow velocity is relatively small and thus the acceleration terms are negligible.
+For return flow to the channel, if the channel water surface is less than the bank elevation, the bank elevation is used to compute the return flow
+velocity.
+Overbank discharge or return flow to the channel is computed using the floodplain assigned roughness.
+The overland flow can enter a previously dry channel.
 
 Levees
 ------
 
-   The FLO-2D levee component confines flow on the floodplain surface by blocking one of the eight flow directions.
-   Levees are designated at the grid element boundaries (Figure 39).
-   If a levee runs through the center of a grid element, the model levee position is represented by one or more of the eight grid element boundaries.
-   Levees often follow the boundaries along a series of consecutive elements.
-   A levee crest elevation can be assigned for each of the eight flow directions in a given grid element.
-   The model will predict levee overtopping.
-   When the flow depth exceeds the levee height, the discharge over the levee is computed using the broadcrested weir flow equation.
-   Weir flow occurs until the tailwater depth is 85% of the headwater depth above and then at higher flows, the water is exchanged across the levees
-   using the difference in water surface elevation.
-   Levee overtopping will not cause levee failure unless the failure or breach option is invoked.
+The FLO-2D levee component confines flow on the floodplain surface by blocking one of the eight flow directions.
+Levees are designated at the grid element boundaries (Figure 39).
+If a levee runs through the center of a grid element, the model levee position is represented by one or more of the eight grid element boundaries.
+Levees often follow the boundaries along a series of consecutive elements.
+A levee crest elevation can be assigned for each of the eight flow directions in a given grid element.
+The model will predict levee overtopping.
+When the flow depth exceeds the levee height, the discharge over the levee is computed using the broadcrested weir flow equation.
+Weir flow occurs until the tailwater depth is 85% of the headwater depth above and then at higher flows, the water is exchanged across the levees
+using the difference in water surface elevation.
+Levee overtopping will not cause levee failure unless the failure or breach option is invoked.
 
-   *Figure 39.
-   Levees are Depicted in Red and the River in Blue in the GDS Program.*
+.. image:: img/Chapter4/Chapte059.jpg
 
-   The levee output files include LEVEE.OUT, LEVOVERTOP.OUT and LEVEEDEFIC.OUT.
-   LEVEE.OUT contains the levee elements that failed.
-   Failure width, failure elevation, discharge from the levee breach and the time of failure occurrence are listed.
-   A discharge hydrograph overtopping the levee element is reported in LEVOVERTOP.OUT.
-   The discharge is combined for all the levee directions that are being overtopped.
+*Figure 39.
+Levees are Depicted in Red and the River in Blue in the GDS Program.*
 
-   Finally, the LEVEEDIFIC.OUT file lists the levee elements with loss of freeboard during the flood event.
-   Five levels of freeboard deficit are reported:
+The levee output files include LEVEE.OUT, LEVOVERTOP.OUT and LEVEEDEFIC.OUT.
+LEVEE.OUT contains the levee elements that failed.
+Failure width, failure elevation, discharge from the levee breach and the time of failure occurrence are listed.
+A discharge hydrograph overtopping the levee element is reported in LEVOVERTOP.OUT.
+The discharge is combined for all the levee directions that are being overtopped.
 
-1. = freeboard > 3 ft (0.9 m)
+Finally, the LEVEEDIFIC.OUT file lists the levee elements with loss of freeboard during the flood event.
+Five levels of freeboard deficit are reported:
 
-2. = 2 ft (0.6 m) < freeboard < 3 ft (0.9 m)
+        1. = freeboard > 3 ft (0.9 m)
+        2. = 2 ft (0.6 m) < freeboard < 3 ft (0.9 m)
+        3. = 1 ft (0.3 m) < freeboard < 2 ft (0.6 m)
+        4. = freeboard < 1 ft (0.3 m)
+        5. = levee is overtopped by flow.
 
-3. = 1 ft (0.3 m) < freeboard < 2 ft (0.6 m)
+The levee deficit can be displayed graphically in both MAPPER Pro and MAXPLOT (
 
-4. = freeboard < 1 ft (0.3 m)
-
-5. = levee is overtopped by flow.
-
-..
-
-   The levee deficit can be displayed graphically in both MAPPER Pro and MAXPLOT (
-
-|Chapte003|
+.. image:: img/Chapter4/Chapte003.jpg
 
    Figure 40).
 
-|Chapte003|
+.. image:: img/Chapter4/Chapte003.jpg
 
-   *Figure 40.
-   Levee Freeboard Deficit Plot Using MAXPLOT.*
+*Figure 40.
+Levee Freeboard Deficit Plot Using MAXPLOT.*
 
 Levee and Dam Breach Failures
 -----------------------------
@@ -360,315 +354,289 @@ Levee and Dam Breach Failures
 Breach Options
 ~~~~~~~~~~~~~~
 
-   There are two FLO-2D user defined dam and levee breach options to predict the breach hydrograph: 1) Breach erosion (Figure 41); and 2) Prescribed
-   failure rates (Figure 42).
-   The prescribed breach method uses assigned vertical and horizontal failure rates.
-   The breach erosion option predicts the physical process of sediment scour of the breach opening.
-   In both breach methods, the breach computational timestep is the flood routing timestep.
-   FLO-2D computes the discharge through the breach, the change in upstream storage, the tailwater and backwater effects, and the downstream flood
-   routing.
-   Each failure option generates a series of output files to analyze the dam breach.
-   The model reports of the time of breach or overtopping, the breach hydrograph, peak discharge through the breach, and breach parameters as a function
-   of time.
-   Additional output files to define the dam failure flood hazard include the time-to-flow-depth output files that report the time to the maximum flow
-   depth, the time to onefoot flow depth and time to two-foot flow depth which are useful for delineating evacuation and emergency access routes.
-   The model reports of the time of breach or overtopping, the breach hydrograph, peak discharge through the breach, and breach parameters as a function
-   of time.
-   Additional output files that define the breach hazard include the time-to-flow-depth output files that report the time to the maximum flow depth, the
-   time to one-foot flow depth and time to two-foot flow depth, and deflood time which are useful for delineating evacuation routes.
+There are two FLO-2D user defined dam and levee breach options to predict the breach hydrograph: 1) Breach erosion (Figure 41); and 2) Prescribed
+failure rates (Figure 42).
+The prescribed breach method uses assigned vertical and horizontal failure rates.
+The breach erosion option predicts the physical process of sediment scour of the breach opening.
+In both breach methods, the breach computational timestep is the flood routing timestep.
+FLO-2D computes the discharge through the breach, the change in upstream storage, the tailwater and backwater effects, and the downstream flood
+routing.
+Each failure option generates a series of output files to analyze the dam breach.
+The model reports of the time of breach or overtopping, the breach hydrograph, peak discharge through the breach, and breach parameters as a function
+of time.
+Additional output files to define the dam failure flood hazard include the time-to-flow-depth output files that report the time to the maximum flow
+depth, the time to onefoot flow depth and time to two-foot flow depth which are useful for delineating evacuation and emergency access routes.
+The model reports of the time of breach or overtopping, the breach hydrograph, peak discharge through the breach, and breach parameters as a function
+of time.
+Additional output files that define the breach hazard include the time-to-flow-depth output files that report the time to the maximum flow depth, the
+time to one-foot flow depth and time to two-foot flow depth, and deflood time which are useful for delineating evacuation routes.
 
-   *Figure 41.
-   Example of Levee Breach Urban Flooding.*
+.. image:: img/Chapter4/Chapte060.jpg
 
-   *Figure 42.
-   Example of a Proposed Domestic Water Supply Reservoir Breach Failure.*
+*Figure 41.
+Example of Levee Breach Urban Flooding.*
+
+.. image:: img/Chapter4/Chapte061.jpg
+
+*Figure 42.
+Example of a Proposed Domestic Water Supply Reservoir Breach Failure.*
 
 Prescribed Breach
 ~~~~~~~~~~~~~~~~~
 
-   For the prescribed levee failure routine, the breach can enlarge vertically or horizontally.
-   The initial breach width and depth is hardwired as 1 ft (0.3 m).
-   Rates of breach expansion (ft/hr or m/hr) can be specified for both the horizontal and vertical failure modes.
-   Breach discharge is based on the breach width and the difference in water surface elevations on each side of the levee.
-   A final levee base elevation that is higher than the floodplain elevation can also be specified.
-   The levee failure can occur for the entire grid element width for a given flow direction and then the breach can grow to contiguous levee elements.
-   The prescribed levee breach can be assigned to globally predict levee failure anywhere in the grid system based on the computed water surface
-   elevation.
-   Additional breach failure variables such as initial failure elevation if different from overtopping failure and duration of saturation before failure
-   can be assigned to add detail to multiple levee failure locations.
-   For prescribed breaches you can:
+For the prescribed levee failure routine, the breach can enlarge vertically or horizontally.
+The initial breach width and depth is hardwired as 1 ft (0.3 m).
+Rates of breach expansion (ft/hr or m/hr) can be specified for both the horizontal and vertical failure modes.
+Breach discharge is based on the breach width and the difference in water surface elevations on each side of the levee.
+A final levee base elevation that is higher than the floodplain elevation can also be specified.
+The levee failure can occur for the entire grid element width for a given flow direction and then the breach can grow to contiguous levee elements.
+The prescribed levee breach can be assigned to globally predict levee failure anywhere in the grid system based on the computed water surface
+elevation.
+Additional breach failure variables such as initial failure elevation if different from overtopping failure and duration of saturation before failure
+can be assigned to add detail to multiple levee failure locations.
+For prescribed breaches you can:
 
-- Determine the location of levee failure anywhere in the levee system based on overtopping or based on the water surface elevation reaching a
-  prescribed elevation or distance below the crest elevation for an assigned duration.
-
-- Initiate multiple levee breach failures in various locations that proceed simultaneously.
-
-- Levee failure proceeds with prescribed vertical and horizontal erosion rates that will slow based on the breach shear stress.
+    - Determine the location of levee failure anywhere in the levee system based on overtopping or based on the water surface elevation reaching a
+      prescribed elevation or distance below the crest elevation for an assigned duration.
+    - Initiate multiple levee breach failures in various locations that proceed simultaneously.
+    - Levee failure proceeds with prescribed vertical and horizontal erosion rates that will slow based on the breach shear stress.
 
 Erosion Breach
 ~~~~~~~~~~~~~~
 
-   The breach erosion component was added to the FLO-2D model to combine the downstream unconfined flood routing with a realistic physical process-based
-   assessment of the dam failure.
-   The basis for the FLO-2D model was National Weather Service BREACH model developed by Fread in 1988.
-   More information on the breach model development is available in the FLO-2D Reference Manual.
-   In FLO-2D, a dam can fail as follows:
-
-- Overtopping and development of a breach channel;
-
-- Piping failure;
-
-- Piping failure and roof collapse and development into a breach channel;
-
-- Breach channel enlargement through side slope slumping;
-
-- Breach enlargement by wedge collapse.
-
-..
-
-   The user has the option to specify the breach element and breach elevation or to assign global parameters and the model will locate breach failure
-   element based on the water surface elevation and duration of inundation.
-   During an inflow flood simulation, the reservoir fills until the water surface elevation is higher than the crest and overtops it initiating a breach
-   channel.
-   The user can also assign a prescribed breach elevation.
-   If the water elevation exceeds the breach elevation for a given duration, piping is initiated (with or without an inflow flood).
-   Once the pipe roof collapses, then the discharge is computed through the ensuing breach channel.
-
-   If the user specifies a breach elevation, then piping will be initiated first.
-   The breach discharge is computed as weir flow with a user specified weir coefficient.
-   The discharge is then used to compute velocity and depth in a rectangular pipe.
-   Using the pipe hydraulics and dam embankment material data, sediment transport capacity is computed using one of nine other sediment transport
-   capacity equations in the FLO-2D model.
-   Sediment is uniformly eroded from the walls, bed and roof of the pipe (Figure 43).
-   When the pipe height is larger than the material remaining in the embankment of above, the roof of the pipe collapses and breach channel flow ensues.
-   The channel discharge is also calculated by the weir equation and like the pipe failure the walls and bed of the rectangular channel are scour.
-   As the channel width and depth increases, the slope stability is checked and if the stability criteria are exceeded, the sides of the channel slump
-   and the rectangular breach transitions to a trapezoidal channel (Figure 44).
-
-   The scour of the trapezoidal bed and sides can be non-uniform and controlled by user input.
-   The breach continues to widen, and the breach width will expand to other grid elements if necessary.
-
-|Chapte004|
-
-   *Figure 43.
-   Dam Breach Piping Failure.*
-
-|Chapte005|
-
-   *Figure 44.
-   Dam Breach Channel Development.*
-
-   The dam geometry parameters (Figure 45) associated with a breach erosion failure are:
-
-- Crest Elevation
-
-- Starting Water Surface Elevation (or depth below crest) (ft or m)
-
-- Cumulative Duration of Inundation at Specified Elevation Prior to Breach Initiation (hr)
-
-- Maximum Breach Width (ft or m)
-
-- Prescribed Initial Pipe Elevation (ft or m)
-
-- Tailwater Elevation (ft or m)
-
-- Foundation or Base Elevation for Vertical Breach Cessation (ft or m) These parameters are defined in Figure 45.
-
-Crest Elevation
-
-Starting Water Surface
-
-Prescribed Pipe Elevation
-
-Dam Foundation Elevation
-
-Tailwater Elevation
-
-Maximum Breac
-
-h Width
-
-   *Figure 45.
-   Breach Failure Geometry.
-   (Teton Dam Failure 1976 USBR).*
-
-   Reservoir water is discharged through the breach and downstream by the FLO-2D routing algorithms using volume conservation that tracks the storage
-   along with the discharge in and out of every grid element based on the computational timesteps.
-   Sediment eroded from the dam is also conserved and matched to the breach hole size conservation and the water discharge through the breach is bulked
-   by the eroded sediment.
-   Routing water through the breach continues until the water surface elevation no longer exceeds the prescribed breach bottom elevation or until all the
-   reservoir water is gone.
-   Tailwater submergence of the weir flow will reduce the breach discharge.
-
-   A comprehensive guide to modeling the breach of levees, dams and walls is outlined in the manual Levee, Dam, and Wall Breach Guidelines (FLO-2D,
-   2018).
-
- Hydraulic Structures
- --------------------
-
-   The full hydraulic structures guidelines are in the Handouts folder.
-   Hydraulic structures are simulated by specifying either discharge rating curves or rating tables.
-   Hydraulic structures can include bridges, culverts, weirs, spillways or any hydraulic facility that controls conveyance and whose discharge can be
-   specifying by a rating curve or tables.
-   Backwater effects upstream of bridges or culverts as well as blockage of a culvert or overtopping of a bridge can be simulated.
-   A hydraulic structure can control the discharge between channel or floodplain grid elements that do not have to be contiguous but may be separated by
-   several grid elements.
-   For example, a culvert under an interstate highway may span several grid elements.
-
-   A hydraulic structure rating curve equation specifies discharge as a function of the headwater depth h:
-
-   Q = a h\ :sup:`b`
-
-   where: (a) is a regression coefficient and (b) is a regression exponent.
-   More than one power regression relationship may be used for a hydraulic structure by specifying the maximum depth for which the relationship is valid.
-   For example, one depth relationship can represent culvert inlet control and a second relationship can be used for the outlet control.
-   In the case of bridge flow, blockage can be simulated with a second regression that has a zero coefficient for the height of the bridge low chord.
-
-   By specifying a hydraulic structure rating table, the model interpolates between the depth and discharge increments to calculate the discharge.
-   A typical rating curve will start with zero depth and zero discharge and increase in non-uniform increments to the maximum expected discharge or
-   higher.
-   The rating table may be more accurate than the regression relationship if the regression is nonlinear on a log-log plot of the depth and discharge.
-   Flow blockage by debris can be simulated by setting the discharge equal to zero corresponding to a prescribed depth.
-   This blockage option may useful in simulating worst case mud and debris flow scenarios where bridges or culverts are located on alluvial fans.
-   Simulating blockage of a channel bridge or culvert can force all the discharge to flow overland.
-
-   In a simplified storm drain approach, multiple inflow nodes can be assigned to the same outflow element.
-   This will enable the cumulative storm drain discharge at the outlet to be assessed without conduit flow routing.
-   It is possible to assign a limiting conveyance capacity for the outlet node and this will limit the inlet discharge in a successive downstream inflow
-   to the conduit.
-   When the conveyance capacity is exceeded, the discharge in the first inlet to exceed the capacity and the inflow to the remaining downstream inlet
-   nodes is zero.
-   The actual storm drain component engine should be used for a detailed analysis of a storm drain system (see the Storm Drain Section below).
-   Refer to the White Paper Guidelines on Hydraulic Structures for additional details including pump simulation.
-
-   Generalized culvert equations for inlet and outlet control are available for the hydraulic structures.
-   Equations to compute culvert discharge for round and rectangular culverts by evaluating inlet and outlet control have been implemented.
-   The culvert discharge will be computed using equations based on experimental and theoretical results from the U.S.
-   Department of Transportation procedures (Hydraulic Design of Highway Culverts; Publication Number FHWA-NHI-01-0260 revised May 2005) and these can
-   replace the FLO-2D model rating table or curve methods.
-   The equations include options for box and pipe culverts and will take into account different entrance types for box culverts (wing wall flare 30 to 75
-   degrees, wing wall flare 90 or 15 degrees and wing wall flare 0 degrees) and three entrance types for pipe culverts (square edge with headwall, socket
-   end with headwall and socket end projecting).
-   The highlights of this component are:
-
-- Computes discharge through box or circular pipe culverts for various entrance conditions.
-
-- Computes both inlet and outlet control and the transition between them.
-
-- No rating curves or tables required.
-
- Storm Drain Modeling
- --------------------
-
-   The full storm drain guidelines are available in the Manuals folder.
-   The FLO-2D surface water model has a dynamic exchange with the storm drain system.
-   FLO-2D will compute the surface water depth or elevations at storm drain cells and will compute the discharge inflow to the storm drain system based
-   on inlet geometry and water surface head.
-   The storm drain engine will then route the flow in the pipe network and compute potential return flow to the surface water system (Figure 46).
-   Storm drain engine was originally based on the EPA SWMM Model 5.0, but through extensive code enhancements, the FLO2D storm drain engine represents a
-   completely new model.
-   The general approach to the applying the storm drain component is:
-
-- Storm Drain GUI interface (SWMM GUI) is called by the GDS to locate and develop the storm drain system.
-
-- GDS automatically develops the required SWMMFLO.DAT based on the SWMM.inp data file.
-
-- User defines the storm drain geometry in the GDS dialog box.
-
-..
-
-   *Figure 46.
-   Storm Drain Layout in the GDS with a Background Image.*
-
-   The surface water routing model and storm drain model share the same computational timestep.
-   FLO2D is the host model, and computes inlet discharge based on the type of inlet and either weir or orifice flow.
-   The storm drain model accepts the inlet discharge and performs the conduit routing and the potential return flow to the surface water through either
-   inlets, outfalls or popped manhole covers.
-
-   The FLO-2D Storm Drain Guidelines manual is a companion reference document that describes the model integration and explains the data input.
-   The basic storm drain model development procedure is:
-
-i.   Develop and run a basic FLO-2D overland flow model.
-
-ii.
-Open the GDS and call the Storm Drain model GUI (SWMM GUI).
-
-iii.
-Develop a storm drain network with the provided SWMM GUI or one of any number of other associated external SWMM software GUIs.
-
-iv.
-GDS automatically creates the required FLO-2D interface data file when the GUI is closed and sets the storm drain switch to “ON”.
-
-v.   Assign the storm drain inlet geometry and coefficients in the GDS dialog box.
-
-vi.
-Run FLO-2D model with the storm drain component.
-vii.
-Review the results in the SWMM.rpt file and graphically in the SWMM GUI.
-viii.
-Add other FLO-2D model components and details such as channels, buildings and levees.
-
- Street Flow
- -----------
-
-   Street flow as shallow flow in rectangular channels with a curb height using the same routing algorithm as for the 1-D rectangular channels.
-   The flow direction, street width and roughness are specified for each street section within an element.
-   Street and overland flow exchanges are computed in the channel-floodplain flow exchange subroutine.
-   When the curb height is exceeded, the discharge to floodplain portion of the grid element is computed.
-   Return flow to the streets is also simulated.
-
-   Streets are assumed to emanate from the center of the grid element to the boundary in the eight flow directions (Figure 47).
-   An east-west street across a grid element would be assigned two street sections.
-   Each section has a length of one-half the grid element side or diagonal.
-   A grid element may contain one or more streets and the streets may intersect.
-   Street roughness values, street widths, elevations and curb heights can be modified on a grid element or street section basis in the GDS program.
-
-   *Figure 47.
-   Streets Depicted in Green in the GDS Program.*
-
- Floodplain Storage Modification and Flow Obstruction
- ----------------------------------------------------
-
-   One of the unique features the FLO-2D model is its ability to simulate flow conditions associated with flow obstructions or loss of flood storage.
-   Area reduction factors (ARFs) and width reduction factors (WRFs) are coefficients that modify the individual grid element surface area storage and
-   flow width.
-
-   ARFs can be used to reduce the flood volume storage on grid elements due to buildings or topography.
-
-   WRFs can be assigned to any of the eight flow directions in a grid element and can partially or completely obstruct flow paths in all eight directions
-   simulating floodwalls, buildings or berms.
-
-   These factors can greatly enhance the detail of the flood simulation through an urban area.
-   Area reduction factors are specified as a percentage of the total grid element surface area (less than or equal to 1.0).
-   Width reduction factors are specified as a percentage of the grid element side (less than or equal to 1.0).
-   For example, a wall might obstruct 40% of the flow width of a grid element side and a building could cover 75% of the same grid element.
-
-   It is usually sufficient to estimate the area or width reduction on a map by visual inspection without measurement.
-   Visualizing the area or width reduction can be facilitated by plotting the grid system over an imported image in the GDS to locate the buildings and
-   obstructions with respect to the grid system (Figure 48).
-   The easiest method to assign ARF and WRF factors is to interpolate GIS shapefiles of buildings or other features automatically in the GDS or QGIS.
-   It is possible to specify individual grid elements that are totally blocked from receiving any flow in the ARF.DAT file (gray elements in Figure 49).
-
-   It is possible to specify individual grid elements that are totally blocked from receiving any flow in the ARF.DAT file (gray elements in Figure 34).
-   These totally blocked cells do not require any WRF value assignment.
-   To avoid having grid elements with small or negligible surface area (almost totally blocked), any cells with assigned ARF that leave only a small
-   percentage of the grid element are reset at model runtime to ARF = 1 (blocked) according criteria outlined in Table 5.
+The breach erosion component was added to the FLO-2D model to combine the downstream unconfined flood routing with a realistic physical process-based
+assessment of the dam failure.
+The basis for the FLO-2D model was National Weather Service BREACH model developed by Fread in 1988.
+More information on the breach model development is available in the FLO-2D Reference Manual.
+In FLO-2D, a dam can fail as follows:
+
+    - Overtopping and development of a breach channel;
+    - Piping failure;
+    - Piping failure and roof collapse and development into a breach channel;
+    - Breach channel enlargement through side slope slumping;
+    - Breach enlargement by wedge collapse.
+
+The user has the option to specify the breach element and breach elevation or to assign global parameters and the model will locate breach failure
+element based on the water surface elevation and duration of inundation.
+During an inflow flood simulation, the reservoir fills until the water surface elevation is higher than the crest and overtops it initiating a breach
+channel.
+The user can also assign a prescribed breach elevation.
+If the water elevation exceeds the breach elevation for a given duration, piping is initiated (with or without an inflow flood).
+Once the pipe roof collapses, then the discharge is computed through the ensuing breach channel.
+
+If the user specifies a breach elevation, then piping will be initiated first.
+The breach discharge is computed as weir flow with a user specified weir coefficient.
+The discharge is then used to compute velocity and depth in a rectangular pipe.
+Using the pipe hydraulics and dam embankment material data, sediment transport capacity is computed using one of nine other sediment transport
+capacity equations in the FLO-2D model.
+Sediment is uniformly eroded from the walls, bed and roof of the pipe (Figure 43).
+When the pipe height is larger than the material remaining in the embankment of above, the roof of the pipe collapses and breach channel flow ensues.
+The channel discharge is also calculated by the weir equation and like the pipe failure the walls and bed of the rectangular channel are scour.
+As the channel width and depth increases, the slope stability is checked and if the stability criteria are exceeded, the sides of the channel slump
+and the rectangular breach transitions to a trapezoidal channel (Figure 44).
+
+The scour of the trapezoidal bed and sides can be non-uniform and controlled by user input.
+The breach continues to widen, and the breach width will expand to other grid elements if necessary.
+
+.. image:: img/Chapter4/Chapte004.jpg
+
+*Figure 43.
+Dam Breach Piping Failure.*
+
+.. image:: img/Chapter4/Chapte005.jpg
+
+*Figure 44.
+Dam Breach Channel Development.*
+
+The dam geometry parameters (Figure 45) associated with a breach erosion failure are:
+
+    - Crest Elevation
+    - Starting Water Surface Elevation (or depth below crest) (ft or m)
+    - Cumulative Duration of Inundation at Specified Elevation Prior to Breach Initiation (hr)
+    - Maximum Breach Width (ft or m)
+    - Prescribed Initial Pipe Elevation (ft or m)
+    - Tailwater Elevation (ft or m)
+    - Foundation or Base Elevation for Vertical Breach Cessation (ft or m)
+
+These parameters are defined in Figure 45.
+
+.. image:: img/Chapter4/Chapte062.jpg
+
+*Figure 45.
+Breach Failure Geometry. (Teton Dam Failure 1976 USBR).*
+
+Reservoir water is discharged through the breach and downstream by the FLO-2D routing algorithms using volume conservation that tracks the storage
+along with the discharge in and out of every grid element based on the computational timesteps.
+Sediment eroded from the dam is also conserved and matched to the breach hole size conservation and the water discharge through the breach is bulked
+by the eroded sediment.
+Routing water through the breach continues until the water surface elevation no longer exceeds the prescribed breach bottom elevation or until all the
+reservoir water is gone.
+Tailwater submergence of the weir flow will reduce the breach discharge.
+
+A comprehensive guide to modeling the breach of levees, dams and walls is outlined in the manual Levee, Dam, and Wall Breach Guidelines (FLO-2D,
+2018).
+
+Hydraulic Structures
+--------------------
+
+The full hydraulic structures guidelines are in the Handouts folder.
+Hydraulic structures are simulated by specifying either discharge rating curves or rating tables.
+Hydraulic structures can include bridges, culverts, weirs, spillways or any hydraulic facility that controls conveyance and whose discharge can be
+specifying by a rating curve or tables.
+Backwater effects upstream of bridges or culverts as well as blockage of a culvert or overtopping of a bridge can be simulated.
+A hydraulic structure can control the discharge between channel or floodplain grid elements that do not have to be contiguous but may be separated by
+several grid elements.
+For example, a culvert under an interstate highway may span several grid elements.
+
+A hydraulic structure rating curve equation specifies discharge as a function of the headwater depth h:
+
+.. math::
+   :label:
+
+   Q = a\, h^{b}
+
+where: (a) is a regression coefficient and (b) is a regression exponent.
+
+More than one power regression relationship may be used for a hydraulic structure by specifying the maximum depth for which the relationship is valid.
+For example, one depth relationship can represent culvert inlet control and a second relationship can be used for the outlet control.
+In the case of bridge flow, blockage can be simulated with a second regression that has a zero coefficient for the height of the bridge low chord.
+
+By specifying a hydraulic structure rating table, the model interpolates between the depth and discharge increments to calculate the discharge.
+A typical rating curve will start with zero depth and zero discharge and increase in non-uniform increments to the maximum expected discharge or
+higher.
+The rating table may be more accurate than the regression relationship if the regression is nonlinear on a log-log plot of the depth and discharge.
+Flow blockage by debris can be simulated by setting the discharge equal to zero corresponding to a prescribed depth.
+This blockage option may useful in simulating worst case mud and debris flow scenarios where bridges or culverts are located on alluvial fans.
+Simulating blockage of a channel bridge or culvert can force all the discharge to flow overland.
+
+In a simplified storm drain approach, multiple inflow nodes can be assigned to the same outflow element.
+This will enable the cumulative storm drain discharge at the outlet to be assessed without conduit flow routing.
+It is possible to assign a limiting conveyance capacity for the outlet node and this will limit the inlet discharge in a successive downstream inflow
+to the conduit.
+When the conveyance capacity is exceeded, the discharge in the first inlet to exceed the capacity and the inflow to the remaining downstream inlet
+nodes is zero.
+The actual storm drain component engine should be used for a detailed analysis of a storm drain system (see the Storm Drain Section below).
+Refer to the White Paper Guidelines on Hydraulic Structures for additional details including pump simulation.
+
+Generalized culvert equations for inlet and outlet control are available for the hydraulic structures.
+Equations to compute culvert discharge for round and rectangular culverts by evaluating inlet and outlet control have been implemented.
+The culvert discharge will be computed using equations based on experimental and theoretical results from the U.S.
+Department of Transportation procedures (Hydraulic Design of Highway Culverts; Publication Number FHWA-NHI-01-0260 revised May 2005) and these can
+replace the FLO-2D model rating table or curve methods.
+The equations include options for box and pipe culverts and will take into account different entrance types for box culverts (wing wall flare 30 to 75
+degrees, wing wall flare 90 or 15 degrees and wing wall flare 0 degrees) and three entrance types for pipe culverts (square edge with headwall, socket
+end with headwall and socket end projecting).
+The highlights of this component are:
+
+    - Computes discharge through box or circular pipe culverts for various entrance conditions.
+    - Computes both inlet and outlet control and the transition between them.
+    - No rating curves or tables required.
+
+Storm Drain Modeling
+--------------------
+
+The full storm drain guidelines are available in the Manuals folder.
+The FLO-2D surface water model has a dynamic exchange with the storm drain system.
+FLO-2D will compute the surface water depth or elevations at storm drain cells and will compute the discharge inflow to the storm drain system based
+on inlet geometry and water surface head.
+The storm drain engine will then route the flow in the pipe network and compute potential return flow to the surface water system (Figure 46).
+Storm drain engine was originally based on the EPA SWMM Model 5.0, but through extensive code enhancements, the FLO2D storm drain engine represents a
+completely new model.
+The general approach to the applying the storm drain component is:
+
+    - Storm Drain GUI interface (SWMM GUI) is called by the GDS to locate and develop the storm drain system.
+    - GDS automatically develops the required SWMMFLO.DAT based on the SWMM.inp data file.
+    - User defines the storm drain geometry in the GDS dialog box.
+
+.. image:: img/Chapter4/Chapte063.jpg
+
+*Figure 46.
+Storm Drain Layout in the GDS with a Background Image.*
+
+The surface water routing model and storm drain model share the same computational timestep.
+FLO2D is the host model, and computes inlet discharge based on the type of inlet and either weir or orifice flow.
+The storm drain model accepts the inlet discharge and performs the conduit routing and the potential return flow to the surface water through either
+inlets, outfalls or popped manhole covers.
+
+The FLO-2D Storm Drain Guidelines manual is a companion reference document that describes the model integration and explains the data input.
+The basic storm drain model development procedure is:
+
+    i.    Develop and run a basic FLO-2D overland flow model.
+    ii.   Open the GDS and call the Storm Drain model GUI (SWMM GUI).
+    iii.  Develop a storm drain network with the provided SWMM GUI or one of any number of other associated external SWMM software GUIs.
+    iv.   GDS automatically creates the required FLO-2D interface data file when the GUI is closed and sets the storm drain switch to “ON”.
+    v.    Assign the storm drain inlet geometry and coefficients in the GDS dialog box.
+    vi.   Run FLO-2D model with the storm drain component.
+    vii.  Review the results in the SWMM.rpt file and graphically in the SWMM GUI.
+    viii. Add other FLO-2D model components and details such as channels, buildings and levees.
+
+Street Flow
+-----------
+
+Street flow as shallow flow in rectangular channels with a curb height using the same routing algorithm as for the 1-D rectangular channels.
+The flow direction, street width and roughness are specified for each street section within an element.
+Street and overland flow exchanges are computed in the channel-floodplain flow exchange subroutine.
+When the curb height is exceeded, the discharge to floodplain portion of the grid element is computed.
+Return flow to the streets is also simulated.
+
+Streets are assumed to emanate from the center of the grid element to the boundary in the eight flow directions (Figure 47).
+An east-west street across a grid element would be assigned two street sections.
+Each section has a length of one-half the grid element side or diagonal.
+A grid element may contain one or more streets and the streets may intersect.
+Street roughness values, street widths, elevations and curb heights can be modified on a grid element or street section basis in the GDS program.
+
+.. image:: img/Chapter4/Chapte063.jpg
+
+*Figure 47.
+Streets Depicted in Green in the GDS Program.*
+
+Floodplain Storage Modification and Flow Obstruction
+----------------------------------------------------
+
+One of the unique features the FLO-2D model is its ability to simulate flow conditions associated with flow obstructions or loss of flood storage.
+Area reduction factors (ARFs) and width reduction factors (WRFs) are coefficients that modify the individual grid element surface area storage and
+flow width.
+
+ARFs can be used to reduce the flood volume storage on grid elements due to buildings or topography.
+
+WRFs can be assigned to any of the eight flow directions in a grid element and can partially or completely obstruct flow paths in all eight directions
+simulating floodwalls, buildings or berms.
+
+These factors can greatly enhance the detail of the flood simulation through an urban area.
+Area reduction factors are specified as a percentage of the total grid element surface area (less than or equal to 1.0).
+Width reduction factors are specified as a percentage of the grid element side (less than or equal to 1.0).
+For example, a wall might obstruct 40% of the flow width of a grid element side and a building could cover 75% of the same grid element.
+
+It is usually sufficient to estimate the area or width reduction on a map by visual inspection without measurement.
+Visualizing the area or width reduction can be facilitated by plotting the grid system over an imported image in the GDS to locate the buildings and
+obstructions with respect to the grid system (Figure 48).
+The easiest method to assign ARF and WRF factors is to interpolate GIS shapefiles of buildings or other features automatically in the GDS or QGIS.
+It is possible to specify individual grid elements that are totally blocked from receiving any flow in the ARF.DAT file (gray elements in Figure 49).
+
+It is possible to specify individual grid elements that are totally blocked from receiving any flow in the ARF.DAT file (gray elements in Figure 34).
+These totally blocked cells do not require any WRF value assignment.
+To avoid having grid elements with small or negligible surface area (almost totally blocked), any cells with assigned ARF that leave only a small
+percentage of the grid element are reset at model runtime to ARF = 1 (blocked) according criteria outlined in Table 5.
+
+*Table 5.
+Maximum Allowable ARF Values.*
 
 .. list-table::
-   :widths: 100
+   :widths: 50 50
    :header-rows: 0
 
 
-   * - **Table 5.
-       Maximum Allowable ARF Values.**
+   * - **Grid Element Size (ft)**
+**Max ARF**
 
-   * - **Grid Element Size (ft)**          | **Max ARF**
+   * - Cell Side > 50
+0.95
 
-   * - Cell Side > 50                      | 0.95
+   * - 20 < Cell Side < 50
+0.90
 
-   * - 20 < Cell Side < 50                 | 0.90
-
-   * - 20 > Cell Side                      | 0.85
+   * - 20 > Cell Side
+0.85
 
 
 ..
