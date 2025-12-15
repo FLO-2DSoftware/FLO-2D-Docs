@@ -2514,7 +2514,7 @@ Implementing the FCDMC Channel Avulsion Approach into FLO-2D
 -------------------------------------------------------------
 
 Concepts and Assumptions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The District original recommendation was to use small FLO-2D grid elements to represent the channel.
 This approach has several limitations:
