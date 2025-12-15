@@ -2030,9 +2030,9 @@ Where:
 
 Where:
 
-   *Ai* is obtained from land use shape file and
+   *A*\ :sub:`i` is obtained from land use shape file and
 
-   *A\ GE* is the grid element area and *RTIMPL* is obtained from the 4\ :sup:`th` column of the land use table.
+   *A*\ :sub:`GE` is the grid element area and *RTIMPL* is obtained from the 4\ :sup:`th` column of the land use table.
 
 The steps to complete Green-Ampt parameter computation are as follows.
 Open the Compute Green Ampt Parameters Dialog box as it was shown above.
@@ -2089,8 +2089,7 @@ The method was developed for predicting rainfall runoff from ungaged watersheds 
 For large basins (especially semiarid basins), the method tends to over predict runoff using the standard curve number tables which has unique or
 variable infiltration characteristics such as channels (Ponce, 1989).
 
-Assigning Curve Numbers to Grid Elements
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Assigning Curve Numbers to Grid Elements*
 
 The general procedure is to assign curve numbers in the *GDS* and then run the *FLO-2D* model with the infiltration component “turned on” and the
 infiltration switch set the SCS-CN option.
@@ -2104,8 +2103,7 @@ The following options are available to assign curve numbers to grid elements:
        the CN’s for each grid element based on the Pima County procedure.
        In this case the CN are not known
 
-Determining CN’s Using the Pima County Method
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Determining CN’s Using the Pima County Method*
 
 *GDS* uses the Pima County Method to determine the CN’s using polygon shape files (SF) for soil, land cover and impervious cover.
 Using this shape file data with the accompany attribute tables, the polygon intersection with the grid element are determined to assign a hydrologic
@@ -2135,15 +2133,17 @@ The following procedure is applied:
 
     Where:
 
-       *Var\ i* is the current variable from the shape file; *A\ i* is subarea intercepted by the grid element and
+        *Var*\ :sub:`i` is the current variable from the shape file;
 
-       *A\ GE* the grid element area.
+        *A*\ :sub:`i` is subarea intercepted by the grid element and
 
-       At the end of this process each grid element has been assigned:
+        *A*\ :sub:`GE` the grid element area.
 
-            a. HSG from Soil shape file.
-            b. Cover density percentage CD.
-            c. Impervious area.
+    At the end of this process each grid element has been assigned:
+
+        a. HSG from Soil shape file.
+        b. Cover density percentage CD.
+        c. Impervious area.
 
     6. Use formulas in Table 1 to determine CN using CD and the corresponding soil group (e.g. CN = (CN soil B \* (B%) + CN soil C \* (C%) + %impervious\*
        99)/100) where: CN for impervious area is 99 and areas for each soil group within a grid element need to be adjusted depending on the impervious area:
@@ -2439,8 +2439,7 @@ This has two options: From *Single Shape File…* and *From Multiple Shape Files
 
 .. image:: img/GDS157.jpg
 
-Assignment of CN’s Based on a Single Shape File
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Assignment of CN’s Based on a Single Shape File*
 
 Using this option, the *GDS* will determine the CN for each grid element based on a user provided polygon shape file that contains a CN for each
 polygon.
@@ -2454,7 +2453,7 @@ In the dialog box, select the Curve Number Shape file (LANDSOIL.SHP in this exam
 
 *GDS* will intersect the shape file polygons with the grid elements and determine the area weighted average value for each grid element.
 
-Computation of CN’s Base on a Multiple Shape Files
+*Computation of CN’s Base on a Multiple Shape Files*
 
 This option computes the CN’s based on the method explained in above sections.
 It is necessary to import three polygon shape files for HSG, Land cover, and Impervious cover.
@@ -2489,7 +2488,7 @@ Double-clicking on any grid element the new Infiltration dialog box will display
 This command will compute the ARF and WRF factors from a polygon shape file of the buildings.
 The correction factor is a percentage and each ARF or WRF variable that is computed will be reduced by a multiplicative percentage factor.
 
-GDS ARF-WRF assignment from Shape Files
+*GDS ARF-WRF assignment from Shape Files*
 
 Loss of flood storage due to buildings and other urban features can be graphically assigned through the Grid Developer System (GDS) using individual
 or polygon grid element selection.
@@ -2498,21 +2497,21 @@ The GDS will compute ARFs and WRFs assuming the polygons fully block the grid el
 adjustments of either ARFs or WRFs based on user defined blockage percentages (fractions).
 This document summarizes the functionality of the new tool and provides instructions how to use it.
 
-Data requirements
+*Data requirements*
 
 The ARF-WRF assignment tool requires the following data:
 
     1. FLO-2D data files for a basic overland flood simulation and
     2. A polygon Shape File where each polygon represents a building or obstruction to the flow Computation Method
 
-Computation Method
+*Computation Method*
 
 For each grid element (cell), the GDS finds all Shape File polygon intersections with the cell.
 The following figure shows an example where three polygons (building polygons) intersect a cell defining three areas A, B and C:
 
 .. image:: img/GDS161.png
 
-Area Reduction Factor
+*Area Reduction Factor*
 
 To calculate the Area Reduction Factor for this cell GDS performs the following operations:
 
@@ -2529,7 +2528,7 @@ To calculate the Area Reduction Factor for this cell GDS performs the following 
 Where AreaA is the intersected area of polygon A with the cell, and AreaB and AreaC are defined accordingly.
 Cell_Area is the Grid Element area.
 
-Width Reduction Factor
+*Width Reduction Factor*
 
 To calculate the Width Reduction Factor for this cell the GDS performs the following operations:
 
@@ -3008,9 +3007,12 @@ A few comments are highlighted here:
              The area, wetted perimeter and top width are evaluated using the upper flow depth given by: (total depth - *Depth for 2\ nd relationship variable*).
              To analyze the upper channel geometry using the XSEC program, only the cross section coordinates above the *Depth for 2\ nd relationship variable* are
              used.
+
         ii.  Channel geometry relationships apply only to flow depths that are less than the channel depth (lower than the top of bank).
              When the flow depth exceeds the top of bank, then the channel geometry above bank is evaluated as a rectangle.
+
         iii. Abrupt transitions between contiguous channel elements should be avoided unless they actually exist.
+
         iv.  A preprocessor program XSEC is available in the *FLO-2D* subdirectory to determine the regression coefficient and exponents.
 
             - Channel elements that are contiguous but do not share discharge (e.g. parallel channels) must be identified with the NOFLO1 and NOFLO2 variables.
