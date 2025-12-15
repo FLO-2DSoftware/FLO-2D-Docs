@@ -1166,190 +1166,136 @@ The UDFCD (2008) has recommended Horton parameters based on the NRCS hydrologic 
 Evaporation
 -----------
 
-   Open water surface evaporation losses for long duration floods in large river systems can be simulated.
+Open water surface evaporation losses for long duration floods in large river systems can be simulated.
 
-   This component was implemented for the 173-mile Middle Rio Grande model from Cochiti Dam to Elephant Butte Reservoir in New Mexico.
-   The open water surface evaporation computation is based on a total monthly evaporation that is prorated for the number of flood days in the given
-   month.
-   The user must input the total monthly evaporation in inches or mm for each month along with the presumed diurnal hourly percentage of the daily
-   evaporation and the clock time at the start of the flood simulation.
-   The total evaporation is then computed by summing the wetted surface area on both the floodplain and channel grid elements for each timestep.
-   The floodplain wetted surface area excludes the area defined by ARF area reduction factors.
-   The evaporation loss does not include evapotranspiration from floodplain vegetation.
-   The total evaporation loss is reported in the SUMMARY.OUT file and should be compared with the infiltration loss for reasonableness.
+This component was implemented for the 173-mile Middle Rio Grande model from Cochiti Dam to Elephant Butte Reservoir in New Mexico.
+The open water surface evaporation computation is based on a total monthly evaporation that is prorated for the number of flood days in the given
+month.
+The user must input the total monthly evaporation in inches or mm for each month along with the presumed diurnal hourly percentage of the daily
+evaporation and the clock time at the start of the flood simulation.
+The total evaporation is then computed by summing the wetted surface area on both the floodplain and channel grid elements for each timestep.
+The floodplain wetted surface area excludes the area defined by ARF area reduction factors.
+The evaporation loss does not include evapotranspiration from floodplain vegetation.
+The total evaporation loss is reported in the SUMMARY.OUT file and should be compared with the infiltration loss for reasonableness.
 
- Overland Multiple Channel Flow
- ------------------------------
+Overland Multiple Channel Flow
+------------------------------
 
-   The purpose of the multiple channel flow component is to simulate the overland flow in rills and gullies rather than as overland sheet flow for
-   floodplain routing (Figure 54).
-   Surface water is often conveyed in small channels and simulating rill and gully flow concentrates the discharge with higher depths and velocities to
-   improve the model runoff timing.
-   This may be especially important in urban areas where small drainage channels and swales exist.
-   In the multiple channel routine, overland sheet flow within the grid element is routed to the multiple channels and then the flow between the grid
-   elements is computed as rill and gully flow.
-   No overland sheet flow is exchanged between grid elements if both elements have assigned multiple channels.
-   The gully geometry is defined by a maximum depth, width and flow roughness.
-   The multiple channel attributes can be spatially variable on the grid system and can be assigned or edited graphically with the GDS or QGIS programs.
+The purpose of the multiple channel flow component is to simulate the overland flow in rills and gullies rather than as overland sheet flow for
+floodplain routing (Figure 54).
+Surface water is often conveyed in small channels and simulating rill and gully flow concentrates the discharge with higher depths and velocities to
+improve the model runoff timing.
+This may be especially important in urban areas where small drainage channels and swales exist.
+In the multiple channel routine, overland sheet flow within the grid element is routed to the multiple channels and then the flow between the grid
+elements is computed as rill and gully flow.
+No overland sheet flow is exchanged between grid elements if both elements have assigned multiple channels.
+The gully geometry is defined by a maximum depth, width and flow roughness.
+The multiple channel attributes can be spatially variable on the grid system and can be assigned or edited graphically with the GDS or QGIS programs.
 
-|Chapte009|
+.. image:: img/Chapter4/Chapte009.jpg
 
-   *Figure 54.
-   Gully on an Alluvial Fan where Overland Sheet Flow is Minimal.*
+*Figure 54.
+Gully on an Alluvial Fan where Overland Sheet Flow is Minimal.*
 
-   If the gully flow exceeds the specified gully depth, the multiple channels can be expanded by a user specified incremental width.
-   This channel widening process assumes these gullies are alluvial channels and will widen to accept more flow as the flow reaches bankfull discharge.
-   There is no gully overbank discharge to the overland surface area within the grid element.
-   The gully will continue to widen until the gully width exceeds the width of the grid element, then the flow routing between grid elements will revert
-   to sheet flow.
-   This enables the grid element to be overwhelmed by large flood flows.
-   If no incremental width is assigned, the flow depth just continues to increase vertically in the channel because there is no overbank out of channel
-   flow exchange with the floodplain.
-   During the falling limb of the hydrograph when the flow depth is less than 1 ft (0.3 m), the gully width will decrease to confine the discharge until
-   the original width is again attained.
-   The user can assign the range of slope where the multiple channel widening is computed.
-   There is also a channel avulsion routine that will force the multiple channel to take a new path when the flow exceeds the bankfull depth.
-   The primarily features of the multiple channel routine are:
+If the gully flow exceeds the specified gully depth, the multiple channels can be expanded by a user specified incremental width.
+This channel widening process assumes these gullies are alluvial channels and will widen to accept more flow as the flow reaches bankfull discharge.
+There is no gully overbank discharge to the overland surface area within the grid element.
+The gully will continue to widen until the gully width exceeds the width of the grid element, then the flow routing between grid elements will revert
+to sheet flow.
+This enables the grid element to be overwhelmed by large flood flows.
+If no incremental width is assigned, the flow depth just continues to increase vertically in the channel because there is no overbank out of channel
+flow exchange with the floodplain.
+During the falling limb of the hydrograph when the flow depth is less than 1 ft (0.3 m), the gully width will decrease to confine the discharge until
+the original width is again attained.
+The user can assign the range of slope where the multiple channel widening is computed.
+There is also a channel avulsion routine that will force the multiple channel to take a new path when the flow exceeds the bankfull depth.
+The primarily features of the multiple channel routine are:
 
-- Improves the runoff timing compare to overland sheet flow;
+    - Improves the runoff timing compare to overland sheet flow;
+    - Shallow rectangular channels;
+    - Channel bed slope is based on grid element topography;
+    - Multiple channel widths can expand to accept more discharge to simulate alluvial fan channels.
 
-- Shallow rectangular channels;
+To assign multiple channels in the graphic editor programs, simply draw a polyline and select width, depth and n-values.
+There is no required order of the channels or grid elements in the MULT.DAT file, but it simplifies editing if the multiple channel elements are
+listed in order in downstream direction.
+The maximum flow depth results of a rainfall watershed model with multiple channels.
+Typically, multiple channels are assigned when observed in aerial photography at the outfalls of subasins as shown in Figure 55.
 
-- Channel bed slope is based on grid element topography;
+.. image:: img/Chapter4/Chapte010.jpg
 
-- Multiple channel widths can expand to accept more discharge to simulate alluvial fan channels.
+*Figure 55.
+Maximum Flow Depth with Multiple Channel Flow Shown as Dark Blue and Red.*
 
-..
+If multiple channels convey the flow to 1-D channels or rivers, then the multiple channel should terminate before the channel bank element and have
+the multiple channel bed elevation in the terminating node (cell elevation – multiple channel depth) be higher than the cell elevation and the bank
+elevation in the channel bank element.
+If necessary, use an adjust to the width and depth as the multiple channel approaches the 1-D channel over several multiple channel elements to
+simulate the multiple channel becoming wider and shallower on the flat river floodplain.
 
-   To assign multiple channels in the graphic editor programs, simply draw a polyline and select width, depth and n-values.
-   There is no required order of the channels or grid elements in the MULT.DAT file, but it simplifies editing if the multiple channel elements are
-   listed in order in downstream direction.
-   The maximum flow depth results of a rainfall watershed model with multiple channels.
-   Typically, multiple channels are assigned when observed in aerial photography at the outfalls of subasins as shown in Figure 55.
+Sediment Transport – Total Load
+-------------------------------
 
-|Chapte010|
+When a channel rigid bed analysis is performed, any potential cross section changes associated with sediment transport are assumed to have a
+negligible effect on the predicted water surface.
+The volume of storage in the channel associated with scour or deposition is relatively small compared to the entire flood volume.
+This is a reasonable assumption for large river floods on the order of a 100-year flood.
+For large rivers, the change in flow area associated with scour or deposition will have negligible effect on the water surface elevation for flows
+exceeding the bankfull discharge.
+On steep alluvial fans, several feet of scour or deposition will usually have a minimal effect on the flow paths of large flood events.
+For fan small flood events, the potential effects of channel incision, avulsion, blockage, bank or levee failure and sediment deposition on the flow
+path should be considered.
 
-   *Figure 55.
-   Maximum Flow Depth with Multiple Channel Flow Shown as Dark Blue and Red.*
+To address mobile bed issues, FLO-2D has a sediment transport component that can compute sediment scour or deposition.
+Within a grid element, sediment transport capacity is computed for either channel, street or overland flow based on the flow hydraulics.
+The sediment transport capacity is then compared with the sediment supply and the resulting sediment excess or deficit is uniformly distributed over
+the grid element potential flow surface using the bed porosity based on the dry weight of sediment.
+For surveyed channel cross sections, a non-uniform sediment distribution relationship is used.
+There are eleven sediment transport capacity equations that can be applied in the FLO-2D.
+Each sediment transport formula was derived from unique river or flume conditions and the user is encouraged to research the applicability of a
+selected equation for a particular project.
+Sediment routing by size fraction and armoring are also options.
+Sediment continuity is tracked on a grid element basis.
 
-   If multiple channels convey the flow to 1-D channels or rivers, then the multiple channel should terminate before the channel bank element and have
-   the multiple channel bed elevation in the terminating node (cell elevation – multiple channel depth) be higher than the cell elevation and the bank
-   elevation in the channel bank element.
-   If necessary, use an adjust to the width and depth as the multiple channel approaches the 1-D channel over several multiple channel elements to
-   simulate the multiple channel becoming wider and shallower on the flat river floodplain.
+During a FLO-2D flood simulation, the sediment transport capacity is based on the predicted flow hydraulics between floodplain or channel elements,
+but the sediment transport computation is uncoupled from the flow hydraulics.
+Initially the flow hydraulics are computed for all the floodplain and channel elements for the given time step and then the sediment transport is
+computed based on the flow hydraulics for that timestep.
+This assumes that the change in channel geometry resulting from deposition or scour will not have a significant effect on the average flow hydraulics
+for that timestep.
+If the scour or deposition is less than 0.10 ft (0.3 m), the sediment storage volume is not distributed on the bed but is accumulated.
+Generally, it takes several timesteps (~1 to10 seconds) to accumulate enough sediment so that the resulting deposition or scour will exceed 0.10 ft
+(0.03 m).
+This justifies the uncoupled sediment transport approach used in FLO-2D.
 
- Sediment Transport – Total Load
- -------------------------------
+Sediment routing by size fraction requires a sediment size distribution.
+A geometric mean sediment diameter is estimated for each sediment interval represented as a percentage of the total sediment sample.
+Generally, a six or more sediment sizes and the corresponding percentages are determined from a sieve analysis.
+Each size fraction is routed in the model and the volumes in the bed (floodplain, channel or street) are tracked.
+Initial sediment size fractions can be specified on a grid element basis for an alluvial fan or watershed surface to compute spatially variable
+sediment transport.
+Different areas of the grid system can be assigned different bed sediment size distributions by groups.
+The variation in size fraction distribution is then tracked over the floodplain or fan surface.
+The sediment supply to a river reach can also be entered in sediment size fractions.
+An example of sediment data for routing by size fraction is presented below:
 
-   When a channel rigid bed analysis is performed, any potential cross section changes associated with sediment transport are assumed to have a
-   negligible effect on the predicted water surface.
-   The volume of storage in the channel associated with scour or deposition is relatively small compared to the entire flood volume.
-   This is a reasonable assumption for large river floods on the order of a 100-year flood.
-   For large rivers, the change in flow area associated with scour or deposition will have negligible effect on the water surface elevation for flows
-   exceeding the bankfull discharge.
-   On steep alluvial fans, several feet of scour or deposition will usually have a minimal effect on the flow paths of large flood events.
-   For fan small flood events, the potential effects of channel incision, avulsion, blockage, bank or levee failure and sediment deposition on the flow
-   path should be considered.
+.. raw:: html
 
-   To address mobile bed issues, FLO-2D has a sediment transport component that can compute sediment scour or deposition.
-   Within a grid element, sediment transport capacity is computed for either channel, street or overland flow based on the flow hydraulics.
-   The sediment transport capacity is then compared with the sediment supply and the resulting sediment excess or deficit is uniformly distributed over
-   the grid element potential flow surface using the bed porosity based on the dry weight of sediment.
-   For surveyed channel cross sections, a non-uniform sediment distribution relationship is used.
-   There are eleven sediment transport capacity equations that can be applied in the FLO-2D.
-   Each sediment transport formula was derived from unique river or flume conditions and the user is encouraged to research the applicability of a
-   selected equation for a particular project.
-   Sediment routing by size fraction and armoring are also options.
-   Sediment continuity is tracked on a grid element basis.
+    <pre>
+                                Sediment Diameter (mm) Percent Finer
+                                    0.074                 0.058
+                                    0.149                 0.099
+                                    0.297                 0.156
+                                     0.59                 0.230
+                                     1.19                 0.336
+                                     2.38                 0.492
+                                     4.76                 0.693
+                                     9.53                 0.808
+                                    19.05                 0.913
+                                    38.10                 1.000
+    </pre>
 
-   During a FLO-2D flood simulation, the sediment transport capacity is based on the predicted flow hydraulics between floodplain or channel elements,
-   but the sediment transport computation is uncoupled from the flow hydraulics.
-   Initially the flow hydraulics are computed for all the floodplain and channel elements for the given time step and then the sediment transport is
-   computed based on the flow hydraulics for that timestep.
-   This assumes that the change in channel geometry resulting from deposition or scour will not have a significant effect on the average flow hydraulics
-   for that timestep.
-   If the scour or deposition is less than 0.10 ft (0.3 m), the sediment storage volume is not distributed on the bed but is accumulated.
-   Generally, it takes several timesteps (~1 to10 seconds) to accumulate enough sediment so that the resulting deposition or scour will exceed 0.10 ft
-   (0.03 m).
-   This justifies the uncoupled sediment transport approach used in FLO-2D.
-
-   Sediment routing by size fraction requires a sediment size distribution.
-   A geometric mean sediment diameter is estimated for each sediment interval represented as a percentage of the total sediment sample.
-   Generally, a six or more sediment sizes and the corresponding percentages are determined from a sieve analysis.
-   Each size fraction is routed in the model and the volumes in the bed (floodplain, channel or street) are tracked.
-   Initial sediment size fractions can be specified on a grid element basis for an alluvial fan or watershed surface to compute spatially variable
-   sediment transport.
-   Different areas of the grid system can be assigned different bed sediment size distributions by groups.
-   The variation in size fraction distribution is then tracked over the floodplain or fan surface.
-   The sediment supply to a river reach can also be entered in sediment size fractions.
-   An example of sediment data for routing by size fraction is presented below:
-
-   Sediment Diameter (mm) Percent Finer
-
-.. _`0.074`:
-
-0.074:
-
-0.058
-
-.. _`0.149`:
-
-0.149:
-
-0.099
-
-.. _`0.297`:
-
-0.297:
-
-0.156
-
-.. _`0.59`:
-
-0.59:
-
-0.230
-
-.. _`1.19`:
-
-1.19:
-
-0.336
-
-.. _`2.38`:
-
-2.38:
-
-0.492
-
-.. _`4.76`:
-
-4.76:
-
-0.693
-
-.. _`9.53`:
-
-9.53:
-
-0.808
-
-.. _`19.05`:
-
-19.05:
-
-0.913
-
-.. _`38.10`:
-
-38.10:
-
-1.000
-
-
-..
-
-   Bed armoring is automatically computed for sediment routing by size fraction.
+Bed armoring is automatically computed for sediment routing by size fraction.
    There are no switches to initiate armoring.
    The armoring process occurs when the upper bed layers of sediment become coarser as the finer sediment is transported out of the bed.
    An armor layer is complete when the coarse bed material covers the bed and protects the fine sediment below it.
