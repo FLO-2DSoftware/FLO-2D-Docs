@@ -1,5 +1,5 @@
-FLO-2D Pro
-==========
+FLO-2D Pro Resource Center 2021
+=================================
 
 .. toctree::
    :maxdepth: 1

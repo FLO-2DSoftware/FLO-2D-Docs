@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 
-Chapter 1
-==========
+Chapter 1 - Channel Development
+==================================
 
 This document supplements the FLO-2D Reference Manual, Data Input Manual and training materials such as the webinars and videos, lessons and short
 course PowerPoint presentations.
@@ -10,40 +10,40 @@ Here is a list of other available references for channel modeling: C:\\users\\Pu
 
 - Data Input Manual
 
-    ˖ Chan.dat, chanbank.dat, xsec.dat
-    ˖ Profiles.exe processor program overview
-    ˖ Channel output files
+    - Chan.dat, chanbank.dat, xsec.dat
+    - Profiles.exe processor program overview
+    - Channel output files
 
 - Workshop Lessons
 
-   ˖ Lesson 3 – Simple geometry and confluence
-   ˖ Lesson 4 – Simple cross section converter
-   ˖ Lesson 5 – Profiles.exe overview and example
-   ˖ Lesson 8 – Import from HEC-RAS
-   ˖ Lesson 14 – Advanced natural channel modeling
+   - Lesson 3 – Simple geometry and confluence
+   - Lesson 4 – Simple cross section converter
+   - Lesson 5 – Profiles.exe overview and example
+   - Lesson 8 – Import from HEC-RAS
+   - Lesson 14 – Advanced natural channel modeling
 
 - QGIS Workshop Lessons
 
-   ˖ Lesson 2 – Import from HEC-RAS
+   - Lesson 2 – Import from HEC-RAS
 
 - Example Projects w/Channels
 
-   ˖ Urban example
-   ˖ Lesson 15 – natural channel with levee
-   ˖ Alawai
-   ˖ Rio Grande
-   ˖ Goat
-   ˖ Aqueduct
-   ˖ Sediment transport
+   - Urban example
+   - Lesson 15 – natural channel with levee
+   - Alawai
+   - Rio Grande
+   - Goat
+   - Aqueduct
+   - Sediment transport
 
 Sharefile.flo-2d.com – Webinar Series\\Channel Series
 
 - Videos
 
-   ˖ Basic channels
-   ˖ Advanced channel modeling
-   ˖ Channel optimization
-   ˖ Advanced natural channels
+   - Basic channels
+   - Advanced channel modeling
+   - Channel optimization
+   - Advanced natural channels
 
 Channel Overview
 ----------------
@@ -59,6 +59,7 @@ hydraulic jumps over a short distance.
 The flow transition between subcritical and supercritical flow is based on the average conditions between two channel elements.
 
 .. image:: img/Chapter1/Chapte002.jpg
+  :class: bordered-image
 
 *Figure 1.
 Channel Flow is One-Dimensional – No Vertical or Horizontal Velocity Distribution*
@@ -75,10 +76,10 @@ Channel Geometry, Length and Roughness
 
 There are four channel geometry options:
 
-    - R - Rectangular
-    - T - Trapezoidal
-    - N - Natural
-    - V - Regression Equation (not recommended except for unique cases)
+    - R – Rectangular
+    - T – Trapezoidal
+    - N – Natural
+    - V – Regression Equation (not recommended except for unique cases)
 
 The channel cross section options are rectangular, trapezoidal and natural.
 In FLO-2D, the floodwave movement in the channel is controlled by the rate of change in the discharge as a function of the rate of change in the flow
@@ -101,6 +102,7 @@ For data file example refer to the FLO-2D Data Input Manual.
 The rectangular channel geometry is defined by width, depth and length of channel inside the grid element (Figure 2).
 
 .. image:: img/Chapter1/Chapte003.jpg
+  :class: bordered-image
 
 *Figure 2.
 Rectangular Channel Geometry.*
@@ -114,6 +116,7 @@ Similarly, the trapezoidal channels are defined by bottom width, channel depth a
 Again, the channel length is the length inside the grid element.
 
 .. image:: img/Chapter1/Chapte026.png
+  :class: bordered-image
 
 *Figure 3.
 Trapezoidal Channel Geometry.*
@@ -147,11 +150,13 @@ This data constitutes a channel geometry rating table for each cross section.
 The cross section data in the XSEC.DAT file can be automatically assigned from a GEO-RAS geometry file using the GDS.
 
 .. image:: img/Chapter1/Chapte004.jpg
+  :class: bordered-image
 
 *Figure 4.
 Natural Channel Cross Section Data.*
 
 .. image:: img/Chapter1/Chapte024.png
+  :class: bordered-image
 
 *Figure 5.
 Natural Shape Cross Section Geometry*
@@ -171,6 +176,7 @@ If the two bank elevations are different in the CHAN.DAT file, the model automat
 fit into one grid element.
 
 .. image:: img/Chapter1/Chapte021.png
+  :class: bordered-image
 
 *Figure 6
 Channel Extension over Several Grid Elements*
@@ -207,6 +213,7 @@ element (Figure 7).
 This process is completely automated if a GEO-RAS geometry file can be imported with the cross section data.
 
 .. image:: img/Chapter1/Chapte005.png
+  :class: bordered-image
 
 *Figure 7.
 Channel Delineation.*
@@ -222,6 +229,7 @@ elements have a zero assigned as the cross section number (Figure 8).
 A shapefile of cross section locations can be used to help identify the cross section to channel element placement.
 
 .. image:: img/Chapter1/Chapte006.jpg
+  :class: bordered-image
 
 *Figure 8.
 Cross Section Assignment.*
@@ -237,6 +245,7 @@ change in the flow area between interpolated cross sections.
 The original cross sections are not edited.
 
 .. image:: img/Chapter1/Chapte022.png
+  :class: bordered-image
 
 *Figure 9.
 Channel Bed Profile Examples*
@@ -259,6 +268,7 @@ After the assignment, the right or left banks can be realigned to the better rep
 click commands.
 
 .. image:: img/Chapter1/Chapte007.jpg
+  :class: bordered-image
 
 *Figure 10.
 Right Bank Assignment and Realignment.*
@@ -270,6 +280,7 @@ The channel length within each grid element is initially estimated as a straight
 (Figure 11).
 
 .. image:: img/Chapter1/Chapte008.jpg
+  :class: bordered-image
 
 *Figure 11.
 Channel Segment Length and Segment Number.*
@@ -279,6 +290,7 @@ The length is the sum half the length of the grid element from the center of the
 (Figure 12).
 
 .. image:: img/Chapter1/Chapte009.png
+  :class: bordered-image
 
 *Figure 12.
 Channel Length for 3 Channel Elements.*
@@ -294,6 +306,7 @@ and the flood volume on the floodplain.
 Figure 13 shows the total distance of the channel in the GDS and the isolated channel lengths in the CHAN.DAT file.
 
 .. image:: img/Chapter1/Chapte010.jpg
+  :class: bordered-image
 
 *Figure 13.
 Channel Length.*
@@ -353,6 +366,7 @@ In lieu of using different velocity equations, one for deeper flow and one for s
 flow velocity by assigning higher shallow n-values or by using depth variable n-value adjustment or both.
 
 .. image:: img/Chapter1/Chapte023.png
+  :class: bordered-image
 
 *Figure 14.
 Low Flow vs. Bank Full Discharge.*
@@ -360,6 +374,7 @@ Low Flow vs. Bank Full Discharge.*
 A channel roughness adjustment can be assigned in the CHAN.DAT file to estimate the n-value at depths below bankfull discharge (Figure 15 – red box).
 
 .. image:: img/Chapter1/Chapte011.png
+  :class: bordered-image
 
 *Figure 15.
 Channel Control Variables.*
@@ -376,16 +391,19 @@ Similarly, matching the measured hydrographs at the Jensen, Utah gage from diurn
 without the depth integrated n-value adjustment (Figure 18).
 
 .. image:: img/Chapter1/Chapte012.jpg
+  :class: bordered-image
 
 *Figure 16.
 Depth Variable Roughness.*
 
 .. image:: img/Chapter1/Chapte013.jpg
+  :class: bordered-image
 
 *Figure 17.
 Dam Release Hydrograph El Paso, TX.*
 
 .. image:: img/Chapter1/Chapte014.jpg
+  :class: bordered-image
 
 *Figure 18.
 Dam Release Hydrograph Jenson, UT.* \ :sup:`1`
@@ -463,6 +481,7 @@ Overbank discharge or return flow to the channel is computed using the floodplai
 The overland flow can enter a previously dry channel.
 
 .. image:: img/Chapter1/Chapte015.png
+  :class: bordered-image
 
 *Figure 19.
 Channel Floodplain Flow Exchange.*
@@ -500,6 +519,7 @@ It only slightly increases the flow area for channel hydraulic computations.
 The channel conveyance flow area for a natural channel is increased by the green space in Figure 20.
 
 .. image:: img/Chapter1/Chapte025.png
+  :class: bordered-image
 
 *Figure 20.
 Vertical Extension of the Lowest Top of Bank to the Highest Top of Bank.*
@@ -580,11 +600,13 @@ Typically steep rising hydrographs and small channel storage cause the most freq
 The rate of change in the discharge flux (ΔQ/Δt) is the culprit.
 
 .. image:: img/Chapter1/Chapte016.jpg
+  :class: bordered-image
 
 *Figure 21.
 Surging Observed in a Channel Element Hydrograph.*
 
 .. image:: img/Chapter1/Chapte017.jpg
+  :class: bordered-image
 
 *Figure 22.
 Steep Rising Hydrograph.*
@@ -600,6 +622,7 @@ To eliminate channel surging, perform the following steps:
        Use limiting Froude number FROUDC.
 
 .. image:: img/Chapter1/Chapte018.jpg
+  :class: bordered-image
 
 *Figure 23.
 Check the Channel Bed Profile for Data Errors.*
@@ -739,6 +762,7 @@ A successful simulation generally has a volume conservation error less than 0.00
 The volume conservation accounting can be reviewed in the SUMMARY.OUT (Figure 24) as shown below for a project that had excellent volume conservation.
 
 .. image:: img/Chapter1/Chapte019.png
+  :class: bordered-image
 
 *Figure 24.
 SUMMARY.OUT Example.*
@@ -748,6 +772,7 @@ Usually if there is a volume conservation error it is in the channel and both CH
 CHVOLUME.OUT (Figure 25) is listed below:
 
 .. image:: img/Chapter1/Chapte020.jpg
+  :class: bordered-image
 
 *Figure 25.
 CHVOLUME.OUT Example.*

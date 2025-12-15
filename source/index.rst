@@ -1,10 +1,10 @@
 .. version: Build 21
 .. This is the documentation for Build 21
 
-FLO-2D Pro Documentation – main
-===============================
+FLO-2D Pro Documentation Build 21
+===================================
 
-Welcome to the main version of the FLO-2D Documentation.
+Welcome to the Build 21 FLO-2D Documentation.
 
 .. toctree::
    :maxdepth: 1

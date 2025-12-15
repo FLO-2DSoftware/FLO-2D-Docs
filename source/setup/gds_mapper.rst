@@ -1,9 +1,11 @@
-GDS - Mapper Install Instructions
+GDS - Mapper Test Instructions
 ======================================
 
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/voexru-EWjg" frameborder="0" allowfullscreen></iframe>
+
+.. important:: GDS and Mapper are pre installed with Build 21.  Skip down to Step 3 to test if they are working.
 
 Step 1: Download the GDS-Mapper Installer
 -------------------------------------------
