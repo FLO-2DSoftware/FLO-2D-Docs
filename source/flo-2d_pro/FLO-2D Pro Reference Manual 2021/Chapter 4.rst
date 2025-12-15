@@ -331,11 +331,11 @@ Five levels of freeboard deficit are reported:
 
 The levee deficit can be displayed graphically in both MAPPER Pro and MAXPLOT (
 
-.. image:: img/Chapter4/Chapte003.jpg
+.. image:: img/Chapter4/Chapte003.png
 
    Figure 40).
 
-.. image:: img/Chapter4/Chapte003.jpg
+.. image:: img/Chapter4/Chapte003.png
 
 *Figure 40.
 Levee Freeboard Deficit Plot Using MAXPLOT.*
