@@ -870,26 +870,20 @@ Green-Ampt Infiltration
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The Green-Ampt (1911) equation was selected to compute infiltration losses in the FLO-2D model because it is sensitive to rainfall intensity.
-   When the rainfall exceeds the potential infiltration, then runoff is generated.
-   The infiltration continues after the rainfall has ceased until all the available water has runoff or has been infiltrated.
-   The Green-Ampt equation is based on the following assumptions:
+When the rainfall exceeds the potential infiltration, then runoff is generated.
+The infiltration continues after the rainfall has ceased until all the available water has runoff or has been infiltrated.
+The Green-Ampt equation is based on the following assumptions:
 
-- Air displacement from the soil has a negligible effect on the infiltration process;
+    - Air displacement from the soil has a negligible effect on the infiltration process;
+    - Infiltration is a vertical process represented by a distinct piston wetting front;
+    - Soil compaction due to raindrop impact is insignificant;
+    - Hysteresis effects of the saturation and desaturation process are negligible;
+    - Flow depth has limited effect on the infiltration processes.
 
-- Infiltration is a vertical process represented by a distinct piston wetting front;
-
-- Soil compaction due to raindrop impact is insignificant;
-
-- Hysteresis effects of the saturation and desaturation process are negligible;
-
-- Flow depth has limited effect on the infiltration processes.
-
-..
-
-   A derivation of the Green-Ampt infiltration method can be found in Fullerton (1983).
-   To utilize the Green-Ampt model, hydraulic conductivity, soil suction, volumetric moisture deficiency, soil storage depth and the percent impervious
-   area must be specified.
-   Typical hydraulic conductivity, porosity and soil suction parameters are presented in Table 7 and Table 8.
+A derivation of the Green-Ampt infiltration method can be found in Fullerton (1983).
+To utilize the Green-Ampt model, hydraulic conductivity, soil suction, volumetric moisture deficiency, soil storage depth and the percent impervious
+area must be specified.
+Typical hydraulic conductivity, porosity and soil suction parameters are presented in Table 7 and Table 8.
 
 .. list-table::
    :widths: 100
