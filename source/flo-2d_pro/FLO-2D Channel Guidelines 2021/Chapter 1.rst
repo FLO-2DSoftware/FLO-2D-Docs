@@ -314,7 +314,15 @@ There are a number of mean velocity equations for open channel uniform flow and 
 
     V = \frac{1.486}{n} R^{\frac{2}{3}} S^{\frac{1}{2}}
 
-where V = velocity, R = hydraulic radius, S = friction slope, n = Manning’s roughness coefficient.
+where:
+
+    V = velocity
+
+    R = hydraulic radius
+
+    S = friction slope
+
+    n = Manning’s roughness coefficient.
 
 The hydraulic radius exponent value (0.667) has been known to vary over a range from about 0.59 to 0.85 depending primarily on channel geometry and
 roughness (Chow, 1959).
