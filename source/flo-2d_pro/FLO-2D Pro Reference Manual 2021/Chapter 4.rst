@@ -2030,91 +2030,101 @@ The viscosity (poises) and yield stress (dynes/cm\ :sup:`2`) are shown to be exp
      </tfoot>
    </table>
 
-.. image:: img/Chapter4/Chapter070.jpg
+
+.. image:: img/Chapter4/Chapte070.jpg
 
 *Figure 60.
 Dynamic Viscosity of Mudflow Samples versus Volumetric Concentration.*
 
-.. image:: img/Chapter4/Chapter070.jpg
+.. image:: img/Chapter4/Chapte070.jpg
 
 *Figure 61.
 Yield Stress of Mudflow Samples versus Volumetric Concentration.*
 
 The viscosity of the fluid matrix is also a function of the type and percentage of silts and clays and the fluid temperature.
-   Very viscous mudflows have high sediment concentrations and correspondingly high yield stresses and may result in laminar flow although laminar flows
-   in nature are extremely rare.
-   Less viscous flows (mud floods) are always turbulent.
+Very viscous mudflows have high sediment concentrations and correspondingly high yield stresses and may result in laminar flow although laminar flows
+in nature are extremely rare.
+Less viscous flows (mud floods) are always turbulent.
 
-   For a mudflow event, the average sediment concentration generally ranges between 20% and 35% by volume with peak concentrations approaching 50% (Table
-   13 and Figure 60 and Figure 61).
-   Large flood events such as the 100-year flood may contain too much water to produce a viscous mudflow event.
-   Smaller rainfall events such as the 10-year or 25-year return period storm may have a greater propensity to create viscous mudflows.
-   Most watersheds with a history of mudflow events and will gradually develop a sediment supply in the channel bed such that small storms may generate
-   mudflow surges.
-   Most rainfall induced mudflows follow a pattern of flood response.
-   Initially clear water flows from the basin rainfall-runoff may arrive at the fan apex.
-   This may be followed by a surge or frontal wave of mud and debris (40 to 50% concentration by volume).
-   When the peak arrives, the average sediment concentration generally decreases to the range of 30 to 40% by volume.
-   On the falling limb of the hydrograph, surges of higher sediment concentration may occur.
+For a mudflow event, the average sediment concentration generally ranges between 20% and 35% by volume with peak concentrations approaching 50% (Table
+13 and Figure 60 and Figure 61).
+Large flood events such as the 100-year flood may contain too much water to produce a viscous mudflow event.
+Smaller rainfall events such as the 10-year or 25-year return period storm may have a greater propensity to create viscous mudflows.
+Most watersheds with a history of mudflow events and will gradually develop a sediment supply in the channel bed such that small storms may generate
+mudflow surges.
+Most rainfall induced mudflows follow a pattern of flood response.
+Initially clear water flows from the basin rainfall-runoff may arrive at the fan apex.
+This may be followed by a surge or frontal wave of mud and debris (40 to 50% concentration by volume).
+When the peak arrives, the average sediment concentration generally decreases to the range of 30 to 40% by volume.
+On the falling limb of the hydrograph, surges of higher sediment concentration may occur.
 
-   To simulate mudflows with the FLO-2D model, the MUD switch in the CONT.DAT must be turned on
+To simulate mudflows with the FLO-2D model, the MUD switch in the CONT.DAT must be turned on
 
-   (MUD = 1) and the viscosity and yield stress variables in SED.DAT file must be specified (Line M).
-   It is recommended that the viscosity and yield stress exponents and coefficients from Table 9 be selected for inclusion in the SED.DAT file.
-   The field sample Glenwood 4, for example, creates a very viscous mudflow.
-   A volumetric sediment concentration or a sediment volume must then be assigned to the water discharge for a timestep in the discretized inflow
-   hydrograph in the INFLOW.DAT file.
-   The inflow sediment volume may represent channel scour, bank erosion or hillslope failure.
-   The incremental sediment volume is tracked through the routing simulation and reported as a total sediment volume in the summary volume conservation
-   tables.
-   This total sediment volume should be reviewed to determine if it is a reasonable sediment supply or yield from the watershed.
+(MUD = 1) and the viscosity and yield stress variables in SED.DAT file must be specified (Line M).
+It is recommended that the viscosity and yield stress exponents and coefficients from Table 9 be selected for inclusion in the SED.DAT file.
+The field sample Glenwood 4, for example, creates a very viscous mudflow.
+A volumetric sediment concentration or a sediment volume must then be assigned to the water discharge for a timestep in the discretized inflow
+hydrograph in the INFLOW.DAT file.
+The inflow sediment volume may represent channel scour, bank erosion or hillslope failure.
+The incremental sediment volume is tracked through the routing simulation and reported as a total sediment volume in the summary volume conservation
+tables.
+This total sediment volume should be reviewed to determine if it is a reasonable sediment supply or yield from the watershed.
 
-   When routing the mud flood or mudflow over an alluvial fan or floodplain, the FLO-2D model preserves continuity for both the water and sediment.
-   For every grid element and timestep, the change in the water and sediment volumes and the corresponding change in sediment concentration are computed.
-   At the end of the simulation, the model reports on the amount of water and sediment removed from the study area (outflow) and the amount and location
-   of the water and sediment remaining on the fan or in the channel (storage).
-   The areal extent of mudflow inundation and the maximum flow depths and velocities are a function of the available sediment volume and concentration
-   which can be varied in the FLO-2D simulations.
-   For further discussion on model hyperconcentrated sediment flows, refer to the FLO-2D white paper document *“Simulating Mudflows Guidelines”*.
+When routing the mud flood or mudflow over an alluvial fan or floodplain, the FLO-2D model preserves continuity for both the water and sediment.
+For every grid element and timestep, the change in the water and sediment volumes and the corresponding change in sediment concentration are computed.
+At the end of the simulation, the model reports on the amount of water and sediment removed from the study area (outflow) and the amount and location
+of the water and sediment remaining on the fan or in the channel (storage).
+The areal extent of mudflow inundation and the maximum flow depths and velocities are a function of the available sediment volume and concentration
+which can be varied in the FLO-2D simulations.
+For further discussion on model hyperconcentrated sediment flows, refer to the FLO-2D white paper document *“Simulating Mudflows Guidelines”*.
 
- Specific Energy, Impact and Static Pressure
- -------------------------------------------
+Specific Energy, Impact and Static Pressure
+-------------------------------------------
 
-   For overland flow, the specific energy, impact pressure and static pressure are computed and reported to a file on an output interval basis.
-   MAPPER Pro and MAXPLOT can graphically display these parameters with spatial variability.
+For overland flow, the specific energy, impact pressure and static pressure are computed and reported to a file on an output interval basis.
+MAPPER Pro and MAXPLOT can graphically display these parameters with spatial variability.
+The specific energy is computed by adding the flow depth velocity head (V\ :sup:`2`/2g) to the flow depth.
+The maximum specific energy is reported to the file SPECENERGY.OUT by grid element.
 
-   The specific energy is computed by adding the flow depth velocity head (V\ :sup:`2`/2g) to the flow depth.
-   The maximum specific energy is reported to the file SPECENERGY.OUT by grid element.
+The impact pressure P\ :sub:`i` for a floodplain grid element is reported as a force per unit length (impact pressure x flow depth).
+The user can then multiply the impact pressure by the structure length within the grid element to get a maximum impact force on the structure.
+Impact force is a function of fluid density, structure materials, angle of impact, and a number of other variables.
+To conservatively estimate the impact pressure, the equation for water taken from Deng (1996):
 
-   The impact pressure P\ :sub:`i` for a floodplain grid element is reported as a force per unit length (impact pressure x flow depth).
-   The user can then multiply the impact pressure by the structure length within the grid element to get a maximum impact force on the structure.
-   Impact force is a function of fluid density, structure materials, angle of impact, and a number of other variables.
-   To conservatively estimate the impact pressure, the equation for water taken from Deng (1996):
+.. math::
+   :label:
 
-   P\ :sub:`i` = k ρ\ :sub:`f` V\ :sup:`2`
+   P_i = k\, \rho_f\, V^{2}
 
-   where P\ :sub:`i` is the impact pressure, coefficient k is 1.28 for both English and SI units, ρ\ :sub:`f` = water density and V is the maximum
-   velocity regardless of direction.
-   For hyperconcentrated sediment flows such as mud floods and mudflows, the fluid density ρ\ :sub:`f` and coefficient k is a function of sediment
-   concentration by volume.
-   The coefficient k is based on a regressed relationship as a function of sediment concentration from the data presented in Deng (1996).
-   This relationship is given by,
+where P\ :sub:`i` is the impact pressure, coefficient k is 1.28 for both English and SI units, ρ\ :sub:`f` = water density and V is the maximum
+velocity regardless of direction.
+For hyperconcentrated sediment flows such as mud floods and mudflows, the fluid density ρ\ :sub:`f` and coefficient k is a function of sediment
+concentration by volume.
+The coefficient k is based on a regressed relationship as a function of sediment concentration from the data presented in Deng (1996).
+This relationship is given by,
 
-   k = 1.261 e\ :sup:`Cw`
+.. math::
+   :label:
 
-   where Cw = sediment concentration by weight.
-   The impact pressure is reported in the file IMPACT.OUT.
+   k = 1.261\, e^{C_w}
 
-   The static pressure P\ :sub:`s` for each grid element is also expressed as a force per unit length.
-   It is given by the maximum flow depth to the center of gravity ĥ times the specific weight of the fluid.
-   The static pressure is then multiplied by the flow depth to compute the static force per unit length of structure (assumes surface area A = l x d).
-   The maximum static pressure is written to the STATICPRESS.OUT file.
-   P\ :sub:`s` = γ ĥ
+where Cw = sediment concentration by weight.
+The impact pressure is reported in the file IMPACT.OUT.
 
- Floodway Delineation
- --------------------
+The static pressure P\ :sub:`s` for each grid element is also expressed as a force per unit length.
+It is given by the maximum flow depth to the center of gravity ĥ times the specific weight of the fluid.
+The static pressure is then multiplied by the flow depth to compute the static force per unit length of structure (assumes surface area A = l x d).
+The maximum static pressure is written to the STATICPRESS.OUT file.
 
-   The floodplain management concept of the floodway delineation is to reserve an unobstructed area of flood conveyance passage while allowing for
+.. math::
+   :label:
+
+   P_s = \gamma\, \hat{h}
+
+Floodway Delineation
+--------------------
+
+The floodplain management concept of the floodway delineation is to reserve an unobstructed area of flood conveyance passage while allowing for
    potential utilization of the floodplain.
    In the United States FEMA procedures outline a method for designating a floodway using the Corps of Engineers HEC-RAS model.
    Floodway boundaries are designed to accommodate a 100-yr flood within acceptable limits.
