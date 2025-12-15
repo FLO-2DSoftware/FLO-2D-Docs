@@ -742,8 +742,8 @@ the inflow to the downstream model.
 This outflow to inflow hydrograph method between model grid systems has been automated in the FLO-2D model (see the White Paper ‘Outflow Hydrograph
 Tool’ or Lesson 13 – Multiple Domains and Outflow Hydrographs.
 
- Inflow Nodes
- ^^^^^^^^^^^^
+Inflow Nodes
+^^^^^^^^^^^^
 
 Inflow nodes introduce flood hydrographs from outside the project area to the FLO-2D grid system.
 A given project may be limited in areal scope to an urban area, downstream of a dam breach, or alluvial fan requiring one or more upstream inflow

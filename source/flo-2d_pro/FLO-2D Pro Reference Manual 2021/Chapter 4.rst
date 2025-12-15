@@ -2283,7 +2283,7 @@ These types of building walls have low tensile strength and support the roof or 
 During a flood the collapse of a wall can result in the entire destruction of the building.
 
 Building Vulnerability
-^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------
 
 Pilotti et al. (2016) provides a rigorous mathematical formulation of the approach which includes the computation of the dynamic forces and pressures on a building
 cell, the axial loading, the maximum bending moment and the resistive forces.
@@ -2337,7 +2337,7 @@ These curves should be considered as general guidelines for the potential for a 
 More research could define a series of vulnerability curves for different types of construction.
 
 Implementation of the Building Collapse in the FLO-2D Model
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------------------
 
 The polynomial equations relating the threshold depth for a building collapse as function of velocity for the four vulnerability curves shown in
 Figure 70 has been implemented in the FLO-2D model.
@@ -2455,7 +2455,7 @@ inundation.
 The FCDMC outlined a methodology to guide the channel avulsion development.
 
 FCDMC Simplified Channel Avulsion Approach
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------
 
 The FCDMC proposed simplified channel avulsion analysis was presented as having three parts.
 Part 1 was the channel overtopping assessment; Part 2 was the channel avulsion assessment and Part 3 was to delineate the flood hazard associated with
@@ -2511,10 +2511,10 @@ It was observed by the District that since the newly formed channel caused by av
 downstream may occur downstream and this may require several model iterations to delineate the entire fan area of inundation.
 
 Implementing the FCDMC Channel Avulsion Approach into FLO-2D
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------------------
 
 Concepts and Assumptions
-''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The District original recommendation was to use small FLO-2D grid elements to represent the channel.
 This approach has several limitations:
