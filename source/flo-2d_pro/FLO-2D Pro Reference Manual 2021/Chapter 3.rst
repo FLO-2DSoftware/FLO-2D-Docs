@@ -510,7 +510,7 @@ The equation for the grid element roughness n\ :sub:`d` as function of flow dept
 .. math::
    :label:
 
-   n_d = n_b \cdot 1.5\, e^{-0.4\, \mathrm{depth}/d_{max}}
+   n_d = n_b \ast 1.5 \ast e^{-(0.4\ depth/dmax)}
 
 where
 
