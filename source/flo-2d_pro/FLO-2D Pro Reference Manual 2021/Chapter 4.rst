@@ -333,7 +333,7 @@ The levee deficit can be displayed graphically in both MAPPER Pro and MAXPLOT (
 
 .. image:: img/Chapter4/Chapte003.png
 
-   Figure 40).
+Figure 40).
 
 .. image:: img/Chapter4/Chapte003.png
 
@@ -1304,7 +1304,7 @@ Bed armoring is automatically computed for sediment routing by size fraction.
    The potential armor layer is evaluated for each timestep by grid element when the volume of each size fraction in the exchange layer is assessed
    (Figure 56).
 
-.. image:: img/Chapter4/Chapte011.jpg
+.. image:: img/Chapter4/Chapte011.png
 
 *Figure 56.
 Sediment Transport Bed Exchange Layer.*
