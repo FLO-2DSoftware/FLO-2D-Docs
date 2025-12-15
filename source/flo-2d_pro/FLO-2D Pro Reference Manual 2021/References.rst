@@ -124,7 +124,7 @@ Hamill, L., 1999.
 Hashimoto, H., 1997.
 “A comparison between gravity flows of dry sand and sand-water mixtures,” *Recent Developments on Debris Flows*, Springer,
 A. Armanini and M.
-   Michiue (eds.), NY, NY.
+Michiue (eds.), NY, NY.
 
 Henderson, F.
 M., 1966.
@@ -428,15 +428,10 @@ HY10, pp.
 Yang, C.T., 1996.
 Sediment Transport, Theory and Practice,” McGraw-Hill, New York, N.Y.
 
-Zeller, M.
-E.
-and W.
-T.
+Zeller, M. E. and W. T.
 Fullerton, 1983.
 “A Theoretically Derived Sediment Transport Equation for SandBed Channels in Arid Regions,” Proceedings of the D.
 B.
 Simons Symposium on Erosion and Sedimentation,
-R. M.
-   Li and P.
-   F.
-   Lagasse, eds., Colorado State University and ASCE.
+R. M. Li and P. F.
+Lagasse, eds., Colorado State University and ASCE.

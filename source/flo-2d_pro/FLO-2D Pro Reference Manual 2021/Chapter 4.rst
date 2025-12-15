@@ -740,38 +740,6 @@ This is the volume of water stored in small surface depressions (puddles) that d
 The assignment of initial abstraction should consider the depression storage represented by the TOL value and be appropriately reduced.
 The TOL parameter can be spatially variable with a unique value assigned to each grid element.
 
-*Table 6.
-Initial Abstraction.*
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
-
-
-   * - Surface Cover                         |    Abstraction (inches)
-
-   * - Natural\ :sup:`1`                        |    0.35 0.15|Desert and rangeland                     |    0.25|Hillslopes Sonoran desert
-       ||Mountain with vegetation                 |
-
-   * - Developed – Residential\ :sup:`1`        |    0.20 0.10|Lawns                                    |    0.05|Desert landscape
-       ||Pavement                                 |
-
-   * - Agricultural fields and pasture       |    0.50
-
-   * - Conifers\ :sup:`2`                    |    0.01 - 0.36
-
-   * - Hardwoods\ :sup:`2`                   |    0.001 - 0.08
-
-   * - Shrubs\ :sup:`2`                      |    0.01 - 0.08
-
-   * - Grass\ :sup:`2`                       |    0.04 - 0.06
-
-   * - Forest floor\ :sup:`2`                |    0.02 - 0.44
-
-   * - :sup:`1`\ Maricopa County Drainage Design Manual, 1992.
-       :sup:`2`\ W.
-       T.Fullerton, Masters Thesis, CSU, 1983.
-
 .. raw:: html
 
    <table style="border-collapse: collapse; width: 100%; border: 2px solid #000;">
@@ -2215,7 +2183,7 @@ Grid Element Maximum Fow Depth
 .. image:: img/Chapter4/Chapte073.jpg
 
 *Figure 63.
-Base Flood.
+Base Flood.*
 
 Grid Element Maximum Fow Depth
 
