@@ -1337,7 +1337,7 @@ The inflow node will have an assigned water inflow hydrograph.
 To avoid excessive scour downstream of the inflow node additional rigid grid elements can be assigned (R-lines in the SED.DAT file).
 These may be positioned for an alluvial fan simulation so that sediment transport equilibrium is achieved at or near the apex.
 
-.. image:: img/Chapter4/Chapte012.jpg
+.. image:: img/Chapter4/Chapte012.png
 
 *Figure 57.
 Inflow Node Locations.*
@@ -1564,7 +1564,7 @@ Table 11 lists the four different categories of hyperconcentrated sediment flows
 This Table 11 was developed from the laboratory data using actual mudflow deposits.
 Some variation in the delineation of the different flow classifications should be expected based on the sample geology.
 
-.. image:: img/Chapter4/Chapter068.jpg
+.. image:: img/Chapter4/Chapte068.jpg
 
 *Figure 58.
 Classification of Hyperconcentrated Sediment Flows.*
@@ -2649,7 +2649,7 @@ variable TOL values results in higher depths.
 The global TOL value was 0.004 ft and the spatial variation in the TOL value ranged from 0.25 to 0.67 ft covering roughly 45% of the grid system.
 In this project the amount of storage on the floodplain after the storm has ended is higher (almost double) with the spatially variable TOL values.
 
-.. image:: img/Chapter4/Chapte024.png
+.. image:: img/Chapter4/Chapte024.jpg
 
 *Figure 81.
 MAXPLOT Difference Analysis of the FINALDEP.OUT Files (Spatially Variable – Base Run).*
@@ -2960,7 +2960,7 @@ Note that all the roof maximum water surface elevations are equal, but the maxim
 predicted at the downspout element.
 The downspout outlet element 21990 has the same water surface elevation and small depth in both simulations.
 
-.. image:: img/Chapter4/Chapte036.jpg
+.. image:: img/Chapter4/Chapte036.png
 
 *Figure 102.
 Total Rainfall (3 inches) Accumulated on a Flat Roof.*
@@ -2981,7 +2981,7 @@ Compare this grid element maximum water surface elevation and flow depth in Figu
 overtopped and some rainfall storage is discharged to the ground.
 Any number of parapet wall cells (levee elements and the blocked direction) can be overtopped.
 
-.. image:: img/Chapter4/Chapte036.jpg
+.. image:: img/Chapter4/Chapte094.jpg
 
 *Figure 104.
 Maximum Flow Depth (Sloped Roof with Parapet wall Being Overtopped).*
