@@ -987,41 +987,43 @@ Green-Ampt Infiltration - Soil Suction.*
    Depression storage is an initial loss from the surface flow (TOL value).
    This is the amount of water stored in small surface depressions that does not become part of the overland runoff or infiltration.
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. raw:: html
 
+   <table style="border-collapse: collapse; width: 100%; border: 3px solid #000;">
+     <caption style="caption-side: top; font-weight: bold; padding: 6px 0;">
+       Table 9. Green-Ampt Infiltration Volumetric Moisture Deficiency.
+     </caption>
 
-   * - **Table 9.
-       Green-Ampt Infiltration Volumetric Moisture Deficiency.**
+     <thead>
+       <tr>
+         <th style="border: 1px solid #000; padding: 6px; background: #eee;">Classification</th>
+         <th style="border: 1px solid #000; padding: 6px; background: #eee;">Dry (% Diff)</th>
+         <th style="border: 1px solid #000; padding: 6px; background: #eee;">Normal (% Diff)</th>
+       </tr>
+     </thead>
 
-   * - Classification        |    Dry (% Diff)         | Normal|                         ||                         |    (% Diff)
+     <tbody>
+       <tr><td style="border:1px solid #000; padding:6px;">sand and loamy sand<sup>1</sup></td><td style="border:1px solid #000; padding:6px; text-align:center;">35</td><td style="border:1px solid #000; padding:6px; text-align:center;">30</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">sandy loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">35</td><td style="border:1px solid #000; padding:6px; text-align:center;">25</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">35</td><td style="border:1px solid #000; padding:6px; text-align:center;">25</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">silty loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">40</td><td style="border:1px solid #000; padding:6px; text-align:center;">25</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">silt</td><td style="border:1px solid #000; padding:6px; text-align:center;">35</td><td style="border:1px solid #000; padding:6px; text-align:center;">15</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">sandy clay loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">25</td><td style="border:1px solid #000; padding:6px; text-align:center;">15</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">clay loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">25</td><td style="border:1px solid #000; padding:6px; text-align:center;">15</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">silty clay loam</td><td style="border:1px solid #000; padding:6px; text-align:center;">30</td><td style="border:1px solid #000; padding:6px; text-align:center;">15</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">sandy clay</td><td style="border:1px solid #000; padding:6px; text-align:center;">20</td><td style="border:1px solid #000; padding:6px; text-align:center;">10</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">silty clay</td><td style="border:1px solid #000; padding:6px; text-align:center;">20</td><td style="border:1px solid #000; padding:6px; text-align:center;">10</td></tr>
+       <tr><td style="border:1px solid #000; padding:6px;">Clay</td><td style="border:1px solid #000; padding:6px; text-align:center;">15</td><td style="border:1px solid #000; padding:6px; text-align:center;">5</td></tr>
+     </tbody>
 
-   * - sand and loamy           |    35                   |    30sand\ :sup:`1`           |                         |
-
-   * - sandy loam               |    35                   |    25
-
-   * - loam                     |    35                   |    25
-
-   * - silty loam               |    40                   |    25
-
-   * - silt                     |    35                   |    15
-
-   * - sandy clay loam          |    25                   |    15
-
-   * - clay loam                |    25                   |    15
-
-   * - silty clay loam          |    30                   |    15
-
-   * - sandy clay               |    20                   |    10
-
-   * - silty clay               | 20                      | 10
-
-   * - Clay                     | 15                      | 5
-
-   * - :sup:`1`\ Maricopa County Drainage Design Manual,  |1992.
-       |
-
+     <tfoot>
+       <tr>
+         <td colspan="3" style="border-top:2px solid #000; padding:6px; font-size:90%;">
+           <sup>1</sup>Maricopa County Drainage Design Manual, 1992.
+         </td>
+       </tr>
+     </tfoot>
+   </table>
 
 Infiltration Depth Limitation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1088,7 +1090,10 @@ The UDFCD Drainage Criteria Manual (2008) suggests that the model represents a r
 urban watersheds where the runoff is not sensitive to soil parameters.
 This Horton equation is defined by:
 
-   *f = f\ o + (f\ i - f\ o) e\ -at*
+.. math::
+   :label:
+
+   f = f_o + (f_i - f_o)\, e^{-a t}
 
 where:
 
@@ -1101,28 +1106,65 @@ This equation simulates initial high infiltration early in the storm and decays 
 The parameters depend on soil conditions and vegetative cover.
 The UDFCD (2008) has recommended Horton parameters based on the NRCS hydrologic soil groups (**Table 10**).
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+.. raw:: html
 
+   <table style="border-collapse: collapse; width: 100%; border: 3px solid #000;">
+     <caption style="caption-side: top; font-weight: bold; padding: 6px 0;">
+       Table 10. Horton Infiltration Parameters.
+     </caption>
 
-   * - **Table 10.
-       Horton Infiltration Parameters.**
+     <thead>
+       <tr>
+         <th rowspan="2" style="border: 1px solid #000; padding: 6px; background: #e6e6e6; text-align: center;">
+           NRCS Soil<br>Group
+         </th>
+         <th colspan="2" style="border: 1px solid #000; padding: 6px; background: #e6e6e6; text-align: center;">
+           Infiltration (in/hr)
+         </th>
+         <th rowspan="2" style="border: 1px solid #000; padding: 6px; background: #e6e6e6; text-align: center;">
+           Decay Coeff.<br>(a)
+         </th>
+       </tr>
+       <tr>
+         <th style="border: 1px solid #000; padding: 6px; background: #e6e6e6; text-align: center;">
+           Initial (<i>f</i><sub>i</sub>)
+         </th>
+         <th style="border: 1px solid #000; padding: 6px; background: #e6e6e6; text-align: center;">
+           Final (<i>f</i><sub>o</sub>)
+         </th>
+       </tr>
+     </thead>
 
-   * - NRCS Soil Group    |    Infiltration (in/hr)                 | Decay Coeff.
-       (*a*)+--------------------+--------------------+|    Initial         | Final (*f\ o*)     ||    (*f\ i*)        |                    |
+     <tbody>
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">A</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">5.0</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">1.0</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">0.0007</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">B</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">4.5</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">0.6</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">0.0018</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">C</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">3.0</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">0.5</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">0.0018</td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">D</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">3.0</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">0.5</td>
+         <td style="border: 1px solid #000; padding: 6px; text-align: center;">0.0018</td>
+       </tr>
+     </tbody>
+   </table>
 
-   * - A                  | 5.0                | 1.0                | 0.0007
-
-   * - B                  | 4.5                | 0.6                | 0.0018
-
-   * - C               | 3.0                | 0.5                | 0.0018
-
-   * - D                  | 3.0                | 0.5                | 0.0018
-
-
- Evaporation
- -----------
+Evaporation
+-----------
 
    Open water surface evaporation losses for long duration floods in large river systems can be simulated.
 
