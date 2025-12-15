@@ -751,92 +751,23 @@ A given project may be limited in areal scope to an urban area, downstream of a 
 flood hydrographs.
 This may include any number of off-site flood hydrographs:
 
-- A FLO-2D watershed rainfall-runoff model upstream hydrograph;
-
-- A flood hydrograph from any other external model such as HEC-1 or HEC-HMS;
-
-- A large upstream river hydrograph;
-
-- Any small urban area off-site flood hydrograph;
+    - A FLO-2D watershed rainfall-runoff model upstream hydrograph;
+    - A flood hydrograph from any other external model such as HEC-1 or HEC-HMS;
+    - A large upstream river hydrograph;
+    - Any small urban area off-site flood hydrograph;
 
 A typical INFLOW.DAT file (Figure 15) mudflow inflow hydrograph with both water discharge and sediment concentration is shown in Figure 16 along with
 the data format (see the Data Input Manual for the variable description).
 
-|Chapte003|
+.. image:: img/Chapter3/Chapte003.png
 
-   *Figure 15.
-   INFLOW.DAT File Example.*
+*Figure 15.
+INFLOW.DAT File Example.*
 
-0.00
+.. image:: img/Chapter3/Chapte037.jpg
 
-0.05
-
-0.10
-
-0.15
-
-0.20
-
-0.25
-
-0.30
-
-0.35
-
-0.40
-
-0
-
-500
-
-1000
-
-1500
-
-2000
-
-2500
-
-3000
-
-3500
-
-4000
-
-4500
-
-5000
-
-0
-
-5
-
-10
-
-15
-
-20
-
-25
-
-30
-
-35
-
-40
-
-Discharge (cfs)
-
-Time (hrs)
-
-Discharge
-
-Sediment Concentration
-
-Concentration by Volume
-
-   *Figure 16.
-   Typical Inflow Flood Hydrograph with Mudflow Sediment Concentration by Volume.*
+*Figure 16.
+Typical Inflow Flood Hydrograph with Mudflow Sediment Concentration by Volume.*
 
 Project managers may request small grid elements on a project inferring that small cells will result in a more accurate model.
 The area of inundation, however, is primarily a function of inflow flood volume or rainfall and discretizing the inflow hydrograph for the
@@ -848,11 +779,17 @@ estimate of the peak discharge can be used.
 Based on FLO-2D model experience, the relationship of the peak discharge Q\ :sub:`Peak` divided by the surface area of one grid element A\ :sub:`surf`
 for a fast model should be on the order of:
 
-Q\ :sub:`peak`/A\ :sub:`surf` ~ 3 cfs/ft\ :sup:`2` or 1 cms/m\ :sup:`2`
+.. math::
+   :label:
+
+   \frac{Q_{peak}}{A_{surf}} \sim 3\ \text{cfs/ft}^2 \quad \text{or} \quad 1\ \text{cms/m}^2
 
 or for a slow model:
 
-Q\ :sub:`peak`/A\ :sub:`surf` ~ 10 cfs/ft\ :sup:`2` or 3 cms/m\ :sup:`2`
+.. math::
+   :label:
+
+   \frac{Q_{peak}}{A_{surf}} \sim 10\ \text{cfs/ft}^2 \quad \text{or} \quad 3\ \text{cms/m}^2
 
 Within this range, the closer this discharge to surface area ratio is to 3 cfs/ft\ :sup:`2` (1 cms/m\ :sup:`2`) the faster the model will run.
 A Q\ :sub:`peak`/A\ :sub:`surf` over 10 cfs/ft\ :sup:`2` will result in an excruciatingly slow model.
@@ -860,19 +797,16 @@ A Q\ :sub:`peak`/A\ :sub:`surf` over 10 cfs/ft\ :sup:`2` will result in an excru
 Inflow Node Guidelines
 ~~~~~~~~~~~~~~~~~~~~~~
 
- Floodplain Inflow Nodes
- ^^^^^^^^^^^^^^^^^^^^^^^
+        *Floodplain Inflow Nodes*
 
 The primary purpose of the inflow node is to get the flood on the grid system and moving downstream.
 While almost any floodplain grid element can be assigned as an inflow node, there are some guidelines that will facilitate introducing an inflow
 hydrograph to a specific location:
 
-- Assign the inflow element as close to the actual hydrograph location as possible.
-  An inflow node can be assigned next to the grid system boundary.
-
-- Contiguous elements downstream should have lower elevation than the inflow node.
-
-- Avoid assigning an inflow node next to an outflow node.
+    - Assign the inflow element as close to the actual hydrograph location as possible.
+      An inflow node can be assigned next to the grid system boundary.
+    - Contiguous elements downstream should have lower elevation than the inflow node.
+    - Avoid assigning an inflow node next to an outflow node.
 
 Review the inflow node elevation and n-values with respect to all the contiguous cells using the GDS or QGIS.
 Avoid assigning the inflow in a depression and raise the inflow node elevation, if necessary, to create a downslope to the contiguous downstream
@@ -883,11 +817,9 @@ elements.
 This will reduce the inflow discharge to the inflow elements and speed up the model.
 The following suggestions will improve the inflow hydrograph distribution over several elements:
 
-- Assign equal inflow hydrographs to all the inflow nodes in a group.
-
-- In the GDS or QGIS assign equal elevations and n-values to all the grouped inflow nodes.
-
-- For one or more downstream rows of cells, assign equal but lower elevations and equal n-values to each row.
+    - Assign equal inflow hydrographs to all the inflow nodes in a group.
+    - In the GDS or QGIS assign equal elevations and n-values to all the grouped inflow nodes.
+    - For one or more downstream rows of cells, assign equal but lower elevations and equal n-values to each row.
 
 The result of this inflow node adjustment will be several rows of elements that are designed to get the inflow hydrograph onto the grid system and
 moving downstream.
@@ -896,39 +828,38 @@ These sacrificial grid elements should be considered as outside of the represent
 It is also possible to force the flow downstream by elevating all the upstream contiguous cells around the inflow node(s) as indicated by Figure 17.
 There would also be no flow sharing between inflow nodes because of the equal inflow hydrographs resulting in equivalent inflow depths.
 
-|Chapte004|
+.. image:: img/Chapter3/Chapte004.jpg
 
-   *Figure 17.
-   Multiple inflow nodes (green) assigned with adjusted elevations and n-values.*
+*Figure 17.
+Multiple inflow nodes (green) assigned with adjusted elevations and n-values.*
 
 A similar isolated inflow condition can be generated by assigning blocked cells around the inflow node (ARF = 1) as shown in Figure 18.
 
-|Chapte005|
+.. image:: img/Chapter3/Chapte005.png
 
-   *Figure 18.
-   GDS image of blocked cells (ARF = 1) surrounding an inflow node (green).*
+*Figure 18.
+GDS image of blocked cells (ARF = 1) surrounding an inflow node (green).*
 
- Channel Inflow Nodes
- ^^^^^^^^^^^^^^^^^^^^
+        *Channel Inflow Nodes*
 
 If the inflow hydrograph is assigned to the upstream channel element and the peak discharge is overflowing the banks, a similar isolation approach can
 be implemented for the channel inflow node.
 The channel inflow cross section can be expanded, and its bank elevations raised to convey the inflow hydrograph peak discharge without overbank flow.
 This modification can be made in the PROFILES processor program or in QGIS (Figure 19 and Figure 20).
 
-*Figure*
+.. image:: img/Chapter3/Chapte038.jpg
 
-*19*
-
-*.
+*Figure 19
 Original upstream channel cross section.*
 
-   (~ 150 ft wide x 7 ft deep)
+               (~ 150 ft wide x 7 ft deep)
 
-   *Figure 20.
-   Revised channel cross section to contain the peak discharge*
+.. image:: img/Chapter3/Chapte039.jpg
 
-   (~ 180 ft wide x 15 ft deep)
+*Figure 20.
+Revised channel cross section to contain the peak discharge*
+
+               (~ 180 ft wide x 15 ft deep)
 
 The channel cross section in Figure 19 was expanded from 150 ft to 180 ft wide and 7 ft deep to 15 ft deep.
 Once the channel inflow node cross section has been expanded to contain the inflow peak discharge, the downstream cross sections for five to ten
@@ -940,10 +871,12 @@ The channel cross sections for the elements in-between the two interpolated book
 Overbank flooding will then occur somewhere downstream of the channel inflow node.
 The channel hydraulic results in this interpolated reach are considered outside the project area.
 
-   *Figure 21.
-   Upstream channel elements with expanded cross sections.*
+.. image:: img/Chapter3/Chapte040.jpg
 
-   (outlined in red)
+*Figure 21.
+Upstream channel elements with expanded cross sections.*
+
+                (outlined in red)
 
 Channel inflow directly to the upstream channel interior elements from the floodplain surface is an option (see the White Paper entitled ‘Channel
 Termination Inflow Guidelines’.
@@ -953,13 +886,12 @@ This may occur from overbank flow circumventing the end of the channel or from r
 In this additional channel inflow is unwanted, block the cells in green in Figure 22 with an ARF = 1 assignment or by adjusting elevations so the flow
 cannot reach the green cells.
 
-|Chapte006|
+.. image:: img/Chapter3/Chapte006.jpg
 
-   *Figure 22.
-   Block the inflow to the interior channel elements.*
+*Figure 22.
+Block the inflow to the interior channel elements.*
 
- Inflow Nodes Summary
- ^^^^^^^^^^^^^^^^^^^^
+            *Inflow Nodes Summary*
 
 When a high peak discharge inflow hydrograph is assigned to small grid elements, the hydrograph can be divided equally over several inflow grid
 elements.
@@ -991,28 +923,26 @@ If a portion of the grid system is isolated by outflow nodes and there is flow o
 distorted the normal depth calculations and the outflow volume will not be conserved (Figure 23).
 This flow condition should be avoided by having discharge to the outflow node from only one side or direction.
 
-   |Chapte007|
+ .. image:: img/Chapter3/Chapte007.jpg
 
-   *Figure 23.
-   Discharge to outflow nodes from both sides.*
+*Figure 23.
+Discharge to outflow nodes from both sides.*
 
 Other outflow guidelines include:
 
-- Outflow elements should not be modified with ARF’s or WRF’s, levees, streets, etc.
+    - Outflow elements should not be modified with ARF’s or WRF’s, levees, streets, etc.
+    - Do not double up outflow nodes or isolate outflow nodes with no connection to upstream inflow (Figure 24).
+    - Channel outflow can also be established by a stage-discharge.
+      This option can be used when channel outflow occurs at a hydraulic structure or when a known stage-discharge relationship is available.
 
-- Do not double up outflow nodes or isolate outflow nodes with no connection to upstream inflow (Figure 24).
+.. image:: img/Chapter3/Chapte008.jpg
 
-- Channel outflow can also be established by a stage-discharge.
-  This option can be used when channel outflow occurs at a hydraulic structure or when a known stage-discharge relationship is available.
+*Figure 24.
+Outflow node assignment and stacked nodes.*
 
-|Chapte008|
+                                (acceptable – left; unacceptable – right)
 
-   *Figure 24.
-   Outflow node assignment and stacked nodes.*
-
-   (acceptable – left; unacceptable – right)
-
-   Incorrect outflow nodes are outlined in red and should be removed
+                 Incorrect outflow nodes are outlined in red and should be removed
 
 Stage-time relationships can be specified for either the floodplain or channel outflow nodes to provide the opportunity to simulate coastal flooding
 related to ocean storm surge or tsunamis.
@@ -1024,8 +954,7 @@ For example, the upstream grid system could encompass the watershed above the ur
 By overlapping the grid systems, the upstream outflow nodes can generate the inflow hydrographs to the downstream smaller cell grid system
 automatically (see the White Paper entitled “Outflow Hydrograph Tool” available at the FLO-2D website).
 
- Outflow Nodes Summary
- ^^^^^^^^^^^^^^^^^^^^^
+            *Outflow Nodes Summary*
 
 Outflow nodes can be assigned anywhere on the grid system to discharge flow off the domain.
 The flow into outflow nodes is based on a normal depth condition to avoid artificially accelerating or decelerating the upstream flow and either
@@ -1073,88 +1002,25 @@ onto the QGIS GUI display as shown in Figure 25.
 It consists of a set of layers that represent the FLO-2D spatial and time variable data.
 The data is stored in a geopackage in SQLite format.
 
-|Chapte009|
+.. image:: img/Chapter3/Chapte009.jpg
 
-   *Figure 25.
-   FLO-2D QGIS Plugin Tool Working Environment.*
+*Figure 25.
+FLO-2D QGIS Plugin Tool Working Environment.*
 
 The plug-in package includes a toolbar for building the project geographical system and will have control icons for editing the various FLO-2D
 component data files.
 Figure 26 shows toolbar and Table 3 is a list of and description of the tools.
 The QGIS plug-in tool is continually expanding and will eventually have all the detail editor functions found in the GDS.
 
-|Chapte010|
+.. image:: img/Chapter3/Chapte010.jpg
 
-   *Figure 26.
-   Toolbar FLO-2D Plugin.*
+*Figure 26.
+Toolbar FLO-2D Plugin.*
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+*Table 3.
+QGIS Plugin Tools.*
 
-
-   * -
-     - **Table 3.
-       QGIS Plugin Tools.**
-
-   * - **Tool**
-     - **Description**
-
-   * - |Chapte011|
-     - FLO-2D Plugin Settings – Set up the geopackage and project coordinate system.
-       Set grid element size and default Manning’s n.
-
-   * - |Chapte012|
-     - Import FLO-2D Pro model \*.DAT files.
-       Uses CONT.DAT as the pointer file to set the path.
-
-   * - |Chapte013|
-     - Exports data files into the FLO-2D \*.DAT file format.
-
-   * - |Chapte014|
-     - Info tool views information related to a FLO-2D element.
-       This dedicated tool is used to view hydrograph time series and plots, cross section table and plots, etc.
-       The Info Tool works on both User and Schematized Layers.
-
-   * - |Chapte015|
-     - Create Grid – this tool builds a grid system from the polygon in the Computational Domain layer and the grid element size set in Settings tool.
-
-   * - |Chapte016|
-     - Sampling Grid Elevation – This tool samples an elevation raster to set the grid element elevation.
-
-   * - |Chapte017|
-     - Sampling Manning’s n – This tool will sample a polygon layer for roughness values and assign that value to the Schematic Layers.
-
-   * - |Chapte018|
-     - Evaluate reduction factors (ARF and WRF) – This tool will compute the area and width reduction factors from building polygons.
-
-   * - |Chapte019|
-     - Grid info tool – This tool queries spatially variable data assigned to individual grid elements.
-
-   * - |Chapte020|
-     - Channel Cross Section Editor – Select and activate a cross section for editing.
-
-   * - |Chapte021|
-     - Evaporation Editor – Tool to edit the evaporation table data.
-
-   * - |Chapte022|
-     - Assign elevation from polygons – This tool will allow the user to edit the elevation layer with polygons.
-
-   * - |Chapte023|
-     - Levee Elevation Tool – This tool eliminate levee and raised topography from the elevation data.
-
-   * - |Chapte024|
-     - HAZUS Tool – This tool uses depth and velocity layers to define a hazard for buildings in the flooded area.
-
-   * - |Chapte025|
-     - Tailings Dam Tool – This button opens the tailings dam tool.
-
-   * - |Chapte026|
-     - Debug Tool – This button imports the debug.out file and opens the component conflict checker.
-
-   * - |Chapte027|
-     - Help – This button opens the help manuals in pdf format.
-
+.. image:: img/Chapter3/Chapte041.jpg
 
 The editable data is accessed via User Layers.
 The user will import, digitize or compute spatial data through these layers.
@@ -1170,49 +1036,30 @@ positioning or assignment.
 This enables the computational domain to be modified at any time and the FLO-2D components like levees, channels and all other data can be then
 updated automatically.
 
-|Chapte028|
+.. image:: img/Chapter3/Chapte028.jpg
 
-   *Figure 27.
-   User and Schematic Layer Structure.*
+*Figure 27.
+User and Schematic Layer Structure.*
 
 A table editor plotting graph is docked to the bottom of the project environment (Figure 28).
 The data can be editing or replaced as required.
 These editors have redo functionality and copy paste and import from comma separated values or MS Excel.
 
-|Chapte029|
+.. image:: img/Chapter3/Chapte029.jpg
 
 *Figure 28.
 FLO-2D Table Editor.*
 
 The docked panel on the right is a control panel
-
-(
-
-Figure
-
-29
-
-)
-
-for digitizing and entering data.
-The
-
-boundary conditions,
-
-channel cross sections, and
-
-rainfall and other FLO
-
--
-
-2
-
-D components can all
-
+(Figure 29) for digitizing and entering data. The
+boundary conditions, channel cross sections, and
+rainfall and other FLO-2D components can all
 generated from this area.
 
-   *Figure 29.
-   Control Panel for Various FLO-2D Components.*
+.. image:: img/Chapter3/Chapte042.jpg
+
+*Figure 29.
+Control Panel for Various FLO-2D Components.*
 
 Graphical Output Options
 ------------------------
@@ -1225,10 +1072,10 @@ The grid element results for floodplain, channel and street flow can be reviewed
 generated in MAPPER Pro.
 Flood mapping can also be generated with the QGIS plug-in tool (Figure 30) and shape files for export can be generated.
 
-|Chapte030|
+.. image:: img/Chapter3/Chapte030.jpg
 
-   *Figure 30.
-   QGIS Plug-in Tool for FLO-2D Model Development and Displaying Results.*
+*Figure 30.
+QGIS Plug-in Tool for FLO-2D Model Development and Displaying Results.*
 
 Graphical displays are provided in the HYDROG, PROFILES, MAXPLOT and MAPPER Pro post-processor programs.
 HYDROG will plot the hydrograph for every channel element.
@@ -1243,20 +1090,20 @@ A typical maximum depth plot is shown in Figure 32.
 Even sediment transport results can be plotted as shown in Figure 33.
 A discussion using MAXPLOT is presented in the Data Input Manual.
 
-|Chapte031|
+.. image:: img/Chapter3/Chapte031.jpg
 
-   *Figure 31.
-   MAXPLOT Mapping Controls.*
+*Figure 31.
+MAXPLOT Mapping Controls.*
 
-|Chapte032|
+.. image:: img/Chapter3/Chapte032.jpg
 
-   *Figure 32.
-   MAXPLOT Floodplain Maximum Flow Depths (Based on Grid Element).*
+*Figure 32.
+MAXPLOT Floodplain Maximum Flow Depths (Based on Grid Element).*
 
-|Chapte033|
+.. image:: img/Chapter3/Chapte033.jpg
 
-   *Figure 33.
-   MAXPLOT Maximum Scour Depths (Based on Grid Element).*
+*Figure 33.
+MAXPLOT Maximum Scour Depths (Based on Grid Element).*
 
 MAPPER Pro creates high resolution color contour plots.
 Several map combinations can be created: grid element or DTM point plots, line contour maps and shaded contour maps.
@@ -1267,30 +1114,22 @@ When the user activates the feature, MAPPER Pro will subtract each DTM ground po
 The resultant DTM point flow depths can then be interpolated and plotted as color contours (Figure 34).
 Some of the MAPPER Pro features include:
 
-- Multiple geo-referenced aerial photos in various graphic formats can be imported such as TIFF, BMP, JPG, etc.
-
-- Multiple layer capability including control of layer properties is available.
-
-- Cut and view flow depth and topography profiles.
-
-- Flood animation.
-  The floodwave progression over the grid system can be viewed.
-
-- Sediment transport maximum deposition and scour can be plotted.
-
-- Maximum flow velocity vectors can be viewed.
-
-- Hazard maps based on flood intensity and frequency can be created.
-
-- GIS shape files (\*.shp) are automatically created with any plotted results.
-  This GIS shape files can be then be imported into ArcView or other GIS programs.
+    - Multiple geo-referenced aerial photos in various graphic formats can be imported such as TIFF, BMP, JPG, etc.
+    - Multiple layer capability including control of layer properties is available.
+    - Cut and view flow depth and topography profiles.
+    - Flood animation. The floodwave progression over the grid system can be viewed.
+    - Sediment transport maximum deposition and scour can be plotted.
+    - Maximum flow velocity vectors can be viewed.
+    - Hazard maps based on flood intensity and frequency can be created.
+    - GIS shape files (\*.shp) are automatically created with any plotted results.
+      This GIS shape files can be then be imported into ArcView or other GIS programs.
 
 The MAPPER Pro features and functions are described in its own manual.
 
-|Chapte034|
+.. image:: img/Chapter3/Chapte034.jpg
 
-   *Figure 34.
-   MAPPER PRO Plot of Maximum Depths.*
+*Figure 34.
+MAPPER PRO Plot of Maximum Depths.*
 
 Data Output Options
 -------------------
@@ -1301,103 +1140,3 @@ Hydraulic data include water surface elevation, flow depth and velocities in the
 Discharge for specified output intervals (hydrographs) are written to various files.
 A mass conservation summary table comparing the inflow, outflow and storage in the system is presented in the SUMMARY.OUT file.
 A complete description of all the output files is presented in the Data Input Manual.
-
-.. |Chapte002| image:: media\Chapte002.jpg
-   :width: 2.99361in
-   :height: 1.65833in
-.. |Chapte003| image:: media\Chapte003.png
-   :width: 2.44347in
-   :height: 2.05833in
-.. |Chapte004| image:: media\Chapte004.jpg
-   :width: 3.44931in
-   :height: 4.79389in
-.. |Chapte005| image:: media\Chapte005.png
-   :width: 2.76542in
-   :height: 2.29306in
-.. |Chapte006| image:: media\Chapte006.jpg
-   :width: 4.62306in
-   :height: 2.83056in
-.. |Chapte007| image:: media\Chapte007.jpg
-   :width: 4.16736in
-   :height: 2.68056in
-.. |Chapte008| image:: media\Chapte008.png
-   :width: 4.8in
-   :height: 2.76667in
-.. |Chapte009| image:: media\Chapte009.jpg
-   :width: 6.5in
-   :height: 3.52431in
-.. |Chapte010| image:: media\Chapte010.jpg
-   :width: 6.22222in
-   :height: 0.4375in
-.. |Chapte011| image:: media\Chapte011.jpg
-   :width: 0.31172in
-   :height: 0.28056in
-.. |Chapte012| image:: media\Chapte012.jpg
-   :width: 0.32208in
-   :height: 0.27014in
-.. |Chapte013| image:: media\Chapte013.jpg
-   :width: 0.30131in
-   :height: 0.27014in
-.. |Chapte014| image:: media\Chapte014.jpg
-   :width: 0.32212in
-   :height: 0.28056in
-.. |Chapte015| image:: media\Chapte015.jpg
-   :width: 0.33264in
-   :height: 0.36382in
-.. |Chapte016| image:: media\Chapte016.jpg
-   :width: 0.37424in
-   :height: 0.34306in
-.. |Chapte017| image:: media\Chapte017.jpg
-   :width: 0.30139in
-   :height: 0.35335in
-.. |Chapte018| image:: media\Chapte018.jpg
-   :width: 0.31181in
-   :height: 0.3326in
-.. |Chapte019| image:: media\Chapte019.jpg
-   :width: 0.30139in
-   :height: 0.35335in
-.. |Chapte020| image:: media\Chapte020.jpg
-   :width: 0.35335in
-   :height: 0.30139in
-.. |Chapte021| image:: media\Chapte021.jpg
-   :width: 0.35344in
-   :height: 0.34306in
-.. |Chapte022| image:: media\Chapte022.jpg
-   :width: 0.32219in
-   :height: 0.31181in
-.. |Chapte023| image:: media\Chapte023.jpg
-   :width: 0.34301in
-   :height: 0.32222in
-.. |Chapte024| image:: media\Chapte024.jpg
-   :width: 0.34301in
-   :height: 0.32222in
-.. |Chapte025| image:: media\Chapte025.jpg
-   :width: 0.33261in
-   :height: 0.32222in
-.. |Chapte026| image:: media\Chapte026.jpg
-   :width: 0.34301in
-   :height: 0.32222in
-.. |Chapte027| image:: media\Chapte027.jpg
-   :width: 0.34301in
-   :height: 0.32222in
-.. |Chapte028| image:: media\Chapte028.jpg
-   :width: 4.93681in
-   :height: 4.91306in
-.. |Chapte029| image:: media\Chapte029.jpg
-   :width: 6.50069in
-   :height: 1.4in
-.. |Chapte030| image:: media\Chapte030.jpg
-   :width: 6.5in
-   :height: 3.52083in
-.. |Chapte031| image:: media\Chapte031.jpg
-   :width: 3.45972in
-   :height: 5.55111in
-.. |Chapte032| image:: media\Chapte032.jpg
-   :width: 6.09167in
-   :height: 3.89972in
-.. |Chapte033| image:: media\Chapte033.jpg
-   :width: 6.09167in
-   :height: 3.89972in
-.. |Chapte034| image:: media\Chapte034.jpg
-   :width: 6.5in
-   :height: 3.19306in
