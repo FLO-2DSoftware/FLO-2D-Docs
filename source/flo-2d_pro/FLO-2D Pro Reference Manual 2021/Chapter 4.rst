@@ -2241,460 +2241,281 @@ At any particular time in the simulation, water may be infiltrating from the sur
 other areas the opposite may occur.
 The model timesteps are synchronized as follows:
 
-- The MODFLOW simulation is divided into a series of stress periods during which specific parameters (e.g. variable heads) are constant.
-- Each stress period, in turn, is divided into a series of computational timesteps.
+    - The MODFLOW simulation is divided into a series of stress periods during which specific parameters (e.g. variable heads) are constant.
+    - Each stress period, in turn, is divided into a series of computational timesteps.
+    - FLO-2D model timesteps are smaller than the MODFLOW model timesteps, so a number of FLO2D computational sweeps are performed to match the MODFLOW
+      model simulation time.
 
-- FLO-2D model timesteps are smaller than the MODFLOW model timesteps, so a number of FLO2D computational sweeps are performed to match the MODFLOW
-  model simulation time.
+Infiltrated floodplain water predicted by FLO-2D is exchanged to the groundwater cells below.
+If the groundwater is lower than the channel bed elevation, the infiltration volume is passed to the corresponding MODFLOW grid element.
+If the groundwater is higher than the channel water surface elevation, the exchange flow will enter the river.
 
-..
+The GDS creates the data for the integration of the models.
+It will generate a subset of the required variables for groundwater simulation (Figure 66).
+Refer the MODFLO-2D manual for more details.
 
-   Infiltrated floodplain water predicted by FLO-2D is exchanged to the groundwater cells below.
-   If the groundwater is lower than the channel bed elevation, the infiltration volume is passed to the corresponding MODFLOW grid element.
-   If the groundwater is higher than the channel water surface elevation, the exchange flow will enter the river.
+.. image:: img/Chapter4/Chapte076.jpg
 
-   The GDS creates the data for the integration of the models.
-   It will generate a subset of the required variables for groundwater simulation (Figure 66).
-   Refer the MODFLO-2D manual for more details.
+*Figure 66.
+GDS Data Entry for a MODFLOW Groundwater Simulation.*
 
-Head Comparison for
+Building Collapse
+-----------------
 
-Island
+In the FLO-2D model, the loss of flood storage due to buildings is simulated with area reduction factors (ARF values) that reduce the surface area of
+a grid element (percentage).
+A grid element may be totally blocked (ARF = 1) or partially blocked (ARF < 1).
+A group of grid elements together may constitute a large building such as a school or mall (Figure 67 a and b).
+In Figure 67 the grey grid elements represent total blockage while the yellow elements are partially blocked.
+The flood flow will go around a totally blocked building.
 
-   *Figure 66.
-   GDS Data Entry for a MODFLOW Groundwater Simulation.*
-
- Building Collapse
- -----------------
-
-   In the FLO-2D model, the loss of flood storage due to buildings is simulated with area reduction factors (ARF values) that reduce the surface area of
-   a grid element (percentage).
-   A grid element may be totally blocked (ARF = 1) or partially blocked (ARF < 1).
-   A group of grid elements together may constitute a large building such as a school or mall (Figure 67 a and b).
-   In Figure 67 the grey grid elements represent total blockage while the yellow elements are partially blocked.
-   The flood flow will go around a totally blocked building.
+.. image:: img/Chapter4/Chapte077.jpg
 
 *Figure 67.
 Buildings with a FLO-2D Grid System and ARF Values Representing Buildings.*
 
-   During a flood event or a mud/debris flow, it is possible that a building could collapse and be removed.
-   There are number of ways for this to happen.
-   The flood dynamic forces or static pressure could simply knock the structure over, push it off the foundation, or rip it apart.
-   Scour and erosion could undermine the structure resulting a collapse into the flow.
-   Large rocks could impact the structure.
-   The integrity of the building structure could be compromised by getting wet.
-   In any case, the flooding could destroy the building and allow the flow to go through the previously occupied grid element(s).
+During a flood event or a mud/debris flow, it is possible that a building could collapse and be removed.
+There are number of ways for this to happen.
+The flood dynamic forces or static pressure could simply knock the structure over, push it off the foundation, or rip it apart.
+Scour and erosion could undermine the structure resulting a collapse into the flow.
+Large rocks could impact the structure.
+The integrity of the building structure could be compromised by getting wet.
+In any case, the flooding could destroy the building and allow the flow to go through the previously occupied grid element(s).
 
-   To predict the collapse of the building during flooding vulnerability curves can be applied.
-   An approach to predicting building collapse was undertaken by Pilotti, et al.
-   (2016) that is like the Bureau of Reclamation (BOR, 1988) application of vulnerability curves for people, vehicles and structures.
-   Pilotti (2016) considered a masonry building constructed with materials such as brick or stone bound together by mortar.
-   These types of building walls have low tensile strength and support the roof or upper story load.
-   During a flood the collapse of a wall can result in the entire destruction of the building.
+To predict the collapse of the building during flooding vulnerability curves can be applied.
+An approach to predicting building collapse was undertaken by Pilotti, et al.
+(2016) that is like the Bureau of Reclamation (BOR, 1988) application of vulnerability curves for people, vehicles and structures.
+Pilotti (2016) considered a masonry building constructed with materials such as brick or stone bound together by mortar.
+These types of building walls have low tensile strength and support the roof or upper story load.
+During a flood the collapse of a wall can result in the entire destruction of the building.
 
 Building Vulnerability
 ^^^^^^^^^^^^^^^^^^^^^^
 
-   Pilotti et al.
-   (2016) provides a rigorous mathematical formulation of the approach which includes the computation of the dynamic forces and pressures on a building
-   cell, the axial loading, the maximum bending moment and the resistive forces.
-   His final product is a set of vulnerability curves based on a maximum depth for a given velocity above which the building will fail (Figure 68).
-   This method is similar to BOR (1988) vulnerability curves for mobile homes and buildings with a foundation (Figure 69 and Figure 70).
-   Other building types and potential failure mechanisms could be considered to generate a series of vulnerability curves.
+Pilotti et al. (2016) provides a rigorous mathematical formulation of the approach which includes the computation of the dynamic forces and pressures on a building
+cell, the axial loading, the maximum bending moment and the resistive forces.
+His final product is a set of vulnerability curves based on a maximum depth for a given velocity above which the building will fail (Figure 68).
+This method is similar to BOR (1988) vulnerability curves for mobile homes and buildings with a foundation (Figure 69 and Figure 70).
+Other building types and potential failure mechanisms could be considered to generate a series of vulnerability curves.
 
-|Chapte013|
+.. image:: img/Chapter4/Chapte013.jpg
 
-   *Figure 68.
-   Vulnerability Curves.
-   (Pilotti et al., 2016).*
+*Figure 68.
+Vulnerability Curves. (Pilotti et al., 2016).*
 
-|Chapte014|
+.. image:: img/Chapter4/Chapte014.jpg
 
-   *Figure 69.
-   Vulnerability Curve for Mobile Homes (BOR, 1988).*
+*Figure 69.
+Vulnerability Curve for Mobile Homes (BOR, 1988).*
 
-|Chapte015|
+.. image:: img/Chapter4/Chapte015.jpg
 
-   *Figure 70.
-   Vulnerability Curves for Buildings with a Foundation (BOR, 1988).*
+*Figure 70.
+Vulnerability Curves for Buildings with a Foundation (BOR, 1988).*
 
-   In the work of Pilotti et al (2016), a conservative approach was taken to generate the depth for a given flood velocity that would cause the building
-   to collapse.
-   This line is expressed as a polynomial equation with depth as a function of velocity which predicts the maximum flow depth (threshold depth) above
-   which the building is presumed to fail (Figure 71).
+In the work of Pilotti et al (2016), a conservative approach was taken to generate the depth for a given flood velocity that would cause the building
+to collapse.
+This line is expressed as a polynomial equation with depth as a function of velocity which predicts the maximum flow depth (threshold depth) above
+which the building is presumed to fail (Figure 71).
 
-y = 0.0005x
+.. image:: img/Chapter4/Chapte078.jpg
 
-5
+*Figure 71.
+Vulnerability Curve for a Masonry Building (Pilotti et al., 2016).*
 
--
+Plotting all three vulnerability curves (including the 2 BOR curves) on the same graph reveals that a masonry building is predicted to be less
+susceptible to collapse (Figure 72).
+The three vulnerability curves have been interpreted as poor or highly susceptible to flood collapse (mobile homes), moderate for buildings with
+foundations, and good for building with more substantial construction.
+A fourth curve (Clausen & Clark, 1990) was recommended by Pilotti et al.
+(2016) (Figure 72 black lines).
+According to Clausen & Clark (1990) building collapse is not predicted for a velocity less than 6 fps.
+The Clausen & Clark black lines in Figure 72 constitute a range of hydraulic values depending on construction materials and methods, but only the
+lower curve is applied in the FLO-2D model.
 
-0.0133
+.. image:: img/Chapter4/Chapte079.jpg
 
-x
+*Figure 72.
+Vulnerability Curves for Building Subject to Collapse.*
 
-4
-
-+
-
-0.124x
-
-3
-
--
-
-0.4705
-
-x
-
-2
-
-+
-
-0.2344x
-
-+ 2.7129
-
-R² = 0.9998
-
-0
-
-0.5
-
-1
-
-1.5
-
-2
-
-2.5
-
-3
-
-0
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-h (m)
-
-U (m/s)
-
-Vulnerability curve
-
-   *Figure 71.
-   Vulnerability Curve for a Masonry Building (Pilotti et al., 2016).*
-
-   Plotting all three vulnerability curves (including the 2 BOR curves) on the same graph reveals that a masonry building is predicted to be less
-   susceptible to collapse (Figure 72).
-   The three vulnerability curves have been interpreted as poor or highly susceptible to flood collapse (mobile homes), moderate for buildings with
-   foundations, and good for building with more substantial construction.
-   A fourth curve (Clausen & Clark, 1990) was recommended by Pilotti et al.
-   (2016) (Figure 72 black lines).
-   According to Clausen & Clark (1990) building collapse is not predicted for a velocity less than 6 fps.
-   The Clausen & Clark black lines in Figure 72 constitute a range of hydraulic values depending on construction materials and methods, but only the
-   lower curve is applied in the FLO-2D model.
-
-0.00
-
-2.00
-
-4.00
-
-6.00
-
-8.00
-
-10.00
-
-12.00
-
-14.00
-
-16.00
-
-18.00
-
-0.00
-
-5.00
-
-10.00
-
-15.00
-
-20.00
-
-25.00
-
-30.00
-
-**D**
-
-**e**
-
-**p**
-
-**t**
-
-**h**
-
-**(**
-
-**f**
-
-**t**
-
-**)**
-
-**Velocity (fps)**
-
-poor
-
-moderate
-
-good
-
-Clausen & Clark G
-
-Clausen & Clark R
-
-   *Figure 72.
-   Vulnerability Curves for Building Subject to Collapse.*
-
-   The vulnerability curves for the BOR mobile homes and buildings with foundations were regressed by digitizing Figure 69 for the delineation between
-   the High Danger and the Judgment Zones.
-   These curves should be considered as general guidelines for the potential for a building to collapse during a flood event.
-   More research could define a series of vulnerability curves for different types of construction.
+The vulnerability curves for the BOR mobile homes and buildings with foundations were regressed by digitizing Figure 69 for the delineation between
+the High Danger and the Judgment Zones.
+These curves should be considered as general guidelines for the potential for a building to collapse during a flood event.
+More research could define a series of vulnerability curves for different types of construction.
 
 Implementation of the Building Collapse in the FLO-2D Model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   The polynomial equations relating the threshold depth for a building collapse as function of velocity for the four vulnerability curves shown in
-   Figure 70 has been implemented in the FLO-2D model.
-   There are two methods for initiating the building collapse routine: 1) Create the BUILDING_COLLAPSE.DAT file consisting of the grid element; and 2)
-   Assigning negative ARF values.
-   In the first method, the vulnerability curves (1-poor, 2-moderate, 3-good and 4-Clausen & Clark upper curve) from Figure 70 includes a global curve
-   and spatial variable curve assignments.
-   In the file, Line 1 is a global vulnerability curve assignment which is superseded by the individual grid element vulnerability curves.
-   If a building consists of multiple grid elements, each element must have a vulnerability curve assignment to collapse the entire building.
-   The global vulnerability curve value could be zero.
-   A portion of a typical BUILDING_COLLAPSE.DAT file is follows:
+The polynomial equations relating the threshold depth for a building collapse as function of velocity for the four vulnerability curves shown in
+Figure 70 has been implemented in the FLO-2D model.
+There are two methods for initiating the building collapse routine: 1) Create the BUILDING_COLLAPSE.DAT file consisting of the grid element; and 2)
+Assigning negative ARF values.
+In the first method, the vulnerability curves (1-poor, 2-moderate, 3-good and 4-Clausen & Clark upper curve) from Figure 70 includes a global curve
+and spatial variable curve assignments.
+In the file, Line 1 is a global vulnerability curve assignment which is superseded by the individual grid element vulnerability curves.
+If a building consists of multiple grid elements, each element must have a vulnerability curve assignment to collapse the entire building.
+The global vulnerability curve value could be zero.
+A portion of a typical BUILDING_COLLAPSE.DAT file is follows:
 
-1. Global Vulnerability Curve
+.. raw:: html
 
-..
+    <pre>
 
-   2
+    0 Global Vulnerability Curve
+     2
+       6756           1
+     1   Grid element, grid element curve (poor)
+     2   Grid element, grid element curve (moderate)
+     3   Grid element, grid element curve (good)
+     4
+     1
+    …
+    </pre>
 
-6756 1
+Assigning a nonzero value to the global vulnerability curve would initiate potential building failure for any of the buildings in the model.
 
-2. Grid element, grid element curve (poor)
+The building collapse routine can also be activated by assigning a negative value to a completely blocked ARF value or to partially blocked ARF values
+as shown in the list below from an ARF.DAT file.
+The grid elements in red are assigned a negative value to assess the potential for collapse.
+This can be done in the FLO-2D graphical editor GDS.
+For this case, the upper Clausen & Clark (1990) is applied.
 
-3. Grid element, grid element curve (moderate)
+.. raw:: html
 
-4. Grid element, grid element curve (good)
+    <pre>
+    T 1450
+    T 1451
+    T -1452
+    T -1453
+    T 1454
+    T 2502
+    T 3818
+    T -3861
+    T -4435
+    T 4766
+     46 0.10 0.00 0.50 0.00 0.00 0.00 0.50 0.00 0.00
+     68 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.50
+     69 0.30 0.00 0.00 0.00 0.50 0.00 0.00 0.00 0.00
+     119 0.40 0.50 0.70 0.00 0.00 1.00 0.00 0.00 0.00
+     120 0.00 0.00 0.00 0.50 0.00 0.00 1.00 0.00 0.00
+     142 0.20 0.20 0.00 0.00 0.70 0.00 0.00 0.00 1.00
+     143 0.00 0.00 0.00 0.20 0.00 0.00 0.00 1.00 0.00
+     161 -0.50 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+     162 -0.50 0.70 0.20 0.00 0.00 1.00 0.00 0.00 0.00
+     163 -0.10 0.00 0.00 0.70 0.00 0.00 1.00 0.00 0.00
+     182 0.30 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
+     185 0.00 0.00 0.00 0.00 0.20 0.00 0.00 0.00
+    </pre>
 
-..
+A portion of building or the entire building can be assigned the collapse trigger (negative ARF value).
+For a complete collapse of the building that encompasses several elements, all of the designated building cells have to be assigned a negative ARF
+value.
+When the flow depth exceeds the tolerance value (TOL), the predicted flow velocity upstream of the building is used in the building collapse equation
+to predict the threshold collapse depth.
+In Figure 73, the building (shown in red) encompasses the entire grid element and the flooding is coming from the North direction (top of the page).
+The velocity used to compute the building collapse threshold depth is shown by the red arrow as the velocity from grid element 222 to grid element 221.
+If the flood flow depth exceeds the threshold depth for grid element 221, the ARF value in the building element is reset to zero (ARF = 0.0) for the
+next computational timestep and the flow can go through the building element.
+The negative ARF values in the ARF.DAT file can be combined during the same simulation with those in the BUILDING_COLLAPSE.DAT file.
 
-   4
+.. image:: img/Chapter4/Chapte016.jpg
 
-   1
+*Figure 73.
+Building (red square) is Flooded from the North Direction.*
 
-   …
+A conservative approach is taken to predict the potential collapse of buildings.
+Based on vulnerability curves of depth versus velocity, when the computed threshold depth is exceeded by flood flow depth associated with a predicted
+velocity, the building area reduction factor ARF value is reset to zero enabling the flow to go through the grid element and fill it with flood
+storage.
+The building collapse routine is triggered by assigning grid element building vulnerability curves in BUILDING_COLLAPSE.DAT or by assigning a negative
+ARF values for either a totally blocked or partially blocked grid element.
+In the future other building vulnerability curves to cover an expanded matrix of building types can be considered.
 
-   Assigning a nonzero value to the global vulnerability curve would initiate potential building failure for any of the buildings in the model.
+Predicting Alluvial Fan Channel Avulsion
+----------------------------------------
 
-   The building collapse routine can also be activated by assigning a negative value to a completely blocked ARF value or to partially blocked ARF values
-   as shown in the list below from an ARF.DAT file.
-   The grid elements in red are assigned a negative value to assess the potential for collapse.
-   This can be done in the FLO-2D graphical editor GDS.
-   For this case, the upper Clausen & Clark (1990) is applied.
+Avulsion of alluvial fan channels depicts the rapid abandonment of one channel and the formation of a new channel with a steeper slope.
+Fuller (2012) defines avulsion as the process by which flow is diverted from an existing channel to a new water course.
+Channel avulsion is generally in response to two factors: 1) Sediment deposition or channel aggradation; and 2) Availability of a steeper slope in an
+alternative downslope direction (Schumm, 1977).
+Channel avulsion can also occur with the headcutting of an incised channel (sometimes referred to as channel piracy).
+A more extensive discussion of alluvial channel avulsion is presented in Fuller (2012).
 
-   T 1450
+Channel avulsion involves complex sediment transport processes that are difficult to predict with a flood routing model.
+The physical process of sediment scour and deposition by size fraction is impossible to predict with any accuracy on a channel reach basis, in part,
+because of the unknown volumes of different sediment sizes in the upstream watershed.
+Alluvial fan channel avulsion is often associated with hyperconcentrated sediment flows (mud and debris flow) frontal waves and surges.
+These frontal waves, surges or just high concentrations of coarse sediment deposit in channel at constrictions, breakin-slopes, or other channel
+variations and partially fill or plug the channel, forcing the flow overbank and initiating the scour or incision of a new channel down a steeper
+slope.
 
-   T 1451
+The area of inundation for alluvial fan flooding has been predicted by the FEMA FAN probabilistic model (FEMA, 2003) using an avulsion method
+modification.
+This is a simplistic model that has several limitations and is not recommended for studies or mapping where a realistic evaluation of the potential
+area of inundation or fan flood hydraulics is required.
+This model, however, has been used by FEMA to generate Flood Insurance Study (FIS) maps with alluvial fan flood hazard zones.
 
-   T -1452
-
-   T -1453
-
-   T 1454
-
-   T 2502
-
-   T 3818
-
-   T -3861
-
-   T -4435
-
-   T 4766
-
-   46 0.10 0.00 0.50 0.00 0.00 0.00 0.50 0.00 0.00
-
-68.
-0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.50
-
-69.
-0.30 0.00 0.00 0.00 0.50 0.00 0.00 0.00 0.00
-
-119.
-0.40 0.50 0.70 0.00 0.00 1.00 0.00 0.00 0.00
-
-120.
-0.00 0.00 0.00 0.50 0.00 0.00 1.00 0.00 0.00
-
-142.
-0.20 0.20 0.00 0.00 0.70 0.00 0.00 0.00 1.00
-
-143.
-0.00 0.00 0.00 0.20 0.00 0.00 0.00 1.00 0.00
-
-161.
--0.50 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
-
-162.
--0.50 0.70 0.20 0.00 0.00 1.00 0.00 0.00 0.00
-
-163.
--0.10 0.00 0.00 0.70 0.00 0.00 1.00 0.00 0.00
-
-..
-
-   182 0.30 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00
-
-   185 0.00 0.00 0.00 0.00 0.20 0.00 0.00 0.00 1.00
-
-   A portion of building or the entire building can be assigned the collapse trigger (negative ARF value).
-   For a complete collapse of the building that encompasses several elements, all of the designated building cells have to be assigned a negative ARF
-   value.
-   When the flow depth exceeds the tolerance value (TOL), the predicted flow velocity upstream of the building is used in the building collapse equation
-   to predict the threshold collapse depth.
-   In Figure 73, the building (shown in red) encompasses the entire grid element and the flooding is coming from the North direction (top of the page).
-   The velocity used to compute the building collapse threshold depth is shown by the red arrow as the velocity from grid element 222 to grid element 221.
-   If the flood flow depth exceeds the threshold depth for grid element 221, the ARF value in the building element is reset to zero (ARF = 0.0) for the
-   next computational timestep and the flow can go through the building element.
-   The negative ARF values in the ARF.DAT file can be combined during the same simulation with those in the BUILDING_COLLAPSE.DAT file.
-
-|Chapte016|
-
-   *Figure 73.
-   Building (red square) is Flooded from the North Direction.*
-
-   A conservative approach is taken to predict the potential collapse of buildings.
-   Based on vulnerability curves of depth versus velocity, when the computed threshold depth is exceeded by flood flow depth associated with a predicted
-   velocity, the building area reduction factor ARF value is reset to zero enabling the flow to go through the grid element and fill it with flood
-   storage.
-   The building collapse routine is triggered by assigning grid element building vulnerability curves in BUILDING_COLLAPSE.DAT or by assigning a negative
-   ARF values for either a totally blocked or partially blocked grid element.
-   In the future other building vulnerability curves to cover an expanded matrix of building types can be considered.
-
- Predicting Alluvial Fan Channel Avulsion
- ----------------------------------------
-
-   Avulsion of alluvial fan channels depicts the rapid abandonment of one channel and the formation of a new channel with a steeper slope.
-   Fuller (2012) defines avulsion as the process by which flow is diverted from an existing channel to a new water course.
-   Channel avulsion is generally in response to two factors: 1) Sediment deposition or channel aggradation; and 2) Availability of a steeper slope in an
-   alternative downslope direction (Schumm, 1977).
-   Channel avulsion can also occur with the headcutting of an incised channel (sometimes referred to as channel piracy).
-   A more extensive discussion of alluvial channel avulsion is presented in Fuller (2012).
-
-   Channel avulsion involves complex sediment transport processes that are difficult to predict with a flood routing model.
-   The physical process of sediment scour and deposition by size fraction is impossible to predict with any accuracy on a channel reach basis, in part,
-   because of the unknown volumes of different sediment sizes in the upstream watershed.
-   Alluvial fan channel avulsion is often associated with hyperconcentrated sediment flows (mud and debris flow) frontal waves and surges.
-   These frontal waves, surges or just high concentrations of coarse sediment deposit in channel at constrictions, breakin-slopes, or other channel
-   variations and partially fill or plug the channel, forcing the flow overbank and initiating the scour or incision of a new channel down a steeper
-   slope.
-
-   The area of inundation for alluvial fan flooding has been predicted by the FEMA FAN probabilistic model (FEMA, 2003) using an avulsion method
-   modification.
-   This is a simplistic model that has several limitations and is not recommended for studies or mapping where a realistic evaluation of the potential
-   area of inundation or fan flood hydraulics is required.
-   This model, however, has been used by FEMA to generate Flood Insurance Study (FIS) maps with alluvial fan flood hazard zones.
-
-   The Flood Control District of Maricopa County (FCDMC) requested a simplified avulsion routine be implemented in the FLO-2D model.
-   Several FLO-2D model enhancements have been supported by the FCDMC.
-   It was proposed that alluvial fan avulsion routine be developed for the FLO-2D model to assess the channel conveyance capacity on the area of
-   inundation.
-   The FCDMC outlined a methodology to guide the channel avulsion development.
+The Flood Control District of Maricopa County (FCDMC) requested a simplified avulsion routine be implemented in the FLO-2D model.
+Several FLO-2D model enhancements have been supported by the FCDMC.
+It was proposed that alluvial fan avulsion routine be developed for the FLO-2D model to assess the channel conveyance capacity on the area of
+inundation.
+The FCDMC outlined a methodology to guide the channel avulsion development.
 
 FCDMC Simplified Channel Avulsion Approach
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   The FCDMC proposed simplified channel avulsion analysis was presented as having three parts.
-   Part 1 was the channel overtopping assessment; Part 2 was the channel avulsion assessment and Part 3 was to delineate the flood hazard associated with
-   the channel avulsion.
-   To summarize the District’s channel avulsion concept, the focus is to simulate channels from a fan apex area that have the potential to overtop and
-   avulse at predicted locations resulting an altered area of inundation.
-   The District provide the following brief outline to accomplish this.
+The FCDMC proposed simplified channel avulsion analysis was presented as having three parts.
+Part 1 was the channel overtopping assessment; Part 2 was the channel avulsion assessment and Part 3 was to delineate the flood hazard associated with
+the channel avulsion.
+To summarize the District’s channel avulsion concept, the focus is to simulate channels from a fan apex area that have the potential to overtop and
+avulse at predicted locations resulting an altered area of inundation.
+The District provide the following brief outline to accomplish this.
 
-   The District delineated different distributary channels starting with the primary or feeder channel at an alluvial fan apex (Figure 74).
-   The first part of the analysis is to identify the locations for channel overtopping along the feeder channel and the first-level branch channels for
-   100-year flood where the point of avulsion is the first-level bifurcation point.
-   The FLO-2D model will be used to estimate the channel overtopping locations.
+The District delineated different distributary channels starting with the primary or feeder channel at an alluvial fan apex (Figure 74).
+The first part of the analysis is to identify the locations for channel overtopping along the feeder channel and the first-level branch channels for
+100-year flood where the point of avulsion is the first-level bifurcation point.
+The FLO-2D model will be used to estimate the channel overtopping locations.
 
-|Chapte017|
+.. image:: img/Chapter4/Chapte017.png
 
-   *Figure 74.
-   Alluvial Fan Distributary Channel Definition for Avulsion Analysis (from FCDMC, 2014).*
+*Figure 74.
+Alluvial Fan Distributary Channel Definition for Avulsion Analysis (from FCDMC, 2014).*
 
-   In the conceptual outline, the District acknowledges the dependency of channel avulsion on sediment deposition indicating major channel avulsion
-   usually occurs during a large flood after previous small floods fill the channel with sediment deposits on the order of 1 to 2 ft.
-   Often sediment deposition has propensity to occur in bends, upstream of constrictions or break-in-slope, or in the presence of obstructions or
-   increased roughness.
-   While the role of sediment transport in channel avulsion is understood and could be simulated with the FLO-2D model, the District proposed to
-   undertake a simpler approach to avoid the complexity associated with predicting sediment deposition.
-   The District avulsion model concept was to:
+In the conceptual outline, the District acknowledges the dependency of channel avulsion on sediment deposition indicating major channel avulsion
+usually occurs during a large flood after previous small floods fill the channel with sediment deposits on the order of 1 to 2 ft.
+Often sediment deposition has propensity to occur in bends, upstream of constrictions or break-in-slope, or in the presence of obstructions or
+increased roughness.
+While the role of sediment transport in channel avulsion is understood and could be simulated with the FLO-2D model, the District proposed to
+undertake a simpler approach to avoid the complexity associated with predicting sediment deposition.
+The District avulsion model concept was to:
 
-a. Build a 25-ft or smaller grid system for the 100-year flood and run the model where the grid element size would essentially constitute the channel
-   cross section.
+    a. Build a 25-ft or smaller grid system for the 100-year flood and run the model where the grid element size would essentially constitute the channel
+       cross section.
+    b. Modify the channel topography (cross section) to account for the sediment deposition.
+    c. Run the FLO-2D model and identify the channel overtopping locations.
+    d. Predict the peak discharge at each overtopping location.
+       This would provide the basis for the secondary channel.
 
-b. Modify the channel topography (cross section) to account for the sediment deposition.
+To estimate the channel width and depth based on the peak discharge, the District propose to apply channel width and depth estimates based on
+empirical regime theory shown in Figure 75 and Figure 76 (USACE, 1994).
+The District indicates that if the channel depth is greater than or equal to 2 feet, then the newly formed channel is a major channel avulsion and the
+area of inundation is an active alluvial fan area.
+By assigning a representative sediment size fraction for the alluvial fan and the estimated peak discharge, Figure 75 and Figure 76 (provided by the
+District), can be used to estimate the channel width and depth.
 
-c. Run the FLO-2D model and identify the channel overtopping locations.
-
-d. Predict the peak discharge at each overtopping location.
-   This would provide the basis for the secondary channel.
-
-..
-
-   To estimate the channel width and depth based on the peak discharge, the District propose to apply channel width and depth estimates based on
-   empirical regime theory shown in Figure 75 and Figure 76 (USACE, 1994).
-   The District indicates that if the channel depth is greater than or equal to 2 feet, then the newly formed channel is a major channel avulsion and the
-   area of inundation is an active alluvial fan area.
-   By assigning a representative sediment size fraction for the alluvial fan and the estimated peak discharge, Figure 75 and Figure 76 (provided by the
-   District), can be used to estimate the channel width and depth.
-
-|Chapte018|
+.. image:: img/Chapter4/Chapte018.png
 
 *Figure 75.
 Channel Forming Depth versus Channel Forming Discharge (from USACE, 1994).*
 
-|Chapte019|
+.. image:: img/Chapter4/Chapte019.jpg
 
-   *Figure 76.
-   Channel Forming or Bank Full Discharge (from USACE, 1994).*
+*Figure 76.
+Channel Forming or Bank Full Discharge (from USACE, 1994).*
 
-   The final task is to assess the area of inundation.
-   It was observed by the District that since the newly formed channel caused by avulsion will impact a new area of the fan, further channel avulsion
-   downstream may occur downstream and this may require several model iterations to delineate the entire fan area of inundation.
+The final task is to assess the area of inundation.
+It was observed by the District that since the newly formed channel caused by avulsion will impact a new area of the fan, further channel avulsion
+downstream may occur downstream and this may require several model iterations to delineate the entire fan area of inundation.
 
 Implementing the FCDMC Channel Avulsion Approach into FLO-2D
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -2702,116 +2523,114 @@ Implementing the FCDMC Channel Avulsion Approach into FLO-2D
 Concepts and Assumptions
 ''''''''''''''''''''''''
 
-   The District original recommendation was to use small FLO-2D grid elements to represent the channel.
-   This approach has several limitations:
+The District original recommendation was to use small FLO-2D grid elements to represent the channel.
+This approach has several limitations:
 
-- The premise of channel avulsions is based on a loss of channel conveyance capacity.
+    - The premise of channel avulsions is based on a loss of channel conveyance capacity.
+    - The channel will have unique width to depth ratios and roughness which would be obscured by the uniform floodplain elements.
+    - Overbank flooding cannot be simply assessed using depressed floodplain elements because of the multi-directional flow.
 
-- The channel will have unique width to depth ratios and roughness which would be obscured by the uniform floodplain elements.
+The District’s proposed avulsion method is based on computed widths and depths from Figure 75 and Figure 76 or the avulsed channels that cannot be
+simply represented by the floodplain element geometry.
+Using the floodplain elements on steep slopes does not limit the unconfined flow in the FLO2D model to a singular direction because the upstream
+element water surface elevation may exceed the downstream cell elevations allowing the flow to distribute to all the downstream contiguous elements.
+It was apparent that to mimic channel avulsion, it is necessary to simulate channel flow in the FLO-2D model.
+It is fortunate, however, that the FLO-2D model has a distributary channel component referred to as “multiple channels”.
 
-- Overbank flooding cannot be simply assessed using depressed floodplain elements because of the multi-directional flow.
+The purpose of the multiple channel flow component is to simulate the overland flow in small channels rather than as overland sheet flow.
+Overland flow is often conveyed in small channels, even though they occupy only a fraction of the potential flow area.
+In the FLO-2D Pro Model Reference Manual (2013), the multiple channel flow is referred to as rill and gully flow.
+Schumm, et al.
+1984, distinguish between rills and gullies as follows.
+Rills are an ephemeral small (smallest) channel formed by runoff and may be seasonal in nature and the result of overland flow.
+A gully is relatively deep channel formed by recent erosion where no previously defined channel existed.
+On alluvial fans, these two types of channels typically form the distributary system downstream of the fan apex and can have the same physical
+processes associated with avulsion, albeit to different scales.
+These channels should be distinguished from the entrenched or incised primary channel near the fan apex leading out of the watershed canyon mouth.
 
-..
+Simulating rill and gully distribute flow concentrates the discharge and may improve the timing of the runoff routing.
+The multiple channel routine calculates overland flow as sheet flow within the grid element and flow between the grid elements is computed as rill and
+gully flow.
+No overland sheet flow is exchanged between grid elements if both elements have assigned multiple channels.
+The gully geometry is defined by a maximum depth, width and flow roughness.
+The multiple channel attributes can be spatially variable on the grid system and can be edited with the GDS program.
 
-   The District’s proposed avulsion method is based on computed widths and depths from Figure 75 and Figure 76 or the avulsed channels that cannot be
-   simply represented by the floodplain element geometry.
-   Using the floodplain elements on steep slopes does not limit the unconfined flow in the FLO2D model to a singular direction because the upstream
-   element water surface elevation may exceed the downstream cell elevations allowing the flow to distribute to all the downstream contiguous elements.
-   It was apparent that to mimic channel avulsion, it is necessary to simulate channel flow in the FLO-2D model.
-   It is fortunate, however, that the FLO-2D model has a distributary channel component referred to as “multiple channels”.
+If the gully flow exceeds the specified gully depth, the multiple channel can be expanded by a specified incremental width.
+This channel widening process assumes these gullies are alluvial channels and will widen to accept more flow as the flow reaches bankfull discharge.
+There is no gully overbank discharge to the overland surface area within the grid element.
+The gully will continue to widen until the gully width exceeds the width of the grid element, then the flow routing between grid elements will revert
+to sheet flow.
+This enables the grid element to be overwhelmed by flood flows.
+During the falling limb of the hydrograph when the flow depth is less than 1 ft (0.3 m), the gully width will decrease to confine the discharge until
+the original width is again attained.
+The user can assign the range of slope where the multiple channel widening is computed.
 
-   The purpose of the multiple channel flow component is to simulate the overland flow in small channels rather than as overland sheet flow.
-   Overland flow is often conveyed in small channels, even though they occupy only a fraction of the potential flow area.
-   In the FLO-2D Pro Model Reference Manual (2013), the multiple channel flow is referred to as rill and gully flow.
-   Schumm, et al.
-   1984, distinguish between rills and gullies as follows.
-   Rills are an ephemeral small (smallest) channel formed by runoff and may be seasonal in nature and the result of overland flow.
-   A gully is relatively deep channel formed by recent erosion where no previously defined channel existed.
-   On alluvial fans, these two types of channels typically form the distributary system downstream of the fan apex and can have the same physical
-   processes associated with avulsion, albeit to different scales.
-   These channels should be distinguished from the entrenched or incised primary channel near the fan apex leading out of the watershed canyon mouth.
+Low Impact Development (LID) Modeling
+-------------------------------------
 
-   Simulating rill and gully distribute flow concentrates the discharge and may improve the timing of the runoff routing.
-   The multiple channel routine calculates overland flow as sheet flow within the grid element and flow between the grid elements is computed as rill and
-   gully flow.
-   No overland sheet flow is exchanged between grid elements if both elements have assigned multiple channels.
-   The gully geometry is defined by a maximum depth, width and flow roughness.
-   The multiple channel attributes can be spatially variable on the grid system and can be edited with the GDS program.
+Low impact development (LID) can be assessed with the FLO-2D model using a spatially variable tolerance value TOL on individual grid elements.
+The TOL parameter was originally designed to represent a flow depth below which no discharge is shared between two grid elements.
+Typically for a large flood event a TOL value of 0.1 ft (0.03 m) is assigned in the TOLER.DAT file so that the model does not exchange discharge for
+negligible depths approaching zero.
+The intent is to reduce the number of computations required for large grid systems.
+For hydrology models, a lower TOL parameter represents the important physical process of depression storage.
+Depression storage remains on the grid system after the rainfall had ceased and is a portion of the initial abstraction (depression storage +
+interception) that must be filled for runoff to initiate.
+The initial abstraction cannot be more than the TOL value.
 
-   If the gully flow exceeds the specified gully depth, the multiple channel can be expanded by a specified incremental width.
-   This channel widening process assumes these gullies are alluvial channels and will widen to accept more flow as the flow reaches bankfull discharge.
-   There is no gully overbank discharge to the overland surface area within the grid element.
-   The gully will continue to widen until the gully width exceeds the width of the grid element, then the flow routing between grid elements will revert
-   to sheet flow.
-   This enables the grid element to be overwhelmed by flood flows.
-   During the falling limb of the hydrograph when the flow depth is less than 1 ft (0.3 m), the gully width will decrease to confine the discharge until
-   the original width is again attained.
-   The user can assign the range of slope where the multiple channel widening is computed.
+The concept of the LID is that each new residential or commercial construction would be required to design flood retention storage into the site
+development.
+This may include bioretention, green roofs, rain gardens, permeable pavement, drainage disconnection, swales, and on-site storage (Figure 77).
+Spatially variable TOL values would be assigned on a grid element basis to represent the composite LID techniques on a given grid element (Figure 78).
+Depending on size multiple grid elements may represent an individual lot or development.
+Different grid elements may represent different LID techniques.
+The volume of on-site retention storage can be assessed by multiplying the lot surface area by the retained flow depth (TOL value).
+This would provide flood hazard mitigation on a lot by lot basis.
 
- Low Impact Development (LID) Modeling
- -------------------------------------
+The LID storage would be displayed as a final flow depth in the Mapper program.
 
-   Low impact development (LID) can be assessed with the FLO-2D model using a spatially variable tolerance value TOL on individual grid elements.
-   The TOL parameter was originally designed to represent a flow depth below which no discharge is shared between two grid elements.
-   Typically for a large flood event a TOL value of 0.1 ft (0.03 m) is assigned in the TOLER.DAT file so that the model does not exchange discharge for
-   negligible depths approaching zero.
-   The intent is to reduce the number of computations required for large grid systems.
-   For hydrology models, a lower TOL parameter represents the important physical process of depression storage.
-   Depression storage remains on the grid system after the rainfall had ceased and is a portion of the initial abstraction (depression storage +
-   interception) that must be filled for runoff to initiate.
-   The initial abstraction cannot be more than the TOL value.
+.. image:: img/Chapter4/Chapte020.png
 
-   The concept of the LID is that each new residential or commercial construction would be required to design flood retention storage into the site
-   development.
-   This may include bioretention, green roofs, rain gardens, permeable pavement, drainage disconnection, swales, and on-site storage (Figure 77).
-   Spatially variable TOL values would be assigned on a grid element basis to represent the composite LID techniques on a given grid element (Figure 78).
-   Depending on size multiple grid elements may represent an individual lot or development.
-   Different grid elements may represent different LID techniques.
-   The volume of on-site retention storage can be assessed by multiplying the lot surface area by the retained flow depth (TOL value).
-   This would provide flood hazard mitigation on a lot by lot basis.
+*Figure 77.
+Low Impact Development Water Retention.*
 
-   The LID storage would be displayed as a final flow depth in the Mapper program.
+(Seattle Public Utilities, Rainwise Program,
+http://www.seattle.gov/util/MyServices/DrainageSewer/Projects/GreenStormwaterInfrastructure/RainWise)
 
-|Chapte020|
+.. image:: img/Chapter4/Chapte021.jpg
 
-   *Figure 77.
-   Low Impact Development Water Retention.*
+*Figure 78.
+FLO-2D Grid Element LID Concept – Spatially Variable TOL Elements (brown).*
 
-   (Seattle Public Utilities, Rainwise Program,
+(http://www.lowimpactdevelopment.org)
 
-   http://www.seattle.gov/util/MyServices/DrainageSewer/Projects/GreenStormwaterInfrastructure/Rain Wise)
+**FLO-2D Model Revisions for the LID Tool**
 
-   |Chapte021|
+The global assignment of the TOL value is still required in the first line (first parameter) in the TOLER.DAT but the name has been revised to
+TOLGLOBAL.
+When a FLO-2D model is initiated the TOLGLOBAL value would be assigned to all the grid elements.
+This value would then be superseded by the spatially variable TOL(i) assignment for each grid element (Figure 3) listed in the file TOLSPATIAL.DAT.
 
-   *Figure 78.
-   FLO-2D Grid Element LID Concept – Spatially Variable TOL Elements (brown).*
+There has been no change in how the TOL value is applied in the model code.
+The TOL depression storage must be filled before flow is exchanged with a neighbor grid element (Figure 79).
+Flow depth less than or equal to the TOL value will remain on the grid element after the simulation is complete.
+The typical range for Global TOL when used for depression storage only is:
 
-   (http://www.lowimpactdevelopment.org)
+.. math::
+   :label:
 
-   **FLO-2D Model Revisions for the LID Tool**
+   0.004 < \mathrm{TOL} \le 0.1
 
-   The global assignment of the TOL value is still required in the first line (first parameter) in the TOLER.DAT but the name has been revised to
-   TOLGLOBAL.
-   When a FLO-2D model is initiated the TOLGLOBAL value would be assigned to all the grid elements.
-   This value would then be superseded by the spatially variable TOL(i) assignment for each grid element (Figure 3) listed in the file TOLSPATIAL.DAT.
+.. image:: img/Chapter4/Chapte022.png
 
-   There has been no change in how the TOL value is applied in the model code.
-   The TOL depression storage must be filled before flow is exchanged with a neighbor grid element (Figure 79).
-   Flow depth less than or equal to the TOL value will remain on the grid element after the simulation is complete.
-   The typical range for Global TOL when used for depression storage only is:
+*Figure 79.
+Global TOL.*
 
-   0.004 < TOL <= 0.1
+The range for spatially variable TOL assignment when LID is added to depression storage is from:
 
-|Chapte022|
+                                            0.001 to 5.0 ft.
 
-   *Figure 79.
-   Global TOL.*
-
-   The range for spatially variable TOL assignment when LID is added to depression storage is from:
-
-   0.001 to 5.0 ft.
-
-|Chapte023|
+.. image:: img/Chapter4/Chapte023.jpg
 
 *Figure 80.
 Spatially Variable TOL Value Format in TOLSPATIAL.DAT.*
@@ -2819,379 +2638,396 @@ Spatially Variable TOL Value Format in TOLSPATIAL.DAT.*
 Using the LID Tool Results
 ''''''''''''''''''''''''''
 
-   After a FLO-2D simulation with the spatially variable TOL grid element assignment, the primary effect will be greater water retention on those grid
-   elements with TOL values that are higher than TOLGLOBAL.
-   The results can be viewed in Mapper or MAXPLOT as higher final flows depths.
-   It should be noted that final flow depths may also include residual flow that has not yet drained from the surface water.
-   A difference plot can be generated in MAXPLOT to demonstrate the effect of the spatially variable TOL values by comparing the FINALDEP.OUT files for a
-   base run with no spatially variable TOL values to a FLO-2D simulation where the spatially TOL values are assigned.
-   Figure 81 is MAXPLOT graphic of the difference between the spatially variable and global TOL values and shows that the assignment of spatially
-   variable TOL values results in higher depths.
-   The global TOL value was 0.004 ft and the spatial variation in the TOL value ranged from 0.25 to 0.67 ft covering roughly 45% of the grid system.
-   In this project the amount of storage on the floodplain after the storm has ended is higher (almost double) with the spatially variable TOL values.
+After a FLO-2D simulation with the spatially variable TOL grid element assignment, the primary effect will be greater water retention on those grid
+elements with TOL values that are higher than TOLGLOBAL.
+The results can be viewed in Mapper or MAXPLOT as higher final flows depths.
+It should be noted that final flow depths may also include residual flow that has not yet drained from the surface water.
+A difference plot can be generated in MAXPLOT to demonstrate the effect of the spatially variable TOL values by comparing the FINALDEP.OUT files for a
+base run with no spatially variable TOL values to a FLO-2D simulation where the spatially TOL values are assigned.
+Figure 81 is MAXPLOT graphic of the difference between the spatially variable and global TOL values and shows that the assignment of spatially
+variable TOL values results in higher depths.
+The global TOL value was 0.004 ft and the spatial variation in the TOL value ranged from 0.25 to 0.67 ft covering roughly 45% of the grid system.
+In this project the amount of storage on the floodplain after the storm has ended is higher (almost double) with the spatially variable TOL values.
 
-|Chapte024|
+.. image:: img/Chapter4/Chapte024.png
 
-   *Figure 81.
-   MAXPLOT Difference Analysis of the FINALDEP.OUT Files (Spatially Variable – Base Run).*
+*Figure 81.
+MAXPLOT Difference Analysis of the FINALDEP.OUT Files (Spatially Variable – Base Run).*
 
-   In the SUMMARY.OUT File, the runoff from the grid system and the volume of water in the storm drain is lower (Figure 82).
-   Clearly there is a more water retained on the floodplain surface that does not flow off the grid system or enter the storm drain because higher
-   spatially variable TOL values are assigned.
-   The spatially variable TOL values representing LID retention storage can have significant impact on the flood hazard or storm drain system downstream
-   of where the LID techniques would be implemented.
+In the SUMMARY.OUT File, the runoff from the grid system and the volume of water in the storm drain is lower (Figure 82).
+Clearly there is a more water retained on the floodplain surface that does not flow off the grid system or enter the storm drain because higher
+spatially variable TOL values are assigned.
+The spatially variable TOL values representing LID retention storage can have significant impact on the flood hazard or storm drain system downstream
+of where the LID techniques would be implemented.
 
-   *Figure 82.
-   SUMMARY.OUT Comparison.*
+.. image:: img/Chapter4/Chapte080.jpg
 
-   For comparison purposes, a simulation was run on the same project in Figure 82 that included infiltration.
-   Figure 83 represents the difference between the ‘with infiltration’ and ‘without infiltration’ simulations (spatial TOL – spatial TOL with
-   infiltration).
-   The final depth is higher without the infiltration being removed from the floodplain surface.
-   The primary final depth differences shown in Figure are for the areas with the LID TOL value assignments.
+*Figure 82.
+SUMMARY.OUT Comparison.*
 
-|Chapte025|
+For comparison purposes, a simulation was run on the same project in Figure 82 that included infiltration.
+Figure 83 represents the difference between the ‘with infiltration’ and ‘without infiltration’ simulations (spatial TOL – spatial TOL with
+infiltration).
+The final depth is higher without the infiltration being removed from the floodplain surface.
+The primary final depth differences shown in Figure are for the areas with the LID TOL value assignments.
 
-   *Figure 83.
-   MAXPLOT Difference Analysis of the FINALDEP.OUT Files (Spatially Variable – Infiltration).*
+.. image:: img/Chapter4/Chapte025.jpg
 
-   The infiltration losses remove water from the final floodplain storage reducing the water retention from 45 af to 40 af.
-   The volume of water that reaches the floodplain outfall elements is reduced from 11.5 af to 8 af (30% reduction) for water that is infiltrated.
-   The volume entering the storm drain system is reduced from 12.5 af to 11 af due to the infiltration (Figure 84).
+*Figure 83.
+MAXPLOT Difference Analysis of the FINALDEP.OUT Files (Spatially Variable – Infiltration).*
 
-|Chapte026|
+The infiltration losses remove water from the final floodplain storage reducing the water retention from 45 af to 40 af.
+The volume of water that reaches the floodplain outfall elements is reduced from 11.5 af to 8 af (30% reduction) for water that is infiltrated.
+The volume entering the storm drain system is reduced from 12.5 af to 11 af due to the infiltration (Figure 84).
 
-   *Figure 84.
-   SUMMARY.OUT File for the Spatially Variable TOL Value and Infiltration.*
+.. image:: img/Chapter4/Chapte026.jpg
 
- Building Rainfall Runoff
- ------------------------
+*Figure 84.
+SUMMARY.OUT File for the Spatially Variable TOL Value and Infiltration.*
+
+Building Rainfall Runoff
+------------------------
 
 Building Runoff
 ^^^^^^^^^^^^^^^
 
-   It is a FLO-2D model option to simulate rainfall runoff from buildings.
-   Buildings are represented by Area Reduction Factors (ARFs) and Width Reduction Factors (WRFs) in the FLO-2D model.
-   ARF values remove surface area from potential water storage on a grid element.
-   WRF values block flow directions between contiguous grid elements.
-   The WRF values are not utilized in estimating rainfall runoff from buildings.
-   Figure 85 displays buildings on a FLO-2D model with 25 ft grid elements.
-   In this figure, the buildings may occupy a portion of a grid element, the entire grid element, or multiple grid elements.
-   The ARF and WRF values can be assigned automatically using shape file interpolation in the Grid Developer System (GDS) or manually by selecting one or
-   more cells and assigning the ARF and WRF values to them (see the FLO2D GDS Manual).
+It is a FLO-2D model option to simulate rainfall runoff from buildings.
+Buildings are represented by Area Reduction Factors (ARFs) and Width Reduction Factors (WRFs) in the FLO-2D model.
+ARF values remove surface area from potential water storage on a grid element.
+WRF values block flow directions between contiguous grid elements.
+The WRF values are not utilized in estimating rainfall runoff from buildings.
+Figure 85 displays buildings on a FLO-2D model with 25 ft grid elements.
+In this figure, the buildings may occupy a portion of a grid element, the entire grid element, or multiple grid elements.
+The ARF and WRF values can be assigned automatically using shape file interpolation in the Grid Developer System (GDS) or manually by selecting one or
+more cells and assigning the ARF and WRF values to them (see the FLO2D GDS Manual).
 
-|Chapte027|
+.. image:: img/Chapter4/Chapte027.jpg
 
-   *Figure 85.
-   Buildings on a 25 ft Grid System (red lines indicate walls represented as levees).*
+*Figure 85.
+Buildings on a 25 ft Grid System (red lines indicate walls represented as levees).*
 
-   There are two options to simulating rainfall runoff from buildings.
-   For the first option, the user assigns the building ARF values.
-   The building may be completely blocked (ARF =1.) or partially blocked (ARF < 1.).
-   When the rainfall occurs on a grid element with a partial ARF value, the rainfall on the entire grid element (including the portion with the assigned
-   building ARF value) is accumulated on the remaining grid element surface area not covered by the building.
-   The building portion of grid element surface area is considered impervious and sheds rainfall but does not store water.
-   This accumulated rainfall depth (> TOL value) is then available for routing to contiguous grid elements.
-   If the grid element surface area is totally blocked and has no storage (ARF = 1.), then there is no rainfall runoff from this grid element.
-   In this case, it is assumed that the rainfall goes to the building downspout, into the storm drain system and off the model.
-   For this option: IRAINBUILDING = 0 (RAIN.DAT file, line 1, second variable).
+There are two options to simulating rainfall runoff from buildings.
+For the first option, the user assigns the building ARF values.
+The building may be completely blocked (ARF =1.) or partially blocked (ARF < 1.).
+When the rainfall occurs on a grid element with a partial ARF value, the rainfall on the entire grid element (including the portion with the assigned
+building ARF value) is accumulated on the remaining grid element surface area not covered by the building.
+The building portion of grid element surface area is considered impervious and sheds rainfall but does not store water.
+This accumulated rainfall depth (> TOL value) is then available for routing to contiguous grid elements.
+If the grid element surface area is totally blocked and has no storage (ARF = 1.), then there is no rainfall runoff from this grid element.
+In this case, it is assumed that the rainfall goes to the building downspout, into the storm drain system and off the model.
+For this option: IRAINBUILDING = 0 (RAIN.DAT file, line 1, second variable).
 
-   For the second option, the rainfall on completely blocked cells constitutes runoff from the building to the surface area.
-   Rainfall on the totally blocked grid elements (ARF = 1) is assumed to be routed through the building drain system to the surface area.
-   The rainfall is accumulated on the grid element surface area and is passed to contiguous grid elements within the building and is then exchanged with
-   cells outside the building as runoff.
-   Figure 86 shows the same buildings in Figure 85 represented by the ARF values.
-   The gray grid elements are completely blocked (ARF =1) and the yellow elements are partially blocked (ARF < 1).
-   The rainfall on an interior grid element (e.g. green element in Figure 86), is routed to the building boundary based on grid element elevation (ground
-   topography) and roughness (Manning’s n-value).
-   This option is assumed to be representative of the shallow flow on a building roof being routed through the building’s drainage system to the
-   downspout.
-   The user can control the drainage direction by adjusting the grid element elevations inside the building.
-   This option requires that IRAINBUILDING = 1 in the RAIN.DAT file (line 1, second variable) be assigned.
-   Totally blocked elements are gray (ARF = 1) and Partially Blocked elements are in varying shades of yellow.
+For the second option, the rainfall on completely blocked cells constitutes runoff from the building to the surface area.
+Rainfall on the totally blocked grid elements (ARF = 1) is assumed to be routed through the building drain system to the surface area.
+The rainfall is accumulated on the grid element surface area and is passed to contiguous grid elements within the building and is then exchanged with
+cells outside the building as runoff.
+Figure 86 shows the same buildings in Figure 85 represented by the ARF values.
+The gray grid elements are completely blocked (ARF =1) and the yellow elements are partially blocked (ARF < 1).
+The rainfall on an interior grid element (e.g. green element in Figure 86), is routed to the building boundary based on grid element elevation (ground
+topography) and roughness (Manning’s n-value).
+This option is assumed to be representative of the shallow flow on a building roof being routed through the building’s drainage system to the
+downspout.
+The user can control the drainage direction by adjusting the grid element elevations inside the building.
+This option requires that IRAINBUILDING = 1 in the RAIN.DAT file (line 1, second variable) be assigned.
+Totally blocked elements are gray (ARF = 1) and Partially Blocked elements are in varying shades of yellow.
 
-   *Figure 86.
-   Assigned ARF Values to the Buildings.*
+.. image:: img/Chapter4/Chapte081.jpg
 
-   There are several assumptions for the rainfall runoff from the buildings:
+*Figure 86.
+Assigned ARF Values to the Buildings.*
 
-- When IRAINBUILDING = 1, the rainfall runoff will only be routed between completely blocked elements within the building.
+There are several assumptions for the rainfall runoff from the buildings:
 
-- The routing is based on the internal building topography (grid element elevation).
+    - When IRAINBUILDING = 1, the rainfall runoff will only be routed between completely blocked elements within the building.
+    - The routing is based on the internal building topography (grid element elevation).
+    - The flow roughness (Manning’s n-value) for the completely blocked buildings is 0.03 (hard coded in the model).
+    - Based on the eight potential flow directions, the flow width for a blocked element (ARF = 1) is 0.41412 \* grid element side (i.e.
+      WRF = 0.).
+    - The flow from inside the building to outside of the building is based on a hard-coded head difference in the water surface elevation of 0.5 ft (0.15
+      m).
+      The actual water surface and ground elevations across the building walls are ignored in the flow computation.
+    - The flow can only be exchanged from inside to outside the building.
+      No flow is permitted from outside to inside the building.
+    - The flow depth must exceed a TOL = 0.0042 for flow to be exchanged between interior building elements.
+      This represents ponded water storage and is hard coded in the model.
 
-- The flow roughness (Manning’s n-value) for the completely blocked buildings is 0.03 (hard coded in the model).
+The following example project (Figure 87) has a large building on a steep alluvial fan slope to the north (top of the page).
+To simulate runoff from the building to the fan surface IRAINBUILDING = 1.
 
-- Based on the eight potential flow directions, the flow width for a blocked element (ARF = 1) is
+.. image:: img/Chapter4/Chapte028.jpg
 
-..
+*Figure 87.
+Location of a Large Building.*
 
-   0.41412 \* grid element side (i.e.
-   WRF = 0.).
+The rainfall results in flooding on the alluvial fan with the floodwave moving from south to north
+(towards the top of the page).
+The building is in a swale and takes a direct hit from the flooding.
+Figure 88 shows the flooding (maximum depths - dark blue grid elements) piling up on the upstream side of the building (south side of the building)
+and flowing to the west to get around the building.
+Along the building south wall, the predicted interior maximum depths are less than the tolerance value (gray cells).
 
-- The flow from inside the building to outside of the building is based on a hard-coded head difference in the water surface elevation of 0.5 ft (0.15
-  m).
-  The actual water surface and ground elevations across the building walls are ignored in the flow computation.
+.. image:: img/Chapter4/Chapte082.jpg
 
-- The flow can only be exchanged from inside to outside the building.
-  No flow is permitted from outside to inside the building.
+*Figure 88.
+Maximum Flow Depths Inside the Building.*
 
-- The flow depth must exceed a TOL = 0.0042 for flow to be exchanged between interior building elements.
-  This represents ponded water storage and is hard coded in the model.
+The rainfall runoff flows inside the building to reach the north wall and is debouched from the building.
+The building is outlined in red.
+Figure 89 shows the maximum velocities on the alluvial fan and indicates that the flow is moving inside the building.
+The flow is routed in the building interior based on the topography and roughness until it reaches the north side and then crosses to the outside of
+the building (Figure 90).
+This example illustrates that the flooding outside the building will progress around the building and the rainfall runoff on the building roof leaves
+the building.
+It possible for the flow to leave the building in any direction.
+The building is outlined in red.
 
-..
+.. image:: img/Chapter4/Chapte083.jpg
 
-   The following example project (Figure 87) has a large building on a steep alluvial fan slope to the north (top of the page).
-   To simulate runoff from the building to the fan surface IRAINBUILDING = 1.
+*Figure 89.
+Maximum Flow Velocities on the Alluvial Fan.*
 
-|Chapte028|
+.. image:: img/Chapter4/Chapte084.jpg
 
-   *Figure 87.
-   Location of a Large Building.*
-
-   The rainfall results in flooding on the alluvial fan with the floodwave moving from south to north
-
-   (towards the top of the page).
-   The building is in a swale and takes a direct hit from the flooding.
-   Figure 88 shows the flooding (maximum depths - dark blue grid elements) piling up on the upstream side of the building (south side of the building)
-   and flowing to the west to get around the building.
-   Along the building south wall, the predicted interior maximum depths are less than the tolerance value (gray cells).
-
-   *Figure 88.
-   Maximum Flow Depths Inside the Building.*
-
-   The rainfall runoff flows inside the building to reach the north wall and is debouched from the building.
-   The building is outlined in red.
-   Figure 89 shows the maximum velocities on the alluvial fan and indicates that the flow is moving inside the building.
-   The flow is routed in the building interior based on the topography and roughness until it reaches the north side and then crosses to the outside of
-   the building (Figure 90).
-   This example illustrates that the flooding outside the building will progress around the building and the rainfall runoff on the building roof leaves
-   the building.
-   It possible for the flow to leave the building in any direction.
-   The building is outlined in red.
-
-   *Figure 89.
-   Maximum Flow Velocities on the Alluvial Fan.*
-
-   *Figure 90.
-   Maximum Flow Velocities.*
+*Figure 90.
+Maximum Flow Velocities.*
 
 Downspout
 ^^^^^^^^^
 
-   The building location selected for this project is shown in Figure 91.
-   The red lines in these figures are levees and represent a parapet wall surrounding the entire building roof.
-   On the project building, the levee elements encompass the blocked building (ARF = 1) elements.
-   The completely blocked elements represent the building roof.
-   The roof grid element elevations are usually assigned a ground elevation.
-   These building elevations can be edited to represent the roof.
-   The roof elements can be selected together and assigned a uniform elevation representing a flat roof (Figure 91).
-   The parapet wall is simulated by selecting the appropriate grid elements and assigning the levee grid element direction and crest (wall elevation) as
-   shown in the Figure 93 levee edit dialog box.
-   Attention must be paid to the selection all the potential levee obstruction flow directions to completely contain the rainfall storage on the building
-   roof.
-   The parapet wall is shown as the red levee in Figure 91 representing the roof boundary.
-   The roof elevation was assigned as approximately 20 ft higher than the ground elevation.
+The building location selected for this project is shown in Figure 91.
+The red lines in these figures are levees and represent a parapet wall surrounding the entire building roof.
+On the project building, the levee elements encompass the blocked building (ARF = 1) elements.
+The completely blocked elements represent the building roof.
+The roof grid element elevations are usually assigned a ground elevation.
+These building elevations can be edited to represent the roof.
+The roof elements can be selected together and assigned a uniform elevation representing a flat roof (Figure 91).
+The parapet wall is simulated by selecting the appropriate grid elements and assigning the levee grid element direction and crest (wall elevation) as
+shown in the Figure 93 levee edit dialog box.
+Attention must be paid to the selection all the potential levee obstruction flow directions to completely contain the rainfall storage on the building
+roof.
+The parapet wall is shown as the red levee in Figure 91 representing the roof boundary.
+The roof elevation was assigned as approximately 20 ft higher than the ground elevation.
 
-   This data base is enough to simulate rainfall storage on a flat roof.
-   This is one of the test simulations.
+This data base is enough to simulate rainfall storage on a flat roof.
+This is one of the test simulations.
 
-   *Figure 91.
-   Project Building Location (in blue oval).*
+.. image:: img/Chapter4/Chapte085.jpg
 
-   *Figure 92.
-   Building Roof Element Elevation Editing.*
+*Figure 91.
+Project Building Location (in blue oval).*
 
-|Chapte029|
+.. image:: img/Chapter4/Chapte086.jpg
 
-   *Figure 93.
-   Grid Element Levee Crest Elevation Editing.*
+*Figure 92.
+Building Roof Element Elevation Editing.*
+
+.. image:: img/Chapter4/Chapte029.jpg
+
+*Figure 93.
+Grid Element Levee Crest Elevation Editing.*
 
 Adjust Roof Slope
 '''''''''''''''''
 
-   A sloped roof can be established by modifying the roof elevations.
-   Individual grid element elevations can be edited by double clicking a given cell and using the elevation field (Figure 94).
-   Grid element elevations can be reset in corners and along the roof borders to establish some cornerstone elevations for further editing.
+A sloped roof can be established by modifying the roof elevations.
+Individual grid element elevations can be edited by double clicking a given cell and using the elevation field (Figure 94).
+Grid element elevations can be reset in corners and along the roof borders to establish some cornerstone elevations for further editing.
 
-   *Figure 94.
-   Grid Element Elevation Editing.*
+.. image:: img/Chapter4/Chapte087.jpg
 
-   To establish a sloped roof, select a line of grid elements between two cornerstone elements with known roof elevations, then choose the street
-   elevation editor (Figure 95).
+*Figure 94.
+Grid Element Elevation Editing.*
 
-|Chapte030|
+To establish a sloped roof, select a line of grid elements between two cornerstone elements with known roof elevations, then choose the street
+elevation editor (Figure 95).
 
-   *Figure 95.
-   Roof Element Elevation Editing Command.*
+.. image:: img/Chapter4/Chapte030.jpg
 
-   Select the *Elevation Adjustments Tab* shown in Figure 96 below.
-   This will activate a dialog box window which will enable a linear slope interpolation between the two selected cornerstone elements (Figure 97).
-   Figure 98 displays the roof element elevations prior to interpolation.
+*Figure 95.
+Roof Element Elevation Editing Command.*
 
-|Chapte031|
+Select the *Elevation Adjustments Tab* shown in Figure 96 below.
+This will activate a dialog box window which will enable a linear slope interpolation between the two selected cornerstone elements (Figure 97).
+Figure 98 displays the roof element elevations prior to interpolation.
 
-   *Figure 96.
-   Roof Element Elevation Editing Tab.*
+.. image:: img/Chapter4/Chapte031.jpg
+
+*Figure 96.
+Roof Element Elevation Editing Tab.*
+
+.. image:: img/Chapter4/Chapte088.jpg
 
 *Figure 97.
 Selecting the Two Cornerstone Grid Elements to Interpolate the Roof Slope.*
 
-|Chapte032|
+.. image:: img/Chapter4/Chapte032.jpg
 
-   *Figure 98.
-   Graphic Display of the Roof Element Elevations Between the Two Cornerstone Cells.*
+*Figure 98.
+Graphic Display of the Roof Element Elevations Between the Two Cornerstone Cells.*
 
-   The *Assign* button will complete the interpolation of the roof cell elevations between the cornerstone elements and save the results as shown in
-   Figure 99.
+The *Assign* button will complete the interpolation of the roof cell elevations between the cornerstone elements and save the results as shown in
+Figure 99.
 
-|Chapte033|
+.. image:: img/Chapter4/Chapte033.jpg
 
-   *Figure 99.
-   Completed Roof Element Elevation Slope Interpolation.*
+*Figure 99.
+Completed Roof Element Elevation Slope Interpolation.*
 
 Downspout Hydraulics
 ''''''''''''''''''''
 
-   The downspout discharge can be simulated as a hydraulic structure identifying the inlet node on the roof and the outlet node on the ground and
-   assigning an inlet control rating table.
-   The inlet control rating table can be based on orifice flow using the equation:
+The downspout discharge can be simulated as a hydraulic structure identifying the inlet node on the roof and the outlet node on the ground and
+assigning an inlet control rating table.
+The inlet control rating table can be based on orifice flow using the equation:
 
-   Q = C \* A \* (2.*g*DEPTH)\ :sup:`0.5`
+.. math::
+   :label:
 
-   where:
+   Q = C \ast A \ast (2.\ast g \ast DEPTH)^{0.5}
 
-C = coefficient that ranges from 0.62 to 0.72
+where:
 
-A = flow area of the opening
+    C = coefficient that ranges from 0.62 to 0.72
 
-   g = acceleration due to gravity (32.2 fps or 9.81 m/s) DEPTH = flow depth on orifice (cell flow depth)
+    A = flow area of the opening
 
-   The hydraulic structure data file is organized as follows:
+    g = acceleration due to gravity (32.2 fps or 9.81 m/s)
 
-S. Downspoutname 0 1 22365 21991 0 0 0 0
+    DEPTH = flow depth on orifice (cell flow depth)
 
-T. 0 0
+The hydraulic structure data file is organized as follows:
 
-..
+.. raw:: html
 
-   T 0.25 1.0
+    <pre>
+     S  Downspoutname 0  1  22365  21991  0 0 0 0
+     T      0      0
+     T      0.25    1.0
+     T      0.5    2.0
+     T      1      3.5
+     T      5      5.5
+    </pre>
 
-   T 0.5 2.0
+In the S-line above, the data includes a downspout name, floodplain or channel element (floodplain = 0), rating curve or table (rating table = 1),
+inlet and outlet cell number, and 4 additional controls that not required.
+The rating table assignment should begin with zero depth and zero discharge and the remaining T-lines are depth and discharge can be based on the
+above orifice equation.
+This data can be entered graphically in the GDS.
 
-   T 1 3.5
+.. image:: img/Chapter4/Chapte034.jpg
 
-   T 5 5.5
+*Figure 100.
+Downspout Hydraulic Structure as Brown Elements in the Upper Right Corner.*
 
-   In the S-line above, the data includes a downspout name, floodplain or channel element (floodplain = 0), rating curve or table (rating table = 1),
-   inlet and outlet cell number, and 4 additional controls that not required.
-   The rating table assignment should begin with zero depth and zero discharge and the remaining T-lines are depth and discharge can be based on the
-   above orifice equation.
-   This data can be entered graphically in the GDS.
+The hydraulic structure editor dialog window for the downspout inlet and outlets shown in Figure 100 is displayed in Figure 101.
+Note that the downspout inlet and outlet elements do not have to be contiguous.
+Any number of downspouts can be simulated in any location on the building roof.
 
-   |Chapte034|
+.. image:: img/Chapter4/Chapte035.jpg
 
-   *Figure 100.
-   Downspout Hydraulic Structure as Brown Elements in the Upper Right Corner.*
-
-   The hydraulic structure editor dialog window for the downspout inlet and outlets shown in Figure 100 is displayed in Figure 101.
-   Note that the downspout inlet and outlet elements do not have to be contiguous.
-   Any number of downspouts can be simulated in any location on the building roof.
-
-|Chapte035|
-
-   *Figure 101.
-   Hydraulic Structure Dialog Box with Entered Downspout Data.*
+*Figure 101.
+Hydraulic Structure Dialog Box with Entered Downspout Data.*
 
 Verification Testing of the Building Roof Runoff Enhancements
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-   The building runoff enhancements were tested in two projects.
-   Since both projects showed an identical response on different scales, only the results of the small scale, more detailed project will be presented.
-   Several tests were developed to verify the roof runoff computations.
-   These include:
+The building runoff enhancements were tested in two projects.
+Since both projects showed an identical response on different scales, only the results of the small scale, more detailed project will be presented.
+Several tests were developed to verify the roof runoff computations.
+These include:
 
 - Rainfall accumulation on a flat roof
-
 - Rainfall runoff movement on sloped roof
-
 - Parapet wall overtopping
-
 - Downspout discharge to the ground
 
-..
+In the first test, three inches of rain is applied to the project in two hours.
+The project has buildings, walls, infiltration and storm drains.
+To focus on the building with the assigned downspout, the storm drain component was turned off.
+Only the building discussed in this document will be reviewed.
+The simulation was terminated after the rainfall ended after two hours.
+The flat roof elevation was 1280.00 and after 2 hours, the computed final roof flow depths results in a uniform water surface elevation of 1280.25 on
+all the elements since there is no outlet (Figure 102) using the FLO-2D Maxplot map program).
 
-   In the first test, three inches of rain is applied to the project in two hours.
-   The project has buildings, walls, infiltration and storm drains.
-   To focus on the building with the assigned downspout, the storm drain component was turned off.
-   Only the building discussed in this document will be reviewed.
-   The simulation was terminated after the rainfall ended after two hours.
-   The flat roof elevation was 1280.00 and after 2 hours, the computed final roof flow depths results in a uniform water surface elevation of 1280.25 on
-   all the elements since there is no outlet (Figure 102) using the FLO-2D Maxplot map program).
+The sloped roof test is designed to predict the rainfall runoff flow to the downspout.
+The downspout is in grid element 22365 (upper right corner of the building NE) and the entire roof slopes to this location.
+Most of the roof has a slope of 0.001 or 0.02 ft per 20 ft grid element.
+The slope in the final few grid elements in the NE corner of the roof are a little steeper.
+In this case, the parapet walls are one foot high and since the maximum water surface elevation does not exceed 1281, there is no flow overtopping the
+parapet walls.
+The maximum water surface elevation is shown in Figure 103.
+Note that all the roof maximum water surface elevations are equal, but the maximum flow depths vary with the roof elevation and the deepest depth is
+predicted at the downspout element.
+The downspout outlet element 21990 has the same water surface elevation and small depth in both simulations.
 
-   The sloped roof test is designed to predict the rainfall runoff flow to the downspout.
-   The downspout is in grid element 22365 (upper right corner of the building NE) and the entire roof slopes to this location.
-   Most of the roof has a slope of 0.001 or 0.02 ft per 20 ft grid element.
-   The slope in the final few grid elements in the NE corner of the roof are a little steeper.
-   In this case, the parapet walls are one foot high and since the maximum water surface elevation does not exceed 1281, there is no flow overtopping the
-   parapet walls.
-   The maximum water surface elevation is shown in Figure 103.
-   Note that all the roof maximum water surface elevations are equal, but the maximum flow depths vary with the roof elevation and the deepest depth is
-   predicted at the downspout element.
-   The downspout outlet element 21990 has the same water surface elevation and small depth in both simulations.
+.. image:: img/Chapter4/Chapte036.jpg
 
-|Chapte036|
+*Figure 102.
+Total Rainfall (3 inches) Accumulated on a Flat Roof.*
 
-   *Figure 102.
-   Total Rainfall (3 inches) Accumulated on a Flat Roof.*
+**Cells 22365 and 21990 will be the downspout inlet and outlet respectively**
 
-   **Cells 22365 and 21990 will be the downspout inlet and outlet respectively**
+.. image:: img/Chapter4/Chapte089.jpg
 
-   *Figure 103.
-   Maximum Flow Depth and Water Surface Elevation on a Sloped Roof.*
+*Figure 103.
+Maximum Flow Depth and Water Surface Elevation on a Sloped Roof.*
 
-   **(Compare the Inlet and Outlet Maximum WS Elevations)**
+**(Compare the Inlet and Outlet Maximum WS Elevations)**
 
-   In the third simulation, the parapet wall was lowered by 0.75 ft to 1280.25 in the LEVEE.DAT file for the downspout inlet grid element 22365.
-   During the simulation the maximum water surface elevation exceeds the parapet wall elevation for the downspout inlet element (22365 NE flow direction
-   5) and overtops the wall (Figure 104).
-   Compare this grid element maximum water surface elevation and flow depth in Figure 103 and note that they are lower because the parapet wall is
-   overtopped and some rainfall storage is discharged to the ground.
-   Any number of parapet wall cells (levee elements and the blocked direction) can be overtopped.
+In the third simulation, the parapet wall was lowered by 0.75 ft to 1280.25 in the LEVEE.DAT file for the downspout inlet grid element 22365.
+During the simulation the maximum water surface elevation exceeds the parapet wall elevation for the downspout inlet element (22365 NE flow direction
+5) and overtops the wall (Figure 104).
+Compare this grid element maximum water surface elevation and flow depth in Figure 103 and note that they are lower because the parapet wall is
+overtopped and some rainfall storage is discharged to the ground.
+Any number of parapet wall cells (levee elements and the blocked direction) can be overtopped.
 
-   *Figure 104.
-   Maximum Flow Depth (Sloped Roof with Parapet wall Being Overtopped).*
+.. image:: img/Chapter4/Chapte036.jpg
 
-   The overtopping discharge is reported below from the file LEVOVERTOP.OUT.
-   The discharge is reported as negative representing flow out of the grid element.
+*Figure 104.
+Maximum Flow Depth (Sloped Roof with Parapet wall Being Overtopped).*
 
-   LEVEE OVERTOPPING DISCHARGE (CFS OR CMS): POSITIVE DISCHARGE REPRESENTS INFLOW TO NODE
+The overtopping discharge is reported below from the file LEVOVERTOP.OUT.
+The discharge is reported as negative representing flow out of the grid element.
 
-   LEVEE ELEMENTS WITH NO OVERTOP DISCHARGE ARE NOT REPORTED
+LEVEE OVERTOPPING DISCHARGE (CFS OR CMS): POSITIVE DISCHARGE REPRESENTS INFLOW TO NODE
+ LEVEE ELEMENTS WITH NO OVERTOP DISCHARGE ARE NOT REPORTED
+ DISCHARGE IS REPORTED BY DIRECTION
 
-   DISCHARGE IS REPORTED BY DIRECTION
+.. raw:: html
 
-   GRID ELEMENT TIME TOTAL DISCHARGE N E S W NE SE SW NW
+    <pre>
+    GRID ELEMENT     TIME   TOTAL DISCHARGE     N       E       S       W        NE     SE      SW      NW
 
-   22365 3.30 -0.02 0.00 0.00 0.00 0.00 -0.02 0.00 0.00 0.00
-
-   3.40 -0.06 0.00 0.00 0.00 0.00 -0.06 0.00 0.00 0.00 3.50 -0.09 0.00 0.00 0.00 0.00 -0.09 0.00 0.00 0.00 3.60 -0.17 0.00 0.00 0.00 0.00 -0.17 0.00 0.00
-   0.00 3.70 -0.23 0.00 0.00 0.00 0.00 -0.23 0.00 0.00 0.00 3.80 -0.36 0.00 0.00 0.00 0.00 -0.36 0.00 0.00 0.00 3.90 -0.54 0.00 0.00 0.00 0.00 -0.54 0.00
-   0.00 0.00 4.00 -0.70 0.00 0.00 0.00 0.00 -0.70 0.00 0.00 0.00 4.10 -0.69 0.00 0.00 0.00 0.00 -0.69 0.00 0.00 0.00 4.20 -0.72 0.00 0.00 0.00 0.00 -0.72
-   0.00 0.00 0.00 4.30 -0.74 0.00 0.00 0.00 0.00 -0.74 0.00 0.00 0.00 4.40 -0.75 0.00 0.00 0.00 0.00 -0.75 0.00 0.00 0.00 4.50 -0.75 0.00 0.00 0.00 0.00
-   -0.75 0.00 0.00 0.00 4.60 -0.75 0.00 0.00 0.00 0.00 -0.75 0.00 0.00 0.00 4.70 -0.76 0.00 0.00 0.00 0.00 -0.76 0.00 0.00 0.00 4.80 -0.78 0.00 0.00 0.00
-   0.00 -0.78 0.00 0.00 0.00
-
-   4.90 -0.78 0.00 0.00 0.00 0.00 -0.78 0.00 0.00 0.00
-
-   PEAK Q 4.92 -0.79
-
-   5.00 -0.78 0.00 0.00 0.00 0.00 -0.78 0.00 0.00 0.00 5.10 -0.77 0.00 0.00 0.00 0.00 -0.77 0.00 0.00 0.00 5.20 -0.74 0.00 0.00 0.00 0.00 -0.74 0.00 0.00
-   0.00 5.30 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00 0.00 0.00 5.40 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00 0.00 0.00 5.50 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00
-   0.00 0.00 5.60 -0.70 0.00 0.00 0.00 0.00 -0.70 0.00 0.00 0.00 5.70 -0.72 0.00 0.00 0.00 0.00 -0.72 0.00 0.00 0.00 5.80 -0.68 0.00 0.00 0.00 0.00 -0.68
-   0.00 0.00 0.00 5.90 -0.66 0.00 0.00 0.00 0.00 -0.66 0.00 0.00 0.00
-
-   6.00 -0.65 0.00 0.00 0.00 0.00 -0.65 0.00 0.00 0.00
-
+     22365           3.30   -0.02               0.00    0.00    0.00    0.00    -0.02   0.00    0.00    0.00
+                     3.40   -0.06               0.00    0.00    0.00    0.00    -0.06   0.00    0.00    0.00
+                     3.50   -0.09               0.00    0.00    0.00    0.00    -0.09   0.00    0.00    0.00
+                     3.60   -0.17               0.00    0.00    0.00    0.00    -0.17   0.00    0.00    0.00
+                     3.70   -0.23               0.00    0.00    0.00    0.00    -0.23   0.00    0.00    0.00
+                     3.80   -0.36               0.00    0.00    0.00    0.00    -0.36   0.00    0.00    0.00
+                     3.90   -0.54               0.00    0.00    0.00    0.00    -0.54   0.00    0.00    0.00
+                     4.00   -0.70               0.00    0.00    0.00    0.00    -0.70   0.00    0.00    0.00
+                     4.10   -0.69               0.00    0.00    0.00    0.00    -0.69   0.00    0.00    0.00
+                     4.20   -0.72               0.00    0.00    0.00    0.00    -0.72   0.00    0.00    0.00
+                     4.30   -0.74               0.00    0.00    0.00    0.00    -0.74   0.00    0.00    0.00
+                     4.40   -0.75               0.00    0.00    0.00    0.00    -0.75   0.00    0.00    0.00
+                     4.50   -0.75               0.00    0.00    0.00    0.00    -0.75   0.00    0.00    0.00
+                     4.60   -0.75               0.00    0.00    0.00    0.00    -0.75   0.00    0.00    0.00
+                     4.70   -0.76               0.00    0.00    0.00    0.00    -0.76   0.00    0.00    0.00
+                     4.80   -0.78               0.00    0.00    0.00    0.00    -0.78   0.00    0.00    0.00
+                     4.90   -0.78               0.00    0.00    0.00    0.00    -0.78   0.00    0.00    0.00
+     PEAK Q             4.92    -0.79
+                    5.00    -0.78               0.00    0.00    0.00    0.00    -0.78   0.00    0.00    0.00
+                    5.10    -0.77               0.00    0.00    0.00    0.00    -0.77   0.00    0.00     0.00
+                    5.20    -0.74               0.00    0.00    0.00    0.00    -0.74   0.00    0.00    0.00
+                    5.30    -0.72               0.00    0.00    0.00    0.00    -0.72   0.00    0.00    0.00
+                    5.40    -0.72               0.00    0.00    0.00    0.00    -0.72   0.00    0.00    0.00
+                    5.50    -0.72               0.00    0.00    0.00    0.00    -0.72   0.00    0.00    0.00
+                    5.60    -0.70               0.00    0.00    0.00    0.00    -0.70   0.00    0.00    0.00
+                    5.70    -0.72               0.00    0.00    0.00    0.00    -0.72   0.00    0.00    0.00
+                    5.80    -0.68               0.00    0.00    0.00    0.00    -0.68   0.00    0.00    0.00
+                    5.90    -0.66               0.00    0.00    0.00    0.00    -0.66   0.00    0.00    0.00
+                    6.00    -0.65               0.00    0.00    0.00    0.00    -0.65   0.00    0.00    0.00
+    </pre>
    The final test simulation combines the sloped roof with a downspout in grid element 22365.
    The inlet (red oval) maximum water surface is lowered by the downspout water discharge as shown in Figure 105.
    The downspout outlet element 21990 (blue oval) has an increased maximum water surface when compared with Figure 103 and Figure 104.
