@@ -312,7 +312,7 @@ There are a number of mean velocity equations for open channel uniform flow and 
 .. math::
     :label:
 
-    V = 1.486/n R^{2/3} S^{1/2}
+    V = \frac{1.486}{n} R^{\frac{2}{3}} S^{\frac{1}{2}}
 
 where V = velocity, R = hydraulic radius, S = friction slope, n = Manning’s roughness coefficient.
 
