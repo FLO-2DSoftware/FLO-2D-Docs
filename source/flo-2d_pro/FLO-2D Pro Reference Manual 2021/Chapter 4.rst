@@ -3177,14 +3177,14 @@ Gutter Flow
 
 Street gutter flow is defined in the Figure 106 where h = curb height.
 
-.. image:: img/Chapter4/Chapte037.jpg
+.. image:: img/Chapter4/Chapte037.png
 
 *Figure 106.
 Gutter Diagram.*
 
 The gutter flow can be shared in all eight flow directions (Figure 107):
 
-.. image:: img/Chapter4/Chapte038.jpg
+.. image:: img/Chapter4/Chapte038.png
 
 *Figure 107.
 Street and Gutter Flow Diagram.*
@@ -3214,7 +3214,7 @@ Flow from the gutter to the sidewalk inside the gutter element is depicted in Fi
 
    \text{Sidewalk elevation} = \text{FPE} + H
 
-.. image:: img/Chapter4/Chapte039.jpg
+.. image:: img/Chapter4/Chapte039.png
 
 *Figure 108.
 Flow Distribution Street to Sidewalk.*
@@ -3222,7 +3222,7 @@ Flow Distribution Street to Sidewalk.*
 Flow from the sidewalk to the gutter inside the gutter element Sidewalk is depicted in Figure 109.
 WSE = FPE + h + FPD; Gutter WSE = FPE + d
 
-.. image:: img/Chapter4/Chapte040.jpg
+.. image:: img/Chapter4/Chapte040.png
 
 *Figure 109.
 Flow Distribution Sidewalk to Street.*
@@ -3415,7 +3415,7 @@ An assumption of weir flow to represent overdeck discharge can only be an approx
 *Figure 121.
 Bridge Deck Overflow with Guardrail*
 
-                ]   (Llano River Bridge Collapse, CBS Austin).
+                                           (Llano River Bridge Collapse, CBS Austin).
 
 Bridge Flow Modeling
 ^^^^^^^^^^^^^^^^^^^^
