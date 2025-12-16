@@ -330,9 +330,19 @@ where:
 
     S\ :sub:`f` = friction slope component; based on Manning’s equation.
 
-    (S\ :sub:`o`) = bed slope pressure gradient and convective and local acceleration terms.
-The two unknown variables are velocity and flow depth.
-The discharge Q is given by Q = VA where A is the cross section flow area.
+    (S\ :sub:`o`) = bed slope pressure gradient
+
+    The other terms include convective and local acceleration terms.
+    The two unknown variables are velocity and flow depth.
+
+The discharge Q is given by:
+
+.. math::
+    :label:
+
+    Q = VA
+
+where A is the cross section flow area.
 
 Open channel (or floodplain) uniform flow is characterized by a constant depth, velocity, flow area and discharge such that the bed slope, water
 surface slope and energy grade line are all parallel (i.e.
