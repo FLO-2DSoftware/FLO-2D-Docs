@@ -306,15 +306,15 @@ If the timestep is greater than 1 second, then the timestep increment is:
 .. math::
    :label:
 
-   DSEC = DSEC + TIME\_ACCEL \times 0.0085 / XFAST
+   DSEC = DSEC + TIME\_ACCEL \times \frac{0.0085}{XFAST}
 
 where:
 
    DSEC = computational timestep in seconds
 
-   TIME_ACCEL = user defined parameter ranging from 0.1 to 10.0 with a default value of 1.0 XFAST = XFAST + 0.001 for each successfully completed
-   timestep loop when DSEC > 1.0 second.
+   TIME_ACCEL = user defined parameter ranging from 0.1 to 10.0 with a default value of 1.0
 
+   XFAST = XFAST + 0.001 for each successfully completed timestep loop when DSEC > 1.0 second.
    XFAST resets to 1.0 each time the DSEC timestep is decremented.
 
 This algorithm increases the timestep uniformly until the timestep DSEC is greater than 1 second.
