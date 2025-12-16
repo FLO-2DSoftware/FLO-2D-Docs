@@ -823,7 +823,7 @@ NUMERICAL STABILITY CONTROL DATA
       - 0.1 - 2
       - Coefficient to increase the rate of incremental timestep change.
 
-        Default value = 0.1 A value of 0.1 may result in a a more stable simulation time.
+        Default value = 0.1. A value of 0.1 may result in a more stable simulation time.
 
         A value of 0.2 or higher may result in a faster simulation.
 
