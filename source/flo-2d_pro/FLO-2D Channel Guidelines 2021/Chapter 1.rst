@@ -622,8 +622,8 @@ To eliminate channel surging, perform the following steps:
     1. Check the bed profile for unreasonable spikes (PROFILES program – Figure 23);
     2. Adjust the n-values (particularly in channel area transition reaches);
     3. Adjust the flow area - smooth out the area transitions (re-interpolate the cross sections);
-    4. Apply the depth variable roughness; 5.
-       Use limiting Froude number FROUDC.
+    4. Apply the depth variable roughness;
+    5. Use limiting Froude number FROUDC.
 
 .. image:: img/Chapter1/Chapte018.jpg
   :class: bordered-image
@@ -635,7 +635,8 @@ The Froude number is important for several reasons:
 
     - It delineates subcritical and supercritical flow;
     - It is the ratio of average flow velocity to shallow wave celerity;
-    - It relates the movement of a translational wave to the stream flow; • It defines an appropriate relationship between velocity and depth.
+    - It relates the movement of a translational wave to the stream flow;
+    - It defines an appropriate relationship between velocity and depth.
 
 Most models report the Froude number or provide warnings when the Froude number is high, but do not make any model adjustments at runtime to limit
 unreasonable Froude numbers from being encountered.
@@ -654,9 +655,9 @@ where:
 
     c = wave celerity = (gd)\ :sup:`0.5`; d = flow depth, g = gravitational acceleration
 
-    t = timestep
+    :math:`\Delta t` = timestep
 
-    x = channel element length
+    :math:`\Delta x` = channel element length
 
 Channel instability arises when the Froude number is high, the timestep is large, or the computation length is small (small channel conveyance
 capacity).
