@@ -556,8 +556,7 @@ where:
 
     V = depth averaged velocity
 
-    c = floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the
-       flow depth
+    c = floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the flow depth
 
 The Courant Number C can vary from 0.0 to 1.0 (recommended range 0.2 to 0.6), and a value of 1.0 in FLO-2D would enable the model to have the largest
 possible timestep.
