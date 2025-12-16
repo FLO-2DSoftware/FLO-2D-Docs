@@ -3543,7 +3543,12 @@ The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959, p.
 
 where:
 
-    β = 1 - α\ :sub:`1` C\ :sup:`2` (A\ :sub:`2` /A\ :sub:`1`)\ :sup:`2` + 2gC\ :sup:`2` (A\ :sub:`2`/K\ :sub:`2`)\ :sup:`2` (L\ :sub:`B` +L\ :sub:`1-2` K\ :sub:`2`/K\ :sub:`1`);
+    .. math::
+   :label:
+
+   \beta = 1 - \alpha_1\, C^2\, (A_2/A_1)^2
+   + 2 g\, C^2\, (A_2/K_2)^2\, (L_B + L_{1-2}\, K_2/K_1);
+
 
     L\ :sub:`B` = length of contracted reach
 
