@@ -1573,12 +1573,10 @@ Evidence of numerical surging in breach discharge includes:
     - Rapidly varying discharges (BREACH.OUT, LEVEE.OUT, or in the floodplain cross section hydrographs);
     - High or variable maximum water surface elevations.
 
-Table 6. Numerical Surging Troubleshooting
-
 .. raw:: html
 
    <table style="border-collapse: collapse; width: 100%;">
-     <caption><strong>Numerical Surging Troubleshooting</strong></caption>
+     <caption><strong>Table 6. Numerical Surging Troubleshooting</strong></caption>
      <thead>
        <tr>
          <th style="border: 1px solid #000; padding: 4px;">Condition</th>
@@ -1785,7 +1783,9 @@ Table 6. Numerical Surging Troubleshooting
      </tbody>
    </table>
 
+.. raw:: html
 
+    <br><br>
 
 Dam Breach Floodwave Reporting for Hazard Mapping
 -----------------------------------------------------------------
@@ -1948,7 +1948,7 @@ This data assignment enables the user to specify either global fragility curve d
 reaches of levee fragility curves in the FLO-2D model in a spatially variable analysis.
 
 FLO-2D Fragility Curve Modeling Results
-----------------------]-----------------
+------------------------------------------
 
 When the levee fragility curves are applied to a levee system, the results show that the levee breach can occur anywhere in the system at varying
 times depending of the selection of the fragility curve and the prescribe probability of failure.
