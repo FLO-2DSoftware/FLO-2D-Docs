@@ -244,7 +244,7 @@ The timestep Δt is limited by:
 .. math::
    :label:
 
-   \Delta t = C\, \Delta x \,/\, (\beta V + c)
+   \Delta t = \frac{C\, \Delta x}{(\beta V + c)}
 
 where:
 
