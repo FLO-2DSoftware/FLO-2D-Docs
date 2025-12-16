@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 4
+CHAPTER 4
 ==========
 
 Introduction
@@ -108,25 +108,25 @@ FLO-2D Storm Drain Instructional Comments.*
    * - WSE isgreater thanpipepressurehead
      - Inlet discharge is computed by FLO-2D and exchanged with the storm drain system.
 
-       FLO-2D will use the grid element water depth (floodplain, channel or street) and the inlet geometry
+       FLO-2D will use the grid element water depth (floodplain, channel or street) and the inlet
 
-       to calculate the inlet discharge.
+       geometry to calculate the inlet discharge.
 
-       Horizontal inlets refer to gutter inlets and vertical inlets are culvert or pipe openings to the surface.
+       Horizontal inlets refer to gutter inlets and vertical inlets are culvert or pipe openings to the
 
-       Floodplain grid element elevation (FPE) is automatically set to the inlet rim elevation.
+       surface. Floodplain grid element elevation (FPE) is automatically set to the inlet rim elevation.
 
        For horizontal inlets changes to FPE are reported to a file named as FPRIMELEV.OUT.
 
        For vertical inlets:
 
-           - An inlet on a 1-D channel (end of segment) where the channel flow is discharging to the storm drain
+           - An inlet on a 1-D channel (end of segment) where the channel flow is discharging to the
 
-             pipe, the invert elevation should be equal to the channel bed elevation.
+             storm drain pipe, the invert elevation should be equal to the channel bed elevation.
 
-           - If the flow is discharging to a storm drain pipe or culvert in a floodplain swale, the invert elevation
+           - If the flow is discharging to a storm drain pipe or culvert in a floodplain swale, the
 
-             should be equal to the cell floodplain elevation.
+             invert elevation should be equal to the cell floodplain elevation.
 
        The last column parameter ‘Feature’ in the GDS inlet dialog has three options:
 
@@ -199,16 +199,16 @@ FLO-2D Storm Drain Instructional Comments.*
        Inflow to the storm drain from surface water is not computed.
 
    * - Volumeconservation
-     - Inflow to the storm drain and return volumes (flooding and outfall volumes) to the surface water are
+     - Inflow to the storm drain and return volumes (flooding and outfall volumes) to the
 
-       compiled and reported by the FLO-2D model.
+       surface water are compiled and reported by the FLO-2D model.
 
    * - Reportingresults
      - The FLO-2D file SWMMQIN.OUT reports the inflow and return flow discharge for each inlet.
 
-       This is different from the discharge values reported in the SWMM.RPT file which includes lateral pipe
+       This is different from the discharge values reported in the SWMM.RPT file which includes
 
-       inflow and outflow.
+       lateral pipe inflow and outflow.
 
        SWMMOUTFIN.OUT file lists time and discharge pairs for storm drain outfall hydrographs when
 
@@ -244,9 +244,9 @@ FLO-2D Storm Drain Instructional Comments.*
 
        It does not apply to normal, fixed, tidal or time series type of outfalls.
 
-       When the outfall does not discharge to the surface water, the outfall head is assigned based
+       When the outfall does not discharge to the surface water, the outfall head is assigned
 
-       on the type of outfall node.
+       based on the type of outfall node.
 
        The following types can be set up:
 
@@ -263,9 +263,9 @@ FLO-2D Storm Drain Instructional Comments.*
 
        The user can define the surcharge depth in the junction properties (SWMM.inp file).
 
-       When the surcharge depth is set to different values in  SWMMFLO.DAT and in the SWMM.inp file,
+       When the surcharge depth is set to different values in  SWMMFLO.DAT and in the
 
-       the model uses the surcharge depth from the SWMMFLO.DAT.
+       SWMM.inp file, the model uses the surcharge depth from the SWMMFLO.DAT.
 
            - If Pressure Head + Surcharge Depth < WSEL:  - Cover remains in place.
            - Inflow to the manhole is not allowed.
@@ -274,7 +274,6 @@ FLO-2D Storm Drain Instructional Comments.*
            - Surcharge depth is reset to 0.
            - Inflow to the storm drain is permitted.
            - Return flow can occur.
-
 
 Default Parameters
 ^^^^^^^^^^^^^^^^^^
@@ -290,11 +289,13 @@ The following storm drain parameters are automatically assigned in the SWMM.inp 
       The storm drain model bases the new equivalent pipe length on an estimate of the full flow velocity in the conduit as well as on the wave celerity.
       The full area, width and hydraulic radius are unchanged in the modified link but the length, slope and roughness are altered.
 
-       Length Factor = (Wave Celerity + Full Depth Velocity) \* Timestep/ Pipe Length For a Length Factor > 1:
+        Length Factor = (Wave Celerity + Full Depth Velocity) \* Timestep/ Pipe Length
 
-       New Roughness= Old Roughness /Length Factor**0.5
+                    For a Length Factor > 1:
 
-       New Slope = Old Slope Slope/Length Factor**0.5
+                           New Roughness= Old Roughness /Length Factor**0.5
+
+                           New Slope = Old Slope Slope/Length Factor**0.5
 
     - The routing model (FLOW_ROUTING) for the FLO-2D storm drain component is set as dynamic wave (DYNWAVE) to account for backwater effects, entrance/exit
       losses, flow reversal or pressurized flow.
@@ -345,17 +346,13 @@ After the urban project is prepared, the following questions related to the stor
     - Inlet locations:
 
       - Are all inlets correctly assigned inside the FLO-2D computational domain?
-
       - Are there inlets incorrectly assigned to the interior channel elements?
-
       - Are there inlets incorrectly assigned to the right channel bank elements?
 
     - Inlet elevations:
 
       - Are there channels discharging to a storm drain inlet?
-
       - Does the channel thalweg elevation match the inlet invert elevation?
-
       - Is the inlet set up as a vertical inlet opening in the SWMMFLO.DAT?
 
 Storm drain inlets should not be set up in an interior or in a right bank channel element.
@@ -467,27 +464,21 @@ The following checklist was prepared to review the storm drain data files:
 
     ☐ Inlet location. All inlets must be inside the FLO-2D computation domain.
 
-    ☐ SWMM hydrology components for surface water modeling are eliminated. If an existing
-      SWMM model was ported to the FLO-2D model, all hydrology features must be removed,
-      including subcatchments and rain gage features.
+    ☐ SWMM hydrology components for surface water modeling are eliminated. If an existing SWMM model was ported to the FLO-2D model, all hydrology features must be removed, including subcatchments and rain gage features.
 
-    ☐ Pipe lengths. If pipe lengths are less than 20 ft or less than the FLO-2D grid element
-      side length, adjust the pipe length or delete that section.
+    ☐ Pipe lengths. If pipe lengths are less than 20 ft or less than the FLO-2D grid element side length, adjust the pipe length or delete that section.
 
     ☐ Adverse pipe slope. Check adverse pipe slope for accuracy.
 
     ☐ Inlet elevations. Grid or channel thalweg elevations should match the inlet rim or invert elevations.
 
-    ☐ Type 4 – Defined by a Stage-Discharge Rating Table. Rating tables must be assigned in
-      the SWMMFLORT.DAT file.
+    ☐ Type 4 – Defined by a Stage-Discharge Rating Table. Rating tables must be assigned in the SWMMFLORT.DAT file.
 
     ☐ Inlet geometry. Check the size and location.
 
-    ☐ Outfall discharge. For outfall discharge to surface water, the outfall must have a
-      'free' condition and be turned 'on' in the SWMMOUTF.DAT file.
+    ☐ Outfall discharge. For outfall discharge to surface water, the outfall must have a 'free' condition and be turned 'on' in the SWMMOUTF.DAT file.
 
-    ☐ Outfall location. Check its position relative to grid/channel elements and its invert
-      elevation relative to floodplain/thalweg elevation.
+    ☐ Outfall location. Check its position relative to grid/channel elements and its invert elevation relative to floodplain/thalweg elevation.
 
     ☐ Outfall to the channel. The outfall must connect to the left bank grid element.
 
@@ -495,7 +486,6 @@ The following checklist was prepared to review the storm drain data files:
 
     ☐ Manholes. Check the assigned surcharge depth.
 
-    ☐ Storm drain model simulation completion. Check the SUMMARY.OUT file last line for
-      the time stamp indicating proper termination.
+    ☐ Storm drain model simulation completion. Check the SUMMARY.OUT file last line for the time stamp indicating proper termination.
 
     ☐ SWMM.ini file. Modify the SWMM.ini file to review the results.

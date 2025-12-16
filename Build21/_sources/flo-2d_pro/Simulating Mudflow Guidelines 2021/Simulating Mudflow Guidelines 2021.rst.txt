@@ -436,38 +436,59 @@ For laminar and transitional flows, turbulence is suppressed and the laminar flo
 *Table 2.
 Resistance Parameters for LaminarFlow*\ :sup:`1`
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+.. raw:: html
 
+   <table style="border-collapse: collapse; width: 100%; border: 2px solid #000;">
+     <thead>
+       <tr>
+         <th style="border:1px solid #000; padding:6px; background:#e6e6e6; text-align:left;">Surface</th>
+         <th style="border:1px solid #000; padding:6px; background:#e6e6e6; text-align:center;">Range of K</th>
+       </tr>
+     </thead>
 
-   * - Surface
-     - Range of K
+     <tbody>
+       <tr>
+         <td style="border:1px solid #000; padding:6px;">Concrete/asphalt</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">24 - 108</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px;">Bare sand</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">30 - 120</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px;">Graded surface</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">90 - 400</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px;">Bare clay - loam soil, eroded</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">100 - 500</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px;">Sparse vegetation</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">1,000 - 4,000</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px;">Short prairie grass</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">3,000 - 10,000</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px;">Bluegrass sod</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">7,000 - 50,000</td>
+       </tr>
+     </tbody>
 
-   * - Concrete/asphalt
-     - 24 -108
+     <tfoot>
+       <tr>
+         <td colspan="2" style="border-top:2px solid #000; padding:6px; font-size:90%;">
+           * Woolhiser (1975)
+         </td>
+       </tr>
+     </tfoot>
+   </table>
 
-   * - Bare sand
-     - 30 - 120
+.. raw:: html
 
-   * - Graded surface
-     - 90 - 400
-
-   * - Bare clay - loam soil, eroded
-     - 100 - 500
-
-   * - Sparse vegetation
-     - 1,000 - 4,000
-
-   * - Short prairie grass
-     - 3,000 - 10,000
-
-   * - Bluegrass sod
-     - 7,000 - 50,000
-
-   * - :sup:`1` Woolhiser (1975)
-     -
-
+    <br><br>
 
 The flow resistance n\ :sub:`td` of the turbulent and dispersive shear stress components are combined into an equivalent Manning’s n-value for the
 flow:
@@ -689,9 +710,12 @@ Less viscous flows (mud floods) are always turbulent.
      </tbody>
    </table>
 
-*Conversion:* Shear Stress: 1 Pascal (PA) = 10 dynes/cm\ :sup:`2`
+.. raw:: html
 
-Viscosity: 1 PAs = 10 dynes-sec/cm\ :sup:`2` = 10 poises
+    <pre>
+                            *Conversion:*          Shear Stress: 1 Pascal (PA) = 10 dynes/cm\ :sup:`2`
+                                                   Viscosity: 1 PAs = 10 dynes-sec/cm\ :sup:`2` = 10 poises
+    </pre>
 
 For a mudflow event, the average sediment concentration generally ranges between 20% and 35% by volume with peak concentrations approaching 45% (Table
 1 and Figure 1).
@@ -734,19 +758,15 @@ Dynamic Viscosity of Mudflow Samples Versus Volumetric Concentration*
 *Figure 4.
 Yield Stress of Mudflow Samples Versus Volumetric Concentration*
 
-Guidelines  
------------
-
-Analyzing the Potential for Hyperconcentrated Sediment Flows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Practical Guidelines for Analyzing the Potential for Hyperconcentrated Sediment Flows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are several simple guidelines that can be checked to determine the potential for a watershed to generate a mudflow.
 In addition, modeling hyperconcentrated sediment flows requires reasonable assumptions for the variables that control the physical flows processes.
 These variables include the volume of water and sediment, sediment concentration, physical surface conditions, fluid and sediment properties.
 These guidelines, variables and how to estimate and apply them will be briefly discussed.
 
-Watershed inspection
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Watershed inspection*
 
 The first check involves a watershed inspection for loose boulders, debris in the basin channel.
 This usually requires an on-ground inspection.
@@ -760,8 +780,7 @@ In the upper watershed, aerial photos as well as on the ground inspection may re
 erosion.
 Fire and overgrazing can contribute to increased sediment loading during subsequent infrequent large storms.
 
-Volume of water and sediment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Volume of water and sediment*
 
 The area of inundation, flow depths and velocities are primarily a function of the sediment and water volumes.
 Flood hydrology and sediment yield have to be analyzed.
@@ -809,6 +828,7 @@ shown in Table 1, then the overall area of inundation predicted by the model wil
 It should be remembered that a basin can only deliver a given quantity of sediment.
 If the estimate sediment yield is compared with less frequent return period flood hydrograph water volumes, it may be noted that the average sediment
 concentration for the entire flood event is insufficient to generate a mudflow for very large flood events.
+
 *Sediment concentration*
 
 The ratio of sediment to water governs the ability of the mixture to flow.
@@ -854,14 +874,14 @@ The altered hydrograph shape results in a modified peak discharge that would exc
 *Figure 6.
 Channel Outflow Hydrographs*
 
-*Surface Conditions: Topography, buildings, obstructions, channels and vegetation* Topography effects local flow depth, velocity and deposition (or
-scour).
+*Surface Conditions: Topography, buildings, obstructions, channels and vegetation*
+
+Topography effects local flow depth, velocity and deposition (or scour).
 Flow depositional features such as natural levees and berms are primarily a function of topography and flow resistance.
 Reduction in slope can induce mudflow cessation or particle settling that will effect sediment concentration.
 Buildings and flow obstructions (flood walls) can alter the flow path, or initiate flow cessation.
 
-Fluid and sediment properties
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Fluid and sediment properties*
 
 Fluid properties vary with sediment concentration.
 Fluid properties such as viscosity, yield stress, and density affect turbulence, flow momentum and energy dissipation.
@@ -873,7 +893,7 @@ area of inundation.
 The key to accurate simulation is the selection of the sediment concentration by volume assigned to the flood hydrograph.
 A balance should be sought between the assigned sediment concentration and the estimated potential sediment yield.
 
-Selection of Rheological Parameters
+Guidelines for the Selection of Rheological Parameters
 -------------------------------------------------------
 
 Each mudflow alluvial fan or tailings dam area or region has geology and soil conditions that will generate unique rheological fluid properties.
@@ -1093,7 +1113,7 @@ exceeds 53%.
    </table>
 
 References
-=====================
+------------
 
 Bagnold, R.A., 1954.
 "Experiments on a gravity-free dispersion of large solid spheres in a Newtonian fluid under shear," *Proc.

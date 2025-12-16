@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 7
+CHAPTER 7
 ==========
 
 Porting a SWMM Model to the FLO-2D Storm Drain System
@@ -20,15 +20,15 @@ Porting SWMM Data Files to a FLO-2D Storm Drain Model
 
 The modifications that have to be made to the SWMM.inp file are discussed.
 
-*Rain gages*
+**Rain gages**
 
 Rain gages are not required in the FLO-2D Storm Drain Model.
 
-*Subcatchments*
+**Subcatchments**
 
 Subcatchments are not required in the FLO-2D Storm Drain Model.
 
-*Inlets*
+**Inlets**
 
 For junctions to function as inlets they must have an ID that starts with ‘I’.
 The required data for inlets are (Figure 79):
@@ -39,17 +39,17 @@ The required data for inlets are (Figure 79):
 
       - The invert elevation and maximum depth can be edited manually in the SWMM GUI or in the QGIS plug-in.
         Open the FLO-2D surface model in QGIS, go to the Storm Drain Editor and Import SWMM.inp file, then add the data.
-        o The maximum depth and the invert elevation are used to determine the rim elevation.
+      - The maximum depth and the invert elevation are used to determine the rim elevation.
       - The rim elevation is compared with the FLO-2D grid element elevations.
-        o These comparisons are listed in the FPRIMELEV.OUT file.
-        o Ideally the elevations in the \*.inp file should match those of the grid system.
+      - These comparisons are listed in the FPRIMELEV.OUT file.
+      - Ideally the elevations in the \*.inp file should match those of the grid system.
 
 .. image:: img/Chapter7/Chapte006.jpg
 
 *Figure 79.
 SWMM GUI Junction Dialog Box Showing the Required Data*
 
-*Outfalls*
+**Outfalls**
 
 Outfalls are terminal nodes in the drainage system used to define final downstream boundaries.
 Only a single link can be connected to an outfall node.
@@ -61,13 +61,13 @@ The required data includes (Figure 80):
 
       - An outfall that returns flows to a channel has to be assigned to the left bank.
       - An option to have an underground (underwater representing ponded flow) outfall was added in the FLO-2D storm drain.
-        o This elevation can be lower than the grid element and is not reported in the FPRIMELEV.OUT file.
+      - This elevation can be lower than the grid element and is not reported in the FPRIMELEV.OUT file.
+      - The outfall can discharge off the model.
 
-    - The outfall can discharge off the model.
     - Outfall Type (Figure 80):
 
       - Set to ‘FREE’ to exchange flow with the FLO-2D surface water system.
-        o Other types such as NORMAL, FIXED, TIDAL or TIME SERIES can be assigned but the flows will not be exchanged with the surface water but will debouch
+      - Other types such as NORMAL, FIXED, TIDAL or TIME SERIES can be assigned but the flows will not be exchanged with the surface water but will debouch
         the flow off the storm drain system.
 
     - Tide gate: Set to ‘NO’ for the outfalls to exchange flows with the surface water.
@@ -137,7 +137,7 @@ The dialog can then be used to turn ‘ON’ or ‘OFF’ the outfall nodes and 
 *Figure 84.
 GDS Outfall Dialog Box Command*
 
-*Simulation Options*
+**Simulation Options**
 
 The following simulation options have to be selected:
 

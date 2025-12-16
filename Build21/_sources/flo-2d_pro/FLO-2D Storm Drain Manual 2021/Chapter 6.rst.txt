@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 6
+CHAPTER 6
 ==============
 
 Reviewing Storm Drain Model Results
@@ -72,8 +72,8 @@ The GDS has the ability to customize different GIS layer views.
 The Crayfish plugin provide functionalities to plot graphs using the FLO-2D maximum results and temporal results in QGIS including animations.
 Crayfish plugin can be installed from the QGIS plugin repository A possible approach to reviewing a storm drain simulation is outlined.
 
-Step 1.
-Review the SUMMARY.OUT File
+**Step 1.
+Review the SUMMARY.OUT File**
 
 After a FLO-2D simulation is completed, the SUMMARY.OUT file can be reviewed with an ASCII text editor program.
 A FLO-2D model has been successfully completed if the termination time and date is reported at the end of the SUMMARY.OUT:
@@ -90,8 +90,7 @@ Volume exchange and conservation between the surface water and storm drain is re
 
 *Storm Drain Return Flow to Surface:* Return flow to the surface water through the inlets as pressure flow.
 
-Step 2.
-View the Surface Water Data and Results in the GDS
+**Step 2. View the Surface Water Data and Results in the GDS**
 
 Open the GDS and load the project as shown in Figure 58.
 The components displayed in this image are the building area reduction factors (ARF-values) and the storm drain features.
@@ -103,8 +102,7 @@ Alternatively, the project could be opened in the FLO-2D QGIS plug-in.
 *Figure 58
 Typical GDS Storm Drain Project*
 
-Step 3.
-Import Shapefiles from Mapper (Optional)
+**Step 3. Import Shapefiles from Mapper (Optional)**
 
 If the output data was plotted in Mapper, the automatically generated shapefiles can be imported into the GDS or QGIS plug-in.
 The FLO-2D model maximum depths and velocities and other output can be imported as shapefiles to view the flooding with the various model components
@@ -118,8 +116,7 @@ The flooding is shown in the streets and is being captured by the storm drain sy
 *Figure 59.
 Maximum Flow Depth Shapefile in the GDS with Storm Drain Components*
 
-Step 4.
-Display the Storm Drain Results in the GDS
+**Step 4. Display the Storm Drain Results in the GDS**
 
 The GDS can display the storm drain inlet discharge hydrograph including the return flow (pressure flow) to the surface water.
 GDS will plot the water surface head on the storm drain inlet and outlet and the hydraulic and energy grade lines.
@@ -176,7 +173,7 @@ To view the output, first make sure that the following files are present in the 
 The SWMM.RPT file reports the storm drain output data in ASCII format and can be read with any ASCII editor.
 The SWMM.OUT file is a binary output file with results reported temporally and spatially that can be read by the SWMM GUI.
 
-SWMM.ini
+**SWMM.ini**
 
 The storm drain results are not automatically loaded into the SWMM GUI.
 To load the results, navigate to the project folder directory and open the SWMM.ini file using an ASCII text editor.
@@ -187,7 +184,7 @@ The user needs to set ‘Saved = 1” and “Current = 1” as highlighted in Fi
 *Figure 66.
 SWMM.ini File with Required Data to View the Results in the SWMM GUI*
 
-View the Storm Drain Results
+**View the Storm Drain Results**
 
 Open the SWMM GUI and navigate to the project folder.
 Open the SWMM.inp file from the File|Open menu.
@@ -204,7 +201,7 @@ The SWMM manual should be used referenced when using the SWMM GUI.
 The GUI environment is shown in Figure 68 consisting of a main menu, tool bars, study area, and working area.
 These attributes and some of the options are explained briefly.
 
-File Menu
+**File Menu**
 
     **Open:** Opens an existing project
 
@@ -212,14 +209,14 @@ File Menu
 
     **Save:** Saves the current project
 
-   **Save As:** Saves the project under a different name
+    **Save As:** Saves the project under a different name
 
 .. image:: img/Chapter6/Chapte022.jpg
 
 *Figure 68.
 SWMM GUI Environment*
 
-Edit Menu
+**Edit Menu**
 
     **Select Object:** Select an object on the map
 
@@ -229,7 +226,7 @@ Edit Menu
 
     **Group Edit:** Edits a property for the group of objects within selected region
 
-View Menu
+**View Menu**
 
     **Dimensions:** Sets reference coordinates and distance units for a study area
 
@@ -239,13 +236,15 @@ View Menu
 
     **Objects:** Toggles display of classes of objects
 
-    **Legends:** Controls display of the map legends **Toolbars:** Toggles display of tool bars
+    **Legends:** Controls display of the map legends
 
-Project Menu
+    **Toolbars:** Toggles display of tool bars
+
+**Project Menu**
 
     **Defaults:** Edits a project’s default properties
 
-Report Menu
+**Report Menu**
 
    **Status:** Displays a status report for the last simulation.
 
@@ -266,19 +265,18 @@ Graph: Time Series**
 
     **Table:** Displays simulation results in tabular form\ **.**
 
-Tools Menu – Commands that Provide Control Detail
+**Tools Menu – Commands that Provide Control Detail**
 
     **Program Preferences:** Sets program preferences, such as font sizes, deletions, number of decimal places displayed, etc.
 
-    **Map Control Display Options:** Sets appearance options for the Map, such as object size, annotation, flow direction arrows, and background colors
-    (Figure 71).
+    **Map Control Display Options:** Sets appearance options for the Map, such as object size, annotation, flow direction arrows, and background colors (Figure 71).
 
 .. image:: img/Chapter6/Chapte015.jpg
 
 *Figure 71.
 Map Options*
 
-Help Menu
+**Help Menu**
 
     **Help Topics:** Displays the Help system’s Table of Contents
 
@@ -286,35 +284,34 @@ Help Menu
 
     **Tutorial:** Presents a short tutorial introducing the user to the EPA SWMM
 
-Study Area Map
+**Study Area Map**
 
     This map is a working environment with of storm drain system.
 
-Toolbars
+**Toolbars**
 
     Provide shortcuts to common operations and includes the standard toolbar.
 
-Map Toolbar and Object Toolbar
+**Map Toolbar and Object Toolbar**
 
     Data/map browser provides access to all the data objects in a project and controls the mapping themes and time periods viewed on the study area map.
 
-Status Bar
+**Status Bar**
 
    **Auto-length**: Indicates whether the automatic computation of conduit lengths.
    It is recommended that the auto-length be turn ‘off” if the data is imported from a GIS database.
 
    **Offsets**: Indicate whether the positions of links above the invert of their connecting nodes are expressed as depth above the invert or as an
-   offset elevation.
-   The FLO-2D component is configured for the depth.
+   offset elevation. The FLO-2D component is configured for the depth.
 
    **Flow units**: English or metric.
    The previously entered data is not automatically adjusted for the unit system if the system is changed.
 
-    **Zoom level:** Zoom level percentage.
+   **Zoom level:** Zoom level percentage.
 
-    **XY location**: Mouse cursor coordinates.
+   **XY location**: Mouse cursor coordinates.
 
-Data Browser
+**Data Browser**
 
 The data browser has three sections (Figure 72).
 
@@ -327,7 +324,7 @@ The data browser has three sections (Figure 72).
 *Figure 72.
 SWMM GUI Data Browser Panel*
 
-Map Browser
+**Map Browser**
 
 The map browser consists of three panels that control the results display (Figure 73).
 

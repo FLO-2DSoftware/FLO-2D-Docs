@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 8
+CHAPTER 8
 ==========
 
 FLO-2D Storm Drain Example
@@ -28,12 +28,12 @@ Storm drain data includes inlet geometry, conduit sizes, and inlet/outlet locati
 After the FLO-2D surface water model is prepared, the storm drain data can be created.
 The steps are:
 
-Create or open a FLO-2D model
+**Create or open a FLO-2D model**
 
 1. Open the GDS and locate the project folder.
 2. Import any aerial images to visualize the location of the storm drain system.
 
-Open the SWMM GUI
+**Open the SWMM GUI**
 
 3. From the GDS open SWMM GUI (Figure 86).
    It is possible to open the GUI directly by calling EPA SWMM 5.0 from the Windows search bar.
@@ -43,7 +43,7 @@ Open the SWMM GUI
 *Figure 86.
 GDS Open Storm Drain GUI**
 
-Create SWMM.inp file
+**Create SWMM.inp file**
 
 4. If there is an existing ‘stand-alone’ storm drain model for this project, the user can port it to the FLO-2D model using the previous Chapter 7
    guidelines.
@@ -124,7 +124,7 @@ Use O = outlets, C = pipe conduits, etc.
 *Figure 93.
 Simulation Options - Dynamic Wave*
 
-Create SWMMFLO.DAT file
+**Create SWMMFLO.DAT file**
 
 12. Open the GDS FLO-2D inlet geometry dialog box (Figure 94.).
 
@@ -148,7 +148,7 @@ Storm Drain Inlet Dialog GDS*
 
 16. The inlet inflow discharge and the flooding are reported in SWMMQIN.OUT.
 
-Create SWMMOUTF.DAT file
+**Create SWMMOUTF.DAT file**
 
 17. View the Outfall nodes dialog to create the SWMMOUTF.DAT file (Figure 96.).
     This dialog reads the outfall nodes from the SWMM.inp file.
@@ -167,7 +167,7 @@ Outfall Node Discharge*
 
 18. Outfall Discharge to FLO-2D is reported in the SWMMOUTFIN.OUT file.
 
-Run FLO-2D storm drain model
+**Run FLO-2D storm drain model**
 
 19. Run the project from GDS (Figure 98).
 
@@ -176,7 +176,7 @@ Run FLO-2D storm drain model
 *Figure 98.
 FLO-2D Control Variables.**
 
-Review FLO-2D storm drain model results
+**Review FLO-2D storm drain model results**
 
 20. The storm drain results are reported in the SWMM.RPT file (ASCII) and SWMM.OUT file (Binary).
     Results can be used to create plots in the GDS and in the SWMM GUI.

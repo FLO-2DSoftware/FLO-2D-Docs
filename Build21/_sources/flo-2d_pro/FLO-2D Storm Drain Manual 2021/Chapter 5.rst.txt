@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 5
+CHAPTER 5
 ===========
 
 Troubleshooting
@@ -547,24 +547,18 @@ The versions of the FLO-2D and the Storm Drain versions are reported in the STOR
 Volume Conservation and Numerical Instability
 '''''''''''''''''''''''''''''''''''''''''''''
 
-When a model run is completed, volume conservation is reported in the SWMM.RPT file under
-
-Flow Routing Continuity.
+When a model run is completed, volume conservation is reported in the SWMM.RPT file under Flow Routing Continuity.
 The FLO-2D model volume conservation results are written to the SUMMARY.OUT file.
 Volume conservation represents the difference between the inflow volume and the outflow plus storage volumes for the system.
 The storm drain system should be reviewed if the mass continuity error in SWMM.RPT exceeds some reasonable level, such as plus or minus 1 percent.
 Ideally, this error should be less than 1 percent.
 The original SWMM model might have volume conservation errors as high as 10 percent and this should not occur with the FLO-2D storm drain model.
 Excessive volume conservation error is primarily the result of short conduit lengths.
-It is recommended that the minimum pipe length be at least the size
-
-of the FLO-2D grid element side.
+It is recommended that the minimum pipe length be at least the size of the FLO-2D grid element side.
 Generally, the volume conservation errors and numerical instabilities may be reduced or eliminated by:
 
     - Increasing pipe roughness n-values;
-
     - Reviewing the selection of reporting timestep (REPORT_STEP) in the SWMM.inp file and the simulation time (TOUT) in the CONT.DAT file;
-
     - Reviewing the system connectivity for adverse slopes and incorrect inlet geometry.
 
 Reviewing the interaction at key features between the surface and the storm drain models.
@@ -572,7 +566,6 @@ Reviewing the interaction at key features between the surface and the storm drai
 The most common sources of numerical instability are:
 
     - Short conduits;
-
     - Conflicting or poor system connectivity in the pipe network.
 
 Discharge oscillations at inlets primarily occur when the pipe system is under pressure (full capacity).
@@ -587,8 +580,10 @@ As the water flows through or out of the storm drain and pipe capacity becomes a
 The model will only allow inlet inflow if there is available capacity.
 There is zero inflow if the storm drain system is full regardless of the surface water elevation above the rim.
 
-High Flow Instability Indices (HFII)
+.. note::
+    It is necessary to put the VC2005-CON.dll in the system folders only if the FLOPro.exe is run from a project folder.
 
+**High Flow Instability Indices (HFII)**
 
 The SWMM.RPT file lists those nodes of the drainage network that have the largest flow continuity errors.
 The following is an example from a SWMM.RPT file:
@@ -598,17 +593,11 @@ The following is an example from a SWMM.RPT file:
     <pre>
 
         High Flow Instability Indexes
-
         ********************************
-
         Link C9 (9)
-
         Link C8 (8)
-
         Link C10 (7)
-
         Link C7 (6)
-
         Link C6 (6)
     </pre>
 
@@ -618,8 +607,7 @@ The index is the number of flow turns that exists in a link during the simulatio
 A flow turn occurs when the difference between a new and old flow results in a perturbation which is defined as a significant flow difference or a
 change in flow direction.
 
-Timestep and Conduit Length
-
+**Timestep and Conduit Length**
 
 Similar to the Courant criteria used on the FLO-2D surface water model, stability issues can arise if the timestep is greater than about two times the
 travel time through a pipe.
@@ -642,11 +630,14 @@ To improve a model with numerical stability issues:
 
            Wave celerity c = 1.5 x V
 
-           Applying the Courant equation:
+                Applying the Courant equation:
 
-           ∆t = C ∆x/(V + c) = 0.6 (20 ft) / (7.3 fps + 1.5 x 7.3 fps) = 0.66 seconds
+.. math::
+   :label:
 
-Unstable Results
+   \Delta t = C\, \Delta x/(V + c) = 0.6\ (20\ \text{ft})\ /(7.3\ \text{fps} + 1.5\ x\ 7.3\ \text{fps}) = 0.66\ \text{seconds}
+
+**Unstable Results**
 
 Oscillations that grow in time are a form of numerical instability.
 The solution is not converging, and the following issues should be reviewed:
@@ -720,6 +711,3 @@ In the original SWWM model, most volume conservation errors were associated with
 more were acceptable.
 If the volume conservation error exceeds 1 % in the FLO-2D storm drain system, the model can be improved.
 
-.. [1]
-   It is necessary to put the VC2005-CON.dll in the system folders only
-   if the FLOPro.exe is run from a project folder.

@@ -165,9 +165,18 @@ where:
 
    Δx = square grid element width V = depth averaged velocity
 
-   c = floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the flow depth above the thalweg
+   c = floodwave celerity = (gd)\ :sup:`0.5` where:
 
-   Rearranging the Courant number timestep equation to: V + c = C Δx /Δt
+        g = gravitation acceleration
+
+        d = flow depth above the thalweg
+
+Rearranging the Courant number timestep equation to:
+
+.. math::
+    :label:
+
+    V + c = \frac{C Δx}{Δt}
 
 results in a formula that relates the progression of the floodwave (V + c) to the discretized model in space and time.
 The Courant number C can vary from 0.1 to 1.0, and a value of 1.0 will enable the model to have the largest possible timestep.
@@ -309,13 +318,31 @@ The constitutive fluid motion equations in the FLO-2D are the continuity equatio
          - \frac{V}{g}\, \frac{\partial V}{\partial x}
          - \frac{1}{g}\, \frac{\partial V}{\partial t}
 
-where h is the flow depth and V is the depth-averaged velocity in one of the eight flow directions x for a computational timestep ∂t and g is the
-gravitational acceleration.
-The excess rainfall intensity (i) may be nonzero on the flow surface.
-The friction slope component S\ :sub:`f` is based on Manning’s equation.
-The other terms include the bed slope (S\ :sub:`o`) pressure gradient and convective and local acceleration terms.
-The two unknown variables are velocity and flow depth.
-The discharge Q is given by Q = VA where A is the cross section flow area.
+where:
+
+    h = flow depth
+
+    V = depth-averaged velocity in one of the eight flow directions x for a computational timestep ∂t
+
+    g = gravitational acceleration.
+
+    i = excess rainfall intensity; may be nonzero on the flow surface.
+
+    S\ :sub:`f` = friction slope component; based on Manning’s equation.
+
+    (S\ :sub:`o`) = bed slope pressure gradient
+
+    The other terms include convective and local acceleration terms.
+    The two unknown variables are velocity and flow depth.
+
+The discharge Q is given by:
+
+.. math::
+    :label:
+
+    Q = VA
+
+where A is the cross section flow area.
 
 Open channel (or floodplain) uniform flow is characterized by a constant depth, velocity, flow area and discharge such that the bed slope, water
 surface slope and energy grade line are all parallel (i.e.
@@ -333,7 +360,14 @@ There a number of uniform flow mean velocity equations for open channels and Man
    V = \frac{1.486}{n}\, R^{2/3}\, S_f^{1/2}
 
 
-where R = hydraulic radius, S\ :sub:`f` = friction slope, n = Manning’s roughness coefficient.
+where:
+
+    R = hydraulic radius
+
+    S\ :sub:`f` = friction slope
+
+    n = Manning’s roughness coefficient.
+
 For wide cross section flow the hydraulic radius approaches the flow depth and the flow area can be expressed as a power function of the flow depth:
 
 .. math::
@@ -342,6 +376,7 @@ For wide cross section flow the hydraulic radius approaches the flow depth and t
    A = a\, h^{b}
 
 where a and b are a regressed coefficient and exponent respectively.
+
 The hydraulic radius exponent value (0.667) in Manning’s equation has been known to vary over a range from about 0.59 to 0.85 depending primarily on
 cross section geometry and roughness (Chow, 1959).
 The roughness coefficient or Manning’s n-value varies with a number of factors including but not limited to bed friction, bed form,
@@ -353,7 +388,6 @@ The discharge Q is a function of three variables, flow area slope and roughness 
    :label:
 
    Q = f\!\left(A^{\sim 2.0},\ S_o^{0.5},\ \frac{1}{n}\right)
-
 
 Since the discharge is function of the square root of the slope, the rate of change in the discharge is not overly sensitive to change in slope.
 Similarly, the discharge is only inversely proportional to the roughness coefficient.
@@ -379,8 +413,19 @@ Mathematically the Courant relationship is given by:
 
    V + c = \frac{C\, \Delta x}{\Delta t}
 
-Where C = Courant Number (C ≤ 1.0); Δx = FLO-2D square grid element width (distance between node centers); V = depth averaged velocity; and c =
-floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the flow depth above the thalweg.
+where:
+
+    C = Courant Number (C ≤ 1.0):
+
+    Δx = FLO-2D square grid element width (distance between node centers):
+
+    V = depth averaged velocity
+
+    c = floodwave celerity = (gd)\ :sup:`0.5` where:
+
+        g = gravitation acceleration
+
+        d = flow depth above the thalweg.
 
 This equation relates the progression of the floodwave (V + c) to the discretized model in space and time.
 The Courant number C can vary from 0.1 to 1.0, and a value of 1.0 will enable the model to have the largest possible timestep.
@@ -514,7 +559,9 @@ The equation for the grid element roughness n\ :sub:`d` as function of flow dept
 
 where
 
-    n\ :sub:`b` = bankfull discharge roughness depth = computed model flow depth
+    n\ :sub:`b` = bankfull discharge roughness
+
+    depth = computed model flow depth
 
     dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 

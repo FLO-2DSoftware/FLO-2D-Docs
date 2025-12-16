@@ -167,7 +167,6 @@ Flow conditions can significantly deviate steady flow when routing a flood event
 The tailwater might be influenced by ocean levels or flood backwater effects from river constrictions.
 Two flow conditions that might will alter the floodwave routing are submergence and upstream flow.
 If it is reasonable certain that there is no potential for upstream flow, set the parameter
-
 INOUTCONT = 0 in Line S of HYSTRUC.DAT.
 In this case, the discharge Q is evaluate by the upstream headwater depth H\ :sub:`w` regardless if the tailwater T\ :sub:`w` surface exceeds the
 headwater surface elevation (Figure 6).
@@ -175,20 +174,19 @@ A pump is also a hydraulic structure that may produce a discharge for a given st
 
 .. image:: img/Hydrau007.jpg
 
-*Figure 6.
-If INOUTCONT = 0, the Discharge Q is a Function of the Headwater Depth H\ :sub:`w` Regardless of the* Tailwater T\ :sub:`w`
+Figure 6.
+If INOUTCONT = 0, the Discharge Q is a Function of the Headwater Depth H\ :sub:`w` Regardless of the Tailwater T\ :sub:`w`.
 
 If a structure spans more than one channel element in a channel segment as shown in Figure 6 above, split the channel into two segments and assign the
 inlet node at the end of the first segment and the outlet node at the start of the second segment.
 As the tailwater increases in relation to the headwater, backwater or submergence may ensue and eventually flow may go upstream through a hydraulic
 structure (Figure 7).
 The effects of the relationship between the structure headwater and tailwater is controlled by the
-
 INOUTCONT parameter (0, 1, or 2) in the HYSTRUC.DAT file (Table 1).
 If INOUTCONT =2, headwater depth H\ :sub:`w` and tailwater T\ :sub:`w` can switch with submergence to allow flow to go upstream.
 
-**Table 1.
-Hydraulic Structure Rating Table Options**
+*Table 1.
+Hydraulic Structure Rating Table Options*
 
 .. list-table::
    :widths: 50 50
@@ -272,6 +270,7 @@ Hydraulic Structure Troubleshooting
 ------------------------------------
 
 General – Warning and Error Messages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Hydraulic structures can be a source of channel numerical instability when the rating curve or table discharge does not match the upstream flow.
 This occurs more frequently for low flow conditions.

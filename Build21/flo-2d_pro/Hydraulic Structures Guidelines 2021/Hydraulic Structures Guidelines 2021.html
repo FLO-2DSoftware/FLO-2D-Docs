@@ -31,7 +31,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Simulating Mudflow Guidelines" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html" />
-    <link rel="prev" title="9. References" href="../FLO-2D%20Storm%20Drain%20Manual%202021/References.html" /> 
+    <link rel="prev" title="9. REFERENCES" href="../FLO-2D%20Storm%20Drain%20Manual%202021/References.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -67,11 +67,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#guidelines">Guidelines</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#modeling-pumps">Modeling Pumps</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#numerical-instability">Numerical Instability</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#hydraulic-structure-troubleshooting">Hydraulic Structure Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hydraulic-structure-troubleshooting">Hydraulic Structure Troubleshooting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general-warning-and-error-messages">General – Warning and Error Messages</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html">Simulating Mudflow Guidelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html#references">References</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../GDS%20Manual%20PRO%202021/GDS%20Manual%20PRO%202021.html">GDS Manual PRO 2021</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021/Levee%20Dam%20and%20Wall%20Breach%20Guidelines%202021.html">Levee Dam and Wall Breach Guidelines</a></li>
 </ul>
@@ -118,7 +120,7 @@ For example, a culvert under an interstate highway may span several grid element
 In addition, flow can be exchanged between a floodplain element and channel element.
 A hydraulic structure rating curve equation specifies discharge as a function of the headwater depth h:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-hydraulic-structures-guidelines-2021-hydraulic-structures-guidelines-2021-0">
-<span class="eqno">(101)<a class="headerlink" href="#equation-flo-2d-pro-hydraulic-structures-guidelines-2021-hydraulic-structures-guidelines-2021-0" title="Link to this equation"></a></span>\[Q = a h^b\]</div>
+<span class="eqno">(12)<a class="headerlink" href="#equation-flo-2d-pro-hydraulic-structures-guidelines-2021-hydraulic-structures-guidelines-2021-0" title="Link to this equation"></a></span>\[Q = a h^b\]</div>
 <p>where: (a) is a regression coefficient and (b) is a regression exponent.</p>
 <p>More than one power regression relationship may be used for a hydraulic structure by specifying the maximum depth for which the relationship is valid.
 For example, one depth relationship can represent normal flow through a bridge and a second relationship can be used to simulate blockage with a zero
@@ -249,23 +251,23 @@ headwater depth or stage based on the assumption of steady, uniform flow.
 Flow conditions can significantly deviate steady flow when routing a flood event.
 The tailwater might be influenced by ocean levels or flood backwater effects from river constrictions.
 Two flow conditions that might will alter the floodwave routing are submergence and upstream flow.
-If it is reasonable certain that there is no potential for upstream flow, set the parameter</p>
-<p>INOUTCONT = 0 in Line S of HYSTRUC.DAT.
+If it is reasonable certain that there is no potential for upstream flow, set the parameter
+INOUTCONT = 0 in Line S of HYSTRUC.DAT.
 In this case, the discharge Q is evaluate by the upstream headwater depth H<sub>w</sub> regardless if the tailwater T<sub>w</sub> surface exceeds the
 headwater surface elevation (Figure 6).
 A pump is also a hydraulic structure that may produce a discharge for a given stage.</p>
 <img alt="../../_images/Hydrau007.jpg" src="../../_images/Hydrau007.jpg" />
-<p><em>Figure 6.
-If INOUTCONT = 0, the Discharge Q is a Function of the Headwater Depth H:sub:`w` Regardless of the</em> Tailwater T<sub>w</sub></p>
+<p>Figure 6.
+If INOUTCONT = 0, the Discharge Q is a Function of the Headwater Depth H<sub>w</sub> Regardless of the Tailwater T<sub>w</sub>.</p>
 <p>If a structure spans more than one channel element in a channel segment as shown in Figure 6 above, split the channel into two segments and assign the
 inlet node at the end of the first segment and the outlet node at the start of the second segment.
 As the tailwater increases in relation to the headwater, backwater or submergence may ensue and eventually flow may go upstream through a hydraulic
 structure (Figure 7).
-The effects of the relationship between the structure headwater and tailwater is controlled by the</p>
-<p>INOUTCONT parameter (0, 1, or 2) in the HYSTRUC.DAT file (Table 1).
+The effects of the relationship between the structure headwater and tailwater is controlled by the
+INOUTCONT parameter (0, 1, or 2) in the HYSTRUC.DAT file (Table 1).
 If INOUTCONT =2, headwater depth H<sub>w</sub> and tailwater T<sub>w</sub> can switch with submergence to allow flow to go upstream.</p>
-<p><strong>Table 1.
-Hydraulic Structure Rating Table Options</strong></p>
+<p><em>Table 1.
+Hydraulic Structure Rating Table Options</em></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50.0%" />
@@ -339,7 +341,8 @@ evidence of numerical surging.</p>
 </section>
 <section id="hydraulic-structure-troubleshooting">
 <h2>Hydraulic Structure Troubleshooting<a class="headerlink" href="#hydraulic-structure-troubleshooting" title="Link to this heading"></a></h2>
-<p>General – Warning and Error Messages</p>
+<section id="general-warning-and-error-messages">
+<h3>General – Warning and Error Messages<a class="headerlink" href="#general-warning-and-error-messages" title="Link to this heading"></a></h3>
 <p>Hydraulic structures can be a source of channel numerical instability when the rating curve or table discharge does not match the upstream flow.
 This occurs more frequently for low flow conditions.
 While FLO-2D can accurately replicate backwater effects, accelerating flow through a hydraulic structure is uncommon and will typically only occur
@@ -587,12 +590,13 @@ Table 2 is a list of possible hydraulic structure issues and fixes.</p>
   </tbody>
 </table></section>
 </section>
+</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../FLO-2D%20Storm%20Drain%20Manual%202021/References.html" class="btn btn-neutral float-left" title="9. References" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../FLO-2D%20Storm%20Drain%20Manual%202021/References.html" class="btn btn-neutral float-left" title="9. REFERENCES" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../Simulating%20Mudflow%20Guidelines%202021/Simulating%20Mudflow%20Guidelines%202021.html" class="btn btn-neutral float-right" title="Simulating Mudflow Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

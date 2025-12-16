@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 3
+CHAPTER 3
 ==========
 
 FLO-2D Storm Drain Data Files
@@ -149,7 +149,7 @@ The structure of the SWMM.inp file follows:
       If cubic meters or liters are chosen then metric units apply to all other quantities.
       The default flow units are CFS.
 
-SWMM.inp Example
+**SWMM.inp Example**
 
 The typical structure of a SWMM.inp file can be shown as follows:
 
@@ -522,7 +522,9 @@ SWMMOUTF.DAT Input Variable Descriptions**
 
    * - *OUTF_FLO2DVOL(JT)*
      - i
-     - 0: off or
+     - 0: off
+
+       or
 
        1: on
      - Allow discharge from the storm drain to FLO-2D
@@ -560,15 +562,15 @@ GDS Dialog Box for Entering Rating Table data for INTYPE 4*
 
 The structure of a SWMMFLORT.DAT file is:
 
-   ID Grid Cell
+.. raw:: html
 
-   ID Depth Discharge
-
-   ID Depth Discharge
-
-   ID Depth Discharge
-
-   …
+    <pre>
+           ID Grid Cell
+           ID Depth Discharge
+           ID Depth Discharge
+           ID Depth Discharge
+           …
+    </pre>
 
 The first pair of numbers should be zero depth and zero discharge.
 This is repeated from 1 to number of storm drain inlets with INTYPE= 4 (Table 12).
@@ -652,10 +654,10 @@ SWMMFLORT.DAT Input File Example**
 
 Table 14 lists the description of the variables for the SWMMFLORT.DAT file.
 
-\(i) = Integer variable (r) = real variable (c) = character
-
 **Table 14.
 SWMMFLORT.DAT Input Variable Descriptions**
+
+\(i) = Integer variable (r) = real variable (c) = character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -714,6 +716,7 @@ The SDCLOGGING.DAT file contains the data with the following format:
     ID  Grid Cell   Inlet ID    Clogging Factor - C<sub>f</sub>(%) Time for clogging -T<sub>c</sub>(hr)
 
     D   2694           I1           25                              0.50
+
     D   2409           I2           50                              3.25
 
     </pre>

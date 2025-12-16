@@ -488,7 +488,11 @@ A hydraulic structure rating curve equation specifies discharge as a function of
 
    Q = a\, h^{b}
 
-where: (a) is a regression coefficient and (b) is a regression exponent.
+where:
+
+    a = regression coefficient
+
+    b = regression exponent.
 
 More than one power regression relationship may be used for a hydraulic structure by specifying the maximum depth for which the relationship is valid.
 For example, one depth relationship can represent culvert inlet control and a second relationship can be used for the outlet control.
@@ -1075,8 +1079,13 @@ This Horton equation is defined by:
 
 where:
 
-    *f* = infiltration rate at any time *t* after the rainfall begins (in/hr) *f\ i* = initial infiltration rate (in/hr) *f\ o* = final infiltration rate
-    (in/hr) *a* = decay coefficient (1/seconds)
+    *f* = infiltration rate at any time *t* after the rainfall begins (in/hr)
+
+    *f\ i* = initial infiltration rate (in/hr)
+
+    *f\ o* = final infiltration rate (in/hr)
+
+    *a* = decay coefficient (1/seconds)
 
     *t* = time from the rainfall initiation (seconds)
 
@@ -1304,7 +1313,11 @@ The first option is to calculate a sediment supply discharge Q\ :sub:`s` rating 
 
 where
 
-    Q\ :sub:`w` is the water discharge, a is a coefficient and b is an exponent.
+    Q\ :sub:`w` = the water discharge
+
+    a = a coefficient
+
+    b = an exponent
 
 This equation is typically derived from a known stream gaging station that is recording suspended sediment load.
 This data sediment load base is usually limited to large rivers and is not available for alluvial fan or watershed overland flow.
@@ -1498,7 +1511,12 @@ C\ :sub:`v` is related to the sediment concentration by weight C\ :sub:`w` by:
 
    C_v = \frac{C_w\, \gamma}{\gamma_s - C_w\, (\gamma_s - \gamma)}
 
-where γ = specific weight of the water and γ\ :sub:`s` = specific weight of the sediment.
+where:
+
+    γ = specific weight of the water:
+
+    γ\ :sub:`s` = specific weight of the sediment.
+
 The sediment concentration can also be expressed in parts per million (ppm) by multiplying the concentration by weight C\ :sub:`w` by 10\ :sup:`6`.
 The specific weight of the mudflow mixture γ\ :sub:`m` is a function of the sediment concentration by volume:
 
@@ -1737,10 +1755,15 @@ and
 
    \tau_y = \tau_c + \tau_{mc}
 
-In these equations η is the dynamic viscosity; τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ
-depends on the intergranular pressure p\ :sub:`s` and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which
-depends on the mass density of the mixture ρ\ :sub:`m`, the Prandtl mixing length l, the sediment size d\ :sub:`s` and a function of the volumetric
-sediment concentration C\ :sub:`v`.
+In these equations:
+
+    η is the dynamic viscosity
+
+    τ\ :sub:`c` is the cohesive yield strength;
+
+    the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ depends on the intergranular pressure p\ :sub:`s` and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which
+    depends on the mass density of the mixture ρ\ :sub:`m`, the Prandtl mixing length l, the sediment size d\ :sub:`s` and a function of the volumetric
+    sediment concentration C\ :sub:`v`.
 
 Bagnold (1954) defined the functional relationship f(ρ\ :sub:`m`, C\ :sub:`v`) in the above equation as:
 
@@ -1754,10 +1777,14 @@ Bagnold (1954) defined the functional relationship f(ρ\ :sub:`m`, C\ :sub:`v`) 
        - 1
      \right]
 
-where a\ :sub:`i` (~ 0.01) is an empirical coefficient and C\ :sub:`\*` is the maximum static volume concentration for the sediment particles.
-It should be noted that Takahashi (1979) found that the coeffigcient a\ :sub:`i` may vary over several orders of magnitude.
-Egashira et al.
-(1989) revised this relationship and suggested the following:
+where:
+
+    a\ :sub:`i` (~ 0.01) = empirical coefficient
+
+    C\ :sub:`\*` = the maximum static volume concentration for the sediment particles.
+
+It should be noted that Takahashi (1979) found that the coefficient a\ :sub:`i` may vary over several orders of magnitude.
+Egashira et al.(1989) revised this relationship and suggested the following:
 
 .. math::
    :label:
@@ -1810,7 +1837,7 @@ following form as a dimensionless slope:
 
    S_f = S_y + S_v + S_{td}
 
-where the total friction slope S\ :sub:`f` is the sum of the yield slope S\ :sub:`y`, the viscous slope S\ :sub:`v`, and the turbulentdispersive slope
+where the total friction slope S\ :sub:`f` is the sum of the yield slope S\ :sub:`y`, the viscous slope S\ :sub:`v`, and the turbulent-dispersive slope
 S\ :sub:`td`.
 The viscous and turbulent-dispersive slope terms are written in terms of depth- averaged velocity V.
 The viscous slope can be written as:
@@ -1821,6 +1848,7 @@ The viscous slope can be written as:
    S_v = \frac{K}{8\, \gamma_m}\, \frac{\eta\, V}{h^2}
 
 where γ\ :sub:`m` is the specific weight of the sediment mixture.
+
 The resistance parameter K for laminar flow equals 24 for smooth wide rectangular channels but increases significantly (~ 50,000) with roughness and
 irregular cross section geometry.
 
@@ -1909,7 +1937,14 @@ of the sediment concentration C\ :sub:`v`:
 
    n_{td} = n_t\, b\, e^{m C_v}
 
-where: n\ :sub:`t` is the turbulent n-value and b is a coefficient (0.0538) and m is an exponent (6.0896).
+where:
+
+    n\ :sub:`t` = the turbulent n-value
+
+    b = a coefficient (0.0538)
+
+    m = an exponent (6.0896)
+
 This equation was based on unpublished paper by Julien and O’Brien (1998) that relates the dispersive and turbulent resistance in hyperconcentrated
 sediment flows as function of the ratio of the flow depth to the sediment grain size.
 The friction slope components can then be combined in the following form:
@@ -2051,9 +2086,7 @@ This may be followed by a surge or frontal wave of mud and debris (40 to 50% con
 When the peak arrives, the average sediment concentration generally decreases to the range of 30 to 40% by volume.
 On the falling limb of the hydrograph, surges of higher sediment concentration may occur.
 
-To simulate mudflows with the FLO-2D model, the MUD switch in the CONT.DAT must be turned on
-
-(MUD = 1) and the viscosity and yield stress variables in SED.DAT file must be specified (Line M).
+To simulate mudflows with the FLO-2D model, the MUD switch in the CONT.DAT must be turned on (MUD = 1) and the viscosity and yield stress variables in SED.DAT file must be specified (Line M).
 It is recommended that the viscosity and yield stress exponents and coefficients from Table 9 be selected for inclusion in the SED.DAT file.
 The field sample Glenwood 4, for example, creates a very viscous mudflow.
 A volumetric sediment concentration or a sediment volume must then be assigned to the water discharge for a timestep in the discretized inflow
@@ -2089,8 +2122,16 @@ To conservatively estimate the impact pressure, the equation for water taken fro
 
    P_i = k\, \rho_f\, V^{2}
 
-where P\ :sub:`i` is the impact pressure, coefficient k is 1.28 for both English and SI units, ρ\ :sub:`f` = water density and V is the maximum
-velocity regardless of direction.
+where:
+
+    P\ :sub:`i` = the impact pressure,
+
+    k = coefficient = 1.28 for both English and SI units,
+
+    ρ\ :sub:`f` = water density
+
+    V is the maximum velocity regardless of direction.
+
 For hyperconcentrated sediment flows such as mud floods and mudflows, the fluid density ρ\ :sub:`f` and coefficient k is a function of sediment
 concentration by volume.
 The coefficient k is based on a regressed relationship as a function of sediment concentration from the data presented in Deng (1996).
@@ -2982,44 +3023,45 @@ Maximum Flow Depth (Sloped Roof with Parapet wall Being Overtopped).*
 The overtopping discharge is reported below from the file LEVOVERTOP.OUT.
 The discharge is reported as negative representing flow out of the grid element.
 
-LEVEE OVERTOPPING DISCHARGE (CFS OR CMS): POSITIVE DISCHARGE REPRESENTS INFLOW TO NODE
- LEVEE ELEMENTS WITH NO OVERTOP DISCHARGE ARE NOT REPORTED
- DISCHARGE IS REPORTED BY DIRECTION
-
 .. raw:: html
 
     <pre>
-    GRID ELEMENT     TIME   TOTAL DISCHARGE     N       E       S       W        NE     SE      SW      NW
 
-     22365           3.30   -0.02               0.00    0.00    0.00    0.00    -0.02   0.00    0.00    0.00
-                     3.40   -0.06               0.00    0.00    0.00    0.00    -0.06   0.00    0.00    0.00
-                     3.50   -0.09               0.00    0.00    0.00    0.00    -0.09   0.00    0.00    0.00
-                     3.60   -0.17               0.00    0.00    0.00    0.00    -0.17   0.00    0.00    0.00
-                     3.70   -0.23               0.00    0.00    0.00    0.00    -0.23   0.00    0.00    0.00
-                     3.80   -0.36               0.00    0.00    0.00    0.00    -0.36   0.00    0.00    0.00
-                     3.90   -0.54               0.00    0.00    0.00    0.00    -0.54   0.00    0.00    0.00
-                     4.00   -0.70               0.00    0.00    0.00    0.00    -0.70   0.00    0.00    0.00
-                     4.10   -0.69               0.00    0.00    0.00    0.00    -0.69   0.00    0.00    0.00
-                     4.20   -0.72               0.00    0.00    0.00    0.00    -0.72   0.00    0.00    0.00
-                     4.30   -0.74               0.00    0.00    0.00    0.00    -0.74   0.00    0.00    0.00
-                     4.40   -0.75               0.00    0.00    0.00    0.00    -0.75   0.00    0.00    0.00
-                     4.50   -0.75               0.00    0.00    0.00    0.00    -0.75   0.00    0.00    0.00
-                     4.60   -0.75               0.00    0.00    0.00    0.00    -0.75   0.00    0.00    0.00
-                     4.70   -0.76               0.00    0.00    0.00    0.00    -0.76   0.00    0.00    0.00
-                     4.80   -0.78               0.00    0.00    0.00    0.00    -0.78   0.00    0.00    0.00
-                     4.90   -0.78               0.00    0.00    0.00    0.00    -0.78   0.00    0.00    0.00
-     PEAK Q             4.92    -0.79
-                    5.00    -0.78               0.00    0.00    0.00    0.00    -0.78   0.00    0.00    0.00
-                    5.10    -0.77               0.00    0.00    0.00    0.00    -0.77   0.00    0.00     0.00
-                    5.20    -0.74               0.00    0.00    0.00    0.00    -0.74   0.00    0.00    0.00
-                    5.30    -0.72               0.00    0.00    0.00    0.00    -0.72   0.00    0.00    0.00
-                    5.40    -0.72               0.00    0.00    0.00    0.00    -0.72   0.00    0.00    0.00
-                    5.50    -0.72               0.00    0.00    0.00    0.00    -0.72   0.00    0.00    0.00
-                    5.60    -0.70               0.00    0.00    0.00    0.00    -0.70   0.00    0.00    0.00
-                    5.70    -0.72               0.00    0.00    0.00    0.00    -0.72   0.00    0.00    0.00
-                    5.80    -0.68               0.00    0.00    0.00    0.00    -0.68   0.00    0.00    0.00
-                    5.90    -0.66               0.00    0.00    0.00    0.00    -0.66   0.00    0.00    0.00
-                    6.00    -0.65               0.00    0.00    0.00    0.00    -0.65   0.00    0.00    0.00
+    LEVEE OVERTOPPING DISCHARGE (CFS OR CMS): POSITIVE DISCHARGE REPRESENTS INFLOW TO NODE
+     LEVEE ELEMENTS WITH NO OVERTOP DISCHARGE ARE NOT REPORTED
+     DISCHARGE IS REPORTED BY DIRECTION
+
+        GRID ELEMENT     TIME   TOTAL DISCHARGE     N       E       S       W        NE     SE      SW      NW
+
+         22365           3.30   -0.02               0.00    0.00    0.00    0.00    -0.02   0.00    0.00    0.00
+                         3.40   -0.06               0.00    0.00    0.00    0.00    -0.06   0.00    0.00    0.00
+                         3.50   -0.09               0.00    0.00    0.00    0.00    -0.09   0.00    0.00    0.00
+                         3.60   -0.17               0.00    0.00    0.00    0.00    -0.17   0.00    0.00    0.00
+                         3.70   -0.23               0.00    0.00    0.00    0.00    -0.23   0.00    0.00    0.00
+                         3.80   -0.36               0.00    0.00    0.00    0.00    -0.36   0.00    0.00    0.00
+                         3.90   -0.54               0.00    0.00    0.00    0.00    -0.54   0.00    0.00    0.00
+                         4.00   -0.70               0.00    0.00    0.00    0.00    -0.70   0.00    0.00    0.00
+                         4.10   -0.69               0.00    0.00    0.00    0.00    -0.69   0.00    0.00    0.00
+                         4.20   -0.72               0.00    0.00    0.00    0.00    -0.72   0.00    0.00    0.00
+                         4.30   -0.74               0.00    0.00    0.00    0.00    -0.74   0.00    0.00    0.00
+                         4.40   -0.75               0.00    0.00    0.00    0.00    -0.75   0.00    0.00    0.00
+                         4.50   -0.75               0.00    0.00    0.00    0.00    -0.75   0.00    0.00    0.00
+                         4.60   -0.75               0.00    0.00    0.00    0.00    -0.75   0.00    0.00    0.00
+                         4.70   -0.76               0.00    0.00    0.00    0.00    -0.76   0.00    0.00    0.00
+                         4.80   -0.78               0.00    0.00    0.00    0.00    -0.78   0.00    0.00    0.00
+                         4.90   -0.78               0.00    0.00    0.00    0.00    -0.78   0.00    0.00    0.00
+         PEAK Q             4.92    -0.79
+                        5.00    -0.78               0.00    0.00    0.00    0.00    -0.78   0.00    0.00    0.00
+                        5.10    -0.77               0.00    0.00    0.00    0.00    -0.77   0.00    0.00     0.00
+                        5.20    -0.74               0.00    0.00    0.00    0.00    -0.74   0.00    0.00    0.00
+                        5.30    -0.72               0.00    0.00    0.00    0.00    -0.72   0.00    0.00    0.00
+                        5.40    -0.72               0.00    0.00    0.00    0.00    -0.72   0.00    0.00    0.00
+                        5.50    -0.72               0.00    0.00    0.00    0.00    -0.72   0.00    0.00    0.00
+                        5.60    -0.70               0.00    0.00    0.00    0.00    -0.70   0.00    0.00    0.00
+                        5.70    -0.72               0.00    0.00    0.00    0.00    -0.72   0.00    0.00    0.00
+                        5.80    -0.68               0.00    0.00    0.00    0.00    -0.68   0.00    0.00    0.00
+                        5.90    -0.66               0.00    0.00    0.00    0.00    -0.66   0.00    0.00    0.00
+                        6.00    -0.65               0.00    0.00    0.00    0.00    -0.65   0.00    0.00    0.00
     </pre>
 
 The final test simulation combines the sloped roof with a downspout in grid element 22365.
@@ -3213,7 +3255,11 @@ Flow from the gutter to the sidewalk inside the gutter element is depicted in Fi
 Flow Distribution Street to Sidewalk.*
 
 Flow from the sidewalk to the gutter inside the gutter element Sidewalk is depicted in Figure 109.
-WSE = FPE + h + FPD; Gutter WSE = FPE + d
+
+.. math::
+   :label:
+
+   \mathrm{WSE} = \mathrm{FPE} + h + \mathrm{FPD};\ \mathrm{Gutter\ WSE} = \mathrm{FPE} + d
 
 .. image:: img/Chapter4/Chapte040.png
 
@@ -3441,8 +3487,7 @@ still assigned and the two bridge cross sections are required.
 *Figure 122.
 FLO-2D Model Bridge Inflow and Outflow Elements Separated Grid Elements.*
 
-Free Surface Flow
-^^^^^^^^^^^^^^^^^^^^^^
+*Free Surface Flow*
 
 The most frequent discharge through a bridge is subcritical low flow or free surface flow.
 Typically, the bridge constricts the channel with abutments and piers, has higher flow resistance, and increases the wetted perimeter resulting in a
@@ -3475,8 +3520,15 @@ where:
 
     α\ :sub:`1` = energy coefficient at cross section 1 V\ :sub:`1` = depth averaged velocity at cross section 1 g = gravitational acceleration
 
-    C = C\ :sub:`c` / (α\ :sub:`2` + k\ :sub:`e` + k\ :sub:`p`)\ :sup:`0.5`; C\ :sub:`c` = coefficient of contraction, α\ :sub:`2` = energy coefficient at
-        cross section 2, k\ :sub:`e` = eddy loss coefficient, k\ :sub:`p` = non-hydrostatic pressure coefficient
+    C = C\ :sub:`c` / (α\ :sub:`2` + k\ :sub:`e` + k\ :sub:`p`)\ :sup:`0.5`;
+
+        C\ :sub:`c` = coefficient of contraction,
+
+        α\ :sub:`2` = energy coefficient at cross section 2,
+
+        k\ :sub:`e` = eddy loss coefficient,
+
+        k\ :sub:`p` = non-hydrostatic pressure coefficient
 
 The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959, p.
 490) in English units:
@@ -3488,18 +3540,26 @@ The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959, p.
 
 where:
 
-    β = 1 - α\ :sub:`1` C\ :sup:`2` (A\ :sub:`2` /A\ :sub:`1`)\ :sup:`2` + 2gC\ :sup:`2` (A\ :sub:`2`/K\ :sub:`2`)\ :sup:`2` (L\ :sub:`B` +L\ :sub:`1-2`
-        K\ :sub:`2`/K\ :sub:`1`);
+.. math::
+    :label:
+
+    \beta = 1 - \alpha_1\, C^2\, (A_2/A_1)^2 + 2 g\, C^2\, (A_2/K_2)^2\, (L_B + L_{1-2}\, K_2/K_1);
+
+where:
 
     L\ :sub:`B` = length of contracted reach
 
     L\ :sub:`1-2` = length of the reach from cross section 1 to cross section 2 (Figure 7)
 
-    K\ :sub:`1` and K\ :sub:`2` = conveyance at cross sections 1 and 2; K\ :sub:`1` = 1.486/n A\ :sub:`1` R\ :sub:`1`\ :sup:`0.67`; K\ :sub:`2` = 1.486/n
-                                  A\ :sub:`2` R\ :sub:`2`\ :sup:`0.67` n = Manning’s n-value through the contracted reach
+    K\ :sub:`1` and K\ :sub:`2` = conveyance at cross sections 1 and 2;
+
+    K\ :sub:`1` = 1.486/n A\ :sub:`1` R\ :sub:`1`\ :sup:`0.67`;
+
+    K\ :sub:`2` = 1.486/n A\ :sub:`2` R\ :sub:`2`\ :sup:`0.67`
+
+    n = Manning’s n-value through the contracted reach
 
     A\ :sub:`1`, R\ :sub:`1` and A\ :sub:`2`, R\ :sub:`2` are the cross section flow areas and hydraulic radiuses respectively (Figure 123).
-
 
 .. image:: img/Chapter4/Chapte093.jpg
 
@@ -3542,8 +3602,7 @@ The following assumptions have been acknowledged as potentially limiting the acc
          28) representing an average of lower values (α\ :sub:`1` ~ 1.1) for large uniform prismatic and higher values for small nonuniform natural channels
          (ranging up to 1.5).
 
-Sluice Gate Flow
-^^^^^^^^^^^^^^^^^^^
+*Sluice Gate Flow*
 
 Once the water surface level reaches the low chord or soffit of the bridge, the water surface control switches from the channel to the bridge and the
 discharge mimics a sluice gate flow (Figure 3b).
@@ -3617,8 +3676,7 @@ The FHA curve in Figure 9 has a regressed relationship of:
 with a correlation coefficient R\ :sup:`2` = 0.61.
 This equation is used in the FLO-2D model.
 
-Orifice Flow
-^^^^^^^^^^^^^^^^
+*Orifice Flow*
 
 Orifice flow is defined by a pressure flow condition through the bridge where both the upstream and downstream water surface elevations are above the
 low chord (Y\ :sub:`u` > Z, Y\ :sub:`d` > Z) indicating a drowned opening (Figure 3d).
@@ -3661,8 +3719,7 @@ The regressed relationship of the data in Figure 10 for Y\ :sub:`u`/Z > 1.25 is 
 This equation is used in the FLO-2D model and results in a coefficient variability in the range of 0.7 to 0.8.
 This is compared with the sluice gate flow discharge coefficient, which ranges from about 0.4 to 0.5 as shown in Figure 9.
 
-Pressure Flow Plus Weir Flow
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Pressure Flow Plus Weir Flow*
 
 Once the flow is above the deck, then the total discharge through bridge Q\ :sub:`T` is the sum of the pressure flow (sluice gate or orifice flow)
 plus the weir flow over the bridge deck:
@@ -3721,8 +3778,7 @@ In the FLO-2D model, the discharge is routed to the inflow node to determine the
 Then the free surface, pressure flow or weir flow equations compute the bridge discharge to the outflow node, which is then routed to the downstream
 elements by the model’s routing algorithm.
 
-Data Requirements and Parameter Definition
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Data Requirements and Parameter Definition*
 
 Two lines of data in the HYSTRUC.DAT file (B-lines) and two cross sections are required for each bridge being simulated.
 The original S-Line in HYSTRUC.DAT identifies the bridge inflow and outflow nodes and its association with the either the channel or the floodplain.
@@ -3904,10 +3960,10 @@ Some notes on the various bridge coefficients for free surface flow are listed b
 The user has an option to assign the coefficients (K\ :sub:`i` > 0.01) or have the model compute the coefficients (K\ :sub:`i` = 0.0).
 If K\ :sub:`i` = 1.0, then this bridge feature and its coefficient has no effect on the bridge flow.
 
-K\ :sub:`F` (KF-COEF) = coefficient based on the effect of Froude number K\ :sub:`F` = f(F\ :sub:`b`).
-The Froude number at the bridge is computed for Type 1 or Type IV bridges (see Appendix Figures) using the discharge, flow area and depth, F\ :sub:`b`
-= Q/A\ :sub:`b` (g y\ :sub:`b`)\ :sup:`0.5`.
-No additional data is required.
+    K\ :sub:`F` (KF-COEF) = coefficient based on the effect of Froude number K\ :sub:`F` = f(F\ :sub:`b`).
+    The Froude number at the bridge is computed for Type 1 or Type IV bridges (see Appendix Figures) using the discharge, flow area and depth, F\ :sub:`b`
+    = Q/A\ :sub:`b` (g y\ :sub:`b`)\ :sup:`0.5`.
+    No additional data is required.
 
     K\ :sub:`r` = coefficient of entrance rounding for Type I only.
     Percent of contraction m and r/b are required where r = radius of the corner and b = contracted bridge width, Appendix Figure A.1c.
