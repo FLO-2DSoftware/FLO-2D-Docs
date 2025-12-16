@@ -282,9 +282,7 @@ Submergence
 -----------
 
 The levee weir coefficient is variable as a function of the headwater based on the U.S.
-Department of
-
-Transportation criteria (Hydraulic Design of Highway Culverts; Publication Number FHWA-HIF-12-026 revised 2012) as shown in Figure 9.
+Department of Transportation criteria (Hydraulic Design of Highway Culverts; Publication Number FHWA-HIF-12-026 revised 2012) as shown in Figure 9.
 If ratio of the tailwater to the headwater above the crest is greater than 0.8, the discharge is reduced by a submergence factor (Figure 10).
 If the water surface elevation on both sides of the levee is greater than 3 ft (1 m) above the crest, the discharge exchange is based on the overland
 flow routing routine.
@@ -344,13 +342,10 @@ During a prescribed levee breach simulation, there are a number of data variable
 discharges for a range of flows and failure conditions.
 Table 1 outlines the potential controls.
 
-*Table 1.
-Prescribed Breach Failure Controls and Guidelines*
-
 .. raw:: html
 
    <table style="border-collapse: collapse; width: 100%;">
-     <caption><strong>Prescribed Breach Failure Controls and Guidelines</strong></caption>
+     <caption><strong>Table 1. Prescribed Breach Failure Controls and Guidelines</strong></caption>
      <thead>
        <tr>
          <th style="border: 1px solid #000; padding: 4px;">Levee Data</th>
@@ -574,6 +569,10 @@ Prescribed Breach Failure Controls and Guidelines*
        </tr>
      </tbody>
    </table>
+
+.. raw:: html
+
+    <br><br>
 
 Urban Wall Failure (Collapse)
 -------------------------------------
