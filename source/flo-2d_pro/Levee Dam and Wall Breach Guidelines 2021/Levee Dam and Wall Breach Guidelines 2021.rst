@@ -1477,7 +1477,7 @@ where:
 .. math::
    :label:
 
-   b = 0.4973 - 0.000543 \ast d - 30.71\ Sf
+   b = 0.4973 - 0.000543 \ast d - 30.71\ S_f
 
 a1, b1, c1 = coefficients given in the following table:
 
