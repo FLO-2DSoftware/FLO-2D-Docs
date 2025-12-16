@@ -3541,12 +3541,11 @@ The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959, p.
 
 where:
 
-    .. math::
-   :label:
+.. math::
+    :label:
 
-   \beta = 1 - \alpha_1\, C^2\, (A_2/A_1)^2
-   + 2 g\, C^2\, (A_2/K_2)^2\, (L_B + L_{1-2}\, K_2/K_1);
-
+    \beta = 1 - \alpha_1\, C^2\, (A_2/A_1)^2
+    + 2 g\, C^2\, (A_2/K_2)^2\, (L_B + L_{1-2}\, K_2/K_1);
 
     L\ :sub:`B` = length of contracted reach
 
@@ -3561,7 +3560,6 @@ where:
     n = Manning’s n-value through the contracted reach
 
     A\ :sub:`1`, R\ :sub:`1` and A\ :sub:`2`, R\ :sub:`2` are the cross section flow areas and hydraulic radiuses respectively (Figure 123).
-
 
 .. image:: img/Chapter4/Chapte093.jpg
 
