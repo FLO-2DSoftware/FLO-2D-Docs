@@ -762,19 +762,15 @@ Dynamic Viscosity of Mudflow Samples Versus Volumetric Concentration*
 *Figure 4.
 Yield Stress of Mudflow Samples Versus Volumetric Concentration*
 
-Guidelines  
------------
-
-Analyzing the Potential for Hyperconcentrated Sediment Flows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Practical Guidelines for Analyzing the Potential for Hyperconcentrated Sediment Flows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are several simple guidelines that can be checked to determine the potential for a watershed to generate a mudflow.
 In addition, modeling hyperconcentrated sediment flows requires reasonable assumptions for the variables that control the physical flows processes.
 These variables include the volume of water and sediment, sediment concentration, physical surface conditions, fluid and sediment properties.
 These guidelines, variables and how to estimate and apply them will be briefly discussed.
 
-Watershed inspection
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Watershed inspection*
 
 The first check involves a watershed inspection for loose boulders, debris in the basin channel.
 This usually requires an on-ground inspection.
@@ -788,8 +784,7 @@ In the upper watershed, aerial photos as well as on the ground inspection may re
 erosion.
 Fire and overgrazing can contribute to increased sediment loading during subsequent infrequent large storms.
 
-Volume of water and sediment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Volume of water and sediment*
 
 The area of inundation, flow depths and velocities are primarily a function of the sediment and water volumes.
 Flood hydrology and sediment yield have to be analyzed.
@@ -837,6 +832,7 @@ shown in Table 1, then the overall area of inundation predicted by the model wil
 It should be remembered that a basin can only deliver a given quantity of sediment.
 If the estimate sediment yield is compared with less frequent return period flood hydrograph water volumes, it may be noted that the average sediment
 concentration for the entire flood event is insufficient to generate a mudflow for very large flood events.
+
 *Sediment concentration*
 
 The ratio of sediment to water governs the ability of the mixture to flow.
@@ -888,8 +884,7 @@ Flow depositional features such as natural levees and berms are primarily a func
 Reduction in slope can induce mudflow cessation or particle settling that will effect sediment concentration.
 Buildings and flow obstructions (flood walls) can alter the flow path, or initiate flow cessation.
 
-Fluid and sediment properties
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*Fluid and sediment properties*
 
 Fluid properties vary with sediment concentration.
 Fluid properties such as viscosity, yield stress, and density affect turbulence, flow momentum and energy dissipation.
@@ -901,7 +896,7 @@ area of inundation.
 The key to accurate simulation is the selection of the sediment concentration by volume assigned to the flood hydrograph.
 A balance should be sought between the assigned sediment concentration and the estimated potential sediment yield.
 
-Selection of Rheological Parameters
+Guidelines for the Selection of Rheological Parameters
 -------------------------------------------------------
 
 Each mudflow alluvial fan or tailings dam area or region has geology and soil conditions that will generate unique rheological fluid properties.
