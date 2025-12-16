@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 8
+CHAPTER 8
 ==========
 
 FLO-2D Storm Drain Example
@@ -28,12 +28,12 @@ Storm drain data includes inlet geometry, conduit sizes, and inlet/outlet locati
 After the FLO-2D surface water model is prepared, the storm drain data can be created.
 The steps are:
 
-Create or open a FLO-2D model
+**Create or open a FLO-2D model**
 
 1. Open the GDS and locate the project folder.
 2. Import any aerial images to visualize the location of the storm drain system.
 
-Open the SWMM GUI
+**Open the SWMM GUI**
 
 3. From the GDS open SWMM GUI (Figure 86).
    It is possible to open the GUI directly by calling EPA SWMM 5.0 from the Windows search bar.
@@ -43,7 +43,7 @@ Open the SWMM GUI
 *Figure 86.
 GDS Open Storm Drain GUI**
 
-Create SWMM.inp file
+**Create SWMM.inp file**
 
 4. If there is an existing ‘stand-alone’ storm drain model for this project, the user can port it to the FLO-2D model using the previous Chapter 7
    guidelines.

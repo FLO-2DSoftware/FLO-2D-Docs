@@ -137,7 +137,7 @@ The dialog can then be used to turn ‘ON’ or ‘OFF’ the outfall nodes and 
 *Figure 84.
 GDS Outfall Dialog Box Command*
 
-*Simulation Options*
+**Simulation Options**
 
 The following simulation options have to be selected:
 
