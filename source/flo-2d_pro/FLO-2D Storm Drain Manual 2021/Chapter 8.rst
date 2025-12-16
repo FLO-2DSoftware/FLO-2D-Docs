@@ -124,7 +124,7 @@ Use O = outlets, C = pipe conduits, etc.
 *Figure 93.
 Simulation Options - Dynamic Wave*
 
-Create SWMMFLO.DAT file
+**Create SWMMFLO.DAT file**
 
 12. Open the GDS FLO-2D inlet geometry dialog box (Figure 94.).
 
@@ -167,7 +167,7 @@ Outfall Node Discharge*
 
 18. Outfall Discharge to FLO-2D is reported in the SWMMOUTFIN.OUT file.
 
-Run FLO-2D storm drain model
+**Run FLO-2D storm drain model**
 
 19. Run the project from GDS (Figure 98).
 
