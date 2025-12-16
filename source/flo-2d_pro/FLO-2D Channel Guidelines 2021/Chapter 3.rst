@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 3 - Troubleshooting
+CHAPTER 3 - TROUBLESHOOTING
 ============================
 
 Channel Troubleshooting
