@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 
 REFERENCES
------------
+===========
 
 FLO-2D Software, Inc.
 FLO-2D Reference Manual, Nutrioso, AZ.
