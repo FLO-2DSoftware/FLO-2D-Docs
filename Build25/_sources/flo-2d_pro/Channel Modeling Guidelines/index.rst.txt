@@ -6,7 +6,7 @@ Channel Modeling Guidelines
 
 .. toctree::
    :numbered:
-   :maxdepth: 2
+   :maxdepth: 1
 
    Chapter 1
    Chapter 2

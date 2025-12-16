@@ -383,10 +383,16 @@ If the timestep is greater than 1 second, then the timestep increment is:</p>
 <span class="eqno">(2.10)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-9" title="Link to this equation"></a></span>\[\text{DSEC} = \text{DSEC} + \frac{\text{TIME_ACCEL} \cdot 0.0085}{\text{XFAST}}\]</div>
 <p>where:</p>
 <blockquote>
+<div><blockquote>
 <div><p>DSEC = computational timestep in seconds</p>
-<p>TIME_ACCEL = user defined parameter ranging from 0.1 to 10.0 with a default value of 1.0</p>
-<p>XFAST = XFAST + 0.001 for each successfully completed timestep loop when DSEC &gt; 1.0 second.
+</div></blockquote>
+<p>TIME_ACCEL = Coefficient to increase the rate of incremental timestep change.
+Default value = 0.1. A value of 0.1 may result in a more stable simulation time.
+A value of 0.2 or higher may result in a faster simulation.</p>
+<blockquote>
+<div><p>XFAST = XFAST + 0.001 for each successfully completed timestep loop when DSEC &gt; 1.0 second.
 Resets to 1.0 each time the DSEC timestep is decremented.</p>
+</div></blockquote>
 </div></blockquote>
 <p>This algorithm increases the timestep uniformly until the timestep DSEC is greater than 1 second.
 When DSEC &gt; 1.0, successive increases in DSEC result in a larger value of XFAST which begins to slow down the timestep rate of change.
