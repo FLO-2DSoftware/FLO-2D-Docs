@@ -607,7 +607,7 @@ The index is the number of flow turns that exists in a link during the simulatio
 A flow turn occurs when the difference between a new and old flow results in a perturbation which is defined as a significant flow difference or a
 change in flow direction.
 
-Timestep and Conduit Length
+**Timestep and Conduit Length**
 
 Similar to the Courant criteria used on the FLO-2D surface water model, stability issues can arise if the timestep is greater than about two times the
 travel time through a pipe.
@@ -637,7 +637,7 @@ To improve a model with numerical stability issues:
 
    \Delta t = C\, \Delta x/(V + c) = 0.6\ (20\ \text{ft})\ /(7.3\ \text{fps} + 1.5\ x\ 7.3\ \text{fps}) = 0.66\ \text{seconds}
 
-Unstable Results
+**Unstable Results**
 
 Oscillations that grow in time are a form of numerical instability.
 The solution is not converging, and the following issues should be reviewed:

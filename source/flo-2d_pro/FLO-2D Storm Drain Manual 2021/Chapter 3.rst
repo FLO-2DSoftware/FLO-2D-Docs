@@ -149,7 +149,7 @@ The structure of the SWMM.inp file follows:
       If cubic meters or liters are chosen then metric units apply to all other quantities.
       The default flow units are CFS.
 
-SWMM.inp Example
+**SWMM.inp Example**
 
 The typical structure of a SWMM.inp file can be shown as follows:
 

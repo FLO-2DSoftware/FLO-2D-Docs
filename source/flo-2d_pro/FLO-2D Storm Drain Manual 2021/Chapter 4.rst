@@ -346,17 +346,13 @@ After the urban project is prepared, the following questions related to the stor
     - Inlet locations:
 
       - Are all inlets correctly assigned inside the FLO-2D computational domain?
-
       - Are there inlets incorrectly assigned to the interior channel elements?
-
       - Are there inlets incorrectly assigned to the right channel bank elements?
 
     - Inlet elevations:
 
       - Are there channels discharging to a storm drain inlet?
-
       - Does the channel thalweg elevation match the inlet invert elevation?
-
       - Is the inlet set up as a vertical inlet opening in the SWMMFLO.DAT?
 
 Storm drain inlets should not be set up in an interior or in a right bank channel element.
