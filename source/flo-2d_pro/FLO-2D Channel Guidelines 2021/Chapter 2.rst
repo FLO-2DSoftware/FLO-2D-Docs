@@ -727,7 +727,8 @@ After initial set up of the urban project, the following issues related to the s
 - Inlet locations:
 
   - Inlets must be inside the FLO-2D computational domain;
-  - Inlets cannot be assigned to the interior channel elements; ✓ Inlets should not be assigned to the channel bank elements.
+  - Inlets cannot be assigned to the interior channel elements;
+  - Inlets should not be assigned to the channel bank elements.
 
 - Inlet elevations:
 
@@ -953,7 +954,7 @@ The channel roughness may also increase with decreasing thalweg depth.
 *Figure 64.
 Combined maximum floodplain and channel flow depths.*
 
-.. image:: img/Chapter2/Chapte039.png
+.. image:: img/Chapter2/Chapte044.png
   :class: bordered-image
 
 *Figure 65.
