@@ -1462,12 +1462,7 @@ velocity V but applied a flow depth d variable exponent b that was a function of
 .. math::
    :label:
 
-   V = \frac{1.486}{n}\, d^{b} S_f^{0.5} \quad \text{(English units)}
-
-.. math::
-   :label:
-
-   V = 1.486/n d^b S_f^0.5 \text{(in English units)}
+   V = 1.486/n\ d^{b}\ S_f^{0.5}
 
 where:
 
@@ -1482,7 +1477,7 @@ where:
 .. math::
    :label:
 
-    b = 0.4973 – 0.000543 \* d – 30.71 S\ :sub:`f`
+   b = 0.4973 - 0.000543 \ast d - 30.71\ Sf
 
 a1, b1, c1 = coefficients given in the following table:
 
