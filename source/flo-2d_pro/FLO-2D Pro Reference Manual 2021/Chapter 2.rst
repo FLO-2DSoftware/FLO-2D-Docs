@@ -53,7 +53,7 @@ follows:
                                  Slope     Gradient    Acceleration    Acceleration
 
     Momentum Equation Term:       S<sub>o</sub>        ∂h/∂x         V∂V/g∂x        ∂V/g∂t
-    Magnitude (ft/mi)             26          0.5         0.12 - 0.25     0.05
+    Magnitude (ft/mi)             26         0.5        0.12 - 0.25     0.05
     </pre>
 
 This illustrates that the application of the kinematic wave (S\ :sub:`o` = S\ :sub:`f`) on moderately steep slopes with relatively steady, uniform
