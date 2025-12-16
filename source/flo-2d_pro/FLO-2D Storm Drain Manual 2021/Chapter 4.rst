@@ -482,8 +482,7 @@ The following checklist was prepared to review the storm drain data files:
 
     ☐ Outfall discharge. For outfall discharge to surface water, the outfall must have a 'free' condition and be turned 'on' in the SWMMOUTF.DAT file.
 
-    ☐ Outfall location. Check its position relative to grid/channel elements and its invert
-      elevation relative to floodplain/thalweg elevation.
+    ☐ Outfall location. Check its position relative to grid/channel elements and its invert elevation relative to floodplain/thalweg elevation.
 
     ☐ Outfall to the channel. The outfall must connect to the left bank grid element.
 
@@ -491,7 +490,6 @@ The following checklist was prepared to review the storm drain data files:
 
     ☐ Manholes. Check the assigned surcharge depth.
 
-    ☐ Storm drain model simulation completion. Check the SUMMARY.OUT file last line for
-      the time stamp indicating proper termination.
+    ☐ Storm drain model simulation completion. Check the SUMMARY.OUT file last line for the time stamp indicating proper termination.
 
     ☐ SWMM.ini file. Modify the SWMM.ini file to review the results.
