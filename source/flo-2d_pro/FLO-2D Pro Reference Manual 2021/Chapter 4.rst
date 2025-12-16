@@ -488,7 +488,11 @@ A hydraulic structure rating curve equation specifies discharge as a function of
 
    Q = a\, h^{b}
 
-where: (a) is a regression coefficient and (b) is a regression exponent.
+where:
+
+    a = regression coefficient
+
+    b = regression exponent.
 
 More than one power regression relationship may be used for a hydraulic structure by specifying the maximum depth for which the relationship is valid.
 For example, one depth relationship can represent culvert inlet control and a second relationship can be used for the outlet control.
@@ -1075,8 +1079,13 @@ This Horton equation is defined by:
 
 where:
 
-    *f* = infiltration rate at any time *t* after the rainfall begins (in/hr) *f\ i* = initial infiltration rate (in/hr) *f\ o* = final infiltration rate
-    (in/hr) *a* = decay coefficient (1/seconds)
+    *f* = infiltration rate at any time *t* after the rainfall begins (in/hr)
+
+    *f\ i* = initial infiltration rate (in/hr)
+
+    *f\ o* = final infiltration rate (in/hr)
+
+    *a* = decay coefficient (1/seconds)
 
     *t* = time from the rainfall initiation (seconds)
 
