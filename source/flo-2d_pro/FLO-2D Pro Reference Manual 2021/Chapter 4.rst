@@ -3487,8 +3487,7 @@ still assigned and the two bridge cross sections are required.
 *Figure 122.
 FLO-2D Model Bridge Inflow and Outflow Elements Separated Grid Elements.*
 
-Free Surface Flow
-^^^^^^^^^^^^^^^^^^^^^^
+*Free Surface Flow*
 
 The most frequent discharge through a bridge is subcritical low flow or free surface flow.
 Typically, the bridge constricts the channel with abutments and piers, has higher flow resistance, and increases the wetted perimeter resulting in a
@@ -3603,8 +3602,7 @@ The following assumptions have been acknowledged as potentially limiting the acc
          28) representing an average of lower values (α\ :sub:`1` ~ 1.1) for large uniform prismatic and higher values for small nonuniform natural channels
          (ranging up to 1.5).
 
-Sluice Gate Flow
-^^^^^^^^^^^^^^^^^^^
+*Sluice Gate Flow*
 
 Once the water surface level reaches the low chord or soffit of the bridge, the water surface control switches from the channel to the bridge and the
 discharge mimics a sluice gate flow (Figure 3b).
@@ -3678,8 +3676,7 @@ The FHA curve in Figure 9 has a regressed relationship of:
 with a correlation coefficient R\ :sup:`2` = 0.61.
 This equation is used in the FLO-2D model.
 
-Orifice Flow
-^^^^^^^^^^^^^^^^
+*Orifice Flow*
 
 Orifice flow is defined by a pressure flow condition through the bridge where both the upstream and downstream water surface elevations are above the
 low chord (Y\ :sub:`u` > Z, Y\ :sub:`d` > Z) indicating a drowned opening (Figure 3d).
@@ -3722,8 +3719,7 @@ The regressed relationship of the data in Figure 10 for Y\ :sub:`u`/Z > 1.25 is 
 This equation is used in the FLO-2D model and results in a coefficient variability in the range of 0.7 to 0.8.
 This is compared with the sluice gate flow discharge coefficient, which ranges from about 0.4 to 0.5 as shown in Figure 9.
 
-Pressure Flow Plus Weir Flow
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Pressure Flow Plus Weir Flow*
 
 Once the flow is above the deck, then the total discharge through bridge Q\ :sub:`T` is the sum of the pressure flow (sluice gate or orifice flow)
 plus the weir flow over the bridge deck:
@@ -3782,8 +3778,7 @@ In the FLO-2D model, the discharge is routed to the inflow node to determine the
 Then the free surface, pressure flow or weir flow equations compute the bridge discharge to the outflow node, which is then routed to the downstream
 elements by the model’s routing algorithm.
 
-Data Requirements and Parameter Definition
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Data Requirements and Parameter Definition*
 
 Two lines of data in the HYSTRUC.DAT file (B-lines) and two cross sections are required for each bridge being simulated.
 The original S-Line in HYSTRUC.DAT identifies the bridge inflow and outflow nodes and its association with the either the channel or the floodplain.
