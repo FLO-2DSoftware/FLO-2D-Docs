@@ -270,6 +270,7 @@ Hydraulic Structure Troubleshooting
 ------------------------------------
 
 General – Warning and Error Messages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Hydraulic structures can be a source of channel numerical instability when the rating curve or table discharge does not match the upstream flow.
 This occurs more frequently for low flow conditions.
