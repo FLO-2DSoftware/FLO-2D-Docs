@@ -436,38 +436,59 @@ For laminar and transitional flows, turbulence is suppressed and the laminar flo
 *Table 2.
 Resistance Parameters for LaminarFlow*\ :sup:`1`
 
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+.. raw:: html
 
+   <table style="border-collapse: collapse; width: 100%; border: 2px solid #000;">
+     <thead>
+       <tr>
+         <th style="border:1px solid #000; padding:6px; background:#e6e6e6; text-align:left;">Surface</th>
+         <th style="border:1px solid #000; padding:6px; background:#e6e6e6; text-align:center;">Range of K</th>
+       </tr>
+     </thead>
 
-   * - Surface
-     - Range of K
+     <tbody>
+       <tr>
+         <td style="border:1px solid #000; padding:6px;">Concrete/asphalt</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">24 - 108</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px;">Bare sand</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">30 - 120</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px;">Graded surface</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">90 - 400</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px;">Bare clay - loam soil, eroded</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">100 - 500</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px;">Sparse vegetation</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">1,000 - 4,000</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px;">Short prairie grass</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">3,000 - 10,000</td>
+       </tr>
+       <tr>
+         <td style="border:1px solid #000; padding:6px;">Bluegrass sod</td>
+         <td style="border:1px solid #000; padding:6px; text-align:center;">7,000 - 50,000</td>
+       </tr>
+     </tbody>
 
-   * - Concrete/asphalt
-     - 24 -108
+     <tfoot>
+       <tr>
+         <td colspan="2" style="border-top:2px solid #000; padding:6px; font-size:90%;">
+           * Woolhiser (1975)
+         </td>
+       </tr>
+     </tfoot>
+   </table>
 
-   * - Bare sand
-     - 30 - 120
+.. raw:: html
 
-   * - Graded surface
-     - 90 - 400
-
-   * - Bare clay - loam soil, eroded
-     - 100 - 500
-
-   * - Sparse vegetation
-     - 1,000 - 4,000
-
-   * - Short prairie grass
-     - 3,000 - 10,000
-
-   * - Bluegrass sod
-     - 7,000 - 50,000
-
-   * - :sup:`1` Woolhiser (1975)
-     -
-
+    <br><br>
 
 The flow resistance n\ :sub:`td` of the turbulent and dispersive shear stress components are combined into an equivalent Manning’s n-value for the
 flow:
