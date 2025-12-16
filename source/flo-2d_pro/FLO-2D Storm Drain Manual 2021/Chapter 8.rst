@@ -148,7 +148,7 @@ Storm Drain Inlet Dialog GDS*
 
 16. The inlet inflow discharge and the flooding are reported in SWMMQIN.OUT.
 
-Create SWMMOUTF.DAT file
+**Create SWMMOUTF.DAT file**
 
 17. View the Outfall nodes dialog to create the SWMMOUTF.DAT file (Figure 96.).
     This dialog reads the outfall nodes from the SWMM.inp file.
@@ -176,7 +176,7 @@ Run FLO-2D storm drain model
 *Figure 98.
 FLO-2D Control Variables.**
 
-Review FLO-2D storm drain model results
+**Review FLO-2D storm drain model results**
 
 20. The storm drain results are reported in the SWMM.RPT file (ASCII) and SWMM.OUT file (Binary).
     Results can be used to create plots in the GDS and in the SWMM GUI.
