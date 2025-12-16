@@ -740,7 +740,7 @@ The Froude number (Fr) is related to the flow resistance K and the energy slope 
 .. math::
     :label:
 
-    Fr = (KS)_{0.5}
+    Fr = (KS)^{0.5}
 
 If there is a mismatch between these physical variables in a flood routing model, then high velocities can occur that may result in flow surging.
 Assigning a limiting Froude number has several practical advantages.
