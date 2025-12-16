@@ -1467,13 +1467,19 @@ velocity V but applied a flow depth d variable exponent b that was a function of
 .. math::
    :label:
 
-   V = \frac{1.486}{n}\, d^{b}\, S_f^{0.5} \quad \text{(in English units)}
+   V = 1.486/n d^b S_f^0.5 \text{(in English units)}
 
 where:
 
     V = flow velocity d = flow depth
 
-    n = Manning’s friction coefficient S\ :sub:`f` = friction slope b = exponent = f(depth, S\ :sub:`f`) b = 0.4973 – 0.000543 \* d – 30.71 S\ :sub:`f`
+    n = Manning’s friction coefficient
+
+S\ :sub:`f` = friction slope
+
+b = exponent = f(depth, S\ :sub:`f`)
+
+b = 0.4973 – 0.000543 \* d – 30.71 S\ :sub:`f`
 
        a1, b1, c1 = coefficients given in the following table:
 
