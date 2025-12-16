@@ -1313,7 +1313,11 @@ The first option is to calculate a sediment supply discharge Q\ :sub:`s` rating 
 
 where
 
-    Q\ :sub:`w` is the water discharge, a is a coefficient and b is an exponent.
+    Q\ :sub:`w` = the water discharge
+
+    a = a coefficient
+
+    b = an exponent
 
 This equation is typically derived from a known stream gaging station that is recording suspended sediment load.
 This data sediment load base is usually limited to large rivers and is not available for alluvial fan or watershed overland flow.
@@ -1507,7 +1511,12 @@ C\ :sub:`v` is related to the sediment concentration by weight C\ :sub:`w` by:
 
    C_v = \frac{C_w\, \gamma}{\gamma_s - C_w\, (\gamma_s - \gamma)}
 
-where γ = specific weight of the water and γ\ :sub:`s` = specific weight of the sediment.
+where:
+
+    γ = specific weight of the water:
+
+    γ\ :sub:`s` = specific weight of the sediment.
+
 The sediment concentration can also be expressed in parts per million (ppm) by multiplying the concentration by weight C\ :sub:`w` by 10\ :sup:`6`.
 The specific weight of the mudflow mixture γ\ :sub:`m` is a function of the sediment concentration by volume:
 
@@ -1746,10 +1755,15 @@ and
 
    \tau_y = \tau_c + \tau_{mc}
 
-In these equations η is the dynamic viscosity; τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ
-depends on the intergranular pressure p\ :sub:`s` and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which
-depends on the mass density of the mixture ρ\ :sub:`m`, the Prandtl mixing length l, the sediment size d\ :sub:`s` and a function of the volumetric
-sediment concentration C\ :sub:`v`.
+In these equations:
+
+    η is the dynamic viscosity
+
+    τ\ :sub:`c` is the cohesive yield strength;
+
+    the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ depends on the intergranular pressure p\ :sub:`s` and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which
+    depends on the mass density of the mixture ρ\ :sub:`m`, the Prandtl mixing length l, the sediment size d\ :sub:`s` and a function of the volumetric
+    sediment concentration C\ :sub:`v`.
 
 Bagnold (1954) defined the functional relationship f(ρ\ :sub:`m`, C\ :sub:`v`) in the above equation as:
 
@@ -1763,10 +1777,14 @@ Bagnold (1954) defined the functional relationship f(ρ\ :sub:`m`, C\ :sub:`v`) 
        - 1
      \right]
 
-where a\ :sub:`i` (~ 0.01) is an empirical coefficient and C\ :sub:`\*` is the maximum static volume concentration for the sediment particles.
-It should be noted that Takahashi (1979) found that the coeffigcient a\ :sub:`i` may vary over several orders of magnitude.
-Egashira et al.
-(1989) revised this relationship and suggested the following:
+where:
+
+    a\ :sub:`i` (~ 0.01) = empirical coefficient
+
+    C\ :sub:`\*` = the maximum static volume concentration for the sediment particles.
+
+It should be noted that Takahashi (1979) found that the coefficient a\ :sub:`i` may vary over several orders of magnitude.
+Egashira et al.(1989) revised this relationship and suggested the following:
 
 .. math::
    :label:
@@ -1819,7 +1837,7 @@ following form as a dimensionless slope:
 
    S_f = S_y + S_v + S_{td}
 
-where the total friction slope S\ :sub:`f` is the sum of the yield slope S\ :sub:`y`, the viscous slope S\ :sub:`v`, and the turbulentdispersive slope
+where the total friction slope S\ :sub:`f` is the sum of the yield slope S\ :sub:`y`, the viscous slope S\ :sub:`v`, and the turbulent-dispersive slope
 S\ :sub:`td`.
 The viscous and turbulent-dispersive slope terms are written in terms of depth- averaged velocity V.
 The viscous slope can be written as:
@@ -1830,6 +1848,7 @@ The viscous slope can be written as:
    S_v = \frac{K}{8\, \gamma_m}\, \frac{\eta\, V}{h^2}
 
 where γ\ :sub:`m` is the specific weight of the sediment mixture.
+
 The resistance parameter K for laminar flow equals 24 for smooth wide rectangular channels but increases significantly (~ 50,000) with roughness and
 irregular cross section geometry.
 
