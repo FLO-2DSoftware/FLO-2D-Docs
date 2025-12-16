@@ -269,7 +269,7 @@ Tributary Channel Ends Adjacent to Main Channel Bank.*
 
 The first split channel element after the confluence should be the first channel element listed for that channel segment.
 In this case it was also necessary to “Add the Confluence Pair” (Figure 39).
-,
+
 .. image:: img/Chapter2/Chapte015.jpg
   :class: bordered-image
 

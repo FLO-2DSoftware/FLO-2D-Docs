@@ -550,10 +550,14 @@ In the FLO-2D model the Courant number limits the timestep Δt by:
 
 where:
 
-   C = Courant Number (C ≤ 1.0)
+    C = Courant Number (C ≤ 1.0)
 
-   Δx = square grid element width V = depth averaged velocity c = floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the
-   flow depth
+    Δx = square grid element width
+
+    V = depth averaged velocity
+
+    c = floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the
+       flow depth
 
 The Courant Number C can vary from 0.0 to 1.0 (recommended range 0.2 to 0.6), and a value of 1.0 in FLO-2D would enable the model to have the largest
 possible timestep.
@@ -566,6 +570,7 @@ A starting value of C = 0.6 is recommended.
 Some guidelines fo applying the Courant number are:
 
     1. Use the default stability criteria for the initial simulation:
+
        - Courant Number C = 0.6
        - DEPTOL = 0.0
        - WAVEMAX = 0.0.
