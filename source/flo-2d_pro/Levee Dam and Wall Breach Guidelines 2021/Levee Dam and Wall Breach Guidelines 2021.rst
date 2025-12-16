@@ -153,7 +153,8 @@ The primary hydraulic mechanisms of dam or levee breach failure are overtopping,
 These physical processes were simulated in the original NWS model and were retained in the FLO-2D model.
 In FLO-2D a dam or levee breach can fail as follows:
 
-    - Overtopping and development of a breach channel on the downstream face of the dam or levee; • Piping failure;
+    - Overtopping and development of a breach channel on the downstream face of the dam or levee;
+    - Piping failure;
     - Piping failure and roof collapse and development into a breach channel;
     - Breach channel enlargement through side slope slumping;
     - Breach enlargement by wedge collapse.
