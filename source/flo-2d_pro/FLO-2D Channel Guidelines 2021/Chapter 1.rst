@@ -268,7 +268,7 @@ After the assignment, the right or left banks can be realigned to the better rep
 click commands.
 
 .. image:: img/Chapter1/Chapte007.jpg
-  :class: bordered-image
+    :class: bordered-image
 
 *Figure 10.
 Right Bank Assignment and Realignment.*
@@ -425,11 +425,6 @@ than the relative roughness (Simons and Senturk, 1976 and Chow, 1959).
 Using these criteria, a flow depth for coarse sand would be about 0.25 ft.
 
 The depth integrated roughness is given by the equation:
-
-.. math::
-    :label:
-
-    n_d = n_b r_c e^{–(r2 \, depth/dmax)}
 
 .. math::
    :label:
