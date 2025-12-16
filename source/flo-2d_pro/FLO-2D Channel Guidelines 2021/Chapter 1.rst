@@ -431,6 +431,11 @@ The depth integrated roughness is given by the equation:
 
     n_d = n_b r_c e^{–(r2 \, depth/dmax)}
 
+.. math::
+   :label:
+
+   n_d = n_b\, r_c\, e^{-\left(r2\, \mathrm{depth}/d_{max}\right)}
+
 where:
 
     depth = flow depth
