@@ -954,7 +954,7 @@ The channel roughness may also increase with decreasing thalweg depth.
 *Figure 64.
 Combined maximum floodplain and channel flow depths.*
 
-.. image:: img/Chapter2/Chapte044.png
+.. image:: img/Chapter2/Chapte044.jpg
   :class: bordered-image
 
 *Figure 65.
