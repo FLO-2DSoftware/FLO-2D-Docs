@@ -185,8 +185,8 @@ The effects of the relationship between the structure headwater and tailwater is
 INOUTCONT parameter (0, 1, or 2) in the HYSTRUC.DAT file (Table 1).
 If INOUTCONT =2, headwater depth H\ :sub:`w` and tailwater T\ :sub:`w` can switch with submergence to allow flow to go upstream.
 
-**Table 1.
-Hydraulic Structure Rating Table Options**
+*Table 1.
+Hydraulic Structure Rating Table Options*
 
 .. list-table::
    :widths: 50 50
