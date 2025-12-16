@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 4
+CHAPTER 4
 ==========
 
 Introduction
@@ -108,25 +108,25 @@ FLO-2D Storm Drain Instructional Comments.*
    * - WSE isgreater thanpipepressurehead
      - Inlet discharge is computed by FLO-2D and exchanged with the storm drain system.
 
-       FLO-2D will use the grid element water depth (floodplain, channel or street) and the inlet geometry
+       FLO-2D will use the grid element water depth (floodplain, channel or street) and the inlet
 
-       to calculate the inlet discharge.
+       geometry to calculate the inlet discharge.
 
-       Horizontal inlets refer to gutter inlets and vertical inlets are culvert or pipe openings to the surface.
+       Horizontal inlets refer to gutter inlets and vertical inlets are culvert or pipe openings to the
 
-       Floodplain grid element elevation (FPE) is automatically set to the inlet rim elevation.
+       surface. Floodplain grid element elevation (FPE) is automatically set to the inlet rim elevation.
 
        For horizontal inlets changes to FPE are reported to a file named as FPRIMELEV.OUT.
 
        For vertical inlets:
 
-           - An inlet on a 1-D channel (end of segment) where the channel flow is discharging to the storm drain
+           - An inlet on a 1-D channel (end of segment) where the channel flow is discharging to the
 
-             pipe, the invert elevation should be equal to the channel bed elevation.
+             storm drain pipe, the invert elevation should be equal to the channel bed elevation.
 
-           - If the flow is discharging to a storm drain pipe or culvert in a floodplain swale, the invert elevation
+           - If the flow is discharging to a storm drain pipe or culvert in a floodplain swale, the
 
-             should be equal to the cell floodplain elevation.
+             invert elevation should be equal to the cell floodplain elevation.
 
        The last column parameter ‘Feature’ in the GDS inlet dialog has three options:
 
@@ -199,16 +199,16 @@ FLO-2D Storm Drain Instructional Comments.*
        Inflow to the storm drain from surface water is not computed.
 
    * - Volumeconservation
-     - Inflow to the storm drain and return volumes (flooding and outfall volumes) to the surface water are
+     - Inflow to the storm drain and return volumes (flooding and outfall volumes) to the
 
-       compiled and reported by the FLO-2D model.
+       surface water are compiled and reported by the FLO-2D model.
 
    * - Reportingresults
      - The FLO-2D file SWMMQIN.OUT reports the inflow and return flow discharge for each inlet.
 
-       This is different from the discharge values reported in the SWMM.RPT file which includes lateral pipe
+       This is different from the discharge values reported in the SWMM.RPT file which includes
 
-       inflow and outflow.
+       lateral pipe inflow and outflow.
 
        SWMMOUTFIN.OUT file lists time and discharge pairs for storm drain outfall hydrographs when
 
@@ -244,9 +244,9 @@ FLO-2D Storm Drain Instructional Comments.*
 
        It does not apply to normal, fixed, tidal or time series type of outfalls.
 
-       When the outfall does not discharge to the surface water, the outfall head is assigned based
+       When the outfall does not discharge to the surface water, the outfall head is assigned
 
-       on the type of outfall node.
+       based on the type of outfall node.
 
        The following types can be set up:
 
@@ -263,9 +263,9 @@ FLO-2D Storm Drain Instructional Comments.*
 
        The user can define the surcharge depth in the junction properties (SWMM.inp file).
 
-       When the surcharge depth is set to different values in  SWMMFLO.DAT and in the SWMM.inp file,
+       When the surcharge depth is set to different values in  SWMMFLO.DAT and in the
 
-       the model uses the surcharge depth from the SWMMFLO.DAT.
+       SWMM.inp file, the model uses the surcharge depth from the SWMMFLO.DAT.
 
            - If Pressure Head + Surcharge Depth < WSEL:  - Cover remains in place.
            - Inflow to the manhole is not allowed.
@@ -274,7 +274,6 @@ FLO-2D Storm Drain Instructional Comments.*
            - Surcharge depth is reset to 0.
            - Inflow to the storm drain is permitted.
            - Return flow can occur.
-
 
 Default Parameters
 ^^^^^^^^^^^^^^^^^^
