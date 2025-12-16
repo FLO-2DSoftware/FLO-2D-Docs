@@ -158,7 +158,7 @@ To summarize, the solution algorithm incorporates the following steps:
         .. math::
             :label:
 
-            d_x^{t+1} = d_x^{t} + d_{x+1}^{t}
+            d_x^{i+1} = d_x^{i} + d_{x+1}^{i}
 
     3. The flow direction first velocity overland, 1-D channel or street estimate is computed using the diffusive wave equation.
        The only unknown diffusive wave equation variable is the velocity.
@@ -174,7 +174,7 @@ To summarize, the solution algorithm incorporates the following steps:
         .. math::
            :label:
 
-           \Delta Q_x^{t+1}
+           \Delta Q_x^{i+1}
            = Q_n + Q_e + Q_s + Q_w + Q_{ne} + Q_{se} + Q_{sw} + Q_{nw}
 
        and the change in volume (net discharge x timestep) is distributed over the available storage area within the grid or channel element to determine an
@@ -183,8 +183,8 @@ To summarize, the solution algorithm incorporates the following steps:
         .. math::
            :label:
 
-           \Delta d_x^{t+1}
-           = \frac{\Delta Q_x^{t+1}\, \Delta t}{A_{surf}}
+           \Delta d_x^{i+1}
+           = \frac{\Delta Q_x^{i+1}\, \Delta i}{A_{surf}}
 
        where ΔQ\ :sub:`x` is the net change in discharge in the eight floodplain directions for the grid element for the timestep Δt between time i and i + 1.
        See Figure 5.
