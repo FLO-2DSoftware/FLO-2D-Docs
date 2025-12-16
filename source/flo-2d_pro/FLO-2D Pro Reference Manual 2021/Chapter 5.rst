@@ -400,9 +400,9 @@ The inflow hydrograph to achieve steady was assigned as follows:
 
     <pre>
             Time (hrs)     Q (cfs)
-            0.0            0.0
-            2.0           1,000
-            100.          1,000
+                0.0            0.0
+                2.0           1,000
+                100.          1,000
     </pre>
 
 The FLO-2D model was run for a simulation time of 6 hrs which was sufficient to achieve steady discharge at the bridge.
