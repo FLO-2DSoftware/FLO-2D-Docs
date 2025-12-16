@@ -183,7 +183,6 @@ inlet node at the end of the first segment and the outlet node at the start of t
 As the tailwater increases in relation to the headwater, backwater or submergence may ensue and eventually flow may go upstream through a hydraulic
 structure (Figure 7).
 The effects of the relationship between the structure headwater and tailwater is controlled by the
-
 INOUTCONT parameter (0, 1, or 2) in the HYSTRUC.DAT file (Table 1).
 If INOUTCONT =2, headwater depth H\ :sub:`w` and tailwater T\ :sub:`w` can switch with submergence to allow flow to go upstream.
 
