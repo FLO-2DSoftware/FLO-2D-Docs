@@ -706,7 +706,11 @@ Flows are considered hydraulically rough if the grain size or roughness element 
 
    \delta = 11.6\, \frac{\nu}{u_*}
 
-where ν = kinematic viscosity and u\ :sub:`\*` = shear velocity
+where:
+
+    ν = kinematic viscosity
+
+    u\ :sub:`\*` = shear velocity
 
 The applicability of Manning’s equation to a given flow condition depends on the relative submergence of the roughness elements (R/k\ :sub:`s`) where
 k\ :sub:`s` is the effective roughness height.
