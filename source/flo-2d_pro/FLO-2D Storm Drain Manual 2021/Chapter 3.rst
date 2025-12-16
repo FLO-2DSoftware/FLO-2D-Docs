@@ -878,8 +878,11 @@ List of the Storm Drain Data Output Files and Description**
 
             - WET WEATHER INFLOW: Compare with Storm Drain Inflow.
             - EXTERNAL INFLOW: Other node inflows in addition to any surface runoff such as direct inflows
+
               as user-defined time series, dry weather inflows that are continuous inflows as base flows,
+
               and rainfall dependent infiltration/inflow (RDII).
+
             - EXTERNAL OUTFLOW: Compare with Storm Drain Outflow from Outfalls.
             - Return Flow to Surface: Compare with STORM DRAIN RETURN FLOW TO SURFACE THROUGH INLETS.
             - Total Storm Drain Storage (nodes + links): Sum of the storage.
