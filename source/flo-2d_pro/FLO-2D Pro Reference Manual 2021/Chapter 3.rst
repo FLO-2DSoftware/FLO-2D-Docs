@@ -165,9 +165,18 @@ where:
 
    Δx = square grid element width V = depth averaged velocity
 
-   c = floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the flow depth above the thalweg
+   c = floodwave celerity = (gd)\ :sup:`0.5` where:
 
-   Rearranging the Courant number timestep equation to: V + c = C Δx /Δt
+        g = gravitation acceleration
+
+        d = flow depth above the thalweg
+
+Rearranging the Courant number timestep equation to:
+
+.. math::
+    :label:
+
+    V + c = \frac{C Δx}{Δt}
 
 results in a formula that relates the progression of the floodwave (V + c) to the discretized model in space and time.
 The Courant number C can vary from 0.1 to 1.0, and a value of 1.0 will enable the model to have the largest possible timestep.
@@ -309,11 +318,19 @@ The constitutive fluid motion equations in the FLO-2D are the continuity equatio
          - \frac{V}{g}\, \frac{\partial V}{\partial x}
          - \frac{1}{g}\, \frac{\partial V}{\partial t}
 
-where h is the flow depth and V is the depth-averaged velocity in one of the eight flow directions x for a computational timestep ∂t and g is the
-gravitational acceleration.
-The excess rainfall intensity (i) may be nonzero on the flow surface.
-The friction slope component S\ :sub:`f` is based on Manning’s equation.
-The other terms include the bed slope (S\ :sub:`o`) pressure gradient and convective and local acceleration terms.
+where:
+
+    h = flow depth
+
+    V = depth-averaged velocity in one of the eight flow directions x for a computational timestep ∂t
+
+    g = gravitational acceleration.
+
+    i = excess rainfall intensity; may be nonzero on the flow surface.
+
+    S\ :sub:`f` = friction slope component; based on Manning’s equation.
+
+    (S\ :sub:`o`) = bed slope pressure gradient and convective and local acceleration terms.
 The two unknown variables are velocity and flow depth.
 The discharge Q is given by Q = VA where A is the cross section flow area.
 
