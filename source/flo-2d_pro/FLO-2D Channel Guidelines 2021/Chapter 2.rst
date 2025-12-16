@@ -223,7 +223,9 @@ Channel routing is established by assigning channel connections at model runtime
 Each channel connection is identified when the CHAN.DAT file is read.
 Confluences or split flows, where a given channel element has three or more connections (i.e.
 upstream, downstream and split/confluence), must be assigned by adding a line C at the end of the CHAN.DAT file.
-The format is: C 4507 4559
+The format is:
+
+                C 4507 4559
 
 The tributary should be listed first (4507) and the main channel second (4559).
 Each tributary or split flow channel element will have a unique line C.
@@ -376,9 +378,9 @@ above the channel thalweg (assumed to be the hydraulic structure invert elevatio
 A discharge rating curve uses headwater depth to calculate discharge:
 
 .. math::
-    :label:
+   :label:
 
-    Q = a depth_b
+   Q = a\ \mathrm{depth}^{b}
 
 where
 
