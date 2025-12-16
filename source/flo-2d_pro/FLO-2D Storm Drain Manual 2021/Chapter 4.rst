@@ -468,24 +468,19 @@ The following checklist was prepared to review the storm drain data files:
 
     ☐ Inlet location. All inlets must be inside the FLO-2D computation domain.
 
-    ☐ SWMM hydrology components for surface water modeling are eliminated. If an existing
-      SWMM model was ported to the FLO-2D model, all hydrology features must be removed,
-      including subcatchments and rain gage features.
+    ☐ SWMM hydrology components for surface water modeling are eliminated. If an existing SWMM model was ported to the FLO-2D model, all hydrology features must be removed, including subcatchments and rain gage features.
 
-    ☐ Pipe lengths. If pipe lengths are less than 20 ft or less than the FLO-2D grid element
-      side length, adjust the pipe length or delete that section.
+    ☐ Pipe lengths. If pipe lengths are less than 20 ft or less than the FLO-2D grid element side length, adjust the pipe length or delete that section.
 
     ☐ Adverse pipe slope. Check adverse pipe slope for accuracy.
 
     ☐ Inlet elevations. Grid or channel thalweg elevations should match the inlet rim or invert elevations.
 
-    ☐ Type 4 – Defined by a Stage-Discharge Rating Table. Rating tables must be assigned in
-      the SWMMFLORT.DAT file.
+    ☐ Type 4 – Defined by a Stage-Discharge Rating Table. Rating tables must be assigned in the SWMMFLORT.DAT file.
 
     ☐ Inlet geometry. Check the size and location.
 
-    ☐ Outfall discharge. For outfall discharge to surface water, the outfall must have a
-      'free' condition and be turned 'on' in the SWMMOUTF.DAT file.
+    ☐ Outfall discharge. For outfall discharge to surface water, the outfall must have a 'free' condition and be turned 'on' in the SWMMOUTF.DAT file.
 
     ☐ Outfall location. Check its position relative to grid/channel elements and its invert
       elevation relative to floodplain/thalweg elevation.
