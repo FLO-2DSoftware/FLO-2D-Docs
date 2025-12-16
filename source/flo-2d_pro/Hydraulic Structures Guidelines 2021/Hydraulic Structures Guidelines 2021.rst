@@ -167,7 +167,6 @@ Flow conditions can significantly deviate steady flow when routing a flood event
 The tailwater might be influenced by ocean levels or flood backwater effects from river constrictions.
 Two flow conditions that might will alter the floodwave routing are submergence and upstream flow.
 If it is reasonable certain that there is no potential for upstream flow, set the parameter
-
 INOUTCONT = 0 in Line S of HYSTRUC.DAT.
 In this case, the discharge Q is evaluate by the upstream headwater depth H\ :sub:`w` regardless if the tailwater T\ :sub:`w` surface exceeds the
 headwater surface elevation (Figure 6).
@@ -176,7 +175,7 @@ A pump is also a hydraulic structure that may produce a discharge for a given st
 .. image:: img/Hydrau007.jpg
 
 *Figure 6.
-If INOUTCONT = 0, the Discharge Q is a Function of the Headwater Depth H\ :sub:`w` Regardless of the* Tailwater T\ :sub:`w`
+If INOUTCONT = 0, the Discharge Q is a Function of the Headwater Depth H\ :sub:`w` Regardless of the Tailwater* T\ :sub:`w`
 
 If a structure spans more than one channel element in a channel segment as shown in Figure 6 above, split the channel into two segments and assign the
 inlet node at the end of the first segment and the outlet node at the start of the second segment.
