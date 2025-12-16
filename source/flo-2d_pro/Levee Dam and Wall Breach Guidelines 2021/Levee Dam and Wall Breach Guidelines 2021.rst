@@ -688,7 +688,9 @@ Wall collapse data can be entered in either the QGIS or GDS (Figure 18 in red bo
 The required data includes:
 
     - Failure side (1 of 8 flow directions)
-    - Global failure – failure criteria applies to all wall elements and directions o (negative failure grid element in LEVEE.DAT)
+    - Global failure – failure criteria applies to all wall elements and directions
+
+        - (negative failure grid element in LEVEE.DAT)
     - Failure elevation if different from the levee crest (0 = failure at overtopping)
     - Cumulative duration at failure elevation (allows saturation; set to zero)
     - Fail to base elevation if different from the floodplain elevation
