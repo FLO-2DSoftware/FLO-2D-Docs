@@ -3255,7 +3255,11 @@ Flow from the gutter to the sidewalk inside the gutter element is depicted in Fi
 Flow Distribution Street to Sidewalk.*
 
 Flow from the sidewalk to the gutter inside the gutter element Sidewalk is depicted in Figure 109.
-WSE = FPE + h + FPD; Gutter WSE = FPE + d
+
+.. math::
+   :label:
+
+   \mathrm{WSE} = \mathrm{FPE} + h + \mathrm{FPD};\ \mathrm{Gutter\ WSE} = \mathrm{FPE} + d
 
 .. image:: img/Chapter4/Chapte040.png
 
