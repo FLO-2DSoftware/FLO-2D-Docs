@@ -125,7 +125,7 @@ decrease in flow depth ∆h for the timestep.
 .. math::
    :label: discharge_balance
 
-   \sum Q_x^{t+1} = Q_n + Q_e + Q_s + Q_w + Q_{ne} + Q_{se} + Q_{sw} + Q_{nw}
+   \sum Q_x^{i+1} = Q_n + Q_e + Q_s + Q_w + Q_{ne} + Q_{se} + Q_{sw} + Q_{nw}
                    = A_{surf}\, \frac{\Delta h}{\Delta t}
 
 where:
