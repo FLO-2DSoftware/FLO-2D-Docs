@@ -3544,8 +3544,9 @@ where:
 .. math::
     :label:
 
-    \beta = 1 - \alpha_1\, C^2\, (A_2/A_1)^2
-    + 2 g\, C^2\, (A_2/K_2)^2\, (L_B + L_{1-2}\, K_2/K_1);
+    \beta = 1 - \alpha_1\, C^2\, (A_2/A_1)^2 + 2 g\, C^2\, (A_2/K_2)^2\, (L_B + L_{1-2}\, K_2/K_1);
+
+where:
 
     L\ :sub:`B` = length of contracted reach
 
