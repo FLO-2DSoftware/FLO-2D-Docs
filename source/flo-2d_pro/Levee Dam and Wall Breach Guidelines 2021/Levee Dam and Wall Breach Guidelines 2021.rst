@@ -988,6 +988,10 @@ The following table presents the wall failure guidelines, controls and data chec
      </tbody>
    </table>
 
+.. raw:: html
+
+    <br><br>
+
 Wall Failure Troubleshooting
 ----------------------------
 
@@ -1002,13 +1006,10 @@ Evidence of numerical surging in wall collapse discharge includes:
     - Rapidly varying discharges (grid element number_LEVEEFAIL.OUT, or in the floodplain cross section hydrographs);
     - Adverse or variable maximum water surface elevations.
 
-   **Table 2.
-   Numerical Surging Troubleshooting**
-
 .. raw:: html
 
    <table style="border-collapse: collapse; width: 100%;">
-     <caption><strong>Numerical Surging Troubleshooting</strong></caption>
+     <caption><strong>Table 2 Numerical Surging Troubleshooting</strong></caption>
      <thead>
        <tr>
          <th style="border: 1px solid #000; padding: 4px;">Condition</th>
@@ -1163,6 +1164,9 @@ Evidence of numerical surging in wall collapse discharge includes:
      </tbody>
    </table>
 
+.. raw:: html
+
+    <br><br>
 
 The primary data issue with a wall collapse occurs is a wall is assigned along the boundary of two grid elements that are significantly different in
 elevation resulting in:
@@ -1459,6 +1463,11 @@ velocity V but applied a flow depth d variable exponent b that was a function of
    :label:
 
    V = \frac{1.486}{n}\, d^{b} S_f^{0.5} \quad \text{(English units)}
+
+.. math::
+   :label:
+
+   V = \frac{1.486}{n}\, d^{b}\, S_f^{0.5} \quad \text{(in English units)}
 
 where:
 
