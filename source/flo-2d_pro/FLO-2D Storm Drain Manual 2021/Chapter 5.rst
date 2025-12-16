@@ -593,7 +593,6 @@ The following is an example from a SWMM.RPT file:
 
         High Flow Instability Indexes
         ********************************
-
         Link C9 (9)
         Link C8 (8)
         Link C10 (7)
@@ -608,7 +607,6 @@ A flow turn occurs when the difference between a new and old flow results in a p
 change in flow direction.
 
 Timestep and Conduit Length
-
 
 Similar to the Courant criteria used on the FLO-2D surface water model, stability issues can arise if the timestep is greater than about two times the
 travel time through a pipe.
@@ -631,9 +629,13 @@ To improve a model with numerical stability issues:
 
            Wave celerity c = 1.5 x V
 
-           Applying the Courant equation:
+                Applying the Courant equation:
 
-           ∆t = C ∆x/(V + c) = 0.6 (20 ft) / (7.3 fps + 1.5 x 7.3 fps) = 0.66 seconds
+.. math::
+   :label:
+
+   \beta = 1 - \alpha_1\, C^2\, (A_2/A_1)^2
+   + 2 g\, C^2\, (A_2/K_2)^2\, (L_B + L_{1-2}\, K_2/K_1);
 
 Unstable Results
 
