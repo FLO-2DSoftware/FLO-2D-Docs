@@ -654,10 +654,10 @@ SWMMFLORT.DAT Input File Example**
 
 Table 14 lists the description of the variables for the SWMMFLORT.DAT file.
 
-\(i) = Integer variable (r) = real variable (c) = character
-
 **Table 14.
 SWMMFLORT.DAT Input Variable Descriptions**
+
+\(i) = Integer variable (r) = real variable (c) = character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -716,6 +716,7 @@ The SDCLOGGING.DAT file contains the data with the following format:
     ID  Grid Cell   Inlet ID    Clogging Factor - C<sub>f</sub>(%) Time for clogging -T<sub>c</sub>(hr)
 
     D   2694           I1           25                              0.50
+
     D   2409           I2           50                              3.25
 
     </pre>
