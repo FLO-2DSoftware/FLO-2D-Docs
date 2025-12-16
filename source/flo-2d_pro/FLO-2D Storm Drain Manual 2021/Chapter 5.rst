@@ -554,9 +554,7 @@ The storm drain system should be reviewed if the mass continuity error in SWMM.R
 Ideally, this error should be less than 1 percent.
 The original SWMM model might have volume conservation errors as high as 10 percent and this should not occur with the FLO-2D storm drain model.
 Excessive volume conservation error is primarily the result of short conduit lengths.
-It is recommended that the minimum pipe length be at least the size
-
-of the FLO-2D grid element side.
+It is recommended that the minimum pipe length be at least the size of the FLO-2D grid element side.
 Generally, the volume conservation errors and numerical instabilities may be reduced or eliminated by:
 
     - Increasing pipe roughness n-values;
@@ -582,7 +580,10 @@ As the water flows through or out of the storm drain and pipe capacity becomes a
 The model will only allow inlet inflow if there is available capacity.
 There is zero inflow if the storm drain system is full regardless of the surface water elevation above the rim.
 
-High Flow Instability Indices (HFII)
+.. note::
+    It is necessary to put the VC2005-CON.dll in the system folders only if the FLOPro.exe is run from a project folder.
+
+**High Flow Instability Indices (HFII)**
 
 The SWMM.RPT file lists those nodes of the drainage network that have the largest flow continuity errors.
 The following is an example from a SWMM.RPT file:
@@ -710,6 +711,3 @@ In the original SWWM model, most volume conservation errors were associated with
 more were acceptable.
 If the volume conservation error exceeds 1 % in the FLO-2D storm drain system, the model can be improved.
 
-.. [1]
-   It is necessary to put the VC2005-CON.dll in the system folders only
-   if the FLOPro.exe is run from a project folder.

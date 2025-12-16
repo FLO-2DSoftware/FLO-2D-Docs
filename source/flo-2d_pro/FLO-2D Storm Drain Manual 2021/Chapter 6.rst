@@ -72,8 +72,8 @@ The GDS has the ability to customize different GIS layer views.
 The Crayfish plugin provide functionalities to plot graphs using the FLO-2D maximum results and temporal results in QGIS including animations.
 Crayfish plugin can be installed from the QGIS plugin repository A possible approach to reviewing a storm drain simulation is outlined.
 
-Step 1.
-Review the SUMMARY.OUT File
+**Step 1.
+Review the SUMMARY.OUT File**
 
 After a FLO-2D simulation is completed, the SUMMARY.OUT file can be reviewed with an ASCII text editor program.
 A FLO-2D model has been successfully completed if the termination time and date is reported at the end of the SUMMARY.OUT:
@@ -90,8 +90,7 @@ Volume exchange and conservation between the surface water and storm drain is re
 
 *Storm Drain Return Flow to Surface:* Return flow to the surface water through the inlets as pressure flow.
 
-Step 2.
-View the Surface Water Data and Results in the GDS
+**Step 2. View the Surface Water Data and Results in the GDS**
 
 Open the GDS and load the project as shown in Figure 58.
 The components displayed in this image are the building area reduction factors (ARF-values) and the storm drain features.
@@ -103,8 +102,7 @@ Alternatively, the project could be opened in the FLO-2D QGIS plug-in.
 *Figure 58
 Typical GDS Storm Drain Project*
 
-Step 3.
-Import Shapefiles from Mapper (Optional)
+**Step 3. Import Shapefiles from Mapper (Optional)**
 
 If the output data was plotted in Mapper, the automatically generated shapefiles can be imported into the GDS or QGIS plug-in.
 The FLO-2D model maximum depths and velocities and other output can be imported as shapefiles to view the flooding with the various model components
@@ -118,8 +116,7 @@ The flooding is shown in the streets and is being captured by the storm drain sy
 *Figure 59.
 Maximum Flow Depth Shapefile in the GDS with Storm Drain Components*
 
-Step 4.
-Display the Storm Drain Results in the GDS
+**Step 4. Display the Storm Drain Results in the GDS**
 
 The GDS can display the storm drain inlet discharge hydrograph including the return flow (pressure flow) to the surface water.
 GDS will plot the water surface head on the storm drain inlet and outlet and the hydraulic and energy grade lines.
