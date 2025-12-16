@@ -8,9 +8,7 @@ FLO-2D Storm Drain Overview
 
 Initially, the FLO-2D PRO two-dimensional flood routing model was integrated with the Environmental Protection Agency (EPA) Storm Water Management
 Model (SWMM) Version 5.0.022 (Rossman, 2005; Rossman, Lewis A., 2006; Rossman, Lewis A., 2007) starting in 2013.
-The FLO-
-
-2D storm drain engine has evolved into a completely new and unique model component.
+The FLO-2D storm drain engine has evolved into a completely new and unique model component.
 The FLO-2D storm drain engine simulates the exchange of surface water flow with a storm drain system as a flow continuum (one body of water).
 Over the years, as the storm drain code expanded, the original SWMM source code became obsolete, and the FLO-2D storm drain system represents a
 significant advancement in storm drain detail, accuracy and speed.
@@ -450,19 +448,19 @@ Curb Inlet Water Depth Profile Adjustment*
 
 Definitions:
 
-Grid depth = flow depth on conventional grid element
+    Grid depth = flow depth on conventional grid element
 
-Curb depth = depth on the storm drain
+    Curb depth = depth on the storm drain
 
-Flow depth = flow depth above the curb height
+    Flow depth = flow depth above the curb height
 
-L\ :sub:`c` = length of street away from curb that is inundated by the curb depth
+    L\ :sub:`c` = length of street away from curb that is inundated by the curb depth
 
-Volume = total water volume on a grid element = side L x side L x Grid Depth
+    Volume = total water volume on a grid element = side L x side L x Grid Depth
 
-VOLCurb = volume equal to the curb height =
+    VOLCurb = volume equal to the curb height =
 
-   1/2 base (L) x height (0.02 x L) x side L = 0.5 x 0.02 x L\ :sup:`3` = 0.01 L\ :sup:`3`
+       1/2 base (L) x height (0.02 x L) x side L = 0.5 x 0.02 x L\ :sup:`3` = 0.01 L\ :sup:`3`
 
 .. image:: img/Chapter1/Chapte013.jpg
 
