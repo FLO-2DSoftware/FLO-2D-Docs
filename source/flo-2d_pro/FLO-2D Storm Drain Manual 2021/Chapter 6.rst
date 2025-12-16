@@ -176,7 +176,7 @@ To view the output, first make sure that the following files are present in the 
 The SWMM.RPT file reports the storm drain output data in ASCII format and can be read with any ASCII editor.
 The SWMM.OUT file is a binary output file with results reported temporally and spatially that can be read by the SWMM GUI.
 
-SWMM.ini
+**SWMM.ini**
 
 The storm drain results are not automatically loaded into the SWMM GUI.
 To load the results, navigate to the project folder directory and open the SWMM.ini file using an ASCII text editor.
@@ -187,7 +187,7 @@ The user needs to set ‘Saved = 1” and “Current = 1” as highlighted in Fi
 *Figure 66.
 SWMM.ini File with Required Data to View the Results in the SWMM GUI*
 
-View the Storm Drain Results
+**View the Storm Drain Results**
 
 Open the SWMM GUI and navigate to the project folder.
 Open the SWMM.inp file from the File|Open menu.
@@ -204,7 +204,7 @@ The SWMM manual should be used referenced when using the SWMM GUI.
 The GUI environment is shown in Figure 68 consisting of a main menu, tool bars, study area, and working area.
 These attributes and some of the options are explained briefly.
 
-File Menu
+**File Menu**
 
     **Open:** Opens an existing project
 
@@ -219,7 +219,7 @@ File Menu
 *Figure 68.
 SWMM GUI Environment*
 
-Edit Menu
+**Edit Menu**
 
     **Select Object:** Select an object on the map
 
@@ -229,7 +229,7 @@ Edit Menu
 
     **Group Edit:** Edits a property for the group of objects within selected region
 
-View Menu
+**View Menu**
 
     **Dimensions:** Sets reference coordinates and distance units for a study area
 
@@ -239,13 +239,15 @@ View Menu
 
     **Objects:** Toggles display of classes of objects
 
-    **Legends:** Controls display of the map legends **Toolbars:** Toggles display of tool bars
+    **Legends:** Controls display of the map legends
 
-Project Menu
+    **Toolbars:** Toggles display of tool bars
+
+**Project Menu**
 
     **Defaults:** Edits a project’s default properties
 
-Report Menu
+**Report Menu**
 
    **Status:** Displays a status report for the last simulation.
 
@@ -266,19 +268,18 @@ Graph: Time Series**
 
     **Table:** Displays simulation results in tabular form\ **.**
 
-Tools Menu – Commands that Provide Control Detail
+**Tools Menu – Commands that Provide Control Detail**
 
     **Program Preferences:** Sets program preferences, such as font sizes, deletions, number of decimal places displayed, etc.
 
-    **Map Control Display Options:** Sets appearance options for the Map, such as object size, annotation, flow direction arrows, and background colors
-    (Figure 71).
+    **Map Control Display Options:** Sets appearance options for the Map, such as object size, annotation, flow direction arrows, and background colors (Figure 71).
 
 .. image:: img/Chapter6/Chapte015.jpg
 
 *Figure 71.
 Map Options*
 
-Help Menu
+**Help Menu**
 
     **Help Topics:** Displays the Help system’s Table of Contents
 
@@ -286,19 +287,19 @@ Help Menu
 
     **Tutorial:** Presents a short tutorial introducing the user to the EPA SWMM
 
-Study Area Map
+**Study Area Map**
 
     This map is a working environment with of storm drain system.
 
-Toolbars
+**Toolbars**
 
     Provide shortcuts to common operations and includes the standard toolbar.
 
-Map Toolbar and Object Toolbar
+**Map Toolbar and Object Toolbar**
 
     Data/map browser provides access to all the data objects in a project and controls the mapping themes and time periods viewed on the study area map.
 
-Status Bar
+**Status Bar**
 
    **Auto-length**: Indicates whether the automatic computation of conduit lengths.
    It is recommended that the auto-length be turn ‘off” if the data is imported from a GIS database.
@@ -314,7 +315,7 @@ Status Bar
 
     **XY location**: Mouse cursor coordinates.
 
-Data Browser
+**Data Browser**
 
 The data browser has three sections (Figure 72).
 
@@ -327,7 +328,7 @@ The data browser has three sections (Figure 72).
 *Figure 72.
 SWMM GUI Data Browser Panel*
 
-Map Browser
+**Map Browser**
 
 The map browser consists of three panels that control the results display (Figure 73).
 
