@@ -1113,7 +1113,7 @@ exceeds 53%.
    </table>
 
 References
-=====================
+------------
 
 Bagnold, R.A., 1954.
 "Experiments on a gravity-free dispersion of large solid spheres in a Newtonian fluid under shear," *Proc.
