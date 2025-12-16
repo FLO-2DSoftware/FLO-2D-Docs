@@ -3960,10 +3960,10 @@ Some notes on the various bridge coefficients for free surface flow are listed b
 The user has an option to assign the coefficients (K\ :sub:`i` > 0.01) or have the model compute the coefficients (K\ :sub:`i` = 0.0).
 If K\ :sub:`i` = 1.0, then this bridge feature and its coefficient has no effect on the bridge flow.
 
-K\ :sub:`F` (KF-COEF) = coefficient based on the effect of Froude number K\ :sub:`F` = f(F\ :sub:`b`).
-The Froude number at the bridge is computed for Type 1 or Type IV bridges (see Appendix Figures) using the discharge, flow area and depth, F\ :sub:`b`
-= Q/A\ :sub:`b` (g y\ :sub:`b`)\ :sup:`0.5`.
-No additional data is required.
+    K\ :sub:`F` (KF-COEF) = coefficient based on the effect of Froude number K\ :sub:`F` = f(F\ :sub:`b`).
+    The Froude number at the bridge is computed for Type 1 or Type IV bridges (see Appendix Figures) using the discharge, flow area and depth, F\ :sub:`b`
+    = Q/A\ :sub:`b` (g y\ :sub:`b`)\ :sup:`0.5`.
+    No additional data is required.
 
     K\ :sub:`r` = coefficient of entrance rounding for Type I only.
     Percent of contraction m and r/b are required where r = radius of the corner and b = contracted bridge width, Appendix Figure A.1c.
