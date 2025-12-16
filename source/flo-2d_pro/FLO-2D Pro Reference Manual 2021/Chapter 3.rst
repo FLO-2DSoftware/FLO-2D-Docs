@@ -360,7 +360,14 @@ There a number of uniform flow mean velocity equations for open channels and Man
    V = \frac{1.486}{n}\, R^{2/3}\, S_f^{1/2}
 
 
-where R = hydraulic radius, S\ :sub:`f` = friction slope, n = Manning’s roughness coefficient.
+where:
+
+    R = hydraulic radius
+
+    S\ :sub:`f` = friction slope
+
+    n = Manning’s roughness coefficient.
+
 For wide cross section flow the hydraulic radius approaches the flow depth and the flow area can be expressed as a power function of the flow depth:
 
 .. math::
@@ -369,6 +376,7 @@ For wide cross section flow the hydraulic radius approaches the flow depth and t
    A = a\, h^{b}
 
 where a and b are a regressed coefficient and exponent respectively.
+
 The hydraulic radius exponent value (0.667) in Manning’s equation has been known to vary over a range from about 0.59 to 0.85 depending primarily on
 cross section geometry and roughness (Chow, 1959).
 The roughness coefficient or Manning’s n-value varies with a number of factors including but not limited to bed friction, bed form,
@@ -380,7 +388,6 @@ The discharge Q is a function of three variables, flow area slope and roughness 
    :label:
 
    Q = f\!\left(A^{\sim 2.0},\ S_o^{0.5},\ \frac{1}{n}\right)
-
 
 Since the discharge is function of the square root of the slope, the rate of change in the discharge is not overly sensitive to change in slope.
 Similarly, the discharge is only inversely proportional to the roughness coefficient.
@@ -406,8 +413,19 @@ Mathematically the Courant relationship is given by:
 
    V + c = \frac{C\, \Delta x}{\Delta t}
 
-Where C = Courant Number (C ≤ 1.0); Δx = FLO-2D square grid element width (distance between node centers); V = depth averaged velocity; and c =
-floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the flow depth above the thalweg.
+where:
+
+    C = Courant Number (C ≤ 1.0):
+
+    Δx = FLO-2D square grid element width (distance between node centers):
+
+    V = depth averaged velocity
+
+    c = floodwave celerity = (gd)\ :sup:`0.5` where:
+
+        g = gravitation acceleration
+
+        d = flow depth above the thalweg.
 
 This equation relates the progression of the floodwave (V + c) to the discretized model in space and time.
 The Courant number C can vary from 0.1 to 1.0, and a value of 1.0 will enable the model to have the largest possible timestep.
