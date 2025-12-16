@@ -710,9 +710,12 @@ Less viscous flows (mud floods) are always turbulent.
      </tbody>
    </table>
 
-*Conversion:* Shear Stress: 1 Pascal (PA) = 10 dynes/cm\ :sup:`2`
+.. raw:: html
 
-Viscosity: 1 PAs = 10 dynes-sec/cm\ :sup:`2` = 10 poises
+    <pre>
+                            *Conversion:*          Shear Stress: 1 Pascal (PA) = 10 dynes/cm\ :sup:`2`
+                                                   Viscosity: 1 PAs = 10 dynes-sec/cm\ :sup:`2` = 10 poises
+    <pre>
 
 For a mudflow event, the average sediment concentration generally ranges between 20% and 35% by volume with peak concentrations approaching 45% (Table
 1 and Figure 1).
