@@ -3523,15 +3523,13 @@ where:
 
     C = C\ :sub:`c` / (α\ :sub:`2` + k\ :sub:`e` + k\ :sub:`p`)\ :sup:`0.5`;
 
-where:
+        C\ :sub:`c` = coefficient of contraction,
 
-    C\ :sub:`c` = coefficient of contraction,
+        α\ :sub:`2` = energy coefficient at cross section 2,
 
-    α\ :sub:`2` = energy coefficient at cross section 2,
+        k\ :sub:`e` = eddy loss coefficient,
 
-    k\ :sub:`e` = eddy loss coefficient,
-
-    k\ :sub:`p` = non-hydrostatic pressure coefficient
+        k\ :sub:`p` = non-hydrostatic pressure coefficient
 
 The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959, p.
 490) in English units:
