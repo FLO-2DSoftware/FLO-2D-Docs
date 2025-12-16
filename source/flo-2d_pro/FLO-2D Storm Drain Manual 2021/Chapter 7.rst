@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 7
+CHAPTER 7
 ==========
 
 Porting a SWMM Model to the FLO-2D Storm Drain System
