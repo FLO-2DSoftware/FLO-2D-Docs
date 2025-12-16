@@ -562,15 +562,15 @@ GDS Dialog Box for Entering Rating Table data for INTYPE 4*
 
 The structure of a SWMMFLORT.DAT file is:
 
-   ID Grid Cell
+.. raw:: html
 
-   ID Depth Discharge
-
-   ID Depth Discharge
-
-   ID Depth Discharge
-
-   …
+    <pre>
+           ID Grid Cell
+           ID Depth Discharge
+           ID Depth Discharge
+           ID Depth Discharge
+           …
+    </pre>
 
 The first pair of numbers should be zero depth and zero discharge.
 This is repeated from 1 to number of storm drain inlets with INTYPE= 4 (Table 12).
