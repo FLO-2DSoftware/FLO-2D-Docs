@@ -1475,13 +1475,16 @@ where:
 
     n = Manning’s friction coefficient
 
-S\ :sub:`f` = friction slope
+    S\ :sub:`f` = friction slope
 
-b = exponent = f(depth, S\ :sub:`f`)
+    b = exponent = f(depth, S\ :sub:`f`)
 
-b = 0.4973 – 0.000543 \* d – 30.71 S\ :sub:`f`
+.. math::
+   :label:
 
-       a1, b1, c1 = coefficients given in the following table:
+    b = 0.4973 – 0.000543 \* d – 30.71 S\ :sub:`f`
+
+a1, b1, c1 = coefficients given in the following table:
 
 *Table 5.
 Muskingum – Cunge Variable Definitions.*
