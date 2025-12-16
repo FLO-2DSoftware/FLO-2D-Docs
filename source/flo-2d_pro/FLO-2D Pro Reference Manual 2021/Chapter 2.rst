@@ -306,7 +306,7 @@ If the timestep is greater than 1 second, then the timestep increment is:
 .. math::
    :label:
 
-   DSEC = DSEC + TIME\_ACCEL \times \frac{0.0085}{XFAST}
+   DSEC = DSEC + TIME\_ACCEL \times \frac{0.0085}{\text{XFAST}}
 
 where:
 
@@ -364,9 +364,15 @@ where:
 
     C = Courant Number (C ≤ 1.0)
 
-    Δx = FLO-2D square grid element width (distance between node centers) V = depth averaged velocity
+    Δx = FLO-2D square grid element width (distance between node centers)
 
-    c = floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the flow depth above the thalweg.
+    V = depth averaged velocity
+
+    c = floodwave celerity = (gd)\ :sup:`0.5` where;
+
+        g = gravitation acceleration
+
+        d = the flow depth above the thalweg.
 
 This equation relates the progression of the floodwave (V + c) to the discretized model in space and time.
 The Courant number C can vary from 0.1 to 1.0, and a value of 1.0 will enable the model to have the largest possible timestep.
