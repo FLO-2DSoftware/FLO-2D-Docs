@@ -1937,7 +1937,14 @@ of the sediment concentration C\ :sub:`v`:
 
    n_{td} = n_t\, b\, e^{m C_v}
 
-where: n\ :sub:`t` is the turbulent n-value and b is a coefficient (0.0538) and m is an exponent (6.0896).
+where:
+
+    n\ :sub:`t` = the turbulent n-value
+
+    b = a coefficient (0.0538)
+
+    m = an exponent (6.0896)
+
 This equation was based on unpublished paper by Julien and O’Brien (1998) that relates the dispersive and turbulent resistance in hyperconcentrated
 sediment flows as function of the ratio of the flow depth to the sediment grain size.
 The friction slope components can then be combined in the following form:
@@ -2079,9 +2086,7 @@ This may be followed by a surge or frontal wave of mud and debris (40 to 50% con
 When the peak arrives, the average sediment concentration generally decreases to the range of 30 to 40% by volume.
 On the falling limb of the hydrograph, surges of higher sediment concentration may occur.
 
-To simulate mudflows with the FLO-2D model, the MUD switch in the CONT.DAT must be turned on
-
-(MUD = 1) and the viscosity and yield stress variables in SED.DAT file must be specified (Line M).
+To simulate mudflows with the FLO-2D model, the MUD switch in the CONT.DAT must be turned on (MUD = 1) and the viscosity and yield stress variables in SED.DAT file must be specified (Line M).
 It is recommended that the viscosity and yield stress exponents and coefficients from Table 9 be selected for inclusion in the SED.DAT file.
 The field sample Glenwood 4, for example, creates a very viscous mudflow.
 A volumetric sediment concentration or a sediment volume must then be assigned to the water discharge for a timestep in the discretized inflow
@@ -2117,8 +2122,16 @@ To conservatively estimate the impact pressure, the equation for water taken fro
 
    P_i = k\, \rho_f\, V^{2}
 
-where P\ :sub:`i` is the impact pressure, coefficient k is 1.28 for both English and SI units, ρ\ :sub:`f` = water density and V is the maximum
-velocity regardless of direction.
+where:
+
+    P\ :sub:`i` = the impact pressure,
+
+    k = coefficient = 1.28 for both English and SI units,
+
+    ρ\ :sub:`f` = water density
+
+    V is the maximum velocity regardless of direction.
+
 For hyperconcentrated sediment flows such as mud floods and mudflows, the fluid density ρ\ :sub:`f` and coefficient k is a function of sediment
 concentration by volume.
 The coefficient k is based on a regressed relationship as a function of sediment concentration from the data presented in Deng (1996).
