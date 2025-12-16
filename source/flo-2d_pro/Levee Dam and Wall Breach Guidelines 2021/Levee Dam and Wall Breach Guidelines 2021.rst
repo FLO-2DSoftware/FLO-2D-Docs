@@ -717,13 +717,10 @@ Wall Failure Guidelines
 
 The following table presents the wall failure guidelines, controls and data checks.
 
-*Table 2.
-Wall Failure Guidelines*
-
 .. raw:: html
 
    <table style="border-collapse: collapse; width: 100%;">
-     <caption><strong>Wall Failure Guidelines</strong></caption>
+     <caption><strong>Table 2. Wall Failure Guidelines</strong></caption>
      <thead>
        <tr>
          <th style="border: 1px solid #000; padding: 4px;">Wall Data</th>
