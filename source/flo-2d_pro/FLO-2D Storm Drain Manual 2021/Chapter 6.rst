@@ -305,15 +305,14 @@ Map Options*
    It is recommended that the auto-length be turn ‘off” if the data is imported from a GIS database.
 
    **Offsets**: Indicate whether the positions of links above the invert of their connecting nodes are expressed as depth above the invert or as an
-   offset elevation.
-   The FLO-2D component is configured for the depth.
+   offset elevation. The FLO-2D component is configured for the depth.
 
    **Flow units**: English or metric.
    The previously entered data is not automatically adjusted for the unit system if the system is changed.
 
-    **Zoom level:** Zoom level percentage.
+   **Zoom level:** Zoom level percentage.
 
-    **XY location**: Mouse cursor coordinates.
+   **XY location**: Mouse cursor coordinates.
 
 **Data Browser**
 
