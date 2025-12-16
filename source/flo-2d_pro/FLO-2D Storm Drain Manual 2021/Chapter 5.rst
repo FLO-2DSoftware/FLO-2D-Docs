@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 5
+CHAPTER 5
 ===========
 
 Troubleshooting
@@ -547,9 +547,7 @@ The versions of the FLO-2D and the Storm Drain versions are reported in the STOR
 Volume Conservation and Numerical Instability
 '''''''''''''''''''''''''''''''''''''''''''''
 
-When a model run is completed, volume conservation is reported in the SWMM.RPT file under
-
-Flow Routing Continuity.
+When a model run is completed, volume conservation is reported in the SWMM.RPT file under Flow Routing Continuity.
 The FLO-2D model volume conservation results are written to the SUMMARY.OUT file.
 Volume conservation represents the difference between the inflow volume and the outflow plus storage volumes for the system.
 The storm drain system should be reviewed if the mass continuity error in SWMM.RPT exceeds some reasonable level, such as plus or minus 1 percent.
@@ -562,9 +560,7 @@ of the FLO-2D grid element side.
 Generally, the volume conservation errors and numerical instabilities may be reduced or eliminated by:
 
     - Increasing pipe roughness n-values;
-
     - Reviewing the selection of reporting timestep (REPORT_STEP) in the SWMM.inp file and the simulation time (TOUT) in the CONT.DAT file;
-
     - Reviewing the system connectivity for adverse slopes and incorrect inlet geometry.
 
 Reviewing the interaction at key features between the surface and the storm drain models.
@@ -572,7 +568,6 @@ Reviewing the interaction at key features between the surface and the storm drai
 The most common sources of numerical instability are:
 
     - Short conduits;
-
     - Conflicting or poor system connectivity in the pipe network.
 
 Discharge oscillations at inlets primarily occur when the pipe system is under pressure (full capacity).
@@ -589,7 +584,6 @@ There is zero inflow if the storm drain system is full regardless of the surface
 
 High Flow Instability Indices (HFII)
 
-
 The SWMM.RPT file lists those nodes of the drainage network that have the largest flow continuity errors.
 The following is an example from a SWMM.RPT file:
 
@@ -598,17 +592,12 @@ The following is an example from a SWMM.RPT file:
     <pre>
 
         High Flow Instability Indexes
-
         ********************************
 
         Link C9 (9)
-
         Link C8 (8)
-
         Link C10 (7)
-
         Link C7 (6)
-
         Link C6 (6)
     </pre>
 
