@@ -212,7 +212,7 @@ File Menu
 
     **Save:** Saves the current project
 
-   **Save As:** Saves the project under a different name
+    **Save As:** Saves the project under a different name
 
 .. image:: img/Chapter6/Chapte022.jpg
 
