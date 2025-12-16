@@ -522,7 +522,9 @@ SWMMOUTF.DAT Input Variable Descriptions**
 
    * - *OUTF_FLO2DVOL(JT)*
      - i
-     - 0: off or
+     - 0: off
+
+       or
 
        1: on
      - Allow discharge from the storm drain to FLO-2D
