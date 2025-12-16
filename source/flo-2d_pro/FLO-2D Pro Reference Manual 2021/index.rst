@@ -3,6 +3,7 @@ FLO-2D Pro Reference Manual 2021
 
 .. toctree::
    :maxdepth: 1
+   :numbered:
 
    Preview
    Chapter 1
