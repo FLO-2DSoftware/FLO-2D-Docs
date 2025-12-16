@@ -577,8 +577,13 @@ The dimensionless Froude number Fr is given by:
 
 Where:
 
-   V = depth averaged flow velocity G = acceleration due to gravity d = depth of flow above the thalweg α = kinetic energy correction factor (involving
-   the fluid density and specific weight).
+   V = depth averaged flow velocity
+
+   g = acceleration due to gravity
+
+   d = depth of flow above the thalweg
+
+   α = kinetic energy correction factor (involving the fluid density and specific weight).
    Typically α is assumed to be 1.
 
 The Froude number helps to define the influence of gravity on the flow pattern.
