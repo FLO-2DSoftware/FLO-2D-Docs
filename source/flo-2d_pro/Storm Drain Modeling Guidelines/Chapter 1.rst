@@ -998,44 +998,44 @@ The inlet discharge is imposed as surface water boundary conditions (BC) and is 
 drain layer for routing.
 The following equations (Johnson and Fred, 1984) are used:
 
-Weir Flow:
+    Weir Flow:
 
-.. math::
-   :label:
+    .. math::
+       :label:
 
-   Q_{w} = CLH^{m}
+       Q_{w} = CLH^{m}
 
-where:
+    where:
 
-    :math:`Q_{w}` = weir discharge
+        :math:`Q_{w}` = weir discharge
 
-    C = weir coefficient, enter in the “Inlet Weir Coeff.” field in the SWMMFLO.DAT
+        C = weir coefficient, enter in the “Inlet Weir Coeff.” field in the SWMMFLO.DAT
 
-    L = crest length; enter in the “Length (1 or 2)” field in the SWMMFLO.DAT
+        L = crest length; enter in the “Length (1 or 2)” field in the SWMMFLO.DAT
 
-    H = FLO-2D grid element water depth that contains the inlet structure
+        H = FLO-2D grid element water depth that contains the inlet structure
 
-    m = 1.5 for a broad crested weir. This is hardcoded.
+        m = 1.5 for a broad crested weir. This is hardcoded.
 
-Orifice Flow:
+    Orifice Flow:
 
-.. math::
-   :label:
+    .. math::
+       :label:
 
-   Q_{o} = \ C_{d}A\sqrt{2gH}
+       Q_{o} = \ C_{d}A\sqrt{2gH}
 
-where:
+    where:
 
-    :math:`Q_{o}` = orifice flow rate at depth H
+        :math:`Q_{o}` = orifice flow rate at depth H
 
-    C\ :sub:`d`  = discharge coefficient hardcoded to 0.67
+        C\ :sub:`d`  = discharge coefficient hardcoded to 0.67
 
-    A = Lh; cross-sectional orifice area, computed from inlet opening length (L) and inlet opening height
-    (h) fields in the SWMMFLO.DAT
+        A = Lh; cross-sectional orifice area, computed from inlet opening length (L) and inlet opening height
+        (h) fields in the SWMMFLO.DAT
 
-    g = gravitational acceleration
+        g = gravitational acceleration
 
-    H = FLO-2D grid element water depth that contains the inlet structure
+        H = FLO-2D grid element water depth that contains the inlet structure
 
 The discharges are calculated based on the physical behavior of the inlet as a weir or an orifice for
 a given timestep and the smaller of the two discharges is used in the surface water exchange to the
@@ -1056,39 +1056,32 @@ The models are fully integrated on a computational timestep basis.
 
 The advantages of the FLO-2D storm drain component over the original SWMM model are:
 
-- Complete surface water hydrology and hydraulics including rainfall runoff, infiltration, and flood
-  routing in channels, streets or unconfined overland flow are simulated by FLO-2D surface water model.
-
-- The storm drain component solves the pipe hydraulics and flow routing but integrates the inlet/outlets
-  and outfalls with the surface water at each computational timestep.
-
-- FLO-2D computes the storm drain inlet discharge based on the water surface head and the inlet geometry.
-  The original SWMM model did not consider inlet control.
-
-- Only those junctions set up as inlets/outfalls in the storm drain model are recognized for system
-  exchange.
-  Pipe junctions without an inlet will not receive a surface runoff discharge.
-
-- The inlet locations digitized in storm drain data files (\*.INP) are automatically read by the FLO-2D
-  QGIS to establish the storm drain inlet connections.
-
-- Inlets can become outlets if the storm drain pressure head exceeds the grid element water surface
-  elevation at a given node.
-  The potential return flow to the surface water is based on the water surface elevation not the rim
-  elevation as in the original SWMM model.
-
-- Manhole covers can pop and allow return flow based on a surcharge depth representing the manhole
-  cover weight.
-  Once popped the manhole surcharge is turned ‘off’ and the manhole functions as an inlet/outlet for
-  the rest of the simulation.
-  This is an improvement on the original SWMM model.
-
-- For outfall nodes in the closed conduit system network, pipe discharge can be removed from the storm
-  drain system or returned to the surface water as a user defined option.
-  The outfall can function as an inlet to the storm drain system based on the surface water elevation.
-  A tide gate can be used to prevent inflow to the outfall.
-  The integration of the outfall boundary conditions with surface water represents an enhancement over
-  the original SWMM model.
+    - Complete surface water hydrology and hydraulics including rainfall runoff, infiltration, and flood
+      routing in channels, streets or unconfined overland flow are simulated by FLO-2D surface water model.
+    - The storm drain component solves the pipe hydraulics and flow routing but integrates the inlet/outlets
+      and outfalls with the surface water at each computational timestep.
+    - FLO-2D computes the storm drain inlet discharge based on the water surface head and the inlet geometry.
+      The original SWMM model did not consider inlet control.
+    - Only those junctions set up as inlets/outfalls in the storm drain model are recognized for system
+      exchange.
+      Pipe junctions without an inlet will not receive a surface runoff discharge.
+    - The inlet locations digitized in storm drain data files (\*.INP) are automatically read by the FLO-2D
+      QGIS to establish the storm drain inlet connections.
+    - Inlets can become outlets if the storm drain pressure head exceeds the grid element water surface
+      elevation at a given node.
+      The potential return flow to the surface water is based on the water surface elevation not the rim
+      elevation as in the original SWMM model.
+    - Manhole covers can pop and allow return flow based on a surcharge depth representing the manhole
+      cover weight.
+      Once popped the manhole surcharge is turned ‘off’ and the manhole functions as an inlet/outlet for
+      the rest of the simulation.
+      This is an improvement on the original SWMM model.
+    - For outfall nodes in the closed conduit system network, pipe discharge can be removed from the storm
+      drain system or returned to the surface water as a user defined option.
+      The outfall can function as an inlet to the storm drain system based on the surface water elevation.
+      A tide gate can be used to prevent inflow to the outfall.
+      The integration of the outfall boundary conditions with surface water represents an enhancement over
+      the original SWMM model.
 
 To integrate the surface water and storm drain models, the first task is to develop a running FLO-2D
 surface water flood model.
@@ -1126,17 +1119,12 @@ FLO-2D can only exchange flow with those junctions defined as inlets (see Inlets
 The junction will not receive FLO-2D surface inflow if it serves as a simple pipe connection.
 The required input data is:
 
-- Name
-
-- X and Y Coordinates
-
-- Invert elevation
-
-- Maximum depth (invert to rim)
-
-- Initial depth (optional)
-
-- Surcharge Depth (optional)
+    - Name
+    - X and Y Coordinates
+    - Invert elevation
+    - Maximum depth (invert to rim)
+    - Initial depth (optional)
+    - Surcharge Depth (optional)
 
 Inlets
 ~~~~~~
@@ -1150,15 +1138,11 @@ Manholes are covered inlets that capture flow from the surface when the cover is
 The manhole ID needs to start with an “I” or “i”.
 The required inlet data is:
 
-- Name: Starts with an “I” or “i” to be identified as Inlets
-
-- X and Y Coordinates
-
-- Invert elevation
-
-- Maximum depth (invert to rim)
-
-- Initial depth (optional)
+    - Name: Starts with an “I” or “i” to be identified as Inlets
+    - X and Y Coordinates
+    - Invert elevation
+    - Maximum depth (invert to rim)
+    - Initial depth (optional)
 
 Conduits
 ~~~~~~~~
@@ -1168,13 +1152,9 @@ Slope is calculated internally based on inlet and outlet node invert elevation.
 Required input data is:
 
 - Conduit name
-
 - Name of connecting feature inlet and outlet
-
 - Cross-sectional Geometry
-
 - Length - between nodes
-
 - Pipe roughness – Manning’s n-value
 
 Outfall
@@ -1190,26 +1170,19 @@ Only one conduit can be connected to an outfall node and there must be at least 
 pipeline.
 The required input data is:
 
-- Name
-
-- X and Y Coordinates
-
-- Invert elevation
-
-- Tide Gate (optional) can be assigned to prevent backflow into the pipes.
-
-- Boundary Condition Types:
-
-- Allow Discharge is ‘off’ - Free Outfalls can discharge the flow from the storm drain system.
-  Flow will not be added to the surface.
-
-- Allow Discharge is ‘on’ - The FLO-2D water surface elevation is imposed on the outfall node.
-  Storm drain water will return to the surface model.
-  This is the only outfall type that allows flow exchange with the surface water.
-  Pressure head is compared to the water surface elevation to define the flow direction.
-
-- Normal, Fixed, Tidal and Time Series Outfalls discharges flow off the storm drain system with a
-  boundary condition set up in the SWMM.INP file.
+    - Name
+    - X and Y Coordinates
+    - Invert elevation
+    - Tide Gate (optional) can be assigned to prevent backflow into the pipes.
+    - Boundary Condition Types:
+    - Allow Discharge is ‘off’ - Free Outfalls can discharge the flow from the storm drain system.
+      Flow will not be added to the surface.
+    - Allow Discharge is ‘on’ - The FLO-2D water surface elevation is imposed on the outfall node.
+      Storm drain water will return to the surface model.
+      This is the only outfall type that allows flow exchange with the surface water.
+      Pressure head is compared to the water surface elevation to define the flow direction.
+    - Normal, Fixed, Tidal and Time Series Outfalls discharges flow off the storm drain system with a
+      boundary condition set up in the SWMM.INP file.
 
 Links
 ~~~~~
@@ -1217,15 +1190,11 @@ Links
 Links are defined as features that connect nodes in the storm drain system.
 The following components are defined as links:
 
-- Conduits
-
-- Pumps
-
-- Orifices
-
-- Weirs
-
-- Outlets
+    - Conduits
+    - Pumps
+    - Orifices
+    - Weirs
+    - Outlets
 
 Pumps
 ~~~~~
@@ -1238,37 +1207,27 @@ surface model.
 Pumps for the storm drain system can be set up in the FLO-2D QGIS plugin.
 They must be set up based on the following considerations:
 
-- The pump curve can specify flow as a function of inlet node volume, inlet node depth, or the head
-  difference between the inlet and outlet nodes.
-
-- The pump discharge is limited to the inlet inflow during a given timestep.
-  This will eliminate the possibility of the pump curve being sufficient to drain the inlet node during
-  the time step.
-
-- An ideal transfer pump can be specified where the flow rate equals the inflow rate at its inlet node
-  and no curve is required.
-  In this case, the pump must be the only outflow link from its inlet node.
+    - The pump curve can specify flow as a function of inlet node volume, inlet node depth, or the head
+      difference between the inlet and outlet nodes.
+    - The pump discharge is limited to the inlet inflow during a given timestep.
+      This will eliminate the possibility of the pump curve being sufficient to drain the inlet node during
+      the time step.
+    - An ideal transfer pump can be specified where the flow rate equals the inflow rate at its inlet node
+      and no curve is required.
+      In this case, the pump must be the only outflow link from its inlet node.
 
 The parameters for a pump in the storm drain system are:
 
-- Names of the inlet and outlet nodes
-
-- Pump curve name
-
-- Pump Type:
-
-- Type1: series of constant flow rates that apply over a corresponding series of volume intervals at
-  the pump’s inlet node.
-
-- Type2: like type1 but the fixed flow rates vary over a set of depth intervals at the pump’s inlet node.
-
-- Type3: flow is a function of the head difference between the inlet and outlet nodes.
-
-- Type 4: variable speed in-line pump where flow varies continuously with inlet node depth.
-
-- Initial status ‘on’ or ‘off’ status
-
-- Startup and shutoff depths
+    - Names of the inlet and outlet nodes
+    - Pump curve name
+    - Pump Type:
+        - Type1: series of constant flow rates that apply over a corresponding series of volume intervals at
+          the pump’s inlet node.
+        - Type2: like type1 but the fixed flow rates vary over a set of depth intervals at the pump’s inlet node.
+        - Type3: flow is a function of the head difference between the inlet and outlet nodes.
+        - Type 4: variable speed in-line pump where flow varies continuously with inlet node depth.
+    - Initial status ‘on’ or ‘off’ status
+    - Startup and shutoff depths
 
 Flow Regulators
 ~~~~~~~~~~~~~~~
@@ -1301,56 +1260,49 @@ the side of the upstream node.
 They can have a flap gate to prevent backflow.
 Orifice flow is based on the following criteria:
 
-- When fully submerged the classical orifice equation is used:
+    - When fully submerged the classical orifice equation is used:
 
-.. math::
-    :label:
+    .. math::
+        :label:
 
-    Q_{w} = C_{d}A\sqrt{2gH}
+        Q_{w} = C_{d}A\sqrt{2gH}
 
 
-- A partially submerged orifice applies the modified weir equation:
+    - A partially submerged orifice applies the modified weir equation:
 
-.. math::
-   :label:
+    .. math::
+       :label:
 
-   Q_{w} = C_{d}A\sqrt{2gDh}f^{1.5}
+       Q_{w} = C_{d}A\sqrt{2gDh}f^{1.5}
 
-- An orifice surface area contribution to the outlet is based on the equivalent pipe length and the
-  depth of water in the orifice.
+    - An orifice surface area contribution to the outlet is based on the equivalent pipe length and the
+      depth of water in the orifice.
 
-where:
+    where:
 
-    A = orifice open area (may be an irregular shape)
+        A = orifice open area (may be an irregular shape)
 
-    D = height of the full orifice opening
+        D = height of the full orifice opening
 
-    h = hydraulic head on the orifice
+        h = hydraulic head on the orifice
 
-    C\ :sub:`d` = discharge coefficient hardcoded to 0.67
+        C\ :sub:`d` = discharge coefficient hardcoded to 0.67
 
-    g = gravitational acceleration
+        g = gravitational acceleration
 
-    *f* = fraction of the orifice that is submerged
+        *f* = fraction of the orifice that is submerged
 
 The parameters of an orifice in the storm drain system are:
 
-- Names of the inlet and outlet nodes
-
-- Type: located in the side or bottom through which fluid is flowing.
-
-- Shape: opening is a circular or rectangular geometry.
-
-- Geometry: height and width of orifice when fully opened.
-
-- Inlet offset is the depth of bottom of the orifice opening from inlet node invert.
-
-- Discharge coefficient.
-
-- Flap Gate: select YES to prevent backflow.
-  Default option is NO.
-
-- Time to Open/Close: the time to open or close a gated orifice.
+    - Names of the inlet and outlet nodes
+    - Type: located in the side or bottom through which fluid is flowing.
+    - Shape: opening is a circular or rectangular geometry.
+    - Geometry: height and width of orifice when fully opened.
+    - Inlet offset is the depth of bottom of the orifice opening from inlet node invert.
+    - Discharge coefficient.
+    - Flap Gate: select YES to prevent backflow.
+      Default option is NO.
+    - Time to Open/Close: the time to open or close a gated orifice.
 
 Weirs
 ~~~~~
@@ -1362,9 +1314,7 @@ The weir calculations are based on the following criteria:
 
 - When the weir becomes completely submerged, the model switches to the orifice equation to predict
   flow as a function of the head.
-
 - Weirs do not contribute any surface area to their end nodes.
-
 - The general weir equation;
 
 .. math::
@@ -1385,27 +1335,18 @@ where:
 
 The parameters of an orifice in the storm drain system are:
 
-- Names of the inlet and outlet nodes
-
-- Type: transverse, side flow, v-notch and trapezoidal.
-
-- Height: vertical heigh of weir opening.
-
-- Length: horizontal length of weir crest or crown for v-notch weir.
-
-- Side slope, width to height of trapezoidal weir side walls.
-
-- Inlet offset depth of bottom of the weir opening from inlet node invert.
-
-- Discharge coefficient for central portion of weir.
-
-- Flap Gate: select YES if weir contains a flap gate to prevent backflow.
-  The default option is NO.
-
-- Number of end contractions.
-
-- End of discharge coefficient: discharge coefficient of flow through the triangular ends of a
-  trapezoidal weir.
+    - Names of the inlet and outlet nodes
+    - Type: transverse, side flow, v-notch and trapezoidal.
+    - Height: vertical heigh of weir opening.
+    - Length: horizontal length of weir crest or crown for v-notch weir.
+    - Side slope, width to height of trapezoidal weir side walls.
+    - Inlet offset depth of bottom of the weir opening from inlet node invert.
+    - Discharge coefficient for central portion of weir.
+    - Flap Gate: select YES if weir contains a flap gate to prevent backflow.
+      The default option is NO.
+    - Number of end contractions.
+    - End of discharge coefficient: discharge coefficient of flow through the triangular ends of a
+      trapezoidal weir.
 
 Outlets
 ~~~~~~~
