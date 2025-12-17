@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 5. FLO-2D PROJECT APPLICATIONS
+CHAPTER 5. FLO-2D PROJECT APPLICATIONS
 ======================================
 
 The FLO-2D website https://flo-2d.com has numerous webinars, video animations of predicted flooding,
@@ -177,19 +177,19 @@ The impact on coastal urban storm drain systems with ocean outfalls from combine
 storm surge can be simulated with a FLO-2D model.
 Urban coastal flooding is controlled by:
 
-- Volume of ocean water coming inland, flood volume and volume conservation
+    - Volume of ocean water coming inland, flood volume and volume conservation
 
-- Sediment bulking (add 20% volume)
+    - Sediment bulking (add 20% volume)
 
-- Flood mitigation – sea walls and levees
+    - Flood mitigation – sea walls and levees
 
-- Loss of storage due to buildings
+    - Loss of storage due to buildings
 
-- Street flow to urban outlying areas
+    - Street flow to urban outlying areas
 
-- Channel flow and storage
+    - Channel flow and storage
 
-- Loss of storm drain capacity with sea level rise
+    - Loss of storm drain capacity with sea level rise
 
 To simulate storm surges a time-stage relationship at the shoreline grid elements is required.
 This table can include high tides as well as multiple surge waves.
@@ -200,33 +200,33 @@ A typical time-stage relationship is shown below.
 
 In addition to the time-stage relationship, the model features that may define a coastal flood model are:
 
-- Rainfall
+    - Rainfall
 
-- Streets
+    - Streets
 
-- Storm drain system
+    - Storm drain system
 
-- Levees or flood walls
+    - Levees or flood walls
 
-- Estuary channels and drainage canals
+    - Estuary channels and drainage canals
 
-- Roughness
+    - Roughness
 
-- Hydraulic structures (culverts and bridges)
+    - Hydraulic structures (culverts and bridges)
 
-- Buildings
+    - Buildings
 
 A FLO-2D storm surge model was prepared for the Florida Keys using the ocean time-stage relationship
 associated with 2005 Hurricane Wilma (Figure 142).
 Using these area of inundation results, the products associated with coastal flood models include:
 
-- Prediction of the overland progression of the hurricane surge through urban area.
+    - Prediction of the overland progression of the hurricane surge through urban area.
 
-- Risk/hazard assessment on urban development and infrastructure (storm drain system).
+    - Risk/hazard assessment on urban development and infrastructure (storm drain system).
 
-- Estimate groundwater level rise and its impact on drainage and utilities.
+    - Estimate groundwater level rise and its impact on drainage and utilities.
 
-- Automatically estimate storm surge damage and mitigation costs.
+    - Automatically estimate storm surge damage and mitigation costs.
 
 .. image:: ../img/References/Chapter5/Chapte018.png
 
@@ -239,11 +239,11 @@ Model Results – What Constitutes a Successful Flood Simulation?
 When a FLO-2D simulation is completed, how do you know if the simulation was successful or accurate?
 There are three keys to a successful project application:
 
-- Volume conservation
+    - Volume conservation
 
-- Area of inundation
+    - Area of inundation
 
-- Maximum velocities and numerical surging
+    - Maximum velocities and numerical surging
 
 Volume must be conserved for both the overland flow and channel flow.
 If the storage plus outflow volume was not conserved on the order of 0.0001 percent or better of the
@@ -353,15 +353,15 @@ Typically, overtopping flow is shallow, but for a long bridge the overflow disch
 An assumption of weir flow to represent over deck discharge can only be an approximation because of
 several factors that are not limited to:
 
-- Tailwater submergence;
+    - Tailwater submergence;
 
-- Variable deck elevation;
+    - Variable deck elevation;
 
-- Unsteady flow conditions;
+    - Unsteady flow conditions;
 
-- Guardrail supports causing blockage and spatially variable flow;
+    - Guardrail supports causing blockage and spatially variable flow;
 
-- Debris blockage.
+    - Debris blockage.
 
 The bridge discharge computations will be performed inside the FLO-2D routing algorithm for the
 floodplain and 1-D channel components in conjunction with the existing hydraulic structure routine.
@@ -455,38 +455,40 @@ Outflow nodes were assigned to a channel element about 9 channel elements downst
 and to the channel element just upstream of the inflow node.
 The inflow hydrograph to achieve steady was assigned as follows:
 
-.. code-block::
+.. raw:: html
 
-   Time (hrs)    Q (cfs)
-      0.0          0.0
-      2.0          1,000
-      100          1,000
+    <pre>
+       Time (hrs)    Q (cfs)
+          0.0          0.0
+          2.0          1,000
+          100          1,000
+    </pre>
 
 The FLO-2D model was run for a simulation time of 6 hrs which was sufficient to achieve steady
 discharge at the bridge.
 The model was also setup with the following data and assumptions:
 
-- Identical channel n-values (0.032);
+    - Identical channel n-values (0.032);
 
-- Spatially variable overbank FLO-2D n-values that did not match the HEC-RAS model;
+    - Spatially variable overbank FLO-2D n-values that did not match the HEC-RAS model;
 
-- The upstream channel and bridge cross sections in the HEC-RAS model;
+    - The upstream channel and bridge cross sections in the HEC-RAS model;
 
-- The rest of the channel cross sections were the original ones in the FLO-2D model;
+    - The rest of the channel cross sections were the original ones in the FLO-2D model;
 
-- Type 1 bridge configuration with no abutment or embankment slopes (vertical);
+    - Type 1 bridge configuration with no abutment or embankment slopes (vertical);
 
-- Average low chord and deck elevations as determined from Figure 147;
+    - Average low chord and deck elevations as determined from Figure 147;
 
-- Deck length, bridge opening, and bridge width were determining from the HEC-RAS cross section;
+    - Deck length, bridge opening, and bridge width were determining from the HEC-RAS cross section;
 
-- Pile width was the sum of the 16 sets of individual pile widths;
+    - Pile width was the sum of the 16 sets of individual pile widths;
 
-- No flow angle of attach with the bridge;
+    - No flow angle of attach with the bridge;
 
-- No coefficient variation for Froude number which ranges from 0.2 to 0.3;
+    - No coefficient variation for Froude number which ranges from 0.2 to 0.3;
 
-- No assignment for overall free surface flow discharge coefficient (to be computed).
+    - No assignment for overall free surface flow discharge coefficient (to be computed).
 
 Model Comparison Results
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -502,24 +504,24 @@ The BRIDGE_DISCHARGE.OUT and HYDROSTRUCT.OUT files verified that the steady stat
 exactly for those flows which were less than the channel conveyance capacity of about 5,000 cfs.
 The only FLO-2D model revisions were:
 
-- Adjustments were made to several channel element Mannings n-values.
-  These n-value revisions were less than 0.005.
+    - Adjustments were made to several channel element Mannings n-values.
+      These n-value revisions were less than 0.005.
 
-- Outflow nodes were added upstream and downstream of the bridge to having to use the entire
-  Rio Grande model.
+    - Outflow nodes were added upstream and downstream of the bridge to having to use the entire
+      Rio Grande model.
 
 No attempt was made to accommodate the HEC-RAS model 1-D constraints with respect to the floodplain
 conditions including roadway approach, levee overtopping, or flow upstream or downstream past the
 outflow nodes.
 The following FLO-2D limitations were noted with respect to the overbank floodplain discharge:
 
-- Floodplain storage was not filled to match the HEC-RAS 1-D steady flow inundation.
-  No floodplain outflow nodes were assigned, and floodplain flow bypassed the channel outflow nodes
-  both upstream and downstream.
+    - Floodplain storage was not filled to match the HEC-RAS 1-D steady flow inundation.
+      No floodplain outflow nodes were assigned, and floodplain flow bypassed the channel outflow nodes
+      both upstream and downstream.
 
-- Overbank flow upstream re-entered the channel and flowed upstream in the channel.
+    - Overbank flow upstream re-entered the channel and flowed upstream in the channel.
 
-- Downstream overbank flow bypassed the outflow node and re-entered the channel.
+    - Downstream overbank flow bypassed the outflow node and re-entered the channel.
 
 Of the three flow regimes, free surface flow, pressure flow and weir flow plus pressure flow, the most
 critical comparison is for the free surface flow regime water surface elevation because this
