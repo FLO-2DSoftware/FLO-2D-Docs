@@ -262,7 +262,7 @@ Data location: QGIS Tutorials/QGIS Lesson 2/Lesson 2/Advanced Debug Run (Figure 
 *Figure 94.
 Example Debug Output Files.*
 
-Click Yes to load both extra error check files (Figure 95).
+Click **Yes** to load both extra error check files (Figure 95).
 
 .. image:: ../img/Channel_Modeling_Guidelines/Chapter3/image23.png
 
