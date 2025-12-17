@@ -580,9 +580,11 @@ The MAXPLOT post processor program is a simple tool for graphically displaying F
 It has been updated to include the new two phase flow output files.
 These output files have the format:
 
-Cell No.
-X-Coordinate Y-Coordinate Variable
+.. raw:: html
 
+    <pre>
+    Cell No.       X-Coordinate        Y-Coordinate        Variable
+    </pre>
 The variables are listed below in the following files (both existing and new files):
 
     - CVTFPMAX.OUT: Maximum fluid phase sediment concentration by volume Cv.
@@ -916,10 +918,10 @@ Maximum Flow Depth Combined Channel and Floodplain Flow.*
 Channel Bed and Maximum Fluid/Mudflow Surface Profile (PROFILES Program).*
 
 Recommendations
-===============
+---------------------
 
 Data Collection
----------------
+^^^^^^^^^^^^^^^^^^^^
 
 This tailings dam breach data collection discussion provides an overview of potential data needs to conduct a FLO-2D two phase flow breach simulation.
 The data is cataloged as either required or optional in the following table.
@@ -931,18 +933,16 @@ tailings dam breach. The FLO-2D model can simulate these components if
 the downstream area of inundation of the tailings dam breach flooding is
 required.
 
-- Evaporation
-
-- Storm drain and groundwater
-
-- Multiple channels
+    - Evaporation
+    - Storm drain and groundwater
+    - Multiple channels
 
 To model the downstream area of inundation with these additional components, use the floodplain cross section component (HYCROSS.OUT) to generate the
 tailings dam breach hydrograph below the dam or use the breach hydrograph (BREACH.OUT or PRESCRIBED_BREACHQ.OUT) as an inflow hydrograph (INFLOW.DAT)
 to simulate the downstream flooding in a second model.
 
 Sediment Transport Approach
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Of the eleven available sediment transport equations, several are suggested for the first simulations.
 All the equations can be applied in each tailings dam two phase flow breach model.
@@ -952,11 +952,9 @@ The SEDTRAN.OUT file lists the sediment discharge (cfs or cms) for all eleven eq
 Comparing the peak sediment loads in the SEDTRAN.OUT file for the grid element downstream of the tailings dam breach in the previous example project,
 the following conclusions can be drawn:
 
-- Low Peak Sediment Discharge Equations: Laursen, Toffaleti, Karim-Kennedy
-
-- Moderate Peak Sediment Discharge Equations: Zeller-Fullerton, Yang, Ackers-White, MPM-Woo, MPM-Smart, Van Rijn
-
-- High Peak Sediment Discharge Equations: Engelund-Hansen, Parker, Klingeman & McClean
+    - Low Peak Sediment Discharge Equations: Laursen, Toffaleti, Karim-Kennedy
+    - Moderate Peak Sediment Discharge Equations: Zeller-Fullerton, Yang, Ackers-White, MPM-Woo, MPM-Smart, Van Rijn
+    - High Peak Sediment Discharge Equations: Engelund-Hansen, Parker, Klingeman & McClean
 
 There is roughly an order of magnitude difference between these three categories.
 This can be misleading, however, since local conditions such as a steep slope or high depth can result in a large variation in the results (e.g., MPM-
@@ -975,7 +973,7 @@ The maximum depths and area of inundation should also be reviewed to determine t
 equations.
 
 Mudflow Parameters
-------------------
+^^^^^^^^^^^^^^^^^^^^
 
 .. math::
    :label:
@@ -1033,45 +1031,45 @@ If rheological laboratory investigations are performed, the data should fall wit
 worldwide (Figures B.1 and B.2 in Appendix B).
 Recommendations for a tailings laboratory investigation are:
 
-1. Collect undisturbed tailings deposit samples and sieve the samples for the clay-silt/sand split to determine the percentage of fine sediment in the
-   flow material.
-   Additional soil analyses such as the Plastic Index and Liquid Limit may also be informative.
+    1. Collect undisturbed tailings deposit samples and sieve the samples for the clay-silt/sand split to determine the percentage of fine sediment in the
+       flow material.
+       Additional soil analyses such as the Plastic Index and Liquid Limit may also be informative.
 
-2. Starting with a dry deposit sample of the fluid matrix material, re-wet the sample based on accurate measurements of the weight of the sediment sample
-   and the added water to determine concentration by volume.
-   Record the observations by referencing Table 1.
-   By sloshing the rewetted tailings in a container, determine if the mudflow appears to be very viscous or rather dilute.
-   Did the flow behave like wet cement or more like a mud flood?
+    2. Starting with a dry deposit sample of the fluid matrix material, re-wet the sample based on accurate measurements of the weight of the sediment sample
+       and the added water to determine concentration by volume.
+       Record the observations by referencing Table 1.
+       By sloshing the rewetted tailings in a container, determine if the mudflow appears to be very viscous or rather dilute.
+       Did the flow behave like wet cement or more like a mud flood?
 
-3. Using a commercially available viscometer, determine the forces or stress required to initiate motion in the viscometer.
-   This is the yield stress.
-   Run the viscometer at low speeds (up to 10 sec\ :sup:`-1` - rotational speed) to measure the viscosity (line slope of the stress versus rate of strain
-   plot) for the various sediment concentrations by volume.
+    3. Using a commercially available viscometer, determine the forces or stress required to initiate motion in the viscometer.
+       This is the yield stress.
+       Run the viscometer at low speeds (up to 10 sec\ :sup:`-1` - rotational speed) to measure the viscosity (line slope of the stress versus rate of strain
+       plot) for the various sediment concentrations by volume.
 
-4. Regress the viscosity and yield stress data as exponential function of the concentration as noted in the above equations.
+    4. Regress the viscosity and yield stress data as exponential function of the concentration as noted in the above equations.
 
 If a subjective judgment is required to select a set of rheological relationships, the following approach is recommended:
 
-1. Observe field or historical tailings dam conditions including depositional characteristics in the tailings deposits.
-   Use available aerial photos.
-   Determine if the tailings deposits appear to be very viscous or rather dilute.
-   Did the flow behave like wet cement or like a fluid muddy flood? Did the inflow to the tailings pond cease immediately or continue flowing over the
-   deposits? Are there frontal wave terminal berms or lateral berm deposits?
+    1. Observe field or historical tailings dam conditions including depositional characteristics in the tailings deposits.
+       Use available aerial photos.
+       Determine if the tailings deposits appear to be very viscous or rather dilute.
+       Did the flow behave like wet cement or like a fluid muddy flood? Did the inflow to the tailings pond cease immediately or continue flowing over the
+       deposits? Are there frontal wave terminal berms or lateral berm deposits?
 
-2. If it is determined that the potential tailings flow could be viscous with a moderate yield stress, select a sample from guidelines tables that will
-   result in a viscosity and yield stress in an appropriate range in guideline figures.
-   Glenwood 4 in Appendix Table B.1 is suggested as a typical type of tailings material that will behave like wet cement.
-   Similarly, if it is assumed that the flow more resembled a mud flood with limited viscosity and yield stress, select parameters corresponding to a
-   Table B.1 sample such as the Aspen Natural Soil.
-   Compute the viscosity and yield stress for several different samples in the B.1 Tables and Figures B.1 and B.2 for a range of concentrations by volume
-   and compare the results in a worksheet table.
+    2. If it is determined that the potential tailings flow could be viscous with a moderate yield stress, select a sample from guidelines tables that will
+       result in a viscosity and yield stress in an appropriate range in guideline figures.
+       Glenwood 4 in Appendix Table B.1 is suggested as a typical type of tailings material that will behave like wet cement.
+       Similarly, if it is assumed that the flow more resembled a mud flood with limited viscosity and yield stress, select parameters corresponding to a
+       Table B.1 sample such as the Aspen Natural Soil.
+       Compute the viscosity and yield stress for several different samples in the B.1 Tables and Figures B.1 and B.2 for a range of concentrations by volume
+       and compare the results in a worksheet table.
 
-3. Run several FLO-2D mudflow simulations with different sample viscosity and yield stress relationships and analyze the range of flow results such as
-   area of inundation, maximum depths, maximum velocities, peak discharges, etc.
-   Determine the worst-case scenario for your project conditions.
+    3. Run several FLO-2D mudflow simulations with different sample viscosity and yield stress relationships and analyze the range of flow results such as
+       area of inundation, maximum depths, maximum velocities, peak discharges, etc.
+       Determine the worst-case scenario for your project conditions.
 
 Tailings Dam Breach Methods
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If a tailings dam with water storage breaches, initially the water is released and scours the stationary tailings material in reservoir at the breach
 as the breach expands.
@@ -1102,15 +1100,21 @@ To set up a stack failure, the tailings facility is initially assigned a levee d
 storage cells (Figure 25).
 The starting water surface and tailings surface (or just tailing surface with no supernatant fluid) are assigned in INFLOW.DAT R-Line:
 
-R 28776 4506.00 4501.00 0.25
+.. raw:: html
 
-where: 28776 is a grid element inside the reservoir
+    <pre>
+    R 28776 4506.00 4501.00 0.25
+    </pre>
 
-4506.00 = water surface elevation
+where:
 
-4501.00 = tailings surface elevation
+    28776 is a grid element inside the reservoir
 
-0.250 = reservoir n-value
+    4506.00 = water surface elevation
+
+    4501.00 = tailings surface elevation
+
+    0.250 = reservoir n-value
 
 At this stage, run theFLO-2D model with SIMUL = 0.01 hrs and TOUT = 0.01 hrs and the model will start and stop.
 Review the SUMMARY.OUT file for the reported volumes and adjust the grid element foundation or bed elevations until the tailing storage volume is
@@ -1150,19 +1154,13 @@ The Tailings Facility is Draining after 0.45 hrs.*
 channel, and/or dam collapse as block failure.
 Computing the tailings dam scour is requires more data and the following dam geometry parameters are required:
 
-- Crest elevation
-
-- Starting water surface elevation (or depth below crest) (ft or m)
-
-- Cumulative duration of inundation at specified elevation prior to breach initiation (hr)
-
-- Maximum breach width (ft or m)
-
-- Prescribed initial pipe elevation (ft or m)
-
-- Tailwater elevation (ft or m)
-
-- Foundation or base elevation for vertical breach cessation (ft or m)
+    - Crest elevation
+    - Starting water surface elevation (or depth below crest) (ft or m)
+    - Cumulative duration of inundation at specified elevation prior to breach initiation (hr)
+    - Maximum breach width (ft or m)
+    - Prescribed initial pipe elevation (ft or m)
+    - Tailwater elevation (ft or m)
+    - Foundation or base elevation for vertical breach cessation (ft or m)
 
 In addition, there are dam shell (and infrequently, a potential dam core) material parameters that are required.
 These parameters have variable levels of sensitivity as presented in Table 4.
@@ -1186,7 +1184,7 @@ at the FLO-2D website. There are also PowerPoint presentations on this
 subject.
 
 What to Review - Summary
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 After the successful completion of a FLO-2D tailings dam breach two phase flow simulation the following output files and results listed in Table 5
 below should be reviewed.
@@ -1216,7 +1214,7 @@ This should match the volume predicted by the Tailings Dam Tool shown in Figure 
 .. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two046.png
 
 References
-==========
+-----------
 
    Amoudry, L.O., 2008.
    “Two-Phase Modeling of Granular Sediment for Sheet Flows and Scour,” Ph.D.
@@ -1260,7 +1258,7 @@ References
 .. _section-3:
 
 Appendix A. Sediment Transport Equations
-========================================
+------------------------------------------
 
 Only one equation is selected to compute the sediment transport capacity in the tailings dam breach simulation, but one floodplain element can be
 assigned to review and compare the sediment transport capacity results for all eleven equations by output interval in the SEDTRAN.OUT file.
@@ -1431,17 +1429,17 @@ and that Engelund-Hansen, MPM-Smart, and Parker, Klingeman & McClean are the mos
 In summary, Yang (1996) made several recommendations for the application of total load sediment transport formulas in the absence of measured data.
 These recommendations for natural rivers are:
 
-- Use Zeller and Fullerton equation when the bedload is a significant portion of the total load.
+    - Use Zeller and Fullerton equation when the bedload is a significant portion of the total load.
 
-- Use Toffaleti’s method or the Karim-Kennedy equation for large sand-bed rivers.
+    - Use Toffaleti’s method or the Karim-Kennedy equation for large sand-bed rivers.
 
-- Use Yang’s equation for sand and gravel transport in natural rivers.
+    - Use Yang’s equation for sand and gravel transport in natural rivers.
 
-- Use Ackers-White or Engelund-Hansen for subcritical flow in lower sediment transport regime.
+    - Use Ackers-White or Engelund-Hansen for subcritical flow in lower sediment transport regime.
 
-- Use Laursen’s formula for shallow rivers with silt and fine sand.
+    - Use Laursen’s formula for shallow rivers with silt and fine sand.
 
-- Use MPM-Woo’s or MPM-Smart for steep slope, arroyo sand bed channels and alluvial fans.
+    - Use MPM-Woo’s or MPM-Smart for steep slope, arroyo sand bed channels and alluvial fans.
 
 Yang (1996) reported that ASCE ranked the equations (not including Toffaleti, MPM-Woo, Karin-Kennedy) in 1982 based on 40 field tests and 165 flume
 measurements in terms of the best overall predictions as follows with Yang ranking the highest: Yang, Laursen, Ackers-White, Engelund-Hansen, and
@@ -1576,7 +1574,7 @@ F.
 Lagasse, eds., Colorado State University and ASCE.
 
 Appendix B. Tailings Dam Mudflows
-=================================
+----------------------------------
 
 Very viscous, hyperconcentrated sediment flows are referred to as mudflows.
 Mudflows are nonhomogeneous, nonNewtonian, transient flood events whose fluid properties can change significantly as they flow down steep canyons and
@@ -1641,7 +1639,7 @@ Yield Stress of Mudflow Samples Versus Volumetric Concentration.
 .. _section-4:
 
 Appendix C. Model Speed and Numerical Stability Adjustments
-===========================================================
+-------------------------------------------------------------
 
 Use the default Courant number (0.6) and TIME_ACCEL (0.1) for the initial simulation and then review the VELTIMEFP.OUT file that reports the maximum
 velocities in descending order to determine if there are any unreasonable velocities.
@@ -1649,25 +1647,25 @@ Finally, verify the model stability by reviewing the SUPER.OUT file for high max
 Review the troubleshooting and numerical stability PowerPoint presentations in the FLO-2D help folder for more detailed information.
 The following approach is suggested for adjusting slow down the model to eliminate numerical instability:
 
-1. If the model has no numerical surging or unreasonable maximum velocities and it is desired to have the model run faster, increase the TIME_ACCEL
-   parameter from 0.1 to 0.2 and run the model again.
-   If the model runs faster and the results still do not indicate any numerical instability, then increase TIME_ACCEL to 0.25.
-   Some numerical instability may begin to appear in VELTIMFP.OUT when TIME_ACCEL is 0.3 or higher.
+    1. If the model has no numerical surging or unreasonable maximum velocities and it is desired to have the model run faster, increase the TIME_ACCEL
+       parameter from 0.1 to 0.2 and run the model again.
+       If the model runs faster and the results still do not indicate any numerical instability, then increase TIME_ACCEL to 0.25.
+       Some numerical instability may begin to appear in VELTIMFP.OUT when TIME_ACCEL is 0.3 or higher.
 
-2. When unreasonable velocities or Froude numbers are noted, decrease the TIME_ACCEL by 0.05.
-   Review the model runtime at the end of the SUMMARY.OUT file and do the various numerical instability checks.
-   At this point, a pattern will probably be apparent and the optimum Courant number and TIME_ACCEL parameter can be achieved.
-   If the model becomes numerically stable with the decreased TIME_ACCEL, it may be possible to increase the Courant number to achieve a slightly faster
-   model.
+    2. When unreasonable velocities or Froude numbers are noted, decrease the TIME_ACCEL by 0.05.
+       Review the model runtime at the end of the SUMMARY.OUT file and do the various numerical instability checks.
+       At this point, a pattern will probably be apparent and the optimum Courant number and TIME_ACCEL parameter can be achieved.
+       If the model becomes numerically stable with the decreased TIME_ACCEL, it may be possible to increase the Courant number to achieve a slightly faster
+       model.
 
-3. If the model has some initial numerical instability, leave the TIME_ACCEL at the default value of 0.1 and decrease the Courant Number from 0.6 to 0.5
-   to 0.4 over several runs until the numerical instability is eliminated.
-   Data adjustments to eliminate numerical surging might include increasing n-values using the limiting Froude number and the ROUGH.OUT file.
-   Depressed grid elements, deep ponded water or steep slopes may also contribute to unreasonably high maximum velocities.
+    3. If the model has some initial numerical instability, leave the TIME_ACCEL at the default value of 0.1 and decrease the Courant Number from 0.6 to 0.5
+       to 0.4 over several runs until the numerical instability is eliminated.
+       Data adjustments to eliminate numerical surging might include increasing n-values using the limiting Froude number and the ROUGH.OUT file.
+       Depressed grid elements, deep ponded water or steep slopes may also contribute to unreasonably high maximum velocities.
 
-4. Following each flood simulation, the TIME.OUT file should be reviewed to determine which of the grid elements are frequently exceeding the Courant
-   timestep and contributing to a slow model speed.
-   For those grid elements with excessive timestep decrements, adjustments can be made to the node attributes such as topography, roughness, available
-   surface area (area reduction values ARFs) or width reduction values (WRFs).
+    4. Following each flood simulation, the TIME.OUT file should be reviewed to determine which of the grid elements are frequently exceeding the Courant
+       timestep and contributing to a slow model speed.
+       For those grid elements with excessive timestep decrements, adjustments can be made to the node attributes such as topography, roughness, available
+       surface area (area reduction values ARFs) or width reduction values (WRFs).
 
 
