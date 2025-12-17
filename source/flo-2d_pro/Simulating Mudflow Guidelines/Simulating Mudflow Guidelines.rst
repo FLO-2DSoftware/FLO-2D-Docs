@@ -1,9 +1,7 @@
 
-
 .. vim: syntax=rst
 
 .. _mudflow_guidelines:
-
 
 Simulating Mudflow Guidelines
 =============================
@@ -32,11 +30,9 @@ Fluid motion is considered to be Newtonian when the shear stress is a linear fun
 nonlinear and is more complex.
 NonNewtonian fluids may be divided into three categories:
 
-- Fluids with a non-linear relationship between shear stress and shear rate;
-
-- Fluids in which the shear stress not only depends on shear rate but is also a function of the time of shearing;
-
-- Fluids that are viscoelastic and exhibit characteristics of both elastic solids and viscous fluids.
+    - Fluids with a non-linear relationship between shear stress and shear rate;
+    - Fluids in which the shear stress not only depends on shear rate but is also a function of the time of shearing;
+    - Fluids that are viscoelastic and exhibit characteristics of both elastic solids and viscous fluids.
 
 Sediment particle motion that exhibits pore water pressure or significant dispersive stress falls into the category of bulk solids movement as either
 landslides or granular flows and should not be considered as fluid motion.
@@ -272,14 +268,12 @@ where:
     τ\ :sub:`d` = dispersive shear stress.
 
 
-
 When written in terms of the shear rate (dv/dy) the following quadratic rheological model can be defined (O'Brien and Julien, 1985):
 
 .. math::
    :label:
 
     τ = τ_y + η \frac{dv}{dy} + C \left(\frac{dv}{dy}\right)^2
-
 
 where
 
@@ -590,15 +584,11 @@ losses due to infiltration or evaporation and storage remaining on the floodplai
 The routed sediment volume can then be compared with the potential sediment yield in the upstream watershed.
 The possible sources of sediment include:
 
-- Landslides.
-
-- Hillslope sloughing.
-
-- Channel bank failure.
-
-- Channel bed scour.
-
-- Overland sediment yield (includes rills and gullies).
+    - Landslides.
+    - Hillslope sloughing.
+    - Channel bank failure.
+    - Channel bed scour.
+    - Overland sediment yield (includes rills and gullies).
 
 Various techniques can be employed to predict sediment supply and should be checked with field observations.
 If landslide scarps or hillslope failure are evident, it is likely that these sediment loading mechanisms will occur during large infrequent storm
@@ -628,18 +618,13 @@ The highly variable nature of the sediment concentration gives rise to unsteady 
 replicated with any degree of certainty.
 When assigning sediment concentrations to a flood hydrograph the following guidelines are suggested:
 
-- The average sediment concentration should reflect the estimated water and sediment volumes for the design storm.
-
-- The sediment volume should not exceed the estimated maximum potential sediment yield observed for the basin.
-
-- The steep rising limb of the hydrograph should be bulked with the highest sediment concentrations to simulate the frontal wave.
-
-- The peak discharge should be assigned a sediment concentration slightly less than the frontal wave to account for water dilution.
-
-- The rising and following limbs of the hydrographs should not have less than 20% sediment concentration by volume.
-
-- To generate a mudflow the average sediment concentration for the entire hydrograph should be in the range of 25% to 35% by volume with the frontal
-  wave peak concentration on the order of 45% to 53% concentration by volume.
+    - The average sediment concentration should reflect the estimated water and sediment volumes for the design storm.
+    - The sediment volume should not exceed the estimated maximum potential sediment yield observed for the basin.
+    - The steep rising limb of the hydrograph should be bulked with the highest sediment concentrations to simulate the frontal wave.
+    - The peak discharge should be assigned a sediment concentration slightly less than the frontal wave to account for water dilution.
+    - The rising and following limbs of the hydrographs should not have less than 20% sediment concentration by volume.
+    - To generate a mudflow the average sediment concentration for the entire hydrograph should be in the range of 25% to 35% by volume with the frontal
+      wave peak concentration on the order of 45% to 53% concentration by volume.
 
 The effects of bulking a flood hydrograph with high concentrations of sediment are multifaceted.
 In the following figure the 100-year design storm water flood and mudflow are shown for watershed near Colorado Springs, Colorado.
@@ -707,44 +692,39 @@ This data as displayed in Figures 3 and 4 follows a relatively narrow band.
 The variability of this data is primarily a function of the type and quantity of clay material in the sample.
 If rheological laboratory investigations are performed for a project site, the data should fall within the banded range given the diverse range of
 data collected worldwide.
-If a subjective judgment to select a set of rheological relationships is necessary, one of the following approach is recommended.
+If a subjective judgment to select a set of rheological relationships is necessary, one of the following approach is recommended:
 
-A. If mudflow deposit field data of the fluid matrix is collected, this analysis is suggested:
+    A. If mudflow deposit field data of the fluid matrix is collected, this analysis is suggested:
 
-1. Observe the field post event conditions including deposits and available photos.
-   Determine if the mudflows appear to be very viscous or rather dilute.
-   Did the flow behave like wet cement or like a mud flood?
+        1. Observe the field post event conditions including deposits and available photos.
+           Determine if the mudflows appear to be very viscous or rather dilute.
+           Did the flow behave like wet cement or like a mud flood?
+        2. Collect undisturbed deposit samples and sieve the samples for the clay-silt/sand split to determine the percentage of fine sediment in the flow
+           material.
+           Additional soil analyses such as the Plastic Index and Liquid Limit may also be informative.
+        3. Starting with a dry deposit sample of the fluid matrix material, re-wet the sample based on accurate measurements of the weight or volume of the
+           sediment sample and the added water to determine concentration by volume. Record the observations by referencing Table 1.
+        4. If it is determined that the flow was very viscous with a moderate yield stress, select a sample from Table 3 that will result in a viscosity and
+           yield stress in an appropriate range in Figures 3 and 4. Glenwood 4 is suggested as a typical type of flow material that will behave like wet
+           cement. Similarly, if it is assumed that the flow more resembled a mud flood with limited viscosity and yield stress, select parameters
+           corresponding to a sample such as the Aspen Natural Soil. Compute the viscosity and yield stress for several different samples for a
+           range of concentrations by volume and compare the results in a table.
 
-2. Collect undisturbed deposit samples and sieve the samples for the clay-silt/sand split to determine the percentage of fine sediment in the flow
-   material.
-   Additional soil analyses such as the Plastic Index and Liquid Limit may also be informative.
+    B. If no field data is available and only a subjective interpretation of the mudflow fluid properties will be applied, then the following approach is
+       recommended.
 
-3. Starting with a dry deposit sample of the fluid matrix material, re-wet the sample based on accurate measurements of the weight or volume of the
-   sediment sample and the added water to determine concentration by volume. Record the observations by referencing Table 1.
-
-4. If it is determined that the flow was very viscous with a moderate yield stress, select a sample from Table 3 that will result in a viscosity and
-   yield stress in an appropriate range in Figures 3 and 4. Glenwood 4 is suggested as a typical type of flow material that will behave like wet
-   cement. Similarly, if it is assumed that the flow more resembled a mud flood with limited viscosity and yield stress, select parameters
-   corresponding to a sample such as the Aspen Natural Soil. Compute the viscosity and yield stress for several different samples for a
-   range of concentrations by volume and compare the results in a table.
-
-B. If no field data is available and only a subjective interpretation of the mudflow fluid properties will be applied, then the following approach is
-   recommended.
-
-1. Observe the field post event conditions including deposits and available photos.
-   Determine if the mudflows appear to be very viscous or rather dilute.
-   Did the flow behave like wet cement or like a mud flood? Did the flow cease? Are there frontal wave terminal berms or lateral boulder levee deposits?
-
-2. If the flow was very viscous with a moderate yield stress, select a sample from Table 3 that will result in a viscosity and yield stress in an
-   appropriate range in Figures 3 and 4.
-   Glenwood 4 is suggested as a typical type of flow material that will behave like wet cement.
-   Similarly, if it is assumed that the flow more resembled a mud flood with limited viscosity and yield stress, select parameters corresponding to a
-   sample such as the Aspen Natural Soil.
-   Compute the viscosity and yield stress for several different samples for a range of concentrations by volume and compare the results in a table.
-
-3. Run several FLO-2D mudflow simulations with different sample viscosity and yield stress relationship and analyze the ranges of flow hydraulics such as
-   area of inundation, maximum depths, maximum velocities, peak discharges, etc.
-   Determine the worst case scenario for you project conditions.
+        1. Observe the field post event conditions including deposits and available photos.
+           Determine if the mudflows appear to be very viscous or rather dilute.
+           Did the flow behave like wet cement or like a mud flood? Did the flow cease? Are there frontal wave terminal berms or lateral boulder levee deposits?
+        2. If the flow was very viscous with a moderate yield stress, select a sample from Table 3 that will result in a viscosity and yield stress in an
+           appropriate range in Figures 3 and 4.
+           Glenwood 4 is suggested as a typical type of flow material that will behave like wet cement.
+           Similarly, if it is assumed that the flow more resembled a mud flood with limited viscosity and yield stress, select parameters corresponding to a
+           sample such as the Aspen Natural Soil.
+           Compute the viscosity and yield stress for several different samples for a range of concentrations by volume and compare the results in a table.
+        3. Run several FLO-2D mudflow simulations with different sample viscosity and yield stress relationship and analyze the ranges of flow hydraulics such as
+           area of inundation, maximum depths, maximum velocities, peak discharges, etc.
+           Determine the worst case scenario for you project conditions.
 
 Dispersion Stress Considerations
 --------------------------------
@@ -753,11 +733,9 @@ For flows with high concentrations of non-cohesive sediment particles and relati
 dispersive stress can play a role in slowing down the velocity.
 Granular flows that can be prescribed by the dispersive stress relationship alone require that three simultaneous conditions be satisfied:
 
-1. The sediment concentration is very high (> 50% by volume).
-
-2. There are Large velocity gradients typically exceeding 10 s\ :sup:`-1`.
-
-3. The sediment particles are large in relationship to the flow depth (~ 10% of flow depth).
+    1. The sediment concentration is very high (> 50% by volume).
+    2. There are Large velocity gradients typically exceeding 10 s\ :sup:`-1`.
+    3. The sediment particles are large in relationship to the flow depth (~ 10% of flow depth).
 
 Julien and Lan (1991) proposed a dimensionless form of the quadratic rheological model:
 
@@ -797,11 +775,9 @@ where:
 
 To apply these relationships the following guidelines are suggested (Julien and O’Brien, 1997):
 
-- If D\ :sub:`v` < 30, viscous shear stress is dominant and mudflows should be expected.
-
-- If D\ :sub:`v` > 400 and T\ :sub:`d` > 1, the turbulent shear stress is dominant and mud floods should occur.
-
-- If D\ :sub:`v` > 400 and T\ :sub:`d` < 1, the dispersive stress is dominant and granular flows are projected.
+    - If D\ :sub:`v` < 30, viscous shear stress is dominant and mudflows should be expected.
+    - If D\ :sub:`v` > 400 and T\ :sub:`d` > 1, the turbulent shear stress is dominant and mud floods should occur.
+    - If D\ :sub:`v` > 400 and T\ :sub:`d` < 1, the dispersive stress is dominant and granular flows are projected.
 
 A transition regime exists when 30 < D\ :sub:`v` < 400 in which all the quadratic rheological equation terms are not negligible.
 
@@ -828,7 +804,7 @@ exceeds 53%.
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula023.png
 
 References
-==========
+-----------
 
 Bagnold, R.A., 1954.
 "Experiments on a gravity-free dispersion of large solid spheres in a Newtonian fluid under shear," *Proc.
