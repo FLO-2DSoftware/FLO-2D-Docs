@@ -772,15 +772,21 @@ number for each timestep.
 If the limiting Froude number is exceeded, the Manning’s n-value is increased according to the following
 criteria:
 
-percent change from the original n-value n-value increment increase
+.. raw:: html
 
-< 20 0.0002
+    <pre>
+         percent change
+    from the original n-value                   n-value increment increase
 
-20 < % < 50 0.0001
+             < 20                                         0.0002
+          20 < % < 50                                     0.0001
+          50 < % < 100                                    0.00002
+          100 < % < 200                                   0.000002
+    </pre>
 
-50 < % < 100 0.00002
+.. raw:: html
 
-100 < % < 200 0.000002
+    <br>
 
 On the recessional limb, when the limiting Froude number is no longer exceeded, the n-value is decreased
 by 0.0001.
