@@ -1221,6 +1221,7 @@ The parameters for a pump in the storm drain system are:
     - Names of the inlet and outlet nodes
     - Pump curve name
     - Pump Type:
+
         - Type1: series of constant flow rates that apply over a corresponding series of volume intervals at
           the pump’s inlet node.
         - Type2: like type1 but the fixed flow rates vary over a set of depth intervals at the pump’s inlet node.
