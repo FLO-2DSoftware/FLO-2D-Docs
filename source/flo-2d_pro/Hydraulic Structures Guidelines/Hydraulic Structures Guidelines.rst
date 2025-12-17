@@ -35,23 +35,15 @@ can be used to simulate blockage with a zero coefficient for the height of the b
 Flow can also reverse and go upstream through a hydraulic structure.
 Hydraulic structures may include:
 
-- Broadcrested weir such as a berm or embankment (Figure 1);
-
-- Sharp crested weir such as a wall;
-
-- Channel side retention basin control weirs;
-
-- Spillways or outlet works from a dam (e.g. Ogee Weir);
-
-- Culverts;
-
-- Bridges;
-
-- Detention basin pumps;
-
-- Highway dip crossings;
-
-- Pumps
+    - Broadcrested weir such as a berm or embankment (Figure 1);
+    - Sharp crested weir such as a wall;
+    - Channel side retention basin control weirs;
+    - Spillways or outlet works from a dam (e.g. Ogee Weir);
+    - Culverts;
+    - Bridges;
+    - Detention basin pumps;
+    - Highway dip crossings;
+    - Pumps
 
 .. image:: ../img/Hydraulic_Structures_Guidelines/Hydrau002.jpeg
 
@@ -100,27 +92,19 @@ degrees) and three entrance types for pipe culverts (square edge with headwall, 
 and socket end projecting).
 The highlights of this new component are:
 
-- Computes discharge through box or circular pipe culverts for various entrance conditions.
-
-- Computes both inlet and outlet control and the transition between them.
-
-- No rating curves or tables required.
+    - Computes discharge through box or circular pipe culverts for various entrance conditions.
+    - Computes both inlet and outlet control and the transition between them.
+    - No rating curves or tables required.
 
 The data required for the generalized culvert equations include (Figure 4):
 
-- Length
-
-- Diameter
-
-- Rectangular Width
-
-- Type – Box or Pipe
-
-- Entrance Type (3)
-
-- Entrance Loss Coefficient
-
-- Roughness
+    - Length
+    - Diameter
+    - Rectangular Width
+    - Type – Box or Pipe
+    - Entrance Type (3)
+    - Entrance Loss Coefficient
+    - Roughness
 
 .. image:: ../img/Hydraulic_Structures_Guidelines/Hydrau005.jpeg
 
@@ -290,24 +274,17 @@ cycle again.
 
 Warning Messages are written to the ERROR.CHK file for the following structure issues:
 
-- Adverse slope between the structure inlet and outlet nodes;
-
-- Inlet or outlet nodes that also contain levee, streets or ARF’s;
-
-- Rating tables with a non-zero first pair of stage-discharge values (must be 0.
-  and 0.);
-
-- The rate of increase in the rating table values is unreasonably high.
+    - Adverse slope between the structure inlet and outlet nodes;
+    - Inlet or outlet nodes that also contain levee, streets or ARF’s;
+    - Rating tables with a non-zero first pair of stage-discharge values (must be 0.and 0.);
+    - The rate of increase in the rating table values is unreasonably high.
 
 Error Messages are written to the ERROR.CHK file for the following conditions:
 
-- Reference elevation is lower than the inflow or outflow grid elevations.
-
-- Grid system Inflow or outflow nodes are also assigned as hydraulic structures.
-
-- Assignment of a channel element to more than one hydraulic structure inlet node.
-
-- Rating table must have increasing stage and Q.
+    - Reference elevation is lower than the inflow or outflow grid elevations.
+    - Grid system Inflow or outflow nodes are also assigned as hydraulic structures.
+    - Assignment of a channel element to more than one hydraulic structure inlet node.
+    - Rating table must have increasing stage and Q.
 
 The most frequent problem with application of the hydraulic structure routine is a rating table that is
 mismatched with an upstream flow condition.
@@ -323,11 +300,10 @@ If surging is noted in the hydraulic structure hydrograph or the channel hydrogr
 the rating table or curve will probably need adjustment.
 The following conditions should be reviewed:
 
-- Shallow flows less than 1 ft in depth with velocity > 5 fps.
-  Warning message
-
-- Downstream WSEL > upstream WSEL with INOUTCONT < 2 (potential upstream flow thru the structure).
-  Warning message.
+    - Shallow flows less than 1 ft in depth with velocity > 5 fps.
+      Warning message
+    - Downstream WSEL > upstream WSEL with INOUTCONT < 2 (potential upstream flow thru the structure).
+      Warning message.
 
 Rating table adjusted with SUBFACTOR.
 Warning message and revised table values are written to **REVISED_RATING_TABLE.OUT** file.
