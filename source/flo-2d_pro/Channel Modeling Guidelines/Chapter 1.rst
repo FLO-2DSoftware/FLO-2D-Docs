@@ -597,7 +597,11 @@ where:
 
     V = depth averaged velocity
 
-    c = floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the flow depth
+    c = floodwave celerity = (gd)\ :sup:`0.5` where:
+
+        g = gravitation acceleration
+
+        d = the flow depth
 
 The Courant Number C can vary from 0.0 to 1.0 (recommended range 0.2 to 0.6), and a value of 1.0 in FLO-2D
 would enable the model to have the largest possible timestep.
@@ -870,17 +874,55 @@ CHVOLUME.OUT (Figure 25) is listed below:
 CHVOLUME.OUT Example.*
 
 Channel data issues that might lead to a volume conservation error include:
+   - Inappropriate Profile
+   - Wrong or missing channel elements (typos)
+   - No channel outflow element
+   - Missing bank stations in the cross section data
+   - Conflicts with hydraulic structures or other components
+   - Radical cross section shape or area changes between two contiguous elements
+
+Channel data issues that might lead to a volume conservation error include:
+  - Inappropriate Profile
+  - Wrong or missing channel elements (typos)
+  - No channel outflow element
+  - Missing bank stations in the cross section data
+  - Conflicts with hydraulic structures or other components
+  - Radical cross section shape or area changes between two contiguous elements
+
+Channel data issues that might lead to a volume conservation error include:
+- Inappropriate Profile
+- Wrong or missing channel elements (typos)
+- No channel outflow element
+- Missing bank stations in the cross section data
+- Conflicts with hydraulic structures or other components
+- Radical cross section shape or area changes between two contiguous elements
+
+
+Channel data issues that might lead to a volume conservation error include:
+
+   - Inappropriate Profile
+   - Wrong or missing channel elements (typos)
+   - No channel outflow element
+   - Missing bank stations in the cross section data
+   - Conflicts with hydraulic structures or other components
+   - Radical cross section shape or area changes between two contiguous elements
+
+Channel data issues that might lead to a volume conservation error include:
+
+  - Inappropriate Profile
+  - Wrong or missing channel elements (typos)
+  - No channel outflow element
+  - Missing bank stations in the cross section data
+  - Conflicts with hydraulic structures or other components
+  - Radical cross section shape or area changes between two contiguous elements
+
+Channel data issues that might lead to a volume conservation error include:
 
 - Inappropriate Profile
-
 - Wrong or missing channel elements (typos)
-
 - No channel outflow element
-
 - Missing bank stations in the cross section data
-
 - Conflicts with hydraulic structures or other components
-
 - Radical cross section shape or area changes between two contiguous elements
 
 Every completed FLO-2D project should demonstrate that volume was accurately conserved.
