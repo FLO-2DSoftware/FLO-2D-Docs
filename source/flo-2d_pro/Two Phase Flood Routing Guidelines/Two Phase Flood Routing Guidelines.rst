@@ -607,24 +607,19 @@ The variables are listed below in the following files (both existing and new fil
 The above files compliment the previously available output files in the same format that can be plotted with the original MAXPLOT or Mapper programs
 some of which are listed below:
 
-- DEPCH.OUT: Maximum channel flow depth.
-
-- DEPCHFINAL.OUT: Final channel flow depth at the end of the simulation.
-
-- DEPTH.OUT: Combined maximum channel and floodplain flow depth.
-
-- IMPACT.OUT: Maximum impact pressure
-
-- SPECENERGY.OUT: Maximum specific energy.
-
-- STATICPRES.OUT: Maximum static pressure.
+    - DEPCH.OUT: Maximum channel flow depth.
+    - DEPCHFINAL.OUT: Final channel flow depth at the end of the simulation.
+    - DEPTH.OUT: Combined maximum channel and floodplain flow depth.
+    - IMPACT.OUT: Maximum impact pressure
+    - SPECENERGY.OUT: Maximum specific energy.
+    - STATICPRES.OUT: Maximum static pressure.
 
 There are several additional output files and not all files are for graphical display.
 For a complete list of output files see the output file section in the FLO-2D Data Input Manual.
 Other FLO-2D QGIS plotting options are available for generating shape files or high-resolution mapping.
 
 Volume Conservation
--------------------
+^^^^^^^^^^^^^^^^^^^^
 
 To conduct a review of a FLO-2D simulation of tailings dam failure, the review should begin with volume conservation reported in the SUMMARY.OUT file.
 There are two primary reported output data in this file to review: 1) The overall fluid and mudflow volume conservation listed in four columns at the
@@ -640,20 +635,17 @@ Later in the file, the sediment volume conservation is reported:
 .. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two039.png
 
 Numerical Stability
--------------------
+^^^^^^^^^^^^^^^^^^^^
 
 Continuing with the project review, the simulation numerical stability should be verified next.
 Potential numerical surging in the model is most likely to occur near the tailings breach and may necessitate lowering the Courant number to control
 computational timesteps.
 There are four output files that can support the conclusion that the model results are numerically stable:
 
-- VELTIMEFP.OUT
-
-- SUPER.OUT
-
-- ROUGH.OUT
-
-- TIME.OUT
+    - VELTIMEFP.OUT
+    - SUPER.OUT
+    - ROUGH.OUT
+    - TIME.OUT
 
 If the maximum velocities reported in VELTIMEFP.OUT (sorted and listed in descending order) are reasonable, then there is no numerical surging in the
 model.
@@ -673,7 +665,7 @@ For further information on numerical instability and troubleshooting refer to th
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Manuals.
 
 Evacuated Grid Elements
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 With tailings dam breach simulations, scour and deposition may contribute to the evacuation of shallow flow volume from floodplain elements.
 Small grid elements and tolerance values and a large peak discharge associated with a tailings dam breach failure may cause a cell to be volume
@@ -692,7 +684,7 @@ For most projects, a few timesteps of evacuated grid elements can be ignored.
 The only consequence of the reported evacuated elements are higher n-values and TOL values and a few timestep reductions.
 
 Scour Limitation
-----------------
+^^^^^^^^^^^^^^^^^^^^
 
 The selection of a given sediment transport equation to simulate the scour and deposition of the fluid phase may not match the project field
 conditions resulting in some grid elements being predicted to have a large scour depth (hole).
@@ -705,7 +697,7 @@ sediment transport out of the grid element will not be considered when distribut
 A typical scour depth limitation may be 3 to 10 ft (1 to 3 m) depending on depth to bedrock.
 
 Channel Two Phase Mudflows
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Overland or channel mudflows without a tailings dam breach can be simulated.
 The only required additional data besides the channel inflow hydrograph with sediment concentrations is the ISEDN switch for the sediment equation or
