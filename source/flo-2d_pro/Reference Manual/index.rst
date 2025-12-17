@@ -2,7 +2,7 @@
 
 .. _reference_manual:
 
-FLO-2D Pro Reference Manual
+FLO-2D PRO REFERENCE MANUAL
 ==============================
 
 .. toctree::
