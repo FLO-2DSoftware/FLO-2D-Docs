@@ -824,10 +824,10 @@ where:
 
     ∆T = timestep
 
-The average area\ :math:`\ \overline{A}`, hydraulic radius\ :math:`\ \overline{R}`, and velocity\ :math:`\overline{V}` are computed using the heads H1 and H2 at either end of the conduit from which corresponding
+The average area\ :math:`\ \overline{A}`, hydraulic radius\ :math:`\ \overline{R}`, and velocity\ :math:`\ \overline{V}` are computed using the heads H1 and H2 at either end of the conduit from which corresponding
 flow depth values y1 and y2 can be derived.
-An average depth *y* is then computed by averaging these values and is used with the cross-section geometry of the conduit to compute\ :math:`\overline{A}` and\ :math:`\overline{R}`.
-The average velocity\ :math:`\overline{V}` is determined by dividing the most current discharge by the average flow area.
+An average depth *y* is then computed by averaging these values and is used with the cross-section geometry of the conduit to compute\ :math:`\ \overline{A}` and\ :math:`\ \overline{R}`.
+The average velocity\ :math:`\ \overline{V}` is determined by dividing the most current discharge by the average flow area.
 A limitation on this velocity is coded to prevent unbounded frictional flow adjustments.
 As a consequence, the velocity cannot be higher than 50 ft/sec.
 
