@@ -719,7 +719,7 @@ Solution Algorithm – How the Model Works
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The differential form of the continuity and momentum equations for the storm drain component are solved by converting them into an explicit set of
-finite difference formulas that compute the flow Q in each conduit and head at each node for time T + t.
+finite difference formulas that compute the flow Q in each conduit and head at each node for time T + ∆t.
 Explicit schemes for these types of solutions are limited to minor steps by strict numerical stability criteria.
 The following discussion was sourced from the EPA SWMM documentation (Rossman et al, 2005).
 
