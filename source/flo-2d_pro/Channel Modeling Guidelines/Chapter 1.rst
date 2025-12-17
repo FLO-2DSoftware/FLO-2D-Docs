@@ -39,10 +39,7 @@ C:\\users\\Public\\Public Documents\\FLO-2D PRO Documentation
   - Goat
   - Aqueduct
   - Sediment transport
-
-..
-
-   Sharefile.flo-2d.com – Webinar Series\\Channel Series
+  - Sharefile.flo-2d.com – Webinar Series\\Channel Series
 
 - Videos
 
