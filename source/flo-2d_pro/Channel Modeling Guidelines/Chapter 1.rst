@@ -874,56 +874,13 @@ CHVOLUME.OUT (Figure 25) is listed below:
 CHVOLUME.OUT Example.*
 
 Channel data issues that might lead to a volume conservation error include:
-   - Inappropriate Profile
-   - Wrong or missing channel elements (typos)
-   - No channel outflow element
-   - Missing bank stations in the cross section data
-   - Conflicts with hydraulic structures or other components
-   - Radical cross section shape or area changes between two contiguous elements
 
-Channel data issues that might lead to a volume conservation error include:
-  - Inappropriate Profile
-  - Wrong or missing channel elements (typos)
-  - No channel outflow element
-  - Missing bank stations in the cross section data
-  - Conflicts with hydraulic structures or other components
-  - Radical cross section shape or area changes between two contiguous elements
-
-Channel data issues that might lead to a volume conservation error include:
-- Inappropriate Profile
-- Wrong or missing channel elements (typos)
-- No channel outflow element
-- Missing bank stations in the cross section data
-- Conflicts with hydraulic structures or other components
-- Radical cross section shape or area changes between two contiguous elements
-
-
-Channel data issues that might lead to a volume conservation error include:
-
-   - Inappropriate Profile
-   - Wrong or missing channel elements (typos)
-   - No channel outflow element
-   - Missing bank stations in the cross section data
-   - Conflicts with hydraulic structures or other components
-   - Radical cross section shape or area changes between two contiguous elements
-
-Channel data issues that might lead to a volume conservation error include:
-
-  - Inappropriate Profile
-  - Wrong or missing channel elements (typos)
-  - No channel outflow element
-  - Missing bank stations in the cross section data
-  - Conflicts with hydraulic structures or other components
-  - Radical cross section shape or area changes between two contiguous elements
-
-Channel data issues that might lead to a volume conservation error include:
-
-- Inappropriate Profile
-- Wrong or missing channel elements (typos)
-- No channel outflow element
-- Missing bank stations in the cross section data
-- Conflicts with hydraulic structures or other components
-- Radical cross section shape or area changes between two contiguous elements
+    - Inappropriate Profile
+    - Wrong or missing channel elements (typos)
+    - No channel outflow element
+    - Missing bank stations in the cross section data
+    - Conflicts with hydraulic structures or other components
+    - Radical cross section shape or area changes between two contiguous elements
 
 Every completed FLO-2D project should demonstrate that volume was accurately conserved.
 Troubleshooting channel volume conservation errors is discussed in Chapter 3.
