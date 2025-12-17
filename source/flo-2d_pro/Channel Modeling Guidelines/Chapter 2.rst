@@ -1040,26 +1040,21 @@ Maximum floodplain velocities showing the flow downstream of the channel.*
 
 The guidelines for setting up a **channel termination** to the floodplain are:
 
-- Select a distance over which the channel will widen and become shallow (4 to 10 channel elements).
-  The final channel cross-section should have a thalweg less than 2.0 ft.
-
-- Maintain essentially the same channel cross-section flow area (with maybe a slight reduction) over
-  the last few channel elements.
-
-- Increase the n-values in the downstream direction.
-
-- The floodplain elevations of the channel interior elements are set to the channel thalweg elevation
-  of the last channel element and are identical.
-
-- The downstream floodplain grid element elevations contiguous to the channel end elements should be lower
-  than the channel end thalweg elevation to
-  allow the flow to drain out of the channel.
-
-- The channel can only terminate in one of the four compass directions.
-  The end of the channel cannot extend from bank to bank across diagonal directions.
-  At least three channel bank extensions should be oriented in one of the four compass directions as shown
-  in Figure 70.
-  The incorrect set-up will not yield correct discharge results from the channel to the floodplain.
+    - Select a distance over which the channel will widen and become shallow (4 to 10 channel elements).
+      The final channel cross-section should have a thalweg less than 2.0 ft.
+    - Maintain essentially the same channel cross-section flow area (with maybe a slight reduction) over
+      the last few channel elements.
+    - Increase the n-values in the downstream direction.
+    - The floodplain elevations of the channel interior elements are set to the channel thalweg elevation
+      of the last channel element and are identical.
+    - The downstream floodplain grid element elevations contiguous to the channel end elements should be lower
+      than the channel end thalweg elevation to
+      allow the flow to drain out of the channel.
+    - The channel can only terminate in one of the four compass directions.
+      The end of the channel cannot extend from bank to bank across diagonal directions.
+      At least three channel bank extensions should be oriented in one of the four compass directions as shown
+      in Figure 70.
+      The incorrect set-up will not yield correct discharge results from the channel to the floodplain.
 
 .. image:: ../img/Channel_Modeling_Guidelines/Chapter2/image48.png
 
