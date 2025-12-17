@@ -717,16 +717,6 @@ Overbank and return flow to the channel will be simulated.
 
 .. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two041.png
 
-Tributary
-
-Fluid Flow Channel
-
-Main Channel
-
-Mixed Flow
-
-Mudflow Channel
-
 Figure 15.
 Two Phase Mudflow in a Channel with Diluted Tributary Inflow.
 
