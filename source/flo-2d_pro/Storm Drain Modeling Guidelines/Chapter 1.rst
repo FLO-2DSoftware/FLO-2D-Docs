@@ -947,42 +947,40 @@ insufficient to update nodal heads at the new time step because only contains fl
 
 To implement the flow continuity condition, a perturbation equation form is enforced:
 
-- An alternative nodal continuity condition is used where the total rate of outflow from a surcharged
-  node must equal the total rate of inflow :math:`\Sigma Q\  = \ 0.\ ` This equation only contains
-  flow, and it is insufficient to update nodal heads at the new time step.
+    - An alternative nodal continuity condition is used where the total rate of outflow from a surcharged
+      node must equal the total rate of inflow :math:`\Sigma Q\  = \ 0.\ ` This equation only contains
+      flow, and it is insufficient to update nodal heads at the new time step.
+    - Since the flow and head updating equations for the system are not solved simultaneously, there is
+      no guarantee that the condition will hold at the surcharged nodes after a flow solution is reached.
+    - Flow continuity condition is enforced Min the form of a perturbation equation:
 
-- Since the flow and head updating equations for the system are not solved simultaneously, there is
-  no guarantee that the condition will hold at the surcharged nodes after a flow solution is reached.
+        .. math::
+           :label:
 
-- Flow continuity condition is enforced Min the form of a perturbation equation:
+           \Sigma\left\lbrack Q + \frac{\partial Q}{\partial H}\mathrm{\Delta}H \right\rbrack\  = 0
 
-.. math::
-   :label:
+        where:
 
-   \Sigma\left\lbrack Q + \frac{\partial Q}{\partial H}\mathrm{\Delta}H \right\rbrack\  = 0
+            :math:`\mathrm{\Delta}H` = node head that must be made to achieve flow continuity.
 
-where:
+            Solving for :math:`\mathrm{\Delta}H`:
 
-:math:`\mathrm{\Delta}H` = node head that must be made to achieve flow continuity.
+            .. math::
+               :label:
 
-Solving for :math:`\mathrm{\Delta}H`:
+               \mathrm{\Delta}H = \frac{- \sum_{}^{}Q}{\sum_{}^{}\frac{\partial Q}{\partial H}}
 
-.. math::
-   :label:
+        where:
 
-   \mathrm{\Delta}H = \frac{- \sum_{}^{}Q}{\sum_{}^{}\frac{\partial Q}{\partial H}}
+            .. math::
+               :label:
 
-where:
+               \frac{\partial Q}{\partial H} = \frac{- g\overline{A}\frac{\mathrm{\Delta}t}{L}}{1 +
+               \mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}
 
-.. math::
-   :label:
-
-   \frac{\partial Q}{\partial H} = \frac{- g\overline{A}\frac{\mathrm{\Delta}t}{L}}{1 +
-   \mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}
-
-:math:`\frac{\partial Q}{\partial H}\ ` has a negative sign because when evaluating
-:math:`\sum_{}^{}Q` because the flow directed out of a node is considered negative while flow into the
-node is positive.
+            :math:`\frac{\partial Q}{\partial H}\ ` has a negative sign because when evaluating
+            :math:`\sum_{}^{}Q` because the flow directed out of a node is considered negative while flow into the
+            node is positive.
 
 If surcharge (return flow to the surface water) is computed, the pressure head is considered in the total
 node adjustment for the successive approximation scheme.
