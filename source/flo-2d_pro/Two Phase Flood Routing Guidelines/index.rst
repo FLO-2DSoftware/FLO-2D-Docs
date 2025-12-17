@@ -6,6 +6,6 @@ Two Phase Flood Routing Guidelines
 
 .. toctree::
    :numbered:
-   :maxdepth: 0
+   :hidden:
 
    Two Phase Flood Routing Guidelines
