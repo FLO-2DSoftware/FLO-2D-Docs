@@ -758,7 +758,7 @@ Solution Algorithm – How the Model Works
 ------------------------------------------
 
 The differential form of the continuity and momentum equations for the storm drain component are solved by converting them into an explicit set of
-finite difference formulas that compute the flow Q in each conduit and head at each node for time T + t.
+finite difference formulas that compute the flow Q in each conduit and head at each node for time T + Δt.
 Explicit schemes for these types of solutions are limited to minor steps by strict numerical stability criteria.
 The following discussion has been extracted from the SWMM documentation (Rossman et al, 2005).
 
@@ -824,10 +824,10 @@ where:
 
     ∆T = timestep
 
-The average area 𝐴̅, hydraulic radius 𝑅̅, and velocity 𝑉̅ are computed using the heads H1 and H2 at either end of the conduit from which corresponding
+The average area\ :math:`\ \overline{A}`, hydraulic radius\ :math:`\ \overline{R}`, and velocity\ :math:`\overline{V}` are computed using the heads H1 and H2 at either end of the conduit from which corresponding
 flow depth values y1 and y2 can be derived.
-An average depth *y* is then computed by averaging these values and is used with the cross-section geometry of the conduit to compute 𝐴̅ and 𝑅̅.
-The average velocity 𝑉̅ is determined by dividing the most current discharge by the average flow area.
+An average depth *y* is then computed by averaging these values and is used with the cross-section geometry of the conduit to compute\ :math:`\overline{A}` and\ :math:`\overline{R}`.
+The average velocity\ :math:`\overline{V}` is determined by dividing the most current discharge by the average flow area.
 A limitation on this velocity is coded to prevent unbounded frictional flow adjustments.
 As a consequence, the velocity cannot be higher than 50 ft/sec.
 
