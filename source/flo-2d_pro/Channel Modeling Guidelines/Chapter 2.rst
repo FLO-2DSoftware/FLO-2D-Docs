@@ -788,22 +788,16 @@ Storm drain inlet – channel
 After initial set up of the urban project, the following issues related to the storm drain inlet to
 channel system should be addressed:
 
-- Inlet locations:
-
-- Inlets must be inside the FLO-2D computational domain;
-
-- Inlets cannot be assigned to the interior channel elements;
-
-- Inlets that pick-up water from the street or overland should not be assigned to the channel left
-  bank elements.
-
-- Inlet elevations:
-
-- Channels discharging to a storm drain inlet should have a invert elevation that matches the inlet
-  invert elevation;
-
-- In most instances, the inlet should be set up as a vertical inlet in the SWMMFLO.DAT file using the
-  Feature switch.
+    - Inlet locations:
+        - Inlets must be inside the FLO-2D computational domain;
+        - Inlets cannot be assigned to the interior channel elements;
+        - Inlets that pick-up water from the street or overland should not be assigned to the channel left
+          bank elements.
+    - Inlet elevations:
+        - Channels discharging to a storm drain inlet should have a invert elevation that matches the inlet
+          invert elevation;
+        - In most instances, the inlet should be set up as a vertical inlet in the SWMMFLO.DAT file using the
+          Feature switch.
 
 Storm drain inlets should not be assigned to an interior channel element.
 If a channel discharges directly to a storm drain conduit inlet, like a culvert inlet, assign the inlet
@@ -845,20 +839,14 @@ Storm drain outfall – channel
 
 To connect a storm drain outfall to a channel element the following issues should be addressed:
 
-- Outfall locations:
-
-- Are all outfalls inside the FLO-2D computational domain?
-
-- Are there outfalls assigned to the interior channel elements? This is not allowed.
-
-- Are outfalls assigned to the appropriate channel bank elements? They should be assigned to the left bank
-  only.
-
-- Outfall type:
-
-- Are outfalls set up as a FREE condition outfall type in the SWMM.inp file? This is required.
-
-- Is the switch to discharge flow back to the surface ‘ON’ in the SWMMOUTF.DAT file?
+    - Outfall locations:
+        - Are all outfalls inside the FLO-2D computational domain?
+        - Are there outfalls assigned to the interior channel elements? This is not allowed.
+        - Are outfalls assigned to the appropriate channel bank elements? They should be assigned to the left bank
+          only.
+    - Outfall type:
+        - Are outfalls set up as a FREE condition outfall type in the SWMM.inp file? This is required.
+        - Is the switch to discharge flow back to the surface ‘ON’ in the SWMMOUTF.DAT file?
 
 Figure 60 shows a complex storm drain – channel system where a channel feeds the storm drain as an
 inlet and flow returns to surface further downstream and back into the channel network.
