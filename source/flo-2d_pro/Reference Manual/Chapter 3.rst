@@ -982,13 +982,13 @@ Discharge to outflow nodes from both sides.*
 
 Other outflow guidelines include:
 
-- Outflow elements should not be modified with ARF’s or WRF’s, levees, streets, etc.
+    - Outflow elements should not be modified with ARF’s or WRF’s, levees, streets, etc.
 
-- Do not double up outflow nodes or isolate outflow nodes with no connection to upstream inflow (Figure 23).
+    - Do not double up outflow nodes or isolate outflow nodes with no connection to upstream inflow (Figure 23).
 
-- Channel outflow can also be established by a stage-discharge.
-  This option can be used when channel outflow occurs at a hydraulic structure or when a known stage-discharge
-  relationship is available.
+    - Channel outflow can also be established by a stage-discharge.
+      This option can be used when channel outflow occurs at a hydraulic structure or when a known stage-discharge
+      relationship is available.
 
 .. image:: ../img/References/Chapter3/image15.png
 
@@ -1158,23 +1158,23 @@ element floodplain water surface elevation.
 The resultant DTM point flow depths can then be interpolated and plotted as color contours (Figure 34).
 Some of the MAPPER Pro features include:
 
-- Multiple geo-referenced aerial photos in various graphic formats can be imported such as TIFF, BMP, JPG, etc.
+    - Multiple geo-referenced aerial photos in various graphic formats can be imported such as TIFF, BMP, JPG, etc.
 
-- Multiple layer capability including control of layer properties is available.
+    - Multiple layer capability including control of layer properties is available.
 
-- Cut and view flow depth and topography profiles.
+    - Cut and view flow depth and topography profiles.
 
-- Flood animation.
-  The floodwave progression over the grid system can be viewed.
+    - Flood animation.
+      The floodwave progression over the grid system can be viewed.
 
-- Sediment transport maximum deposition and scour can be plotted.
+    - Sediment transport maximum deposition and scour can be plotted.
 
-- Maximum flow velocity vectors can be viewed.
+    - Maximum flow velocity vectors can be viewed.
 
-- Hazard maps based on flood intensity and frequency can be created.
+    - Hazard maps based on flood intensity and frequency can be created.
 
-- GIS shape files (\*.shp) are automatically built with any plotted results.
-  The shapefiles can then be imported into other GIS programs.
+    - GIS shape files (\*.shp) are automatically built with any plotted results.
+      The shapefiles can then be imported into other GIS programs.
 
 The MAPPER Pro features and functions are described in its own manual.
 
