@@ -217,7 +217,7 @@ Data Browser
 The data browser has three sections (Figure 58).
 
 - A tree box that lists all the storm drain categories of data objects.
-]
+
 - Edit buttons.
 
 - A list of individual objects in the selected category.
