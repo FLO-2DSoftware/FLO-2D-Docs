@@ -292,7 +292,9 @@ Review the map for problems that should be fixed.
 *Figure 97.
 Channel Bank Difference Example.*
 
-**channel.chk** This file is usually empty.
+**channel.chk**
+
+This file is usually empty.
 It contains messages related to channel extensions though other channel bank elements or levees or when the
 channel needs to be wider.
 
