@@ -340,7 +340,7 @@ Type 5 – Manhole
 +++++++++++++++++
 
 Manholes are a special case of inlets.
-Storm drains under high pressure during flooding can result in the manhole covers being popped off (Figure 32.
+Storm drains under high pressure during flooding can result in the manhole covers being popped off (Figure 32
 and Figure 33).
 The FLO-2D storm drain component can simulate covers popping through the application of a surcharge depth.
 Once the manhole cover popped, it remains off and the manhole becomes a Type 3 inlet.
@@ -388,8 +388,7 @@ where:
 *Figure 33.
 Popped Manhole Cover with Pressure Head (Source: istock).*
 
-To calculate the surcharge depth for manhole cover shown in Figure 32.
-, the observed head of water is approximately 1.0 feet (0.3 meter).
+To calculate the surcharge depth for manhole cover shown in Figure 32, the observed head of water is approximately 1.0 feet (0.3 meter).
 The manhole cover weight and diameter must be known.
 Assuming a diameter of 2 ft (0.61 m) and a weight of 100 pounds, what surcharge depth d\ :sub:`s` had to be exceeded to pop the cover?
 
@@ -438,9 +437,9 @@ Outfall Discharging into a Retention Basin.*
 
 The discharge at the outfall is controlled as follows:
 
-If storm drain pressure head > WSE, then outfall discharges to the surface water cell
+    If storm drain pressure head > WSE, then outfall discharges to the surface water cell
 
-If storm drain pressure head < WSE, then there is no outfall discharge and the outfall node depth = WSE – outfall invert elevation.
+    If storm drain pressure head < WSE, then there is no outfall discharge and the outfall node depth = WSE – outfall invert elevation.
 
 Tide gates can be assigned in the SWMM.inp file to stop the flow from going into the storm drain system through the outfall.
 Flow could leave the storm drain system but not enter it.
@@ -493,40 +492,33 @@ Typically, inlets have horizontal inlets, but some inlets such as culverts have 
 For vertical inlets, the water surface elevations are compared at the node, but the rim elevation is ignored.
 Vertical inlets have unique constraints:
 
-1. For an inlet on a channel (channel flow is discharging to the storm drain conduit), the invert elevation should be set to the channel bed elevation.
-   If the Type 4 inlet is a vertical inlet and it is in a channel cell, the ‘Feature’ column must be equal to 1 in the SWMMFLO.DAT file and the
-   floodplain elevation is not modified.
+    1. For an inlet on a channel (channel flow is discharging to the storm drain conduit), the invert elevation should be set to the channel bed elevation.
+       If the Type 4 inlet is a vertical inlet and it is in a channel cell, the ‘Feature’ column must be equal to 1 in the SWMMFLO.DAT file and the
+       floodplain elevation is not modified.
+    2. For a floodplain swale where the flow is discharging to a storm drain conduit or culvert, the floodplain grid element elevation should match the pipe
+       invert elevation.
+       If the Type 4 inlet is a vertical inlet and it is in a floodplain cell, the ‘Feature’ column must be equal to 1 in the SWMMFLO.DAT file and the
+       floodplain elevation equal to the pipe invert elevation otherwise the floodplain elevation is modified at runtime.0
+    3. The ‘Feature’ column in the QGIS Components inlets/junctions dialog window (SWMMFLO.DAT file) has three options:
 
-2. For a floodplain swale where the flow is discharging to a storm drain conduit or culvert, the floodplain grid element elevation should match the pipe
-   invert elevation.
-   If the Type 4 inlet is a vertical inlet and it is in a floodplain cell, the ‘Feature’ column must be equal to 1 in the SWMMFLO.DAT file and the
-   floodplain elevation equal to the pipe invert elevation otherwise the floodplain elevation is modified at runtime.
+        0 - default, no flapgate, no vertical inlet opening
 
-3. The ‘Feature’ column in the QGIS Components inlets/junctions dialog window (SWMMFLO.DAT file) has three options:
+        1 - vertical inlet opening
 
-..
+            a. Channel pipe inlet invert elevation = channel bed elevation
+            b. Floodplain grid element elevation = pipe invert elevation
 
-   0 - default, no flapgate, no vertical inlet opening
+        2 - flapgate (outfall)
 
-   1 - vertical inlet opening
+        3 - Turn off the adjustment of discharge during runtime for those inlets with drop box capacity exceeded.
 
-a. Channel pipe inlet invert elevation = channel bed elevation
+        4. Revised floodplain elevations are not changed in the FPLAIN.DAT file.
+           These modifications are only implemented at runtime.
+           For permanent floodplain revisions, the user must adjust the elevations in FPLAIN.DAT to match the modifications in FPRIMELEV.OUT.
+           Rim elevations for the inlets located in channel or street cells are not checked and must be verified by the user.
 
-b. Floodplain grid element elevation = pipe invert elevation
-
-..
-
-   2 - flapgate (outfall)
-
-   3.- Turn off the adjustment of discharge during runtime for those inlets with drop box capacity exceeded.
-
-4. Revised floodplain elevations are not changed in the FPLAIN.DAT file.
-   These modifications are only implemented at runtime.
-   For permanent floodplain revisions, the user must adjust the elevations in FPLAIN.DAT to match the modifications in FPRIMELEV.OUT.
-   Rim elevations for the inlets located in channel or street cells are not checked and must be verified by the user.
-
-5. Unique inlet conditions such as those with unusual shape openings are simulated with a rating table or the generalized culvert equation (Type 4
-   inlets).
+        5. Unique inlet conditions such as those with unusual shape openings are simulated with a rating table or the generalized culvert equation (Type 4
+           inlets).
 
 All runtime changes in the floodplain elevation are reported in FPRIMELEV.OUT and Stormdrain_error.chk files.
 They are reported to the FPLAIN_SDElev.RGH and TOPO_SDElev.RGH,
@@ -545,7 +537,7 @@ The inlet and outlet offsets can be zero if there is no offset or any height abo
 *Figure 37.
 Offsets in a Pipe System.
 Blue rectangles are the nodes that connect pipes.*
-
+]
 Pipe 1 and pipe 2 show the offsets in the pipe system.
 Pipe 3 shows no offset in Figure 37.
 An inlet offset and an outlet offset can be defined at each pipe in the SWMM.INP data file.
