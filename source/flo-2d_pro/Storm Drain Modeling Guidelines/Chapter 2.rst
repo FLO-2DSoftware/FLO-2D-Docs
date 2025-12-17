@@ -537,7 +537,7 @@ The inlet and outlet offsets can be zero if there is no offset or any height abo
 *Figure 37.
 Offsets in a Pipe System.
 Blue rectangles are the nodes that connect pipes.*
-]
+
 Pipe 1 and pipe 2 show the offsets in the pipe system.
 Pipe 3 shows no offset in Figure 37.
 An inlet offset and an outlet offset can be defined at each pipe in the SWMM.INP data file.
