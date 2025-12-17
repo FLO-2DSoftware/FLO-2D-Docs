@@ -56,13 +56,13 @@ Those values written to the SWMM.inp file are automatically replaced at the begi
       The storm drain model bases the new equivalent pipe length on an estimate of the full flow velocity in the conduit as well as on the wave celerity.
       The full area, width and hydraulic radius are unchanged in the modified link, but the length, slope and roughness are altered.
 
-      Length Factor = (Wave Celerity + Full Depth Velocity) \* Timestep/ Pipe Length
+          Length Factor = (Wave Celerity + Full Depth Velocity) \* Timestep/ Pipe Length
 
-          For a Length Factor > 1:
+              For a Length Factor > 1:
 
-              New Roughness = Old Roughness /Length Factor**0.5
+                  New Roughness = Old Roughness /Length Factor**0.5
 
-              New Slope =  Old Slope Slope/Length Factor**0.5
+                  New Slope =  Old Slope Slope/Length Factor**0.5
     - The routing model (FLOW_ROUTING) for the FLO-2D storm drain component is set as dynamic wave (DYNWAVE) to account for backwater effects, entrance/exit
       losses, flow reversal or pressurized flow.
       If the FLOW_ROUTING from the SWMM.INP is different than dynamic wave (DYNWAVE), FLO-2D will replace the routing model from the SWMM.INP with the
