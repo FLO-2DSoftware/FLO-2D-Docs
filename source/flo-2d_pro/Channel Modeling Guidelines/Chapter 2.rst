@@ -221,7 +221,7 @@ As the channel approaches the bridge or culvert, it is important to capture the 
 from a cross-section upstream of the backwater effects to the hydraulic opening.
 Ideally this transition would occur over several channel elements either with flow expansion or inlet
 narrowing.
-In Figure 24 below, the channel cross-section at the bridge/culvert is only slightly larger (with flared
+In Figure 36 below, the channel cross-section at the bridge/culvert is only slightly larger (with flared
 wing walls) than the upstream trapezoidal cross-section.
 With 15 ft grid elements, the cross-section area transition should occur over 4 or 5 channel elements
 with a slightly increasing n-values from 0.02 representing the upstream channel to 0.03 or so at the
