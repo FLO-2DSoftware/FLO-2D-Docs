@@ -40,24 +40,24 @@ Upstream Channel Boundary with an Inflow Node.*
 *Figure 75.
 Downstream Channel Boundary with an Outflow Node.*
 
-Cross Sections
+Cross-sections
 --------------
 
-Check the cross section placement.
-Note any locations where more cross sections are required such as the top half of Figure 76.
-The bottom half shows a channel with good cross section placement to represent the transition from an urban channel to a natural channel.
+Check the cross-section placement.
+Note any locations where more cross-sections are required such as the top half of Figure 76.
+The bottom half shows a channel with good cross-section placement to represent the transition from an urban channel to a natural channel.
 
 .. image:: ../img/Channel_Modeling_Guidelines/Chapter3/image4.png
 
 *Figure 76.
-Cross Sections wih a Bad Transition and a Good Transition.*
+cross-sections wih a Bad Transition and a Good Transition.*
 
-Check each cross section plot for accuracy using the cross section geometry table and plot as shown in Figure 77.
+Check each cross-section plot for accuracy using the cross-section geometry table and plot as shown in Figure 77.
 
 .. image:: ../img/Channel_Modeling_Guidelines/Chapter3/image5.png
 
 *Figure 77.
-Review a Cross Section Shape.*
+Review a cross-section Shape.*
 
 Profiles
 --------
@@ -84,7 +84,7 @@ see https://documentation.flo-2d.com/Plugin1000/toolbar/flo-2d-info-tool/FLO-2D%
 Transitions
 -----------
 
-Review the change in cross section area, width, and wetted perimeter for each cross section.
+Review the change in cross-section area, width, and wetted perimeter for each cross-section.
 Check for changes in these values that indicate the channel is transitioning too quickly for the model to remain numerically stable.
 Find this in the XSECAREA.OUT file (Figure 80) or by using the Profiles.exe program.
 
@@ -137,7 +137,7 @@ If the velocities are unreasonable, look for simple problems.
 
   - Drop structure or a naturally occurring steep channel slope can result in naturally high velocities.
 
-  - Bad cross section data resulting in bad bedslope can result in unnaturally high velocities.
+  - Bad cross-section data resulting in bad bedslope can result in unnaturally high velocities.
 
   - Test data against an Open Channel Flow Calculator.
 
@@ -147,7 +147,7 @@ If the velocities are unreasonable, look for simple problems.
 
   - If the grid element listed is close to an inflow node, the velocity could be unnaturally high.
     Fix this by ramping the inflow over 0.5 hours.
-    If water is added to a cross section too quickly, it can become unstable.
+    If water is added to a cross-section too quickly, it can become unstable.
 
   - If the grid element is close to a storm drain outfall or culvert, review the transition to make sure it matches the physical system.
     Increase the roughness around connected component.
@@ -170,7 +170,7 @@ in Time.out (Figure 85).
 This channel is not responsible for timestep decrements.
 
 .. note::
-   Observation by K O’Brien. If channel elements are listed in TIME.OUT,correcting the cross section might
+   Observation by K O’Brien. If channel elements are listed in TIME.OUT,correcting the cross-section might
    push the issue downstream. Channels have a high impact on the timestep decrement if they are steep or if
    the grid element size is small. If an unreasonable number of timestep decrements result because of a
    channel node, it may not be fixable. This is OK so long as the channel is stable and volume conservation
@@ -228,7 +228,7 @@ Interior Channel Nodes Example.*
 Check files
 -----------
 
-ChanBankEl.chk (Figure 91) lists the differences between the channel cross section and the left or right bank grid elevation.
+ChanBankEl.chk (Figure 91) lists the differences between the channel cross-section and the left or right bank grid elevation.
 If major elevation differences are listed, please review them, and see if corrections are required.
 
 .. image:: ../img/Channel_Modeling_Guidelines/Chapter3/image19.png
@@ -279,11 +279,11 @@ Style Channel Bank Elevation Difference.*
 Review the map for problems that should be fixed.
 
 - Grouped positive points mean the channel is embedded below the floodplain.
-  Check cross sections.
+  Check cross-sections.
 
 - Grouped negative points mean a channel is perched above the floodplain.
   Floodplain to channel flow exchange is blocked.
-  Check cross section data.
+  Check cross-section data.
 
 - All the points in the following image are OK because they will be automatically corrected when flopro.exe runs (Figure 97).
 
@@ -324,7 +324,7 @@ Type 35368 into the FLO-2D grid info box (Figure 99) and click the eye button.
 *Figure 99.
 Grid Info Tool.*
 
-Assume that this channel element and cross section are not able to converge for depths greater than 1ft.
+Assume that this channel element and cross-section are not able to converge for depths greater than 1ft.
 This means that the calculated velocity is invalid, and the solution velocity is estimated from the diffusive wave equation.
 It is not typical to see problematic channel elements in clear water studies.
 If they are present, use the same techniques discussed in Channel Optimization video and the Channel Guidelines.
@@ -335,7 +335,7 @@ Corrective measures include:
 
 - Using shallow n adjustments.
 
-- Improving transitional cross sections with better interpolations.
+- Improving transitional cross-sections with better interpolations.
 
 - Fixing bedslope problems.
 
@@ -348,7 +348,7 @@ Corrective measures include:
 Super Critical
 --------------
 
-The super critical output file (Figure 100) will print the time and number of timesteps that a specific node or cross section is super critical.
+The super critical output file (Figure 100) will print the time and number of timesteps that a specific node or cross-section is super critical.
 The file only exists if a super critical flow is reported.
 
 .. note::
@@ -360,16 +360,16 @@ The file only exists if a super critical flow is reported.
 *Figure 100.
 Super.out Example.*
 
-It is OK to have super critical channel cross sections.
+It is OK to have super critical channel cross-sections.
 If the file reported grid elements that should not be super critical, check the following:
 
-- Check overly steep bedslope between cross sections.
+- Check overly steep bedslope between cross-sections.
 
 - Increasing the roughness.
 
 - Using shallow n adjustments.
 
-- Improving transitional cross sections with better interpolations.
+- Improving transitional cross-sections with better interpolations.
 
 Overbank flow
 -------------
@@ -391,7 +391,7 @@ Evacuated
    The following evacuatedchan.out file is from a different project.
 
 
-EVACUATEDCHAN.OUT file (Figure 101) is written when all the water is taken from a cross section in a single timestep.
+EVACUATEDCHAN.OUT file (Figure 101) is written when all the water is taken from a cross-section in a single timestep.
 A V-shaped channel might result in evacuated timesteps.
 JS O’Brien has modified the channel flow so they do not share flow until 0.1ft or 0.03m of depth.
 This has eliminated most evacuated channel reporting.
@@ -428,9 +428,9 @@ XSECAREA
 --------
 
 This is about the same as the Transitions above.
-It specifically asks the user to check this data for bad cross sections.
+It specifically asks the user to check this data for bad cross-sections.
 
-Review the change in cross section area, width, and wetted perimeter for each cross section (Figure 104).
+Review the change in cross-section area, width, and wetted perimeter for each cross-section (Figure 104).
 Check for changes in these values that indicate the channel is transitioning too quickly for the model to remain numerically stable.
 Find this in the XSECAREA.OUT file or by using the Profiles.exe program.
 
@@ -444,7 +444,7 @@ CHANMAX
 
 CHANMAX.OUT (Figure 105) is a useful file that lists the maximum discharge, maximum water surface elevation, and respective times for each of those.
 Review this file for anomalies.
-Instability and volume conservation error can sometimes be traced back to cross sections with discharge values that are too high or discharge values
+Instability and volume conservation error can sometimes be traced back to cross-sections with discharge values that are too high or discharge values
 that do not align with the water surface elevation and the time.
 
 .. image:: ../img/Channel_Modeling_Guidelines/Chapter3/image32.png
