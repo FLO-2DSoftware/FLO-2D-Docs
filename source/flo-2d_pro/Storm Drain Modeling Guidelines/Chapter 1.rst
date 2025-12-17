@@ -648,7 +648,7 @@ where:
 
     t = computational timestep
 
-    A = cross sectional area of the pipe
+    A = cross-sectional area of the pipe
 
     Q = pipe discharge
 
