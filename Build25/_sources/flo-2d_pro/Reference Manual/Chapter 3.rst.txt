@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 3. FLO-2D MODEL SYSTEM
+CHAPTER 3. FLO-2D MODEL SYSTEM
 ==============================
 
 Assumptions and Special Conditions
@@ -83,13 +83,13 @@ Basic Assumptions
 
 The inherent assumptions in a FLO-2D simulation are:
 
-- Steady flow for the duration of the timestep;
+    - Steady flow for the duration of the timestep;
 
-- Hydrostatic pressure distribution;
+    - Hydrostatic pressure distribution;
 
-- Hydraulic roughness is based on steady, uniform turbulent flow resistance;
+    - Hydraulic roughness is based on steady, uniform turbulent flow resistance;
 
-- A channel element is represented by uniform channel geometry and roughness.
+    - A channel element is represented by uniform channel geometry and roughness.
 
 These assumptions are self-explanatory, but they remind us that the flow conditions between grid elements are being averaged.
 For more information on reservoir routing and ponded flow, look at the Levee, Dam, and Wall Breach Guidelines.
@@ -269,13 +269,13 @@ urban model.
 It is necessary to balance the cell size with the discharge flux.
 Consider the following:
 
-- Model runtime;
+    - Model runtime;
 
-- Model accuracy and detail;
+    - Model accuracy and detail;
 
-- The time it takes to prepare and edit the model components;
+    - The time it takes to prepare and edit the model components;
 
-- The number of required simulations.
+    - The number of required simulations.
 
 Selecting a small grid element size less than 15 ft or 5 m for large projects is not recommended.
 Typically, the DTM data resolution does not justify using grid elements that small and further accuracy is lost when the results are mapped.
@@ -795,13 +795,13 @@ A given project may be limited in areal scope to an urban area, downstream of a 
 flood hydrographs.
 This may include any number of off-site flood hydrographs:
 
-- A FLO-2D watershed rainfall-runoff model upstream hydrograph;
+    - A FLO-2D watershed rainfall-runoff model upstream hydrograph;
 
-- A flood hydrograph from any other external model such as HEC-1 or HEC-HMS;
+    - A flood hydrograph from any other external model such as HEC-1 or HEC-HMS;
 
-- A large upstream river hydrograph;
+    - A large upstream river hydrograph;
 
-- Any small urban area off-site flood hydrograph;
+    - Any small urban area off-site flood hydrograph;
 
 A typical INFLOW.DAT file (Figure 14) mudflow inflow hydrograph with both water discharge and sediment concentration
 is shown in Figure 15 along with the data format (see the Data Input Manual for the variable description).
@@ -845,13 +845,13 @@ The primary purpose of the inflow node is to get the flood on the grid system an
 While almost any floodplain grid element can be assigned as an inflow node, there are some guidelines that will facilitate introducing an inflow
 hydrograph to a specific location:
 
-- Assign the inflow element as close to the actual hydrograph location as possible.
+    - Assign the inflow element as close to the actual hydrograph location as possible.
 
 An inflow node can be assigned next to the grid system boundary.
 
-- Contiguous elements downstream should have lower elevation than the inflow node.
+    - Contiguous elements downstream should have lower elevation than the inflow node.
 
-- Avoid assigning an inflow node next to an outflow node.
+    - Avoid assigning an inflow node next to an outflow node.
 
 Review the inflow node elevation and n-values with respect to all the contiguous cells using the GDS or QGIS.
 Avoid assigning the inflow in a depression and raise the inflow node elevation, if necessary, to create a downslope to the contiguous downstream
@@ -862,11 +862,11 @@ elements.
 This will reduce the inflow discharge to the inflow elements and speed up the model.
 The following suggestions will improve the inflow hydrograph distribution over several elements:
 
-- Assign equal inflow hydrographs to all the inflow nodes in a group.
+    - Assign equal inflow hydrographs to all the inflow nodes in a group.
 
-- In the GDS or QGIS assign equal elevations and n-values to all the grouped inflow nodes.
+    - In the GDS or QGIS assign equal elevations and n-values to all the grouped inflow nodes.
 
-- For one or more downstream rows of cells, assign equal but lower elevations and equal n-values to each row.
+    - For one or more downstream rows of cells, assign equal but lower elevations and equal n-values to each row.
 
 The result of this inflow node adjustment will be several rows of elements that are designed to get the inflow
 hydrograph onto the grid system and moving downstream.
@@ -982,13 +982,13 @@ Discharge to outflow nodes from both sides.*
 
 Other outflow guidelines include:
 
-- Outflow elements should not be modified with ARF’s or WRF’s, levees, streets, etc.
+    - Outflow elements should not be modified with ARF’s or WRF’s, levees, streets, etc.
 
-- Do not double up outflow nodes or isolate outflow nodes with no connection to upstream inflow (Figure 23).
+    - Do not double up outflow nodes or isolate outflow nodes with no connection to upstream inflow (Figure 23).
 
-- Channel outflow can also be established by a stage-discharge.
-  This option can be used when channel outflow occurs at a hydraulic structure or when a known stage-discharge
-  relationship is available.
+    - Channel outflow can also be established by a stage-discharge.
+      This option can be used when channel outflow occurs at a hydraulic structure or when a known stage-discharge
+      relationship is available.
 
 .. image:: ../img/References/Chapter3/image15.png
 
@@ -1158,23 +1158,23 @@ element floodplain water surface elevation.
 The resultant DTM point flow depths can then be interpolated and plotted as color contours (Figure 34).
 Some of the MAPPER Pro features include:
 
-- Multiple geo-referenced aerial photos in various graphic formats can be imported such as TIFF, BMP, JPG, etc.
+    - Multiple geo-referenced aerial photos in various graphic formats can be imported such as TIFF, BMP, JPG, etc.
 
-- Multiple layer capability including control of layer properties is available.
+    - Multiple layer capability including control of layer properties is available.
 
-- Cut and view flow depth and topography profiles.
+    - Cut and view flow depth and topography profiles.
 
-- Flood animation.
-  The floodwave progression over the grid system can be viewed.
+    - Flood animation.
+      The floodwave progression over the grid system can be viewed.
 
-- Sediment transport maximum deposition and scour can be plotted.
+    - Sediment transport maximum deposition and scour can be plotted.
 
-- Maximum flow velocity vectors can be viewed.
+    - Maximum flow velocity vectors can be viewed.
 
-- Hazard maps based on flood intensity and frequency can be created.
+    - Hazard maps based on flood intensity and frequency can be created.
 
-- GIS shape files (\*.shp) are automatically built with any plotted results.
-  The shapefiles can then be imported into other GIS programs.
+    - GIS shape files (\*.shp) are automatically built with any plotted results.
+      The shapefiles can then be imported into other GIS programs.
 
 The MAPPER Pro features and functions are described in its own manual.
 

@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 1. INTRODUCTION
+CHAPTER 1. INTRODUCTION
 =======================
 
 This Reference Manual discusses the physical processes of flooding.

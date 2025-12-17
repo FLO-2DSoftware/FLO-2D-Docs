@@ -9,23 +9,19 @@ Input and Output File - General
 This chapter describes the input and output data and their format for the FLO-2D storm drain component.
 The storm drain input data files can be created using any storm water user interface GUI:
 
-- FLO-2D QGIS plug-in,
-
-- EPA SWMM 5,
-
-- inpPINS,
-
-- Storm and Sanitary Analysis.
+    - FLO-2D QGIS plug-in,
+    - EPA SWMM 5,
+    - inpPINS,
+    - Storm and Sanitary Analysis.
 
 The following folders contain the storm drain model system:
 
-- FLO-2D PRO folder in C:\\Program Files (x86).
-  All executable program files for the FLO-2D model including pre- and post-processing and FLOPRO.exe are in
-  this folder.
-
-- FLO-2D PRO documentation folder in C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation (My Documents).
-  Manuals, Handout Documents, PowerPoint Presentations, and tutorials are in this directory.
-  Online documentation site: https://documentation.flo-2d.com/
+    - FLO-2D PRO folder in C:\\Program Files (x86).
+      All executable program files for the FLO-2D model including pre- and post-processing and FLOPRO.exe are in
+      this folder.
+    - FLO-2D PRO documentation folder in C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation (My Documents).
+      Manuals, Handout Documents, PowerPoint Presentations, and tutorials are in this directory.
+      Online documentation site: https://documentation.flo-2d.com/
 
 Data Input Files
 ----------------
@@ -47,10 +43,9 @@ CONT.DAT
 
 This file contains the simulation control parameters:
 
-- Set SWMM = 1 to initiate the storm drain component, review the DATA INPUT MANUAL.DAT file for more information
-  about this switch.
-
-- For no storm drain simulation, SWMM = 0 (default).
+    - Set SWMM = 1 to initiate the storm drain component, review the DATA INPUT MANUAL.DAT file for more information
+      about this switch.
+    - For no storm drain simulation, SWMM = 0 (default).
 
 SWMM.inp
 ~~~~~~~~
@@ -68,35 +63,26 @@ Each section of the SWMM.inp file begins with a keyword.
 
 The structure of the SWMM.inp file follows:
 
-- Sections appear in any arbitrary order in the input (\*.inp) file.
-  Section keywords can appear in mixed lower- and upper-case letters.
-  Only the first four characters (plus the open bracket) are used to distinguish one keyword from another (e.g.,
-  [DIVIDERS] and [Divi] are equivalent).
-
-- Not all sections must be present on each project.
-
-- Each section can contain one or more lines of data.
-
-- Blank lines may appear anywhere in the file.
-
-- A semicolon (;) can be used to indicate that comment follows, not data.
-  This sometimes generates reading errors in the storm drain code.
-
-- Data items can appear in any column of a line.
-
-- The data is ordered creating a tabular appearance complete with column headings.
-
-- When listing the format of a line of data, mandatory keywords are shown in boldface while optional items appear
-  in parentheses.
-
-- A list of keywords separated by a slash (YES/NO) means that only one of the words should appear in the data line.
-
-- In the [OPTIONS] section, flow units can be selected as either cubic feet per second (CFS), gallons per minute
-  (GPM), million gallons per day (MGD), cubic meters per second (CMS), liters per second, (LPS), or million liters
-  per day (MLD).
-  If cubic feet or gallons are chosen for flow units then US units are used for all other quantities.
-  If cubic meters or liters are chosen, then metric units apply to all other quantities.
-  The default flow units are CFS.
+    - Sections appear in any arbitrary order in the input (\*.inp) file.
+      Section keywords can appear in mixed lower- and upper-case letters.
+      Only the first four characters (plus the open bracket) are used to distinguish one keyword from another (e.g.,
+      [DIVIDERS] and [Divi] are equivalent).
+    - Not all sections must be present on each project.
+    - Each section can contain one or more lines of data.
+    - Blank lines may appear anywhere in the file.
+    - A semicolon (;) can be used to indicate that comment follows, not data.
+      This sometimes generates reading errors in the storm drain code.
+    - Data items can appear in any column of a line.
+    - The data is ordered creating a tabular appearance complete with column headings.
+    - When listing the format of a line of data, mandatory keywords are shown in boldface while optional items appear
+      in parentheses.
+    - A list of keywords separated by a slash (YES/NO) means that only one of the words should appear in the data line.
+    - In the [OPTIONS] section, flow units can be selected as either cubic feet per second (CFS), gallons per minute
+      (GPM), million gallons per day (MGD), cubic meters per second (CMS), liters per second, (LPS), or million liters
+      per day (MLD).
+      If cubic feet or gallons are chosen for flow units then US units are used for all other quantities.
+      If cubic meters or liters are chosen, then metric units apply to all other quantities.
+      The default flow units are CFS.
 
 SWMMFLO.DAT
 ~~~~~~~~~~~
@@ -150,15 +136,13 @@ When the outfall order is modified in the SWMM.inp file because an outfall node 
 outfall nodes in the QGIS plug-in should be edited and the SWMMOUTF.DAT file saved.
 The functionality of the outfall nodes is as follows:
 
-- If the outfall discharge is ‘off’ the outfall will discharge off the complete model system.
-  No discharge is returned from the storm drain to the surface water.
-
-- If the outfall discharge switch is ‘on’ the surface water elevation and storm drain pressure head are compared
-  and the outfall will discharge until WSE is equal or greater than the storm drain head.
-  The outfall flow drains back to the surface water.
-
-- Potential backflow into the outfall pipe will depend on the comparison of the WSEL, the storm drain pressure head
-  and the tide gate assignment.
+    - If the outfall discharge is ‘off’ the outfall will discharge off the complete model system.
+      No discharge is returned from the storm drain to the surface water.
+    - If the outfall discharge switch is ‘on’ the surface water elevation and storm drain pressure head are compared
+      and the outfall will discharge until WSE is equal or greater than the storm drain head.
+      The outfall flow drains back to the surface water.
+    - Potential backflow into the outfall pipe will depend on the comparison of the WSEL, the storm drain pressure head
+      and the tide gate assignment.
 
 SWMMFLORT.DAT
 ~~~~~~~~~~~~~

@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 4. MODEL COMPONENTS
+CHAPTER 4. MODEL COMPONENTS
 ===========================
 
 Model Features
@@ -8,40 +8,40 @@ Model Features
 
 The primary FLO-2D flood routing features and attributes are:
 
-- Floodwave attenuation can be analyzed with hydrograph routing.
+    - Floodwave attenuation can be analyzed with hydrograph routing.
 
-- Overland flow on unconfined surfaces is modeled in eight directions.
+    - Overland flow on unconfined surfaces is modeled in eight directions.
 
-- Floodplain flows can be simulated over complex topography and roughness including split flow, shallow flow,
-  and flow in multiple channels.
+    - Floodplain flows can be simulated over complex topography and roughness including split flow, shallow flow,
+      and flow in multiple channels.
 
-- Channel, street and overland flow and the flow exchange is calculated.
+    - Channel, street and overland flow and the flow exchange is calculated.
 
-- Channel flow is routed with either a rectangular, trapezoidal, or natural cross section data.
+    - Channel flow is routed with either a rectangular, trapezoidal, or natural cross section data.
 
-- The flow regime can vary between subcritical and supercritical.
+    - The flow regime can vary between subcritical and supercritical.
 
-- Flow over adverse slopes and backwater effects can be simulated.
+    - Flow over adverse slopes and backwater effects can be simulated.
 
-- Rainfall, infiltration losses and runoff on the alluvial fan or floodplain can be modeled.
+    - Rainfall, infiltration losses and runoff on the alluvial fan or floodplain can be modeled.
 
-- Bed scour and deposition can be modeled using one of eleven sediment transport equations.
+    - Bed scour and deposition can be modeled using one of eleven sediment transport equations.
 
-- Viscous mudflows can be simulated.
+    - Viscous mudflows can be simulated.
 
-- The effects of flow obstructions such as buildings, walls and levees that limit storage or modify flow
-  paths can be modeled.
+    - The effects of flow obstructions such as buildings, walls and levees that limit storage or modify flow
+      paths can be modeled.
 
-- The outflow from bridges and culverts is estimated by user defined rating curves.
+    - The outflow from bridges and culverts is estimated by user defined rating curves.
 
-- The number of floodplain and channel elements is unlimited.
+    - The number of floodplain and channel elements is unlimited.
 
-- The exchange of surface water and storm drain flows can be simulated.
+    - The exchange of surface water and storm drain flows can be simulated.
 
-- The exchange of surface water and groundwater can be simulated using a runtime interface with
-  the MODFLOW groundwater model.
+    - The exchange of surface water and groundwater can be simulated using a runtime interface with
+      the MODFLOW groundwater model.
 
-- Dam and levee breach can be simulated with either a prescribe breach rate or breach erosion.
+    - Dam and levee breach can be simulated with either a prescribe breach rate or breach erosion.
 
 Data file preparation and computer run times vary according to the number and size of the grid elements,
 the inflow discharge flux and the duration of the inflow flood hydrograph being simulated.
@@ -90,11 +90,11 @@ n-values to the grid elements will enable street flow.
 These street elements can be assigned with shape files either with QGIS plug-in tool or with the GDS (Figure 36).
 To make the floodplain elements represent the street:
 
-- Assign n-values in an acceptable range for street irregularities, breaks-in-slope, unsteady and non-uniform flow (0.02 to 0.035).
+    - Assign n-values in an acceptable range for street irregularities, breaks-in-slope, unsteady and non-uniform flow (0.02 to 0.035).
 
-- Select a spatially variable limiting Froude number in the range from 1.5 to 2.5.
+    - Select a spatially variable limiting Froude number in the range from 1.5 to 2.5.
 
-- Review and adjust the street profile.
+    - Review and adjust the street profile.
 
 To adjust the street profile, there are two GDS tools: 1) Interpolate elevations downslope and for the street crown.
 It will also assign minimum curb elevations to the floodplain elevations outside the street.
@@ -120,16 +120,16 @@ As the cell depression volume fills and eventually spills to other grid elements
 infiltrated.
 The unique attributes of this routine to improve shallow flow runoff are:
 
-- At runtime, the flow depth is based on the stage-volume rating table until the cell is filled.
+    - At runtime, the flow depth is based on the stage-volume rating table until the cell is filled.
 
-- A minimum number of DTM points within each grid element are required to assign the storage rating table;
-  otherwise the model uses the TOL value for the depression storage.
+    - A minimum number of DTM points within each grid element are required to assign the storage rating table;
+      otherwise the model uses the TOL value for the depression storage.
 
-- The rating table is created only for those grid cells that do not contain a street or channel or that have an
-  area reduction factor (ARF) less than 0.5.
+    - The rating table is created only for those grid cells that do not contain a street or channel or that have an
+      area reduction factor (ARF) less than 0.5.
 
-- If a grid element has a rating table, the cell elevation will be equal to the lowest DTM point used in
-  the calculation of the rating table.
+    - If a grid element has a rating table, the cell elevation will be equal to the lowest DTM point used in
+      the calculation of the rating table.
 
 For a complete discussion of this grid element rating table stage-volume tool, refer to the GDS manual.
 
@@ -190,14 +190,14 @@ Channel Extension Over Several Grid Elements.*
 There are three options for establishing the bank elevation in relationship to the channel bed elevation (thalweg) and the floodplain elevation in the
 CHAN.DAT file:
 
-1. The channel grid element bed elevation is determined by subtracting the assigned channel thalweg depth from the floodplain elevation.
-   This is appropriate for rectangular and trapezoidal cross sections.
+    1. The channel grid element bed elevation is determined by subtracting the assigned channel thalweg depth from the floodplain elevation.
+       This is appropriate for rectangular and trapezoidal cross sections.
 
-2. A bank elevation is assigned in the CHAN.DAT file and the channel bed elevation is computed by subtracting the channel depth from the lowest bank
-   elevation.
-   This is appropriate for rectangular and trapezoidal cross sections.
+    2. A bank elevation is assigned in the CHAN.DAT file and the channel bed elevation is computed by subtracting the channel depth from the lowest bank
+       elevation.
+       This is appropriate for rectangular and trapezoidal cross sections.
 
-3. A surveyed cross section data set is assigned in XSEC.DAT and the model automatically assigns the top-of-bank elevation.
+    3. A surveyed cross section data set is assigned in XSEC.DAT and the model automatically assigns the top-of-bank elevation.
 
 When using cross section data for the channel geometry, option 3 should be applied.
 
@@ -280,15 +280,19 @@ The discharge is combined for all the levee directions that are being overtopped
 Finally, the LEVEEDIFIC.OUT file lists the levee elements with loss of freeboard during the flood event.
 Five levels of freeboard deficit are reported:
 
-   0 = freeboard > 3 ft (0.9 m)
+.. raw:: html
 
-   1 = 2 ft (0.6 m) < freeboard < 3 ft (0.9 m)
+    <pre>
+       0 = freeboard > 3 ft (0.9 m)
 
-   2 = 1 ft (0.3 m) < freeboard < 2 ft (0.6 m)
+       1 = 2 ft (0.6 m) < freeboard < 3 ft (0.9 m)
 
-   3 = freeboard < 1 ft (0.3 m)
+       2 = 1 ft (0.3 m) < freeboard < 2 ft (0.6 m)
 
-   4 = levee is overtopped by flow.
+       3 = freeboard < 1 ft (0.3 m)
+
+       4 = levee is overtopped by flow.
+    </pre>
 
 The levee deficit can be displayed graphically in both MAPPER Pro and MAXPLOT (Figure 40).
 
@@ -347,12 +351,12 @@ Additional breach failure variables such as initial failure elevation if differe
 can be assigned to add detail to multiple levee failure locations.
 For prescribed breaches you can:
 
-- Determine the location of levee failure anywhere in the levee system based on overtopping or based on the water surface elevation reaching a
-  prescribed elevation or distance below the crest elevation for an assigned duration.
+    - Determine the location of levee failure anywhere in the levee system based on overtopping or based on the water surface elevation reaching a
+      prescribed elevation or distance below the crest elevation for an assigned duration.
 
-- Initiate multiple levee breach failures in various locations that proceed simultaneously.
+    - Initiate multiple levee breach failures in various locations that proceed simultaneously.
 
-- Levee failure proceeds with prescribed vertical and horizontal erosion rates that will slow based on the breach shear stress.
+    - Levee failure proceeds with prescribed vertical and horizontal erosion rates that will slow based on the breach shear stress.
 
 Erosion Breach
 ~~~~~~~~~~~~~~~~~~~~
@@ -363,15 +367,15 @@ The basis for the FLO-2D model was National Weather Service BREACH model develop
 More information on the breach model development is available in the FLO-2D Reference Manual.
 In FLO-2D, a dam can fail as follows:
 
-- Overtopping and development of a breach channel;
+    - Overtopping and development of a breach channel;
 
-- Piping failure;
+    - Piping failure;
 
-- Piping failure and roof collapse and development into a breach channel;
+    - Piping failure and roof collapse and development into a breach channel;
 
-- Breach channel enlargement through side slope slumping;
+    - Breach channel enlargement through side slope slumping;
 
-- Breach enlargement by wedge collapse.
+    - Breach enlargement by wedge collapse.
 
 The user has the option to specify the breach element and breach elevation or to assign global parameters and the
 model will locate breach failure element based on the water surface elevation and duration of inundation.
@@ -409,19 +413,19 @@ Dam Breach Channel Development.*
 
 The dam geometry parameters (Figure 45) associated with a breach erosion failure are:
 
-- Crest Elevation
+    - Crest Elevation
 
-- Starting Water Surface Elevation (or depth below crest) (ft or m)
+    - Starting Water Surface Elevation (or depth below crest) (ft or m)
 
-- Cumulative Duration of Inundation at Specified Elevation Prior to Breach Initiation (hr)
+    - Cumulative Duration of Inundation at Specified Elevation Prior to Breach Initiation (hr)
 
-- Maximum Breach Width (ft or m)
+    - Maximum Breach Width (ft or m)
 
-- Prescribed Initial Pipe Elevation (ft or m)
+    - Prescribed Initial Pipe Elevation (ft or m)
 
-- Tailwater Elevation (ft or m)
+    - Tailwater Elevation (ft or m)
 
-- Foundation or Base Elevation for Vertical Breach Cessation (ft or m)
+    - Foundation or Base Elevation for Vertical Breach Cessation (ft or m)
 
 These parameters are defined in Figure 44.
 
@@ -498,11 +502,11 @@ wing wall flare 90 or 15 degrees and wing wall flare 0 degrees) and three entran
 headwall and socket end projecting).
 The highlights of this component are:
 
-- Computes discharge through box or circular pipe culverts for various entrance conditions.
+    - Computes discharge through box or circular pipe culverts for various entrance conditions.
 
-- Computes both inlet and outlet control and the transition between them.
+    - Computes both inlet and outlet control and the transition between them.
 
-- No rating curves or tables required.
+    - No rating curves or tables required.
 
 Storm Drain Modeling
 ------------------------
@@ -517,11 +521,11 @@ Storm drain engine was originally based on the EPA SWMM Model 5.0, but through e
 the FLO-2D storm drain engine represents a completely new model.
 The general approach to the applying the storm drain component is:
 
-- Storm Drain GUI interface (SWMM GUI) is called by the GDS to locate and develop the storm drain system.
+    - Storm Drain GUI interface (SWMM GUI) is called by the GDS to locate and develop the storm drain system.
 
-- GDS automatically develops the required SWMMFLO.DAT based on the SWMM.inp data file.
+    - GDS automatically develops the required SWMMFLO.DAT based on the SWMM.inp data file.
 
-- User defines the storm drain geometry in the GDS dialog box.
+    - User defines the storm drain geometry in the GDS dialog box.
 
 .. image:: ../img/References/Chapter4/image13.jpeg
 
@@ -536,21 +540,21 @@ inlets, outfalls or popped manhole covers.
 The FLO-2D Storm Drain Guidelines manual is a companion reference document that describes the model integration and explains the data input.
 The basic storm drain model development procedure is:
 
-i. Develop and run a basic FLO-2D overland flow model.
+    i. Develop and run a basic FLO-2D overland flow model.
 
-ii. Open the GDS and call the Storm Drain model GUI (SWMM GUI).
+    ii. Open the GDS and call the Storm Drain model GUI (SWMM GUI).
 
-iii. Develop a storm drain network with the provided SWMM GUI or one of any number of other associated external SWMM software GUIs.
+    iii. Develop a storm drain network with the provided SWMM GUI or one of any number of other associated external SWMM software GUIs.
 
-iv. GDS automatically creates the required FLO-2D interface data file when the GUI is closed and sets the storm drain switch to “ON”.
+    iv. GDS automatically creates the required FLO-2D interface data file when the GUI is closed and sets the storm drain switch to “ON”.
 
-v. Assign the storm drain inlet geometry and coefficients in the GDS dialog box.
+    v. Assign the storm drain inlet geometry and coefficients in the GDS dialog box.
 
-vi. Run FLO-2D model with the storm drain component.
+    vi. Run FLO-2D model with the storm drain component.
 
-vii. Review the results in the SWMM.rpt file and graphically in the SWMM GUI.
+    vii. Review the results in the SWMM.rpt file and graphically in the SWMM GUI.
 
-viii. Add other FLO-2D model components and details such as channels, buildings, and levees.
+    viii. Add other FLO-2D model components and details such as channels, buildings, and levees.
 
 Street Flow
 ---------------
@@ -731,15 +735,15 @@ When the rainfall exceeds the potential infiltration, then runoff is generated.
 The infiltration continues after the rainfall has ceased until all the available water has runoff or has been infiltrated.
 The Green-Ampt equation is based on the following assumptions:
 
-- Air displacement from the soil has a negligible effect on the infiltration process;
+    - Air displacement from the soil has a negligible effect on the infiltration process;
 
-- Infiltration is a vertical process represented by a distinct piston wetting front;
+    - Infiltration is a vertical process represented by a distinct piston wetting front;
 
-- Soil compaction due to raindrop impact is insignificant;
+    - Soil compaction due to raindrop impact is insignificant;
 
-- Hysteresis effects of the saturation and desaturation process are negligible;
+    - Hysteresis effects of the saturation and desaturation process are negligible;
 
-- Flow depth has limited effect on the infiltration processes.
+    - Flow depth has limited effect on the infiltration processes.
 
 A derivation of the Green-Ampt infiltration method can be found in Fullerton (1983).
 To utilize the Green-Ampt model, hydraulic conductivity, soil suction, volumetric moisture deficiency, soil storage depth and the percent impervious
@@ -892,13 +896,13 @@ The user can assign the range of slope where the multiple channel widening is co
 There is also a channel avulsion routine that will force the multiple channels to take a new path when the flow exceeds the bankfull depth.
 The primarily features of the multiple channel routine are:
 
-- Improves the runoff timing compared to overland sheet flow;
+    - Improves the runoff timing compared to overland sheet flow;
 
-- Shallow rectangular channels;
+    - Shallow rectangular channels;
 
-- Channel bed slope is based on grid element topography;
+    - Channel bed slope is based on grid element topography;
 
-- Multiple channel widths can expand to accept more discharge to simulate alluvial fan channels.
+    - Multiple channel widths can expand to accept more discharge to simulate alluvial fan channels.
 
 To assign multiple channels in the graphic editor programs, simply draw a polyline and select width, depth, and
 n-values.
@@ -1145,17 +1149,17 @@ The original Einstein method is assumed to work best when the bedload constitute
 In summary, Yang (1996) made several recommendations for the application of total load sediment transport formulas in the absence of measured data.
 These recommendations for natural rivers are slightly edited and presented below:
 
-- Use Zeller and Fullerton equation when the bedload is a significant portion of the total load.
+    - Use Zeller and Fullerton equation when the bedload is a significant portion of the total load.
 
-- Use Toffaleti’s method or the Karim-Kennedy equation for large sand-bed rivers.
+    - Use Toffaleti’s method or the Karim-Kennedy equation for large sand-bed rivers.
 
-- Use Yang’s equation for sand and gravel transport in natural rivers.
+    - Use Yang’s equation for sand and gravel transport in natural rivers.
 
-- Use Ackers-White or Engelund-Hansen for subcritical flow in lower sediment transport regime.
+    - Use Ackers-White or Engelund-Hansen for subcritical flow in lower sediment transport regime.
 
-- Use Laursen’s formula for shallow rivers with silt and fine sand.
+    - Use Laursen’s formula for shallow rivers with silt and fine sand.
 
-- Use MPM-Woo’s or MPM-Smart for steep slope, arroyo sand bed channels and alluvial fans.
+    - Use MPM-Woo’s or MPM-Smart for steep slope, arroyo sand bed channels and alluvial fans.
 
 Yang (1996) reported that ASCE ranked the equations (not including Toffaleti, MPM-Woo, Karin-Kennedy) in 1982 based on 40 field tests and 165 flume
 measurements in terms of the best overall predictions as follows with Yang ranking the highest: Yang, Laursen, Ackers-White, Engelund-Hansen, and
@@ -1637,14 +1641,14 @@ The floodplain areas that can be eliminated from potential flood storage without
 development.
 The general guidelines for floodway delineation are:
 
-- The floodway is based on the 100-yr flood.
+    - The floodway is based on the 100-yr flood.
 
-- The floodplain is divided into floodway and floodway fringe zones.
-  It is generally assumed that all the flood conveyance in the floodway fringe is eliminated.
+    - The floodplain is divided into floodway and floodway fringe zones.
+      It is generally assumed that all the flood conveyance in the floodway fringe is eliminated.
 
-- The floodway will pass the 100-yr flood without raising the water surface elevation more than 1 ft (0.3 m) above the maximum floodplain water surface.
+    - The floodway will pass the 100-yr flood without raising the water surface elevation more than 1 ft (0.3 m) above the maximum floodplain water surface.
 
-- The floodway is determined by means of equal reduction of conveyance on both sides of the channel.
+    - The floodway is determined by means of equal reduction of conveyance on both sides of the channel.
 
 The above guidelines are convenient artifacts of the single discharge, steady flow HEC-RAS model but do not reflect reality.
 Flooding in the floodway fringe is never eliminated.
@@ -1686,24 +1690,24 @@ This forces more water volume downstream increasing the floodplain inundation in
 The result is a mapped area of the floodway and floodway fringe that reflects the redistribution of the flood volume in the system.
 The procedure for performing the floodway simulation is as follows:
 
-- Complete a base run FLO-2D floodwall simulation.
+    - Complete a base run FLO-2D floodwall simulation.
 
-- Set IFLOODWAY = 1 or “on” and ENCROACH = ~ 1 ft (0.3 m) in CONT.DAT.
+    - Set IFLOODWAY = 1 or “on” and ENCROACH = ~ 1 ft (0.3 m) in CONT.DAT.
 
-- Run the floodway simulation with FLO-2D.
+    - Run the floodway simulation with FLO-2D.
 
 The FLO-2D floodway rules for sharing discharge are:
 
-1. The FLO-2D Model defines floodway elements as floodplain elements with flow depth > ENCROACH value in the base run.
-   Channel bank elements are automatically assigned as floodway elements.
+    1. The FLO-2D Model defines floodway elements as floodplain elements with flow depth > ENCROACH value in the base run.
+       Channel bank elements are automatically assigned as floodway elements.
 
-2. If the two floodplain elements sharing discharge are non-floodway elements, flow is shared between the elements (allows for rainfall runoff).
+    2. If the two floodplain elements sharing discharge are non-floodway elements, flow is shared between the elements (allows for rainfall runoff).
 
-3. If both floodplain elements are floodway elements, then flow is shared between them.
+    3. If both floodplain elements are floodway elements, then flow is shared between them.
 
-4. If one floodplain element is a floodway element and the other is not, flow is not shared until the predicted water surface exceeds the base flood
-   simulation maximum water surface elevation plus the ENCROACH value.
-   When this occurs, the non-floodway element is re-assigned to be a floodway element.
+    4. If one floodplain element is a floodway element and the other is not, flow is not shared until the predicted water surface exceeds the base flood
+       simulation maximum water surface elevation plus the ENCROACH value.
+       When this occurs, the non-floodway element is re-assigned to be a floodway element.
 
 In this manner, the flow first fills the floodway element until the maximum water surface plus the encroachment
 depth is exceeded.
@@ -1745,12 +1749,12 @@ At any time in the simulation, water may be infiltrating from the surface water 
 the opposite may occur.
 The model timesteps are synchronized as follows:
 
-- The MODFLOW simulation is divided into a series of stress periods during which specific parameters (e.g., variable heads) are constant.
+    - The MODFLOW simulation is divided into a series of stress periods during which specific parameters (e.g., variable heads) are constant.
 
-- Each stress period, in turn, is divided into a series of computational timesteps.
+    - Each stress period, in turn, is divided into a series of computational timesteps.
 
-- FLO-2D model timesteps are smaller than the MODFLOW model timesteps, so several FLO-2D computational sweeps are performed to match the MODFLOW model
-  simulation time.
+    - FLO-2D model timesteps are smaller than the MODFLOW model timesteps, so several FLO-2D computational sweeps are performed to match the MODFLOW model
+      simulation time.
 
 Infiltrated floodplain water predicted by FLO-2D is exchanged to the groundwater cells below.
 If the groundwater is lower than the channel bed elevation, the infiltration volume is passed to the corresponding MODFLOW grid element.
@@ -1982,15 +1986,15 @@ predicting sediment deposition.
 
 The model concept was to:
 
-a. Build a 25-ft or smaller grid system for the 100-year flood and run the model where the grid element
-   size would essentially constitute the channel cross section.
+    a. Build a 25-ft or smaller grid system for the 100-year flood and run the model where the grid element
+       size would essentially constitute the channel cross section.
 
-b. Modify the channel topography (cross section) to account for the sediment deposition.
+    b. Modify the channel topography (cross section) to account for the sediment deposition.
 
-c. Run the FLO-2D model and identify the channel overtopping locations.
+    c. Run the FLO-2D model and identify the channel overtopping locations.
 
-d. Predict the peak discharge at each overtopping location.
-   This would provide the basis for the secondary channel.
+    d. Predict the peak discharge at each overtopping location.
+       This would provide the basis for the secondary channel.
 
 To estimate the channel width and depth based on the peak discharge, a proposal was made to apply channel
 width and depth estimates based on empirical regime theory shown in Figure 76 and Figure 77 (USACE, 1994).
@@ -2023,13 +2027,13 @@ Concepts and Assumptions
 The original recommendation was to use small FLO-2D grid elements to represent the channel.
 This approach has several limitations:
 
-- The premise of channel avulsions is based on a loss of channel conveyance capacity.
+    - The premise of channel avulsions is based on a loss of channel conveyance capacity.
 
-- The channel will have unique width to depth ratios and roughness which would be obscured by the uniform
-  floodplain elements.
+    - The channel will have unique width to depth ratios and roughness which would be obscured by the uniform
+      floodplain elements.
 
-- Overbank flooding cannot be simply assessed using depressed floodplain elements because of the
-  multi-directional flow.
+    - Overbank flooding cannot be simply assessed using depressed floodplain elements because of the
+      multi-directional flow.
 
 The proposed avulsion method is based on computed widths and depths from Figure 75 and Figure 76 or the
 avulsed channels that cannot be simply represented by the floodplain element geometry.
@@ -2085,7 +2089,6 @@ Low Impact Development (LID) is a design strategy that integrates stormwater ret
 FLO-2D models LID using either a volume-based sink approach or a depth-based TOL (tolerance) approach.
 Each method helps simulate how LID features such as rain gardens, swales, or permeable surfaces (Figure 78) retain water on-site before contributing
 to runoff.
-
 
 .. image:: ../img/References/Chapter4/image68.png
 
@@ -2204,11 +2207,11 @@ infiltration capacity due to vegetation and soil amendments.
 
 In the example shown in , a bioswale has been assigned enhanced infiltration values:
 
-- Lower suction head to reflect permeable soil
+    - Lower suction head to reflect permeable soil
 
-- Higher hydraulic conductivity (Ksat)
+    - Higher hydraulic conductivity (Ksat)
 
-- Increased porosity (DTHETA) from amended soils
+    - Increased porosity (DTHETA) from amended soils
 
 These parameters allow the model to capture the performance of the bioswale during storm events, accounting for both temporary surface storage and
 infiltration.
@@ -2220,37 +2223,6 @@ This approach offers a simple but effective way to simulate LID features that fu
 
 *Figure 84.
 LID Retention Bioswale.*
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Building Rainfall Runoff
 -----------------------------
@@ -2311,23 +2283,23 @@ Assigned ARF Values to the Buildings.*
 
 There are several assumptions for the rainfall runoff from the buildings:
 
-- When IRAINBUILDING = 1, the rainfall runoff will only be routed between completely blocked elements within the building.
+    - When IRAINBUILDING = 1, the rainfall runoff will only be routed between completely blocked elements within the building.
 
-- The routing is based on the internal building topography (grid element elevation).
+    - The routing is based on the internal building topography (grid element elevation).
 
-- The flow roughness (Manning’s n-value) for the completely blocked buildings is 0.03 (hard coded in the model).
+    - The flow roughness (Manning’s n-value) for the completely blocked buildings is 0.03 (hard coded in the model).
 
-- Based on the eight potential flow directions, the flow width for a blocked element (ARF = 1) is 0.41412 \* grid element side (i.e., WRF = 0.).
+    - Based on the eight potential flow directions, the flow width for a blocked element (ARF = 1) is 0.41412 \* grid element side (i.e., WRF = 0.).
 
-- The flow from inside the building to outside of the building is based on a hard-coded head difference in the water surface elevation of 0.5 ft (0.15
-  m).
-  The actual water surface and ground elevations across the building walls are ignored in the flow computation.
+    - The flow from inside the building to outside of the building is based on a hard-coded head difference in the water surface elevation of 0.5 ft (0.15
+      m).
+      The actual water surface and ground elevations across the building walls are ignored in the flow computation.
 
-- The flow can only be exchanged from inside to outside the building.
-  No flow is permitted from outside to inside the building.
+    - The flow can only be exchanged from inside to outside the building.
+      No flow is permitted from outside to inside the building.
 
-- The flow depth must exceed a TOL = 0.0042 for flow to be exchanged between interior building elements.
-  This represents ponded water storage and is hard coded in the model.
+    - The flow depth must exceed a TOL = 0.0042 for flow to be exchanged between interior building elements.
+      This represents ponded water storage and is hard coded in the model.
 
 The following example project (Figure 87) has a large building on a steep alluvial fan slope to the north
 (top of the page).
@@ -2516,13 +2488,13 @@ detailed project will be presented.
 Several tests were developed to verify the roof runoff computations.
 These include:
 
-- Rainfall accumulation on a flat roof
+    - Rainfall accumulation on a flat roof
 
-- Rainfall runoff movement on sloped roof
+    - Rainfall runoff movement on sloped roof
 
-- Parapet wall overtopping
+    - Parapet wall overtopping
 
-- Downspout discharge to the ground
+    - Downspout discharge to the ground
 
 In the first test, three inches of rain is applied to the project in two hours.
 The project has buildings, walls, infiltration, and storm drains.
@@ -2606,13 +2578,13 @@ The primary revisions involved allowing component interaction with the completel
 representing the buildings (ARF = 1).
 The three new tools were tested extensively with a flat and sloped roof to validate that:
 
-- Rainfall was accurately predicted to accumulate on a flat roof;
+    - Rainfall was accurately predicted to accumulate on a flat roof;
 
-- Rainfall runoff was predicted to flow to the lowest cell on a slope roof;
+    - Rainfall runoff was predicted to flow to the lowest cell on a slope roof;
 
-- Rainfall runoff flowed to the lowest roof cell and overtopped a low parapet wall;
+    - Rainfall runoff flowed to the lowest roof cell and overtopped a low parapet wall;
 
-- Roof storage was discharged through a downspout located at the lowest roof cell.
+    - Roof storage was discharged through a downspout located at the lowest roof cell.
 
 There are no required data file revisions to use these new building rainfall tools.
 
@@ -2794,12 +2766,12 @@ Constricted Flow through a Bridge (Tom Imbrigiotta, USGS).*
 
 The head loss or energy loss through a bridge (referred to as the afflux) is generated from three primary sources:
 
-- Flow expansion from the bridge downstream;
+    - Flow expansion from the bridge downstream;
 
-- Flow resistance associated with surface friction (piers, abutments and soffit when submerged) and other roughness
-  conditions included, but not limited to, bed forms, vegetation, non-uniform flow (scour holes and piers);
+    - Flow resistance associated with surface friction (piers, abutments and soffit when submerged) and other roughness
+      conditions included, but not limited to, bed forms, vegetation, non-uniform flow (scour holes and piers);
 
-- Flow contraction by the bridge configuration.
+    - Flow contraction by the bridge configuration.
 
 The energy loss attributed to flow expansion is presumed to be about twice the contraction energy loss (Hamill, 1999).
 It should be noted, however, that uniform flow in the river reach upstream of the bridge is the exception rather
@@ -2914,15 +2886,15 @@ Typically, overtopping flow is shallow, but for a long bridge the overflow disch
 An assumption of weir flow to represent overdeck discharge can only be an approximation because of several
 factors that are not limited to:
 
-- Tailwater submergence;
+    - Tailwater submergence;
 
-- Variable deck elevation;
+    - Variable deck elevation;
 
-- Unsteady flow conditions;
+    - Unsteady flow conditions;
 
-- Guardrail supports causing blockage and spatially variable flow;
+    - Guardrail supports causing blockage and spatially variable flow;
 
-- Debris blockage.
+    - Debris blockage.
 
 .. image:: ../img/References/Chapter4/image116.jpeg
 
@@ -2936,11 +2908,11 @@ Bridge Flow Modeling
 The FLO-2D modeling approach and equations for the different types of bridge flow are discussed in this section.
 The objective is to compute the bridge discharge that will consist of either:
 
-- Free surface flow
+    - Free surface flow
 
-- Pressure flow
+    - Pressure flow
 
-- Weir flow (overtopping) plus pressure flow
+    - Weir flow (overtopping) plus pressure flow
 
 The effect of submergence from rising downstream tailwater is also determined by the FLO-2D model.
 
@@ -3070,42 +3042,42 @@ The USGS bridge discharge method embodies several assumptions both theoretically
 the required data.
 The following assumptions have been acknowledged as potentially limiting the accuracy of the modeling approach.
 
-i. Two cross sections will be used to represent the bridge.
-   If there is no 1-D FLO-2D channel, the cross sections still required data (BRIDGE_XSEC.DAT file).
-   For a 1-D channel, the bridge cross sections can be represented by existing channel cross sections with the
-   first cross section being the bridge inflow node channel cross section.
-   This cross section should represent essentially normal depth upstream of the bridge (beyond backwater effects).
-   The length between the two cross sections (UPLENGTH12 – L\ :sub:`1-2` in Figure 127) can be adjusted and can be
-   longer than a grid element side length if the cell size is too short to extend to the normal flow depth conditions.
+    i. Two cross sections will be used to represent the bridge.
+       If there is no 1-D FLO-2D channel, the cross sections still required data (BRIDGE_XSEC.DAT file).
+       For a 1-D channel, the bridge cross sections can be represented by existing channel cross sections with the
+       first cross section being the bridge inflow node channel cross section.
+       This cross section should represent essentially normal depth upstream of the bridge (beyond backwater effects).
+       The length between the two cross sections (UPLENGTH12 – L\ :sub:`1-2` in Figure 127) can be adjusted and can be
+       longer than a grid element side length if the cell size is too short to extend to the normal flow depth conditions.
 
-ii. The bridge flow will be exchanged between the upstream inflow and downstream outflow elements
-    (INFLONOD or OUTFLONOD in HYSTRUC.DAT file) for either the channel or floodplain.
-    Conceptually the bridge will be located between these two elements and share discharge between them.
-    The inflow and outflow nodes do not have to be contiguous.
-    The bridge cross section will constitute the boundary between these elements.
+    ii. The bridge flow will be exchanged between the upstream inflow and downstream outflow elements
+        (INFLONOD or OUTFLONOD in HYSTRUC.DAT file) for either the channel or floodplain.
+        Conceptually the bridge will be located between these two elements and share discharge between them.
+        The inflow and outflow nodes do not have to be contiguous.
+        The bridge cross section will constitute the boundary between these elements.
 
-iii. If there is widespread floodplain flooding, the upstream cross section should be limited to the 1-D channel
-     top of banks.
-     For a bridge on the floodplain with no channel, the cross section should be limited to a perceived channel
-     width or the bridge opening width.
-     The cross section should not encompass the entire valley floodplain.
+    iii. If there is widespread floodplain flooding, the upstream cross section should be limited to the 1-D channel
+         top of banks.
+         For a bridge on the floodplain with no channel, the cross section should be limited to a perceived channel
+         width or the bridge opening width.
+         The cross section should not encompass the entire valley floodplain.
 
-iv. The flow depth at the bridge is defined by the upstream inflow element water surface elevation and the
-    bridge cross section thalweg in cross section 2 (Figure 127).
-    This is not entirely accurate, since the water surface will vary from the upstream cross section to the bridge
-    cross section, but water surface elevation at the bridge is not computed directly by the model.
-    Given the potential of backwater effects, however, the impact of the variable water surface elevation on
-    the flow depth will not be significant.
+    iv. The flow depth at the bridge is defined by the upstream inflow element water surface elevation and the
+        bridge cross section thalweg in cross section 2 (Figure 127).
+        This is not entirely accurate, since the water surface will vary from the upstream cross section to the bridge
+        cross section, but water surface elevation at the bridge is not computed directly by the model.
+        Given the potential of backwater effects, however, the impact of the variable water surface elevation on
+        the flow depth will not be significant.
 
-v. The water surface head difference will be assessed from the upstream inflow node headwater and the
-   downstream outflow node tailwater.
+    v. The water surface head difference will be assessed from the upstream inflow node headwater and the
+       downstream outflow node tailwater.
 
-vi. The bridge will assume to have the same constriction coefficients and losses regardless of whether
-    the flow is upstream or downstream.
+    vi. The bridge will assume to have the same constriction coefficients and losses regardless of whether
+        the flow is upstream or downstream.
 
-vii. A velocity coefficient of α\ :sub:`1` = 1.3 is assumed and hardcoded for natural streams from Chow (1959, p.28)
-     representing an average of lower values (α\ :sub:`1` ~ 1.1) for large uniform prismatic and higher values
-     for small nonuniform natural channels (ranging up to 1.5).
+    vii. A velocity coefficient of α\ :sub:`1` = 1.3 is assumed and hardcoded for natural streams from Chow (1959, p.28)
+         representing an average of lower values (α\ :sub:`1` ~ 1.1) for large uniform prismatic and higher values
+         for small nonuniform natural channels (ranging up to 1.5).
 
 Sluice Gate Flow
 ''''''''''''''''
@@ -3319,9 +3291,9 @@ The first B-line of data in the HYSTRUC.DAT file provides the user with the oppo
 free surface low flow discharge coefficients.
 The second B-line includes the various bridge parameters such as low chord, deck length, pier width, etc.
 
-1. ``B  IBTYPE(i), COEFFP(i), C_PRIME_USER(i), KF_COEF(i), KWW_COEF(i), KPHI_COEF(i), KY_COEF(i), KX_COEF(i), KJ_COEF(i)``
+    1. ``B  IBTYPE(i), COEFFP(i), C_PRIME_USER(i), KF_COEF(i), KWW_COEF(i), KPHI_COEF(i), KY_COEF(i), KX_COEF(i), KJ_COEF(i)``
 
-2. ``B  BOPENING(i), BLENGTH(i), BN_VALUE(i), UPLENGTH12(i), LOWCHORD(i), DECKHT(i), DECKLENGTH(i), PIERWIDTH(i), SLUICECOEFADJ(i), ORIFICECOEFADJ(i), COEFFWEIRB(i), WINGWALL_ANGLE(i), PHI_ANGLE(i), LBTOEABUT(i), RBTOEABUT(i)``
+    2. ``B  BOPENING(i), BLENGTH(i), BN_VALUE(i), UPLENGTH12(i), LOWCHORD(i), DECKHT(i), DECKLENGTH(i), PIERWIDTH(i), SLUICECOEFADJ(i), ORIFICECOEFADJ(i), COEFFWEIRB(i), WINGWALL_ANGLE(i), PHI_ANGLE(i), LBTOEABUT(i), RBTOEABUT(i)``
 
 
 A typical HYSTRUCT.DAT file for a bridge would be as follows:
@@ -3378,27 +3350,27 @@ To assist in understanding the free surface bridge flow routine, some specific d
 
 *Notes on the bridge configuration data:*
 
-i. TYPE = 1-4 bridge configurations representing the type of constriction I through IV depending on abutment type
-   shown in the Appendix figures.
-   The bridge type will be used to assign the various coefficients.
-   Refer also to Figures 17-16 through 17-23 beginning on page 480 of Chow (1959) or Figure 4.4 through 4.13
-   beginning on page 113 of Hamill (1999).
-   These two sets of figures are essentially the same but Hamill (1999) has a little more detail in some of the
-   figures and for that reason, Hamill’s (1999) figures has been reproduced in the Appendix.
+    i. TYPE = 1-4 bridge configurations representing the type of constriction I through IV depending on abutment type
+       shown in the Appendix figures.
+       The bridge type will be used to assign the various coefficients.
+       Refer also to Figures 17-16 through 17-23 beginning on page 480 of Chow (1959) or Figure 4.4 through 4.13
+       beginning on page 113 of Hamill (1999).
+       These two sets of figures are essentially the same but Hamill (1999) has a little more detail in some of the
+       figures and for that reason, Hamill’s (1999) figures has been reproduced in the Appendix.
 
-ii. The various coefficients are estimated from a linear interpolation between two points on the lines representing
-    the bridge parameters and coefficient data in the Appendix plots.
-    Typically, the lines in Appendix figures were divided into 8 to 12 segments to generate the digital data set.
+    ii. The various coefficients are estimated from a linear interpolation between two points on the lines representing
+        the bridge parameters and coefficient data in the Appendix plots.
+        Typically, the lines in Appendix figures were divided into 8 to 12 segments to generate the digital data set.
 
-iii. The bridge opening (BOPENING) is the width of the contracted cross section between the top of banks.
+    iii. The bridge opening (BOPENING) is the width of the contracted cross section between the top of banks.
 
-iv. L\ :sub:`1-2` = distance upstream of the surveyed constricted cross section (UPLENGTH12).
-    This cross section should be located upstream of the backwater effects of the bridge (up to several lengths of
-    the bridge opening width).
+    iv. L\ :sub:`1-2` = distance upstream of the surveyed constricted cross section (UPLENGTH12).
+        This cross section should be located upstream of the backwater effects of the bridge (up to several lengths of
+        the bridge opening width).
 
-v. Refer to the Appendix figures for parameter definition such as the radius of the leading edge of the Type I
-   abutment, length of the wingwall chamfer for various three chamfer angles (30\ :sup:`o`, 45\ :sup:`o`
-   and 60\ :sup:`o`), angle of bridge with respect to the flow, and angle of wingwall.
+    v. Refer to the Appendix figures for parameter definition such as the radius of the leading edge of the Type I
+       abutment, length of the wingwall chamfer for various three chamfer angles (30\ :sup:`o`, 45\ :sup:`o`
+       and 60\ :sup:`o`), angle of bridge with respect to the flow, and angle of wingwall.
 
 
 *Comments on the bridge coefficients:*
@@ -3499,12 +3471,12 @@ upstream and downstream predicted by the FLO-2D model routing algorithms are use
 This data enables the upstream, bridge and downstream flow depths to be computed.
 Some adjustments to the flow depth and head across the bridge are made for certain conditions:
 
-- The head at the bridge is interpolated based on the distance between the upstream cross sections and bridge.
+    - The head at the bridge is interpolated based on the distance between the upstream cross sections and bridge.
 
-- If the head exceeds the flow depth, the head is set to the flow depth.
+    - If the head exceeds the flow depth, the head is set to the flow depth.
 
-- If the tailwater is higher than the headwater and the upstream water surface elevation is higher than the low
-  chord, the head is computed as the difference between the upstream water surface elevation and the low chord.
+    - If the tailwater is higher than the headwater and the upstream water surface elevation is higher than the low
+      chord, the head is computed as the difference between the upstream water surface elevation and the low chord.
 
 Based on the respective flow depths, the upstream and bridge cross section channel geometry is computed including
 flow area, top width, wetted perimeter, and hydraulic radius.

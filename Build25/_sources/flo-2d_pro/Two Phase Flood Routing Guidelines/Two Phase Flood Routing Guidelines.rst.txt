@@ -2,11 +2,11 @@
 
 .. _two_phase_guidelines:
 
-Two Phase Flood Routing Guidelines
+TWO PHASE FLOOD ROUTING GUIDELINES
 ====================================
 
 Introduction
-============
+--------------
 
 This document describes how to simulate a mudflow or a tailings dam breach failure as either a mudflow or two-phase fluid flow (water and mudflow)
 using the FLO-2D model.
@@ -18,31 +18,26 @@ These guidelines complement the Tailings Dam Modeling training tutorials that sh
 Please contact FLO-2D Staff contact@flo-2d.com to get access to the training packages.
 
 Background
-==========
+-----------
 
 FLO-2D Model
-------------
+^^^^^^^^^^^^^
 
 The FLO-2D model has the following two-dimensional flow routing capabilities related to tailings dam failure:
 
-- Sudden collapse of the tailings stacks;
-
-- Dam breach with prescribed rates of failure or by simulating breach erosion;
-
-- Conventional sediment transport with scour and deposition;
-
-- Hyperconcentrated sediment flow (mudflows and mud floods) with flow cessation and remobilization;
-
-- River channel flow (1D) and overbank flooding;
-
-- Urban flooding with street flow and building obstruction.
+    - Sudden collapse of the tailings stacks;
+    - Dam breach with prescribed rates of failure or by simulating breach erosion;
+    - Conventional sediment transport with scour and deposition;
+    - Hyperconcentrated sediment flow (mudflows and mud floods) with flow cessation and remobilization;
+    - River channel flow (1D) and overbank flooding;
+    - Urban flooding with street flow and building obstruction.
 
 The FLO-2D Reference Manual, various White Papers and PowerPoint presentations provide additional discussion on the FLO-2D modeling system, sediment
 transport and mudflows and can be accessed once the software is installed.
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation
 
 Need for Two Phase Flow for Tailings Dam Breach
------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Tailing dam breach failure and the downstream mudflow routing can be simulated with water storage release combined with mudflow floodwave.
 For a more accurate prediction of bed scour and deposition of the tailings material released through the breach, a two phase fluid approach combining
@@ -79,7 +74,7 @@ Ajka Accident Hungary October 2010.
 FLO-2D Tailings Dam Tool Opening Control Window.*
 
 Hyperconcentrated Multi-Phase Sediment Flow
--------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The physical processes of sediment transport represent a continuum that ranges from particles in clear water to landslides and despite the best
 efforts to characterize, classify and simulate different types of sediment laden events, the delineation between fluid flow and soil mass movement is
@@ -134,10 +129,10 @@ Figure 3.
 FLO-2D Two Phase Flow – Fluid with Sediment Transport and Mudflow.*
 
 FLO-2D Two Phase Flow Approach
-==============================
+-----------------------------------
 
 General
--------
+^^^^^^^^
 
 An important issue for the flood modeler is selecting appropriate project scale to accurately predict the area of inundation.
 For a tailings dam breach project, this depends on the flood hydrology, the tailings volumes, and potential for flow cessation.
@@ -147,7 +142,7 @@ The challenge for the programmer is to develop a realistic model with as much ph
 simulation of a large-scale project.
 
 Conventional Sediment Transport
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Prior to undertaking the two phase flow implementation, the FLO-2D model had the option of simulating either sediment transport or hyperconcentrated
 sediment flow (mudflow) but the application of the two components was exclusive.
@@ -186,7 +181,7 @@ the extrapolation to higher concentrations or diverse sediment size distribution
 The various sediment transport equations and recommendations for their application are discussed later in the document.
 
 Hyperconcentrated Sediment Flows – Mud Floods and Mudflows
-----------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Most tailings dam failure mudflows fall within a range of about 20 to 55 percent sediment concentration by volume.
 When the tailings dam has minimal water storage, mudflows will occur (Figure 5).
@@ -230,7 +225,7 @@ function of the available sediment. Further discussion of the FLO-2D
 mudflow component is presented in Appendix B.
 
 Two Phase Flow Component
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To apply the FLO-2D two phase flow component, the sediment transport and mudflow model components must run concurrently with an interface routine that
 exchanges sediment between them as depicted in Figure 6.
@@ -239,17 +234,13 @@ hydraulics are computed in a second loop.
 Water and sediment volume conservation is tracked in both components separately on a grid element basis.
 To accomplish this integration, the following tasks are completed:
 
-   1. The data is read for both components (i.e., the SED.DAT requires both sediment transport and mudflow component data).
-
-   2. For a tailings dam breach, the elevation or depth of the tailings is defined as an input parameter in the INFLOW.DAT file reservoir line (R-line).
-
-   3. The sediment exchange between the fluid and mudflow phases is computed as well as sediment sharing between the fluid and the bed if there is no
-      mudflow.
-
-   4. Sediment volume conservation routines for both components are updated.
-
-   5. Sediment concentration by volume limits for both mudflow and sediment transport components are tested and the sediment exchange when the limits are
-      exceeded is adjusted.
+       1. The data is read for both components (i.e., the SED.DAT requires both sediment transport and mudflow component data).
+       2. For a tailings dam breach, the elevation or depth of the tailings is defined as an input parameter in the INFLOW.DAT file reservoir line (R-line).
+       3. The sediment exchange between the fluid and mudflow phases is computed as well as sediment sharing between the fluid and the bed if there is no
+          mudflow.
+       4. Sediment volume conservation routines for both components are updated.
+       5. Sediment concentration by volume limits for both mudflow and sediment transport components are tested and the sediment exchange when the limits are
+          exceeded is adjusted.
 
 .. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image7.png
 
@@ -258,17 +249,12 @@ Fluid – Mudflow Two Phase Flow Exchange for a Grid Element.*
 
 The two phase flow computations in the FLO-2D model proceed in the following manner:
 
-- First the fluid phase loop is completed with a sweep of all the grid elements to establish the fluid hydraulics.
-
-- All the grid elements are checked for numerical stability.
-
-- The conventional sediment transport is computed with updated volume concentrations.
-
-- The mudflow loop of the two phase flow with corresponding numerical stability checks is executed.
-
-- The sediment is exchanged with the fluid layer as either scour from the mudflow or deposition from the fluid layer to the mudflow.
-
-- All the sediment concentrations and volumes are then updated, and the model resumes the flood routing with an updated timestep.
+    - First the fluid phase loop is completed with a sweep of all the grid elements to establish the fluid hydraulics.
+    - All the grid elements are checked for numerical stability.
+    - The conventional sediment transport is computed with updated volume concentrations.
+    - The mudflow loop of the two phase flow with corresponding numerical stability checks is executed.
+    - The sediment is exchanged with the fluid layer as either scour from the mudflow or deposition from the fluid layer to the mudflow.
+    - All the sediment concentrations and volumes are then updated, and the model resumes the flood routing with an updated timestep.
 
 The flow chart in Figure 7 depicts the component interaction within the FLO-2D simulation.
 The sediment transport and mudflow routines are discussed in more detail in the Appendices.
@@ -279,7 +265,7 @@ The sediment transport and mudflow routines are discussed in more detail in the 
 Workflow for the Two Phase Fluid and Mudflow Routing in the FLO-2D Model.*
 
 Assumptions and Limitations
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are some practical limitations to the sediment transport and mudflow exchange at the fluid-mudflow boundary.
 All the sediment transport equations used in the FLO-2D model were developed for river or flume conditions where the sediment concentration by volume
@@ -323,18 +309,15 @@ For dense mudflows or landslides, the sediment concentration by volume must decr
 with water.
 
 Component Availability
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 At the present time, there are several FLO-2D components that are superfluous to two phase flow modeling.
 The following components are automatically set to ‘OFF’:
 
-- Evaporation
-
-- Storm Drain
-
-- Groundwater
-
-- Multiple Channels (rill and gully flow)
+    - Evaporation
+    - Storm Drain
+    - Groundwater
+    - Multiple Channels (rill and gully flow)
 
 The initial focus for the two phase flow compute was to simulate tailings dam breach with water storage.
 For obvious reasons, tailings dams are not located in a river channel corridor, but FLO-2D can still simulate a mud flood or mudflow with upstream or
@@ -343,10 +326,10 @@ Significant Infiltration will generally not occur when a mud flood or mud flood 
 clogged with sediment.
 
 Simulating a Tailings Dam Failure
-=================================
+----------------------------------
 
 General
--------
+^^^^^^^^^
 
 A tailings dam failure can be simulated with or without water storage.
 It is assumed that any supernatant water storage (Vstorage) rests over the tailings material and the water depth (F) will drain first if the breach
@@ -354,15 +337,11 @@ failure is progressive from the top of the dam (Figure 8).
 The dam may be a designed feature constructed of borrow material or it could be created from as stacked layered tailings deposits.
 In either case, there are four FLO-2D options for simulating the tailings dam breach failure and routing the flood downstream:
 
-- Stacked tailings collapse (no water storage);
-
-- Dam breach failure with or without water storage:
-
-- Instantaneous tailings dam collapse – seismic or static (prescribed failure component);
-
-- Prescribed failure – assign horizontal and vertical failure rates;
-
-- Breach erosion – progressive failure using the dam breach erosion component;
+    - Stacked tailings collapse (no water storage);
+    - Dam breach failure with or without water storage:
+    - Instantaneous tailings dam collapse – seismic or static (prescribed failure component);
+    - Prescribed failure – assign horizontal and vertical failure rates;
+    - Breach erosion – progressive failure using the dam breach erosion component;
 
 For two phase flow, the tailings dam reservoir and the downstream flood inundation area can be modeled in one flow domain grid system or split into
 separate models so that the tailings dam breach discharge hydrograph can be determined and tested with faster simulations.
@@ -379,7 +358,7 @@ The four tailings dam failure options are briefly discussed below and additional
 PowerPoint presentations, white papers and other FLO-2D reference documents available from the website.
 
 Stack Layer Tailings Facility Collapse
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The collapse of stacked layer tailings facility is assumed to occur as either a static or seismic failure without any water storage or flood inflow.
 It is the simplest FLO-2D option to apply and does not require the assignment of dam parameters (using the levee component).
@@ -392,17 +371,13 @@ Tailings Stacks Example (source: Google Earth Historical Imagery).*
 
 The following assumptions are applied for this tailings failure option:
 
-- The tailing facility is constructed in relatively homogeneous horizontal layers;
-
-- The density and fluid property variability of the layers in the vertical direction will not significantly affect the flow properties as failure
-  occurs;
-
-- In terms of the development of the collapse floodwave and predicting the downstream hydraulics and area of inundation, the actual failure mode is
-  inconsequential;
-
-- The tailings material when the model simulation begins is in a failure condition with incipient motion as just being initiated;
-
-- There is no water storage and no dam is simulated.
+    - The tailing facility is constructed in relatively homogeneous horizontal layers;
+    - The density and fluid property variability of the layers in the vertical direction will not significantly affect the flow properties as failure
+      occurs;
+    - In terms of the development of the collapse floodwave and predicting the downstream hydraulics and area of inundation, the actual failure mode is
+      inconsequential;
+    - The tailings material when the model simulation begins is in a failure condition with incipient motion as just being initiated;
+    - There is no water storage and no dam is simulated.
 
 To simulate the collapse, a tailings depth and sediment by volume for each grid element within the tailings facility is required in a file named
 TAILINGS_CV.DAT in the following format:
@@ -422,11 +397,9 @@ flow condition.
 
 Additional data input requirements unique to tailings failures include by file name:
 
-- CONT.DAT: MUD = 1, ISED = 0, XCONC = Concentration Adjustment Factor (additive)
-
-- SED.DAT: Mudflow M-line is needed, C-line for sediment transport is not required
-
-- LEVEE.DAT not required.
+    - CONT.DAT: MUD = 1, ISED = 0, XCONC = Concentration Adjustment Factor (additive)
+    - SED.DAT: Mudflow M-line is needed, C-line for sediment transport is not required
+    - LEVEE.DAT not required.
 
 When starting a project, performing a stack failure first is the suggested approach.
 It only requires tailings dam volume, original ground surface, tailings surface or depth, estimated n-values, a selection of rheologic parameters from
@@ -481,54 +454,39 @@ research potential tailings dam breach rates and experiment with various rates t
 
 *Breach Erosion:* Computing the tailings dam scour is complicated and the method has the following failure potential:
 
-- Overtopping and development of a breach channel;
-
-- Piping failure;
-
-- Piping failure, roof collapse and development into a breach channel;
-
-- Breach channel enlargement through side slope slumping;
-
-- Breach enlargement by wedge collapse.
+    - Overtopping and development of a breach channel;
+    - Piping failure;
+    - Piping failure, roof collapse and development into a breach channel;
+    - Breach channel enlargement through side slope slumping;
+    - Breach enlargement by wedge collapse.
 
 To exercise the above breach sequence the following geometry parameters are required:
 
-- Crest elevation
-
-- Starting water surface elevation (or depth below crest) (ft or m)
-
-- Cumulative duration of inundation at specified elevation prior to breach initiation (hr)
-
-- Maximum breach width (ft or m)
-
-- Prescribed initial pipe elevation (ft or m)
-
-- Tailwater elevation (ft or m)
-
-- Foundation or base elevation for vertical breach cessation (ft or m)
+    - Crest elevation
+    - Starting water surface elevation (or depth below crest) (ft or m)
+    - Cumulative duration of inundation at specified elevation prior to breach initiation (hr)
+    - Maximum breach width (ft or m)
+    - Prescribed initial pipe elevation (ft or m)
+    - Tailwater elevation (ft or m)
+    - Foundation or base elevation for vertical breach cessation (ft or m)
 
 These tailing dam breach options can be simulated with the two phase flow component discussed in detail below.
 Further discussion of the required data input for a tailings dam breach simulation is presented in the FLO-2D Data Input Manual, several white papers
 on dam breach and various PPT slide presentations that available from the FLO-2D website (`www.flo-2d.com <http://www.flo-2d.com>`__).
 
 2 Phase Flow Data Input
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 The data input discussed in this section is unique to the two phase flow component and supplements the data required for a typical FLO-2D flood model
 or tailings dam mudflow simulation.
 To initiate FLO-2D two phase flow:
 
-- CONT.DAT - The MUD switch = 2 instead of 1 Sediment transport switch is 0;
+    - CONT.DAT - The MUD switch = 2 instead of 1 Sediment transport switch is 0;
+    - CONT.DAT XCONC is set to the average tailings concentration;
+    - INFLOW.DAT – reservoir node gets a water elevation, tailings elevation and reservoir roughness.
 
-- CONT.DAT XCONC is set to the average tailings concentration;
-
-- INFLOW.DAT – reservoir node gets a water elevation, tailings elevation and reservoir roughness.
-
-..
-
-   R 7576 318.75 315.5 0.20
-
-- TAILINGS.DAT – grid element and thickness.
+        R 7576 318.75 315.5 0.20
+    - TAILINGS.DAT – grid element and thickness.
 
 The reservoir water surface elevation is assigned to a single grid element inside the reservoir (cell #7576).
 The model will then automatically assign the reservoir starting WS Elevation to all the grid elements with a bed elevation less than the starting WS
@@ -539,23 +497,19 @@ tailings elevation would not be uniform.
 The individual cell tailings thickness can also be assigned in the TAILINGS.DAT file which lists the reservoir grid element and the tailings thickness
 as shown below:
 
-   7127 10.00 (= thickness below the cell bed elevation)
+.. raw:: html
 
-   7128 10.00
-
-   7129 10.00
-
-   7130 12.25
-
-   7188 15.00
-
-   7189 13.25
-
-   7190 11.95
-
-   7191 10.00
-
-   7192 10.00
+    <pre>
+       7127 10.00 (= thickness below the cell bed elevation)
+       7128 10.00
+       7129 10.00
+       7130 12.25
+       7188 15.00
+       7189 13.25
+       7190 11.95
+       7191 10.00
+       7192 10.00
+    </pre>
 
 The tailings thickness in TAILINGS.DAT overrides the global assignment of tailings elevation or depth in Line R of the INFLOW.DAT file.
 The reservoir roughness at the end of line R enables the reservoir elements n-value to be reassigned to account for potential flow with deep depths
@@ -575,15 +529,11 @@ A typical SED.DAT file for two phase flow may be as follows:
 Refer to the FLO-2D Data Input Manual to review each variable.
 A few highlights are mentioned below:
 
-- The mudflow parameters in LINE M should be listed first;
-
-- The M-Line primarily includes viscosity and yield stress coefficients and exponents;
-
-- The sediment transport capacity equation is entered in the C-line;
-
-- Scour limitation is assigned by line E.
-
-- At the present time sediment routing by size fractions is not available for two phase flow and is ignored if the data is assigned.
+    - The mudflow parameters in LINE M should be listed first;
+    - The M-Line primarily includes viscosity and yield stress coefficients and exponents;
+    - The sediment transport capacity equation is entered in the C-line;
+    - Scour limitation is assigned by line E.
+    - At the present time sediment routing by size fractions is not available for two phase flow and is ignored if the data is assigned.
 
 Typical tolerance values, Courant numbers, limiting Froude number, and overland flow n-values are appropriate - no special values are necessary for a
 tailings dam breach simulation.
@@ -620,47 +570,38 @@ Two phase data entry dialog mudflow.*
 Two phase data entry dialog sediment transport.*
 
 Output Files and Reviewing the Results
-======================================
+------------------------------------------
 
 Output Files
-------------
+^^^^^^^^^^^^^
 
 Several new output files were created to review the two phase flow results.
 The MAXPLOT post processor program is a simple tool for graphically displaying FLO-2D model output.
 It has been updated to include the new two phase flow output files.
 These output files have the format:
 
-Cell No.
-X-Coordinate Y-Coordinate Variable
+.. raw:: html
+
+    <pre>
+    Cell No.       X-Coordinate        Y-Coordinate        Variable
+    </pre>
 
 The variables are listed below in the following files (both existing and new files):
 
-- CVTFPMAX.OUT: Maximum fluid phase sediment concentration by volume Cv.
-
-- CVTFPMAX_MUD.OUT: Maximum mudflow phase sediment concentration by volume.
-
-- DEPFP.OUT: Combined maximum fluid and mudflow phase flow depths.
-
-- DEPFPMAX_MUD.OUT: Maximum mudflow phase flow depth.
-
-- DEPTHMAX.OUT: Maximum fluid phase flow depth.
-
-- FINALDEP.OUT: Final fluid phase flow depth at the completion of the simulation.
-
-- FINALDEP_MUD.OUT: Final mudflow phase flow depth at the simulation completion.
-
-- FINALDEP_COMBO.OUT: Final combined fluid and mudflow phase flow depths
-  - end of simulation.
-
-- FINALVEL.OUT and FINALDIR.OUT: Final velocity and direction (1 of 8) for the fluid phase.
-
-- FINALVEL_MUD.OUT and FINALDIR_MUD.OUT: Final velocity and direction for the mudflow phase.
-
-- VELFP.OUT and VELDIREC.OUT: Maximum velocity and direction for the fluid phase.
-
-- VELFP_MUD.OUT and VELDIREC_MUD.OUT: Maximum velocity/direction for the mudflow phase.
-
-- VELRESMAX.OUT and VELRESMAX_MUD.OUT: These two files have a different format…
+    - CVTFPMAX.OUT: Maximum fluid phase sediment concentration by volume Cv.
+    - CVTFPMAX_MUD.OUT: Maximum mudflow phase sediment concentration by volume.
+    - DEPFP.OUT: Combined maximum fluid and mudflow phase flow depths.
+    - DEPFPMAX_MUD.OUT: Maximum mudflow phase flow depth.
+    - DEPTHMAX.OUT: Maximum fluid phase flow depth.
+    - FINALDEP.OUT: Final fluid phase flow depth at the completion of the simulation.
+    - FINALDEP_MUD.OUT: Final mudflow phase flow depth at the simulation completion.
+    - FINALDEP_COMBO.OUT: Final combined fluid and mudflow phase flow depths
+      - end of simulation.
+    - FINALVEL.OUT and FINALDIR.OUT: Final velocity and direction (1 of 8) for the fluid phase.
+    - FINALVEL_MUD.OUT and FINALDIR_MUD.OUT: Final velocity and direction for the mudflow phase.
+    - VELFP.OUT and VELDIREC.OUT: Maximum velocity and direction for the fluid phase.
+    - VELFP_MUD.OUT and VELDIREC_MUD.OUT: Maximum velocity/direction for the mudflow phase.
+    - VELRESMAX.OUT and VELRESMAX_MUD.OUT: These two files have a different format…
 
 ..
 
@@ -669,24 +610,19 @@ The variables are listed below in the following files (both existing and new fil
 The above files compliment the previously available output files in the same format that can be plotted with the original MAXPLOT or Mapper programs
 some of which are listed below:
 
-- DEPCH.OUT: Maximum channel flow depth.
-
-- DEPCHFINAL.OUT: Final channel flow depth at the end of the simulation.
-
-- DEPTH.OUT: Combined maximum channel and floodplain flow depth.
-
-- IMPACT.OUT: Maximum impact pressure
-
-- SPECENERGY.OUT: Maximum specific energy.
-
-- STATICPRES.OUT: Maximum static pressure.
+    - DEPCH.OUT: Maximum channel flow depth.
+    - DEPCHFINAL.OUT: Final channel flow depth at the end of the simulation.
+    - DEPTH.OUT: Combined maximum channel and floodplain flow depth.
+    - IMPACT.OUT: Maximum impact pressure
+    - SPECENERGY.OUT: Maximum specific energy.
+    - STATICPRES.OUT: Maximum static pressure.
 
 There are several additional output files and not all files are for graphical display.
 For a complete list of output files see the output file section in the FLO-2D Data Input Manual.
 Other FLO-2D QGIS plotting options are available for generating shape files or high-resolution mapping.
 
 Volume Conservation
--------------------
+^^^^^^^^^^^^^^^^^^^^
 
 To conduct a review of a FLO-2D simulation of tailings dam failure, the review should begin with volume conservation reported in the SUMMARY.OUT file.
 There are two primary reported output data in this file to review: 1) The overall fluid and mudflow volume conservation listed in four columns at the
@@ -702,20 +638,17 @@ Later in the file, the sediment volume conservation is reported:
 .. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two039.png
 
 Numerical Stability
--------------------
+^^^^^^^^^^^^^^^^^^^^
 
 Continuing with the project review, the simulation numerical stability should be verified next.
 Potential numerical surging in the model is most likely to occur near the tailings breach and may necessitate lowering the Courant number to control
 computational timesteps.
 There are four output files that can support the conclusion that the model results are numerically stable:
 
-- VELTIMEFP.OUT
-
-- SUPER.OUT
-
-- ROUGH.OUT
-
-- TIME.OUT
+    - VELTIMEFP.OUT
+    - SUPER.OUT
+    - ROUGH.OUT
+    - TIME.OUT
 
 If the maximum velocities reported in VELTIMEFP.OUT (sorted and listed in descending order) are reasonable, then there is no numerical surging in the
 model.
@@ -735,7 +668,7 @@ For further information on numerical instability and troubleshooting refer to th
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Manuals.
 
 Evacuated Grid Elements
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 With tailings dam breach simulations, scour and deposition may contribute to the evacuation of shallow flow volume from floodplain elements.
 Small grid elements and tolerance values and a large peak discharge associated with a tailings dam breach failure may cause a cell to be volume
@@ -754,7 +687,7 @@ For most projects, a few timesteps of evacuated grid elements can be ignored.
 The only consequence of the reported evacuated elements are higher n-values and TOL values and a few timestep reductions.
 
 Scour Limitation
-----------------
+^^^^^^^^^^^^^^^^^^^^
 
 The selection of a given sediment transport equation to simulate the scour and deposition of the fluid phase may not match the project field
 conditions resulting in some grid elements being predicted to have a large scour depth (hole).
@@ -767,7 +700,7 @@ sediment transport out of the grid element will not be considered when distribut
 A typical scour depth limitation may be 3 to 10 ft (1 to 3 m) depending on depth to bedrock.
 
 Channel Two Phase Mudflows
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Overland or channel mudflows without a tailings dam breach can be simulated.
 The only required additional data besides the channel inflow hydrograph with sediment concentrations is the ISEDN switch for the sediment equation or
@@ -787,38 +720,25 @@ Overbank and return flow to the channel will be simulated.
 
 .. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two041.png
 
-Tributary
-
-Fluid Flow Channel
-
-Main Channel
-
-Mixed Flow
-
-Mudflow Channel
-
 Figure 15.
 Two Phase Mudflow in a Channel with Diluted Tributary Inflow.
 
 Two Phase Flow Application - Possible Modeling Scenarios
---------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For a two phase flow tailings dam breach project application, the possible breach scenarios include:
 
-- Water failure only: PMP or PMF plus impounded water, or PMP plus impounded water plus inflow flood hydrograph; Use instantaneous breach failure,
-  prescribed rate failure or breach erosion.
-  No two phase flow necessary for this scenario.
-
-- Mudflow only: Failure of a completely mixed water and tailings material (a relatively fluid volume stored in the tailings reservoir) that will flow
-  with an instantaneous breach.
-  No fluid layer is assigned.
-  The tailings elevation and the water surface elevation are the same.
-
-- Breach failures that include varying tailings material sediment concentrations by volume; Use instantaneous breach failure, prescribed rates of breach
-  failure, or sediment erosion breach.
-
-- Multiple tailing dam failures cascading downstream into one another as instantaneous failures, prescribed rates of breach failure or sediment erosion
-  breach.
+    - Water failure only: PMP or PMF plus impounded water, or PMP plus impounded water plus inflow flood hydrograph; Use instantaneous breach failure,
+      prescribed rate failure or breach erosion.
+      No two phase flow necessary for this scenario.
+    - Mudflow only: Failure of a completely mixed water and tailings material (a relatively fluid volume stored in the tailings reservoir) that will flow
+      with an instantaneous breach.
+      No fluid layer is assigned.
+      The tailings elevation and the water surface elevation are the same.
+    - Breach failures that include varying tailings material sediment concentrations by volume; Use instantaneous breach failure, prescribed rates of breach
+      failure, or sediment erosion breach.
+    - Multiple tailing dam failures cascading downstream into one another as instantaneous failures, prescribed rates of breach failure or sediment erosion
+      breach.
 
 PMP = Probable Maximum Precipitation
 
@@ -827,58 +747,47 @@ PMF = Probable Maximum Flood
 The following tailings dam breach scenarios might include these tasks:
 
 - Estimate tailings breach volume with Tailings Dam Tool
-
 - Create combined tailings dam and downstream flooding grid system
-
 - Assign water surface and tailings elevation in INFLOW.DAT, Line R
-
 - Assign sediment transport and mudflow parameters in SED.DAT
-
 - Select one or more fluid sediment transport equations
-
 - Select one or more mudflow samples for varying concentrations by volume
-
 - Check SUMMARY.OUT to compare water/sediment volume conservation
-
 - Simulate a downstream channel and tributaries to capture the breach discharge
 
 1. Dam is constructed from borrow material (not tailings) with impounded water
 
-i. Prescribed failure with vertical and horizontal rates
+    i. Prescribed failure with vertical and horizontal rates
 
-a. Assign vertical and horizontal breach rates in LEVEE.DAT
+        a. Assign vertical and horizontal breach rates in LEVEE.DAT
 
-b. Assign breach vertical/horizontal rates to zero for instantaneous failure to bedrock
+        b. Assign breach vertical/horizontal rates to zero for instantaneous failure to bedrock
 
-c. Review breach elevation/width with respect to water surface and tailings elevation
+        c. Review breach elevation/width with respect to water surface and tailings elevation
 
-ii.
-Dam and tailings predicted erosion
+    ii. Dam and tailings predicted erosion
 
-a. Assign dam geometry and sediment parameters
+        a. Assign dam geometry and sediment parameters
 
-b. Review scour depth and deposition downstream near dam breach
+        b. Review scour depth and deposition downstream near dam breach
 
-c. Check SUMMARY.OUT to review sediment volume contribution from dam
+        c. Check SUMMARY.OUT to review sediment volume contribution from dam
 
 2. The dam is created by tailing deposits
 
-i. Prescribed failure with vertical and horizontal rates
+    i. Prescribed failure with vertical and horizontal rates
 
-a. Assign vertical and horizontal breach rates in LEVEE.DAT
+        a. Assign vertical and horizontal breach rates in LEVEE.DAT
+        d. Assign breach vertical/horizontal rates to zero for instantaneous failure to bedrock
+        c. Review breach elevation/width with respect to water surface and tailings elevation
 
-d. Assign breach vertical/horizontal rates to zero for instantaneous failure to bedrock
+    ii. Dam and tailings predicted erosion
 
-c. Review breach elevation/width with respect to water surface and tailings elevation
+        a. Establish a fake dam geometry to match tailings slope
 
-ii.
-Dam and tailings predicted erosion
+        b. Assign tailings thickness
 
-a. Establish a fake dam geometry to match tailings slope
-
-b. Assign tailings thickness
-
-c. Review scour depth and deposition downstream of dam breach
+        c. Review scour depth and deposition downstream of dam breach
 
 A tailings reservoir project as a two phase flow example project is presented.
 In Figure 16 the tailings reservoir is located on the right portion of grid system using levee elements (red lines) to define the reservoir (the levee
@@ -900,11 +809,9 @@ Example Project – Reservoir Located on the Right of the Flow Domain.*
 
 The following two phase flow tailings dam breach scenarios were simulated:
 
-- Instantaneous breach – seismic or static failure
-
-- Breach erosion - dam scour to bedrock
-
-- Prescribed breach – vertical/horizontal breach rates using the eleven sediment transport equations
+    - Instantaneous breach – seismic or static failure
+    - Breach erosion - dam scour to bedrock
+    - Prescribed breach – vertical/horizontal breach rates using the eleven sediment transport equations
 
 Figure 16 shows an example of the predicted maximum depths for the combined fluid and mudflow phases.
 This example is generated using a prescribed breach rate of 20 m/hr (for both vertical and horizontal) and the Karim-Kennedy sediment transport
@@ -1012,10 +919,10 @@ Maximum Flow Depth Combined Channel and Floodplain Flow.*
 Channel Bed and Maximum Fluid/Mudflow Surface Profile (PROFILES Program).*
 
 Recommendations
-===============
+---------------------
 
 Data Collection
----------------
+^^^^^^^^^^^^^^^^^^^^
 
 This tailings dam breach data collection discussion provides an overview of potential data needs to conduct a FLO-2D two phase flow breach simulation.
 The data is cataloged as either required or optional in the following table.
@@ -1027,18 +934,16 @@ tailings dam breach. The FLO-2D model can simulate these components if
 the downstream area of inundation of the tailings dam breach flooding is
 required.
 
-- Evaporation
-
-- Storm drain and groundwater
-
-- Multiple channels
+    - Evaporation
+    - Storm drain and groundwater
+    - Multiple channels
 
 To model the downstream area of inundation with these additional components, use the floodplain cross section component (HYCROSS.OUT) to generate the
 tailings dam breach hydrograph below the dam or use the breach hydrograph (BREACH.OUT or PRESCRIBED_BREACHQ.OUT) as an inflow hydrograph (INFLOW.DAT)
 to simulate the downstream flooding in a second model.
 
 Sediment Transport Approach
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Of the eleven available sediment transport equations, several are suggested for the first simulations.
 All the equations can be applied in each tailings dam two phase flow breach model.
@@ -1048,11 +953,9 @@ The SEDTRAN.OUT file lists the sediment discharge (cfs or cms) for all eleven eq
 Comparing the peak sediment loads in the SEDTRAN.OUT file for the grid element downstream of the tailings dam breach in the previous example project,
 the following conclusions can be drawn:
 
-- Low Peak Sediment Discharge Equations: Laursen, Toffaleti, Karim-Kennedy
-
-- Moderate Peak Sediment Discharge Equations: Zeller-Fullerton, Yang, Ackers-White, MPM-Woo, MPM-Smart, Van Rijn
-
-- High Peak Sediment Discharge Equations: Engelund-Hansen, Parker, Klingeman & McClean
+    - Low Peak Sediment Discharge Equations: Laursen, Toffaleti, Karim-Kennedy
+    - Moderate Peak Sediment Discharge Equations: Zeller-Fullerton, Yang, Ackers-White, MPM-Woo, MPM-Smart, Van Rijn
+    - High Peak Sediment Discharge Equations: Engelund-Hansen, Parker, Klingeman & McClean
 
 There is roughly an order of magnitude difference between these three categories.
 This can be misleading, however, since local conditions such as a steep slope or high depth can result in a large variation in the results (e.g., MPM-
@@ -1071,7 +974,7 @@ The maximum depths and area of inundation should also be reviewed to determine t
 equations.
 
 Mudflow Parameters
-------------------
+^^^^^^^^^^^^^^^^^^^^
 
 .. math::
    :label:
@@ -1129,45 +1032,45 @@ If rheological laboratory investigations are performed, the data should fall wit
 worldwide (Figures B.1 and B.2 in Appendix B).
 Recommendations for a tailings laboratory investigation are:
 
-1. Collect undisturbed tailings deposit samples and sieve the samples for the clay-silt/sand split to determine the percentage of fine sediment in the
-   flow material.
-   Additional soil analyses such as the Plastic Index and Liquid Limit may also be informative.
+    1. Collect undisturbed tailings deposit samples and sieve the samples for the clay-silt/sand split to determine the percentage of fine sediment in the
+       flow material.
+       Additional soil analyses such as the Plastic Index and Liquid Limit may also be informative.
 
-2. Starting with a dry deposit sample of the fluid matrix material, re-wet the sample based on accurate measurements of the weight of the sediment sample
-   and the added water to determine concentration by volume.
-   Record the observations by referencing Table 1.
-   By sloshing the rewetted tailings in a container, determine if the mudflow appears to be very viscous or rather dilute.
-   Did the flow behave like wet cement or more like a mud flood?
+    2. Starting with a dry deposit sample of the fluid matrix material, re-wet the sample based on accurate measurements of the weight of the sediment sample
+       and the added water to determine concentration by volume.
+       Record the observations by referencing Table 1.
+       By sloshing the rewetted tailings in a container, determine if the mudflow appears to be very viscous or rather dilute.
+       Did the flow behave like wet cement or more like a mud flood?
 
-3. Using a commercially available viscometer, determine the forces or stress required to initiate motion in the viscometer.
-   This is the yield stress.
-   Run the viscometer at low speeds (up to 10 sec\ :sup:`-1` - rotational speed) to measure the viscosity (line slope of the stress versus rate of strain
-   plot) for the various sediment concentrations by volume.
+    3. Using a commercially available viscometer, determine the forces or stress required to initiate motion in the viscometer.
+       This is the yield stress.
+       Run the viscometer at low speeds (up to 10 sec\ :sup:`-1` - rotational speed) to measure the viscosity (line slope of the stress versus rate of strain
+       plot) for the various sediment concentrations by volume.
 
-4. Regress the viscosity and yield stress data as exponential function of the concentration as noted in the above equations.
+    4. Regress the viscosity and yield stress data as exponential function of the concentration as noted in the above equations.
 
 If a subjective judgment is required to select a set of rheological relationships, the following approach is recommended:
 
-1. Observe field or historical tailings dam conditions including depositional characteristics in the tailings deposits.
-   Use available aerial photos.
-   Determine if the tailings deposits appear to be very viscous or rather dilute.
-   Did the flow behave like wet cement or like a fluid muddy flood? Did the inflow to the tailings pond cease immediately or continue flowing over the
-   deposits? Are there frontal wave terminal berms or lateral berm deposits?
+    1. Observe field or historical tailings dam conditions including depositional characteristics in the tailings deposits.
+       Use available aerial photos.
+       Determine if the tailings deposits appear to be very viscous or rather dilute.
+       Did the flow behave like wet cement or like a fluid muddy flood? Did the inflow to the tailings pond cease immediately or continue flowing over the
+       deposits? Are there frontal wave terminal berms or lateral berm deposits?
 
-2. If it is determined that the potential tailings flow could be viscous with a moderate yield stress, select a sample from guidelines tables that will
-   result in a viscosity and yield stress in an appropriate range in guideline figures.
-   Glenwood 4 in Appendix Table B.1 is suggested as a typical type of tailings material that will behave like wet cement.
-   Similarly, if it is assumed that the flow more resembled a mud flood with limited viscosity and yield stress, select parameters corresponding to a
-   Table B.1 sample such as the Aspen Natural Soil.
-   Compute the viscosity and yield stress for several different samples in the B.1 Tables and Figures B.1 and B.2 for a range of concentrations by volume
-   and compare the results in a worksheet table.
+    2. If it is determined that the potential tailings flow could be viscous with a moderate yield stress, select a sample from guidelines tables that will
+       result in a viscosity and yield stress in an appropriate range in guideline figures.
+       Glenwood 4 in Appendix Table B.1 is suggested as a typical type of tailings material that will behave like wet cement.
+       Similarly, if it is assumed that the flow more resembled a mud flood with limited viscosity and yield stress, select parameters corresponding to a
+       Table B.1 sample such as the Aspen Natural Soil.
+       Compute the viscosity and yield stress for several different samples in the B.1 Tables and Figures B.1 and B.2 for a range of concentrations by volume
+       and compare the results in a worksheet table.
 
-3. Run several FLO-2D mudflow simulations with different sample viscosity and yield stress relationships and analyze the range of flow results such as
-   area of inundation, maximum depths, maximum velocities, peak discharges, etc.
-   Determine the worst-case scenario for your project conditions.
+    3. Run several FLO-2D mudflow simulations with different sample viscosity and yield stress relationships and analyze the range of flow results such as
+       area of inundation, maximum depths, maximum velocities, peak discharges, etc.
+       Determine the worst-case scenario for your project conditions.
 
 Tailings Dam Breach Methods
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If a tailings dam with water storage breaches, initially the water is released and scours the stationary tailings material in reservoir at the breach
 as the breach expands.
@@ -1198,15 +1101,21 @@ To set up a stack failure, the tailings facility is initially assigned a levee d
 storage cells (Figure 25).
 The starting water surface and tailings surface (or just tailing surface with no supernatant fluid) are assigned in INFLOW.DAT R-Line:
 
-R 28776 4506.00 4501.00 0.25
+.. raw:: html
 
-where: 28776 is a grid element inside the reservoir
+    <pre>
+    R 28776 4506.00 4501.00 0.25
+    </pre>
 
-4506.00 = water surface elevation
+where:
 
-4501.00 = tailings surface elevation
+    28776 is a grid element inside the reservoir
 
-0.250 = reservoir n-value
+    4506.00 = water surface elevation
+
+    4501.00 = tailings surface elevation
+
+    0.250 = reservoir n-value
 
 At this stage, run theFLO-2D model with SIMUL = 0.01 hrs and TOUT = 0.01 hrs and the model will start and stop.
 Review the SUMMARY.OUT file for the reported volumes and adjust the grid element foundation or bed elevations until the tailing storage volume is
@@ -1246,19 +1155,13 @@ The Tailings Facility is Draining after 0.45 hrs.*
 channel, and/or dam collapse as block failure.
 Computing the tailings dam scour is requires more data and the following dam geometry parameters are required:
 
-- Crest elevation
-
-- Starting water surface elevation (or depth below crest) (ft or m)
-
-- Cumulative duration of inundation at specified elevation prior to breach initiation (hr)
-
-- Maximum breach width (ft or m)
-
-- Prescribed initial pipe elevation (ft or m)
-
-- Tailwater elevation (ft or m)
-
-- Foundation or base elevation for vertical breach cessation (ft or m)
+    - Crest elevation
+    - Starting water surface elevation (or depth below crest) (ft or m)
+    - Cumulative duration of inundation at specified elevation prior to breach initiation (hr)
+    - Maximum breach width (ft or m)
+    - Prescribed initial pipe elevation (ft or m)
+    - Tailwater elevation (ft or m)
+    - Foundation or base elevation for vertical breach cessation (ft or m)
 
 In addition, there are dam shell (and infrequently, a potential dam core) material parameters that are required.
 These parameters have variable levels of sensitivity as presented in Table 4.
@@ -1282,7 +1185,7 @@ at the FLO-2D website. There are also PowerPoint presentations on this
 subject.
 
 What to Review - Summary
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 After the successful completion of a FLO-2D tailings dam breach two phase flow simulation the following output files and results listed in Table 5
 below should be reviewed.
@@ -1312,7 +1215,7 @@ This should match the volume predicted by the Tailings Dam Tool shown in Figure 
 .. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two046.png
 
 References
-==========
+-----------
 
    Amoudry, L.O., 2008.
    “Two-Phase Modeling of Granular Sediment for Sheet Flows and Scour,” Ph.D.
@@ -1356,7 +1259,7 @@ References
 .. _section-3:
 
 Appendix A. Sediment Transport Equations
-========================================
+------------------------------------------
 
 Only one equation is selected to compute the sediment transport capacity in the tailings dam breach simulation, but one floodplain element can be
 assigned to review and compare the sediment transport capacity results for all eleven equations by output interval in the SEDTRAN.OUT file.
@@ -1527,17 +1430,17 @@ and that Engelund-Hansen, MPM-Smart, and Parker, Klingeman & McClean are the mos
 In summary, Yang (1996) made several recommendations for the application of total load sediment transport formulas in the absence of measured data.
 These recommendations for natural rivers are:
 
-- Use Zeller and Fullerton equation when the bedload is a significant portion of the total load.
+    - Use Zeller and Fullerton equation when the bedload is a significant portion of the total load.
 
-- Use Toffaleti’s method or the Karim-Kennedy equation for large sand-bed rivers.
+    - Use Toffaleti’s method or the Karim-Kennedy equation for large sand-bed rivers.
 
-- Use Yang’s equation for sand and gravel transport in natural rivers.
+    - Use Yang’s equation for sand and gravel transport in natural rivers.
 
-- Use Ackers-White or Engelund-Hansen for subcritical flow in lower sediment transport regime.
+    - Use Ackers-White or Engelund-Hansen for subcritical flow in lower sediment transport regime.
 
-- Use Laursen’s formula for shallow rivers with silt and fine sand.
+    - Use Laursen’s formula for shallow rivers with silt and fine sand.
 
-- Use MPM-Woo’s or MPM-Smart for steep slope, arroyo sand bed channels and alluvial fans.
+    - Use MPM-Woo’s or MPM-Smart for steep slope, arroyo sand bed channels and alluvial fans.
 
 Yang (1996) reported that ASCE ranked the equations (not including Toffaleti, MPM-Woo, Karin-Kennedy) in 1982 based on 40 field tests and 165 flume
 measurements in terms of the best overall predictions as follows with Yang ranking the highest: Yang, Laursen, Ackers-White, Engelund-Hansen, and
@@ -1672,7 +1575,7 @@ F.
 Lagasse, eds., Colorado State University and ASCE.
 
 Appendix B. Tailings Dam Mudflows
-=================================
+----------------------------------
 
 Very viscous, hyperconcentrated sediment flows are referred to as mudflows.
 Mudflows are nonhomogeneous, nonNewtonian, transient flood events whose fluid properties can change significantly as they flow down steep canyons and
@@ -1737,7 +1640,7 @@ Yield Stress of Mudflow Samples Versus Volumetric Concentration.
 .. _section-4:
 
 Appendix C. Model Speed and Numerical Stability Adjustments
-===========================================================
+-------------------------------------------------------------
 
 Use the default Courant number (0.6) and TIME_ACCEL (0.1) for the initial simulation and then review the VELTIMEFP.OUT file that reports the maximum
 velocities in descending order to determine if there are any unreasonable velocities.
@@ -1745,25 +1648,25 @@ Finally, verify the model stability by reviewing the SUPER.OUT file for high max
 Review the troubleshooting and numerical stability PowerPoint presentations in the FLO-2D help folder for more detailed information.
 The following approach is suggested for adjusting slow down the model to eliminate numerical instability:
 
-1. If the model has no numerical surging or unreasonable maximum velocities and it is desired to have the model run faster, increase the TIME_ACCEL
-   parameter from 0.1 to 0.2 and run the model again.
-   If the model runs faster and the results still do not indicate any numerical instability, then increase TIME_ACCEL to 0.25.
-   Some numerical instability may begin to appear in VELTIMFP.OUT when TIME_ACCEL is 0.3 or higher.
+    1. If the model has no numerical surging or unreasonable maximum velocities and it is desired to have the model run faster, increase the TIME_ACCEL
+       parameter from 0.1 to 0.2 and run the model again.
+       If the model runs faster and the results still do not indicate any numerical instability, then increase TIME_ACCEL to 0.25.
+       Some numerical instability may begin to appear in VELTIMFP.OUT when TIME_ACCEL is 0.3 or higher.
 
-2. When unreasonable velocities or Froude numbers are noted, decrease the TIME_ACCEL by 0.05.
-   Review the model runtime at the end of the SUMMARY.OUT file and do the various numerical instability checks.
-   At this point, a pattern will probably be apparent and the optimum Courant number and TIME_ACCEL parameter can be achieved.
-   If the model becomes numerically stable with the decreased TIME_ACCEL, it may be possible to increase the Courant number to achieve a slightly faster
-   model.
+    2. When unreasonable velocities or Froude numbers are noted, decrease the TIME_ACCEL by 0.05.
+       Review the model runtime at the end of the SUMMARY.OUT file and do the various numerical instability checks.
+       At this point, a pattern will probably be apparent and the optimum Courant number and TIME_ACCEL parameter can be achieved.
+       If the model becomes numerically stable with the decreased TIME_ACCEL, it may be possible to increase the Courant number to achieve a slightly faster
+       model.
 
-3. If the model has some initial numerical instability, leave the TIME_ACCEL at the default value of 0.1 and decrease the Courant Number from 0.6 to 0.5
-   to 0.4 over several runs until the numerical instability is eliminated.
-   Data adjustments to eliminate numerical surging might include increasing n-values using the limiting Froude number and the ROUGH.OUT file.
-   Depressed grid elements, deep ponded water or steep slopes may also contribute to unreasonably high maximum velocities.
+    3. If the model has some initial numerical instability, leave the TIME_ACCEL at the default value of 0.1 and decrease the Courant Number from 0.6 to 0.5
+       to 0.4 over several runs until the numerical instability is eliminated.
+       Data adjustments to eliminate numerical surging might include increasing n-values using the limiting Froude number and the ROUGH.OUT file.
+       Depressed grid elements, deep ponded water or steep slopes may also contribute to unreasonably high maximum velocities.
 
-4. Following each flood simulation, the TIME.OUT file should be reviewed to determine which of the grid elements are frequently exceeding the Courant
-   timestep and contributing to a slow model speed.
-   For those grid elements with excessive timestep decrements, adjustments can be made to the node attributes such as topography, roughness, available
-   surface area (area reduction values ARFs) or width reduction values (WRFs).
+    4. Following each flood simulation, the TIME.OUT file should be reviewed to determine which of the grid elements are frequently exceeding the Courant
+       timestep and contributing to a slow model speed.
+       For those grid elements with excessive timestep decrements, adjustments can be made to the node attributes such as topography, roughness, available
+       surface area (area reduction values ARFs) or width reduction values (WRFs).
 
 

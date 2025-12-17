@@ -32,22 +32,16 @@ Inlets
 
 The required data for inlets are (Figure 60):
 
-- Name (field): Starts with the character (‘I’ or ‘i’).
+    - Name (field): Starts with the character (‘I’ or ‘i’).
+    - X-coordinate and Y-coordinate: It is required to have a spatial reference to pair FLO-2D and the ‘stand-alone’ SWMM system.
+    - Invert Elevation and Maximum Depth (fields):
 
-- X-coordinate and Y-coordinate: It is required to have a spatial reference to pair FLO-2D and the ‘stand-alone’ SWMM system.
-
-- Invert Elevation and Maximum Depth (fields):
-
-  - The invert elevation and maximum depth can be edited manually in the QGIS plug-in or in the SWMM GUI.
-    Open the FLO-2D surface model in QGIS, go to the Storm Drain Editor, and Import SWMM.inp file, then add the data.
-
-  - The maximum depth and the invert elevation are used to determine the rim elevation.
-
-  - The rim elevation is compared with the FLO-2D grid element elevations.
-
-  - These comparisons are listed in the FPRIMELEV.OUT file.
-
-  - Ideally the elevations in the \*.inp file should match those of the grid system.
+          - The invert elevation and maximum depth can be edited manually in the QGIS plug-in or in the SWMM GUI.
+            Open the FLO-2D surface model in QGIS, go to the Storm Drain Editor, and Import SWMM.inp file, then add the data.
+          - The maximum depth and the invert elevation are used to determine the rim elevation.
+          - The rim elevation is compared with the FLO-2D grid element elevations.
+          - These comparisons are listed in the FPRIMELEV.OUT file.
+          - Ideally the elevations in the \*.inp file should match those of the grid system.
 
 .. image:: ../img/Storm_Drain_Modeling_Guidelines/Chapter7/image1.png
 
@@ -62,26 +56,17 @@ Only a single link can be connected to an outfall node.
 The required data includes (Figure 61):
 
 - Name (field)
-
 - X- and Y-coordinate: It is required to have a spatial reference to pair FLO-2D and the ‘stand-alone’ SWMM system.
-
 - Invert Elevation:
 
-  - An outfall that returns flows to a channel must be assigned to the left bank.
-
-  - An option to have an underground (underwater representing ponded flow) outfall was added in the FLO-2D storm drain.
-
-  - This elevation can be lower than the grid element and is not reported in the FPRIMELEV.OUT file.
-
-  - The outfall can discharge off the model.
-
+      - An outfall that returns flows to a channel must be assigned to the left bank.
+      - An option to have an underground (underwater representing ponded flow) outfall was added in the FLO-2D storm drain.
+      - This elevation can be lower than the grid element and is not reported in the FPRIMELEV.OUT file.
+      - The outfall can discharge off the model.
 - Outfall Type (Figure 61):
-
-  - Set to ‘FREE’ to exchange flow with the FLO-2D surface water system.
-
-  - Other types such as NORMAL, FIXED, TIDAL or TIME SERIES can be assigned but the flows will not be exchanged with the surface water but will debouch
-    the flow off the storm drain system.
-
+      - Set to ‘FREE’ to exchange flow with the FLO-2D surface water system.
+      - Other types such as NORMAL, FIXED, TIDAL or TIME SERIES can be assigned but the flows will not be exchanged with the surface water but will debouch
+        the flow off the storm drain system.
 - Tide gate: Set to ‘NO’ for the outfalls to exchange flows with the surface water.
 
 .. image:: ../img/Storm_Drain_Modeling_Guidelines/Chapter7/image3.png
@@ -108,24 +93,20 @@ This file contains the inlet geometry as well as the names/numbers that identify
 It is created from the SWMM.inp file by the QGIS plug-in.
 To use the SWMM.inp to create the SWMMFLO.DAT, the following SWMM components must be removed from file:
 
-- Hydrologic processes such as time-varying rainfall, rainfall interception, evaporation, depression storage, groundwater percolation, snow accumulation
-  and standing water surface.
+    - Hydrologic processes such as time-varying rainfall, rainfall interception, evaporation, depression storage, groundwater percolation, snow accumulation
+      and standing water surface.
+    - Watershed processes such as infiltration trenches, streets, and swales.
+    - Surface flood simulation features such as canals, culverts, and bridges.
+      FLO-2D engine performs all the surface flood routing.
 
-- Watershed processes such as infiltration trenches, streets, and swales.
-
-- Surface flood simulation features such as canals, culverts, and bridges.
-  FLO-2D engine performs all the surface flood routing.
-
-After the SWMM.inp file was edited, the storm drain command can be called from the FLO-2D QGIS Plug-in (Figure 62.
-) create the additional Storm Drain data files, review FLO-2D Plugin User’s Manual for more details.
+After the SWMM.inp file was edited, the storm drain command can be called from the FLO-2D QGIS Plug-in (Figure 62) create the additional Storm Drain data files, review FLO-2D Plugin User’s Manual for more details.
 
 .. image:: ../img/Storm_Drain_Modeling_Guidelines/Chapter7/Chapte002.png
 
 *Figure 62.
 QGIS Plug-in Storm Drain Commands.*
 
-The FLO-2D QGIS Plug-in then locates and reads the SWMM.inp file (Figure 63.
-) and loads the SWMM inlet nodes and associates them with a FLO-2D grid element.
+The FLO-2D QGIS Plug-in then locates and reads the SWMM.inp file (Figure 63) and loads the SWMM inlet nodes and associates them with a FLO-2D grid element.
 At this point, the storm drain geometry can be entered in FLO-2D plug-in.
 
 .. image:: ../img/Storm_Drain_Modeling_Guidelines/Chapter7/Chapte003.png
