@@ -226,15 +226,12 @@ Type 3 - Grate (Gutter) Inlet with/without Sag
 
 The following are the input parameters for a Type 3 inlet (Figure 30):
 
-- Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)
+    - Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)
+    - Grate perimeter (not including curb side)
+    - Grate open area
+    - Grate sag height (zero for at grade)
 
-- Grate perimeter (not including curb side)
-
-- Grate open area
-
-- Grate sag height (zero for at grade)
-
-Note: Orifice flow coefficient = 0.67 (hardcoded) for all cases.
+.. note:: Orifice flow coefficient = 0.67 (hardcoded) for all cases.
 
 .. image:: ../img/Storm_Drain_Modeling_Guidelines/Chapter2/image13.jpeg
 
@@ -333,12 +330,11 @@ Storm Drain Vertical Inlet with a Culvert Entrance.*
 
 The following are the input parameters for a Type 4 inlet that are entered in the SWMMFLORT.DAT file:
 
-Stage (depth) above inlet (ft or m)
+    Stage (depth) above inlet (ft or m)
 
-Discharge (cfs or cms)
+    Discharge (cfs or cms)
 
-Note: The stage-discharge data is assigned in pairs with the first pair being: 0.
-0.
+.. note:: The stage-discharge data is assigned in pairs with the first pair being: 0.0.
 
 Type 5 – Manhole
 +++++++++++++++++
