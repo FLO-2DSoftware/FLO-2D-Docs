@@ -12,27 +12,22 @@ Even for successful simulations, the ERROR.CHK and STORMDRAIN_ERROR.CHK should b
 All the potential errors that may be encountered cannot be anticipated, but some suggestions to reduce the conflicts and have a better understanding
 of how to improve the storm drain model are presented:
 
-- Number of inlets (SWMMFLO.DAT) should be equal to the number of nodes with an ID that starts with “I” (SWMM.inp).
-  The QGIS plugin identify the inlets automatically.
-  If a storm drain feature is added or deleted, the storm drain files need to be recreated to include the change.
-
-- The SWMMOUTF.DAT file should be created through the QGIS plug-in, if the storm drain system has outfalls defined.
-  If the number of outfalls is modified, the user must recreate the SWMMOUTF.DAT.
-
-- Outfall to a channel must be assigned to the left bank channel element.
-
-- The SWMMFLORT.DAT file needs to be created if Type 4 inlet rating tables or culvert conditions were assigned.
-
-- The inlet rim elevation must be equal to the FLO-2D grid element floodplain elevation for horizontal inlets.
-  Cell elevation is adjusted to the rim elevation at runtime and a warning message is generated.
-  The user must make the adjustment permanent in FPLAIN.DAT and TOPO.DAT by deleting the files and renaming FPLAIN_SDElev.RGH and TOPO_SDElev.RGH as
-  FPLAIN.DAT and TOPO.DAT.
-
-- The path names of FLO-2D storm drain files are recommended to be less than 254 characters.
-  Paths names approaching that number of characters may cause the storm drain model to crash.
-  The filenames and paths are defined as character pointers in the storm drain model so there is no text length issue but there are several opening and
-  write statements in the output files that include format specifiers that could trigger this problem.
-  If this problem is reported in the output \*.CHK files, then run the model in a folder with a short path and a simplified name.
+    - Number of inlets (SWMMFLO.DAT) should be equal to the number of nodes with an ID that starts with “I” (SWMM.inp).
+      The QGIS plugin identify the inlets automatically.
+      If a storm drain feature is added or deleted, the storm drain files need to be recreated to include the change.
+    - The SWMMOUTF.DAT file should be created through the QGIS plug-in, if the storm drain system has outfalls defined.
+      If the number of outfalls is modified, the user must recreate the SWMMOUTF.DAT.
+    - Outfall to a channel must be assigned to the left bank channel element.
+    - The SWMMFLORT.DAT file needs to be created if Type 4 inlet rating tables or culvert conditions were assigned.
+    - The inlet rim elevation must be equal to the FLO-2D grid element floodplain elevation for horizontal inlets.
+      Cell elevation is adjusted to the rim elevation at runtime and a warning message is generated.
+      The user must make the adjustment permanent in FPLAIN.DAT and TOPO.DAT by deleting the files and renaming FPLAIN_SDElev.RGH and TOPO_SDElev.RGH as
+      FPLAIN.DAT and TOPO.DAT.
+    - The path names of FLO-2D storm drain files are recommended to be less than 254 characters.
+      Paths names approaching that number of characters may cause the storm drain model to crash.
+      The filenames and paths are defined as character pointers in the storm drain model so there is no text length issue but there are several opening and
+      write statements in the output files that include format specifiers that could trigger this problem.
+      If this problem is reported in the output \*.CHK files, then run the model in a folder with a short path and a simplified name.
 
 FLO-2D Error Messages
 ---------------------
@@ -84,19 +79,16 @@ Excessive volume conservation error is primarily the result of short conduit len
 It is recommended that the minimum pipe length be at least the size of the FLO-2D grid element side.
 The volume conservation errors, and numerical instabilities may be reduced or eliminated by:
 
-- Increasing pipe roughness n-values.
-
-- Reviewing the selection of reporting timestep (REPORT_STEP) in the SWMM.inp file and the simulation time (TOUT) in the CONT.DAT file.
-
-- Reviewing the system connectivity for adverse slopes and incorrect inlet geometry.
+    - Increasing pipe roughness n-values.
+    - Reviewing the selection of reporting timestep (REPORT_STEP) in the SWMM.inp file and the simulation time (TOUT) in the CONT.DAT file.
+    - Reviewing the system connectivity for adverse slopes and incorrect inlet geometry.
 
 Reviewing the interaction of key features between the surface and the storm drain models.
 
 The most common sources of numerical instability are:
 
-- Short conduits.
-
-- Conflicting or poor system connectivity in the pipe network.
+    - Short conduits.
+    - Conflicting or poor system connectivity in the pipe network.
 
 Discharge oscillations at inlets primarily occur when the pipe system is under pressure (full capacity).
 In the original SWMM model, when the pipe pressure exceeded the rim elevation, the inlet inflow discharge ceased and the water in the pipe could
