@@ -9,15 +9,11 @@ Guidelines Storm Drain Setup
 To build a FLO-2D project with a storm drain, it is important to create a functional surface model first.
 This includes the following required components:
 
-- Computational domain
-
-- Grid elevation and roughness
-
-- Boundary conditions
-
-- Channels and culverts
-
-- Wall and buildings
+    - Computational domain
+    - Grid elevation and roughness
+    - Boundary conditions
+    - Channels and culverts
+    - Wall and buildings
 
 Once the surface model is ready, the storm drain can be added to the system using the FLO-2D Plugin.
 For detailed instructions including tutorials and videos, please refer to the FLO-2D Documentation website.
@@ -27,21 +23,17 @@ Three Storm Drain Lessons and the Coastal Tutorial have storm drain systems.
 
 Specific instructions for creating a storm drain in a FLO-2D urban environment are:
 
-- A storm drain inlet/outfall should not be assigned to a completely blocked cell (ARF = 1); A reasonable amount of surface area should be available for
-  the storm drain feature to interact with the surface water.
-
-- Higher roughness values can be assigned to floodplain elements with storm drain features (inlet or outfalls) to represent the storm drain flow
-  disturbance around the inlet or outfall.
-  This would help surface routing numerical stability.
-
-- Inlet rim elevations should match the floodplain elevation.
-  For an inlet rating table, the inlet discharge is zero if the floodplain water surface elevation is less than the inlet rim elevation.
-
-- Levees and walls may isolate a storm drain feature in the model resulting in oscillating storm drain discharge.
-  A review of the inlet/outfall location may be required.
-
-- Storm drain features should not be assigned to surface water inflow or outflow elements.
-  There is an error message generated for this conflict.
+    - A storm drain inlet/outfall should not be assigned to a completely blocked cell (ARF = 1); A reasonable amount of surface area should be available for
+      the storm drain feature to interact with the surface water.
+    - Higher roughness values can be assigned to floodplain elements with storm drain features (inlet or outfalls) to represent the storm drain flow
+      disturbance around the inlet or outfall.
+      This would help surface routing numerical stability.
+    - Inlet rim elevations should match the floodplain elevation.
+      For an inlet rating table, the inlet discharge is zero if the floodplain water surface elevation is less than the inlet rim elevation.
+    - Levees and walls may isolate a storm drain feature in the model resulting in oscillating storm drain discharge.
+      A review of the inlet/outfall location may be required.
+    - Storm drain features should not be assigned to surface water inflow or outflow elements.
+      There is an error message generated for this conflict.
 
 Other specific urban guidelines are listed in Table 19.
 
@@ -56,66 +48,56 @@ Default Parameters
 The following storm drain parameters are automatically hardwired in the FLO-2D storm drain model.
 Those values written to the SWMM.inp file are automatically replaced at the beginning of the FLO-2D simulation according to the following:
 
-- Runoff Wet Weather (WET_STEP) and Runoff Dry Weather (DRY_STEP) timesteps.
-  These watershed routing parameters are not directly used by the FLO-2D storm drain model.
+    - Runoff Wet Weather (WET_STEP) and Runoff Dry Weather (DRY_STEP) timesteps.
+      These watershed routing parameters are not directly used by the FLO-2D storm drain model.
+    - Lengthening Step (LENGTHENING_STEP) is set as the routing timestep (ROUTING_STEP) divided by 6.
+      This is hardwired in the FLO-2D storm drain code, values from SWMM.inp file will be replaced at the beginning of the FLO-2D simulation.
+      This option increases the length of the shorter conduits based on the Courant-Friederick-Levy (CFL) stability criteria.
+      The storm drain model bases the new equivalent pipe length on an estimate of the full flow velocity in the conduit as well as on the wave celerity.
+      The full area, width and hydraulic radius are unchanged in the modified link, but the length, slope and roughness are altered.
 
-- Lengthening Step (LENGTHENING_STEP) is set as the routing timestep (ROUTING_STEP) divided by 6.
-  This is hardwired in the FLO-2D storm drain code, values from SWMM.inp file will be replaced at the beginning of the FLO-2D simulation.
-  This option increases the length of the shorter conduits based on the Courant-Friederick-Levy (CFL) stability criteria.
-  The storm drain model bases the new equivalent pipe length on an estimate of the full flow velocity in the conduit as well as on the wave celerity.
-  The full area, width and hydraulic radius are unchanged in the modified link, but the length, slope and roughness are altered.
+      Length Factor = (Wave Celerity + Full Depth Velocity) \* Timestep/ Pipe Length
 
-Length Factor = (Wave Celerity + Full Depth Velocity) \* Timestep/ Pipe Length
+          For a Length Factor > 1:
 
-   For a Length Factor > 1:
+          New Roughness = Old Roughness /Length Factor**0.5
 
-   New Roughness = Old Roughness /Length Factor**0.5
-
-   New Slope =  Old Slope Slope/Length Factor**0.5
-
-- The routing model (FLOW_ROUTING) for the FLO-2D storm drain component is set as dynamic wave (DYNWAVE) to account for backwater effects, entrance/exit
-  losses, flow reversal or pressurized flow.
-  If the FLOW_ROUTING from the SWMM.INP is different than dynamic wave (DYNWAVE), FLO-2D will replace the routing model from the SWMM.INP with the
-  dynamic wave (DYNWAVE) option.
-
-- The inertial term (INERTIAL_DAMPING) is set to PARTIAL or dampen (Partial=1).
-  The inertial terms in the Saint Venant Equation are reduced for critical flow and ignored for supercritical flow.
-
-- Report Control Actions and Report Input Summary ([Report] CONTROLS and INPUT) are automatically turned on.
-
-- “Start Reporting on” variables (START_DATE and START_TIME) in the SWMM GUI is automatically set as Start Analysis on.
-  Both the FLO-2D and the storm drain model will start reporting results at the beginning of the simulation.
-
-- “End Analysis on” variables (END_DATE and END_TIME) in the SWMM GUI are automatically set based on the simulation time entered in FLO-2D (CON.DAT
-  file).
-  The Storm Drain results (\*.RPT,\*.OUT) are automatically saved when the model simulation runs until completion.
-  If the model is stopped before completion, storm drain results are written.
+          New Slope =  Old Slope Slope/Length Factor**0.5
+    - The routing model (FLOW_ROUTING) for the FLO-2D storm drain component is set as dynamic wave (DYNWAVE) to account for backwater effects, entrance/exit
+      losses, flow reversal or pressurized flow.
+      If the FLOW_ROUTING from the SWMM.INP is different than dynamic wave (DYNWAVE), FLO-2D will replace the routing model from the SWMM.INP with the
+      dynamic wave (DYNWAVE) option.
+    - The inertial term (INERTIAL_DAMPING) is set to PARTIAL or dampen (Partial=1).
+      The inertial terms in the Saint Venant Equation are reduced for critical flow and ignored for supercritical flow.
+    - Report Control Actions and Report Input Summary ([Report] CONTROLS and INPUT) are automatically turned on.
+    - “Start Reporting on” variables (START_DATE and START_TIME) in the SWMM GUI is automatically set as Start Analysis on.
+      Both the FLO-2D and the storm drain model will start reporting results at the beginning of the simulation.
+    - “End Analysis on” variables (END_DATE and END_TIME) in the SWMM GUI are automatically set based on the simulation time entered in FLO-2D (CON.DAT
+      file).
+      The Storm Drain results (\*.RPT,\*.OUT) are automatically saved when the model simulation runs until completion.
+      If the model is stopped before completion, storm drain results are written.
 
 Initial Parameters
 ------------------
 
 When building the storm drain model, the following data assignments in the SWMM.inp file are recommended:
 
-1. It is recommended to keep the names of the various storm drain components simple, short, and uniform such as I1, I2, I3… for inlets.
-   The number of characters should be less than 25.
-   Use O = outlets and C = pipe conduits.
-   This will simplify the graphics display of the storm drain components and make it easier to differentiate between inlets, manholes, and outlets.
+    1. It is recommended to keep the names of the various storm drain components simple, short, and uniform such as I1, I2, I3… for inlets.
+       The number of characters should be less than 25.
+       Use O = outlets and C = pipe conduits.
+       This will simplify the graphics display of the storm drain components and make it easier to differentiate between inlets, manholes, and outlets.
+    2. The END_TIME for the model duration is automatically assigned so that the END_TIME minus the START_TIME is equal to the simulation time SIMUL in the
+       FLO-2D model CONT.DAT file.
+    3. The ROUTING_STEP is automatically assigned as equal to the FLO-2D Timestep.
+       The FLO-2D Timestep is used as the ROUTING_STEP for all conditions including a VARIABLE_STEP equal or different to zero.
 
-2. The END_TIME for the model duration is automatically assigned so that the END_TIME minus the START_TIME is equal to the simulation time SIMUL in the
-   FLO-2D model CONT.DAT file.
-
-3. The ROUTING_STEP is automatically assigned as equal to the FLO-2D Timestep.
-   The FLO-2D Timestep is used as the ROUTING_STEP for all conditions including a VARIABLE_STEP equal or different to zero.
-
-Note: The WET_STEP and DRY_STEP values are hardcoded to 1 minute.
-
-4. The REPORT_START_DATE and REPORT_START_TIME are automatically assigned as the start date and time.
-
-5. The storm drain component reporting time (REPORT_STEP) in SWMM.inp file is recommended to be set up as equal to the FLO-2D output interval (TOUT) in
-   the CONT.DAT file.
-   Results for the surface water and for the storm drain will be reported with the same output timestep.
-   REPORT_STEP is a mixture of hours, minutes, and seconds with the format 00:00:00.
-   The unit for TOUT is hours.
+       .. note:: The WET_STEP and DRY_STEP values are hardcoded to 1 minute.
+    4. The REPORT_START_DATE and REPORT_START_TIME are automatically assigned as the start date and time.
+    5. The storm drain component reporting time (REPORT_STEP) in SWMM.inp file is recommended to be set up as equal to the FLO-2D output interval (TOUT) in
+       the CONT.DAT file.
+       Results for the surface water and for the storm drain will be reported with the same output timestep.
+       REPORT_STEP is a mixture of hours, minutes, and seconds with the format 00:00:00.
+       The unit for TOUT is hours.
 
 Integration of a Storm Drain Network into a Complex Urban Model
 ---------------------------------------------------------------
