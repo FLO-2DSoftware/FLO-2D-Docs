@@ -409,22 +409,22 @@ Drain Time
 Check to see if the channel finished draining the project (Figure 102).
 If there is no tidal or baseline flow, the hydrograph at the end of the channel should be close to zero or the channel depth should be close to zero.
 There are many ways to check this.
-Here are two easy ones.
+Here are two easy ones:
 
-HYDROG.EXE shows that the hydrograph at the end of the channel should be about finished.
-This one still has some residual rainfall.
+    HYDROG.EXE shows that the hydrograph at the end of the channel should be about finished.
+    This one still has some residual rainfall.
 
-.. image:: ../img/Channel_Modeling_Guidelines/Chapter3/image30.png
+    .. image:: ../img/Channel_Modeling_Guidelines/Chapter3/image30.png
 
-*Figure 102.
-Channel Hydrograph Hydrog Example.*
+    *Figure 102.
+    Channel Hydrograph Hydrog Example.*
 
-PROFILES.EXE show that the flow channel is almost empty (Figure 103).
+    PROFILES.EXE show that the flow channel is almost empty (Figure 103).
 
-.. image:: ../img/Channel_Modeling_Guidelines/Chapter3/image31.png
+    .. image:: ../img/Channel_Modeling_Guidelines/Chapter3/image31.png
 
-*Figure 103.
-Channel Profile Example.*
+    *Figure 103.
+    Channel Profile Example.*
 
 XSECAREA
 --------
