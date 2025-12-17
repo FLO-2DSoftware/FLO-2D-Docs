@@ -2,7 +2,7 @@
 
 .. _two_phase_guidelines:
 
-Two Phase Flood Routing Guidelines
+TWO PHASE FLOOD ROUTING GUIDELINES
 ====================================
 
 Introduction
