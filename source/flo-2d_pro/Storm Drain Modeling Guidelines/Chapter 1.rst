@@ -908,7 +908,7 @@ The solution algorithm involves the following steps:
 
        Q_{new} = (1−Ω) Q_{last} +Ω Q_{new}
 
-    4. The equation for :math:`H_{t + \mathrm{\Delta}t}`\ is solved again for heads using Q\ :sub:`new`.
+    4. The equation for :math:`H_{t + \mathrm{\Delta}t}` is solved again for heads using Q\ :sub:`new`.
        As with discharge, this new solution for head, H\ :sub:`new` is weighted with H\ :sub:`last` to
        produce an updated estimate for heads:
 
