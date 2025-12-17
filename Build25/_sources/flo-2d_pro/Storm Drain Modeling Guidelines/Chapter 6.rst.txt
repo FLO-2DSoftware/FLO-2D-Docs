@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 6: Reviewing Storm Drain Model Results
+CHAPTER 6: REVIEWING STORM DRAIN MODEL RESULTS
 ===============================================
 
 Introduction

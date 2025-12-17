@@ -151,13 +151,9 @@ Here is a list of other available references for channel modeling:</p>
 <li><p>Goat</p></li>
 <li><p>Aqueduct</p></li>
 <li><p>Sediment transport</p></li>
+<li><p>Sharefile.flo-2d.com – Webinar Series\Channel Series</p></li>
 </ul>
 </li>
-</ul>
-<blockquote>
-<div><p>Sharefile.flo-2d.com – Webinar Series\Channel Series</p>
-</div></blockquote>
-<ul class="simple">
 <li><p>Videos</p>
 <ul>
 <li><p>Basic channels</p></li>
@@ -195,12 +191,14 @@ Channel elements must be contiguous to be able to share discharge.</p>
 <section id="channel-geometry-length-and-roughness">
 <h2><span class="section-number">1.2. </span>Channel Geometry, Length and Roughness<a class="headerlink" href="#channel-geometry-length-and-roughness" title="Link to this heading"></a></h2>
 <p>There are four channel geometry options:</p>
-<ul class="simple">
+<blockquote>
+<div><ul class="simple">
 <li><p>R - Rectangular</p></li>
 <li><p>T - Trapezoidal</p></li>
 <li><p>N - Natural</p></li>
 <li><p>V - Regression Equation (not recommended except for unique cases)</p></li>
 </ul>
+</div></blockquote>
 <p>The channel cross section options are rectangular, trapezoidal, and natural.
 In FLO-2D, the floodwave movement in the channel is controlled by the rate of change in the discharge as
 a function of the rate of change in the flow area (∂Q/∂A).
@@ -292,7 +290,8 @@ into two elements even if the channel would fit into one grid element.</p>
 <p><em>Figure 6.
 Channel Extension over Several Grid Elements.</em></p>
 <p>There are three options for establishing the channel bank elevation to bed elevation relationship:</p>
-<ol class="arabic simple">
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A prismatic channel element bed elevation (rectangular and trapezoidal channels) is determined by
 subtracting the assigned channel thalweg depth from
 the floodplain elevation.</p></li>
@@ -304,6 +303,7 @@ This is appropriate for rectangular and trapezoidal geometry.</p></li>
 elevations in the channel.
 When using actual cross section data for the channel geometry, option 3 should be applied.</p></li>
 </ol>
+</div></blockquote>
 </section>
 </section>
 <section id="channel-development">
@@ -516,19 +516,23 @@ Using these criteria, a flow depth for coarse sand would be about 0.25 ft.</p>
 and the ROUGHADJ default value is 0.4.
 The ROUGHADJ factor can be higher ranging up to 1.0 or more, but a typical range is from 0.2 to 0.4.
 The application of the depth variable roughness has the following advantages:</p>
-<ul class="simple">
+<blockquote>
+<div><ul class="simple">
 <li><p>Can be used to reduce or eliminate surging from low to high flow;</p></li>
 <li><p>Accounts for submerged roughness elements;</p></li>
 <li><p>Enhances the modeling upper regime sediment transport.</p></li>
 </ul>
+</div></blockquote>
 <p>The basic guidelines for roughness assignment and temporal variation in a FLO-2D model are:</p>
-<ul class="simple">
+<blockquote>
+<div><ul class="simple">
 <li><p>SHALLOWN – for very shallow flows up to 0.2 ft</p></li>
 <li><p>SHALLOWN/2 for flows up to 0.5 ft</p></li>
 <li><p>Assign n-values for floodplain flow depths &gt; 3 ft or 1 m (channel – bankfull)</p></li>
 <li><p>Use depth integrated n-values (default for floodplain)</p></li>
 <li><p>Calibrate n-values for reasonable Froude numbers – adjusted at runtime</p></li>
 </ul>
+</div></blockquote>
 </section>
 </section>
 <section id="channel-floodplain-flow-exchange">
@@ -618,7 +622,11 @@ In the FLO-2D model the Courant number limits the timestep Δt by:</p>
 <div><p>C = Courant Number (C ≤ 1.0)</p>
 <p>Δx = square grid element width</p>
 <p>V = depth averaged velocity</p>
-<p>c = floodwave celerity = (gd)<sup>0.5</sup> where g is gravitation acceleration and d is the flow depth</p>
+<p>c = floodwave celerity = (gd)<sup>0.5</sup> where:</p>
+<blockquote>
+<div><p>g = gravitation acceleration</p>
+<p>d = the flow depth</p>
+</div></blockquote>
 </div></blockquote>
 <p>The Courant Number C can vary from 0.0 to 1.0 (recommended range 0.2 to 0.6), and a value of 1.0 in FLO-2D
 would enable the model to have the largest possible timestep.
@@ -631,7 +639,8 @@ Recent testing has shown that the model can run faster (more consistent higher t
 stability if the Courant Number is set to values less than 1.0.
 A starting value of C = 0.6 is recommended.
 Some guidelines for applying the Courant number are:</p>
-<ol class="arabic simple">
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>Use the default stability criteria for the initial simulation:</p>
 <ul class="simple">
 <li><p>Courant Number C = 0.6</p></li>
@@ -646,6 +655,7 @@ of 0.3.</p></li>
 <li><p>After a flood simulation is complete, review the TIME.OUT file to determine which of the stability
 criterion is slowing down the model.</p></li>
 </ol>
+</div></blockquote>
 <p>It has been determined that the Courant Number is more effective in controlling numerical instability
 surging than the other FLO-2D stability parameters DEPTOL and WAVEMAX.
 It is recommended that both parameters be set to zero.</p>
@@ -682,23 +692,27 @@ Steep Rising Hydrograph.</em></p>
 <p>A steep rising hydrograph, intense rainfall, or severe overland flow to the channel may cause instability
 near the inflow node or at any location in the channel where the conveyance capacity may be highly variable.
 To eliminate channel surging, perform the following steps:</p>
-<ol class="arabic simple">
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>Check the bed profile for unreasonable spikes (PROFILES program – Figure 23);</p></li>
 <li><p>Adjust the n-values (particularly in channel area transition reaches);</p></li>
 <li><p>Adjust the flow area - smooth out the area transitions (re-interpolate the cross sections);</p></li>
 <li><p>Apply the depth variable roughness;</p></li>
 <li><p>Use limiting Froude number FROUDC.</p></li>
 </ol>
+</div></blockquote>
 <img alt="../../_images/image24.jpeg" src="../../_images/image24.jpeg" />
 <p><em>Figure 23.
 Check the Channel Bed Profile for Data Errors.</em></p>
 <p>The Froude number is important for several reasons:</p>
-<ul class="simple">
+<blockquote>
+<div><ul class="simple">
 <li><p>It delineates subcritical and supercritical flow;</p></li>
 <li><p>It is the ratio of average flow velocity to shallow wave celerity;</p></li>
 <li><p>It relates the movement of a translational wave to the stream flow;</p></li>
 <li><p>It defines an appropriate relationship between velocity and depth.</p></li>
 </ul>
+</div></blockquote>
 <p>Most models report the Froude number or provide warnings when the Froude number is high, but do not make
 any model adjustments at runtime to limit unreasonable Froude numbers from being encountered.
 The Froude number is directly related to model stability through the Courant number:</p>
@@ -745,23 +759,27 @@ channels at equilibrium:</p>
 <p>S = bed slope</p>
 </div></blockquote>
 <p>Recommended limiting Froude numbers are:</p>
-<ul class="simple">
+<blockquote>
+<div><ul class="simple">
 <li><p>Major rivers: 0.3 – 0.6</p></li>
 <li><p>Floodplain: 0.5 – 0.8</p></li>
 <li><p>Alluvial fans: 0.9 – 1.1</p></li>
 <li><p>Street flow: 1.1 – 1.75</p></li>
 </ul>
+</div></blockquote>
 <p>When a limiting Froude number (FROUDC in CHAN.DAT) is assigned, the model computes the channel Froude
 number for each timestep.
 If the limiting Froude number is exceeded, the Manning’s n-value is increased according to the following
 criteria:</p>
-<p>percent change</p>
-<p>from the original n-value n-value increment increase</p>
-<p>&lt; 20 0.0002</p>
-<p>20 &lt; % &lt; 50 0.0001</p>
-<p>50 &lt; % &lt; 100 0.00002</p>
-<p>100 &lt; % &lt; 200 0.000002</p>
-<p>On the recessional limb, when the limiting Froude number is no longer exceeded, the n-value is decreased
+<pre>
+     percent change
+from the original n-value                   n-value increment increase
+
+         < 20                                         0.0002
+      20 < % < 50                                     0.0001
+      50 < % < 100                                    0.00002
+      100 < % < 200                                   0.000002
+</pre><br><p>On the recessional limb, when the limiting Froude number is no longer exceeded, the n-value is decreased
 by 0.0001.
 This increase in flow resistance mimics increasing energy loss as the flow accelerates.
 When the limiting Froude is exceeded, the changes in the n-value are reported in the ROUGH.OUT file.
@@ -826,7 +844,8 @@ CHVOLUME.OUT (Figure 25) is listed below:</p>
 <p><em>Figure 25.
 CHVOLUME.OUT Example.</em></p>
 <p>Channel data issues that might lead to a volume conservation error include:</p>
-<ul class="simple">
+<blockquote>
+<div><ul class="simple">
 <li><p>Inappropriate Profile</p></li>
 <li><p>Wrong or missing channel elements (typos)</p></li>
 <li><p>No channel outflow element</p></li>
@@ -834,6 +853,7 @@ CHVOLUME.OUT Example.</em></p>
 <li><p>Conflicts with hydraulic structures or other components</p></li>
 <li><p>Radical cross section shape or area changes between two contiguous elements</p></li>
 </ul>
+</div></blockquote>
 <p>Every completed FLO-2D project should demonstrate that volume was accurately conserved.
 Troubleshooting channel volume conservation errors is discussed in Chapter 3.</p>
 </section>

@@ -690,7 +690,7 @@ Node-Link Representation of a Drainage System (Roesner et al, 1992)</em></p>
 <section id="solution-algorithm-how-the-model-works">
 <h4><span class="section-number">1.1.2.2. </span>Solution Algorithm – How the Model Works<a class="headerlink" href="#solution-algorithm-how-the-model-works" title="Link to this heading"></a></h4>
 <p>The differential form of the continuity and momentum equations for the storm drain component are solved by converting them into an explicit set of
-finite difference formulas that compute the flow Q in each conduit and head at each node for time T + t.
+finite difference formulas that compute the flow Q in each conduit and head at each node for time T + ∆t.
 Explicit schemes for these types of solutions are limited to minor steps by strict numerical stability criteria.
 The following discussion was sourced from the EPA SWMM documentation (Rossman et al, 2005).</p>
 <p>The flow equation solved for each conduit is given by:</p>
@@ -722,7 +722,7 @@ The following discussion was sourced from the EPA SWMM documentation (Rossman et
 <p>t = time</p>
 <p>∆T = timestep</p>
 </div></blockquote>
-<p>The average area <span class="math notranslate nohighlight">\(\bar{A}\)</span>, hydraulic radius <span class="math notranslate nohighlight">\(\bar{R}\)</span>, and velocity <span class="math notranslate nohighlight">\(\bar{V}\)</span> are computed using the heads H1 and H2 at either end of the conduit from which corresponding
+<p>The average area <span class="math notranslate nohighlight">\(\bar{A}\)</span>, hydraulic radius <span class="math notranslate nohighlight">\(\bar{R}\)</span>, and velocity <span class="math notranslate nohighlight">\(\bar{V}\)</span> are computed using the heads H<sub>1</sub> and H<sub>2</sub> at either end of the conduit from which corresponding
 flow depth values y<sub>1</sub> and y<sub>2</sub> can be derived.
 An average depth <em>y</em> is then computed by averaging these values and is used with the cross-section geometry of the conduit to compute <span class="math notranslate nohighlight">\(\bar{A}\)</span> and <span class="math notranslate nohighlight">\(\bar{R}\)</span>.
 The average velocity <span class="math notranslate nohighlight">\(\bar{V}\)</span> is determined by dividing the most current discharge by the average flow area.

@@ -14,57 +14,38 @@ C:\\users\\Public\\Public Documents\\FLO-2D PRO Documentation
 - Data Input Manual
 
   - Chan.dat, chanbank.dat, xsec.dat
-
   - Profiles.exe processor program overview
-
   - Channel output files
 
 - Old Workshop Lessons
 
   - Lesson 3 – Simple geometry and confluence
-
   - Lesson 4 – Simple cross section converter
-
   - Lesson 5 – Profiles.exe overview and example
-
   - Lesson 8 – Import from HEC-RAS
-
   - Lesson 14 – Advanced natural channel modeling
 
 - QGIS Workshop Lessons
 
   - Lesson 2 – Import from HEC-RAS
-
   - Module 2 – Channel tools QGIS no HEC-RAS required.
-
   - Module 10 – Channel Review
 
 - Example Projects w/Channels
 
   - Urban example
-
   - Lesson 15 – natural channel with levee
-
   - Rio Grande
-
   - Goat
-
   - Aqueduct
-
   - Sediment transport
-
-..
-
-   Sharefile.flo-2d.com – Webinar Series\\Channel Series
+  - Sharefile.flo-2d.com – Webinar Series\\Channel Series
 
 - Videos
 
   - Basic channels
-
   - Advanced channel modeling
-
   - Channel optimization
-
   - Advanced natural channels
 
 Channel Overview
@@ -101,13 +82,10 @@ Channel Geometry, Length and Roughness
 
 There are four channel geometry options:
 
-- R - Rectangular
-
-- T - Trapezoidal
-
-- N - Natural
-
-- V - Regression Equation (not recommended except for unique cases)
+    - R - Rectangular
+    - T - Trapezoidal
+    - N - Natural
+    - V - Regression Equation (not recommended except for unique cases)
 
 The channel cross section options are rectangular, trapezoidal, and natural.
 In FLO-2D, the floodwave movement in the channel is controlled by the rate of change in the discharge as
@@ -219,18 +197,18 @@ Channel Extension over Several Grid Elements.*
 
 There are three options for establishing the channel bank elevation to bed elevation relationship:
 
-1. A prismatic channel element bed elevation (rectangular and trapezoidal channels) is determined by
-   subtracting the assigned channel thalweg depth from
-   the floodplain elevation.
+    1. A prismatic channel element bed elevation (rectangular and trapezoidal channels) is determined by
+       subtracting the assigned channel thalweg depth from
+       the floodplain elevation.
 
-2. A bank elevation is assigned in the CHAN.DAT file and the channel bed elevation is computed by subtracting
-   the channel depth from the lowest bank
-   elevation.
-   This is appropriate for rectangular and trapezoidal geometry.
+    2. A bank elevation is assigned in the CHAN.DAT file and the channel bed elevation is computed by subtracting
+       the channel depth from the lowest bank
+       elevation.
+       This is appropriate for rectangular and trapezoidal geometry.
 
-3. Station/elevation cross section data is assigned in XSEC.DAT that represents the top of bank and bed
-   elevations in the channel.
-   When using actual cross section data for the channel geometry, option 3 should be applied.
+    3. Station/elevation cross section data is assigned in XSEC.DAT that represents the top of bank and bed
+       elevations in the channel.
+       When using actual cross section data for the channel geometry, option 3 should be applied.
 
 Channel Development
 -------------------
@@ -501,23 +479,17 @@ and the ROUGHADJ default value is 0.4.
 The ROUGHADJ factor can be higher ranging up to 1.0 or more, but a typical range is from 0.2 to 0.4.
 The application of the depth variable roughness has the following advantages:
 
-- Can be used to reduce or eliminate surging from low to high flow;
-
-- Accounts for submerged roughness elements;
-
-- Enhances the modeling upper regime sediment transport.
+    - Can be used to reduce or eliminate surging from low to high flow;
+    - Accounts for submerged roughness elements;
+    - Enhances the modeling upper regime sediment transport.
 
 The basic guidelines for roughness assignment and temporal variation in a FLO-2D model are:
 
-- SHALLOWN – for very shallow flows up to 0.2 ft
-
-- SHALLOWN/2 for flows up to 0.5 ft
-
-- Assign n-values for floodplain flow depths > 3 ft or 1 m (channel – bankfull)
-
-- Use depth integrated n-values (default for floodplain)
-
-- Calibrate n-values for reasonable Froude numbers – adjusted at runtime
+    - SHALLOWN – for very shallow flows up to 0.2 ft
+    - SHALLOWN/2 for flows up to 0.5 ft
+    - Assign n-values for floodplain flow depths > 3 ft or 1 m (channel – bankfull)
+    - Use depth integrated n-values (default for floodplain)
+    - Calibrate n-values for reasonable Froude numbers – adjusted at runtime
 
 Channel – Floodplain Flow Exchange
 ----------------------------------
@@ -625,7 +597,11 @@ where:
 
     V = depth averaged velocity
 
-    c = floodwave celerity = (gd)\ :sup:`0.5` where g is gravitation acceleration and d is the flow depth
+    c = floodwave celerity = (gd)\ :sup:`0.5` where:
+
+        g = gravitation acceleration
+
+        d = the flow depth
 
 The Courant Number C can vary from 0.0 to 1.0 (recommended range 0.2 to 0.6), and a value of 1.0 in FLO-2D
 would enable the model to have the largest possible timestep.
@@ -639,22 +615,20 @@ stability if the Courant Number is set to values less than 1.0.
 A starting value of C = 0.6 is recommended.
 Some guidelines for applying the Courant number are:
 
-1. Use the default stability criteria for the initial simulation:
+    1. Use the default stability criteria for the initial simulation:
 
-   - Courant Number C = 0.6
+       - Courant Number C = 0.6
+       - DEPTOL = 0.0
+       - WAVEMAX = 0.0.
 
-   - DEPTOL = 0.0
+    2. If the model has no numerical surging or unreasonable maximum velocities, the model can run faster
+       by increasing the Courant Number to 0.7 or 0.8.
 
-   - WAVEMAX = 0.0.
+    3. If the model has some numerical instability, decrease the Courant Number by 0.1 to a minimum value
+       of 0.3.
 
-2. If the model has no numerical surging or unreasonable maximum velocities, the model can run faster
-   by increasing the Courant Number to 0.7 or 0.8.
-
-3. If the model has some numerical instability, decrease the Courant Number by 0.1 to a minimum value
-   of 0.3.
-
-4. After a flood simulation is complete, review the TIME.OUT file to determine which of the stability
-   criterion is slowing down the model.
+    4. After a flood simulation is complete, review the TIME.OUT file to determine which of the stability
+       criterion is slowing down the model.
 
 It has been determined that the Courant Number is more effective in controlling numerical instability
 surging than the other FLO-2D stability parameters DEPTOL and WAVEMAX.
@@ -704,15 +678,15 @@ A steep rising hydrograph, intense rainfall, or severe overland flow to the chan
 near the inflow node or at any location in the channel where the conveyance capacity may be highly variable.
 To eliminate channel surging, perform the following steps:
 
-1. Check the bed profile for unreasonable spikes (PROFILES program – Figure 23);
+    1. Check the bed profile for unreasonable spikes (PROFILES program – Figure 23);
 
-2. Adjust the n-values (particularly in channel area transition reaches);
+    2. Adjust the n-values (particularly in channel area transition reaches);
 
-3. Adjust the flow area - smooth out the area transitions (re-interpolate the cross sections);
+    3. Adjust the flow area - smooth out the area transitions (re-interpolate the cross sections);
 
-4. Apply the depth variable roughness;
+    4. Apply the depth variable roughness;
 
-5. Use limiting Froude number FROUDC.
+    5. Use limiting Froude number FROUDC.
 
 .. image:: ../img/Channel_Modeling_Guidelines/Chapter1/image24.jpeg
 
@@ -721,13 +695,10 @@ Check the Channel Bed Profile for Data Errors.*
 
 The Froude number is important for several reasons:
 
-- It delineates subcritical and supercritical flow;
-
-- It is the ratio of average flow velocity to shallow wave celerity;
-
-- It relates the movement of a translational wave to the stream flow;
-
-- It defines an appropriate relationship between velocity and depth.
+    - It delineates subcritical and supercritical flow;
+    - It is the ratio of average flow velocity to shallow wave celerity;
+    - It relates the movement of a translational wave to the stream flow;
+    - It defines an appropriate relationship between velocity and depth.
 
 Most models report the Froude number or provide warnings when the Froude number is high, but do not make
 any model adjustments at runtime to limit unreasonable Froude numbers from being encountered.
@@ -792,30 +763,31 @@ where:
 
 Recommended limiting Froude numbers are:
 
-- Major rivers: 0.3 – 0.6
-
-- Floodplain: 0.5 – 0.8
-
-- Alluvial fans: 0.9 – 1.1
-
-- Street flow: 1.1 – 1.75
+    - Major rivers: 0.3 – 0.6
+    - Floodplain: 0.5 – 0.8
+    - Alluvial fans: 0.9 – 1.1
+    - Street flow: 1.1 – 1.75
 
 When a limiting Froude number (FROUDC in CHAN.DAT) is assigned, the model computes the channel Froude
 number for each timestep.
 If the limiting Froude number is exceeded, the Manning’s n-value is increased according to the following
 criteria:
 
-percent change
+.. raw:: html
 
-from the original n-value n-value increment increase
+    <pre>
+         percent change
+    from the original n-value                   n-value increment increase
 
-< 20 0.0002
+             < 20                                         0.0002
+          20 < % < 50                                     0.0001
+          50 < % < 100                                    0.00002
+          100 < % < 200                                   0.000002
+    </pre>
 
-20 < % < 50 0.0001
+.. raw:: html
 
-50 < % < 100 0.00002
-
-100 < % < 200 0.000002
+    <br>
 
 On the recessional limb, when the limiting Froude number is no longer exceeded, the n-value is decreased
 by 0.0001.
@@ -903,17 +875,12 @@ CHVOLUME.OUT Example.*
 
 Channel data issues that might lead to a volume conservation error include:
 
-- Inappropriate Profile
-
-- Wrong or missing channel elements (typos)
-
-- No channel outflow element
-
-- Missing bank stations in the cross section data
-
-- Conflicts with hydraulic structures or other components
-
-- Radical cross section shape or area changes between two contiguous elements
+    - Inappropriate Profile
+    - Wrong or missing channel elements (typos)
+    - No channel outflow element
+    - Missing bank stations in the cross section data
+    - Conflicts with hydraulic structures or other components
+    - Radical cross section shape or area changes between two contiguous elements
 
 Every completed FLO-2D project should demonstrate that volume was accurately conserved.
 Troubleshooting channel volume conservation errors is discussed in Chapter 3.

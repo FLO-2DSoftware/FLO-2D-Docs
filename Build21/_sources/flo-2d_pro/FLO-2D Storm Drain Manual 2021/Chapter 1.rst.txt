@@ -758,7 +758,7 @@ Solution Algorithm – How the Model Works
 ------------------------------------------
 
 The differential form of the continuity and momentum equations for the storm drain component are solved by converting them into an explicit set of
-finite difference formulas that compute the flow Q in each conduit and head at each node for time T + t.
+finite difference formulas that compute the flow Q in each conduit and head at each node for time T + Δt.
 Explicit schemes for these types of solutions are limited to minor steps by strict numerical stability criteria.
 The following discussion has been extracted from the SWMM documentation (Rossman et al, 2005).
 
@@ -824,10 +824,11 @@ where:
 
     ∆T = timestep
 
-The average area 𝐴̅, hydraulic radius 𝑅̅, and velocity 𝑉̅ are computed using the heads H1 and H2 at either end of the conduit from which corresponding
-flow depth values y1 and y2 can be derived.
-An average depth *y* is then computed by averaging these values and is used with the cross-section geometry of the conduit to compute 𝐴̅ and 𝑅̅.
-The average velocity 𝑉̅ is determined by dividing the most current discharge by the average flow area.
+The average area\ :math:`\ \overline{A}`, hydraulic radius\ :math:`\ \overline{R}`, and velocity\ :math:`\ \overline{V}` are
+computed using the heads H\ :sub:`1` and H\ :sub:`2` at either end of the conduit from which corresponding
+flow depth values y\ :sub:`1` and y\ :sub:`2` can be derived.
+An average depth *y* is then computed by averaging these values and is used with the cross-section geometry of the conduit to compute\ :math:`\ \overline{A}` and\ :math:`\ \overline{R}`.
+The average velocity\ :math:`\ \overline{V}` is determined by dividing the most current discharge by the average flow area.
 A limitation on this velocity is coded to prevent unbounded frictional flow adjustments.
 As a consequence, the velocity cannot be higher than 50 ft/sec.
 
@@ -854,7 +855,7 @@ The conduit surface area (A\ :sub:`store`) depends on the flow condition within 
 
     1. Under normal conditions the pipe surface area equals half of the conduit length times the average of the top width at the end and mid points of the
        conduit.
-       These widths are evaluated before the next updated timestep using the flow depths y1, y2, and y.
+       These widths are evaluated before the next updated timestep using the flow depths y\ :sub:`1`, y\ :sub:`2`, and y.
     2. If the inflow of the conduit to a node is in free-fall (conduit invert elevation is above the water surface of the node), then the conduit does not
        contribute to the node surface area.
     3. For conduits with closed shapes such as circular pipes that are greater than 96 percent full, a constant top width equal to the width when 96 percent
@@ -865,7 +866,7 @@ The conduit surface area (A\ :sub:`store`) depends on the flow condition within 
        from becoming unbounded.
        Under normal conditions A\ :sub:`store` equals half the conduit’s length times the average of the top width at the end- and mid-points of the conduit.
 
-These widths are evaluated before the next updated flow solution is found, using the flow depths y1, y2, and y discussed previously.
+These widths are evaluated before the next updated flow solution is found, using the flow depths y\ :sub:`1`, y\ :sub:`2`, and y discussed previously.
 The default value for this minimum area is 12.57 ft\ :sup:`2` which corresponds to the area of a 4-foot diameter manhole.
 
 To calculate the discharge Q and the head H, the equations are solved for each timestep using a method of successive approximations with under-

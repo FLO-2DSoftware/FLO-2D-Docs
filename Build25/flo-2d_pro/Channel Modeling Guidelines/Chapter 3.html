@@ -65,7 +65,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#channel-review-and-troubleshooting">3.1. Channel Review and Troubleshooting</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#documentation">3.2. Documentation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#boundary-conditions">3.3. Boundary Conditions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#cross-sections">3.4. Cross Sections</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cross-sections">3.4. Cross-sections</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#profiles">3.5. Profiles</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#transitions">3.6. Transitions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#alignment">3.7. Alignment</a></li>
@@ -155,17 +155,17 @@ Upstream Channel Boundary with an Inflow Node.</em></p>
 Downstream Channel Boundary with an Outflow Node.</em></p>
 </section>
 <section id="cross-sections">
-<h2><span class="section-number">3.4. </span>Cross Sections<a class="headerlink" href="#cross-sections" title="Link to this heading"></a></h2>
-<p>Check the cross section placement.
-Note any locations where more cross sections are required such as the top half of Figure 76.
-The bottom half shows a channel with good cross section placement to represent the transition from an urban channel to a natural channel.</p>
+<h2><span class="section-number">3.4. </span>Cross-sections<a class="headerlink" href="#cross-sections" title="Link to this heading"></a></h2>
+<p>Check the cross-section placement.
+Note any locations where more cross-sections are required such as the top half of Figure 76.
+The bottom half shows a channel with good cross-section placement to represent the transition from an urban channel to a natural channel.</p>
 <img alt="../../_images/image46.png" src="../../_images/image46.png" />
 <p><em>Figure 76.
-Cross Sections wih a Bad Transition and a Good Transition.</em></p>
-<p>Check each cross section plot for accuracy using the cross section geometry table and plot as shown in Figure 77.</p>
+cross-sections wih a Bad Transition and a Good Transition.</em></p>
+<p>Check each cross-section plot for accuracy using the cross-section geometry table and plot as shown in Figure 77.</p>
 <img alt="../../_images/image53.png" src="../../_images/image53.png" />
 <p><em>Figure 77.
-Review a Cross Section Shape.</em></p>
+Review a cross-section Shape.</em></p>
 </section>
 <section id="profiles">
 <h2><span class="section-number">3.5. </span>Profiles<a class="headerlink" href="#profiles" title="Link to this heading"></a></h2>
@@ -184,7 +184,7 @@ see <a class="reference external" href="https://documentation.flo-2d.com/Plugin1
 </section>
 <section id="transitions">
 <h2><span class="section-number">3.6. </span>Transitions<a class="headerlink" href="#transitions" title="Link to this heading"></a></h2>
-<p>Review the change in cross section area, width, and wetted perimeter for each cross section.
+<p>Review the change in cross-section area, width, and wetted perimeter for each cross-section.
 Check for changes in these values that indicate the channel is transitioning too quickly for the model to remain numerically stable.
 Find this in the XSECAREA.OUT file (Figure 80) or by using the Profiles.exe program.</p>
 <img alt="../../_images/image82.png" src="../../_images/image82.png" />
@@ -223,7 +223,7 @@ If the velocities are unreasonable, look for simple problems.</p>
 <li><p>Steep slope</p>
 <ul>
 <li><p>Drop structure or a naturally occurring steep channel slope can result in naturally high velocities.</p></li>
-<li><p>Bad cross section data resulting in bad bedslope can result in unnaturally high velocities.</p></li>
+<li><p>Bad cross-section data resulting in bad bedslope can result in unnaturally high velocities.</p></li>
 <li><p>Test data against an Open Channel Flow Calculator.</p></li>
 </ul>
 </li>
@@ -232,7 +232,7 @@ If the velocities are unreasonable, look for simple problems.</p>
 <li><p>If the time of occurrence is not near the peak, this could indicate instability.</p></li>
 <li><p>If the grid element listed is close to an inflow node, the velocity could be unnaturally high.
 Fix this by ramping the inflow over 0.5 hours.
-If water is added to a cross section too quickly, it can become unstable.</p></li>
+If water is added to a cross-section too quickly, it can become unstable.</p></li>
 <li><p>If the grid element is close to a storm drain outfall or culvert, review the transition to make sure it matches the physical system.
 Increase the roughness around connected component.
 Lower the Channel Courant to 0.4, 0.3, or 0.2.</p></li>
@@ -252,7 +252,7 @@ in Time.out (Figure 85).
 This channel is not responsible for timestep decrements.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Observation by K O’Brien. If channel elements are listed in TIME.OUT,correcting the cross section might
+<p>Observation by K O’Brien. If channel elements are listed in TIME.OUT,correcting the cross-section might
 push the issue downstream. Channels have a high impact on the timestep decrement if they are steep or if
 the grid element size is small. If an unreasonable number of timestep decrements result because of a
 channel node, it may not be fixable. This is OK so long as the channel is stable and volume conservation
@@ -292,7 +292,7 @@ Interior Channel Nodes Example.</em></p>
 </section>
 <section id="check-files">
 <h2><span class="section-number">3.12. </span>Check files<a class="headerlink" href="#check-files" title="Link to this heading"></a></h2>
-<p>ChanBankEl.chk (Figure 91) lists the differences between the channel cross section and the left or right bank grid elevation.
+<p>ChanBankEl.chk (Figure 91) lists the differences between the channel cross-section and the left or right bank grid elevation.
 If major elevation differences are listed, please review them, and see if corrections are required.</p>
 <img alt="../../_images/image191.png" src="../../_images/image191.png" />
 <p><em>Figure 91.
@@ -315,7 +315,7 @@ Import Debug Data Tool.</em></p>
 <img alt="../../_images/image222.png" src="../../_images/image222.png" />
 <p><em>Figure 94.
 Example Debug Output Files.</em></p>
-<p>Click Yes to load both extra error check files (Figure 95).</p>
+<p>Click <strong>Yes</strong> to load both extra error check files (Figure 95).</p>
 <img alt="../../_images/image231.png" src="../../_images/image231.png" />
 <p><em>Figure 95.
 Additional Debug Files Loaded.</em></p>
@@ -326,16 +326,17 @@ Style Channel Bank Elevation Difference.</em></p>
 <p>Review the map for problems that should be fixed.</p>
 <ul class="simple">
 <li><p>Grouped positive points mean the channel is embedded below the floodplain.
-Check cross sections.</p></li>
+Check cross-sections.</p></li>
 <li><p>Grouped negative points mean a channel is perched above the floodplain.
 Floodplain to channel flow exchange is blocked.
-Check cross section data.</p></li>
+Check cross-section data.</p></li>
 <li><p>All the points in the following image are OK because they will be automatically corrected when flopro.exe runs (Figure 97).</p></li>
 </ul>
 <img alt="../../_images/image251.png" src="../../_images/image251.png" />
 <p><em>Figure 97.
 Channel Bank Difference Example.</em></p>
-<p><strong>channel.chk</strong> This file is usually empty.
+<p><strong>channel.chk</strong></p>
+<p>This file is usually empty.
 It contains messages related to channel extensions though other channel bank elements or levees or when the
 channel needs to be wider.</p>
 <p>For more information and example usage,
@@ -360,7 +361,7 @@ This is one fromthe training module so it can be inspected.</p>
 <img alt="../../_images/image272.png" src="../../_images/image272.png" />
 <p><em>Figure 99.
 Grid Info Tool.</em></p>
-<p>Assume that this channel element and cross section are not able to converge for depths greater than 1ft.
+<p>Assume that this channel element and cross-section are not able to converge for depths greater than 1ft.
 This means that the calculated velocity is invalid, and the solution velocity is estimated from the diffusive wave equation.
 It is not typical to see problematic channel elements in clear water studies.
 If they are present, use the same techniques discussed in Channel Optimization video and the Channel Guidelines.</p>
@@ -368,7 +369,7 @@ If they are present, use the same techniques discussed in Channel Optimization v
 <ul class="simple">
 <li><p>Increasing the roughness around inflow nodes, structures, and outfalls.</p></li>
 <li><p>Using shallow n adjustments.</p></li>
-<li><p>Improving transitional cross sections with better interpolations.</p></li>
+<li><p>Improving transitional cross-sections with better interpolations.</p></li>
 <li><p>Fixing bedslope problems.</p></li>
 <li><p>Correct tributary/split transitional areas to match the physical system.</p></li>
 <li><p>Applying correct tailwater conditions around hydraulic structures where backwater or reverse flow occurs.</p></li>
@@ -377,7 +378,7 @@ If they are present, use the same techniques discussed in Channel Optimization v
 </section>
 <section id="super-critical">
 <h2><span class="section-number">3.14. </span>Super Critical<a class="headerlink" href="#super-critical" title="Link to this heading"></a></h2>
-<p>The super critical output file (Figure 100) will print the time and number of timesteps that a specific node or cross section is super critical.
+<p>The super critical output file (Figure 100) will print the time and number of timesteps that a specific node or cross-section is super critical.
 The file only exists if a super critical flow is reported.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -386,13 +387,13 @@ The file only exists if a super critical flow is reported.</p>
 <img alt="../../_images/image281.png" src="../../_images/image281.png" />
 <p><em>Figure 100.
 Super.out Example.</em></p>
-<p>It is OK to have super critical channel cross sections.
+<p>It is OK to have super critical channel cross-sections.
 If the file reported grid elements that should not be super critical, check the following:</p>
 <ul class="simple">
-<li><p>Check overly steep bedslope between cross sections.</p></li>
+<li><p>Check overly steep bedslope between cross-sections.</p></li>
 <li><p>Increasing the roughness.</p></li>
 <li><p>Using shallow n adjustments.</p></li>
-<li><p>Improving transitional cross sections with better interpolations.</p></li>
+<li><p>Improving transitional cross-sections with better interpolations.</p></li>
 </ul>
 </section>
 <section id="overbank-flow">
@@ -412,7 +413,7 @@ It may be written for sediment transport or mudflow in channels.</p>
 <p class="admonition-title">Note</p>
 <p>The following evacuatedchan.out file is from a different project.</p>
 </div>
-<p>EVACUATEDCHAN.OUT file (Figure 101) is written when all the water is taken from a cross section in a single timestep.
+<p>EVACUATEDCHAN.OUT file (Figure 101) is written when all the water is taken from a cross-section in a single timestep.
 A V-shaped channel might result in evacuated timesteps.
 JS O’Brien has modified the channel flow so they do not share flow until 0.1ft or 0.03m of depth.
 This has eliminated most evacuated channel reporting.</p>
@@ -425,8 +426,9 @@ EvacuatedChan.out Example.</em></p>
 <p>Check to see if the channel finished draining the project (Figure 102).
 If there is no tidal or baseline flow, the hydrograph at the end of the channel should be close to zero or the channel depth should be close to zero.
 There are many ways to check this.
-Here are two easy ones.</p>
-<p>HYDROG.EXE shows that the hydrograph at the end of the channel should be about finished.
+Here are two easy ones:</p>
+<blockquote>
+<div><p>HYDROG.EXE shows that the hydrograph at the end of the channel should be about finished.
 This one still has some residual rainfall.</p>
 <img alt="../../_images/image301.png" src="../../_images/image301.png" />
 <p><em>Figure 102.
@@ -435,12 +437,13 @@ Channel Hydrograph Hydrog Example.</em></p>
 <img alt="../../_images/image311.png" src="../../_images/image311.png" />
 <p><em>Figure 103.
 Channel Profile Example.</em></p>
+</div></blockquote>
 </section>
 <section id="xsecarea">
 <h2><span class="section-number">3.19. </span>XSECAREA<a class="headerlink" href="#xsecarea" title="Link to this heading"></a></h2>
 <p>This is about the same as the Transitions above.
-It specifically asks the user to check this data for bad cross sections.</p>
-<p>Review the change in cross section area, width, and wetted perimeter for each cross section (Figure 104).
+It specifically asks the user to check this data for bad cross-sections.</p>
+<p>Review the change in cross-section area, width, and wetted perimeter for each cross-section (Figure 104).
 Check for changes in these values that indicate the channel is transitioning too quickly for the model to remain numerically stable.
 Find this in the XSECAREA.OUT file or by using the Profiles.exe program.</p>
 <img alt="../../_images/image82.png" src="../../_images/image82.png" />
@@ -451,7 +454,7 @@ XsecArea.out Example.</em></p>
 <h2><span class="section-number">3.20. </span>CHANMAX<a class="headerlink" href="#chanmax" title="Link to this heading"></a></h2>
 <p>CHANMAX.OUT (Figure 105) is a useful file that lists the maximum discharge, maximum water surface elevation, and respective times for each of those.
 Review this file for anomalies.
-Instability and volume conservation error can sometimes be traced back to cross sections with discharge values that are too high or discharge values
+Instability and volume conservation error can sometimes be traced back to cross-sections with discharge values that are too high or discharge values
 that do not align with the water surface elevation and the time.</p>
 <img alt="../../_images/image32.png" src="../../_images/image32.png" />
 <p><em>Figure 105.

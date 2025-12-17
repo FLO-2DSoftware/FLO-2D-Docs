@@ -43,31 +43,31 @@ hydrographs as needed to test specific components.
 *Figure 26.
 Start a Project with a Grid System and an Inflow Hydrograph Only.*
 
-Channel cross section data
+Channel cross-section data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Some of the issues associated with channel geometry data are discussed in this section.
-The best approach for working with cross section data is to review each channel element cross section
-plot and the corresponding flow area, top width,and wetted perimeter in the PROFILES program to
+The best approach for working with cross-section data is to review each channel element cross-section
+plot and the corresponding flow area, top width, and wetted perimeter in the PROFILES program to
 identify any radical variations in the geometry on a channel element basis.
 
-Cutting channel cross sections from DTM data
+Cutting channel cross-sections from DTM data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cutting cross sections requires several GIS source files including high resolution elevation data,
-polyline shapefiles of the banks, and cross sections.
+Cutting cross-sections requires several GIS source files including high resolution elevation data,
+polyline shapefiles of the banks, and cross-sections.
 It may also be necessary to refine the elevation data using breaklines to help define the thalweg and banks.
 Elevation data should be in the form of a TIN or high-resolution raster to help facilitate editing the data.
-When cutting the profile of a cross section, the station elevation orientation should be from left to
+When cutting the profile of a cross-section, the station elevation orientation should be from left to
 right looking down stream.
-QGIS and the FLO-2D plugin is the most efficient tool to cut cross section data.
+QGIS and the FLO-2D plugin is the most efficient tool to cut cross-section data.
 Tutorials and instructions can be found online at https://documentation.flo-2d.com.
 
-Cutting cross sections from elevation data can have problems that should be addressed before finalizing
-the cross section data set.
+Cutting cross-sections from elevation data can have problems that should be addressed before finalizing
+the cross-section data set.
 Regardless of the level of accuracy, an elevation dataset will have some overlap in the channel beds
 and banks and the profile cutting tools from different software will give different results.
-Cutting cross sections from different elevation data files may give different results.
+Cutting cross-sections from different elevation data files may give different results.
 Cutting the profile in slightly different places will also give different results.
 The elevation data is only valid as of the day it is flown.
 As the dataset ages, the actual channel geometry evolves with flow.
@@ -87,51 +87,51 @@ and how the channel evolves in the downstream direction.
 Take pictures and notes to help understand what the channel system is trying to do.
 Determine the slope of the channel and estimate a trapezoidal or rectangular area.
 Do a calculation to estimate a bank full discharge.
-If the cut cross sections cannot contain that discharge, they need to be reviewed.
+If the cut cross-sections cannot contain that discharge, they need to be reviewed.
 Go over photographs of the channel, review the aerials, and review the elevation data.
 This process will probably reveal reasons for discrepancies in capacity.
 
 Flow area variation
 ~~~~~~~~~~~~~~~~~~~
 
-Cross sections can have a similar appearance but have a completely different geometry (Figure 27).
-In this figure, two cross sections are contiguous but only one controls the flow.
-One cross section has a bank full flow area of 33 ft\ :sup:`2` and the second one has 139 ft\ :sup:`2`.
-It is necessary to review the data source for each cross section to ensure they represent the physical
+cross-sections can have a similar appearance but have a completely different geometry (Figure 27).
+In this figure, two cross-sections are contiguous but only one controls the flow.
+One cross-section has a bank full flow area of 33 ft\ :sup:`2` and the second one has 139 ft\ :sup:`2`.
+It is necessary to review the data source for each cross-section to ensure they represent the physical
 configuration.
 
 .. image:: ../img/Channel_Modeling_Guidelines/Chapter2/image2.png
 
 *Figure 27.
-Cross Section Comparison.*
+cross-section Comparison.*
 
 Braided channels
 ~~~~~~~~~~~~~~~~
 
-Braided channels can be poorly represented by cut cross sections.
-The top of banks may be obscured with a cut cross section showing multiple high points that could be the
+Braided channels can be poorly represented by cut cross-sections.
+The top of banks may be obscured with a cut cross-section showing multiple high points that could be the
 active channel (Figure 28).
 The braided channel may also be reworked by recent flooding creating wide variation in flow areas.
 Typically, the braided channel will convey a 2-year to 5-year return period flood within its banks.
 The channel may increase its bankfull capacity during the flood event.
-If the cut cross section cannot be accurately delineated with aerial photos or field observations, the
-channel cross section shape may have to be estimated or small grid elements can replace the 1-D channel.
+If the cut cross-section cannot be accurately delineated with aerial photos or field observations, the
+channel cross-section shape may have to be estimated or small grid elements can replace the 1-D channel.
 
 .. image:: ../img/Channel_Modeling_Guidelines/Chapter2/image3.png
 
 *Figure 28.
-Braided Channel Cross Section.*
+Braided Channel cross-section.*
 
 Braided channels are difficult to model for split flow conditions and the channel can rework itself during
 flood events.
 Sediment deposition and slope variation can produce temporally variable channel geometry.
-Figure 29 and Figure 30 show the area where the cross section in Figure 28 was cut.
+Figure 29 and Figure 30 show the area where the cross-section in Figure 28 was cut.
 The channel geometry and shape for these two dates varies significantly.
 Typically, the braided channel will convey a 2-year to 5-year return period flood within its banks because
 it has a highly mobile bed.
 The channel will increase its bankfull capacity during the flood event.
-If the cut cross section cannot be accurately delineated with aerial photos or field observations, the
-channel cross section shape may have to be estimated.
+If the cut cross-section cannot be accurately delineated with aerial photos or field observations, the
+channel cross-section shape may have to be estimated.
 
 .. image:: ../img/Channel_Modeling_Guidelines/Chapter2/image4.png
 
@@ -148,17 +148,17 @@ Braided Channel 2014.
 Undefined banks
 ~~~~~~~~~~~~~~~
 
-Another common problem with cut cross sections is that the bank definition is not captured.
+Another common problem with cut cross-sections is that the bank definition is not captured.
 This can occur if the channel width is too narrow or if the elevation data has insufficient resolution.
 Figure 31 right bank is not captured.
-This is probably because the cross section was not long enough, or the elevation data didn’t have enough
+This is probably because the cross-section was not long enough, or the elevation data didn’t have enough
 resolution along the right bank.
-This is one of the most common errors of cut cross sections.
+This is one of the most common errors of cut cross-sections.
 
 .. image:: ../img/Channel_Modeling_Guidelines/Chapter2/image6.png
 
 *Figure 31.
-Cross Section Missing Right Bank.*
+cross-section Missing Right Bank.*
 
 Split flows and islands
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -166,7 +166,7 @@ Split flows and islands
 Islands are typically higher than one or both banks due to sediment deposition.
 Figure 32 shows that the secondary channel on the right has a lower right bank elevation than the top
 of the island and consequently, the top of the island is presumed to be the right bank for the entire
-cross section.
+cross-section.
 For some islands, splitting the river into two channels with a confluence may be more expedient.
 The other approach is to lower the island below the right bank.
 
@@ -178,9 +178,9 @@ Split Flows.*
 LiDAR issues
 ~~~~~~~~~~~~
 
-LiDAR and IFSAR data do not penetrate water surfaces, the bottom of the cross section is not known
+LiDAR and IFSAR data do not penetrate water surfaces, the bottom of the cross-section is not known
 (Figure 33).
-Bathometric or surveyed data is required to define the underwater cross section geometry.
+Bathometric or surveyed data is required to define the underwater cross-section geometry.
 
 .. image:: ../img/Channel_Modeling_Guidelines/Chapter2/image8.png
 
@@ -192,8 +192,8 @@ Urban channels
 
 Urban trapezoidal and rectangular concrete channels are often modelled as natural channels with station
 -elevation with only a minimum number of stations.
-In the red points represent the station and elevation pairs listed in the XSEC.DAT for this cross section.
-Four station points are insufficient to define the rating table for the natural cross section geometry.
+In the red points represent the station and elevation pairs listed in the XSEC.DAT for this cross-section.
+Four station points are insufficient to define the rating table for the natural cross-section geometry.
 It is more appropriate to model urban design channels with the Rectangular or Trapezoidal method.
 
 .. image:: ../img/Channel_Modeling_Guidelines/Chapter2/image9.png
@@ -212,18 +212,18 @@ correctly interpolates the thalweg and channel shape.
 *Figure 35.
 Urban Design Channel Corrected.*
 
-Bridge and culvert cross section transitions
+Bridge and culvert cross-section transitions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Hydraulic structures can be integrated with any channel geometry.
 If a hydraulic structure is causing numerical instability, first review the upstream channel geometry.
 As the channel approaches the bridge or culvert, it is important to capture the transition in the geometry
-from a cross section upstream of the backwater effects to the hydraulic opening.
+from a cross-section upstream of the backwater effects to the hydraulic opening.
 Ideally this transition would occur over several channel elements either with flow expansion or inlet
 narrowing.
-In Figure 24 below, the channel cross section at the bridge/culvert is only slightly larger (with flared
-wing walls) than the upstream trapezoidal cross section.
-With 15 ft grid elements, the cross section area transition should occur over 4 or 5 channel elements
+In Figure 36 below, the channel cross-section at the bridge/culvert is only slightly larger (with flared
+wing walls) than the upstream trapezoidal cross-section.
+With 15 ft grid elements, the cross-section area transition should occur over 4 or 5 channel elements
 with a slightly increasing n-values from 0.02 representing the upstream channel to 0.03 or so at the
 bridge piers.
 There is also a storm drain outlet near the bridge entrance as identified by the sediment bar deposit.
@@ -273,12 +273,12 @@ Channel Boundary Configuration.*
 Another potential source of instability or volume conservation issues in channel inflow nodes along
 a boundary is the peak discharge compared to the capacity of the channel.
 If the peak discharge is much greater than the channel capacity, volume conservation problems may occur.
-A simple fix is to give the channel an artificially high capacity in the first few cross sections so
+A simple fix is to give the channel an artificially high capacity in the first few cross-sections so
 that the inflow can be distributed within the channel fully before it overtops the banks.
 Figure 39 shows a hydrograph with around 8,000 cfs.
 This is too much discharge for the natural channel.
 Along the boundary, the channel area is artificially expanded to accommodate the discharge.
-Once the flow moves downstream a few cross sections, the channel returns to normal capacity.
+Once the flow moves downstream a few cross-sections, the channel returns to normal capacity.
 This isn’t commonly applied but it does help when using a steep channel with small grid elements.
 
 
@@ -417,16 +417,16 @@ backwater can cause flooding outside the levee system.
 *Figure 46.
 Levees with Openings.*
 
-Channel cross sections should not include the Levee.
+Channel cross-sections should not include the Levee.
 The levee crest elevation is set by the Levee component.
-The channel cross sections represent bank to bank data only.
+The channel cross-sections represent bank to bank data only.
 The blue line in Figure 47 is the data that should be used to set up a channel along a levee.
 The levee crest elevation is set using the levee line (See Levee Guidelines.)
 
 .. image:: ../img/Channel_Modeling_Guidelines/Chapter2/image22.png
 
 *Figure 47.
-Channel Cross Section with Levees.*
+Channel cross-section with Levees.*
 
 Hydraulic Structures
 --------------------
@@ -517,7 +517,7 @@ The hydraulic structure rating table or curve can be created from:
 - Weir equations, HY-8, HEC-RAS, or another suitable program.
   Always check with the regulating agency to determine what software will be accepted.
 
-- Two cross sections upstream and two downstream of a bridge are used to generate a rating table with
+- Two cross-sections upstream and two downstream of a bridge are used to generate a rating table with
   HEC-RAS.
 
 - Culvert tables or programs
@@ -577,7 +577,7 @@ The objective of the bridge routine is to compute the discharge through the brid
 configuration of the bridge (Figure 52).
 The bridge discharge is shared between two grid elements (channel or floodplain) that do not have to be
 contiguous and whose flow hydraulics (depth and water surface) are computed by the FLO-2D routing algorithm.
-Bridge discharge is defined by 1-D flow in the cross sections upstream and through the bridge.
+Bridge discharge is defined by 1-D flow in the cross-sections upstream and through the bridge.
 The focus of the bridge routine is to relate the bridge discharge to the flow volume in the upstream and
 downstream channel elements.
 A primary focus of the bridge routine application should be to achieve numerical stability for the bridge
@@ -759,22 +759,16 @@ smoothed out.
 To reduce or eliminate channel numerical surging with a hydraulic structure, the following steps are
 suggested:
 
-1. Provide more definition to the rating table at low flows;
-
-2. Regenerate the rating curves in the external program with more realistic n-values used in the FLO-2D
-   channel;
-
-3. Review and adjust the slope through the structure;
-
-4. Gradually increase the channel n-values upstream and downstream of the bridge/culvert;
-
-5. Review and adjust the channel flow area transition leading upstream to and away downstream from the
-   bridge;
-
-6. Use a rating curve instead of the rating table, although, in general, the rating table is more accurate
-   than a rating curve;
-
-7. Use the FLO-2D bridge flow component that represents the combined bridge features and channel geometry.
+    1. Provide more definition to the rating table at low flows;
+    2. Regenerate the rating curves in the external program with more realistic n-values used in the FLO-2D
+       channel;
+    3. Review and adjust the slope through the structure;
+    4. Gradually increase the channel n-values upstream and downstream of the bridge/culvert;
+    5. Review and adjust the channel flow area transition leading upstream to and away downstream from the
+       bridge;
+    6. Use a rating curve instead of the rating table, although, in general, the rating table is more accurate
+       than a rating curve;
+    7. Use the FLO-2D bridge flow component that represents the combined bridge features and channel geometry.
 
 Storm Drains
 ------------
@@ -794,22 +788,16 @@ Storm drain inlet – channel
 After initial set up of the urban project, the following issues related to the storm drain inlet to
 channel system should be addressed:
 
-- Inlet locations:
-
-- Inlets must be inside the FLO-2D computational domain;
-
-- Inlets cannot be assigned to the interior channel elements;
-
-- Inlets that pick-up water from the street or overland should not be assigned to the channel left
-  bank elements.
-
-- Inlet elevations:
-
-- Channels discharging to a storm drain inlet should have a invert elevation that matches the inlet
-  invert elevation;
-
-- In most instances, the inlet should be set up as a vertical inlet in the SWMMFLO.DAT file using the
-  Feature switch.
+    - Inlet locations:
+        - Inlets must be inside the FLO-2D computational domain;
+        - Inlets cannot be assigned to the interior channel elements;
+        - Inlets that pick-up water from the street or overland should not be assigned to the channel left
+          bank elements.
+    - Inlet elevations:
+        - Channels discharging to a storm drain inlet should have a invert elevation that matches the inlet
+          invert elevation;
+        - In most instances, the inlet should be set up as a vertical inlet in the SWMMFLO.DAT file using the
+          Feature switch.
 
 Storm drain inlets should not be assigned to an interior channel element.
 If a channel discharges directly to a storm drain conduit inlet, like a culvert inlet, assign the inlet
@@ -851,20 +839,14 @@ Storm drain outfall – channel
 
 To connect a storm drain outfall to a channel element the following issues should be addressed:
 
-- Outfall locations:
-
-- Are all outfalls inside the FLO-2D computational domain?
-
-- Are there outfalls assigned to the interior channel elements? This is not allowed.
-
-- Are outfalls assigned to the appropriate channel bank elements? They should be assigned to the left bank
-  only.
-
-- Outfall type:
-
-- Are outfalls set up as a FREE condition outfall type in the SWMM.inp file? This is required.
-
-- Is the switch to discharge flow back to the surface ‘ON’ in the SWMMOUTF.DAT file?
+    - Outfall locations:
+        - Are all outfalls inside the FLO-2D computational domain?
+        - Are there outfalls assigned to the interior channel elements? This is not allowed.
+        - Are outfalls assigned to the appropriate channel bank elements? They should be assigned to the left bank
+          only.
+    - Outfall type:
+        - Are outfalls set up as a FREE condition outfall type in the SWMM.inp file? This is required.
+        - Is the switch to discharge flow back to the surface ‘ON’ in the SWMMOUTF.DAT file?
 
 Figure 60 shows a complex storm drain – channel system where a channel feeds the storm drain as an
 inlet and flow returns to surface further downstream and back into the channel network.
@@ -1058,33 +1040,28 @@ Maximum floodplain velocities showing the flow downstream of the channel.*
 
 The guidelines for setting up a **channel termination** to the floodplain are:
 
-- Select a distance over which the channel will widen and become shallow (4 to 10 channel elements).
-  The final channel cross section should have a thalweg less than 2.0 ft.
-
-- Maintain essentially the same channel cross section flow area (with maybe a slight reduction) over
-  the last few channel elements.
-
-- Increase the n-values in the downstream direction.
-
-- The floodplain elevations of the channel interior elements are set to the channel thalweg elevation
-  of the last channel element and are identical.
-
-- The downstream floodplain grid element elevations contiguous to the channel end elements should be lower
-  than the channel end thalweg elevation to
-  allow the flow to drain out of the channel.
-
-- The channel can only terminate in one of the four compass directions.
-  The end of the channel cannot extend from bank to bank across diagonal directions.
-  At least three channel bank extensions should be oriented in one of the four compass directions as shown
-  in Figure 70.
-  The incorrect set-up will not yield correct discharge results from the channel to the floodplain.
+    - Select a distance over which the channel will widen and become shallow (4 to 10 channel elements).
+      The final channel cross-section should have a thalweg less than 2.0 ft.
+    - Maintain essentially the same channel cross-section flow area (with maybe a slight reduction) over
+      the last few channel elements.
+    - Increase the n-values in the downstream direction.
+    - The floodplain elevations of the channel interior elements are set to the channel thalweg elevation
+      of the last channel element and are identical.
+    - The downstream floodplain grid element elevations contiguous to the channel end elements should be lower
+      than the channel end thalweg elevation to
+      allow the flow to drain out of the channel.
+    - The channel can only terminate in one of the four compass directions.
+      The end of the channel cannot extend from bank to bank across diagonal directions.
+      At least three channel bank extensions should be oriented in one of the four compass directions as shown
+      in Figure 70.
+      The incorrect set-up will not yield correct discharge results from the channel to the floodplain.
 
 .. image:: ../img/Channel_Modeling_Guidelines/Chapter2/image48.png
 
 *Figure 70.
 Channel Termination Bank Position.*
 
-Although it is not recommended, a uniform cross section can be used to the end of the channel as in the
+Although it is not recommended, a uniform cross-section can be used to the end of the channel as in the
 case of a rectangular concrete channel that just debouches onto the floodplain surface.
 If this was the project condition, it is suggested that the **1-D channel component** be continued some
 distance downstream of the concrete section to allow the alluvial channel flow area to gradually
