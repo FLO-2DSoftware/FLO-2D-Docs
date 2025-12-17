@@ -10,7 +10,7 @@ FLO-2D Pro Resource Center
    Reference Manual/index
    Channel Modeling Guidelines/index
    Storm Drain Modeling Guidelines/index
-   Hydraulic Structures Guidelines/index
-   Levee Dam and Wall Breach Guidelines/index
-   Simulating Mudflow Guidelines/index
-   Two Phase Flood Routing Guidelines/index
+   Hydraulic Structures Guidelines/Hydraulic Structures Guidelines
+   Levee Dam and Wall Breach Guidelines/Levee Dam and Wall Breach Guidelines
+   Simulating Mudflow Guidelines/Simulating Mudflow Guidelines
+   Two Phase Flood Routing Guidelines/Two Phase Flood Routing Guidelines
