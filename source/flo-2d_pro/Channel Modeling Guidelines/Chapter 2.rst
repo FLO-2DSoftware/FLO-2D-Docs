@@ -759,22 +759,16 @@ smoothed out.
 To reduce or eliminate channel numerical surging with a hydraulic structure, the following steps are
 suggested:
 
-1. Provide more definition to the rating table at low flows;
-
-2. Regenerate the rating curves in the external program with more realistic n-values used in the FLO-2D
-   channel;
-
-3. Review and adjust the slope through the structure;
-
-4. Gradually increase the channel n-values upstream and downstream of the bridge/culvert;
-
-5. Review and adjust the channel flow area transition leading upstream to and away downstream from the
-   bridge;
-
-6. Use a rating curve instead of the rating table, although, in general, the rating table is more accurate
-   than a rating curve;
-
-7. Use the FLO-2D bridge flow component that represents the combined bridge features and channel geometry.
+    1. Provide more definition to the rating table at low flows;
+    2. Regenerate the rating curves in the external program with more realistic n-values used in the FLO-2D
+       channel;
+    3. Review and adjust the slope through the structure;
+    4. Gradually increase the channel n-values upstream and downstream of the bridge/culvert;
+    5. Review and adjust the channel flow area transition leading upstream to and away downstream from the
+       bridge;
+    6. Use a rating curve instead of the rating table, although, in general, the rating table is more accurate
+       than a rating curve;
+    7. Use the FLO-2D bridge flow component that represents the combined bridge features and channel geometry.
 
 Storm Drains
 ------------
