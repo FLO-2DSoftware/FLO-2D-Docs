@@ -497,23 +497,19 @@ tailings elevation would not be uniform.
 The individual cell tailings thickness can also be assigned in the TAILINGS.DAT file which lists the reservoir grid element and the tailings thickness
 as shown below:
 
-   7127 10.00 (= thickness below the cell bed elevation)
+.. raw:: html
 
-   7128 10.00
-
-   7129 10.00
-
-   7130 12.25
-
-   7188 15.00
-
-   7189 13.25
-
-   7190 11.95
-
-   7191 10.00
-
-   7192 10.00
+    <pre>
+       7127 10.00 (= thickness below the cell bed elevation)
+       7128 10.00
+       7129 10.00
+       7130 12.25
+       7188 15.00
+       7189 13.25
+       7190 11.95
+       7191 10.00
+       7192 10.00
+    </pre>
 
 The tailings thickness in TAILINGS.DAT overrides the global assignment of tailings elevation or depth in Line R of the INFLOW.DAT file.
 The reservoir roughness at the end of line R enables the reservoir elements n-value to be reassigned to account for potential flow with deep depths
@@ -533,15 +529,11 @@ A typical SED.DAT file for two phase flow may be as follows:
 Refer to the FLO-2D Data Input Manual to review each variable.
 A few highlights are mentioned below:
 
-- The mudflow parameters in LINE M should be listed first;
-
-- The M-Line primarily includes viscosity and yield stress coefficients and exponents;
-
-- The sediment transport capacity equation is entered in the C-line;
-
-- Scour limitation is assigned by line E.
-
-- At the present time sediment routing by size fractions is not available for two phase flow and is ignored if the data is assigned.
+    - The mudflow parameters in LINE M should be listed first;
+    - The M-Line primarily includes viscosity and yield stress coefficients and exponents;
+    - The sediment transport capacity equation is entered in the C-line;
+    - Scour limitation is assigned by line E.
+    - At the present time sediment routing by size fractions is not available for two phase flow and is ignored if the data is assigned.
 
 Typical tolerance values, Courant numbers, limiting Froude number, and overland flow n-values are appropriate - no special values are necessary for a
 tailings dam breach simulation.
@@ -558,7 +550,7 @@ sediment size and percent finer than.
 .. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two037.png
 
 .. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image16.png
-
+]
 *Figure 12.
 Sediment Routing by Size Fractions and Bed Armoring.*
 
@@ -578,10 +570,10 @@ Two phase data entry dialog mudflow.*
 Two phase data entry dialog sediment transport.*
 
 Output Files and Reviewing the Results
-======================================
+------------------------------------------
 
 Output Files
-------------
+^^^^^^^^^^^^^
 
 Several new output files were created to review the two phase flow results.
 The MAXPLOT post processor program is a simple tool for graphically displaying FLO-2D model output.
@@ -593,32 +585,20 @@ X-Coordinate Y-Coordinate Variable
 
 The variables are listed below in the following files (both existing and new files):
 
-- CVTFPMAX.OUT: Maximum fluid phase sediment concentration by volume Cv.
-
-- CVTFPMAX_MUD.OUT: Maximum mudflow phase sediment concentration by volume.
-
-- DEPFP.OUT: Combined maximum fluid and mudflow phase flow depths.
-
-- DEPFPMAX_MUD.OUT: Maximum mudflow phase flow depth.
-
-- DEPTHMAX.OUT: Maximum fluid phase flow depth.
-
-- FINALDEP.OUT: Final fluid phase flow depth at the completion of the simulation.
-
-- FINALDEP_MUD.OUT: Final mudflow phase flow depth at the simulation completion.
-
-- FINALDEP_COMBO.OUT: Final combined fluid and mudflow phase flow depths
-  - end of simulation.
-
-- FINALVEL.OUT and FINALDIR.OUT: Final velocity and direction (1 of 8) for the fluid phase.
-
-- FINALVEL_MUD.OUT and FINALDIR_MUD.OUT: Final velocity and direction for the mudflow phase.
-
-- VELFP.OUT and VELDIREC.OUT: Maximum velocity and direction for the fluid phase.
-
-- VELFP_MUD.OUT and VELDIREC_MUD.OUT: Maximum velocity/direction for the mudflow phase.
-
-- VELRESMAX.OUT and VELRESMAX_MUD.OUT: These two files have a different format…
+    - CVTFPMAX.OUT: Maximum fluid phase sediment concentration by volume Cv.
+    - CVTFPMAX_MUD.OUT: Maximum mudflow phase sediment concentration by volume.
+    - DEPFP.OUT: Combined maximum fluid and mudflow phase flow depths.
+    - DEPFPMAX_MUD.OUT: Maximum mudflow phase flow depth.
+    - DEPTHMAX.OUT: Maximum fluid phase flow depth.
+    - FINALDEP.OUT: Final fluid phase flow depth at the completion of the simulation.
+    - FINALDEP_MUD.OUT: Final mudflow phase flow depth at the simulation completion.
+    - FINALDEP_COMBO.OUT: Final combined fluid and mudflow phase flow depths
+      - end of simulation.
+    - FINALVEL.OUT and FINALDIR.OUT: Final velocity and direction (1 of 8) for the fluid phase.
+    - FINALVEL_MUD.OUT and FINALDIR_MUD.OUT: Final velocity and direction for the mudflow phase.
+    - VELFP.OUT and VELDIREC.OUT: Maximum velocity and direction for the fluid phase.
+    - VELFP_MUD.OUT and VELDIREC_MUD.OUT: Maximum velocity/direction for the mudflow phase.
+    - VELRESMAX.OUT and VELRESMAX_MUD.OUT: These two files have a different format…
 
 ..
 
