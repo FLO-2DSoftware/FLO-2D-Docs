@@ -1,5 +1,8 @@
 .. vim: syntax=rst
 
+HYDRAULIC STRUCTURES GUIDELINES
+===============================
+
 Overview
 --------------------
 
