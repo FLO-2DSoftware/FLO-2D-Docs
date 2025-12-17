@@ -550,7 +550,7 @@ sediment size and percent finer than.
 .. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two037.png
 
 .. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image16.png
-]
+
 *Figure 12.
 Sediment Routing by Size Fractions and Bed Armoring.*
 
@@ -721,24 +721,21 @@ Figure 15.
 Two Phase Mudflow in a Channel with Diluted Tributary Inflow.
 
 Two Phase Flow Application - Possible Modeling Scenarios
---------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For a two phase flow tailings dam breach project application, the possible breach scenarios include:
 
-- Water failure only: PMP or PMF plus impounded water, or PMP plus impounded water plus inflow flood hydrograph; Use instantaneous breach failure,
-  prescribed rate failure or breach erosion.
-  No two phase flow necessary for this scenario.
-
-- Mudflow only: Failure of a completely mixed water and tailings material (a relatively fluid volume stored in the tailings reservoir) that will flow
-  with an instantaneous breach.
-  No fluid layer is assigned.
-  The tailings elevation and the water surface elevation are the same.
-
-- Breach failures that include varying tailings material sediment concentrations by volume; Use instantaneous breach failure, prescribed rates of breach
-  failure, or sediment erosion breach.
-
-- Multiple tailing dam failures cascading downstream into one another as instantaneous failures, prescribed rates of breach failure or sediment erosion
-  breach.
+    - Water failure only: PMP or PMF plus impounded water, or PMP plus impounded water plus inflow flood hydrograph; Use instantaneous breach failure,
+      prescribed rate failure or breach erosion.
+      No two phase flow necessary for this scenario.
+    - Mudflow only: Failure of a completely mixed water and tailings material (a relatively fluid volume stored in the tailings reservoir) that will flow
+      with an instantaneous breach.
+      No fluid layer is assigned.
+      The tailings elevation and the water surface elevation are the same.
+    - Breach failures that include varying tailings material sediment concentrations by volume; Use instantaneous breach failure, prescribed rates of breach
+      failure, or sediment erosion breach.
+    - Multiple tailing dam failures cascading downstream into one another as instantaneous failures, prescribed rates of breach failure or sediment erosion
+      breach.
 
 PMP = Probable Maximum Precipitation
 
@@ -747,58 +744,47 @@ PMF = Probable Maximum Flood
 The following tailings dam breach scenarios might include these tasks:
 
 - Estimate tailings breach volume with Tailings Dam Tool
-
 - Create combined tailings dam and downstream flooding grid system
-
 - Assign water surface and tailings elevation in INFLOW.DAT, Line R
-
 - Assign sediment transport and mudflow parameters in SED.DAT
-
 - Select one or more fluid sediment transport equations
-
 - Select one or more mudflow samples for varying concentrations by volume
-
 - Check SUMMARY.OUT to compare water/sediment volume conservation
-
 - Simulate a downstream channel and tributaries to capture the breach discharge
 
 1. Dam is constructed from borrow material (not tailings) with impounded water
 
-i. Prescribed failure with vertical and horizontal rates
+    i. Prescribed failure with vertical and horizontal rates
 
-a. Assign vertical and horizontal breach rates in LEVEE.DAT
+        a. Assign vertical and horizontal breach rates in LEVEE.DAT
 
-b. Assign breach vertical/horizontal rates to zero for instantaneous failure to bedrock
+        b. Assign breach vertical/horizontal rates to zero for instantaneous failure to bedrock
 
-c. Review breach elevation/width with respect to water surface and tailings elevation
+        c. Review breach elevation/width with respect to water surface and tailings elevation
 
-ii.
-Dam and tailings predicted erosion
+    ii. Dam and tailings predicted erosion
 
-a. Assign dam geometry and sediment parameters
+        a. Assign dam geometry and sediment parameters
 
-b. Review scour depth and deposition downstream near dam breach
+        b. Review scour depth and deposition downstream near dam breach
 
-c. Check SUMMARY.OUT to review sediment volume contribution from dam
+        c. Check SUMMARY.OUT to review sediment volume contribution from dam
 
 2. The dam is created by tailing deposits
 
-i. Prescribed failure with vertical and horizontal rates
+    i. Prescribed failure with vertical and horizontal rates
 
-a. Assign vertical and horizontal breach rates in LEVEE.DAT
+        a. Assign vertical and horizontal breach rates in LEVEE.DAT
+        d. Assign breach vertical/horizontal rates to zero for instantaneous failure to bedrock
+        c. Review breach elevation/width with respect to water surface and tailings elevation
 
-d. Assign breach vertical/horizontal rates to zero for instantaneous failure to bedrock
+    ii. Dam and tailings predicted erosion
 
-c. Review breach elevation/width with respect to water surface and tailings elevation
+        a. Establish a fake dam geometry to match tailings slope
 
-ii.
-Dam and tailings predicted erosion
+        b. Assign tailings thickness
 
-a. Establish a fake dam geometry to match tailings slope
-
-b. Assign tailings thickness
-
-c. Review scour depth and deposition downstream of dam breach
+        c. Review scour depth and deposition downstream of dam breach
 
 A tailings reservoir project as a two phase flow example project is presented.
 In Figure 16 the tailings reservoir is located on the right portion of grid system using levee elements (red lines) to define the reservoir (the levee
@@ -820,11 +806,9 @@ Example Project – Reservoir Located on the Right of the Flow Domain.*
 
 The following two phase flow tailings dam breach scenarios were simulated:
 
-- Instantaneous breach – seismic or static failure
-
-- Breach erosion - dam scour to bedrock
-
-- Prescribed breach – vertical/horizontal breach rates using the eleven sediment transport equations
+    - Instantaneous breach – seismic or static failure
+    - Breach erosion - dam scour to bedrock
+    - Prescribed breach – vertical/horizontal breach rates using the eleven sediment transport equations
 
 Figure 16 shows an example of the predicted maximum depths for the combined fluid and mudflow phases.
 This example is generated using a prescribed breach rate of 20 m/hr (for both vertical and horizontal) and the Karim-Kennedy sediment transport
