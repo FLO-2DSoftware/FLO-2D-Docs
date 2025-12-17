@@ -1,7 +1,10 @@
 .. vim: syntax=rst
 
+LEVEE DAM AND WALL BREACH GUIDELINES
+===================================
+
 Levee Overview
-==============
+---------------
 
 The FLO-2D levee component confines flow on the floodplain surface by blocking one or more of the eight
 flow directions.
@@ -53,10 +56,10 @@ reverts to overland flow calculations.
 Levees are Displayed in Red in the FLO-2D QGIS Plugin.*
 
 Levee and Dam Breach Failure
-============================
+------------------------------
 
 General
--------
+^^^^^^^
 
 FLO-2D can simulate levee and dam breach failures.
 This may encompass the gradual erosion of a dam or levee or the instantaneous collapse of a flood wall.
@@ -97,7 +100,7 @@ Example of Levee Breach Urban Flooding.*
 Example of a Proposed Domestic Water Supply Reservoir Breach Failure.*
 
 Prescribed Levee and Dam Failure
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For the prescribed levee failure routine, the breach can enlarge vertically and horizontally or fail
 instantaneously.
@@ -117,24 +120,18 @@ failure and duration of saturation before failure can be assigned to add detail 
 failure locations.
 The highlights of spatially variable levee failure are:
 
-- Levee failure can occur anywhere on the grid system based on overtopping or the water surface elevation
-  reaching a specified distance below the crest elevation for an assigned duration.
-
-- Multiple levee breaches can occur and expand in various locations simultaneously.
-
-- Levee breach expansion with prescribed horizontal or vertical rates.
-
-- Failure can occur from either side of the levee (river side and land side).
-
-- Based on water surface elevation, flow through the levee breach can occur in either direction.
-  As landside ponding equilibrates with the river water surface elevation, the beach flow may alternate
-  directions.
-
-- Levees may overtop or breach into detention basins or channel retention facilities.
-  Basin pumps then can be integrated with FLO-2D levee breach analyses.
-
-- By setting the prescribed breach failure rates equal to zero, an instantaneous collapse of the levee
-  or wall can be simulated for a specified maximum width or the side width of the grid element.
+    - Levee failure can occur anywhere on the grid system based on overtopping or the water surface elevation
+      reaching a specified distance below the crest elevation for an assigned duration.
+    - Multiple levee breaches can occur and expand in various locations simultaneously.
+    - Levee breach expansion with prescribed horizontal or vertical rates.
+    - Failure can occur from either side of the levee (river side and land side).
+    - Based on water surface elevation, flow through the levee breach can occur in either direction.
+      As landside ponding equilibrates with the river water surface elevation, the beach flow may alternate
+      directions.
+    - Levees may overtop or breach into detention basins or channel retention facilities.
+      Basin pumps then can be integrated with FLO-2D levee breach analyses.
+    - By setting the prescribed breach failure rates equal to zero, an instantaneous collapse of the levee
+      or wall can be simulated for a specified maximum width or the side width of the grid element.
 
 Unless the levee or wall failure is instantaneous, the failure mechanism, initial breach width and the
 first thirty minutes or so of breach widening are generally inconsequential to the downstream flooding.
@@ -173,7 +170,7 @@ A typical rate of breach width decrease is shown in Figure 4.
 Prescribed Breach Horizontal Rate Decrease with Decreasing Shear Stress.*
 
 Levee and Dam Predicted Breach Erosion
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The breach erosion component was added to the FLO-2D model to predict a realistic assessment of a levee
 or dam failure in concert with the downstream flooding.
@@ -186,15 +183,11 @@ stability failure by sliding, slumping or collapse.
 These physical processes were simulated in the original NWS model and were retained in the FLO-2D model.
 In FLO-2D a dam or levee breach can fail as follows:
 
-- Overtopping and development of a breach channel on the downstream face of the dam or levee;
-
-- Piping failure;
-
-- Piping failure and roof collapse and development into a breach channel;
-
-- Breach channel enlargement through side slope slumping;
-
-- Breach enlargement by wedge collapse.
+    - Overtopping and development of a breach channel on the downstream face of the dam or levee;
+    - Piping failure;
+    - Piping failure and roof collapse and development into a breach channel;
+    - Breach channel enlargement through side slope slumping;
+    - Breach enlargement by wedge collapse.
 
 The user has the option to specify the breach element and elevation or to assign global parameters and
 the model will locate the initial levee breach failure element based on the water surface elevation and
@@ -221,42 +214,32 @@ One of the reasons for selecting the NWS BREACH model for the FLO-2D model templ
 had sufficient geotechnical detail to mathematically represent the physical process of dam breach failure.
 As a result, the FLO-2D breach model includes the following features:
 
-- The embankment can have an impervious core and a non-cohesive shell with different materials;
-
-- Embankment material properties include sediment size, specific weight, cohesive strength, internal
-  friction angle, porosity and Manning’s n-value;
-
-- Breach channel initiation through piping failure;
-
-- Enlargement of the breach through sudden structural collapse or slope instability;
-
-- Riprap material or grass on the downstream face;
-
-- Sediment transport for different size sediment in the embankment core or shell.
+    - The embankment can have an impervious core and a non-cohesive shell with different materials;
+    - Embankment material properties include sediment size, specific weight, cohesive strength, internal
+      friction angle, porosity and Manning’s n-value;
+    - Breach channel initiation through piping failure;
+    - Enlargement of the breach through sudden structural collapse or slope instability;
+    - Riprap material or grass on the downstream face;
+    - Sediment transport for different size sediment in the embankment core or shell.
 
 The following assumptions are hardcoded into the FLO-2D breach model:
 
-- Initial breach width to depth ratio (BRATIO) – if the assigned breach width to depth ratio is 0.0
-  (in the BREACH.DAT file), then BRATIO = 2.
-
-- The initial piping width is assumed to be 1.0ft (0.30m).
-
-- The minimum and maximum Manning’s n-values permitted for the breach flow resistance are 0.02 and
-  0.25, respectively.
-
-- The pipe outlet at the toe of the dam or levee is the downstream grid element floodplain elevation
-  plus 1 ft (0.3 m).
-
-- After the specified breach initiation condition is reached, the breach discharge is computed if the
-  upstream water surface elevation exceeds the upstream breach pipe or channel bottom elevation plus
-  a tolerance value of 0.1 ft or 0.3 m.
-
-- If the specified initial breach elevation in the BREACH.DAT file is less than 10.0 ft (3.0 m), then
-  the initial piping breach elevation is assumed to be the dam or levee crest elevation minus the
-  assigned breach elevation (Initial Breach Elevation = Levee Crest – BRBOTTOMEL).
+    - Initial breach width to depth ratio (BRATIO) – if the assigned breach width to depth ratio is 0.0
+      (in the BREACH.DAT file), then BRATIO = 2.
+    - The initial piping width is assumed to be 1.0ft (0.30m).
+    - The minimum and maximum Manning’s n-values permitted for the breach flow resistance are 0.02 and
+      0.25, respectively.
+    - The pipe outlet at the toe of the dam or levee is the downstream grid element floodplain elevation
+      plus 1 ft (0.3 m).
+    - After the specified breach initiation condition is reached, the breach discharge is computed if the
+      upstream water surface elevation exceeds the upstream breach pipe or channel bottom elevation plus
+      a tolerance value of 0.1 ft or 0.3 m.
+    - If the specified initial breach elevation in the BREACH.DAT file is less than 10.0 ft (3.0 m), then
+      the initial piping breach elevation is assumed to be the dam or levee crest elevation minus the
+      assigned breach elevation (Initial Breach Elevation = Levee Crest – BRBOTTOMEL).
 
 Pipe Breach
------------
+^^^^^^^^^^^^^^^
 
 If the user specifies a breach elevation, pipe flow will be initiated when the upstream water surface
 exceeds the specified pipe invert elevation.
@@ -277,7 +260,7 @@ above the pipe, the roof of the pipe collapses and channel flow ensues through t
 Pipe Breach Failure.*
 
 Overtopping and Channel Breach
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Channel flow through the breach can occur if the pipe roof collapse or if the flow overtops the dam or
 levee.
@@ -296,7 +279,7 @@ failure, the dam crest length or the available connected levee grids.
 Overtopping and Channel Breach Erosion.*
 
 Dam Collapse
-------------
+^^^^^^^^^^^^^
 
 Breach enlargement is also possible through a sudden collapse of the upper portion of the dam.
 The collapse would consist of a wedge shaped mass of embankment material.
@@ -312,7 +295,7 @@ A flow chart of the basic computation scheme for the breach component is shown i
 Breach Schematic Flow Chart.*
 
 Levee Overtopping without Failure
-=================================
+-----------------------------------
 
 Levee overtopping can occur without breach failure.
 Floodplain features such as roadway or railroad embankments, concrete walls and levees with riprap
@@ -350,7 +333,7 @@ This is to accommodate non-uniform crest elevations and minute discharges that w
 Typically, if the flow is greater than about 0.1 ft, the discharge will be significant.
 
 Submergence
------------
+^^^^^^^^^^^
 
 The levee weir coefficient is variable as a function of the headwater based on the U.S.
 Department of Transportation criteria (Hydraulic Design of Highway Culverts; Publication Number
@@ -373,7 +356,7 @@ Schematic of the Levee Overtopping Flow.*
 Levee Overtopping Tailwater Submergence.*
 
 Prescribed Levee Breach Input Data
-==================================
+--------------------------------------
 
 The prescribed breach failure is recommended over the breach erosion failure because the physical
 process of sediment scour in hyperconcentrated sediment flows is poorly understood and simplistically
@@ -390,17 +373,12 @@ Open the Levees and Breach Editor, select the Prescribed Failure and click on Le
 as shown in Figure 12.
 The required data includes:
 
-- Elevation of the prescribed failure if different from the levee crest
-
-- Duration of saturation prior to breach initiation
-
-- Breach base elevation if different from the floodplain elevation
-
-- Maximum breach width
-
-- Vertical rate of breach expansion
-
-- Horizontal rate of breach expansion
+    - Elevation of the prescribed failure if different from the levee crest
+    - Duration of saturation prior to breach initiation
+    - Breach base elevation if different from the floodplain elevation
+    - Maximum breach width
+    - Vertical rate of breach expansion
+    - Horizontal rate of breach expansion
 
 .. image:: ../img/Levee_Dam_and_Wall_Breach_Guidelines/image12.png
 
@@ -429,7 +407,7 @@ Table 1 outlines the potential controls.
 .. image:: ../img/Levee_Dam_and_Wall_Breach_Guidelines/Levee029.png
 
 Urban Wall Failure (Collapse)
-=============================
+-------------------------------
 
 Simulating flood confinement by urban walls in the FLO-2D model is accomplished with the levee
 component by blocking one or more of the eight flow directions.
@@ -479,7 +457,7 @@ Wall Collapse.
 Walls are Displayed by the Thin Red Lines.*
 
 Wall Failure Modes
-------------------
+^^^^^^^^^^^^^^^^^^^
 
 There are two failure modes for walls and levees: 1) Prescribed failure using vertical and horizontal
 rates of breach expansion; 2) Predicted breach erosion of earthen embankments using sediment transport
@@ -504,23 +482,18 @@ failure and duration of saturation before failure can be assigned to add detail 
 failure locations.
 Wall failure highlights are:
 
-- Wall failure can occur anywhere on the grid system based on overtopping or if the water surface
-  elevation reaches a specified distance below the crest elevation.
-
-- Multiple wall failure can occur in various locations simultaneously.
-
-- Wall failure expansion can be based on prescribed horizontal or vertical rates.
-
-- Failure can occur from either side of the wall.
-
-- Based on water surface elevation, flow through the breach can occur in either direction.
-  As ponding equilibrates on each side of the wall, flow through the wall may alternate directions.
-
-- By setting the breach failure rates equal to zero, an instantaneous collapse of the wall will be
-  simulated for a specified maximum width or the side width of the grid element.
+    - Wall failure can occur anywhere on the grid system based on overtopping or if the water surface
+      elevation reaches a specified distance below the crest elevation.
+    - Multiple wall failure can occur in various locations simultaneously.
+    - Wall failure expansion can be based on prescribed horizontal or vertical rates.
+    - Failure can occur from either side of the wall.
+    - Based on water surface elevation, flow through the breach can occur in either direction.
+      As ponding equilibrates on each side of the wall, flow through the wall may alternate directions.
+    - By setting the breach failure rates equal to zero, an instantaneous collapse of the wall will be
+      simulated for a specified maximum width or the side width of the grid element.
 
 Wall Overtopping without Failure
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Concrete or block walls can be overtopped without failing.
 Overtopping discharge is shared between two cells with the wall assignment on their border.
@@ -551,27 +524,19 @@ stability.
 Levee Overtopping Tailwater Submergence.*
 
 Wall Collapse
--------------
+^^^^^^^^^^^^^^
 
 Wall collapse data can be entered in the FLO-2D QGIS Plugin (Figure 18 in red box).
 The required data includes:
 
 - Failure side (1 of 8 flow directions)
-
 - Global failure – failure criteria applies to all wall elements and directions
-
-- (negative failure grid element in LEVEE.DAT)
-
+    - (negative failure grid element in LEVEE.DAT)
 - Elevation of the prescribed failure if different from the levee crest
-
 - Duration of saturation prior to breach initiation
-
 - Breach base elevation if different from the floodplain elevation
-
 - Maximum breach width
-
 - Vertical rate of breach expansion
-
 - Horizontal rate of breach expansion
 
 Find a wall collapse tutorial, please refer to the Self-Help Training kit
@@ -587,7 +552,7 @@ The tutorial shows how to define the collapse elevation by defining the failure 
 FLO-2D QGIS Plugin Prescribed Wall Breach Dialog Box.*
 
 Wall Failure Guidelines
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following table presents the wall failure guidelines, controls and data checks.
 
@@ -596,7 +561,7 @@ The following table presents the wall failure guidelines, controls and data chec
 .. image:: ../img/Levee_Dam_and_Wall_Breach_Guidelines/Levee031.png
 
 Wall Failure Troubleshooting
-----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Wall failure can often result in a high discharge (high velocities and flow depths) immediately
 downstream of the wall.
@@ -606,12 +571,10 @@ Wall failure combined with hydraulic structures or other features can also cause
 evacuating too volume from the upstream grid element.
 Evidence of numerical surging in wall collapse discharge includes:
 
-- High maximum velocities and Froude numbers (VELTIMEFP.OUT, SUPER.OUT);
-
-- Rapidly varying discharges (grid element number LEVEEFAIL.OUT, or in the floodplain cross section
-  hydrographs);
-
-- Adverse or variable maximum water surface elevations.
+    - High maximum velocities and Froude numbers (VELTIMEFP.OUT, SUPER.OUT);
+    - Rapidly varying discharges (grid element number LEVEEFAIL.OUT, or in the floodplain cross section
+      hydrographs);
+    - Adverse or variable maximum water surface elevations.
 
 .. image:: ../img/Levee_Dam_and_Wall_Breach_Guidelines/Levee032.png
 
@@ -620,12 +583,10 @@ Evidence of numerical surging in wall collapse discharge includes:
 The primary data issue with a wall collapse occurs is a wall is assigned along the boundary of two
 grid elements that are significantly different in elevation resulting in:
 
-- Failure elevations that are lower than the ground elevation
-
-- Wall crest elevations that were less than 3 ft above one or both grid element elevations
-
-- Failure of walls without a water surface elevation or with only a shallow water surface elevation
-  that is higher than the prescribed failure elevation.
+    - Failure elevations that are lower than the ground elevation
+    - Wall crest elevations that were less than 3 ft above one or both grid element elevations
+    - Failure of walls without a water surface elevation or with only a shallow water surface elevation
+      that is higher than the prescribed failure elevation.
 
 Figure 19 illustrates the condition where the water surface may exceed wall failure elevation and
 failure occurs resulting in evacuation of the shallow water in Cell B.
@@ -641,11 +602,10 @@ Error and warning messages were established for these elevation conditions.
 *Figure 19.
 Levee or Wall Configuration with Uneven Ground Elevations.*
 
-- If the ground elevations on each side of the wall are different by more than 0.5 ft, the cell with
-  the higher elevation are set to lower grid element elevation.
-
-- If the failure elevation is lower than either ground elevation, the failure elevation is reset to
-  3 ft above the lowest ground elevation.
+    - If the ground elevations on each side of the wall are different by more than 0.5 ft, the cell with
+      the higher elevation are set to lower grid element elevation.
+    - If the failure elevation is lower than either ground elevation, the failure elevation is reset to
+      3 ft above the lowest ground elevation.
 
 In previous model versions it was assumed that the ground elevation was essentially the same on both
 sides of the wall, so that when the water surface reached the failure elevation, the wall would collapse
@@ -656,15 +616,13 @@ In the current model, failure will ensue when the difference in the water surfac
 than the failure elevation.
 The levee/wall failure criteria was simplified as follows:
 
-- Water surface elevation must be greater than the prescribed levee failure elevation plus a tolerance
-  value of 0.1 ft or 0.03 m.
-
-- Water surface elevation on the upstream side (storage side) of the levee must be higher than the
-  downstream water surface elevation.
-
-- The water surface elevation minus the ground elevation (flow depth) on the upstream side must be
-  greater than the water surface elevation minus the ground elevation (flow depth) on the downstream
-  side of the dam or levee.
+    - Water surface elevation must be greater than the prescribed levee failure elevation plus a tolerance
+      value of 0.1 ft or 0.03 m.
+    - Water surface elevation on the upstream side (storage side) of the levee must be higher than the
+      downstream water surface elevation.
+    - The water surface elevation minus the ground elevation (flow depth) on the upstream side must be
+      greater than the water surface elevation minus the ground elevation (flow depth) on the downstream
+      side of the dam or levee.
 
 The additional criteria that the difference in the water surface elevations across the wall must exceed
 the failure elevation minus the ground elevation to assess the wall stability was removed.
@@ -674,17 +632,15 @@ failure are assigned.
 The following options are available to assess the relationship between the wall crest elevation,
 the wall failure elevation and the floodplain ground elevation:
 
-- DEPRESSDEPTH (in CONT.DAT) = 0.0 to 10.0 ft; Identifies the wall with a crest elevation lower than
-  DEPRESSDEPTH in LOW_LEVEE_CREST_ELEVATIONS.OUT file.
-
-- DEPRESSDEPTH = -1.0 to - 10.0 ft; Assesses the side of the wall where the crest elevation is
-  assigned to determine if the levee height is lower than the DEPRESSDEPTH value.
-
-- DEPRESSDEPTH = -101.0 to -110.0 ft; Assesses both sides of the wall to determine if the height is
-  lower than DEPRESSDEPTH (1 ft to 10 ft).
+    - DEPRESSDEPTH (in CONT.DAT) = 0.0 to 10.0 ft; Identifies the wall with a crest elevation lower than
+      DEPRESSDEPTH in LOW_LEVEE_CREST_ELEVATIONS.OUT file.
+    - DEPRESSDEPTH = -1.0 to - 10.0 ft; Assesses the side of the wall where the crest elevation is
+      assigned to determine if the levee height is lower than the DEPRESSDEPTH value.
+    - DEPRESSDEPTH = -101.0 to -110.0 ft; Assesses both sides of the wall to determine if the height is
+      lower than DEPRESSDEPTH (1 ft to 10 ft).
 
 Summary
--------
+^^^^^^^^
 
 Distribution of shallow unconfined flooding in urban areas is often controlled by block walls that
 isolate residential lots or entire neighborhoods.
@@ -708,30 +664,22 @@ failure elevation but with insufficient static pressure to collapse the wall.
 These conditions are resolved are runtime in the model but should be avoided in the data files.
 
 Predicted Breach Erosion Input Data
-===================================
+---------------------------------------
 
 The dam breach erosion component provides an opportunity to simulate the physical processes of breach
 widening through scour.
 Nine out of the eleven sediment transport equations in the FLO-2D can be used to compute the breach
 erosion including:
 
-- Zeller-Fullerton
-
-- Yang
-
-- Engelund & Hansen
-
-- Ackers & White
-
-- Laursen
-
-- MPM-Smart
-
-- Karim-Kennedy
-
-- Parker, Klingeman & McLean
-
-- Van Rijn
+    - Zeller-Fullerton
+    - Yang
+    - Engelund & Hansen
+    - Ackers & White
+    - Laursen
+    - MPM-Smart
+    - Karim-Kennedy
+    - Parker, Klingeman & McLean
+    - Van Rijn
 
 Referring to the FLO-2D Reference Manual for descriptions of each equation is advisable.
 The various sediment transport capacity equations predict a range of erosion rates, which affect the
@@ -756,51 +704,37 @@ a fast breach.
 To maximize the breach rate, assign the pipe inlet near the maximum water surface (Figure 4).
 A brief description of the pipe breach erosion computational sequence follows:
 
-- If upstream water surface > pipe elevation – piping failure initiates;
-
-- User specifies initial pipe elevation with outlet fixed 1 ft above downstream embankment toe.
-  This enables the steepest slope, which should approximate the most conservative case.
-  The erosion pivots around the embankment toe;
-
-- With pipe enlargement or collapse – channel breach flow ensues;
-
-- For both pipe and channel breach flow, the discharge is controlled by weir or pipe flow, and the
-  hydraulics computed by open channel flow;
-
-- Tailwater submergence is evaluated as previously discussed;
-
-- Sediment scour volume is computed based on the selected equation;
-
-- The model removes the eroded sediment volume from the pipe geometry uniformly to widen the breach;
-
-- Weir flow versus pipe flow is based on the head of the weir.
-  If the head is greater than 1.5 times the pipe diameter, then pipe flow is computed using the
-  Darcy-Weisbach equation with a pipe friction factor computed from the user selected n-value.
-
-- The pipe flow routine checks for laminar-turbulent flow using Reynold’s number and uses the appropriate
-  flow regime equation to compute the velocity.
+    - If upstream water surface > pipe elevation – piping failure initiates;
+    - User specifies initial pipe elevation with outlet fixed 1 ft above downstream embankment toe.
+      This enables the steepest slope, which should approximate the most conservative case.
+      The erosion pivots around the embankment toe;
+    - With pipe enlargement or collapse – channel breach flow ensues;
+    - For both pipe and channel breach flow, the discharge is controlled by weir or pipe flow, and the
+      hydraulics computed by open channel flow;
+    - Tailwater submergence is evaluated as previously discussed;
+    - Sediment scour volume is computed based on the selected equation;
+    - The model removes the eroded sediment volume from the pipe geometry uniformly to widen the breach;
+    - Weir flow versus pipe flow is based on the head of the weir.
+      If the head is greater than 1.5 times the pipe diameter, then pipe flow is computed using the
+      Darcy-Weisbach equation with a pipe friction factor computed from the user selected n-value.
+    - The pipe flow routine checks for laminar-turbulent flow using Reynold’s number and uses the appropriate
+      flow regime equation to compute the velocity.
 
 Channel flow will occur if the dam or levee is overtopped or if the pipe roof collapses (Figure 5).
 The channel breach computational sequence is outlined as follows:
 
-- For the overtopped condition, breach discharge initiates as channel flow using the broadcrested weir
-  equation through a hardcoded width of 1.0 ft and
-  the downstream face slope;
-
-- The overtopping channel breach flow combines with any overtopping discharge over the levee or dam
-  grid element side with the breach;
-
-- The channel breach discharge is predicted by weir flow and the channel hydraulics down the steep
-  slope are computed as open channel flow using Manning’s equation;
-
-- The sediment scour volume is removed uniformly from the bottom and sides of the channel to widen
-  the breach;
-
-- The breach geometry transitions to a trapezoidal channel when the side slopes collapse;
-
-- The breach scour will eventually include erosion of the upstream face;
-
-- The breach channel slope erodes parallel to the downstream face.
+    - For the overtopped condition, breach discharge initiates as channel flow using the broadcrested weir
+      equation through a hardcoded width of 1.0 ft and
+      the downstream face slope;
+    - The overtopping channel breach flow combines with any overtopping discharge over the levee or dam
+      grid element side with the breach;
+    - The channel breach discharge is predicted by weir flow and the channel hydraulics down the steep
+      slope are computed as open channel flow using Manning’s equation;
+    - The sediment scour volume is removed uniformly from the bottom and sides of the channel to widen
+      the breach;
+    - The breach geometry transitions to a trapezoidal channel when the side slopes collapse;
+    - The breach scour will eventually include erosion of the upstream face;
+    - The breach channel slope erodes parallel to the downstream face.
 
 The FLO-2D breach erosion component integrates breach discharge with two-dimensional downstream flooding.
 The erosion is based on the breach flow hydraulics, the reservoir water surface and tailwater elevations.
@@ -817,21 +751,16 @@ concentration by volume C\ :sub:`v`, as shown in Equation 3:
     BF = \frac{1}{(1 - C_{v})}
 
 Breach Erosion Parameter Sensitivity
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The primary breach erosion parameters are:
 
-- Embankment geometry – side slopes, crest width and length
-
-- Pipe breach elevation and width/depth ratio
-
-- Embankment sediment size: core, shell and riprap material
-
-- Embankment sediment parameters – unit weight, porosity, cohesive strength
-
-- Roughness n-values for shell and core
-
-- Grass on downstream face
+    - Embankment geometry – side slopes, crest width and length
+    - Pipe breach elevation and width/depth ratio
+    - Embankment sediment size: core, shell and riprap material
+    - Embankment sediment parameters – unit weight, porosity, cohesive strength
+    - Roughness n-values for shell and core
+    - Grass on downstream face
 
 The data can be entered in the FLO-2D QGIS Plugin as shown in Figure 20.
 The breach erosion parameter data can be entered for either a global levee failure or for specific
@@ -855,91 +784,78 @@ The breach velocity down the pipe or channel is a function of the assigned rough
 and this affects the sediment discharge.
 Other parameters that can affect the breach erosion include:
 
-- Critical shear stress (Cv) which is a function of cohesive strength and the plasticity index of the
-  embankment materials.
-  The critical shear stress varies with clay content.
-
-- Embankment cohesive strength is used in the computation of channel side slope slump and dam wedge
-  collapse and blow out.
-  This parameter is an important variable for the rate of increase in breach width.
-
-- Sediment gradient D\ :sub:`90`/D\ :sub:`30`:Q\ :sub:`s` ~ (D\ :sub:`90`/D\ :sub:`30`)\ :sup:`0.2`
+    - Critical shear stress (Cv) which is a function of cohesive strength and the plasticity index of the
+      embankment materials.
+      The critical shear stress varies with clay content.
+    - Embankment cohesive strength is used in the computation of channel side slope slump and dam wedge
+      collapse and blow out.
+      This parameter is an important variable for the rate of increase in breach width.
+    - Sediment gradient D\ :sub:`90`/D\ :sub:`30`:Q\ :sub:`s` ~ (D\ :sub:`90`/D\ :sub:`30`)\ :sup:`0.2`
 
 The breach parameter sensitivity is outlined in the following table:
 
 .. image:: ../img/Levee_Dam_and_Wall_Breach_Guidelines/Levee034.png
 
 Breach Modeling Approach
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following steps are recommended for developing a FLO-2D dam breach simulation:
 
-- Select a grid elements size that results in a peak discharge divided the surface area of one grid
-  element **less than 10 cfs/sq ft. (or 3 cms/sq m)**.
-  Roughly estimate dam breach peak discharge before establishing the grid system.
+    - Select a grid elements size that results in a peak discharge divided the surface area of one grid
+      element **less than 10 cfs/sq ft. (or 3 cms/sq m)**.
+      Roughly estimate dam breach peak discharge before establishing the grid system.
+    - Using the FLO-2D QGIS Plugin Levee Editor, assign the dam embankment crest.
+      Tie the levee elements representing the crest to the grid elements representing the canyon walls.
+      **Assign the embankment (levee elements) to the grid elements representing the reservoir elements
+      so that the levee element is filled with reservoir
+      water.** Straight line levees are easier to work with than diagonal levees.
+    - Assign the starting water surface to one reservoir element.
+      Run the model for a short during to determine if there is any leakage outside the reservoir by
+      plotting the maximum flow depths in Rasterizor or MapCrafter.
+    - After the first FLO-2D simulation, rename TOPO_RES.BAC to TOPO.DAT and MANNINGS_N_RES.BAC to
+      MANNINGS_N.DAT and delete FPLAIN.DAT to assign the dead pool to the reservoir topography.
+      FPLAIN.DAT will be recreated automatically on the next model run.
+    - Assign outflow nodes across the canyon or dam breach potential flow area near the dam.
+      This will allow shorter simulation times while testing the dam breach parameters.
+    - Downstream grid element n-values should be assigned in the range from 0.1 to 0.2 representing the
+      severe turbulence for the first 1000 ft (300 m) or more below the dam.
+    - Reservoir grid element n-values will be automatically assigning a value of 0.25 when the reservoir
+      starting water surface option is used regardless of the initial n-value assignment.
+      Higher n-values can be assigned.
+      If a reservoir starting water surface is not assigned than it is recommended that the reservoir
+      elements be manually assigned n-values of 0.25 or higher.
+    - The grid element that is selected for the initial breach should be assigned a floodplain elevation
+      that represents the dam foundation.
+      No breach erosion will occur below this elevation.
+    - The dam grid elements (levee elements) that will fail during the breach and one row of grid elements
+      upstream should be assigned the same elevation to reduce the potential for numerical instability.
+      The same approach can be used for the downstream elements below the dam, but they can be lower than
+      the dam foundation in a successive series of three to five rows of elements.
+    - Assign realistic values to the dam parameters representing field or design dam geometry and embankment
+      material.
 
-- Using the FLO-2D QGIS Plugin Levee Editor, assign the dam embankment crest.
-  Tie the levee elements representing the crest to the grid elements representing the canyon walls.
-  **Assign the embankment (levee elements) to the grid elements representing the reservoir elements
-  so that the levee element is filled with reservoir
-  water.** Straight line levees are easier to work with than diagonal levees.
+The following parameters requires some engineering judgment:
 
-- Assign the starting water surface to one reservoir element.
-  Run the model for a short during to determine if there is any leakage outside the reservoir by
-  plotting the maximum flow depths in Rasterizor or MapCrafter.
+    - Weir coefficient: 2.65 to 3.05 Higher values will result in a higher peak discharge which may be more
+      conservative in terms of assessing the flood hazard.
+    - Initial Breach Width to Depth Ratio (BRATIO): 0.5 to 4.0.
+      Suggested value is 2.0.
+      For the purpose of initial pipe geometry, this parameter is inconsequential, but it is also used to
+      distribution the breach erosion scour to the bed and sides of the breach trapezoidal channel.
+      A higher value of BRATIO will widen faster and reduce the vertical erosion of the bed.
+    - The maximum sediment concentration by volume should assigned a value of 0.5 or 0.55 which will limit
+      the initial breach sediment concentration to that representing a viscous mudflow.
+    - The dam core and shell n-values can be assigned in the range from 0.065 to 0.25.
+      These values affect the breach pipe and channel hydraulics and low n-values can result in very fast
+      erosion.
+      The breach turbulence and steep slope require high n-values to avoid unrealistic scour.
+    - If the specified initial breach elevation in the BREACH.DAT file is less than 10.0 ft (3.0 m), then
+      the initial piping breach elevation is assumed to be the dam or levee crest elevation minus the
+      assigned breach elevation (Initial Breach Elevation = Levee Crest – BRBOTTOMEL).
 
-- After the first FLO-2D simulation, rename TOPO_RES.BAC to TOPO.DAT and MANNINGS_N_RES.BAC to
-  MANNINGS_N.DAT and delete FPLAIN.DAT to assign the dead pool to the reservoir topography.
-  FPLAIN.DAT will be recreated automatically on the next model run.
-
-- Assign outflow nodes across the canyon or dam breach potential flow area near the dam.
-  This will allow shorter simulation times while testing the dam breach parameters.
-
-- Downstream grid element n-values should be assigned in the range from 0.1 to 0.2 representing the
-  severe turbulence for the first 1000 ft (300 m) or more below the dam.
-
-- Reservoir grid element n-values will be automatically assigning a value of 0.25 when the reservoir
-  starting water surface option is used regardless of the initial n-value assignment.
-  Higher n-values can be assigned.
-  If a reservoir starting water surface is not assigned than it is recommended that the reservoir
-  elements be manually assigned n-values of 0.25 or higher.
-
-- The grid element that is selected for the initial breach should be assigned a floodplain elevation
-  that represents the dam foundation.
-  No breach erosion will occur below this elevation.
-
-- The dam grid elements (levee elements) that will fail during the breach and one row of grid elements
-  upstream should be assigned the same elevation to reduce the potential for numerical instability.
-  The same approach can be used for the downstream elements below the dam, but they can be lower than
-  the dam foundation in a successive series of three to five rows of elements.
-
-- Assign realistic values to the dam parameters representing field or design dam geometry and embankment
-  material.
-  The following parameters requires some engineering judgment:
-
-- Weir coefficient: 2.65 to 3.05 Higher values will result in a higher peak discharge which may be more
-  conservative in terms of assessing the flood hazard.
-
-- Initial Breach Width to Depth Ratio (BRATIO): 0.5 to 4.0.
-  Suggested value is 2.0.
-  For the purpose of initial pipe geometry, this parameter is inconsequential, but it is also used to
-  distribution the breach erosion scour to the bed and sides of the breach trapezoidal channel.
-  A higher value of BRATIO will widen faster and reduce the vertical erosion of the bed.
-
-- The maximum sediment concentration by volume should assigned a value of 0.5 or 0.55 which will limit
-  the initial breach sediment concentration to that representing a viscous mudflow.
-
-- The dam core and shell n-values can be assigned in the range from 0.065 to 0.25.
-  These values affect the breach pipe and channel hydraulics and low n-values can result in very fast
-  erosion.
-  The breach turbulence and steep slope require high n-values to avoid unrealistic scour.
-
-- If the specified initial breach elevation in the BREACH.DAT file is less than 10.0 ft (3.0 m), then
-  the initial piping breach elevation is assumed to be the dam or levee crest elevation minus the
-  assigned breach elevation (Initial Breach Elevation = Levee Crest – BRBOTTOMEL).
-
-- Note that the breach discharge is computed if the upstream water surface elevation exceeds the
-  upstream breach pipe or channel bottom elevation plus the tolerance value (TOL ~ 0.1 ft or 0.3 m).
+    .. note::
+       The breach discharge is computed if the upstream water surface elevation exceeds the
+       upstream breach pipe or channel bottom elevation plus the tolerance value (TOL ~ 0.1 ft or 0.3 m).
 
 The corresponding output data from the BREACH.OUT file for the dam breach hydrograph shown in
 Figure 21 is presented in the following table with the maximum sediment concentration by volume
@@ -953,7 +869,7 @@ Example of the Large Dam Breach Hydrograph.*
 .. image:: ../img/Levee_Dam_and_Wall_Breach_Guidelines/Levee035.png
 
 Reservoir Routing
-=================
+----------------------
 
 Deep water slow velocity movement in reservoir, detention basins or other ponded features in a
 two-dimension model represents a unique condition for flood routing.
@@ -988,7 +904,7 @@ In the FLO-2D model, the ponded conditions arise when the depth is equal to or e
 side length.
 
 A New Friction Slope Equation
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Typically, reservoir routing is done by applying a diffusive wave method such as Muskingum-Cunge
 (kinematic wave) requiring rating tables, cross section data and slope.
@@ -1032,7 +948,7 @@ with a starting water surface elevation and the average depth between the grid e
 than the grid element side.
 
 Starting Reservoir Water Surface Elevation and n-value Assignment
------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A reservoir can be simulated at the outset of a FLO-2D simulation.
 To assign a starting reservoir water surface, use the FLO-2D QGIS Plugin Initial Condition Editor to
@@ -1057,7 +973,7 @@ This is a relatively stable condition and the ensuing reservoir drainage or fill
 numerical instability.
 
 Reservoir Dead Pool
--------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 Some reservoir storage (Figure 24) may have been excavated below ground level with embankments above
 ground.
@@ -1081,7 +997,7 @@ The dead pool represents permanent storage that does not contribute to downstrea
 Reservoir Starting Water Surface Elevation Node Shown in Blue-Green.*
 
 Filling a Basin or Reservoir during the Simulation
---------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When a detention basin or other storage facility is filled during a flood simulation, the grid element
 water surface can be variable and relatively large velocities may be reported.
@@ -1089,15 +1005,13 @@ To initiate the above revision to the Manning’s regression equation, simply as
 than 0.250 to the potentially ponded area, detention basin or reservoir.
 These guidelines will help make the basin filling simulation more computationally stable:
 
-- Assign high n-values (~0.100 to 0.200) to the storage basin site using RESERVOIRN parameter line
-  R in INFLOW.DAT.
-
-- Slow the model down using a smaller Courant number for the floodplain.
-  Decrease the Courant number in 0.10 increments to a minimum of 0.05
-
-- Assign spatially variable limiting Froude numbers in the basin elements.
-  Use a small limiting Froude of 0.2 or lower to automatically adjust the n-values.
-  Review and accept the new n-values in ROUGH.OUT at the end of the simulation.
+    - Assign high n-values (~0.100 to 0.200) to the storage basin site using RESERVOIRN parameter line
+      R in INFLOW.DAT.
+    - Slow the model down using a smaller Courant number for the floodplain.
+      Decrease the Courant number in 0.10 increments to a minimum of 0.05
+    - Assign spatially variable limiting Froude numbers in the basin elements.
+      Use a small limiting Froude of 0.2 or lower to automatically adjust the n-values.
+      Review and accept the new n-values in ROUGH.OUT at the end of the simulation.
 
 While applying the DEPTOL stability parameter may improve the model stability, a lower Courant number
 should be enough to ensure consistently low velocities in the reservoir.
@@ -1106,7 +1020,7 @@ At the end of the simulation, if the basin has stored water without inflow or ou
 water surfaces should be relatively flat.
 
 Levee Breach Numerical Instability
-==================================
+--------------------------------------
 
 Levee and dam breaches often result in a very high discharge, velocity and flow depth.
 It is important when the focus of the project is the levee or dam breach inundation to select an
@@ -1130,18 +1044,16 @@ Combined levee breach with hydraulic structures or other features can also cause
 evacuating too volume from the upstream grid element.
 Evidence of numerical surging in breach discharge includes:
 
-- High maximum velocities (VELTIMEFP.OUT);
-
-- Rapidly varying discharges (BREACH.OUT, LEVEE.OUT, or in the floodplain cross section hydrographs);
-
-- High or variable maximum water surface elevations.
+    - High maximum velocities (VELTIMEFP.OUT);
+    - Rapidly varying discharges (BREACH.OUT, LEVEE.OUT, or in the floodplain cross section hydrographs);
+    - High or variable maximum water surface elevations.
 
 .. image:: ../img/Levee_Dam_and_Wall_Breach_Guidelines/Levee037.png
 
 .. image:: ../img/Levee_Dam_and_Wall_Breach_Guidelines/Levee038.png
 
 Dam Breach Floodwave Reporting for Hazard Mapping
-=================================================
+--------------------------------------------------
 
 To address the California Office of Emergency Services requirements for dam breach area of inundation
 and hazard maps, the following output data is generated during a FLO-2D model simulation.
@@ -1152,7 +1064,7 @@ For that reason, hazard map preparation may require a unique depiction of some o
 characteristics.
 
 Flood Wave Output
------------------
+^^^^^^^^^^^^^^^^^^^
 
 To facilitate mapping the CalEMA floodwave parameters, an output file (FLOODWAVETIME.OUT) is generated
 by FLO-2D at the end of the flood simulation.
@@ -1188,8 +1100,8 @@ tolerance value (TOL).
 If a channel is assigned to the grid element, the maximum water surface for either the channel or the
 floodplain is reported.
 
-Floodplain Cross Section
-------------------------
+Floodplain Cross-Section
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The peak discharge for a selected floodplain cross section or for each channel element is reported
 in HYCROSS.OUT or HYCHAN.OUT respectively.
@@ -1214,7 +1126,7 @@ If no levee or dam breach is simulated with the FLO-2D model, the FLOODWAVETIME.
 populated with output data with a start time related to the commencement of the flood model (hour 0.0).
 
 Levee Fragility Curves
-======================
+-------------------------
 
 Introduction Levee fragility curves can be used in the Central Valley flood studies to develop flood
 hazard maps with the FLO-2D model.
@@ -1260,46 +1172,32 @@ for a set of curves as shown below.
 The first column is the curve reference name; the second column is the probability of failure
 (x-axis Figure 1); and third column is the distance below the levee crest in feet or meters (y-axis).
 
-FS1 0.03 6.0
+.. raw:: html
 
-FS1 0.15 3.5
-
-FS1 0.50 2.5
-
-FS1 0.85 1.0
-
-FS1 0.95 0.0
-
-FS2 0.03 9.0
-
-FS2 0.15 5.5
-
-FS2 0.50 4.0
-
-FS2 0.85 2.0
-
-FS2 0.98 0.0
-
-FS3 0.03 12.0
-
-FS3 0.15 9.0
-
-FS3 0.50 6.5
-
-FS3 0.85 4.0
-
-FS3 1.00 0.0
-
-FS4 0.15 15.0
-
-FS4 0.50 9.0
-
-FS4 0.85 6.0
-
-FS4 1.00 0.0
+    <pre>
+    FS1 0.03 6.0
+    FS1 0.15 3.5
+    FS1 0.50 2.5
+    FS1 0.85 1.0
+    FS1 0.95 0.0
+    FS2 0.03 9.0
+    FS2 0.15 5.5
+    FS2 0.50 4.0
+    FS2 0.85 2.0
+    FS2 0.98 0.0
+    FS3 0.03 12.0
+    FS3 0.15 9.0
+    FS3 0.50 6.5
+    FS3 0.85 4.0
+    FS3 1.00 0.0
+    FS4 0.15 15.0
+    FS4 0.50 9.0
+    FS4 0.85 6.0
+    FS4 1.00 0.0
+    </pre>
 
 Application of the Levee Fragility Curves in the FLO-2D Model
--------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The California Department of Water Resources (DWR) can apply the levee fragility curves in the Central
 Valley Floodplain Evaluation and Delineation project to delineate and map potential flood hazards.
@@ -1318,31 +1216,29 @@ When these fragility curves are applied with the FLO-2D flood routing model usin
 erosion component, levee failure location and time of occurrence can be predicted.
 The following levee fragility curve data is assigned by the user in the FLO-2D model:
 
-Global Levee Data: Line ID, Fragility Curve ID, Probability of Failure (eg.
-0.50)
+Global Levee Data: Line ID, Fragility Curve ID, Probability of Failure (eg.0.50)
 
 Individual Levee Data: Line ID, Grid Element, Fragility Curve ID, Probability of Failure
 
 Example:
 
-C FS3 0.5
+.. raw:: html
 
-P 3450 FS1 0.5
-
-P 3558 FS1 0.9
-
-P 3559 FS2 0.7
-
-P 3669 FS3 0.5
-
-P 3670 FS4 0.5
+    <pre>
+    C FS3 0.5
+    P 3450 FS1 0.5
+    P 3558 FS1 0.9
+    P 3559 FS2 0.7
+    P 3669 FS3 0.5
+    P 3670 FS4 0.5
+    </pre>
 
 This data assignment enables the user to specify either global fragility curve data for the entire
 levee system or individual levee grid elements or reaches of levee fragility curves in the FLO-2D
 model in a spatially variable analysis.
 
 FLO-2D Fragility Curve Modeling Results
----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When the levee fragility curves are applied to a levee system, the results show that the levee
 breach can occur anywhere in the system at varying times depending of the selection of the fragility
@@ -1365,7 +1261,7 @@ Breaching in 2 Locations; Left: Levee Breaches Expanding)
 FLO-2D Levee Breach Simulation in Progress Using Levee Fragility Curves*
 
 Benefits of Using the Levee Fragility Curves for Flood Hazard Mapping
----------------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The levee fragility curves define the relationship between geotechnical and flood hazard as well as
 identify the levee risk associated with potential levee failure.
@@ -1387,7 +1283,7 @@ progression.
 This represents a significant step in accurate hazard mapping.
 
 References
-==========
+-----------
 
 Fread, D.L., 1998.
 “Breach: An Erosional Model for Earthen Dam Failures,” National Weather Service, NOAA, Silver Spring,
