@@ -863,72 +863,70 @@ The net volume is computed as:
 
 The conduit surface area (A\ :sub:`store`) depends on the flow condition within the conduit as follows:
 
-1. Under normal conditions the pipe surface area equals half of the conduit length times the average
-   of the top width at the end and mid points of the conduit.
-   These widths are evaluated before the next updated timestep using the flow depths
-   y\ :sub:`1`, y\ :sub:`2`, and y.
+    1. Under normal conditions the pipe surface area equals half of the conduit length times the average
+       of the top width at the end and mid points of the conduit.
+       These widths are evaluated before the next updated timestep using the flow depths
+       y\ :sub:`1`, y\ :sub:`2`, and y.
 
-2. If the inflow of the conduit to a node is in free-fall (conduit invert elevation is above the
-   water surface of the node), then the conduit does not contribute to the node surface area.
+    2. If the inflow of the conduit to a node is in free-fall (conduit invert elevation is above the
+       water surface of the node), then the conduit does not contribute to the node surface area.
 
-3. For conduits with closed shapes such as circular pipes that are greater than 96 percent full,
-   a constant top width equal to the width when 96 percent full is used.
-   This prevents the head adjustment term H\ :sub:`t` from creating numerical instability as the
-   top width and corresponding surface area approach zero when the conduit reaches a full condition.
-   A minimum surface area for A\ :sub:`store` is assigned to all nodes, including junctions that
-   normally have no storage volume, preventing H\ :sub:`t` from becoming unbounded.
-   Under normal conditions A\ :sub:`store` equals half the conduit’s length times the average of the
-   top width at the end- and mid-points of the conduit.
-   These widths are evaluated before the next updated flow solution is found, using the flow depths
-   y\ :sub:`1`, y\ :sub:`2`, and y discussed previously.
-   The default value for this minimum area is 12.57 ft\ :sup:`2` which corresponds to the area of
-   a 4-foot diameter manhole.
+    3. For conduits with closed shapes such as circular pipes that are greater than 96 percent full,
+       a constant top width equal to the width when 96 percent full is used.
+       This prevents the head adjustment term H\ :sub:`t` from creating numerical instability as the
+       top width and corresponding surface area approach zero when the conduit reaches a full condition.
+       A minimum surface area for A\ :sub:`store` is assigned to all nodes, including junctions that
+       normally have no storage volume, preventing H\ :sub:`t` from becoming unbounded.
+       Under normal conditions A\ :sub:`store` equals half the conduit’s length times the average of the
+       top width at the end- and mid-points of the conduit.
+       These widths are evaluated before the next updated flow solution is found, using the flow depths
+       y\ :sub:`1`, y\ :sub:`2`, and y discussed previously.
+       The default value for this minimum area is 12.57 ft\ :sup:`2` which corresponds to the area of
+       a 4-foot diameter manhole.
 
 To calculate the discharge Q and the head H, the equations are solved for each timestep using a method
 of successive approximations with under-relaxation (Rossman, 2005).
 The solution algorithm involves the following steps:
 
-1. A first estimate of discharge Q in each conduit at time *t +* Δ\ *t* is calculated by solving
-   for :math:`Q_{t + \mathrm{\Delta}t}` using the heads,
-   areas, and velocities determined at the current time *t*.
+    1. A first estimate of discharge Q in each conduit at time *t +* Δ\ *t* is calculated by solving
+       for :math:`Q_{t + \mathrm{\Delta}t}` using the heads,
+       areas, and velocities determined at the current time *t*.
 
-2. A first estimate of the head (H) in each conduit at time *t +* Δ\ *t* is calculated by evaluating
-   :math:`H_{t + \mathrm{\Delta}t}` using the discharge Q just computed.
-   The results are denoted as:
+    2. A first estimate of the head (H) in each conduit at time *t +* Δ\ *t* is calculated by evaluating
+       :math:`H_{t + \mathrm{\Delta}t}` using the discharge Q just computed.
+       The results are denoted as:
 
-   Q\ :sub:`last` and H\ :sub:`last`
+       Q\ :sub:`last` and H\ :sub:`last`
 
-3. The equation :math:`Q_{t + \mathrm{\Delta}t}` is solved once again, using the head, area, and
-   velocity based on the Q\ :sub:`last` and H\ :sub:`last` values just computed.
-   A relaxation factor Ω is used to combine the new flow estimate Q\ :sub:`new` with the previous
-   estimate Q\ :sub:`last` to generate a new Q\ :sub:`new` according to the equation:
+    3. The equation :math:`Q_{t + \mathrm{\Delta}t}` is solved once again, using the head, area, and
+       velocity based on the Q\ :sub:`last` and H\ :sub:`last` values just computed.
+       A relaxation factor Ω is used to combine the new flow estimate Q\ :sub:`new` with the previous
+       estimate Q\ :sub:`last` to generate a new Q\ :sub:`new` according to the equation:
 
-.. math::
-   :label:
+    .. math::
+       :label:
 
-   Q_{new} = (1−Ω) Q_{last} +Ω Q_{new}
+       Q_{new} = (1−Ω) Q_{last} +Ω Q_{new}
 
-4. The equation for :math:`H_{t + \mathrm{\Delta}t}`\ is solved again for heads using Q\ :sub:`new`.
-   As with discharge, this new solution for head, H\ :sub:`new` is weighted with H\ :sub:`last` to
-   produce an updated estimate for heads:
+    4. The equation for :math:`H_{t + \mathrm{\Delta}t}`\ is solved again for heads using Q\ :sub:`new`.
+       As with discharge, this new solution for head, H\ :sub:`new` is weighted with H\ :sub:`last` to
+       produce an updated estimate for heads:
 
-.. math::
-   :label:
+    .. math::
+       :label:
 
-   H_{new} = (1−Ω) H_{last} +Ω H_{new}
+       H_{new} = (1−Ω) H_{last} +Ω H_{new}
 
-5. If H\ :sub:`new` is close enough to H\ :sub:`last` then the process stops with Q\ :sub:`new`
-   and H\ :sub:`new` as the solution for time t + Δt.
-   Otherwise H\ :sub:`last` and Q\ :sub:`last` are replaced with H\ :sub:`new` and Q\ :sub:`new`,
-   respectively and the process returns to step 2.
+    5. If H\ :sub:`new` is close enough to H\ :sub:`last` then the process stops with Q\ :sub:`new`
+       and H\ :sub:`new` as the solution for time t + Δt.
+       Otherwise H\ :sub:`last` and Q\ :sub:`last` are replaced with H\ :sub:`new` and Q\ :sub:`new`,
+       respectively and the process returns to step 2.
 
 The procedure uses the following parameters and conditions for this iterative procedure:
 
-- A constant relaxation factor Ω is equal to 0.5.
-
-- A convergence tolerance of 0.005 feet on nodal heads.
-
-- Number of trials is limited to four.
+    - A constant relaxation factor Ω is equal to 0.5.
+    - A convergence tolerance of 0.005 feet on nodal heads.
+    - Number of trials is limited to four.
 
 The flow depth in conduits that are not surcharged is limited not to exceed the normal flow depth for
 the discharge at the upstream end of the conduit whenever the flow regime is supercritical.
