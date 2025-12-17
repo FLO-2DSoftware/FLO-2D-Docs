@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-References
+REFERENCES
 ==========
 
 Chow, V.T., 1959.
