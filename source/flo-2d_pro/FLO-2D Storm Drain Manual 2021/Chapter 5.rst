@@ -534,7 +534,7 @@ The VC2005-CON.dll file (based on the file date) should be current in the follow
 
     - C:\\Program Files (x86)\\FLO-2D PRO
 
-    - C:\\Windows\\System32 [1]_
+    - C:\\Windows\\System32
 
     - C:\\Windows\\SysWOW64\ :sup:`1`
 
