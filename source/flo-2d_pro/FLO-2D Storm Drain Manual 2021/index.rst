@@ -4,7 +4,7 @@ FLO-2D Storm Drain Manual 2021
 
 .. toctree::
    :maxdepth: 1
-   :numbered: 1
+   :numbered:
 
    Chapter 1
    Chapter 2
