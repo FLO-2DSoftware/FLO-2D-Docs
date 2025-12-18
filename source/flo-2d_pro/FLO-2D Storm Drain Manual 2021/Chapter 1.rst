@@ -3,8 +3,6 @@
 STORM
 ==========
 
-FLO-2D Storm Drain Overview
-----------------------------
 
 Initially, the FLO-2D PRO two-dimensional flood routing model was integrated with the Environmental Protection Agency (EPA) Storm Water Management
 Model (SWMM) Version 5.0.022 (Rossman, 2005; Rossman, Lewis A., 2006; Rossman, Lewis A., 2007) starting in 2013.
