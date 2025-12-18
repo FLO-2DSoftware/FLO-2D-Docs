@@ -1,6 +1,3 @@
-.. raw:: latex
-
-   \resetEqCounter
 
 FLO-2D Storm Drain Manual 2021
 ================================
