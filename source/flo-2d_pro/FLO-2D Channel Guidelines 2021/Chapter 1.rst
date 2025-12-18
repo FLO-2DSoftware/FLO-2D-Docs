@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 1 - CHANNEL DEVELOPMENT
+CHANNEL DEVELOPMENT
 ==================================
 
 This document supplements the FLO-2D Reference Manual, Data Input Manual and training materials such as the webinars and videos, lessons and short
