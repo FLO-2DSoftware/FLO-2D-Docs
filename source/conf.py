@@ -55,10 +55,11 @@ docx_pagebreak_before_section = 1
 numfig = True
 numfig_secnum_depth = 1
 
-def reset_equation_counter(app, doctree):
-    env = app.builder.env
+def reset_equation_counter(app, env, docname):
     if hasattr(env, "toc_fignumbers"):
-        env.toc_fignumbers.get("equation", {}).clear()
+        eqnums = env.toc_fignumbers.get("equation")
+        if eqnums is not None:
+            eqnums.clear()
 
 def setup(app):
-    app.connect("doctree-read", reset_equation_counter)
+    app.connect("env-purge-doc", reset_equation_counter)
