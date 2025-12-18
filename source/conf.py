@@ -55,19 +55,10 @@ docx_pagebreak_before_section = 1
 numfig = True
 numfig_secnum_depth = 1
 
-# mathjax_path = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-# mathjax3_config = {
-#     "tex": {
-#         "tags": "ams",
-#         "useLabelIds": True,
-#         "macros": {
-#             "resetEqCounter": [
-#                 r"\setcounter{equation}{0}",
-#                 0
-#             ]
-#         }
-#     },
-#     "options": {
-#         "displayAlign": "right"
-#     }
-# }
+def reset_equation_counter(app, doctree):
+    env = app.builder.env
+    if hasattr(env, "toc_fignumbers"):
+        env.toc_fignumbers.get("equation", {}).clear()
+
+def setup(app):
+    app.connect("doctree-read", reset_equation_counter)
