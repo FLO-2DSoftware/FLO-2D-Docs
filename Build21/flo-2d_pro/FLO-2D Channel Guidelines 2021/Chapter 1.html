@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CHAPTER 1 - CHANNEL DEVELOPMENT &mdash; FLO-2D Pro Documentation  documentation</title>
+  <title>1. CHAPTER 1 - CHANNEL DEVELOPMENT &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
@@ -30,7 +30,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="CHAPTER 2 - GUIDELINES" href="Chapter%202.html" />
+    <link rel="next" title="2. CHAPTER 2 - GUIDELINES" href="Chapter%202.html" />
     <link rel="prev" title="FLO-2D Channel Guidelines 2021" href="index.html" /> 
 </head>
 
@@ -61,16 +61,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../data_input_manual.html">Data Input Manual</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Pro%20Reference%20Manual%202021/index.html">FLO-2D Pro Reference Manual 2021</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">FLO-2D Channel Guidelines 2021</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">CHAPTER 1 - CHANNEL DEVELOPMENT</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#channel-overview">Channel Overview</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#channel-geometry-length-and-roughness">Channel Geometry, Length and Roughness</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#channel-floodplain-flow-exchange">Channel – Floodplain Flow Exchange</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#channel-numerical-stability-and-volume-conservation">Channel Numerical Stability and Volume Conservation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. CHAPTER 1 - CHANNEL DEVELOPMENT</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#channel-overview">1.1. Channel Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#channel-geometry-length-and-roughness">1.2. Channel Geometry, Length and Roughness</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#channel-floodplain-flow-exchange">1.3. Channel – Floodplain Flow Exchange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#channel-numerical-stability-and-volume-conservation">1.4. Channel Numerical Stability and Volume Conservation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">CHAPTER 2 - GUIDELINES</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Chapter%203.html">CHAPTER 3 - TROUBLESHOOTING</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ref.html">REFERENCES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">2. CHAPTER 2 - GUIDELINES</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%203.html">3. CHAPTER 3 - TROUBLESHOOTING</a></li>
+<li class="toctree-l3"><a class="reference internal" href="References.html">4. REFERENCES</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../FLO-2D%20Storm%20Drain%20Manual%202021/index.html">FLO-2D Storm Drain Manual 2021</a></li>
@@ -100,7 +100,7 @@
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center 2021</a></li>
           <li class="breadcrumb-item"><a href="index.html">FLO-2D Channel Guidelines 2021</a></li>
-      <li class="breadcrumb-item active">CHAPTER 1 - CHANNEL DEVELOPMENT</li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>CHAPTER 1 - CHANNEL DEVELOPMENT</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/flo-2d_pro/FLO-2D Channel Guidelines 2021/Chapter 1.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -111,7 +111,7 @@
            <div itemprop="articleBody">
              
   <section id="chapter-1-channel-development">
-<h1>CHAPTER 1 - CHANNEL DEVELOPMENT<a class="headerlink" href="#chapter-1-channel-development" title="Link to this heading"></a></h1>
+<h1><span class="section-number">1. </span>CHAPTER 1 - CHANNEL DEVELOPMENT<a class="headerlink" href="#chapter-1-channel-development" title="Link to this heading"></a></h1>
 <p>This document supplements the FLO-2D Reference Manual, Data Input Manual and training materials such as the webinars and videos, lessons and short
 course PowerPoint presentations.
 It presents guidelines and information that are designed to assist the user in developing a model with a detailed 1-D channel.
@@ -172,7 +172,7 @@ Here is a list of other available references for channel modeling: C:\users\Publ
 </li>
 </ul>
 <section id="channel-overview">
-<h2>Channel Overview<a class="headerlink" href="#channel-overview" title="Link to this heading"></a></h2>
+<h2><span class="section-number">1.1. </span>Channel Overview<a class="headerlink" href="#channel-overview" title="Link to this heading"></a></h2>
 <p>Channel flow is simulated as one-dimensional depth averaged flow represented by a single water surface within the cross section.
 Average flow hydraulics of velocity and depth define the discharge between channel grid elements.
 There is no two-dimensional flow variation within the channel and there is no vertical velocity distribution, secondary currents, or superelevation in
@@ -193,7 +193,7 @@ the sum of the channel lengths within the channel elements.
 Channel elements must be contiguous to be able to share discharge.</p>
 </section>
 <section id="channel-geometry-length-and-roughness">
-<h2>Channel Geometry, Length and Roughness<a class="headerlink" href="#channel-geometry-length-and-roughness" title="Link to this heading"></a></h2>
+<h2><span class="section-number">1.2. </span>Channel Geometry, Length and Roughness<a class="headerlink" href="#channel-geometry-length-and-roughness" title="Link to this heading"></a></h2>
 <p>There are four channel geometry options:</p>
 <blockquote>
 <div><ul class="simple">
@@ -218,7 +218,7 @@ depths, identifying contiguous channel elements that do not share discharge, and
 adjustments.
 For data file example refer to the FLO-2D Data Input Manual.</p>
 <section id="rectangular">
-<h3><em>Rectangular</em><a class="headerlink" href="#rectangular" title="Link to this heading"></a></h3>
+<h3><span class="section-number">1.2.1. </span><em>Rectangular</em><a class="headerlink" href="#rectangular" title="Link to this heading"></a></h3>
 <p>The rectangular channel geometry is defined by width, depth and length of channel inside the grid element (Figure 2).</p>
 <img alt="../../_images/Chapte003.jpg" class="bordered-image" src="../../_images/Chapte003.jpg" />
 <p><em>Figure 2.
@@ -229,7 +229,7 @@ Rectangular Channel Geometry.</em></p>
 </div>
 </section>
 <section id="trapezoidal">
-<h3><em>Trapezoidal</em><a class="headerlink" href="#trapezoidal" title="Link to this heading"></a></h3>
+<h3><span class="section-number">1.2.2. </span><em>Trapezoidal</em><a class="headerlink" href="#trapezoidal" title="Link to this heading"></a></h3>
 <p>Similarly, the trapezoidal channels are defined by bottom width, channel depth and side slopes (ratio of horizontal to vertical) (Figure 3).
 Again, the channel length is the length inside the grid element.</p>
 <img alt="../../_images/Chapte026.png" class="bordered-image" src="../../_images/Chapte026.png" />
@@ -247,7 +247,7 @@ In urban areas, there may be a rectangular concrete channel that transitions to 
 Trapezoidal tributaries represented by one segment can join a mainstem channel segment that has natural cross section geometry.</p>
 </section>
 <section id="natural">
-<h3><em>Natural</em><a class="headerlink" href="#natural" title="Link to this heading"></a></h3>
+<h3><span class="section-number">1.2.3. </span><em>Natural</em><a class="headerlink" href="#natural" title="Link to this heading"></a></h3>
 <p>Actual river natural cross sections can be modeled if the station and elevation data is available (Figure 4).
 Geo-referenced cross section station and elevation data can be obtained by survey (land or bathymetry) or by cutting cross sections from a digital
 terrain model data.
@@ -295,7 +295,7 @@ When using actual cross section data for the channel geometry, option 3 should b
 </div></blockquote>
 </section>
 <section id="channel-development">
-<h3>Channel Development<a class="headerlink" href="#channel-development" title="Link to this heading"></a></h3>
+<h3><span class="section-number">1.2.4. </span>Channel Development<a class="headerlink" href="#channel-development" title="Link to this heading"></a></h3>
 <p>There are several steps required when developing the 1-D channel component in the GDS.
 These include locating the channel position, interpolating the cross sections or entering geometry data, adjusting the slope, adjusting the length,
 and assigning the n-values.
@@ -305,7 +305,7 @@ The Data Input Manual is another source of information for channel modeling.
 It lists and describes the data files and variables used to create channels.
 An overview of the overall process is briefly discussed below.</p>
 <section id="locate-the-channel-element-with-respect-to-the-grid-system">
-<h4>Locate the channel element with respect to the grid system<a class="headerlink" href="#locate-the-channel-element-with-respect-to-the-grid-system" title="Link to this heading"></a></h4>
+<h4><span class="section-number">1.2.4.1. </span>Locate the channel element with respect to the grid system<a class="headerlink" href="#locate-the-channel-element-with-respect-to-the-grid-system" title="Link to this heading"></a></h4>
 <p>Using the GDS and an aerial photo, the channels can be assigned to a grid element.
 For channel flow to occur through a reach of river, the channel elements must be contiguous neighbors Using the background image, a polyline can be
 drawn along the left bank to select the left bank elements and then the individual cross sections can be identified with the appropriate channel bank
@@ -316,7 +316,7 @@ This process is completely automated if a GEO-RAS geometry file can be imported 
 Channel Delineation.</em></p>
 </section>
 <section id="interpolate-the-cross-section">
-<h4>Interpolate the Cross Section<a class="headerlink" href="#interpolate-the-cross-section" title="Link to this heading"></a></h4>
+<h4><span class="section-number">1.2.4.2. </span>Interpolate the Cross Section<a class="headerlink" href="#interpolate-the-cross-section" title="Link to this heading"></a></h4>
 <p>Eventually, each left bank channel element is assigned a cross section in the CHAN.DAT file.
 Generally, there are only a few cross sections and numerous channel elements, so each cross section will be assigned to represent several channel
 elements.
@@ -340,7 +340,7 @@ The original cross sections are not edited.</p>
 Channel Bed Profile Examples</em></p>
 </section>
 <section id="adjust-the-channel-bed-slope">
-<h4>Adjust the Channel Bed Slope<a class="headerlink" href="#adjust-the-channel-bed-slope" title="Link to this heading"></a></h4>
+<h4><span class="section-number">1.2.4.3. </span>Adjust the Channel Bed Slope<a class="headerlink" href="#adjust-the-channel-bed-slope" title="Link to this heading"></a></h4>
 <p>Following the channel cross section interpolation, the bed slope is linear between two known or surveyed cross sections.
 There is no other data available to create a variable bed slope between cross sections.
 When reviewing the cross section slope, it is possible that there may be abrupt bed slope changes or adverse slope conditions that seem unreasonable.
@@ -349,7 +349,7 @@ adjustments to the bed slope.
 Re-interpolating the bed slope can be accomplished in the Profiles program for local cross section adjustments.</p>
 </section>
 <section id="assign-the-right-bank-element">
-<h4>Assign the Right Bank Element<a class="headerlink" href="#assign-the-right-bank-element" title="Link to this heading"></a></h4>
+<h4><span class="section-number">1.2.4.4. </span>Assign the Right Bank Element<a class="headerlink" href="#assign-the-right-bank-element" title="Link to this heading"></a></h4>
 <p>Once the channel geometry has been assigned and interpolated, the right bank elements can be assigned using a GDS menu command (Figure 10).
 After the assignment, the right or left banks can be realigned to the better represent the bank locations in the aerial image using mouse point and
 click commands.</p>
@@ -358,7 +358,7 @@ click commands.</p>
 Right Bank Assignment and Realignment.</em></p>
 </section>
 <section id="channel-length-adjustment">
-<h4>Channel Length Adjustment<a class="headerlink" href="#channel-length-adjustment" title="Link to this heading"></a></h4>
+<h4><span class="section-number">1.2.4.5. </span>Channel Length Adjustment<a class="headerlink" href="#channel-length-adjustment" title="Link to this heading"></a></h4>
 <p>The channel length within each grid element is initially estimated as a straight line for a half grid element and is reported in the GDS dialog box
 (Figure 11).</p>
 <img alt="../../_images/Chapte008.jpg" class="bordered-image" src="../../_images/Chapte008.jpg" />
@@ -384,7 +384,7 @@ Figure 13 shows the total distance of the channel in the GDS and the isolated ch
 Channel Length.</em></p>
 </section>
 <section id="channel-roughness">
-<h4>Channel Roughness<a class="headerlink" href="#channel-roughness" title="Link to this heading"></a></h4>
+<h4><span class="section-number">1.2.4.6. </span>Channel Roughness<a class="headerlink" href="#channel-roughness" title="Link to this heading"></a></h4>
 <p>Open channel uniform flow is characterized by a constant depth, velocity, flow area and discharge such that the bed slope, water surface slope and
 energy grade line are all parallel.
 Generally, uniform flow dictates that the flow is also steady.
@@ -393,7 +393,7 @@ For practical purposes, natural uniform flow assumes the turbulent boundary laye
 logarithmic.
 There are a number of mean velocity equations for open channel uniform flow and Manning’s equation is the best known of these:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-0">
-<span class="eqno">(1)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-0" title="Link to this equation"></a></span>\[V = \frac{1.486}{n} R^{\frac{2}{3}} S^{\frac{1}{2}}\]</div>
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-0" title="Link to this equation"></a></span>\[V = \frac{1.486}{n} R^{\frac{2}{3}} S^{\frac{1}{2}}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>V = velocity</p>
@@ -456,7 +456,7 @@ Dam Release Hydrograph Jenson, UT.</em> <sup>1</sup></p>
 d is the flow depth and k<sub>s</sub> is the effective roughness height.
 In general, Manning’s equation is appropriate for a relative submergence greater than 100 (Julien, 1995):</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-1">
-<span class="eqno">(2)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-1" title="Link to this equation"></a></span>\[{d/k}_s &gt; 100\]</div>
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-1" title="Link to this equation"></a></span>\[{d/k}_s &gt; 100\]</div>
 <p>The typical roughness height for grain size bed materials can range from 0.0015 ft for rough concrete to 0.01 ft for coarse sand or uniform earth
 channels.
 In this case Manning’s equation for a coarse sand plane bed would be applicable to as low as 0.7 ft.
@@ -465,7 +465,7 @@ than the relative roughness (Simons and Senturk, 1976 and Chow, 1959).
 Using these criteria, a flow depth for coarse sand would be about 0.25 ft.</p>
 <p>The depth integrated roughness is given by the equation:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-2">
-<span class="eqno">(3)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-2" title="Link to this equation"></a></span>\[n_d = n_b\, r_c\, e^{-\left(r2\, \mathrm{depth}/d_{max}\right)}\]</div>
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-2" title="Link to this equation"></a></span>\[n_d = n_b\, r_c\, e^{-\left(r2\, \mathrm{depth}/d_{max}\right)}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>depth = flow depth</p>
@@ -504,7 +504,7 @@ The application of the depth variable roughness has the following advantages:</p
 </section>
 </section>
 <section id="channel-floodplain-flow-exchange">
-<h2>Channel – Floodplain Flow Exchange<a class="headerlink" href="#channel-floodplain-flow-exchange" title="Link to this heading"></a></h2>
+<h2><span class="section-number">1.3. </span>Channel – Floodplain Flow Exchange<a class="headerlink" href="#channel-floodplain-flow-exchange" title="Link to this heading"></a></h2>
 <p>The channel-floodplain exchange is computed for each channel bank element and is based on the potential water surface elevation difference between the
 channel and the floodplain for both the left and right bank (Figure 19).
 The flow can overtop the left bank without overtopping the right bank, they are independent.
@@ -553,7 +553,7 @@ The channel conveyance flow area for a natural channel is increased by the green
 Vertical Extension of the Lowest Top of Bank to the Highest Top of Bank.</em></p>
 </section>
 <section id="channel-numerical-stability-and-volume-conservation">
-<h2>Channel Numerical Stability and Volume Conservation<a class="headerlink" href="#channel-numerical-stability-and-volume-conservation" title="Link to this heading"></a></h2>
+<h2><span class="section-number">1.4. </span>Channel Numerical Stability and Volume Conservation<a class="headerlink" href="#channel-numerical-stability-and-volume-conservation" title="Link to this heading"></a></h2>
 <p>Channel numerical stability requires the convergence of the routing algorithm solution to the full dynamic wave equation for velocity.
 For almost any channel configuration, a small timestep will eliminate the numerical surging.
 The key to efficient computational flood routing for a finite difference model with an explicit numerical scheme is appropriate numerical stability
@@ -568,7 +568,7 @@ The concept of the Courant Number is that a particle of fluid should not travel 
 timestep Δt.
 In the FLO-2D model the Courant number limits the timestep Δt by:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-3">
-<span class="eqno">(4)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-3" title="Link to this equation"></a></span>\[Δt = \frac{C Δx}{(V + c)}\]</div>
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-3" title="Link to this equation"></a></span>\[Δt = \frac{C Δx}{(V + c)}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>C = Courant Number (C ≤ 1.0)</p>
@@ -607,7 +607,7 @@ It is recommended that both parameters be set to zero.</p>
 Discharge is a function of the friction slope S<sub>f</sub> in Manning’s equations to the one-half power and is inversely proportional to the n-value,
 but the discharge is a function of the flow area A to approximately the 5/3 power.</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-4">
-<span class="eqno">(5)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-4" title="Link to this equation"></a></span>\[Q = f(A, S, n)\]</div>
+<span class="eqno">(1.5)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-4" title="Link to this equation"></a></span>\[Q = f(A, S, n)\]</div>
 <p>where A = a d<sup>b</sup> and a = power regression coefficient and b = power regression exponent</p>
 <p>Assigning a reasonable n-value that balances flow area and slope will make the model more stable.</p>
 <p>To identify channel surging, first review the VELTIMEC.OUT file for any unreasonable maximum velocities (listed by grid element and time in descending
@@ -650,7 +650,7 @@ Check the Channel Bed Profile for Data Errors.</em></p>
 unreasonable Froude numbers from being encountered.
 The Froude number is directly related to model stability through the Courant number:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-5">
-<span class="eqno">(6)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-5" title="Link to this equation"></a></span>\[C = \frac {c(F + 1)}{(\frac{\Delta x}{\Delta t})}\]</div>
+<span class="eqno">(1.6)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-5" title="Link to this equation"></a></span>\[C = \frac {c(F + 1)}{(\frac{\Delta x}{\Delta t})}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>C = selected value of Courant number</p>
@@ -677,7 +677,7 @@ High velocities and shallow depths on alluvial surfaces will dissipate energy wi
 Supercritical flow is more prevalent on hard surfaces such as concrete-lined channels.
 Jia (1990) provides a relationship to estimate a minimum Froude number (Fr<sub>min</sub>) for stable alluvial channels at equilibrium:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-6">
-<span class="eqno">(7)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-6" title="Link to this equation"></a></span>\[Fr_{min} = 4.49 d^{-0.186} (VS)^{0.377}\]</div>
+<span class="eqno">(1.7)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-6" title="Link to this equation"></a></span>\[Fr_{min} = 4.49 d^{-0.186} (VS)^{0.377}\]</div>
 <p>Where:</p>
 <blockquote>
 <div><p>d = representative sediment size (typically D<sub>50)</sub> V = velocity and S = bed slope.</p>
@@ -715,13 +715,15 @@ As slope increases, competent flow for sediment transport asymptotically approac
 In most instances, flow is forced to be less than critical by incipient motion thresholds.
 This will define a limiting Froude number as given by Grant (1997):</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-7">
-<span class="eqno">(8)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-7" title="Link to this equation"></a></span>\[ \begin{align}\begin{aligned}F_r = 3.85 S^{0.33} \, \, gravel bed (τ^*_cr = 0.03)\\F_r = 5.18 S^{0.11} \, \, sand bed (τ^*_cr = 0.06)\end{aligned}\end{align} \]</div>
+<span class="eqno">(1.8)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-7" title="Link to this equation"></a></span>\[F_r = 3.85 S^{0.33} \, \, gravel \, bed (τ^*_cr = 0.03)\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-8">
+<span class="eqno">(1.9)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-8" title="Link to this equation"></a></span>\[F_r = 5.18 S^{0.11} \, \, sand \, bed (τ^*_cr = 0.06)\]</div>
 <p>For mobile bed channels a steep slope is required for flow to approach critical because the hydraulics oscillate with sediment entrainment.
 These relationships define the upper limit Froude number for sand and gravel for slopes &lt; 0.10.
 There is a unique relationship that exists between slope, flow area and roughness.
 The Froude number (Fr) is related to the flow resistance K and the energy slope S as given by:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-8">
-<span class="eqno">(9)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-8" title="Link to this equation"></a></span>\[Fr = (KS)^{0.5}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-9">
+<span class="eqno">(1.10)<a class="headerlink" href="#equation-flo-2d-pro-flo-2d-channel-guidelines-2021-chapter-1-9" title="Link to this equation"></a></span>\[Fr = (KS)^{0.5}\]</div>
 <p>If there is a mismatch between these physical variables in a flood routing model, then high velocities can occur that may result in flow surging.
 Assigning a limiting Froude number has several practical advantages.
 First, it helps to maintain the average flow velocity within a reasonable range.
@@ -773,7 +775,7 @@ Troubleshooting channel volume conservation errors is discussed in Chapter 3.</p
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="FLO-2D Channel Guidelines 2021" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Chapter%202.html" class="btn btn-neutral float-right" title="CHAPTER 2 - GUIDELINES" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Chapter%202.html" class="btn btn-neutral float-right" title="2. CHAPTER 2 - GUIDELINES" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

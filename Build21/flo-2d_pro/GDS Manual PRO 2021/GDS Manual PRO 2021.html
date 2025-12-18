@@ -490,7 +490,7 @@ Then the user selects the command: “File.
 Create LEVEECRESTS.DAT” and the station calculation compares the length of the polyline (Poly_Length) and the total length of the levees
 (Levees_Length) to determine a WRF value to match the lengths:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-0">
-<span class="eqno">(34)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-0" title="Link to this equation"></a></span>\[\mathrm{WRF\_value}
+<span class="eqno">(23)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-0" title="Link to this equation"></a></span>\[\mathrm{WRF\_value}
 = 1 - \min\!\left( 1,\ \frac{\mathrm{Poly\_Length}(i)}{\mathrm{Levees\_Length}(i)} \right)\]</div>
 <p>The stations (second column in LEVEECRESTS.DAT are then calculated from the distance from one levee center to the next levee center by multiplying it
 by the WRF_value.</p>
@@ -1554,7 +1554,7 @@ The general procedure is as follows:</p>
 </ol>
 </div></blockquote>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-1">
-<span class="eqno">(35)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-1" title="Link to this equation"></a></span>\[\overline{XKSAT}
+<span class="eqno">(24)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-1" title="Link to this equation"></a></span>\[\overline{XKSAT}
 = ALOG\!\left(
     \frac{\sum A_i\, \log(XKSAT_i)}{A_{GE}}
   \right)\]</div>
@@ -1675,9 +1675,9 @@ The specific table used for DTHETA depends on the <em>saturation</em> field of t
 This requires a computation of the ratio the hydraulic conductivity for the vegetative cover to the bare ground hydraulic conductivity (C<sub>K</sub>):</p></li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-2">
-<span class="eqno">(36)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-2" title="Link to this equation"></a></span>\[C_k = \frac{VC_k - 10}{90} + 1\]</div>
+<span class="eqno">(25)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-2" title="Link to this equation"></a></span>\[C_k = \frac{VC_k - 10}{90} + 1\]</div>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-3">
-<span class="eqno">(37)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-3" title="Link to this equation"></a></span>\[XKSATC = XKSAT \sum_{k} P_k\, C_k\]</div>
+<span class="eqno">(26)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-3" title="Link to this equation"></a></span>\[XKSATC = XKSAT \sum_{k} P_k\, C_k\]</div>
 <p>Where:</p>
 <blockquote>
 <div><p>P<sub>k</sub> is the percentage of the area within the grid element corresponding to C<sub>k</sub> and XKSATC for each grid element is written to the
@@ -1687,7 +1687,7 @@ INFIL.DAT file.</p>
 <li><p>For each grid element compute the initial abstraction <em>IABSTR</em>:</p></li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-4">
-<span class="eqno">(38)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-4" title="Link to this equation"></a></span>\[IABSTR = \left( \frac{\sum{A_i (IA_i)}}{A_{GE}} \right)\]</div>
+<span class="eqno">(27)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-4" title="Link to this equation"></a></span>\[IABSTR = \left( \frac{\sum{A_i (IA_i)}}{A_{GE}} \right)\]</div>
 <p>Where:</p>
 <blockquote>
 <div><p><em>IAi</em> is the initial abstraction in the subarea <em>Ai</em> intercepted by the element and is based on the 3<sup>rd</sup> column of the landuse table;</p>
@@ -1695,7 +1695,7 @@ INFIL.DAT file.</p>
 </div></blockquote>
 <p>Compute effective impervious area (%) for each grid element <em>(RTIMP)</em>.</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-5">
-<span class="eqno">(39)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-5" title="Link to this equation"></a></span>\[RTIMP\_1 = \left( \frac{\sum{A_i (RTIMPS \cdot EFF)_i}}{A_{GE}} \right)\]</div>
+<span class="eqno">(28)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-5" title="Link to this equation"></a></span>\[RTIMP\_1 = \left( \frac{\sum{A_i (RTIMPS \cdot EFF)_i}}{A_{GE}} \right)\]</div>
 <p>Where:</p>
 <blockquote>
 <div><p><em>Ai</em> is determined from the soil shape file;</p>
@@ -1703,7 +1703,7 @@ INFIL.DAT file.</p>
 <p><em>RIMPS</em> is the percent rock outcrop obtained from the 4<sup>th</sup> column of the soil table.</p>
 </div></blockquote>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-6">
-<span class="eqno">(40)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-6" title="Link to this equation"></a></span>\[RTIMP = RTIMP\_1 + \left( \frac{\sum{A_i (RTIMPL)_i}}{A_{GE}} \right)\]</div>
+<span class="eqno">(29)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-6" title="Link to this equation"></a></span>\[RTIMP = RTIMP\_1 + \left( \frac{\sum{A_i (RTIMPL)_i}}{A_{GE}} \right)\]</div>
 <p>Where:</p>
 <blockquote>
 <div><p><em>A</em><sub>i</sub> is obtained from land use shape file and</p>
@@ -1783,7 +1783,7 @@ If only the group is given (e.g. B) then assume 100%.</p></li>
 each variable:</p></li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-7">
-<span class="eqno">(41)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-7" title="Link to this equation"></a></span>\[Var = \frac{\sum A_i Var_i}{A_{GE}}\]</div>
+<span class="eqno">(30)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-7" title="Link to this equation"></a></span>\[Var = \frac{\sum A_i Var_i}{A_{GE}}\]</div>
 <p>Where:</p>
 <blockquote>
 <div><p><em>Var</em><sub>i</sub> is the current variable from the shape file;</p>
@@ -2149,9 +2149,9 @@ The following figure shows an example where three polygons (building polygons) i
 <p><em>Area Reduction Factor</em></p>
 <p>To calculate the Area Reduction Factor for this cell GDS performs the following operations:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-8">
-<span class="eqno">(42)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-8" title="Link to this equation"></a></span>\[Total\_Intersected\_Area = AreaA + AreaB + AreaC\]</div>
+<span class="eqno">(31)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-8" title="Link to this equation"></a></span>\[Total\_Intersected\_Area = AreaA + AreaB + AreaC\]</div>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-9">
-<span class="eqno">(43)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-9" title="Link to this equation"></a></span>\[Area\_Reduction\_Factor = \frac{Total\_Intersected\_Area}{Cell\_Area}\]</div>
+<span class="eqno">(32)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-9" title="Link to this equation"></a></span>\[Area\_Reduction\_Factor = \frac{Total\_Intersected\_Area}{Cell\_Area}\]</div>
 <p>Where AreaA is the intersected area of polygon A with the cell, and AreaB and AreaC are defined accordingly.
 Cell_Area is the Grid Element area.</p>
 <p><em>Width Reduction Factor</em></p>
@@ -2162,7 +2162,7 @@ For example in the following configuration the SE WRF is computed based on the y
 <img alt="../../_images/GDS298.jpg" src="../../_images/GDS298.jpg" />
 <p>The shaded AreaSE is used to calculate the SE WRF as follows:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-10">
-<span class="eqno">(44)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-10" title="Link to this equation"></a></span>\[SE\ Width\ Reduction\ Factor = \frac{AreaSE}{Area\_of\_SubCell}\]</div>
+<span class="eqno">(33)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-10" title="Link to this equation"></a></span>\[SE\ Width\ Reduction\ Factor = \frac{AreaSE}{Area\_of\_SubCell}\]</div>
 <p>This algorithm accounts for the effect of width reduction factor even when the building or polygon is not intersecting the actual SE element side.</p>
 <p>3.5.27 Compute Limiting Froude Numbers … (Grid Menu)</p>
 <img alt="../../_images/GDS299.jpg" src="../../_images/GDS299.jpg" />
@@ -2532,7 +2532,7 @@ The basic equation for the channel element roughness n<sub>d</sub> as function o
 </ul>
 </div></blockquote>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-11">
-<span class="eqno">(45)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-11" title="Link to this equation"></a></span>\[n_d = n_b\, r_c\, e^{-\left( r2\ depth / dmax \right)}\]</div>
+<span class="eqno">(34)<a class="headerlink" href="#equation-flo-2d-pro-gds-manual-pro-2021-gds-manual-pro-2021-11" title="Link to this equation"></a></span>\[n_d = n_b\, r_c\, e^{-\left( r2\ depth / dmax \right)}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>n<sub>b</sub> = bankfull discharge roughness</p>

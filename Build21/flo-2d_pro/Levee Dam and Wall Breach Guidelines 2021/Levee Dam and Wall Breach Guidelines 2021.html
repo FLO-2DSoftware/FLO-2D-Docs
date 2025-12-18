@@ -252,7 +252,7 @@ When the vertical breach reaches the levee base elevation the maximum breach she
 Subsequently the horizontal breach rate (HBR) for the time step is set equal to the originally assigned horizontal breach rate (HBR<sub>orig</sub>)
 times the ratio of the computed shear stress for the time step to the maximum shear stress:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-0">
-<span class="eqno">(46)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-0" title="Link to this equation"></a></span>\[HBR = HBR_{orig}\left( \frac{\tau_{calc}} {\tau_{\max}} \right)\]</div>
+<span class="eqno">(35)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-0" title="Link to this equation"></a></span>\[HBR = HBR_{orig}\left( \frac{\tau_{calc}} {\tau_{\max}} \right)\]</div>
 <p>This will slow the rate of breach widening as the flow depth and velocity decrease or as the tailwater to headwater equilibrates.
 A typical rate of breach width decrease is shown in Figure 4.</p>
 <img alt="../../_images/Levee002.jpg" src="../../_images/Levee002.jpg" />
@@ -372,7 +372,7 @@ headwater is given by d<sub>t</sub>/d<sub>h</sub> based on the highest grid elem
 Levee Overtopping Definition.</em></p>
 <p>The flow can occur in either direction and the discharge Q is computed using the conventional broad-crested weir equation:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-1">
-<span class="eqno">(47)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-1" title="Link to this equation"></a></span>\[Q = CLH_d^{1.5}\]</div>
+<span class="eqno">(36)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-1" title="Link to this equation"></a></span>\[Q = CLH_d^{1.5}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>C is the broadcrested weir coefficient (3.09 in English units, average typical coefficient for the broadcrested weir);</p>
@@ -730,7 +730,7 @@ width of the grid element.</p></li>
 Overtopping discharge is shared between two cells with the wall assignment on their border.
 In Figure 16 the overtopping discharge Q is computed using the conventional broad-crested weir equation:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-2">
-<span class="eqno">(48)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-2" title="Link to this equation"></a></span>\[Q = CLH_d^{1.5}\]</div>
+<span class="eqno">(37)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-2" title="Link to this equation"></a></span>\[Q = CLH_d^{1.5}\]</div>
 <img alt="../../_images/Levee010.jpg" src="../../_images/Levee010.jpg" />
 <p><em>Figure 16.
 Levee Overtopping Definition.</em></p>
@@ -1365,7 +1365,7 @@ Sediment conservation was implemented for both pipe and channel scour computatio
 If the volume of eroded sediment does not match the breach hole volume, the breach pipe or channel geometry is adjusted to account for the difference.
 The downstream breach flood hydrograph is automatically bulked (BF) for the levee or dam sediment concentration by volume C<sub>v</sub>:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-3">
-<span class="eqno">(49)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-3" title="Link to this equation"></a></span>\[BF = \frac{1}{\,1 - C_{v}\,}\]</div>
+<span class="eqno">(38)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-3" title="Link to this equation"></a></span>\[BF = \frac{1}{\,1 - C_{v}\,}\]</div>
 </section>
 <section id="breach-erosion-parameter-sensitivity">
 <h2>Breach Erosion Parameter Sensitivity<a class="headerlink" href="#breach-erosion-parameter-sensitivity" title="Link to this heading"></a></h2>
@@ -1510,7 +1510,7 @@ This approach, however, still generated unreasonably high velocities for very de
 To effective model the slow velocities in reservoirs, a new friction slope equation was developed that kept the same form as Manning’s equation for
 velocity V but applied a flow depth d variable exponent b that was a function of both depth and slope.</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-4">
-<span class="eqno">(50)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-4" title="Link to this equation"></a></span>\[V = 1.486/n\ d^{b}\ S_f^{0.5}\]</div>
+<span class="eqno">(39)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-4" title="Link to this equation"></a></span>\[V = 1.486/n\ d^{b}\ S_f^{0.5}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>V = flow velocity d = flow depth</p>
@@ -1519,7 +1519,7 @@ velocity V but applied a flow depth d variable exponent b that was a function of
 <p>b = exponent = f(depth, S<sub>f</sub>)</p>
 </div></blockquote>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-5">
-<span class="eqno">(51)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-5" title="Link to this equation"></a></span>\[b = 0.4973 - 0.000543 \ast d - 30.71\ S_f\]</div>
+<span class="eqno">(40)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-2021-levee-dam-and-wall-breach-guidelines-2021-5" title="Link to this equation"></a></span>\[b = 0.4973 - 0.000543 \ast d - 30.71\ S_f\]</div>
 <p>a1, b1, c1 = coefficients given in the following table:</p>
 <p><em>Table 5.
 Muskingum – Cunge Variable Definitions.</em></p>
