@@ -1,3 +1,7 @@
+.. raw:: latex
+
+   \resetEqCounter
+
 FLO-2D Channel Guidelines 2021
 ==============================
 
