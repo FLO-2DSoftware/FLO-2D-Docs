@@ -1115,7 +1115,7 @@ Floodplain Grid Element n-Value Data
     1 0.04      Line 1: <b>DUM   FP(I, J)</b>
     2 0.04      Line 1: <b>DUM   FP(I, J)</b>
     3 0.04      Line 1: <b>DUM   FP(I, J)</b>
-...
+    ...
     ...
     ...
     18   0.04   Line 1: <b>DUM   FP(I, J)</b>
@@ -1200,7 +1200,6 @@ This file is prepared and edited by the FLO-2D Plugin for spatially variable n-v
    These files can be used to assigned or edit the n-values.
    TOPO.DAT and MANNINGS_N.DAT are in a format that is more GIS compatible and FPLAIN.DAT is therefore obsolete.
    MANNINGS_N.RGH is used with the limiting Froude number component to report adjusted n-values during a simulation in place of FPLAIN.RGH.
-
 
 
 File: TOPO.DAT
@@ -2168,7 +2167,7 @@ Realtime Rainfall Data Map
     1 10055330
     2 10055330
     3 10055330
-.
+    .
     .
     .
     NNOD   10054387
@@ -2215,7 +2214,6 @@ Realtime Rainfall Data Map
 .. raw:: html
 
     <br><br>
-
 
 File: RAINCELLRAW.DAT
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -4188,7 +4186,7 @@ Hydraulic Structure Data - Culverts, Bridges, Weirs, Etc.
      - Toe elevation of the right abutment (ft or m)
 
    * -
--
+     -
      -
      - \* If the coefficient is assigned 1.0, that bridge coefficient is either not important or has no effect.
 
