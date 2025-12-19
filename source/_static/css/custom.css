@@ -130,6 +130,13 @@ img {
     margin-bottom: 1em;
 }
 
+/* Visually normalize ALL CAPS headings */
 h1, h2, h3, h4, h5, h6 {
+    text-transform: capitalize;
+}
+/* Normalize ALL-CAPS text in the sidebar TOC only */
+.wy-nav-content .toctree-l1 > a,
+.wy-nav-content .toctree-l2 > a,
+.wy-nav-content .toctree-l3 > a {
     text-transform: capitalize;
 }
