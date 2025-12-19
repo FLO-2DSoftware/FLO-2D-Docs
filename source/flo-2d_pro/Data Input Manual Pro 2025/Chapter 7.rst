@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 7: DEBUGGING AND TROUBLE SHOOTING THE DATA FILES
+Chapter 7: Debugging and Trouble Shooting the Data Files
 ========================================================
 
 **Troubleshooting Guidelines**
@@ -438,7 +438,7 @@ It should be noted that for FLO-2D no server system can outperform a high perfor
 
    * - 6673
      - HYDRAULIC STRUCTURE\_ HEADWATER WARNING.CHK
-     -
+-
      -
 
 

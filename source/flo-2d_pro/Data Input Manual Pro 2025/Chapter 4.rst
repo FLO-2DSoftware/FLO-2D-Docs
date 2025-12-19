@@ -1,9 +1,9 @@
 .. vim: syntax=rst
 
-CHAPTER 4: Input Data File Description
+Chapter 4: Input Data File Description
 ======================================
 
-GENERAL
+General
 -------
 
 The FLO-2D data file variables and format are described in this chapter.
@@ -99,10 +99,10 @@ but can still be used).
 
     <br>
 
-FILE:  CONT.DAT
+File: CONT.DAT
 ~~~~~~~~~~~~~~~~
 
-SYSTEM CONTROL DATA
+System Control Data
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -720,10 +720,10 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
        Data can be assigned to both files for separate grid elements.
        If IMULTC = 2, then multiple channels can be used alongside separate gutter cells in GUTTER.DAT.
 
-FILE: TOLER.DAT
+File: TOLER.DAT
 ~~~~~~~~~~~~~~~~
 
-NUMERICAL STABILITY CONTROL DATA
+Numerical Stability Control Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -906,10 +906,10 @@ NUMERICAL STABILITY CONTROL DATA
       runtime. This may require only an increase in TIME_ACCEL.
 
 
-FILE: FPLAIN.DAT
+File: FPLAIN.DAT
 ~~~~~~~~~~~~~~~~~~~
 
-FLOODPLAIN GRID ELEMENT DATA
+Floodplain Grid Element Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
@@ -922,7 +922,7 @@ FLOODPLAIN GRID ELEMENT DATA
     1 0 2 10 0 0.060 4005.23 Line 1:    <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
     2 0 3 11 1 0.065 4008.65 Line 1:    <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
     3 0 4 12 2 0.065 4002.23 Line 1:    <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
-    ...
+...
     ...
     ...
     18 9 0 27 17 0.065 4010.78 Line 1:  <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
@@ -1102,10 +1102,10 @@ To turn off the depth variable roughness set AMANN = -99.
 See the Comment 9 in the CONT.DAT file.
 
 
-FILE: MANNINGS_N.DAT
+File: MANNINGS_N.DAT
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-FLOODPLAIN GRID ELEMENT NVALUE DATA
+Floodplain Grid Element n-Value Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -1117,7 +1117,7 @@ FLOODPLAIN GRID ELEMENT NVALUE DATA
     1 0.04      Line 1: <b>DUM   FP(I, J)</b>
     2 0.04      Line 1: <b>DUM   FP(I, J)</b>
     3 0.04      Line 1: <b>DUM   FP(I, J)</b>
-    ...
+...
     ...
     ...
     18   0.04   Line 1: <b>DUM   FP(I, J)</b>
@@ -1205,10 +1205,10 @@ This file is prepared and edited by the FLO-2D Plugin for spatially variable n-v
 
 
 
-FILE: TOPO.DAT
+File: TOPO.DAT
 ~~~~~~~~~~~~~~~
 
-TOPOGRAPHICAL ELEVATION DATA
+Topographical Elevation Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -1300,10 +1300,10 @@ TOPOGRAPHICAL ELEVATION DATA
 
 
 
-FILE: INFLOW.DAT
+File: INFLOW.DAT
 ~~~~~~~~~~~~~~~~~~
 
-INFLOW HYDROGRAPH DATA
+Inflow Hydrograph Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -1576,10 +1576,10 @@ INFLOW HYDROGRAPH DATA
     elements that are inside the tailings dam storage area.
 
 
-FILE: OUTFLOW.DAT
+File: OUTFLOW.DAT
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-OUTFLOW HYDROGRAPH DATA
+Outflow Hydrograph Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. raw:: html
 
@@ -1818,10 +1818,10 @@ OUTFLOW HYDROGRAPH DATA
     <br><br>
 
 
-FILE: RAIN.DAT
+File: RAIN.DAT
 ~~~~~~~~~~~~~~
 
-RAINFALL DATA
+Rainfall Data
 ^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -2020,8 +2020,11 @@ RAINFALL DATA
     <br><br>
 
 
-FILE: RAINCELL.DAT
+File: RAINCELL.DAT
 ~~~~~~~~~~~~~~~~~~~
+
+Realtime Rainfall Data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
@@ -2137,10 +2140,10 @@ FILE: RAINCELL.DAT
 
     <br><br>
 
-FILE: FLO2DRAINCELL.DAT
+File: FLO2DRAINCELL.DAT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-FLO2DRAINCELL.DAT File
+Realtime Rainfall Data Map
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -2167,7 +2170,7 @@ FLO2DRAINCELL.DAT File
     1 10055330
     2 10055330
     3 10055330
-    .
+.
     .
     .
     NNOD   10054387
@@ -2216,10 +2219,10 @@ FLO2DRAINCELL.DAT File
     <br><br>
 
 
-FILE: RAINCELLRAW.DAT
+File: RAINCELLRAW.DAT
 ~~~~~~~~~~~~~~~~~~~~~~
 
-RAINCELLRAW.DAT File
+Realtime Rainfall Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -2323,10 +2326,10 @@ RAINCELLRAW.DAT File
 
     <br><br>
 
-FILE: INFIL.DAT
+File: INFIL.DAT
 ~~~~~~~~~~~~~~~~
 
-INFILTRATION DATA
+Infiltration Data
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -2788,13 +2791,10 @@ INFILTRATION DATA
 16. Horton infiltration for Build23 and on requires an initial abstraction of inches to be assigned to Line 2 of the INFIL.DAT file..
 
 
-
-
-
-FILE: EVAPOR.DAT
+File: EVAPOR.DAT
 ~~~~~~~~~~~~~~~~~
 
-EVAPORATION DATA
+Evaporation Data
 ^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -2901,10 +2901,10 @@ EVAPORATION DATA
 
 
 
-FILE: CHAN.DAT
+File: CHAN.DAT
 ~~~~~~~~~~~~~~~~~
 
-CHANNEL DATA
+Channel Data
 ^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -3415,10 +3415,10 @@ CHANNEL DATA
 
 
 
-FILE: CHANBANK.DAT
+File: CHANBANK.DAT
 ~~~~~~~~~~~~~~~~~~~
 
-CHANNEL BANK DATA
+Channel Bank Data
 ^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -3514,10 +3514,10 @@ CHANNEL BANK DATA
 3. Channel right bank assignments are not required if the channel cross-section will fit in one grid element and no bank elevations are assigned in CHAN.
    DAT.
 
-FILE: XSEC.DAT
+File: XSEC.DAT
 ~~~~~~~~~~~~~~
 
-CROSS-SECTION DATA
+Cross-section Data
 ^^^^^^^^^^^^^^^^^^
 
    .. raw:: html
@@ -3642,11 +3642,11 @@ CROSS-SECTION DATA
 
 
 
-FILE: HYSTRUC.DAT
+File: HYSTRUC.DAT
 ~~~~~~~~~~~~~~~~~
 
-HYDRAULIC STRUCTURE DATA
-^^^^^^^^^^^^^^^^^^^^^^^^
+Hydraulic Structure Data - Culverts, Bridges, Weirs, Etc.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
@@ -4190,7 +4190,7 @@ HYDRAULIC STRUCTURE DATA
      - Toe elevation of the right abutment (ft or m)
 
    * -
-     -
+-
      -
      - \* If the coefficient is assigned 1.0, that bridge coefficient is either not important or has no effect.
 
@@ -4312,10 +4312,10 @@ HYDRAULIC STRUCTURE DATA
     If using only one barrel, this variable is not added.
 
 
-FILE: SUBMERGE_FACTOR.DAT
+File: SUBMERGE_FACTOR.DAT
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-SUBMERGENCE DATA
+Submergence Data
 ^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -4411,10 +4411,10 @@ SUBMERGENCE DATA
        iii. Write out the subfactor changes and use the acceleration to increase the rate of change in the subfactor SUBM_ADJ > 1.0 or decrease the rate of
             change: SUBM_ADJ < 1.0.
 
-FILE: STREET.DAT
+File: STREET.DAT
 ~~~~~~~~~~~~~~~~
 
-STREET DATA
+Street Data
 ^^^^^^^^^^^
 
    .. raw:: html
@@ -4662,10 +4662,10 @@ STREET DATA
    The user cannot adjust it.
 
 
-FILE: ARF.DAT
+File: ARF.DAT
 ~~~~~~~~~~~~~
 
-FLOODPLAIN AREA WIDTH REDUCTION DATA
+Floodplain Area Width Reduction Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
    .. raw:: html
@@ -4849,10 +4849,10 @@ FLOODPLAIN AREA WIDTH REDUCTION DATA
    If a building consists of multiple totally blocked elements (ITTAWF~ T-line in ARF.DAT), all of the ITTAWF grid element numbers must be assigned as
    negative to completely remove the building.
 
-FILE: MULT.DAT
+File: MULT.DAT
 ~~~~~~~~~~~~~~
 
-MULTIPLE CHANNEL (RILL AND GULLY) DATA
+Multiple Channel (rill and Gully) Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
@@ -5052,11 +5052,11 @@ MULTIPLE CHANNEL (RILL AND GULLY) DATA
    For more information, see the avulsion discussion white paper in the FLO-2D Handouts and Reference Manual.
 
 
-FILE: SIMPLE_MULT.DAT
+File: SIMPLE_MULT.DAT
 ~~~~~~~~~~~~~~~~~~~~~
 
-MULTIPLE CHANNEL DATA
-^^^^^^^^^^^^^^^^^^^^^
+Multiple Channel Data (rill and Gully) Data Simplified
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
@@ -5151,10 +5151,10 @@ MULTIPLE CHANNEL DATA
     They both use the same variable data, but SIMPLE_MULT depth and width are hardwired.
 
 
-FILE: SED.DAT
+File: SED.DAT
 ~~~~~~~~~~~~~
 
-MUDFLOW AND SEDIMENT TRANSPORT DATA
+Mudflow and Sediment Transport Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -5678,10 +5678,10 @@ MUDFLOW AND SEDIMENT TRANSPORT DATA
 7. The debris basin volume is assigned to an inflow node.
    The inflow node will not compute discharge to downstream cells until the basin volume is exceeded.
 
-FILE: LEVEE.DAT
+File: LEVEE.DAT
 ~~~~~~~~~~~~~~~
 
-LEVEE AND FAILURE DATA
+Levee and Failure Data
 ~~~~~~~~~~~~~~~~~~~~~~
 
    .. raw:: html
@@ -6063,10 +6063,10 @@ LEVEE AND FAILURE DATA
 
 
 
-FILE: FPXSEC.DAT
+File: FPXSEC.DAT
 ~~~~~~~~~~~~~~~~
 
-FLOODPLAIN CROSS-SECTION DATA
+Floodplain Cross-section Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -6252,11 +6252,11 @@ FLOODPLAIN CROSS-SECTION DATA
    For example, if the cross-section orientation is East to West, the flow direction should be North or South only.
 
 
-FILE: BREACH.DAT
+File: BREACH.DAT
 ~~~~~~~~~~~~~~~~
 
-DAM AND LEVEE BREACH DATA
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Dam and Levee Erosion Breach Data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
@@ -7052,10 +7052,10 @@ DAM AND LEVEE BREACH DATA
    (global breach data is not required)
 
 
-FILE: FPFROUDE.DAT
+File: FPFROUDE.DAT
 ~~~~~~~~~~~~~~~~~~
 
-FLOODPLAIN LIMITING FROUDE NUMBERS
+Floodplain Limiting Froude Numbers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -7135,10 +7135,10 @@ FLOODPLAIN LIMITING FROUDE NUMBERS
    Rename the MANNINGS_N.
    RGH file to MANNINGS_N.DAT.
 
-FILE: SWMMFLO.DAT
+File: SWMMFLO.DAT
 ~~~~~~~~~~~~~~~~~
 
-STORM DRAIN DATA FILE
+Storm Drain Data File
 ^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -7343,10 +7343,10 @@ STORM DRAIN DATA FILE
 
 4. The feature switch = 3 will allow the storm drain engine to always try and feed water to the storm drain system even when the drop box is at capacity.
 
-FILE: SWMMFLORT.DAT
+File: SWMMFLORT.DAT
 ~~~~~~~~~~~~~~~~~~~
 
-STORM DRAIN TYPE 4 RATING TABLE FILE
+Storm Drain Type 4 Rating Table File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -7504,10 +7504,10 @@ STORM DRAIN TYPE 4 RATING TABLE FILE
 
             - type 1 - square edge with headwall type 2 - socket end with headwall type 3 - socket end projecting
 
-FILE: SWMMOUTF.DAT
+File: SWMMOUTF.DAT
 ~~~~~~~~~~~~~~~~~~
 
-STORM DRAIN OUTFALL ID DATA FILE
+Storm Drain Outfall Data File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. raw:: html
 
@@ -7588,10 +7588,10 @@ STORM DRAIN OUTFALL ID DATA FILE
 
 3. If the flow in the storm drain system can return to the surface, set the switch to the on position = 1.
 
-FILE: SDCLOGGING.DAT
+File: SDCLOGGING.DAT
 ~~~~~~~~~~~~~~~~~~~~
 
-STORM DRAIN BLOCKAGE METHOD FILE
+Storm Drain Blockage Method File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -7681,12 +7681,12 @@ STORM DRAIN BLOCKAGE METHOD FILE
 
 2. The time to initiate clogging is based on the starting time of the model not the time of inundation of the storm drain inlet.
 
-FILE: SWMMFLODROPBOX.DAT
+File: SWMMFLODROPBOX.DAT
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _storm-drain-blockage-method-file-1:
 
-STORM DRAIN BLOCKAGE METHOD FILE
+Drop Box Volume File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -7786,10 +7786,10 @@ STORM DRAIN BLOCKAGE METHOD FILE
      - 78.54
 
 
-FILE: TOLSPATIAL.DAT
+File: TOLSPATIAL.DAT
 ~~~~~~~~~~~~~~~~~~~~
 
-SPATIALLY VARIABLE TOLLERANCE VALUES
+Spatially Variable Tolerance Values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -7860,10 +7860,10 @@ SPATIALLY VARIABLE TOLLERANCE VALUES
 
 2. Global TOL is used if where a TOLSPATIAL.DAT grid element is not applied.
 
-FILE: WSURF.DAT
+File: WSURF.DAT
 ~~~~~~~~~~~~~~~
 
-WATER SURFACE ELEVATION COMPARISON
+Water Surface Elevation Comparison
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -7949,12 +7949,12 @@ WATER SURFACE ELEVATION COMPARISON
 2. The FLO-2D Plugin does not build this file.
    It is created by the user in a text editor program.
 
-FILE: WSTIME.DAT
+File: WSTIME.DAT
 ~~~~~~~~~~~~~~~~
 
 .. _water-surface-elevation-comparison-1:
 
-WATER SURFACE ELEVATION COMPARISON
+Water Surface Elevation Comparison
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -8045,10 +8045,10 @@ WATER SURFACE ELEVATION COMPARISON
 2. The FLO-2D Plugin does not build this file.
    It is created by the user in a text editor program.
 
-FILE: TIMDEPCELL.DAT
+File: TIMDEPCELL.DAT
 ~~~~~~~~~~~~~~~~~~~~
 
-ARRAY OF GRID ELEMENTS FOR TIME OUTPUT
+Array of Grid Elements for Time Output
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -8118,8 +8118,11 @@ ARRAY OF GRID ELEMENTS FOR TIME OUTPUT
 2. The FLO-2D Plugin does not build this file.
    It is created by the user in a text editor.
 
-FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW N
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+File: SHALLOWN_SPATIAL.DAT 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Spatially Variable Shallow N-Values
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
@@ -8215,10 +8218,10 @@ FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW
            0.5 ft (0.15 m) < flow depth < 3 ft (1 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = n<sub>b</sub> * 1.5 * e<sup>-(0.4 depth/dmax)</sup><br>
            3 ft (1 m) < flow depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = n-value in MANNINGS_N.DAT
 
-FILE: GUTTER.DAT
+File: GUTTER.DAT
 ~~~~~~~~~~~~~~~~
 
-FLOODPLAIN STREET ELEMENT GUTTER DATA
+Floodplain Street Element Gutter Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -8372,10 +8375,10 @@ FLOODPLAIN STREET ELEMENT GUTTER DATA
 
 4. The spatially variable or individual element assigned street width, curb height and n-value supersede the global values.
 
-FILE: BUILDING_COLLAPSE.DAT
+File: BUILDING_COLLAPSE.DAT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-BUILDING COLLAPSE PARAMETERS
+Building Collapse Parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -8476,10 +8479,10 @@ BUILDING COLLAPSE PARAMETERS
 2. The building collapse routine can also be activated by assigning a negative value to a completely blocked ARF value or to partially blocked ARF values
    in the ARF.DAT file.
 
-FILE: OUTRC.DAT
+File: OUTRC.DAT
 ~~~~~~~~~~~~~~~
 
-SURFACE WATER RATING TABLES
+Surface Water Rating Tables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
@@ -8573,10 +8576,10 @@ SURFACE WATER RATING TABLES
    The storage volume rating table is generated by the FLO-2D Plugin.
    The FLO-2D model will read this file if it is present.
 
-FILE: CHAN_INTERIOR_NODES.DAT
+File: CHAN_INTERIOR_NODES.DAT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-ARRAY OF INTERIOR GRID ELEMENTS
+Array Of Interior Grid Elements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
@@ -8647,10 +8650,10 @@ ARRAY OF INTERIOR GRID ELEMENTS
    can be added.
    Use NotePad, NotePad++, or UltraEdit to make adjustments.
 
-FILE: BRIDGE_XSEC.DAT
+File: BRIDGE_XSEC.DAT
 ~~~~~~~~~~~~~~~~~~~~~
 
-BRIDGE CROSS-SECTIONS
+Bridge Cross-sections
 ^^^^^^^^^^^^^^^^^^^^^
 .. raw:: html
 
@@ -8744,10 +8747,10 @@ BRIDGE CROSS-SECTIONS
 
 2. See the bridge manual to know where to measure the cross-section data.
 
-FILE: TAILINGS.DAT
+File: TAILINGS.DAT
 ~~~~~~~~~~~~~~~~~~
 
-TAILINGS DEPTH DATA
+Tailings Depth Data
 ^^^^^^^^^^^^^^^^^^^
 .. raw:: html
 
@@ -8816,11 +8819,12 @@ TAILINGS DEPTH DATA
 2. Tailings.DAT file is needed for a tailings dam material with no uniform depth.
    One or multiple cells in the tailings dam storage area might have a different tailings dam depth than uniform TAILINGSELEV read from INFLOW.DAT file.
 
-FILE: TAILINGS_CV.DAT
+File: TAILINGS_CV.DAT
 ~~~~~~~~~~~~~~~~~~~~~
 
-TAILINGS DATA
-^^^^^^^^^^^^^
+Tailings Depth and CV Data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
@@ -8904,13 +8908,13 @@ TAILINGS DATA
    the mudflow through the dam breach.
    Only a portion of the tailings will actually flow through the breach.
 
-FILE: TAILINGS_STACK_DEPTH.DAT
+File: TAILINGS_STACK_DEPTH.DAT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _tailings-depth-data-1:
 
-TAILINGS DEPTH DATA
-^^^^^^^^^^^^^^^^^^^
+Stacked Tailings Depth Data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
@@ -9007,11 +9011,11 @@ TAILINGS DEPTH DATA
 
 3. A second option is to assign the TAILINGS_STACK_DEPTH.DAT in QGIS and then follow steps 5 thru 8 above to initiate the stack failure.
 
-FILE: LID_VOLUME.DAT
+File: LID_VOLUME.DAT
 ~~~~~~~~~~~~~~~~~~~~
 
-LOW IMPACT DEVELOPMENT DATA FILE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Low Impact Development (LID) Data File
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
@@ -9085,10 +9089,10 @@ LOW IMPACT DEVELOPMENT DATA FILE
 2. The LID volume may be a preferred method over assigning the TOLSPATIAL.
    DAT data to represent a LID storage volume because the flow depth will be not added to the grid element when considering rainfall runoff distribution.
 
-FILE: MULTDOMAIN.DAT
+File: MULTDOMAIN.DAT
 ~~~~~~~~~~~~~~~~~~~~
 
-MULTIPLE DOMAIN DATA FILE
+Multiple Domain Data File
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 .. raw:: html
 
@@ -9185,10 +9189,10 @@ MULTIPLE DOMAIN DATA FILE
    Downstream cells have to be routing some flow, in other words, if a cell is specified in the DAT file has a flow discharge equal to zero for the
    entire simulation, then the cell will not be written to the output file.
 
-FILE: STEEP_SLOPEN.DAT
+File: STEEP_SLOPEN.DAT
 ~~~~~~~~~~~~~~~~~~~~~~
 
-STEEP SLOPE N VALUE DATA FILE
+Steep Slope N-Value Data File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. raw:: html
 
@@ -9218,7 +9222,7 @@ STEEP SLOPE N VALUE DATA FILE
     2
     263
     236
-    245
+245
     ...
     </pre>
     </div>

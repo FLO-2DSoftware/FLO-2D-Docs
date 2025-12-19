@@ -1,9 +1,9 @@
 .. vim: syntax=rst
 
-CHAPTER 2: HELP AND RESOURCES
+Chapter 2: Help and Resources
 =============================
 
-FLO-2D TUTORIALS
+FLO-2D Tutorials
 --------------------
 
 **Tutorials**
@@ -43,7 +43,7 @@ There are several workshop lessons located in the FLO-2D Documentation subdirect
 
    - This lesson outlines the process to create culverts using rating tables in QGIS with the FLO-2D Plugin.
 
-FLO-2D EXAMPLE FLOOD SIMULATIONS
+FLO-2D Example Flood Simulations
 --------------------------------
 
 .. _section-1:
@@ -108,20 +108,20 @@ Run these projects using the Run for FLO-2D Project folder.
 
    - Fully functional example of sediment transport routing in a 1-D channel.
 
-FLO-2D POWERPOINT PRESENTATION
+FLO-2D PowerPoint Presentation
 ------------------------------
 
 These presentations discuss most of the FLO-2D components.
 The files can be found in FLO-2D Pro Documentation\\flo_help\\PowerPoint Presentations.
 
-OTHER HELP DOCUMENTS
+Other Help Documents
 --------------------
 
 Several documents in the FLO-2D Handout folder provide advanced model guidance and discussion of specific
 components and model techniques.
 They can be found in FLO-2D Pro Documentation\\flo_help\\Handouts.
 
-METRIC OPTION
+Metric Option
 -------------
 
 The user can choose either the English or Metric system of units (for the Metric system set METRIC = 1 in
