@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 1 - CHANNEL OVERVIEW
+Chapter 1 - Channel Overview
 ================================
 
 This document supplements the FLO-2D Reference Manual, Data Input Manual and training materials such as the
@@ -77,7 +77,7 @@ Channel bed slope is computed as the difference between the channel element thal
 the cross section) elevations divided by half the sum of the channel lengths within the channel elements.
 Channel elements must be contiguous to be able to share discharge.
 
-Channel Geometry, Length and Roughness
+Channel Geometry Length And Roughness
 --------------------------------------
 
 There are four channel geometry options:
@@ -223,7 +223,7 @@ The Data Input Manual is another source of information for channel modeling.
 It lists and describes the data files and variables used to create channels.
 An overview of the overall process is briefly discussed below.
 
-Locate the channel element with respect to the grid system
+Locate The Channel Element With Respect To The Grid System
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Using the QGIS, the FLO-2D Plugin and an aerial photo, the channels can be assigned to a grid element.
@@ -237,7 +237,7 @@ This process is completely automated if a GEO-RAS geometry file can be imported 
 *Figure 7.
 Channel Delineation.*
 
-Create the cross sections
+Create The Cross Sections
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Each left bank channel element is assigned a cross section in the CHAN.DAT file.
@@ -253,8 +253,8 @@ placement.
 *Figure 8.
 Cross Section Assignment.*
 
-Create the cross sections
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Interpolate The Cross Sections
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When the cross sections have all been assigned the channel bed profile looks like a staircase (Figure 9 top)
 because the channel elements without a surveyed cross section not been interpolated.
@@ -272,7 +272,7 @@ The original cross sections are not edited.
 *Figure 9.
 Cross Sections*
 
-Adjust the channel bed slope
+Adjust The Channel Bed Slope
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Following the channel cross section interpolation, the bed slope is linear between two known or surveyed
@@ -284,7 +284,7 @@ Adverse bed slope in the downstream direction can be accommodated by the model (
 surveys or data collection, may justify adjustments to the bed slope.
 Re-interpolating the bed slope can be accomplished in the Profiles program for local cross section adjustments.
 
-Channel bank alignment
+Channel Bank Alignment
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Once the channel geometry has been assigned and interpolated, the left and right bank alignment can be
@@ -295,7 +295,7 @@ adjusted using QGIS and the FLO-2D Plugin (Figure 10).
 *Figure 10.
 Right Bank Assignment and Realignment.*
 
-Channel length adjustment
+Channel Length Adjustment
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The channel length within each grid element is initially estimated as a straight line for a half grid
@@ -334,7 +334,7 @@ lengths in the CHAN.DAT file.
 *Figure 13.
 Channel Length.*
 
-Channel roughness
+Channel Roughness
 ~~~~~~~~~~~~~~~~~
 
 Open channel uniform flow is characterized by a constant depth, velocity, flow area and discharge such
@@ -563,7 +563,7 @@ The channel conveyance flow area for a natural channel is increased by the green
 *Figure 20.
 Vertical Extension of the Lowest Top of Bank to the Highest Top of Bank.*
 
-Channel Numerical Stability and Volume Conservation
+Channel Numerical Stability And Volume Conservation
 ---------------------------------------------------
 
 Channel numerical stability requires the convergence of the routing algorithm solution to the full dynamic

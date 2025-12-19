@@ -1,9 +1,9 @@
 .. vim: syntax=rst
 
-CHAPTER 2 - CHANNEL MODELING GUIDELINES
+Chapter 2 - Channel Modeling Guidelines
 ==========================================
 
-Guidelines - Channels in the Urban Environment
+Guidelines - Channels In The Urban Environment
 ----------------------------------------------
 
 Overview
@@ -43,7 +43,7 @@ hydrographs as needed to test specific components.
 *Figure 26.
 Start a Project with a Grid System and an Inflow Hydrograph Only.*
 
-Channel cross-section data
+Channel Cross-Section Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Some of the issues associated with channel geometry data are discussed in this section.
@@ -51,7 +51,7 @@ The best approach for working with cross-section data is to review each channel 
 plot and the corresponding flow area, top width, and wetted perimeter in the PROFILES program to
 identify any radical variations in the geometry on a channel element basis.
 
-Cutting channel cross-sections from DTM data
+Cutting Channel Cross-Sections From Dtm Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cutting cross-sections requires several GIS source files including high resolution elevation data,
@@ -91,7 +91,7 @@ If the cut cross-sections cannot contain that discharge, they need to be reviewe
 Go over photographs of the channel, review the aerials, and review the elevation data.
 This process will probably reveal reasons for discrepancies in capacity.
 
-Flow area variation
+Flow Area Variation
 ~~~~~~~~~~~~~~~~~~~
 
 cross-sections can have a similar appearance but have a completely different geometry (Figure 27).
@@ -105,7 +105,7 @@ configuration.
 *Figure 27.
 cross-section Comparison.*
 
-Braided channels
+Braided Channels
 ~~~~~~~~~~~~~~~~
 
 Braided channels can be poorly represented by cut cross-sections.
@@ -145,7 +145,7 @@ Braided Channel 2012.
 Braided Channel 2014.
 (Source: Google Earth)*
 
-Undefined banks
+Undefined Banks
 ~~~~~~~~~~~~~~~
 
 Another common problem with cut cross-sections is that the bank definition is not captured.
@@ -160,7 +160,7 @@ This is one of the most common errors of cut cross-sections.
 *Figure 31.
 cross-section Missing Right Bank.*
 
-Split flows and islands
+Split Flows And Islands
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Islands are typically higher than one or both banks due to sediment deposition.
@@ -175,7 +175,7 @@ The other approach is to lower the island below the right bank.
 *Figure 32.
 Split Flows.*
 
-LiDAR issues
+Lidar Issues
 ~~~~~~~~~~~~
 
 LiDAR and IFSAR data do not penetrate water surfaces, the bottom of the cross-section is not known
@@ -187,7 +187,7 @@ Bathometric or surveyed data is required to define the underwater cross-section 
 *Figure 33.
 Water Surface.*
 
-Urban channels
+Urban Channels
 ~~~~~~~~~~~~~~
 
 Urban trapezoidal and rectangular concrete channels are often modelled as natural channels with station
@@ -212,7 +212,7 @@ correctly interpolates the thalweg and channel shape.
 *Figure 35.
 Urban Design Channel Corrected.*
 
-Bridge and culvert cross-section transitions
+Bridge And Culvert Cross-Section Transitions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Hydraulic structures can be integrated with any channel geometry.
@@ -235,7 +235,7 @@ flow would experience higher flow resistance (higher n-values).
 *Figure 36.
 Urban Concrete-Lined Trapezoidal Channel Transition.*
 
-Inflow node boundary
+Inflow Node Boundary
 --------------------
 
 Channel inflow nodes and channels that start at the upstream boundary of a grid may require a modified
@@ -371,7 +371,7 @@ Use the PROFILES program when reviewing the confluence channel element geometry.
 - The roughness values for the tributary and main channel upstream and downstream of the confluence
   should be increased to reflect the highly turbulent flow constriction.
 
-Channel infiltration
+Channel Infiltration
 --------------------
 
 Although channel bed and bank seepage is usually only a minor portion of the total infiltration losses
@@ -389,7 +389,7 @@ Highly porous, semi-arid channels may have high infiltration that may require ca
 stream gage records.
 Infiltration will not be a cause of volume conservation error or instability in the channel.
 
-Levees and channels
+Levees And Channels
 -------------------
 
 Levees can be assigned along channels (Figure 45).
@@ -451,7 +451,7 @@ effects when the rating curve or table predicts less discharge than the upstream
 Refer to the Data Input Manual or the White Paper “Hydraulic Structure Guidelines” for a more complete
 discussion of hydraulic structures in the FLO-2D model.
 
-Hydraulic structure rating curves and tables
+Hydraulic Structure Rating Curves And Tables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The hydraulic structure stage-discharge relationship can be assigned as either a rating curve or rating
@@ -524,7 +524,7 @@ The hydraulic structure rating table or curve can be created from:
 
 - Weir and spillway equations
 
-Generalized culvert equations
+Generalized Culvert Equations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Culvert flow can be simulated using generalized culvert equations to predict culvert discharge for circular
@@ -559,7 +559,7 @@ All the possible flow scenarios involving inlet and outlet control are analyzed 
 generalized culvert equations, based on tailwater elevation, friction losses, slope, and entrance
 control and headwater elevation.
 
-Bridge hydraulics component
+Bridge Hydraulics Component
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The FLO-2D bridge routine enables the user to compute the discharge through bridges without using an
@@ -590,7 +590,7 @@ Component” along with a companion paper “Bridge Component HEC-RAS Comparison
 *Figure 52.
 FLO-2D Bridge Component.*
 
-Tailwater conditions
+Tailwater Conditions
 ~~~~~~~~~~~~~~~~~~~~
 
 As the tailwater increases in relation to the headwater, backwater or submergence may ensue and eventually
@@ -608,7 +608,7 @@ The INOUTCONT parameter does not apply to the generalized culvert equations.
 *Figure 53.
 Variable Culvert Tailwater Condition.*
 
-Channel hydraulic structure troubleshooting
+Channel Hydraulic Structure Troubleshooting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Hydraulic structures can be a primary source of numerical instability in the channel when the rating
@@ -664,7 +664,7 @@ The following conditions should be reviewed:
 - Rating table adjusted with SUBFACTOR.
   Warning message and revised table values are written to REVISED_RATING_TABLE.OUT file.
 
-Hydraulic structure – channel instability adjustments
+Hydraulic Structure – Channel Instability Adjustments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Hydraulic structures create a secondary control on the water surface elevation.
@@ -782,7 +782,7 @@ channel component.
 The storm drain system interfaces with channels through inlets and outfalls.
 An early identification of storm drain database deficiencies can save time and resources on a project.
 
-Storm drain inlet – channel
+Storm Drain Inlet – Channel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After initial set up of the urban project, the following issues related to the storm drain inlet to
@@ -834,7 +834,7 @@ The water surface elevation and the pressure head are a function of the followin
 *Figure 59.
 Complex Interaction between a Storm Drain Conduit and 1-D Channel.*
 
-Storm drain outfall – channel
+Storm Drain Outfall – Channel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To connect a storm drain outfall to a channel element the following issues should be addressed:
@@ -930,7 +930,7 @@ interaction between external surface water and storm drain pressure (Figure 64).
 *Figure 64.
 Head Variations Cause Pipe Discharge Oscillations.*
 
-Storm drain manual
+Storm Drain Manual
 ~~~~~~~~~~~~~~~~~~
 
 The FLO-2D storm drain manual is a comprehensive set of guidelines for modeling the overall surface to
@@ -945,7 +945,7 @@ Channel Termination
 
 There are three ways to terminate a channel:
 
-Outflow node
+Outflow Node
 ~~~~~~~~~~~~
 
 The first method is to have a channel end with a channel outflow node and the flow is discharged off the
@@ -960,7 +960,7 @@ the outflow node or discharges into lake, bay or estuary.
 *Figure 65.
 Channel Outflow Configuration.*
 
-Hydraulic structure
+Hydraulic Structure
 ~~~~~~~~~~~~~~~~~~~
 
 The second method is to use a hydraulic structure to discharge the flow from a channel element to a
@@ -975,7 +975,7 @@ If the peak discharge to grid element area ratio (Q\ :sub:`p`/A) exceeds 100 cfs
 *Figure 66.
 Channel to Floodplain - Hydraulic Structure.*
 
-Channel termination on floodplain
+Channel Termination On Floodplain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The third method of channel termination is to end the channel on the floodplain without a channel outflow
@@ -1067,7 +1067,7 @@ If this was the project condition, it is suggested that the **1-D channel compon
 distance downstream of the concrete section to allow the alluvial channel flow area to gradually
 decrease and become wider and shallower as would occur in the natural setting.
 
-Floodplain overland flow into the channel
+Floodplain Overland Flow Into The Channel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The floodplain elements contiguous to the channel interior should match the channel thalweg elevation.

@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 .. _channel-modeling-guidelines:
 
-CHANNEL MODELING GUIDELINES
+Channel Modeling Guidelines
 ===========================
 
 .. toctree::
