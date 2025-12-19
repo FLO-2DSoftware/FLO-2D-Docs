@@ -350,7 +350,7 @@ SYSTEM CONTROL DATA
 
        between multiple channel elements.
 
-       The MULT.DAT file must be created.
+       The MULT.DAT and/or SIMPLE_MULT.DAT files must be created.
 
    * - IMODFLOW
      - s

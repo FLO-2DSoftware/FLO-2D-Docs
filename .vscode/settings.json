@@ -9,5 +9,6 @@
         "NOAA",
         "rubberband",
         "Tailwater"
-    ]
+    ],
+    "makefile.configureOnOpen": false
 }
