@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 1: FLO-2D INSTALLATION AND GETTING STARTED
+CHAPTER 1: FLO-2D Installation and Getting Started
 ===================================================
 
 GENERAL
@@ -22,8 +22,8 @@ FLO-2D INSTALLATION
 
 The FLO-2D Pro model has been compiled for 64-bit multi-core processor computers.
 It cannot be run on a 32-bit computer.
-Recommended minimum computer requirements are at least 4 GB RAM.
-To install the FLO-2D on the computer hard drive, unzip the installation file and double click the file FLO-2D- PRO-Setup.exe file.
+Recommended minimum computer requirements are at least 8 GB RAM.
+To install the FLO-2D on the computer hard drive, unzip the installation file and double click the file FLO-2D-PRO-Setup.exe file.
 Follow the installation instructions as they appear in the dialog boxes on the screen.
 The default directory is C:\\PROGRAM FILES(x86)\\FLO-2D PRO.
 The FLO-2D model, and the processor programs are loaded into the FLO-2D Pro folder.

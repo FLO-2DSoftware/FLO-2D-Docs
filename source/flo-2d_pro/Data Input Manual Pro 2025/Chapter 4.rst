@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 4: INPUT DATA FILE DESCRIPTION
+CHAPTER 4: Input Data File Description
 ======================================
 
 GENERAL
@@ -13,14 +13,14 @@ the variables are presented.
 Some instructional comments follow the variable descriptions for clarification.
 QGIS or any ASCII text editor can be used to create or edit the data files.
 
-LIST OF PROGRAM FILE UNITS
+List of File Unit Numbers
 ---------------------------
 
 The following table lists the data and output file (‘Unit’) numbers that are assigned by the FLO-2D model at runtime.
 These unit numbers may be reported in error messages and referring to these numbers may help to locate input data
 errors.
 
-DATA FILES
+Data Files
 -----------
 
 Four data files are required for every flood simulation: CONT.DAT, TOLER.DAT, FPLAIN.DAT, CADPTS.DAT.
