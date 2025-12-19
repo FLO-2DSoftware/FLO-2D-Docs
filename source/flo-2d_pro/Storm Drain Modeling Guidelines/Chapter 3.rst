@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 3: FLO-2D STORM DRAIN DATA FILES
+CHAPTER 3: FLO-2D Storm Drain Data Files
 =========================================
 
 Input and Output File - General

@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 5: TROUBLESHOOTING
+CHAPTER 5: Troubleshooting
 ===========================
 
 Introduction
