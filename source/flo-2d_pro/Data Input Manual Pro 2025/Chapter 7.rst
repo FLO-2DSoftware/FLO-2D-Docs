@@ -437,8 +437,8 @@ It should be noted that for FLO-2D no server system can outperform a high perfor
      - HYDRAULIC STRUCTURE_HEADWATER WARNING.CHK
 
    * - 6673
-     - HYDRAULIC STRUCTURE\_ HEADWATER WARNING.CHK
--
+     - HYDRAULIC STRUCTURE_HEADWATER WARNING.CHK
+     -
      -
 
 
