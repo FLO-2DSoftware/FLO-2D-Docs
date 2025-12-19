@@ -20,15 +20,19 @@ Data files can also be edited using an ASCII text editor such as UltraEdit© or 
 FLO-2D Installation
 --------------------
 
-The FLO-2D Pro model has been compiled for 64-bit multi-core processor computers.
-It cannot be run on a 32-bit computer.
-Recommended minimum computer requirements are at least 8 GB RAM.
-To install the FLO-2D on the computer hard drive, unzip the installation file and double click the file FLO-2D-PRO-Setup.exe file.
-Follow the installation instructions as they appear in the dialog boxes on the screen.
-The default directory is C:\\PROGRAM FILES(x86)\\FLO-2D PRO.
-The FLO-2D model, and the processor programs are loaded into the FLO-2D Pro folder.
-The FLO-2D resource files are saved to the FLO-2D Documentation folder under C:\\Users\\Public\\Public Documents\\FLO-2D PRO Documentation.
-These files include helpful resources such as user manuals, example projects, lessons and PowerPoint presentations and instructional handouts.
+The FLO-2D Pro model is compiled for **64-bit, multi-core computers** and cannot be run on a 32-bit system. The recommended minimum system requirement is **8 GB of RAM**.
+
+To install FLO-2D Pro, unzip the installation package and double-click **FLO-2D-PRO-Setup.exe**. Follow the installation prompts as they appear on the screen. By default, the software is installed in::
+
+   C:\Program Files (x86)\FLO-2D Pro
+
+The FLO-2D model and processor programs are installed in the *FLO-2D Pro* directory. Supporting resource files are installed in the *FLO-2D Documentation* folder located at::
+
+   C:\Users\Public\Public Documents\FLO-2D Pro Documentation
+
+The documentation folder contains user manuals, example projects, lessons, PowerPoint presentations, and other instructional materials.
+
+Get :ref:`flo-2d-pro-installation-instructions<flo-2d-pro-installation-instructions>`.
 
 Un-installing the FLO-2D Software
 ---------------------------------
