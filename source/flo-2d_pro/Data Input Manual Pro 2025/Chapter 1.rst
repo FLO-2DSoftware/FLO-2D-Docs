@@ -147,7 +147,7 @@ If the Q\ :sub:`peak`/A\ :sub:`surf` is much greater than 10.0 cfs/ft\ :sup:`2` 
 After the grid element size has been selected, proceed with establishing the grid system using the QGIS/FLO-2D Plugin.
 There are QGIS workshop lessons to assist in getting started on a new project.
 
-:ref:`Grid Element Size<grid-element-size>`.
+:ref:`Grid Element Size<grid-element-size>`
 
 
 *Table 1.1.
@@ -275,7 +275,7 @@ Channels are defined in FLO-2D whenever 1-D flow is more accurate than overland 
 They can reduce flooding and help the water move downstream quicker than flow on the floodplain.
 An extensive Channel Guidelines document is available in the Manuals Folder.
 
-:ref:`FLO-2D Channel Guidelines<channel-modeling-guidelines>`.
+:ref:`FLO-2D Channel Guidelines<channel-modeling-guidelines>`
 
 **Street Flow**
 
@@ -293,7 +293,7 @@ Levee failure can include piping, overtopping and collapse.
 There is a levee and dam erosion component in FLO-2D.
 An extensive Levee, Dam, and Wall Breach document is available in the Manuals folder.
 
-:ref:`FLO-2D Levee, Dam and Wall Breach Guidelines<levee-dam-wall-breach-guidelines>`.
+:ref:`FLO-2D Levee, Dam and Wall Breach Guidelines<levee-dam-wall-breach-guidelines>`
 
 **Rainfall and Infiltration on Alluvial Fans**
 
@@ -312,4 +312,4 @@ For concentrations less than 20% by volume, the flow will behave like a water fl
 The primary effect of increasing the sediment concentration, in this case, is to bulk the flow volume.
 Simulating Mudflow Guidelines is available in the Handouts folder.
 
-:ref:`FLO-2D Mudflow Guidelines<mudflow-guidelines>`.
+:ref:`FLO-2D Mudflow Guidelines<mudflow_guidelines>`

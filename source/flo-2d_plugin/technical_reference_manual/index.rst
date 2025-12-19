@@ -1,6 +1,6 @@
 .. _tech_ref_manual:
 
-FLO-2D Gila for QGIS: Technical Reference
+FLO-2D Gila for QGIS Technical Reference
 ============================================
 
 FLO-2D Plugin Gila v2.0.0

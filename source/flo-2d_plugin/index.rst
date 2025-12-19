@@ -1,4 +1,4 @@
-FLO-2D Gila for QGIS: Documentation
+FLO-2D Gila for QGIS Documentation
 =====================================
 
 .. toctree::

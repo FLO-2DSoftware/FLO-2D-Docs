@@ -88,7 +88,7 @@ Run these projects using the Run for FLO-2D Project folder.
      and yield stresses.
      This flood simulation is a good example to review for mudflow, buildings and streets.
 
-   *Ocean Storm Surge/Tsunami Model in an Urban Area – Waikiki Beach, Oahu, Hawaii (Alawai-Tsunami subdirectory)*
+*Ocean Storm Surge/Tsunami Model in an Urban Area – Waikiki Beach, Oahu, Hawaii (Alawai-Tsunami subdirectory)*
 
    - By assigning stage-time relationships to the outflow elements along the Waikiki coast line, the Alawai
      watershed model is converted to an ocean storm surge or tsunami model.
@@ -106,20 +106,20 @@ Run these projects using the Run for FLO-2D Project folder.
 
 *Sediment Transport - Sediment Transport Channel Example*
 
-   - Fully functional example of sediment transport routing in a 1-D channel.
+   - Example of sediment transport routing in a 1-D channel.
 
 FLO-2D PowerPoint Presentation
 ------------------------------
 
 These presentations discuss most of the FLO-2D components.
-The files can be found in FLO-2D Pro Documentation\\flo_help\\PowerPoint Presentations.
+The files can be found in **FLO-2D Pro Documentation\\flo_help\\PowerPoint Presentations**.
 
 Other Help Documents
 --------------------
 
 Several documents in the FLO-2D Handout folder provide advanced model guidance and discussion of specific
 components and model techniques.
-They can be found in FLO-2D Pro Documentation\\flo_help\\Handouts.
+They can be found in **FLO-2D Pro Documentation\\flo_help\\Handouts**.
 
 Metric Option
 -------------
@@ -129,7 +129,7 @@ the CONT.DAT file).
 When using the Metric system, substitute the appropriate metric unit for the English unit in the data files.
 The following basic units are used in the model:
 
-*Table 2.1. ENGLISH/METRIC.*
+*Table 2.1. FLO-2D Units of Measure Imperial/Metric.*
 
 .. list-table::
    :widths: 25 25 25

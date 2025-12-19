@@ -912,7 +912,6 @@ File: FPLAIN.DAT
 Floodplain Grid Element Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
@@ -922,7 +921,7 @@ Floodplain Grid Element Data
     1 0 2 10 0 0.060 4005.23 Line 1:    <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
     2 0 3 11 1 0.065 4008.65 Line 1:    <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
     3 0 4 12 2 0.065 4002.23 Line 1:    <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
-...
+    ...
     ...
     ...
     18 9 0 27 17 0.065 4010.78 Line 1:  <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
@@ -1100,7 +1099,6 @@ FLOPRO.EXE reads the grid, elevation, and Manning’s n data as follows: The mod
 
 To turn off the depth variable roughness set AMANN = -99.
 See the Comment 9 in the CONT.DAT file.
-
 
 File: MANNINGS_N.DAT
 ~~~~~~~~~~~~~~~~~~~~~~~~
