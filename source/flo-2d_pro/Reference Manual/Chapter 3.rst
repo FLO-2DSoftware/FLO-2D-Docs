@@ -110,6 +110,8 @@ This is the reason that FEMA FIS river studies typically do not require sediment
 Simulating a mobile bed can be more important for smaller floods, for alluvial fan flows and where channel avulsion or sediment deposition might
 change the flow path.
 
+.. _grid-element-size:
+
 Grid Element Size
 ---------------------
 

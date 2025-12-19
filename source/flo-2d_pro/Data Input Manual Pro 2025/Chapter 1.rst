@@ -32,7 +32,7 @@ The FLO-2D model and processor programs are installed in the *FLO-2D Pro* direct
 
 The documentation folder contains user manuals, example projects, lessons, PowerPoint presentations, and other instructional materials.
 
-Get :ref:`flo-2d-pro-installation-instructions<flo-2d-pro-installation-instructions>`.
+Get :ref:`Installation Instructions<flo-2d-pro-installation-instructions>`.
 
 Un-installing the FLO-2D Software
 ---------------------------------
@@ -58,7 +58,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Handouts.
 Tutorials and training videos are available for the FLO-2D Plugin.
 The Plugin is the recommended data editor.
 
-C:\\users\\public\\public documents\\flo-2d pro documentation https://documentation.flo-2d.com
+:ref:`Tutorials<tutorials-index>`.
 
 **Seeking Assistance – Technical Support**
 
@@ -146,6 +146,8 @@ The closer Q\ :sub:`peak`/A\ :sub:`surf` is to 3.0 cfs/ft\ :sup:`2` (0.1 cms/m\ 
 If the Q\ :sub:`peak`/A\ :sub:`surf` is much greater than 10.0 cfs/ft\ :sup:`2` or 0.3 cms/m\ :sup:`2`, the model will run more slowly (See table 1.1).
 After the grid element size has been selected, proceed with establishing the grid system using the QGIS/FLO-2D Plugin.
 There are QGIS workshop lessons to assist in getting started on a new project.
+
+:ref:`Grid Element Size<grid-element-size>`.
 
 
 *Table 1.1.
@@ -272,7 +274,8 @@ The flow shares between the channel banks and the floodplain.
 Channels are defined in FLO-2D whenever 1-D flow is more accurate than overland flow.
 They can reduce flooding and help the water move downstream quicker than flow on the floodplain.
 An extensive Channel Guidelines document is available in the Manuals Folder.
-C:\\users\\Public\\Public Documents\\FLO-2D Pro Documentation\\flo_help\\Manuals.
+
+:ref:`FLO-2D Channel Guidelines<channel-modeling-guidelines>`.
 
 **Street Flow**
 
@@ -289,7 +292,8 @@ Levees are assigned to grid element boundaries with a crest elevations.
 Levee failure can include piping, overtopping and collapse.
 There is a levee and dam erosion component in FLO-2D.
 An extensive Levee, Dam, and Wall Breach document is available in the Manuals folder.
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Manuals\\Levee Dam and Wall Breach Guidelines.pdf
+
+:ref:`FLO-2D Levee, Dam and Wall Breach Guidelines<levee-dam-wall-breach-guidelines>`.
 
 **Rainfall and Infiltration on Alluvial Fans**
 
@@ -308,4 +312,4 @@ For concentrations less than 20% by volume, the flow will behave like a water fl
 The primary effect of increasing the sediment concentration, in this case, is to bulk the flow volume.
 Simulating Mudflow Guidelines is available in the Handouts folder.
 
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Handouts\\ Simulating Mudflow Guidelines.pdf.
+:ref:`FLO-2D Mudflow Guidelines<mudflow-guidelines>`.
