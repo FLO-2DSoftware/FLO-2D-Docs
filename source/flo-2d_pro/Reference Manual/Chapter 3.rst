@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 3. FLO-2D MODEL SYSTEM
+Chapter 3. FLO-2D Model System
 ==============================
 
 Assumptions and Special Conditions

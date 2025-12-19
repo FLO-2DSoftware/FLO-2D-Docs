@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-REFERENCES
+References
 ==========
 
 Ackers, P.

@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 1. INTRODUCTION
+Chapter 1. Introduction
 =======================
 
 This Reference Manual discusses the physical processes of flooding.
@@ -115,10 +115,9 @@ in bed elevation; impact force and number of other specific hydraulic variables,
 the system.
 The user can specify the temporal and spatial output detail including the outflow hydrograph locations, the output time intervals and the graphical
 display of the flood progression over the grid system.
-After the preliminary FLO-2D runs, the user can apply the output options to determine required level of0 output detail.
+After the preliminary FLO-2D runs, the user can apply the output options to determine required level of output detail.
 
 .. image:: ../img/References/Chapter1/Chapte004.jpeg
 
 Figure 3.
 FLO-2D Flow Chart.
-
