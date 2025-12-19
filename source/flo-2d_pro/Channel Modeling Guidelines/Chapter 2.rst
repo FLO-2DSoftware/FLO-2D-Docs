@@ -3,7 +3,7 @@
 Chapter 2 - Channel Modeling Guidelines
 ==========================================
 
-Guidelines - Channels In The Urban Environment
+Guidelines - Channels in the Urban Environment
 ----------------------------------------------
 
 Overview
@@ -51,7 +51,7 @@ The best approach for working with cross-section data is to review each channel 
 plot and the corresponding flow area, top width, and wetted perimeter in the PROFILES program to
 identify any radical variations in the geometry on a channel element basis.
 
-Cutting Channel Cross-Sections From Dtm Data
+Cutting Channel Cross-Sections from DTM Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Cutting cross-sections requires several GIS source files including high resolution elevation data,
@@ -160,7 +160,7 @@ This is one of the most common errors of cut cross-sections.
 *Figure 31.
 cross-section Missing Right Bank.*
 
-Split Flows And Islands
+Split Flows and Islands
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Islands are typically higher than one or both banks due to sediment deposition.
@@ -175,7 +175,7 @@ The other approach is to lower the island below the right bank.
 *Figure 32.
 Split Flows.*
 
-Lidar Issues
+LIDAR Issues
 ~~~~~~~~~~~~
 
 LiDAR and IFSAR data do not penetrate water surfaces, the bottom of the cross-section is not known
@@ -212,7 +212,7 @@ correctly interpolates the thalweg and channel shape.
 *Figure 35.
 Urban Design Channel Corrected.*
 
-Bridge And Culvert Cross-Section Transitions
+Bridge and Culvert Cross-Section Transitions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Hydraulic structures can be integrated with any channel geometry.
@@ -389,7 +389,7 @@ Highly porous, semi-arid channels may have high infiltration that may require ca
 stream gage records.
 Infiltration will not be a cause of volume conservation error or instability in the channel.
 
-Levees And Channels
+Levees and Channels
 -------------------
 
 Levees can be assigned along channels (Figure 45).
@@ -451,7 +451,7 @@ effects when the rating curve or table predicts less discharge than the upstream
 Refer to the Data Input Manual or the White Paper “Hydraulic Structure Guidelines” for a more complete
 discussion of hydraulic structures in the FLO-2D model.
 
-Hydraulic Structure Rating Curves And Tables
+Hydraulic Structure Rating Curves and Tables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The hydraulic structure stage-discharge relationship can be assigned as either a rating curve or rating
@@ -856,10 +856,10 @@ inlet and flow returns to surface further downstream and back into the channel n
 *Figure 60.
 Complex Flow Exchange between a Storm Drain System and 1-D Channel.*
 
-Storm drain outfalls should be assigned to the channel left bank element.
+Storm drain outfalls should be assigned to the channel left bank element.
 For most cases, the outfall invert elevation would be assigned to the channel element thalweg elevation.
 If the coordinates in the SWMM.inp file are the left bank element channel coordinates, then FLO-2D Plugin
-will automatically assign the outfall node to the left bank element.
+will automatically  assign the outfall node to the left bank element.
 The user can review that the outfall is correctly paired to the left bank element in the SWMMOUTF.DAT file.
 Refer to Figure 61 for an example of a storm drain that physically outfalls to the right bank but is
 extended to the left bank grid for modeling purposes.
@@ -874,7 +874,7 @@ Typical Configuration of a Storm Drain Outfall Discharging to a Natural Channel.
 The Plugin uses coordinates of the different storm drain components from the SWMM.inp file to pair them
 with the grid elements in the surface layer.
 It is usually not necessary for the outfall coordinates in the SWMM.inp to match the left bank
-channel element coordinate.
+channel element coordinate.
 The position is within the channel, the outfall will be correlated in the SWMMOUTF.DAT updating the grid
 element number to the closest left bank element number (Figure 62).
 The user should check every outfall to be sure it is correctly assigned to the appropriate left bank grid.
@@ -975,7 +975,7 @@ If the peak discharge to grid element area ratio (Q\ :sub:`p`/A) exceeds 100 cfs
 *Figure 66.
 Channel to Floodplain - Hydraulic Structure.*
 
-Channel Termination On Floodplain
+Channel Termination on Floodplain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The third method of channel termination is to end the channel on the floodplain without a channel outflow
@@ -1067,7 +1067,7 @@ If this was the project condition, it is suggested that the **1-D channel compon
 distance downstream of the concrete section to allow the alluvial channel flow area to gradually
 decrease and become wider and shallower as would occur in the natural setting.
 
-Floodplain Overland Flow Into The Channel
+Floodplain Overland Flow into the Channel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The floodplain elements contiguous to the channel interior should match the channel thalweg elevation.

@@ -1,9 +1,9 @@
 .. vim: syntax=rst
 
-Chapter 3 - Channel Review And Troubleshooting
+Chapter 3 - Channel Review and Troubleshooting
 ===============================================
 
-Channel Review And Troubleshooting
+Channel Review and Troubleshooting
 ----------------------------------
 
 This section of the manual discusses how to review and troubleshoot channel data and results using the Reviewer’s Checklist.
