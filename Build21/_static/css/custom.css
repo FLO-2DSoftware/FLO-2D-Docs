@@ -157,3 +157,8 @@ table.docutils td {
     border: 1px solid #cccccc;
     padding: 6px 8px;
 }
+
+/* Increase spacing between numbered list items in Chapter 4 only */
+#chapter-4-input-data-file-description ol > li {
+    margin-bottom: 1em;
+}
