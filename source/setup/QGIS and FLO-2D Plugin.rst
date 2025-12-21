@@ -277,8 +277,8 @@ Tutorial data is located here:
    :width: 600px
    :class: bordered-img
 
-Setup Older FLO-2D Plugins (Optional)
----------------------------------------
+Setup Older FLO-2D Plugins (Not Required)
+-------------------------------------------
 
 Older versions of the FLO-2D Plugin can be downloaded from the following link:
 
