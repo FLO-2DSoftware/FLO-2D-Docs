@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 3 - CHANNEL REVIEW AND TROUBLESHOOTING
+Chapter 3 - Channel Review and Troubleshooting
 ===============================================
 
 Channel Review and Troubleshooting
@@ -40,7 +40,7 @@ Upstream Channel Boundary with an Inflow Node.*
 *Figure 75.
 Downstream Channel Boundary with an Outflow Node.*
 
-Cross-sections
+Cross-Sections
 --------------
 
 Check the cross-section placement.
@@ -225,7 +225,7 @@ Review the interior grid elements (Figure 90).
 *Figure 90.
 Interior Channel Nodes Example.*
 
-Check files
+Check Files
 -----------
 
 ChanBankEl.chk (Figure 91) lists the differences between the channel cross-section and the left or right bank grid elevation.
@@ -373,7 +373,7 @@ If the file reported grid elements that should not be super critical, check the 
 
 - Improving transitional cross-sections with better interpolations.
 
-Overbank flow
+Overbank Flow
 -------------
 
 If there is no overbank flow, OVERBANK.OUT will be empty or it will not exist.
@@ -426,7 +426,7 @@ Here are two easy ones:
     *Figure 103.
     Channel Profile Example.*
 
-XSECAREA
+Xsecarea
 --------
 
 This is about the same as the Transitions above.
@@ -441,7 +441,7 @@ Find this in the XSECAREA.OUT file or by using the Profiles.exe program.
 *Figure 104.
 XsecArea.out Example.*
 
-CHANMAX
+Chanmax
 -------
 
 CHANMAX.OUT (Figure 105) is a useful file that lists the maximum discharge, maximum water surface elevation, and respective times for each of those.

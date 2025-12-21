@@ -1,9 +1,9 @@
 .. vim: syntax=rst
 
-Chapter 5: OUTPUT FILES AND OPTIONS
+Chapter 5: Output Files and Options
 ===================================
 
-BASIC GUIDELINES FOR USING OUTPUT FILES.
+Basic Guidelines for Using Output Files.
 -----------------------------------------
 
 During the flood simulation, the user has two choices for viewing the model flood progression:

@@ -3,7 +3,7 @@
 
 .. _mudflow_guidelines:
 
-SIMULATING MUDFLOW GUIDELINES
+Simulating Mudflow Guidelines
 =============================
 
 Introduction

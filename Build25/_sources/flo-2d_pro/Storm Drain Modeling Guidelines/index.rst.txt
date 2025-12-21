@@ -2,7 +2,7 @@
 .. _sdguidelines:
 
 =================================
-STORM DRAIN MODELING GUIDELINES
+Storm Drain Modeling Guidelines
 =================================
 
 .. toctree::

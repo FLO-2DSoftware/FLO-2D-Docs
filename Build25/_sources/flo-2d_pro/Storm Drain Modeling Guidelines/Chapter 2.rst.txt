@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 2: FLO-2D STORM DRAIN FEATURES
+CHAPTER 2: FLO-2D Storm Drain Features
 =======================================
 
 Overview of Inlets and Outfalls

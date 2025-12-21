@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 3. FLO-2D MODEL SYSTEM
+Chapter 3. FLO-2D Model System
 ==============================
 
 Assumptions and Special Conditions
@@ -109,6 +109,8 @@ Entire channel reaches must aggrade or degrade to significantly affect the area 
 This is the reason that FEMA FIS river studies typically do not require sediment transport analyses.
 Simulating a mobile bed can be more important for smaller floods, for alluvial fan flows and where channel avulsion or sediment deposition might
 change the flow path.
+
+.. _grid-element-size:
 
 Grid Element Size
 ---------------------

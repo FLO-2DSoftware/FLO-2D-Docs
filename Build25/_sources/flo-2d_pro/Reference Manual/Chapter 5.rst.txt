@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 5. FLO-2D PROJECT APPLICATIONS
+Chapter 5. FLO-2D Project Applications
 ======================================
 
 The FLO-2D website https://flo-2d.com has numerous webinars, video animations of predicted flooding,
@@ -125,7 +125,7 @@ the hydrograph.
 The bulked sediment hydrograph is tracked through system conserving volume for both water and sediment.
 Flow cessation and flow dilution are possible outcomes of the mudflow routing.
 
-5.4 Urban Flooding
+Urban Flooding
 ------------------
 
 One of the primary applications of the FLO-2D model is urban flood hazard delineation.
@@ -633,4 +633,3 @@ of the coefficients may be necessary.
 An adjustment factor to raise or lower the computed sluice gate or orifice coefficient is available
 as data input parameter.
 The user has complete control of all the coefficients utilized in the bridge routine for all flow regimes.
-

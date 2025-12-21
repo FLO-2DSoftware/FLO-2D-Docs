@@ -1,9 +1,9 @@
 .. vim: syntax=rst
 
-CHAPTER 1: FLO-2D INSTALLATION AND GETTING STARTED
+Chapter 1: FLO-2D Installation and Getting Started
 ===================================================
 
-GENERAL
+General
 -------
 
 Use this document to help create the FLO-2D input data and review the output data.
@@ -17,27 +17,31 @@ QGIS facilitates assigning spatially variable data that can be interpolated from
 PROFILES is used to edit channel geometry data.
 Data files can also be edited using an ASCII text editor such as UltraEdit© or NotePad++©.
 
-FLO-2D INSTALLATION
+FLO-2D Installation
 --------------------
 
-The FLO-2D Pro model has been compiled for 64-bit multi-core processor computers.
-It cannot be run on a 32-bit computer.
-Recommended minimum computer requirements are at least 4 GB RAM.
-To install the FLO-2D on the computer hard drive, unzip the installation file and double click the file FLO-2D- PRO-Setup.exe file.
-Follow the installation instructions as they appear in the dialog boxes on the screen.
-The default directory is C:\\PROGRAM FILES(x86)\\FLO-2D PRO.
-The FLO-2D model, and the processor programs are loaded into the FLO-2D Pro folder.
-The FLO-2D resource files are saved to the FLO-2D Documentation folder under C:\\Users\\Public\\Public Documents\\FLO-2D PRO Documentation.
-These files include helpful resources such as user manuals, example projects, lessons and PowerPoint presentations and instructional handouts.
+The FLO-2D Pro model is compiled for **64-bit, multi-core computers** and cannot be run on a 32-bit system. The recommended minimum system requirement is **8 GB of RAM**.
 
-UN-INSTALLING THE FLO-2D SOFTWARE
+To install FLO-2D Pro, unzip the installation package and double-click **FLO-2D-PRO-Setup.exe**. Follow the installation prompts as they appear on the screen. By default, the software is installed in::
+
+   C:\Program Files (x86)\FLO-2D Pro
+
+The FLO-2D model and processor programs are installed in the *FLO-2D Pro* directory. Supporting resource files are installed in the *FLO-2D Documentation* folder located at::
+
+   C:\Users\Public\Public Documents\FLO-2D Pro Documentation
+
+The documentation folder contains user manuals, example projects, lessons, PowerPoint presentations, and other instructional materials.
+
+Get :ref:`Installation Instructions<flo-2d-pro-installation-instructions>`.
+
+Un-installing the FLO-2D Software
 ---------------------------------
 
 Remove the FLO-2D program and all of its attendant software from the computer with the Windows system Add Remove Programs tool.
 When removing the model, if the option appears to keep shared DLL/OCX files, do not remove them from the computer.
 To completely remove the FLO-2D files, delete the FLO-2D Pro Folder from the Program Files (x86).
 
-GETTING STARTED
+Getting Started
 ----------------
 
 **Updates**
@@ -54,7 +58,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Handouts.
 Tutorials and training videos are available for the FLO-2D Plugin.
 The Plugin is the recommended data editor.
 
-C:\\users\\public\\public documents\\flo-2d pro documentation https://documentation.flo-2d.com
+:ref:`Tutorials<tutorials-index>`.
 
 **Seeking Assistance – Technical Support**
 
@@ -142,6 +146,8 @@ The closer Q\ :sub:`peak`/A\ :sub:`surf` is to 3.0 cfs/ft\ :sup:`2` (0.1 cms/m\ 
 If the Q\ :sub:`peak`/A\ :sub:`surf` is much greater than 10.0 cfs/ft\ :sup:`2` or 0.3 cms/m\ :sup:`2`, the model will run more slowly (See table 1.1).
 After the grid element size has been selected, proceed with establishing the grid system using the QGIS/FLO-2D Plugin.
 There are QGIS workshop lessons to assist in getting started on a new project.
+
+:ref:`Grid Element Size<grid-element-size>`
 
 
 *Table 1.1.
@@ -258,7 +264,7 @@ Things to check when creating the data files:
        Outflow nodes should not be doubled up.
        Use a single line of outflow nodes.
 
-MODEL COMPONENT CONSIDERATIONS
+Model Component Considerations
 ----------------------------------
 
 **Channel Modeling**
@@ -268,7 +274,8 @@ The flow shares between the channel banks and the floodplain.
 Channels are defined in FLO-2D whenever 1-D flow is more accurate than overland flow.
 They can reduce flooding and help the water move downstream quicker than flow on the floodplain.
 An extensive Channel Guidelines document is available in the Manuals Folder.
-C:\\users\\Public\\Public Documents\\FLO-2D Pro Documentation\\flo_help\\Manuals.
+
+:ref:`FLO-2D Channel Guidelines<channel-modeling-guidelines>`
 
 **Street Flow**
 
@@ -285,7 +292,8 @@ Levees are assigned to grid element boundaries with a crest elevations.
 Levee failure can include piping, overtopping and collapse.
 There is a levee and dam erosion component in FLO-2D.
 An extensive Levee, Dam, and Wall Breach document is available in the Manuals folder.
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Manuals\\Levee Dam and Wall Breach Guidelines.pdf
+
+:ref:`FLO-2D Levee, Dam and Wall Breach Guidelines<levee-dam-wall-breach-guidelines>`
 
 **Rainfall and Infiltration on Alluvial Fans**
 
@@ -304,4 +312,4 @@ For concentrations less than 20% by volume, the flow will behave like a water fl
 The primary effect of increasing the sediment concentration, in this case, is to bulk the flow volume.
 Simulating Mudflow Guidelines is available in the Handouts folder.
 
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Handouts\\ Simulating Mudflow Guidelines.pdf.
+:ref:`FLO-2D Mudflow Guidelines<mudflow_guidelines>`

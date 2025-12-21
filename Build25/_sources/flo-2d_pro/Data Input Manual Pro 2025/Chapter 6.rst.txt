@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 6: POST-PROCESSOR PROGRAMS
+Chapter 6: Post-processor Programs
 ==================================
 
 There are four post-processor programs: FLO-2D MapCrafter, MAXPLOT, HYDROG and PROFILES that display the output data graphically.
@@ -289,4 +289,3 @@ computed water surface and cumulative difference between the surveyed and comput
     ...
     </pre>
     </div>
-

@@ -1,3 +1,5 @@
+.. _flo-2d-pro-installation-instructions:
+
 FLO-2D Pro Installation Instructions
 ======================================
 

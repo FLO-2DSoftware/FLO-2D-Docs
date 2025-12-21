@@ -1,16 +1,16 @@
 .. vim: syntax=rst
 
-CHAPTER 3: PRE-PROCESSOR PROGRAMS
+Chapter 3: Pre-processor Programs
 =================================
 
-INTRODUCTION
+Introduction
 -------------
 
 There are two pre-processor programs to help to create or edit the FLO-2D data files: QGIS Plugin, and PROFILES.
 Tutorials and workshop lessons for some of the programs’ functions are available in the FLO-2D/flo_help subdirectory.
 A discussion of the commands in the PROFILES program is included in this manual.
 
-QGIS FLO-2D PLUGIN
+QGIS FLO-2D Plugin
 ------------------
 
 The FLO-2D Plugin for Quantum Geographical Interface System (QGIS) is a program developed to generate FLO-2D data files using QGIS.
@@ -35,7 +35,7 @@ In addition, there are a number of GDS tutorials and workshop lessons that are a
 The tutorial and GDS/Mapper installer are in the Sharefile FLO-2D Pro Update folder.
 A Sharefile account is given to all end users and IT Admin.
 
-PROFILES
+Profiles
 --------
 
 The PROFILES processor program displays the channel slope and permits interactive adjustment of the channel
@@ -133,4 +133,3 @@ use the ‘Interpolate Segment Slope/Shape’ menu option as follows:
 
     .. note::
        Perform the initial channel interpolation of the cross-sections automatically with the FLO-2D plugin.
-

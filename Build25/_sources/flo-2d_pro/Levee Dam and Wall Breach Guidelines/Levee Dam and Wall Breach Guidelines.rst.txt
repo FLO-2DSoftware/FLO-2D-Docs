@@ -1,6 +1,8 @@
 .. vim: syntax=rst
 
-LEVEE DAM AND WALL BREACH GUIDELINES
+.. _levee-dam-wall-breach-guidelines:
+
+Levee Dam and Wall Breach Guidelines
 =====================================
 
 Levee Overview

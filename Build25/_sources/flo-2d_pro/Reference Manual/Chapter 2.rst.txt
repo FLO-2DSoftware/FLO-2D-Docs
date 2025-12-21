@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 2. FLO-2D MODEL THEORY
+Chapter 2. FLO-2D Model Theory
 ==============================
 
 FLO-2D is a simple volume conservation model.
