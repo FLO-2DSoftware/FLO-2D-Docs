@@ -58,8 +58,10 @@
 <li class="toctree-l2"><a class="reference internal" href="FLO-2D%20Pro.html">FLO-2D Pro Installation Instructions</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">QGIS and FLO-2D Plugin Install Instructions</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#step-1-qgis-installation">Step 1: QGIS Installation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-2-flo-2d-plugin">Step 2: FLO-2D Plugin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#step-3-additional-plugins">Step 3: Additional Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-qgis-setup-profile">Step 2: QGIS Setup Profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-install-flo-2d-plugin">Step 3: Install FLO-2D Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-recommended-plugins">Step 4: Recommended Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-older-flo-2d-plugins-not-required">Setup Older FLO-2D Plugins (Not Required)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="GDS%20and%20Mapper%20Install%20Instructions.html">GDS - Mapper Install Instructions</a></li>
@@ -229,16 +231,16 @@ Click the <strong>Skip</strong> button to select the latest version for installa
 </a>
 </div>
 </details></section>
-<section id="step-2-flo-2d-plugin">
-<h2>Step 2: FLO-2D Plugin<a class="headerlink" href="#step-2-flo-2d-plugin" title="Link to this heading"></a></h2>
-<p id="flo2d-plugin-step">Setup QGIS and install the FLO-2D Plugin.</p>
+<section id="step-2-qgis-setup-profile">
+<h2>Step 2: QGIS Setup Profile<a class="headerlink" href="#step-2-qgis-setup-profile" title="Link to this heading"></a></h2>
+<p id="flo2d-plugin-step">Build a QGIS User Profile by following these steps:</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>This step should be performed by the End User.  If it is done on an Admin account, the profile will only be
-available on that account.</p>
+available on the Admin account.</p>
 </div>
 <ol class="arabic simple">
-<li><p>Open QGIS.</p></li>
+<li><p>Open QGIS. Any version newer than 3.30 should work.</p></li>
 </ol>
 <a class="bordered-img reference internal image-reference" href="../_images/Worksh002.png"><img alt="../_images/Worksh002.png" class="bordered-img" src="../_images/Worksh002.png" style="width: 600px;" />
 </a>
@@ -250,50 +252,105 @@ available on that account.</p>
 <ol class="arabic simple" start="3">
 <li><p>Click the <strong>CRS</strong> tab and set the options shown below.</p></li>
 </ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This step is critical for the FLO-2D Plugin to function properly.</p>
+</div>
 <a class="bordered-img reference internal image-reference" href="../_images/image1414.png"><img alt="../_images/image1414.png" class="bordered-img" src="../_images/image1414.png" style="width: 600px;" />
 </a>
-<ol class="arabic" start="4">
-<li><p>Get the Plugin.</p>
-<a href="https://flo-2d.com/qgis-plugin/" target="_blank" rel="noopener noreferrer">Download FLO-2D Plugin</a></li>
-<li><p>Navigate to the Plugin Manager.</p></li>
+</section>
+<section id="step-3-install-flo-2d-plugin">
+<h2>Step 3: Install FLO-2D Plugin<a class="headerlink" href="#step-3-install-flo-2d-plugin" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Restart QGIS at the conclusion of Step 3 to <strong>Save</strong> the User Profile.</p>
+</div>
+<ol class="arabic">
+<li><p>Add the FLO-2D Plugin Repository. Copy this link to the clipboard. Ctrl-C.</p>
+<p><code class="docutils literal notranslate"><span class="pre">https://flo-2dsoftware.github.io/FLO-2D-Plugins/plugins.xml</span></code></p>
+</li>
+<li><p>Open to the Plugin Manager and Find the Settings tab.</p></li>
+<li><p>Click the Add button to add the FLO-2D Plugin Repository.</p></li>
 </ol>
-<a class="bordered-img reference internal image-reference" href="../_images/image108.png"><img alt="../_images/image108.png" class="bordered-img" src="../_images/image108.png" style="width: 600px;" />
+<a class="bordered-img reference internal image-reference" href="../_images/qgisplugin001.png"><img alt="../_images/qgisplugin001.png" class="bordered-img" src="../_images/qgisplugin001.png" style="width: 600px;" />
 </a>
-<ol class="arabic" start="6">
-<li><p>Install the Plugin.</p>
-<p>Click the <strong>Install from ZIP</strong> tab → Browse to the downloaded ZIP file → <strong>Install Plugin</strong>.</p>
+<ol class="arabic simple" start="4">
+<li><p>Fill the form with the repository URL and click OK.</p></li>
+</ol>
+<a class="bordered-img reference internal image-reference" href="../_images/qgisplugin002.png"><img alt="../_images/qgisplugin002.png" class="bordered-img" src="../_images/qgisplugin002.png" style="width: 600px;" />
+</a>
+<ol class="arabic" start="5">
+<li><p>Install the FLO-2D Plugins.</p>
+<p>Switch to the All Plugins tab and filter the list with “FLO-2D”.</p>
+<p>Install the following plugins:</p>
 </li>
 </ol>
-<a class="bordered-img reference internal image-reference" href="../_images/image12a.png"><img alt="../_images/image12a.png" class="bordered-img" src="../_images/image12a.png" style="width: 600px;" />
+<a class="bordered-img reference internal image-reference" href="../_images/qgisplugin003.png"><img alt="../_images/qgisplugin003.png" class="bordered-img" src="../_images/qgisplugin003.png" style="width: 600px;" />
 </a>
 </section>
-<section id="step-3-additional-plugins">
-<h2>Step 3: Additional Plugins<a class="headerlink" href="#step-3-additional-plugins" title="Link to this heading"></a></h2>
+<section id="step-4-recommended-plugins">
+<h2>Step 4: Recommended Plugins<a class="headerlink" href="#step-4-recommended-plugins" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>These recommended plugins can be installed from the <strong>All Plugins</strong> menu:</p>
+<li><p>These additional plugins are helpful for FLO-2D Model Development.</p></li>
+<li><p>These plugins can be installed from the <strong>All Plugins</strong> menu:</p>
 <ul class="simple">
-<li><p>FLO-2D Rasterizor</p></li>
-<li><p>FLO-2D MapCrafter</p></li>
 <li><p>Quick Map Services</p></li>
 <li><p>Profile Tool</p></li>
 <li><p>Curve Number Generator</p></li>
+<li><p>Manning’s Roughness Generator</p></li>
+<li><p>Street View</p></li>
+<li><p>QuickOSM</p></li>
 </ul>
 </li>
 </ol>
-<a class="bordered-img reference internal image-reference" href="../_images/image1112.png"><img alt="../_images/image1112.png" class="bordered-img" src="../_images/image1112.png" style="width: 600px;" />
+<a class="bordered-img reference internal image-reference" href="../_images/qgisplugin004.png"><img alt="../_images/qgisplugin004.png" class="bordered-img" src="../_images/qgisplugin004.png" style="width: 600px;" />
 </a>
-<ol class="arabic" start="2">
+<ol class="arabic" start="3">
 <li><p>Quick Map Services requires an additional step.</p>
 <p>Click the QMS icon → Settings → More Services → <strong>Get Contributed Pack</strong>.</p>
 </li>
 </ol>
 <a class="bordered-img reference internal image-reference" href="../_images/image15.gif"><img alt="../_images/image15.gif" class="bordered-img" src="../_images/image15.gif" style="width: 600px;" />
 </a>
-<p>This concludes the installation and setup.
+<p>This concludes the installation and setup.  Please restart QGIS to save the profile.
 Tutorial data is located here:</p>
 <p><code class="docutils literal notranslate"><span class="pre">C:\Users\Public\Documents\FLO-2D</span> <span class="pre">PRO</span> <span class="pre">Documentation\Example</span> <span class="pre">Projects\QGIS</span> <span class="pre">Tutorials</span></code></p>
 <a class="bordered-img reference internal image-reference" href="../_images/image94.png"><img alt="../_images/image94.png" class="bordered-img" src="../_images/image94.png" style="width: 600px;" />
 </a>
+</section>
+<section id="setup-older-flo-2d-plugins-not-required">
+<h2>Setup Older FLO-2D Plugins (Not Required)<a class="headerlink" href="#setup-older-flo-2d-plugins-not-required" title="Link to this heading"></a></h2>
+<p>Older versions of the FLO-2D Plugin can be downloaded from the following link:</p>
+<blockquote>
+<div><a href="https://flo-2d.com/qgis-plugin/" target="_blank" rel="noopener noreferrer">Download FLO-2D Plugin</a></div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A dedicated QGIS User Profile is recommended when working with older versions of the FLO-2D Plugin.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Open QGIS and access the <strong>Settings</strong> menu.</p></li>
+<li><p>Select <strong>New Profile</strong>.</p></li>
+</ol>
+<a class="bordered-img reference internal image-reference" href="../_images/qgisplugin005.png"><img alt="../_images/qgisplugin005.png" class="bordered-img" src="../_images/qgisplugin005.png" style="width: 600px;" />
+</a>
+<ol class="arabic simple" start="3">
+<li><p>QGIS loads in a default state. All required settings must be configured for the new profile.</p></li>
+</ol>
+<a class="bordered-img reference internal image-reference" href="../_images/qgisplugin006.png"><img alt="../_images/qgisplugin006.png" class="bordered-img" src="../_images/qgisplugin006.png" style="width: 600px;" />
+</a>
+<ol class="arabic simple" start="4">
+<li><p>Add the required previous build of the FLO-2D Plugin by opening the <strong>Plugin Manager</strong>.</p></li>
+<li><p>Select the <strong>Install from ZIP</strong> tab.</p></li>
+<li><p>Navigate to the downloaded ZIP file and select the plugin.</p></li>
+<li><p>Accept the security warning when prompted.</p></li>
+</ol>
+<a class="bordered-img reference internal image-reference" href="../_images/qgisplugin007.png"><img alt="../_images/qgisplugin007.png" class="bordered-img" src="../_images/qgisplugin007.png" style="width: 600px;" />
+</a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The FLO-2D plugin toolbar now reflects version 0.10.115.</p>
+</div>
+<p>Return to <a class="reference internal" href="#flo2d-plugin-step"><span class="std std-ref">Step 2</span></a> to complete the QGIS setup and install any additional required plugins.</p>
 </section>
 </section>
 
