@@ -277,39 +277,41 @@ Tutorial data is located here:
    :width: 600px
    :class: bordered-img
 
-Step 4: Setup Older FLO-2D Plugins
------------------------------------
+Setup Older FLO-2D Plugins (Optional)
+------------------------------------
 
-If you need to use an older version of the FLO-2D Plugin, you can download it from the following link:
+Older versions of the FLO-2D Plugin can be downloaded from the following link:
 
    .. raw:: html
 
       <a href="https://flo-2d.com/qgis-plugin/" target="_blank" rel="noopener noreferrer">Download FLO-2D Plugin</a>
 
-.. note:: Build a unique QGIS User Profile for older versions of the software.
+.. note::
+   A dedicated QGIS User Profile is recommended when working with older versions of the FLO-2D Plugin.
 
-1. Open QGIS find the Setting Menu.
-2. Click New Profile.
+1. Open QGIS and access the **Settings** menu.
+2. Select **New Profile**.
 
 .. image:: img/Instructions/qgisplugin005.png
    :width: 600px
    :class: bordered-img
 
-3. QGIS will load in a Default State.  All previously configured settings must be built.
+3. QGIS loads in a default state. All required settings must be configured for the new profile.
 
 .. image:: img/Instructions/qgisplugin006.png
    :width: 600px
    :class: bordered-img
 
-4. Start by adding the FLO-2D Plugin previous build.  Load the Plugin Manager.
-5. Use the Install from Zip Tab.
-6. Navigate to the zipped file and select the plugin.
-7. Accept the Security Warning.
+4. Add the required previous build of the FLO-2D Plugin by opening the **Plugin Manager**.
+5. Select the **Install from ZIP** tab.
+6. Navigate to the downloaded ZIP file and select the plugin.
+7. Accept the security warning when prompted.
 
 .. image:: img/Instructions/qgisplugin007.png
    :width: 600px
    :class: bordered-img
 
-.. note:: The FLO-2D plugin toolbar now contains the 0.10.115 version of the Plugin.
+.. note::
+   The FLO-2D plugin toolbar now reflects version 0.10.115.
 
-Return to :ref: `Step 2. <flo2d_plugin_step>` and finish the QGIS setup and add additional plugins.
+Return to :ref:`Step 2 <flo2d_plugin_step>` to complete the QGIS setup and install any additional required plugins.
