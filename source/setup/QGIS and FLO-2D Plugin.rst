@@ -278,7 +278,7 @@ Tutorial data is located here:
    :class: bordered-img
 
 Setup Older FLO-2D Plugins (Optional)
-------------------------------------
+---------------------------------------
 
 Older versions of the FLO-2D Plugin can be downloaded from the following link:
 
