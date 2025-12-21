@@ -99,51 +99,159 @@ but can still be used).
 Test Table
 ----------------
 
-**DAT File Organization by Functional Group**
+**DAT File Map by Section**
 
 .. list-table::
-   :widths: 25 25 50
+   :widths: 25 35 35
    :header-rows: 1
 
    * - Section
      - File
-     - Reference
+     - 
 
    * - **General**
-     - CONT.DAT
      - :ref:`CONT.DAT <file-cont-dat>`
-
-   * -
-     - TOLER.DAT
      - :ref:`TOLER.DAT <file-toler-dat>`
 
    * -
-     - EVAPOR.DAT
-     - :ref:`EVAPOR.DAT <file-evapor-dat>`
+     - :ref:`FPXSEC.DAT <file-fpxsec-dat>`
+     - 
+
+   * -
+     - 
+     - 
 
    * - **Grid**
-     - TOPO.DAT
-     - :ref:`TOPO.DAT <file-topo-dat>`
-
-   * -
-     - FPLAIN.DAT
      - :ref:`FPLAIN.DAT <file-fplain-dat>`
+     - :ref:`OUTRC.DAT <file-outrc-dat>`
 
    * -
-     - CHANBANK.DAT
+     - :ref:`MANNINGS_N.DAT <file-mannings_n-dat>`
+     - 
+
+   * -
+     - :ref:`TOPO.DAT <file-topo-dat>`
+     - 
+
+   * -
+     - 
+     - 
+
+   * - **2D**
+     - :ref:`ARF.DAT <file-arf-dat>`
+     - :ref:`FPFROUDE.DAT <file-fpfroude-dat>`
+
+   * -
+     - :ref:`MULT.DAT <file-mult-dat>`
+     - :ref:`SHALLOWN_SPATIAL.DAT <file-shallown_spatial-dat>`
+
+   * -
+     - :ref:`SIMPLE_MULT.DAT <file-simple_mult-dat>`
+     - :ref:`TOLSPATIAL.DAT <file-tolspatial-dat>`
+
+   * -
+     - :ref:`LID_VOLUME.DAT <file-lid_volume-dat>`
+     - :ref:`STEEP_SLOPEN.DAT <file-steep_slopen-dat>`
+
+   * -
+     - :ref:`BUILDING_COLLAPSE.DAT <file-building_collapse-dat>`
+     - 
+
+   * -
+     - 
+     - 
+
+   * - **1D**
+     - :ref:`CHAN.DAT <file-chan-dat>`
+     - :ref:`HYSTRUC.DAT <file-hystruc-dat>`
+
+   * -
      - :ref:`CHANBANK.DAT <file-chanbank-dat>`
+     - :ref:`SUBMERGE_FACTOR.DAT <file-submerge_factor-dat>`
+
+   * -
+     - :ref:`XSEC.DAT <file-xsec-dat>`
+     - :ref:`STREET.DAT <file-street-dat>`
+
+   * -
+     - :ref:`CHAN_INTERIOR_NODES.DAT <file-chan_interior_nodes-dat>`
+     - :ref:`BRIDGE_XSEC.DAT <file-bridge_xsec-dat>`
+
+   * -
+     - 
+     - 
 
    * - **Hydrology**
-     - RAIN.DAT
      - :ref:`RAIN.DAT <file-rain-dat>`
-
-   * -
-     - INFIL.DAT
      - :ref:`INFIL.DAT <file-infil-dat>`
 
    * -
-     - INFLOW.DAT
+     - :ref:`RAINCELL.DAT <file-raincell-dat>`
+     - :ref:`EVAPOR.DAT <file-evapor-dat>`
+
+   * -
+     - :ref:`FLO2DRAINCELL.DAT <file-flo2draincell-dat>`
+     - 
+
+   * -
+     - :ref:`RAINCELLRAW.DAT <file-raincellraw-dat>`
+     - 
+
+   * -
+     - 
+     - 
+
+   * - **Boundary**
      - :ref:`INFLOW.DAT <file-inflow-dat>`
+     - :ref:`OUTFLOW.DAT <file-outflow-dat>`
+
+   * -
+     - :ref:`MULTDOMAIN.DAT <file-multdomain-dat>`
+     - 
+
+   * -
+     - 
+     - 
+
+   * - **Storm Drain**
+     - :ref:`SWMMFLO.DAT <file-swmmflo-dat>`
+     - :ref:`SDCLOGGING.DAT <file-sdclogging-dat>`
+
+   * -
+     - :ref:`SWMMFLORT.DAT <file-swmmflort-dat>`
+     - :ref:`SWMMFLODROPBOX.DAT <file-swmmflodropbox-dat>`
+
+   * -
+     - :ref:`SWMMOUTF.DAT <file-swmmoutf-dat>`
+     - :ref:`GUTTER.DAT <file-gutter-dat>`
+
+   * -
+     - 
+     - 
+
+   * - **Dam and Levee**
+     - :ref:`LEVEE.DAT <file-levee-dat>`
+     - :ref:`TAILINGS.DAT <file-tailings-dat>`
+
+   * -
+     - :ref:`BREACH.DAT <file-breach-dat>`
+     - :ref:`TAILINGS_CV.DAT <file-tailings_cv-dat>`
+
+   * -
+     - :ref:`SED.DAT <file-sed-dat>`
+     - :ref:`TAILINGS_STACK_DEPTH.DAT <file-tailings_stack_depth-dat>`
+
+   * -
+     - 
+     - 
+
+   * - **Calibration**
+     - :ref:`WSURF.DAT <file-wsurf-dat>`
+     - :ref:`TIMDEPCELL.DAT <file-timdepcell-dat>`
+
+   * -
+     - :ref:`WSTIME.DAT <file-wstime-dat>`
+     - 
 
 
 File Links
