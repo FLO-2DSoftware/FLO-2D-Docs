@@ -1,8 +1,6 @@
 name: Build and publish multiversion documentation
 
 on:
-  push:
-    branches: [ main, Build* ]
   workflow_dispatch:
 
 jobs:
