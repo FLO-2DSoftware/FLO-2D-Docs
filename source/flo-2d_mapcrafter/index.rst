@@ -10,6 +10,8 @@ simulations, aiding in risk management. The plugin also streamlines the
 QGIS layout manager process by automatically generating templates for
 easy customization.
 
+.. image:: img/mapcrafter.jpg
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
