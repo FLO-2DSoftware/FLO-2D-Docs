@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-FLO-2D FLO Runner
+FLO-2D FLORunner
 =====================================
 
 FLORunner is a lightweight application that simplifies running multiple FLO-2D simulation projects. It streamlines your workflow, reduces manual effort, and lets you focus on analyzing results instead of managing files.
