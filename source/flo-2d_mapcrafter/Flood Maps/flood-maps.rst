@@ -10,7 +10,8 @@ Site Characteristics
 
 Static layers describing the physical and geometric properties of the model domain. These maps provide the terrain framework that governs flood routing and inundation patterns.
 
-**Ground elevation**
+Ground elevation
+~~~~~~~~~~~~~~~~
 
 :math:`\qquad` ``TOPO.DAT`` - Grid element, x- and y-coordinates, and
 their elevations (ft or m).
@@ -20,12 +21,14 @@ Basic
 
 Primary hydraulic outputs directly computed by FLO-2D. These layers describe fundamental flood conditions such as depth, velocity, and water surface elevation.
 
-**Maximum Depth**
+Maximum Depth
+~~~~~~~~~~~~~
 
 :math:`\qquad` ``DEPTH.OUT`` - Maximum combined channel/floodplain flow
 depths (ft or m).
 
-**Maximum Velocity**
+Maximum Velocity
+~~~~~~~~~~~~~~~~
 
 :math:`\qquad` ``VELFP.OUT`` - Maximum floodplain flow velocity (ft/s or
 m/s).
