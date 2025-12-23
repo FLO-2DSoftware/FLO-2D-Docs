@@ -32,4 +32,3 @@ Installation Steps
 
 .. figure:: img/flo_runner_install.png
    :align: center
-   :width: 200pt

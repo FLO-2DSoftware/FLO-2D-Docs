@@ -1,3 +1,6 @@
-Setting up multiple domain connectivity
+Multiple domain connectivity
 ========================================
 
+
+.. figure:: img/connectivity.png
+   :align: center
