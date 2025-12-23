@@ -7,6 +7,8 @@ description of flooding scenarios for enhanced analysis.
 Site Characteristics
 --------------------
 
+Static layers defining the physical and geometric properties of the model domain. These maps provide the terrain framework controlling both fluid and solid phase movement.
+
 Ground elevation
 ~~~~~~~~~~~~~~~~
 
@@ -15,6 +17,8 @@ their elevations (ft or m).
 
 Basic
 -----
+
+Primary outputs from two phase simulations. These layers describe floodplain flow, mudflow behavior, sediment concentration, and combined depth conditions resulting from phase interaction.
 
 Maximum Flood Depth
 ~~~~~~~~~~~~~~~~~~~
@@ -79,6 +83,8 @@ mudflow maximum flow depths. Floodplain fluid or mudflow max depth
 Derived
 -------
 
+Secondary metrics computed from two phase hydraulic results. These layers combine depth and velocity to represent overall hazard intensity from coupled fluid and sediment processes.
+
 Depth x Velocity
 ~~~~~~~~~~~~~~~~
 
@@ -87,6 +93,8 @@ each floodplain element (ft²/s or m²/s).
 
 Time
 ----
+
+Time based indicators showing when critical two phase conditions occur. These maps support analysis of flood and mudflow onset, peak interaction, and temporal evolution.
 
 Time to 1 ft (0.3 m)
 ~~~~~~~~~~~~~~~~~~~~
@@ -108,6 +116,8 @@ maximum depth (hrs).
 
 Channel
 -------
+
+Hydraulic results specific to channel elements under two phase flow conditions. These maps describe channel response to combined fluid and sediment transport.
 
 Maximum Channel Depth
 ~~~~~~~~~~~~~~~~~~~~~
@@ -134,6 +144,8 @@ or m/s).
 Structures
 ----------
 
+Outputs describing interaction between two phase flows and engineered structures. These layers support evaluation of levee performance under combined hydraulic and sediment loading.
+
 Levee Deficit
 ~~~~~~~~~~~~~
 
@@ -149,6 +161,8 @@ Definition:
 
 Mudflow
 -------
+
+Mudflow specific results extracted from two phase simulations. These layers describe mudflow depth, velocity, direction, and sediment concentration as a distinct phase.
 
 Maximum Mudflow Depth
 ~~~~~~~~~~~~~~~~~~~~~
@@ -204,6 +218,8 @@ Final Mudflow Velocity Vectors
 Sediment
 --------
 
+Sediment transport and bed change results associated with two phase simulations. These maps describe erosion, deposition, and net bed elevation change driven by coupled processes.
+
 Maximum Deposition
 ~~~~~~~~~~~~~~~~~~
 
@@ -221,6 +237,8 @@ Final Bed Difference
 
 Hydraulic
 ---------
+
+Advanced hydraulic force and energy metrics for two phase conditions. These layers quantify pressures and forces acting on structures under combined fluid and mudflow loading.
 
 Specific Energy
 ~~~~~~~~~~~~~~~

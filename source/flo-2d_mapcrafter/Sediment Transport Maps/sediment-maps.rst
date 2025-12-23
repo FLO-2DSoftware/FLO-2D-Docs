@@ -7,6 +7,8 @@ results from FLO-2D output files.
 Site Characteristics
 --------------------
 
+Static layers describing the physical and geometric properties of the model domain. These maps provide the topographic framework controlling hydraulic and sediment transport processes.
+
 Ground elevation
 ~~~~~~~~~~~~~~~~
 
@@ -15,6 +17,8 @@ their elevations (ft or m).
 
 Basic
 -----
+
+Primary hydraulic outputs that influence sediment movement. These layers describe flow conditions governing erosion, transport, and deposition.
 
 Maximum Depth
 ~~~~~~~~~~~~~
@@ -65,6 +69,8 @@ Final Velocity Vectors
 Derived
 -------
 
+Secondary metrics computed from hydraulic results. These layers combine depth and velocity to represent flow intensity relevant to sediment mobilization.
+
 Depth x Velocity
 ~~~~~~~~~~~~~~~~
 
@@ -73,6 +79,8 @@ each floodplain element (ft²/s or m²/s).
 
 Time
 ----
+
+Time based indicators showing when critical hydraulic conditions occur. These maps help relate sediment response to flood onset and peak flow conditions.
 
 Time to 1 ft (0.3 m)
 ~~~~~~~~~~~~~~~~~~~~
@@ -94,6 +102,8 @@ maximum depth (hrs).
 
 Channel
 -------
+
+Hydraulic conditions within channel elements. These maps support evaluation of channel conveyance and its influence on sediment transport and bed adjustment.
 
 Maximum Channel Depth
 ~~~~~~~~~~~~~~~~~~~~~
@@ -120,6 +130,8 @@ or m/s).
 Sediment
 --------
 
+Direct sediment transport and bed change results. These layers describe erosion, deposition, and net bed elevation change during the simulation.
+
 Maximum Deposition
 ~~~~~~~~~~~~~~~~~~
 
@@ -138,6 +150,8 @@ Final Bed Difference
 Structures
 ----------
 
+Outputs describing the interaction between sediment laden flows and engineered structures. These maps support assessment of structural performance under sediment loading.
+
 Levee Deficit
 ~~~~~~~~~~~~~
 
@@ -153,6 +167,8 @@ Definition:
 
 Hydraulic
 ---------
+
+Advanced hydraulic force and energy metrics. These layers quantify pressures and forces acting on structures under sediment influenced flow conditions.
 
 Specific Energy
 ~~~~~~~~~~~~~~~

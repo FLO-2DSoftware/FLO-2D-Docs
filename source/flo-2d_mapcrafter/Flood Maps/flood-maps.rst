@@ -8,6 +8,8 @@ flood scenarios.
 Site Characteristics
 --------------------
 
+Static layers describing the physical and geometric properties of the model domain. These maps provide the terrain framework that governs flood routing and inundation patterns.
+
 Ground elevation
 ~~~~~~~~~~~~~~~~
 
@@ -16,6 +18,8 @@ their elevations (ft or m).
 
 Basic
 -----
+
+Primary hydraulic outputs directly computed by FLO-2D. These layers describe fundamental flood conditions such as depth, velocity, and water surface elevation.
 
 Maximum Depth
 ~~~~~~~~~~~~~
@@ -66,6 +70,8 @@ Final Velocity Vectors
 Derived
 -------
 
+Secondary metrics calculated from basic hydraulic results. These layers combine multiple variables to better represent flood intensity and hazard potential.
+
 Depth x Velocity
 ~~~~~~~~~~~~~~~~
 
@@ -74,6 +80,8 @@ each floodplain element (ft²/s or m²/s).
 
 Time
 ----
+
+Time based indicators showing when critical flood conditions occur. These maps support emergency planning, warning systems, and analysis of flood onset and peak timing.
 
 Time to 1 ft (0.3 m)
 ~~~~~~~~~~~~~~~~~~~~
@@ -95,6 +103,8 @@ maximum depth (hrs).
 
 Channel
 -------
+
+Hydraulic results specific to channel elements. These maps are used to assess channel conveyance, capacity, and flow behavior during flooding.
 
 Maximum Channel Depth
 ~~~~~~~~~~~~~~~~~~~~~
@@ -121,6 +131,8 @@ or m/s).
 Structures
 ----------
 
+Outputs describing the interaction between floodwaters and engineered structures. These layers support evaluation of levee performance and overtopping risk.
+
 Levee Deficit
 ~~~~~~~~~~~~~
 
@@ -136,6 +148,8 @@ Definition:
 
 Hydraulic
 ---------
+
+Advanced hydraulic force and energy metrics. These layers quantify pressures, forces, and energy levels relevant to structural loading and damage assessment.
 
 Specific Energy
 ~~~~~~~~~~~~~~~

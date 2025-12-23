@@ -7,6 +7,8 @@ areas prone to mudflow events based on FLO-2D outputs.
 Site Characteristics
 --------------------
 
+Static layers describing the physical and geometric properties of the model domain. These maps provide the terrain framework governing mudflow routing, confinement, and accumulation.
+
 Ground elevation
 ~~~~~~~~~~~~~~~~
 
@@ -15,6 +17,8 @@ their elevations (ft or m).
 
 Basic
 -----
+
+Primary hydraulic outputs for mudflow simulations. These layers describe depth, velocity, and water surface conditions that control mudflow extent and momentum.
 
 Maximum Depth
 ~~~~~~~~~~~~~
@@ -65,6 +69,8 @@ Final Velocity Vectors
 Derived
 -------
 
+Secondary metrics calculated from basic mudflow hydraulic results. These layers combine depth and velocity to represent mudflow intensity and destructive potential.
+
 Depth x Velocity
 ~~~~~~~~~~~~~~~~
 
@@ -73,6 +79,8 @@ each floodplain element (ft²/s or m²/s).
 
 Time
 ----
+
+Time based indicators showing when critical mudflow conditions occur. These maps support analysis of mudflow onset, peak timing, and progression.
 
 Time to 1 ft (0.3 m)
 ~~~~~~~~~~~~~~~~~~~~
@@ -94,6 +102,8 @@ maximum depth (hrs).
 
 Channel
 -------
+
+Hydraulic conditions within channel elements during mudflow events. These maps are used to assess channel confinement and conveyance of debris laden flows.
 
 Maximum Channel Depth
 ~~~~~~~~~~~~~~~~~~~~~
@@ -120,6 +130,8 @@ or m/s).
 Mudflow
 -------
 
+Mudflow specific outputs describing sediment concentration and rheological behavior. These layers characterize the spatial distribution and evolution of mudflow material.
+
 Maximum Sediment Concentration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -134,6 +146,8 @@ concentration by volume (vsed/vtotal).
 
 Structures
 ----------
+
+Outputs describing the interaction between mudflows and engineered structures. These maps support evaluation of levee performance under mudflow loading.
 
 Levee Deficit
 ~~~~~~~~~~~~~
@@ -150,6 +164,8 @@ Definition:
 
 Hydraulic
 ---------
+
+Advanced hydraulic force and energy metrics. These layers quantify pressures, forces, and energy levels relevant to structural loading during mudflow events.
 
 Specific Energy
 ~~~~~~~~~~~~~~~
