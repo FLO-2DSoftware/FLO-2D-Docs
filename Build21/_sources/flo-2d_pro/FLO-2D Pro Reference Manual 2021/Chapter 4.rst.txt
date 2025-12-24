@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 4. MODEL COMPONENTS
+CHAPTER 4. MODEL COMPONENTS
 ===========================
 
 Model Features

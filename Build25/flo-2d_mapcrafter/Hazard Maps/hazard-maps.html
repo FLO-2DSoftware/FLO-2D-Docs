@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hazard Maps &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=6385869e" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>window.MathJax = {"tex": {"tags": "none", "useLabelIds": true}, "options": {"displayAlign": "right"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Storm Drain Plots" href="../Storm%20Drain%20Plots/storm-drain-plots.html" />
+    <link rel="prev" title="Velocity Vector Maps" href="../Velocity%20Vector%20Maps/velocity-vector-maps.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Gila for QGIS Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D MapCrafter</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Flood%20Maps/flood-maps.html">Flood maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sediment%20Transport%20Maps/sediment-maps.html">Sediment Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Mudflow%20Maps/mudflow-maps.html">Mudflow Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two-Phase%20Maps/two-phase-maps.html">Two-Phase Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Velocity%20Vector%20Maps/velocity-vector-maps.html">Velocity Vector Maps</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Hazard Maps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#australian-rainfall-runoff-arr">Australian Rainfall &amp; Runoff (ARR)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#flood-hazard-map">Flood Hazard Map</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#swiss">Swiss</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#flood-intensity-map">Flood Intensity Map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#debris-intensity-map">Debris Intensity Map</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#us-bureau-of-reclamation">US Bureau of Reclamation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#houses-hazard-map">Houses Hazard Map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mobile-home-hazard-map">Mobile Home Hazard Map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vehicle-hazard-map">Vehicle Hazard Map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adults-hazard-map">Adults Hazard Map</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#children-hazard-map">Children Hazard Map</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Storm%20Drain%20Plots/storm-drain-plots.html">Storm Drain Plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Layouts/layouts.html">Layouts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_florunner/index.html">FLO-2D FLORunner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">FLO-2D Gila Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D MapCrafter</a></li>
+      <li class="breadcrumb-item active">Hazard Maps</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/flo-2d_mapcrafter/Hazard Maps/hazard-maps.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="hazard-maps">
+<h1>Hazard Maps<a class="headerlink" href="#hazard-maps" title="Link to this heading"></a></h1>
+<p>Develops hydrodynamic risk maps, highlighting areas with elevated risks
+based on FLO-2D simulations, aiding in risk management.</p>
+<section id="australian-rainfall-runoff-arr">
+<h2>Australian Rainfall &amp; Runoff (ARR)<a class="headerlink" href="#australian-rainfall-runoff-arr" title="Link to this heading"></a></h2>
+<img alt="../../_images/haz_1.png" src="../../_images/haz_1.png" />
+<p>This hazard map is based on the <em>Australian Rainfall &amp; Runoff: A Guide
+to Flood Estimation (2019)</em>.</p>
+<section id="flood-hazard-map">
+<h3>Flood Hazard Map<a class="headerlink" href="#flood-hazard-map" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> H1: Generally safe for vehicles, people and buildings</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> H2: Unsafe for small vehicles</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> H3: Unsafe for vehicles, children and the elderly</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> H4: Unsafe for vehicles and people</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> H5: Unsafe for vehicles and people. All buildings
+vulnerable to structural damage. Some less robust buildings subject to
+failure</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> H6: Unsafe for vehicles and people. All building types
+considered vulnerable to failure</div>
+</div>
+</section>
+</section>
+<section id="swiss">
+<h2>Swiss<a class="headerlink" href="#swiss" title="Link to this heading"></a></h2>
+<img alt="../../_images/haz_2.png" src="../../_images/haz_2.png" />
+<p>These hazard maps are based on <em>Vademecum: Hazard maps and related
+instruments (2005)</em>.</p>
+<section id="flood-intensity-map">
+<h3>Flood Intensity Map<a class="headerlink" href="#flood-intensity-map" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> HIGH INTENSITY: Depth &gt; 2 m or Depth * Velocity &gt; 2
+m²/s</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> MODERATE INTENSITY: 0.5 &gt; Depth &gt; 2 m or 0.5 &gt; Depth *
+Velocity &gt; 2 m²/s</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> LOW INTENSITY: Depth &lt; 0.5 m or Depth * Velocity &lt; 0.5
+m²/s</div>
+</div>
+</section>
+<section id="debris-intensity-map">
+<h3>Debris Intensity Map<a class="headerlink" href="#debris-intensity-map" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> HIGH INTENSITY: Depth &gt; 1 m and Velocity &gt; 1 m/s</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> MODERATE INTENSITY: Depth &lt; 1 m or Velocity &lt; 1 m/s</div>
+</div>
+</section>
+</section>
+<section id="us-bureau-of-reclamation">
+<h2>US Bureau of Reclamation<a class="headerlink" href="#us-bureau-of-reclamation" title="Link to this heading"></a></h2>
+<img alt="../../_images/haz_3.png" src="../../_images/haz_3.png" />
+<p>These hazard maps are based on the <em>Downstream Hazard Classification
+Guidelines (1988)</em>.</p>
+<section id="houses-hazard-map">
+<h3>Houses Hazard Map<a class="headerlink" href="#houses-hazard-map" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> HIGH DANGER ZONE: Occupants of most houses are in
+danger from flood water</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> JUDGMENT ZONE: Danger level is based upon engineering
+judgment</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> LOW DANGER ZONE: Occupants of most houses are not
+seriously in danger from flood water</div>
+</div>
+</section>
+<section id="mobile-home-hazard-map">
+<h3>Mobile Home Hazard Map<a class="headerlink" href="#mobile-home-hazard-map" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> HIGH DANGER ZONE: Occupants of almost any size mobile
+home are in danger from flood water</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> JUDGMENT ZONE: Danger level is based upon engineering
+judgment</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> LOW DANGER ZONE: Occupants of almost any size mobile
+home are not seriously in danger from flood water</div>
+</div>
+</section>
+<section id="vehicle-hazard-map">
+<h3>Vehicle Hazard Map<a class="headerlink" href="#vehicle-hazard-map" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> HIGH DANGER ZONE: Occupants of almost any size
+passenger vehicle are in danger from flood water</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> JUDGMENT ZONE: Danger level is based upon engineering
+judgment</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> LOW DANGER ZONE: Occupants of almost any size passenger
+vehicle are not seriously in danger from flood water</div>
+</div>
+</section>
+<section id="adults-hazard-map">
+<h3>Adults Hazard Map<a class="headerlink" href="#adults-hazard-map" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> HIGH DANGER ZONE: Almost any size adult is in danger
+from flood water</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> JUDGMENT ZONE: Danger level is based upon engineering
+judgment</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> LOW DANGER ZONE: Almost any size adult is not seriously
+threatened by flood water</div>
+</div>
+</section>
+<section id="children-hazard-map">
+<h3>Children Hazard Map<a class="headerlink" href="#children-hazard-map" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> HIGH DANGER ZONE: Almost any size child is in danger
+from flood water</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> JUDGMENT ZONE: Danger level is based upon engineering
+judgment</div>
+<div class="line"><span class="math notranslate nohighlight">\(\qquad\)</span> LOW DANGER ZONE: Almost any size child (excluding
+infants) is not seriously threatened by flood water</div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Velocity%20Vector%20Maps/velocity-vector-maps.html" class="btn btn-neutral float-left" title="Velocity Vector Maps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Storm%20Drain%20Plots/storm-drain-plots.html" class="btn btn-neutral float-right" title="Storm Drain Plots" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="hazard-maps.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build21/index.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
