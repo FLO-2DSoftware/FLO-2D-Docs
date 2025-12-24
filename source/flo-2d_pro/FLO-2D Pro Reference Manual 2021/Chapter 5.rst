@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 5. FLO-2D PROJECT APPLICATIONS
+CHAPTER 5. FLO-2D PROJECT APPLICATIONS
 ======================================
 
 The FLO-2D website (`www.flo-2d.com) <http://www.flo-2d.com/>`__ has numerous webinars, video animations of predicted flooding, PowerPoint
