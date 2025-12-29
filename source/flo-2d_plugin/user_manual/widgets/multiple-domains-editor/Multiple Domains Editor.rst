@@ -132,7 +132,3 @@ Legacy Export Format
 
 .. image:: ../../img/multd-editor/multd014.png
 
-Under Construction
-----------------------
-At this time, the Multiple Domains tool is still under development.  All 2D parameters are complete and functional but 1D parameters are not yet implemented.  
-The Multiple Domains Editor will be updated in the for the December 2025 release to include 1D parameters.  
