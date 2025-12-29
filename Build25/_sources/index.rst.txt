@@ -4,6 +4,16 @@
 FLO-2D Pro Documentation – Build 25
 ====================================
 
+.. danger::
+
+   🚧 **BUILD 25 — DOCUMENTATION BETA** 🚧
+
+   This documentation reflects a **pre-release build**.
+   Features, workflows, and file structures may change without notice.
+
+   Refer to the latest released build documentation for validated guidance.
+
+
 Welcome to the main version of the FLO-2D Documentation.
 
 .. toctree::
