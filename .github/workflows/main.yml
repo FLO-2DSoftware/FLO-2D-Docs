@@ -33,7 +33,7 @@ jobs:
 
       - name: Add root index.html
         run: |
-          echo '<!DOCTYPE html><html><head><meta http-equiv="Refresh" content="0; url=Build25/index.html" /></head><body><p>Redirecting to Build25...</p></body></html>' > _site/index.html
+          echo '<!DOCTYPE html><html><head><meta http-equiv="Refresh" content="0; url=Build23/index.html" /></head><body><p>Redirecting to Build23...</p></body></html>' > _site/index.html
 
       - name: Deploy using ghp-import
         run: |
