@@ -9,7 +9,7 @@ including grid data, channel, storm drain elements, hydraulic structres and vari
 This section covers the 3 tools.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents
 
    Grid Info Tool
