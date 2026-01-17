@@ -51,7 +51,7 @@ Create Cross Section
 .. tip::
 
    In 2025, a new cross-section tool was introduced that reads flow data directly from
-   `TIMDEP.HDF5`.
+   `TIMDEPXSEC.HDF5`.
 
    This capability allows the model to be run once, after which cross sections can be
    generated and evaluated as needed.
