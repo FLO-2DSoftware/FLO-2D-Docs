@@ -7,6 +7,7 @@ project = 'FLO-2D Pro Documentation'
 copyright = "2025, Jimmy O'Brien, Noemi Gonzalez-Ramirez, Karen O'Brien, Robson Pachaly"
 author = "Jimmy O'Brien, Noemi Gonzalez-Ramirez, Karen O'Brien, Robson Pachaly"
 html_logo = "FLO-2D Transparent.png"
+html_favicon = "facicon.ico"
 
 # -- Sphinx Multiversion Settings -------------------------------------------
 # NOTE: Use one of the following settings depending on your build environment
