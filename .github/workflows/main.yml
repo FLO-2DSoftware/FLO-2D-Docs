@@ -29,12 +29,17 @@ jobs:
 
       - name: List _site contents
         run: |
-         ls -R _site
+          ls -R _site
 
       - name: Add root index.html
         run: |
           echo '<!DOCTYPE html><html><head><meta http-equiv="Refresh" content="0; url=Build23/index.html" /></head><body><p>Redirecting to Build23...</p></body></html>' > _site/index.html
 
+      - name: Add CNAME for custom domain
+        run: |
+          echo "documentation.flo-2d.com" > _site/CNAME
+
       - name: Deploy using ghp-import
         run: |
           ghp-import -n -p -f _site
+
