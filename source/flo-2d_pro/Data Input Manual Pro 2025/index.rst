@@ -1,4 +1,5 @@
 .. vim: syntax=rst
+
 .. _data_input_manual:
 
 =====================
