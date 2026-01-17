@@ -48,6 +48,21 @@ Map Velocity
 Create Cross Section
 ---------------------
 
+.. tip::
+
+   In 2025, a new cross-section tool was introduced that reads flow data directly from
+   `TIMDEP.HDF5`.
+
+   This capability allows the model to be run once, after which cross sections can be
+   generated and evaluated as needed.
+
+   To enable this feature, set the :ref:`Control Variable ITIMTEP <time_lapse_output>` to
+   **3** or **4** and run the model.
+
+   Use the :ref:`Results Tool <fpxsec_results>` to review floodplain cross-section results.
+
+
+
 Use the editor widget to create the cross section.
 
 1. Click the add
