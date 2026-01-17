@@ -8,12 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Export data (*.DAT) files &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=9c3e77be" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=6385869e" />
 
   
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
@@ -22,7 +23,7 @@
       <script>let toggleHintShow = 'Click to show';</script>
       <script>let toggleHintHide = 'Click to hide';</script>
       <script>let toggleOpenOnPrint = 'true';</script>
-      <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script src="../../../../_static/togglebutton.js?v=1ae7504c"></script>
       <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
       <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../../../../_static/js/theme.js"></script>
@@ -143,25 +144,33 @@ Export large files like INFIL.DAT or TOPO.DAT only when needed.</p>
 </section>
 <section id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>If data is missing from the grid table, this message will appear. This happens when the elevation raster, roughness
-polygon, or roughness raster do not cover the whole grid.  Check the grid attributes for NULL data.</p></li>
-</ol>
+<ol class="arabic">
+<li><p>If data is missing from the grid table, this message will appear. This occurs when the
+elevation raster, roughness polygon, or roughness raster does not fully cover the grid.
+Check the grid attributes for NULL values.</p>
 <img alt="../../../../_images/exportproject4.png" src="../../../../_images/exportproject4.png" />
-<ol class="arabic simple" start="2">
-<li><p>If a component switch is off, an action will be taken to correct the switch position using the Export Dialog Box.  The following short
-video shows how the export action works.</p></li>
-</ol>
-<ol class="arabic simple" start="3">
-<li><p>Export warning</p></li>
-</ol>
+</li>
+<li><p>If a component switch is off, an action is taken to correct the switch position using the
+Export dialog box. The following short video demonstrates how the export action works.</p>
+<iframe width="560" height="315"
+        src="https://www.youtube.com/embed/iVAZcKqD2_w?si=UNr-bT5iegXnyufZ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+</iframe></li>
+<li><p>Export warning</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If you commonly export to the same folder, you might notice that the Remove FPLAIN.DAT, CADPTS.DAT,
-and NEIGHBOR.DAT checkbox is active.  It’s important to check the box if you made a change to the
-grid shape, size, elevation, or roughness.  FLO-2D engine will read the old files if they exist.</p>
+<p>If you commonly export to the same folder, the <strong>Remove FPLAIN.DAT, CADPTS.DAT, and
+NEIGHBOR.DAT</strong> option may be active. Enable this option if changes were made to grid
+shape, size, elevation, or roughness. Otherwise, the FLO-2D engine will read existing
+files.</p>
 </div>
 <img alt="../../../../_images/quickrun004.png" src="../../../../_images/quickrun004.png" />
+</li>
+</ol>
 </section>
 </section>
 

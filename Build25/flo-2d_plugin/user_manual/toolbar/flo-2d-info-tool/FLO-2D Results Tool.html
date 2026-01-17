@@ -8,12 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FLO-2D Results Tool &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=9c3e77be" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=6385869e" />
 
   
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
@@ -22,7 +23,7 @@
       <script>let toggleHintShow = 'Click to show';</script>
       <script>let toggleHintHide = 'Click to hide';</script>
       <script>let toggleOpenOnPrint = 'true';</script>
-      <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script src="../../../../_static/togglebutton.js?v=1ae7504c"></script>
       <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
       <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../../../../_static/js/theme.js"></script>
@@ -166,12 +167,21 @@ tool.</p>
 <img alt="../../../../_images/results007.png" src="../../../../_images/results007.png" />
 </section>
 <section id="floodplain-cross-section-results">
-<h2>Floodplain Cross Section Results<a class="headerlink" href="#floodplain-cross-section-results" title="Link to this heading"></a></h2>
+<span id="fpxsec-results"></span><h2>Floodplain Cross Section Results<a class="headerlink" href="#floodplain-cross-section-results" title="Link to this heading"></a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>FLO-2D Pro Build 25 engine and FLO-2D Gila 2.0 plugin include a floodplain cross section tool that can read from any new cross section using a
+time dependent file called TIMDEPXSEC.HDF5. to set this file up, go here:</p>
+<p><a class="reference internal" href="../flo-2d-parameters/Control%20Variables.html#time-lapse-output"><span class="std std-ref">Run XSEC Time Series Results</span></a></p>
+</div>
 <ol class="arabic simple">
-<li><p>Click any floodplain cross section to load the results in the table and plotting panel.</p></li>
+<li><p>Click any floodplain cross section to load the results in the table and plotting panel. Note the new option Read from TIMDEPXSEC.HDF5 can be used for any new
+floodplain cross section.  The old option Read from HYCROSS.OUT is used for predefined floodplain cross sections that were saved to FPXSEC.DAT.</p></li>
+<li><p>Learn how to build floodplain cross sections for either case here:
+<a class="reference internal" href="../../widgets/floodplain-cross-section-editor/Floodplain%20Cross%20Section%20Editor.html#floodplain-cross-section-editor"><span class="std std-ref">Create Floodplain Cross Sections</span></a></p></li>
 </ol>
 <img alt="../../../../_images/results008.png" src="../../../../_images/results008.png" />
-<ol class="arabic simple" start="2">
+<ol class="arabic simple">
 <li><p>Click any floodplain cross section cell to load the results in the table and plotting panel.</p></li>
 </ol>
 <img alt="../../../../_images/results009.png" src="../../../../_images/results009.png" />

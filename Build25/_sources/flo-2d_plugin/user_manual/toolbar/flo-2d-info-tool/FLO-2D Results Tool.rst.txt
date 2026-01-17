@@ -59,14 +59,25 @@ Storm Drain Results
 .. image:: ../../img/Flo-2D-Info-Tool/results007.png
 
 
+.. _fpxsec_results:
+
 Floodplain Cross Section Results
 --------------------------------------
 
-1. Click any floodplain cross section to load the results in the table and plotting panel.
+.. important:: FLO-2D Pro Build 25 engine and FLO-2D Gila 2.0 plugin include a floodplain cross section tool that can read from any new cross section using a 
+   time dependent file called TIMDEPXSEC.HDF5. to set this file up, go here:
+   
+   :ref:`Run XSEC Time Series Results <time_lapse_output>`
+
+1. Click any floodplain cross section to load the results in the table and plotting panel. Note the new option Read from TIMDEPXSEC.HDF5 can be used for any new
+   floodplain cross section.  The old option Read from HYCROSS.OUT is used for predefined floodplain cross sections that were saved to FPXSEC.DAT.
+
+2. Learn how to build floodplain cross sections for either case here:
+   :ref:`Create Floodplain Cross Sections <floodplain_cross_section_editor>`
 
 .. image:: ../../img/Flo-2D-Info-Tool/results008.png
 
-2. Click any floodplain cross section cell to load the results in the table and plotting panel.
+1. Click any floodplain cross section cell to load the results in the table and plotting panel.
 
 .. image:: ../../img/Flo-2D-Info-Tool/results009.png
 
