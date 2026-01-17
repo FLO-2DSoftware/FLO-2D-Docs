@@ -100,27 +100,87 @@ Summary matrix
 
 .. list-table::
    :header-rows: 1
-   :widths: 22 18 60
+   :widths: 10 44 46
 
-   * - Build(s)
-     - Supported ITIMTEP
-     - Output behavior
-   * - Build 16
-     - 0-4
-     - 0 none; 1 OUT; 2 OUT+HDF5; 3 OUT+NETCDF4; 4 all
-   * - Builds 18-19
-     - 0-5
-     - Build 16 behavior plus 5 CELL (TIMDEPCELL.DAT)
-   * - Build 21
-     - 0-7
-     - Builds 18-19 behavior plus 6 HDF5 only; 7 NC-only output
-   * - Builds 23-24
-     - 0-6 and 11/21/31/41/51
-     - 0 none; 1 OUT+NC4.OUT; 2 HDF5; 3 NC-HDF5; 4 all; 5 CELL; 6 HDF5 only.
-       Interval variants apply same intent for a time interval.
-   * - Build 25+
-     - 0-6 and 11/21/31/41/51
-     - Same as Build 23, with XSEC added to 3 and 31 (NC-HDF5 + XSEC)
+   * - ITIMTEP
+     - Output
+     - Builds
+
+   * - 0
+     - No time series output is written
+     - 16, 18, 19, 21, 23, 25
+
+   * - 1
+     - TIMEDEP/TIMDEP.OUT (text time series output)
+     - 16, 18, 19, 21
+
+   * - 1
+     - TIMDEP.OUT + TIMDEP_NC4.OUT
+     - 23, 25
+
+   * - 2
+     - TIMEDEP/TIMDEP.OUT + HDF5 files
+     - 16, 18, 19, 21
+
+   * - 2
+     - TIMDEP.HDF5 files
+     - 23, 25
+
+   * - 3
+     - TIMEDEP/TIMDEP.OUT + NETCDF4 files
+     - 16
+
+   * - 3
+     - NETCDF4 files
+     - 18, 19, 21
+
+   * - 3
+     - TIMDEPNC.HDF5 file
+     - 23
+
+   * - 3
+     - TIMDEPNC.HDF5 + TIMDEPXSEC
+     - 25
+
+   * - 4
+     - All time series output is written
+     - 16, 18, 19, 21, 23, 25
+
+   * - 5
+     - Extract a time series for specific cells (requires TIMDEPCELL.DAT)
+     - 18, 19, 21, 23, 25
+
+   * - 6
+     - TIMEDEP.HDF5 only
+     - 21, 23, 25
+
+   * - 7
+     - TIMEDEPNC.HDF
+     - 21
+
+   * - 11
+     - TIMDEP.OUT + TIMDEP_NC4.OUT for the time interval
+     - 23, 25
+
+   * - 21
+     - TIMDEP.HDF5 for the time interval
+     - 23, 25
+
+   * - 31
+     - TIMDEPNC.HDF5 for the time interval
+     - 23
+
+   * - 31
+     - TIMDEPNC.HDF5 + TIMDEPXSEC for the time interval
+     - 25
+
+   * - 41
+     - All time series output for the time interval
+     - 23, 25
+
+   * - 51
+     - Extract a time series during the time interval for specific cells (requires TIMDEPCELL.DAT)
+     - 23, 25
 
 Numerical Stability
 ---------------------
