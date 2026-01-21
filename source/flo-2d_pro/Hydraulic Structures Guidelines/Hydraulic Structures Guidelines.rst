@@ -7,7 +7,7 @@ Overview
 --------------------
 
 Hydraulic structures can include bridges, culverts, weirs, spillways, pumps or any facility that controls
-the water surface elevation and whose discharge can be specifying by a rating curve or tables, or
+the water surface elevation and whose discharge can be specified by a rating curve or tables, or
 generalized culvert equations.
 Backwater effects upstream of bridges or culverts as well as blockage of a culvert or overtopping of a
 bridge can be simulated.
