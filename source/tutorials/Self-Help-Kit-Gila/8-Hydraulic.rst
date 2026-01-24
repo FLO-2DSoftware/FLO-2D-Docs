@@ -222,15 +222,15 @@ Schematic Correction and Recheck
 
 .. warning::
 
-The following image illustrates a **Simple Storm Drain** configuration, which provides a convenient way to connect multiple inlets to a single outlet using a shared rating table and an outlet flow limit.
+   The following image illustrates a **Simple Storm Drain** configuration, which provides a convenient way to connect multiple inlets to a single outlet using a shared rating table and an outlet flow limit.
 
-In this configuration, **flow allocation among inlets is not governed by hydraulic conditions**. Instead, inlet priority is determined solely by the internal index order of the inlets.
+   In this configuration, **flow allocation among inlets is not governed by hydraulic conditions**. Instead, inlet priority is determined solely by the internal index order of the inlets.
 
-As a result, upstream inlets with lower index positions may preferentially pass flow while downstream or higher-indexed inlets may be artificially restricted once the outlet capacity is reached. This behavior can lead to non-physical flow distributions when multiple inlets compete for a constrained outlet.
+   As a result, upstream inlets with lower index positions may preferentially pass flow while downstream or higher-indexed inlets may be artificially restricted once the outlet capacity is reached. This behavior can lead to non-physical flow distributions when multiple inlets compete for a constrained outlet.
 
-This method should only be used when inlet prioritization by index is acceptable or hydraulically insignificant. For cases requiring hydraulically realistic flow sharing, a more detailed storm drain representation is recommended.
+   This method should only be used when inlet prioritization by index is acceptable or hydraulically insignificant. For cases requiring hydraulically realistic flow sharing, a more detailed storm drain representation is recommended.
 
-    .. image:: ../img/shg/8/shg_hydaulic015.png
+      .. image:: ../img/shg/8/shg_hydaulic015.png
 
 .. _correct_elevation:
 
