@@ -150,12 +150,11 @@ Backward Compatibility Notes
 .. note::
 
    Projects created with FLO-2D builds prior to Build 15 treat
-   ``ITIMTEP`` as a simple enable/disable flag. Any nonzero value
-   activates ASCII ``TIMDEP.OUT`` output regardless of the numeric value.
+   ``ITIMTEP`` as a simple enable/disable flag. A ``1`` value
+   activates ASCII ``TIMDEP.OUT``.
 
-   Interval-based ``ITIMTEP`` values (``11, 21, 31, 41, 51``) are ignored
-   by builds earlier than Build 23 and will be interpreted as their base
-   values (``1–5``) without time-window control.
+   Interval-based ``ITIMTEP`` values (``11, 21, 31, 41, 51``) will not work for 
+   builds earlier than Build 23.
 
    When upgrading legacy projects, review ``ITIMTEP`` settings to ensure
    that output formats and interval behavior match the intended build
