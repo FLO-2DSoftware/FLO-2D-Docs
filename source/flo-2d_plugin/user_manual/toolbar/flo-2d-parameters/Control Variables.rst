@@ -93,14 +93,11 @@ Behavior by Build
 
    * - Build
      - ITIMTEP Behavior
-   * - ≤ Build 2009
+   * - ≤ Build 2015
      - ``ITIMTEP`` functions as an enable/disable switch.
        ``ITIMTEP = 1`` writes ASCII ``TIMDEP.OUT`` for MAXPLOT or MAPPER
        post-processing animation. No format selection or interval control.
-   * - Builds 2012–2014
-     - Same enable/disable behavior as Build 2009.
-       Time-dependent output is written only in ASCII format.
-   * - Builds 2015–2017
+   * - Build 2016
      - Output format selection introduced.
        ``ITIMTEP = 1`` writes ASCII output, ``3`` writes NetCDF4,
        and ``4`` writes all available outputs.
