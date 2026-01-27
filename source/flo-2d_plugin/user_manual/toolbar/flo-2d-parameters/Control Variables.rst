@@ -97,10 +97,10 @@ Behavior by Build
        interval control.
    * - Build 16 (2016-2017)
      - Output format selection introduced.
-       ``ITIMTEP = 1`` writes ASCII output,
-       ``2`` writes HDF5,
-       ``3`` writes NetCDF4,
-       and ``4`` writes all available outputs.
+       ``ITIMTEP = 1`` writes TIMDEP.OUT,
+       ``2`` writes TIMDEP.OUT and TIMDEP.HDF5,
+       ``3`` writes TIMDEP.OUT, TIMDEP.HDF5, and TIMDEP_NC4.OUT
+       and ``4`` writes TIMDEP.OUT TIMDEPNC.HDF5, and TIMDEP_NC4.OUT
        No interval control.
    * - Builds 18 and 19 (2018–2020)
      - Same format-selection behavior as Build 2016.
@@ -115,6 +115,11 @@ Behavior by Build
        ``2``, ``4``, or ``6`` write HDF5 output.
        Behavior is functional but not cleanly separable by switch value.
    * - Build 23 (2022 - 2024)
+     - Output format selection simplified   
+       ``ITIMTEP = 1`` timdep.out,
+       ``2`` writes timdep.HDF5,
+       ``3`` writes timdep.nc4 and NetCDF4,
+       and ``4`` writes all available outputs.
      - Interval-controlled output formally introduced.
        Values ``11, 21, 31, 41, 51`` enable the same output modes as
        ``1–5`` but restrict output to a user-defined time interval.
