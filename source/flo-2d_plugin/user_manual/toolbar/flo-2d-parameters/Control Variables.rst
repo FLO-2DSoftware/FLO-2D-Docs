@@ -84,9 +84,6 @@ interval during which output is produced.
 Behavior by Build
 -----------------
 
-ITIMTEP Behavior by Build
-========================
-
 .. list-table::
    :header-rows: 1
    :widths: 20 80
