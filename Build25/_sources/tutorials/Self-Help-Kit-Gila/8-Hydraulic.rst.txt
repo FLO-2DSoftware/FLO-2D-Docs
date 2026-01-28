@@ -219,9 +219,18 @@ Schematic Correction and Recheck
 
 - Check and re-validate structure assignments one more time.
 - Use the Center button to cycle through and verify again.
-- Ignore the below error:
 
-    .. image:: ../img/shg/8/shg_hydaulic015.png
+.. warning::
+
+   The following image illustrates a **Simple Storm Drain** configuration, which provides a convenient way to connect multiple inlets to a single outlet using a shared rating table and an outlet flow limit.
+
+   In this configuration, **flow allocation among inlets is not governed by hydraulic conditions**. Instead, inlet priority is determined solely by the internal index order of the inlets.
+
+   As a result, upstream inlets with lower index positions may preferentially pass flow while downstream or higher-indexed inlets may be artificially restricted once the outlet capacity is reached. This behavior can lead to non-physical flow distributions when multiple inlets compete for a constrained outlet.
+
+   This method should only be used when inlet prioritization by index is acceptable or hydraulically insignificant. For cases requiring hydraulically realistic flow sharing, a more detailed storm drain representation is recommended.
+
+      .. image:: ../img/shg/8/shg_hydaulic015.png
 
 .. _correct_elevation:
 

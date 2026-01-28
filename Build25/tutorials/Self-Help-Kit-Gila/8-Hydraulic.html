@@ -18,7 +18,7 @@
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script>let toggleHintShow = 'Click to show';</script>
       <script>let toggleHintHide = 'Click to hide';</script>
@@ -26,6 +26,7 @@
       <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
       <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
       <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -342,15 +343,20 @@ left bank is the reference to the cross-section.</p>
 <li><p>Save and click <strong>Schematize</strong> to update geometry.</p></li>
 </ul>
 <img alt="../../_images/shg_hydaulic014.png" src="../../_images/shg_hydaulic014.png" />
-<ul>
+<ul class="simple">
 <li><p>Check and re-validate structure assignments one more time.</p></li>
 <li><p>Use the Center button to cycle through and verify again.</p></li>
-<li><p>Ignore the below error:</p>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The following image illustrates a <strong>Simple Storm Drain</strong> configuration, which provides a convenient way to connect multiple inlets to a single outlet using a shared rating table and an outlet flow limit.</p>
+<p>In this configuration, <strong>flow allocation among inlets is not governed by hydraulic conditions</strong>. Instead, inlet priority is determined solely by the internal index order of the inlets.</p>
+<p>As a result, upstream inlets with lower index positions may preferentially pass flow while downstream or higher-indexed inlets may be artificially restricted once the outlet capacity is reached. This behavior can lead to non-physical flow distributions when multiple inlets compete for a constrained outlet.</p>
+<p>This method should only be used when inlet prioritization by index is acceptable or hydraulically insignificant. For cases requiring hydraulically realistic flow sharing, a more detailed storm drain representation is recommended.</p>
 <blockquote>
 <div><img alt="../../_images/shg_hydaulic015.png" src="../../_images/shg_hydaulic015.png" />
 </div></blockquote>
-</li>
-</ul>
+</div>
 </section>
 </section>
 <section id="correct-elevation">
