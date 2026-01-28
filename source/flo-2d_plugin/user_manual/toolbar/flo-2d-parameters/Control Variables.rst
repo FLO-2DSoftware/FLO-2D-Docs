@@ -91,46 +91,63 @@ Behavior by Build
    * - Build
      - ITIMTEP Behavior
    * - ≤ Build 14 (2015)
-     - ``ITIMTEP`` functions as a simple enable/disable switch.
-       ``ITIMTEP = 1`` writes ASCII ``TIMDEP.OUT`` for MAPPER or MAXPLOT
-       post-processing animation. No output format selection and no
-       interval control.
+     - ``ITIMTEP = 1`` writes ``TIMDEP.OUT``
    * - Build 16 (2016-2017)
      - Output format selection introduced.
-       ``ITIMTEP = 1`` writes TIMDEP.OUT,
-       ``2`` writes TIMDEP.OUT and TIMDEP.HDF5,
-       ``3`` writes TIMDEP.OUT, TIMDEP.HDF5, and TIMDEP_NC4.OUT
-       and ``4`` writes TIMDEP.OUT TIMDEPNC.HDF5, and TIMDEP_NC4.OUT
-       No interval control.
-   * - Builds 18 and 19 (2018–2020)
-     - Same format-selection behavior as Build 2016.
-       Cell-specific time-series extraction added:
+       ``ITIMTEP = 1`` writes ``TIMDEP.OUT``
+       ``2`` writes ``TIMDEP.OUT`` and ``TIMDEP.HDF5``
+       ``3`` writes ``TIMDEP.OUT``, ``TIMDEPNC.HDF5``, and ``TIMDEP_NC4.OUT``
+       ``4`` writes ``TIMDEP.OUT``, ``TIMDEPNC.HDF5``, and ``TIMDEP_NC4.OUT``
+   * - Builds 18 (2018–2019)
+       ``ITIMTEP = 1`` writes ``TIMDEP.OUT``
+       ``2`` writes ``TIMDEP.OUT`` and ``TIMDEP.HDF5``
+       ``3`` writes ``TIMDEP.OUT``, ``TIMDEPNC.HDF5``, and ``TIMDEP_NC4.OUT``
+       ``4`` writes ``TIMDEP.OUT``, ``TIMDEPNC.HDF5``, and ``TIMDEP_NC4.OUT``  
+     - Cell-specific time-series extraction added:
        ``ITIMTEP = 5`` extracts time series for selected cells using
        ``TIMDEPCELL.DAT``.
-   * - Build 21 (2021)
+   * - Builds 19 (2019–2020)
+       ``ITIMTEP = 1`` writes ``TIMDEP.OUT``
+       ``2`` writes ``TIMDEP.HDF5``
+       ``3`` writes ``TIMDEPNC.HDF5T5``
+       ``4`` writes ``TIMDEP.OUT`` and ``TIMDEPNC.HDF5``
+     - Cell-specific time-series extraction added:
+       ``ITIMTEP = 5`` extracts time series for selected cells using
+       ``TIMDEPCELL.DAT``.
+   * - Build 21 (2021-2022)
      - Transitional and internally complex behavior driven by early QGIS
        time-series integration.
-       ``ITIMTEP = 1–4`` all write ``TIMDEP.OUT``;
-       ``3`` or ``4`` write NetCDF output;
-       ``2``, ``4``, or ``6`` write HDF5 output.
-       Behavior is functional but not cleanly separable by switch value.
-   * - Build 23 (2022 - 2024)
+       ``ITIMTEP = 1`` writes ``TIMDEP.OUT`` and ``TIMDEP_NC4.OUT``
+       ``2`` writes ``TIMDEP.HDF5``
+       ``3`` writes ``TIMDEPNC.HDF5``
+       ``4`` writes ``TIMDEP.OUT``, ``TIMDEP.HDF5``, ``TIMDEP_NC4.OUT``, and ``TIMDEPNC.HDF5``
+     - Cell-specific time-series extraction added:
+       ``ITIMTEP = 5`` extracts time series for selected cells using
+       ``TIMDEPCELL.DAT``.
+   * - Build 23 (2022 - 2025)
      - Output format selection simplified   
-       ``ITIMTEP = 1`` timdep.out,
-       ``2`` writes timdep.HDF5,
-       ``3`` writes timdep.nc4 and NetCDF4,
-       and ``4`` writes all available outputs.
+       ``ITIMTEP = 1`` writes ``TIMDEP.OUT``
+       ``2`` writes ``TIMDEP.HDF5``
+       ``3`` writes ``TIMDEPNC.HDF5``
+       ``4`` writes ``TIMDEP.OUT``, ``TIMDEP.HDF5``, ``TIMDEP_NC4.OUT``, and ``TIMDEPNC.HDF5``
+     - Cell-specific time-series extraction added:
+       ``ITIMTEP = 5`` extracts time series for selected cells using
+       ``TIMDEPCELL.DAT``.
      - Interval-controlled output formally introduced.
        Values ``11, 21, 31, 41, 51`` enable the same output modes as
        ``1–5`` but restrict output to a user-defined time interval.
-       Switch behavior is fully normalized and documented.
-   * - Build 25  (2026+)
-     - Same behavior as Build 23, with additional HDF5 datasets
-       (including ``TIMDEPFPXSEC.HDF5``) added to switch values
-       ``3`` and ``4``.
-       This represents the current stable and fully documented
-       implementation.
-
+   * - Build 25 (2026+)
+     - Output format selection simplified   
+       ``ITIMTEP = 1`` writes ``TIMDEP.OUT``
+       ``2`` writes ``TIMDEP.HDF5``
+       ``3`` writes ``TIMDEPNC.HDF5``, and ``TIMDEPFPXSEC.HDF5``
+       ``4`` writes ``TIMDEP.OUT``, ``TIMDEP.HDF5``, ``TIMDEP_NC4.OUT``, and ``TIMDEPNC.HDF5``
+     - Cell-specific time-series extraction added:
+       ``ITIMTEP = 5`` extracts time series for selected cells using
+       ``TIMDEPCELL.DAT``.
+     - Interval-controlled output formally introduced.
+       Values ``11, 21, 31, 41, 51`` enable the same output modes as
+       ``1–5`` but restrict output to a user-defined time interval.
 
 Backward Compatibility Notes
 ------------------------------
