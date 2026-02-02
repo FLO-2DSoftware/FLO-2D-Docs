@@ -131,8 +131,7 @@ The local pier scour depth is computed using the HEC-18 CSU equation:
 
 .. math::
 
-   y_s = 2.0 \, K_1 \, K_2 \, K_3 \, K_4 \, a^{0.65} \, y_1^{0.35} \\
-   \qquad F_r^{0.43}
+   y_s = 2.0 \, K_1 \, K_2 \, K_3 \, K_4 \, a^{0.65} \, y_1^{0.35} \, F_r^{0.43}
 
 where:
 
