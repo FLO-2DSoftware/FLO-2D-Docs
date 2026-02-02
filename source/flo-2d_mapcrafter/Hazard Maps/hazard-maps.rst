@@ -157,9 +157,9 @@ The approach flow Froude number is computed as:
 
 where:
 
-- :math:`v` = approach velocity magnitude
-- :math:`g` = gravitational acceleration
-- :math:`y_1` = approach flow depth
+- :math:`v` = approach velocity magnitude (ft/s or m/s)
+- :math:`g` = gravitational acceleration (32.174 ft/s/s or 9.80665 m/s/s)
+- :math:`y_1` = approach flow depth (ft or m)
 
 Velocity and depth are extracted from FLO-2D output rasters.
 
@@ -170,11 +170,11 @@ Pier geometry and correction factors are supplied through the pier attribute tab
 
 Typical parameters include:
 
-- Pier width
-- Pier shape (for :math:`K_1`)
-- Flow angle relative to pier axis (for :math:`K_2`)
-- Bed condition (live bed or clear water, for :math:`K_3`)
-- Armoring condition (for :math:`K_4`)
+- Pier width (ft or m)
+- Pier shape for :math:`K_1`
+- Flow angle relative to pier axis for :math:`K_2`
+- Bed condition live bed or clear water, for :math:`K_3`
+- Armoring condition for :math:`K_4`
 
 Correction factor values follow guidance provided in HEC-18.
 
@@ -182,7 +182,8 @@ Correction factor values follow guidance provided in HEC-18.
 Pier Scour Correction Factors (HEC-18)
 -----------------------------------------
 
-The CSU pier scour equation includes correction factors that account for pier geometry, flow alignment, bed condition, and armoring effects. These factors are defined in HEC-18 and are summarized below.
+The CSU pier scour equation includes correction factors that account for pier geometry, flow alignment, bed condition, and 
+armoring effects. These factors are defined in HEC-18 and are summarized below.
 
 K₁ — Pier Nose Shape Factor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -227,14 +228,14 @@ Constraints:
    <details>
    <summary><strong>K₂ Angle-of-Attack Helper</strong> (optional)</summary>
 
-   <p>This helper computes K₂ using the HEC-18 equation. Results are for reference only.</p>
+   <p>This helper computes K₂ using the HEC-18 equation.  It does not perform validation or replace engineering judgement. Results are for reference only.</p>
 
    <label>Angle of attack (degrees):
      <input id="theta" type="number" step="1" value="0">
    </label><br>
 
    <label>Pier length (L):
-     <input id="L" type="number" step="0.1" value="5">
+     <input id="L" type="number" step="0.1" value="1">
    </label><br>
 
    <label>Pier width (a):
@@ -245,15 +246,30 @@ Constraints:
    <p id="k2out"></p>
 
    <script>
-     function calcK2() {
-       const theta = document.getElementById('theta').value * Math.PI / 180;
-       const L = parseFloat(document.getElementById('L').value);
-       const a = parseFloat(document.getElementById('a').value);
-       const ratio = Math.min(L / a, 12.0);
-       const k2 = Math.pow(Math.cos(theta) + ratio * Math.sin(theta), 0.65);
-       document.getElementById('k2out').innerText =
-         'K₂ = ' + k2.toFixed(2);
-     }
+    function calcK2() {
+      // Read raw inputs
+      const thetaInput = Number(document.getElementById('theta').value);
+      const Linput = Number(document.getElementById('L').value);
+      const ainput = Number(document.getElementById('a').value);
+
+      // Defensive bounds (best practice #1)
+      const thetaDeg = Math.max(0, Math.min(90, thetaInput));
+      const L = Math.max(0.01, Linput);
+      const a = Math.max(0.01, ainput);
+
+      // Convert angle to radians
+      const theta = thetaDeg * Math.PI / 180;
+
+      // Compute K₂
+      const ratio = Math.min(L / a, 12.0);
+      const k2 = Math.pow(Math.cos(theta) + ratio * Math.sin(theta), 0.65);
+
+      // Output (safe: text only)
+      document.getElementById('k2out').innerText =
+        'K₂ = ' + k2.toFixed(2);
+    }
+
+    <p></p>
    </script>
    </details>
 
