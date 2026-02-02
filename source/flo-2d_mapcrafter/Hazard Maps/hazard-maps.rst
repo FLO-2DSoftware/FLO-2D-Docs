@@ -108,7 +108,7 @@ Children Hazard Map
   infants) is not seriously threatened by flood water
 
 Pier Scour (HEC-18 CSU Method)
-=============================
+================================
 
 MapCrafter includes a pier scour mapping tool based on the Colorado State University (CSU) pier scour equation as documented in HEC-18. This method estimates local scour depth at bridge piers using hydraulic results from FLO-2D simulations and user-defined pier geometry parameters.
 
@@ -126,7 +126,7 @@ Hydraulic variables are extracted from raster datasets and combined with pier at
 ---
 
 CSU Pier Scour Equation
-----------------------
+-------------------------
 
 The local pier scour depth is computed using the HEC-18 CSU equation:
 
