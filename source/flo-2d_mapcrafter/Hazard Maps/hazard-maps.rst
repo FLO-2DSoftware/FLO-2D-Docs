@@ -284,14 +284,8 @@ K₃ — Bed Condition Factor
 +------------------------------+-----------------------+--------+
 | Plane bed / antidune         | –                     | 1.1    |
 +------------------------------+-----------------------+--------+
-| Small dunes                  | 2 ≤ H < 10            | 1.1    |
-+------------------------------+-----------------------+--------+
-| Medium dunes                 | 10 ≤ H < 30           | 1.1–1.2|
-+------------------------------+-----------------------+--------+
-| Large dunes                  | H ≥ 30                | 1.3    |
-+------------------------------+-----------------------+--------+
 
-Dune height :math:`H` is measured in the approach channel bed profile.
+For solar sites small to large dunes are not anticipated.
 
 
 K₄ — Bed Armoring Factor
@@ -307,12 +301,9 @@ The armoring factor reduces predicted scour depth where coarse bed material limi
 | Armored bed (minimum value)   | 0.4    | Applies when coarse material limits scour |
 +-------------------------------+--------+-------------------------------------------+
 
-Typical armoring criteria include:
-
-- :math:`D_{50} \ge 0.002 \, m`
-- :math:`D_{95} \ge 0.020 \, m`
-
-More detailed armoring formulations may be applied when grain-size and critical velocity data are available.
+For solar sites, :math:`K_4` is a sensitive parameter but please remember this is not open channel flow
+so calculating the variable from the known flume studies or mobile bed studies may result in impractical
+results.  Use engineering judgment and test a range of values.
 
 
 Notes
@@ -327,62 +318,59 @@ Notes
 Spatial Evaluation
 ------------------
 
-Pier scour depth is computed at each pier location by sampling hydraulic variables from raster outputs. Evaluation methods include:
+Grid centroid sampling may be performed using values extracted from `DEPFP.OUT` and `VELFP.OUT`. Grid centroid values may 
+also be sampled directly from `TIMDEP.HDF5`. Maximum depth and velocity values obtained from `DEPFP.OUT` and `VELFP.OUT` are 
+not inherently time-synchronized. When relatively uniform flow conditions are anticipated, this approach provides reasonable 
+screening-level results. Sampling from `TIMDEP.HDF5` preserves time synchronization by computing the maximum depth–velocity 
+product using time-dependent data. The resulting maximum value may be slightly lower than the true peak due to the discrete 
+output interval used in the simulation.
 
-- Sampling at pier centroid points
-- Sampling maximum values within a buffer zone
-- Applying time-maximum depth and velocity results
-
-The resulting scour depth values may be mapped spatially or reported per pier.
 
 Example Project
 ---------------
 
-**Scenario:** Flood event impacting a roadway bridge  
+**Scenario:** Flood event over a potential solar site. 
 **Model Type:** FLO-2D overland flow simulation  
 **Objective:** Estimate potential pier scour depths using HEC-18 methodology
 
-### Input Data
+**Input Data**
 
-- FLO-2D depth raster (maximum or time-specific)
+- FLO-2D depth file
 - FLO-2D velocity raster
-- Pier location vector layer with geometry attributes
+- FLO-2D Project QGIS
 
-### Workflow
+**Workflow**
 
 1. Run FLO-2D simulation and generate depth and velocity outputs.
-2. Load raster results into QGIS.
-3. Open **MapCrafter → Pier Scour**.
-4. Select:
-   - Depth raster
-   - Velocity raster
-   - Pier layer
-5. Define pier width, shape, and correction factors.
-6. Execute pier scour calculation.
+2. Open **MapCrafter** and choose the correct CRS.
+3. Find the **Hazard** tab and set the **Pier Scour** Variables. 
+4. Click Create Maps and the **Pier Scour** map is added to the **Hazard Group**.
 
-MapCrafter computes local scour depth at each pier using the CSU equation and generates a mapped output.
+
+MapCrafter computes local scour depth at each grid using the CSU equation and generates a raster mapped output.
+Sample this output with a pier map to get local results.
 
 Outputs
--------
+~~~~~~~~~~
 
 The pier scour tool produces:
 
-- Pier-specific scour depth values
-- Spatial scour depth maps
+- Pier scour depth raster
 - Styled layers compatible with MapCrafter layouts
-- Tabular outputs suitable for reporting
 
 
 Limitations
------------
+~~~~~~~~~~~~~~~~~~~~
 
 - The CSU equation estimates **local pier scour only**.
 - Contraction scour and long-term degradation are not included.
 - Results are sensitive to flow depth, velocity, and pier alignment assumptions.
-- Final design decisions should follow full HEC-18 guidance and site-specific studies.
+- Final design decisions should follow full HEC-18 guidance.
 
 
 Summary
--------
+------------
 
-The MapCrafter pier scour tool implements the HEC-18 CSU equation directly using FLO-2D hydraulic results and user-defined pier parameters. This approach enables spatial visualization and comparative assessment of potential pier scour within a GIS-based post-processing workflow.
+The MapCrafter pier scour tool implements the HEC-18 CSU equation directly using FLO-2D 
+hydraulic results and user-defined pier parameters. This approach enables spatial visualization 
+and comparative assessment of potential pier scour within a GIS-based post-processing workflow.
