@@ -107,121 +107,125 @@ Children Hazard Map
 | :math:`\qquad` LOW DANGER ZONE: Almost any size child (excluding
   infants) is not seriously threatened by flood water
 
-Pier Scour Mapping
-=====================
+Pier Scour (HEC-18 CSU Method)
+=============================
 
-The Pier Scour mapping tool in MapCrafter provides a spatial screening method for identifying areas where hydraulic conditions may contribute to local scour at bridge piers. The tool is intended to support rapid visualization and comparative assessment of scour potential based on FLO-2D simulation results.
+MapCrafter includes a pier scour mapping tool based on the Colorado State University (CSU) pier scour equation as documented in HEC-18. This method estimates local scour depth at bridge piers using hydraulic results from FLO-2D simulations and user-defined pier geometry parameters.
 
-Pier scour maps are derived from modeled hydraulic variables and are not a substitute for detailed bridge design or regulatory scour analyses.
-
----
-
-Purpose and Scope
--------------------
-
-Pier scour mapping is used to:
-
-- Identify zones of elevated scour potential near pier locations
-- Compare relative scour severity across multiple events or scenarios
-- Support planning-level risk assessments and visualization workflows
-
-The method is best suited for post-event evaluation, dam breach studies, and flood hazard screening where detailed bridge geometry or foundation data may not be available.
+The pier scour tool is intended for engineering screening and comparative assessment and does not replace a full bridge scour design analysis.
 
 ---
 
-Governing Variables
--------------------
+Method Overview
+---------------
 
-Pier scour potential is estimated using depth and velocity results extracted from FLO-2D model outputs. The primary variables include:
+The CSU equation estimates local pier scour depth as a function of flow depth, velocity, pier geometry, alignment, and bed material effects. MapCrafter applies the equation spatially using FLO-2D depth and velocity outputs to generate scour depth maps and pier-specific results.
 
-- Flow depth
-- Velocity magnitude
-- Optional unit discharge or shear-related indicators
-
-These variables are sampled spatially near pier locations using raster-based analysis.
+Hydraulic variables are extracted from raster datasets and combined with pier attributes supplied by the user.
 
 ---
 
-Scour Index Formulation
-------------------------
+CSU Pier Scour Equation
+----------------------
 
-A simplified pier scour index is computed using the depth–velocity product:
+The local pier scour depth is computed using the HEC-18 CSU equation:
 
 .. math::
 
-   S = d \cdot v
+   y_s = 2.0 \, K_1 \, K_2 \, K_3 \, K_4 \, a
+   \left( \frac{y_1}{a} \right)^{0.35}
+   F_r^{0.43}
 
 where:
 
-- :math:`S` = scour index
-- :math:`d` = flow depth
-- :math:`v` = velocity magnitude
+- :math:`y_s` = local pier scour depth
+- :math:`y_1` = approach flow depth
+- :math:`a` = pier width normal to flow
+- :math:`F_r` = Froude number of the approach flow
+- :math:`K_1` = pier shape factor
+- :math:`K_2` = angle of attack factor
+- :math:`K_3` = bed condition factor
+- :math:`K_4` = bed armoring factor
 
-This index provides a relative measure of hydraulic intensity near pier locations and is used for classification and mapping purposes.
-
----
-
-Optional Threshold Criteria
------------------------------
-
-Additional screening criteria may be applied depending on project needs:
-
-Velocity threshold:
-
-.. math::
-
-   v \ge v_{crit}
-
-Depth threshold:
-
-.. math::
-
-   d \ge d_{crit}
-
-Threshold values are user-defined or selected based on internal MapCrafter defaults and should be interpreted as screening indicators rather than design limits.
+All variables are evaluated at the pier location using FLO-2D model results and user-provided pier parameters.
 
 ---
 
-Spatial Evaluation Method
----------------------------
+Froude Number
+-------------
 
-Pier scour potential is evaluated by sampling raster values in the vicinity of pier locations. Typical evaluation approaches include:
+The approach flow Froude number is computed as:
+
+.. math::
+
+   F_r = \frac{v}{\sqrt{g \, y_1}}
+
+where:
+
+- :math:`v` = approach velocity magnitude
+- :math:`g` = gravitational acceleration
+- :math:`y_1` = approach flow depth
+
+Velocity and depth are extracted from FLO-2D output rasters.
+
+---
+
+Pier Geometry and Correction Factors
+------------------------------------
+
+Pier geometry and correction factors are supplied through the pier attribute table or MapCrafter interface.
+
+Typical parameters include:
+
+- Pier width
+- Pier shape (for :math:`K_1`)
+- Flow angle relative to pier axis (for :math:`K_2`)
+- Bed condition (live bed or clear water, for :math:`K_3`)
+- Armoring condition (for :math:`K_4`)
+
+Correction factor values follow guidance provided in HEC-18.
+
+---
+
+Spatial Evaluation
+------------------
+
+Pier scour depth is computed at each pier location by sampling hydraulic variables from raster outputs. Evaluation methods include:
 
 - Sampling at pier centroid points
-- Sampling within a defined buffer radius
-- Selecting maximum values within the sampled area
+- Sampling maximum values within a buffer zone
+- Applying time-maximum depth and velocity results
 
-The resulting scour index values are mapped and symbolized to highlight areas of increased scour potential.
-
----
-
-Classification and Mapping
---------------------------
-
-Computed scour index values are grouped into relative hazard classes, such as:
-
-- Low scour potential
-- Moderate scour potential
-- High scour potential
-
-Class breaks may be defined using fixed thresholds or data-driven methods depending on the analysis objective.
-
-The final output is a classified raster or vector layer suitable for visualization, comparison, and reporting.
+The resulting scour depth values may be mapped spatially or reported per pier.
 
 ---
 
-Example Workflow
-----------------
+Example Project
+---------------
 
-1. Run a FLO-2D simulation producing depth and velocity outputs.
-2. Load results into QGIS.
+**Scenario:** Flood event impacting a roadway bridge  
+**Model Type:** FLO-2D overland flow simulation  
+**Objective:** Estimate potential pier scour depths using HEC-18 methodology
+
+### Input Data
+
+- FLO-2D depth raster (maximum or time-specific)
+- FLO-2D velocity raster
+- Pier location vector layer with geometry attributes
+
+### Workflow
+
+1. Run FLO-2D simulation and generate depth and velocity outputs.
+2. Load raster results into QGIS.
 3. Open **MapCrafter → Pier Scour**.
 4. Select:
    - Depth raster
    - Velocity raster
-   - Pier location layer
-5. Define sampling method and thresholds.
-6. Generate the pier scour map.
+   - Pier layer
+5. Define pier width, shape, and correction factors.
+6. Execute pier scour calculation.
+
+MapCrafter computes local scour depth at each pier using the CSU equation and generates a mapped output.
 
 ---
 
@@ -230,27 +234,24 @@ Outputs
 
 The pier scour tool produces:
 
-- A pier scour index layer
-- Classified scour potential maps
+- Pier-specific scour depth values
+- Spatial scour depth maps
 - Styled layers compatible with MapCrafter layouts
-- Data suitable for further GIS or engineering review
+- Tabular outputs suitable for reporting
 
 ---
 
 Limitations
 -----------
 
-- The pier scour map is a screening-level product.
-- Structural geometry, foundation depth, and sediment properties are not explicitly modeled.
-- Results should not be used directly for design or regulatory determinations.
-- Detailed scour evaluations should follow established hydraulic and geotechnical guidelines.
+- The CSU equation estimates **local pier scour only**.
+- Contraction scour and long-term degradation are not included.
+- Results are sensitive to flow depth, velocity, and pier alignment assumptions.
+- Final design decisions should follow full HEC-18 guidance and site-specific studies.
 
 ---
 
 Summary
 -------
 
-The MapCrafter Pier Scour tool provides a rapid, GIS-based method for visualizing and comparing potential scour conditions using FLO-2D hydraulic results. When used appropriately, it enhances post-processing workflows and supports informed decision-making during flood risk assessments.
-
-
-
+The MapCrafter pier scour tool implements the HEC-18 CSU equation directly using FLO-2D hydraulic results and user-defined pier parameters. This approach enables spatial visualization and comparative assessment of potential pier scour within a GIS-based post-processing workflow.
