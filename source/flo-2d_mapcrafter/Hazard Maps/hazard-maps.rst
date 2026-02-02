@@ -251,7 +251,7 @@ The armoring factor reduces predicted scour depth where coarse bed material limi
 +-------------------------------+--------+-------------------------------------------+
 | Condition                     | K₄     | Notes                                     |
 +===============================+========+===========================================+
-| Unarmored bed                 | 1.0    | Default condition                          |
+| Unarmored bed                 | 1.0    | Default condition                         |
 +-------------------------------+--------+-------------------------------------------+
 | Armored bed (minimum value)   | 0.4    | Applies when coarse material limits scour |
 +-------------------------------+--------+-------------------------------------------+
