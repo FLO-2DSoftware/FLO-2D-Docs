@@ -222,6 +222,42 @@ Constraints:
 - If :math:`L/a > 12`, use :math:`L/a = 12`
 - For flow angles greater than approximately 5°, :math:`K_1` is typically set to 1.0
 
+.. raw:: html
+
+   <details>
+   <summary><strong>K₂ Angle-of-Attack Helper</strong> (optional)</summary>
+
+   <p>This helper computes K₂ using the HEC-18 equation. Results are for reference only.</p>
+
+   <label>Angle of attack (degrees):
+     <input id="theta" type="number" step="1" value="0">
+   </label><br>
+
+   <label>Pier length (L):
+     <input id="L" type="number" step="0.1" value="5">
+   </label><br>
+
+   <label>Pier width (a):
+     <input id="a" type="number" step="0.1" value="1">
+   </label><br><br>
+
+   <button onclick="calcK2()">Compute K₂</button>
+   <p id="k2out"></p>
+
+   <script>
+     function calcK2() {
+       const theta = document.getElementById('theta').value * Math.PI / 180;
+       const L = parseFloat(document.getElementById('L').value);
+       const a = parseFloat(document.getElementById('a').value);
+       const ratio = Math.min(L / a, 12.0);
+       const k2 = Math.pow(Math.cos(theta) + ratio * Math.sin(theta), 0.65);
+       document.getElementById('k2out').innerText =
+         'K₂ = ' + k2.toFixed(2);
+     }
+   </script>
+   </details>
+
+
 K₃ — Bed Condition Factor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
