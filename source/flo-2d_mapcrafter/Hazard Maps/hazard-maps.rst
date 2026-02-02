@@ -110,20 +110,19 @@ Children Hazard Map
 Pier Scour (HEC-18 CSU Method)
 ================================
 
-MapCrafter includes a pier scour mapping tool based on the Colorado State University (CSU) pier scour equation as documented in HEC-18. This method estimates local scour depth at bridge piers using hydraulic results from FLO-2D simulations and user-defined pier geometry parameters.
+MapCrafter includes a pier scour mapping tool based on the Colorado State University (CSU) pier scour equation as documented in HEC-18. This method estimates local scour depth at piers using hydraulic results from FLO-2D simulations and user-defined pier geometry parameters.
 
-The pier scour tool is intended for engineering screening and comparative assessment and does not replace a full bridge scour design analysis.
+FLO-2D users apply the pier scour equation to solar site models to estimate scour around solar panel pole mount or ground mount systems.
 
----
 
-Method Overview
+Overview
 ---------------
 
 The CSU equation estimates local pier scour depth as a function of flow depth, velocity, pier geometry, alignment, and bed material effects. MapCrafter applies the equation spatially using FLO-2D depth and velocity outputs to generate scour depth maps and pier-specific results.
 
 Hydraulic variables are extracted from raster datasets and combined with pier attributes supplied by the user.
 
----
+.. image:: ../img/pier001.png
 
 CSU Pier Scour Equation
 -------------------------
@@ -133,7 +132,7 @@ The local pier scour depth is computed using the HEC-18 CSU equation:
 .. math::
 
    y_s = 2.0 \, K_1 \, K_2 \, K_3 \, K_4 \, a^0.65
-   \left(y_1)^{0.35}
+   \(y_1)^{0.35}
    F_r^{0.43}
 
 where:
@@ -148,8 +147,6 @@ where:
 - :math:`K_4` = bed armoring factor
 
 All variables are evaluated at the pier location using FLO-2D model results and user-provided pier parameters.
-
----
 
 Froude Number
 -------------
@@ -167,8 +164,6 @@ where:
 - :math:`y_1` = approach flow depth
 
 Velocity and depth are extracted from FLO-2D output rasters.
-
----
 
 Pier Geometry and Correction Factors
 ------------------------------------
@@ -208,10 +203,9 @@ K₁ — Pier Nose Shape Factor
 | Sharp nose (triangular)   | 0.9    | Sharp leading edge             |
 +---------------------------+--------+--------------------------------+
 
----
 
 K₂ — Flow Angle of Attack Factor
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The flow angle correction factor accounts for the angle between the approach flow direction and the pier axis.
 
@@ -230,10 +224,8 @@ Constraints:
 - If :math:`L/a > 12`, use :math:`L/a = 12`
 - For flow angles greater than approximately 5°, :math:`K_1` is typically set to 1.0
 
----
-
 K₃ — Bed Condition Factor
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +------------------------------+-----------------------+--------+
 | Bed Condition                | Dune Height (H)       | K₃     |
@@ -251,10 +243,9 @@ K₃ — Bed Condition Factor
 
 Dune height :math:`H` is measured in the approach channel bed profile.
 
----
 
 K₄ — Bed Armoring Factor
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The armoring factor reduces predicted scour depth where coarse bed material limits erosion.
 
@@ -273,7 +264,6 @@ Typical armoring criteria include:
 
 More detailed armoring formulations may be applied when grain-size and critical velocity data are available.
 
----
 
 Notes
 -----
@@ -294,8 +284,6 @@ Pier scour depth is computed at each pier location by sampling hydraulic variabl
 - Applying time-maximum depth and velocity results
 
 The resulting scour depth values may be mapped spatially or reported per pier.
-
----
 
 Example Project
 ---------------
@@ -324,8 +312,6 @@ Example Project
 
 MapCrafter computes local scour depth at each pier using the CSU equation and generates a mapped output.
 
----
-
 Outputs
 -------
 
@@ -336,7 +322,6 @@ The pier scour tool produces:
 - Styled layers compatible with MapCrafter layouts
 - Tabular outputs suitable for reporting
 
----
 
 Limitations
 -----------
@@ -346,7 +331,6 @@ Limitations
 - Results are sensitive to flow depth, velocity, and pier alignment assumptions.
 - Final design decisions should follow full HEC-18 guidance and site-specific studies.
 
----
 
 Summary
 -------
