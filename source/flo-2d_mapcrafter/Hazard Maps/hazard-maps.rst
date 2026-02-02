@@ -228,7 +228,7 @@ Constraints:
    <details>
    <summary><strong>K₂ Angle-of-Attack Helper</strong> (optional)</summary>
 
-   <p>This helper computes K₂ using the HEC-18 equation.  It does not perform validation or replace engineering judgement. Results are for reference only.</p>
+   <p>This helper computes K₂ for the HEC-18 CSU equation.  It does not perform validation or replace engineering judgement. Results are for reference only.</p>
 
    <label>Angle of attack (degrees):
      <input id="theta" type="number" step="1" value="0">
@@ -266,7 +266,7 @@ Constraints:
 
       // Output (safe: text only)
       document.getElementById('k2out').innerText =
-        'K₂ = ' + k2.toFixed(2);
+        'K₂ = ' + k2out.toFixed(2);
     }
 
     <p></p>
