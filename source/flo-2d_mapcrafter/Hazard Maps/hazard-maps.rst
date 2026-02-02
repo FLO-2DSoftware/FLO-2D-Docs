@@ -132,17 +132,17 @@ The local pier scour depth is computed using the HEC-18 CSU equation:
 
 .. math::
 
-   y_s = 2.0 \, K_1 \, K_2 \, K_3 \, K_4 \, a
-   \left( \frac{y_1}{a} \right)^{0.35}
+   y_s = 2.0 \, K_1 \, K_2 \, K_3 \, K_4 \, a^0.65
+   \left(y_1)^{0.35}
    F_r^{0.43}
 
 where:
 
-- :math:`y_s` = local pier scour depth
-- :math:`y_1` = approach flow depth
-- :math:`a` = pier width normal to flow
-- :math:`F_r` = Froude number of the approach flow
-- :math:`K_1` = pier shape factor
+- :math:`y_s` = local pier scour depth (ft or m)
+- :math:`y_1` = approach flow depth (ft or m)
+- :math:`a` = pier width normal to flow (ft or m)
+- :math:`F_r` = Froude number of the approach flow 
+- :math:`K_1` = pier shape factor 
 - :math:`K_2` = angle of attack factor
 - :math:`K_3` = bed condition factor
 - :math:`K_4` = bed armoring factor
@@ -185,7 +185,104 @@ Typical parameters include:
 
 Correction factor values follow guidance provided in HEC-18.
 
+
+Pier Scour Correction Factors (HEC-18)
+-----------------------------------------
+
+The CSU pier scour equation includes correction factors that account for pier geometry, flow alignment, bed condition, and armoring effects. These factors are defined in HEC-18 and are summarized below.
+
+K₁ — Pier Nose Shape Factor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++---------------------------+--------+--------------------------------+
+| Pier Nose Shape           | K₁     | Notes                          |
++===========================+========+================================+
+| Square nose               | 1.1    | Blunt leading edge             |
++---------------------------+--------+--------------------------------+
+| Round nose                | 1.0    | Smooth transition              |
++---------------------------+--------+--------------------------------+
+| Circular cylinder         | 1.0    | Flow-symmetric                 |
++---------------------------+--------+--------------------------------+
+| Group of cylinders        | 1.0    | Multiple circular elements     |
++---------------------------+--------+--------------------------------+
+| Sharp nose (triangular)   | 0.9    | Sharp leading edge             |
++---------------------------+--------+--------------------------------+
+
 ---
+
+K₂ — Flow Angle of Attack Factor
+--------------------------------
+
+The flow angle correction factor accounts for the angle between the approach flow direction and the pier axis.
+
+.. math::
+
+   K_2 = \left( \cos\theta + \frac{L}{a}\sin\theta \right)^{0.65}
+
+where:
+
+- :math:`\theta` = angle of attack (degrees)
+- :math:`L` = pier length parallel to flow
+- :math:`a` = pier width normal to flow
+
+Constraints:
+
+- If :math:`L/a > 12`, use :math:`L/a = 12`
+- For flow angles greater than approximately 5°, :math:`K_1` is typically set to 1.0
+
+---
+
+K₃ — Bed Condition Factor
+-------------------------
+
++------------------------------+-----------------------+--------+
+| Bed Condition                | Dune Height (H)       | K₃     |
++==============================+=======================+========+
+| Clear-water scour            | –                     | 1.1    |
++------------------------------+-----------------------+--------+
+| Plane bed / antidune         | –                     | 1.1    |
++------------------------------+-----------------------+--------+
+| Small dunes                  | 2 ≤ H < 10            | 1.1    |
++------------------------------+-----------------------+--------+
+| Medium dunes                 | 10 ≤ H < 30           | 1.1–1.2|
++------------------------------+-----------------------+--------+
+| Large dunes                  | H ≥ 30                | 1.3    |
++------------------------------+-----------------------+--------+
+
+Dune height :math:`H` is measured in the approach channel bed profile.
+
+---
+
+K₄ — Bed Armoring Factor
+------------------------
+
+The armoring factor reduces predicted scour depth where coarse bed material limits erosion.
+
++-------------------------------+--------+-------------------------------------------+
+| Condition                     | K₄     | Notes                                     |
++===============================+========+===========================================+
+| Unarmored bed                 | 1.0    | Default condition                          |
++-------------------------------+--------+-------------------------------------------+
+| Armored bed (minimum value)   | 0.4    | Applies when coarse material limits scour |
++-------------------------------+--------+-------------------------------------------+
+
+Typical armoring criteria include:
+
+- :math:`D_{50} \ge 0.002 \, m`
+- :math:`D_{95} \ge 0.020 \, m`
+
+More detailed armoring formulations may be applied when grain-size and critical velocity data are available.
+
+---
+
+Notes
+-----
+
+- Correction factors follow HEC-18 guidance and are applied multiplicatively.
+- Factors should be reviewed carefully for site-specific conditions.
+- The CSU equation estimates **local pier scour only** and does not include contraction scour or long-term degradation.
+
+
 
 Spatial Evaluation
 ------------------
