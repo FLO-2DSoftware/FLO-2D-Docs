@@ -329,9 +329,9 @@ output interval used in the simulation.
 Example Project
 ---------------
 
-**Scenario:** Flood event over a potential solar site. 
-**Model Type:** FLO-2D overland flow simulation  
-**Objective:** Estimate potential pier scour depths using HEC-18 methodology
+- **Scenario:** Flood event over a potential solar site. 
+- **Model Type:** FLO-2D overland flow simulation  
+- **Objective:** Estimate potential pier scour depths using HEC-18 methodology
 
 **Input Data**
 
