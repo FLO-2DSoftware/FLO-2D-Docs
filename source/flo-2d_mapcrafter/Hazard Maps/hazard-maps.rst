@@ -342,7 +342,7 @@ Example Project
 **Workflow**
 
 1. Run FLO-2D simulation and generate depth and velocity outputs.
-2. Open **MapCrafter** and choose the correct CRS.
+2. Load the project in **QGIS** and run **Mapcrafter**.
 
 .. image:: ../img/pier002.png
 
