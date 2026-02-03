@@ -87,6 +87,27 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#pier-scour-hec-18-csu-method">Pier Scour (HEC-18 CSU Method)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#csu-pier-scour-equation">CSU Pier Scour Equation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#froude-number">Froude Number</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pier-geometry-and-correction-factors">Pier Geometry and Correction Factors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pier-scour-correction-factors-hec-18">Pier Scour Correction Factors (HEC-18)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#k1-pier-nose-shape-factor">K₁ — Pier Nose Shape Factor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#k2-flow-angle-of-attack-factor">K₂ — Flow Angle of Attack Factor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#k3-bed-condition-factor">K₃ — Bed Condition Factor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#k4-bed-armoring-factor">K₄ — Bed Armoring Factor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spatial-evaluation">Spatial Evaluation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-project">Example Project</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../Storm%20Drain%20Plots/storm-drain-plots.html">Storm Drain Plots</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Layouts/layouts.html">Layouts</a></li>
 </ul>
@@ -228,6 +249,274 @@ judgment</div>
 infants) is not seriously threatened by flood water</div>
 </div>
 </section>
+</section>
+</section>
+<section id="pier-scour-hec-18-csu-method">
+<h1>Pier Scour (HEC-18 CSU Method)<a class="headerlink" href="#pier-scour-hec-18-csu-method" title="Link to this heading"></a></h1>
+<p>MapCrafter includes a pier scour mapping tool based on the Colorado State University (CSU) pier scour equation as documented in HEC-18. This method estimates local scour depth at piers using hydraulic results from FLO-2D simulations and user-defined pier geometry parameters.</p>
+<p>FLO-2D users apply the pier scour equation to solar site models to estimate scour around solar panel pole mount or ground mount systems.</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The CSU equation estimates local pier scour depth as a function of flow depth, velocity, pier geometry, alignment, and bed material effects. MapCrafter applies the equation spatially using FLO-2D depth and velocity outputs to generate scour depth maps and pier-specific results.</p>
+<p>Hydraulic variables are extracted from raster datasets and combined with pier attributes supplied by the user.</p>
+<img alt="../../_images/pier001.png" src="../../_images/pier001.png" />
+</section>
+<section id="csu-pier-scour-equation">
+<h2>CSU Pier Scour Equation<a class="headerlink" href="#csu-pier-scour-equation" title="Link to this heading"></a></h2>
+<p>The local pier scour depth is computed using the HEC-18 CSU equation:</p>
+<div class="math notranslate nohighlight">
+\[y_s = 2.0 \, K_1 \, K_2 \, K_3 \, K_4 \, a^{0.65} \, y_1^{0.35} \, F_r^{0.43}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(y_s\)</span> = local pier scour depth (ft or m)</p></li>
+<li><p><span class="math notranslate nohighlight">\(y_1\)</span> = approach flow depth (ft or m)</p></li>
+<li><p><span class="math notranslate nohighlight">\(a\)</span> = pier width normal to flow (ft or m)</p></li>
+<li><p><span class="math notranslate nohighlight">\(F_r\)</span> = Froude number of the approach flow</p></li>
+<li><p><span class="math notranslate nohighlight">\(K_1\)</span> = pier shape factor</p></li>
+<li><p><span class="math notranslate nohighlight">\(K_2\)</span> = angle of attack factor</p></li>
+<li><p><span class="math notranslate nohighlight">\(K_3\)</span> = bed condition factor</p></li>
+<li><p><span class="math notranslate nohighlight">\(K_4\)</span> = bed armoring factor</p></li>
+</ul>
+<p>All variables are evaluated at the pier location using FLO-2D model results and user-provided pier parameters.</p>
+</section>
+<section id="froude-number">
+<h2>Froude Number<a class="headerlink" href="#froude-number" title="Link to this heading"></a></h2>
+<p>The approach flow Froude number is computed as:</p>
+<div class="math notranslate nohighlight">
+\[F_r = \frac{v}{\sqrt{g \, y_1}}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(v\)</span> = approach velocity magnitude (ft/s or m/s)</p></li>
+<li><p><span class="math notranslate nohighlight">\(g\)</span> = gravitational acceleration (32.174 ft/s/s or 9.80665 m/s/s)</p></li>
+<li><p><span class="math notranslate nohighlight">\(y_1\)</span> = approach flow depth (ft or m)</p></li>
+</ul>
+<p>Velocity and depth are extracted from FLO-2D output rasters.</p>
+</section>
+<section id="pier-geometry-and-correction-factors">
+<h2>Pier Geometry and Correction Factors<a class="headerlink" href="#pier-geometry-and-correction-factors" title="Link to this heading"></a></h2>
+<p>Pier geometry and correction factors are supplied through the pier attribute table or MapCrafter interface.</p>
+<p>Typical parameters include:</p>
+<ul class="simple">
+<li><p>Pier width (ft or m)</p></li>
+<li><p>Pier shape for <span class="math notranslate nohighlight">\(K_1\)</span></p></li>
+<li><p>Flow angle relative to pier axis for <span class="math notranslate nohighlight">\(K_2\)</span></p></li>
+<li><p>Bed condition live bed or clear water, for <span class="math notranslate nohighlight">\(K_3\)</span></p></li>
+<li><p>Armoring condition for <span class="math notranslate nohighlight">\(K_4\)</span></p></li>
+</ul>
+<p>Correction factor values follow guidance provided in HEC-18.</p>
+</section>
+<section id="pier-scour-correction-factors-hec-18">
+<h2>Pier Scour Correction Factors (HEC-18)<a class="headerlink" href="#pier-scour-correction-factors-hec-18" title="Link to this heading"></a></h2>
+<p>The CSU pier scour equation includes correction factors that account for pier geometry, flow alignment, bed condition, and
+armoring effects. These factors are defined in HEC-18 and are summarized below.</p>
+<section id="k1-pier-nose-shape-factor">
+<h3>K₁ — Pier Nose Shape Factor<a class="headerlink" href="#k1-pier-nose-shape-factor" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Pier Nose Shape</p></th>
+<th class="head"><p>K₁</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Square nose</p></td>
+<td><p>1.1</p></td>
+<td><p>Blunt leading edge</p></td>
+</tr>
+<tr class="row-odd"><td><p>Round nose</p></td>
+<td><p>1.0</p></td>
+<td><p>Smooth transition</p></td>
+</tr>
+<tr class="row-even"><td><p>Circular cylinder</p></td>
+<td><p>1.0</p></td>
+<td><p>Flow-symmetric</p></td>
+</tr>
+<tr class="row-odd"><td><p>Group of cylinders</p></td>
+<td><p>1.0</p></td>
+<td><p>Multiple circular elements</p></td>
+</tr>
+<tr class="row-even"><td><p>Sharp nose (triangular)</p></td>
+<td><p>0.9</p></td>
+<td><p>Sharp leading edge</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="k2-flow-angle-of-attack-factor">
+<h3>K₂ — Flow Angle of Attack Factor<a class="headerlink" href="#k2-flow-angle-of-attack-factor" title="Link to this heading"></a></h3>
+<p>The flow angle correction factor accounts for the angle between the approach flow direction and the pier axis.</p>
+<div class="math notranslate nohighlight">
+\[K_2 = \left( \cos\theta + \frac{L}{a}\sin\theta \right)^{0.65}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\theta\)</span> = angle of attack (degrees)</p></li>
+<li><p><span class="math notranslate nohighlight">\(L\)</span> = pier length parallel to flow</p></li>
+<li><p><span class="math notranslate nohighlight">\(a\)</span> = pier width normal to flow</p></li>
+</ul>
+<p>Constraints:</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(L/a &gt; 12\)</span>, use <span class="math notranslate nohighlight">\(L/a = 12\)</span></p></li>
+<li><p>For flow angles greater than approximately 5°, <span class="math notranslate nohighlight">\(K_1\)</span> is typically set to 1.0</p></li>
+</ul>
+<details>
+<summary><strong>K₂ Angle-of-Attack Helper</strong> (optional)</summary>
+
+<p>This helper computes K₂ for the HEC-18 CSU equation.  It does not perform validation or replace engineering judgement. Results are for reference only.</p>
+
+<label>Angle of attack (degrees):
+  <input id="theta" type="number" step="1" value="0">
+</label><br>
+
+<label>Pier length (L):
+  <input id="L" type="number" step="0.1" value="1">
+</label><br>
+
+<label>Pier width (a):
+  <input id="a" type="number" step="0.1" value="1">
+</label><br><br>
+
+<button onclick="calcK2()">Compute K₂</button>
+<p id="k2out"></p>
+
+<script>
+ function calcK2() {
+   // Read raw inputs
+   const thetaInput = Number(document.getElementById('theta').value);
+   const Linput = Number(document.getElementById('L').value);
+   const ainput = Number(document.getElementById('a').value);
+
+   // Defensive bounds (best practice #1)
+   const thetaDeg = Math.max(0, Math.min(90, thetaInput));
+   const L = Math.max(0.01, Linput);
+   const a = Math.max(0.01, ainput);
+
+   // Convert angle to radians
+   const theta = thetaDeg * Math.PI / 180;
+
+   // Compute K₂
+   const ratio = Math.min(L / a, 12.0);
+   const k2 = Math.pow(Math.cos(theta) + ratio * Math.sin(theta), 0.65);
+
+   // Output (safe: text only)
+   document.getElementById('k2out').innerText =
+     'K₂ = ' + k2out.toFixed(2);
+ }
+
+ <p></p>
+</script>
+</details></section>
+<section id="k3-bed-condition-factor">
+<h3>K₃ — Bed Condition Factor<a class="headerlink" href="#k3-bed-condition-factor" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Bed Condition</p></th>
+<th class="head"><p>Dune Height (H)</p></th>
+<th class="head"><p>K₃</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Clear-water scour</p></td>
+<td><p>–</p></td>
+<td><p>1.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Plane bed / antidune</p></td>
+<td><p>–</p></td>
+<td><p>1.1</p></td>
+</tr>
+</tbody>
+</table>
+<p>For solar sites small to large dunes are not anticipated.</p>
+</section>
+<section id="k4-bed-armoring-factor">
+<h3>K₄ — Bed Armoring Factor<a class="headerlink" href="#k4-bed-armoring-factor" title="Link to this heading"></a></h3>
+<p>The armoring factor reduces predicted scour depth where coarse bed material limits erosion.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Condition</p></th>
+<th class="head"><p>K₄</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Unarmored bed</p></td>
+<td><p>1.0</p></td>
+<td><p>Default condition</p></td>
+</tr>
+<tr class="row-odd"><td><p>Armored bed (minimum value)</p></td>
+<td><p>0.4</p></td>
+<td><p>Applies when coarse material limits scour</p></td>
+</tr>
+</tbody>
+</table>
+<p>For solar sites, <span class="math notranslate nohighlight">\(K_4\)</span> is a sensitive parameter but please remember this is not open channel flow
+so calculating the variable from the known flume studies or mobile bed studies may result in impractical
+results.  Use engineering judgment and test a range of values.</p>
+</section>
+</section>
+<section id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Correction factors follow HEC-18 guidance and are applied multiplicatively.</p></li>
+<li><p>Factors should be reviewed carefully for site-specific conditions.</p></li>
+<li><p>The CSU equation estimates <strong>local pier scour only</strong> and does not include contraction scour or long-term degradation.</p></li>
+</ul>
+</section>
+<section id="spatial-evaluation">
+<h2>Spatial Evaluation<a class="headerlink" href="#spatial-evaluation" title="Link to this heading"></a></h2>
+<p>Grid centroid sampling may be performed using values extracted from <cite>DEPFP.OUT</cite> and <cite>VELFP.OUT</cite>. Grid centroid values may
+also be sampled directly from <cite>TIMDEP.HDF5</cite>. Maximum depth and velocity values obtained from <cite>DEPFP.OUT</cite> and <cite>VELFP.OUT</cite> are
+not inherently time-synchronized. When relatively uniform flow conditions are anticipated, this approach provides reasonable
+screening-level results. Sampling from <cite>TIMDEP.HDF5</cite> preserves time synchronization by computing the maximum depth–velocity
+product using time-dependent data. The resulting maximum value may be slightly lower than the true peak due to the discrete
+output interval used in the simulation.</p>
+</section>
+<section id="example-project">
+<h2>Example Project<a class="headerlink" href="#example-project" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Scenario:</strong> Flood event over a potential solar site.</p></li>
+<li><p><strong>Model Type:</strong> FLO-2D rainfall runoff overland flow simulation.</p></li>
+<li><p><strong>Objective:</strong> Estimate potential pier scour depths using HEC-18 methodology.</p></li>
+</ul>
+<p><strong>Input Data</strong></p>
+<ul class="simple">
+<li><p>FLO-2D depth file</p></li>
+<li><p>FLO-2D velocity file</p></li>
+<li><p>FLO-2D Project QGIS</p></li>
+</ul>
+<p><strong>Workflow</strong></p>
+<ol class="arabic simple">
+<li><p>Run FLO-2D simulation and generate depth and velocity outputs.</p></li>
+<li><p>Load the project in <strong>QGIS</strong> and run <strong>Mapcrafter</strong>.</p></li>
+</ol>
+<img alt="../../_images/pier002.png" src="../../_images/pier002.png" />
+<ol class="arabic simple" start="3">
+<li><p>Find the <strong>Hazard</strong> tab and set the <strong>Pier Scour</strong> Variables.</p></li>
+</ol>
+<img alt="../../_images/pier003.png" src="../../_images/pier003.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click Create Maps and the <strong>Pier Scour</strong> map is added to the <strong>Hazard Group</strong>.</p></li>
+</ol>
+<p>MapCrafter computes local scour depth at each grid using the CSU equation and generates a raster mapped output.
+Sample this output with a pier map to get local results.</p>
+<ol class="arabic simple" start="5">
+<li><p>Check the pier scour map in the Layers List and expand the raster layer to show the style limis.</p></li>
+</ol>
+<img alt="../../_images/pier004.png" src="../../_images/pier004.png" />
+<section id="limitations">
+<h3>Limitations<a class="headerlink" href="#limitations" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>The CSU equation estimates <strong>local pier scour only</strong>.</p></li>
+<li><p>Contraction scour and long-term degradation are not included.</p></li>
+<li><p>Results are sensitive to flow depth, velocity, and pier alignment assumptions.</p></li>
+<li><p>Final design decisions should follow full HEC-18 guidance.</p></li>
+</ul>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<p>The MapCrafter pier scour tool implements the HEC-18 CSU equation directly using FLO-2D
+hydraulic results and user-defined pier parameters. This approach enables spatial visualization
+and comparative assessment of potential pier scour within a GIS-based post-processing workflow.</p>
 </section>
 </section>
 
