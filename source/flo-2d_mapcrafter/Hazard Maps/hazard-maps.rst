@@ -330,8 +330,8 @@ Example Project
 ---------------
 
 - **Scenario:** Flood event over a potential solar site. 
-- **Model Type:** FLO-2D overland flow simulation  
-- **Objective:** Estimate potential pier scour depths using HEC-18 methodology
+- **Model Type:** FLO-2D rainfall runoff overland flow simulation.
+- **Objective:** Estimate potential pier scour depths using HEC-18 methodology.
 
 **Input Data**
 
@@ -343,21 +343,23 @@ Example Project
 
 1. Run FLO-2D simulation and generate depth and velocity outputs.
 2. Open **MapCrafter** and choose the correct CRS.
+
+.. image:: ../img/pier002.png
+
 3. Find the **Hazard** tab and set the **Pier Scour** Variables. 
+
+.. image:: ../img/pier003.png
+
 4. Click Create Maps and the **Pier Scour** map is added to the **Hazard Group**.
 
 
 MapCrafter computes local scour depth at each grid using the CSU equation and generates a raster mapped output.
 Sample this output with a pier map to get local results.
 
-Outputs
-~~~~~~~~~~
 
-The pier scour tool produces:
+5. Check the pier scour map in the Layers List and expand the raster layer to show the style limis.
 
-- Pier scour depth raster
-- Styled layers compatible with MapCrafter layouts
-
+.. image:: ../img/pier004.png
 
 Limitations
 ~~~~~~~~~~~~~~~~~~~~
