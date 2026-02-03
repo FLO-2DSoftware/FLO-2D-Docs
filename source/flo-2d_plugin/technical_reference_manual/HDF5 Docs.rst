@@ -149,6 +149,16 @@ Reserved for special conditions like confluence or split flow and no exchange co
 
 .. image:: ./img/hdf5/FLO084a.png
 
+Starting Water Elevation
+~~~~~~~~~~~~~~~~~~~~~~~~
+Reserved for special conditions where a channel needs a water surface elevation to be applied between two channel elements within the same
+channel segment.  
+
+*Corresponds to:* `CHAN.DAT` Lines 3a and 3b.
+
+.. image:: ./img/hdf5/FLO084b.png
+
+
 Control Parameters
 ------------------
 Contains global control data and switches and numerical tolerances.
