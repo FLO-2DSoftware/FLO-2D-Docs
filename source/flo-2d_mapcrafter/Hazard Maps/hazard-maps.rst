@@ -336,7 +336,7 @@ Example Project
 **Input Data**
 
 - FLO-2D depth file
-- FLO-2D velocity raster
+- FLO-2D velocity file
 - FLO-2D Project QGIS
 
 **Workflow**
