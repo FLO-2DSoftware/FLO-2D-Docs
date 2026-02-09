@@ -7,6 +7,7 @@ FLO-2D Gila Tutorials
    :maxdepth: 1
 
    Self-Help-Kit-Gila/index
+   hydrowkshp/index
    Tailings/index
    TDT/index
    Two-Phase-Dam-Breach/index
