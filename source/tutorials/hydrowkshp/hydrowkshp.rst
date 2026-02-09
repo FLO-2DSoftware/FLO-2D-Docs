@@ -669,16 +669,16 @@ The plugin developer seems to be very responsive to requests for development.
 
 |hydrow072|
 
-.. |hydrow002| image:: ..img/hydrowkshp/hydrow002.jpg
+.. |hydrow002| image:: img/hydrowkshp/hydrow002.jpg
    :width: 5.18403in
    :height: 3.38514in
-.. |hydrow003| image:: ..img/hydrowkshp/hydrow003.jpg
+.. |hydrow003| image:: img/hydrowkshp/hydrow003.jpg
    :width: 6.79653in
    :height: 2.14569in
-.. |hydrow004| image:: ..img/hydrowkshp/hydrow004.jpg
+.. |hydrow004| image:: img/hydrowkshp/hydrow004.jpg
    :width: 6.76389in
    :height: 2.47569in
-.. |hydrow005| image:: ..img/hydrowkshp/hydrow005.jpg
+.. |hydrow005| image:: img/hydrowkshp/hydrow005.jpg
    :width: 3.02083in
    :height: 1.59375in
 .. |hydrow006| image:: ..img/hydrowkshp/hydrow006.jpg
