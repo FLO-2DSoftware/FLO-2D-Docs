@@ -1,10 +1,10 @@
 .. vim: syntax=rst
 
-====================================
-Hydrology Data Connection Workshop
-====================================
+=============================================
+Hydrologic Mapping and Data Access Workshop
+=============================================
 
 .. toctree::
-    :maxdepth: 1
-    
+    :maxdepth: 2
+
     hydrowkshp.rst
