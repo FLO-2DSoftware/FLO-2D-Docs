@@ -1,5 +1,3 @@
-.. vim: syntax=rst
-
 Hydrologic Mapping and Data Access
 =====================================
 
@@ -52,7 +50,7 @@ The required data is on the FLO-2D Flash Drive or can be downloaded here:
 
 
 Step 1: Find the data
----------------------
++++++++++++++++++++++++++++++++++++++++++
 
    1. Open the Flash Drive or use the link to get the data.
 
@@ -67,7 +65,7 @@ Step 1: Find the data
 
 
 Step 2: Install class data
---------------------------
++++++++++++++++++++++++++++++++++++++++++
 
 1. Double click the AFMA Workshop Installer.exe.
 
@@ -78,7 +76,7 @@ Step 2: Install class data
 |hydrow002|
 
 Step 3: Set up the quick access folder
---------------------------------------
++++++++++++++++++++++++++++++++++++++++++
 
 1. Find the training folder.
 
@@ -91,7 +89,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects
 |hydrow003|
 
 Step 4: Load QGIS and Install Plugins
--------------------------------------
++++++++++++++++++++++++++++++++++++++++++
 
 Open QGIS
 
