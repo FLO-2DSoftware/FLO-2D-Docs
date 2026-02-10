@@ -16,8 +16,8 @@ Participants will:
 
 - Practice workflows for floodplain and stormwater projects.
 
-Module 1 - Workshop Setup
-----------------------------
+Module 1 - Workshop Setup 
+--------------------------------------------------------------
 
 This workshop uses QGIS v3.40 and the FLO-2D Gila Plugin v2.0.0.  :ref:`Install Instructions <setup_qgis_flo2d_plugin>`
 
@@ -25,7 +25,7 @@ This workshop uses QGIS v3.40 and the FLO-2D Gila Plugin v2.0.0.  :ref:`Install 
 
 The required data can be downloaded here:
 
-raw:: html
+.. raw:: html
 
    <a href="https://flo-2d.sharefile.com/d-s47f576b807f94c17b85f7668fbd2c31e" target="_blank">Download Data Installer</a>
 
@@ -107,8 +107,8 @@ Close and Reload QGIS.
 Close it now to save the user profile.
 If the program crashes, the **setup** step will need to be repeated.
 
-Module 2 - Setup Server Connections
---------------------------------------
+Module 1 - Connect Data 
+-----------------------------------------------------
 
 These steps to connect to US or International servers are the same for local data.
 If a local agency has a server connection URL, QGIS can be connected to is using the same methods.
@@ -188,8 +188,8 @@ Click the Open FLO-2D Project button.
 
 Navigate to the Workshop folder and open the Workshop Project1.gpkg file.
 
-Delineate a Watershed
------------------------
+Module 2 - Delineate a Watershed
+---------------------------------------
 
 Step 1: Load data
 +++++++++++++++++++++++++++++++++++++++++++++++++++
