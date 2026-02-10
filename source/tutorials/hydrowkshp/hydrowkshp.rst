@@ -54,7 +54,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects
 
 |hydrow003|
 
-Step 3: Load QGIS and Install Plugins
+Step 3: Load QGIS
 +++++++++++++++++++++++++++++++++++++++++
 
 Open QGIS
@@ -68,7 +68,9 @@ Open the plugin manager and load the All Tab.
 Click the **All** tab.
 Use the **Search** bar to find and install these plugins:
 
-a. FLO-2D MapCrafter
+a. FLO-2D Gila v2.0.0 (Not listed?  Click install instgructions at the top of this lesson)
+
+a. FLO-2D MapCrafter v2.0.0
 
 b. FLO-2D Rasterizor
 
@@ -79,11 +81,6 @@ d. Curve Number Generator
 e. Manning’s Roughness Generator
 
 f. Street View
-
-Switch the tab to **Install from ZIP** and Navigate to the FLO-2D Gila plugin.
-
-The final list of **Installed** plugins looks similar to the following image.
-It doesn’t have to match exactly.
 
 |hydrow006|
 
@@ -103,9 +100,7 @@ QGIS Toolbar Layout Overview
 
 |hydrow010|
 
-Close and Reload QGIS.
-Close it now to save the user profile.
-If the program crashes, the **setup** step will need to be repeated.
+.. note:: Close and Reload QGIS to **save the user profile**. If the program crashes, the **setup** step will need to be repeated.
 
 Module 1 - Connect Data 
 -----------------------------------------------------
@@ -633,33 +628,27 @@ The plugin developer seems to be very responsive to requests for development.
 
 |hydrow072|
 
-.. |hydrow002| image:: ../img/hydrowkshp/hydrow002.jpg
-   :width: 5.18403in
-   :height: 3.38514in
-.. |hydrow003| image:: ../img/hydrowkshp/hydrow003.jpg
-   :width: 6.79653in
-   :height: 2.14569in
+.. |hydrow002| image:: ../img/hydrowkshp/hydrow002.png
+
+.. |hydrow003| image:: ../img/hydrowkshp/hydrow003.png
+
 .. |hydrow004| image:: ../img/hydrowkshp/hydrow004.jpg
    :width: 6.76389in
    :height: 2.47569in
 .. |hydrow005| image:: ../img/hydrowkshp/hydrow005.jpg
    :width: 3.02083in
    :height: 1.59375in
-.. |hydrow006| image:: ../img/hydrowkshp/hydrow006.jpg
-   :width: 6.76389in
-   :height: 4.06458in
+.. |hydrow006| image:: ../img/hydrowkshp/hydrow006.png
+
 .. |hydrow007| image:: ../img/hydrowkshp/hydrow007.jpg
    :width: 3.35278in
    :height: 1.59653in
-.. |hydrow008| image:: ../img/hydrowkshp/hydrow008.jpg
-   :width: 3.76597in
-   :height: 2.89556in
+.. |hydrow008| image:: ../img/hydrowkshp/hydrow008.png
+
 .. |hydrow009| image:: ../img/hydrowkshp/hydrow009.jpg
-   :width: 6.16042in
-   :height: 3.13194in
+
 .. |hydrow010| image:: ../img/hydrowkshp/hydrow010.jpg
-   :width: 6.49986in
-   :height: 2.19583in
+
 .. |hydrow011| image:: ../img/hydrowkshp/hydrow011.jpg
    :width: 6.76333in
    :height: 5.13542in
