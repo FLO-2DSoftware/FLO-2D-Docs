@@ -16,10 +16,10 @@ Participants will:
 
 - Practice workflows for floodplain and stormwater projects.
 
-Workshop Setup
------------------
+Module 1 - Workshop Setup
+----------------------------
 
-This workshop uses QGIS v3.40 and the FLO-2D Gila Plugin.  :ref:`Install Instructions <setup_qgis_flo2d_plugin>`
+This workshop uses QGIS v3.40 and the FLO-2D Gila Plugin v2.0.0.  :ref:`Install Instructions <setup_qgis_flo2d_plugin>`
 
 **Required Data**
 
@@ -27,45 +27,13 @@ The required data can be downloaded here:
 
 raw:: html
 
-   <a href="https://flo-2d.sharefile.com/d-s5c66fd7ec29e451facfcef7c56fac84e" target="_blank">Download Data Installer</a>
-
-.. list-table::
-   :widths: 50 50
-   :header-rows: 0
+   <a href="https://flo-2d.sharefile.com/d-s47f576b807f94c17b85f7668fbd2c31e" target="_blank">Download Data Installer</a>
 
 
-   * - **File**
-     - **Content**
-
-   * - \*.exe
-     - Data Installer
-
-   * - \*.zip
-     - FLO-2D Plugin xxx.zip
-
-   * - \*.pptx
-     - Presentation Files
-
-
-Step 1: Find the data
+Step 1: Install class data
 +++++++++++++++++++++++++++++++++++++++++
 
-   1. Open the Flash Drive or use the link to get the data.
-
-.. list-table::
-   :widths: 100
-   :header-rows: 0
-
-
-   * - Note:
-
-   * - Can’t use the flash drive? Get the data here:https://flo-2d.sharefile.com/d-s833f3121de6149288b5beecf1d239a63
-
-
-Step 2: Install class data
-+++++++++++++++++++++++++++++++++++++++++
-
-1. Double click the AFMA Workshop Installer.exe.
+1. Double click the  Workshop Installer.exe.
 
 2. Install using **default** settings.
 
@@ -73,7 +41,7 @@ Step 2: Install class data
 
 |hydrow002|
 
-Step 3: Set up the quick access folder
+Step 2: Set up the quick access folder
 +++++++++++++++++++++++++++++++++++++++++
 
 1. Find the training folder.
@@ -86,7 +54,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects
 
 |hydrow003|
 
-Step 4: Load QGIS and Install Plugins
+Step 3: Load QGIS and Install Plugins
 +++++++++++++++++++++++++++++++++++++++++
 
 Open QGIS
@@ -139,8 +107,8 @@ Close and Reload QGIS.
 Close it now to save the user profile.
 If the program crashes, the **setup** step will need to be repeated.
 
-Setup Server Connections
-----------------------------------
+Module 2 - Setup Server Connections
+--------------------------------------
 
 These steps to connect to US or International servers are the same for local data.
 If a local agency has a server connection URL, QGIS can be connected to is using the same methods.
@@ -265,8 +233,8 @@ Fill the form and export the **Project Domain**.
 
 |hydrow019|
 
-Process Elevation Data
----------------------------
+Module 3 - Process Elevation Data
+--------------------------------------
 
 Step 1: Zoom to boundary
 +++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -341,8 +309,8 @@ Set the Source Raster to the correct elevation layer and click OK.
 
 |hydrow028|
 
-Process Manning’s Roughness Data
-------------------------------------
+Module 4 - Process Manning’s Roughness Data
+------------------------------------------------
 
 .. _step-1-load-data-1:
 
@@ -501,8 +469,8 @@ The grid roughness can be checked with the renderer.
 
 |hydrow051|
 
-Process Rainfall Data
---------------------------
+Module 5 - Process Rainfall Data
+--------------------------------------
 
 Step 1: Uniform rain on grid
 +++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -604,8 +572,8 @@ Log-in to a free account to accept the terms and process the request.
 
 |hydrow067|
 
-Process Infiltration Data
-------------------------------
+Module 6 - Process Infiltration Data
+-----------------------------------------
 
 Green-Ampt method
 +++++++++++++++++++++++++++++++++++++++++++++++++++
