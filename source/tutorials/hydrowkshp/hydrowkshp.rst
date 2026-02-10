@@ -27,7 +27,8 @@ The required data can be downloaded here:
 
 .. raw:: html
 
-   <a href="https://flo-2d.sharefile.com/d-s47f576b807f94c17b85f7668fbd2c31e" target="_blank">Download Data Installer</a>
+   <a href="https://flo-2d.sharefile.com/d-s47f576b807f94c17b85f7668fbd2c31e" target="_blank">Data Installer</a>
+   <p></p>
 
 
 Step 1: Install class data
@@ -68,27 +69,27 @@ Open the plugin manager and load the All Tab.
 Click the **All** tab.
 Use the **Search** bar to find and install these plugins:
 
-a. FLO-2D Gila v2.0.0 (Not listed?  Click install instgructions at the top of this lesson)
+a. FLO-2D Gila v2.0.0 (Not listed?  Click install instructions at the top of this lesson.)
 
-a. FLO-2D MapCrafter v2.0.0
+b. FLO-2D MapCrafter v2.0.0
 
-b. FLO-2D Rasterizor
+c. FLO-2D Rasterizor
 
-c. Profile Tool
+d. Profile Tool
 
-d. Curve Number Generator
+e. Curve Number Generator
 
-e. Manning’s Roughness Generator
+f. Manning’s Roughness Generator
 
-f. Street View
+g. Street View
 
 |hydrow006|
 
-Open the Setting/Options menu.
+Open the Settings>>Options menu.
 
 |hydrow007|
 
-Find the CRS tab and check the Use Project CRS button.
+Find the CRS tab and select the **Use Project CRS** button.
 
 |hydrow008|
 
@@ -100,14 +101,13 @@ QGIS Toolbar Layout Overview
 
 |hydrow010|
 
-.. note:: Close and Reload QGIS to **save the user profile**. If the program crashes, the **setup** step will need to be repeated.
+.. Important:: Close and Reload QGIS to **save the User Profile**. If QGIS crashes before the profile is saved, the **setup** step will need to be repeated.
 
 Module 1 - Connect Data 
 -----------------------------------------------------
 
-These steps to connect to US or International servers are the same for local data.
-If a local agency has a server connection URL, QGIS can be connected to is using the same methods.
-If the server requires a login, that can be set up in the connectors.
+Use the following steps to connect to U.S. government or international data servers. If a local agency provides a server connection URL, 
+QGIS can connect to it using the same workflow. Servers that require authentication can be configured through the QGIS connection settings.
 
 Step 1: 3DEP elevation server connection
 +++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -172,7 +172,7 @@ Click New and enter a name and paste the URL.
 
 URL: https://geospatial.sec.usace.army.mil/dls/rest/services/NLD/Public/FeatureServer
 
-|hydrow013|
+|hydrow013a|
 
 Step 6: Load FLO-2D Project
 +++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -181,16 +181,13 @@ Click the Open FLO-2D Project button.
 
 |hydrow015|
 
-Navigate to the Workshop folder and open the Workshop Project1.gpkg file.
+Navigate to the Workshop folder and open the Workshop Project 1.gpkg file.
 
 Module 2 - Delineate a Watershed
 ---------------------------------------
 
 Step 1: Load data
 +++++++++++++++++++++++++++++++++++++++++++++++++++
-
-WARNING: The workshop internet connection may not support this process.
-If that is the case, data is already downloaded for this area.
 
 Open the Data Source Manager and find the WCS tab.
 
@@ -203,8 +200,6 @@ Click Add.
 
 Step 2: Isolate one or more watersheds
 +++++++++++++++++++++++++++++++++++++++++++++++++++
-
-If this takes too long, uncheck the **WBDHU12** layer and check the **Watershed Boundary** polygon in the **External layers** group.
 
 Zoom to the Soldier Canyon Watershed.
 
@@ -650,14 +645,13 @@ The plugin developer seems to be very responsive to requests for development.
 .. |hydrow010| image:: ../img/hydrowkshp/hydrow010.jpg
 
 .. |hydrow011| image:: ../img/hydrowkshp/hydrow011.jpg
-   :width: 6.76333in
-   :height: 5.13542in
+
 .. |hydrow012| image:: ../img/hydrowkshp/hydrow012.jpg
-   :width: 6.76389in
-   :height: 5.13611in
+
 .. |hydrow013| image:: ../img/hydrowkshp/hydrow013.jpg
-   :width: 6.76333in
-   :height: 5.13542in
+
+.. |hydrow013a| image:: ../img/hydrowkshp/hydrow013a.png
+
 .. |hydrow014| image:: ../img/hydrowkshp/hydrow014.jpg
    :width: 6.76319in
    :height: 5.13542in
