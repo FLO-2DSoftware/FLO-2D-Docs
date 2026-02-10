@@ -271,8 +271,6 @@ Expand the 3DEP group Select the first layer and click OK.
 Step 3: Download elevation
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-WARNING: **Skip** This step if the internet connection is slow.
-
 Right click the DEP3Elevation layer and Export a small bit of elevation data.
 
 |hydrow024|
@@ -306,11 +304,6 @@ Module 4 - Process Manning’s Roughness Data
 
 Step 1: Load data
 +++++++++++++++++++++++++++++++++++++++++++++++++++
-
-**WARNING**: The internet connection might be too slow for this step.
-If that is the case, **Skip** this step.
-
-Cancel the connection by unchecking **unchecking** the Land Cover layer Cancel the download by clicking the **progress bar** and clicking cancel.
 
 Curve Number Generator Method.
 
