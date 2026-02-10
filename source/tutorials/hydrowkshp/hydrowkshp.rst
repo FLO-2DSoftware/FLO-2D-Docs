@@ -8,28 +8,26 @@ Participants will:
 
 - Connect to online databases and download hydrologic data.
 
-- Transform raw datasets into ready-to-use inputs for FLO-2D or HECRAS 2D modeling.
+- Transform raw datasets into ready-to-use inputs for FLO-2D modeling.
 
 - Process Manning’s n values and infiltration parameters (Green-Ampt, SCS, Horton).
 
 - Access new rainfall mapping tools, including ERA5 reanalysis, NEXRAD, and gridded precipitation datasets.
-
-- Review PCHydro tools from Pima County Flood Control.
 
 - Practice workflows for floodplain and stormwater projects.
 
 Workshop Setup
 -----------------
 
-**Overview**
-
-The computer Admin should set up the computer with QGIS:
-
-   • QGIS Local Installer
+This workshop uses QGIS v3.40 and the FLO-2D Gila Plugin.  :ref:`Install Instructions <setup_qgis_flo2d_plugin>`
 
 **Required Data**
 
-The required data is on the FLO-2D Flash Drive or can be downloaded here:
+The required data can be downloaded here:
+
+raw:: html
+
+   <a href="https://flo-2d.sharefile.com/d-s5c66fd7ec29e451facfcef7c56fac84e" target="_blank">Download Data Installer</a>
 
 .. list-table::
    :widths: 50 50
@@ -40,7 +38,7 @@ The required data is on the FLO-2D Flash Drive or can be downloaded here:
      - **Content**
 
    * - \*.exe
-     - AFMA Data Installer
+     - Data Installer
 
    * - \*.zip
      - FLO-2D Plugin xxx.zip

@@ -1,3 +1,5 @@
+.. _setup_qgis_flo2d_plugin:
+
 QGIS and FLO-2D Plugin Install Instructions
 ============================================
 
