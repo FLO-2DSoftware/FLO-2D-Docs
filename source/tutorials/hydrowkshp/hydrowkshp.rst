@@ -69,7 +69,9 @@ Open the plugin manager and load the All Tab.
 Click the **All** tab.
 Use the **Search** bar to find and install these plugins:
 
-a. FLO-2D Gila v2.0.0 (Not listed?  Click install instructions at the top of this lesson.)
+a. **FLO-2D Gila v2.0.0**  
+   If it is not listed in the Plugin Manager, follow the installation instructions at the top of this lesson (see :ref:`addflo2dplugin`).
+
 
 b. FLO-2D MapCrafter v2.0.0
 
