@@ -247,9 +247,9 @@ Step 2: Load elevation data
 
 .. note:: If the process is taking too long, be sure to double check the Extent.
 
-Cancel the connection by unchecking **unchecking** the DEP3 layer Cancel the download by clicking the **progress bar** and clicking cancel.
+Cancel the connection by **unchecking** the DEP3 layer Cancel the download by clicking the **progress bar** and clicking cancel.
 
-Local Agency data may be of better quality than 3DEP data.
+.. important:: Local Agency data may be of better quality than 3DEP data.
 
 Open the Data Source Manager and find the WCS tab.
 
@@ -685,9 +685,9 @@ The plugin developer seems to be very responsive to requests for development.
 
 .. |hydrow029| image:: ../img/hydrowkshp/hydrow029.jpg
 
-.. |hydrow030| image:: ../img/hydrowkshp/hydrow030.jpg
+.. |hydrow030| image:: ../img/hydrowkshp/hydrow030.png
 
-.. |hydrow031| image:: ../img/hydrowkshp/hydrow031.jpg
+.. |hydrow031| image:: ../img/hydrowkshp/hydrow031.png
 
 .. |hydrow032| image:: ../img/hydrowkshp/hydrow032.png
 
