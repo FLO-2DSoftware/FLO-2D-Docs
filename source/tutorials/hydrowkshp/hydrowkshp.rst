@@ -663,7 +663,7 @@ The plugin developer seems to be very responsive to requests for development.
 
 .. |hydrow018| image:: ../img/hydrowkshp/hydrow018.jpg
 
-.. |hydrow019| image:: ../img/hydrowkshp/hydrow019.jpg
+.. |hydrow019| image:: ../img/hydrowkshp/hydrow019.png
 
 .. |hydrow020| image:: ../img/hydrowkshp/hydrow020.jpg
 
@@ -675,7 +675,7 @@ The plugin developer seems to be very responsive to requests for development.
 
 .. |hydrow024| image:: ../img/hydrowkshp/hydrow024.jpg
 
-.. |hydrow025| image:: ../img/hydrowkshp/hydrow025.jpg
+.. |hydrow025| image:: ../img/hydrowkshp/hydrow025.png
 
 .. |hydrow026| image:: ../img/hydrowkshp/hydrow026.png
 
