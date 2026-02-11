@@ -62,27 +62,11 @@ Open QGIS
 
 |hydrow004|
 
-Open the plugin manager and load the All Tab.
+Open the plugin manager and load the Installed Tab.
 
 |hydrow005|
 
-Click the **All** tab.
-Use the **Search** bar to find and install these plugins:
-
-a. **FLO-2D Gila v2.0.0**  
-   If it is not listed in the Plugin Manager, follow the installation instructions at the top of this lesson (see :ref:`addflo2dplugin`).
-
-b. FLO-2D MapCrafter v2.0.0
-
-c. FLO-2D Rasterizor
-
-d. Profile Tool
-
-e. Curve Number Generator
-
-f. Manning’s Roughness Generator
-
-g. Street View
+If you are missing any of these plugins please follow the :ref:`Install Instructions <setup_qgis_flo2d_plugin>`.
 
 |hydrow006|
 
@@ -101,8 +85,6 @@ QGIS Layout Overview
 QGIS Toolbar Layout Overview
 
 |hydrow010|
-
-.. Important:: Close and Reload QGIS to **save the User Profile**. If QGIS crashes before the profile is saved, the **setup** step will need to be repeated.
 
 Module 1 - Connect Data 
 -----------------------------------------------------
@@ -174,6 +156,8 @@ Click New and enter a name and paste the URL.
 URL: https://geospatial.sec.usace.army.mil/dls/rest/services/NLD/Public/FeatureServer
 
 |hydrow013a|
+
+.. Important:: Close and Reload QGIS to **save the User Profile**. If QGIS crashes before the profile is saved, the **setup** step will need to be repeated.
 
 Step 6: Load FLO-2D Project
 +++++++++++++++++++++++++++++++++++++++++++++++++++
