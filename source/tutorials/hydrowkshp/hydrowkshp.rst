@@ -622,16 +622,13 @@ The plugin developer seems to be very responsive to requests for development.
 .. |hydrow003| image:: ../img/hydrowkshp/hydrow003.png
 
 .. |hydrow004| image:: ../img/hydrowkshp/hydrow004.jpg
-   :width: 6.76389in
-   :height: 2.47569in
+
 .. |hydrow005| image:: ../img/hydrowkshp/hydrow005.jpg
-   :width: 3.02083in
-   :height: 1.59375in
+
 .. |hydrow006| image:: ../img/hydrowkshp/hydrow006.png
 
 .. |hydrow007| image:: ../img/hydrowkshp/hydrow007.jpg
-   :width: 3.35278in
-   :height: 1.59653in
+
 .. |hydrow008| image:: ../img/hydrowkshp/hydrow008.png
 
 .. |hydrow009| image:: ../img/hydrowkshp/hydrow009.jpg
@@ -647,179 +644,118 @@ The plugin developer seems to be very responsive to requests for development.
 .. |hydrow013a| image:: ../img/hydrowkshp/hydrow013a.png
 
 .. |hydrow014| image:: ../img/hydrowkshp/hydrow014.jpg
-   :width: 6.76319in
-   :height: 5.13542in
+
 .. |hydrow015| image:: ../img/hydrowkshp/hydrow015.jpg
-   :width: 3.71667in
-   :height: 3.425in
+
 .. |hydrow016| image:: ../img/hydrowkshp/hydrow016.jpg
-   :width: 6.76389in
-   :height: 6.80625in
+
 .. |hydrow017| image:: ../img/hydrowkshp/hydrow017.jpg
-   :width: 4.99958in
-   :height: 6.37778in
+
 .. |hydrow018| image:: ../img/hydrowkshp/hydrow018.jpg
-   :width: 4.99917in
-   :height: 3.88333in
+
 .. |hydrow019| image:: ../img/hydrowkshp/hydrow019.jpg
-   :width: 5.99861in
-   :height: 4.30194in
+
 .. |hydrow020| image:: ../img/hydrowkshp/hydrow020.jpg
-   :width: 5.34264in
-   :height: 6.55069in
+
 .. |hydrow021| image:: ../img/hydrowkshp/hydrow021.jpg
-   :width: 5in
-   :height: 5.03125in
+
 .. |hydrow022| image:: ../img/hydrowkshp/hydrow022.jpg
-   :width: 4.99917in
-   :height: 4.16597in
+
 .. |hydrow023| image:: ../img/hydrowkshp/hydrow023.jpg
-   :width: 4.99931in
-   :height: 4.12361in
+
 .. |hydrow024| image:: ../img/hydrowkshp/hydrow024.jpg
-   :width: 4.99958in
-   :height: 3.67222in
+
 .. |hydrow025| image:: ../img/hydrowkshp/hydrow025.jpg
-   :width: 4.99931in
-   :height: 4.32069in
+
 .. |hydrow026| image:: ../img/hydrowkshp/hydrow026.png
-   :width: 4.99972in
-   :height: 3.6125in
+
 .. |hydrow027| image:: ../img/hydrowkshp/hydrow027.png
-   :width: 4.99944in
-   :height: 2.50903in
+
 .. |hydrow028| image:: ../img/hydrowkshp/hydrow028.jpg
-   :width: 4.68597in
-   :height: 2.13472in
+
 .. |hydrow029| image:: ../img/hydrowkshp/hydrow029.jpg
-   :width: 4.99986in
-   :height: 3.24722in
+
 .. |hydrow030| image:: ../img/hydrowkshp/hydrow030.jpg
-   :width: 4.99986in
-   :height: 3.3125in
+
 .. |hydrow031| image:: ../img/hydrowkshp/hydrow031.jpg
-   :width: 4.92639in
-   :height: 4.25764in
+
 .. |hydrow032| image:: ../img/hydrowkshp/hydrow032.png
-   :width: 6.76389in
-   :height: 3.89514in
+
 .. |hydrow033| image:: ../img/hydrowkshp/hydrow033.jpg
-   :width: 6.76389in
-   :height: 3.62292in
+
 .. |hydrow034| image:: ../img/hydrowkshp/hydrow034.jpg
-   :width: 4.99986in
-   :height: 2.69861in
+
 .. |hydrow035| image:: ../img/hydrowkshp/hydrow035.jpg
-   :width: 4.99986in
-   :height: 3.13542in
+
 .. |hydrow036| image:: ../img/hydrowkshp/hydrow036.jpg
-   :width: 4.99931in
-   :height: 2.35403in
+
 .. |hydrow037| image:: ../img/hydrowkshp/hydrow037.png
-   :width: 6.76389in
-   :height: 3.44861in
+
 .. |hydrow038| image:: ../img/hydrowkshp/hydrow038.png
-   :width: 6.76389in
-   :height: 3.45417in
+
 .. |hydrow039| image:: ../img/hydrowkshp/hydrow039.jpg
-   :width: 4.99931in
-   :height: 3.13514in
+
 .. |hydrow040| image:: ../img/hydrowkshp/hydrow040.jpg
-   :width: 4.99944in
-   :height: 2.5875in
+
 .. |hydrow041| image:: ../img/hydrowkshp/hydrow041.jpg
-   :width: 6.45347in
-   :height: 3.45403in
+
 .. |hydrow042| image:: ../img/hydrowkshp/hydrow042.jpg
-   :width: 4.99958in
-   :height: 2.36736in
+
 .. |hydrow043| image:: ../img/hydrowkshp/hydrow043.jpg
-   :width: 5in
-   :height: 2.77778in
+
 .. |hydrow044| image:: ../img/hydrowkshp/hydrow044.jpg
-   :width: 4.99917in
-   :height: 2.02431in
+
 .. |hydrow045| image:: ../img/hydrowkshp/hydrow045.jpg
-   :width: 5.33333in
-   :height: 5.24167in
+
 .. |hydrow046| image:: ../img/hydrowkshp/hydrow046.jpg
-   :width: 4.99917in
-   :height: 2.91736in
+
 .. |hydrow047| image:: ../img/hydrowkshp/hydrow047.jpg
-   :width: 4.99903in
-   :height: 3.71389in
+
 .. |hydrow048| image:: ../img/hydrowkshp/hydrow048.jpg
-   :width: 6.38333in
-   :height: 3.75in
+
 .. |hydrow049| image:: ../img/hydrowkshp/hydrow049.jpg
-   :width: 6.76389in
-   :height: 2.87986in
+
 .. |hydrow050| image:: ../img/hydrowkshp/hydrow050.jpg
-   :width: 4.99806in
-   :height: 1.53125in
+
 .. |hydrow051| image:: ../img/hydrowkshp/hydrow051.jpg
-   :width: 4.99806in
-   :height: 1.53125in
+
 .. |hydrow052| image:: ../img/hydrowkshp/hydrow052.jpg
-   :width: 6.76389in
-   :height: 3.91528in
+
 .. |hydrow053| image:: ../img/hydrowkshp/hydrow053.jpg
-   :width: 1.64028in
-   :height: 3.99986in
+
 .. |hydrow054| image:: ../img/hydrowkshp/hydrow054.jpg
-   :width: 3.99167in
-   :height: 4.04167in
+
 .. |hydrow055| image:: ../img/hydrowkshp/hydrow055.jpg
-   :width: 6.76389in
-   :height: 2.52986in
+
 .. |hydrow056| image:: ../img/hydrowkshp/hydrow056.jpg
-   :width: 6.76278in
-   :height: 3.26806in
+
 .. |hydrow057| image:: ../img/hydrowkshp/hydrow057.jpg
-   :width: 4.68333in
-   :height: 2.48333in
+
 .. |hydrow058| image:: ../img/hydrowkshp/hydrow058.jpg
-   :width: 3.8in
-   :height: 4.08333in
+
 .. |hydrow059| image:: ../img/hydrowkshp/hydrow059.jpg
-   :width: 4.99986in
-   :height: 3.13542in
-.. |hydrow060| image:: ../img/hydrowkshp/hydrow060.jpg
-   :width: 4.99972in
-   :height: 3.12153in
+
 .. |hydrow061| image:: ../img/hydrowkshp/hydrow061.jpg
-   :width: 5.19417in
-   :height: 1.31667in
+
 .. |hydrow062| image:: ../img/hydrowkshp/hydrow062.jpg
-   :width: 4.23542in
-   :height: 2.29861in
+
 .. |hydrow063| image:: ../img/hydrowkshp/hydrow063.jpg
-   :width: 4.99917in
-   :height: 2.65in
+
 .. |hydrow064| image:: ../img/hydrowkshp/hydrow064.jpg
-   :width: 4.99986in
-   :height: 1.45069in
+
 .. |hydrow065| image:: ../img/hydrowkshp/hydrow065.jpg
-   :width: 2.88875in
-   :height: 2.22847in
+
 .. |hydrow066| image:: ../img/hydrowkshp/hydrow066.jpg
-   :width: 4.37431in
-   :height: 1.93028in
+
 .. |hydrow067| image:: ../img/hydrowkshp/hydrow067.jpg
-   :width: 4.99944in
-   :height: 4.59028in
+
 .. |hydrow068| image:: ../img/hydrowkshp/hydrow068.jpg
-   :width: 4.62403in
-   :height: 2.93611in
+
 .. |hydrow069| image:: ../img/hydrowkshp/hydrow069.png
-   :width: 5.45625in
-   :height: 3.49167in
+
 .. |hydrow070| image:: ../img/hydrowkshp/hydrow070.jpg
-   :width: 6.49167in
-   :height: 4.13056in
+
 .. |hydrow071| image:: ../img/hydrowkshp/hydrow071.jpg
-   :width: 6.76389in
-   :height: 5.12361in
+
 .. |hydrow072| image:: ../img/hydrowkshp/hydrow072.jpg
-   :width: 6.76389in
-   :height: 3.59375in
+
