@@ -745,6 +745,8 @@ The plugin developer seems to be very responsive to requests for development.
 
 .. |hydrow059| image:: ../img/hydrowkshp/hydrow059.jpg
 
+.. |hydrow060| image:: ../img/hydrowkshp/hydrow060.jpg
+
 .. |hydrow061| image:: ../img/hydrowkshp/hydrow061.jpg
 
 .. |hydrow062| image:: ../img/hydrowkshp/hydrow062.jpg
