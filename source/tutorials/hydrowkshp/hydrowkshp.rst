@@ -184,6 +184,12 @@ Click the Open FLO-2D Project button.
 
 Navigate to the Workshop folder and open the Workshop Project 1.gpkg file.
 
+|hydrow015a|
+
+The project should look like this:
+
+|hydrow015b|
+
 Module 2 - Delineate a Watershed
 ---------------------------------------
 
@@ -646,6 +652,10 @@ The plugin developer seems to be very responsive to requests for development.
 .. |hydrow014| image:: ../img/hydrowkshp/hydrow014.jpg
 
 .. |hydrow015| image:: ../img/hydrowkshp/hydrow015.jpg
+
+.. |hydrow015a| image:: ../img/hydrowkshp/hydrow015a.jpg
+
+.. |hydrow015b| image:: ../img/hydrowkshp/hydrow015b.jpg
 
 .. |hydrow016| image:: ../img/hydrowkshp/hydrow016.jpg
 
