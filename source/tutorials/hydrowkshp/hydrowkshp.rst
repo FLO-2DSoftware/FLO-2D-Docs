@@ -180,7 +180,7 @@ Module 2 - Delineate a Watershed
 Step 1: Load data
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Open the Data Source Manager and find the WCS tab.
+Open the Data Source Manager and find the ArcGIS REST tab.
 
 Connect the National Hydrography data server.
 
@@ -198,21 +198,66 @@ Wait for the watershed polygons to load.
 
 Use the Select tool to select a watershed polygon.
 
+.. note:: This watershed is already part of the project.  
+   Download it again to learn the process and to get an editable copy.
+
 |hydrow017|
 
-Step 3: Watershed export
+Step 3: Polygon export
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
 It is easy to export a single watershed polygon or a group of watershed polygons as a Project Domain.
-These can be used for FLO-2D or HEC-RAS 2D or any other 2D model.
+These can be used for FLO-2D or any other 2D model.
 
 Right click the **WBDHU12** layer and click **Export Data>>Save Features As**.
 
 |hydrow018|
 
-Fill the form and export the **Project Domain**.
+Fill the form and export the **Watershed Polygon**.
+
+.. note:: This file needs to use EPSG:3857 because that is also the native elevation CRS.
 
 |hydrow019|
+
+Step 4: Load the Flow Lines
++++++++++++++++++++++++++++++++
+
+Open the Data Manager tool and Load the ArcGIS REST tab.
+
+Select the Hydrography layer and click Connect.
+
+Select the Flowlines Raster and click ADD.
+
+|hydrow019a|
+
+This project uses Soldier Canyon which is the streamline on the north-east side of the map.
+
+|hydrow019b|
+
+Step 5: Trim the Watershed Polygon 
++++++++++++++++++++++++++++++++++++++++
+
+Select the Layer **Watershed Boundary 3857**.
+
+Click the **Edit Pencil**.
+
+Select the **Vertext Tool**
+
+Delete the vertex points that are outside the flow line extent of the Project Area.
+
+.. hint:: Press Ctrl+Z to undo unintended deletions. If the changes are beyond recovery with Undo, toggle off editing mode and decline the save to revert to the last committed state.
+
+Once finished, click untoggle the editor and click Save.
+
+|hydrow019c|
+
+This is the rough project extent.
+
+
+|hydrow019d|
+
+
+
 
 Module 3 - Process Elevation Data
 --------------------------------------
@@ -220,20 +265,17 @@ Module 3 - Process Elevation Data
 Step 1: Zoom to boundary
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Find the Small Boundary layer in External Layer Group.
-
-Right click the Small Boundary and click Zoom to Layer.
+Zoom to the Watershed Boundary.
 
 |hydrow020|
 
 Step 2: Load elevation data
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. note:: If the process is taking too long, be sure to double check the Extent.
+.. important:: 
+   If the process is taking too long, cancel the download using the Progress Bar and check the extent.
 
-Cancel the connection by **unchecking** the DEP3 layer Cancel the download by clicking the **progress bar** and clicking cancel.
-
-.. important:: Local Agency data may be of better quality than 3DEP data.
+   Local Agency data may be of better quality than 3DEP data.
 
 Open the Data Source Manager and find the WCS tab.
 
@@ -248,14 +290,17 @@ Close the Data Source Manager.
 
 |hydrow021|
 
-Uncheck the layer because it has a heavy connection.
-Right click the layer and select Repair Data Source.
+Uncheck the 3DEP layer to prevent loading issues caused by its active data connection. 
+
+Then right-click the layer and choose Repair Data Source to reestablish the link.
 
 |hydrow022|
 
 Expand the WCS group
 
 Expand the 3DEP group Select the first layer and click OK.
+
+.. note:: Not certain why this reload step is necessary but it seems to work for all WCS connections.
 
 |hydrow023|
 
@@ -269,24 +314,25 @@ Right click the DEP3Elevation layer and Export a small bit of elevation data.
 Set the file path.
 Make sure the CRS is 3857.
 
-Limit the Extent to Grid Layer or Map Canvas if zoomed into the project area.
+Limit the Extent to Watershed Boundary Layer or Map Canvas if zoomed into the project area.
+
+If this process is too time consuming, try this site:
+
+.. raw:: html
+
+   <a href="https://apps.nationalmap.gov/downloader/" target="_blank">USGS Data Downloader</a>
+   <p></p>
 
 |hydrow025|
 
-Step 4: Convert data to feet and interpolate to grid
+Step 4: Convert data to feet
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Use the FLO-2D **Pre-processing Tools** to convert the units of the raster.
 
 |hydrow026|
 
-Use the **Grid Tools** >> **Sample Elevation** to interpolate the elevation to the grid.
 
-|hydrow027|
-
-Set the Source Raster to the correct elevation layer and click OK.
-
-|hydrow028|
 
 Module 4 - Process Manning’s Roughness Data
 ------------------------------------------------
@@ -649,7 +695,15 @@ The plugin developer seems to be very responsive to requests for development.
 
 .. |hydrow019| image:: ../img/hydrowkshp/hydrow019.png
 
-.. |hydrow020| image:: ../img/hydrowkshp/hydrow020.jpg
+.. |hydrow019| image:: ../img/hydrowkshp/hydrow019a.png
+
+.. |hydrow019| image:: ../img/hydrowkshp/hydrow019b.png
+
+.. |hydrow019| image:: ../img/hydrowkshp/hydrow019c.png
+
+.. |hydrow019| image:: ../img/hydrowkshp/hydrow019d.png     
+
+.. |hydrow020| image:: ../img/hydrowkshp/hydrow020.png
 
 .. |hydrow021| image:: ../img/hydrowkshp/hydrow021.jpg
 
@@ -755,3 +809,10 @@ The plugin developer seems to be very responsive to requests for development.
 
 .. |hydrow072| image:: ../img/hydrowkshp/hydrow072.jpg
 
+Use the **Grid Tools** >> **Sample Elevation** to interpolate the elevation to the grid.
+
+|hydrow027|
+
+Set the Source Raster to the correct elevation layer and click OK.
+
+|hydrow028|
