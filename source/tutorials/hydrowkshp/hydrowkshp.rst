@@ -268,28 +268,21 @@ Zoom to the trimmed Watershed Boundary.
 Step 2: Load elevation data
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Open the Data Source Manager and find the WCS tab.
-
-Connect the elevation data.
-
-Select the first layer.
-
-Set the coordinate system to 3857.
-(USGS data uses Metric units.) Add the layer.
-
-Close the Data Source Manager.
+- Open the Data Source Manager and find the WCS tab.
+- Connect the elevation data.
+- Select the first layer.
+- Set the coordinate system to 3857. (USGS data uses Metric units.) Add the layer.
+- Close the Data Source Manager.
 
 |hydrow021|
 
-Uncheck the 3DEP layer to prevent loading issues caused by its active data connection. 
-
-Then right-click the layer and choose Repair Data Source to reestablish the link.
+- Uncheck the 3DEP layer to prevent loading issues caused by its active data connection. 
+- Then right-click the layer and choose Repair Data Source to reestablish the link.
 
 |hydrow022|
 
-Expand the WCS group
-
-Expand the 3DEP group Select the first layer and click OK.
+- Expand the WCS group
+- Expand the 3DEP group Select the first layer and click OK.
 
 .. note:: Not certain why this reload step is necessary but it seems to work for all WCS connections.
 
@@ -298,27 +291,28 @@ Expand the 3DEP group Select the first layer and click OK.
 Step 3: Download elevation
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. important:: 
-   If the process is taking too long, cancel the download using the Progress Bar and check the extent.
+.. important::
+
+   If the download is taking longer than expected, cancel it from the Progress Bar and verify that the selected extent is not excessively large.
+
+   If the download fails or performs poorly, use the following alternative site:
+
+   .. raw:: html
+
+      <a href="https://apps.nationalmap.gov/downloader/" target="_blank">USGS Data Downloader</a>
+      <p></p>
 
    
 .. hint:: 
    Local Agency data may be of better quality than 3DEP data.
 
-Right click the DEP3Elevation layer and Export a elevation data to cover the Project Area. 
+- Right click the DEP3Elevation layer and Export a elevation data to cover the Project Area. 
 
 |hydrow024|
 
 - Set the file path.
 - Make sure the CRS is 3857.
 - Limit the Extent to Watershed Boundary Layer or Map Canvas if zoomed into the project area.
-
-.. note:: If this process is too time consuming, try this site:
-
-  .. raw:: html
-
-     <a href="https://apps.nationalmap.gov/downloader/" target="_blank">USGS Data Downloader</a>
-     <p></p>
 
 |hydrow025|
 
