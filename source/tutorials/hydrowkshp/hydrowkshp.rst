@@ -226,7 +226,7 @@ Open the Data Manager tool and Load the ArcGIS REST tab.
 
 Select the Hydrography layer and click Connect.
 
-Select the Flowlines Raster and click ADD.
+Select the FlowDirection Raster and click ADD.
 
 |hydrow019a|
 
@@ -253,11 +253,7 @@ Once finished, click untoggle the editor and click Save.
 
 This is the rough project extent.
 
-
 |hydrow019d|
-
-
-
 
 Module 3 - Process Elevation Data
 --------------------------------------
@@ -265,17 +261,12 @@ Module 3 - Process Elevation Data
 Step 1: Zoom to boundary
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Zoom to the Watershed Boundary.
+Zoom to the trimmed Watershed Boundary.
 
 |hydrow020|
 
 Step 2: Load elevation data
 +++++++++++++++++++++++++++++++++++++++++++++++++++
-
-.. important:: 
-   If the process is taking too long, cancel the download using the Progress Bar and check the extent.
-
-   Local Agency data may be of better quality than 3DEP data.
 
 Open the Data Source Manager and find the WCS tab.
 
@@ -307,21 +298,27 @@ Expand the 3DEP group Select the first layer and click OK.
 Step 3: Download elevation
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Right click the DEP3Elevation layer and Export a small bit of elevation data.
+.. important:: 
+   If the process is taking too long, cancel the download using the Progress Bar and check the extent.
+
+   
+.. hint:: 
+   Local Agency data may be of better quality than 3DEP data.
+
+Right click the DEP3Elevation layer and Export a elevation data to cover the Project Area. 
 
 |hydrow024|
 
-Set the file path.
-Make sure the CRS is 3857.
+- Set the file path.
+- Make sure the CRS is 3857.
+- Limit the Extent to Watershed Boundary Layer or Map Canvas if zoomed into the project area.
 
-Limit the Extent to Watershed Boundary Layer or Map Canvas if zoomed into the project area.
+.. note:: If this process is too time consuming, try this site:
 
-If this process is too time consuming, try this site:
+  .. raw:: html
 
-.. raw:: html
-
-   <a href="https://apps.nationalmap.gov/downloader/" target="_blank">USGS Data Downloader</a>
-   <p></p>
+     <a href="https://apps.nationalmap.gov/downloader/" target="_blank">USGS Data Downloader</a>
+     <p></p>
 
 |hydrow025|
 
