@@ -695,13 +695,13 @@ The plugin developer seems to be very responsive to requests for development.
 
 .. |hydrow019| image:: ../img/hydrowkshp/hydrow019.png
 
-.. |hydrow019| image:: ../img/hydrowkshp/hydrow019a.png
+.. |hydrow019a| image:: ../img/hydrowkshp/hydrow019a.png
 
-.. |hydrow019| image:: ../img/hydrowkshp/hydrow019b.png
+.. |hydrow019b| image:: ../img/hydrowkshp/hydrow019b.png
 
-.. |hydrow019| image:: ../img/hydrowkshp/hydrow019c.png
+.. |hydrow019c| image:: ../img/hydrowkshp/hydrow019c.png
 
-.. |hydrow019| image:: ../img/hydrowkshp/hydrow019d.png     
+.. |hydrow019d| image:: ../img/hydrowkshp/hydrow019d.png     
 
 .. |hydrow020| image:: ../img/hydrowkshp/hydrow020.png
 
