@@ -316,12 +316,35 @@ Step 3: Download elevation
 
 |hydrow025|
 
-Step 4: Convert data to feet
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+- The finished raster should look like this.  
+- If it has a bad range, it may need to be patched. 
+- Patching a raster consists of downloading the small missing pieces and then merging all of the rasters together.
 
-Use the FLO-2D **Pre-processing Tools** to convert the units of the raster.
+|hydrow025a|
 
-|hydrow026|
+Module 2 - Finish the Watershed
+------------------------------------
+
+Step 1 - Clip the raster 
+++++++++++++++++++++++++++
+
+- Open the Processing toolbox and search Clip Raster
+
+|hydrow025b|
+
+- Fill the form as shown below and click Run
+
+|hydrow025c|
+
+- Search the Processing toolbox for saga fill.
+
+.. note:: If Saga isn't in the Toolbox, install it with the Plugin Manager.
+
+|hydrow025d|
+
+- Fill the form as shown and click Run.
+
+|hydrow025e|
 
 
 
@@ -706,6 +729,18 @@ The plugin developer seems to be very responsive to requests for development.
 
 .. |hydrow025| image:: ../img/hydrowkshp/hydrow025.png
 
+.. |hydrow025a| image:: ../img/hydrowkshp/hydrow025a.png
+
+.. |hydrow025b| image:: ../img/hydrowkshp/hydrow025b.png
+
+.. |hydrow025c| image:: ../img/hydrowkshp/hydrow025c.png
+
+.. |hydrow025d| image:: ../img/hydrowkshp/hydrow025d.png
+
+.. |hydrow025e| image:: ../img/hydrowkshp/hydrow025e.png
+
+.. |hydrow025f| image:: ../img/hydrowkshp/hydrow025f.png
+
 .. |hydrow026| image:: ../img/hydrowkshp/hydrow026.png
 
 .. |hydrow027| image:: ../img/hydrowkshp/hydrow027.png
@@ -799,6 +834,15 @@ The plugin developer seems to be very responsive to requests for development.
 .. |hydrow071| image:: ../img/hydrowkshp/hydrow071.jpg
 
 .. |hydrow072| image:: ../img/hydrowkshp/hydrow072.jpg
+
+
+
+Step 4: Convert data to feet
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Use the FLO-2D **Pre-processing Tools** to convert the units of the raster.
+
+|hydrow026|
 
 Use the **Grid Tools** >> **Sample Elevation** to interpolate the elevation to the grid.
 
