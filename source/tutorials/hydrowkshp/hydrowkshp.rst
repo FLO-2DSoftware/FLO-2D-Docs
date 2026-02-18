@@ -174,8 +174,9 @@ The project should look like this:
 
 |hydrow015b|
 
-Module 2 - Delineate a Watershed
----------------------------------------
+Module 2 - Identify the Contributing Watershed
+------------------------------------------------
+
 
 Step 1: Load data
 +++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -345,6 +346,17 @@ Step 1 - Clip the raster
 - Fill the form as shown and click Run.
 
 |hydrow025e|
+
+- Search the Toolbox for Saga Strahler.
+- Fill the form and click Run.
+
+|hydrow025f|
+
+- Run raster cacluator on the Stream Order raster to reduce the low level streams.
+
+|hydrow025g|
+
+
 
 
 
@@ -740,6 +752,8 @@ The plugin developer seems to be very responsive to requests for development.
 .. |hydrow025e| image:: ../img/hydrowkshp/hydrow025e.png
 
 .. |hydrow025f| image:: ../img/hydrowkshp/hydrow025f.png
+
+.. |hydrow025g| image:: ../img/hydrowkshp/hydrow025g.png
 
 .. |hydrow026| image:: ../img/hydrowkshp/hydrow026.png
 
