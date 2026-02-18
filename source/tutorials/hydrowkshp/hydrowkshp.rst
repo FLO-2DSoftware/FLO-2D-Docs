@@ -174,6 +174,26 @@ The project should look like this:
 
 |hydrow015b|
 
+.. raw:: html
+
+   <details>
+   <summary><strong>Module 2 – Identify the Contributing Watershed (Optional)</strong></summary>
+
+Module 2 – Identify the Contributing Watershed
+----------------------------------------------
+
+Step 1: Load Data
++++++++++++++++++
+
+Open the Data Source Manager and select the ArcGIS REST tab.
+
+Connect to the National Hydrography data server.
+
+.. raw:: html
+
+   </details>
+
+
 Module 2 - Identify the Contributing Watershed
 ------------------------------------------------
 
