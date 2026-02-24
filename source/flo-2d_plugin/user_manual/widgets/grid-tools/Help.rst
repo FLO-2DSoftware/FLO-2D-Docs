@@ -1,6 +1,6 @@
 .. _grid_help:
 
-17. Grid Tools Help
+18. Grid Tools Help
 ===================================
 
 .. image:: ../../img/gridtools/help/help001.png
