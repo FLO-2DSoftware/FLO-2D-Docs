@@ -174,107 +174,89 @@ The project should look like this:
 
 |hydrow015b|
 
-.. raw:: html
 
-   <details>
-   <summary><strong>Module 2 – Identify the Contributing Watershed (Optional)</strong></summary>
+.. dropdown:: Module 2 - Identify the Contributing Watershed
+   :open:
 
-Module 2 – Identify the Contributing Watershed
-----------------------------------------------
+   Step 1: Load data
+   +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Step 1: Load Data
-+++++++++++++++++
+   Open the Data Source Manager and find the ArcGIS REST tab.
 
-Open the Data Source Manager and select the ArcGIS REST tab.
+   Connect the National Hydrography data server.
 
-Connect to the National Hydrography data server.
+   Select the WBDHU12 Polygon layer.
+   Click Add.
 
-.. raw:: html
+   |hydrow016|
 
-   </details>
+   Step 2: Isolate one or more watersheds
+   +++++++++++++++++++++++++++++++++++++++++++++++++++
 
+   Zoom to the Soldier Canyon Watershed.
 
-Module 2 - Identify the Contributing Watershed
-------------------------------------------------
+   Wait for the watershed polygons to load.
 
+   Use the Select tool to select a watershed polygon.
 
-Step 1: Load data
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+   .. note:: This watershed is already part of the project.
+      Download it again to learn the process and to get an editable copy.
 
-Open the Data Source Manager and find the ArcGIS REST tab.
+   |hydrow017|
 
-Connect the National Hydrography data server.
+   Step 3: Polygon export
+   +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Select the WBDHU12 Polygon layer.
-Click Add.
+   It is easy to export a single watershed polygon or a group of watershed polygons as a Project Domain.
+   These can be used for FLO-2D or any other 2D model.
 
-|hydrow016|
+   Right click the **WBDHU12** layer and click **Export Data >> Save Features As**.
 
-Step 2: Isolate one or more watersheds
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+   |hydrow018|
 
-Zoom to the Soldier Canyon Watershed.
+   Fill the form and export the **Watershed Polygon**.
 
-Wait for the watershed polygons to load.
+   .. note:: This file needs to use EPSG:3857 because that is also the native elevation CRS.
 
-Use the Select tool to select a watershed polygon.
+   |hydrow019|
 
-.. note:: This watershed is already part of the project.  
-   Download it again to learn the process and to get an editable copy.
+   Step 4: Load the Flow Lines
+   +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-|hydrow017|
+   Open the Data Manager tool and load the ArcGIS REST tab.
 
-Step 3: Polygon export
-+++++++++++++++++++++++++++++++++++++++++++++++++++
+   Select the Hydrography layer and click Connect.
 
-It is easy to export a single watershed polygon or a group of watershed polygons as a Project Domain.
-These can be used for FLO-2D or any other 2D model.
+   Select the FlowDirection Raster and click ADD.
 
-Right click the **WBDHU12** layer and click **Export Data>>Save Features As**.
+   |hydrow019a|
 
-|hydrow018|
+   This project uses Soldier Canyon which is the streamline on the north-east side of the map.
 
-Fill the form and export the **Watershed Polygon**.
+   |hydrow019b|
 
-.. note:: This file needs to use EPSG:3857 because that is also the native elevation CRS.
+   Step 5: Trim the Watershed Polygon
+   +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-|hydrow019|
+   Select the Layer **Watershed Boundary 3857**.
 
-Step 4: Load the Flow Lines
-+++++++++++++++++++++++++++++++
+   Click the **Edit Pencil**.
 
-Open the Data Manager tool and Load the ArcGIS REST tab.
+   Select the **Vertex Tool**.
 
-Select the Hydrography layer and click Connect.
+   Delete the vertex points that are outside the flow line extent of the Project Area.
 
-Select the FlowDirection Raster and click ADD.
+   .. hint::
+      Press Ctrl+Z to undo unintended deletions.
+      If the changes are beyond recovery with Undo, toggle off editing mode and decline the save to revert to the last committed state.
 
-|hydrow019a|
+   Once finished, untoggle the editor and click Save.
 
-This project uses Soldier Canyon which is the streamline on the north-east side of the map.
+   |hydrow019c|
 
-|hydrow019b|
+   This is the rough project extent.
 
-Step 5: Trim the Watershed Polygon 
-+++++++++++++++++++++++++++++++++++++++
-
-Select the Layer **Watershed Boundary 3857**.
-
-Click the **Edit Pencil**.
-
-Select the **Vertext Tool**
-
-Delete the vertex points that are outside the flow line extent of the Project Area.
-
-.. hint:: Press Ctrl+Z to undo unintended deletions. If the changes are beyond recovery with Undo, toggle off editing mode and decline the save to revert to the last committed state.
-
-Once finished, click untoggle the editor and click Save.
-
-|hydrow019c|
-
-This is the rough project extent.
-
-|hydrow019d|
+   |hydrow019d|
 
 Module 3 - Process Elevation Data
 --------------------------------------
