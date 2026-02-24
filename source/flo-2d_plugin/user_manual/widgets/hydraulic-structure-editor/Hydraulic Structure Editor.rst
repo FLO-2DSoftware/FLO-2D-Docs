@@ -365,6 +365,7 @@ Entrance Loss Coefficients
 The entrance head loss is calculated using the following equation:
 
 .. math::
+  :label:
 
    H_e = K_e \left( \frac{v^2}{2g} \right)
 

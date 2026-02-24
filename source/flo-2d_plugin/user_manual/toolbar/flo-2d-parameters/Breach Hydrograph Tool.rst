@@ -40,6 +40,7 @@ Further refinement of both the centerline and buffer can be done after the initi
 to ensure that critical areas are included and that the model runs efficiently.
 
 .. math::
+  :label:
 
    D_{\max} = 8.870 \times 10^{-8} V_{\max}^{3}
    - 2.602 \times 10^{-4} V_{\max}^{2}
@@ -439,6 +440,7 @@ Figure 21 - Empirical correlations equations of documented tailings dam failures
 A second updated equation  (Luca Piciullo, 2022) with a multi variable power regression has been included in the tailing dam tool.
 
 .. math::
+  :label:
 
    R = 10^{\beta_0 + \varepsilon} \, V^{\beta_1} H^{\beta_2}
 
