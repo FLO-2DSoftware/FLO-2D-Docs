@@ -3,7 +3,7 @@
 Breach Hydrograph Tool
 ======================
 
-.. image:: ../../img/Breach-Hydrograph-Tool/bht006.jpg
+.. image:: ../../img/buttons/control006.jpg
 
 The Breach Hydrograph Tool was developed to estimate one of the most critical steps in hypothetical tailings and water dam break studies:
 generating a defensible outflow hydrograph. The tool focuses on water and tailings dams and implements commonly
