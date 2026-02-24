@@ -7,13 +7,9 @@ Objectives
 Participants will:
 
 - Connect to online databases and download hydrologic data.
-
 - Transform raw datasets into ready-to-use inputs for FLO-2D modeling.
-
 - Process Manning’s n values and infiltration parameters (Green-Ampt, SCS, Horton).
-
 - Access new rainfall mapping tools, including ERA5 reanalysis, NEXRAD, and gridded precipitation datasets.
-
 - Practice workflows for floodplain and stormwater projects.
 
 Module 1 - Workshop Setup 
@@ -34,55 +30,52 @@ The required data can be downloaded here:
 Step 1: Install class data
 +++++++++++++++++++++++++++++++++++++++++
 
-1. Double click the  Workshop Installer.exe.
-
-2. Install using **default** settings.
-
-3. Close the installer when the Completed message is listed in the Install Window.
+- Double click the  Workshop Installer.exe.
+- Install using **default** settings.
+- Close the installer when the Completed message is listed in the Install Window.
 
 |hydrow002|
 
 Step 2: Set up the quick access folder
 +++++++++++++++++++++++++++++++++++++++++
 
-1. Find the training folder.
+- Find the training folder.
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects
 
-2. Drag the Workshop Folder into the Quick Access Area.
-
-3. It can be removed after the class is over.
+- Drag the Workshop Folder into the Quick Access Area.
+- It can be removed after the class is over.
 
 |hydrow003|
 
 Step 3: Load QGIS
 +++++++++++++++++++++++++++++++++++++++++
 
-Open QGIS
+- Open QGIS
 
 |hydrow004|
 
-Open the plugin manager and load the Installed Tab.
+- Open the plugin manager and load the Installed Tab.
 
 |hydrow005|
 
-If you are missing any of these plugins please follow the :ref:`Install Instructions <setup_qgis_flo2d_plugin>`.
+- If you are missing any of these plugins please follow the :ref:`Install Instructions <setup_qgis_flo2d_plugin>`.
 
 |hydrow006|
 
-Open the Settings>>Options menu.
+- Open the Settings>>Options menu.
 
 |hydrow007|
 
-Find the CRS tab and select the **Use Project CRS** button.
+- Find the CRS tab and select the **Use Project CRS** button.
 
 |hydrow008|
 
-QGIS Layout Overview
+- QGIS Layout Overview
 
 |hydrow009|
 
-QGIS Toolbar Layout Overview
+- QGIS Toolbar Layout Overview
 
 |hydrow010|
 
@@ -95,11 +88,9 @@ QGIS can connect to it using the same workflow. Servers that require authenticat
 Step 1: 3DEP elevation server connection
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Load the Data Manager by clicking the colorful icon below.
-
-Set the tab to WCS.
-
-Click New and enter a name and paste the URL.
+- Load the Data Manager by clicking the colorful icon below.
+- Set the tab to WCS.
+- Click New and enter a name and paste the URL.
 
 URL: https://elevation.nationalmap.gov/arcgis/services/3DEPElevation/ImageServer/WCSServer
 
@@ -108,11 +99,9 @@ URL: https://elevation.nationalmap.gov/arcgis/services/3DEPElevation/ImageServer
 Step 2: Land cover NLCD server connection
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Load the Data Manager by clicking the colorful icon below.
-
-Set the tab to WCS.
-
-Click New and enter a name and paste the URL.
+- Load the Data Manager by clicking the colorful icon below.
+- Set the tab to WCS.
+- Click New and enter a name and paste the URL.
 
 URL: https://dmsdata.cr.usgs.gov/geoserver/mrlc_Land-Cover-Native_conus_year_data/wcs
 
@@ -121,11 +110,9 @@ URL: https://dmsdata.cr.usgs.gov/geoserver/mrlc_Land-Cover-Native_conus_year_dat
 Step 3: Hydrography NHD server connection
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Load the Data Manager by clicking the colorful icon below.
-
-Set the tab to ArcGIS REST Server.
-
-Click New and enter a name and paste the URL.
+- Load the Data Manager by clicking the colorful icon below.
+- Set the tab to ArcGIS REST Server.
+- Click New and enter a name and paste the URL.
 
 URL: https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer
 
@@ -134,11 +121,9 @@ URL: https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer
 Step 4: FEMA Effective Server
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Load the Data Manager by clicking the colorful icon below.
-
-Set the tab to ArcGIS REST Server.
-
-Click New and enter a name and paste the URL.
+- Load the Data Manager by clicking the colorful icon below.
+- Set the tab to ArcGIS REST Server.
+- Click New and enter a name and paste the URL.
 
 URL: https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer
 
@@ -147,11 +132,9 @@ URL: https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer
 Step 5: Levee Database
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Load the Data Manager by clicking the colorful icon below.
-
-Set the tab to ArcGIS REST Server.
-
-Click New and enter a name and paste the URL.
+- Load the Data Manager by clicking the colorful icon below.
+- Set the tab to ArcGIS REST Server.
+- Click New and enter a name and paste the URL.
 
 URL: https://geospatial.sec.usace.army.mil/dls/rest/services/NLD/Public/FeatureServer
 
@@ -162,101 +145,92 @@ URL: https://geospatial.sec.usace.army.mil/dls/rest/services/NLD/Public/FeatureS
 Step 6: Load FLO-2D Project
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Click the Open FLO-2D Project button.
+- Click the Open FLO-2D Project button.
 
 |hydrow015|
 
-Navigate to the Workshop folder and open the Workshop Project 1.gpkg file.
+- Navigate to the Workshop folder and open the Workshop Project 1.gpkg file.
 
 |hydrow015a|
 
-The project should look like this:
+- The project should look like this:
 
 |hydrow015b|
 
 
-.. dropdown:: Module 2 - Identify the Contributing Watershed
-   :open:
+Module 2 - Identify the Contributing Watershed
+-----------------------------------------------------
 
-   Step 1: Load data
-   +++++++++++++++++++++++++++++++++++++++++++++++++++
+Step 1: Load data
++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-   Open the Data Source Manager and find the ArcGIS REST tab.
+- Open the Data Source Manager and find the ArcGIS REST tab.
+- Connect the National Hydrography data server.
+- Select the WBDHU12 Polygon layer.
+- Click Add.
 
-   Connect the National Hydrography data server.
+|hydrow016|
 
-   Select the WBDHU12 Polygon layer.
-   Click Add.
+Step 2: Isolate one or more watersheds
++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-   |hydrow016|
+- Zoom to the Soldier Canyon Watershed.
+- Wait for the watershed polygons to load.
+- Use the Select tool to select a watershed polygon.
 
-   Step 2: Isolate one or more watersheds
-   +++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: This watershed is already part of the project.
+   Download it again to learn the process and to get an editable copy.
 
-   Zoom to the Soldier Canyon Watershed.
+|hydrow017|
 
-   Wait for the watershed polygons to load.
+Step 3: Polygon export
++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-   Use the Select tool to select a watershed polygon.
+It is easy to export a single watershed polygon or a group of watershed polygons as a Project Domain.
+These can be used for FLO-2D or any other 2D model.
 
-   .. note:: This watershed is already part of the project.
-      Download it again to learn the process and to get an editable copy.
+- Right click the **WBDHU12** layer and click **Export Data >> Save Features As**.
 
-   |hydrow017|
+|hydrow018|
 
-   Step 3: Polygon export
-   +++++++++++++++++++++++++++++++++++++++++++++++++++
+- Fill the form and export the **Watershed Polygon**.
 
-   It is easy to export a single watershed polygon or a group of watershed polygons as a Project Domain.
-   These can be used for FLO-2D or any other 2D model.
+.. note:: This file needs to use EPSG:3857 because that is also the native elevation CRS.
 
-   Right click the **WBDHU12** layer and click **Export Data >> Save Features As**.
+|hydrow019|
 
-   |hydrow018|
+Step 4: Load the Flow Lines
++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-   Fill the form and export the **Watershed Polygon**.
+- Open the Data Manager tool and load the ArcGIS REST tab.
+- Select the Hydrography layer and click Connect.
+- Select the FlowDirection Raster and click ADD.
 
-   .. note:: This file needs to use EPSG:3857 because that is also the native elevation CRS.
+|hydrow019a|
 
-   |hydrow019|
+This project uses Soldier Canyon which is the streamline on the north-east side of the map.
 
-   Step 4: Load the Flow Lines
-   +++++++++++++++++++++++++++++++++++++++++++++++++++
+|hydrow019b|
 
-   Open the Data Manager tool and load the ArcGIS REST tab.
+Step 5: Trim the Watershed Polygon
++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-   Select the Hydrography layer and click Connect.
+- Select the Layer **Watershed Boundary 3857**.
+- Click the **Edit Pencil**.
+- Select the **Vertex Tool**.
+- Delete the vertex points that are outside the flow line extent of the Project Area.
 
-   Select the FlowDirection Raster and click ADD.
+.. hint::
+   Press Ctrl+Z to undo unintended deletions.
+   If the changes are beyond recovery with Undo, toggle off editing mode and decline the save to revert to the last committed state.
 
-   |hydrow019a|
+- Once finished, untoggle the editor and click Save.
 
-   This project uses Soldier Canyon which is the streamline on the north-east side of the map.
+|hydrow019c|
 
-   |hydrow019b|
+This is the rough project extent.
 
-   Step 5: Trim the Watershed Polygon
-   +++++++++++++++++++++++++++++++++++++++++++++++++++
-
-   Select the Layer **Watershed Boundary 3857**.
-
-   Click the **Edit Pencil**.
-
-   Select the **Vertex Tool**.
-
-   Delete the vertex points that are outside the flow line extent of the Project Area.
-
-   .. hint::
-      Press Ctrl+Z to undo unintended deletions.
-      If the changes are beyond recovery with Undo, toggle off editing mode and decline the save to revert to the last committed state.
-
-   Once finished, untoggle the editor and click Save.
-
-   |hydrow019c|
-
-   This is the rough project extent.
-
-   |hydrow019d|
+|hydrow019d|
 
 Module 3 - Process Elevation Data
 --------------------------------------
@@ -264,7 +238,7 @@ Module 3 - Process Elevation Data
 Step 1: Zoom to boundary
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Zoom to the trimmed Watershed Boundary.
+- Zoom to the trimmed Watershed Boundary.
 
 |hydrow020|
 
