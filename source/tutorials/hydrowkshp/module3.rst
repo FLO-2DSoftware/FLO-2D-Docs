@@ -103,6 +103,13 @@ Step 2: Download elevation
    - The raster extent fully covers the intended modeling domain.
    - This approach avoids redownloading large datasets while preserving continuity in the final elevation surface.
 
+Step 3: Group elevation layers
+---------------------------------------------------
+
+- Move the elevation layers to the elevation group.
+
+|hydrow025l|
+
 .. |hydrow020| image:: ../img/hydrowkshp/hydrow020.png
 
 .. |hydrow021| image:: ../img/hydrowkshp/hydrow021.jpg
@@ -126,3 +133,5 @@ Step 2: Download elevation
 .. |hydrow025j| image:: ../img/hydrowkshp/hydrow025j.png
 
 .. |hydrow025k| image:: ../img/hydrowkshp/hydrow025k.png
+
+.. |hydrow025l| image:: ../img/hydrowkshp/hydrow025l.png

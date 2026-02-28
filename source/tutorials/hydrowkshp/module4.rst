@@ -6,13 +6,13 @@ Module 4 - Process Manning’s Roughness Data
 Step 1: Load land cover data (NLCD)
 ---------------------------------------------------
 
-Curve Number Generator Method.
+**Curve Number Generator Method**
 
-- Load the Curve Number Generator from the Processing toolbox.
+- Load the **Curve Number Generator** from the **Processing** toolbox.
 
 |hydrow029|
 
-- Set the Extent to Grid.
+- Set the Extent to **Watershed** Layer.
 - Set the name and path.
 - Uncheck the other items.
 - Click Run
