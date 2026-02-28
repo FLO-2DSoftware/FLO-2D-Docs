@@ -15,7 +15,7 @@ Participants will:
 - Practice workflows for floodplain and stormwater projects.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents
 
    module1.rst
