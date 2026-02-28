@@ -70,10 +70,15 @@ This project uses Soldier Canyon which is the streamline on the north-east side 
 
 - Uncheck the source layer and move both layers to the Watershed Group.
 
+|hydrow019g|
+
 Step 5: Trim the Watershed Polygon
 ---------------------------------------------------
 
 The watershed polygon is too large so it can be trimmed manually or by running some watershed processin tools.
+
+.. info:: 2D models do not require detailed watershed delineation. 
+   This step provides a simple method to trim the polygon to the contributing drainage area.
 
 - Select the Layer **Watershed Boundary 3857**.
 - Click the **Edit Pencil**.
@@ -88,9 +93,13 @@ The watershed polygon is too large so it can be trimmed manually or by running s
 
 |hydrow019c|
 
-This is the rough project extent.
+- This is the rough project extent.
 
 |hydrow019d|
+
+- The Area of Interest is here.
+
+|hydrow019i|
 
 .. |hydrow016| image:: ../img/hydrowkshp/hydrow016.jpg
 
@@ -114,4 +123,6 @@ This is the rough project extent.
 
 .. |hydrow019g| image:: ../img/hydrowkshp/hydrow019g.png
 
-.. |hydrow019h| image:: ../img/hydrowkshp/hydrow019h.png    
+.. |hydrow019h| image:: ../img/hydrowkshp/hydrow019h.png
+
+.. |hydrow019i| image:: ../image/hydrowksh/hydrow019h.png
