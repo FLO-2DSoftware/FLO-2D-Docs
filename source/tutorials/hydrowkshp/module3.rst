@@ -63,6 +63,8 @@ Step 2: Download elevation
 
 - The finished raster should look like this.  
 
+|hydrow025a|
+
 .. dropdown:: Elevation Patching
 
    If download issues occur, incomplete raster may result. The following guidance clarifies when patching is necessary and how to complete the process properly:
@@ -101,39 +103,6 @@ Step 2: Download elevation
    - The raster extent fully covers the intended modeling domain.
    - This approach avoids redownloading large datasets while preserving continuity in the final elevation surface.
 
-|hydrow025a|
-
-
-Step 3 - Clip the raster 
---------------------------
-
-- Open the Processing toolbox and search Clip Raster
-
-|hydrow025b|
-
-- Fill the form as shown below and click Run
-
-|hydrow025c|
-
-- Search the Processing toolbox for saga fill.
-
-.. note:: If Saga isn't in the Toolbox, install it with the Plugin Manager.
-
-|hydrow025d|
-
-- Fill the form as shown and click Run.
-
-|hydrow025e|
-
-- Search the Toolbox for Saga Strahler.
-- Fill the form and click Run.
-
-|hydrow025f|
-
-- Run raster cacluator on the Stream Order raster to reduce the low level streams.
-
-|hydrow025g|
-
 .. |hydrow020| image:: ../img/hydrowkshp/hydrow020.png
 
 .. |hydrow021| image:: ../img/hydrowkshp/hydrow021.jpg
@@ -147,16 +116,6 @@ Step 3 - Clip the raster
 .. |hydrow025| image:: ../img/hydrowkshp/hydrow025.png
 
 .. |hydrow025a| image:: ../img/hydrowkshp/hydrow025a.png
-
-.. |hydrow025b| image:: ../img/hydrowkshp/hydrow025b.png
-
-.. |hydrow025c| image:: ../img/hydrowkshp/hydrow025c.png
-
-.. |hydrow025d| image:: ../img/hydrowkshp/hydrow025d.png
-
-.. |hydrow025e| image:: ../img/hydrowkshp/hydrow025e.png
-
-.. |hydrow025f| image:: ../img/hydrowkshp/hydrow025f.png
 
 .. |hydrow025g| image:: ../img/hydrowkshp/hydrow025g.png
 
