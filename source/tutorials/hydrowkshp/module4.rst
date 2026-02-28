@@ -32,12 +32,35 @@ Step 2: Download the USGS data
 
 |hydrow031a|
 
+- Repair the data Source
+
+|hydrow031b|
+
+- Select the layer and click OK.
+
+|hydrow031c|
+
 - Right click the Land Cover layer and click Export.
+
+|hydrow031f|
+
 - Fill the form and click OK.
 
 |hydrow031|
 
 - Move the Land Cover layers to the **Manning's** group.
+
+|hydrow031e|
+
+- Copy the Style from the NLCD Layer.
+
+|hydrow031g|
+
+- Paste the Style to the Downloaded Layer.
+
+|hydrow031h|
+
+- Note the difference between the Curve Number Generator and the NLCD Current data.
 
 |hydrow031d|
 
@@ -179,6 +202,20 @@ Step 8: Interpolate to the Grid
 .. |hydrow031| image:: ../img/hydrowkshp/hydrow031.png
 
 .. |hydrow031a| image:: ../img/hydrowkshp/hydrow031a.png
+
+.. |hydrow031b| image:: ../img/hydrowkshp/hydrow031b.png
+
+.. |hydrow031c| image:: ../img/hydrowkshp/hydrow031c.png  
+
+.. |hydrow031d| image:: ../img/hydrowkshp/hydrow031d.png
+
+.. |hydrow031e| image:: ../img/hydrowkshp/hydrow031e.png
+
+.. |hydrow031f| image:: ../img/hydrowkshp/hydrow031f.png
+
+.. |hydrow031g| image:: ../img/hydrowkshp/hydrow031g.png
+
+.. |hydrow031h| image:: ../img/hydrowkshp/hydrow031h.png
 
 .. |hydrow032| image:: ../img/hydrowkshp/hydrow032.png
 
