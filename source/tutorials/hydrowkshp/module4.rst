@@ -104,18 +104,18 @@ Step 4: Run NLCD landuse roughness processor
 Step 5: Load land cover data (ESA World)
 ---------------------------------------------------
 
-Curve Number Generator Method.
+Curve Number Generator ESA
 
 - Load the Curve Number Generator from the Processing toolbox.
 
-|hydrow029|
+|hydrow029a|
 
 - Set the Extent to Grid.
 - Set the name and path.
 - Uncheck the other items.
 - Click Run
 
-|hydrow030|
+|hydrow030a|
 
 
 Step 6: Run ESA landuse roughness processor
@@ -197,7 +197,11 @@ Step 8: Interpolate to the Grid
 
 .. |hydrow029| image:: ../img/hydrowkshp/hydrow029.jpg
 
+.. |hydrow029a| image:: ../img/hydrowkshp/hydrow029a.png
+
 .. |hydrow030| image:: ../img/hydrowkshp/hydrow030.png
+
+.. |hydrow030| image:: ../img/hydrowkshp/hydrow030a.png
 
 .. |hydrow031| image:: ../img/hydrowkshp/hydrow031.png
 
@@ -223,7 +227,7 @@ Step 8: Interpolate to the Grid
 
 .. |hydrow034| image:: ../img/hydrowkshp/hydrow034.jpg
 
-.. |hydrow035| image:: ../img/hydrowkshp/hydrow035.jpg
+.. |hydrow035| image:: ../img/hydrowkshp/hydrow035.png
 
 .. |hydrow036| image:: ../img/hydrowkshp/hydrow036.jpg
 
