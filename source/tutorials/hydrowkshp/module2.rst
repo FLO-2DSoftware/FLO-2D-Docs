@@ -125,4 +125,4 @@ The watershed polygon is too large so it can be trimmed manually or by running s
 
 .. |hydrow019h| image:: ../img/hydrowkshp/hydrow019h.png
 
-.. |hydrow019i| image:: ../img/hydrowksh/hydrow019h.png
+.. |hydrow019i| image:: ../img/hydrowksh/hydrow019i.png
