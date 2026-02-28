@@ -77,7 +77,7 @@ Step 5: Trim the Watershed Polygon
 
 The watershed polygon is too large so it can be trimmed manually or by running some watershed processin tools.
 
-.. info:: 2D models do not require detailed watershed delineation. 
+.. note:: 2D models do not require detailed watershed delineation. 
    This step provides a simple method to trim the polygon to the contributing drainage area.
 
 - Select the Layer **Watershed Boundary 3857**.
@@ -125,4 +125,4 @@ The watershed polygon is too large so it can be trimmed manually or by running s
 
 .. |hydrow019h| image:: ../img/hydrowkshp/hydrow019h.png
 
-.. |hydrow019i| image:: ../image/hydrowksh/hydrow019h.png
+.. |hydrow019i| image:: ../img/hydrowksh/hydrow019h.png
