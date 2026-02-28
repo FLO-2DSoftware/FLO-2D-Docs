@@ -1,6 +1,10 @@
 Module 3 - Process Elevation Data
 ========================================
 
+.. note:: The complete watershed elevation file is already included in the project. 
+   This exercise is intended to provide practice with the download workflow and to 
+   identify any potential issues that may arise during the process.
+
 Step 1: Load elevation data
 ---------------------------------------------------
 
@@ -24,7 +28,8 @@ Step 1: Load elevation data
 - Expand the WCS group
 - Expand the 3DEP group Select the first layer and click OK.
 
-.. note:: Not certain why this reload step is necessary but it seems to work for all WCS connections.
+.. note:: The reason this reload step is required is not entirely clear; 
+   however, it consistently resolves display and connection issues for WCS-based 3DEP elevation layers in QGIS.
 
 |hydrow023|
 
@@ -57,8 +62,47 @@ Step 2: Download elevation
 |hydrow025|
 
 - The finished raster should look like this.  
-- If it has a bad range, it may need to be patched. 
-- Patching a raster consists of downloading the small missing pieces and then merging all of the rasters together.
+
+.. dropdown:: Elevation Patching
+
+   If download issues occur, incomplete raster tiles are often the cause. The following guidance clarifies when patching is necessary and how to complete the process properly:
+
+   - If a download error occurs, portions of the raster may be truncated or missing entirely. This can result in partial tiles or edge artifacts.
+   - If the downloaded raster contains blank areas, unexpected NoData regions, or 0-elevation pixels that are not physically realistic for the terrain, the dataset is likely incomplete.
+   - These gaps commonly occur with WCS services, interrupted downloads, or when the request extent slightly exceeds the server’s tile boundaries.
+
+   Patching Procedure
+
+   Patching a raster involves:
+
+   1. Identifying the missing or corrupted areas (typically visible as NoData or anomalous 0 values).
+
+   |hydrow025i|
+
+   2. Redownloading only the small missing sections using a tighter extent that fully covers the gap.
+   
+   |hydrow025k|
+
+   3. Verifying that all rasters share:
+
+      - The same coordinate reference system (CRS)
+      - The same cell size
+      - The same NoData definition
+
+   4. Merging (mosaicking) the rasters into a single continuous dataset using tools such as:
+
+      - GDAL Merge
+      - Build Virtual Raster (VRT)
+      - Merge in QGIS Processing
+
+   |hydrow025h|
+   
+   After merging, confirm:
+
+   - No unintended NoData seams remain.
+   - Elevation statistics are reasonable (minimum, maximum, and mean).
+   - The raster extent fully covers the intended modeling domain.
+   - This approach avoids redownloading large datasets while preserving continuity in the final elevation surface.
 
 |hydrow025a|
 
@@ -118,3 +162,11 @@ Step 3 - Clip the raster
 .. |hydrow025f| image:: ../img/hydrowkshp/hydrow025f.png
 
 .. |hydrow025g| image:: ../img/hydrowkshp/hydrow025g.png
+
+.. |hydrow025h| image:: ../img/hydrowkshp/hydrow025h.png
+
+.. |hydrow025i| image:: ../img/hydrowkshp/hydrow025i.png
+
+.. |hydrow025j| image:: ../img/hydrowkshp/hydrow025j.png
+
+.. |hydrow025k| image:: ../img/hydrowkshp/hydrow025k.png
