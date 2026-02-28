@@ -53,17 +53,12 @@ Load the July storm NetCDF file that contains the ERA Rainfall data from the Cop
 
 |hydrow059|
 
-The interpolator will process the realtime rainfall.
-
-Click the FLO-2D Info button on the FLO-2D tool bar.
-
-Zoom into the rainfall area that has 9 inches of rainfall.
-
-Click a grid element to see a sample of the Copernicus data.
-
-This is something like NEXRAD reflectivity but for the whole world.
-
-It can be easily downloaded and gage calibrated to a storm event with gages.
+- The interpolator will process the realtime rainfall.
+- Click the FLO-2D Info button on the FLO-2D tool bar.
+- Zoom into the rainfall area that has 9 inches of rainfall.
+- Click a grid element to see a sample of the Copernicus data.
+- This is something like NEXRAD reflectivity but for the whole world.
+- It can be easily downloaded and gage calibrated to a storm event with gages.
 
 |hydrow060|
 
@@ -89,17 +84,19 @@ Select all times
 
 |hydrow064|
 
-Set up the subregion
+- Set up the subregion
 
 |hydrow065|
 
-Set the data and download format.
+- Set the data and download format.
 
 |hydrow066|
 
 Log-in to a free account to accept the terms and process the request.
 
 |hydrow067|
+
+
 
 .. |hydrow052| image:: ../img/hydrowkshp/hydrow052.jpg
 

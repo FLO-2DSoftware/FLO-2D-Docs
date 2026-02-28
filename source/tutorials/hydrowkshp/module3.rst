@@ -1,15 +1,12 @@
 Module 3 - Process Elevation Data
 ========================================
 
-Step 1: Zoom to boundary
+Step 1: Load elevation data
 ---------------------------------------------------
 
 - Zoom to the trimmed Watershed Boundary.
 
 |hydrow020|
-
-Step 2: Load elevation data
----------------------------------------------------
 
 - Open the Data Source Manager and find the WCS tab.
 - Connect the elevation data.
@@ -31,7 +28,7 @@ Step 2: Load elevation data
 
 |hydrow023|
 
-Step 3: Download elevation
+Step 2: Download elevation
 ---------------------------------------------------
 
 .. important::
@@ -65,10 +62,8 @@ Step 3: Download elevation
 
 |hydrow025a|
 
-Module 3 - Finish the Watershed
-------------------------------------
 
-Step 1 - Clip the raster 
+Step 3 - Clip the raster 
 --------------------------
 
 - Open the Processing toolbox and search Clip Raster

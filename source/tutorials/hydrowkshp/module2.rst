@@ -4,9 +4,9 @@ Module 2 - Identify the Contributing Watershed
 Step 1: Load data
 ---------------------------------------------------
 
-- Open the Data Source Manager and find the ArcGIS REST tab.
-- Connect the National Hydrography data server.
-- Select the WBDHU12 Polygon layer.
+- Open the **Data Source Manager** and find the **ArcGIS REST** tab.
+- Connect the **National Hydrography** data server.
+- Select the **WBDHU12** Polygon layer.
 - Click Add.
 
 |hydrow016|
@@ -26,7 +26,7 @@ Step 2: Save one Watershed
 Step 3: Polygon export
 ---------------------------------------------------
 
-It is easy to export a single watershed polygon or a group of watershed polygons as a Project Domain.
+It is easy to export a single watershed polygon or a group of watershed polygons as a **Project Domain**.
 These can be used for FLO-2D or any other 2D model.
 
 - Right click the **WBDHU12** layer and click **Export Data >> Save Features As**.
@@ -47,12 +47,12 @@ Step 4: Load the Flow Lines
 ---------------------------------------------------
 
 - Open the **Data Manager** tool and load the **ArcGIS REST** tab.
-- Select the Hydrography layer and click Connect.
-- Select the FlowDirection Raster and click ADD.
+- Select the **Hydrography** layer and click Connect.
+- Select the **Flow Direction** Raster and click **ADD**.
 
 |hydrow019a|
 
-This project uses Soldier Canyon which is the streamline on the north-east side of the map.
+This project uses **Soldier Canyon** which is the streamline on the north-east side of the map.
 
 .. important:: If the Flow Direction arrows are not visible, zoom in to a smaller area and 
    allow them to render. Once they display at a closer scale, they typically load more 
@@ -60,7 +60,7 @@ This project uses Soldier Canyon which is the streamline on the north-east side 
 
 |hydrow019b|
 
-- Once the Flow Directions load, export them to a raster file.
+- Once the Flow Directions load, export it to a raster file.
 
 |hydrow019e|
 
@@ -68,7 +68,7 @@ This project uses Soldier Canyon which is the streamline on the north-east side 
 
 |hydrow019f|
 
-- Uncheck the source layer and move both layers to the Watershed Group.
+- Uncheck the source layer and move both layers to the **Watershed Group**.
 
 |hydrow019g|
 
