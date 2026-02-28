@@ -8,31 +8,28 @@ Step 1: Load data
 
 Curve Number Generator Method.
 
-Load the Curve Number Generator from the Processing toolbox.
+- Load the Curve Number Generator from the Processing toolbox.
 
 |hydrow029|
 
-Set the Extent to Grid.
-
-Set the name and path.
-
-Uncheck the other items.
-
-Click Run
+- Set the Extent to Grid.
+- Set the name and path.
+- Uncheck the other items.
+- Click Run
 
 |hydrow030|
 
 Step 2: Download the USGS data
 ---------------------------------------------------
 
-**Curve Number Generator** seems much faster than this download method.
-Skip or cancel this download if it’s taking too long.
+.. note:: **Curve Number Generator** seems much faster than this download method.
+   Skip or cancel this download if it’s taking too long.
 
-Curve Number Generator is limited to an allowable size limit.
-For large projects download in batches or use the USGS method.
+   Curve Number Generator is limited to an allowable size limit.
+   For large projects download in batches or use the USGS method.
 
-Right click the USGS Land Cover layer and click Export.
-Fill the form and click OK.
+- Right click the USGS Land Cover layer and click Export.
+- Fill the form and click OK.
 
 |hydrow031|
 
@@ -42,35 +39,34 @@ Step 3: Review look-up tables
 Land cover lookup table.
 The full table is in the Excel Spreadsheet.
 
-Modify these table per local **Flood Control Specifications.**
+- Modify these table per local **Flood Control Specifications.**
 
 |hydrow032|
 
-Mannings roughness for shallow overland flow developed for FLO-2D.
-Example Table.
+- Mannings roughness for shallow overland flow developed for FLO-2D. Example Table.
 
 |hydrow033|
 
 Step 4: Run NLCD landuse roughness processor
 ---------------------------------------------------
 
-Open the **Processing Toolbox**.
+- Open the **Processing Toolbox**.
 
 |hydrow034|
 
-Open the Existing Processor Model.
+- Open the Existing Processor Model.
 
 |hydrow035|
 
-Double click the Reclassify module.
+- Double click the Reclassify module.
 
 |hydrow036|
 
-This table can be modified to reflect **Local Manning’s n value standards**.
+- This table can be modified to reflect **Local Manning’s n value standards**.
 
 |hydrow037|
 
-Run the processor model to reclassify the landuse data as roughness data.
+- Run the processor model to reclassify the landuse data as roughness data.
 
 |hydrow038|
 
@@ -80,38 +76,38 @@ Step 5: Run ESA landuse roughness processor
 This processor works on World Data.
 For Example, use it on the **US Mexico boundary.**
 
-Open the **Processing Toolbox**.
+- Open the **Processing Toolbox**.
 
 |hydrow034|
 
-Open the Existing Processor Model.
+- Open the Existing Processor Model.
 
 |hydrow039|
 
-Double click the Reclassify module.
+- Double click the Reclassify module.
 
 |hydrow036|
 
-This table can be modified to reflect **Local Manning’s n value standards**.
+- This table can be modified to reflect **Local Manning’s n value standards**.
 
 |hydrow040|
 
-Run the processor model to reclassify the landuse data as roughness data.
+- Run the processor model to reclassify the landuse data as roughness data.
 
 |hydrow041|
 
 Step 6: Create street layer buffer
 ---------------------------------------------------
 
-Run the **Buffer** tool from the **Processing Toolbox**.
+- Run the **Buffer** tool from the **Processing Toolbox**.
 
 |hydrow042|
 
-Load the **Street Network** in the editor and set the buffer distance to Edit Expression.
+- Load the **Street Network** in the editor and set the buffer distance to Edit Expression.
 
 |hydrow043|
 
-Set the Expression to “Width ft” /2 to use the street width divided by 2 as the buffer radius.
+- Set the Expression to “Width ft” /2 to use the street width divided by 2 as the buffer radius.
 
 |hydrow044|
 
@@ -125,31 +121,29 @@ Copy the features using Ctrl-C.
 
 |hydrow046|
 
-Find the Roughness Layer in the Areas Group.
-
-Edit the layer.
-
-Paste the features into the Roughness Layer.
+- Find the Roughness Layer in the Areas Group.
+- Edit the layer.
+- Paste the features into the Roughness Layer.
 
 |hydrow047|
 
-Open the Attribute Table Set the n value to 0.018.
-Set the field editor to n Update all.
+- Open the Attribute Table Set the n value to 0.018.
+- Set the field editor to n Update all.
 
 |hydrow048|
 
 Step 7: Interpolate to the Grid
 ---------------------------------------------------
 
-Start by interpolating the Mannings n raster to the grid.
+- Start by interpolating the Mannings n raster to the grid.
 
 |hydrow049|
 
-Next run the polygon interpolator on the User Roughness polygons.
+- Next run the polygon interpolator on the User Roughness polygons.
 
 |hydrow050|
 
-The grid roughness can be checked with the renderer.
+- The grid roughness can be checked with the renderer.
 
 |hydrow051|
 
