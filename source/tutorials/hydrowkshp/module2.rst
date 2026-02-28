@@ -66,7 +66,7 @@ This project uses Soldier Canyon which is the streamline on the north-east side 
 
 - Fill the form as shown and click OK.
 
-|hydro019f|
+|hydrow019f|
 
 - Uncheck the source layer and move both layers to the Watershed Group.
 
