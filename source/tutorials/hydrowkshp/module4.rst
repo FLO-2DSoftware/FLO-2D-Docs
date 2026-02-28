@@ -3,7 +3,7 @@ Module 4 - Process Manning’s Roughness Data
 
 .. _step-1-load-data-1:
 
-Step 1: Load data
+Step 1: Load land cover data (NLCD)
 ---------------------------------------------------
 
 Curve Number Generator Method.
@@ -70,7 +70,24 @@ Step 4: Run NLCD landuse roughness processor
 
 |hydrow038|
 
-Step 5: Run ESA landuse roughness processor
+Step 5: Load land cover data (ESA World)
+---------------------------------------------------
+
+Curve Number Generator Method.
+
+- Load the Curve Number Generator from the Processing toolbox.
+
+|hydrow029|
+
+- Set the Extent to Grid.
+- Set the name and path.
+- Uncheck the other items.
+- Click Run
+
+|hydrow030|
+
+
+Step 6: Run ESA landuse roughness processor
 ---------------------------------------------------
 
 This processor works on World Data.
@@ -96,7 +113,7 @@ For Example, use it on the **US Mexico boundary.**
 
 |hydrow041|
 
-Step 6: Create street layer buffer
+Step 7: Create street layer buffer
 ---------------------------------------------------
 
 - Run the **Buffer** tool from the **Processing Toolbox**.
@@ -132,7 +149,7 @@ Copy the features using Ctrl-C.
 
 |hydrow048|
 
-Step 7: Interpolate to the Grid
+Step 8: Interpolate to the Grid
 ---------------------------------------------------
 
 - Start by interpolating the Mannings n raster to the grid.
