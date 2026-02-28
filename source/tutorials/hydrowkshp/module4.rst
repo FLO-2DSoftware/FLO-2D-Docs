@@ -201,7 +201,7 @@ Step 8: Interpolate to the Grid
 
 .. |hydrow030| image:: ../img/hydrowkshp/hydrow030.png
 
-.. |hydrow030| image:: ../img/hydrowkshp/hydrow030a.png
+.. |hydrow030a| image:: ../img/hydrowkshp/hydrow030a.png
 
 .. |hydrow031| image:: ../img/hydrowkshp/hydrow031.png
 
