@@ -5,7 +5,6 @@ Hydrologic Mapping and Data Access Workshop
 =============================================
 
 Objectives
------------------
 
 Participants will:
 
@@ -16,7 +15,7 @@ Participants will:
 - Practice workflows for floodplain and stormwater projects.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents
 
    module1.rst
