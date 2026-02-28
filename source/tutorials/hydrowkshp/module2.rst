@@ -14,7 +14,7 @@ Step 1: Load data
 Step 2: Save one Watershed
 ---------------------------------------------------
 
-- Zoom to the Agua Caliente Watershed.
+- Zoom to the **Agua Caliente** Watershed.
 - Wait for the watershed polygons to load.
 - Use the Select tool to select a watershed polygon.
 
@@ -39,10 +39,14 @@ These can be used for FLO-2D or any other 2D model.
 
 |hydrow019|
 
+- Adjust the polygon style to remove the fill and make the outline heavier.
+
+|hydrow019h|
+
 Step 4: Load the Flow Lines
 ---------------------------------------------------
 
-- Open the Data Manager tool and load the ArcGIS REST tab.
+- Open the **Data Manager** tool and load the **ArcGIS REST** tab.
 - Select the Hydrography layer and click Connect.
 - Select the FlowDirection Raster and click ADD.
 
@@ -50,7 +54,21 @@ Step 4: Load the Flow Lines
 
 This project uses Soldier Canyon which is the streamline on the north-east side of the map.
 
+.. important:: If the Flow Direction arrows are not visible, zoom in to a smaller area and 
+   allow them to render. Once they display at a closer scale, they typically load more 
+   efficiently when zooming back out to a larger extent.
+
 |hydrow019b|
+
+- Once the Flow Directions load, export them to a raster file.
+
+|hydrow019e|
+
+- Fill the form as shown and click OK.
+
+|hydro019f|
+
+- Uncheck the source layer and move both layers to the Watershed Group.
 
 Step 5: Trim the Watershed Polygon
 ---------------------------------------------------
@@ -89,3 +107,11 @@ This is the rough project extent.
 .. |hydrow019c| image:: ../img/hydrowkshp/hydrow019c.png
 
 .. |hydrow019d| image:: ../img/hydrowkshp/hydrow019d.png
+
+.. |hydrow019e| image:: ../img/hydrowkshp/hydrow019e.png
+
+.. |hydrow019f| image:: ../img/hydrowkshp/hydrow019f.png  
+
+.. |hydrow019g| image:: ../img/hydrowkshp/hydrow019g.png
+
+.. |hydrow019h| image:: ../img/hydrowkshp/hydrow019h.png    

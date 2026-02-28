@@ -66,7 +66,7 @@ Step 3: Load QGIS
 |hydrow010|
 
 Module 1 - Connect Data 
------------------------------------------------------
+=============================
 
 Use the following steps to connect to U.S. government or international data servers. If a local agency provides a server connection URL, 
 QGIS can connect to it using the same workflow. Servers that require authentication can be configured through the QGIS connection settings.
