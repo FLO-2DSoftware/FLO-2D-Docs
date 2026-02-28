@@ -59,38 +59,6 @@ The plugin developer seems to be very responsive to requests for development.
 
 |hydrow072|
 
-.. |hydrow052| image:: ../img/hydrowkshp/hydrow052.jpg
-
-.. |hydrow053| image:: ../img/hydrowkshp/hydrow053.jpg
-
-.. |hydrow054| image:: ../img/hydrowkshp/hydrow054.jpg
-
-.. |hydrow055| image:: ../img/hydrowkshp/hydrow055.jpg
-
-.. |hydrow056| image:: ../img/hydrowkshp/hydrow056.jpg
-
-.. |hydrow057| image:: ../img/hydrowkshp/hydrow057.jpg
-
-.. |hydrow058| image:: ../img/hydrowkshp/hydrow058.jpg
-
-.. |hydrow059| image:: ../img/hydrowkshp/hydrow059.jpg
-
-.. |hydrow060| image:: ../img/hydrowkshp/hydrow060.jpg
-
-.. |hydrow061| image:: ../img/hydrowkshp/hydrow061.jpg
-
-.. |hydrow062| image:: ../img/hydrowkshp/hydrow062.jpg
-
-.. |hydrow063| image:: ../img/hydrowkshp/hydrow063.jpg
-
-.. |hydrow064| image:: ../img/hydrowkshp/hydrow064.jpg
-
-.. |hydrow065| image:: ../img/hydrowkshp/hydrow065.jpg
-
-.. |hydrow066| image:: ../img/hydrowkshp/hydrow066.jpg
-
-.. |hydrow067| image:: ../img/hydrowkshp/hydrow067.jpg
-
 .. |hydrow068| image:: ../img/hydrowkshp/hydrow068.jpg
 
 .. |hydrow069| image:: ../img/hydrowkshp/hydrow069.png
