@@ -65,15 +65,12 @@ Step 2: Download elevation
 
 .. dropdown:: Elevation Patching
 
-   If download issues occur, incomplete raster tiles are often the cause. The following guidance clarifies when patching is necessary and how to complete the process properly:
+   If download issues occur, incomplete raster may result. The following guidance clarifies when patching is necessary and how to complete the process properly:
 
-   - If a download error occurs, portions of the raster may be truncated or missing entirely. This can result in partial tiles or edge artifacts.
-   - If the downloaded raster contains blank areas, unexpected NoData regions, or 0-elevation pixels that are not physically realistic for the terrain, the dataset is likely incomplete.
+   - If the downloaded raster contains blank areas, unexpected NoData regions, or 0-elevation pixels that are not physically realistic for the terrain, the dataset is incomplete.
    - These gaps commonly occur with WCS services, interrupted downloads, or when the request extent slightly exceeds the server’s tile boundaries.
 
-   Patching Procedure
-
-   Patching a raster involves:
+   **Patching Procedure**
 
    1. Identifying the missing or corrupted areas (typically visible as NoData or anomalous 0 values).
 
@@ -95,7 +92,7 @@ Step 2: Download elevation
       - Build Virtual Raster (VRT)
       - Merge in QGIS Processing
 
-   |hydrow025h|
+   |hydrow025j|
    
    After merging, confirm:
 
