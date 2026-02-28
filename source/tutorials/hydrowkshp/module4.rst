@@ -28,10 +28,18 @@ Step 2: Download the USGS data
    Curve Number Generator is limited to an allowable size limit.
    For large projects download in batches or use the USGS method.
 
-- Right click the USGS Land Cover layer and click Export.
+- Connect to the NLCD Land Cover data.
+
+|hydrow031a|
+
+- Right click the Land Cover layer and click Export.
 - Fill the form and click OK.
 
 |hydrow031|
+
+- Move the Land Cover layers to the **Manning's** group.
+
+|hydrow031d|
 
 Step 3: Review look-up tables
 ---------------------------------------------------
@@ -169,6 +177,8 @@ Step 8: Interpolate to the Grid
 .. |hydrow030| image:: ../img/hydrowkshp/hydrow030.png
 
 .. |hydrow031| image:: ../img/hydrowkshp/hydrow031.png
+
+.. |hydrow031a| image:: ../img/hydrowkshp/hydrow031a.png
 
 .. |hydrow032| image:: ../img/hydrowkshp/hydrow032.png
 
