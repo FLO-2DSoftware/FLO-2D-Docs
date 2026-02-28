@@ -19,9 +19,9 @@ Participants will:
    :maxdepth: 1
    :caption: Contents
 
-    module1.rst
-    module2.rst
-    module3.rst
-    module4.rst
-    module5.rst
-    module6.rst
+   module1.rst
+   module2.rst
+   module3.rst
+   module4.rst
+   module5.rst
+   module6.rst
