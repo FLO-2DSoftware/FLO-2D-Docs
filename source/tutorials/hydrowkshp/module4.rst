@@ -188,18 +188,44 @@ Step 7: Download Street Centerlines
 |hydrow042f|
 
 
-Step 8: Create street layer buffer
+Step 8: Reproject and Export Street Layer
+---------------------------------------------------
+
+The street layer must be in the project coordinate system before buffering.  
+If it remains in WGS84 (EPSG:4326), the buffer distance will be interpreted in degrees and will not produce correct results.
+
+- Right-click the **Roads** layer.
+- Select **Export → Save Features As**.
+
+|hydrow043a|
+
+- Set **Format** to:
+
+  ``ESRI Shapefile``
+
+- Set the **Coordinate Reference System (CRS)** to:
+
+  ``EPSG:2222``
+
+- Choose an appropriate file name and save location.
+- Click **OK**.
+
+|hydrow043a|
+
+The street layer is now in projected units (feet), and buffer distances will be applied correctly in the next step.
+
+Step 9: Create street layer buffer
 ---------------------------------------------------
 
 - Run the **Buffer** tool from the **Processing Toolbox**.
 
 |hydrow042|
 
-- Load the **Roads Layer** in the editor and set the buffer distance to Edit Expression.
+- Load the **Street Network** in the editor and set the buffer distance to Edit Expression.
 
 |hydrow043|
 
-- Set the Expression to “Width ft” /2 to use the street width divided by 2 as the buffer radius.
+- Copy code into the **Expression Editor** to determine the buffer width by street type.
 
 ```json
 CASE
@@ -212,15 +238,14 @@ CASE
 END / 2
 ```
 
-
-|hydrow044|
+|hydrow043c|
 
 This results in a polygon layer that covers the streets.
 If some streets are missing, it is easy to digitize them directly into the street network or download them from OSM.
 
 |hydrow045|
 
-Select the buffer polygons that intersect the **GRID** layer.
+Select the buffer polygons.
 Copy the features using Ctrl-C.
 
 |hydrow046|
@@ -236,20 +261,6 @@ Copy the features using Ctrl-C.
 
 |hydrow048|
 
-Step 9: Interpolate to the Grid
----------------------------------------------------
-
-- Start by interpolating the Mannings n raster to the grid.
-
-|hydrow049|
-
-- Next run the polygon interpolator on the User Roughness polygons.
-
-|hydrow050|
-
-- The grid roughness can be checked with the renderer.
-
-|hydrow051|
 
 .. |hydrow029| image:: ../img/hydrowkshp/hydrow029.jpg
 
@@ -316,6 +327,12 @@ Step 9: Interpolate to the Grid
 .. |hydrow042f| image:: ../img/hydrowkshp/hydrow042f.gif
 
 .. |hydrow043| image:: ../img/hydrowkshp/hydrow043.jpg
+
+.. |hydrow043a| image:: ../img/hydrowkshp/hydrow043a.png
+
+.. |hydrow043b| image:: ../img/hydrowkshp/hydrow043b.png
+
+.. |hydrow043c| image:: ../img/hydrowkshp/hydrow043c.png
 
 .. |hydrow044| image:: ../img/hydrowkshp/hydrow044.jpg
 
