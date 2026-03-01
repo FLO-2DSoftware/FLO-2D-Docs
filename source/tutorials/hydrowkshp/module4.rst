@@ -151,7 +151,7 @@ For Example, use it on the **US Mexico boundary.**
 |hydrow040a|
 
 Step 7: Download Street Centerlines from OpenStreetMap
----------------------------------------------------
+--------------------------------------------------------------
 
 - Open **Plugins → Manage and Install Plugins** and install **QuickOSM** (or **OSM Downloader**) if it is not already enabled.
 
