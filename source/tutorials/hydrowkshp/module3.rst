@@ -147,6 +147,6 @@ Step 3: Interpolate the elevation (Grid)
 
 .. |hydrow025l| image:: ../img/hydrowkshp/hydrow025l.png
 
-.. |hydrow025m| image:: ../img/hydrowkshp/hydrow025mpng
+.. |hydrow025m| image:: ../img/hydrowkshp/hydrow025m.png
 
-.. |hydrow025m| image:: ../img/hydrowkshp/hydrow025n.png
+.. |hydrow025n| image:: ../img/hydrowkshp/hydrow025n.png
