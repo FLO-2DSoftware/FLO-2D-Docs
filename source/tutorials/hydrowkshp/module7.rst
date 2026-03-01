@@ -19,7 +19,7 @@ Set the Source Raster to the correct elevation layer and click OK.
 
 |hydrow028|
 
-Step x: Rougness
+Step x: Roughness
 -------------------------------------------------------
 
 |hydrow045|

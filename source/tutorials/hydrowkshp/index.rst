@@ -6,6 +6,16 @@ Hydrologic Mapping and Data Access Workshop
 
 Objectives
 
+This workshop is designed to provide a structured, end-to-end workflow for acquiring, processing, 
+and preparing hydrologic and hydraulic datasets for use in FLO-2D modeling. The focus is on transforming 
+publicly available geospatial data into technically defensible, model-ready inputs suitable for 
+floodplain mapping, stormwater analysis, and watershed-scale studies.
+
+Participants will gain practical experience connecting to online data services, processing elevation 
+and land surface datasets, developing rainfall inputs, and generating infiltration and roughness parameters 
+consistent with engineering standards. Emphasis is placed on reproducible methods, proper coordinate management, 
+and maintaining data integrity throughout the workflow.
+
 Participants will:
 
 - Connect to online databases and download hydrologic data.
