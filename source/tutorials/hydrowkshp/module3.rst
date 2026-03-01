@@ -67,7 +67,7 @@ Step 2: Download elevation
 
 .. dropdown:: Elevation Patching
 
-   If download issues occur, incomplete raster may result. The following guidance clarifies when patching is necessary and how to complete the process properly:
+   If download issues occur, incomplete raster may result. 
 
    .. warning:: If the downloaded raster contains blank areas, unexpected NoData regions, or 0-elevation pixels that are not physically realistic for the terrain, 
       the dataset is incomplete.

@@ -101,6 +101,27 @@ The watershed polygon is too large so it can be trimmed manually or by running s
 
 |hydrow019i|
 
+Step 6: Create the Grid
+---------------------------------------------------
+
+- Open the attributes table and toggle the **Edit Pencil** on.
+- Set the Object ID to 20-ft and press the **Enter** key on the keyboard.  This field has been reutilized for cell size.
+- Save the edits and toggle the **Edit Pencil** off.
+
+|hydrow019j|
+
+- Click the **Create Grid** button.
+- Fill the form as shown below and click **Ok**.
+
+|hydrow019k|
+
+- If desired, remove the Hydrography Connected Layers.
+- Uncheck the Grid.
+- Group the Watershed layers in the Watershed Group.
+
+|hydrow019l|
+
+
 .. |hydrow016| image:: ../img/hydrowkshp/hydrow016.jpg
 
 .. |hydrow017| image:: ../img/hydrowkshp/hydrow017.jpg
@@ -126,3 +147,9 @@ The watershed polygon is too large so it can be trimmed manually or by running s
 .. |hydrow019h| image:: ../img/hydrowkshp/hydrow019h.png
 
 .. |hydrow019i| image:: ../img/hydrowkshp/hydrow019i.png
+
+.. |hydrow019j| image:: ../img/hydrowkshp/hydrow019j.gif
+
+.. |hydrow019k| image:: ../img/hydrowkshp/hydrow019k.png
+
+.. |hydrow019l| image:: ../img/hydrowkshp/hydrow019l.png
