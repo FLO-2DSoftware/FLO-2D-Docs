@@ -104,8 +104,18 @@ Step 2: Download elevation
    - The raster extent fully covers the intended modeling domain.
    - This approach avoids redownloading large datasets while preserving continuity in the final elevation surface.
 
-Step 3: Group elevation layers
+Step 3: Interpolate the elevation (Grid)
 ---------------------------------------------------
+
+- Convert the elevation data from meters to feet.
+
+|hydrow025m|
+
+- Run the elevation interpolator.
+- Select the elevation file.
+- Click ok.
+
+|hydrow025n|
 
 - Move the elevation layers to the elevation group.
 
@@ -136,3 +146,7 @@ Step 3: Group elevation layers
 .. |hydrow025k| image:: ../img/hydrowkshp/hydrow025k.png
 
 .. |hydrow025l| image:: ../img/hydrowkshp/hydrow025l.png
+
+.. |hydrow025m| image:: ../img/hydrowkshp/hydrow025mpng
+
+.. |hydrow025m| image:: ../img/hydrowkshp/hydrow025n.png

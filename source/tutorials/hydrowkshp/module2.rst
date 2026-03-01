@@ -105,7 +105,8 @@ Step 6: Create the Grid
 ---------------------------------------------------
 
 - Open the attributes table and toggle the **Edit Pencil** on.
-- Set the Object ID to 20-ft and press the **Enter** key on the keyboard.  This field has been reutilized for cell size.
+- Set the Object ID to 20-ft or 30-ft and press the **Enter** to apply the changes.  (30-ft faster for trainnig.)
+- This field has just been reutilized for cell size.
 - Save the edits and toggle the **Edit Pencil** off.
 
 |hydrow019j|
@@ -115,7 +116,7 @@ Step 6: Create the Grid
 
 |hydrow019k|
 
-- If desired, remove the Hydrography Connected Layers.
+- If desired, remove the **Hydrography Connected** Layers.
 - Uncheck the Grid.
 - Group the Watershed layers in the Watershed Group.
 
