@@ -1,18 +1,18 @@
 Module 3 - Process Elevation Data
 ========================================
 
-.. note:: The complete watershed elevation file is already included in the project. 
+.. note:: The **complete watershed elevation** file is already included in the project. 
    This exercise is intended to provide practice with the download workflow and to 
    identify any potential issues that may arise during the process.
 
 Step 1: Load elevation data
 ---------------------------------------------------
 
-- Zoom to the trimmed Watershed Boundary.
+- Zoom to the **trimmed** Watershed Boundary.
 
 |hydrow020|
 
-- Open the Data Source Manager and find the WCS tab.
+- Open the **Data Source Manager** and find the **WCS** tab.
 - Connect the elevation data.
 - Select the first layer.
 - Set the coordinate system to 3857. (USGS data uses Metric units.) Add the layer.
@@ -20,12 +20,12 @@ Step 1: Load elevation data
 
 |hydrow021|
 
-- Uncheck the 3DEP layer to prevent loading issues caused by its active data connection. 
-- Then right-click the layer and choose Repair Data Source to reestablish the link.
+- **Uncheck** the 3DEP layer to prevent loading issues caused by its active data connection. 
+- Then right-click the layer and choose **Repair Data Source** to reestablish the link.
 
 |hydrow022|
 
-- Expand the WCS group
+- Expand the **WCS** group
 - Expand the 3DEP group Select the first layer and click OK.
 
 .. note:: The reason this reload step is required is not entirely clear; 
@@ -69,8 +69,9 @@ Step 2: Download elevation
 
    If download issues occur, incomplete raster may result. The following guidance clarifies when patching is necessary and how to complete the process properly:
 
-   - If the downloaded raster contains blank areas, unexpected NoData regions, or 0-elevation pixels that are not physically realistic for the terrain, the dataset is incomplete.
-   - These gaps commonly occur with WCS services, interrupted downloads, or when the request extent slightly exceeds the server’s tile boundaries.
+   .. warning:: If the downloaded raster contains blank areas, unexpected NoData regions, or 0-elevation pixels that are not physically realistic for the terrain, 
+      the dataset is incomplete.
+   
 
    **Patching Procedure**
 
@@ -78,7 +79,7 @@ Step 2: Download elevation
 
    |hydrow025i|
 
-   2. Redownloading only the small missing sections using a tighter extent that fully covers the gap.
+   2. Download the small missing sections using a tighter extent that fully covers the gap.
    
    |hydrow025k|
 
