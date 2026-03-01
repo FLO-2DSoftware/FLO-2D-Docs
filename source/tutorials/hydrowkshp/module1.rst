@@ -193,5 +193,5 @@ Step 2: Review Available Data
 
 .. |hydrow015b| image:: ../img/hydrowkshp/hydrow015b.png
 
-.. |hydrow015b| image:: ../img/hydrowkshp/hydrow015c.png  
+.. |hydrow015c| image:: ../img/hydrowkshp/hydrow015c.png  
 
