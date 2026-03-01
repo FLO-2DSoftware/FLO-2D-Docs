@@ -128,8 +128,11 @@ URL: https://geospatial.sec.usace.army.mil/dls/rest/services/NLD/Public/FeatureS
 
 .. Important:: Close and Reload QGIS to **save the User Profile**. If QGIS crashes before the profile is saved, the **setup** step will need to be repeated.
 
-Step 6: Load FLO-2D Project
----------------------------------------------------
+Module 1 - Load FLO-2D Project 
+=================================
+
+Step 1: Load the project
+------------------------------
 
 - Click the Open FLO-2D Project button.
 
@@ -142,6 +145,19 @@ Step 6: Load FLO-2D Project
 - The project should look like this:
 
 |hydrow015b|
+
+Step 2: Review Available Data
+---------------------------------
+
+.. note:: Since the data processing steps in this workshop depend on a good 
+   internet connection and the ability to download large datasets, some files are 
+   available in the **Workshop** Folders.
+
+- Open the Workshop directory and review the data files.
+- If a download process fails, find the data in each respective folder.
+
+|hydrow015c|
+
 
 .. |hydrow002| image:: ../img/hydrowkshp/hydrow002.png
 
@@ -176,3 +192,6 @@ Step 6: Load FLO-2D Project
 .. |hydrow015a| image:: ../img/hydrowkshp/hydrow015a.png
 
 .. |hydrow015b| image:: ../img/hydrowkshp/hydrow015b.png
+
+.. |hydrow015b| image:: ../img/hydrowkshp/hydrow015c.png  
+
