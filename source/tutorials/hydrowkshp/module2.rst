@@ -35,7 +35,7 @@ These can be used for FLO-2D or any other 2D model.
 
 - Fill the form and export the **Watershed Polygon**.
 
-.. note:: This file needs to use EPSG:3857 because that is also the native elevation CRS.
+.. note:: This file needs to use EPSG:2222 because that is the project coordinate system.
 
 |hydrow019|
 
