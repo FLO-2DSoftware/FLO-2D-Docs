@@ -150,7 +150,45 @@ For Example, use it on the **US Mexico boundary.**
 
 |hydrow040a|
 
-Step 7: Create street layer buffer
+Step 7: Download Street Centerlines from OpenStreetMap
+---------------------------------------------------
+
+- Open **Plugins → Manage and Install Plugins** and install **QuickOSM** (or **OSM Downloader**) if it is not already enabled.
+
+|hydrow042a|
+
+- Open the tool:
+- **Vector → QuickOSM → QuickOSM**
+
+|hydrow042b|
+
+- Use the **Map Preset** tab and select Urban for Streets and Buildings.
+- Use the current map canvas extent so the download matches the project domain.
+- Click Run Preset.
+
+.. note:: if a timeout error occurs, run the preset again.
+
+|hydrow042c|
+
+- Select the streets that are inside the **Watershed Boundary**.
+- Run the Select by location tool.
+- Fill the fields as shown and click Run.
+
+|hydrow042d|
+
+- Invert the selection.
+
+|hydrow042e|
+
+- Toggle the editor.
+- Delete the Selected Streets.
+- Save the edits.
+- Toggle the editor off.
+
+|hydrow042f|
+
+
+Step 8: Create street layer buffer
 ---------------------------------------------------
 
 - Run the **Buffer** tool from the **Processing Toolbox**.
@@ -186,7 +224,7 @@ Copy the features using Ctrl-C.
 
 |hydrow048|
 
-Step 8: Interpolate to the Grid
+Step 9: Interpolate to the Grid
 ---------------------------------------------------
 
 - Start by interpolating the Mannings n raster to the grid.
@@ -252,6 +290,18 @@ Step 8: Interpolate to the Grid
 .. |hydrow041| image:: ../img/hydrowkshp/hydrow041.jpg
 
 .. |hydrow042| image:: ../img/hydrowkshp/hydrow042.jpg
+
+.. |hydrow042a| image:: ../img/hydrowkshp/hydrow042a.png
+
+.. |hydrow042b| image:: ../img/hydrowkshp/hydrow042b.png
+
+.. |hydrow042c| image:: ../img/hydrowkshp/hydrow042c.png
+
+.. |hydrow042d| image:: ../img/hydrowkshp/hydrow042d.png
+
+.. |hydrow042e| image:: ../img/hydrowkshp/hydrow042e.png
+
+.. |hydrow042f| image:: ../img/hydrowkshp/hydrow042f.gif
 
 .. |hydrow043| image:: ../img/hydrowkshp/hydrow043.jpg
 
