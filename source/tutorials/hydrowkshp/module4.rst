@@ -3,150 +3,154 @@ Module 4 - Process Manning’s Roughness Data
 
 .. _step-1-load-data-1:
 
-Step 1: Load land cover data (NLCD)
----------------------------------------------------
+.. dropdown:: NLCD Method
 
-**Curve Number Generator Method**
+  Step 1: Load land cover data (NLCD)
+  ---------------------------------------------------
 
-- Load the **Curve Number Generator** from the **Processing** toolbox.
+  **Curve Number Generator Method**
 
-|hydrow029|
+  - Load the **Curve Number Generator** from the **Processing** toolbox.
 
-- Set the Extent to **Watershed** Layer.
-- Set the name and path.
-- Uncheck the other items.
-- Click Run
+  |hydrow029|
 
-|hydrow030|
+  - Set the Extent to **Watershed** Layer.
+  - Set the name and path.
+  - Uncheck the other items.
+  - Click Run
 
-Step 2: Download the USGS data
----------------------------------------------------
+  |hydrow030|
 
-- Connect to the NLCD Land Cover data.
+  Step 2: Download the USGS data
+  ---------------------------------------------------
 
-|hydrow031a|
+  - Connect to the NLCD Land Cover data.
 
-- Repair the data Source
+  |hydrow031a|
 
-|hydrow031b|
+  - Repair the data Source
 
-- Select the layer and click OK.
+  |hydrow031b|
 
-|hydrow031c|
+  - Select the layer and click OK.
 
-- Right click the Land Cover layer and click Export.
+  |hydrow031c|
 
-|hydrow031f|
+  - Right click the Land Cover layer and click Export.
 
-- Fill the form and click OK.
+  |hydrow031f|
 
-|hydrow031|
+  - Fill the form and click OK.
 
-- Move the Land Cover layers to the **Manning's** group.
+  |hydrow031|
 
-|hydrow031e|
+  - Move the Land Cover layers to the **Manning's** group.
 
-- Copy the Style from the NLCD Layer.
+  |hydrow031e|
 
-|hydrow031g|
+  - Copy the Style from the NLCD Layer.
 
-- Paste the Style to the Downloaded Layer.
+  |hydrow031g|
 
-|hydrow031h|
+  - Paste the Style to the Downloaded Layer.
 
-- Note the difference between the Curve Number Generator 2021 and the Land Cover NLCD Server 2024 data.
+  |hydrow031h|
 
-|hydrow031d|
+  - Note the difference between the Curve Number Generator 2021 and the Land Cover NLCD Server 2024 data.
 
-Step 3: Review look-up tables
----------------------------------------------------
+  |hydrow031d|
 
-Land cover lookup table.
-The full table is in the Excel Spreadsheet.
+  Step 3: Review look-up tables
+  ---------------------------------------------------
 
-- Modify these table per local **Flood Control Specifications.**
+  Land cover lookup table.
+  The full table is in the Excel Spreadsheet.
 
-|hydrow032|
+  - Modify these table per local **Flood Control Specifications.**
 
-- Mannings roughness for shallow overland flow developed for FLO-2D. (source: FCDMC)
+  |hydrow032|
 
-|hydrow033|
+  - Mannings roughness for shallow overland flow developed for FLO-2D. (source: FCDMC)
 
-Step 4: Run NLCD Land Cover Roughness processor 
----------------------------------------------------
+  |hydrow033|
 
-- Open the **Processing Toolbox**.
+  Step 4: Run NLCD Land Cover Roughness processor 
+  ---------------------------------------------------
 
-|hydrow034|
+  - Open the **Processing Toolbox**.
 
-- Open the Existing Processor Model.
+  |hydrow034|
 
-|hydrow035|
+  - Open the Existing Processor Model.
 
-- Double click the Reclassify module.
+  |hydrow035|
 
-|hydrow036|
+  - Double click the Reclassify module.
 
-- This table may be modified to reflect local Manning’s n value standards. 
+  |hydrow036|
 
-.. note:: Every raster value must be explicitly assigned a corresponding Manning’s n value. 
-  If one value is omitted, the processor may fail during roughness surface generation.
+  - This table may be modified to reflect local Manning’s n value standards. 
 
-|hydrow037|
+  .. note:: Every raster value must be explicitly assigned a corresponding Manning’s n value. 
+    If one value is omitted, the processor may fail during roughness surface generation.
 
-.. hint:: Processor models are script-based. Editing the table in a plain text editor is often 
-   faster than using the graphical interface.
+  |hydrow037|
 
-|hydrow037a|
+  .. hint:: Processor models are script-based. Editing the table in a plain text editor is often 
+    faster than using the graphical interface.
 
-- Run the processor model to reclassify the landuse data as roughness data.
+  |hydrow037a|
 
-|hydrow038|
+  - Run the processor model to reclassify the landuse data as roughness data.
 
-Step 5: Load Land Cover data (ESA World)
----------------------------------------------------
+  |hydrow038|
 
-Curve Number Generator ESA
+.. dropdown:: ESA Method
 
-- Load the Curve Number Generator from the Processing toolbox.
+  Step 5: Load Land Cover data (ESA World)
+  ---------------------------------------------------
 
-|hydrow029a|
+  Curve Number Generator ESA
 
-- Set the Extent to Grid.
-- Set the name and path.
-- Uncheck the other items.
-- Click Run
+  - Load the Curve Number Generator from the Processing toolbox.
 
-|hydrow030a|
+  |hydrow029a|
 
+  - Set the Extent to Grid.
+  - Set the name and path.
+  - Uncheck the other items.
+  - Click Run
 
-Step 6: Run ESA Land Cover Roughness processor
----------------------------------------------------
+  |hydrow030a|
 
-This processor works on World Data.
-For Example, use it on the **US Mexico boundary.**
 
-- Open the **Processing Toolbox**.
+  Step 6: Run ESA Land Cover Roughness processor
+  ---------------------------------------------------
 
-|hydrow034|
+  This processor works on World Data.
+  For Example, use it on the **US Mexico boundary.**
 
-- Open the Existing Processor Model.
+  - Open the **Processing Toolbox**.
 
-|hydrow039|
+  |hydrow034|
 
-- Double click the Reclassify module.
+  - Open the Existing Processor Model.
 
-|hydrow036|
+  |hydrow039|
 
-- This table can be modified to reflect **Local Manning’s n value standards**.
+  - Double click the Reclassify module.
 
-|hydrow040|
+  |hydrow036|
 
-- Run the processor model to reclassify the landuse data as roughness data.
+  - This table can be modified to reflect **Local Manning’s n value standards**.
 
-|hydrow041|
+  |hydrow040|
 
-- Move all Manning's n Roughness related rasters into the Manning's Group.
+  - Run the processor model to reclassify the landuse data as roughness data.
+
+  |hydrow041|
+
+  - Move all Manning's n Roughness related rasters into the Manning's Group.
 
 |hydrow040a|
 
