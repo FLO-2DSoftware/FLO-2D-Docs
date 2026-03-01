@@ -227,15 +227,15 @@ Step 9: Create street layer buffer
 
 - Copy code into the **Expression Editor** to determine the buffer width by street type.
 
-```json
-CASE
-    WHEN "highway" = 'primary' THEN 40
-    WHEN "highway" = 'secondary' THEN 30
-    WHEN "highway" = 'tertiary' THEN 25
-    WHEN "highway" = 'residential' THEN 20
-    WHEN "highway" = 'service' THEN 15
-    ELSE 15
-END / 2
+```
+   CASE
+      WHEN "highway" = 'primary' THEN 40
+      WHEN "highway" = 'secondary' THEN 30
+      WHEN "highway" = 'tertiary' THEN 25
+      WHEN "highway" = 'residential' THEN 20
+      WHEN "highway" = 'service' THEN 15
+      ELSE 15
+   END / 2
 ```
 
 |hydrow043c|
