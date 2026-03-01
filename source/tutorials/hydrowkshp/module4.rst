@@ -227,7 +227,7 @@ Step 9: Create street layer buffer
 
 - Copy code into the **Expression Editor** to determine the buffer width by street type.
 
-.. code-block:: qgis
+.. code-block:: text
 
    CASE
        WHEN "highway" = 'primary' THEN 40
