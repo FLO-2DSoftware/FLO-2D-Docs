@@ -241,25 +241,7 @@ Step 9: Create street layer buffer
 |hydrow043c|
 
 This results in a polygon layer that covers the streets.
-If some streets are missing, it is easy to digitize them directly into the street network or download them from OSM.
-
-|hydrow045|
-
-Select the buffer polygons.
-Copy the features using Ctrl-C.
-
-|hydrow046|
-
-- Find the Roughness Layer in the Areas Group.
-- Edit the layer.
-- Paste the features into the Roughness Layer.
-
-|hydrow047|
-
-- Open the Attribute Table Set the n value to 0.018.
-- Set the field editor to n Update all.
-
-|hydrow048|
+If some streets are missing, it is easy to digitize them directly into the street network.
 
 
 .. |hydrow029| image:: ../img/hydrowkshp/hydrow029.jpg
@@ -335,14 +317,6 @@ Copy the features using Ctrl-C.
 .. |hydrow043c| image:: ../img/hydrowkshp/hydrow043c.png
 
 .. |hydrow044| image:: ../img/hydrowkshp/hydrow044.jpg
-
-.. |hydrow045| image:: ../img/hydrowkshp/hydrow045.jpg
-
-.. |hydrow046| image:: ../img/hydrowkshp/hydrow046.jpg
-
-.. |hydrow047| image:: ../img/hydrowkshp/hydrow047.jpg
-
-.. |hydrow048| image:: ../img/hydrowkshp/hydrow048.jpg
 
 .. |hydrow049| image:: ../img/hydrowkshp/hydrow049.jpg
 

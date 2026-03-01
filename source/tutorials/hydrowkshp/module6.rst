@@ -70,23 +70,4 @@ The plugin developer seems to be very responsive to requests for development.
 .. |hydrow072| image:: ../img/hydrowkshp/hydrow072.jpg
 
 
-Step 4: Convert data to feet
--------------------------------------------------------
 
-Use the FLO-2D **Pre-processing Tools** to convert the units of the raster.
-
-|hydrow026|
-
-Use the **Grid Tools** >> **Sample Elevation** to interpolate the elevation to the grid.
-
-|hydrow027|
-
-Set the Source Raster to the correct elevation layer and click OK.
-
-|hydrow028|
-
-.. |hydrow026| image:: ../img/hydrowkshp/hydrow026.png
-
-.. |hydrow027| image:: ../img/hydrowkshp/hydrow027.png
-
-.. |hydrow028| image:: ../img/hydrowkshp/hydrow028.jpg

@@ -24,3 +24,4 @@ Participants will:
    module4.rst
    module5.rst
    module6.rst
+   module7.rst
