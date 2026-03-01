@@ -150,7 +150,7 @@ For Example, use it on the **US Mexico boundary.**
 
 |hydrow040a|
 
-Step 7: Download Street Centerlines from OpenStreetMap
+Step 7: Download Street Centerlines
 --------------------------------------------------------------
 
 - Open **Plugins → Manage and Install Plugins** and install **QuickOSM** (or **OSM Downloader**) if it is not already enabled.
@@ -195,11 +195,23 @@ Step 8: Create street layer buffer
 
 |hydrow042|
 
-- Load the **Street Network** in the editor and set the buffer distance to Edit Expression.
+- Load the **Roads Layer** in the editor and set the buffer distance to Edit Expression.
 
 |hydrow043|
 
 - Set the Expression to “Width ft” /2 to use the street width divided by 2 as the buffer radius.
+
+```json
+CASE
+    WHEN "highway" = 'primary' THEN 40
+    WHEN "highway" = 'secondary' THEN 30
+    WHEN "highway" = 'tertiary' THEN 25
+    WHEN "highway" = 'residential' THEN 20
+    WHEN "highway" = 'service' THEN 15
+    ELSE 15
+END / 2
+```
+
 
 |hydrow044|
 
