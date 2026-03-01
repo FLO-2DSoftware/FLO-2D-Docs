@@ -146,6 +146,10 @@ For Example, use it on the **US Mexico boundary.**
 
 |hydrow041|
 
+- Move all Manning's n Roughness related rasters into the Manning's Group.
+
+|hydrow040a|
+
 Step 7: Create street layer buffer
 ---------------------------------------------------
 
@@ -239,9 +243,11 @@ Step 8: Interpolate to the Grid
 
 .. |hydrow038| image:: ../img/hydrowkshp/hydrow038.png
 
-.. |hydrow039| image:: ../img/hydrowkshp/hydrow039.jpg
+.. |hydrow039| image:: ../img/hydrowkshp/hydrow039.png
 
-.. |hydrow040| image:: ../img/hydrowkshp/hydrow040.jpg
+.. |hydrow040| image:: ../img/hydrowkshp/hydrow040.png
+
+.. |hydrow040a| image:: ../img/hydrowkshp/hydrow040a.png
 
 .. |hydrow041| image:: ../img/hydrowkshp/hydrow041.jpg
 
