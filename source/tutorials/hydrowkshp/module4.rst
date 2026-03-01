@@ -22,12 +22,6 @@ Step 1: Load land cover data (NLCD)
 Step 2: Download the USGS data
 ---------------------------------------------------
 
-.. note:: **Curve Number Generator** seems much faster than this download method.
-   Skip or cancel this download if it’s taking too long.
-
-   Curve Number Generator is limited to an allowable size limit.
-   For large projects download in batches or use the USGS method.
-
 - Connect to the NLCD Land Cover data.
 
 |hydrow031a|
@@ -60,7 +54,7 @@ Step 2: Download the USGS data
 
 |hydrow031h|
 
-- Note the difference between the Curve Number Generator and the NLCD Current data.
+- Note the difference between the Curve Number Generator 2021 and the Land Cover NLCD Server 2024 data.
 
 |hydrow031d|
 
@@ -74,11 +68,11 @@ The full table is in the Excel Spreadsheet.
 
 |hydrow032|
 
-- Mannings roughness for shallow overland flow developed for FLO-2D. Example Table.
+- Mannings roughness for shallow overland flow developed for FLO-2D. (source: FCDMC)
 
 |hydrow033|
 
-Step 4: Run NLCD landuse roughness processor
+Step 4: Run NLCD Land Cover Roughness processor 
 ---------------------------------------------------
 
 - Open the **Processing Toolbox**.
@@ -93,15 +87,23 @@ Step 4: Run NLCD landuse roughness processor
 
 |hydrow036|
 
-- This table can be modified to reflect **Local Manning’s n value standards**.
+- This table may be modified to reflect local Manning’s n value standards. 
+
+.. note:: Every raster value must be explicitly assigned a corresponding Manning’s n value. 
+  If one value is omitted, the processor may fail during roughness surface generation.
 
 |hydrow037|
+
+.. hint:: Processor models are script-based. Editing the table in a plain text editor is often 
+   faster than using the graphical interface.
+
+|hydrow037a|
 
 - Run the processor model to reclassify the landuse data as roughness data.
 
 |hydrow038|
 
-Step 5: Load land cover data (ESA World)
+Step 5: Load Land Cover data (ESA World)
 ---------------------------------------------------
 
 Curve Number Generator ESA
@@ -118,7 +120,7 @@ Curve Number Generator ESA
 |hydrow030a|
 
 
-Step 6: Run ESA landuse roughness processor
+Step 6: Run ESA Land Cover Roughness processor
 ---------------------------------------------------
 
 This processor works on World Data.
@@ -232,6 +234,8 @@ Step 8: Interpolate to the Grid
 .. |hydrow036| image:: ../img/hydrowkshp/hydrow036.jpg
 
 .. |hydrow037| image:: ../img/hydrowkshp/hydrow037.png
+
+.. |hydrow037a| image:: ../img/hydrowkshp/hydrow037a.png
 
 .. |hydrow038| image:: ../img/hydrowkshp/hydrow038.png
 
