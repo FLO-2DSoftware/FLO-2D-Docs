@@ -3,169 +3,179 @@ Module 4 - Process Manning’s Roughness Data
 
 This module describes the workflow for converting land cover datasets into Manning’s n roughness surfaces using QGIS and online data services.
 
-Select one of the following data sources. Both follow the same processing methodology, differing only in the origin of the land cover dataset.
+Select one of the following processing methods. Only one method is required.
 
-.. _step-1-load-data-1:
+.. raw:: html
 
-.. container:: h2
+   <details>
+   <summary><strong>NLCD Method</strong></summary>
 
-   National Land Cover Dataset Method (NLCD)
 
-  .. container:: h2
+Step 1: Load land cover data (NLCD)
+---------------------------------------------------
 
-    Step 1: Load land cover data (NLCD)
-  
-  - Load the **Curve Number Generator** from the **Processing** toolbox.
+**Curve Number Generator Method**
 
-  |hydrow029|
+- Load the **Curve Number Generator** from the **Processing** toolbox.
 
-  - Set the Extent to **Watershed** Layer.
-  - Set the name and path.
-  - Uncheck the other items.
-  - Click Run
+|hydrow029|
 
-  |hydrow030|
+- Set the Extent to **Watershed** Layer.
+- Set the name and path.
+- Uncheck the other items.
+- Click Run
 
-  .. container:: h2
+|hydrow030|
 
-    Step 2: Download the USGS data
-  
-  - Connect to the NLCD Land Cover data.
 
-  |hydrow031a|
+Step 2: Download the USGS data
+---------------------------------------------------
 
-  - Repair the data Source
+- Connect to the NLCD Land Cover data.
 
-  |hydrow031b|
+|hydrow031a|
 
-  - Select the layer and click OK.
+- Repair the data Source
 
-  |hydrow031c|
+|hydrow031b|
 
-  - Right click the Land Cover layer and click Export.
+- Select the layer and click OK.
 
-  |hydrow031f|
+|hydrow031c|
 
-  - Fill the form and click OK.
+- Right click the Land Cover layer and click Export.
 
-  |hydrow031|
+|hydrow031f|
 
-  - Move the Land Cover layers to the **Manning's** group.
+- Fill the form and click OK.
 
-  |hydrow031e|
+|hydrow031|
 
-  - Copy the Style from the NLCD Layer.
+- Move the Land Cover layers to the **Manning's** group.
 
-  |hydrow031g|
+|hydrow031e|
 
-  - Paste the Style to the Downloaded Layer.
+- Copy the Style from the NLCD Layer.
 
-  |hydrow031h|
+|hydrow031g|
 
-  - Note the difference between the Curve Number Generator 2021 and the Land Cover NLCD Server 2024 data.
+- Paste the Style to the Downloaded Layer.
 
-  |hydrow031d|
+|hydrow031h|
 
-  .. container:: h2
+- Note the difference between the Curve Number Generator 2021 and the Land Cover NLCD Server 2024 data.
 
-    Step 3: Review look-up tables
-  
-  Land cover lookup table.
-  The full table is in the Excel Spreadsheet.
+|hydrow031d|
 
-  - Modify these table per local **Flood Control Specifications.**
 
-  |hydrow032|
+Step 3: Review look-up tables
+---------------------------------------------------
 
-  - Mannings roughness for shallow overland flow developed for FLO-2D. (source: FCDMC)
+Land cover lookup table.
+The full table is in the Excel Spreadsheet.
 
-  |hydrow033|
+- Modify these table per local **Flood Control Specifications.**
 
-  .. container:: h2
+|hydrow032|
 
-    Step 4: Run NLCD Land Cover Roughness processor 
-  
-  - Open the **Processing Toolbox**.
+- Mannings roughness for shallow overland flow developed for FLO-2D. (source: FCDMC)
 
-  |hydrow034|
+|hydrow033|
 
-  - Open the Existing Processor Model.
 
-  |hydrow035|
+Step 4: Run NLCD Land Cover Roughness processor
+---------------------------------------------------
 
-  - Double click the Reclassify module.
+- Open the **Processing Toolbox**.
 
-  |hydrow036|
+|hydrow034|
 
-  - This table may be modified to reflect local Manning’s n value standards. 
+- Open the Existing Processor Model.
 
-  .. note:: Every raster value must be explicitly assigned a corresponding Manning’s n value. 
-    If one value is omitted, the processor may fail during roughness surface generation.
+|hydrow035|
 
-  |hydrow037|
+- Double click the Reclassify module.
 
-  .. hint:: Processor models are script-based. Editing the table in a plain text editor is often 
-    faster than using the graphical interface.
+|hydrow036|
 
-  |hydrow037a|
+- This table may be modified to reflect local Manning’s n value standards.
 
-  - Run the processor model to reclassify the landuse data as roughness data.
+.. note:: Every raster value must be explicitly assigned a corresponding Manning’s n value.
+   If one value is omitted, the processor may fail during roughness surface generation.
 
-  |hydrow038|
+|hydrow037|
 
-.. container:: h2
+.. hint:: Processor models are script-based. Editing the table in a plain text editor is often
+   faster than using the graphical interface.
 
-   European Space Agency (ESA) Method
+|hydrow037a|
 
-  .. container:: h2
+- Run the processor model to reclassify the landuse data as roughness data.
 
-    Step 5: Load Land Cover data (ESA World)
-  
+|hydrow038|
 
-  Curve Number Generator ESA
+.. raw:: html
 
-  - Load the Curve Number Generator from the Processing toolbox.
+   </details>
 
-  |hydrow029a|
 
-  - Set the Extent to Grid.
-  - Set the name and path.
-  - Uncheck the other items.
-  - Click Run
+.. raw:: html
 
-  |hydrow030a|
+   <details>
+   <summary><strong>ESA Method</strong></summary>
 
-  .. container:: h2
 
-    Step 6: Run ESA Land Cover Roughness processor
-  
-  This processor works on World Data.
-  For Example, use it on the **US Mexico boundary.**
+Step 5: Load Land Cover data (ESA World)
+---------------------------------------------------
 
-  - Open the **Processing Toolbox**.
+Curve Number Generator ESA
 
-  |hydrow034|
+- Load the Curve Number Generator from the Processing toolbox.
 
-  - Open the Existing Processor Model.
+|hydrow029a|
 
-  |hydrow039|
+- Set the Extent to Grid.
+- Set the name and path.
+- Uncheck the other items.
+- Click Run
 
-  - Double click the Reclassify module.
+|hydrow030a|
 
-  |hydrow036|
 
-  - This table can be modified to reflect **Local Manning’s n value standards**.
+Step 6: Run ESA Land Cover Roughness processor
+---------------------------------------------------
 
-  |hydrow040|
+This processor works on World Data.
+For Example, use it on the **US Mexico boundary.**
 
-  - Run the processor model to reclassify the landuse data as roughness data.
+- Open the **Processing Toolbox**.
 
-  |hydrow041|
+|hydrow034|
 
-  
-- Move all Manning's n Roughness related rasters into the Manning's N group.
+- Open the Existing Processor Model.
+
+|hydrow039|
+
+- Double click the Reclassify module.
+
+|hydrow036|
+
+- This table can be modified to reflect **Local Manning’s n value standards**.
+
+|hydrow040|
+
+- Run the processor model to reclassify the landuse data as roughness data.
+
+|hydrow041|
+
+- Move all Manning's n Roughness related rasters into the Manning's Group.
 
 |hydrow040a|
+
+.. raw:: html
+
+   </details>
+
 
 Step 7: Download Street Centerlines
 --------------------------------------------------------------
@@ -183,7 +193,7 @@ Step 7: Download Street Centerlines
 - Use the current map canvas extent so the download matches the project domain.
 - Click Run Preset.
 
-.. note:: if a timeout error occurs, run the preset again.
+.. note:: If a timeout error occurs, run the preset again.
 
 |hydrow042c|
 
@@ -204,10 +214,11 @@ Step 7: Download Street Centerlines
 
 |hydrow042f|
 
+
 Step 8: Reproject and Export Street Layer
 ---------------------------------------------------
 
-The street layer must be in the project coordinate system before buffering.  
+The street layer must be in the project coordinate system before buffering.
 If it remains in WGS84 (EPSG:4326), the buffer distance will be interpreted in degrees and will not produce correct results.
 
 - Right-click the **Roads** layer.
@@ -229,6 +240,7 @@ If it remains in WGS84 (EPSG:4326), the buffer distance will be interpreted in d
 |hydrow043a|
 
 The street layer is now in projected units (feet), and buffer distances will be applied correctly in the next step.
+
 
 Step 9: Create street layer buffer
 ---------------------------------------------------
@@ -258,6 +270,7 @@ Step 9: Create street layer buffer
 
 This results in a polygon layer that covers the streets.
 If some streets are missing, it is easy to digitize them directly into the street network.
+
 
 
 .. |hydrow029| image:: ../img/hydrowkshp/hydrow029.jpg
