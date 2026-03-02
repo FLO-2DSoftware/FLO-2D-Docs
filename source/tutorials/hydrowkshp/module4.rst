@@ -120,8 +120,8 @@ spacer
 
 .. raw:: html
 
-   <details>
-   <summary><strong>European Space Agency (ESA) Method</strong></summary>
+  <details>
+  <summary><strong>European Space Agency (ESA) Method</strong></summary>
 
 .. _step-5-load-data:
 
@@ -169,7 +169,7 @@ For Example, use it on the **US Mexico boundary.**
 
 .. raw:: html
 
-   </details>
+  </details>
 
 - Move all Manning's n Roughness related rasters into the Manning's Group.
 
