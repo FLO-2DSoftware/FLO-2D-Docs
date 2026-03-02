@@ -3,7 +3,7 @@ Module 5 - Process Rainfall Data
 
 .. warning:: The rainfall processing methods shown here are practical grid-based workflows. 
     Depending on project requirements or regulatory standards, alternative scientifically 
-    validated approaches may be necessary.
+    validated approaches should also be explored.
 
 Step 1: Uniform rain on grid
 ---------------------------------------------------

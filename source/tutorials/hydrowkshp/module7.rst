@@ -1,12 +1,8 @@
-Grid Ideas for Later
-========================
+Module 7 Process Buildings
+=================================
 
-
-Buildings
-=============
-
-Step 1. Save Buildings Layer
----------------------------------
+Step 1. Save Buildings Layer from OSM
+-----------------------------------------
 
 - Select the buildings by location.
 - Select Buildings that are within the Watershed Polygon.
