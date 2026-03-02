@@ -5,9 +5,9 @@ Module 4 - Process Manning’s Roughness Data
 
 .. dropdown:: NLCD Method
 
-  Step 1: Load land cover data (NLCD)
-  ---------------------------------------------------
-
+  .. container:: h3
+    Step 1: Load land cover data (NLCD)
+  
   **Curve Number Generator Method**
 
   - Load the **Curve Number Generator** from the **Processing** toolbox.
@@ -21,9 +21,9 @@ Module 4 - Process Manning’s Roughness Data
 
   |hydrow030|
 
-  Step 2: Download the USGS data
-  ---------------------------------------------------
-
+  .. container:: h3
+    Step 2: Download the USGS data
+  
   - Connect to the NLCD Land Cover data.
 
   |hydrow031a|
@@ -60,9 +60,9 @@ Module 4 - Process Manning’s Roughness Data
 
   |hydrow031d|
 
-  Step 3: Review look-up tables
-  ---------------------------------------------------
-
+  .. container:: h3
+    Step 3: Review look-up tables
+  
   Land cover lookup table.
   The full table is in the Excel Spreadsheet.
 
@@ -74,9 +74,9 @@ Module 4 - Process Manning’s Roughness Data
 
   |hydrow033|
 
-  Step 4: Run NLCD Land Cover Roughness processor 
-  ---------------------------------------------------
-
+  .. container:: h3
+    Step 4: Run NLCD Land Cover Roughness processor 
+  
   - Open the **Processing Toolbox**.
 
   |hydrow034|
@@ -107,8 +107,9 @@ Module 4 - Process Manning’s Roughness Data
 
 .. dropdown:: ESA Method
 
-  Step 5: Load Land Cover data (ESA World)
-  ---------------------------------------------------
+  .. container:: h3
+    Step 5: Load Land Cover data (ESA World)
+  
 
   Curve Number Generator ESA
 
@@ -123,10 +124,9 @@ Module 4 - Process Manning’s Roughness Data
 
   |hydrow030a|
 
-
-  Step 6: Run ESA Land Cover Roughness processor
-  ---------------------------------------------------
-
+  .. container:: h3
+    Step 6: Run ESA Land Cover Roughness processor
+  
   This processor works on World Data.
   For Example, use it on the **US Mexico boundary.**
 
@@ -190,7 +190,6 @@ Step 7: Download Street Centerlines
 - Toggle the editor off.
 
 |hydrow042f|
-
 
 Step 8: Reproject and Export Street Layer
 ---------------------------------------------------
