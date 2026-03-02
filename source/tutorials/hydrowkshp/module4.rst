@@ -7,7 +7,9 @@ Select one of the following data sources. Both follow the same processing method
 
 .. _step-1-load-data-1:
 
-.. dropdown:: National Land Cover Dataset Method (NLCD)
+.. container:: h2
+
+   National Land Cover Dataset Method (NLCD)
 
   .. container:: h2
 
@@ -111,7 +113,9 @@ Select one of the following data sources. Both follow the same processing method
 
   |hydrow038|
 
-.. dropdown:: European Space Agency (ESA) Method
+.. container:: h2
+
+   European Space Agency (ESA) Method
 
   .. container:: h2
 
