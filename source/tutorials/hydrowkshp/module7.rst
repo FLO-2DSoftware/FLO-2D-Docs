@@ -13,7 +13,7 @@ Step 1. Save Buildings Layer from OSM
 
 |hydrow073a|
 
-- Save the builidings as an ESRI Shapefile.
+- Save the buildings as an ESRI Shapefile.
 
 |hydrow073b|
 
@@ -34,4 +34,3 @@ Step 1. Save Buildings Layer from OSM
 .. |hydrow073c| image:: ../img/hydrowkshp/hydrow073c.png
 
 .. |hydrow073d| image:: ../img/hydrowkshp/hydrow073d.png
-

@@ -4,7 +4,8 @@ Module 6 - Process Infiltration Data
 Choose one method: :ref:`Green-Ampt <green>` or :ref:`SCS <scs>`.
 
 .. _green:
-Green-Ampt method
+
+Green-Ampt Method
 ---------------------------------------------------
 
 These agencies use Green-Ampt infiltration data with FLO-2D.
