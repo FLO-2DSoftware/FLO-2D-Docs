@@ -98,56 +98,7 @@ Step 3: Create street layer buffer
 This results in a polygon layer that covers the streets.
 If some streets are missing, it is easy to digitize them directly into the street network.
 
-
-.. |hydrow029| image:: ../img/hydrowkshp/hydrow029.jpg
-
-.. |hydrow029a| image:: ../img/hydrowkshp/hydrow029a.png
-
-.. |hydrow030| image:: ../img/hydrowkshp/hydrow030.png
-
-.. |hydrow030a| image:: ../img/hydrowkshp/hydrow030a.png
-
-.. |hydrow031| image:: ../img/hydrowkshp/hydrow031.png
-
-.. |hydrow031a| image:: ../img/hydrowkshp/hydrow031a.png
-
-.. |hydrow031b| image:: ../img/hydrowkshp/hydrow031b.png
-
-.. |hydrow031c| image:: ../img/hydrowkshp/hydrow031c.png  
-
-.. |hydrow031d| image:: ../img/hydrowkshp/hydrow031d.png
-
-.. |hydrow031e| image:: ../img/hydrowkshp/hydrow031e.png
-
-.. |hydrow031f| image:: ../img/hydrowkshp/hydrow031f.png
-
-.. |hydrow031g| image:: ../img/hydrowkshp/hydrow031g.png
-
-.. |hydrow031h| image:: ../img/hydrowkshp/hydrow031h.png
-
-.. |hydrow032| image:: ../img/hydrowkshp/hydrow032.png
-
-.. |hydrow033| image:: ../img/hydrowkshp/hydrow033.jpg
-
-.. |hydrow034| image:: ../img/hydrowkshp/hydrow034.jpg
-
-.. |hydrow035| image:: ../img/hydrowkshp/hydrow035.png
-
-.. |hydrow036| image:: ../img/hydrowkshp/hydrow036.jpg
-
-.. |hydrow037| image:: ../img/hydrowkshp/hydrow037.png
-
-.. |hydrow037a| image:: ../img/hydrowkshp/hydrow037a.png
-
-.. |hydrow038| image:: ../img/hydrowkshp/hydrow038.png
-
-.. |hydrow039| image:: ../img/hydrowkshp/hydrow039.png
-
-.. |hydrow040| image:: ../img/hydrowkshp/hydrow040.png
-
 .. |hydrow040a| image:: ../img/hydrowkshp/hydrow040a.png
-
-.. |hydrow041| image:: ../img/hydrowkshp/hydrow041.jpg
 
 .. |hydrow042| image:: ../img/hydrowkshp/hydrow042.jpg
 
@@ -167,14 +118,4 @@ If some streets are missing, it is easy to digitize them directly into the stree
 
 .. |hydrow043a| image:: ../img/hydrowkshp/hydrow043a.png
 
-.. |hydrow043b| image:: ../img/hydrowkshp/hydrow043b.png
-
 .. |hydrow043c| image:: ../img/hydrowkshp/hydrow043c.png
-
-.. |hydrow044| image:: ../img/hydrowkshp/hydrow044.jpg
-
-.. |hydrow049| image:: ../img/hydrowkshp/hydrow049.jpg
-
-.. |hydrow050| image:: ../img/hydrowkshp/hydrow050.jpg
-
-.. |hydrow051| image:: ../img/hydrowkshp/hydrow051.jpg
