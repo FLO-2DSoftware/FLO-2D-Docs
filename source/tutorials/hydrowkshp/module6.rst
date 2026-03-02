@@ -55,8 +55,6 @@ Many agencies and clients use the SCS Curve Number (CN) method for rainfall-runo
 In the Southwestern United States, Pima County Regional Flood Control District has developed a 
 well-documented and regionally calibrated CN methodology that reflects desert hydrology and local soil conditions.
 
-.. note:: A future version of this tutorial will include the Pima County Curve Number method modified for QGIS.
-
 For reference, see the Pima County guidance:
 
 .. raw:: html
@@ -67,10 +65,15 @@ For reference, see the Pima County guidance:
       PCHydro User Guide
    </a>
 
+.. warning:: This workshop demonstrates use of the **Curve Number Generator** tool 
+   in QGIS in combination with the **Desert Curve Number lookup table from TR-55** 
+   to represent arid watershed conditions.
 
+   This workflow is provided for instructional purposes and does not reflect 
+   the recommended methodology for Pima County.
 
-This workshop will use the **Curve Number Generator** tool 
-within QGIS, while applying the **Desert Curve Number lookup table from TR-55** to reflect arid watershed conditions.
+   A more comprehensive QGIS-based procedure, incorporating updates to the 
+   FLO-2D Plugin, will be provided in a future tutorial.
 
 Step 1: Run the Curve Number Generator
 ---------------------------------------------------
