@@ -169,11 +169,6 @@ For Example, use it on the **US Mexico boundary.**
 
 |hydrow041|
 
-.. raw:: html
-
-   <div>
-   </details>
-
 Step 7: Download Street Centerlines
 --------------------------------------------------------------
 
@@ -270,6 +265,11 @@ Step 9: Create street layer buffer
 
 This results in a polygon layer that covers the streets.
 If some streets are missing, it is easy to digitize them directly into the street network.
+
+.. raw:: html
+
+   <div>
+   </details>
 
 
 .. |hydrow029| image:: ../img/hydrowkshp/hydrow029.jpg
