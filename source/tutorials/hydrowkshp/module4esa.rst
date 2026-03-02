@@ -66,4 +66,6 @@ Step 3: Interpolate the Manning's n to the Grid
 
 .. |hydrow041| image:: ../img/hydrowkshp/hydrow041.jpg
 
-.. |hydrow038b| image:: ../img/hydrowkshp/hydrow038b.png
+.. |hydrow038d| image:: ../img/hydrowkshp/hydrow038d.png
+
+.. |hydrow038c| image:: ../img/hydrowkshp/hydrow038c.png
