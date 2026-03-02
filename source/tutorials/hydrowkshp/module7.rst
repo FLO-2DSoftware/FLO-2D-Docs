@@ -1,4 +1,4 @@
-Module 7 Process Buildings
+Module 7 - Process Buildings
 =================================
 
 Step 1. Save Buildings Layer from OSM

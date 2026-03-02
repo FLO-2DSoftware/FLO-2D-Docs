@@ -75,7 +75,7 @@ This project uses **Soldier Canyon** which is the streamline on the north-east s
 Step 5: Trim the Watershed Polygon
 ---------------------------------------------------
 
-The watershed polygon is too large so it can be trimmed manually or by running some watershed processin tools.
+The watershed polygon is too large so it can be trimmed manually or by running some watershed processing tools.
 
 .. note:: 2D models do not require detailed watershed delineation. 
    This step provides a simple method to trim the polygon to the contributing drainage area.
@@ -89,7 +89,7 @@ The watershed polygon is too large so it can be trimmed manually or by running s
    Press Ctrl+Z to undo unintended deletions.
    If the changes are beyond recovery with Undo, toggle off editing mode and decline the save to revert to the last committed state.
 
-- Once finished, untoggle the editor and click Save.
+- Once finished, toggle the **Editor Pencil** off and click **Save**.
 
 |hydrow019c|
 
@@ -105,7 +105,7 @@ Step 6: Create the Grid
 ---------------------------------------------------
 
 - Open the attributes table and toggle the **Edit Pencil** on.
-- Set the Object ID to 20-ft or 30-ft and press the **Enter** to apply the changes.  (30-ft faster for trainnig.)
+- Set the Object ID to 20-ft or 30-ft and press the **Enter** to apply the changes.  (30-ft faster for training.)
 - This field has just been reutilized for cell size.
 - Save the edits and toggle the **Edit Pencil** off.
 

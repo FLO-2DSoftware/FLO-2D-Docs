@@ -102,7 +102,7 @@ Step 2: Download elevation
    - No unintended NoData seams remain.
    - Elevation statistics are reasonable (minimum, maximum, and mean).
    - The raster extent fully covers the intended modeling domain.
-   - This approach avoids redownloading large datasets while preserving continuity in the final elevation surface.
+   - This approach avoids re-downloading large datasets while preserving continuity in the final elevation surface.
 
 Step 3: Interpolate the elevation to the Grid
 ---------------------------------------------------
