@@ -93,7 +93,7 @@ Step 3: Create street layer buffer
 This results in a polygon layer that covers the streets.
 If some streets are missing, it is easy to digitize them directly into the street network.
 
-Step 4. Copy Buffered features into the Roughness layer
+Step 4. Add Buffered features into the Roughness layer
 ----------------------------------------------------------------
 
 - Click the Buffered Layer to activate the layer.
@@ -125,9 +125,17 @@ Step 4. Copy Buffered features into the Roughness layer
 
 |hydrow043j|
 
+Step 4. Sample roughness layer to the grid.
+----------------------------------------------------------------
+
 - Sample the roughness polygons values to the Grid.
 
 |hydrow043h|
+
+- Remove the Buffered layer.
+- Organize all roughness layers to the Manning's n group.
+
+|hydrow043k|
 
 .. |hydrow040a| image:: ../img/hydrowkshp/hydrow040a.png
 
@@ -164,3 +172,5 @@ Step 4. Copy Buffered features into the Roughness layer
 .. |hydrow043i| image:: ../img/hydrowkshp/hydrow043i.png
 
 .. |hydrow043j| image:: ../img/hydrowkshp/hydrow043j.png 
+
+.. |hydrow043k| image:: ../img/hydrowkshp/hydrow043k.png 

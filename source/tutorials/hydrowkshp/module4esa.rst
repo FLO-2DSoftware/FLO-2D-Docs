@@ -41,7 +41,7 @@ For Example, use it on the **US Mexico boundary.**
 
 |hydrow041|
 
-Step 3: Interpolate the Manning's n to the Grid 
+Step 3: Interpolate Manning's n to the Grid 
 ---------------------------------------------------
 
 - Run the Roughness Raster processor.

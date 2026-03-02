@@ -99,7 +99,7 @@ Step 4: Run NLCD Land Cover Roughness processor
 
 |hydrow038|
 
-Step 5: Interpolate the Manning's n to the Grid 
+Step 5: Interpolate Manning's n to the Grid 
 ---------------------------------------------------
 
 - Run the Roughness Raster processor.
