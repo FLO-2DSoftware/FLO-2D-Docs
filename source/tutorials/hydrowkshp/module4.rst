@@ -7,8 +7,8 @@ Select one of the following data sources. Both follow the same processing method
 
 .. raw:: html
 
-   <details>
-   <summary><strong>National Land Cover Dataset Method</strong></summary>
+  <details>
+  <summary><strong>National Land Cover Dataset Method</strong></summary>
 
 .. _step-1-load-data-1:
 
