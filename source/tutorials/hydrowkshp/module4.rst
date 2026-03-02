@@ -9,12 +9,10 @@ Select one of the following data sources. Both follow the same processing method
 
 .. dropdown:: National Land Cover Dataset Method (NLCD)
 
-  .. container:: h3
+  .. container:: h2
 
     Step 1: Load land cover data (NLCD)
   
-  **Curve Number Generator Method**
-
   - Load the **Curve Number Generator** from the **Processing** toolbox.
 
   |hydrow029|
@@ -26,7 +24,7 @@ Select one of the following data sources. Both follow the same processing method
 
   |hydrow030|
 
-  .. container:: h3
+  .. container:: h2
 
     Step 2: Download the USGS data
   
@@ -66,7 +64,7 @@ Select one of the following data sources. Both follow the same processing method
 
   |hydrow031d|
 
-  .. container:: h3
+  .. container:: h2
 
     Step 3: Review look-up tables
   
@@ -81,7 +79,7 @@ Select one of the following data sources. Both follow the same processing method
 
   |hydrow033|
 
-  .. container:: h3
+  .. container:: h2
 
     Step 4: Run NLCD Land Cover Roughness processor 
   
@@ -115,7 +113,7 @@ Select one of the following data sources. Both follow the same processing method
 
 .. dropdown:: European Space Agency (ESA) Method
 
-  .. container:: h3
+  .. container:: h2
 
     Step 5: Load Land Cover data (ESA World)
   
@@ -133,7 +131,7 @@ Select one of the following data sources. Both follow the same processing method
 
   |hydrow030a|
 
-  .. container:: h3
+  .. container:: h2
 
     Step 6: Run ESA Land Cover Roughness processor
   
@@ -160,7 +158,8 @@ Select one of the following data sources. Both follow the same processing method
 
   |hydrow041|
 
-  - Move all Manning's n Roughness related rasters into the Manning's Group.
+  
+- Move all Manning's n Roughness related rasters into the Manning's N group.
 
 |hydrow040a|
 
