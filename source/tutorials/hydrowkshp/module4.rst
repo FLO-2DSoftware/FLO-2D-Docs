@@ -7,8 +7,8 @@ Select one of the following data sources. Both follow the same processing method
 
 .. raw:: html
 
-  <details>
-  <summary><strong>National Land Cover Dataset Method</strong></summary>
+   <details>
+   <summary><strong>National Land Cover Dataset Method</strong></summary>
 
 .. _step-1-load-data-1:
 
@@ -114,14 +114,13 @@ Step 4: Run NLCD Land Cover Roughness processor
 
 .. raw:: html
 
-  </details>
+   </details>
 
-spacer
 
 .. raw:: html
 
-  <details>
-  <summary><strong>European Space Agency (ESA) Method</strong></summary>
+   <details>
+   <summary><strong>European Space Agency (ESA) Method</strong></summary>
 
 .. _step-5-load-data:
 
@@ -169,14 +168,14 @@ For Example, use it on the **US Mexico boundary.**
 
 .. raw:: html
 
-  </details>
+   </details>
+
+Step 7: Download Street Centerlines
+--------------------------------------------------------------
 
 - Move all Manning's n Roughness related rasters into the Manning's Group.
 
 |hydrow040a|
-
-Step 7: Download Street Centerlines
---------------------------------------------------------------
 
 - Open **Plugins → Manage and Install Plugins** and install **QuickOSM** (or **OSM Downloader**) if it is not already enabled.
 
