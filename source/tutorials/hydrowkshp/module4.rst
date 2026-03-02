@@ -6,6 +6,7 @@ Module 4 - Process Manning’s Roughness Data
 .. dropdown:: NLCD Method
 
   .. container:: h3
+    
     Step 1: Load land cover data (NLCD)
   
   **Curve Number Generator Method**
@@ -22,6 +23,7 @@ Module 4 - Process Manning’s Roughness Data
   |hydrow030|
 
   .. container:: h3
+
     Step 2: Download the USGS data
   
   - Connect to the NLCD Land Cover data.
@@ -61,6 +63,7 @@ Module 4 - Process Manning’s Roughness Data
   |hydrow031d|
 
   .. container:: h3
+
     Step 3: Review look-up tables
   
   Land cover lookup table.
@@ -75,6 +78,7 @@ Module 4 - Process Manning’s Roughness Data
   |hydrow033|
 
   .. container:: h3
+
     Step 4: Run NLCD Land Cover Roughness processor 
   
   - Open the **Processing Toolbox**.
@@ -108,6 +112,7 @@ Module 4 - Process Manning’s Roughness Data
 .. dropdown:: ESA Method
 
   .. container:: h3
+
     Step 5: Load Land Cover data (ESA World)
   
 
@@ -125,6 +130,7 @@ Module 4 - Process Manning’s Roughness Data
   |hydrow030a|
 
   .. container:: h3
+
     Step 6: Run ESA Land Cover Roughness processor
   
   This processor works on World Data.
