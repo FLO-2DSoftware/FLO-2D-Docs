@@ -54,18 +54,13 @@ If it remains in WGS84 (EPSG:4326), the buffer distance will be interpreted in d
 
 |hydrow043a|
 
-- Set **Format** to:
-
-  ``ESRI Shapefile``
-
-- Set the **Coordinate Reference System (CRS)** to:
-
-  ``EPSG:2222``
-
+- Set **Format** to: ``ESRI Shapefile``
+- Set the **Coordinate Reference System (CRS)** to: ``EPSG:2222``
 - Choose an appropriate file name and save location.
+- Check Selected Features. 
 - Click **OK**.
 
-|hydrow043a|
+|hydrow043d|
 
 The street layer is now in projected units (feet), and buffer distances will be applied correctly in the next step.
 
@@ -98,6 +93,42 @@ Step 3: Create street layer buffer
 This results in a polygon layer that covers the streets.
 If some streets are missing, it is easy to digitize them directly into the street network.
 
+Step 4. Copy Buffered features into the Roughness layer
+----------------------------------------------------------------
+
+- Click the Buffered Layer to activate the layer.
+- Select all features in the layer.
+- CTRL-c copies the features.
+
+|hydrow043e|
+
+- Select the Roughness layer and toggle the **Edit Pencil** on.
+
+|hydrow043f|
+
+- Ctrl-v pastes the features into the roughness layer.
+- Save the edits and toggle the **Edit Pencil** layer off.
+
+|hydrow043g|
+
+- Open the attribute table of the Roughness layer.
+
+|hydrow043i|
+
+- Toggle the **Edit Pencil** on.
+- Change the field selector to **n**
+- Type **0.02** in the combo box.
+- Click **Update All**.
+- Click the **Save Button**.
+- Toggle the **Edit Pencil** off.
+- Close the table.
+
+|hydrow043j|
+
+- Sample the roughness polygons values to the Grid.
+
+|hydrow043h|
+
 .. |hydrow040a| image:: ../img/hydrowkshp/hydrow040a.png
 
 .. |hydrow042| image:: ../img/hydrowkshp/hydrow042.jpg
@@ -119,3 +150,17 @@ If some streets are missing, it is easy to digitize them directly into the stree
 .. |hydrow043a| image:: ../img/hydrowkshp/hydrow043a.png
 
 .. |hydrow043c| image:: ../img/hydrowkshp/hydrow043c.png
+
+.. |hydrow043d| image:: ../img/hydrowkshp/hydrow043d.png
+
+.. |hydrow043e| image:: ../img/hydrowkshp/hydrow043e.png
+
+.. |hydrow043f| image:: ../img/hydrowkshp/hydrow043f.png
+
+.. |hydrow043g| image:: ../img/hydrowkshp/hydrow043g.png
+
+.. |hydrow043h| image:: ../img/hydrowkshp/hydrow043h.png
+
+.. |hydrow043i| image:: ../img/hydrowkshp/hydrow043i.png
+
+.. |hydrow043j| image:: ../img/hydrowkshp/hydrow043j.png 

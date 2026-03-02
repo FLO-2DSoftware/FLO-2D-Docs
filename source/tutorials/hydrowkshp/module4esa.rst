@@ -41,6 +41,17 @@ For Example, use it on the **US Mexico boundary.**
 
 |hydrow041|
 
+Step 3: Interpolate the Manning's n to the Grid 
+---------------------------------------------------
+
+- Run the Roughness Raster processor.
+
+|hydrow038c|
+
+- Move the Land Cover and Roughness layers to the Manning's n group.
+
+|hydrow038d|
+
 .. |hydrow029a| image:: ../img/hydrowkshp/hydrow029a.png
 
 .. |hydrow030a| image:: ../img/hydrowkshp/hydrow030a.png
@@ -54,4 +65,5 @@ For Example, use it on the **US Mexico boundary.**
 .. |hydrow040| image:: ../img/hydrowkshp/hydrow040.png
 
 .. |hydrow041| image:: ../img/hydrowkshp/hydrow041.jpg
-    
+
+.. |hydrow038b| image:: ../img/hydrowkshp/hydrow038b.png

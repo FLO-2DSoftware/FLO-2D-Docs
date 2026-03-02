@@ -99,7 +99,16 @@ Step 4: Run NLCD Land Cover Roughness processor
 
 |hydrow038|
 
-.. _step-5-load-data:
+Step 5: Interpolate the Manning's n to the Grid 
+---------------------------------------------------
+
+- Run the Roughness Raster processor.
+
+|hydrow038a|
+
+- Move the Land Cover and Roughness layers to the Manning's n group.
+
+|hydrow038b|
 
 .. |hydrow029| image:: ../img/hydrowkshp/hydrow029.jpg
 
@@ -138,4 +147,8 @@ Step 4: Run NLCD Land Cover Roughness processor
 .. |hydrow037a| image:: ../img/hydrowkshp/hydrow037a.png
 
 .. |hydrow038| image:: ../img/hydrowkshp/hydrow038.png
+
+.. |hydrow038a| image:: ../img/hydrowkshp/hydrow038a.png
+
+.. |hydrow038b| image:: ../img/hydrowkshp/hydrow038b.png
 
