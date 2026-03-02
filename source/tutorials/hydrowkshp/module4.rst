@@ -1,8 +1,6 @@
 Module 4 - Process Manning’s Roughness Data
 ===============================================
 
-
-
 This module describes the workflow for converting land cover datasets into Manning’s n roughness surfaces using QGIS and online data services.
 
 Select one of the following data sources. Both follow the same processing methodology, differing only in the origin of the land cover dataset.
@@ -122,6 +120,8 @@ Step 4: Run NLCD Land Cover Roughness processor
 
    <details>
    <summary><strong>European Space Agency (ESA) Method</strong></summary>
+
+.. _step-5-load-data:
 
 Step 5: Load Land Cover data (ESA World)
 ---------------------------------------------------
