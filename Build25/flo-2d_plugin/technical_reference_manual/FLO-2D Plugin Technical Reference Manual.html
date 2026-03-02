@@ -670,7 +670,7 @@ Raster statistics determine the maximum rainfall value (RAIN<sub>max</sub>).
 The final RAIN<sub>arf</sub> variable is calculated as a ratio of the local rain depth to the max rain depth.
 A rainfall reduction value is calculated for each element in the grid system using equation (1).</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-0">
-<span class="eqno">(33)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-0" title="Link to this equation"></a></span>\[{RAIN}_{arf} = \frac{{RAIN}_{grid}}{{RAIN}_{\max}}\]</div>
+<span class="eqno">(36)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-0" title="Link to this equation"></a></span>\[{RAIN}_{arf} = \frac{{RAIN}_{grid}}{{RAIN}_{\max}}\]</div>
 <p>Where:</p>
 <blockquote>
 <div><ul class="simple">
@@ -768,7 +768,7 @@ Soil layer with XKSAT.</em></p>
 <p>The area weighted log average is calculated for each grid element from the soil layer equation(2).
 The soil polygon is intersected with the grid polygon to provide the A<sub>i</sub>.</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-1">
-<span class="eqno">(34)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-1" title="Link to this equation"></a></span>\[{\overline{XKSAT}}_{grid} = 10\ \hat{}\ \left( \frac{\Sigma A_{i}*log({XKSAT}_{i})}{A_{ge}} \right)\]</div>
+<span class="eqno">(37)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-1" title="Link to this equation"></a></span>\[{\overline{XKSAT}}_{grid} = 10\ \hat{}\ \left( \frac{\Sigma A_{i}*log({XKSAT}_{i})}{A_{ge}} \right)\]</div>
 <p>Where:</p>
 <blockquote>
 <div><p><em>XKSATi</em> is obtained from the soil attribute table.</p>
@@ -784,7 +784,7 @@ Soil Layer with PSIF.</em></p>
 <p>The area weighted log average is calculated for each grid element from the soil layer equation (3).
 The soil polygon is intersected with the grid polygon to provide the A<sub>i</sub>.</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-2">
-<span class="eqno">(35)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-2" title="Link to this equation"></a></span>\[{\overline{PSIF}}_{grid} = 10\ \hat{}\ \left ( \frac{\Sigma A_{i}*log({PSIF}_{i})}{A_{ge}} \right)\]</div>
+<span class="eqno">(38)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-2" title="Link to this equation"></a></span>\[{\overline{PSIF}}_{grid} = 10\ \hat{}\ \left ( \frac{\Sigma A_{i}*log({PSIF}_{i})}{A_{ge}} \right)\]</div>
 <p>Where:</p>
 <blockquote>
 <div><p><em>PSIFi</em> is obtained from the soil attribute table.</p>
@@ -814,7 +814,7 @@ DTHETA<sub>wet</sub>, DTHETA<sub>normal</sub>, and DTHETA<sub>dry</sub> attribut
 Once DTHETA<sub>parts</sub> is complete, DTHETA<sub>grid</sub> is calculated using a weighted
 average for each grid element equation (4).</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-3">
-<span class="eqno">(36)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-3" title="Link to this equation"></a></span>\[{\overline{DTHETA}}_{\mathbf{grid}} = \left( \frac{\Sigma A_{i}*{DTHETA}_{i}}{A_{ge}} \right)\]</div>
+<span class="eqno">(39)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-3" title="Link to this equation"></a></span>\[{\overline{DTHETA}}_{\mathbf{grid}} = \left( \frac{\Sigma A_{i}*{DTHETA}_{i}}{A_{ge}} \right)\]</div>
 <p>Where:</p>
 <p><em>DTHETAi</em> is taken from the intersected landsoil DTHETA<sub>parts</sub>.</p>
 <p><em>Ai</em> is the subarea intercepted by the grid element from the 3<sup>rd</sup> column of the landuse table and <em>AGE</em> is the grid element area.</p>
@@ -831,7 +831,7 @@ Landuse with Rockout Percentages.</em></p>
 RTIMP<sub>natural</sub>.
 The RTIMP<sub>max</sub> is given by equation (5).</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-4">
-<span class="eqno">(37)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-4" title="Link to this equation"></a></span>\[{RTI MP}_{\max} = \max({RTIMP}_{land,\ }{RTIMP}_{natural})\]</div>
+<span class="eqno">(40)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-4" title="Link to this equation"></a></span>\[{RTI MP}_{\max} = \max({RTIMP}_{land,\ }{RTIMP}_{natural})\]</div>
 <p>Where:</p>
 <blockquote>
 <div><p>RTIMP<sub>max</sub> is the maximum impervious value of the intersection between the landuse data and the
@@ -842,7 +842,7 @@ soil data.</p>
 </div></blockquote>
 <p>This is an area weighted average impervious decimal calculation equation (6) for each grid element.</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-5">
-<span class="eqno">(38)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-5" title="Link to this equation"></a></span>\[{RTIMP}_{grid} = \ \frac{\left( \frac{\Sigma{RTIMP}_{\max}*(A_{i})}{A_{ge}} \right)}{100}\]</div>
+<span class="eqno">(41)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-5" title="Link to this equation"></a></span>\[{RTIMP}_{grid} = \ \frac{\left( \frac{\Sigma{RTIMP}_{\max}*(A_{i})}{A_{ge}} \right)}{100}\]</div>
 <p>Where:</p>
 <blockquote>
 <div><p>RTIMP<sub>grid</sub> is the final decimal percent impervious for each grid element.</p>
@@ -853,7 +853,7 @@ soil data.</p>
 </div></blockquote>
 <p>Any centroid within an EFF polygon is applied to an EFF or effectiveness of the impervious field equation (7).</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-6">
-<span class="eqno">(39)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-6" title="Link to this equation"></a></span>\[{RTIMP }_{final} = \ \left( {RTIMP}_{grid}*(EFF*.01) \right)\]</div>
+<span class="eqno">(42)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-6" title="Link to this equation"></a></span>\[{RTIMP }_{final} = \ \left( {RTIMP}_{grid}*(EFF*.01) \right)\]</div>
 <p>Where:</p>
 <blockquote>
 <div><p>RTIMP<sub>final</sub> is the effective imperviousness of the grid element.</p>
@@ -880,9 +880,9 @@ Landuse with Vegetative Cover.</em></p>
 This requires a computation of the ratio of the hydraulic conductivity for the vegetative cover to the bare
 ground hydraulic conductivity equation (9):</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-7">
-<span class="eqno">(40)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-7" title="Link to this equation"></a></span>\[C_{K} = \left( \frac{{VC}_{K} - 10)}{90} \right) + 1\]</div>
+<span class="eqno">(43)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-7" title="Link to this equation"></a></span>\[C_{K} = \left( \frac{{VC}_{K} - 10)}{90} \right) + 1\]</div>
 <div class="math notranslate nohighlight" id="equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-8">
-<span class="eqno">(41)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-8" title="Link to this equation"></a></span>\[XKSATC = XKSAT\ \sum_{k}^{}{P_{k}C_{k}}\]</div>
+<span class="eqno">(44)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-8" title="Link to this equation"></a></span>\[XKSATC = XKSAT\ \sum_{k}^{}{P_{k}C_{k}}\]</div>
 <p>Where:</p>
 <blockquote>
 <div><p>P<sub>k</sub> is the percentage of the area within the grid element corresponding to C<sub>k</sub> and
@@ -899,7 +899,7 @@ Landuse with Initial Abstraction.</em></p>
 <p>The intersection between the landuse and grid element gives an area weighted average for the initial
 abstraction equation (10):</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-9">
-<span class="eqno">(42)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-9" title="Link to this equation"></a></span>\[IABSTR\  = \left( \frac{\sum_{}^{}{A_{i}({IA}_{i})}}{A_{GE}} \right)\]</div>
+<span class="eqno">(45)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-9" title="Link to this equation"></a></span>\[IABSTR\  = \left( \frac{\sum_{}^{}{A_{i}({IA}_{i})}}{A_{GE}} \right)\]</div>
 <p>Where:</p>
 <blockquote>
 <div><p><em>IAi</em> is the initial abstraction in the subarea <em>Ai</em> intercepted by the element and

@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>17. Model-Revised Grid Inputs (.RGH Files) &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=6385869e" />
+
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="18. Grid Tools Help" href="Help.html" />
+    <link rel="prev" title="16. Low Impact Development (LID) Volume Spatial" href="Low%20Impact%20Development.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Gila for QGIS Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">FLO-2D Gila for QGIS User Manual</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin-features/index.html">Plugin Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Widgets</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Grid Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pre-processing-tools/Pre-Processing%20Tools.html">Pre-Processing Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../profile-tool/Profile%20Tool.html">Profile Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cross-sections-editor/Cross%20Sections%20Editor.html">Cross Sections Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary-condition-editor/index.html">Boundary Condition Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../initial-condition-editor/Initial%20Condition%20Editor.html">Initial Condition Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rain-editor/Rain%20Editor.html">Rain Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../schematized-channel-editor/Schematized%20Channel%20Editor.html">Schematized Channel Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../hydraulic-structure-editor/Hydraulic%20Structure%20Editor.html">Structures Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../street-editor/Street%20Editor.html">Street Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../floodplain-cross-section-editor/Floodplain%20Cross%20Section%20Editor.html">Floodplain Cross Section Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../infiltration-editor/index.html">Infiltration Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../storm-drain-editor/index.html">Storm Drain Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../levees-breach-editor/Levees%20Breach%20Editor.html">Levees Breach Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiple-channels-editor/Multiple%20Channel%20Editor.html">Multiple Channels Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../multiple-domains-editor/Multiple%20Domains%20Editor.html">Multiple Domains Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../post-development-grid-modification/index.html">Grid Modification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/index.html">FLO-2D Gila for QGIS Technical Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_mapcrafter/index.html">FLO-2D MapCrafter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_florunner/index.html">FLO-2D FLORunner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">FLO-2D Gila Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Gila for QGIS Documentation</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Gila for QGIS User Manual</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Widgets</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Grid Tools</a></li>
+      <li class="breadcrumb-item active">17. Model-Revised Grid Inputs (.RGH Files)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/flo-2d_plugin/user_manual/widgets/grid-tools/RGH.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="model-revised-grid-inputs-rgh-files">
+<span id="rgh"></span><h1>17. Model-Revised Grid Inputs (.RGH Files)<a class="headerlink" href="#model-revised-grid-inputs-rgh-files" title="Link to this heading"></a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>🚧 This page is currently under development 🚧</p>
+</div>
+<img alt="../../../../_images/rgh001.png" src="../../../../_images/rgh001.png" />
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Overview</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>.RGH</strong> files in FLO-2D are <em>runtime / revised data</em> output files the model can produce that contain updated versions
+of some input datasets after a run (for example: revised elevations, revised Manning’s n values, or other cell-by-cell
+adjustments that occurred during simulation).</p>
+<p class="sd-card-text">They are primarily used for:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p class="sd-card-text">recording model-computed changes to input parameters (so you can inspect or reuse
+those adjustments), and</p></li>
+<li><p class="sd-card-text">optionally replacing the original <cite>.DAT</cite> file for a subsequent run (by renaming a <cite>.RGH</cite>
+to the corresponding <cite>.DAT</cite>).</p></li>
+</ol>
+</div></blockquote>
+<p class="sd-card-text">Two common triggers that produce or update <cite>.RGH</cite> contents:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p class="sd-card-text">the <strong>FROUDL</strong> (limiting Froude) handling that increases n-values at runtime, and</p></li>
+<li><p class="sd-card-text">the <strong>IBACKUP</strong> option (particularly <cite>IBACKUP = 2</cite>) that writes
+elevation/outflow node changes back to an <cite>.RGH</cite> file.</p></li>
+</ol>
+</div></blockquote>
+<p class="sd-card-text">List of .RGH Files:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="sd-card-text">FPLAIN.RGH</p></li>
+<li><p class="sd-card-text">CHAN.RGH</p></li>
+<li><p class="sd-card-text">STREET.RGH</p></li>
+<li><p class="sd-card-text">MULT.RGH</p></li>
+<li><p class="sd-card-text">MANNINGS_N.RGH</p></li>
+<li><p class="sd-card-text">FPLAIN_SDELEV.RGH</p></li>
+<li><p class="sd-card-text">TOPO_SDELEV.RGH</p></li>
+<li><p class="sd-card-text">STEEPROUGH.RGH</p></li>
+</ul>
+</div></blockquote>
+<p class="sd-card-text"><em>CHAN.RGH</em></p>
+<blockquote>
+<div><p class="sd-card-text">CHAN.RGH is a duplicate file of the CHAN.DAT file with the updated
+Manning’s n-value changes that were reported in the ROUGH.OUT
+file.  The maximum and final Manning’s n-value changes are listed in the
+ROUGH.OUT file.  To accept the changes to Manning’s n-values, CHAN.
+RGH can be renamed to replace CHAN.DAT for the next FLO-2D flood
+simulation.  This automates the spatial adjustment of n-values for channel
+elements that exceed the limiting Froude number.</p>
+</div></blockquote>
+<p class="sd-card-text"><em>FPLAIN.RGH</em></p>
+<blockquote>
+<div><p class="sd-card-text">This file contains the final Manning’s n-value changes for the floodplain
+grid elements.  The maximum and final Manning’s n-values are reported
+in the ROUGH.OUT.  If the changes are acceptable, FPLAIN.RGH can
+be renamed to FPLAIN.DAT for the next FLO-2D flood simulation.  This
+automates the spatial adjustment of n-values for floodplain elements that
+exceed the limiting Froude number.</p>
+</div></blockquote>
+<p class="sd-card-text"><em>FPLAIN_SDELEV.RGH</em></p>
+<blockquote>
+<div><p class="sd-card-text">This file contains the elevation adjustments that were automatically correct
+ed when the FLO-2D engine compared the floodplain grid elements to the
+storm drain rim and type 4 invert elevations.  To fully accept the changes
+reported to fprimelev.new, replace FPLAIN.DAT with this file.  It is also
+necessarry to replace the TOPO.DAT with TOPO_SDELEV.RGH.</p>
+</div></blockquote>
+<p class="sd-card-text"><em>MANNINGS_N.RGH</em></p>
+<blockquote>
+<div><p class="sd-card-text">MANNINGS_N.RGH is a duplicate file of the MANNINGS_N.DAT
+file with the updated Manning’s n-value changes that were reported in the
+ROUGH.OUT file.  The maximum and final Manning’s n-value changes
+are listed in the ROUGH.OUT</p>
+</div></blockquote>
+<p class="sd-card-text"><em>MULT.RGH</em></p>
+<blockquote>
+<div><p class="sd-card-text">MULT.RGH is a duplicate file of the MULT.DAT file with the updated
+Manning’s n-value changes that were reported in the ROUGH.OUT file.
+The maximum and final Manning’s n-value changes are listed in the ROUGH.OUT.</p>
+</div></blockquote>
+<p class="sd-card-text"><em>STREET.RGH</em></p>
+<blockquote>
+<div><p class="sd-card-text">This file lists the final changes to Manning’s n-values for the street grid
+elements.  The maximum and final Manning’s n-values are reported in the
+ROUGH.OUT file. If the n-value changes are acceptable, STREET.RGH
+can be renamed to STREET.DAT for the next FLO-2D flood simulation.
+This automates the spatial adjustment of n-values for street elements that
+exceeded the limiting Froude number</p>
+</div></blockquote>
+<p class="sd-card-text"><em>TOPO_SDELEV.RGH</em></p>
+<blockquote>
+<div><p class="sd-card-text">This file contains the elevation adjustments that were automatically corrected
+when the FLO-2D engine compared the floodplain grid elements
+to the storm drain inlet rim and type 4 invert elevations.  To fully accept
+the changes reported to fprimelev.new, replace TOPO.DAT with this file.
+It is also necessary to replace the FPLAIN.DAT with FPLSIN_SDELEV. RGH.</p>
+</div></blockquote>
+</div>
+</details><section id="mannings-n-rgh">
+<h2>MANNINGS_N.RGH<a class="headerlink" href="#mannings-n-rgh" title="Link to this heading"></a></h2>
+<img alt="../../../../_images/Mannings_n_rgh001.png" src="../../../../_images/Mannings_n_rgh001.png" />
+<p>This tool updates the grid table n-values. To use it, the “Update grid n-values using manningsn.rgh”
+checkbox must be checked as shown in the figure below.</p>
+<img alt="../../../../_images/Mannings_n_rgh002.png" src="../../../../_images/Mannings_n_rgh002.png" />
+<p>After that, one can now select the source file (MANNINGS_N.RGH) and click <strong>OK</strong> and apply the corrections.</p>
+<img alt="../../../../_images/Mannings_n_rgh003.png" src="../../../../_images/Mannings_n_rgh003.png" />
+<img alt="../../../../_images/Mannings_n_rgh004.png" src="../../../../_images/Mannings_n_rgh004.png" />
+<img alt="../../../../_images/Mannings_n_rgh005.png" src="../../../../_images/Mannings_n_rgh005.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Low%20Impact%20Development.html" class="btn btn-neutral float-left" title="16. Low Impact Development (LID) Volume Spatial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Help.html" class="btn btn-neutral float-right" title="18. Grid Tools Help" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="RGH.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="../../../../../Build21/index.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

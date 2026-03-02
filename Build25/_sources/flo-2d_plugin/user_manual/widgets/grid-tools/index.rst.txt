@@ -28,4 +28,5 @@ that are part of the geopackage.  Each tool is described in this section.
    Hazus Layers.rst
    Steep Slope.rst
    Low Impact Development.rst
+   RGH.rst
    Help.rst

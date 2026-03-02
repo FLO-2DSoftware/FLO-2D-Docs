@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>National Land Cover Data (NLCD) &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=6385869e" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="World Land Cover Data - European Satelite Agency (ESA World)" href="module4esa.html" />
+    <link rel="prev" title="Module 4 - Process Manning’s Roughness Data" href="module4.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Gila for QGIS Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_mapcrafter/index.html">FLO-2D MapCrafter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_florunner/index.html">FLO-2D FLORunner</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Gila Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Self-Help-Kit-Gila/index.html">Self-Help Kit Gila</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Hydrologic Mapping and Data Access Workshop</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="module1.html">Module 1 - Workshop Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module1.html#module-1-connect-data">Module 1 - Connect Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module1.html#module-1-load-flo-2d-project">Module 1 - Load FLO-2D Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module2.html">Module 2 - Identify the Contributing Watershed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module3.html">Module 3 - Process Elevation Data</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="module4.html">Module 4 - Process Manning’s Roughness Data</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">National Land Cover Data (NLCD)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="module4esa.html">World Land Cover Data - European Satelite Agency (ESA World)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="module4str.html">Open Street Data OSM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="module5.html">Module 5 - Process Rainfall Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module6.html">Module 6 - Process Infiltration Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module7.html">Module 7 Process Buildings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TDT/index.html">Tailings Dam Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two-Phase-Dam-Breach/index.html">Two Phase Dam Breach</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Gila Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Hydrologic Mapping and Data Access Workshop</a></li>
+          <li class="breadcrumb-item"><a href="module4.html">Module 4 - Process Manning’s Roughness Data</a></li>
+      <li class="breadcrumb-item active">National Land Cover Data (NLCD)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/hydrowkshp/module4nlcd.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="national-land-cover-data-nlcd">
+<h1>National Land Cover Data (NLCD)<a class="headerlink" href="#national-land-cover-data-nlcd" title="Link to this heading"></a></h1>
+<section id="step-1-curve-number-generator-method">
+<h2>Step 1: Curve Number Generator method<a class="headerlink" href="#step-1-curve-number-generator-method" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Load the <strong>Curve Number Generator</strong> from the <strong>Processing</strong> toolbox.</p></li>
+</ul>
+<p><img alt="hydrow029" src="../../_images/hydrow029.jpg" /></p>
+<ul class="simple">
+<li><p>Set the Extent to <strong>Watershed</strong> Layer.</p></li>
+<li><p>Set the name and path.</p></li>
+<li><p>Uncheck the other items.</p></li>
+<li><p>Click Run</p></li>
+</ul>
+<p><img alt="hydrow030" src="../../_images/hydrow030.png" /></p>
+</section>
+<section id="step-2-download-the-usgs-data">
+<h2>Step 2: Download the USGS data<a class="headerlink" href="#step-2-download-the-usgs-data" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Connect to the NLCD Land Cover data.</p></li>
+</ul>
+<p><img alt="hydrow031a" src="../../_images/hydrow031a.png" /></p>
+<ul class="simple">
+<li><p>Repair the data Source</p></li>
+</ul>
+<p><img alt="hydrow031b" src="../../_images/hydrow031b.png" /></p>
+<ul class="simple">
+<li><p>Select the layer and click OK.</p></li>
+</ul>
+<p><img alt="hydrow031c" src="../../_images/hydrow031c.png" /></p>
+<ul class="simple">
+<li><p>Right click the Land Cover layer and click Export.</p></li>
+</ul>
+<p><img alt="hydrow031f" src="../../_images/hydrow031f.png" /></p>
+<ul class="simple">
+<li><p>Fill the form and click OK.</p></li>
+</ul>
+<p><img alt="hydrow031" src="../../_images/hydrow031.png" /></p>
+<ul class="simple">
+<li><p>Move the Land Cover layers to the <strong>Manning’s</strong> group.</p></li>
+</ul>
+<p><img alt="hydrow031e" src="../../_images/hydrow031e.png" /></p>
+<ul class="simple">
+<li><p>Copy the Style from the NLCD Layer.</p></li>
+</ul>
+<p><img alt="hydrow031g" src="../../_images/hydrow031g.png" /></p>
+<ul class="simple">
+<li><p>Paste the Style to the Downloaded Layer.</p></li>
+</ul>
+<p><img alt="hydrow031h" src="../../_images/hydrow031h.png" /></p>
+<ul class="simple">
+<li><p>Note the difference between the Curve Number Generator 2021 and the Land Cover NLCD Server 2024 data.</p></li>
+</ul>
+<p><img alt="hydrow031d" src="../../_images/hydrow031d.png" /></p>
+</section>
+<section id="step-3-review-look-up-tables">
+<h2>Step 3: Review look-up tables<a class="headerlink" href="#step-3-review-look-up-tables" title="Link to this heading"></a></h2>
+<p>Land cover lookup table.
+The full table is in the Excel Spreadsheet.</p>
+<ul class="simple">
+<li><p>Modify these table per local <strong>Flood Control Specifications.</strong></p></li>
+</ul>
+<p><img alt="hydrow032" src="../../_images/hydrow032.png" /></p>
+<ul class="simple">
+<li><p>Mannings roughness for shallow overland flow developed for FLO-2D. (source: FCDMC)</p></li>
+</ul>
+<p><img alt="hydrow033" src="../../_images/hydrow033.jpg" /></p>
+</section>
+<section id="step-4-run-nlcd-land-cover-roughness-processor">
+<h2>Step 4: Run NLCD Land Cover Roughness processor<a class="headerlink" href="#step-4-run-nlcd-land-cover-roughness-processor" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Open the <strong>Processing Toolbox</strong>.</p></li>
+</ul>
+<p><img alt="hydrow034" src="../../_images/hydrow034.jpg" /></p>
+<ul class="simple">
+<li><p>Open the Existing Processor Model.</p></li>
+</ul>
+<p><img alt="hydrow035" src="../../_images/hydrow035.png" /></p>
+<ul class="simple">
+<li><p>Double click the Reclassify module.</p></li>
+</ul>
+<p><img alt="hydrow036" src="../../_images/hydrow036.jpg" /></p>
+<ul class="simple">
+<li><p>This table may be modified to reflect local Manning’s n value standards.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Every raster value must be explicitly assigned a corresponding Manning’s n value.
+If one value is omitted, the processor may fail during roughness surface generation.</p>
+</div>
+<p><img alt="hydrow037" src="../../_images/hydrow037.png" /></p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Processor models are script-based. Editing the table in a plain text editor is often
+faster than using the graphical interface.</p>
+</div>
+<p><img alt="hydrow037a" src="../../_images/hydrow037a.png" /></p>
+<ul class="simple">
+<li><p>Run the processor model to reclassify the landuse data as roughness data.</p></li>
+</ul>
+<p><img alt="hydrow038" src="../../_images/hydrow038.png" /></p>
+</section>
+<section id="step-5-interpolate-manning-s-n-to-the-grid">
+<h2>Step 5: Interpolate Manning’s n to the Grid<a class="headerlink" href="#step-5-interpolate-manning-s-n-to-the-grid" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Run the Roughness Raster processor.</p></li>
+</ul>
+<p><img alt="hydrow038a" src="../../_images/hydrow038a.png" /></p>
+<ul class="simple">
+<li><p>Move the Land Cover and Roughness layers to the Manning’s n group.</p></li>
+</ul>
+<p><img alt="hydrow038b" src="../../_images/hydrow038b.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="module4.html" class="btn btn-neutral float-left" title="Module 4 - Process Manning’s Roughness Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="module4esa.html" class="btn btn-neutral float-right" title="World Land Cover Data - European Satelite Agency (ESA World)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="module4nlcd.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build21/index.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

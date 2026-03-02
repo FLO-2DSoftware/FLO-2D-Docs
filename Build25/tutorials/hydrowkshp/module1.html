@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 1 - Workshop Setup &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=6385869e" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Module 2 - Identify the Contributing Watershed" href="module2.html" />
+    <link rel="prev" title="Hydrologic Mapping and Data Access Workshop" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Gila for QGIS Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_mapcrafter/index.html">FLO-2D MapCrafter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_florunner/index.html">FLO-2D FLORunner</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Gila Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Self-Help-Kit-Gila/index.html">Self-Help Kit Gila</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Hydrologic Mapping and Data Access Workshop</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Module 1 - Workshop Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-install-class-data">Step 1: Install class data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-set-up-the-quick-access-folder">Step 2: Set up the quick access folder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-load-qgis">Step 3: Load QGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-1-connect-data">Module 1 - Connect Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-3dep-elevation-server-connection">Step 1: 3DEP elevation server connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-land-cover-nlcd-server-connection">Step 2: Land cover NLCD server connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-hydrography-nhd-server-connection">Step 3: Hydrography NHD server connection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-fema-effective-server">Step 4: FEMA Effective Server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-levee-database">Step 5: Levee Database</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-1-load-flo-2d-project">Module 1 - Load FLO-2D Project</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-load-the-project">Step 1: Load the project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-review-available-data">Step 2: Review Available Data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="module2.html">Module 2 - Identify the Contributing Watershed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module3.html">Module 3 - Process Elevation Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module4.html">Module 4 - Process Manning’s Roughness Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module5.html">Module 5 - Process Rainfall Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module6.html">Module 6 - Process Infiltration Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module7.html">Module 7 Process Buildings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TDT/index.html">Tailings Dam Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two-Phase-Dam-Breach/index.html">Two Phase Dam Breach</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Gila Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Hydrologic Mapping and Data Access Workshop</a></li>
+      <li class="breadcrumb-item active">Module 1 - Workshop Setup</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/hydrowkshp/module1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-1-workshop-setup">
+<h1>Module 1 - Workshop Setup<a class="headerlink" href="#module-1-workshop-setup" title="Link to this heading"></a></h1>
+<p>This workshop uses QGIS v3.40 and the FLO-2D Gila Plugin v2.0.0.  <a class="reference internal" href="../../setup/QGIS%20and%20FLO-2D%20Plugin.html#setup-qgis-flo2d-plugin"><span class="std std-ref">Install Instructions</span></a></p>
+<p><strong>Required Data</strong></p>
+<p>The required data can be downloaded here:</p>
+<a href="https://flo-2d.sharefile.com/d-s47f576b807f94c17b85f7668fbd2c31e" target="_blank">Data Installer</a>
+<p></p><section id="step-1-install-class-data">
+<h2>Step 1: Install class data<a class="headerlink" href="#step-1-install-class-data" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Double click the  Workshop Installer.exe.</p></li>
+<li><p>Install using <strong>default</strong> settings.</p></li>
+<li><p>Close the installer when the Completed message is listed in the Install Window.</p></li>
+</ul>
+<p><img alt="hydrow002" src="../../_images/hydrow002.png" /></p>
+</section>
+<section id="step-2-set-up-the-quick-access-folder">
+<h2>Step 2: Set up the quick access folder<a class="headerlink" href="#step-2-set-up-the-quick-access-folder" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Find the training folder.</p></li>
+</ul>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects</p>
+<ul class="simple">
+<li><p>Drag the Workshop Folder into the Quick Access Area.</p></li>
+<li><p>It can be removed after the class is over.</p></li>
+</ul>
+<p><img alt="hydrow003" src="../../_images/hydrow003.png" /></p>
+</section>
+<section id="step-3-load-qgis">
+<h2>Step 3: Load QGIS<a class="headerlink" href="#step-3-load-qgis" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Open QGIS</p></li>
+</ul>
+<p><img alt="hydrow004" src="../../_images/hydrow004.jpg" /></p>
+<ul class="simple">
+<li><p>Open the plugin manager and load the Installed Tab.</p></li>
+</ul>
+<p><img alt="hydrow005" src="../../_images/hydrow005.jpg" /></p>
+<ul class="simple">
+<li><p>If you are missing any of these plugins please follow the <a class="reference internal" href="../../setup/QGIS%20and%20FLO-2D%20Plugin.html#setup-qgis-flo2d-plugin"><span class="std std-ref">Install Instructions</span></a>.</p></li>
+</ul>
+<p><img alt="hydrow006" src="../../_images/hydrow006.png" /></p>
+<ul class="simple">
+<li><p>Open the Settings&gt;&gt;Options menu.</p></li>
+</ul>
+<p><img alt="hydrow007" src="../../_images/hydrow007.jpg" /></p>
+<ul class="simple">
+<li><p>Find the CRS tab and select the <strong>Use Project CRS</strong> button.</p></li>
+</ul>
+<p><img alt="hydrow008" src="../../_images/hydrow008.png" /></p>
+<ul class="simple">
+<li><p>QGIS Layout Overview</p></li>
+</ul>
+<p><img alt="hydrow009" src="../../_images/hydrow009.jpg" /></p>
+<ul class="simple">
+<li><p>QGIS Toolbar Layout Overview</p></li>
+</ul>
+<p><img alt="hydrow010" src="../../_images/hydrow010.jpg" /></p>
+</section>
+</section>
+<section id="module-1-connect-data">
+<h1>Module 1 - Connect Data<a class="headerlink" href="#module-1-connect-data" title="Link to this heading"></a></h1>
+<p>Use the following steps to connect to U.S. government or international data servers. If a local agency provides a server connection URL,
+QGIS can connect to it using the same workflow. Servers that require authentication can be configured through the QGIS connection settings.</p>
+<section id="step-1-3dep-elevation-server-connection">
+<h2>Step 1: 3DEP elevation server connection<a class="headerlink" href="#step-1-3dep-elevation-server-connection" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Load the Data Manager by clicking the colorful icon below.</p></li>
+<li><p>Set the tab to WCS.</p></li>
+<li><p>Click New and enter a name and paste the URL.</p></li>
+</ul>
+<p>URL: <a class="reference external" href="https://elevation.nationalmap.gov/arcgis/services/3DEPElevation/ImageServer/WCSServer">https://elevation.nationalmap.gov/arcgis/services/3DEPElevation/ImageServer/WCSServer</a></p>
+<p><img alt="hydrow011" src="../../_images/hydrow011.jpg" /></p>
+</section>
+<section id="step-2-land-cover-nlcd-server-connection">
+<h2>Step 2: Land cover NLCD server connection<a class="headerlink" href="#step-2-land-cover-nlcd-server-connection" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Load the Data Manager by clicking the colorful icon below.</p></li>
+<li><p>Set the tab to WCS.</p></li>
+<li><p>Click New and enter a name and paste the URL.</p></li>
+</ul>
+<p>URL: <a class="reference external" href="https://dmsdata.cr.usgs.gov/geoserver/mrlc_Land-Cover-Native_conus_year_data/wcs">https://dmsdata.cr.usgs.gov/geoserver/mrlc_Land-Cover-Native_conus_year_data/wcs</a></p>
+<p><img alt="hydrow012" src="../../_images/hydrow012.jpg" /></p>
+</section>
+<section id="step-3-hydrography-nhd-server-connection">
+<h2>Step 3: Hydrography NHD server connection<a class="headerlink" href="#step-3-hydrography-nhd-server-connection" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Load the Data Manager by clicking the colorful icon below.</p></li>
+<li><p>Set the tab to ArcGIS REST Server.</p></li>
+<li><p>Click New and enter a name and paste the URL.</p></li>
+</ul>
+<p>URL: <a class="reference external" href="https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer">https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer</a></p>
+<p><img alt="hydrow013" src="../../_images/hydrow013.jpg" /></p>
+</section>
+<section id="step-4-fema-effective-server">
+<h2>Step 4: FEMA Effective Server<a class="headerlink" href="#step-4-fema-effective-server" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Load the Data Manager by clicking the colorful icon below.</p></li>
+<li><p>Set the tab to ArcGIS REST Server.</p></li>
+<li><p>Click New and enter a name and paste the URL.</p></li>
+</ul>
+<p>URL: <a class="reference external" href="https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer">https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer</a></p>
+<p><img alt="hydrow014" src="../../_images/hydrow014.jpg" /></p>
+</section>
+<section id="step-5-levee-database">
+<h2>Step 5: Levee Database<a class="headerlink" href="#step-5-levee-database" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Load the Data Manager by clicking the colorful icon below.</p></li>
+<li><p>Set the tab to ArcGIS REST Server.</p></li>
+<li><p>Click New and enter a name and paste the URL.</p></li>
+</ul>
+<p>URL: <a class="reference external" href="https://geospatial.sec.usace.army.mil/dls/rest/services/NLD/Public/FeatureServer">https://geospatial.sec.usace.army.mil/dls/rest/services/NLD/Public/FeatureServer</a></p>
+<p><img alt="hydrow013a" src="../../_images/hydrow013a.png" /></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Close and Reload QGIS to <strong>save the User Profile</strong>. If QGIS crashes before the profile is saved, the <strong>setup</strong> step will need to be repeated.</p>
+</div>
+</section>
+</section>
+<section id="module-1-load-flo-2d-project">
+<h1>Module 1 - Load FLO-2D Project<a class="headerlink" href="#module-1-load-flo-2d-project" title="Link to this heading"></a></h1>
+<section id="step-1-load-the-project">
+<h2>Step 1: Load the project<a class="headerlink" href="#step-1-load-the-project" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Click the Open FLO-2D Project button.</p></li>
+</ul>
+<p><img alt="hydrow015" src="../../_images/hydrow015.jpg" /></p>
+<ul class="simple">
+<li><p>Navigate to the Workshop folder and open the Workshop Project 1.gpkg file.</p></li>
+</ul>
+<p><img alt="hydrow015a" src="../../_images/hydrow015a.png" /></p>
+<ul class="simple">
+<li><p>The project should look like this:</p></li>
+</ul>
+<p><img alt="hydrow015b" src="../../_images/hydrow015b.png" /></p>
+</section>
+<section id="step-2-review-available-data">
+<h2>Step 2: Review Available Data<a class="headerlink" href="#step-2-review-available-data" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since the data processing steps in this workshop depend on a good
+internet connection and the ability to download large datasets, some files are
+available in the <strong>Workshop</strong> Folders.</p>
+</div>
+<ul class="simple">
+<li><p>Open the Workshop directory and review the data files.</p></li>
+<li><p>If a download process fails, find the data in each respective folder.</p></li>
+</ul>
+<p><img alt="hydrow015c" src="../../_images/hydrow015c.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Hydrologic Mapping and Data Access Workshop" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="module2.html" class="btn btn-neutral float-right" title="Module 2 - Identify the Contributing Watershed" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="module1.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build21/index.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

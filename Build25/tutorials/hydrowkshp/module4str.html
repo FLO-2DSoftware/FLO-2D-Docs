@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open Street Data OSM &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=6385869e" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Module 5 - Process Rainfall Data" href="module5.html" />
+    <link rel="prev" title="World Land Cover Data - European Satelite Agency (ESA World)" href="module4esa.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Gila for QGIS Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_mapcrafter/index.html">FLO-2D MapCrafter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_florunner/index.html">FLO-2D FLORunner</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Gila Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Self-Help-Kit-Gila/index.html">Self-Help Kit Gila</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Hydrologic Mapping and Data Access Workshop</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="module1.html">Module 1 - Workshop Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module1.html#module-1-connect-data">Module 1 - Connect Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module1.html#module-1-load-flo-2d-project">Module 1 - Load FLO-2D Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module2.html">Module 2 - Identify the Contributing Watershed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module3.html">Module 3 - Process Elevation Data</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="module4.html">Module 4 - Process Manning’s Roughness Data</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="module4nlcd.html">National Land Cover Data (NLCD)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="module4esa.html">World Land Cover Data - European Satelite Agency (ESA World)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Open Street Data OSM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="module5.html">Module 5 - Process Rainfall Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module6.html">Module 6 - Process Infiltration Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module7.html">Module 7 Process Buildings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TDT/index.html">Tailings Dam Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two-Phase-Dam-Breach/index.html">Two Phase Dam Breach</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Gila Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Hydrologic Mapping and Data Access Workshop</a></li>
+          <li class="breadcrumb-item"><a href="module4.html">Module 4 - Process Manning’s Roughness Data</a></li>
+      <li class="breadcrumb-item active">Open Street Data OSM</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/hydrowkshp/module4str.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="open-street-data-osm">
+<h1>Open Street Data OSM<a class="headerlink" href="#open-street-data-osm" title="Link to this heading"></a></h1>
+<section id="step-1-download-street-centerlines">
+<h2>Step 1: Download Street Centerlines<a class="headerlink" href="#step-1-download-street-centerlines" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Move all Manning’s n Roughness related rasters into the Manning’s Group.</p></li>
+</ul>
+<p><img alt="hydrow040a" src="../../_images/hydrow040a.png" /></p>
+<ul class="simple">
+<li><p>Open <strong>Plugins → Manage and Install Plugins</strong> and install <strong>QuickOSM</strong> (or <strong>OSM Downloader</strong>) if it is not already enabled.</p></li>
+</ul>
+<p><img alt="hydrow042a" src="../../_images/hydrow042a.png" /></p>
+<ul class="simple">
+<li><p>Open the tool:</p></li>
+<li><p><strong>Vector → QuickOSM → QuickOSM</strong></p></li>
+</ul>
+<p><img alt="hydrow042b" src="../../_images/hydrow042b.png" /></p>
+<ul class="simple">
+<li><p>Use the <strong>Map Preset</strong> tab and select Urban for Streets and Buildings.</p></li>
+<li><p>Use the current map canvas extent so the download matches the project domain.</p></li>
+<li><p>Click Run Preset.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>if a timeout error occurs, run the preset again.</p>
+</div>
+<p><img alt="hydrow042c" src="../../_images/hydrow042c.png" /></p>
+<ul class="simple">
+<li><p>Select the streets that are inside the <strong>Watershed Boundary</strong>.</p></li>
+<li><p>Run the Select by location tool.</p></li>
+<li><p>Fill the fields as shown and click Run.</p></li>
+</ul>
+<p><img alt="hydrow042d" src="../../_images/hydrow042d.png" /></p>
+<ul class="simple">
+<li><p>Invert the selection.</p></li>
+</ul>
+<p><img alt="hydrow042e" src="../../_images/hydrow042e.png" /></p>
+<ul class="simple">
+<li><p>Toggle the editor.</p></li>
+<li><p>Delete the Selected Streets.</p></li>
+<li><p>Save the edits.</p></li>
+<li><p>Toggle the editor off.</p></li>
+</ul>
+<p><img alt="hydrow042f" src="../../_images/hydrow042f.gif" /></p>
+</section>
+<section id="step-2-reproject-and-export-street-layer">
+<h2>Step 2: Reproject and Export Street Layer<a class="headerlink" href="#step-2-reproject-and-export-street-layer" title="Link to this heading"></a></h2>
+<p>The street layer must be in the project coordinate system before buffering.
+If it remains in WGS84 (EPSG:4326), the buffer distance will be interpreted in degrees and will not produce correct results.</p>
+<ul class="simple">
+<li><p>Right-click the <strong>Roads</strong> layer.</p></li>
+<li><p>Select <strong>Export → Save Features As</strong>.</p></li>
+</ul>
+<p><img alt="hydrow043a" src="../../_images/hydrow043a.png" /></p>
+<ul class="simple">
+<li><p>Set <strong>Format</strong> to: <code class="docutils literal notranslate"><span class="pre">ESRI</span> <span class="pre">Shapefile</span></code></p></li>
+<li><p>Set the <strong>Coordinate Reference System (CRS)</strong> to: <code class="docutils literal notranslate"><span class="pre">EPSG:2222</span></code></p></li>
+<li><p>Choose an appropriate file name and save location.</p></li>
+<li><p>Check Selected Features.</p></li>
+<li><p>Click <strong>OK</strong>.</p></li>
+</ul>
+<p><img alt="hydrow043d" src="../../_images/hydrow043d.png" /></p>
+<p>The street layer is now in projected units (feet), and buffer distances will be applied correctly in the next step.</p>
+</section>
+<section id="step-3-create-street-layer-buffer">
+<h2>Step 3: Create street layer buffer<a class="headerlink" href="#step-3-create-street-layer-buffer" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Run the <strong>Buffer</strong> tool from the <strong>Processing Toolbox</strong>.</p></li>
+</ul>
+<p><img alt="hydrow042" src="../../_images/hydrow042.jpg" /></p>
+<ul class="simple">
+<li><p>Load the <strong>Street Network</strong> in the editor and set the buffer distance to Edit Expression.</p></li>
+</ul>
+<p><img alt="hydrow043" src="../../_images/hydrow043.jpg" /></p>
+<ul class="simple">
+<li><p>Copy code into the <strong>Expression Editor</strong> to determine the buffer width by street type.</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>CASE
+    WHEN &quot;highway&quot; = &#39;primary&#39; THEN 40
+    WHEN &quot;highway&quot; = &#39;secondary&#39; THEN 30
+    WHEN &quot;highway&quot; = &#39;tertiary&#39; THEN 25
+    WHEN &quot;highway&quot; = &#39;residential&#39; THEN 20
+    WHEN &quot;highway&quot; = &#39;service&#39; THEN 15
+    ELSE 15
+END / 2
+</pre></div>
+</div>
+<p><img alt="hydrow043c" src="../../_images/hydrow043c.png" /></p>
+<p>This results in a polygon layer that covers the streets.
+If some streets are missing, it is easy to digitize them directly into the street network.</p>
+</section>
+<section id="step-4-add-buffered-features-into-the-roughness-layer">
+<h2>Step 4. Add Buffered features into the Roughness layer<a class="headerlink" href="#step-4-add-buffered-features-into-the-roughness-layer" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Click the Buffered Layer to activate the layer.</p></li>
+<li><p>Select all features in the layer.</p></li>
+<li><p>CTRL-c copies the features.</p></li>
+</ul>
+<p><img alt="hydrow043e" src="../../_images/hydrow043e.png" /></p>
+<ul class="simple">
+<li><p>Select the Roughness layer and toggle the <strong>Edit Pencil</strong> on.</p></li>
+</ul>
+<p><img alt="hydrow043f" src="../../_images/hydrow043f.png" /></p>
+<ul class="simple">
+<li><p>Ctrl-v pastes the features into the roughness layer.</p></li>
+<li><p>Save the edits and toggle the <strong>Edit Pencil</strong> layer off.</p></li>
+</ul>
+<p><img alt="hydrow043g" src="../../_images/hydrow043g.png" /></p>
+<ul class="simple">
+<li><p>Open the attribute table of the Roughness layer.</p></li>
+</ul>
+<p><img alt="hydrow043i" src="../../_images/hydrow043i.png" /></p>
+<ul class="simple">
+<li><p>Toggle the <strong>Edit Pencil</strong> on.</p></li>
+<li><p>Change the field selector to <strong>n</strong></p></li>
+<li><p>Type <strong>0.02</strong> in the combo box.</p></li>
+<li><p>Click <strong>Update All</strong>.</p></li>
+<li><p>Click the <strong>Save Button</strong>.</p></li>
+<li><p>Toggle the <strong>Edit Pencil</strong> off.</p></li>
+<li><p>Close the table.</p></li>
+</ul>
+<p><img alt="hydrow043j" src="../../_images/hydrow043j.png" /></p>
+</section>
+<section id="step-4-sample-roughness-layer-to-the-grid">
+<h2>Step 4. Sample roughness layer to the grid.<a class="headerlink" href="#step-4-sample-roughness-layer-to-the-grid" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Sample the roughness polygons values to the Grid.</p></li>
+</ul>
+<p><img alt="hydrow043h" src="../../_images/hydrow043h.png" /></p>
+<ul class="simple">
+<li><p>Remove the Buffered layer.</p></li>
+<li><p>Organize all roughness layers to the Manning’s n group.</p></li>
+</ul>
+<p><img alt="hydrow043k" src="../../_images/hydrow043k.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="module4esa.html" class="btn btn-neutral float-left" title="World Land Cover Data - European Satelite Agency (ESA World)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="module5.html" class="btn btn-neutral float-right" title="Module 5 - Process Rainfall Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="module4str.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build21/index.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

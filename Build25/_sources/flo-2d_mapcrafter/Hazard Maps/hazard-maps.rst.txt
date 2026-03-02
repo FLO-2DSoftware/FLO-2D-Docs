@@ -130,6 +130,7 @@ CSU Pier Scour Equation
 The local pier scour depth is computed using the HEC-18 CSU equation:
 
 .. math::
+  :label:
 
    y_s = 2.0 \, K_1 \, K_2 \, K_3 \, K_4 \, a^{0.65} \, y_1^{0.35} \, F_r^{0.43}
 
@@ -152,6 +153,7 @@ Froude Number
 The approach flow Froude number is computed as:
 
 .. math::
+  :label:
 
    F_r = \frac{v}{\sqrt{g \, y_1}}
 
@@ -209,6 +211,7 @@ K₂ — Flow Angle of Attack Factor
 The flow angle correction factor accounts for the angle between the approach flow direction and the pier axis.
 
 .. math::
+  :label:
 
    K_2 = \left( \cos\theta + \frac{L}{a}\sin\theta \right)^{0.65}
 

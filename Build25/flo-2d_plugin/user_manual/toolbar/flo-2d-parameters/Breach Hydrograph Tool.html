@@ -1,0 +1,650 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breach Hydrograph Tool &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=6385869e" />
+
+  
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>window.MathJax = {"tex": {"tags": "none", "useLabelIds": true}, "options": {"displayAlign": "right"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="FLO-2D Info Tools" href="../flo-2d-info-tool/index.html" />
+    <link rel="prev" title="Levee Elevation Tool" href="Levee%20Tool.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Gila for QGIS Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">FLO-2D Gila for QGIS User Manual</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin-features/index.html">Plugin Features</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">Toolbar</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../flo-2d-project/index.html">FLO-2D Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../flo-2d-import-export/index.html">FLO-2D Import Export</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../run-flo-2d-pro/index.html">Run FLO-2D Pro</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">FLO-2D Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../flo-2d-info-tool/index.html">FLO-2D Info Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../flo-2d-project-review/index.html">FLO-2D Project Review</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../flo-2d-help/Help.html">Help</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../widgets/index.html">Widgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../post-development-grid-modification/index.html">Grid Modification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/index.html">FLO-2D Gila for QGIS Technical Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_mapcrafter/index.html">FLO-2D MapCrafter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_florunner/index.html">FLO-2D FLORunner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">FLO-2D Gila Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Gila for QGIS Documentation</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Gila for QGIS User Manual</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Toolbar</a></li>
+          <li class="breadcrumb-item"><a href="index.html">FLO-2D Parameters</a></li>
+      <li class="breadcrumb-item active">Breach Hydrograph Tool</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/flo-2d_plugin/user_manual/toolbar/flo-2d-parameters/Breach Hydrograph Tool.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="breach-hydrograph-tool">
+<span id="id1"></span><h1>Breach Hydrograph Tool<a class="headerlink" href="#breach-hydrograph-tool" title="Link to this heading"></a></h1>
+<img alt="../../../../_images/control006.png" src="../../../../_images/control006.png" />
+<p>The Breach Hydrograph Tool was developed to estimate one of the most critical steps in hypothetical tailings and water dam break studies:
+generating a defensible outflow hydrograph. The tool focuses on water and tailings dams and implements commonly
+accepted empirical and statistical approaches for estimating peak discharge, released volume, average breach width, and
+sediment load based on geometric and field data. The tool is fully integrated with the FLO-2D Gila plugin,
+allowing users to define dam geometry, reservoir volume, breach parameters, and downstream routing conditions within
+the same spatial workflow used for flood modeling.</p>
+<section id="automatic-generation-of-computational-domain">
+<h2>Automatic Generation of Computational Domain<a class="headerlink" href="#automatic-generation-of-computational-domain" title="Link to this heading"></a></h2>
+<p>The first functionality of the Breach Hydrograph Tool is to automatically generate a computational domain for the dam
+break study, requiring four input parameters:</p>
+<ul class="simple">
+<li><p>Centerline</p></li>
+<li><p>Buffer</p></li>
+<li><p>Elevation raster</p></li>
+<li><p>Roughness raster</p></li>
+</ul>
+<p>Figure 1 - Automatic Generation of Computational Domain</p>
+<img alt="../../../../_images/bht017.jpg" src="../../../../_images/bht017.jpg" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The computational domain may be defined in advance using the Grid Editor.
+This tool includes an automatic option to generate a domain specifically
+for dam-break simulations, but it is not required.</p>
+</div>
+<p>The centerline is used to define the downstream channel or the potential path of the flood wave,
+while the buffer defines the width of the computational domain to ensure that all potential flooding areas are included in the analysis.
+A good estimation of the centerline can be done visually by a more experienced user, but its total length can be estimated
+by using the following equation. The buffer width depends on the topography and the expected flood wave propagation,
+but a common practice is to use a buffer width that is at least 1.5 the width of the dam to capture potential inundation areas.
+Further refinement of both the centerline and buffer can be done after the initial generation of the computational domain
+to ensure that critical areas are included and that the model runs efficiently.</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-plugin-user-manual-toolbar-flo-2d-parameters-breach-hydrograph-tool-0">
+<span class="eqno">(33)<a class="headerlink" href="#equation-flo-2d-plugin-user-manual-toolbar-flo-2d-parameters-breach-hydrograph-tool-0" title="Link to this equation"></a></span>\[ D_{\max} = 8.870 \times 10^{-8} V_{\max}^{3}
+ - 2.602 \times 10^{-4} V_{\max}^{2}
+ + 2.648 \times 10^{-1} V_{\max}
+ + 6.737\]</div>
+<p>Figure 2 - Demonstration of the centerline and buffer used to generate the computational domain for a dam break study</p>
+<img alt="../../../../_images/bht019.jpg" src="../../../../_images/bht019.jpg" />
+<p>The elevation raster provides the topography required for hydraulic modeling, while the roughness raster defines the
+spatial distribution of surface roughness coefficients that control flow resistance and flood wave propagation.
+Each case study may require a finer DEM resolution to capture critical terrain features such as channels, levees, and road embankments.
+However, for medium to large dams, a 30 m resolution DEM is often adequate for dam break studies.
+Surface roughness values can be estimated from land-use and land-cover data. The freely available QGIS Manning’s Roughness Generator plugin,
+based on ESA WorldCover 2021, has proven to be a reliable and consistent source for deriving spatially distributed Manning’s n values.</p>
+<p>Figure 3 - Spatial parameters assigned to the computational domain (Left: Elevation; Right: Roughness)</p>
+<img alt="../../../../_images/bht020.jpg" src="../../../../_images/bht020.jpg" />
+<p>Once the computational domain is defined and the roughness and elevation are assigned, the inflow and outflow boundary conditions
+should be set. Usually the inflow boundary is defined downstream of the dam as a line or point, while the outflow boundary is defined
+at the downstream end of the computational domain as a polygon. The breach hydrograph generated by the tool will be assigned to the inflow boundary condition,
+and the FLO-2D model will route the flood wave downstream to predict arrival times, inundation extent, and potential exposure of infrastructure and population.</p>
+<p>Figure 4 - Definition of inflow and outflow boundary conditions</p>
+<img alt="../../../../_images/bht021.jpg" src="../../../../_images/bht021.jpg" />
+</section>
+<section id="water-dams">
+<h2>Water Dams<a class="headerlink" href="#water-dams" title="Link to this heading"></a></h2>
+<p>Failures of water dams are rare compared with tailings dams, but when they occur the downstream consequences can be severe
+due to the rapid release of large reservoir volumes. Historical records from ICOLD and FEMA dam-safety studies show that
+many water-dam failures are associated with overtopping, internal erosion, foundation instability, or structural deficiencies,
+often triggered by extreme hydrologic events. Even for small dams, hypothetical failure scenarios are required to
+evaluate downstream risk, classify potential damage, and support emergency planning under dam-safety regulations.</p>
+<p>Water dam breach analyses are uncertain because failure geometry, breach development rate, and reservoir conditions at
+the time of failure are rarely known. As a result, hypothetical dam-break studies rely on empirical relationships
+and scenario-based assumptions to estimate peak discharge, released volume, and breach hydrographs.
+These parameters must then be routed downstream to determine flood arrival times, inundation extent, and potential
+exposure of infrastructure and population.</p>
+<p>Although several hydrologic and hydraulic models exist to simulate downstream flooding, generating defensible breach
+hydrographs in a consistent and reproducible way remains one of the most challenging steps in water dam break studies.
+Differences in assumed breach width, failure time, or reservoir level can lead to large variations in predicted flood impacts.</p>
+<p>The Breach Hydrograph Tool addresses this need by providing a structured framework for generating hypothetical
+water dam breach hydrographs using accepted empirical methods and consistent parameter assumptions.
+The tool integrates directly with FLO-2D Gila, allowing dam geometry, reservoir characteristics,
+and breach scenarios to be defined within the same spatial workflow used for flood routing.
+This integration supports rapid scenario testing, reproducibility of assumptions, and a fast transition from
+preliminary screening to more detailed hydraulic analyses when higher-consequence scenarios are identified.</p>
+</section>
+<section id="water-dam-geometry-data">
+<h2>Water Dam Geometry Data<a class="headerlink" href="#water-dam-geometry-data" title="Link to this heading"></a></h2>
+<p>To use the Water Dam process, check the Water Dam group box. The required data to generate a breach hydrograph for a water dam includes:</p>
+<ul class="simple">
+<li><p>Dam height</p></li>
+<li><p>Reservoir volume</p></li>
+<li><p>Failure mechanism</p></li>
+<li><p>Baseflow</p></li>
+</ul>
+<p>Figure 5 - Water dam geometry data input</p>
+<img alt="../../../../_images/bht024.jpg" src="../../../../_images/bht024.jpg" />
+</section>
+<section id="water-dam-outflow-hydrograph-generation-methodologies">
+<h2>Water Dam Outflow Hydrograph Generation Methodologies<a class="headerlink" href="#water-dam-outflow-hydrograph-generation-methodologies" title="Link to this heading"></a></h2>
+<p>There are currently four methodologies available in the tool to generate peak discharge, time to peak, average breach,
+and estimated hydrograph length for water dam failures. These methodologies are based on empirical relationships and are commonly used in dam safety analyses.</p>
+<p>Figure 6 - Methodologies for generating breach parameters for water dam failures</p>
+<img alt="../../../../_images/bht025.jpg" src="../../../../_images/bht025.jpg" />
+<p>Table 1 - Empirical Relations for Breach Parameters</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 30.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Peak Discharge <span class="math notranslate nohighlight">\(Q_p\)</span></p></th>
+<th class="head"><p>Time to peak <span class="math notranslate nohighlight">\(T_f\)</span></p></th>
+<th class="head"><p>Breach Width <span class="math notranslate nohighlight">\(B\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Froehlich (1995)</p></td>
+<td><p><span class="math notranslate nohighlight">\(Q_p = 0.607\, V^{0.295} H^{1.24}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_f = 0.00254\, V^{0.53} H^{-0.9}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(B = 0.1803\, k\, V^{0.32} H^{0.19}\)</span>
+<span class="math notranslate nohighlight">\(k = 1.4\)</span> for overtopping,
+<span class="math notranslate nohighlight">\(k = 1.0\)</span> for piping</p></td>
+</tr>
+<tr class="row-odd"><td><p>Froehlich (2008)</p></td>
+<td><p><span class="math notranslate nohighlight">\(Q_p = 0.607\, V^{0.295} H^{1.24}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_f = 0.0176 \left(\dfrac{V}{g H^{2}}\right)^{0.5}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(B = 0.27\, k\, V^{0.5}\)</span>
+<span class="math notranslate nohighlight">\(k = 1.3\)</span> for overtopping,
+<span class="math notranslate nohighlight">\(k = 1.0\)</span> for piping</p></td>
+</tr>
+<tr class="row-even"><td><p>MMC</p></td>
+<td><p><span class="math notranslate nohighlight">\(Q_p = 0.0039042\, V^{0.8122}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_f = 0.011\, B\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(B = 3H\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>ANA-LNEC</p></td>
+<td><p><span class="math notranslate nohighlight">\(Q_p = \max\left(0.607\, V^{0.295} H^{1.24},\; 0.039\, V^{0.8122}\right)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_f = 0.00254\, V^{0.53} H^{-0.9}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(B = 0.1803\, k\, V^{0.32} H^{0.19}\)</span>
+<span class="math notranslate nohighlight">\(k = 1.4\)</span> for overtopping,
+<span class="math notranslate nohighlight">\(k = 1.0\)</span> for piping</p></td>
+</tr>
+</tbody>
+</table>
+<p>Once the breach parameters are calculated, the tool allows the selection of three methodologies to generate the hydrograph.</p>
+<p>Figure 7 - Methodologies for generating breach hydrograph shape for water dam failures</p>
+<img alt="../../../../_images/bht026.jpg" src="../../../../_images/bht026.jpg" />
+<p>Table 2 - Hydrograph shape methods</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Equation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Parabolic (Barfield, 1981)</p></td>
+<td><p><span class="math notranslate nohighlight">\(Q_t = Q_{base} + Q_p
+\left[
+\dfrac{t}{t_f}
+e^{\left(1-\dfrac{t}{t_p}\right)}
+\right]^{\beta}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>TR66 (SCS, 1981)</p></td>
+<td><div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(Q_t = Q_{base} + Q_p \dfrac{t}{T_f}\)</span>,  for <span class="math notranslate nohighlight">\(t \le T_f\)</span></div>
+<div class="line"><span class="math notranslate nohighlight">\(Q_t = Q_{base} + Q_p \exp\!\left(-(t-T_p)\dfrac{Q_p}{V}\right)\)</span>,  for <span class="math notranslate nohighlight">\(t &gt; T_f\)</span></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>Triangular</p></td>
+<td><div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(Q_t = Q_{base} + Q_p \dfrac{t}{T_p}\)</span>,  for <span class="math notranslate nohighlight">\(0 \le t \le T_p\)</span></div>
+<div class="line"><span class="math notranslate nohighlight">\(Q_t = Q_{base} + Q_p \left(1 - \dfrac{t - T_p}{T_f - T_p}\right)\)</span>,  for <span class="math notranslate nohighlight">\(T_p &lt; t \le T_f\)</span></div>
+<div class="line"><span class="math notranslate nohighlight">\(Q_t = Q_{base}\)</span>,  for <span class="math notranslate nohighlight">\(t &gt; T_f\)</span></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The breach parameters can be adjusted by the user to modify the duration of the breach hydrograph or to change the peak discharge,
+which directly affects the released volume. Next to the total volume displayed on the graph, a ratio between the released
+volume and the reservoir storage volume is shown. This ratio helps users evaluate how changes in breach parameters influence
+the amount of released water. For typical water-dam failure scenarios, this ratio generally ranges between 0.75 and 0.95.</p>
+</section>
+<section id="flo-2d-save-options-for-water-dams">
+<h2>FLO-2D Save Options for Water Dams<a class="headerlink" href="#flo-2d-save-options-for-water-dams" title="Link to this heading"></a></h2>
+<p>Once the breach hydrograph has been defined, select the inflow boundary condition where it will be applied and click Add.
+The outflow hydrograph will then be assigned to the selected inflow boundary condition and included in the inflow list.</p>
+<p>Figure 8 - Definition of inflow boundary condition for water dam breach hydrograph</p>
+<img alt="../../../../_images/bht027.jpg" src="../../../../_images/bht027.jpg" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The inflow boundary condition must be schematized before exporting the model to ensure the hydrograph is written correctly.</p>
+</div>
+</section>
+<section id="mapping-of-water-dam-failures">
+<h2>Mapping of Water Dam Failures<a class="headerlink" href="#mapping-of-water-dam-failures" title="Link to this heading"></a></h2>
+<p>A typical area of inundation map is shown in Figure 9 with the corresponding hazard map shown in Figure 10.
+The hazard map indicates the area of inundation from the dam breach is a high hazard.</p>
+<p>Figure 9 - Typical water dam breach area of inundation map</p>
+<img alt="../../../../_images/bht028.jpg" src="../../../../_images/bht028.jpg" />
+<p>Figure 10 - Typical water dam breach flood hazard map</p>
+<img alt="../../../../_images/bht029.jpg" src="../../../../_images/bht029.jpg" />
+</section>
+<section id="tailings-dams">
+<h2>Tailings Dams<a class="headerlink" href="#tailings-dams" title="Link to this heading"></a></h2>
+<p>In the past few decades, there have been records of over 60 incidents involving the failure of tailings dams, and since 1960,
+a total of 196 failures have been documented (as reported by the WISE Uranium Project in 2023; ICOLD, 2001).
+The highest number of tailings dam failures occurred during the 1970s, and these failures have persisted, happening at an
+approximate rate of 20 collapses per decade. Nearly all these failures can be attributed to issues related to inadequate
+design, construction, or operation. It’s important to note that there is a rapid expansion of mining
+operations, with numerous new mines set to become operational in the near future.</p>
+<p>The failures can be mainly grouped into four categories:</p>
+<ul class="simple">
+<li><p>Hydrologic (rain or flood inflow)</p></li>
+<li><p>Static failure including:</p>
+<ul>
+<li><p>Piping and internal erosion</p></li>
+<li><p>Foundation failure (slope stability)</p></li>
+<li><p>Design related</p></li>
+</ul>
+</li>
+<li><p>Seismic (Earthquake)</p></li>
+<li><p>Unknown</p></li>
+</ul>
+<p>Tailings dams are designed to store the fine-grained solid waste materials produced during mineral processing,
+and they are often raised in height over time as they are in use. The structural integrity of the tailing deposit,
+both in terms of hydrology and slope stability, depends on the characteristics of the mine waste and the
+construction methods employed for the dam.</p>
+<p>Although there are hydrologic and hydraulic models available for forecasting potential flood hazards downstream,
+assessing the amount of material that could be eroded from tailings deposits during a flood event is a highly
+subjective process. The flood hazard associated with the downstream area of inundation in response to a tailings dam
+failure is primarily governed by the volume of the tailings plus any additional water inflow from rainfall
+or upstream watershed flooding.</p>
+<p>Precisely forecasting the risk of tailings dam failure is of paramount importance to ensure safety and prevent
+property damage. Traditionally, the standard method for evaluating the flood and mudflow hazard following a
+dam breach involves employing a 2-D flood routing model (FLO-2D, 2014). However, estimating the volume of
+material released during a tailings dam breach is a challenging task.</p>
+</section>
+<section id="tailings-dam-methodology">
+<h2>Tailings Dam Methodology<a class="headerlink" href="#tailings-dam-methodology" title="Link to this heading"></a></h2>
+<p>During this analysis the data for fifty-seven hard rock mine tailings dam failures were collected to analyze failure
+modes and develop an event tree model for the creation of this tailing dam failure tool. The failures were grouped
+into the most common failure categories as shown in Table 3 and Table 4 below to compare the breach scenarios
+(Azam et al, 2010; Rico et al, 2008 and Strachan, 2001) that categorize the events as described below:</p>
+<p>Categories include:</p>
+<ul class="simple">
+<li><p>Overtopping – includes heavy rain and snow melt;</p></li>
+<li><p>Piping/internal erosion –  includes seepage and slope instability;</p></li>
+<li><p>Foundation failure – includes mine subsidence;</p></li>
+<li><p>Design related – includes structural failures and operations issues;</p></li>
+<li><p>Earthquake – includes seismic induced liquefaction;</p></li>
+<li><p>Unknown.</p></li>
+</ul>
+<p>Table 3 - Summary of hard rock mine tailings dam failures 1970 to 2012</p>
+<img alt="../../../../_images/bht001.jpg" src="../../../../_images/bht001.jpg" />
+<p>Table 4 - Percent of failures by cause</p>
+<img alt="../../../../_images/bht002.jpg" src="../../../../_images/bht002.jpg" />
+<p>Based on the information provided above, one can draw the conclusion that the primary factors leading to dam failures
+are extreme hydrologic events and piping erosion. Considering that there are typically two tailings dam failures
+worldwide each year, the statistical likelihood of a tailings dam failure appears to be roughly on par with that of a
+water storage dam failure. This emphasizes the urgent requirement for the development of more advanced tools and
+methodologies to enhance the precision of predictions regarding tailings dam breaches.</p>
+</section>
+<section id="tailings-dam-geometry-data">
+<h2>Tailings Dam Geometry Data<a class="headerlink" href="#tailings-dam-geometry-data" title="Link to this heading"></a></h2>
+<p>To predict tailings dam breach volume, the new software tool requires input data for the dam and the impoundment materials.
+The breach volume will be estimated based on the dam height and the documented tailing dam breach failures,
+but other parameters entered in data fields are necessary to calculate the failure occurrence,
+they play a critical role in determining whether a failure is likely to happen or not.
+The user should also need to select some data input from a range of values. The parameters will include dam geometry,
+tailings saturation, tailing shear strength, and depth of impounded water at the dam face.
+The tailings dam data parameters are defined in Figure 11.</p>
+<p>Figure 11 - Input data parameters for a tailings dam profile</p>
+<img alt="../../../../_images/bht004.jpg" src="../../../../_images/bht004.jpg" />
+<p>The tailings dam geometry dialog box is shown in Figure 12.</p>
+<p>Figure 12 - Tailings dam geometry data input</p>
+<img alt="../../../../_images/bht003.jpg" src="../../../../_images/bht003.jpg" />
+<p>The tailing dam breach volume screening tool described in this manual, uses event tree diagrams based on risk analysis
+methods created by the US Bureau of Reclamation for water storage dams (USBR, 2012). An event tree analysis is an
+analytical diagram that uses Boolean logic to examine a chronological series of events (branches)
+by tracing forward through a causal event chain.</p>
+<p>The tool consists of a sequence of task dialogs that use the input data (geometry and tailing properties) provided
+by the user in the first dialog of the tool, see Figure 12 above. The potential of a failure for three different
+failure modes: hydrologic, static, and seismic is calculated.</p>
+<p>The tool is organized to resolve on the background the event tree for the corresponding failure mode selected by the
+user. The user does not see the logical process of the event tree, but the output of the event tree analysis is
+displayed in the failure information as type of failure (see Figure 13). The result of the event tree diagram
+for the tree failure modes is the failure occurrence or not of the dam breach.
+If there is no potential of failure based on the data provided by the user in the first page of the tailing dam,
+the tool will display a No Breach message in the failure information.</p>
+<p>Figure 13 -  Failure modes for the Breach Hydrograph Tool</p>
+<img alt="../../../../_images/bht005.jpg" src="../../../../_images/bht005.jpg" />
+<p>The tailing dam tool calculates the subsequent release volume of stored tailings employing empirical correlations of
+documented failures. The intention is to reduce the uncertainty on the release volume and use the tool to define a
+worst-case scenario. This tool was developed for application with the FLO-2D flood routing model so that dam owners
+and regulators can estimate failure release volumes, predict the downstream flood hazard and assess
+potential liabilities and risk.</p>
+</section>
+<section id="tailings-dam-failure-modes-selection">
+<h2>Tailings Dam Failure Modes Selection<a class="headerlink" href="#tailings-dam-failure-modes-selection" title="Link to this heading"></a></h2>
+<p>The determination of whether a failure has occurred, along with the subsequent reporting of failure information as either
+“Dam Breach by” or “No Breach,”, is computed for each failure mode.
+Some illustrative calculations involved in the tree event analysis include:</p>
+<ul class="simple">
+<li><p>The occurrence of a static failure mode involves utilizing the downstream slope, the reservoir level, and the friction angle of the tailings dam material to calculate the slope failure value through the application of stability analysis.</p></li>
+<li><p>For the earthquake failure mode, the capacity of soil to resist liquefaction represented by Cyclic Resistance Ratio (CRR) is computed, the tool goes through several checks one being the equivalent blow count and effective stress ratio that can cause the liquefaction and subsequent failure of the embankment.</p></li>
+<li><p>For the deformation of crest, the tool uses figures from USBR Risk Analysis (Swaisgood, 2003) and calculates whether the deformation of crest will be greater than the freeboard or not.</p></li>
+</ul>
+<p>The failure modes are described in detail as follows.</p>
+<section id="hydrologic-failure-mode">
+<h3>Hydrologic Failure Mode<a class="headerlink" href="#hydrologic-failure-mode" title="Link to this heading"></a></h3>
+<p>The probability of a hydrologic failure and the subsequent breach release volume are calculated using the Figure 14 data
+as outlined in the hydrologic failure mode event tree (Figure 15). This data supports dam breach by erosion through overtopping.</p>
+<ul class="simple">
+<li><p>Reservoir stage and associated the storage capacity</p></li>
+<li><p>Flood stage and volume (probable maximum flood)</p></li>
+<li><p>Spillway blocked / capacity</p></li>
+</ul>
+<p>Figure 14 - Hydrologic failure mode dialog box</p>
+<img alt="../../../../_images/bht007.jpg" src="../../../../_images/bht007.jpg" />
+<p>Event tree logic determines whether overtopping erosion leads to breach.</p>
+<p>Figure 15 - Hydrologic failure model event tree</p>
+<img alt="../../../../_images/bht010.jpg" src="../../../../_images/bht010.jpg" />
+</section>
+<section id="static-failure-mode">
+<h3>Static Failure Mode<a class="headerlink" href="#static-failure-mode" title="Link to this heading"></a></h3>
+<p>Failure potential and the release volume is calculated based on limit equilibrium charts
+(Tesarik and McWilliams; 1981 and Hoek and Bray; 1977) using the following data to
+define event tree branches for the static failure mode:</p>
+<p>Inputs include:</p>
+<ul class="simple">
+<li><p>Reservoir level (high, medium or low)</p></li>
+<li><p>Embankment pore pressure (high, medium or low)</p></li>
+<li><p>Foundation failure computed from bearing capacity failure charts</p></li>
+<li><p>Embankment slope failure to breach</p></li>
+</ul>
+<p>Figure 16 - Static failure mode dialog box.</p>
+<img alt="../../../../_images/bht008.jpg" src="../../../../_images/bht008.jpg" />
+<p>The event tree for the static mode failure is described in Figure 17 below.</p>
+<p>Figure 17 - Event tree for the static failure mode</p>
+<img alt="../../../../_images/bht012.jpg" src="../../../../_images/bht012.jpg" />
+</section>
+<section id="seismic-failure-mode">
+<h3>Seismic Failure Mode<a class="headerlink" href="#seismic-failure-mode" title="Link to this heading"></a></h3>
+<p>Several methodologies have been compiled to determine the potential for seismic failure.
+The seismic failure release volume is calculated the following data:</p>
+<ul class="simple">
+<li><p>Earthquake magnitude and peak ground acceleration</p></li>
+<li><p>Foundation liquefaction potential (Seed et al. 1983, Juang et al. 2000)</p></li>
+<li><p>Crest deformation Swaisgood 2003</p></li>
+</ul>
+<p>Figure 18 - Seismic failure modes dialog box</p>
+<img alt="../../../../_images/bht009.jpg" src="../../../../_images/bht009.jpg" />
+<p>The event tree for the seismic mode failure is described in Figure 19 below.</p>
+<p>Figure 19 - Event tree for the seismic failure</p>
+<img alt="../../../../_images/bht014.jpg" src="../../../../_images/bht014.jpg" />
+</section>
+</section>
+<section id="release-volume-of-tailings-dam-failure">
+<h2>Release Volume of Tailings Dam Failure<a class="headerlink" href="#release-volume-of-tailings-dam-failure" title="Link to this heading"></a></h2>
+<p>Following the tailing dam failure assessment process where the tool leads the user through a series of dialog boxes
+with pull-down menus and data entry fields that will result in the breach volume if failure is predicted to occur,
+the tool calculates multiple release breach volumes.</p>
+<p>The final product is a breach volume based on the empirical correlation with dam height.
+Figure 20 show the empirical correlations based on the documented failures from Table 3.
+This set of empirical correlations are identified in the tailing dam tool as
+Vrmin, Vrmax and VAverage.</p>
+<p>Figure 20 - Empirical correlations equations of documented tailings dam failures based on our analysis of the documented tailing dam failures</p>
+<img alt="../../../../_images/bht015.jpg" src="../../../../_images/bht015.jpg" />
+<p>An additional set of multi-linear regressions (Larrauri and Lall, 2018; Rico et al., 2008; Piciullo et al., 2022)
+have been implemented in the latest version of the tailing dam tool (Luca Piciullo, 2022), see Figure 21.</p>
+<p>Figure 21 - Empirical correlations equations of documented tailings dam failures (Luca Piciullo, 2022).</p>
+<img alt="../../../../_images/bht016.jpg" src="../../../../_images/bht016.jpg" />
+<p>A second updated equation  (Luca Piciullo, 2022) with a multi variable power regression has been included in the tailing dam tool.</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-plugin-user-manual-toolbar-flo-2d-parameters-breach-hydrograph-tool-1">
+<span class="eqno">(34)<a class="headerlink" href="#equation-flo-2d-plugin-user-manual-toolbar-flo-2d-parameters-breach-hydrograph-tool-1" title="Link to this equation"></a></span>\[ R = 10^{\beta_0 + \varepsilon} \, V^{\beta_1} H^{\beta_2}\]</div>
+<p>The following variables are used in the tailing dam tool, as shown in Figure 22 below.</p>
+<p>Figure 2 - Values for multiple linear regression between Released volume(R), Stored volume (V), and dam Height (H) (Luca Piciullo, 2022).</p>
+<img alt="../../../../_images/bht018.jpg" src="../../../../_images/bht018.jpg" />
+<p>These equations can be used to estimate the release volume for the tailing dam failure. The rate of flow (discharge)
+versus time as well as the sediment concentration by volume for each output time is necessary to understand
+how the volume is being released from the earth filled reservoir. For this reason, six typical hydrograph
+distributions and six typical distributions over time of sediment concentration by volume are available in the tool.</p>
+</section>
+<section id="tailings-dam-breach-hydrographs">
+<h2>Tailings Dam Breach Hydrographs<a class="headerlink" href="#tailings-dam-breach-hydrographs" title="Link to this heading"></a></h2>
+<p>Depending on the predicted failure mode, the tailing dam failure assessment tool calculates the occurrence of the
+failure based on the geometry of the dam, and the water and impoundment characteristics, and it estimates the maximum,
+minimum and average volumes based on the dam height and the documented failures.  Based on the historical data,
+the breach volume typically ranges from 10% to 40% of the impounded tailings volume.</p>
+<p>This predicted breach hydrograph is assigned into an user selected inflow for routing the flood downstream in the FLO-2D model.
+Six typical unit hydrograph shapes with variable time of peak discharge are provided (Figure 23). Professional judgment
+is required to select the hydrograph shape that may generate a worst-case flood hazard (largest area of inundation) with the FLO-2D model.
+An iterative convergence routine was created for the tailings dam failure tool so that the selected the breach hydrograph
+shape matches the predicted release volume. In other words, the release volume selected by the user in the tailing dam
+tool is assigned to an inflow. The volume of water and tailings dam material is introduced into the FLO-2D model as a
+boundary condition, and it subsequently flows downstream into the model’s domain.
+The final volume reported in the SUMMARY.OUT file should coincide with the user selected volume from the tailing dam tool.</p>
+<p>Figure 23 - Breach Failure Hydrograph Shape Selection</p>
+<img alt="../../../../_images/bht011.jpg" src="../../../../_images/bht011.jpg" />
+<p>In a final step, the sediment concentration by volume is distributed over the duration of the hydrograph so the
+hyperconcentrated sediment flows can be simulated in the FLO-2D.  Six possible sediment concentrations by volume
+distributions are included in the tool. The user selects one distribution and enters the maximum concentration by volume
+(Figure 24). The event duration is the same as that selected for the breach discharge hydrograph.
+The total volume of water and sediment is known from the dam geometry.
+The total volume is internally adjusted for porosity to have an equivalent solid block of sediment to compute the
+average sediment concentration. The tool calculates the total volume of sediment by adjusting the maximum concentration
+by volume to populate a table of sediment concentration by volume versus breach time.</p>
+<p>Figure 24 - Selection of Sediment Concentration by Volume Distribution.</p>
+<img alt="../../../../_images/bht013.jpg" src="../../../../_images/bht013.jpg" />
+</section>
+<section id="flo-2d-save-options-for-tailings-dam">
+<h2>FLO-2D Save Options for Tailings Dam<a class="headerlink" href="#flo-2d-save-options-for-tailings-dam" title="Link to this heading"></a></h2>
+<p>Once the breach hydrograph has been defined, select the inflow boundary condition where it will be applied and click Add.
+The outflow hydrograph will then be assigned to the selected inflow boundary condition and included in the inflow list.</p>
+<p>Figure 25 - Definition of inflow boundary condition for tailings dam breach hydrograph</p>
+<img alt="../../../../_images/bht027.jpg" src="../../../../_images/bht027.jpg" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The inflow boundary condition must be schematized before exporting the model to ensure the hydrograph is written correctly.</p>
+</div>
+</section>
+<section id="mapping-of-tailings-dam-failures">
+<h2>Mapping of Tailings Dam Failures<a class="headerlink" href="#mapping-of-tailings-dam-failures" title="Link to this heading"></a></h2>
+<p>A typical area of inundation map is shown in Figure 26 with the corresponding hazard map shown in Figure 27.
+The hazard map indicates that most of the area of inundation from the dam breach is a high hazard.
+The hazard levels in Figure 27 are based on hydraulic intensity
+(maximum depth and the maximum product of velocity times depth).</p>
+<p>Figure 26 - Typical Tailings Dam Breach Area of Inundation Map</p>
+<img alt="../../../../_images/bht022.jpg" src="../../../../_images/bht022.jpg" />
+<p>Figure 27 - Typical Tailings Dam Breach Flood Hazard Map</p>
+<img alt="../../../../_images/bht023.jpg" src="../../../../_images/bht023.jpg" />
+</section>
+<section id="tailings-dam-conclusions">
+<h2>Tailings Dam Conclusions<a class="headerlink" href="#tailings-dam-conclusions" title="Link to this heading"></a></h2>
+<p>The tailing dam tool estimates the release of tailing dam breach volume based on the documented failure of tailing dam.
+The tailing dam failure assessment tool computes a range of release volumes so that the user can evaluate
+the potential existing or proposed tailings dam flood hazard.  The tool assigns a breach hydrograph to the inflow
+boundary condition to route the breach failure hydrograph downstream. Currently there is no comparable tool available
+in the mining industry. Combined with the FLO-2D model, the tailings dam breach tool can:</p>
+<ul class="simple">
+<li><p>Predict tailings dam failure and the subsequent release volume of stored tailings</p></li>
+<li><p>Identify potential downstream flood hazard for assessing damages and risk</p></li>
+</ul>
+<p>The tailing dam failure assessment tool has been verified and validated to assess accuracy and reliability of the
+tool failure components during the different phases of the development.  A limited number of both historical and
+recent tailing dam failures were used to evaluate the accuracy of the predicted breach volumes.
+For additional information and documentation on the tailing dam breach tool or dam breach hazard mapping,
+visit the FLO-2D website (www.flo-2d.com).</p>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<p>Azam, S. and Li, Q. 2010. Tailings dam failures: a review of the last one hundred years. Geotechnical News, December.</p>
+<p>FLO-2D Reference Manual. 2014.  FLO-2D Software, Inc. Nutrioso, Arizona.</p>
+<p>Hoek, E. and Bray, J. 1977. Rock Slope Engineering, 1st Edition, IMM, London.</p>
+<p>International Commission on Large Dams (ICOLD). 2001. Tailings Dam Failures - Risk of Dangerous Occurrences, Lessons Learnt from Practical Experiences. Bulletin 121.</p>
+<p>Juang, C.H., Chen, C.J., Jiang, T., and Andrus, R.D. 2000. Risk-Based Liquefaction Potential Evaluation Using Standard Penetration Tests. Can. Geotech. J. 37: 1195 - 1208.</p>
+<p>Rico M, Benito G, Salgueiro A.R, Diez-Herrero A, and Pereira, H.G. 2008. Reported tailings dam failures: a review of the European incidents in the worldwide context. Journal of Hazardous Materials 52(2) 846–852.</p>
+<p>Seed, H.B., Idriss, I.M., and Arango, I. 1983. Evaluation of Liquidation Potential Using Field Performance Data. J. Geotechnical Engineering. 109: 458-482.</p>
+<p>Strachan, C. 2001. Tailings dam performance from USCOLD incident-survey data. Mining Engineering 53(3): 49–53.</p>
+<p>Swaisgood, J.R. 2003. Embankment dam deformations caused by earthquakes. Proc. Pacific Conference on Earthquake Eng., Christchurch, New Zealand.</p>
+<p>Tesarik, D.R. and McWilliams, P.C. 1981. Factor of Safety Charts for Estimating the Stability of Saturated and Unsaturated Tailings Pond Embankments. U.S. Department of the Interior, Bureau of Mines.</p>
+<p>US Bureau of Reclamation and Army Corps of Engineers. 2012. Best Practices in Dam and Levee Safety Risk Analysis.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Levee%20Tool.html" class="btn btn-neutral float-left" title="Levee Elevation Tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../flo-2d-info-tool/index.html" class="btn btn-neutral float-right" title="FLO-2D Info Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="Breach Hydrograph Tool.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="../../../../../Build21/index.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

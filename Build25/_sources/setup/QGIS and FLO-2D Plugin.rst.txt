@@ -1,3 +1,5 @@
+.. _setup_qgis_flo2d_plugin:
+
 QGIS and FLO-2D Plugin Install Instructions
 ============================================
 
@@ -206,10 +208,17 @@ Build a QGIS User Profile by following these steps:
    :width: 600px
    :class: bordered-img
 
+.. _addflo2dplugin:
+
 Step 3: Install FLO-2D Plugin
 -------------------------------
 
-.. warning:: Restart QGIS at the conclusion of Step 3 to **Save** the User Profile.
+.. warning::
+
+   If the FLO-2D Plugin does not install, check whether a previous version was installed using the **Install from ZIP** method.
+
+   Uninstall the ZIP-installed version, completely close QGIS, then restart QGIS before attempting the installation again.
+
 
 1. Add the FLO-2D Plugin Repository. Copy this link to the clipboard. Ctrl-C.
 

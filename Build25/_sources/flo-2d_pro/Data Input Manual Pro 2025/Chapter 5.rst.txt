@@ -2015,7 +2015,7 @@ BINARY FILES
 
     This binary output file contains grid element, flow depth, velocity and velocity direction x and y and water surface elevation for each floodplain
     grid element at the user specified output time intervals (TIMTEP in CONT.DAT).
-    This file is written in binary format (HDF5) and it has the same results than the TIMDEP.OUT file.
+    This file is written in binary format (HDF5) and it has the same results as the TIMDEP.OUT file.
 
 **TIMDEP_NC4.OUT**
 
@@ -2139,7 +2139,7 @@ The velocity output files include:
     FINALDIR.OUT - Flow maximum velocity direction at the end of the simulation;
 
     VEL_X_DEPTH.OUT - The velocity x depth parameter is evaluated as a single variable.
-    This is not max velocity x max depth, it is the maximum value of the velocity squared x depth that is synchronized by time.
+    This is not max velocity x max depth, it is the maximum value of the velocity x depth that is synchronized by time.
 
     VEL_SQUARED_X_DEPTH.OUT - The velocity squared x depth parameter is evaluated as a single variable.
     This is not max velocity squared x max depth, it is the maximum value of the velocity squared x depth that is synchronized by time.

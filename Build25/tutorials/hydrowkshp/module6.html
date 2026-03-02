@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 6 - Process Infiltration Data &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=6385869e" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Module 7 Process Buildings" href="module7.html" />
+    <link rel="prev" title="Module 5 - Process Rainfall Data" href="module5.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Gila for QGIS Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_mapcrafter/index.html">FLO-2D MapCrafter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_florunner/index.html">FLO-2D FLORunner</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Gila Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Self-Help-Kit-Gila/index.html">Self-Help Kit Gila</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Hydrologic Mapping and Data Access Workshop</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="module1.html">Module 1 - Workshop Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module1.html#module-1-connect-data">Module 1 - Connect Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module1.html#module-1-load-flo-2d-project">Module 1 - Load FLO-2D Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module2.html">Module 2 - Identify the Contributing Watershed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module3.html">Module 3 - Process Elevation Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module4.html">Module 4 - Process Manning’s Roughness Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module5.html">Module 5 - Process Rainfall Data</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Module 6 - Process Infiltration Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#green-ampt-method">Green-Ampt Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-run-the-green-ampt-processor">Step 1: Run the Green Ampt Processor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-review-the-landuse-data">Step 2: Review the LandUse data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scs-curve-number-method">SCS Curve Number Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-run-the-curve-number-generator">Step 1: Run the Curve Number Generator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-review-the-cn-lookup-table">Step 2: Review the CN lookup table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="module7.html">Module 7 Process Buildings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TDT/index.html">Tailings Dam Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two-Phase-Dam-Breach/index.html">Two Phase Dam Breach</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Gila Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Hydrologic Mapping and Data Access Workshop</a></li>
+      <li class="breadcrumb-item active">Module 6 - Process Infiltration Data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/hydrowkshp/module6.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-6-process-infiltration-data">
+<h1>Module 6 - Process Infiltration Data<a class="headerlink" href="#module-6-process-infiltration-data" title="Link to this heading"></a></h1>
+<p>Choose one method: <a class="reference internal" href="#green"><span class="std std-ref">Green-Ampt</span></a> or <a class="reference internal" href="#scs"><span class="std std-ref">SCS</span></a>.</p>
+<section id="green-ampt-method">
+<span id="green"></span><h2>Green-Ampt Method<a class="headerlink" href="#green-ampt-method" title="Link to this heading"></a></h2>
+<p>These agencies use Green-Ampt infiltration data with FLO-2D.</p>
+<blockquote>
+<div><p>FCDMC, AZDOT, NVDOT, PCRFCD</p>
+</div></blockquote>
+</section>
+<section id="step-1-run-the-green-ampt-processor">
+<h2>Step 1: Run the Green Ampt Processor<a class="headerlink" href="#step-1-run-the-green-ampt-processor" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Open the Infiltration Global button and check Green-Ampt and SCS CN.</p></li>
+<li><p>Click OK</p></li>
+</ul>
+<p><img alt="hydrow068" src="../../_images/hydrow068.jpg" /></p>
+<ul class="simple">
+<li><p>Click Calculate Green Ampt button and set the radio buttons to SSURGO and OSM and use the Calculate buttons to get data.</p></li>
+<li><p>Cancel the final process.</p></li>
+<li><p>The data QC is performed in the next step.</p></li>
+</ul>
+<p><img alt="hydrow069" src="../../_images/hydrow069.png" /></p>
+</section>
+<section id="step-2-review-the-landuse-data">
+<h2>Step 2: Review the LandUse data<a class="headerlink" href="#step-2-review-the-landuse-data" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Open the attribute table of the LandUse layer.</p></li>
+<li><p>Some polygons are categorized as Medium Density Residential with a 30 RTIMP.</p></li>
+<li><p>Change these areas to Desert Landscape with 0 RTIMP.</p></li>
+<li><p>Select the polygons with the polygon selector.</p></li>
+</ul>
+<p><img alt="hydrow070" src="../../_images/hydrow070.jpg" /></p>
+<ul class="simple">
+<li><p>Open the attribute table of the Soil layer.</p></li>
+<li><p>Sort all of the pertinent columns by high low to verify that the values are within a reasonable range.</p></li>
+<li><p>Spot checking polygons is also recommended to determine if the data is valid.</p></li>
+</ul>
+<p><img alt="hydrow070a" src="../../_images/hydrow070a.jpg" /></p>
+<ul class="simple">
+<li><p>Save the two layers to Module 6 folder and add them to the Infiltration Group.</p></li>
+</ul>
+<p><img alt="hydrow070b" src="../../_images/hydrow070b.jpg" /></p>
+</section>
+<section id="scs-curve-number-method">
+<span id="scs"></span><h2>SCS Curve Number Method<a class="headerlink" href="#scs-curve-number-method" title="Link to this heading"></a></h2>
+<p>Many agencies and clients use the SCS Curve Number (CN) method for rainfall-runoff modeling.
+In the Southwestern United States, Pima County Regional Flood Control District has developed a
+well-documented and regionally calibrated CN methodology that reflects desert hydrology and local soil conditions.</p>
+<p>For reference, see the Pima County guidance:</p>
+<a href="https://content.civicplus.com/api/assets/db8e8971-fa2d-4e02-a207-968561c5ebae"
+   target="_blank"
+   rel="noopener noreferrer">
+   PCHydro User Guide
+</a><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This workshop demonstrates use of the <strong>Curve Number Generator</strong> tool
+in QGIS in combination with the <strong>Desert Curve Number lookup table from TR-55</strong>
+to represent arid watershed conditions.</p>
+<p>This workflow is provided for instructional purposes and does not reflect
+the recommended methodology for Pima County.</p>
+<p>A more comprehensive QGIS-based procedure, incorporating updates to the
+FLO-2D Plugin, will be provided in a future tutorial.</p>
+</div>
+</section>
+<section id="step-1-run-the-curve-number-generator">
+<h2>Step 1: Run the Curve Number Generator<a class="headerlink" href="#step-1-run-the-curve-number-generator" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Load the <strong>Curve Number Generator</strong> from the <strong>Processing Toolbox</strong>.</p></li>
+<li><p>Download the data only.</p></li>
+<li><p>The final process will be completed after modifying the lookup table.</p></li>
+</ul>
+<p><img alt="hydrow071" src="../../_images/hydrow071.jpg" /></p>
+</section>
+<section id="step-2-review-the-cn-lookup-table">
+<h2>Step 2: Review the CN lookup table<a class="headerlink" href="#step-2-review-the-cn-lookup-table" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Modify the lookup table to apply the <strong>TR-55 Desert CN values</strong>.</p></li>
+<li><p>The table may also be adjusted to reflect local agency standards where required.</p></li>
+<li><p>The processing model can be adapted to connect to local servers if needed.</p></li>
+<li><p>The plugin developer is responsive to enhancement requests.</p></li>
+</ul>
+<p><img alt="hydrow072" src="../../_images/hydrow072.jpg" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="module5.html" class="btn btn-neutral float-left" title="Module 5 - Process Rainfall Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="module7.html" class="btn btn-neutral float-right" title="Module 7 Process Buildings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="module6.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build21/index.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

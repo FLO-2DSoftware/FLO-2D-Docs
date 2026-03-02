@@ -1,0 +1,156 @@
+Module 2 - Identify the Contributing Watershed
+====================================================
+
+Step 1: Load data
+---------------------------------------------------
+
+- Open the **Data Source Manager** and find the **ArcGIS REST** tab.
+- Connect the **National Hydrography** data server.
+- Select the **WBDHU12** Polygon layer.
+- Click Add.
+
+|hydrow016|
+
+Step 2: Save one Watershed
+---------------------------------------------------
+
+- Zoom to the **Agua Caliente** Watershed.
+- Wait for the watershed polygons to load.
+- Use the Select tool to select a watershed polygon.
+
+.. note:: This watershed is already part of the project.
+   Download it again to learn the process and to get an editable copy.
+
+|hydrow017|
+
+Step 3: Polygon export
+---------------------------------------------------
+
+It is easy to export a single watershed polygon or a group of watershed polygons as a **Project Domain**.
+These can be used for FLO-2D or any other 2D model.
+
+- Right click the **WBDHU12** layer and click **Export Data >> Save Features As**.
+
+|hydrow018|
+
+- Fill the form and export the **Watershed Polygon**.
+
+.. note:: This file needs to use EPSG:2222 because that is the project coordinate system.
+
+|hydrow019|
+
+- Adjust the polygon style to remove the fill and make the outline heavier.
+
+|hydrow019h|
+
+Step 4: Load the Flow Lines
+---------------------------------------------------
+
+- Open the **Data Manager** tool and load the **ArcGIS REST** tab.
+- Select the **Hydrography** layer and click Connect.
+- Select the **Flow Direction** Raster and click **ADD**.
+
+|hydrow019a|
+
+This project uses **Soldier Canyon** which is the streamline on the north-east side of the map.
+
+.. important:: If the Flow Direction arrows are not visible, zoom in to a smaller area and 
+   allow them to render. Once they display at a closer scale, they typically load more 
+   efficiently when zooming back out to a larger extent.
+
+|hydrow019b|
+
+- Once the Flow Directions load, export it to a raster file.
+
+|hydrow019e|
+
+- Fill the form as shown and click OK.
+
+|hydrow019f|
+
+- Uncheck the source layer and move both layers to the **Watershed Group**.
+
+|hydrow019g|
+
+Step 5: Trim the Watershed Polygon
+---------------------------------------------------
+
+The watershed polygon is too large so it can be trimmed manually or by running some watershed processin tools.
+
+.. note:: 2D models do not require detailed watershed delineation. 
+   This step provides a simple method to trim the polygon to the contributing drainage area.
+
+- Select the Layer **Watershed Boundary 3857**.
+- Click the **Edit Pencil**.
+- Select the **Vertex Tool**.
+- Delete the vertex points that are outside the flow line extent of the Project Area.
+
+.. hint::
+   Press Ctrl+Z to undo unintended deletions.
+   If the changes are beyond recovery with Undo, toggle off editing mode and decline the save to revert to the last committed state.
+
+- Once finished, untoggle the editor and click Save.
+
+|hydrow019c|
+
+- This is the rough project extent.
+
+|hydrow019d|
+
+- The Area of Interest is here.
+
+|hydrow019i|
+
+Step 6: Create the Grid
+---------------------------------------------------
+
+- Open the attributes table and toggle the **Edit Pencil** on.
+- Set the Object ID to 20-ft or 30-ft and press the **Enter** to apply the changes.  (30-ft faster for trainnig.)
+- This field has just been reutilized for cell size.
+- Save the edits and toggle the **Edit Pencil** off.
+
+|hydrow019j|
+
+- Click the **Create Grid** button.
+- Fill the form as shown below and click **Ok**.
+
+|hydrow019k|
+
+- If desired, remove the **Hydrography Connected** Layers.
+- Uncheck the Grid.
+- Group the Watershed layers in the Watershed Group.
+
+|hydrow019l|
+
+
+.. |hydrow016| image:: ../img/hydrowkshp/hydrow016.jpg
+
+.. |hydrow017| image:: ../img/hydrowkshp/hydrow017.jpg
+
+.. |hydrow018| image:: ../img/hydrowkshp/hydrow018.jpg
+
+.. |hydrow019| image:: ../img/hydrowkshp/hydrow019.png
+
+.. |hydrow019a| image:: ../img/hydrowkshp/hydrow019a.png
+
+.. |hydrow019b| image:: ../img/hydrowkshp/hydrow019b.png
+
+.. |hydrow019c| image:: ../img/hydrowkshp/hydrow019c.png
+
+.. |hydrow019d| image:: ../img/hydrowkshp/hydrow019d.png
+
+.. |hydrow019e| image:: ../img/hydrowkshp/hydrow019e.png
+
+.. |hydrow019f| image:: ../img/hydrowkshp/hydrow019f.png  
+
+.. |hydrow019g| image:: ../img/hydrowkshp/hydrow019g.png
+
+.. |hydrow019h| image:: ../img/hydrowkshp/hydrow019h.png
+
+.. |hydrow019i| image:: ../img/hydrowkshp/hydrow019i.png
+
+.. |hydrow019j| image:: ../img/hydrowkshp/hydrow019j.gif
+
+.. |hydrow019k| image:: ../img/hydrowkshp/hydrow019k.png
+
+.. |hydrow019l| image:: ../img/hydrowkshp/hydrow019l.png

@@ -21,3 +21,4 @@ the FLO-2D model setup. This includes:
    Schematic to User Converter
    Evaporation Editor
    Levee Tool
+   Breach Hydrograph Tool

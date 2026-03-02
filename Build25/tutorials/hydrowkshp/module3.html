@@ -1,0 +1,311 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 3 - Process Elevation Data &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=6385869e" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Module 4 - Process Manning’s Roughness Data" href="module4.html" />
+    <link rel="prev" title="Module 2 - Identify the Contributing Watershed" href="module2.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Gila for QGIS Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_mapcrafter/index.html">FLO-2D MapCrafter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_florunner/index.html">FLO-2D FLORunner</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Gila Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Self-Help-Kit-Gila/index.html">Self-Help Kit Gila</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Hydrologic Mapping and Data Access Workshop</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="module1.html">Module 1 - Workshop Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module1.html#module-1-connect-data">Module 1 - Connect Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module1.html#module-1-load-flo-2d-project">Module 1 - Load FLO-2D Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module2.html">Module 2 - Identify the Contributing Watershed</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Module 3 - Process Elevation Data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-load-elevation-data">Step 1: Load elevation data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-download-elevation">Step 2: Download elevation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-interpolate-the-elevation-to-the-grid">Step 3: Interpolate the elevation to the Grid</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="module4.html">Module 4 - Process Manning’s Roughness Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module5.html">Module 5 - Process Rainfall Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module6.html">Module 6 - Process Infiltration Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module7.html">Module 7 Process Buildings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TDT/index.html">Tailings Dam Tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two-Phase-Dam-Breach/index.html">Two Phase Dam Breach</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Gila Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Hydrologic Mapping and Data Access Workshop</a></li>
+      <li class="breadcrumb-item active">Module 3 - Process Elevation Data</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/hydrowkshp/module3.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-3-process-elevation-data">
+<h1>Module 3 - Process Elevation Data<a class="headerlink" href="#module-3-process-elevation-data" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <strong>complete watershed elevation</strong> file is already included in the project.
+This exercise is intended to provide practice with the download workflow and to
+identify any potential issues that may arise during the process.</p>
+</div>
+<section id="step-1-load-elevation-data">
+<h2>Step 1: Load elevation data<a class="headerlink" href="#step-1-load-elevation-data" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Zoom to the <strong>trimmed</strong> Watershed Boundary.</p></li>
+</ul>
+<p><img alt="hydrow020" src="../../_images/hydrow020.png" /></p>
+<ul class="simple">
+<li><p>Open the <strong>Data Source Manager</strong> and find the <strong>WCS</strong> tab.</p></li>
+<li><p>Connect the elevation data.</p></li>
+<li><p>Select the first layer.</p></li>
+<li><p>Set the coordinate system to 3857. (USGS data uses Metric units.) Add the layer.</p></li>
+<li><p>Close the Data Source Manager.</p></li>
+</ul>
+<p><img alt="hydrow021" src="../../_images/hydrow021.jpg" /></p>
+<ul class="simple">
+<li><p><strong>Uncheck</strong> the 3DEP layer to prevent loading issues caused by its active data connection.</p></li>
+<li><p>Then right-click the layer and choose <strong>Repair Data Source</strong> to reestablish the link.</p></li>
+</ul>
+<p><img alt="hydrow022" src="../../_images/hydrow022.jpg" /></p>
+<ul class="simple">
+<li><p>Expand the <strong>WCS</strong> group</p></li>
+<li><p>Expand the 3DEP group Select the first layer and click OK.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The reason this reload step is required is not entirely clear;
+however, it consistently resolves display and connection issues for WCS-based 3DEP elevation layers in QGIS.</p>
+</div>
+<p><img alt="hydrow023" src="../../_images/hydrow023.jpg" /></p>
+</section>
+<section id="step-2-download-elevation">
+<h2>Step 2: Download elevation<a class="headerlink" href="#step-2-download-elevation" title="Link to this heading"></a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If the download is taking longer than expected, cancel it from the Progress Bar and verify that the selected extent is not excessively large.</p>
+<p>If the download fails or performs poorly, use the following alternative site:</p>
+<a href="https://apps.nationalmap.gov/downloader/" target="_blank">USGS Data Downloader</a>
+<p></p></div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Local Agency data may be of better quality than 3DEP data.</p>
+</div>
+<ul class="simple">
+<li><p>Right click the DEP3Elevation layer and Export a elevation data to cover the Project Area.</p></li>
+</ul>
+<p><img alt="hydrow024" src="../../_images/hydrow024.jpg" /></p>
+<ul class="simple">
+<li><p>Set the file path.</p></li>
+<li><p>Make sure the CRS is 3857.</p></li>
+<li><p>Limit the Extent to Watershed Boundary Layer or Map Canvas if zoomed into the project area.</p></li>
+</ul>
+<p><img alt="hydrow025" src="../../_images/hydrow025.png" /></p>
+<ul class="simple">
+<li><p>The finished raster should look like this.</p></li>
+</ul>
+<p><img alt="hydrow025a" src="../../_images/hydrow025a.png" /></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Elevation Patching</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If download issues occur, incomplete raster may result.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p class="sd-card-text">If the downloaded raster contains blank areas, unexpected NoData regions, or 0-elevation pixels that are not physically realistic for the terrain,
+the dataset is incomplete.</p>
+</div>
+<p class="sd-card-text"><strong>Patching Procedure</strong></p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Identifying the missing or corrupted areas (typically visible as NoData or anomalous 0 values).</p></li>
+</ol>
+<p class="sd-card-text"><img alt="hydrow025i" src="../../_images/hydrow025i.png" /></p>
+<ol class="arabic simple" start="2">
+<li><p class="sd-card-text">Download the small missing sections using a tighter extent that fully covers the gap.</p></li>
+</ol>
+<p class="sd-card-text"><img alt="hydrow025k" src="../../_images/hydrow025k.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p class="sd-card-text">Verifying that all rasters share:</p>
+<ul class="simple">
+<li><p class="sd-card-text">The same coordinate reference system (CRS)</p></li>
+<li><p class="sd-card-text">The same cell size</p></li>
+<li><p class="sd-card-text">The same NoData definition</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">Merging (mosaicking) the rasters into a single continuous dataset using tools such as:</p>
+<ul class="simple">
+<li><p class="sd-card-text">GDAL Merge</p></li>
+<li><p class="sd-card-text">Build Virtual Raster (VRT)</p></li>
+<li><p class="sd-card-text">Merge in QGIS Processing</p></li>
+</ul>
+</li>
+</ol>
+<p class="sd-card-text"><img alt="hydrow025j" src="../../_images/hydrow025j.png" /></p>
+<p class="sd-card-text">After merging, confirm:</p>
+<ul class="simple">
+<li><p class="sd-card-text">No unintended NoData seams remain.</p></li>
+<li><p class="sd-card-text">Elevation statistics are reasonable (minimum, maximum, and mean).</p></li>
+<li><p class="sd-card-text">The raster extent fully covers the intended modeling domain.</p></li>
+<li><p class="sd-card-text">This approach avoids redownloading large datasets while preserving continuity in the final elevation surface.</p></li>
+</ul>
+</div>
+</details></section>
+<section id="step-3-interpolate-the-elevation-to-the-grid">
+<h2>Step 3: Interpolate the elevation to the Grid<a class="headerlink" href="#step-3-interpolate-the-elevation-to-the-grid" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Convert the elevation data from meters to feet.</p></li>
+</ul>
+<p><img alt="hydrow025m" src="../../_images/hydrow025m.png" /></p>
+<ul class="simple">
+<li><p>Run the elevation interpolator.</p></li>
+<li><p>Select the elevation file.</p></li>
+<li><p>Click ok.</p></li>
+</ul>
+<p><img alt="hydrow025n" src="../../_images/hydrow025n.png" /></p>
+<ul class="simple">
+<li><p>If desired, remove the 3DEP layer.</p></li>
+<li><p>Move the elevation layers to the elevation group.</p></li>
+</ul>
+<p><img alt="hydrow025l" src="../../_images/hydrow025l.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="module2.html" class="btn btn-neutral float-left" title="Module 2 - Identify the Contributing Watershed" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="module4.html" class="btn btn-neutral float-right" title="Module 4 - Process Manning’s Roughness Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="module3.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build21/index.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

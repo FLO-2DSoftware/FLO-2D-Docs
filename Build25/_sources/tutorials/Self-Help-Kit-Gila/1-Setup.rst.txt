@@ -52,7 +52,7 @@ _____________________________________
 Open QGIS
 +++++++++++
 
-Search for QGIS 3.34 in the Windows search bar.
+Search for QGIS 3.34 or later in the Windows search bar.
 
 .. image:: ../img/shg/1/shg_006.png
 
