@@ -116,6 +116,8 @@ Step 4: Run NLCD Land Cover Roughness processor
 
   </details>
 
+  spacer
+
 .. raw:: html
 
    <details>
