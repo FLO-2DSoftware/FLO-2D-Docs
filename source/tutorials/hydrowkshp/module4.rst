@@ -1,15 +1,18 @@
 Module 4 - Process Manning’s Roughness Data
 ===============================================
 
+
+
 This module describes the workflow for converting land cover datasets into Manning’s n roughness surfaces using QGIS and online data services.
 
-Select one of the following processing methods. Only one method is required.
+Select one of the following data sources. Both follow the same processing methodology, differing only in the origin of the land cover dataset.
 
 .. raw:: html
 
    <details>
-   <summary><strong>NLCD Method</strong></summary>
+   <summary><strong>National Land Cover Dataset Method</strong></summary>
 
+.. _step-1-load-data-1:
 
 Step 1: Load land cover data (NLCD)
 ---------------------------------------------------
@@ -26,7 +29,6 @@ Step 1: Load land cover data (NLCD)
 - Click Run
 
 |hydrow030|
-
 
 Step 2: Download the USGS data
 ---------------------------------------------------
@@ -67,7 +69,6 @@ Step 2: Download the USGS data
 
 |hydrow031d|
 
-
 Step 3: Review look-up tables
 ---------------------------------------------------
 
@@ -82,8 +83,7 @@ The full table is in the Excel Spreadsheet.
 
 |hydrow033|
 
-
-Step 4: Run NLCD Land Cover Roughness processor
+Step 4: Run NLCD Land Cover Roughness processor 
 ---------------------------------------------------
 
 - Open the **Processing Toolbox**.
@@ -98,15 +98,15 @@ Step 4: Run NLCD Land Cover Roughness processor
 
 |hydrow036|
 
-- This table may be modified to reflect local Manning’s n value standards.
+- This table may be modified to reflect local Manning’s n value standards. 
 
-.. note:: Every raster value must be explicitly assigned a corresponding Manning’s n value.
-   If one value is omitted, the processor may fail during roughness surface generation.
+.. note:: Every raster value must be explicitly assigned a corresponding Manning’s n value. 
+  If one value is omitted, the processor may fail during roughness surface generation.
 
 |hydrow037|
 
-.. hint:: Processor models are script-based. Editing the table in a plain text editor is often
-   faster than using the graphical interface.
+.. hint:: Processor models are script-based. Editing the table in a plain text editor is often 
+  faster than using the graphical interface.
 
 |hydrow037a|
 
@@ -116,14 +116,12 @@ Step 4: Run NLCD Land Cover Roughness processor
 
 .. raw:: html
 
-   </details>
-
+  </details>
 
 .. raw:: html
 
    <details>
-   <summary><strong>ESA Method</strong></summary>
-
+   <summary><strong>European Space Agency (ESA) Method</strong></summary>
 
 Step 5: Load Land Cover data (ESA World)
 ---------------------------------------------------
@@ -140,7 +138,6 @@ Curve Number Generator ESA
 - Click Run
 
 |hydrow030a|
-
 
 Step 6: Run ESA Land Cover Roughness processor
 ---------------------------------------------------
@@ -168,14 +165,13 @@ For Example, use it on the **US Mexico boundary.**
 
 |hydrow041|
 
-- Move all Manning's n Roughness related rasters into the Manning's Group.
-
-|hydrow040a|
-
 .. raw:: html
 
    </details>
 
+- Move all Manning's n Roughness related rasters into the Manning's Group.
+
+|hydrow040a|
 
 Step 7: Download Street Centerlines
 --------------------------------------------------------------
@@ -193,7 +189,7 @@ Step 7: Download Street Centerlines
 - Use the current map canvas extent so the download matches the project domain.
 - Click Run Preset.
 
-.. note:: If a timeout error occurs, run the preset again.
+.. note:: if a timeout error occurs, run the preset again.
 
 |hydrow042c|
 
@@ -218,7 +214,7 @@ Step 7: Download Street Centerlines
 Step 8: Reproject and Export Street Layer
 ---------------------------------------------------
 
-The street layer must be in the project coordinate system before buffering.
+The street layer must be in the project coordinate system before buffering.  
 If it remains in WGS84 (EPSG:4326), the buffer distance will be interpreted in degrees and will not produce correct results.
 
 - Right-click the **Roads** layer.
@@ -240,7 +236,6 @@ If it remains in WGS84 (EPSG:4326), the buffer distance will be interpreted in d
 |hydrow043a|
 
 The street layer is now in projected units (feet), and buffer distances will be applied correctly in the next step.
-
 
 Step 9: Create street layer buffer
 ---------------------------------------------------
@@ -270,7 +265,6 @@ Step 9: Create street layer buffer
 
 This results in a polygon layer that covers the streets.
 If some streets are missing, it is easy to digitize them directly into the street network.
-
 
 
 .. |hydrow029| image:: ../img/hydrowkshp/hydrow029.jpg
