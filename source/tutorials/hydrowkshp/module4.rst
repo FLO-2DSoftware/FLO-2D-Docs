@@ -9,6 +9,7 @@ Select one of the following data sources. Both follow the same processing method
 
    <details>
    <summary><strong>National Land Cover Dataset Method</strong></summary>
+   <div>
 
 .. _step-1-load-data-1:
 
@@ -114,6 +115,7 @@ Step 4: Run NLCD Land Cover Roughness processor
 
 .. raw:: html
 
+   <div>
    </details>
 
 
@@ -121,6 +123,7 @@ Step 4: Run NLCD Land Cover Roughness processor
 
    <details>
    <summary><strong>European Space Agency (ESA) Method</strong></summary>
+   <div>
 
 .. _step-5-load-data:
 
@@ -168,6 +171,7 @@ For Example, use it on the **US Mexico boundary.**
 
 .. raw:: html
 
+   <div>
    </details>
 
 Step 7: Download Street Centerlines
