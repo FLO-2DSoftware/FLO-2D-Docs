@@ -1,11 +1,23 @@
 Module 5 - Process Rainfall Data
 ======================================
 
+.. warning:: The rainfall processing methods shown here are practical grid-based workflows. 
+    Depending on project requirements or regulatory standards, alternative scientifically 
+    validated approaches may be necessary.
+
 Step 1: Uniform rain on grid
 ---------------------------------------------------
 
 Real Storm Molina Canyon 9.09 inches in 5 days.
 July 27, 2006, to July 31 2006.
+
+.. raw:: html
+
+   <a href="https://alertmap.rfcd.pima.gov/gmap/gmap.html"
+      target="_blank"
+      rel="noopener noreferrer">
+      Data Source
+   </a>
 
 |hydrow052|
 
@@ -16,8 +28,7 @@ July 27, 2006, to July 31 2006.
 - Find the rain editor in QGIS and ensure 9.09 inches are used in the uniform rainfall total.
 - Add a new Time Series table and name it Molina 5 Day 2.
 
-- If necessary, select the Molina 5 Day 2 pattern again.
-  It may not automatically select it the correct pattern.
+- If necessary, reselect the Molina 5 Day 2 pattern, as the plot may not update automatically.
 
 |hydrow054|
 
@@ -43,6 +54,7 @@ Step 3: Realtime Rainfall (ERA Copernicus)
 ---------------------------------------------------
 
 .. note:: This step replaces the Uniform rainfall data with realtime data for the same storm.
+    Future versions of this module will include processing NEXRAD Data.  
 
 - Check the Realtime Rainfall box and click the Add Raster button.
 
@@ -100,6 +112,8 @@ Step 4: Review the Copernicus Downloader
 - Log-in to a free account to accept the terms and process the request.
 
 |hydrow067|
+
+
 
 
 
