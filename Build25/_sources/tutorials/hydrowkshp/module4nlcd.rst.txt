@@ -64,7 +64,7 @@ The full table is in the Excel Spreadsheet.
 
 |hydrow032|
 
-- Mannings roughness for shallow overland flow developed for FLO-2D. (source: FCDMC)
+- Manning's roughness for shallow overland flow developed for FLO-2D. (source: FCDMC)
 
 |hydrow033|
 
@@ -95,7 +95,7 @@ Step 4: Run NLCD Land Cover Roughness processor
 
 |hydrow037a|
 
-- Run the processor model to reclassify the landuse data as roughness data.
+- Run the processor model to reclassify the land cover data as roughness data.
 
 |hydrow038|
 

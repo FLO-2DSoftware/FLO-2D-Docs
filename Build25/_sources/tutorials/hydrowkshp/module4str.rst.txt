@@ -1,7 +1,7 @@
 Open Street Data OSM
 ==========================
 
-Step 1: Download Street Centerlines
+Step 1: Download street center ines
 --------------------------------------------------------------
 
 - Move all Manning's n Roughness related rasters into the Manning's Group.
@@ -43,7 +43,7 @@ Step 1: Download Street Centerlines
 |hydrow042f|
 
 
-Step 2: Reproject and Export Street Layer
+Step 2: Re-project and Export Street Layer
 ---------------------------------------------------
 
 The street layer must be in the project coordinate system before buffering.  

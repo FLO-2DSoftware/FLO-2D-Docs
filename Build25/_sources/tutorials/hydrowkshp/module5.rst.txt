@@ -113,10 +113,6 @@ Step 4: Review the Copernicus Downloader
 
 |hydrow067|
 
-
-
-
-
 .. |hydrow052| image:: ../img/hydrowkshp/hydrow052.jpg
 
 .. |hydrow053| image:: ../img/hydrowkshp/hydrow053.jpg

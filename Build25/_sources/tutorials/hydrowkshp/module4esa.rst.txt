@@ -1,4 +1,4 @@
-World Land Cover Data - European Satelite Agency (ESA World)
+World Land Cover Data - European Satellite Agency (ESA World)
 ==============================================================
 
 Step 1. Curve Number Generator ESA
@@ -37,7 +37,7 @@ For Example, use it on the **US Mexico boundary.**
 
 |hydrow040|
 
-- Run the processor model to reclassify the landuse data as roughness data.
+- Run the processor model to reclassify the Land Cover data as roughness data.
 
 |hydrow041|
 

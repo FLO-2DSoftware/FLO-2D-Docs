@@ -12,5 +12,6 @@ warnings or errors within the FLO-2D Project.
    :maxdepth: 1
    :caption: Contents
 
+   scenarios
    Hazus Tool
    Debug
