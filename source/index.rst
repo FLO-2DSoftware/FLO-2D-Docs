@@ -10,13 +10,13 @@ FLO-2D Pro Documentation – Build 25
      <img id="flo2dimg" src="_static/docshome.png" usemap="#flo2dmap" style="max-width:100%; height:auto;">
      <map name="flo2dmap">
        <!-- Installation -->
-       <area shape="rect" coords="87,552,276,625" href="setup/index.html" alt="Installation">
+       <area shape="rect" coords="65,590,275,660" href="setup/index.html" alt="Installation">
        <!-- Reference Manuals -->
-       <area shape="rect" coords="312,552,538,625" href="flo-2d_pro/index.html" alt="Reference Manuals">
+       <area shape="rect" coords="310,590,550,660" href="flo-2d_pro/index.html" alt="Reference Manuals">
        <!-- Plugin Docs -->
-       <area shape="rect" coords="567,552,770,625" href="flo-2d_plugin/index.html" alt="Plugin Docs">
+       <area shape="rect" coords="625,590,840,660" href="flo-2d_plugin/index.html" alt="Plugin Docs">
        <!-- Tutorials -->
-       <area shape="rect" coords="799,552,1003,625" href="tutorials/index.html" alt="Tutorials">
+       <area shape="rect" coords="920,590,1100,660" href="tutorials/index.html" alt="Tutorials">
      </map>
 
      <script>
@@ -54,7 +54,6 @@ FLO-2D Pro Documentation – Build 25
      })();
      </script>
    </div>
-
 
 Welcome to the Build 25 version of the FLO-2D Documentation.
 
