@@ -13,7 +13,7 @@ FLO-2D Pro Documentation – Build 25
    <map name="flo2dmap">
 
    <!-- Installation -->
-   <area shape="rect" coords="120,760,380,860"
+   <area shape="rect" coords="0,0,2000,2000"
          href="setup/index.html"
          alt="Installation">
 
