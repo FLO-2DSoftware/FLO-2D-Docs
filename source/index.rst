@@ -8,28 +8,33 @@ FLO-2D Pro Documentation – Build 25
 
    <div style="text-align:center">
 
-   <img src="_static/docshome.png" usemap="#flo2dmap"
-     style="width:1400px; max-width:none;">
+   <img src="_static/docshome.png"
+     usemap="#flo2dmap"
+     style="max-width:100%; height:auto;">
 
    <map name="flo2dmap">
 
-      <area shape="rect" coords="150,780,360,880"
+      <!-- Installation -->
+      <area shape="rect" coords="110,720,330,840"
             href="setup/index.html"
             alt="Installation">
 
-      <area shape="rect" coords="420,780,700,880"
+      <!-- Reference Manuals -->
+      <area shape="rect" coords="360,720,660,840"
             href="flo-2d_pro/index.html"
             alt="Reference Manuals">
 
-      <area shape="rect" coords="760,780,1020,880"
+      <!-- Plugin Docs -->
+      <area shape="rect" coords="690,720,980,840"
             href="flo-2d_plugin/index.html"
             alt="Plugin Docs">
 
-      <area shape="rect" coords="1080,780,1340,880"
+      <!-- Tutorials -->
+      <area shape="rect" coords="1010,720,1290,840"
             href="tutorials/index.html"
             alt="Tutorials">
 
-      </map>
+   </map>
 
    </div>
 
