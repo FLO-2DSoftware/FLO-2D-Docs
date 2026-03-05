@@ -25,6 +25,7 @@ extensions = [
     'sphinx_togglebutton',
     'sphinx_design'
 ]
+html_allow_raw = True
 templates_path = ['_templates']
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
