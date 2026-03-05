@@ -8,7 +8,7 @@ FLO-2D Pro Documentation – Build 25
 
    <div style="text-align:center">
 
-   <img src="docshome.png" usemap="#flo2dmap" style="max-width:100%; height:auto;">
+   <img src="source/docshome.png" usemap="#flo2dmap" style="max-width:100%; height:auto;">
 
    <map name="flo2dmap">
 
@@ -37,7 +37,7 @@ FLO-2D Pro Documentation – Build 25
    </div>
 
 
-Welcome to the main version of the FLO-2D Documentation.
+Welcome to the Build 25 version of the FLO-2D Documentation.
 
 .. toctree::
    :maxdepth: 1
