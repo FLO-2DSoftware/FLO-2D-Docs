@@ -8,7 +8,7 @@ FLO-2D Pro Documentation – Build 25
 
    <div style="text-align:center">
 
-   <img src="source/docshome.png" usemap="#flo2dmap" style="max-width:100%; height:auto;">
+   <img src="_static/docshome.png" usemap="#flo2dmap" style="max-width:100%; height:auto;">
 
    <map name="flo2dmap">
 
