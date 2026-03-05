@@ -8,12 +8,12 @@ FLO-2D Pro Documentation – Build 25
 
    <div style="text-align:center">
 
-   <img src="_static/docshome.png" usemap="#flo2dmap">
+   <img src="_static/docshome.png" width="1400" usemap="#flo2dmap">
 
    <map name="flo2dmap">
 
    <!-- Installation -->
-   <area shape="rect" coords="120,760,380,860"
+   <area shape="rect" coords="420,780,700,880"
          href="setup/index.html"
          alt="Installation">
 
@@ -23,12 +23,12 @@ FLO-2D Pro Documentation – Build 25
          alt="Reference Manuals">
 
    <!-- Plugin Docs -->
-   <area shape="rect" coords="780,760,1060,860"
+   <area shape="rect" coords="760,780,1020,880"
          href="flo-2d_plugin/index.html"
          alt="Plugin Docs">
 
    <!-- Tutorials -->
-   <area shape="rect" coords="1100,760,1380,860"
+   <area shape="rect" coords="1080,780,1340,880"
          href="tutorials/index.html"
          alt="Tutorials">
 
