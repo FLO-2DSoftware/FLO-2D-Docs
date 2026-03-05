@@ -4,20 +4,43 @@
 FLO-2D Pro Documentation – Build 25
 ====================================
 
-.. danger::
+.. raw:: html
 
-   🚧 **BUILD 25 — DOCUMENTATION BETA** 🚧
+   <div style="text-align:center">
 
-   This documentation reflects a **pre-release build**.
-   Features, workflows, and file structures may change without notice.
+   <img src="docshome.png" usemap="#flo2dmap" style="max-width:100%; height:auto;">
 
-   Refer to the latest released build documentation for validated guidance.
+   <map name="flo2dmap">
+
+   <!-- Installation -->
+   <area shape="rect" coords="120,760,380,860"
+         href="installation/index.html"
+         alt="Installation">
+
+   <!-- Reference Manuals -->
+   <area shape="rect" coords="430,760,740,860"
+         href="flo-2d_pro/resource_center/index.html"
+         alt="Reference Manuals">
+
+   <!-- Plugin Docs -->
+   <area shape="rect" coords="780,760,1060,860"
+         href="flo-2d_gila/index.html"
+         alt="Plugin Docs">
+
+   <!-- Tutorials -->
+   <area shape="rect" coords="1100,760,1380,860"
+         href="tutorials/index.html"
+         alt="Tutorials">
+
+   </map>
+
+   </div>
 
 
 Welcome to the main version of the FLO-2D Documentation.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    setup/index
