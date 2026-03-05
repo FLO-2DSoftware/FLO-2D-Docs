@@ -14,17 +14,17 @@ FLO-2D Pro Documentation – Build 25
 
    <!-- Installation -->
    <area shape="rect" coords="120,760,380,860"
-         href="installation/index.html"
+         href="setup/index.html"
          alt="Installation">
 
    <!-- Reference Manuals -->
    <area shape="rect" coords="430,760,740,860"
-         href="flo-2d_pro/resource_center/index.html"
+         href="flo-2d_pro/index.html"
          alt="Reference Manuals">
 
    <!-- Plugin Docs -->
    <area shape="rect" coords="780,760,1060,860"
-         href="flo-2d_gila/index.html"
+         href="flo-2d_plugin/index.html"
          alt="Plugin Docs">
 
    <!-- Tutorials -->
