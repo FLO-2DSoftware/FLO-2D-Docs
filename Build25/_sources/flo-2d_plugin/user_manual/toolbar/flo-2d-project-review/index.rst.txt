@@ -6,7 +6,7 @@ The HAZUS tool generates water surface elevation or flow depth rasters for the F
 Channel Profile plots profiles for various layer types, and the Debug Tool identifies potential
 warnings or errors within the FLO-2D Project.
 
-.. image:: ../../img/Buttons/review001.png
+.. image:: ../../img/Buttons/review001a.png
 
 .. toctree::
    :maxdepth: 1
