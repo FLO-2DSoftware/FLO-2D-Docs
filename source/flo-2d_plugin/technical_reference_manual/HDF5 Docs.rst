@@ -233,6 +233,17 @@ Defines Green-Ampt infiltration parameters spatially or globally.
 
 .. image:: ./img/hdf5/FLO076.png
 
+Green Ampt Channel
+~~~~~~~~~~~~~~~~~~~~~~~
+Single channel infiltration.
+
+.. image:: ./img/hdf5/FLO076a.png
+
+Channel infiltration by reach.
+
+.. image:: ./img/hdf5/FLO076b.png
+
+
 .. _scs_hdf:
 
 SCS Curve Number
