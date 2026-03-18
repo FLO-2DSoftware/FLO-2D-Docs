@@ -16,6 +16,14 @@ Choose one of the following methods:
    The following method uses the OSGeo4W Network Installer to install the current QGIS LTR version and
    adds Python modules such as ``h5py`` and ``netCDF4``.
 
+   .. important::
+
+   QGIS 3.44.x is built with NumPy 2 and HDF5 3.15, which are not currently compatible with the FLO-2D Plugin.
+
+   When using the OSGeo4W Network Installer, install QGIS 3.40.15 instead of 3.44. QGIS 4.0 is not yet supported.
+
+   An updated plugin with support for these dependencies is in development. Backward compatibility and validation testing are currently in progress.
+
    .. container:: h3
 
       1. Download the OSGeo4W Installer
