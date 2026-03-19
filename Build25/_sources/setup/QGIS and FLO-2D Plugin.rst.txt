@@ -18,11 +18,11 @@ Choose one of the following methods:
 
    .. important::
 
-   QGIS 3.44.x is built with NumPy 2 and HDF5 3.15, which are not currently compatible with the FLO-2D Plugin.
+      QGIS 3.44.x is built with NumPy 2 and HDF5 3.15, which are not currently compatible with the FLO-2D Plugin.
 
-   When using the OSGeo4W Network Installer, install QGIS 3.40.15 instead of 3.44. QGIS 4.0 is not yet supported.
+      When using the OSGeo4W Network Installer, install QGIS 3.40.15 instead of 3.44. QGIS 4.0 is not yet supported.
 
-   An updated plugin with support for these dependencies is in development. Backward compatibility and validation testing are currently in progress.
+      An updated plugin with support for these dependencies is in development. Backward compatibility and validation testing are currently in progress.
 
    .. container:: h3
 
