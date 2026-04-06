@@ -111,7 +111,7 @@ It is the most robust and detailed urban flood model available with the capabili
 hydraulic structures (culverts, bridges and weirs), rainfall, infiltration, building roof runoff, building collapses and LID components.
 Area drainage master plans in the Phoenix area are being completed with FLO-2D using grid systems on the order of 1.8 million elements.
 Urban grid element size is typically 20 ft, however, ten foot elements have been used with high resolution topographic data sets (Figure 130).
-\
+
 .. image:: img/Chapter5/Chapte011.png
 
 *Figure 130.
