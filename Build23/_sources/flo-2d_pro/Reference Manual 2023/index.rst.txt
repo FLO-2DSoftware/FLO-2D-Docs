@@ -12,7 +12,7 @@ FLO-2D PRO REFERENCE MANUAL 2023
    :maxdepth: 1
    :numbered:
 
-   chapter 1
+   Chapter 1
    Chapter 2
    Chapter 3
    Chapter 4

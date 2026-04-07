@@ -23,7 +23,7 @@
       <script>let toggleHintShow = 'Click to show';</script>
       <script>let toggleHintHide = 'Click to hide';</script>
       <script>let toggleOpenOnPrint = 'true';</script>
-      <script src="../../_static/togglebutton.js?v=1ae7504c"></script>
+      <script src="../../_static/togglebutton.js?v=b8b12719"></script>
       <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
       <script src="../../_static/design-tabs.js?v=f930bc37"></script>
       <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -134,7 +134,7 @@ The FLO-2D model will compute the storm drain inflow discharge based on the pred
 This inlet-controlled discharge will then be routed as storm drain conduit discharge.
 The storm drain return flow to the surface water system is exchanged through storm drain inlets/outlets and outfalls.
 The complete conceptualized flood routing system is shown in Figure 1.</p>
-<img alt="../../_images/Chapte0027.jpg" src="../../_images/Chapte0027.jpg" />
+<img alt="../../_images/Chapte0023.jpg" src="../../_images/Chapte0023.jpg" />
 <p><em>Figure 1.
 Conceptualized FLO-2D Model System with a Storm Drain Component.</em></p>
 <p>The FLO-2D storm drain component can be visualized in layers.
@@ -162,7 +162,7 @@ Once the storm drain system is built and the run switch is set, the flow into an
 model is started.
 Following a successful simulation, the storm drain results can be reviewed in QGIS or in the EPA SWMM GUI.
 Figure 3 shows an example of a storm drain integrated with a surface model on a QGIS map.</p>
-<img alt="../../_images/Chapte0034.jpg" src="../../_images/Chapte0034.jpg" />
+<img alt="../../_images/Chapte0031.jpg" src="../../_images/Chapte0031.jpg" />
 <p><em>Figure 3.
 A Typical Storm Drain System as Viewed in QGIS.*</em></p>
 <section id="flo-2d-storm-drain-model-overview">
@@ -271,7 +271,7 @@ The conditions that control the inlet flow direction are described below and sho
 <li><p>No return flow.</p></li>
 </ul>
 </div></blockquote>
-<img alt="../../_images/Chapte0044.png" src="../../_images/Chapte0044.png" />
+<img alt="../../_images/Chapte0042.png" src="../../_images/Chapte0042.png" />
 <p><em>Figure 4.
 Inlet No Return Flow.</em></p>
 <p>FLO-2D WSE &gt; Storm drain pressure head&gt; rim elevation:</p>
@@ -294,7 +294,7 @@ No Return Flow No Inlet Flow</em></p>
 <li><p>Water leaves the storm drain system and it is added to the surface grid cell.</p></li>
 </ul>
 </div></blockquote>
-<img alt="../../_images/Chapte0061.png" src="../../_images/Chapte0061.png" />
+<img alt="../../_images/Chapte006.png" src="../../_images/Chapte006.png" />
 <p><em>Figure 6.
 Inlet with Return Flow</em></p>
 <section id="pressure-head-and-manholes">
@@ -365,7 +365,7 @@ For underground outfalls, a switch equal to 2 can be used, where the artificial 
 and only the FLO-2D WSE is assigned for the entire simulation.
 When the model runs, the inflow may be added to either the outfall grid element or the upstream storm drain conduit network and the flow can go either
 in or out of the outfall pipe based on the pressure head.</p>
-<img alt="../../_images/Chapte0084.jpg" src="../../_images/Chapte0084.jpg" />
+<img alt="../../_images/Chapte0081.jpg" src="../../_images/Chapte0081.jpg" />
 <p><em>Figure 8.
 Initial Condition for an Underground (Underwater) Storm Drain Outfall</em></p>
 <p>Typically, an outfall has an invert elevation equal to or greater than the floodplain, channel, or street elevations.
@@ -387,7 +387,7 @@ The flapgate switch in SWMMFLO.DAT has the following settings:</p>
 <p>Sometimes nodes seem like an outfall but need to interact with the storm drain system differently.
 These can be set up as inlets that will discharge flow from the storm drain to the surface water.
 Feature equal to 2 set up a flap gate for a simulated outlet.</p>
-<img alt="../../_images/Chapte0092.jpg" src="../../_images/Chapte0092.jpg" />
+<img alt="../../_images/Chapte0091.jpg" src="../../_images/Chapte0091.jpg" />
 <p><em>Figure 9.
 Vertical Inlet Opening with No Flap gate.</em></p>
 </section>
@@ -466,7 +466,7 @@ Using an assumed 2% street cross slope results in a higher depth (more head) on 
 The curb height can be entered in the SWMMFLO.DAT file to make this adjustment automatically for each inlet.
 The curb inlet flow assignment is the same concept as the Street Gutter Flow feature (requires GUTTER.DAT file) that can be applied to gutters in
 streets without storm drain inlets.</p>
-<img alt="../../_images/Chapte0103.jpg" src="../../_images/Chapte0103.jpg" />
+<img alt="../../_images/Chapte0101.jpg" src="../../_images/Chapte0101.jpg" />
 <p><em>Figure 10.
 Curb Inlet Water Depth Profile Adjustment</em></p>
 <p>Definitions:</p>
@@ -524,19 +524,19 @@ The selected method allows the pressure head to be exponentially reduced over to
 <img alt="../../_images/Chapte0222.jpg" src="../../_images/Chapte0222.jpg" />
 <p><em>Figure 12
 Water Elevation Profile at 03:17:00.</em></p>
-<img alt="../../_images/Chapte0114.jpg" src="../../_images/Chapte0114.jpg" />
+<img alt="../../_images/Chapte0112.jpg" src="../../_images/Chapte0112.jpg" />
 <p><em>Figure 13.
 Inlet Pressure Head - No Pressure Head Dampening is Applied</em></p>
-<img alt="../../_images/Chapte0233.jpg" src="../../_images/Chapte0233.jpg" />
+<img alt="../../_images/Chapte0232.jpg" src="../../_images/Chapte0232.jpg" />
 <p><em>Figure 14
 Water Elevation Profile at 03:18:00.</em></p>
-<img alt="../../_images/Chapte0124.jpg" src="../../_images/Chapte0124.jpg" />
+<img alt="../../_images/Chapte0123.jpg" src="../../_images/Chapte0123.jpg" />
 <p><em>Figure 15.
 Inlet Pressure Head with Dampening up to 1.25 Times the Lateral Pipe Diameter.</em></p>
-<img alt="../../_images/Chapte0254.jpg" src="../../_images/Chapte0254.jpg" />
+<img alt="../../_images/Chapte0252.jpg" src="../../_images/Chapte0252.jpg" />
 <p><em>Figure 16
 Water Elevation Profile at 03:18:00.*</em></p>
-<img alt="../../_images/Chapte0134.jpg" src="../../_images/Chapte0134.jpg" />
+<img alt="../../_images/Chapte0133.jpg" src="../../_images/Chapte0133.jpg" />
 <p><em>Figure 17.
 Inlet Pressure Head with Dampening up to RIM Elevation</em></p>
 </section>
@@ -553,7 +553,7 @@ D         2409            l2                     50                           3.
 </div><p>The inlet discharge calculated using either the orifice or weir equations is subject to a blockage reduction that is specified by the user.
 The inlet discharge is calculated and then reduced using the clogging factor in the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-0">
-<span class="eqno">(1.11)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-0" title="Link to this equation"></a></span>\[Q_R = (1-C_f) \ Q_c\]</div>
+<span class="eqno">(1.32)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-0" title="Link to this equation"></a></span>\[Q_R = (1-C_f) \ Q_c\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>Q<sub>R</sub> = reduced inflow discharge</p>
@@ -562,10 +562,10 @@ The inlet discharge is calculated and then reduced using the clogging factor in 
 </div></blockquote>
 <p>This methodology is recommended for single inlets by entities such as the Colorado Department of Transportation and the cities of Denver and Las Vegas.
 Figure 18 and Figure 19 show the reduced discharge for a Type 2 inlet using a clogging factor of 50% at time 0.5 hrs.</p>
-<img alt="../../_images/Chapte0145.jpg" src="../../_images/Chapte0145.jpg" />
+<img alt="../../_images/Chapte0143.jpg" src="../../_images/Chapte0143.jpg" />
 <p><em>Figure 18.
 Type 2 Inlet Discharge versus Time</em></p>
-<img alt="../../_images/Chapte0155.jpg" src="../../_images/Chapte0155.jpg" />
+<img alt="../../_images/Chapte0153.jpg" src="../../_images/Chapte0153.jpg" />
 <p><em>Figure 19.
 Type 2 Inlet Discharge versus Time Using a Clogging Factor of 50% at Time 0.5 hrs</em></p>
 <p>It is noted that the Flood Control District of Maricopa County (FCDMC) in Phoenix, Arizona recommends this approach for flooding and drainage studies,
@@ -575,7 +575,7 @@ In a design project the storm drain features are oversized to provide enough cap
 The clogging factor data file can be created in the SWMMFLO.DAT data dialog for all types of inlets.</p>
 <p><em>Table 2.
 FCDMC Catch Basin Clogging Factors (FCDMC, 2018)</em></p>
-<img alt="../../_images/Chapte0163.jpg" src="../../_images/Chapte0163.jpg" />
+<img alt="../../_images/Chapte0162.jpg" src="../../_images/Chapte0162.jpg" />
 </section>
 <section id="reduction-of-return-flow-to-surface">
 <h4><span class="section-number">1.1.1.11. </span>Reduction of Return Flow to Surface<a class="headerlink" href="#reduction-of-return-flow-to-surface" title="Link to this heading"></a></h4>
@@ -585,7 +585,7 @@ The sudden contraction at the inlet from the drop box pipe diameter results in a
 water.
 The energy loss for a contraction in pressure flow can be calculated from the following equation (DOT Urban Drainage Design Manual):</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-1">
-<span class="eqno">(1.12)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-1" title="Link to this equation"></a></span>\[H_c = K_c(\frac{V_2 \ ^2}{2g})\]</div>
+<span class="eqno">(1.33)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-1" title="Link to this equation"></a></span>\[H_c = K_c(\frac{V_2 \ ^2}{2g})\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>K<sub>c</sub> = contraction coefficient (see Table 3)</p>
@@ -595,7 +595,7 @@ The energy loss for a contraction in pressure flow can be calculated from the fo
 <p><em>Table 3.
 Values of K for Contraction.
 (Dept. of Transportation, 2013)</em></p>
-<img alt="../../_images/Chapte0174.jpg" src="../../_images/Chapte0174.jpg" />
+<img alt="../../_images/Chapte0173.jpg" src="../../_images/Chapte0173.jpg" />
 </section>
 </section>
 <section id="storm-drain-model-governing-equations">
@@ -606,10 +606,10 @@ Values of K for Contraction.
 a network of pipes (Rossman, 2006).</p>
 <p>Continuity Equation:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-2">
-<span class="eqno">(1.13)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-2" title="Link to this equation"></a></span>\[\frac{∂A}{∂t} + \frac{∂Q}{∂x} = 0\]</div>
+<span class="eqno">(1.34)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-2" title="Link to this equation"></a></span>\[\frac{∂A}{∂t} + \frac{∂Q}{∂x} = 0\]</div>
 <p>Momentum equation for x-direction:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-3">
-<span class="eqno">(1.14)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-3" title="Link to this equation"></a></span>\[\frac{∂Q}{∂t} + \frac{∂ (Q^2/A)}{∂x} + gA \frac{∂H}{∂x} + gAS_f + gAh_L = 0\]</div>
+<span class="eqno">(1.35)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-3" title="Link to this equation"></a></span>\[\frac{∂Q}{∂t} + \frac{∂ (Q^2/A)}{∂x} + gA \frac{∂H}{∂x} + gAS_f + gAh_L = 0\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>x = distance along the conduit</p>
@@ -657,7 +657,7 @@ This solution (DAMPEN) produces more stable results around the critical stage of
 solution at sub-critical flow conditions.</p>
 <p>The friction slope component S<sub>f</sub> is based on Manning’s equation:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-4">
-<span class="eqno">(1.15)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-4" title="Link to this equation"></a></span>\[S_f = \frac{n_2V|V|}{k_2R^{\frac{4}{3}}}\]</div>
+<span class="eqno">(1.36)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-4" title="Link to this equation"></a></span>\[S_f = \frac{n_2V|V|}{k_2R^{\frac{4}{3}}}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>n = Manning roughness coefficient</p>
@@ -667,7 +667,7 @@ solution at sub-critical flow conditions.</p>
 </div></blockquote>
 <p>The local head loss term h<sub>L</sub> is caused by an energy loss that is proportional to the velocity head and it can be expressed as:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-5">
-<span class="eqno">(1.16)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-5" title="Link to this equation"></a></span>\[h_L = \frac {KV^2}{2gL}\]</div>
+<span class="eqno">(1.37)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-5" title="Link to this equation"></a></span>\[h_L = \frac {KV^2}{2gL}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>K = loss coefficient for each pipe</p>
@@ -677,7 +677,7 @@ solution at sub-critical flow conditions.</p>
 </div></blockquote>
 <p>To calculate the change in pressure head at each node that connects two or more conduits an additional equation is necessary (Figure 20):</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-6">
-<span class="eqno">(1.17)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-6" title="Link to this equation"></a></span>\[\frac{∂H}{∂t} = \frac {∑Q}{A_{store}+∑As}\]</div>
+<span class="eqno">(1.38)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-6" title="Link to this equation"></a></span>\[\frac{∂H}{∂t} = \frac {∑Q}{A_{store}+∑As}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>h = flow depth (difference between the node head and the pipe invert elevation)</p>
@@ -685,7 +685,7 @@ solution at sub-critical flow conditions.</p>
 <p>∑As = surface area contributed by the conduits connected to the node.</p>
 <p>∑Q = net flow at Node J contributed by all connected conduits plus external inflows</p>
 </div></blockquote>
-<img alt="../../_images/Chapte0202.jpg" src="../../_images/Chapte0202.jpg" />
+<img alt="../../_images/Chapte0201.jpg" src="../../_images/Chapte0201.jpg" />
 <p><em>Figure 20.
 Node-Link Representation of a Drainage System (Roesner et al, 1992)</em></p>
 </section>
@@ -697,16 +697,16 @@ Explicit schemes for these types of solutions are limited to minor steps by stri
 The following discussion was sourced from the EPA SWMM documentation (Rossman et al, 2005).</p>
 <p>The flow equation solved for each conduit is given by:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-7">
-<span class="eqno">(1.18)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-7" title="Link to this equation"></a></span>\[Q_{t+∆t} = \frac {Q_t + Q∆_{gravity} + Q∆_{inertial}}{1+Q_{friction}+∆Q_{losses}}\]</div>
+<span class="eqno">(1.39)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-7" title="Link to this equation"></a></span>\[Q_{t+∆t} = \frac {Q_t + Q∆_{gravity} + Q∆_{inertial}}{1+Q_{friction}+∆Q_{losses}}\]</div>
 <p>The ∆Q in each conduit corresponds to the different force terms expressed as:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-8">
-<span class="eqno">(1.19)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-8" title="Link to this equation"></a></span>\[∆Q_{gravity} = g\bar{A} (H1-H2) ∆t/L\]</div>
+<span class="eqno">(1.40)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-8" title="Link to this equation"></a></span>\[∆Q_{gravity} = g\bar{A} (H1-H2) ∆t/L\]</div>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-9">
-<span class="eqno">(1.20)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-9" title="Link to this equation"></a></span>\[∆Q_{inertial} = 2\bar{V}(\bar{A} - A_t) + \bar{V}^2 (A2-A1) ∆t/L\]</div>
+<span class="eqno">(1.41)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-9" title="Link to this equation"></a></span>\[∆Q_{inertial} = 2\bar{V}(\bar{A} - A_t) + \bar{V}^2 (A2-A1) ∆t/L\]</div>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-10">
-<span class="eqno">(1.21)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-10" title="Link to this equation"></a></span>\[∆Q_{friction}= \frac{gn^2 |\bar{V}|∆t} {k^2\bar{R}^{4/3}}\]</div>
+<span class="eqno">(1.42)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-10" title="Link to this equation"></a></span>\[∆Q_{friction}= \frac{gn^2 |\bar{V}|∆t} {k^2\bar{R}^{4/3}}\]</div>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-11">
-<span class="eqno">(1.22)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-11" title="Link to this equation"></a></span>\[∆Q_{losses} = \frac{∑_i K_i |V_i|∆t}{2L}\]</div>
+<span class="eqno">(1.43)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-11" title="Link to this equation"></a></span>\[∆Q_{losses} = \frac{∑_i K_i |V_i|∆t}{2L}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p><span class="math notranslate nohighlight">\(\bar{A}\)</span> = conduit average cross-sectional flow area</p>
@@ -734,10 +734,10 @@ Consequently, the velocity cannot be higher than 50 ft/sec.</p>
 the conduit is set equal to the smaller of the critical depth and the normal flow depth for the conduit flow.
 The equation to calculate the head adjustment term for each timestep at each node is:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-12">
-<span class="eqno">(1.23)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-12" title="Link to this equation"></a></span>\[H_{t+∆t} = H_t + \frac {∆Vol}{(A_{store} + ∑A_s)_{t+∆t}}\]</div>
+<span class="eqno">(1.44)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-12" title="Link to this equation"></a></span>\[H_{t+∆t} = H_t + \frac {∆Vol}{(A_{store} + ∑A_s)_{t+∆t}}\]</div>
 <p>where ∆Vol is the net volume flowing through the node over the timestep. The net volume is computed as:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-13">
-<span class="eqno">(1.24)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-13" title="Link to this equation"></a></span>\[∆Vol = 0.5 \left[(∑Q)_t + (∑Q)_{t+∆t}\right]∆t\]</div>
+<span class="eqno">(1.45)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-13" title="Link to this equation"></a></span>\[∆Vol = 0.5 \left[(∑Q)_t + (∑Q)_{t+∆t}\right]∆t\]</div>
 <p>The conduit surface area (A<sub>store</sub>) depends on the flow condition within the conduit as follows:</p>
 <blockquote>
 <div><p>1. Under normal conditions the pipe surface area equals half of the conduit length times the average of the top width at the end and mid points of the conduit.
@@ -772,13 +772,13 @@ A relaxation factor Ω is used to combine the new flow estimate Q<sub>new</sub>
 according to the equation:</p>
 <blockquote>
 <div><div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-14">
-<span class="eqno">(1.25)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-14" title="Link to this equation"></a></span>\[Q_{new} = (1−Ω) Q_{last} +Ω Q{new}\]</div>
+<span class="eqno">(1.46)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-14" title="Link to this equation"></a></span>\[Q_{new} = (1−Ω) Q_{last} +Ω Q{new}\]</div>
 </div></blockquote>
 <p>4. The equation for H<sub>t+∆t</sub>is solved again for heads using Q<sub>new</sub>.
 As with discharge, this new solution for head, H<sub>new</sub> is weighted with H<sub>last</sub> to produce an updated estimate for heads:</p>
 <blockquote>
 <div><div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-15">
-<span class="eqno">(1.26)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-15" title="Link to this equation"></a></span>\[H_{new} = (1−Ω) H_{last} +Ω H_{new}\]</div>
+<span class="eqno">(1.47)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-15" title="Link to this equation"></a></span>\[H_{new} = (1−Ω) H_{last} +Ω H_{new}\]</div>
 </div></blockquote>
 <ol class="arabic simple" start="5">
 <li><p>If H<sub>new</sub> is close enough to H<sub>last</sub> then the process stops with Q<sub>new</sub> and H<sub>new</sub> as the solution for time t + Δt.
@@ -815,17 +815,17 @@ surcharged nodes after a flow solution is reached.</p></li>
 </ul>
 </div></blockquote>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-16">
-<span class="eqno">(1.27)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-16" title="Link to this equation"></a></span>\[Σ\left[Q + \frac{∂Q}{∂H}∆H\right] = 0\]</div>
+<span class="eqno">(1.48)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-16" title="Link to this equation"></a></span>\[Σ\left[Q + \frac{∂Q}{∂H}∆H\right] = 0\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>∆𝐻 = node head that must be made to achieve flow continuity.</p>
 </div></blockquote>
 <p>Solving for ∆𝐻:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-17">
-<span class="eqno">(1.28)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-17" title="Link to this equation"></a></span>\[∆H = \frac {∑Q}{∑∂Q⁄∂H}\]</div>
+<span class="eqno">(1.49)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-17" title="Link to this equation"></a></span>\[∆H = \frac {∑Q}{∑∂Q⁄∂H}\]</div>
 <p>where:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-18">
-<span class="eqno">(1.29)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-18" title="Link to this equation"></a></span>\[\frac {∂H}{∂Q} = \frac {−g \bar{A} ∆t⁄L}{∂H 1 + ∆Q_{friction} + ∆Q_{losses}}\]</div>
+<span class="eqno">(1.50)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-18" title="Link to this equation"></a></span>\[\frac {∂H}{∂Q} = \frac {−g \bar{A} ∆t⁄L}{∂H 1 + ∆Q_{friction} + ∆Q_{losses}}\]</div>
 <p>∂H/∂Q has a negative sign because when evaluating ∑𝑄 because the flow directed out of a node is
 considered negative while flow into the node is positive.
 If surcharge (return flow to the surface water) is computed, the pressure head is considered in the total node adjustment for the successive
@@ -842,7 +842,7 @@ The inlet discharge is imposed as surface water boundary conditions (BC) and is 
 The following equations (Johnson and Fred, 1984) are used:</p>
 <p>Weir Flow:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-19">
-<span class="eqno">(1.30)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-19" title="Link to this equation"></a></span>\[𝑄_w = 𝐶𝐿𝐻^m\]</div>
+<span class="eqno">(1.51)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-19" title="Link to this equation"></a></span>\[𝑄_w = 𝐶𝐿𝐻^m\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>Q<sub>w</sub> = weir discharge</p>
@@ -853,7 +853,7 @@ The following equations (Johnson and Fred, 1984) are used:</p>
 </div></blockquote>
 <p>Orifice Flow:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-20">
-<span class="eqno">(1.31)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-20" title="Link to this equation"></a></span>\[Q_o = C_d A \sqrt{2 g H}\]</div>
+<span class="eqno">(1.52)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-20" title="Link to this equation"></a></span>\[Q_o = C_d A \sqrt{2 g H}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>Q<sub>o</sub> = orifice flow rate at depth H</p>

@@ -76,12 +76,12 @@ This reveals the ultimate disposition of inflow volume either as a loss to the s
 channel storage, or as outflow off the grid system.
 The inflow volume dictates the area of inundation and will control model calibration to available post flood data if replicating an historical storm.
 
-.. image:: img/Chapter1/Chapte002.jpg
+.. image:: img/Chapter1/cha1001.jpg
 
 *Figure 1.
 Physical Processes Simulated by FLO-2D.*
 
-.. image:: img/Chapter1/Chapte003.jpg
+.. image:: img/Chapter1/cha1003.jpg
 
 *Figure 2.
 Channel – Floodplain Interface.*
@@ -118,7 +118,7 @@ The user can specify the temporal and spatial output detail including the outflo
 display of the flood progression over the grid system.
 After the preliminary FLO-2D runs, the user can apply the output options to determine required level of output detail.
 
-.. image:: img/Chapter1/Chapte004.png
+.. image:: img/Chapter1/cha1004.png
 
 *Figure 3.
 FLO-2D Flow Chart.*

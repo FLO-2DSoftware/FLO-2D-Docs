@@ -7,7 +7,7 @@ FLO-2D is a simple volume conservation model.
 It moves the flood volume around on a series of tiles for overland flow or through stream segments for channel routing.
 Floodwave progression over the flow domain is controlled by topography and resistance to flow.
 Flood routing in two dimensions is accomplished through a numerical integration of the equations of motion and the conservation of fluid volume for
-either a water flood or a hyperconcentrated sediment flow.
+either a water flood or a hyper-concentrated sediment flow.
 A discussion of the governing equations follows.
 
 Governing Equations
@@ -158,7 +158,7 @@ This simplifies and reduces the number of steps in the solution algorithm.
 Each direction is visited only once during a sweep of the grid system domain and involves two grid elements whereas a grid element index requires each
 grid element to be visited (Figure 4).
 
-.. image:: img/Chapter2/Chapte002.jpg
+.. image:: img/Chapter2/cha2002.jpg
 
 *Figure 4.
 Flow Direction.*
@@ -181,7 +181,7 @@ To summarize, the solution algorithm incorporates the following steps:
 
     4. The predicted diffusive wave velocity for the current timestep is used as a seed in the Newton-Raphson method to solve the full dynamic wave equation
        for the velocity.
-       It should be noted that for hyperconcentrated sediment flows such as mud and debris flows, the velocity calculations include the additional viscous
+       It should be noted that for hyper-concentrated sediment flows such as mud and debris flows, the velocity calculations include the additional viscous
        and yield stress terms.
 
     5. The discharge Q across the boundary is computed by multiplying the velocity by the cross-sectional flow area.
@@ -211,7 +211,7 @@ To summarize, the solution algorithm incorporates the following steps:
 
     7. The simulation progresses with increasing timesteps using a timestep algorithm until the stability criteria are exceeded again.
 
-.. image:: img/Chapter2/Chapte003.jpg
+.. image:: img/Chapter2/cha2003.jpg
 
 *Figure 5.
 Discharge Flux across Grid Element Boundaries.*
@@ -238,7 +238,7 @@ All the inflow volume, outflow volume, change in storage or loss from the grid s
 conservation is computed.
 Results are written to the output files or to the screen at user specified output time intervals.
 
-.. image:: img/Chapter2/Chapte001.jpg
+.. image:: img/Chapter2/cha2001.jpg
 
 *Figure 6.
 FLO-2D Stability Criteria Flow Chart.*
@@ -417,12 +417,12 @@ Unreasonable maximum velocities are easy to identify because the VELTIM_x.OUT fi
 The first several reported maximum velocities should not be significantly greater than the rest of the file as in the case of node 4887 in the
 VELTIMFP.OUT file below.
 
-.. image:: img/Chapter2/Chapte004.jpg
+.. image:: img/Chapter2/cha2004.jpg
 
 *Figure 7.
 Numerical Surging in a Channel Element Hydrograph.*
 
-.. image:: img/Chapter2/Chapte005.jpg
+.. image:: img/Chapter2/cha2005.jpg
 
 *Figure 8.
 File Sample VELTIMFP.OUT.*
@@ -528,7 +528,7 @@ The FLO-2D model has an explicit numerical scheme that exchanges flow with conti
 shallow flows to completely drain an element of volume if the outflow exceeds the inflow plus storage.
 This may occur more frequently with hydraulic structure inflow nodes.
 
-.. image:: img/Chapter2/Chapte003.jpg
+.. image:: img/Chapter2/cha2006.jpg
 
 *Figure 9.
 TOL Definition.*

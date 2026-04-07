@@ -99,7 +99,7 @@ Typical overland flow roughness values (Manning’s n coefficients) are shown in
 
     <br><br>
 
-.. image:: img/Chapter4/Chapte002.png
+.. image:: img/Chapter4/cha4002.png
 
 *Figure 34.
 Overland Flow Routing Subroutine Flow Chart.*
@@ -123,7 +123,7 @@ It will also assign minimum curb elevations to the floodplain elevations outside
 For more street editing options and details see the GDS manual or the street editing white paper.
 
 
-.. image:: img/Chapter4/Chapte100.png
+.. image:: img/Chapter4/cha4100.png
 
 *Figure 35.
 Editing Grid Elements to Represent Streets.*
@@ -152,7 +152,7 @@ The unique attributes of this routine to improve shallow flow runoff are:
 
 For a complete discussion of this grid element rating table stage-volume tool, refer to the GDS manual.
 
-.. image:: img/Chapter4/Chapte049.png
+.. image:: img/Chapter4/cha4049.png
 
 *Figure 36.
 Stage-Volume Rating Table for Assigning Flow Depths.*
@@ -195,7 +195,7 @@ Each bank can have a unique elevation.
 If the two bank elevations are different in the CHAN.DAT file, the model automatically splits the channel into two elements even if the channel would
 fit into one grid element.
 
-.. image:: img/Chapter4/Chapte001.png
+.. image:: img/Chapter4/cha4001.png
 
 *Figure 37.
 Channel Extension Over Several Grid Elements.*
@@ -277,7 +277,7 @@ Weir flow occurs until the tailwater depth is 85% of the headwater depth above a
 using the difference in water surface elevation.
 Levee overtopping will not cause levee failure unless the failure or breach option is invoked.
 
-.. image:: img/Chapter4/Chapte101.png
+.. image:: img/Chapter4/cha4101.png
 
 *Figure 38.
 Levees are Depicted in Red and the River in Blue in the GDS Program.*
@@ -302,7 +302,7 @@ Five levels of freeboard deficit are reported:
 
 The levee deficit can be displayed graphically in both MAPPER Pro and MAXPLOT (Figure 39).
 
-.. image:: img/Chapter4/Chapte003.png
+.. image:: img/Chapter4/cha4003.png
 
 *Figure 39.
 Levee Freeboard Deficit Plot Using MAXPLOT.*
@@ -329,12 +329,12 @@ time.
 Additional output files that define the breach hazard include the time-to-flow-depth output files that report the time to the maximum flow depth, the
 time to one-foot flow depth and time to two-foot flow depth, and deflood time which are useful for delineating evacuation routes.
 
-.. image:: img/Chapter4/Chapte102.png
+.. image:: img/Chapter4/cha4102.png
 
 *Figure 40.
 Example of Levee Breach Urban Flooding.*
 
-.. image:: img/Chapter4/Chapte103.png
+.. image:: img/Chapter4/cha4103.png
 
 *Figure 41.
 Example of a Proposed Domestic Water Supply Reservoir Breach Failure.*
@@ -399,12 +399,12 @@ and the rectangular breach transitions to a trapezoidal channel (Figure 43).
 The scour of the trapezoidal bed and sides can be non-uniform and controlled by user input.
 The breach continues to widen, and the breach width will expand to other grid elements if necessary.
 
-.. image:: img/Chapter4/Chapte004.jpg
+.. image:: img/Chapter4/cha4004.jpg
 
 *Figure 42.
 Dam Breach Piping Failure.*
 
-.. image:: img/Chapter4/Chapte005.jpg
+.. image:: img/Chapter4/cha4005.jpg
 
 *Figure 43.
 Dam Breach Channel Development.*
@@ -437,7 +437,7 @@ The dam geometry parameters (Figure 44) associated with a breach erosion failure
 
         Maximum Breach Width
 
-.. image:: img/Chapter4/Chapte104.png
+.. image:: img/Chapter4/cha4104.png
 
 *Figure 44.
 Breach Failure Geometry. (Teton Dam Failure 1976 USBR).*
@@ -533,7 +533,7 @@ The general approach to the applying the storm drain component is:
 
     - User defines the storm drain geometry in the GDS dialog box.
 
-.. image:: img/Chapter4/Chapte105.png
+.. image:: img/Chapter4/cha4105.png
 
 *Figure 45.
 Storm Drain Layout in the GDS with a Background Image.*
@@ -575,7 +575,7 @@ Each section has a length of one-half the grid element side or diagonal.
 A grid element may contain one or more streets and the streets may intersect.
 Street roughness values, street widths, elevations and curb heights can be modified on a grid element or street section basis in the GDS program.
 
-.. image:: img/Chapter4/Chapte106.png
+.. image:: img/Chapter4/cha4106.png
 
 *Figure 46.
 Streets Depicted in Green in the GDS Program.*
@@ -630,12 +630,12 @@ Maximum Allowable ARF Values.*
 
 A grid element of 10 ft will thereby have at least 15 square ft of surface area.
 
-.. image:: img/Chapter4/Chapte006.jpg
+.. image:: img/Chapter4/cha4006.jpg
 
 *Figure 47.
 ARF Assignments for Buildings with Walls, Storm Drain and Background Image.*
 
-.. image:: img/Chapter4/Chapte007.jpg
+.. image:: img/Chapter4/cha4007.jpg
 
 *Figure 48.
 Color Depiction of ARF and WRF Factors.*
@@ -644,12 +644,12 @@ Two building options are rainfall runoff from building roofs and building collap
 Rainfall can collect on building roofs using levees to represent parapet walls and be routed to downspouts represented by hydraulic structure rating
 curves (Figure 49 and Figure 50).
 
-.. image:: img/Chapter4/Chapte008.jpg
+.. image:: img/Chapter4/cha4008.jpg
 
 *Figure 49.
 Roof Rainfall Runoff Routed to a Downspout.*
 
-.. image:: img/Chapter4/Chapte009.jpg
+.. image:: img/Chapter4/cha4009.jpg
 
 *Figure 50.
 Roof Downspout and Parapet Walls for Roof Storage.*
@@ -661,7 +661,7 @@ flood storage.
 The building collapse routine is triggered by assigning grid element building vulnerability curves in BUILDING_COLLAPSE.DAT or by assigning a negative
 ARF values for either a totally blocked or partially blocked grid element.
 
-.. image:: img/Chapter4/Chapte108.png
+.. image:: img/Chapter4/cha4108.png
 
 *Figure 51.
 Building Collapse Vulnerability Curves.*
@@ -710,7 +710,7 @@ The roof runoff in dense urban areas can constitute a significant percentage of 
 volume.
 The building ARF values are in addition to the RTIMP impervious surface infiltration assignment.
 
-.. image:: img/Chapter4/Chapte107.png
+.. image:: img/Chapter4/cha4107.png
 
 *Figure 52.
 Flooding Replicated from NEXRAD Data near Tucson, Arizona.*
@@ -1222,7 +1222,7 @@ The UDFCD (2008) has recommended Horton parameters based on the NRCS hydrologic 
 *Table 9.
 Horton Infiltration Parameters.*
 
-.. image:: img/Chapter4/Chapte109.png
+.. image:: img/Chapter4/cha4109.png
 
 Evaporation
 ----------------
@@ -1252,7 +1252,7 @@ No overland sheet flow is exchanged between grid elements if both elements have 
 The gully geometry is defined by a maximum depth, width and flow roughness.
 The multiple channel attributes can be spatially variable on the grid system and can be assigned or edited graphically with the GDS or QGIS programs.
 
-.. image:: img/Chapter4/Chapte010.jpg
+.. image:: img/Chapter4/cha4010.jpg
 
 *Figure 53.
 Gully on an Alluvial Fan where Overland Sheet Flow is Minimal.*
@@ -1285,7 +1285,7 @@ listed in order in downstream direction.
 The maximum flow depth results of a rainfall watershed model with multiple channels.
 Typically, multiple channels are assigned when observed in aerial photography at the outfalls of subasins as shown in Figure 54.
 
-.. image:: img/Chapter4/Chapte011.jpg
+.. image:: img/Chapter4/cha4011.jpg
 
 *Figure 54.
 Maximum Flow Depth with Multiple Channel Flow Shown as Dark Blue and Red.*
@@ -1392,7 +1392,7 @@ grain size of the bed material (Yang, 1996; O’Brien, 1984).
 The potential armor layer is evaluated for each timestep by grid element when the volume of each size fraction in the exchange layer is assessed
 (Figure 55).
 
-.. image:: img/Chapter4/Chapte012.png
+.. image:: img/Chapter4/cha4012.png
 
 *Figure 55.
 Sediment Transport Bed Exchange Layer.*
@@ -1428,7 +1428,7 @@ The inflow node will have an assigned water inflow hydrograph.
 To avoid excessive scour downstream of the inflow node additional rigid grid elements can be assigned (R-lines in the SED.DAT file).
 These may be positioned for an alluvial fan simulation so that sediment transport equilibrium is achieved at or near the apex.
 
-.. image:: img/Chapter4/Chapte013.png
+.. image:: img/Chapter4/cha4013.png
 
 *Figure 56.
 Inflow Node Locations.*
@@ -1663,7 +1663,7 @@ Table 11 lists the four different categories of hyperconcentrated sediment flows
 This Table 11 was developed from the laboratory data using actual mudflow deposits.
 Some variation in the delineation of the different flow classifications should be expected based on the sample geology.
 
-.. image:: img/Chapter4/Chapte110.png
+.. image:: img/Chapter4/cha4110.png
 
 *Figure 57.
 Classification of Hyperconcentrated Sediment Flows.*
@@ -1680,7 +1680,7 @@ The fluid properties were modeled as a Bingham fluid whose shear stress is a fun
 *Table 11.
 Mudflow Behavior as a Function of Sediment Concentration.*
 
-.. image:: img/Chapter4/Chapte111.png
+.. image:: img/Chapter4/cha4111.png
 
 Takahashi and Tsujimoto (1985) proposed a two-dimensional finite difference model for debris flows based a dilatant fluid model coupled with Coulomb
 flow resistance.
@@ -1816,7 +1816,7 @@ If d/D\ :sub:`i` > 100, inertial forces dominate.
 In the range 30 < d/D\ :sub:`i` < 100 both forces play an important role in the momentum exchange.
 It should be noted that sediment concentration is a critical factor that is not accounted for in this criterion.
 
-.. image:: img/Chapter4/Chapte113.png
+.. image:: img/Chapter4/cha4113.png
 
 *Figure 58.
 Shear Stress as a Function of Shear Rate for Fluid Deformation Models.*
@@ -1943,14 +1943,14 @@ The viscosity (poises) and yield stress (dynes/cm\ :sup:`2`) are shown to be exp
 *Table 13.
 Yield Stress and Viscosity as a Function of Sediment Concentration.*
 
-.. image:: img/Chapter4/Chapte114.png
+.. image:: img/Chapter4/cha4114.png
 
-.. image:: img/Chapter4/Chapte115.png
+.. image:: img/Chapter4/cha4115.png
 
 *Figure 59.
 Dynamic Viscosity of Mudflow Samples versus Volumetric Concentration.*
 
-.. image:: img/Chapter4/Chapte116.png
+.. image:: img/Chapter4/cha4116.png
 
 *Figure 60.
 Yield Stress of Mudflow Samples versus Volumetric Concentration.*
@@ -2127,17 +2127,17 @@ The primary objective in creating the FLO-2D floodway routine was to automate th
 the HEC-RAS floodway delineation.
 Nevertheless, some judgment may still be required when delineating the final floodway boundary.
 
-.. image:: img/Chapter4/Chapte117.png
+.. image:: img/Chapter4/cha4117.png
 
 *Figure 61.
 Floodway Schematic Flow Chart.*
 
-.. image:: img/Chapter4/Chapte014.jpg
+.. image:: img/Chapter4/cha4014.jpg
 
 *Figure 62.
 Flood Delineation Comparison*
 
-.. image:: img/Chapter4/Chapte015.jpg
+.. image:: img/Chapter4/cha4015.jpg
 
 *Figure 63.
 Floodway Delineation Comparison.*
@@ -2168,7 +2168,7 @@ The GDS creates the data for the integration of the models.
 It will generate a subset of the required variables for groundwater simulation (Figure 64).
 Refer the MODFLO-2D manual for more details.
 
-.. image:: img/Chapter4/Chapte118.png
+.. image:: img/Chapter4/cha4118.png
 
 *Figure 64.
 GDS Data Entry for a MODFLOW Groundwater Simulation.*
@@ -2183,7 +2183,7 @@ A group of grid elements together may constitute a large building such as a scho
 In Figure 65 the grey grid elements represent total blockage while the yellow elements are partially blocked.
 The flood flow will go around a totally blocked building.
 
-.. image:: img/Chapter4/Chapte119.png
+.. image:: img/Chapter4/cha4119.png
 
 *Figure 65.
 Buildings with a FLO-2D Grid System and ARF Values Representing Buildings.*
@@ -2211,17 +2211,17 @@ The final product is a set of vulnerability curves based on a maximum depth for 
 This method is similar to BOR (1988) vulnerability curves for mobile homes and buildings with a foundation (Figure 67 and Figure 68).
 Other building types and potential failure mechanisms could be considered to generate a series of vulnerability curves.
 
-.. image:: img/Chapter4/Chapte123.png
+.. image:: img/Chapter4/cha4123.png
 
 *Figure 66.
 Vulnerability Curves. (Pilotti et al., 2016).*
 
-.. image:: img/Chapter4/Chapte125.png
+.. image:: img/Chapter4/cha4125.png
 
 *Figure 67.
 Vulnerability Curve for Mobile Homes (BOR, 1988).*
 
-.. image:: img/Chapter4/Chapte018.jpg
+.. image:: img/Chapter4/cha4018.jpg
 
 *Figure 68.
 Vulnerability Curves for Buildings with a Foundation (BOR, 1988).*
@@ -2231,7 +2231,7 @@ to collapse.
 This line is expressed as a polynomial equation with depth as a function of velocity which predicts the maximum flow depth (threshold depth) above
 which the building is presumed to fail (Figure 69).
 
-.. image:: img/Chapter4/Chapte019.png
+.. image:: img/Chapter4/cha4019.png
 
 *Figure 69.
 Vulnerability Curve for a Masonry Building (Pilotti et al., 2016).*
@@ -2246,7 +2246,7 @@ According to Clausen & Clark (1990) building collapse is not predicted for a vel
 The Clausen & Clark black lines in Figure 70 constitute a range of hydraulic values depending on construction materials and methods, but only the
 lower curve is applied in the FLO-2D model.
 
-.. image:: img/Chapter4/Chapte123.png
+.. image:: img/Chapter4/cha4123.png
 
 *Figure 70.
 Vulnerability Curves for Building Subject to Collapse.*
@@ -2333,7 +2333,7 @@ If the flood flow depth exceeds the threshold depth for grid element 221, the AR
 next computational timestep and the flow can go through the building element.
 The negative ARF values in the ARF.DAT file can be combined during the same simulation with those in the BUILDING_COLLAPSE.DAT file.
 
-.. image:: img/Chapter4/Chapte020.jpg
+.. image:: img/Chapter4/cha4020.jpg
 
 *Figure 71.
 Building (red square) is Flooded from the North Direction.*
@@ -2390,7 +2390,7 @@ The first part of the analysis is to identify the locations for channel overtopp
 100-year flood where the point of avulsion is the first-level bifurcation point.
 The FLO-2D model will be used to estimate the channel overtopping locations.
 
-.. image:: img/Chapter4/Chapte021.png
+.. image:: img/Chapter4/cha4021.png
 
 *Figure 72.
 Alluvial Fan Distributary Channel Definition for Avulsion Analysis (from FCDMC, 2014).*
@@ -2420,12 +2420,12 @@ of inundation is an active alluvial fan area.
 By assigning a representative sediment size fraction for the alluvial fan and the estimated peak discharge, Figure 73 and Figure 74 (provided FCDMC),
 can be used to estimate the channel width and depth.
 
-.. image:: img/Chapter4/Chapte022.png
+.. image:: img/Chapter4/cha4022.png
 
 *Figure 73.
 Channel Forming Depth versus Channel Forming Discharge (from USACE, 1994).*
 
-.. image:: img/Chapter4/Chapte023.jpg
+.. image:: img/Chapter4/cha4023.jpg
 
 *Figure 74.
 Channel Forming or Bank Full Discharge (from USACE, 1994).*
@@ -2508,7 +2508,7 @@ Different grid elements may represent different LID techniques.
 The volume of on-site retention storage can be directly assigned in the LID_VOLUME.DAT file or assessed by multiplying the lot surface area by the
 retained flow depth (TOL value).
 
-.. image:: img/Chapter4/Chapte024.png
+.. image:: img/Chapter4/cha4024.png
 
 *Figure 75.
 Low Impact Development Water Retention.*
@@ -2517,7 +2517,7 @@ Low Impact Development Water Retention.*
 
 http://www.seattle.gov/util/MyServices/DrainageSewer/Projects/GreenStormwaterInfrastructure/Rain Wise)
 
-.. image:: img/Chapter4/Chapte025.jpg
+.. image:: img/Chapter4/cha4025.jpg
 
 *Figure 76.
 FLO-2D Grid Element LID Concept – Spatially Variable TOL Elements (brown).*
@@ -2557,7 +2557,7 @@ In this case, the volume per grid element must be calculated.
 Any grid element with a centroid inside a TOL Spatial polygon will be added to the data file.
 LID_VOLUME.DAT is the required data file so if QGIS writes the data to TOL_SPATIAL.DAT, rename that file.
 
-.. image:: img/Chapter4/Chapte026.jpg
+.. image:: img/Chapter4/cha4026.jpg
 
 *Figure 77.
 LID Volume Tool.*
@@ -2577,7 +2577,7 @@ The typical range for TOL when used for depression storage only is:
 
 The range for spatially variable TOL assignment when LID is added to depression storage for flow depths that may reach 5.0 ft (1.5 m) or higher.
 
-.. image:: img/Chapter4/Chapte027.png
+.. image:: img/Chapter4/cha4027.png
 
 *Figure 78.
 Global TOL.*
@@ -2587,7 +2587,7 @@ At the start of a FLO-2D model, the TOLGLOBAL value is assigned to all the grid 
 This value is superseded by the spatially variable TOL(i) assignment for each grid element listed in the file TOLSPATIAL.DAT (Figure 79).
 This file has the same format as the LID_VOLUME.DAT file.
 
-.. image:: img/Chapter4/Chapte028.jpg
+.. image:: img/Chapter4/cha4028.jpg
 
 *Figure 79.
 Spatially Variable TOL Value Format in TOLSPATIAL.DAT.*
@@ -2597,7 +2597,7 @@ The data is saved to TOLSPATIAL.DAT file with grid element number and a TOL valu
 If there are multiple LID techniques being applied to a given element, then guidelines or a reference table could be developed to assess a composite
 LID TOL value.
 
-.. image:: img/Chapter4/Chapte029.jpg
+.. image:: img/Chapter4/cha4029.jpg
 
 *Figure 80.
 FLO-2D Plugin Spatially Variable TOL Assignment.*
@@ -2610,7 +2610,7 @@ The model has 4 inches of total rainfall distributed in a 2 hr storm.
 displays areas of retention with the volume (ft3) identified.
 This is volume that simulated flow into a cistern or pervious pavement or was stored in a garden pond.
 
-.. image:: img/Chapter4/Chapte030.jpg
+.. image:: img/Chapter4/cha4030.jpg
 
 *Figure 81.
 LID Retention Volume and Depth Grid Elements.*
@@ -2618,17 +2618,17 @@ LID Retention Volume and Depth Grid Elements.*
 The FLO-2D graphic display of rainfall on grid are shown on Figure 82 - Figure 84.
 The early results show no depth on grid for the LID cases.
 
-.. image:: img/Chapter4/Chapte031.jpg
+.. image:: img/Chapter4/cha4031.jpg
 
 *Figure 82.
 Early Rainfall No LID.*
 
-.. image:: img/Chapter4/Chapte032.jpg
+.. image:: img/Chapter4/cha4032.jpg
 
 *Figure 83.
 Early Rainfall with LID Volume.*
 
-.. image:: img/Chapter4/Chapte033.jpg
+.. image:: img/Chapter4/cha4033.jpg
 
 *Figure 84.
 Early Rainfall with TOL Spatial Depth.*
@@ -2637,7 +2637,7 @@ The SUMMARY.OUT (Figure 85) file reveals that about 1.4 acre-ft were retained in
 project area.
 It is also noted that the TOL volume changed for the TOL Spatial Volume.
 
-.. image:: img/Chapter4/Chapte034.jpg
+.. image:: img/Chapter4/cha4034.jpg
 
 *Figure 85.
 Examples of SUMMARY.OUT File Test Cases.*
@@ -2668,7 +2668,7 @@ Figure 86 displays buildings on a FLO-2D model with 25 ft grid elements.
 In this figure, the buildings may occupy a portion of a grid element, the entire grid element, or multiple grid elements.
 The ARF and WRF values can be assigned automatically using shape file interpolation with the FLO-2D Plugin.
 
-.. image:: img/Chapter4/Chapte035.jpg
+.. image:: img/Chapter4/cha4035.jpg
 
 *Figure 86.
 Buildings on a 25 ft Grid System (red lines indicate walls represented as levees).*
@@ -2698,7 +2698,7 @@ The user can control the drainage direction by adjusting the grid element elevat
 This option requires that IRAINBUILDING = 1 in the RAIN.DAT file (line 1, second variable) be assigned.
 Totally blocked elements are gray (ARF = 1) and Partially Blocked elements are in varying shades of yellow.
 
-.. image:: img/Chapter4/Chapte127.png
+.. image:: img/Chapter4/cha4127.png
 
 *Figure 87.
 Assigned ARF Values to the Buildings.*
@@ -2727,7 +2727,7 @@ There are several assumptions for the rainfall runoff from the buildings:
 The following example project (Figure 88) has a large building on a steep alluvial fan slope to the north (top of the page).
 To simulate runoff from the building to the fan surface IRAINBUILDING = 1.
 
-.. image:: img/Chapter4/Chapte036.jpg
+.. image:: img/Chapter4/cha4036.jpg
 
 *Figure 88.
 Location of a Large Building.*
@@ -2738,7 +2738,7 @@ Figure 89 shows the flooding (maximum depths - dark blue grid elements) piling u
 and flowing to the west to get around the building.
 Along the building south wall, the predicted interior maximum depths are less than the tolerance value (gray cells).
 
-.. image:: img/Chapter4/Chapte128.png
+.. image:: img/Chapter4/cha4128.png
 
 *Figure 89.
 Maximum Flow Depths Inside the Building.*
@@ -2753,12 +2753,12 @@ the building.
 It possible for the flow to leave the building in any direction.
 The building is outlined in red.
 
-.. image:: img/Chapter4/Chapte129.png
+.. image:: img/Chapter4/cha4129.png
 
 *Figure 90.
 Maximum Flow Velocities on the Alluvial Fan.*
 
-.. image:: img/Chapter4/Chapte130.png
+.. image:: img/Chapter4/cha4130.png
 
 *Figure 91.
 Maximum Flow Velocities.*
@@ -2781,17 +2781,17 @@ The roof elevation was assigned as approximately 20 ft higher than the ground el
 This data is enough to simulate rainfall storage on a flat roof.
 This is one of the test simulations.
 
-.. image:: img/Chapter4/Chapte131.png
+.. image:: img/Chapter4/cha4131.png
 
 *Figure 92.
 Project Building Location (in blue oval).*
 
-.. image:: img/Chapter4/Chapte132.png
+.. image:: img/Chapter4/cha4132.png
 
 *Figure 93.
 Building Roof Element Elevation Editing.*
 
-.. image:: img/Chapter4/Chapte037.jpg
+.. image:: img/Chapter4/cha4037.jpg
 
 *Figure 94.
 Grid Element Levee Crest Elevation Editing.*
@@ -2803,7 +2803,7 @@ A sloped roof can be established by modifying the roof elevations.
 Individual grid element elevations can be edited by double clicking a given cell and using the elevation field (Figure 95).
 Grid element elevations can be reset in corners and along the roof borders to establish some cornerstone elevations for further editing.
 
-.. image:: img/Chapter4/Chapte133.png
+.. image:: img/Chapter4/cha4133.png
 
 *Figure 95.
 Grid Element Elevation Editing.*
@@ -2811,7 +2811,7 @@ Grid Element Elevation Editing.*
 To establish a sloped roof, select a line of grid elements between two cornerstone elements with known roof elevations, then choose the street
 elevation editor (Figure 96).
 
-.. image:: img/Chapter4/Chapte038.jpg
+.. image:: img/Chapter4/cha4038.jpg
 
 *Figure 96.
 Roof Element Elevation Editing Command.*
@@ -2820,17 +2820,17 @@ Select the *Elevation Adjustments Tab* shown in Figure 97 below.
 This will activate a dialog box window which will enable a linear slope interpolation between the two selected cornerstone elements (Figure 98).
 Figure 99 displays the roof element elevations prior to interpolation.
 
-.. image:: img/Chapter4/Chapte039.jpg
+.. image:: img/Chapter4/cha4039.jpg
 
 *Figure 97.
 Roof Element Elevation Editing Tab.*
 
-.. image:: img/Chapter4/Chapte134.png
+.. image:: img/Chapter4/cha4134.png
 
 *Figure 98.
 Selecting the Two Cornerstone Grid Elements to Interpolate the Roof Slope.*
 
-.. image:: img/Chapter4/Chapte040.jpg
+.. image:: img/Chapter4/cha4040.jpg
 
 *Figure 99.
 Graphic Display of the Roof Element Elevations Between the Two Cornerstone Cells.*
@@ -2838,7 +2838,7 @@ Graphic Display of the Roof Element Elevations Between the Two Cornerstone Cells
 The *Assign* button will complete the interpolation of the roof cell elevations between the cornerstone elements and save the results as shown in
 Figure 100.
 
-.. image:: img/Chapter4/Chapte041.jpg
+.. image:: img/Chapter4/cha4041.jpg
 
 *Figure 100.
 Completed Roof Element Elevation Slope Interpolation.*
@@ -2886,7 +2886,7 @@ The rating table assignment should begin with zero depth and zero discharge and 
 above orifice equation.
 This data can be entered graphically in the GDS.
 
-.. image:: img/Chapter4/Chapte042.jpg
+.. image:: img/Chapter4/cha4042.jpg
 
 *Figure 101.
 Downspout Hydraulic Structure as Brown Elements in the Upper Right Corner.*
@@ -2895,7 +2895,7 @@ The hydraulic structure editor dialog window for the downspout inlet and outlets
 Note that the downspout inlet and outlet elements do not have to be contiguous.
 Any number of downspouts can be simulated in any location on the building roof.
 
-.. image:: img/Chapter4/Chapte043.jpg
+.. image:: img/Chapter4/cha4043.jpg
 
 *Figure 102.
 Hydraulic Structure Dialog Box with Entered Downspout Data.*
@@ -2936,14 +2936,14 @@ Note that all the roof maximum water surface elevations are equal, but the maxim
 predicted at the downspout element.
 The downspout outlet element 21990 has the same water surface elevation and small depth in both simulations.
 
-.. image:: img/Chapter4/Chapte044.png
+.. image:: img/Chapter4/cha4044.png
 
 *Figure 103.
 Total Rainfall (3 inches) Accumulated on a Flat Roof.*
 
 Cells 22365 and 21990 will be the downspout inlet and outlet respectively
 
-.. image:: img/Chapter4/Chapte135.png
+.. image:: img/Chapter4/cha4135.png
 
 *Figure 104.
 Maximum Flow Depth and Water Surface Elevation on a Sloped Roof.*
@@ -2957,7 +2957,7 @@ Compare this grid element maximum water surface elevation and flow depth in Figu
 overtopped and some rainfall storage is discharged to the ground.
 Any number of parapet wall cells (levee elements and the blocked direction) can be overtopped.
 
-.. image:: img/Chapter4/Chapte136.png
+.. image:: img/Chapter4/cha4136.png
 
 *Figure 105.
 Maximum Flow Depth (Sloped Roof with Parapet wall Being Overtopped).*
@@ -3011,7 +3011,7 @@ The final test simulation combines the sloped roof with a downspout in grid elem
 The inlet (red oval) maximum water surface is lowered by the downspout water discharge as shown in Figure 106.
 The downspout outlet element 21990 (blue oval) has an increased maximum water surface when compared with Figure 104 and Figure 105.
 
-.. image:: img/Chapter4/Chapte137.png
+.. image:: img/Chapter4/cha4137.png
 
 *Figure 106.
 Maximum Flow Depth and Water Surface Elevation.
@@ -3165,14 +3165,14 @@ Gutter Flow
 
 Street gutter flow is defined in the Figure 107 where h = curb height.
 
-.. image:: img/Chapter4/Chapte045.png
+.. image:: img/Chapter4/cha4045.png
 
 *Figure 107.
 Gutter Diagram.*
 
 The gutter flow can be shared in all eight flow directions (Figure 108):
 
-.. image:: img/Chapter4/Chapte046.png
+.. image:: img/Chapter4/cha4046.png
 
 *Figure 108.
 Street and Gutter Flow Diagram.*
@@ -3196,7 +3196,7 @@ Flow from the gutter to the sidewalk inside the gutter element is depicted in Fi
 
    Sidewalk elevation = FPE + H
 
-.. image:: img/Chapter4/Chapte047.png
+.. image:: img/Chapter4/cha4047.png
 
 *Figure 109.
 Flow Distribution Street to Sidewalk.*
@@ -3205,7 +3205,7 @@ Flow from the sidewalk to the gutter inside the gutter element Sidewalk is depic
 
     WSE = FPE + h + FPD; Gutter WSE = FPE + d
 
-.. image:: img/Chapter4/Chapte048.png
+.. image:: img/Chapter4/cha4048.png
 
 *Figure 110.
 Flow Distribution Sidewalk to Street.*
@@ -3220,7 +3220,7 @@ The inflow discharge is initial zero cfs, increases to 10 cfs in 0.1 hrs and ste
 No rainfall or infiltration are simulated.
 Buildings and walls are simulated.
 
-.. image:: img/Chapter4/Chapte049.jpg
+.. image:: img/Chapter4/cha4049.jpg
 
 *Figure 111.
 Gutter Elements with Storm Drain.*
@@ -3231,14 +3231,14 @@ The flow has less spreading between the street and floodplain elements along the
 
 The results without the gutter are shown Figure 112:
 
-.. image:: img/Chapter4/Chapte050.jpg
+.. image:: img/Chapter4/cha4050.jpg
 
 *Figure 112.
 Flow Depth without Gutter*
 
 The gutter flow results are displayed in the Figure 113.
 
-.. image:: img/Chapter4/Chapte051.jpg
+.. image:: img/Chapter4/cha4051.jpg
 
 *Figure 113.
 Flow Depth with Gutter.*
@@ -3256,7 +3256,7 @@ In a FLO-2D flood simulation, the focus is to predict the discharge between two 
 As such, the bridge component is a link between two grid elements (channel or floodplain) and the discharge through the bridge is computed by
 representing the various physical features of the bridge that constrict the flow (see Figure 114).
 
-.. image:: img/Chapter4/Chapte052.jpg
+.. image:: img/Chapter4/cha4052.jpg
 
 *Figure 114.
 Constricted Flow through a Bridge (Tom Imbrigiotta, USGS).*
@@ -3286,7 +3286,7 @@ the bridge that results in an upstream backwater effect.
 This will enable the accurate analysis of bridge constricted floodplain and river reaches that exhibit non-uniform and unsteady flow conditions
 (Figure 115).
 
-.. image:: img/Chapter4/Chapte053.jpg
+.. image:: img/Chapter4/cha4053.jpg
 
 *Figure 115.
 Unsteady Non-Uniform Flow through a Bridge Constriction.*
@@ -3305,33 +3305,33 @@ to flow acceleration through the bridge.
 Five types of subcritical bridge flow are shown in Figure 116 though Figure 120 where the flow depth at the bridge Y\ :sub:`z` required to submerge
 the bridge opening is greater than about 1.1 \* Z (distance from the bed to the bridge low chord) (Chow, 1959 and Hamill, 1999).
 
-.. image:: img/Chapter4/Chapte054.jpg
+.. image:: img/Chapter4/cha4054.jpg
 
 *Figure 116.
 Type 1 Flow: Free surface, subcritical flow*
 
         (Z > Yu > Yd).
 
-.. image:: img/Chapter4/Chapte055.jpg
+.. image:: img/Chapter4/cha4055.jpg
 
 *Figure 117.
 Type 2 Flow: Inlet submerged, outlet free surface, partially full, sluice gate flow*
 
         (Yu > Z > Yd).
 
-.. image:: img/Chapter4/Chapte056.jpg
+.. image:: img/Chapter4/cha4056.jpg
 
 *Figure 118.
 Type 3 Flow: Inlet submerged, outlet submerged, opening full, sluice gate-orifice transition flow* (Yu > Z > Yd).
 
-.. image:: img/Chapter4/Chapte057.jpg
+.. image:: img/Chapter4/cha4057.jpg
 
 *Figure 119.
 Type 4 Flow: Inlet submerged, outlet submerged, orifice flow*
 
         (Yu > Yd > Z).
 
-.. image:: img/Chapter4/Chapte058.jpg
+.. image:: img/Chapter4/cha4058.jpg
 
 *Figure 120.
 Type 5 Flow: Inlet submerged, outlet submerged, deck overflow*
@@ -3351,7 +3351,7 @@ The transition between sluice gate flow and orifice flow is unique to the bridge
 blockage.
 Based on project applications, sluice gate flow may persist until the upstream flow depth is 1.5 times or greater than the depth to the low chord.
 
-.. image:: img/Chapter4/Chapte059.jpg
+.. image:: img/Chapter4/cha4059.jpg
 
 *Figure 121.
 Pressure Flow with the Water Surface above the Low Chord Elevation*
@@ -3379,7 +3379,7 @@ An assumption of weir flow to represent overdeck discharge can only be an approx
 
     - Guardrail supports causing blockage and spatially variable flow; • Debris blockage.
 
-.. image:: img/Chapter4/Chapte060.jpg
+.. image:: img/Chapter4/cha4060.jpg
 
 *Figure 122.
 Bridge Deck Overflow with Guardrail*
@@ -3413,7 +3413,7 @@ and tailwater water elevation in the outflow node.
 In the case where a bridge is located on the floodplain (such as a wash) spanning several elements, an inflow and outflow node (or multiple nodes) are
 still assigned, and the two bridge cross-sections are required.
 
-.. image:: img/Chapter4/Chapte061.jpg
+.. image:: img/Chapter4/cha4061.jpg
 
 *Figure 123.
 FLO-2D Model Bridge Inflow and Outflow Elements Separated Grid Elements.*
@@ -3495,7 +3495,7 @@ where:
 
     A\ :sub:`1`, R\ :sub:`1` and A\ :sub:`2`, R\ :sub:`2` are the cross-section flow areas and hydraulic radiuses respectively (Figure 124).
 
-.. image:: img/Chapter4/Chapte138.png
+.. image:: img/Chapter4/cha4138.png
 
 *Figure 124.
 Conceptual Bridge Plan and Profile with River Cross-sections.*
@@ -3574,7 +3574,7 @@ where:
 
     Y_u – Y + V_u^2/2g
 
-.. image:: img/Chapter4/Chapte062.jpg
+.. image:: img/Chapter4/cha4062.jpg
 
 *Figure 125.
 Stage-Discharge Variation between Free Surface Flow and Bridge Flow (Hamill, 1999; p.53).*
@@ -3584,7 +3584,7 @@ through the bridge will vary from approximately Z/2 to the downstream tailwater 
 Figure 126 indicates a range of 0.27 to 0.50 for the sluice gate coefficient as a function of the low chord submergence, however, Hamill (1999, Figure
 2.11, p.55) indicates that the coefficient can approach 0.6 depending on the bridge configuration.
 
-.. image:: img/Chapter4/Chapte063.jpg
+.. image:: img/Chapter4/cha4063.jpg
 
 *Figure 126.
 Sluice Gate Discharge Coefficient as Function of the Low Chord Submergence (FHA, 2012).*
@@ -3649,7 +3649,7 @@ A value of 0.8 is recommended for a typical two- to four-lane concrete girder br
 Hamill (1999) plots data from actual bridge flow and other sources to demonstrate the variation of the coefficient of discharge with submergence
 (Figure 127).
 
-.. image:: img/Chapter4/Chapte064.jpg
+.. image:: img/Chapter4/cha4064.jpg
 
 *Figure 127.
 Orifice Coefficient of Discharge as Function of Low Chord Submergence (Hamill, 1999).*
