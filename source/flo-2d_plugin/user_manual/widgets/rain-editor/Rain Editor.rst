@@ -189,14 +189,17 @@ Import Realtime Rainfall
 
 .. image:: ../../img/Rain-Editor/rained014.png
 
-The Plugin requests the directory where the NEXRAD data is stored.
+For the ASCII raster method, the Rainfall import tool is initiated by selecting a 
+single `*.asc` file, but it will automatically load all `*.asc` files available in the directory.
 
-3. Navigate to the correct directory and click Select Folder.
+3. Navigate to the correct directory and select the first file.
 
 .. image:: ../../img/Rain-Editor/rained015.png
   
 
-4. Click OK once the process is complete.
+4. The progress bar will indicate that the process is running and since `*.asc` files do not have a know projection,
+   QGIS is set to default to the Project Coordinate System. Once the process is complete a Blue QGIS message will appear and 
+   the Process Complete is written to the FLO-2D Log Message Panel.
 
 .. image:: ../../img/Rain-Editor/rained016.png
 
@@ -204,12 +207,14 @@ The Plugin requests the directory where the NEXRAD data is stored.
 Export the rainfall data
 -------------------------
 
-1. Click Export the Realtime Rainfall Data.  There are 3 Options.  The recommended option is hdf5 due to the size
-   differences in the data files.
+**`*.DAT` File Method**
+
+1. Click Export data (`*.DAT`) files button and Select the Output Location.  The RAINCELL.DAT file will be exported with the 
+   project. The New RAINCELL data file truncates Zero Rainfall from the dataset. It will be smaller than the Old RAINCELL file.
 
 .. image:: ../../img/Rain-Editor/rained017.png
   
-2. Name the storm and click Save.
+1. Name the storm and click Save.
 
 .. image:: ../../img/Rain-Editor/rained018.png
 
@@ -218,6 +223,8 @@ Export the rainfall data
    that is close to 1 gigabyte.  HDF5 files are orders of magnitude smaller and in general load faster.
 
    .. image:: ../../img/Rain-Editor/raincell001.png
+
+**`*.HDF5` File Method** (Recommended for Realtime Rainfall)
 
 
 .. |rained024| image:: ../../img/Rain-Editor/rained024.png
