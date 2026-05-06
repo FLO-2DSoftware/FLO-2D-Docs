@@ -152,13 +152,13 @@ Line 1: 9/9/2013 04:05 9/9/2013 23:55 5 239
 
 Line 1: Start Time, End Time, Time Interval, \*.asc File Count
 
-.. important:: Line 2 of the \*.rfc isn’t necessary.
+.. important:: Line 2 of the \*.rfc isn’t necessary.  It was required for GDS processing.  QGIS loads all files and does not require the list of files.
 
                The Rainfall calculator will use all \*.ASC files in the project directory.
                Make sure they are named in ascending order by time.
 
                Time = 0 is not necessary.
-               The engine will start the simulation at time and rainfall = zero.
+               The FLO-2D engine (FLOPRO.EXE) will start the simulation at time and rainfall = zero.
                The rainfall data will interpolate from time = 0 rainfall = 0 to the first interval.
 
 .. image:: ../../img/Rain-Editor/rained010.png
@@ -207,24 +207,42 @@ single `*.asc` file, but it will automatically load all `*.asc` files available 
 Export the rainfall data
 -------------------------
 
-**`*.DAT` File Method**
+.. important::
+
+   RAINCELL.DAT is an ASCII file, while RAINCELL.HDF5 is a compressed binary format.
+
+   For large projects, ASCII rainfall files can reach several gigabytes in size. Even the
+   Self Help Kit produces a file approaching 1 GB.
+
+   HDF5 files are significantly smaller and generally provide faster load times.
+
+   .. image:: ../../img/Rain-Editor/raincell001.png
+
+**\*.DAT File Method** (Older Method)
 
 1. Click Export data (`*.DAT`) files button and Select the Output Location.  The RAINCELL.DAT file will be exported with the 
    project. The New RAINCELL data file truncates Zero Rainfall from the dataset. It will be smaller than the Old RAINCELL file.
 
 .. image:: ../../img/Rain-Editor/rained017.png
   
-1. Name the storm and click Save.
+2. Wait for the data to export.
+   
+3. This dialog shows that the `RAINFALL.DAT` and `RAINCELL.DAT` files were exported.
 
 .. image:: ../../img/Rain-Editor/rained018.png
 
-.. Important::  RAINCELL.DAT is an ascii file.  RAINCELL.HDF5 is a compressible database file.  The file size of a
-   large project can be many gigabytes of data if store in ascii format.  Even the self help kit results in a file
-   that is close to 1 gigabyte.  HDF5 files are orders of magnitude smaller and in general load faster.
+**\*.HDF5 File Method** (Recommended for Realtime Rainfall)
 
-   .. image:: ../../img/Rain-Editor/raincell001.png
+1. Click Export data (`*.HDF5`) files button and Select the Output Location.  The RAINCELL.DAT file will be exported with the 
+   project. The New RAINCELL data file truncates Zero Rainfall from the dataset. It will be smaller than the Old RAINCELL file.
 
-**`*.HDF5` File Method** (Recommended for Realtime Rainfall)
+.. image:: ../../img/Rain-Editor/rained017a.png
+  
+2. Wait for the data to export.
+   
+3. This dialog shows that the `RAINFALL.DAT` and `RAINCELL.DAT` files were exported.
+
+.. image:: ../../img/Rain-Editor/rained018.png
 
 
 .. |rained024| image:: ../../img/Rain-Editor/rained024.png
