@@ -5,7 +5,7 @@ Breach Hydrograph Tool
 
 .. image:: ../../img/Buttons/control006.png
 
-The Breach Hydrograph Tool was developed to estimate one of the most critical steps in hypothetical tailings and water dam break studies:
+The Breach Hydrograph Tool was developed to estimate one of the most critical steps in hypothetical tailings and water dam breach studies:
 generating a defensible outflow hydrograph. The tool focuses on water and tailings dams and implements commonly
 accepted empirical and statistical approaches for estimating peak discharge, released volume, average breach width, and
 sediment load based on geometric and field data. The tool is fully integrated with the FLO-2D Gila plugin,
@@ -16,7 +16,7 @@ Automatic Generation of Computational Domain
 --------------------------------------------
 
 The first functionality of the Breach Hydrograph Tool is to automatically generate a computational domain for the dam
-break study, requiring four input parameters:
+breach study, requiring four input parameters:
 
 - Centerline
 - Buffer
@@ -29,7 +29,7 @@ Figure 1 - Automatic Generation of Computational Domain
 
 .. note:: The computational domain may be defined in advance using the Grid Editor.
    This tool includes an automatic option to generate a domain specifically
-   for dam-break simulations, but it is not required.
+   for dam-breach simulations, but it is not required.
 
 The centerline is used to define the downstream channel or the potential path of the flood wave,
 while the buffer defines the width of the computational domain to ensure that all potential flooding areas are included in the analysis.
@@ -47,14 +47,14 @@ to ensure that critical areas are included and that the model runs efficiently.
    + 2.648 \times 10^{-1} V_{\max}
    + 6.737
 
-Figure 2 - Demonstration of the centerline and buffer used to generate the computational domain for a dam break study
+Figure 2 - Demonstration of the centerline and buffer used to generate the computational domain for a dam breach study
 
 .. image:: ../../img/Breach-Hydrograph-Tool/bht019.jpg
 
 The elevation raster provides the topography required for hydraulic modeling, while the roughness raster defines the
 spatial distribution of surface roughness coefficients that control flow resistance and flood wave propagation.
 Each case study may require a finer DEM resolution to capture critical terrain features such as channels, levees, and road embankments.
-However, for medium to large dams, a 30 m resolution DEM is often adequate for dam break studies.
+However, for medium to large dams, a 30 m resolution DEM is often adequate for dam breach studies.
 Surface roughness values can be estimated from land-use and land-cover data. The freely available QGIS Manning’s Roughness Generator plugin,
 based on ESA WorldCover 2021, has proven to be a reliable and consistent source for deriving spatially distributed Manning’s n values.
 
@@ -81,13 +81,13 @@ often triggered by extreme hydrologic events. Even for small dams, hypothetical 
 evaluate downstream risk, classify potential damage, and support emergency planning under dam-safety regulations.
 
 Water dam breach analyses are uncertain because failure geometry, breach development rate, and reservoir conditions at
-the time of failure are rarely known. As a result, hypothetical dam-break studies rely on empirical relationships
+the time of failure are rarely known. As a result, hypothetical dam breach studies rely on empirical relationships
 and scenario-based assumptions to estimate peak discharge, released volume, and breach hydrographs.
 These parameters must then be routed downstream to determine flood arrival times, inundation extent, and potential
 exposure of infrastructure and population.
 
 Although several hydrologic and hydraulic models exist to simulate downstream flooding, generating defensible breach
-hydrographs in a consistent and reproducible way remains one of the most challenging steps in water dam break studies.
+hydrographs in a consistent and reproducible way remains one of the most challenging steps in water dam breach studies.
 Differences in assumed breach width, failure time, or reservoir level can lead to large variations in predicted flood impacts.
 
 The Breach Hydrograph Tool addresses this need by providing a structured framework for generating hypothetical
