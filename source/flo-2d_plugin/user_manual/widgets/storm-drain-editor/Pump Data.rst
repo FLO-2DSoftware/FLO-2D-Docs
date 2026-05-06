@@ -5,27 +5,28 @@ The Storm Drain Editor can define pump data.
 
 .. image:: ../../img/Storm-Drain/pump001.png
 
-Pump discharge is defined by pump types.  An Ideal pump is not limited by any tabular control but all other pump types
-are controlled by pump tables that are defined below.
+Pump discharge is defined by pump types. An Ideal pump is not limited by a tabular control curve. All other pump
+types are controlled by pump curves that are defined in the Pump Data Group.
 
 Ideal Pump
-----------
+-----------
 
-The Ideal pump type transfer all inflow that is collected at
-the inlet node. The pump must be the only outlet link connected to the inlet node.
+The Ideal pump transfers all inflow collected at the inlet node. The pump must be the only outlet link connected
+to the inlet node.
 
-1. To set an ideal pump, use the Find Object or the Info Tool to open the Pump Properties docked widget for the desired pump. Set the Curve to Ideal.
+1. To set an Ideal pump, use the Find Object or the Info Tool to open the Pump Properties docked widget for the desired pump. Set the Curve to Ideal.
 
 .. image:: ../../img/Storm-Drain/pump006.png
 
 Pump Type 1
 -------------
 
-Pump type 1 is a pump that is designed for an offline wet well. When the flow increases incrementally with the volume
-of the wet well. The discharge in cubic feet per second (cfs) or cubic meters per second (cms) increases in steps
-or incrementally as the volume in cubic feet (ft³) or cubic meters (m³) increases.
+Pump Type 1 is designed for an offline wet well system. The discharge in cubic feet per second (cfs) or cubic meters
+per second (cms) increases in stepped increments as the wet well volume in cubic feet (ft³) or cubic meters (m³)
+increases.
 
-Offline means the inlet node cannot be connected to any other link than the pump link.
+An offline wet well system stores flow in a separate wet well structure connected to the storm drain system. The
+pump removes water from the wet well and discharges it to another location in the system.
 
 1. Define the Pump Type and data using the Pump Data Group and the FLO-2D Table Editor.
 
@@ -38,8 +39,8 @@ Offline means the inlet node cannot be connected to any other link than the pump
 Pump Type 2
 -------------
 
-Pump Type 2 is a pump that is designed for an inline system.  It has a discharge (cfs or cms) to depth (ft or m)
-relationship where the flow increases as the depth at the inlet node in a stepped pattern.
+Pump Type 2 is designed for an inline system. It uses a discharge (cfs or cms) versus depth (ft or m) relationship
+where the flow increases in stepped increments as the inlet node depth increases.
 
 1. Define the Pump Type and data using the Pump Data Group and the FLO-2D Table Editor.
 
@@ -50,11 +51,11 @@ relationship where the flow increases as the depth at the inlet node in a steppe
 .. image:: ../../img/Storm-Drain/pump007.png
 
 Pump Type 3
----------------
+-------------
 
-Pump type 3 is a pump that is designed for an inline system.  It has a head (ft or m) to discharge (cfs or cms)
-relationship that varies continuously.  It is not a stepped pattern.  This pump flow will increase as the head
-difference between the inlet and the outlet nodes decreases.
+Pump Type 3 is designed for an inline system. It uses a head (ft or m) versus discharge (cfs or cms) relationship
+that varies continuously rather than in stepped increments. The pump flow increases as the head difference between
+the inlet and outlet nodes decreases.
 
 1. Define the Pump Type and data using the Pump Data Group and the FLO-2D Table Editor.
 
@@ -65,10 +66,10 @@ difference between the inlet and the outlet nodes decreases.
 .. image:: ../../img/Storm-Drain/pump007.png
 
 Pump Type 4
---------------
+-------------
 
-Pump type 4 is an inline pump.  It has a discharge (cfs or cms) to depth (ft or m) relationship where the flow
-increases as the depth increases.  It is a continuous increase not a stepped increase.
+Pump Type 4 is designed for an inline system. It uses a discharge (cfs or cms) versus depth (ft or m) relationship
+where the flow increases continuously as the inlet node depth increases.
 
 1. Define the Pump Type and data using the Pump Data Group and the FLO-2D Table Editor.
 
@@ -81,12 +82,11 @@ increases as the depth increases.  It is a continuous increase not a stepped inc
 Pump Controls
 --------------
 
-In addition to pump tables, pumps are also controlled by rules that are defined in the Pump Properties.  These
-properties include initial status of the pump which is on or off.  The depth at which the pump starts and the depth
-at which the pump shuts off.  These properties are defined in the Pump Properties docked widget.
+In addition to pump curves, pumps are controlled by settings defined in the Pump Properties docked widget. These
+settings include the initial pump status (ON or OFF), the startup depth, and the shutoff depth.
 
 Pump Information
-----------------
+-----------------
 
 .. list-table::
    :header-rows: 1
@@ -94,16 +94,16 @@ Pump Information
    * - Name
      - Unique pump name.
    * - Inlet Node
-     - Node name on the inlet of the pump.
+     - Node name at the inlet of the pump.
    * - Outlet Node
-     - Node name on the outlet  of the pump.
+     - Node name at the outlet of the pump.
    * - Description
-     - Pump description user defined.
+     - User-defined pump description.
    * - Pump Curve
-     - Name of the Pump Curve which contains the pump's operating data. Use * for Ideal pump.
+     - Name of the Pump Curve containing the pump operating data. Use * for an Ideal pump.
    * - Initial Status
      - Status of the pump (ON or OFF) at the beginning of the simulation.
    * - Startup Depth
-     - Depth at inlet node that turns on the pump (ft or m).
+     - Depth at the inlet node that turns the pump on (ft or m).
    * - Shutoff Depth
-     - Depth at inlet node that turns off the pump (ft or m).
+     - Depth at the inlet node that turns the pump off (ft or m).
