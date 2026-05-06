@@ -1,9 +1,13 @@
 Module 5 - Process Rainfall Data
 ======================================
 
-.. warning:: The rainfall processing methods shown here are practical grid-based workflows. 
-    Depending on project requirements or regulatory standards, alternative scientifically 
-    validated approaches should also be explored.
+.. warning:: Realtime rainfall products such as ERA5, Copernicus, or NEXRAD datasets may 
+   contain significant uncertainty and should not automatically be considered calibrated 
+   rainfall data. These datasets are useful for screening studies, training exercises, 
+   and preliminary hydrologic evaluation, but project-level or regulatory applications may 
+   require gage adjustment, additional rainfall verification, calibration, uncertainty analysis, 
+   and locally accepted hydrologic methods. Hydrologic requirements and accepted workflows can vary 
+   by project location, state, or flood control district.
 
 Step 1: Uniform rain on grid
 ---------------------------------------------------

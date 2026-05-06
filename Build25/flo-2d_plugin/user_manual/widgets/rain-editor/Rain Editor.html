@@ -248,11 +248,11 @@ The first line of data is a control line that sets up the timing of the storm an
 <p>Line 1: Start Time, End Time, Time Interval, *.asc File Count</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Line 2 of the *.rfc isn’t necessary.</p>
+<p>Line 2 of the *.rfc isn’t necessary.  It was required for GDS processing.  QGIS loads all files and does not require the list of files.</p>
 <p>The Rainfall calculator will use all *.ASC files in the project directory.
 Make sure they are named in ascending order by time.</p>
 <p>Time = 0 is not necessary.
-The engine will start the simulation at time and rainfall = zero.
+The FLO-2D engine (FLOPRO.EXE) will start the simulation at time and rainfall = zero.
 The rainfall data will interpolate from time = 0 rainfall = 0 to the first interval.</p>
 </div>
 <img alt="../../../../_images/rained010.png" src="../../../../_images/rained010.png" />
@@ -278,34 +278,51 @@ The rainfall data will interpolate from time = 0 rainfall = 0 to the first inter
 <li><p>Click the Import Real Time Rainfall ASCII files.</p></li>
 </ol>
 <img alt="../../../../_images/rained014.png" src="../../../../_images/rained014.png" />
-<p>The Plugin requests the directory where the NEXRAD data is stored.</p>
+<p>For the ASCII raster method, the Rainfall import tool is initiated by selecting a
+single <cite>*.asc</cite> file, but it will automatically load all <cite>*.asc</cite> files available in the directory.</p>
 <ol class="arabic simple" start="3">
-<li><p>Navigate to the correct directory and click Select Folder.</p></li>
+<li><p>Navigate to the correct directory and select the first file.</p></li>
 </ol>
 <img alt="../../../../_images/rained015.png" src="../../../../_images/rained015.png" />
 <ol class="arabic simple" start="4">
-<li><p>Click OK once the process is complete.</p></li>
+<li><p>The progress bar will indicate that the process is running and since <cite>*.asc</cite> files do not have a know projection,
+QGIS is set to default to the Project Coordinate System. Once the process is complete a Blue QGIS message will appear and
+the Process Complete is written to the FLO-2D Log Message Panel.</p></li>
 </ol>
 <img alt="../../../../_images/rained016.png" src="../../../../_images/rained016.png" />
 </section>
 <section id="export-the-rainfall-data">
 <h2><a class="toc-backref" href="#id9" role="doc-backlink">Export the rainfall data</a><a class="headerlink" href="#export-the-rainfall-data" title="Link to this heading"></a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>RAINCELL.DAT is an ASCII file, while RAINCELL.HDF5 is a compressed binary format.</p>
+<p>For large projects, ASCII rainfall files can reach several gigabytes in size. Even the
+Self Help Kit produces a file approaching 1 GB.</p>
+<p>HDF5 files are significantly smaller and generally provide faster load times.</p>
+<img alt="../../../../_images/raincell001.png" src="../../../../_images/raincell001.png" />
+</div>
+<p><strong>*.DAT File Method</strong> (Older Method)</p>
 <ol class="arabic simple">
-<li><p>Click Export the Realtime Rainfall Data.  There are 3 Options.  The recommended option is hdf5 due to the size
-differences in the data files.</p></li>
+<li><p>Click Export data (<cite>*.DAT</cite>) files button and Select the Output Location.  The RAINCELL.DAT file will be exported with the
+project. The New RAINCELL data file truncates Zero Rainfall from the dataset. It will be smaller than the Old RAINCELL file.</p></li>
 </ol>
 <img alt="../../../../_images/rained017.png" src="../../../../_images/rained017.png" />
 <ol class="arabic simple" start="2">
-<li><p>Name the storm and click Save.</p></li>
+<li><p>Wait for the data to export.</p></li>
+<li><p>This dialog shows that the <cite>RAINFALL.DAT</cite> and <cite>RAINCELL.DAT</cite> files were exported.</p></li>
 </ol>
 <img alt="../../../../_images/rained018.png" src="../../../../_images/rained018.png" />
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>RAINCELL.DAT is an ascii file.  RAINCELL.HDF5 is a compressible database file.  The file size of a
-large project can be many gigabytes of data if store in ascii format.  Even the self help kit results in a file
-that is close to 1 gigabyte.  HDF5 files are orders of magnitude smaller and in general load faster.</p>
-<img alt="../../../../_images/raincell001.png" src="../../../../_images/raincell001.png" />
-</div>
+<p><strong>*.HDF5 File Method</strong> (Recommended for Realtime Rainfall)</p>
+<ol class="arabic simple">
+<li><p>Click Export data (<cite>*.HDF5</cite>) files button and Select the Output Location.  The RAINCELL.DAT file will be exported with the
+project. The New RAINCELL data file truncates Zero Rainfall from the dataset. It will be smaller than the Old RAINCELL file.</p></li>
+</ol>
+<img alt="../../../../_images/rained017a.png" src="../../../../_images/rained017a.png" />
+<ol class="arabic simple" start="2">
+<li><p>Wait for the data to export.</p></li>
+<li><p>This dialog shows that the <cite>RAINFALL.DAT</cite> and <cite>RAINCELL.DAT</cite> files were exported.</p></li>
+</ol>
+<img alt="../../../../_images/rained018.png" src="../../../../_images/rained018.png" />
 </section>
 </section>
 
