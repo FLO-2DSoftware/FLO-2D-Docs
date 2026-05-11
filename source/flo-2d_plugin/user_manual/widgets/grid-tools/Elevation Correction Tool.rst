@@ -159,11 +159,11 @@ correction polygon.
 
 2. Set up the tool as shown in the following image.
 
-.. image:: ../../img/gridtools/Elevation-Correction-from-Polygons/Elev001.png
+.. image:: ../../img/gridtools/Elevation-Correction-from-Polygons/elev001.png
 
 4. Run the calculator and then plot the elevation to see the correction.
 
-.. image:: ../../img/gridtools/Elevation-Correction-from-Polygons/Elev002.png
+.. image:: ../../img/gridtools/Elevation-Correction-from-Polygons/elev002.png
 
 Raster Statistics in Polygons - TC 12
 ----------------------------------------------
