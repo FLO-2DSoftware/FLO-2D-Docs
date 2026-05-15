@@ -3,6 +3,8 @@ Erosion of Diamond Valley Lake
 
 .. image:: ../../../img/dam-breach/dam-breach0015.png
 
+Source: Google Earth Pro imagery. Image enhanced for clarity; dam/basin features unchanged.
+
 A conceptual dam failure scenario was developed for Diamond Valley Lake, a major reservoir located in Riverside County,
 California. The objective of the study was to evaluate the potential downstream impacts associated with a
 progressive erosion failure of the embankment dam using a physically based breach modeling approach in the FLO-2D model.
