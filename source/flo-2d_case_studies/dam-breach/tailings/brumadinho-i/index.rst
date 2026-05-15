@@ -3,6 +3,8 @@ Brumadinho I
 
 .. image:: ../../../img/dam-breach/dam-breach0006.png
 
+Source https://commons.wikimedia.org/wiki/File:Brumadinho,_Minas_Gerais_(47021723582).jpg
+
 The failure of the Brumadinho tailings dam in Minas Gerais, Brazil, on January 25, 2019, represents one of the most
 significant tailings dam disasters in recent history and has become a defining case study in modern tailings risk assessment
 and dam safety engineering. The event highlighted the complex behavior of saturated tailings materials and the importance
