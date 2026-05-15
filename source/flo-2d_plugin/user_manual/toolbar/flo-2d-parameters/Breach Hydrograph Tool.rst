@@ -12,6 +12,13 @@ sediment load based on geometric and field data. The tool is fully integrated wi
 allowing users to define dam geometry, reservoir volume, breach parameters, and downstream routing conditions within
 the same spatial workflow used for flood modeling.
 
+.. contents:: Contents
+   :local:
+   :depth: 3
+   :backlinks: top
+
+----
+
 Computational Domain - Auto-Generate
 --------------------------------------------
 
