@@ -116,16 +116,50 @@
   <section id="breach-hydrograph-tool">
 <span id="id1"></span><h1>Breach Hydrograph Tool<a class="headerlink" href="#breach-hydrograph-tool" title="Link to this heading"></a></h1>
 <img alt="../../../../_images/control006.png" src="../../../../_images/control006.png" />
-<p>The Breach Hydrograph Tool was developed to estimate one of the most critical steps in hypothetical tailings and water dam breach studies:
+<p>The Breach Hydrograph Tool was developed to estimate one of the most critical steps in hypothetical tailings and water dam break studies:
 generating a defensible outflow hydrograph. The tool focuses on water and tailings dams and implements commonly
 accepted empirical and statistical approaches for estimating peak discharge, released volume, average breach width, and
 sediment load based on geometric and field data. The tool is fully integrated with the FLO-2D Gila plugin,
 allowing users to define dam geometry, reservoir volume, breach parameters, and downstream routing conditions within
 the same spatial workflow used for flood modeling.</p>
-<section id="automatic-generation-of-computational-domain">
-<h2>Automatic Generation of Computational Domain<a class="headerlink" href="#automatic-generation-of-computational-domain" title="Link to this heading"></a></h2>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#computational-domain-auto-generate" id="id2">Computational Domain - Auto-Generate</a></p></li>
+<li><p><a class="reference internal" href="#water-dams" id="id3">Water Dams</a></p>
+<ul>
+<li><p><a class="reference internal" href="#water-dam-geometry-data" id="id4">Water Dam Geometry Data</a></p></li>
+<li><p><a class="reference internal" href="#water-dam-outflow-hydrograph-generation-methodologies" id="id5">Water Dam Outflow Hydrograph Generation Methodologies</a></p></li>
+<li><p><a class="reference internal" href="#flo-2d-save-options-for-water-dams" id="id6">FLO-2D Save Options for Water Dams</a></p></li>
+<li><p><a class="reference internal" href="#mapping-of-water-dam-failures" id="id7">Mapping of Water Dam Failures</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#tailings-dams" id="id8">Tailings Dams</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tailings-dam-methodology" id="id9">Tailings Dam Methodology</a></p></li>
+<li><p><a class="reference internal" href="#tailings-dam-geometry-data" id="id10">Tailings Dam Geometry Data</a></p></li>
+<li><p><a class="reference internal" href="#tailings-dam-failure-modes-selection" id="id11">Tailings Dam Failure Modes Selection</a></p>
+<ul>
+<li><p><a class="reference internal" href="#hydrologic-failure-mode" id="id12">Hydrologic Failure Mode</a></p></li>
+<li><p><a class="reference internal" href="#static-failure-mode" id="id13">Static Failure Mode</a></p></li>
+<li><p><a class="reference internal" href="#seismic-failure-mode" id="id14">Seismic Failure Mode</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#release-volume-of-tailings-dam-failure" id="id15">Release Volume of Tailings Dam Failure</a></p></li>
+<li><p><a class="reference internal" href="#tailings-dam-breach-hydrographs" id="id16">Tailings Dam Breach Hydrographs</a></p></li>
+<li><p><a class="reference internal" href="#flo-2d-save-options-for-tailings-dam" id="id17">FLO-2D Save Options for Tailings Dam</a></p></li>
+<li><p><a class="reference internal" href="#mapping-of-tailings-dam-failures" id="id18">Mapping of Tailings Dam Failures</a></p></li>
+<li><p><a class="reference internal" href="#tailings-dam-conclusions" id="id19">Tailings Dam Conclusions</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#references" id="id20">References</a></p></li>
+</ul>
+</nav>
+<hr class="docutils" />
+<section id="computational-domain-auto-generate">
+<h2><a class="toc-backref" href="#contents" role="doc-backlink">Computational Domain - Auto-Generate</a><a class="headerlink" href="#computational-domain-auto-generate" title="Link to this heading"></a></h2>
 <p>The first functionality of the Breach Hydrograph Tool is to automatically generate a computational domain for the dam
-breach study, requiring four input parameters:</p>
+break study, requiring four input parameters:</p>
 <ul class="simple">
 <li><p>Centerline</p></li>
 <li><p>Buffer</p></li>
@@ -138,7 +172,7 @@ breach study, requiring four input parameters:</p>
 <p class="admonition-title">Note</p>
 <p>The computational domain may be defined in advance using the Grid Editor.
 This tool includes an automatic option to generate a domain specifically
-for dam-breach simulations, but it is not required.</p>
+for dam-break simulations, but it is not required.</p>
 </div>
 <p>The centerline is used to define the downstream channel or the potential path of the flood wave,
 while the buffer defines the width of the computational domain to ensure that all potential flooding areas are included in the analysis.
@@ -152,12 +186,12 @@ to ensure that critical areas are included and that the model runs efficiently.<
  - 2.602 \times 10^{-4} V_{\max}^{2}
  + 2.648 \times 10^{-1} V_{\max}
  + 6.737\]</div>
-<p>Figure 2 - Demonstration of the centerline and buffer used to generate the computational domain for a dam breach study</p>
+<p>Figure 2 - Demonstration of the centerline and buffer used to generate the computational domain for a dam break study</p>
 <img alt="../../../../_images/bht019.jpg" src="../../../../_images/bht019.jpg" />
 <p>The elevation raster provides the topography required for hydraulic modeling, while the roughness raster defines the
 spatial distribution of surface roughness coefficients that control flow resistance and flood wave propagation.
 Each case study may require a finer DEM resolution to capture critical terrain features such as channels, levees, and road embankments.
-However, for medium to large dams, a 30 m resolution DEM is often adequate for dam breach studies.
+However, for medium to large dams, a 30 m resolution DEM is often adequate for dam break studies.
 Surface roughness values can be estimated from land-use and land-cover data. The freely available QGIS Manning’s Roughness Generator plugin,
 based on ESA WorldCover 2021, has proven to be a reliable and consistent source for deriving spatially distributed Manning’s n values.</p>
 <p>Figure 3 - Spatial parameters assigned to the computational domain (Left: Elevation; Right: Roughness)</p>
@@ -170,19 +204,19 @@ and the FLO-2D model will route the flood wave downstream to predict arrival tim
 <img alt="../../../../_images/bht021.jpg" src="../../../../_images/bht021.jpg" />
 </section>
 <section id="water-dams">
-<h2>Water Dams<a class="headerlink" href="#water-dams" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#contents" role="doc-backlink">Water Dams</a><a class="headerlink" href="#water-dams" title="Link to this heading"></a></h2>
 <p>Failures of water dams are rare compared with tailings dams, but when they occur the downstream consequences can be severe
 due to the rapid release of large reservoir volumes. Historical records from ICOLD and FEMA dam-safety studies show that
 many water-dam failures are associated with overtopping, internal erosion, foundation instability, or structural deficiencies,
 often triggered by extreme hydrologic events. Even for small dams, hypothetical failure scenarios are required to
 evaluate downstream risk, classify potential damage, and support emergency planning under dam-safety regulations.</p>
 <p>Water dam breach analyses are uncertain because failure geometry, breach development rate, and reservoir conditions at
-the time of failure are rarely known. As a result, hypothetical dam breach studies rely on empirical relationships
+the time of failure are rarely known. As a result, hypothetical dam-break studies rely on empirical relationships
 and scenario-based assumptions to estimate peak discharge, released volume, and breach hydrographs.
 These parameters must then be routed downstream to determine flood arrival times, inundation extent, and potential
 exposure of infrastructure and population.</p>
 <p>Although several hydrologic and hydraulic models exist to simulate downstream flooding, generating defensible breach
-hydrographs in a consistent and reproducible way remains one of the most challenging steps in water dam breach studies.
+hydrographs in a consistent and reproducible way remains one of the most challenging steps in water dam break studies.
 Differences in assumed breach width, failure time, or reservoir level can lead to large variations in predicted flood impacts.</p>
 <p>The Breach Hydrograph Tool addresses this need by providing a structured framework for generating hypothetical
 water dam breach hydrographs using accepted empirical methods and consistent parameter assumptions.
@@ -190,9 +224,8 @@ The tool integrates directly with FLO-2D Gila, allowing dam geometry, reservoir 
 and breach scenarios to be defined within the same spatial workflow used for flood routing.
 This integration supports rapid scenario testing, reproducibility of assumptions, and a fast transition from
 preliminary screening to more detailed hydraulic analyses when higher-consequence scenarios are identified.</p>
-</section>
 <section id="water-dam-geometry-data">
-<h2>Water Dam Geometry Data<a class="headerlink" href="#water-dam-geometry-data" title="Link to this heading"></a></h2>
+<h3><a class="toc-backref" href="#contents" role="doc-backlink">Water Dam Geometry Data</a><a class="headerlink" href="#water-dam-geometry-data" title="Link to this heading"></a></h3>
 <p>To use the Water Dam process, check the Water Dam group box. The required data to generate a breach hydrograph for a water dam includes:</p>
 <ul class="simple">
 <li><p>Dam height</p></li>
@@ -204,7 +237,7 @@ preliminary screening to more detailed hydraulic analyses when higher-consequenc
 <img alt="../../../../_images/bht024.jpg" src="../../../../_images/bht024.jpg" />
 </section>
 <section id="water-dam-outflow-hydrograph-generation-methodologies">
-<h2>Water Dam Outflow Hydrograph Generation Methodologies<a class="headerlink" href="#water-dam-outflow-hydrograph-generation-methodologies" title="Link to this heading"></a></h2>
+<h3><a class="toc-backref" href="#contents" role="doc-backlink">Water Dam Outflow Hydrograph Generation Methodologies</a><a class="headerlink" href="#water-dam-outflow-hydrograph-generation-methodologies" title="Link to this heading"></a></h3>
 <p>There are currently four methodologies available in the tool to generate peak discharge, time to peak, average breach,
 and estimated hydrograph length for water dam failures. These methodologies are based on empirical relationships and are commonly used in dam safety analyses.</p>
 <p>Figure 6 - Methodologies for generating breach parameters for water dam failures</p>
@@ -298,7 +331,7 @@ volume and the reservoir storage volume is shown. This ratio helps users evaluat
 the amount of released water. For typical water-dam failure scenarios, this ratio generally ranges between 0.75 and 0.95.</p>
 </section>
 <section id="flo-2d-save-options-for-water-dams">
-<h2>FLO-2D Save Options for Water Dams<a class="headerlink" href="#flo-2d-save-options-for-water-dams" title="Link to this heading"></a></h2>
+<h3><a class="toc-backref" href="#contents" role="doc-backlink">FLO-2D Save Options for Water Dams</a><a class="headerlink" href="#flo-2d-save-options-for-water-dams" title="Link to this heading"></a></h3>
 <p>Once the breach hydrograph has been defined, select the inflow boundary condition where it will be applied and click Add.
 The outflow hydrograph will then be assigned to the selected inflow boundary condition and included in the inflow list.</p>
 <p>Figure 8 - Definition of inflow boundary condition for water dam breach hydrograph</p>
@@ -309,7 +342,7 @@ The outflow hydrograph will then be assigned to the selected inflow boundary con
 </div>
 </section>
 <section id="mapping-of-water-dam-failures">
-<h2>Mapping of Water Dam Failures<a class="headerlink" href="#mapping-of-water-dam-failures" title="Link to this heading"></a></h2>
+<h3><a class="toc-backref" href="#contents" role="doc-backlink">Mapping of Water Dam Failures</a><a class="headerlink" href="#mapping-of-water-dam-failures" title="Link to this heading"></a></h3>
 <p>A typical area of inundation map is shown in Figure 9 with the corresponding hazard map shown in Figure 10.
 The hazard map indicates the area of inundation from the dam breach is a high hazard.</p>
 <p>Figure 9 - Typical water dam breach area of inundation map</p>
@@ -317,8 +350,9 @@ The hazard map indicates the area of inundation from the dam breach is a high ha
 <p>Figure 10 - Typical water dam breach flood hazard map</p>
 <img alt="../../../../_images/bht029.jpg" src="../../../../_images/bht029.jpg" />
 </section>
+</section>
 <section id="tailings-dams">
-<h2>Tailings Dams<a class="headerlink" href="#tailings-dams" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#contents" role="doc-backlink">Tailings Dams</a><a class="headerlink" href="#tailings-dams" title="Link to this heading"></a></h2>
 <p>In the past few decades, there have been records of over 60 incidents involving the failure of tailings dams, and since 1960,
 a total of 196 failures have been documented (as reported by the WISE Uranium Project in 2023; ICOLD, 2001).
 The highest number of tailings dam failures occurred during the 1970s, and these failures have persisted, happening at an
@@ -351,9 +385,8 @@ or upstream watershed flooding.</p>
 property damage. Traditionally, the standard method for evaluating the flood and mudflow hazard following a
 dam breach involves employing a 2-D flood routing model (FLO-2D, 2014). However, estimating the volume of
 material released during a tailings dam breach is a challenging task.</p>
-</section>
 <section id="tailings-dam-methodology">
-<h2>Tailings Dam Methodology<a class="headerlink" href="#tailings-dam-methodology" title="Link to this heading"></a></h2>
+<h3><a class="toc-backref" href="#contents" role="doc-backlink">Tailings Dam Methodology</a><a class="headerlink" href="#tailings-dam-methodology" title="Link to this heading"></a></h3>
 <p>During this analysis the data for fifty-seven hard rock mine tailings dam failures were collected to analyze failure
 modes and develop an event tree model for the creation of this tailing dam failure tool. The failures were grouped
 into the most common failure categories as shown in Table 3 and Table 4 below to compare the breach scenarios
@@ -378,7 +411,7 @@ water storage dam failure. This emphasizes the urgent requirement for the develo
 methodologies to enhance the precision of predictions regarding tailings dam breaches.</p>
 </section>
 <section id="tailings-dam-geometry-data">
-<h2>Tailings Dam Geometry Data<a class="headerlink" href="#tailings-dam-geometry-data" title="Link to this heading"></a></h2>
+<h3><a class="toc-backref" href="#contents" role="doc-backlink">Tailings Dam Geometry Data</a><a class="headerlink" href="#tailings-dam-geometry-data" title="Link to this heading"></a></h3>
 <p>To predict tailings dam breach volume, the new software tool requires input data for the dam and the impoundment materials.
 The breach volume will be estimated based on the dam height and the documented tailing dam breach failures,
 but other parameters entered in data fields are necessary to calculate the failure occurrence,
@@ -413,7 +446,7 @@ and regulators can estimate failure release volumes, predict the downstream floo
 potential liabilities and risk.</p>
 </section>
 <section id="tailings-dam-failure-modes-selection">
-<h2>Tailings Dam Failure Modes Selection<a class="headerlink" href="#tailings-dam-failure-modes-selection" title="Link to this heading"></a></h2>
+<h3><a class="toc-backref" href="#contents" role="doc-backlink">Tailings Dam Failure Modes Selection</a><a class="headerlink" href="#tailings-dam-failure-modes-selection" title="Link to this heading"></a></h3>
 <p>The determination of whether a failure has occurred, along with the subsequent reporting of failure information as either
 “Dam Breach by” or “No Breach,”, is computed for each failure mode.
 Some illustrative calculations involved in the tree event analysis include:</p>
@@ -424,7 +457,7 @@ Some illustrative calculations involved in the tree event analysis include:</p>
 </ul>
 <p>The failure modes are described in detail as follows.</p>
 <section id="hydrologic-failure-mode">
-<h3>Hydrologic Failure Mode<a class="headerlink" href="#hydrologic-failure-mode" title="Link to this heading"></a></h3>
+<h4><a class="toc-backref" href="#contents" role="doc-backlink">Hydrologic Failure Mode</a><a class="headerlink" href="#hydrologic-failure-mode" title="Link to this heading"></a></h4>
 <p>The probability of a hydrologic failure and the subsequent breach release volume are calculated using the Figure 14 data
 as outlined in the hydrologic failure mode event tree (Figure 15). This data supports dam breach by erosion through overtopping.</p>
 <ul class="simple">
@@ -439,7 +472,7 @@ as outlined in the hydrologic failure mode event tree (Figure 15). This data sup
 <img alt="../../../../_images/bht010.jpg" src="../../../../_images/bht010.jpg" />
 </section>
 <section id="static-failure-mode">
-<h3>Static Failure Mode<a class="headerlink" href="#static-failure-mode" title="Link to this heading"></a></h3>
+<h4><a class="toc-backref" href="#contents" role="doc-backlink">Static Failure Mode</a><a class="headerlink" href="#static-failure-mode" title="Link to this heading"></a></h4>
 <p>Failure potential and the release volume is calculated based on limit equilibrium charts
 (Tesarik and McWilliams; 1981 and Hoek and Bray; 1977) using the following data to
 define event tree branches for the static failure mode:</p>
@@ -457,7 +490,7 @@ define event tree branches for the static failure mode:</p>
 <img alt="../../../../_images/bht012.jpg" src="../../../../_images/bht012.jpg" />
 </section>
 <section id="seismic-failure-mode">
-<h3>Seismic Failure Mode<a class="headerlink" href="#seismic-failure-mode" title="Link to this heading"></a></h3>
+<h4><a class="toc-backref" href="#contents" role="doc-backlink">Seismic Failure Mode</a><a class="headerlink" href="#seismic-failure-mode" title="Link to this heading"></a></h4>
 <p>Several methodologies have been compiled to determine the potential for seismic failure.
 The seismic failure release volume is calculated the following data:</p>
 <ul class="simple">
@@ -473,7 +506,7 @@ The seismic failure release volume is calculated the following data:</p>
 </section>
 </section>
 <section id="release-volume-of-tailings-dam-failure">
-<h2>Release Volume of Tailings Dam Failure<a class="headerlink" href="#release-volume-of-tailings-dam-failure" title="Link to this heading"></a></h2>
+<h3><a class="toc-backref" href="#contents" role="doc-backlink">Release Volume of Tailings Dam Failure</a><a class="headerlink" href="#release-volume-of-tailings-dam-failure" title="Link to this heading"></a></h3>
 <p>Following the tailing dam failure assessment process where the tool leads the user through a series of dialog boxes
 with pull-down menus and data entry fields that will result in the breach volume if failure is predicted to occur,
 the tool calculates multiple release breach volumes.</p>
@@ -499,7 +532,7 @@ how the volume is being released from the earth filled reservoir. For this reaso
 distributions and six typical distributions over time of sediment concentration by volume are available in the tool.</p>
 </section>
 <section id="tailings-dam-breach-hydrographs">
-<h2>Tailings Dam Breach Hydrographs<a class="headerlink" href="#tailings-dam-breach-hydrographs" title="Link to this heading"></a></h2>
+<h3><a class="toc-backref" href="#contents" role="doc-backlink">Tailings Dam Breach Hydrographs</a><a class="headerlink" href="#tailings-dam-breach-hydrographs" title="Link to this heading"></a></h3>
 <p>Depending on the predicted failure mode, the tailing dam failure assessment tool calculates the occurrence of the
 failure based on the geometry of the dam, and the water and impoundment characteristics, and it estimates the maximum,
 minimum and average volumes based on the dam height and the documented failures.  Based on the historical data,
@@ -526,7 +559,7 @@ by volume to populate a table of sediment concentration by volume versus breach 
 <img alt="../../../../_images/bht013.jpg" src="../../../../_images/bht013.jpg" />
 </section>
 <section id="flo-2d-save-options-for-tailings-dam">
-<h2>FLO-2D Save Options for Tailings Dam<a class="headerlink" href="#flo-2d-save-options-for-tailings-dam" title="Link to this heading"></a></h2>
+<h3><a class="toc-backref" href="#contents" role="doc-backlink">FLO-2D Save Options for Tailings Dam</a><a class="headerlink" href="#flo-2d-save-options-for-tailings-dam" title="Link to this heading"></a></h3>
 <p>Once the breach hydrograph has been defined, select the inflow boundary condition where it will be applied and click Add.
 The outflow hydrograph will then be assigned to the selected inflow boundary condition and included in the inflow list.</p>
 <p>Figure 25 - Definition of inflow boundary condition for tailings dam breach hydrograph</p>
@@ -537,7 +570,7 @@ The outflow hydrograph will then be assigned to the selected inflow boundary con
 </div>
 </section>
 <section id="mapping-of-tailings-dam-failures">
-<h2>Mapping of Tailings Dam Failures<a class="headerlink" href="#mapping-of-tailings-dam-failures" title="Link to this heading"></a></h2>
+<h3><a class="toc-backref" href="#contents" role="doc-backlink">Mapping of Tailings Dam Failures</a><a class="headerlink" href="#mapping-of-tailings-dam-failures" title="Link to this heading"></a></h3>
 <p>A typical area of inundation map is shown in Figure 26 with the corresponding hazard map shown in Figure 27.
 The hazard map indicates that most of the area of inundation from the dam breach is a high hazard.
 The hazard levels in Figure 27 are based on hydraulic intensity
@@ -548,7 +581,7 @@ The hazard levels in Figure 27 are based on hydraulic intensity
 <img alt="../../../../_images/bht023.jpg" src="../../../../_images/bht023.jpg" />
 </section>
 <section id="tailings-dam-conclusions">
-<h2>Tailings Dam Conclusions<a class="headerlink" href="#tailings-dam-conclusions" title="Link to this heading"></a></h2>
+<h3><a class="toc-backref" href="#contents" role="doc-backlink">Tailings Dam Conclusions</a><a class="headerlink" href="#tailings-dam-conclusions" title="Link to this heading"></a></h3>
 <p>The tailing dam tool estimates the release of tailing dam breach volume based on the documented failure of tailing dam.
 The tailing dam failure assessment tool computes a range of release volumes so that the user can evaluate
 the potential existing or proposed tailings dam flood hazard.  The tool assigns a breach hydrograph to the inflow
@@ -564,8 +597,9 @@ recent tailing dam failures were used to evaluate the accuracy of the predicted 
 For additional information and documentation on the tailing dam breach tool or dam breach hazard mapping,
 visit the FLO-2D website (www.flo-2d.com).</p>
 </section>
+</section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#contents" role="doc-backlink">References</a><a class="headerlink" href="#references" title="Link to this heading"></a></h2>
 <p>Azam, S. and Li, Q. 2010. Tailings dam failures: a review of the last one hundred years. Geotechnical News, December.</p>
 <p>FLO-2D Reference Manual. 2014.  FLO-2D Software, Inc. Nutrioso, Arizona.</p>
 <p>Hoek, E. and Bray, J. 1977. Rock Slope Engineering, 1st Edition, IMM, London.</p>
