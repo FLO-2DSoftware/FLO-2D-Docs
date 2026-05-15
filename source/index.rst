@@ -67,3 +67,4 @@ Welcome to the Build 25 version of the FLO-2D Documentation.
    flo-2d_mapcrafter/index
    flo-2d_florunner/index
    tutorials/index
+   flo-2d_case_studies/index
