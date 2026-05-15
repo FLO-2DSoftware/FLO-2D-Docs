@@ -250,8 +250,25 @@ available on the Admin account.</p>
 <span id="addflo2dplugin"></span><h2>Step 3: Install FLO-2D Plugin<a class="headerlink" href="#step-3-install-flo-2d-plugin" title="Link to this heading"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If the FLO-2D Plugin does not install, check whether a previous version was installed using the <strong>Install from ZIP</strong> method.</p>
-<p>Uninstall the ZIP-installed version, completely close QGIS, then restart QGIS before attempting the installation again.</p>
+<p>The FLO-2D Plugin packages a bundled version of the <code class="docutils literal notranslate"><span class="pre">h5py</span></code> library for Stand Alone QGIS programs.
+In some QGIS environments, the <code class="docutils literal notranslate"><span class="pre">h5py</span></code> binaries can remain locked in memory after the plugin is loaded.
+This may prevent the plugin from uninstalling, updating, or overwriting files during installation.</p>
+<p>If the plugin cannot be removed or updated:</p>
+<ol class="arabic">
+<li><p>Close QGIS completely.</p></li>
+<li><p>Open the plugin directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">YourUserName</span>\<span class="n">AppData</span>\<span class="n">Roaming</span>\<span class="n">QGIS</span>\<span class="n">QGIS3</span>\<span class="n">profiles</span>\<span class="n">default</span>\<span class="n">python</span>\<span class="n">plugins</span>\
+</pre></div>
+</div>
+<p>or for QGIS 4:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">YourUserName</span>\<span class="n">AppData</span>\<span class="n">Roaming</span>\<span class="n">QGIS</span>\<span class="n">QGIS4</span>\<span class="n">profiles</span>\<span class="n">default</span>\<span class="n">python</span>\<span class="n">plugins</span>\
+</pre></div>
+</div>
+</li>
+<li><p>Delete the entire <code class="docutils literal notranslate"><span class="pre">flo2d</span></code> plugin folder manually.</p></li>
+<li><p>Restart QGIS.</p></li>
+<li><p>Reinstall the FLO-2D Plugin.</p></li>
+</ol>
 </div>
 <ol class="arabic">
 <li><p>Add the FLO-2D Plugin Repository. Copy this link to the clipboard. Ctrl-C.</p>
