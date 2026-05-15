@@ -215,9 +215,30 @@ Step 3: Install FLO-2D Plugin
 
 .. warning::
 
-   If the FLO-2D Plugin does not install, check whether a previous version was installed using the **Install from ZIP** method.
+   The FLO-2D Plugin packages a bundled version of the ``h5py`` library for Stand Alone QGIS programs.
+   In some QGIS environments, the ``h5py`` binaries can remain locked in memory after the plugin is loaded.  
+   This may prevent the plugin from uninstalling, updating, or overwriting files during installation.
 
-   Uninstall the ZIP-installed version, completely close QGIS, then restart QGIS before attempting the installation again.
+   If the plugin cannot be removed or updated:
+
+   1. Close QGIS completely.
+   2. Open the plugin directory:
+
+      ::
+
+         C:\Users\YourUserName\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins\
+
+      or for QGIS 4:
+
+      ::
+
+         C:\Users\YourUserName\AppData\Roaming\QGIS\QGIS4\profiles\default\python\plugins\
+
+   3. Delete the entire ``flo2d`` plugin folder manually.
+   4. Restart QGIS.
+   5. Reinstall the FLO-2D Plugin.
+
+   
 
 
 1. Add the FLO-2D Plugin Repository. Copy this link to the clipboard. Ctrl-C.
