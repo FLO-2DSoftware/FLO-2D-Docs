@@ -1,7 +1,7 @@
 Conceptual Urban Dam Failure Scenario
 ======================================
 
-.. image:: ../img/dam-breach/dam-breach0014.png
+.. image:: ../../../img/dam-breach/dam-breach0014.png
 
 Dry detention basin and earthen dam in Phoenix, Arizona.
 Source: Google Earth Pro imagery. Image enhanced for clarity; dam/basin features unchanged.
