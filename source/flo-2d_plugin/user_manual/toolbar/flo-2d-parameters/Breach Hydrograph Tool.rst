@@ -12,7 +12,7 @@ sediment load based on geometric and field data. The tool is fully integrated wi
 allowing users to define dam geometry, reservoir volume, breach parameters, and downstream routing conditions within
 the same spatial workflow used for flood modeling.
 
-Automatic Generation of Computational Domain
+Computational Domain - Auto-Generate
 --------------------------------------------
 
 The first functionality of the Breach Hydrograph Tool is to automatically generate a computational domain for the dam
@@ -98,7 +98,7 @@ This integration supports rapid scenario testing, reproducibility of assumptions
 preliminary screening to more detailed hydraulic analyses when higher-consequence scenarios are identified.
 
 Water Dam Geometry Data
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To use the Water Dam process, check the Water Dam group box. The required data to generate a breach hydrograph for a water dam includes:
 
@@ -112,7 +112,7 @@ Figure 5 - Water dam geometry data input
 .. image:: ../../img/Breach-Hydrograph-Tool/bht024.jpg
 
 Water Dam Outflow Hydrograph Generation Methodologies
-------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are currently four methodologies available in the tool to generate peak discharge, time to peak, average breach,
 and estimated hydrograph length for water dam failures. These methodologies are based on empirical relationships and are commonly used in dam safety analyses.
@@ -195,7 +195,7 @@ volume and the reservoir storage volume is shown. This ratio helps users evaluat
 the amount of released water. For typical water-dam failure scenarios, this ratio generally ranges between 0.75 and 0.95.
 
 FLO-2D Save Options for Water Dams
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once the breach hydrograph has been defined, select the inflow boundary condition where it will be applied and click Add.
 The outflow hydrograph will then be assigned to the selected inflow boundary condition and included in the inflow list.
@@ -208,7 +208,7 @@ Figure 8 - Definition of inflow boundary condition for water dam breach hydrogra
 
 
 Mapping of Water Dam Failures
---------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A typical area of inundation map is shown in Figure 9 with the corresponding hazard map shown in Figure 10.
 The hazard map indicates the area of inundation from the dam breach is a high hazard.
@@ -260,7 +260,7 @@ dam breach involves employing a 2-D flood routing model (FLO-2D, 2014). However,
 material released during a tailings dam breach is a challenging task.
 
 Tailings Dam Methodology
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 During this analysis the data for fifty-seven hard rock mine tailings dam failures were collected to analyze failure
 modes and develop an event tree model for the creation of this tailing dam failure tool. The failures were grouped
@@ -291,7 +291,7 @@ water storage dam failure. This emphasizes the urgent requirement for the develo
 methodologies to enhance the precision of predictions regarding tailings dam breaches.
 
 Tailings Dam Geometry Data
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To predict tailings dam breach volume, the new software tool requires input data for the dam and the impoundment materials.
 The breach volume will be estimated based on the dam height and the documented tailing dam breach failures,
@@ -338,7 +338,7 @@ and regulators can estimate failure release volumes, predict the downstream floo
 potential liabilities and risk.
 
 Tailings Dam Failure Modes Selection
-------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The determination of whether a failure has occurred, along with the subsequent reporting of failure information as either
 "Dam Breach by" or "No Breach,", is computed for each failure mode.
@@ -415,7 +415,7 @@ Figure 19 - Event tree for the seismic failure
 .. image:: ../../img/Breach-Hydrograph-Tool/bht014.jpg
 
 Release Volume of Tailings Dam Failure
---------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Following the tailing dam failure assessment process where the tool leads the user through a series of dialog boxes
 with pull-down menus and data entry fields that will result in the breach volume if failure is predicted to occur,
@@ -456,7 +456,7 @@ how the volume is being released from the earth filled reservoir. For this reaso
 distributions and six typical distributions over time of sediment concentration by volume are available in the tool.
 
 Tailings Dam Breach Hydrographs
---------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Depending on the predicted failure mode, the tailing dam failure assessment tool calculates the occurrence of the
 failure based on the geometry of the dam, and the water and impoundment characteristics, and it estimates the maximum,
@@ -490,7 +490,7 @@ Figure 24 - Selection of Sediment Concentration by Volume Distribution.
 .. image:: ../../img/Breach-Hydrograph-Tool/bht013.jpg
 
 FLO-2D Save Options for Tailings Dam
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once the breach hydrograph has been defined, select the inflow boundary condition where it will be applied and click Add.
 The outflow hydrograph will then be assigned to the selected inflow boundary condition and included in the inflow list.
@@ -502,7 +502,7 @@ Figure 25 - Definition of inflow boundary condition for tailings dam breach hydr
 .. important:: The inflow boundary condition must be schematized before exporting the model to ensure the hydrograph is written correctly.
 
 Mapping of Tailings Dam Failures
---------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A typical area of inundation map is shown in Figure 26 with the corresponding hazard map shown in Figure 27.
 The hazard map indicates that most of the area of inundation from the dam breach is a high hazard.
@@ -518,7 +518,7 @@ Figure 27 - Typical Tailings Dam Breach Flood Hazard Map
 .. image:: ../../img/Breach-Hydrograph-Tool/bht023.jpg
 
 Tailings Dam Conclusions
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The tailing dam tool estimates the release of tailing dam breach volume based on the documented failure of tailing dam.
 The tailing dam failure assessment tool computes a range of release volumes so that the user can evaluate
