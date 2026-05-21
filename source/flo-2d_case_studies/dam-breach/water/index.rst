@@ -325,7 +325,7 @@ and simulated the progressive development of the breach and resulting flood rout
    California. The objective of the study was to evaluate the potential downstream impacts associated with a
    progressive erosion failure of the embankment dam using a physically based breach modeling approach in the FLO-2D model.
 
-   .. image:: ../../../img/dam-breach/dam-breach0015.png
+   .. image:: ../../img/dam-breach/dam-breach0015.png
       :width: 75%
 
    Source: Google Earth Pro imagery. Image enhanced for clarity; dam/basin features unchanged.
@@ -403,7 +403,7 @@ and simulated the progressive development of the breach and resulting flood rout
    response to hydraulic forces acting on the embankment materials. Unlike simplified hydrograph-based approaches,
    the model computes the breach discharge internally as erosion progresses and the breach geometry evolves.
 
-   .. image:: ../../../img/dam-breach/dam-breach0016.png
+   .. image:: ../../img/dam-breach/dam-breach0016.png
     
    The simulation begins with the reservoir filled to the defined water surface elevation. Once the breach initiates,
    flow accelerates through the embankment opening and progressively enlarges the breach as material is removed by hydraulic erosion.
@@ -430,7 +430,7 @@ and simulated the progressive development of the breach and resulting flood rout
    reservoir water over time. The model predicted an initial period of relatively low discharge followed by rapid
    acceleration of flow as the breach widened and deepened.
 
-   .. image:: ../../../img/dam-breach/dam-breach0004.gif
+   .. image:: ../../img/dam-breach/dam-breach0004.gif
 
    As the breach developed, the reservoir water level declined steadily, producing a sustained release of flow
    downstream. The results showed that the peak discharge occurred after the breach reached a critical size,
