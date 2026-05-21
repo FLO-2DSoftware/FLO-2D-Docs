@@ -1,4 +1,4 @@
-.. _tutorials-index:
+.. _solar:
 
 Solar Site FLO-2D Project
 ============================
