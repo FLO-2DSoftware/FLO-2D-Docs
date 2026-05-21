@@ -181,15 +181,15 @@ specified the breach development time, and simulated the resulting reservoir rel
    invert is located at the basin floor elevation of 1371.34 ft and extends approximately 160 ft through the embankment. 
    The emergency spillway has a minimum crest elevation of 1393.7 ft and provides overflow protection during extreme storm events.
 
-   Additional information about Phoenix Basin No. 7 is available from the Flood Control District of Maricopa County:
-
    .. raw:: html
 
       <a href="https://alert.fcd.maricopa.gov/alert/Flow/13307.htm#RNOFF"
          target="_blank"
          rel="noopener noreferrer">
-         Phoenix Basin No. 7 Data
+         Phoenix Basin No. 7
       </a>
+
+   Additional information about Phoenix Basin No. 7 is available from the Flood Control District of Maricopa County:
 
    .. image:: ../../img/dam-breach/dam-breach0014.png
       :width: 75%
