@@ -34,9 +34,8 @@ The case study for this method is the Teton Dam Failure, which used the complete
 estimating breach parameters, generating the outflow hydrograph, and routing the resulting floodwave using the Breach Hydrograph Tool.
 
 .. dropdown:: **Teton Dam Failure**
-   ==================================
 
-   .. image:: ../../../img/dam-breach/dam-breach0001.png
+   .. image:: ../../img/dam-breach/dam-breach0001.png
       :width: 75%
 
    .. note:: Historical aerial photograph of the Teton Dam failure near Newdale, Idaho, captured on June 5, 1976. The image shows 
@@ -59,6 +58,7 @@ estimating breach parameters, generating the outflow hydrograph, and routing the
    the Teton Dam event has become a standard reference case for validating hydraulic models and training engineers in dam breach simulation.
 
    .. container:: h3
+      
       Project Characteristics
    
    The Teton Dam failure involved the sudden release of a large reservoir volume and produced one of the highest recorded
@@ -71,6 +71,7 @@ estimating breach parameters, generating the outflow hydrograph, and routing the
    second and producing a flood wave that inundated an area of roughly 240 square kilometers downstream of the dam.
 
    .. container:: h3
+
       Modeling Objectives
    
    The primary objective of this case study was to simulate the dam failure using FLO-2D and the Breach Hydrograph Tool
@@ -88,9 +89,10 @@ estimating breach parameters, generating the outflow hydrograph, and routing the
    and regulatory evaluations.
 
    .. container:: h3
+
       Model Setup and Data
    
-   .. image:: ../../../img/dam-breach/dam-breach0005.png
+   .. image:: ../../img/dam-breach/dam-breach0005.png
       :width: 75%
 
    The simulation domain was defined using terrain and land cover data representative of the downstream watershed.
@@ -107,9 +109,10 @@ estimating breach parameters, generating the outflow hydrograph, and routing the
    physically realistic and numerically stable.
 
    .. container:: h3
+
       Simulation Results
 
-   .. image:: ../../../img/dam-breach/dam-breach0002.png
+   .. image:: ../../img/dam-breach/dam-breach0002.png
 
    .. important:: update this image.
 
@@ -128,6 +131,7 @@ estimating breach parameters, generating the outflow hydrograph, and routing the
    engineering and regulatory applications.
 
    .. container:: h3
+
       Training and Professional Development
    
    This case study is part of the FLO-2D Dam Breach training package, which provides practical guidance on how to develop,
