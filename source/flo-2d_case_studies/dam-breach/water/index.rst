@@ -35,18 +35,18 @@ estimating breach parameters, generating the outflow hydrograph, and routing the
 
 .. dropdown:: **Teton Dam Failure**
 
-   .. image:: ../../img/dam-breach/dam-breach0001.png
-      :width: 75%
-
-   .. note:: Historical aerial photograph of the Teton Dam failure near Newdale, Idaho, captured on June 5, 1976. The image shows 
-      the breached dam and downstream flood impacts along the Teton River corridor. 
-      **Source:** Roberts, WaterArchives.org (Image ID-L-0010). No known U.S. copyright restrictions. Credit to WaterArchives.org is requested.
-
    The failure of the Teton Dam in Idaho, United States, on June 5, 1976, remains one of the most thoroughly documented
    embankment dam failures in hydraulic engineering history. The event occurred during the initial filling of the reservoir,
    when the water level approached the design maximum pool elevation. Due to the extensive forensic investigations conducted
    after the failure, the case provides a reliable and well-documented benchmark for evaluating dam breach modeling
    methodologies and flood routing performance.
+
+   .. image:: ../../img/dam-breach/dam-breach0001.png
+      :width: 75%
+
+   .. note:: Historical aerial photograph of the Teton Dam failure near Newdale, Idaho, captured on June 5, 1976. The image shows 
+      the breached dam and downstream flood impacts along the Teton River corridor. 
+      **Source:** Roberts, WaterArchives.org (Image ID-L-0010). No known U.S. copyright restrictions. 
 
    The dam failure was initiated by internal erosion through the embankment core, commonly referred to as piping.
    Seepage developed along fractures in the core and foundation materials, progressively enlarging internal flow paths until
@@ -58,7 +58,7 @@ estimating breach parameters, generating the outflow hydrograph, and routing the
    the Teton Dam event has become a standard reference case for validating hydraulic models and training engineers in dam breach simulation.
 
    .. container:: h3
-      
+
       Project Characteristics
    
    The Teton Dam failure involved the sudden release of a large reservoir volume and produced one of the highest recorded
@@ -114,8 +114,6 @@ estimating breach parameters, generating the outflow hydrograph, and routing the
 
    .. image:: ../../img/dam-breach/dam-breach0002.png
 
-   .. important:: update this image.
-
    The FLO-2D simulation reproduced the key hydraulic characteristics of the Teton Dam failure, including rapid reservoir drawdown,
    high peak discharge, and extensive downstream inundation. The model generated time-dependent flow depth and velocity
    fields that allowed detailed evaluation of flood behavior throughout the computational domain.
@@ -129,6 +127,8 @@ estimating breach parameters, generating the outflow hydrograph, and routing the
    indicating that the model maintained appropriate mass conservation throughout the event.
    This verification step is critical for ensuring the reliability of dam breach simulations used in
    engineering and regulatory applications.
+
+   .. image:: ../../img/dam-breach/dam-breach0002.gif
 
    .. container:: h3
 
