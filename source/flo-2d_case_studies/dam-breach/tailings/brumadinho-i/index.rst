@@ -3,7 +3,9 @@ Brumadinho I
 
 .. image:: ../../../img/dam-breach/dam-breach0006.png
 
-Source https://commons.wikimedia.org/wiki/File:Brumadinho,_Minas_Gerais_(47021723582).jpg
+.. note:: Historical aerial photograph of the Brumadinho tailings dam failure in Minas Gerais, Brazil, showing the 
+    tailings inundation path and affected landscape following the January 25, 2019 dam collapse. Source: Wikimedia 
+    Commons, photograph by Antonio Cruz. Refer to the Wikimedia Commons image page for licensing information.
 
 The failure of the Brumadinho tailings dam in Minas Gerais, Brazil, on January 25, 2019, represents one of the most
 significant tailings dam disasters in recent history and has become a defining case study in modern tailings risk assessment

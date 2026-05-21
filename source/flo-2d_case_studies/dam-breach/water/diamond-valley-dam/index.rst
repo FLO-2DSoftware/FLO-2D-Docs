@@ -101,7 +101,7 @@ overtopping is the dominant failure mechanism.
 Simulation Results
 ---------------------------------
 
-.. image:: ../../../img/dam-breach/dam-breach0004.png
+.. image:: ../../../img/dam-breach/dam-breach0004.gif
 
 The simulation demonstrated the progressive formation of a breach in the embankment and the resulting release of
 reservoir water over time. The model predicted an initial period of relatively low discharge followed by rapid

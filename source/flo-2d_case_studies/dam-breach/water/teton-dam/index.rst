@@ -3,6 +3,10 @@ Teton Dam Failure
 
 .. image:: ../../../img/dam-breach/dam-breach0001.png
 
+.. note:: Historical aerial photograph of the Teton Dam failure near Newdale, Idaho, captured on June 5, 1976. The image shows 
+   the breached dam and downstream flood impacts along the Teton River corridor. 
+   **Source:** Roberts, WaterArchives.org (Image ID-L-0010). No known U.S. copyright restrictions. Credit to WaterArchives.org is requested.
+
 The failure of the Teton Dam in Idaho, United States, on June 5, 1976, remains one of the most thoroughly documented
 embankment dam failures in hydraulic engineering history. The event occurred during the initial filling of the reservoir,
 when the water level approached the design maximum pool elevation. Due to the extensive forensic investigations conducted

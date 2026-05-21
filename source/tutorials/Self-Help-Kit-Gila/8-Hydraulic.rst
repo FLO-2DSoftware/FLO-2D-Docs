@@ -342,4 +342,4 @@ It is part of the final steps for preparing your model.
 
 Summary and Review Project
 -------------------------------
-Coming soon!
+Under Construction...
