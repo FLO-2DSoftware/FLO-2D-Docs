@@ -1,9 +1,25 @@
 Conceptual Urban Dam Failure
 ======================================
 
-.. image:: ../../../img/dam-breach/dam-breach0014.png
+Dry detention basin and earthen dam located in Phoenix, Arizona. Phoenix Basin No. 7 provides approximately 
+257 acre-feet of storage and drains a 0.6 square-mile watershed. Runoff is discharged through a 27-inch principal 
+outlet pipe connected to a downstream channel and supplemented by an emergency spillway. The outlet pipe inlet 
+invert is located at the basin floor elevation of 1371.34 ft and extends approximately 160 ft through the embankment. 
+The emergency spillway has a minimum crest elevation of 1393.7 ft and provides overflow protection during extreme storm events.
 
-Dry detention basin and earthen dam in Phoenix, Arizona.
+Additional information about Phoenix Basin No. 7 is available from the Flood Control District of Maricopa County:
+
+.. raw:: html
+
+   <a href="https://alert.fcd.maricopa.gov/alert/Flow/13307.htm#RNOFF"
+      target="_blank"
+      rel="noopener noreferrer">
+      Phoenix Basin No. 7 Data
+   </a>
+
+.. image:: ../../../img/dam-breach/dam-breach0014.png
+    :width: 75%
+
 Source: Google Earth Pro imagery. Image enhanced for clarity; dam/basin features unchanged.
 
 A conceptual dam failure scenario was developed for an urban watershed located in the Phoenix metropolitan area in
@@ -17,8 +33,7 @@ However, failure of such structures, whether due to overtopping, structural inst
 can result in rapid downstream flooding with potentially significant consequences.
 
 The scenario analyzed in this case study represents a hypothetical failure of an urban detention dam.
-The modeling effort was conducted to support consequence assessment and emergency planning by identifying potential
-flood pathways, infrastructure impacts, and downstream hazard zones.
+
 
 Modeling Objectives
 --------------------
@@ -32,7 +47,6 @@ The analysis focused on:
 - Evaluating downstream flood propagation
 - Identifying potential infrastructure impacts
 - Assessing flood routing across transportation corridors
-- Supporting emergency planning and risk communication
 
 This type of modeling is commonly performed for dam safety evaluations,
 urban flood risk studies, and regulatory compliance assessments.
@@ -40,12 +54,12 @@ urban flood risk studies, and regulatory compliance assessments.
 Model Setup and Data
 ---------------------------------
 
-.. image:: ../../../img/dam-breach/dam-breach0013.png
-    :width: 75%
-
 The dam structure was represented as a levee dam within the computational domain. The failure was simulated using a
 prescribed breach, in which the location, geometry, and direction of the breach were defined explicitly within the model.
 The breach was positioned at a location along the dam crest to simulate a structural failure mechanism.
+
+.. image:: ../../../img/dam-breach/dam-breach0013.png
+    :width: 75%
 
 The model dynamically calculated the discharge through the breach as water levels within the reservoir exceeded the
 structural capacity of the dam. This approach allowed the simulation to represent the progressive release of stored
