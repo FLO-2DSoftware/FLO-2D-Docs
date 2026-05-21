@@ -2,6 +2,7 @@ Teton Dam Failure
 ==================================
 
 .. image:: ../../../img/dam-breach/dam-breach0001.png
+   :width: 75%
 
 .. note:: Historical aerial photograph of the Teton Dam failure near Newdale, Idaho, captured on June 5, 1976. The image shows 
    the breached dam and downstream flood impacts along the Teton River corridor. 
@@ -55,6 +56,7 @@ Model Setup and Data
 ---------------------------------
 
 .. image:: ../../../img/dam-breach/dam-breach0005.png
+   :width: 75%
 
 The simulation domain was defined using terrain and land cover data representative of the downstream watershed.
 Elevation data were processed to generate a computational grid suitable for hydraulic routing,
@@ -73,6 +75,8 @@ Simulation Results
 --------------------
 
 .. image:: ../../../img/dam-breach/dam-breach0002.png
+
+.. important update this image.
 
 The FLO-2D simulation reproduced the key hydraulic characteristics of the Teton Dam failure, including rapid reservoir drawdown,
 high peak discharge, and extensive downstream inundation. The model generated time-dependent flow depth and velocity

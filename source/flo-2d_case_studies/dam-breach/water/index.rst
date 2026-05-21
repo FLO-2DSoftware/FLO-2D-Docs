@@ -70,6 +70,7 @@ Method 3: Erosion Breach
 ---------------------------
 
 .. image:: ../../img/dam-breach/dam-breach0004.gif
+   :width: 75%
 
 The Erosion Breach method represents the most physically based approach for simulating dam failure in FLO-2D.
 In this method, the breach develops dynamically as a result of hydraulic erosion driven by the flow of water through

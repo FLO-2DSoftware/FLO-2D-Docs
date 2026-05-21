@@ -1,4 +1,4 @@
-Conceptual Urban Dam Failure Scenario
+Conceptual Urban Dam Failure
 ======================================
 
 .. image:: ../../../img/dam-breach/dam-breach0014.png
@@ -41,6 +41,7 @@ Model Setup and Data
 ---------------------------------
 
 .. image:: ../../../img/dam-breach/dam-breach0013.png
+    :width: 75%
 
 The dam structure was represented as a levee dam within the computational domain. The failure was simulated using a
 prescribed breach, in which the location, geometry, and direction of the breach were defined explicitly within the model.

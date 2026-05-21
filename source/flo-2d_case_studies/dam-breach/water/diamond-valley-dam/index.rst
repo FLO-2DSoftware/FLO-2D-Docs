@@ -2,6 +2,7 @@ Erosion of Diamond Valley Lake
 ==================================
 
 .. image:: ../../../img/dam-breach/dam-breach0015.png
+    :width: 75%
 
 Source: Google Earth Pro imagery. Image enhanced for clarity; dam/basin features unchanged.
 
