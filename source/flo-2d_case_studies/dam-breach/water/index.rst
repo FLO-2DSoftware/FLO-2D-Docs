@@ -12,11 +12,11 @@ in detail, including their assumptions, typical applications, and recommended tu
 Method 1: Breach Hydrograph Tool
 ---------------------------------
 
-.. image:: ../../img/dam-breach/dam-breach0002.png
-
 The Breach Hydrograph Tool is a simplified and efficient method for estimating the outflow hydrograph associated with a
 water dam failure. This approach is commonly used for preliminary assessments, regulatory studies, emergency planning,
 and screening-level analyses where detailed breach mechanics are not required or where limited data are available.
+
+.. image:: ../../img/dam-breach/dam-breach0002.png
 
 The tool estimates the key breach parameters required to define the dam failure hydrograph, including the peak discharge,
 time to peak discharge, average breach width, and the total duration of the hydrograph. These parameters are calculated
@@ -153,12 +153,12 @@ estimating breach parameters, generating the outflow hydrograph, and routing the
 Method 2: Prescribed Breach
 ---------------------------------
 
-.. image:: ../../img/dam-breach/dam-breach0003.gif
-   :width: 75%
-
 In this method, the user directly defines the breach geometry and the rate at which the breach develops over time.
 The model then computes the resulting outflow hydrograph dynamically based on the changing breach
 dimensions and the hydraulic conditions in the reservoir.
+
+.. image:: ../../img/dam-breach/dam-breach0003.gif
+   :width: 75%
 
 This approach is commonly used when site-specific information about the breach characteristics is available or when
 regulatory guidance requires the explicit definition of breach parameters. The prescribed breach method allows the
@@ -220,6 +220,7 @@ specified the breach development time, and simulated the resulting reservoir rel
 
    - Simulating the structural failure of the dam
    - Evaluating downstream flood propagation
+   - Calibrate to flood extent mapping
    - Identifying potential infrastructure impacts
    - Assessing flood routing across transportation corridors
 
