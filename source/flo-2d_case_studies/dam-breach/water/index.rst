@@ -41,7 +41,7 @@ estimating breach parameters, generating the outflow hydrograph, and routing the
 Method 2: Prescribed Breach
 ---------------------------------
 
-.. image:: ../../img/dam-breach/dam-breach0003.png
+.. image:: ../../img/dam-breach/dam-breach0003.gif
 
 In this method, the user directly defines the breach geometry and the rate at which the breach develops over time.
 The model then computes the resulting outflow hydrograph dynamically based on the changing breach
