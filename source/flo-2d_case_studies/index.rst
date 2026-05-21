@@ -1,4 +1,4 @@
-.. _tutorials-index:
+.. _case_studies:
 
 FLO-2D Case Studies
 =========================
