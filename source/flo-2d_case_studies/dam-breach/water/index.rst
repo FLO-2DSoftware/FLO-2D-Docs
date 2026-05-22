@@ -401,6 +401,7 @@ and simulated the progressive development of the breach and resulting flood rout
    erosion processes rather than instantaneous structural collapse.
 
    .. container:: h3
+   
       Modeling Approach
    
    The dam failure was simulated using the FLO-2D erosion breach method, in which the breach develops dynamically in
