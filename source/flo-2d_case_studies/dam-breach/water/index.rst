@@ -157,7 +157,7 @@ In this method, the user directly defines the breach geometry and the rate at wh
 The model then computes the resulting outflow hydrograph dynamically based on the changing breach
 dimensions and the hydraulic conditions in the reservoir.
 
-.. image:: ../../img/dam-breach/dam-breach0018.png
+.. image:: ../../img/dam-breach/dam-breach0019.png
    :width: 75%
 
 This approach is commonly used when site-specific information about the breach characteristics is available or when
