@@ -157,7 +157,7 @@ In this method, the user directly defines the breach geometry and the rate at wh
 The model then computes the resulting outflow hydrograph dynamically based on the changing breach
 dimensions and the hydraulic conditions in the reservoir.
 
-.. image:: ../../img/dam-breach/dam-breach0003.gif
+.. image:: ../../img/dam-breach/dam-breach0018.png
    :width: 75%
 
 This approach is commonly used when site-specific information about the breach characteristics is available or when
@@ -266,7 +266,11 @@ specified the breach development time, and simulated the resulting reservoir rel
    - Potential inundation extent
    - Downstream hazard zones
 
-   These results are critical for evaluating evacuation requirements, infrastructure vulnerability, and emergency response planning.
+   These results are critical for evaluating evacuation requirements, infrastructure vulnerability, and emergency response planning. Time 
+   dependent results allow emergency planners to establish more precise and accurate safety zones.
+
+   .. image:: ../../img/dam-breach/dam-breach0003.gif
+
 
    .. container:: h3
       
