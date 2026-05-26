@@ -102,8 +102,7 @@ estimating breach parameters, generating the outflow hydrograph, and routing the
    The resulting model configuration allowed the simulation to reproduce the hydraulic response of the flood wave as it moved through the downstream system.
 
    .. image:: ../../img/dam-breach/dam-breach0005.png
-      :width: 75%
-
+   
    The modeling workflow included verification of simulation stability and review of diagnostic outputs such as volume conservation,
    velocity distribution, and time step behavior. These checks are essential for ensuring that the simulation results are
    physically realistic and numerically stable.

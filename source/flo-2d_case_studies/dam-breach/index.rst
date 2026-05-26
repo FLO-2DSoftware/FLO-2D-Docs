@@ -31,5 +31,3 @@ and emergency planning.
    :caption: Contents
 
    water/index.rst
-   tailings/index.rst
-   two-phase/index.rst
