@@ -158,7 +158,6 @@ The model then computes the resulting outflow hydrograph dynamically based on th
 dimensions and the hydraulic conditions in the reservoir.
 
 .. image:: ../../img/dam-breach/dam-breach0019.png
-   :width: 75%
 
 This approach is commonly used when site-specific information about the breach characteristics is available or when
 regulatory guidance requires the explicit definition of breach parameters. The prescribed breach method allows the
@@ -299,8 +298,8 @@ In this method, the breach develops dynamically as a result of hydraulic erosion
 the dam structure. Instead of prescribing the final breach geometry or estimating a hydrograph in advance,
 the model computes the progressive enlargement of the breach based on erosion processes and hydraulic conditions during the simulation.
 
-.. image:: ../../img/dam-breach/dam-breach0004.gif
-   :width: 75%
+.. image:: ../../img/dam-breach/dam-breach0020.png
+
 
 This approach is particularly useful when the failure mechanism is expected to involve overtopping or internal erosion
 and when the objective of the study is to represent the time-dependent evolution of the breach. The erosion breach
