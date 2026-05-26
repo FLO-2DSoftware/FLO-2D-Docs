@@ -16,7 +16,7 @@ The Breach Hydrograph Tool is a simplified and efficient method for estimating t
 water dam failure. This approach is commonly used for preliminary assessments, regulatory studies, emergency planning,
 and screening-level analyses where detailed breach mechanics are not required or where limited data are available.
 
-.. image:: ../../img/dam-breach/dam-breach0002.png
+.. image:: ../../img/dam-breach/dam-breach0021.png
 
 The tool estimates the key breach parameters required to define the dam failure hydrograph, including the peak discharge,
 time to peak discharge, average breach width, and the total duration of the hydrograph. These parameters are calculated
