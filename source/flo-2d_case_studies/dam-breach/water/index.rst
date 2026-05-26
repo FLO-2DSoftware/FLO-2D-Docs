@@ -248,12 +248,12 @@ specified the breach development time, and simulated the resulting reservoir rel
       
       Simulation Results
 
-   .. image:: ../../img/dam-breach/dam-breach0012.png
-
    The simulation demonstrated the rapid downstream propagation of floodwaters following the structural failure of the dam.
    The model predicted that released water would initially follow the primary drainage pathway downstream of the structure
    before spreading laterally across the urban terrain.
 
+   .. image:: ../../img/dam-breach/dam-breach0012.png
+   
    One of the key findings of the analysis was the potential for floodwaters to intersect major transportation infrastructure.
    The results indicated that flow could cross a nearby highway corridor and continue toward lower-elevation areas located to the southwest of the dam.
 
