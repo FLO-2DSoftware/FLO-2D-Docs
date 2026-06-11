@@ -6,18 +6,18 @@ Tank Breach
 Introduction
 ------------
 
-A tank breach is the sudden or gradual failure of a storage tank or containment system that releases stored
-liquid (e.g water) into the surrounding area. In FLO-2D, tank breach modeling is important because it helps
-estimate how the released material will spread across the terrain, whether it will remain inside containment,
-overtop a wall, or move into nearby drainage paths. This type of analysis supports emergency planning,
-containment design, hazard mapping, and risk evaluation.
+A tank breach is the sudden or progressive failure of a storage tank or containment system that results in the
+ uncontrolled release of stored liquid (e.g., water) into the surrounding environment. In FLO-2D, tank breach 
+ modeling is used to simulate the movement and extent of the released liquid across the terrain, evaluate 
+ whether it remains within containment features such as berms or walls, and identify potential flow paths to 
+ nearby drainage systems. This analysis supports emergency response planning, containment design, hazard mapping, 
+ and risk assessment.
 
 .. image:: ../img/tank-breach/tank001.png
     :width: 75%
 
-To model tank breach scenarios in FLO-2D, a **Prescribed Breach** method can be used. In this method, the user directly
-defines the breach geometry and the rate at which the breach develops over time. The model then computes  the
-resulting outflow hydrograph dynamically based on the changing breach dimension and the conditions in the tank.
+In this case study, the tank breach and containment wall breach were applied.  The tank breach was simulated with a 
+hydrograph and the containment wall breach was simulated with a prescribed breach of using a collapse failure.
 
 .. image:: ../img/tank-breach/tank002.png
     :width: 95%
@@ -39,9 +39,8 @@ The minimum and maximum elevation of the site is 846.070 and 903.852 ft, respect
 .. image:: ../img/tank-breach/tank003.png
     :width: 75%
 
-Source: Google Earth Pro imagery.
 
-Workshop Objectives
+Workshop 
 ~~~~~~~~~~~~~~~~~~~
 The Tank Breach Workshop is an advanced FLO-2D Plugin/QGIS training exercise focused on teaching
 participants how to build, run, and map a tank-breach flood model. The workshop’s main objectives
