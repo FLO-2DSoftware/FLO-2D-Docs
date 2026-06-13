@@ -81,7 +81,7 @@ Spatially varying roughness values were applied to represent:
 * Disturbed areas
 * Urbanized regions
 
-.. image:: img/mudflow003.png
+.. image:: ../img/mudflow-modeling/mudflow003.png
    :align: center
 
 *Figure 3. Spatial distribution of Manning's roughness.*
