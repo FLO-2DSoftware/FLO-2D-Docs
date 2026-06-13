@@ -95,7 +95,7 @@ A temporal rainfall distribution was developed to represent storm intensificatio
 
 The rainfall distribution was applied directly to the FLO-2D grid using the rainfall editor.
 
-.. image:: img/mudflow004.png
+.. image:: ../img/mudflow-modeling/mudflow004.png
    :align: center
 
 *Figure 4. Design storm rainfall distribution.*
