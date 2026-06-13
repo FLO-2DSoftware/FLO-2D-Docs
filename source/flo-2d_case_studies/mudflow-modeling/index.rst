@@ -38,7 +38,7 @@ The study area consists of a steep mountainous watershed that drains onto a deve
 Numerous tributary channels converge near the apex of the fan where debris flows and mudflows
 commonly initiate during short-duration, high-intensity storm events.
 
-.. image:: img/mudflow_modeling/mudflow001.png
+.. image:: ../img/mudflow-modeling/mudflow001.png
    :align: center
 
 *Figure 1. Watershed and alluvial fan study area.*
@@ -64,7 +64,7 @@ A computational domain was created to encompass the contributing watershed and d
 
 Elevation data were interpolated to the FLO-2D grid and used to define overland flow paths, channelized drainage features, and fan topography.
 
-.. image:: img/mudflow_modeling/mudflow002.png
+.. image:: ../img/mudflow-modeling/mudflow002.png
    :align: center
 
 *Figure 2. Computational grid and terrain model.*
