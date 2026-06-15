@@ -146,7 +146,7 @@ The resulting hydrograph includes:
 
 These data were assigned to an inflow boundary condition within FLO-2D.
 
-.. image:: img/mudflow007.png
+.. image:: ../img/mudflow-modeling/mudflow007.png
    :align: center
 
 *Figure 7. Mudflow hydrograph development.*
