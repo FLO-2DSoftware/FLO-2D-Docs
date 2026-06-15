@@ -166,7 +166,7 @@ Model inputs included:
 
 The simulation routed the mudflow through channels and across the alluvial fan while accounting for sediment transport and deposition processes.
 
-.. image:: ../img/mudflow-modeling/mudflow008.png
+.. image:: ../img/mudflow-modeling/mudflow008.gif
    :align: center
 
 *Figure 8. FLO-2D mudflow simulation.*
