@@ -127,7 +127,7 @@ A floodplain cross section was established near the apex of the alluvial fan to 
 
 The resulting hydrograph represents the volume and timing of runoff entering the fan system.
 
-.. image:: img/mudflow006.png
+.. image:: ../img/mudflow-modeling/mudflow006.png
    :align: center
 
 *Figure 6. Simulated watershed hydrograph.*
