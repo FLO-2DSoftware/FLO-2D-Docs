@@ -113,7 +113,7 @@ Green-Ampt parameters were developed from:
 
 This process allowed rainfall excess to be converted into runoff while accounting for spatial variability in infiltration rates.
 
-.. image:: img/mudflow005.png
+.. image:: ../img/mudflow-modeling/mudflow005.png
    :align: center
 
 *Figure 5. Infiltration parameter development.*
