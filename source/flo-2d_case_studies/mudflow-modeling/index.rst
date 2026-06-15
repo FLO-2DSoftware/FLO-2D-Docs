@@ -179,7 +179,7 @@ The simulation produced a series of hazard maps that describe the magnitude and 
 Maximum Mudflow Depth
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: img/mudflow009.png
+.. image:: ../img/mudflow-modeling/mudflow009.png
    :align: center
 
 *Figure 9. Maximum mudflow depth.*
@@ -187,7 +187,7 @@ Maximum Mudflow Depth
 Maximum Velocity
 ~~~~~~~~~~~~~~~~
 
-.. image:: img/mudflow010.png
+.. image:: ../img/mudflow-modeling/mudflow010.png
    :align: center
 
 *Figure 10. Maximum mudflow velocity.*
@@ -195,7 +195,7 @@ Maximum Velocity
 Maximum Sediment Concentration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: img/mudflow011.png
+.. image:: ../img/mudflow-modeling/mudflow011.png
    :align: center
 
 *Figure 11. Maximum sediment concentration by volume.*
