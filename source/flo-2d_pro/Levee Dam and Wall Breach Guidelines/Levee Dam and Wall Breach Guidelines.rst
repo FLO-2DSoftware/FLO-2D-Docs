@@ -74,11 +74,11 @@ and initial breach mechanism is not as important to the downstream area of flood
 
 There are two failure modes: 1) Prescribed failure using vertical and horizontal rates of breach
 expansion; 2) Predicted breach erosion of earthen embankments using sediment transport capacity equations.
-Prescribed failure is defined a levee or dam breach that is computed using uniform expansion rate in
+Prescribed failure is defined as a levee or dam breach that is computed using uniform expansion rate in
 vertical and horizontal from a one foot wide breach to a full breach opening.
 If the rates of failure are set to zero, the levee or wall can failure instantaneously.
 
-The FLO-2D model can automatically access the location of the initial levee breach based on computed
+The FLO-2D model can automatically assess the location of the initial levee breach based on computed
 flood routing hydraulics.
 The breach computational timestep is controlled by the flood routing routine in the model.
 FLO-2D computes the breach widening, the discharge through the breach, the change in upstream storage,
