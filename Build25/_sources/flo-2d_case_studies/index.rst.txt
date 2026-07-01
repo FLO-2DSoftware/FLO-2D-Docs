@@ -7,4 +7,5 @@ FLO-2D Case Studies
    :maxdepth: 1
 
    dam-breach/index
+   tank-breach/tank-breach.rst
    
