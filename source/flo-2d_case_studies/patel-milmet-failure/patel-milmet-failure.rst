@@ -3,7 +3,6 @@
 Patel Milmet Dam Failure
 ========================
 
-
 Background
 ----------
 
@@ -18,7 +17,7 @@ Reports indicated that approximately 190,000 m\ :sup:`3` of water was released, 
 communities.
 The disaster resulted in the loss of 48 lives and caused extensive damage to homes, infrastructure, farmland, and other property (KHCR, 2018).
 
-.. image:: ../img/milmet002.jpeg
+.. image:: ../img/patel-milmet-failure/milmet002.jpeg
 
 *Figure 1.
 Milmet Dam Failure (Photo courtesy of Kenya's Ministry of Interior and Coordination of National
@@ -29,7 +28,7 @@ Modeling dam breach scenarios such as this can help identify areas at risk from 
 Predictions of flood extent, depth, velocity, and arrival time provide a basis for mapping hazard zones, assessing risks to downstream communities and
 agricultural lands, and identifying areas that may remain safe during a breach event.
 
-.. image:: ../img/milmet003.png
+.. image:: ../img/patel-milmet-failure/milmet003.png
 
 *Figure 2.
 Post-Event Image (Source Google Earth).*
@@ -73,7 +72,7 @@ provide a more comprehensive assessment of potential hazard and risk.
 FLO-2D Breach Hydrograph Tool
 -----------------------------
 
-.. image:: ../img/milmet004.png
+.. image:: ../img/patel-milmet-failure/milmet004.png
 
 *Figure 3.
 Breach Hydrograph Tool location in FLO-2D toolbar.*
