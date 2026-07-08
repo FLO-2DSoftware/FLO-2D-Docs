@@ -6,24 +6,30 @@ Patel Milmet Dam Failure
 Background
 ----------
 
-The Patel Dam, also known as the Milmet Dam, was an earthen embankment reservoir located in Solai, Nakuru County, Kenya, on the privately owned Patel
+The Patel Dam, also known as the Milmet Dam, was an earthen embankment reservoir located in Solai, Nakuru County, Kenya (Figure 1), on the privately owned Patel
 Coffee Estate.
+
+.. image:: ../img/patel-milmet-failure/milmet012.png
+
+*Figure 1.
+Study Area.*
+
 The estate covered approximately 3,500 acres and contained seven dams or water pans, namely Milmet Dam, Tinderess Dam, Moi Dam, Duck Dam, D.O Dam,
 Mini Moi Dam, and Pelican Water Pan (The Senate of Kenya, 2018).
 The Milmet was one of five earthen embankment dams on the property.
 
-On 9 May 2018, the Milmet Dam failed catastrophically (Figure 1) after holding an estimated 200,000 m\ :sup:`3` of water.
+On 9 May 2018, the Milmet Dam failed catastrophically (Figure 2) after holding an estimated 200,000 m\ :sup:`3` of water.
 Reports indicated that approximately 190,000 m\ :sup:`3` of water was released, generating a destructive flood that swept through downstream
 communities.
 The disaster resulted in the loss of 48 lives and caused extensive damage to homes, infrastructure, farmland, and other property (KHCR, 2018).
 
 .. image:: ../img/patel-milmet-failure/milmet002.jpeg
 
-*Figure 1.
+*Figure 2.
 Milmet Dam Failure (Photo courtesy of Kenya's Ministry of Interior and Coordination of National
 Government Multi-Agency Report 2018).*
 
-The breach runout as shown in Figure 2 extends downstream through farmland and villages for roughly 8 Km.
+The breach runout as shown in Figure 3 extends downstream through farmland and villages for roughly 8 Km.
 Modeling dam breach scenarios such as this can help identify areas at risk from a potential dam failure.
 Predictions of flood extent, depth, velocity, and arrival time provide a basis for mapping hazard zones, assessing risks to downstream communities and
 agricultural lands, and identifying areas that may remain safe during a breach event.
@@ -31,7 +37,7 @@ agricultural lands, and identifying areas that may remain safe during a breach e
 .. image:: ../img/patel-milmet-failure/milmet003.png
    :width: 75%
 
-*Figure 2.
+*Figure 3.
 Post-Event Image (Source Google Earth).*
 
 This case study uses the documented characteristics of the Patel (Milmet) Dam failure as the basis for demonstrating the FLO-2D modeling workflow.
@@ -75,7 +81,7 @@ FLO-2D Breach Hydrograph Tool
 
 .. image:: ../img/patel-milmet-failure/milmet004.png
 
-*Figure 3.
+*Figure 4.
 Breach Hydrograph Tool location in FLO-2D toolbar.*
 
 Water Dam Inputs
@@ -100,18 +106,18 @@ Hydrograph Generation
 
     - Parabolic – Barfield (1981)
 
-See Figure 4 for configuration of these parameters and the resulting hydrograph.
+See Figure 5 for configuration of these parameters and the resulting hydrograph.
 
 .. image:: ../img/patel-milmet-failure/milmet005.png
    :width: 75%
 
-*Figure 4.
+*Figure 5.
 Breach Hydrograph Tool.*
 
 FLO-2D Model Configuration
 --------------------------
 
-The model domain (Figure 5) for this case study is limited to 4.7 Km downstream of the dam.
+The model domain (Figure 6) for this case study is limited to 4.7 Km downstream of the dam.
 This was to limit the workflow for a simple case study.
 The model domain uses a 30 m grid cell size, Advanced Land Observing Satellite (ALOS) World 3D elevation data.
 European Space Agency (ESA) Land Cover data was used to develop Manning’s roughness values.
@@ -124,7 +130,7 @@ release the normal depth flow at the downstream boundary.
 .. image:: ../img/patel-milmet-failure/milmet006.png
    :width: 75%
 
-*Figure 5.
+*Figure 6.
 Dam Breach Domain and Upstream Breach Hydrograph.*
 
 
@@ -139,9 +145,9 @@ Maximum Flood Depth
 .. image:: ../img/patel-milmet-failure/milmet007.png
    :width: 75%
 
-*Figure 6: Maximum Depth*
+*Figure 7: Maximum Depth*
 
-Maximum flood depth shows the greatest depth of flooding reached at each grid pixel (Figure 6) during the event.
+Maximum flood depth shows the greatest depth of flooding reached at each grid pixel (Figure 7) during the event.
 It can use to identify areas at the highest risk of inundation, assess potential impacts on people, buildings, infrastructure, and agriculture, and
 support flood hazard mapping.
 In this demonstration, the maximum flood depth map provides a clear representation of the simulated flood extent and highlights the areas expected to
@@ -152,9 +158,9 @@ Maximum Velocity
 .. image:: ../img/patel-milmet-failure/milmet008.png
    :width: 75%
 
-*Figure 7: Maximum Velocity*
+*Figure 8: Maximum Velocity*
 
-Maximum velocity shows the highest flow velocity reached at each grid pixel during the event (Figure 7).
+Maximum velocity shows the highest flow velocity reached at each grid pixel during the event (Figure 8).
 Flow velocity is a key indicator of the destructive power of floodwaters, as high-velocity flows can erode riverbanks, damage buildings, undermine
 roads and bridges, and transport debris over long distances.
 Maximum velocity maps help identify areas where floodwater pose the greatest risk to people and infrastructure and provide valuable information for
@@ -165,11 +171,11 @@ Maximum Velocity Vectors
 .. image:: ../img/patel-milmet-failure/milmet009.png
    :width: 75%
 
-*Figure 8: Maximum Velocity Vectors*
+*Figure 9: Maximum Velocity Vectors*
 
 Maximum velocity vectors provide information on both the magnitude and direction of flood flows during the simulation.
 Unlike the maximum velocity map, which only shows how fast the water is moving, velocity vectors illustrate the direction of flow as it propagates
-across the floodplain (Figure 8).
+across the floodplain (Figure 9).
 This information is useful for understanding flood routing, identifying the main flow paths, and assessing areas that are likely to experience strong
 hydraulic forces, erosion, or debris transport.
 Velocity vector maps can also support the design of flood mitigation measures, such as the placement of levees, culverts, and flood protection
@@ -183,9 +189,9 @@ Australian Rainfall and Runoff (ARR)
 .. image:: ../img/patel-milmet-failure/milmet010.png
    :width: 75%
 
-*Figure 9: ARR Flood Hazard*
+*Figure 10: ARR Flood Hazard*
 
-Flood hazard maps (Figure 9) combine flood depth and flow velocity to classify the severity of flood conditions and identify areas where floodwaters
+Flood hazard maps (Figure 10) combine flood depth and flow velocity to classify the severity of flood conditions and identify areas where floodwaters
 are most likely to pose a risk to people, infrastructure, and property.
 Unlike individual depth or velocity maps, hazard maps provide an overall indication of flood danger by categorizing inundated areas into hazard
 classes ranging from very low to extreme.
@@ -200,7 +206,7 @@ Floodplain Cross-Section Measurements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The cross sections are used to compute hydrographs for flow crossing a line of cells, including floodplain, channel and street flow elements.
-Four floodplain cross sections (Figure 10) were used in this project area to help define the floodwave arrival time.
+Four floodplain cross sections (Figure 11) were used in this project area to help define the floodwave arrival time.
 It should be noted that floodwave arrival times are highly sensitive to breach formation time, release volume, and the resulting breach hydrograph.
 Whenever possible, these parameters should be calibrated using documented observations, witness statements, or post-event investigations.
 In the absence of reliable observations, multiple simulations with varying breach parameters should be evaluated to characterize the range of
@@ -209,7 +215,7 @@ potential downstream impacts and arrival times.
 .. image:: ../img/patel-milmet-failure/milmet011.png
    :width: 75%
 
-*Figure 10: Floodplain Cross-Section measurements at select locations*
+*Figure 11: Floodplain Cross-Section measurements at select locations*
 
 
 
