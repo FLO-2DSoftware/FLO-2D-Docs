@@ -23,12 +23,6 @@ regulatory decision-making.*
 
 
 
-PATEL MILMET DAM FAILURE
-
-FLO-2D Software, Inc.
-
-contact@flo-2d.com
-
 .. toctree::
    :maxdepth: 1
    :caption: Contenxt
