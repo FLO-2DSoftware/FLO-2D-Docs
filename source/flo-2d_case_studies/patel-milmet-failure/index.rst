@@ -30,7 +30,7 @@ FLO-2D Software, Inc.
 contact@flo-2d.com
 
 .. toctree::
-   :maxdepth: 0
+   :maxdepth: 1
    :caption: Contenxt
 
    patel-milmet-failure
