@@ -9,7 +9,7 @@ A Case Study
 .. image:: ../img/patel-milmet-failure/milmet001.png
    :width: 75%
 
-***Disclaimer:***
+**Disclaimer:**
 
 *This document is intended solely as a demonstration of the FLO-2D QGIS Plugin workflow for a
 dam-break modeling and flood inundation mapping.
@@ -30,7 +30,7 @@ FLO-2D Software, Inc.
 contact@flo-2d.com
 
 .. toctree::
-   maxdepth: 1
+   maxdepth: 0
 
    patel-milmet-failure
 
