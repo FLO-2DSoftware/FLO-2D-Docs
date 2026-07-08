@@ -29,6 +29,7 @@ Predictions of flood extent, depth, velocity, and arrival time provide a basis f
 agricultural lands, and identifying areas that may remain safe during a breach event.
 
 .. image:: ../img/patel-milmet-failure/milmet003.png
+   :width: 75%
 
 *Figure 2.
 Post-Event Image (Source Google Earth).*
@@ -102,6 +103,7 @@ Hydrograph Generation
 See Figure 4 for configuration of these parameters and the resulting hydrograph.
 
 .. image:: ../img/patel-milmet-failure/milmet005.png
+   :width: 75%
 
 *Figure 4.
 Breach Hydrograph Tool.*
@@ -120,6 +122,7 @@ Appropriate inflow and outflow boundary conditions were established prior to mod
 release the normal depth flow at the downstream boundary.
 
 .. image:: ../img/patel-milmet-failure/milmet006.png
+   :width: 75%
 
 *Figure 5.
 Dam Breach Domain and Upstream Breach Hydrograph.*
@@ -134,6 +137,7 @@ Selected Flood Maps
 Maximum Flood Depth
 
 .. image:: ../img/patel-milmet-failure/milmet007.png
+   :width: 75%
 
 *Figure 6: Maximum Depth*
 
@@ -146,6 +150,7 @@ experience the deepest flooding following the dam failure scenario.
 Maximum Velocity
 
 .. image:: ../img/patel-milmet-failure/milmet008.png
+   :width: 75%
 
 *Figure 7: Maximum Velocity*
 
@@ -158,6 +163,7 @@ flood hazard assessment.
 Maximum Velocity Vectors
 
 .. image:: ../img/patel-milmet-failure/milmet009.png
+   :width: 75%
 
 *Figure 8: Maximum Velocity Vectors*
 
@@ -175,6 +181,7 @@ Selected Hazard Maps
 Australian Rainfall and Runoff (ARR)
 
 .. image:: ../img/patel-milmet-failure/milmet010.png
+   :width: 75%
 
 *Figure 9: ARR Flood Hazard*
 
@@ -200,6 +207,7 @@ In the absence of reliable observations, multiple simulations with varying breac
 potential downstream impacts and arrival times.
 
 .. image:: ../img/patel-milmet-failure/milmet011.png
+   :width: 75%
 
 *Figure 10: Floodplain Cross-Section measurements at select locations*
 
