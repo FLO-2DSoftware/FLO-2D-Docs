@@ -10,7 +10,6 @@ A Case Study
    :width: 75%
 
 **Disclaimer:**
-
 *This document is intended solely as a demonstration of the FLO-2D QGIS Plugin workflow for a
 dam-break modeling and flood inundation mapping.
 It is* **NOT** *a formal engineering investigation, calibrated hydraulic study, safety assessment,
