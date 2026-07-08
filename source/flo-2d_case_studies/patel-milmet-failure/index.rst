@@ -22,7 +22,7 @@ regulatory decision-making.*
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contenxt
+   :caption: Context
 
    patel-milmet-failure
 
