@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 
-PATEL MILMET DAM FAILURE
-=======================
+Patel Milmet Dam Failure
+========================
 
 
 Background
