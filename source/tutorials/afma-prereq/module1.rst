@@ -17,29 +17,29 @@ Step 2: Install the FLO-2D Build 25
 
 Install FLO-2D using the following instructions.  Admin Rights Required.
 
-.. image:: img/Instructions/image3.png
+.. image:: ../img/Instructions/image3.png
 
 
 1. Right click zipped file to access properties.
 
 2. Unblock the file if necessary.
 
-.. image:: img/Instructions/image41.png
+.. image:: ../img/Instructions/image41.png
 
 
 3. Double click the Setup file to run the installer.
 
-.. image:: img/Instructions/image5.png
+.. image:: ../img/Instructions/image5.png
 
 
 4. Check all options and click next.
 
-.. image:: img/Instructions/image15a.png
+.. image:: ../img/Instructions/image15a.png
 
 
 5. Click Next and Install to run the installer.
 
-.. image:: img/Instructions/image16.png
+.. image:: ../img/Instructions/image16.png
 
 
 6. The Microsoft Visual C++ redistribution packages are embedded in the FLO-2D installer.  They install passively,
