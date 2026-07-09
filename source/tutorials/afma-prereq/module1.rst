@@ -1,4 +1,4 @@
-Module 1 - Install FLO-2D Pro and QGIS
+Module 1 - Install The Software
 ====================================================
 
 This module will prepare your computer for the FLO-2D workshop. By the end of this module, 
@@ -9,6 +9,8 @@ Step 1: Get the installers
 ---------------------------------------------------
 
 1. Download the required installer here:
+
+.. raw:: html
 
    <a href="https://flo-2d.sharefile.com/d-s324ed541474440dd85aaad107c07063c" target="_blank" rel="noopener noreferrer">Download</a>
 
