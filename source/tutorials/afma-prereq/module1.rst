@@ -8,7 +8,7 @@ you will have QGIS, the FLO-2D Plugin, and the FLO-2D Pro engine installed and r
 Step 1: Get the installers
 ---------------------------------------------------
 
-1. Download the required installer here: |Download|
+1. Download the required installer here:
 
 .. raw:: html
 
