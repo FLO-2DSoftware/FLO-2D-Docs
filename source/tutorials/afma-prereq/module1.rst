@@ -14,6 +14,7 @@ Step 1: Get the installers
 
    <a href="https://flo-2d.sharefile.com/d-s324ed541474440dd85aaad107c07063c" target="_blank" rel="noopener noreferrer">Download</a></p>
 
+
 Step 2: Install the FLO-2D Build 25
 ------------------------------------
 
@@ -46,7 +47,7 @@ Step 3: Run the FLO-2D AFMA Activator
 Step 4: Install QGIS 3.4x
 ---------------------------------------
 
-1. Run the QGIS Installer.
+1. Run the QGIS Installer. This one is 3.44 but any version around 3.4x should be fine.
 
 .. image:: ../../setup/img/Instructions/inst006a.png
 
@@ -87,7 +88,7 @@ Build a QGIS User Profile by following these steps:
    :width: 600px
    :class: bordered-img
 
-Step 4: Install Plugins
+Step 5: Install Plugins
 ----------------------------
 
 .. warning::
@@ -117,36 +118,10 @@ Step 4: Install Plugins
 
    
 
+1. Open to the Plugin Manager and Find the Install from Zip tab.
 
-1. Add the FLO-2D Plugin Repository. Copy this link to the clipboard. Ctrl-C.
-
-   ``https://flo-2dsoftware.github.io/FLO-2D-Plugins/plugins.xml``
-
-
-2. Open to the Plugin Manager and Find the Settings tab.
-
-3. Click the Add button to add the FLO-2D Plugin Repository.
-
-.. image:: ../../setup/img/Instructions/qgisplugin001.png
-   :width: 600px
-   :class: bordered-img
-
-4. Fill the form with the repository URL and click OK.
-
-.. image:: ../../setup/img/Instructions/qgisplugin002.png
-   :width: 600px
-   :class: bordered-img
-
-
-5. Install the FLO-2D Plugins.
-
-   Switch to the All Plugins tab and filter the list with "FLO-2D".
-
-   Install the following plugins:
-
-.. image:: ../../setup/img/Instructions/qgisplugin003.png
-   :width: 600px
-   :class: bordered-img
+2. Load the Plugin and install it.
+3. Load MapCrafter and install it the same way.
 
 Step 5: Recommended Plugins
 -----------------------------------
