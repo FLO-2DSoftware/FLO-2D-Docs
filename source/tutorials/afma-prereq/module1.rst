@@ -46,21 +46,12 @@ Step 3: Run the FLO-2D AFMA Activator
 Step 4: Install QGIS 3.4x
 ---------------------------------------
 
-1. Get an old stand alone installer from the QGIS download archive:
+1. Run the QGIS Installer.
 
-   .. raw:: html
-       <a href="https://download.osgeo.org/qgis/win64/" target="_blank" rel="noopener noreferrer">QGIS Installer Archive</a>
+.. image:: ../../setup/img/Instructions/inst006a.png
 
-
-.. note:: The images reference QGIS version 3.34 and 3.28 but the steps are the same for any stand alone version of QGIS.
-      
-.. image:: ../../setup/img/Instructions/archive.png
-   :width: 600px
-   :class: bordered-img
    
-2. Double click the QGIS installer.
-
-3. Finish installing with the default settings.
+2. Finish installing with the default settings. Your installer should read QGIS 3.44. 
 
 .. image:: ../../setup/img/Instructions/image8.png
    :width: 600px
