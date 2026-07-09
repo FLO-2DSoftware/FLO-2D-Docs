@@ -8,18 +8,18 @@ you will have QGIS, the FLO-2D Plugin, and the FLO-2D Pro engine installed and r
 Step 1: Get the installers
 ---------------------------------------------------
 
-1. Download the required installer here:
+1. Download the required installer here: |Download|
 
 .. raw:: html
 
-   <a href="https://flo-2d.sharefile.com/d-s324ed541474440dd85aaad107c07063c" target="_blank" rel="noopener noreferrer">Download</a>
+   <a href="https://flo-2d.sharefile.com/d-s324ed541474440dd85aaad107c07063c" target="_blank" rel="noopener noreferrer">Download</a></p>
 
 Step 2: Install the FLO-2D Build 25
 ------------------------------------
 
 1. . Run the Installer.
 
-.. image:: ../../setup/img/Instructions/image5.png
+.. image:: ../../setup/img/Instructions/inst001a.png
 
 
 2. Check all options and click next.
@@ -43,34 +43,31 @@ Step 3: Run the FLO-2D AFMA Activator
 
 .. image:: ../../setup/img/Instructions/inst003.png
 
-Step : Install QGIS 3.4x
+Step 4: Install QGIS 3.4x
 ---------------------------------------
 
-   Get an old stand alone installer from the QGIS download archive:
+1. Get an old stand alone installer from the QGIS download archive:
 
-      .. raw:: html
+   .. raw:: html
+       <a href="https://download.osgeo.org/qgis/win64/" target="_blank" rel="noopener noreferrer">QGIS Installer Archive</a>
 
-         <a href="https://download.osgeo.org/qgis/win64/" target="_blank" rel="noopener noreferrer">QGIS Installer Archive</a>
-   
-   
-   .. note:: The images reference QGIS version 3.34 and 3.28 but the steps are the same for any stand alone version of QGIS.
+
+.. note:: The images reference QGIS version 3.34 and 3.28 but the steps are the same for any stand alone version of QGIS.
       
-   .. image:: ../../setup/img/Instructions/archive.png
-      :width: 600px
-      :class: bordered-img
+.. image:: ../../setup/img/Instructions/archive.png
+   :width: 600px
+   :class: bordered-img
    
-   1. Double click the QGIS installer.
+2. Double click the QGIS installer.
 
-   2. Finish installing with the default settings.
+3. Finish installing with the default settings.
 
-   .. image:: ../../setup/img/Instructions/image8.png
-      :width: 600px
-      :class: bordered-img
+.. image:: ../../setup/img/Instructions/image8.png
+   :width: 600px
+   :class: bordered-img
 
-Step 3: QGIS Setup Profile
+Step 4: QGIS Setup Profile
 --------------------------------------------
-
-.. _flo2d_plugin_step:
 
 Build a QGIS User Profile by following these steps:
 
