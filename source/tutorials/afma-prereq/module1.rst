@@ -17,29 +17,29 @@ Step 2: Install the FLO-2D Build 25
 
 Install FLO-2D using the following instructions.  Admin Rights Required.
 
-.. image:: ../img/Instructions/image3.png
+.. image:: ../../setup/img/Instructions/image3.png
 
 
 1. Right click zipped file to access properties.
 
 2. Unblock the file if necessary.
 
-.. image:: ../img/Instructions/image41.png
+.. image:: ../../setup/img/Instructions/image41.png
 
 
 3. Double click the Setup file to run the installer.
 
-.. image:: ../img/Instructions/image5.png
+.. image:: ../../setup/img/Instructions/image5.png
 
 
 4. Check all options and click next.
 
-.. image:: ../img/Instructions/image15a.png
+.. image:: ../../setup/img/Instructions/image15a.png
 
 
 5. Click Next and Install to run the installer.
 
-.. image:: ../img/Instructions/image16.png
+.. image:: ../../setup/img/Instructions/image16.png
 
 
 6. The Microsoft Visual C++ redistribution packages are embedded in the FLO-2D installer.  They install passively,
@@ -60,11 +60,11 @@ The activator is stored in the tech support account. It requires Admin Rights to
 
 1. Download and run the activator.
 
-.. image:: img/Instructions/inst002.png
+.. image:: ../../setup/img/Instructions/inst002.png
 
 2. Activation lasts 1 year past the purchase date.
 
-.. image:: img/Instructions/inst003.png
+.. image:: ../../setup/img/Instructions/inst003.png
 
 3. FLO-2D uses a site license.  It can be installed and activated on any computer in the office that holds the
    license.  The license agreement is saved to the Documentation folder along with the rest of the FLO-2D Documentation.
@@ -82,7 +82,7 @@ Follow these instructions to set up an older version of QGIS.
    
    .. note:: The images reference QGIS version 3.34 and 3.28 but the steps are the same for any stand alone version of QGIS.
       
-   .. image:: img/Instructions/archive.png
+   .. image:: ../../setup/img/Instructions/archive.png
       :width: 600px
       :class: bordered-img
    
@@ -90,7 +90,7 @@ Follow these instructions to set up an older version of QGIS.
 
    2. Finish installing with the default settings.
 
-   .. image:: img/Instructions/image8.png
+   .. image:: ../../setup/img/Instructions/image8.png
       :width: 600px
       :class: bordered-img
 
@@ -108,13 +108,13 @@ Build a QGIS User Profile by following these steps:
 
 1. Open QGIS. Any version newer than 3.30 should work.
 
-.. image:: img/Instructions/Worksh002.png
+.. image:: ../../setup/img/Instructions/Worksh002.png
    :width: 600px
    :class: bordered-img
 
 2. Click **Settings → Options**.
 
-.. image:: img/Instructions/image13.png
+.. image:: ../../setup/img/Instructions/image13.png
    :width: 600px
    :class: bordered-img
 
@@ -122,7 +122,7 @@ Build a QGIS User Profile by following these steps:
 
 .. important:: This step is critical for the FLO-2D Plugin to function properly.
 
-.. image:: img/Instructions/image14.png
+.. image:: ../../setup/img/Instructions/image14.png
    :width: 600px
    :class: bordered-img
 
@@ -168,13 +168,13 @@ Step 4: Install FLO-2D Plugin
 
 3. Click the Add button to add the FLO-2D Plugin Repository.
 
-.. image:: img/Instructions/qgisplugin001.png
+.. image:: ../../setup/img/Instructions/qgisplugin001.png
    :width: 600px
    :class: bordered-img
 
 4. Fill the form with the repository URL and click OK.
 
-.. image:: img/Instructions/qgisplugin002.png
+.. image:: ../../setup/img/Instructions/qgisplugin002.png
    :width: 600px
    :class: bordered-img
 
@@ -185,7 +185,7 @@ Step 4: Install FLO-2D Plugin
 
    Install the following plugins:
 
-.. image:: img/Instructions/qgisplugin003.png
+.. image:: ../../setup/img/Instructions/qgisplugin003.png
    :width: 600px
    :class: bordered-img
 
@@ -203,7 +203,7 @@ Step 5: Recommended Plugins
    - Street View
    - QuickOSM
 
-.. image:: img/Instructions/qgisplugin004.png
+.. image:: ../../setup/img/Instructions/qgisplugin004.png
    :width: 600px
    :class: bordered-img
 
@@ -211,7 +211,7 @@ Step 5: Recommended Plugins
 
    Click the QMS icon → Settings → More Services → **Get Contributed Pack**.
 
-.. image:: img/Instructions/image15.gif
+.. image:: ../../setup/img/Instructions/image15.gif
    :width: 600px
    :class: bordered-img
 
