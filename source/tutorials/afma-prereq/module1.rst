@@ -17,63 +17,34 @@ Step 1: Get the installers
 Step 2: Install the FLO-2D Build 25
 ------------------------------------
 
-Install FLO-2D using the following instructions.  Admin Rights Required.
-
-.. image:: ../../setup/img/Instructions/image3.png
-
-
-1. Right click zipped file to access properties.
-
-2. Unblock the file if necessary.
-
-.. image:: ../../setup/img/Instructions/image41.png
-
-
-3. Double click the Setup file to run the installer.
+1. . Run the Installer.
 
 .. image:: ../../setup/img/Instructions/image5.png
 
 
-4. Check all options and click next.
+2. Check all options and click next.
 
 .. image:: ../../setup/img/Instructions/image15a.png
 
 
-5. Click Next and Install to run the installer.
+3. Click Next and Install to run the installer.
+
+4. The Microsoft Visual C++ redistribution packages are embedded in the FLO-2D installer.  They install passively,
+   but may request a restart.
 
 .. image:: ../../setup/img/Instructions/image16.png
 
+Step 3: Run the FLO-2D AFMA Activator
+---------------------------------------
 
-6. The Microsoft Visual C++ redistribution packages are embedded in the FLO-2D installer.  They install passively,
-   but may request a restart.
+1. Run the activator.
 
-The activator is stored in the tech support account. It requires Admin Rights to run.
-
-.. important::
-
-   The activator name tag is MM-YY where MM is the month and YY is the year of purchase. Don't run an activator from previous years.
-
-|Activator|
-
-.. |Activator| raw:: html
-
-   <a href="https://flo-2d.sharefile.com/" target="_blank">Sharefile Login</a>
-
-
-1. Download and run the activator.
-
-.. image:: ../../setup/img/Instructions/inst002.png
-
-2. Activation lasts 1 year past the purchase date.
+.. image:: ../../setup/img/Instructions/inst002a.png
 
 .. image:: ../../setup/img/Instructions/inst003.png
 
-3. FLO-2D uses a site license.  It can be installed and activated on any computer in the office that holds the
-   license.  The license agreement is saved to the Documentation folder along with the rest of the FLO-2D Documentation.
-
-C:\\users\\public\\documents\\FLO-2D Pro Documentation
-
-Follow these instructions to set up an older version of QGIS. 
+Step : Install QGIS 3.4x
+---------------------------------------
 
    Get an old stand alone installer from the QGIS download archive:
 
@@ -127,8 +98,6 @@ Build a QGIS User Profile by following these steps:
 .. image:: ../../setup/img/Instructions/image14.png
    :width: 600px
    :class: bordered-img
-
-.. _addflo2dplugin:
 
 Step 4: Install Plugins
 ----------------------------
