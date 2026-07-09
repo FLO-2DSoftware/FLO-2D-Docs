@@ -128,7 +128,7 @@ Build a QGIS User Profile by following these steps:
 
 .. _addflo2dplugin:
 
-Step 4: Install FLO-2D Plugin
+Step 4: Install Plugins
 -------------------------------
 
 .. warning::
