@@ -1,99 +1,166 @@
 Module 2 - Setup HEC-RAS 6.0
 ====================================================
 
-Step 1: Get the Software
+
+|hydrow003|
+
+Step 3: Load QGIS
+-----------------------------------------
+
+- Open QGIS
+
+|hydrow004|
+
+- Open the plugin manager and load the Installed Tab.
+
+|hydrow005|
+
+- If you are missing any of these plugins please follow the :ref:`Install Instructions <setup_qgis_flo2d_plugin>`.
+
+|hydrow006|
+
+- Open the Settings>>Options menu.
+
+|hydrow007|
+
+- Find the CRS tab and select the **Use Project CRS** button.
+
+|hydrow008|
+
+- QGIS Layout Overview
+
+|hydrow009|
+
+- QGIS Toolbar Layout Overview
+
+|hydrow010|
+
+Module 2 - Connect Data 
+=============================
+
+Use the following steps to connect to U.S. government or international data servers. If a local agency provides a server connection URL, 
+QGIS can connect to it using the same workflow. Servers that require authentication can be configured through the QGIS connection settings.
+
+Step 1: 3DEP elevation server connection
 ---------------------------------------------------
 
-1. Open a web browser and navigate to the HEC-RAS download page.
+- Load the Data Manager by clicking the colorful icon below.
+- Set the tab to WCS.
+- Click New and enter a name and paste the URL.
 
-   https://www.hec.usace.army.mil/software/hec-ras/download.aspx
+URL: https://elevation.nationalmap.gov/arcgis/services/3DEPElevation/ImageServer/WCSServer
 
-2. Download the HEC-RAS 6.0 installation package.
+|hydrow011|
 
-3. Save the installer to a location that is easy to find, such as your
-   Downloads folder.
-
-HEC-RAS is developed and distributed free of charge by the U.S. Army
-Corps of Engineers Hydrologic Engineering Center (HEC). :contentReference[oaicite:0]{index=0}
-
-
-Step 2: Verify System Requirements
+Step 2: Land cover NLCD server connection
 ---------------------------------------------------
 
-Before installing HEC-RAS, verify that your computer meets the minimum
-requirements.
+- Load the Data Manager by clicking the colorful icon below.
+- Set the tab to WCS.
+- Click New and enter a name and paste the URL.
 
-* Windows 64-bit operating system
-* Administrative privileges to install software
-* Sufficient disk space for the software and project files
+URL: https://dmsdata.cr.usgs.gov/geoserver/mrlc_Land-Cover-Native_conus_year_data/wcs
 
-HEC-RAS Version 6.0 and newer require a 64-bit Windows operating system. :contentReference[oaicite:1]{index=1}
+|hydrow012|
 
-
-Step 3: Run the Installer
+Step 3: Hydrography NHD server connection
 ---------------------------------------------------
 
-1. Locate the downloaded installation file.
-2. Right-click the installer and select **Run as Administrator**.
-3. If prompted by Windows User Account Control (UAC), click **Yes**.
-4. Follow the installation wizard and accept the default settings unless
-   your organization requires a different installation location.
-5. Click **Install** and wait for the installation to complete.
-6. Click **Finish** when the installation is complete.
+- Load the Data Manager by clicking the colorful icon below.
+- Set the tab to ArcGIS REST Server.
+- Click New and enter a name and paste the URL.
 
+URL: https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer
 
-Step 4: Launch HEC-RAS
+|hydrow013|
+
+Step 4: FEMA Effective Server
 ---------------------------------------------------
 
-1. Open the Windows Start Menu.
-2. Search for **HEC-RAS 6.0**.
-3. Launch the application.
+- Load the Data Manager by clicking the colorful icon below.
+- Set the tab to ArcGIS REST Server.
+- Click New and enter a name and paste the URL.
 
-The HEC-RAS main window should open and display the standard menu and
-toolbar interface.
+URL: https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer
 
+|hydrow014|
 
-Step 5: Confirm the Installation
+Step 5: Levee Database
 ---------------------------------------------------
 
-1. From the HEC-RAS menu, select:
+- Load the Data Manager by clicking the colorful icon below.
+- Set the tab to ArcGIS REST Server.
+- Click New and enter a name and paste the URL.
 
-   **Help > About HEC-RAS**
+URL: https://geospatial.sec.usace.army.mil/dls/rest/services/NLD/Public/FeatureServer
 
-2. Verify that the software version is listed as **6.0**.
+|hydrow013a|
 
-If HEC-RAS opens successfully and the version number is displayed, the
-installation is complete.
+.. Important:: Close and Reload QGIS to **save the User Profile**. If QGIS crashes before the profile is saved, the **setup** step will need to be repeated.
+
+Module 2 - Load FLO-2D Project 
+=================================
+
+Step 1: Load the project
+------------------------------
+
+- Click the Open FLO-2D Project button.
+
+|hydrow015|
+
+- Navigate to the Workshop folder and open the Workshop Project 1.gpkg file.
+
+|hydrow015a|
+
+- The project should look like this:
+
+|hydrow015b|
+
+Step 2: Review Available Data
+---------------------------------
+
+.. note:: Since the data processing steps in this workshop depend on a good 
+   internet connection and the ability to download large datasets, some files are 
+   available in the **Workshop** Folders.
+
+- Open the Workshop directory and review the data files.
+- If a download process fails, find the data in each respective folder.
+
+|hydrow015c|
 
 
-Step 6: Create a Working Directory
----------------------------------------------------
+.. |hydrow002| image:: ../img/hydrowkshp/hydrow002.png
 
-Create a folder structure for the workshop files before beginning any
-model development.
+.. |hydrow003| image:: ../img/hydrowkshp/hydrow003.png
 
-Example:
+.. |hydrow004| image:: ../img/hydrowkshp/hydrow004.jpg
 
-::
+.. |hydrow005| image:: ../img/hydrowkshp/hydrow005.jpg
 
-   C:\HEC-RAS_Workshop\
-   ├── Data
-   ├── Terrain
-   ├── Geometry
-   ├── Results
-   └── Backup
+.. |hydrow006| image:: ../img/hydrowkshp/hydrow006.png
 
-Keeping project files organized will make it easier to manage terrain,
-geometry, flow data, and simulation results throughout the workshop.
+.. |hydrow007| image:: ../img/hydrowkshp/hydrow007.jpg
 
+.. |hydrow008| image:: ../img/hydrowkshp/hydrow008.png
 
-Step 7: Download the Workshop Files
----------------------------------------------------
+.. |hydrow009| image:: ../img/hydrowkshp/hydrow009.jpg
 
-1. Download the workshop dataset provided by the instructor.
-2. Extract the files to the ``HEC-RAS_Workshop`` directory.
-3. Verify that all project files are accessible before proceeding to the
-   next module.
+.. |hydrow010| image:: ../img/hydrowkshp/hydrow010.jpg
 
-At the end of this module, HEC-RAS should be installed, functioning
-properly, and ready for model development.
+.. |hydrow011| image:: ../img/hydrowkshp/hydrow011.jpg
+
+.. |hydrow012| image:: ../img/hydrowkshp/hydrow012.jpg
+
+.. |hydrow013| image:: ../img/hydrowkshp/hydrow013.jpg
+
+.. |hydrow013a| image:: ../img/hydrowkshp/hydrow013a.png
+
+.. |hydrow014| image:: ../img/hydrowkshp/hydrow014.jpg
+
+.. |hydrow015| image:: ../img/hydrowkshp/hydrow015.jpg
+
+.. |hydrow015a| image:: ../img/hydrowkshp/hydrow015a.png
+
+.. |hydrow015b| image:: ../img/hydrowkshp/hydrow015b.png
+
+.. |hydrow015c| image:: ../img/hydrowkshp/hydrow015c.png  

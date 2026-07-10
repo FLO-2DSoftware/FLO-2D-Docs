@@ -2,8 +2,7 @@ Module 1 - Install The Software
 ====================================================
 
 This module will prepare your computer for the FLO-2D workshop. By the end of this module, 
-you will have QGIS, the FLO-2D Plugin, and the FLO-2D Pro engine installed and ready for use. :contentReference[oaicite:0]{index=0}
-
+you will have QGIS, the FLO-2D Plugin, and the FLO-2D Pro engine installed and ready for use. 
 
 Step 1: Get the installers
 ---------------------------------------------------
@@ -18,7 +17,7 @@ Step 1: Get the installers
 Step 2: Install the FLO-2D Build 25
 ------------------------------------
 
-1. . Run the Installer.
+1. Run the FLO-2D Installer.
 
 .. image:: ../../setup/img/Instructions/inst001a.png
 
@@ -48,17 +47,18 @@ Step 4: Install QGIS 3.4x
 ---------------------------------------
 
 1. Run the QGIS Installer. This one is 3.44 but any version around 3.4x should be fine.
+2. If you have more than 2 versions of QGIS installed, remove the ones you don't need.
 
 .. image:: ../../setup/img/Instructions/inst006a.png
 
    
-2. Finish installing with the default settings. Your installer should read QGIS 3.44. 
+3. Finish installing with the default settings. The following image is a bit outdated. 
 
 .. image:: ../../setup/img/Instructions/image8.png
    :width: 600px
    :class: bordered-img
 
-Step 4: QGIS Setup Profile
+Step 5: QGIS Setup Profile
 --------------------------------------------
 
 Build a QGIS User Profile by following these steps:
@@ -68,7 +68,7 @@ Build a QGIS User Profile by following these steps:
    This step should be performed by the End User.  If it is done on an Admin account, the profile will only be 
    available on the Admin account.
 
-1. Open QGIS. Any version newer than 3.30 should work.
+1. Open QGIS. Your version will be newer.
 
 .. image:: ../../setup/img/Instructions/Worksh002.png
    :width: 600px
@@ -88,13 +88,17 @@ Build a QGIS User Profile by following these steps:
    :width: 600px
    :class: bordered-img
 
-Step 5: Install Plugins
+Step 6: Install Plugins
 ----------------------------
+
+1. Install the FLO-2D Plugins
+
+.. image:: ../../setup/img/Instructions/inst008.png
 
 .. warning::
 
    The FLO-2D Plugin packages a bundled version of the ``h5py`` library for Stand Alone QGIS programs.
-   In some QGIS environments, the ``h5py`` binaries can remain locked in memory after the plugin is loaded.  
+   In some QGIS environments, the ``h5py`` binaries lock the plugin folder.  
    This may prevent the plugin from uninstalling, updating, or overwriting files during installation.
 
    If the plugin cannot be removed or updated:
@@ -118,12 +122,12 @@ Step 5: Install Plugins
 
    
 
-1. Open to the Plugin Manager and Find the Install from Zip tab.
+2. Open to the Plugin Manager and Find the Install from Zip tab.
 
-2. Load the Plugin and install it.
-3. Load MapCrafter and install it the same way.
+3. Load the FLO-2D Plugin and install it.
+4. Load FLO-2D MapCrafter and install it the same way.
 
-Step 5: Recommended Plugins
+Step 7: Recommended Plugins
 -----------------------------------
 
 1. These additional plugins are helpful for FLO-2D Model Development.
@@ -156,176 +160,36 @@ Tutorial data is located here:
 ``C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials``
 
 
-Step 6: Set up the quick access folder
------------------------------------------
-
-- Find the training folder.
-
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects
-
-- Drag the Workshop Folder into the Quick Access Area.
-- It can be removed after the class is over.
-
-|hydrow003|
-
-Step 3: Load QGIS
------------------------------------------
-
-- Open QGIS
-
-|hydrow004|
-
-- Open the plugin manager and load the Installed Tab.
-
-|hydrow005|
-
-- If you are missing any of these plugins please follow the :ref:`Install Instructions <setup_qgis_flo2d_plugin>`.
-
-|hydrow006|
-
-- Open the Settings>>Options menu.
-
-|hydrow007|
-
-- Find the CRS tab and select the **Use Project CRS** button.
-
-|hydrow008|
-
-- QGIS Layout Overview
-
-|hydrow009|
-
-- QGIS Toolbar Layout Overview
-
-|hydrow010|
-
-Module 1 - Connect Data 
-=============================
-
-Use the following steps to connect to U.S. government or international data servers. If a local agency provides a server connection URL, 
-QGIS can connect to it using the same workflow. Servers that require authentication can be configured through the QGIS connection settings.
-
-Step 1: 3DEP elevation server connection
+Step 8: Install HEC-RAS 6
 ---------------------------------------------------
 
-- Load the Data Manager by clicking the colorful icon below.
-- Set the tab to WCS.
-- Click New and enter a name and paste the URL.
+1. Run the installer.
 
-URL: https://elevation.nationalmap.gov/arcgis/services/3DEPElevation/ImageServer/WCSServer
+.. image:: ../../setup/img/Instructions/inst007.png
+   :width: 600px
+   :class: bordered-img
 
-|hydrow011|
 
-Step 2: Land cover NLCD server connection
+
+1. Locate the downloaded installation file.
+2. Right-click the installer and select **Run as Administrator**.
+3. If prompted by Windows User Account Control (UAC), click **Yes**.
+4. Follow the installation wizard and accept the default settings unless
+   your organization requires a different installation location.
+5. Click **Install** and wait for the installation to complete.
+6. Click **Finish** when the installation is complete.
+
+
+Step 4: Launch HEC-RAS
 ---------------------------------------------------
 
-- Load the Data Manager by clicking the colorful icon below.
-- Set the tab to WCS.
-- Click New and enter a name and paste the URL.
+1. Open the Windows Start Menu.
+2. Search for **HEC-RAS 6.0**.
+3. Launch the application.
 
-URL: https://dmsdata.cr.usgs.gov/geoserver/mrlc_Land-Cover-Native_conus_year_data/wcs
-
-|hydrow012|
-
-Step 3: Hydrography NHD server connection
----------------------------------------------------
-
-- Load the Data Manager by clicking the colorful icon below.
-- Set the tab to ArcGIS REST Server.
-- Click New and enter a name and paste the URL.
-
-URL: https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer
-
-|hydrow013|
-
-Step 4: FEMA Effective Server
----------------------------------------------------
-
-- Load the Data Manager by clicking the colorful icon below.
-- Set the tab to ArcGIS REST Server.
-- Click New and enter a name and paste the URL.
-
-URL: https://hazards.fema.gov/arcgis/rest/services/public/NFHL/MapServer
-
-|hydrow014|
-
-Step 5: Levee Database
----------------------------------------------------
-
-- Load the Data Manager by clicking the colorful icon below.
-- Set the tab to ArcGIS REST Server.
-- Click New and enter a name and paste the URL.
-
-URL: https://geospatial.sec.usace.army.mil/dls/rest/services/NLD/Public/FeatureServer
-
-|hydrow013a|
-
-.. Important:: Close and Reload QGIS to **save the User Profile**. If QGIS crashes before the profile is saved, the **setup** step will need to be repeated.
-
-Module 1 - Load FLO-2D Project 
-=================================
-
-Step 1: Load the project
-------------------------------
-
-- Click the Open FLO-2D Project button.
-
-|hydrow015|
-
-- Navigate to the Workshop folder and open the Workshop Project 1.gpkg file.
-
-|hydrow015a|
-
-- The project should look like this:
-
-|hydrow015b|
-
-Step 2: Review Available Data
----------------------------------
-
-.. note:: Since the data processing steps in this workshop depend on a good 
-   internet connection and the ability to download large datasets, some files are 
-   available in the **Workshop** Folders.
-
-- Open the Workshop directory and review the data files.
-- If a download process fails, find the data in each respective folder.
-
-|hydrow015c|
+The HEC-RAS main window should open and display the standard menu and
+toolbar interface.
 
 
-.. |hydrow002| image:: ../img/hydrowkshp/hydrow002.png
 
-.. |hydrow003| image:: ../img/hydrowkshp/hydrow003.png
-
-.. |hydrow004| image:: ../img/hydrowkshp/hydrow004.jpg
-
-.. |hydrow005| image:: ../img/hydrowkshp/hydrow005.jpg
-
-.. |hydrow006| image:: ../img/hydrowkshp/hydrow006.png
-
-.. |hydrow007| image:: ../img/hydrowkshp/hydrow007.jpg
-
-.. |hydrow008| image:: ../img/hydrowkshp/hydrow008.png
-
-.. |hydrow009| image:: ../img/hydrowkshp/hydrow009.jpg
-
-.. |hydrow010| image:: ../img/hydrowkshp/hydrow010.jpg
-
-.. |hydrow011| image:: ../img/hydrowkshp/hydrow011.jpg
-
-.. |hydrow012| image:: ../img/hydrowkshp/hydrow012.jpg
-
-.. |hydrow013| image:: ../img/hydrowkshp/hydrow013.jpg
-
-.. |hydrow013a| image:: ../img/hydrowkshp/hydrow013a.png
-
-.. |hydrow014| image:: ../img/hydrowkshp/hydrow014.jpg
-
-.. |hydrow015| image:: ../img/hydrowkshp/hydrow015.jpg
-
-.. |hydrow015a| image:: ../img/hydrowkshp/hydrow015a.png
-
-.. |hydrow015b| image:: ../img/hydrowkshp/hydrow015b.png
-
-.. |hydrow015c| image:: ../img/hydrowkshp/hydrow015c.png  
 
