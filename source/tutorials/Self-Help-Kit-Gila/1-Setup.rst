@@ -106,17 +106,18 @@ configured. For example, a student account on a shared computer will not have th
 administrative account.
 
 FLO-2D Reference Materials
-=============================
+_____________________________________
 
 Technical reference manuals, user manuals, and tutorials are found on the FLO-2D website. https://documentation.flo-2d.com
 
 The most important documents are:
 
--Data Input Manual
--FLO-2D Reference Manual
--Channel Guidelines
--Storm Drain Guidelines
--Hydraulic Structure Guidelines
+- Data Input Manual
+- FLO-2D Reference Manual
+- Channel Guidelines
+- Storm Drain Guidelines
+- Hydraulic Structure Guidelines
+
 
 Technical assistance is available for bug fixes, installation support, and general guidance. Please send a 
 screenshot of the problem to us via email. Most tech support is managed quickly and effectively by email. 
@@ -125,7 +126,7 @@ The short course files are installed in the path:
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\Example Projects\\Self Help Kit
 
 FLO-2D Units
-=====================
+_____________________________________
 
 .. list-table::
    :header-rows: 1

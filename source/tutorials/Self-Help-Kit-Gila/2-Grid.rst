@@ -358,32 +358,32 @@ Save, Export and Extra Information (Optional)
       cells) may experience performance issues when using QGIS table joins and table tools. SQL-based queries operate
       directly on the database without requiring additional memory allocation, making them significantly faster.
 
-.. dropdown:: Optional: **Quick Run**
-   :icon: play-fill
+.. dropdown:: **Quick Run**
+   :icon: play
 
-The **Quick Run** feature allows exporting data and running the model in a single step.
+   The **Quick Run** feature allows exporting data and running the model in a single step.
 
-.. image:: ../img/shg/2/shg02_030.png
+   .. image:: ../img/shg/2/shg02_030.png
 
-Create a new folder named **Quick Run** inside the **Lesson 1** directory and select it.
+   Create a new folder named **Quick Run** inside the **Lesson 1** directory and select it.
 
-.. image:: ../img/shg/2/shg02_031.png
+   .. image:: ../img/shg/2/shg02_031.png
 
-Uncheck **Rain** and click **OK** to initiate a **Quick Run** test.
+   Uncheck **Rain** and click **OK** to initiate a **Quick Run** test.
 
-.. image:: ../img/shg/2/shg02_032.png
+   .. image:: ../img/shg/2/shg02_032.png
 
-If the model starts successfully, the **License Status** will be displayed, and the simulation will begin.
+   If the model starts successfully, the **License Status** will be displayed, and the simulation will begin.
 
-.. image:: ../img/shg/2/shg02_033.png
+   .. image:: ../img/shg/2/shg02_033.png
 
-.. hint:: The **Quick Run** feature executes **FLOPRO.EXE** validation checks. If the model starts, the verification
-   process has passed. For additional information on ASCII data files used by the **FLOPRO.EXE** engine, refer to
-   the accompanying **YouTube tutorial**.
+   .. hint:: The **Quick Run** feature executes **FLOPRO.EXE** validation checks. If the model starts, the verification
+      process has passed. For additional information on ASCII data files used by the **FLOPRO.EXE** engine, refer to
+      the accompanying **YouTube tutorial**.
 
 
-.. dropdown:: Optional: **Run Demo Engine**
-   :icon: play-fill
+.. dropdown:: Run Demo Engine
+   :icon: play
 
    .. raw:: html
 
@@ -394,7 +394,7 @@ If the model starts successfully, the **License Status** will be displayed, and 
    .. Note:: The Self-Help Tutorial does not require a license.  Use the Demo-Engine as shown in the video to take this
       tutorial with a demo version of the software.
 
-.. dropdown:: Optional: **Backup and Recovery**
+.. dropdown:: Backup and Recovery
    :icon: gear
 
    .. raw:: html
