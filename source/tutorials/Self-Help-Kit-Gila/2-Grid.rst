@@ -270,8 +270,8 @@ Navigate to the **Numerical Stability** tab and review the parameter values.
    target="_blank" rel="noopener noreferrer">Webinar Series</a>
 
 
-Save, Export, and Run
-----------------------
+Save, Export and Extra Information (Optional)
+------------------------------------------------
 
 .. raw:: html
 
@@ -280,22 +280,22 @@ Save, Export, and Run
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
    </iframe>
 
-**Save the Project**
-+++++++++++++++++++++
+.. dropdown:: Optional: **Save the Project**
+   :icon: folder
 
-Click the **QGIS Save** button and confirm by selecting **Yes** in the dialog box.
+   Click the **QGIS Save** button and confirm by selecting **Yes** in the dialog box.
 
-.. image:: ../img/shg/2/shg02_024.png
+   .. image:: ../img/shg/2/shg02_024.png
 
-Move the **Elevation** and **Manning's n** layers to the left side of the dialog box. This action saves these layers
-to the GeoPackage.
+   Move the **Elevation** and **Manning's n** layers to the left side of the dialog box. This action saves these layers
+   to the GeoPackage.
 
-.. image:: ../img/shg/2/shg02_025.png
+   .. image:: ../img/shg/2/shg02_025.png
 
-The **FLO-2D Plugin** automatically organizes external layers added to the GeoPackage into a separate group.
-The **Project Domain** layer can be removed, as it has already been copied into the **Computational Domain**.
+   The **FLO-2D Plugin** automatically organizes external layers added to the GeoPackage into a separate group.
+   The **Project Domain** layer can be removed, as it has already been copied into the **Computational Domain**.
 
-.. image:: ../img/shg/2/shg02_026.png
+   .. image:: ../img/shg/2/shg02_026.png
 
 .. dropdown:: Optional: Review the GeoPackage Structure
    :icon: database
@@ -316,8 +316,7 @@ The **Project Domain** layer can be removed, as it has already been copied into 
    .. image:: ../img/shg/2/shg_003.gif
 
    **Using SQL Tools in GeoPackage**
-   ++++++++++++++++++++++++++++++++++++
-
+   
    To execute SQL queries, right-click the **Grid** layer and select **Execute SQL**.
 
    .. image:: ../img/shg/2/shg02_029.png
@@ -359,8 +358,8 @@ The **Project Domain** layer can be removed, as it has already been copied into 
       cells) may experience performance issues when using QGIS table joins and table tools. SQL-based queries operate
       directly on the database without requiring additional memory allocation, making them significantly faster.
 
-**Quick Run**
-+++++++++++++++++++++
+.. dropdown:: Optional: **Quick Run**
+   :icon: play-fill
 
 The **Quick Run** feature allows exporting data and running the model in a single step.
 
@@ -383,24 +382,24 @@ If the model starts successfully, the **License Status** will be displayed, and 
    the accompanying **YouTube tutorial**.
 
 
-Run Demo Engine
----------------------
+.. dropdown:: Optional: **Run Demo Engine**
+   :icon: play-fill
 
-.. raw:: html
+   .. raw:: html
 
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/9wUJBdP6vjQ?si=gHTxsyj6ct_J3TKf"
-   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/9wUJBdP6vjQ?si=gHTxsyj6ct_J3TKf"
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+      gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-.. Note:: The Self-Help Tutorial does not require a license.  Use the Demo-Engine as shown in the video to take this
-   tutorial with a demo version of the software.
+   .. Note:: The Self-Help Tutorial does not require a license.  Use the Demo-Engine as shown in the video to take this
+      tutorial with a demo version of the software.
 
-Backup and Recovery
------------------------
+.. dropdown:: Optional: **Backup and Recovery**
+   :icon: gear
 
-.. raw:: html
+   .. raw:: html
 
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/wmo3Mkl7ZvU"
-   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/wmo3Mkl7ZvU"
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+      gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
