@@ -297,67 +297,67 @@ The **Project Domain** layer can be removed, as it has already been copied into 
 
 .. image:: ../img/shg/2/shg02_026.png
 
-**Review the GeoPackage Structure**
-++++++++++++++++++++++++++++++++++++
+.. dropdown:: Optional: Review the GeoPackage Structure
+   :icon: database
 
-Open the **Browser Panel** and dock it next to the **Layers Panel** by dragging the panel with a left-click and
-dropping it on the Layers Panel when highlighted.
+   Open the **Browser Panel** and dock it next to the **Layers Panel** by dragging the panel with a left-click and
+   dropping it on the Layers Panel when highlighted.
 
-.. image:: ../img/shg/2/shg_002.gif
+   .. image:: ../img/shg/2/shg_002.gif
 
-Connect to the **Project GeoPackage** by right-clicking the **GeoPackage** section and selecting **New Connection**.
-Choose the **Project GeoPackage** file and click **Open**.
+   Connect to the **Project GeoPackage** by right-clicking the **GeoPackage** section and selecting **New Connection**.
+   Choose the **Project GeoPackage** file and click **Open**.
 
-.. image:: ../img/shg/2/shg02_027.png
+   .. image:: ../img/shg/2/shg02_027.png
 
-Expand the **GeoPackage** and use the **E, G, and M** keys on the keyboard to quickly navigate to tables that begin
-with those letters.
+   Expand the **GeoPackage** and use the **E, G, and M** keys on the keyboard to quickly navigate to tables that begin
+   with those letters.
 
-.. image:: ../img/shg/2/shg_003.gif
+   .. image:: ../img/shg/2/shg_003.gif
 
-**Using SQL Tools in GeoPackage**
-++++++++++++++++++++++++++++++++++++
+   **Using SQL Tools in GeoPackage**
+   ++++++++++++++++++++++++++++++++++++
 
-To execute SQL queries, right-click the **Grid** layer and select **Execute SQL**.
+   To execute SQL queries, right-click the **Grid** layer and select **Execute SQL**.
 
-.. image:: ../img/shg/2/shg02_029.png
+   .. image:: ../img/shg/2/shg02_029.png
 
-To compute basic statistics on the `n_value` field in the `grid` table within a GeoPackage database, use the
-following SQL query:
+   To compute basic statistics on the `n_value` field in the `grid` table within a GeoPackage database, use the
+   following SQL query:
 
-.. code-block:: sql
+   .. code-block:: sql
 
-    SELECT
-        MIN(n_value) AS min_value,
-        MAX(n_value) AS max_value,
-        AVG(n_value) AS mean_value,
-        SUM(n_value) AS sum_value,
-        COUNT(n_value) AS total_entries,
-        (SUM(n_value * n_value) / COUNT(n_value)) - (AVG(n_value) * AVG(n_value)) AS variance,
-        SQRT((SUM(n_value * n_value) / COUNT(n_value)) - (AVG(n_value) * AVG(n_value))) AS std_dev
-    FROM grid;
+      SELECT
+         MIN(n_value) AS min_value,
+         MAX(n_value) AS max_value,
+         AVG(n_value) AS mean_value,
+         SUM(n_value) AS sum_value,
+         COUNT(n_value) AS total_entries,
+         (SUM(n_value * n_value) / COUNT(n_value)) - (AVG(n_value) * AVG(n_value)) AS variance,
+         SQRT((SUM(n_value * n_value) / COUNT(n_value)) - (AVG(n_value) * AVG(n_value))) AS std_dev
+      FROM grid;
 
-**Query Explanation:**
+   **Query Explanation:**
 
-- `MIN(n_value)`: Returns the **minimum** roughness value.
-- `MAX(n_value)`: Returns the **maximum** roughness value.
-- `AVG(n_value)`: Computes the **mean** roughness value.
-- `SUM(n_value)`: Returns the **sum** of all roughness values.
-- `COUNT(n_value)`: Counts the **total number of records**.
-- `variance`: Computes the **variance** of `n_value`.
-- `std_dev`: Computes the **standard deviation**.
+   - `MIN(n_value)`: Returns the **minimum** roughness value.
+   - `MAX(n_value)`: Returns the **maximum** roughness value.
+   - `AVG(n_value)`: Computes the **mean** roughness value.
+   - `SUM(n_value)`: Returns the **sum** of all roughness values.
+   - `COUNT(n_value)`: Counts the **total number of records**.
+   - `variance`: Computes the **variance** of `n_value`.
+   - `std_dev`: Computes the **standard deviation**.
 
-**Executing the Query in QGIS:**
+   **Executing the Query in QGIS:**
 
-1. Right-click the **grid** table and select **Execute SQL**.
-2. Paste the SQL query into the query editor.
-3. Click **Run** to execute the query and display the results.
+   1. Right-click the **grid** table and select **Execute SQL**.
+   2. Paste the SQL query into the query editor.
+   3. Click **Run** to execute the query and display the results.
 
-.. image:: ../img/shg/2/shg02_028.png
+   .. image:: ../img/shg/2/shg02_028.png
 
-.. hint:: Using SQL processing is a more efficient method for analyzing data in GeoPackages. Large grids (over 1 million
-   cells) may experience performance issues when using QGIS table joins and table tools. SQL-based queries operate
-   directly on the database without requiring additional memory allocation, making them significantly faster.
+   .. hint:: Using SQL processing is a more efficient method for analyzing data in GeoPackages. Large grids (over 1 million
+      cells) may experience performance issues when using QGIS table joins and table tools. SQL-based queries operate
+      directly on the database without requiring additional memory allocation, making them significantly faster.
 
 **Quick Run**
 +++++++++++++++++++++

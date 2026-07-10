@@ -91,8 +91,7 @@ Navigate to **Settings > Options** and apply the correct configurations.
 Set Up Quick Map Services
 ++++++++++++++++++++++++++++
 
-The Quick Map Services plugin requires a **Contributed Pack** and visibility control adjustments. Open the plugin
-settings, download the **Contributed Pack**, and uncheck any maps that are not needed.
+Open the plugin settings and uncheck any maps that are not needed.
 
 .. image:: ../img/shg/1/shg_011.png
 
@@ -105,3 +104,84 @@ initial setup, the setup process must be repeated.
 Each user account has a distinct profile. If another user logs into the computer, a separate QGIS profile must be
 configured. For example, a student account on a shared computer will not have the same QGIS configuration as an
 administrative account.
+
+FLO-2D Reference Materials
+=============================
+
+Technical reference manuals, user manuals, and tutorials are found on the FLO-2D website. https://documentation.flo-2d.com
+
+The most important documents are:
+
+-Data Input Manual
+-FLO-2D Reference Manual
+-Channel Guidelines
+-Storm Drain Guidelines
+-Hydraulic Structure Guidelines
+
+Technical assistance is available for bug fixes, installation support, and general guidance. Please send a 
+screenshot of the problem to us via email. Most tech support is managed quickly and effectively by email. 
+The short course files are installed in the path:
+
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\Example Projects\\Self Help Kit
+
+FLO-2D Units
+=====================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 30 30
+
+   * - Parameter
+     - Unit (Imperial)
+     - Unit (Metric)
+
+   * - Grid Size
+     - feet (ft)
+     - meters (m)
+
+   * - Elevation
+     - feet (ft)
+     - meters (m)
+
+   * - Area
+     - square feet (ft²)
+     - square meters (m²)
+
+   * - Storage Volume (Large Scale)
+     - acre-feet (ac-ft)
+     - cubic meters (m³)
+
+   * - Discharge
+     - cubic feet per second (cfs)
+     - cubic meters per second (m³/s)
+
+   * - Simulation Time
+     - hours (hr)
+     - hours (hr)
+
+   * - Time Step
+     - hours (hr)
+     - hours (hr)
+
+   * - Flow Velocity
+     - feet per second (ft/s)
+     - meters per second (m/s)
+
+   * - Hydraulic Conductivity
+     - inches per hour (in/hr)
+     - millimeters per hour (mm/hr)
+
+   * - Rainfall Intensity
+     - inches per hour (in/hr)
+     - millimeters per hour (mm/hr)
+
+   * - Manning's n
+     - dimensionless
+     - dimensionless
+
+   * - Flow Rate
+     - cubic feet per second (cfs)
+     - cubic meters per second (m³/s)
+		
+There is no need to convert Manning's N. The conversion is part of the calculation		
+
