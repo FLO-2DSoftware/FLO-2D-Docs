@@ -88,8 +88,8 @@ Build a QGIS User Profile by following these steps:
    :width: 600px
    :class: bordered-img
 
-Step 6: Install Plugins
-----------------------------
+Step 6: Install FLO-2D Plugins
+--------------------------------
 
 1. Install the FLO-2D Plugins
 
@@ -123,6 +123,8 @@ Step 6: Install Plugins
    
 
 2. Open to the Plugin Manager and Find the Install from Zip tab.
+
+.. image:: ../../setup/img/Instructions/instplugin001.png
 
 3. Load the FLO-2D Plugin and install it.
 4. Load FLO-2D MapCrafter and install it the same way.
