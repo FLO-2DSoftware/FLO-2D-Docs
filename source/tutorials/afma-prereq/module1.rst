@@ -55,7 +55,7 @@ Step 4: Install QGIS 3.4x
 3. Finish installing with the default settings. The following image is a bit outdated. 
 
 .. image:: ../../setup/img/Instructions/image8.png
-   :width: 600px
+   :width: 800px
    :class: bordered-img
 
 Step 5: QGIS Setup Profile
@@ -71,13 +71,13 @@ Build a QGIS User Profile by following these steps:
 1. Open QGIS. Your version will be newer.
 
 .. image:: ../../setup/img/Instructions/Worksh002.png
-   :width: 600px
+   :width: 800px
    :class: bordered-img
 
 2. Click **Settings → Options**.
 
 .. image:: ../../setup/img/Instructions/image13.png
-   :width: 600px
+   :width: 800px
    :class: bordered-img
 
 3. Click the **CRS** tab and set the options shown below.
@@ -85,7 +85,7 @@ Build a QGIS User Profile by following these steps:
 .. important:: This step is critical for the FLO-2D Plugin to function properly.
 
 .. image:: ../../setup/img/Instructions/image14.png
-   :width: 600px
+   :width: 800px
    :class: bordered-img
 
 Step 6: Install FLO-2D Plugins
@@ -165,7 +165,7 @@ Step 8: Install HEC-RAS 6
 1. Run the installer.
 
 .. image:: ../../setup/img/Instructions/inst007.png
-   :width: 600px
+   :width: 800px
    :class: bordered-img
 
 
