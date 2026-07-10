@@ -144,7 +144,7 @@ Step 7: Recommended Plugins
    - QuickOSM
 
 .. image:: ../../setup/img/Instructions/qgisplugin004.png
-   :width: 600px
+   :width: 800px
    :class: bordered-img
 
 3. Quick Map Services requires an additional step.
@@ -152,14 +152,11 @@ Step 7: Recommended Plugins
    Click the QMS icon → Settings → More Services → **Get Contributed Pack**.
 
 .. image:: ../../setup/img/Instructions/image15.gif
-   :width: 600px
+   :width: 800px
    :class: bordered-img
 
 
-This concludes the installation and setup.  Please restart QGIS to save the profile.
-Tutorial data is located here:
-
-``C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials``
+4. **Close QGIS** to save the profile.
 
 
 Step 8: Install HEC-RAS 6
@@ -180,18 +177,4 @@ Step 8: Install HEC-RAS 6
    your organization requires a different installation location.
 5. Click **Install** and wait for the installation to complete.
 6. Click **Finish** when the installation is complete.
-
-
-Step 4: Launch HEC-RAS
----------------------------------------------------
-
-1. Open the Windows Start Menu.
-2. Search for **HEC-RAS 6.0**.
-3. Launch the application.
-
-The HEC-RAS main window should open and display the standard menu and
-toolbar interface.
-
-
-
 
