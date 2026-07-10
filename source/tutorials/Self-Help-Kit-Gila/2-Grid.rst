@@ -280,8 +280,7 @@ Save, Export and Extra Information (Optional)
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
    </iframe>
 
-.. dropdown:: Optional: **Save the Project**
-   :icon: folder
+.. dropdown:: Save the Project
 
    Click the **QGIS Save** button and confirm by selecting **Yes** in the dialog box.
 
@@ -297,8 +296,7 @@ Save, Export and Extra Information (Optional)
 
    .. image:: ../img/shg/2/shg02_026.png
 
-.. dropdown:: Optional: Review the GeoPackage Structure
-   :icon: database
+.. dropdown:: Review the GeoPackage Structure
 
    Open the **Browser Panel** and dock it next to the **Layers Panel** by dragging the panel with a left-click and
    dropping it on the Layers Panel when highlighted.
@@ -359,7 +357,6 @@ Save, Export and Extra Information (Optional)
       directly on the database without requiring additional memory allocation, making them significantly faster.
 
 .. dropdown:: **Quick Run**
-   :icon: play
 
    The **Quick Run** feature allows exporting data and running the model in a single step.
 
@@ -383,7 +380,6 @@ Save, Export and Extra Information (Optional)
 
 
 .. dropdown:: Run Demo Engine
-   :icon: play
 
    .. raw:: html
 
@@ -395,7 +391,6 @@ Save, Export and Extra Information (Optional)
       tutorial with a demo version of the software.
 
 .. dropdown:: Backup and Recovery
-   :icon: gear
 
    .. raw:: html
 
