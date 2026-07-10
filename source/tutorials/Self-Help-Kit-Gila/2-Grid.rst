@@ -118,6 +118,16 @@ After setup, the project interface should appear as follows:
 
 .. image:: ../img/shg/2/shg02_009.png
 
+Helpers
+++++++++++
+
+- Don't use the roller wheel in the FLO-2D Widget Area.  Use Collapse instead.
+- Layers List Collapse helps to shrink the list quickly.
+- If a layer is lost, the Search tool is helpful.
+
+.. image:: ../img/shg/2/shg02_009a.png
+
+
 Setup the Grid
 ----------------
 
