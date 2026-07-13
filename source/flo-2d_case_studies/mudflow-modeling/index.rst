@@ -22,6 +22,9 @@ mudflow routing to estimate downstream inundation, sediment concentrations, flow
 The workflow illustrates how a rainfall-driven watershed response can be converted into a mudflow
 hydrograph and routed through a detailed FLO-2D computational grid.
 
+.. image:: ../img/mudflow-modeling/mudflow012.png
+
+
 Project Objectives
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -90,7 +93,7 @@ Spatially varying roughness values were applied to represent:
 
 *Figure 3. Spatial distribution of Manning's roughness.*
 
-hydrology
+Hydrology
 ----------------
 
 Rainfall 
@@ -245,8 +248,4 @@ and support hazard mitigation planning in debris-flow-prone watersheds.
 References
 ~~~~~~~~~~~~~
 
-O'Brien, J.S. (2020). *Simulating Mudflow Guidelines*. FLO-2D Software, Inc.
-
-FLO-2D Software, Inc. *Mudflow Modeling Tutorial 2026*.
-
-FLO-2D Reference Manual.
+O'Brien, J.S. (2020). *Simulating Mudflow Guidelines*. FLO-2D Software, Inc., Nutrioso AZ, 
