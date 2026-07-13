@@ -13,13 +13,13 @@ A tank breach is the sudden or progressive failure of a storage tank or containm
  nearby drainage systems. This analysis supports emergency response planning, containment design, hazard mapping, 
  and risk assessment.
 
-.. image:: ../img/tank-breach/tank001.png
+.. image:: ../../img/tank-breach/tank001.png
     :width: 75%
 
 In this case study, the tank breach and containment wall breach were applied.  The tank breach was simulated with a 
 hydrograph and the containment wall breach was simulated with a prescribed breach of using a collapse failure.
 
-.. image:: ../img/tank-breach/tank002.png
+.. image:: ../../img/tank-breach/tank002.png
     :width: 95%
 
 This approach is commonly used when site-specific information about the breach characteristics is available or when
@@ -36,7 +36,7 @@ Case Study
 For this study a prescribed breach failure of a tank in Oklahoma near the intersection of N382 Rd and E131 Rd.
 The minimum and maximum elevation of the site is 846.070 and 903.852 ft, respectively.
 
-.. image:: ../img/tank-breach/tank003.png
+.. image:: ../../img/tank-breach/tank003.png
     :width: 75%
 
 
@@ -79,7 +79,7 @@ Participants create the breach project database, reload external data, define th
 generate the grid, assign and correct elevations, place the breach inflow node, and represent containment
 structures as levee or wall features.
 
-.. image:: ../img/tank-breach/tank004.png
+.. image:: ../../img/tank-breach/tank004.png
 
 Finally, the model is exported and run, then results are reviewed through volume checks, raster maps,
 MapCrafter outputs, profile plots, and animation of the breach flood behavior. Additional exercises
@@ -88,7 +88,7 @@ extend the model to levee breach, culvert/ditch, and secondary containment scena
 Sample Results
 ~~~~~~~~~~~~~~
 
-.. image:: ../img/tank-breach/tank001.gif
+.. image:: ../../img/tank-breach/tank001.gif
 
 Overall, the tank breach workflow provides a practical method for evaluating how a tank failure may
 behave under different site and release conditions. By creating the FLO-2D grid, assigning elevations,

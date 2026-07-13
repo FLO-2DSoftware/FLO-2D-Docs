@@ -31,3 +31,5 @@ and emergency planning.
    :caption: Contents
 
    water/index.rst
+   patel-milmet-failure/index
+   tank-breach/index

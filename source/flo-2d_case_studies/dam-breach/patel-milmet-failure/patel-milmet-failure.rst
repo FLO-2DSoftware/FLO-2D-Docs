@@ -9,7 +9,7 @@ Background
 The Patel Dam, also known as the Milmet Dam, was an earthen embankment reservoir located in Solai, Nakuru County, Kenya (Figure 1), on the privately owned Patel
 Coffee Estate.
 
-.. image:: ../img/patel-milmet-failure/milmet012.png
+.. image:: ../../img/patel-milmet-failure/milmet012.png
 
 *Figure 1.
 Study Area.*
@@ -23,7 +23,7 @@ Reports indicated that approximately 190,000 m\ :sup:`3` of water was released, 
 communities.
 The disaster resulted in the loss of 48 lives and caused extensive damage to homes, infrastructure, farmland, and other property (KHCR, 2018).
 
-.. image:: ../img/patel-milmet-failure/milmet002.jpeg
+.. image:: ../../img/patel-milmet-failure/milmet002.jpeg
 
 *Figure 2.
 Milmet Dam Failure (Photo courtesy of Kenya's Ministry of Interior and Coordination of National
@@ -34,7 +34,7 @@ Modeling dam breach scenarios such as this can help identify areas at risk from 
 Predictions of flood extent, depth, velocity, and arrival time provide a basis for mapping hazard zones, assessing risks to downstream communities and
 agricultural lands, and identifying areas that may remain safe during a breach event.
 
-.. image:: ../img/patel-milmet-failure/milmet003.png
+.. image:: ../../img/patel-milmet-failure/milmet003.png
    :width: 75%
 
 *Figure 3.
@@ -79,7 +79,7 @@ provide a more comprehensive assessment of potential hazard and risk.
 FLO-2D Breach Hydrograph Tool
 -----------------------------
 
-.. image:: ../img/patel-milmet-failure/milmet004.png
+.. image:: ../../img/patel-milmet-failure/milmet004.png
 
 *Figure 4.
 Breach Hydrograph Tool location in FLO-2D toolbar.*
@@ -108,7 +108,7 @@ Hydrograph Generation
 
 See Figure 5 for configuration of these parameters and the resulting hydrograph.
 
-.. image:: ../img/patel-milmet-failure/milmet005.png
+.. image:: ../../img/patel-milmet-failure/milmet005.png
    :width: 75%
 
 *Figure 5.
@@ -127,7 +127,7 @@ aerial imagery.
 Appropriate inflow and outflow boundary conditions were established prior to model execution to introduce the Breach Flow to the upstream boundary and
 release the normal depth flow at the downstream boundary.
 
-.. image:: ../img/patel-milmet-failure/milmet006.png
+.. image:: ../../img/patel-milmet-failure/milmet006.png
    :width: 75%
 
 *Figure 6.
@@ -142,7 +142,7 @@ Selected Flood Maps
 
 Maximum Flood Depth
 
-.. image:: ../img/patel-milmet-failure/milmet007.png
+.. image:: ../../img/patel-milmet-failure/milmet007.png
    :width: 75%
 
 *Figure 7: Maximum Depth*
@@ -155,7 +155,7 @@ experience the deepest flooding following the dam failure scenario.
 
 Maximum Velocity
 
-.. image:: ../img/patel-milmet-failure/milmet008.png
+.. image:: ../../img/patel-milmet-failure/milmet008.png
    :width: 75%
 
 *Figure 8: Maximum Velocity*
@@ -168,7 +168,7 @@ flood hazard assessment.
 
 Maximum Velocity Vectors
 
-.. image:: ../img/patel-milmet-failure/milmet009.png
+.. image:: ../../img/patel-milmet-failure/milmet009.png
    :width: 75%
 
 *Figure 9: Maximum Velocity Vectors*
@@ -186,7 +186,7 @@ Selected Hazard Maps
 
 Australian Rainfall and Runoff (ARR)
 
-.. image:: ../img/patel-milmet-failure/milmet010.png
+.. image:: ../../img/patel-milmet-failure/milmet010.png
    :width: 75%
 
 *Figure 10: ARR Flood Hazard*
@@ -212,7 +212,7 @@ Whenever possible, these parameters should be calibrated using documented observ
 In the absence of reliable observations, multiple simulations with varying breach parameters should be evaluated to characterize the range of
 potential downstream impacts and arrival times.
 
-.. image:: ../img/patel-milmet-failure/milmet011.png
+.. image:: ../../img/patel-milmet-failure/milmet011.png
    :width: 75%
 
 *Figure 11: Floodplain Cross-Section measurements at select locations*

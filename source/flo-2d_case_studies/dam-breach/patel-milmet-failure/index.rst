@@ -4,7 +4,7 @@ Patel Milmet Dam Failure: A Case Study
 ======================================
 
 
-.. image:: ../img/patel-milmet-failure/milmet001.png
+.. image:: ../../img/patel-milmet-failure/milmet001.png
    :width: 75%
 
 **Disclaimer:**

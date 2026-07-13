@@ -1,7 +1,7 @@
 .. _mudflow:
 
 ============================================
-Mudflow Hazard Assessment on an Alluvial Fan
+Mudflow Modeling
 ============================================
 
 Overview
