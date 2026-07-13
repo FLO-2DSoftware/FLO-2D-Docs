@@ -1,6 +1,11 @@
 Water Dam Breach
 ==================================
 
+.. contents:: Contents
+   :local: 
+   :depth: 1
+   :backlinks: entry
+
 To model water dam breach scenarios in FLO-2D, several approaches are available depending on the level of detail required,
 the available data, and the purpose of the analysis. These approaches range from simplified empirical methods for rapid
 screening studies to more detailed hydraulic simulations that represent breach development and downstream flood routing.
@@ -149,7 +154,7 @@ estimating breach parameters, generating the outflow hydrograph, and routing the
    The training materials are designed for engineers, consultants, regulators,
    and emergency planners responsible for dam safety and flood risk management.
 
-Method 2: Prescribed Breach - Urban Dam and Sedimentation Basin
+Method 2: Prescribed Breach (Urban Dam and Sedimentation Basin)
 ------------------------------------------------------------------
 
 In this method, the user directly defines the breach geometry and the rate at which the breach develops over time.
