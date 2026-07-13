@@ -3,6 +3,11 @@
 Patel Milmet Dam Failure: A Case Study
 ======================================
 
+.. contents:: Contents
+   :local: 
+   :depth: 1
+   :backlinks: entry
+
 .. image:: ../../img/patel-milmet-failure/milmet001.png
    :width: 75%
 
@@ -16,15 +21,6 @@ engineering assumptions for demonstration purposes only.
 The results should therefore be interpreted as an illustration of FLO-2D capabilities
 rather than reconstruction of the actual 2018 flood event or a basis for engineering or
 regulatory decision-making.*
-
-.. contents:: Contents
-   :local: 
-   :depth: 1
-   :backlinks: entry
-
-
-Patel Milmet Dam Failure
-========================
 
 Background
 ----------
