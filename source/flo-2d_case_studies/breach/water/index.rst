@@ -9,8 +9,8 @@ Three methods can be used to simulate water dam failures in FLO-2D. Each method 
 modeling complexity and physical representation of the failure process. The following sections describe these methods
 in detail, including their assumptions, typical applications, and recommended tutorial packages for implementation.
 
-Method 1: Breach Hydrograph Tool
----------------------------------
+Method 1: Breach Hydrograph Tool (Teton Dam Failure)
+--------------------------------------------------------
 
 The Breach Hydrograph Tool is a simplified and efficient method for estimating the outflow hydrograph associated with a
 water dam failure. This approach is commonly used for preliminary assessments, regulatory studies, emergency planning,
@@ -149,8 +149,8 @@ estimating breach parameters, generating the outflow hydrograph, and routing the
    The training materials are designed for engineers, consultants, regulators,
    and emergency planners responsible for dam safety and flood risk management.
 
-Method 2: Prescribed Breach
----------------------------------
+Method 2: Prescribed Breach - Urban Dam and Sedimentation Basin
+------------------------------------------------------------------
 
 In this method, the user directly defines the breach geometry and the rate at which the breach develops over time.
 The model then computes the resulting outflow hydrograph dynamically based on the changing breach
@@ -289,8 +289,8 @@ specified the breach development time, and simulated the resulting reservoir rel
    The workflow presented in this case study reflects standard engineering practice for dam safety and urban
    flood risk analysis using physically based hydraulic modeling tools.
 
-Method 3: Erosion Breach
----------------------------
+Method 3: Erosion Breach (Diamond Dam Valley Lake)
+------------------------------------------------------
 
 The Erosion Breach method represents the most physically based approach for simulating dam failure in FLO-2D.
 In this method, the breach develops dynamically as a result of hydraulic erosion driven by the flow of water through
