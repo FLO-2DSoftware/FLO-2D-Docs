@@ -1,11 +1,21 @@
 .. vim: syntax=rst
 
 =============================================
-Dam Breach
+Breach - Hydraulic Breach Modeling
 =============================================
 
-FLO-2D provides a comprehensive framework for simulating dam breach scenarios involving water, tailings,
-and two-phase. The model supports multiple approaches to represent dam failure,
+FLO-2D provides a comprehensive framework for simulating Hydraulic Breach modeling including:
+
+Dam Breach Modeling 
+
+Water Dam
+Tailings Dam
+
+and 
+
+Tank Breach Modeling 
+
+The model supports multiple approaches to represent dam failure,
 allowing the user to select a method that is consistent with the available data, the expected failure mechanism,
 and the objectives of the study. These approaches range from simplified hydrograph estimation methods to fully
 dynamic simulations that explicitly represent breach development and sediment transport.
