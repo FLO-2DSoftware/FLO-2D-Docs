@@ -23,7 +23,7 @@ The workflow illustrates how a rainfall-driven watershed response can be convert
 hydrograph and routed through a detailed FLO-2D computational grid.
 
 Project Objectives
-------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The primary objectives of this study were to:
 
@@ -36,7 +36,7 @@ The primary objectives of this study were to:
 * Evaluate potential inundation depths, velocities, and sediment concentrations.
 
 Study Area
-----------
+~~~~~~~~~~~~~~~~
 
 The study area consists of a steep mountainous watershed that drains onto a developed alluvial fan.
 Numerous tributary channels converge near the apex of the fan where debris flows and mudflows
@@ -48,7 +48,7 @@ commonly initiate during short-duration, high-intensity storm events.
 *Figure 1. Watershed and alluvial fan study area.*
 
 Data Sources
-------------
+-----------------
 
 Several publicly available datasets were used during model development:
 
@@ -62,7 +62,7 @@ Several publicly available datasets were used during model development:
 These datasets were processed within QGIS and imported directly into the FLO-2D GeoPackage workflow.
 
 Terrain Development
--------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 A computational domain was created to encompass the contributing watershed and downstream alluvial fan.
 
@@ -74,7 +74,7 @@ Elevation data were interpolated to the FLO-2D grid and used to define overland 
 *Figure 2. Computational grid and terrain model.*
 
 Surface Roughness
------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 Manning's roughness values were developed using land cover classifications and interpolated to the computational grid.
 
@@ -90,10 +90,13 @@ Spatially varying roughness values were applied to represent:
 
 *Figure 3. Spatial distribution of Manning's roughness.*
 
-Rainfall Analysis
------------------
+hydrology
+----------------
 
-The design storm was selected to represent a short-duration, high-intensity event capable of generating significant runoff and sediment transport.
+Rainfall 
+~~~~~~~~~~~~~~~~~~~~~
+
+The design storm was selected to represent a short-duration, high-intensity event capable of generating significant runoff and mudflow modeling.
 
 A temporal rainfall distribution was developed to represent storm intensification and recession over the event duration.
 
@@ -104,8 +107,8 @@ The rainfall distribution was applied directly to the FLO-2D grid using the rain
 
 *Figure 4. Design storm rainfall distribution.*
 
-Infiltration Modeling
----------------------
+Infiltration 
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Infiltration losses were estimated using soil and land use information.
 
@@ -123,7 +126,7 @@ This process allowed rainfall excess to be converted into runoff while accountin
 *Figure 5. Infiltration parameter development.*
 
 Hydrologic Response
--------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 A rainfall-runoff simulation was performed to estimate the watershed response to the design storm.
 
@@ -136,7 +139,7 @@ The resulting hydrograph represents the volume and timing of runoff entering the
 
 *Figure 6. Simulated watershed hydrograph.*
 
-Mudflow Hydrograph Development
+Mudflow Hydrograph 
 ------------------------------
 
 The flood hydrograph was converted into a mudflow hydrograph using sediment concentration by volume (Cv) relationships.
@@ -156,7 +159,7 @@ These data were assigned to an inflow boundary condition within FLO-2D.
 *Figure 7. Mudflow hydrograph development.*
 
 Mudflow Routing Simulation
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The FLO-2D mudflow model was configured to simulate two-phase flow conditions.
 
@@ -232,7 +235,7 @@ Key Findings
 * FLO-2D provides a practical workflow for evaluating rainfall-triggered mudflow hazards.
 
 Conclusion
-----------
+~~~~~~~~~~~~~~~
 
 This case study demonstrates a complete end-to-end workflow for simulating rainfall-generated
 mudflows using FLO-2D. By combining watershed hydrology, infiltration analysis, hydrograph
@@ -240,7 +243,7 @@ generation, and two-phase mudflow routing, engineers can evaluate potential down
 and support hazard mitigation planning in debris-flow-prone watersheds.
 
 References
-----------
+~~~~~~~~~~~~~
 
 O'Brien, J.S. (2020). *Simulating Mudflow Guidelines*. FLO-2D Software, Inc.
 
