@@ -11,13 +11,16 @@ Mudflow Modeling
 Overview
 --------
 
-Mudflows are among the most destructive natural hazards in mountainous and semi-arid environments.
-Following intense rainfall, large volumes of water, sediment, rock, and debris can rapidly concentrate
-within steep drainages and emerge onto downstream alluvial fans where infrastructure and development are often located.
+Mudflows are among the most destructive natural hazards in mountainous and steep coastal environments. Following intense rainfall, 
+large volumes of water, sediment, rock, and woody debris can rapidly mobilize within steep drainages and canyon channels, 
+producing fast-moving flows capable of damaging infrastructure and threatening downstream communities. Post-fire conditions can 
+significantly increase the hazard by reducing vegetation cover, creating hydrophobic soil conditions, and exposing previously 
+stabilized soils to erosion and mudflow propagation.
 
-This case study demonstrates a complete FLO-2D workflow for evaluating mudflow hazards on an alluvial fan.
-The project combines watershed hydrology, rainfall-runoff modeling, infiltration analysis, and FLO-2D
-mudflow routing to estimate downstream inundation, sediment concentrations, flow depths, and velocities.
+This case study demonstrates a complete FLO-2D workflow for evaluating mudflow hazards within a steep coastal watershed. The project 
+combines watershed hydrology, rainfall-runoff modeling, infiltration analysis, and FLO-2D mudflow routing to simulate the generation 
+and downstream movement of sediment-laden flows. Model results are used to evaluate inundation extents, sediment concentrations, 
+flow depths, velocities, and potential hazard areas along the drainage corridor and developed downstream areas.
 
 The workflow illustrates how a rainfall-driven watershed response can be converted into a mudflow
 hydrograph and routed through a detailed FLO-2D computational grid.
@@ -33,22 +36,22 @@ The primary objectives of this study were to:
 * Delineate the contributing watershed.
 * Develop a rainfall-runoff model for a design storm event.
 * Estimate infiltration losses using globally available soil and land use data.
-* Generate a runoff hydrograph at the apex of the alluvial fan.
+* GGenerate a runoff hydrograph at the downstream canyon cross section.
 * Convert the flood hydrograph into a mudflow hydrograph.
 * Simulate downstream mudflow routing.
-* Evaluate potential inundation depths, velocities, and sediment concentrations.
+* Evaluate potential inundation depths, velocities, and mudflow concentrations.
 
 Study Area
 ~~~~~~~~~~~~~~~~
 
-The study area consists of a steep mountainous watershed that drains onto a developed alluvial fan.
-Numerous tributary channels converge near the apex of the fan where debris flows and mudflows
-commonly initiate during short-duration, high-intensity storm events.
+The study area consists of a steep mountainous watershed near Malibu, California, that drains through 
+a network of steep tributary channels into developed foothill areas along the canyon outlet. Numerous 
+tributaries converge within the watershed, concentrating runoff, sediment, and debris during short-duration, 
+high-intensity, post-fire storm events.
 
 .. image:: ../img/mudflow-modeling/mudflow001.png
-   :align: center
 
-*Figure 1. Watershed and alluvial fan study area.*
+*Figure 1. Watershed and foothills study area.*
 
 Data Sources
 -----------------
@@ -67,12 +70,10 @@ These datasets were processed within QGIS and imported directly into the FLO-2D 
 Terrain Development
 ~~~~~~~~~~~~~~~~~~~~~~
 
-A computational domain was created to encompass the contributing watershed and downstream alluvial fan.
-
-Elevation data were interpolated to the FLO-2D grid and used to define overland flow paths, channelized drainage features, and fan topography.
+A computational domain was created to encompass the contributing watershed and downstream developed zone. Elevation data 
+were interpolated to the FLO-2D grid and used to define overland flow paths, channelized drainage features, and canyon outlet topography.
 
 .. image:: ../img/mudflow-modeling/mudflow002.png
-   :align: center
 
 *Figure 2. Computational grid and terrain model.*
 
@@ -89,7 +90,6 @@ Spatially varying roughness values were applied to represent:
 * Urbanized regions
 
 .. image:: ../img/mudflow-modeling/mudflow003.png
-   :align: center
 
 *Figure 3. Spatial distribution of Manning's roughness.*
 
@@ -99,85 +99,89 @@ Hydrology
 Rainfall 
 ~~~~~~~~~~~~~~~~~~~~~
 
-The design storm was selected to represent a short-duration, high-intensity event capable of generating significant runoff and mudflow modeling.
-
-A temporal rainfall distribution was developed to represent storm intensification and recession over the event duration.
-
-The rainfall distribution was applied directly to the FLO-2D grid using the rainfall editor.
+The design storm was selected to represent a short-duration, high-intensity event capable of generating significant runoff and mudflow. A temporal 
+rainfall distribution was developed to represent storm intensification and recession over the event duration.  The 3-hr design storm rainfall in inches 
+and rainfall distribution curve was defined for the project using the rainfall editor.
 
 .. image:: ../img/mudflow-modeling/mudflow004.png
-   :align: center
 
 *Figure 4. Design storm rainfall distribution.*
 
 Infiltration 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Infiltration losses were estimated using soil and land use information.
-
-Green-Ampt parameters were developed from:
+Infiltration losses were estimated using soil and land use information. Green-Ampt parameters were developed from:
 
 * Soil hydraulic properties
 * Land cover classifications
 * Surface abstraction characteristics
 
-This process allowed rainfall excess to be converted into runoff while accounting for spatial variability in infiltration rates.
+This process allowed rainfall excess to be converted into runoff while accounting for spatial variability in infiltration parameters. 
+The Green-Ampt method uses Hydraulic Conductivity (xksat), Infiltration Volume (dtheta), Capillary Suction (psif), Initial Abstraction (aa), 
+and Percent Impervious (rtimp) to define transmission losses over a project area. The SSURGO Soil and ESA World Land Cover were used in this 
+example to interpolate Green-Ampt Parameters to the grid.
 
 .. image:: ../img/mudflow-modeling/mudflow005.png
-   :align: center
 
 *Figure 5. Infiltration parameter development.*
 
 Hydrologic Response
 ~~~~~~~~~~~~~~~~~~~~~~
 
-A rainfall-runoff simulation was performed to estimate the watershed response to the design storm.
-
-A floodplain cross section was established near the apex of the alluvial fan to measure the discharge generated by the watershed.
-
-The resulting hydrograph represents the volume and timing of runoff entering the fan system.
+A rainfall-runoff simulation was performed to estimate the watershed response to the design storm. 
+A cross section was established near the watershed outlet at the canyon mouth to quantify the runoff 
+generated by the upstream drainage area. The resulting hydrograph represents the volume and timing of 
+flow entering the downstream mudflow routing domain. Short-duration rainfall intensity is an important 
+factor in post-fire debris-flow generation and watershed response, particularly in steep coastal watersheds 
+where debris flows can be triggered by relatively frequent storm events (Oakley et al., 2025).
 
 .. image:: ../img/mudflow-modeling/mudflow006.png
-   :align: center
 
 *Figure 6. Simulated watershed hydrograph.*
 
 Mudflow Hydrograph 
 ------------------------------
 
-The flood hydrograph was converted into a mudflow hydrograph using sediment concentration by volume (Cv) relationships.
+The clear-water runoff hydrograph was converted to a mudflow hydrograph by estimating the volume of sediment delivered from the burned 
+watershed and combining it with the simulated runoff volume. Post-fire sediment yield may be estimated from site-specific sediment 
+studies or empirical debris-flow volume models that relate sediment production to rainfall intensity, burned watershed area, terrain, 
+and burn severity. The USGS uses the empirical methods developed by Gartner et al. (2014) to estimate potential post-fire debris-flow 
+volumes in the Transverse Ranges of Southern California.
+
+The estimated sediment volume was converted to a sediment concentration by volume, Cv, relative to the combined water and sediment 
+volume. The selected Cv was then applied to the clear-water hydrograph to increase the discharge and volume while preserving the timing 
+and general shape of the runoff hydrograph. The resulting mudflow hydrograph represents the combined discharge of water and sediment 
+entering the downstream routing domain.
 
 The resulting hydrograph includes:
 
 * Water discharge
 * Sediment concentration
-* Mudflow volume
 * Event duration
 
-These data were assigned to an inflow boundary condition within FLO-2D.
+These data were assigned to an inflow boundary condition for a detailed urban FLO-2D model.
 
 .. image:: ../img/mudflow-modeling/mudflow007.png
-   :align: center
 
 *Figure 7. Mudflow hydrograph development.*
 
 Mudflow Routing Simulation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The FLO-2D mudflow model was configured to simulate two-phase flow conditions.
+The FLO-2D mudflow model was configured to simulate flow conditions.
 
 Model inputs included:
 
 * Mudflow hydrograph
-* Sediment concentration parameters
+* Mudflow concentration parameters
+* Viscocity and yield stress coefficient and exponent parameters
 * Surface roughness
 * Terrain elevations
 * Hydraulic structures
 
-The simulation routed the mudflow through channels and across the alluvial fan while accounting for sediment transport and deposition processes.
+The simulation routed the mudflow downstream of the canyon apex and through the urban zone crossing Highway 1 with the Pacific Ocean as a boundary.
 
 .. image:: ../img/mudflow-modeling/mudflow008.gif
-   :align: center
 
 *Figure 8. FLO-2D mudflow simulation.*
 
@@ -190,7 +194,7 @@ Maximum Mudflow Depth
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: ../img/mudflow-modeling/mudflow009.png
-   :align: center
+
 
 *Figure 9. Maximum mudflow depth.*
 
@@ -198,7 +202,7 @@ Maximum Velocity
 ~~~~~~~~~~~~~~~~
 
 .. image:: ../img/mudflow-modeling/mudflow010.png
-   :align: center
+
 
 *Figure 10. Maximum mudflow velocity.*
 
@@ -206,7 +210,7 @@ Maximum Sediment Concentration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: ../img/mudflow-modeling/mudflow011.png
-   :align: center
+
 
 *Figure 11. Maximum sediment concentration by volume.*
 
@@ -218,7 +222,7 @@ The resulting hazard maps identify areas potentially exposed to:
 * Deep mudflow inundation
 * High velocity impacts
 * Elevated sediment concentrations
-* Deposition zones on the alluvial fan
+* Deposition zones in the urban areas
 
 These outputs can be used to support:
 
@@ -248,4 +252,8 @@ and support hazard mitigation planning in debris-flow-prone watersheds.
 References
 ~~~~~~~~~~~~~
 
-O'Brien, J.S. (2020). *Simulating Mudflow Guidelines*. FLO-2D Software, Inc., Nutrioso AZ, 
+O'Brien, J.S. (2020). *Simulating Mudflow Guidelines*. FLO-2D Software, Inc., Nutrioso AZ. 
+https://documentation.flo-2d.com/Build25/flo-2d_pro/Simulating%20Mudflow%20Guidelines/Simulating%20Mudflow%20Guidelines.html
+
+Staley, D.M., Kean, J.W., and Rengers, F.K., 2020, "The Recurrence Interval of Post-Fire Debris-Flow Generating Rainfall in the 
+Southwestern United States," Geomorphology, Vol. 370, Article 107392. Elsevier. https://doi.org/10.1016/j.geomorph.2020.107392
