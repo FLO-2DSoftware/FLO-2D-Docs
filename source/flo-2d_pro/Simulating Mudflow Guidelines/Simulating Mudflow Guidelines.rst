@@ -18,7 +18,7 @@ This classification convention is followed in this document.
 This discussion will attempt to distinguish between hyperconcentrated sediment flows that behave as fluids and mass wasting processes such as
 landslides, earthflows, slow creeping soil masses or rotation or slippage failure of soils.
 The scientific community has widely adopted the term ‘debris flow’ to describe the full range of hyperconcentrated sediment flows.
-The use of this term is discouraged because of it is non-descriptive and provides little insight into the physical processes of a given flow event.
+The use of this term is discouraged because it is non-descriptive and provides little insight into the physical processes of a given flow event.
 The term ‘debris flows’ does not infer either a water flood, viscous mudflow, a dispersive or granular flows, but is ubiquitously applied to all of
 them.
 In a humorous sense, ‘debris flow’ does effectively describe the flow of cars, refrigerators, trash and dead cows, all of which can be found in a
