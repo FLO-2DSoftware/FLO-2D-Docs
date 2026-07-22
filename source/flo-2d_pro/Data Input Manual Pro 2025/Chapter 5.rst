@@ -155,7 +155,7 @@ List of 2-D Overland Output*
      - TIMDEP.OUT
 
    * - 111
-     - FPINFILTRATION.
+     - FPINFILTRATION.OUT
      - 78
      - TIMDEP_NC4.OUT
 
