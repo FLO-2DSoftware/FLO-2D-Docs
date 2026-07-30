@@ -1742,6 +1742,7 @@ elements that are inside the tailings dam storage area.</p></li>
     N   567  1              Line 4: <b>OUTCHAR = ‘N’ NOSTA NOSTACFP</b>
     S  0.00 0.00            Line 5: <b>OUTCHAR = ‘S’ STA_TIME(J) STA_STAGE(J) J=1 S  0.50 10.00    Line 5: OUTCHAR = ‘S’
                                     STA_TIME(J) STA_STAGE(J) J=2 O  273    Line 6 OUTCHAR = ‘O’ NODDC(J) J=1</b>
+    O 101                   Line 6: <b>OUTCHAR = ‘O’  NODDC(J) J=2</b>
     O1 373                  Line 6: <b>OUTCHAR = ‘O1’ NODDC(J) J=2</b>
     O2 374                  Line 6: <b>OUTCHAR = ‘O2’ NODDC(J) J=3</b>
     O3 567                  Line 6: <b>OUTCHAR = ‘O3’ NODDC(J) J=4</b>
@@ -4427,8 +4428,8 @@ The user cannot adjust it.</p></li>
     <hr style="margin:4px 0;border:2px solid black;">
 <pre>
 S 0                                 Line 1: <b>ITTCHAR = ‘S’ ARFBLOCKMOD</b>
-T 49                                Line 1: <b>ITTCHAR = ‘T’ ITTAWF(K)</b>
-29 .2 .70 .50 1.0 0. 0. 0. 0. 0.    Line 2: <b>IDG(I) ARF(I) WRF(I,J)</b>
+T 49                                Line 2: <b>ITTCHAR = ‘T’ ITTAWF(K)</b>
+29 .2 .70 .50 1.0 0. 0. 0. 0. 0.    Line 3: <b>IDG(I) ARF(I) WRF(I,J)</b>
                                             <i>K = number of totally blocked grid elements
                                             I = number of partially blocked grid elements
                                             J = 8 flow directions</i>
@@ -5280,7 +5281,7 @@ The inflow node will not compute discharge to downstream cells until the basin v
     <div><i><pre>                                       LEVEE.DAT File Variables</pre></i></div>
     <hr style="margin:4px 0;border:2px solid black;">
 <pre>
-0.00 00             Line 1:     <b>RAISELEV ILEVFAIL</b>
+0.00 0.00           Line 1:     <b>RAISELEV ILEVFAIL</b>
 L 1891              Line 2:     <b>LEVCHAR = ‘L’ LGRIDNO(L)</b> <i>L = number of levee grid elements</i>
 D 4 5029.00         Line 3:     <b>LEVCHAR = ‘D’ LDIR(L,J) LEVCREST(L,J)</b>
                                 <i>L = number of levee grid elements

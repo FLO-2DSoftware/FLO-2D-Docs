@@ -67,6 +67,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#install-the-training-data">Install the Training Data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#open-qgis-and-set-up">Open QGIS and Set Up</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#close-and-reload-qgis">Close and Reload QGIS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flo-2d-reference-materials">FLO-2D Reference Materials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flo-2d-units">FLO-2D Units</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="2-Grid.html">Create Project and Grid</a></li>
@@ -82,6 +84,7 @@
 <li class="toctree-l3"><a class="reference internal" href="10-Troubleshooting.html#faq-webinar">FAQ - Webinar</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../afma-prereq/index.html">AFMA 2026 Pre-Requisite Workshop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../GeoPackage/index.html">GeoPackage Tools &amp; Tips</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hydrowkshp/index.html">Hydrologic Mapping and Data Access Workshop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
@@ -173,8 +176,7 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 </section>
 <section id="set-up-quick-map-services">
 <h3>Set Up Quick Map Services<a class="headerlink" href="#set-up-quick-map-services" title="Link to this heading"></a></h3>
-<p>The Quick Map Services plugin requires a <strong>Contributed Pack</strong> and visibility control adjustments. Open the plugin
-settings, download the <strong>Contributed Pack</strong>, and uncheck any maps that are not needed.</p>
+<p>Open the plugin settings and uncheck any maps that are not needed.</p>
 <img alt="../../_images/shg_011.png" src="../../_images/shg_011.png" />
 </section>
 </section>
@@ -185,6 +187,89 @@ initial setup, the setup process must be repeated.</p>
 <p>Each user account has a distinct profile. If another user logs into the computer, a separate QGIS profile must be
 configured. For example, a student account on a shared computer will not have the same QGIS configuration as an
 administrative account.</p>
+</section>
+<section id="flo-2d-reference-materials">
+<h2>FLO-2D Reference Materials<a class="headerlink" href="#flo-2d-reference-materials" title="Link to this heading"></a></h2>
+<p>Technical reference manuals, user manuals, and tutorials are found on the FLO-2D website. <a class="reference external" href="https://documentation.flo-2d.com">https://documentation.flo-2d.com</a></p>
+<p>The most important documents are:</p>
+<ul class="simple">
+<li><p>Data Input Manual</p></li>
+<li><p>FLO-2D Reference Manual</p></li>
+<li><p>Channel Guidelines</p></li>
+<li><p>Storm Drain Guidelines</p></li>
+<li><p>Hydraulic Structure Guidelines</p></li>
+</ul>
+<p>Technical assistance is available for bug fixes, installation support, and general guidance. Please send a
+screenshot of the problem to us via email. Most tech support is managed quickly and effectively by email.
+The short course files are installed in the path:</p>
+<p>C:\Users\Public\Documents\FLO-2D PRO DocumentationExample Projects\Self Help Kit</p>
+</section>
+<section id="flo-2d-units">
+<h2>FLO-2D Units<a class="headerlink" href="#flo-2d-units" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Unit (Imperial)</p></th>
+<th class="head"><p>Unit (Metric)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Grid Size</p></td>
+<td><p>feet (ft)</p></td>
+<td><p>meters (m)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Elevation</p></td>
+<td><p>feet (ft)</p></td>
+<td><p>meters (m)</p></td>
+</tr>
+<tr class="row-even"><td><p>Area</p></td>
+<td><p>square feet (ft²)</p></td>
+<td><p>square meters (m²)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Storage Volume (Large Scale)</p></td>
+<td><p>acre-feet (ac-ft)</p></td>
+<td><p>cubic meters (m³)</p></td>
+</tr>
+<tr class="row-even"><td><p>Discharge</p></td>
+<td><p>cubic feet per second (cfs)</p></td>
+<td><p>cubic meters per second (m³/s)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Simulation Time</p></td>
+<td><p>hours (hr)</p></td>
+<td><p>hours (hr)</p></td>
+</tr>
+<tr class="row-even"><td><p>Time Step</p></td>
+<td><p>hours (hr)</p></td>
+<td><p>hours (hr)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Flow Velocity</p></td>
+<td><p>feet per second (ft/s)</p></td>
+<td><p>meters per second (m/s)</p></td>
+</tr>
+<tr class="row-even"><td><p>Hydraulic Conductivity</p></td>
+<td><p>inches per hour (in/hr)</p></td>
+<td><p>millimeters per hour (mm/hr)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rainfall Intensity</p></td>
+<td><p>inches per hour (in/hr)</p></td>
+<td><p>millimeters per hour (mm/hr)</p></td>
+</tr>
+<tr class="row-even"><td><p>Manning’s n</p></td>
+<td><p>dimensionless</p></td>
+<td><p>dimensionless</p></td>
+</tr>
+<tr class="row-odd"><td><p>Flow Rate</p></td>
+<td><p>cubic feet per second (cfs)</p></td>
+<td><p>cubic meters per second (m³/s)</p></td>
+</tr>
+</tbody>
+</table>
+<p>There is no need to convert Manning’s N. The conversion is part of the calculation</p>
 </section>
 </section>
 

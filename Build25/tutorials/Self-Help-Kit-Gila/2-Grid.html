@@ -70,9 +70,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#assign-elevation">Assign Elevation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#assign-grid-roughness">Assign Grid Roughness</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#assign-control-parameters">Assign Control Parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#save-export-and-run">Save, Export, and Run</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#run-demo-engine">Run Demo Engine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#backup-and-recovery">Backup and Recovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#save-export-and-extra-information-optional">Save, Export and Extra Information (Optional)</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="3-Hydrology.html">Hydrology</a></li>
@@ -87,6 +85,7 @@
 <li class="toctree-l3"><a class="reference internal" href="10-Troubleshooting.html#faq-webinar">FAQ - Webinar</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../afma-prereq/index.html">AFMA 2026 Pre-Requisite Workshop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../GeoPackage/index.html">GeoPackage Tools &amp; Tips</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../hydrowkshp/index.html">Hydrologic Mapping and Data Access Workshop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
@@ -220,6 +219,15 @@ layer. It does not need to be retained within the GeoPackage.</p>
 </ul>
 <img alt="../../_images/shg02_009.png" src="../../_images/shg02_009.png" />
 </section>
+<section id="helpers">
+<h3>Helpers<a class="headerlink" href="#helpers" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Don’t use the roller wheel in the FLO-2D Widget Area.  Use Collapse instead.</p></li>
+<li><p>Layers List Collapse helps to shrink the list quickly.</p></li>
+<li><p>If a layer is lost, the Search tool is helpful.</p></li>
+</ul>
+<img alt="../../_images/shg02_009a.png" src="../../_images/shg02_009a.png" />
+</section>
 </section>
 <section id="setup-the-grid">
 <h2>Setup the Grid<a class="headerlink" href="#setup-the-grid" title="Link to this heading"></a></h2>
@@ -322,108 +330,111 @@ Manual</strong> and review related webinar recordings by <strong>Dr. Jimmy O’B
 target="_blank" rel="noopener noreferrer">Webinar Series</a></p>
 </div>
 </section>
-<section id="save-export-and-run">
-<h2>Save, Export, and Run<a class="headerlink" href="#save-export-and-run" title="Link to this heading"></a></h2>
+<section id="save-export-and-extra-information-optional">
+<h2>Save, Export and Extra Information (Optional)<a class="headerlink" href="#save-export-and-extra-information-optional" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_uE-NrasaXA?si=IWpqfAKH5k7KNoih"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-</iframe><section id="save-the-project">
-<h3><strong>Save the Project</strong><a class="headerlink" href="#save-the-project" title="Link to this heading"></a></h3>
-<p>Click the <strong>QGIS Save</strong> button and confirm by selecting <strong>Yes</strong> in the dialog box.</p>
+</iframe><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Save the Project</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Click the <strong>QGIS Save</strong> button and confirm by selecting <strong>Yes</strong> in the dialog box.</p>
 <img alt="../../_images/shg02_024.png" src="../../_images/shg02_024.png" />
-<p>Move the <strong>Elevation</strong> and <strong>Manning’s n</strong> layers to the left side of the dialog box. This action saves these layers
+<p class="sd-card-text">Move the <strong>Elevation</strong> and <strong>Manning’s n</strong> layers to the left side of the dialog box. This action saves these layers
 to the GeoPackage.</p>
 <img alt="../../_images/shg02_025.png" src="../../_images/shg02_025.png" />
-<p>The <strong>FLO-2D Plugin</strong> automatically organizes external layers added to the GeoPackage into a separate group.
+<p class="sd-card-text">The <strong>FLO-2D Plugin</strong> automatically organizes external layers added to the GeoPackage into a separate group.
 The <strong>Project Domain</strong> layer can be removed, as it has already been copied into the <strong>Computational Domain</strong>.</p>
 <img alt="../../_images/shg02_026.png" src="../../_images/shg02_026.png" />
-</section>
-<section id="review-the-geopackage-structure">
-<h3><strong>Review the GeoPackage Structure</strong><a class="headerlink" href="#review-the-geopackage-structure" title="Link to this heading"></a></h3>
-<p>Open the <strong>Browser Panel</strong> and dock it next to the <strong>Layers Panel</strong> by dragging the panel with a left-click and
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Review the GeoPackage Structure</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Open the <strong>Browser Panel</strong> and dock it next to the <strong>Layers Panel</strong> by dragging the panel with a left-click and
 dropping it on the Layers Panel when highlighted.</p>
 <img alt="../../_images/shg_002.gif" src="../../_images/shg_002.gif" />
-<p>Connect to the <strong>Project GeoPackage</strong> by right-clicking the <strong>GeoPackage</strong> section and selecting <strong>New Connection</strong>.
+<p class="sd-card-text">Connect to the <strong>Project GeoPackage</strong> by right-clicking the <strong>GeoPackage</strong> section and selecting <strong>New Connection</strong>.
 Choose the <strong>Project GeoPackage</strong> file and click <strong>Open</strong>.</p>
 <img alt="../../_images/shg02_027.png" src="../../_images/shg02_027.png" />
-<p>Expand the <strong>GeoPackage</strong> and use the <strong>E, G, and M</strong> keys on the keyboard to quickly navigate to tables that begin
+<p class="sd-card-text">Expand the <strong>GeoPackage</strong> and use the <strong>E, G, and M</strong> keys on the keyboard to quickly navigate to tables that begin
 with those letters.</p>
 <img alt="../../_images/shg_003.gif" src="../../_images/shg_003.gif" />
-</section>
-<section id="using-sql-tools-in-geopackage">
-<h3><strong>Using SQL Tools in GeoPackage</strong><a class="headerlink" href="#using-sql-tools-in-geopackage" title="Link to this heading"></a></h3>
-<p>To execute SQL queries, right-click the <strong>Grid</strong> layer and select <strong>Execute SQL</strong>.</p>
+<p class="sd-card-text"><strong>Using SQL Tools in GeoPackage</strong></p>
+<p class="sd-card-text">To execute SQL queries, right-click the <strong>Grid</strong> layer and select <strong>Execute SQL</strong>.</p>
 <img alt="../../_images/shg02_029.png" src="../../_images/shg02_029.png" />
-<p>To compute basic statistics on the <cite>n_value</cite> field in the <cite>grid</cite> table within a GeoPackage database, use the
+<p class="sd-card-text">To compute basic statistics on the <cite>n_value</cite> field in the <cite>grid</cite> table within a GeoPackage database, use the
 following SQL query:</p>
 <div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span>
-<span class="w">    </span><span class="k">MIN</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">min_value</span><span class="p">,</span>
-<span class="w">    </span><span class="k">MAX</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">max_value</span><span class="p">,</span>
-<span class="w">    </span><span class="k">AVG</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">mean_value</span><span class="p">,</span>
-<span class="w">    </span><span class="k">SUM</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">sum_value</span><span class="p">,</span>
-<span class="w">    </span><span class="k">COUNT</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_entries</span><span class="p">,</span>
-<span class="w">    </span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="n">n_value</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">n_value</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">n_value</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">variance</span><span class="p">,</span>
-<span class="w">    </span><span class="n">SQRT</span><span class="p">((</span><span class="k">SUM</span><span class="p">(</span><span class="n">n_value</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">n_value</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">n_value</span><span class="p">)))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">std_dev</span>
+<span class="w">   </span><span class="k">MIN</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">min_value</span><span class="p">,</span>
+<span class="w">   </span><span class="k">MAX</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">max_value</span><span class="p">,</span>
+<span class="w">   </span><span class="k">AVG</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">mean_value</span><span class="p">,</span>
+<span class="w">   </span><span class="k">SUM</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">sum_value</span><span class="p">,</span>
+<span class="w">   </span><span class="k">COUNT</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total_entries</span><span class="p">,</span>
+<span class="w">   </span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="n">n_value</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">n_value</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">n_value</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">variance</span><span class="p">,</span>
+<span class="w">   </span><span class="n">SQRT</span><span class="p">((</span><span class="k">SUM</span><span class="p">(</span><span class="n">n_value</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="n">n_value</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="k">AVG</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">n_value</span><span class="p">)))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">std_dev</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">grid</span><span class="p">;</span>
 </pre></div>
 </div>
-<p><strong>Query Explanation:</strong></p>
+<p class="sd-card-text"><strong>Query Explanation:</strong></p>
 <ul class="simple">
-<li><p><cite>MIN(n_value)</cite>: Returns the <strong>minimum</strong> roughness value.</p></li>
-<li><p><cite>MAX(n_value)</cite>: Returns the <strong>maximum</strong> roughness value.</p></li>
-<li><p><cite>AVG(n_value)</cite>: Computes the <strong>mean</strong> roughness value.</p></li>
-<li><p><cite>SUM(n_value)</cite>: Returns the <strong>sum</strong> of all roughness values.</p></li>
-<li><p><cite>COUNT(n_value)</cite>: Counts the <strong>total number of records</strong>.</p></li>
-<li><p><cite>variance</cite>: Computes the <strong>variance</strong> of <cite>n_value</cite>.</p></li>
-<li><p><cite>std_dev</cite>: Computes the <strong>standard deviation</strong>.</p></li>
+<li><p class="sd-card-text"><cite>MIN(n_value)</cite>: Returns the <strong>minimum</strong> roughness value.</p></li>
+<li><p class="sd-card-text"><cite>MAX(n_value)</cite>: Returns the <strong>maximum</strong> roughness value.</p></li>
+<li><p class="sd-card-text"><cite>AVG(n_value)</cite>: Computes the <strong>mean</strong> roughness value.</p></li>
+<li><p class="sd-card-text"><cite>SUM(n_value)</cite>: Returns the <strong>sum</strong> of all roughness values.</p></li>
+<li><p class="sd-card-text"><cite>COUNT(n_value)</cite>: Counts the <strong>total number of records</strong>.</p></li>
+<li><p class="sd-card-text"><cite>variance</cite>: Computes the <strong>variance</strong> of <cite>n_value</cite>.</p></li>
+<li><p class="sd-card-text"><cite>std_dev</cite>: Computes the <strong>standard deviation</strong>.</p></li>
 </ul>
-<p><strong>Executing the Query in QGIS:</strong></p>
+<p class="sd-card-text"><strong>Executing the Query in QGIS:</strong></p>
 <ol class="arabic simple">
-<li><p>Right-click the <strong>grid</strong> table and select <strong>Execute SQL</strong>.</p></li>
-<li><p>Paste the SQL query into the query editor.</p></li>
-<li><p>Click <strong>Run</strong> to execute the query and display the results.</p></li>
+<li><p class="sd-card-text">Right-click the <strong>grid</strong> table and select <strong>Execute SQL</strong>.</p></li>
+<li><p class="sd-card-text">Paste the SQL query into the query editor.</p></li>
+<li><p class="sd-card-text">Click <strong>Run</strong> to execute the query and display the results.</p></li>
 </ol>
 <img alt="../../_images/shg02_028.png" src="../../_images/shg02_028.png" />
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
-<p>Using SQL processing is a more efficient method for analyzing data in GeoPackages. Large grids (over 1 million
+<p class="sd-card-text">Using SQL processing is a more efficient method for analyzing data in GeoPackages. Large grids (over 1 million
 cells) may experience performance issues when using QGIS table joins and table tools. SQL-based queries operate
 directly on the database without requiring additional memory allocation, making them significantly faster.</p>
 </div>
-</section>
-<section id="quick-run">
-<h3><strong>Quick Run</strong><a class="headerlink" href="#quick-run" title="Link to this heading"></a></h3>
-<p>The <strong>Quick Run</strong> feature allows exporting data and running the model in a single step.</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>Quick Run</strong></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The <strong>Quick Run</strong> feature allows exporting data and running the model in a single step.</p>
 <img alt="../../_images/shg02_030.png" src="../../_images/shg02_030.png" />
-<p>Create a new folder named <strong>Quick Run</strong> inside the <strong>Lesson 1</strong> directory and select it.</p>
+<p class="sd-card-text">Create a new folder named <strong>Quick Run</strong> inside the <strong>Lesson 1</strong> directory and select it.</p>
 <img alt="../../_images/shg02_031.png" src="../../_images/shg02_031.png" />
-<p>Uncheck <strong>Rain</strong> and click <strong>OK</strong> to initiate a <strong>Quick Run</strong> test.</p>
+<p class="sd-card-text">Uncheck <strong>Rain</strong> and click <strong>OK</strong> to initiate a <strong>Quick Run</strong> test.</p>
 <img alt="../../_images/shg02_032.png" src="../../_images/shg02_032.png" />
-<p>If the model starts successfully, the <strong>License Status</strong> will be displayed, and the simulation will begin.</p>
+<p class="sd-card-text">If the model starts successfully, the <strong>License Status</strong> will be displayed, and the simulation will begin.</p>
 <img alt="../../_images/shg02_033.png" src="../../_images/shg02_033.png" />
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
-<p>The <strong>Quick Run</strong> feature executes <strong>FLOPRO.EXE</strong> validation checks. If the model starts, the verification
+<p class="sd-card-text">The <strong>Quick Run</strong> feature executes <strong>FLOPRO.EXE</strong> validation checks. If the model starts, the verification
 process has passed. For additional information on ASCII data files used by the <strong>FLOPRO.EXE</strong> engine, refer to
 the accompanying <strong>YouTube tutorial</strong>.</p>
 </div>
-</section>
-</section>
-<section id="run-demo-engine">
-<h2>Run Demo Engine<a class="headerlink" href="#run-demo-engine" title="Link to this heading"></a></h2>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Run Demo Engine</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9wUJBdP6vjQ?si=gHTxsyj6ct_J3TKf"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The Self-Help Tutorial does not require a license.  Use the Demo-Engine as shown in the video to take this
+<p class="sd-card-text">The Self-Help Tutorial does not require a license.  Use the Demo-Engine as shown in the video to take this
 tutorial with a demo version of the software.</p>
 </div>
-</section>
-<section id="backup-and-recovery">
-<h2>Backup and Recovery<a class="headerlink" href="#backup-and-recovery" title="Link to this heading"></a></h2>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Backup and Recovery</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wmo3Mkl7ZvU"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+</details></section>
 </section>
 
 

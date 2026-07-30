@@ -1,0 +1,469 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mudflow Modeling &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=6385869e" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>window.MathJax = {"tex": {"tags": "none", "useLabelIds": true}, "options": {"displayAlign": "right"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Tank Breach" href="../breach/tank-breach/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Gila for QGIS Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_mapcrafter/index.html">FLO-2D MapCrafter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_florunner/index.html">FLO-2D FLORunner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">FLO-2D Gila Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Case Studies</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../breach/index.html">Breach - Hydraulic Breach Modeling</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Mudflow Modeling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#project-objectives">Project Objectives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#study-area">Study Area</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#data-sources">Data Sources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#terrain-development">Terrain Development</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#surface-roughness">Surface Roughness</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hydrology">Hydrology</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#rainfall">Rainfall</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#infiltration">Infiltration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hydrologic-response">Hydrologic Response</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mudflow-volume">Mudflow Volume</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mudflow-hydrograph">Mudflow Hydrograph</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mudflow-routing-simulation">Mudflow Routing Simulation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#results">Results</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#maximum-mudflow-depth">Maximum Mudflow Depth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#maximum-velocity">Maximum Velocity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#maximum-sediment-concentration">Maximum Sediment Concentration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#combined-hazard-assessment">Combined Hazard Assessment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#key-findings">Key Findings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Case Studies</a></li>
+      <li class="breadcrumb-item active">Mudflow Modeling</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/flo-2d_case_studies/mudflow-modeling/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mudflow-modeling">
+<span id="mudflow"></span><h1>Mudflow Modeling<a class="headerlink" href="#mudflow-modeling" title="Link to this heading"></a></h1>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#overview" id="id2">Overview</a></p></li>
+<li><p><a class="reference internal" href="#data-sources" id="id3">Data Sources</a></p></li>
+<li><p><a class="reference internal" href="#hydrology" id="id4">Hydrology</a></p></li>
+<li><p><a class="reference internal" href="#mudflow-volume" id="id5">Mudflow Volume</a></p></li>
+<li><p><a class="reference internal" href="#mudflow-hydrograph" id="id6">Mudflow Hydrograph</a></p></li>
+<li><p><a class="reference internal" href="#results" id="id7">Results</a></p></li>
+<li><p><a class="reference internal" href="#key-findings" id="id8">Key Findings</a></p></li>
+</ul>
+</nav>
+<section id="overview">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Overview</a><a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Mudflows are among the most destructive natural hazards in mountainous and steep coastal environments. Following intense rainfall,
+large volumes of water, sediment, rock, and woody debris can rapidly mobilize within steep drainages and canyon channels,
+producing fast-moving flows capable of damaging infrastructure and threatening downstream communities. Post-fire conditions can
+significantly increase the hazard by reducing vegetation cover, creating hydrophobic soil conditions, and exposing previously
+stabilized soils to erosion and mudflow propagation.</p>
+<p>This case study demonstrates a complete FLO-2D workflow for evaluating mudflow hazards within a steep coastal watershed. The project
+combines watershed hydrology, rainfall-runoff modeling, infiltration analysis, and FLO-2D mudflow routing to simulate the generation
+and downstream movement of sediment-laden flows. Model results are used to evaluate inundation extents, mudflow volumes and concentrations,
+flow depths, velocities, and potential hazard areas along the drainage corridor and developed downstream areas. These results are used to
+define hazard areas, facilitate mitigation design and basin design, and define safety corridors.</p>
+<p>The workflow illustrates how a rainfall-driven watershed response can be converted into a mudflow
+hydrograph and routed through a detailed FLO-2D computational grid.</p>
+<img alt="../../_images/mudflow012.png" src="../../_images/mudflow012.png" />
+<section id="project-objectives">
+<h3>Project Objectives<a class="headerlink" href="#project-objectives" title="Link to this heading"></a></h3>
+<p>The primary objectives of this study were to:</p>
+<ul class="simple">
+<li><p>Delineate the contributing watershed.</p></li>
+<li><p>Develop a rainfall-runoff model for a design storm event.</p></li>
+<li><p>Estimate infiltration losses using globally available soil and land use data.</p></li>
+<li><p>Generate a runoff hydrograph at the downstream canyon cross section.</p></li>
+<li><p>Convert the flood hydrograph into a mudflow hydrograph.</p></li>
+<li><p>Simulate downstream mudflow routing.</p></li>
+<li><p>Evaluate potential inundation depths, velocities, and mudflow concentrations.</p></li>
+</ul>
+</section>
+<section id="study-area">
+<h3>Study Area<a class="headerlink" href="#study-area" title="Link to this heading"></a></h3>
+<p>The study area consists of a steep mountainous watershed near Malibu, California, that drains through
+a network of steep tributary channels into developed foothill areas along the canyon outlet. Numerous
+tributaries converge within the watershed, concentrating runoff, sediment, and debris during short-duration,
+high-intensity, post-fire storm events.</p>
+<img alt="../../_images/mudflow001.png" src="../../_images/mudflow001.png" />
+<p><em>Figure 1. Watershed and foothills study area.</em></p>
+</section>
+</section>
+<section id="data-sources">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Data Sources</a><a class="headerlink" href="#data-sources" title="Link to this heading"></a></h2>
+<p>Several publicly available datasets were used during model development:</p>
+<ul class="simple">
+<li><p>Digital elevation model (DEM)</p></li>
+<li><p>National hydrography data</p></li>
+<li><p>Design rainfall data</p></li>
+<li><p>Soil classification data</p></li>
+<li><p>Global land cover data</p></li>
+<li><p>High-resolution aerial imagery</p></li>
+</ul>
+<p>These datasets were integrated into the GIS workflow to derive the terrain, hydrologic, and land surface parameters used by the FLO-2D model.</p>
+<section id="terrain-development">
+<h3>Terrain Development<a class="headerlink" href="#terrain-development" title="Link to this heading"></a></h3>
+<p>A computational domain was created to encompass the contributing watershed and downstream developed zone. Elevation data
+was interpolated to the FLO-2D grid and used to define overland flow paths, channelized drainage features, and canyon outlet topography.</p>
+<img alt="../../_images/mudflow002.png" src="../../_images/mudflow002.png" />
+<p><em>Figure 2. Computational grid and terrain model.</em></p>
+</section>
+<section id="surface-roughness">
+<h3>Surface Roughness<a class="headerlink" href="#surface-roughness" title="Link to this heading"></a></h3>
+<p>Manning’s roughness values were developed using land cover classifications and interpolated to the computational grid.</p>
+<p>Spatially varying roughness values were applied to represent:</p>
+<ul class="simple">
+<li><p>Natural channels</p></li>
+<li><p>Desert vegetation</p></li>
+<li><p>Disturbed areas</p></li>
+<li><p>Urbanized regions</p></li>
+</ul>
+<img alt="../../_images/mudflow003.png" src="../../_images/mudflow003.png" />
+<p><em>Figure 3. Spatial distribution of Manning’s roughness.</em></p>
+</section>
+</section>
+<section id="hydrology">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Hydrology</a><a class="headerlink" href="#hydrology" title="Link to this heading"></a></h2>
+<section id="rainfall">
+<h3>Rainfall<a class="headerlink" href="#rainfall" title="Link to this heading"></a></h3>
+<p>The design storm was selected to represent a short-duration, high-intensity event capable of generating significant runoff and mudflow. A temporal
+rainfall distribution was developed to represent storm intensification and recession over the event duration.  The 10 yr 3-hr design storm rainfall in inches
+and rainfall distribution curve was defined for the project using the rainfall editor.</p>
+<img alt="../../_images/mudflow004.png" src="../../_images/mudflow004.png" />
+<p><em>Figure 4. Design storm rainfall distribution.</em></p>
+</section>
+<section id="infiltration">
+<h3>Infiltration<a class="headerlink" href="#infiltration" title="Link to this heading"></a></h3>
+<p>Infiltration losses were estimated using soil and land use information. Green-Ampt parameters were developed from:</p>
+<ul class="simple">
+<li><p>Soil hydraulic properties</p></li>
+<li><p>Land cover classifications</p></li>
+<li><p>Surface abstraction characteristics</p></li>
+</ul>
+<p>This process allowed rainfall excess to be converted into runoff while accounting for spatial variability in infiltration parameters.
+The Green-Ampt method uses Hydraulic Conductivity (xksat), Infiltration Volume (dtheta), Capillary Suction (psif), Initial Abstraction (aa),
+and Percent Impervious (rtimp) to define transmission losses over a project area. The SSURGO Soil and ESA World Land Cover were used in this
+example to interpolate Green-Ampt Parameters to the grid.</p>
+<img alt="../../_images/mudflow005.png" src="../../_images/mudflow005.png" />
+<p><em>Figure 5. Infiltration parameter development.</em></p>
+</section>
+<section id="hydrologic-response">
+<h3>Hydrologic Response<a class="headerlink" href="#hydrologic-response" title="Link to this heading"></a></h3>
+<p>A rainfall-runoff simulation was performed to estimate the watershed response to a 10-year 3-hr design storm. The runoff hydrograph was extracted
+from a cross section located near the watershed outlet at the canyon mouth. The resulting hydrograph represents the timing and volume of flow
+entering the downstream mudflow routing domain. Short-duration rainfall intensity is a primary factor controlling post-fire debris-flow initiation
+and watershed response, particularly in steep coastal watersheds where debris flows can be be triggered by relatively frequent storm events. Although
+this case study uses a 10-year design storm, Staley et al. (2020) found that many post-fire debris flows are triggered by more frequent rainfall
+events, indicating that damaging debris flows are not limited to rare, extreme storms.</p>
+<img alt="../../_images/mudflow006.png" src="../../_images/mudflow006.png" />
+<p><em>Figure 6. Simulated watershed hydrograph.</em></p>
+</section>
+</section>
+<section id="mudflow-volume">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Mudflow Volume</a><a class="headerlink" href="#mudflow-volume" title="Link to this heading"></a></h2>
+<p>An estimated debris-flow volume was obtained from the USGS post-fire debris-flow
+hazard assessment dataset for the 2018 Woolsey Fire. The dataset was generated using
+the empirical regression model developed by Gartner et al. (2014), which predicts
+debris-flow volume from watershed relief, burned area, and short-duration rainfall
+intensity. The predicted debris-flow volume is expressed as:</p>
+<div class="math notranslate nohighlight">
+\[\ln(V) = 4.22 + 0.39\sqrt{i15} + 0.36\ln(Bmh) + 0.13\sqrt{R}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(V\)</span> = potential sediment volume (m³)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\ln(V)\)</span> = natural logarithm of the potential sediment volume</p></li>
+<li><p><span class="math notranslate nohighlight">\(i15\)</span> = peak 15-minute rainfall intensity (mm/hr)</p></li>
+<li><p><span class="math notranslate nohighlight">\(Bmh\)</span> = catchment area burned at moderate or high severity (km²)</p></li>
+<li><p><span class="math notranslate nohighlight">\(R\)</span> = watershed relief (m)</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[V = \exp(\ln(V))\]</div>
+<p>The USGS hazard assessment predicts a debris-flow volume of approximately
+23,400 m³ or ~19 acre-ft for the study watershed. This value was used to estimate
+the sediment volume available for entrainment during the FLO-2D mudflow
+simulation.</p>
+<img alt="../../_images/mudflow013.png" src="../../_images/mudflow013.png" />
+<p><em>Figure 7. USGS post-fire debris-flow hazard polygons.</em></p>
+<p>USGS post-fire debris-flow hazard polygon for the study watershed. The
+attribute table includes the intermediate regression variables and the
+predicted debris-flow volume used in this case study.</p>
+</section>
+<section id="mudflow-hydrograph">
+<span id="id1"></span><h2><a class="toc-backref" href="#id6" role="doc-backlink">Mudflow Hydrograph</a><a class="headerlink" href="#mudflow-hydrograph" title="Link to this heading"></a></h2>
+<p>The clear-water runoff hydrograph was converted to a mudflow hydrograph by applying
+a variable volumetric sediment concentration (<span class="math notranslate nohighlight">\(C_v\)</span>) that increased
+proportionally with discharge. The sediment concentration at each time step was
+computed as:</p>
+<div class="math notranslate nohighlight">
+\[C_v = C_{v,\max}\left(\frac{Q}{Q_{\max}}\right)\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(C_v\)</span> = volumetric sediment concentration</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_{v,\max}\)</span> = maximum volumetric sediment concentration</p></li>
+<li><p><span class="math notranslate nohighlight">\(Q\)</span> = instantaneous discharge</p></li>
+<li><p><span class="math notranslate nohighlight">\(Q_{\max}\)</span> = peak discharge of the clear-water hydrograph</p></li>
+</ul>
+<p>This approach assumes that sediment concentration is greatest at the peak discharge
+and decreases during the rising and recession limbs of the hydrograph, resulting in
+a time-varying mudflow hydrograph representative of a post-fire debris-flow event.</p>
+<p>A uniform sediment concentration applied over the entire hydrograph produced
+sediment volumes that exceeded the debris volume predicted by the USGS empirical
+regression model of Gartner et al. (2014). Therefore, the peak sediment
+concentration (<span class="math notranslate nohighlight">\(C_{v,\max}\)</span>) was iteratively adjusted while allowing the
+sediment concentration to vary with discharge until the integrated sediment volume
+matched the predicted debris yield. For this case study, a peak volumetric sediment
+concentration of approximately <strong>0.45</strong> produced a modeled sediment volume
+consistent with the predicted debris yield of approximately <strong>19 acre-ft</strong>.</p>
+<p>This methodology preserves the temporal characteristics of the modeled runoff
+hydrograph while constraining the total sediment volume to an independently
+estimated debris yield, providing a practical engineering approach for developing
+mudflow inflow hydrographs in the absence of a physically based sediment transport
+model.</p>
+<img alt="../../_images/mudflow007.png" src="../../_images/mudflow007.png" />
+<p><em>Figure 8. Mudflow hydrograph development.</em></p>
+<section id="mudflow-routing-simulation">
+<h3>Mudflow Routing Simulation<a class="headerlink" href="#mudflow-routing-simulation" title="Link to this heading"></a></h3>
+<p>The FLO-2D mudflow model was configured to simulate flow conditions.</p>
+<p>Model inputs included:</p>
+<ul class="simple">
+<li><p>Mudflow hydrograph</p></li>
+<li><p>Mudflow concentration parameters</p></li>
+<li><p>Viscosity and yield stress coefficient and exponent parameters</p></li>
+<li><p>Surface roughness</p></li>
+<li><p>Terrain elevations</p></li>
+<li><p>Hydraulic structures</p></li>
+</ul>
+<p>The simulation routed the mudflow downstream of the canyon apex and through the urban zone crossing Highway 1 with the Pacific Ocean as a boundary.</p>
+<img alt="flo-2d_case_studies/img/mudflow-modeling/mudflow008.gif" src="flo-2d_case_studies/img/mudflow-modeling/mudflow008.gif" />
+<p><em>Figure 9. FLO-2D mudflow simulation.</em></p>
+</section>
+</section>
+<section id="results">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Results</a><a class="headerlink" href="#results" title="Link to this heading"></a></h2>
+<p>The simulation produced a series of hazard maps that describe the magnitude and extent of the event. It could also be used to determine
+if an upstream debris basin could mitigate an event.</p>
+<section id="maximum-mudflow-depth">
+<h3>Maximum Mudflow Depth<a class="headerlink" href="#maximum-mudflow-depth" title="Link to this heading"></a></h3>
+<img alt="../../_images/mudflow009.png" src="../../_images/mudflow009.png" />
+<p><em>Figure 10. Maximum mudflow depth.</em></p>
+</section>
+<section id="maximum-velocity">
+<h3>Maximum Velocity<a class="headerlink" href="#maximum-velocity" title="Link to this heading"></a></h3>
+<img alt="../../_images/mudflow010.png" src="../../_images/mudflow010.png" />
+<p><em>Figure 11. Maximum mudflow velocity.</em></p>
+</section>
+<section id="maximum-sediment-concentration">
+<h3>Maximum Sediment Concentration<a class="headerlink" href="#maximum-sediment-concentration" title="Link to this heading"></a></h3>
+<img alt="../../_images/mudflow011.png" src="../../_images/mudflow011.png" />
+<p><em>Figure 12. Maximum sediment concentration by volume.</em></p>
+</section>
+<section id="combined-hazard-assessment">
+<h3>Combined Hazard Assessment<a class="headerlink" href="#combined-hazard-assessment" title="Link to this heading"></a></h3>
+<p>The resulting hazard maps identify areas potentially exposed to:</p>
+<ul class="simple">
+<li><p>Deep mudflow inundation</p></li>
+<li><p>High velocity impacts</p></li>
+<li><p>Elevated sediment concentrations</p></li>
+<li><p>Deposition zones in the urban areas</p></li>
+</ul>
+<p>These outputs can be used to support:</p>
+<ul class="simple">
+<li><p>Hazard mapping</p></li>
+<li><p>Infrastructure planning</p></li>
+<li><p>Emergency response planning</p></li>
+<li><p>Debris-flow mitigation studies</p></li>
+<li><p>Land development reviews</p></li>
+</ul>
+<img alt="../../_images/mudflow014.png" src="../../_images/mudflow014.png" />
+<p><em>Figure 13. Fema Hazard Zones.</em></p>
+</section>
+</section>
+<section id="key-findings">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Key Findings</a><a class="headerlink" href="#key-findings" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Watershed-scale rainfall runoff can be converted into a defensible mudflow inflow hydrograph.</p></li>
+<li><p>Spatially distributed infiltration improves runoff estimation.</p></li>
+<li><p>Mudflow routing is highly sensitive to topography and channel confinement.</p></li>
+<li><p>Sediment concentration significantly influences downstream hazard extent.</p></li>
+<li><p>FLO-2D provides a practical workflow for evaluating rainfall-triggered mudflow hazards.</p></li>
+</ul>
+<section id="conclusion">
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h3>
+<p>This case study demonstrates a complete end-to-end workflow for simulating rainfall-generated
+mudflows using FLO-2D. By combining watershed hydrology, infiltration analysis, hydrograph
+generation, and mudflow routing, engineers can evaluate potential downstream impacts, design mitigation features,
+and support hazard planning in debris-flow-prone watersheds.</p>
+</section>
+<section id="references">
+<h3>References<a class="headerlink" href="#references" title="Link to this heading"></a></h3>
+<p>Gartner, J.E., Cannon, S.H., and Santi, P.M. (2014). “Empirical Models for Predicting Volumes of Sediment Deposited by
+Debris Flows and Sediment-Laden Floods in the Transverse Ranges of Southern California,” Engineering Geology, Vol. 176,
+pp. 45-56. Elsevier. <a class="reference external" href="https://doi.org/10.1016/j.enggeo.2014.04.008">https://doi.org/10.1016/j.enggeo.2014.04.008</a></p>
+<p>O’Brien, J.S. (2020). <em>Simulating Mudflow Guidelines</em>. FLO-2D Software, Inc., Nutrioso AZ.
+<a class="reference external" href="https://documentation.flo-2d.com/Build25/flo-2d_pro/Simulating%20Mudflow%20Guidelines/Simulating%20Mudflow%20Guidelines.html">https://documentation.flo-2d.com/Build25/flo-2d_pro/Simulating%20Mudflow%20Guidelines/Simulating%20Mudflow%20Guidelines.html</a></p>
+<p>Staley, D.M., Kean, J.W., and Rengers, F.K., 2020, “The Recurrence Interval of Post-Fire Debris-Flow Generating Rainfall in the
+Southwestern United States,” Geomorphology, Vol. 370, Article 107392. Elsevier. <a class="reference external" href="https://doi.org/10.1016/j.geomorph.2020.107392">https://doi.org/10.1016/j.geomorph.2020.107392</a></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../breach/tank-breach/index.html" class="btn btn-neutral float-left" title="Tank Breach" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build21/index.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

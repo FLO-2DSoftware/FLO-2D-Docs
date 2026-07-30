@@ -1,0 +1,552 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Water Dam Breach &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=6385869e" />
+
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../../_static/togglebutton.js?v=b8b12719"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Patel Milmet Dam Failure" href="../patel-milmet-failure/index.html" />
+    <link rel="prev" title="Breach - Hydraulic Breach Modeling" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../flo-2d_plugin/index.html">FLO-2D Gila for QGIS Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../flo-2d_mapcrafter/index.html">FLO-2D MapCrafter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../flo-2d_florunner/index.html">FLO-2D FLORunner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/index.html">FLO-2D Gila Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">FLO-2D Case Studies</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Breach - Hydraulic Breach Modeling</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Water Dam Breach</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#method-1-breach-hydrograph-tool-teton-dam-failure">Method 1: Breach Hydrograph Tool (Teton Dam Failure)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method-2-prescribed-breach-urban-dam-and-sedimentation-basin">Method 2: Prescribed Breach (Urban Dam and Sedimentation Basin)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method-3-erosion-breach-diamond-dam-valley-lake">Method 3: Erosion Breach (Diamond Dam Valley Lake)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../patel-milmet-failure/index.html">Patel Milmet Dam Failure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tank-breach/index.html">Tank Breach</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../mudflow-modeling/index.html">Mudflow Modeling</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Case Studies</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Breach - Hydraulic Breach Modeling</a></li>
+      <li class="breadcrumb-item active">Water Dam Breach</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/flo-2d_case_studies/breach/water/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="water-dam-breach">
+<h1>Water Dam Breach<a class="headerlink" href="#water-dam-breach" title="Link to this heading"></a></h1>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#method-1-breach-hydrograph-tool-teton-dam-failure" id="id1">Method 1: Breach Hydrograph Tool (Teton Dam Failure)</a></p></li>
+<li><p><a class="reference internal" href="#method-2-prescribed-breach-urban-dam-and-sedimentation-basin" id="id2">Method 2: Prescribed Breach (Urban Dam and Sedimentation Basin)</a></p></li>
+<li><p><a class="reference internal" href="#method-3-erosion-breach-diamond-dam-valley-lake" id="id3">Method 3: Erosion Breach (Diamond Dam Valley Lake)</a></p></li>
+</ul>
+</nav>
+<p>To model water dam breach scenarios in FLO-2D, several approaches are available depending on the level of detail required,
+the available data, and the purpose of the analysis. These approaches range from simplified empirical methods for rapid
+screening studies to more detailed hydraulic simulations that represent breach development and downstream flood routing.</p>
+<p>Three methods can be used to simulate water dam failures in FLO-2D. Each method represents a different level of
+modeling complexity and physical representation of the failure process. The following sections describe these methods
+in detail, including their assumptions, typical applications, and recommended tutorial packages for implementation.</p>
+<section id="method-1-breach-hydrograph-tool-teton-dam-failure">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Method 1: Breach Hydrograph Tool (Teton Dam Failure)</a><a class="headerlink" href="#method-1-breach-hydrograph-tool-teton-dam-failure" title="Link to this heading"></a></h2>
+<p>The Breach Hydrograph Tool is a simplified and efficient method for estimating the outflow hydrograph associated with a
+water dam failure. This approach is commonly used for preliminary assessments, regulatory studies, emergency planning,
+and screening-level analyses where detailed breach mechanics are not required or where limited data are available.</p>
+<img alt="../../../_images/dam-breach0021.png" src="../../../_images/dam-breach0021.png" />
+<p>The tool estimates the key breach parameters required to define the dam failure hydrograph, including the peak discharge,
+time to peak discharge, average breach width, and the total duration of the hydrograph. These parameters are calculated
+using widely accepted empirical relationships derived from historical dam failure data, such as the Froehlich equations,
+the ANA-LNEC methodology, and the MMC approach. These methods provide practical and defensible estimates of breach
+characteristics when detailed information about the failure mechanism is not available.</p>
+<p>After estimating the breach characteristics, the tool generates the breach hydrograph using simplified analytical
+shapes that represent the temporal evolution of the discharge during the failure process. Common hydrograph shapes
+include triangular, parabolic, and TR66 formulations. The resulting hydrograph can then be directly assigned to an
+inflow boundary condition in the FLO-2D model, allowing the released water to be routed through the downstream system
+to evaluate flood depths, velocities, and inundation extent.</p>
+<p>The case study for this method is the Teton Dam Failure, which used the complete workflow for
+estimating breach parameters, generating the outflow hydrograph, and routing the resulting floodwave using the Breach Hydrograph Tool.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>Teton Dam Failure</strong></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The failure of the Teton Dam in Idaho, United States, on June 5, 1976, remains one of the most thoroughly documented
+embankment dam failures in hydraulic engineering history. The event occurred during the initial filling of the reservoir,
+when the water level approached the design maximum pool elevation. Due to the extensive forensic investigations conducted
+after the failure, the case provides a reliable and well-documented benchmark for evaluating dam breach modeling
+methodologies and flood routing performance.</p>
+<a class="reference internal image-reference" href="../../../_images/dam-breach0001.png"><img alt="../../../_images/dam-breach0001.png" src="../../../_images/dam-breach0001.png" style="width: 75%;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="sd-card-text">Historical aerial photograph of the Teton Dam failure near Newdale, Idaho, captured on June 5, 1976. The image shows
+the breached dam and downstream flood impacts along the Teton River corridor.
+<strong>Source:</strong> Roberts, WaterArchives.org (Image ID-L-0010). No known U.S. copyright restrictions.</p>
+</div>
+<p class="sd-card-text">The dam failure was initiated by internal erosion through the embankment core, commonly referred to as piping.
+Seepage developed along fractures in the core and foundation materials, progressively enlarging internal flow paths until
+structural integrity was compromised. Once a sinkhole formed on the downstream face, rapid erosion led to full breach
+formation within a few hours. The resulting flood wave propagated downstream along the Teton River valley,
+producing widespread inundation and significant economic damage.</p>
+<p class="sd-card-text">Because the failure mechanism, reservoir conditions, breach development, and downstream impacts were extensively documented,
+the Teton Dam event has become a standard reference case for validating hydraulic models and training engineers in dam breach simulation.</p>
+<div class="h3 docutils container">
+<p class="sd-card-text">Project Characteristics</p>
+</div>
+<p class="sd-card-text">The Teton Dam failure involved the sudden release of a large reservoir volume and produced one of the highest recorded
+discharges associated with an embankment dam failure. The hydraulic conditions and downstream flood response provide an
+ideal test case for evaluating dam breach modeling tools and flood hazard assessment methodologies.</p>
+<p class="sd-card-text">The dam had a total height of approximately 305 feet and stored a reservoir with a capacity of approximately 435 million
+cubic yards. At the time of failure, the reservoir contained an estimated released volume of approximately 396 million
+cubic yards. The breach developed rapidly, generating a peak discharge of approximately 2.3 million cubic feet per
+second and producing a flood wave that inundated an area of roughly 240 square kilometers downstream of the dam.</p>
+<div class="h3 docutils container">
+<p class="sd-card-text">Modeling Objectives</p>
+</div>
+<p class="sd-card-text">The primary objective of this case study was to simulate the dam failure using FLO-2D and the Breach Hydrograph Tool
+to evaluate the downstream flood response resulting from the breach. The simulation focused on reproducing the magnitude
+and timing of the released flow and estimating the resulting inundation extent and hydraulic conditions across the downstream valley.</p>
+<p class="sd-card-text">Specific modeling objectives included:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Estimating the breach discharge hydrograph</p></li>
+<li><p class="sd-card-text">Simulating flood propagation downstream of the dam</p></li>
+<li><p class="sd-card-text">Evaluating inundation depth and flood extent</p></li>
+<li><p class="sd-card-text">Verifying model stability and volume conservation</p></li>
+</ul>
+<p class="sd-card-text">This type of analysis is commonly performed in dam safety studies, emergency action planning, consequence assessments,
+and regulatory evaluations.</p>
+<div class="h3 docutils container">
+<p class="sd-card-text">Model Setup and Data</p>
+</div>
+<p class="sd-card-text">The simulation domain was defined using terrain and land cover data representative of the downstream watershed.
+Elevation data were processed to generate a computational grid suitable for hydraulic routing,
+and surface roughness values were assigned based on land cover classification. The modeling domain was configured
+to capture the expected flood propagation along the river valley and adjacent floodplain areas.</p>
+<p class="sd-card-text">The computational grid resolution was selected to balance numerical stability, computational efficiency, and spatial accuracy.
+Boundary conditions were defined to represent the inflow generated by the dam breach and the downstream flow routing conditions.
+The resulting model configuration allowed the simulation to reproduce the hydraulic response of the flood wave as it moved through the downstream system.</p>
+<img alt="../../../_images/dam-breach0005.png" src="../../../_images/dam-breach0005.png" />
+<p class="sd-card-text">The modeling workflow included verification of simulation stability and review of diagnostic outputs such as volume conservation,
+velocity distribution, and time step behavior. These checks are essential for ensuring that the simulation results are
+physically realistic and numerically stable.</p>
+<div class="h3 docutils container">
+<p class="sd-card-text">Simulation Results</p>
+</div>
+<p class="sd-card-text">The FLO-2D simulation reproduced the key hydraulic characteristics of the Teton Dam failure, including rapid reservoir drawdown,
+high peak discharge, and extensive downstream inundation. The model generated time-dependent flow depth and velocity
+fields that allowed detailed evaluation of flood behavior throughout the computational domain.</p>
+<img alt="../../../_images/dam-breach0002.gif" src="../../../_images/dam-breach0002.gif" />
+<p class="sd-card-text">The results demonstrated the ability of the model to simulate large-scale dam breach events and to capture the
+dynamic interaction between the released flow and the downstream terrain. Areas of high velocity were identified near
+the breach and along confined sections of the river valley, while broader floodplain areas exhibited lower velocities
+and deeper inundation depths. These patterns are consistent with the expected hydraulic behavior of a large dam breach flood wave.</p>
+<p class="sd-card-text">The simulation also confirmed that the total released volume matched the expected reservoir discharge,
+indicating that the model maintained appropriate mass conservation throughout the event.
+This verification step is critical for ensuring the reliability of dam breach simulations used in
+engineering and regulatory applications.</p>
+<img alt="../../../_images/dam-breach0002.png" src="../../../_images/dam-breach0002.png" />
+<div class="h3 docutils container">
+<p class="sd-card-text">Training and Professional Development</p>
+</div>
+<p class="sd-card-text">This case study is part of the FLO-2D Dam Breach training package, which provides practical guidance on how to develop,
+run, and evaluate dam failure simulations using real-world scenarios. The training focuses on building technical
+confidence in model setup, parameter selection, and result interpretation.</p>
+<p class="sd-card-text">Participants learn how to:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Define a dam breach scenario</p></li>
+<li><p class="sd-card-text">Generate and apply a breach hydrograph</p></li>
+<li><p class="sd-card-text">Configure the computational domain</p></li>
+<li><p class="sd-card-text">Run the hydraulic simulation</p></li>
+<li><p class="sd-card-text">Analyze flood depth, velocity, and inundation results</p></li>
+<li><p class="sd-card-text">Produce maps and technical outputs for decision-making</p></li>
+</ul>
+<p class="sd-card-text">The training materials are designed for engineers, consultants, regulators,
+and emergency planners responsible for dam safety and flood risk management.</p>
+</div>
+</details></section>
+<section id="method-2-prescribed-breach-urban-dam-and-sedimentation-basin">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Method 2: Prescribed Breach (Urban Dam and Sedimentation Basin)</a><a class="headerlink" href="#method-2-prescribed-breach-urban-dam-and-sedimentation-basin" title="Link to this heading"></a></h2>
+<p>In this method, the user directly defines the breach geometry and the rate at which the breach develops over time.
+The model then computes the resulting outflow hydrograph dynamically based on the changing breach
+dimensions and the hydraulic conditions in the reservoir.</p>
+<img alt="../../../_images/dam-breach0019.png" src="../../../_images/dam-breach0019.png" />
+<p>This approach is commonly used when site-specific information about the breach characteristics is available or when
+regulatory guidance requires the explicit definition of breach parameters. The prescribed breach method allows the
+user to control aspects of the failure process, including the final breach width, breach development rates,
+breach invert elevation, and the time required for the breach to fully develop.</p>
+<p>The prescribed breach method is particularly appropriate for engineering studies where the breach characteristics
+can be reasonably estimated based on design information, dam geometry, or regulatory guidance. It is also commonly
+used in consequence assessments, dam safety evaluations, and emergency action planning studies where a defined failure
+scenario must be simulated in a consistent and repeatable manner.</p>
+<p>The case study for this method is the Conceptual Urban Dam Failure Scenario, which defined the breach geometry,
+specified the breach development time, and simulated the resulting reservoir release using the Prescribed Breach method.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><strong>Conceptual Urban Dam Failure</strong></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Dry detention basin and earthen dam located in Phoenix, Arizona. Phoenix Basin No. 7 provides approximately
+257 acre-feet of storage and drains a 0.6 square-mile watershed. Runoff is discharged through a 27-inch principal
+outlet pipe connected to a downstream channel and supplemented by an emergency spillway. The outlet pipe inlet
+invert is located at the basin floor elevation of 1371.34 ft and extends approximately 160 ft through the embankment.
+The emergency spillway has a minimum crest elevation of 1393.7 ft and provides overflow protection during extreme storm events.</p>
+<a href="https://alert.fcd.maricopa.gov/alert/Flow/13307.htm"
+   target="_blank"
+   rel="noopener noreferrer">
+   Phoenix Basin No. 7
+</a><p class="sd-card-text">Additional information about Phoenix Basin No. 7 is available from the Flood Control District of Maricopa County:</p>
+<a class="reference internal image-reference" href="../../../_images/dam-breach0014.png"><img alt="../../../_images/dam-breach0014.png" src="../../../_images/dam-breach0014.png" style="width: 75%;" /></a>
+<p class="sd-card-text">Source: Google Earth Pro imagery. Image enhanced for clarity; dam/basin features unchanged.</p>
+<p class="sd-card-text">A conceptual dam failure scenario was developed for an urban watershed located in the Phoenix metropolitan area in
+Arizona, United States. The purpose of the study was to evaluate the potential downstream impacts associated with the
+failure of a flood control structure located within a developed urban environment. The analysis was performed using
+the prescribed breach method in the FLO-2D model to simulate the release of stored water following a structural failure of the dam.</p>
+<p class="sd-card-text">Urban flood control dams in the Phoenix region are commonly designed to manage storm runoff generated by intense
+rainfall events. These structures play a critical role in reducing downstream flood risk.
+However, failure of such structures, whether due to overtopping, structural instability, or operational malfunction,
+can result in rapid downstream flooding with potentially significant consequences.</p>
+<p class="sd-card-text">The scenario analyzed in this case study represents a hypothetical failure of an urban detention dam.</p>
+<div class="h3 docutils container">
+<p class="sd-card-text">Modeling Objectives</p>
+</div>
+<p class="sd-card-text">The primary objective of this case study was to simulate the failure of an urban flood control dam using a
+physically defined breach and to evaluate the resulting downstream flooding behavior within a developed area.</p>
+<p class="sd-card-text">The analysis focused on:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Simulating the structural failure of the dam</p></li>
+<li><p class="sd-card-text">Evaluating downstream flood propagation</p></li>
+<li><p class="sd-card-text">Calibrate to flood extent mapping</p></li>
+<li><p class="sd-card-text">Identifying potential infrastructure impacts</p></li>
+<li><p class="sd-card-text">Assessing flood routing across transportation corridors</p></li>
+</ul>
+<p class="sd-card-text">This type of modeling is commonly performed for dam safety evaluations,
+urban flood risk studies, and regulatory compliance assessments.</p>
+<div class="h3 docutils container">
+<p class="sd-card-text">Model Setup and Data</p>
+</div>
+<p class="sd-card-text">The dam structure was represented as a levee dam within the computational domain. The failure was simulated using a
+prescribed breach, in which the location, geometry, and direction of the breach were defined explicitly within the model.
+The breach was positioned at a location along the dam crest to simulate a structural failure mechanism.</p>
+<a class="reference internal image-reference" href="../../../_images/dam-breach0013.png"><img alt="../../../_images/dam-breach0013.png" src="../../../_images/dam-breach0013.png" style="width: 75%;" /></a>
+<p class="sd-card-text">The model dynamically calculated the discharge through the breach as water levels within the reservoir exceeded the
+structural capacity of the dam. This approach allowed the simulation to represent the progressive release of stored
+water and the resulting downstream flood routing.</p>
+<p class="sd-card-text">By combining breach dynamics with hydraulic infrastructure representation, the model provided a realistic
+simulation of both normal and failure conditions for the dam.</p>
+<div class="h3 docutils container">
+<p class="sd-card-text">Simulation Results</p>
+</div>
+<p class="sd-card-text">The simulation demonstrated the rapid downstream propagation of floodwaters following the structural failure of the dam.
+The model predicted that released water would initially follow the primary drainage pathway downstream of the structure
+before spreading laterally across the urban terrain.</p>
+<img alt="../../../_images/dam-breach0012.png" src="../../../_images/dam-breach0012.png" />
+<p class="sd-card-text">One of the key findings of the analysis was the potential for floodwaters to intersect major transportation infrastructure.
+The results indicated that flow could cross a nearby highway corridor and continue toward lower-elevation areas located to the southwest of the dam.</p>
+<p class="sd-card-text">The model outputs provided detailed spatial information describing:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Maximum flood depth distribution</p></li>
+<li><p class="sd-card-text">Flow velocity patterns</p></li>
+<li><p class="sd-card-text">Timing of flood arrival</p></li>
+<li><p class="sd-card-text">Potential inundation extent</p></li>
+<li><p class="sd-card-text">Downstream hazard zones</p></li>
+</ul>
+<p class="sd-card-text">These results are critical for evaluating evacuation requirements, infrastructure vulnerability, and emergency response planning. Time
+dependent results allow emergency planners to establish more precise and accurate safety zones.</p>
+<img alt="../../../_images/dam-breach0003.gif" src="../../../_images/dam-breach0003.gif" />
+<div class="h3 docutils container">
+<p class="sd-card-text">Training and Professional Development</p>
+</div>
+<p class="sd-card-text">This conceptual urban dam failure scenario is a case study part of the FLO-2D dam breach modeling training program and
+is designed to illustrate how prescribed breach modeling can be applied to urban flood control systems.
+The case study provides a practical example of how numerical modeling can support decision-making
+in emergency planning and infrastructure risk management.</p>
+<p class="sd-card-text">Participants learn how to:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Define realistic breach scenarios</p></li>
+<li><p class="sd-card-text">Set up urban infrastructure within the model</p></li>
+<li><p class="sd-card-text">Evaluate downstream flood impacts</p></li>
+<li><p class="sd-card-text">Interpret model results for risk assessment</p></li>
+</ul>
+<p class="sd-card-text">The workflow presented in this case study reflects standard engineering practice for dam safety and urban
+flood risk analysis using physically based hydraulic modeling tools.</p>
+</div>
+</details></section>
+<section id="method-3-erosion-breach-diamond-dam-valley-lake">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Method 3: Erosion Breach (Diamond Dam Valley Lake)</a><a class="headerlink" href="#method-3-erosion-breach-diamond-dam-valley-lake" title="Link to this heading"></a></h2>
+<p>The Erosion Breach method represents the most physically based approach for simulating dam failure in FLO-2D.
+In this method, the breach develops dynamically as a result of hydraulic erosion driven by the flow of water through
+the dam structure. Instead of prescribing the final breach geometry or estimating a hydrograph in advance,
+the model computes the progressive enlargement of the breach based on erosion processes and hydraulic conditions during the simulation.</p>
+<img alt="../../../_images/dam-breach0020.png" src="../../../_images/dam-breach0020.png" />
+<p>This approach is particularly useful when the failure mechanism is expected to involve overtopping or internal erosion
+and when the objective of the study is to represent the time-dependent evolution of the breach. The erosion breach
+method accounts for the interaction between reservoir hydraulics, flow velocity, and material resistance, allowing
+the breach dimensions to change continuously as the simulation progresses. As the breach widens and deepens, the
+model automatically updates the discharge and reservoir drawdown, producing a hydrograph that reflects the physical
+development of the failure.</p>
+<p>The erosion process is controlled by parameters that describe the resistance of the dam material to erosion,
+such as erodibility coefficients and critical shear stress. These parameters can be estimated from laboratory testing,
+published ranges for similar materials, or regulatory guidance. Because the breach geometry is not predefined,
+the resulting failure behavior is influenced by both the hydraulic conditions and the assumed material properties,
+making this method well suited for sensitivity analyses and detailed engineering evaluations of potential failure scenarios.</p>
+<p>The erosion breach method is commonly applied in dam safety studies, risk assessments, and design evaluations
+where the failure mechanism must be represented explicitly and where the timing and magnitude of the breach discharge
+are important for downstream hazard analysis. It is also valuable when evaluating the influence of material properties
+or reservoir conditions on the progression of the failure and the resulting floodwave characteristics.</p>
+<p>The case study for this method is the Erosion of Diamond Valley Lake, which defined the dam material properties, configured the erosion parameters,
+and simulated the progressive development of the breach and resulting flood routing using the Erosion Breach method.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Erosion of Diamond Valley Lake</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">A conceptual dam failure scenario was developed for Diamond Valley Lake, a major reservoir located in Riverside County,
+California. The objective of the study was to evaluate the potential downstream impacts associated with a
+progressive erosion failure of the embankment dam using a physically based breach modeling approach in the FLO-2D model.</p>
+<a class="reference internal image-reference" href="../../../_images/dam-breach0015.png"><img alt="../../../_images/dam-breach0015.png" src="../../../_images/dam-breach0015.png" style="width: 75%;" /></a>
+<p class="sd-card-text">Source: Google Earth Pro imagery. Image enhanced for clarity; dam/basin features unchanged.</p>
+<p class="sd-card-text">Diamond Valley Lake is a large water supply reservoir designed to provide regional water storage and reliability
+for Southern California. The dam system consists of engineered embankment structures constructed using zoned materials,
+including a central core and outer shell layers. Because of the size of the reservoir and the stored water volume,
+any failure of the embankment has the potential to generate significant downstream flooding and infrastructure impacts.</p>
+<p class="sd-card-text">The scenario analyzed in this case study represents a hypothetical erosion-driven breach initiated by internal
+instability or surface erosion processes. The modeling effort was conducted to support dam safety evaluation
+and emergency planning by simulating the progressive development of the breach and the resulting flood propagation downstream.</p>
+<p class="sd-card-text">This type of analysis is commonly performed for large reservoirs where the failure mechanism is expected to
+evolve over time rather than occur instantaneously.</p>
+<p class="sd-card-text">The modeling framework and dam parameters used in this study are based on representative geometry and
+material properties defined in the project dataset.</p>
+<div class="h3 docutils container">
+<p class="sd-card-text">Dam Characteristics and Material Properties</p>
+</div>
+<p class="sd-card-text">The dam structure analyzed in this case study represents a large embankment dam constructed using zoned materials
+typical of modern reservoir design. The geometry of the dam plays a critical role in controlling breach development
+and discharge magnitude during a failure event.</p>
+<p class="sd-card-text">Representative structural characteristics for the dam include:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Crest width of approximately 32 feet</p></li>
+<li><p class="sd-card-text">Crest length of approximately 7,900 feet</p></li>
+<li><p class="sd-card-text">Upstream and downstream shell slopes of approximately 2H:1V</p></li>
+<li><p class="sd-card-text">Core slope of approximately 0.5H:1V</p></li>
+</ul>
+<p class="sd-card-text">These geometric parameters influence both the hydraulic head available for erosion and the stability of
+the embankment during breach formation.</p>
+<p class="sd-card-text">Material properties are equally important in determining the rate at which the breach develops.
+In erosion-based failure modeling, parameters such as grain size distribution, porosity, cohesion, and
+internal friction control the resistance of the embankment to hydraulic erosion.</p>
+<p class="sd-card-text">Typical material properties considered in the analysis include:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Median grain size of the core and shell materials</p></li>
+<li><p class="sd-card-text">Porosity and unit weight of the embankment zones</p></li>
+<li><p class="sd-card-text">Cohesive strength and friction angle of the materials</p></li>
+<li><p class="sd-card-text">Roughness characteristics of the downstream face</p></li>
+</ul>
+<p class="sd-card-text">These parameters define the mechanical response of the dam during erosion and directly
+affect the timing and magnitude of the breach discharge.</p>
+<div class="h3 docutils container">
+<p class="sd-card-text">Modeling Objectives</p>
+</div>
+<p class="sd-card-text">The primary objective of this case study was to simulate a progressive erosion failure of the dam and evaluate the
+resulting downstream flood behavior using a physically based breach development model.</p>
+<p class="sd-card-text">The analysis focused on:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Simulating the initiation of erosion within the embankment</p></li>
+<li><p class="sd-card-text">Modeling progressive enlargement of the breach opening</p></li>
+<li><p class="sd-card-text">Estimating discharge as the reservoir drains</p></li>
+<li><p class="sd-card-text">Evaluating downstream flood propagation</p></li>
+<li><p class="sd-card-text">Supporting dam safety and emergency planning</p></li>
+</ul>
+<p class="sd-card-text">This type of modeling is particularly important for large reservoirs where failure mechanisms are controlled by
+erosion processes rather than instantaneous structural collapse.</p>
+<div class="h3 docutils container">
+<p class="sd-card-text">Modeling Approach</p>
+</div>
+<p class="sd-card-text">The dam failure was simulated using the FLO-2D erosion breach method, in which the breach develops dynamically in
+response to hydraulic forces acting on the embankment materials. Unlike simplified hydrograph-based approaches,
+the model computes the breach discharge internally as erosion progresses and the breach geometry evolves.</p>
+<img alt="../../../_images/dam-breach0016.png" src="../../../_images/dam-breach0016.png" />
+<p class="sd-card-text">The simulation begins with the reservoir filled to the defined water surface elevation. Once the breach initiates,
+flow accelerates through the embankment opening and progressively enlarges the breach as material is removed by hydraulic erosion.</p>
+<p class="sd-card-text">Key parameters controlling breach development in this analysis include:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Maximum allowable breach width</p></li>
+<li><p class="sd-card-text">Initial breach elevation</p></li>
+<li><p class="sd-card-text">Weir discharge coefficient</p></li>
+<li><p class="sd-card-text">Breach width-to-depth ratio</p></li>
+<li><p class="sd-card-text">Material resistance to erosion</p></li>
+</ul>
+<p class="sd-card-text">These parameters govern how quickly the breach forms and how rapidly the reservoir drains following failure.</p>
+<p class="sd-card-text">The erosion-based approach provides a physically realistic representation of dam failure behavior and is
+particularly appropriate for large embankment dams where internal erosion or
+overtopping is the dominant failure mechanism.</p>
+<div class="h3 docutils container">
+<p class="sd-card-text">Simulation Results</p>
+</div>
+<p class="sd-card-text">The simulation demonstrated the progressive formation of a breach in the embankment and the resulting release of
+reservoir water over time. The model predicted an initial period of relatively low discharge followed by rapid
+acceleration of flow as the breach widened and deepened.</p>
+<img alt="../../../_images/dam-breach0004.gif" src="../../../_images/dam-breach0004.gif" />
+<p class="sd-card-text">As the breach developed, the reservoir water level declined steadily, producing a sustained release of flow
+downstream. The results showed that the peak discharge occurred after the breach reached a critical size,
+at which point the hydraulic head driving the flow was maximized.</p>
+<p class="sd-card-text">Downstream flooding patterns reflected the gradual increase in discharge associated with erosion-driven failure.
+Areas closest to the dam experienced the highest flow velocities and water depths, while downstream areas exhibited
+broader floodplain inundation as flow energy dissipated.</p>
+<p class="sd-card-text">The simulation also confirmed that the total released volume matched the reservoir storage, indicating that
+the model maintained appropriate mass conservation throughout the event. This verification step is essential for
+ensuring the reliability of dam breach simulations used in engineering and regulatory applications.</p>
+<div class="h3 docutils container">
+<p class="sd-card-text">Training and Professional Development</p>
+</div>
+<p class="sd-card-text">This case study is part of the FLO-2D dam breach modeling training program and is designed to illustrate how
+erosion-based breach modeling can be applied to large reservoir systems. The scenario provides a practical example
+of how numerical modeling can support decision-making in dam safety and risk management.</p>
+<p class="sd-card-text">Participants learn how to:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Define embankment geometry and material properties</p></li>
+<li><p class="sd-card-text">Configure erosion-based breach parameters</p></li>
+<li><p class="sd-card-text">Simulate progressive breach development</p></li>
+<li><p class="sd-card-text">Evaluate downstream flood impacts</p></li>
+<li><p class="sd-card-text">Interpret model results for emergency planning</p></li>
+</ul>
+<p class="sd-card-text">The workflow presented in this case study reflects standard engineering practice
+for physically based dam breach analysis in large reservoir systems.</p>
+</div>
+</details></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Breach - Hydraulic Breach Modeling" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../patel-milmet-failure/index.html" class="btn btn-neutral float-right" title="Patel Milmet Dam Failure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="index.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="../../../../Build21/index.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

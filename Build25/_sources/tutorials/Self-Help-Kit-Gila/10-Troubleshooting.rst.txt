@@ -78,3 +78,5 @@ A: I’ll need to do some research, but the engine should use both types. Howeve
 
 **Q: Which .OUT file has channel cross-section outflow hydrographs if we are to transfer flows between domains where the channel continues in downstream domains?**
 A: Use the discharge at the next upstream node. You can get that from the QGIS reporting tool or from hycross.out.
+
+
