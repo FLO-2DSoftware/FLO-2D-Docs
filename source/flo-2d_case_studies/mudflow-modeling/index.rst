@@ -151,17 +151,22 @@ intensity. The predicted debris-flow volume is expressed as:
 
 .. math::
 
-   \ln(V) = 4.22 + 0.13\sqrt{R} + 0.36\ln(B_{MH}) + 0.39\sqrt{I_{15}}
+   \ln(V) = 4.22 + 0.39\sqrt{i15} + 0.36\ln(Bmh) + 0.13\sqrt{R}
 
 where:
 
-* :math:`V` = predicted debris-flow volume (m³)
+* :math:`V` = potential sediment volume (m³)
+* :math:`\ln(V)` = natural logarithm of the potential sediment volume
+* :math:`i15` = peak 15-minute rainfall intensity (mm/hr)
+* :math:`Bmh` = catchment area burned at moderate or high severity (km²)
 * :math:`R` = watershed relief (m)
-* :math:`B_{MH}` = burned area at moderate and high burn severity (km²)
-* :math:`I_{15}` = 15-minute rainfall intensity (mm/hr)
+
+.. math::
+
+   V = \exp(\ln(V))
 
 The USGS hazard assessment predicts a debris-flow volume of approximately
-23,400 m³ for the study watershed (Figure XX). This value was used to estimate
+23,400 m³ or ~19 acre-ft for the study watershed. This value was used to estimate
 the sediment volume available for entrainment during the FLO-2D mudflow
 simulation.
 
@@ -169,31 +174,49 @@ simulation.
 
 *Figure 7. USGS post-fire debris-flow hazard polygons.*
 
-   USGS post-fire debris-flow hazard polygon for the study watershed. The
-   attribute table includes the intermediate regression variables and the
-   predicted debris-flow volume used in this case study.
+USGS post-fire debris-flow hazard polygon for the study watershed. The
+attribute table includes the intermediate regression variables and the
+predicted debris-flow volume used in this case study.
 
-Mudflow Hydrograph 
-------------------------------
+.. _mudflow_hydrograph:
 
-The clear-water runoff hydrograph was converted to a mudflow hydrograph by estimating the volume of sediment delivered from the burned 
-watershed and combining it with the simulated runoff volume. Post-fire sediment yield may be estimated from site-specific sediment 
-studies or empirical debris-flow volume models that relate sediment production to rainfall intensity, burned watershed area, terrain, 
-and burn severity. The USGS uses the empirical methods developed by East et al. (2014) to estimate potential post-fire debris-flow 
-volumes in the Transverse Ranges of Southern California.
+Mudflow Hydrograph
+------------------
 
-The estimated sediment volume was converted to a sediment concentration by volume, Cv, relative to the combined water and sediment 
-volume. The selected Cv was then applied to the clear-water hydrograph to increase the discharge and volume while preserving the timing 
-and general shape of the runoff hydrograph. The resulting mudflow hydrograph represents the combined discharge of water and sediment 
-entering the downstream routing domain.
+The clear-water runoff hydrograph was converted to a mudflow hydrograph by applying
+a variable volumetric sediment concentration (:math:`C_v`) that increased
+proportionally with discharge. The sediment concentration at each time step was
+computed as:
 
-The resulting hydrograph includes:
+.. math::
 
-* Water discharge
-* Sediment concentration
-* Event duration
+   C_v = C_{v,\max}\left(\frac{Q}{Q_{\max}}\right)
 
-These data were assigned to an inflow boundary condition for a detailed urban FLO-2D model.
+where:
+
+* :math:`C_v` = volumetric sediment concentration
+* :math:`C_{v,\max}` = maximum volumetric sediment concentration
+* :math:`Q` = instantaneous discharge
+* :math:`Q_{\max}` = peak discharge of the clear-water hydrograph
+
+This approach assumes that sediment concentration is greatest at the peak discharge
+and decreases during the rising and recession limbs of the hydrograph, resulting in
+a time-varying mudflow hydrograph representative of a post-fire debris-flow event.
+
+A uniform sediment concentration applied over the entire hydrograph produced
+sediment volumes that exceeded the debris volume predicted by the USGS empirical
+regression model of Gartner et al. (2014). Therefore, the peak sediment
+concentration (:math:`C_{v,\max}`) was iteratively adjusted while allowing the
+sediment concentration to vary with discharge until the integrated sediment volume
+matched the predicted debris yield. For this case study, a peak volumetric sediment
+concentration of approximately **0.45** produced a modeled sediment volume
+consistent with the predicted debris yield of approximately **19 acre-ft**.
+
+This methodology preserves the temporal characteristics of the modeled runoff
+hydrograph while constraining the total sediment volume to an independently
+estimated debris yield, providing a practical engineering approach for developing
+mudflow inflow hydrographs in the absence of a physically based sediment transport
+model.
 
 .. image:: ../img/mudflow-modeling/mudflow007.png
 
@@ -285,6 +308,10 @@ and support hazard planning in debris-flow-prone watersheds.
 
 References
 ~~~~~~~~~~~~~
+
+Gartner, J.E., Cannon, S.H., and Santi, P.M. (2014). "Empirical Models for Predicting Volumes of Sediment Deposited by 
+Debris Flows and Sediment-Laden Floods in the Transverse Ranges of Southern California," Engineering Geology, Vol. 176, 
+pp. 45-56. Elsevier. https://doi.org/10.1016/j.enggeo.2014.04.008
 
 O'Brien, J.S. (2020). *Simulating Mudflow Guidelines*. FLO-2D Software, Inc., Nutrioso AZ. 
 https://documentation.flo-2d.com/Build25/flo-2d_pro/Simulating%20Mudflow%20Guidelines/Simulating%20Mudflow%20Guidelines.html
