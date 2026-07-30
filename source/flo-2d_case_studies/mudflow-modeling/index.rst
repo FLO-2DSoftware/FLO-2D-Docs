@@ -245,7 +245,8 @@ The simulation routed the mudflow downstream of the canyon apex and through the 
 Results
 -------
 
-The simulation produced a series of hazard maps that describe the magnitude and extent of the event.
+The simulation produced a series of hazard maps that describe the magnitude and extent of the event. It could also be used to determine 
+if an upstream debris basin could mitigate an event.
 
 Maximum Mudflow Depth
 ~~~~~~~~~~~~~~~~~~~~~
@@ -288,6 +289,11 @@ These outputs can be used to support:
 * Emergency response planning
 * Debris-flow mitigation studies
 * Land development reviews
+
+.. image:: ../img/mudflow-modeling/mudflow014.png
+
+
+*Figure 13. Fema Hazard Zones.*
 
 Key Findings
 ------------
