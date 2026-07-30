@@ -2,13 +2,18 @@
     "python-envs.defaultEnvManager": "ms-python.python:system",
     "python-envs.pythonProjects": [],
     "cSpell.words": [
+        "baseflow",
         "hydrographs",
         "isohyetal",
+        "KHRC",
         "multd",
+        "Nakuru",
         "newbc",
         "NOAA",
         "rubberband",
-        "Tailwater"
+        "Solai",
+        "Tailwater",
+        "Tinderess"
     ],
     "makefile.configureOnOpen": false
 }

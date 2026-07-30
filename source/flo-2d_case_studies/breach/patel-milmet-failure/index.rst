@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 
-Patel Milmet Dam Failure: A Case Study
-======================================
+Patel Milmet Dam Failure
+==============================
 
 .. contents:: Contents
    :local: 
@@ -40,7 +40,7 @@ The Milmet was one of five earthen embankment dams on the property.
 On 9 May 2018, the Milmet Dam failed catastrophically (Figure 2) after holding an estimated 200,000 m\ :sup:`3` of water.
 Reports indicated that approximately 190,000 m\ :sup:`3` of water was released, generating a destructive flood that swept through downstream
 communities.
-The disaster resulted in the loss of 48 lives and caused extensive damage to homes, infrastructure, farmland, and other property (KHCR, 2018).
+The disaster resulted in the loss of 48 lives and caused extensive damage to homes, infrastructure, farmland, and other property (KHRC, 2018).
 
 .. image:: ../../img/patel-milmet-failure/milmet002.jpeg
 
@@ -82,7 +82,7 @@ The remaining hydraulic parameters required to generate a breach hydrograph were
 historical dam break cases to estimate potential failures, released volume, breach hydrograph and more.
 A downstream baseflow of 0.0 m\ :sup:`3`/s was assumed for the simulation because no measured or pre-failure discharge was available.
 Although post-event investigations reported that the dam had exhibited leakage for several years before failure, the available reports do not quantify
-the leakage rate or the resulting downstream flow (KHCR, 2018).
+the leakage rate or the resulting downstream flow (KHRC, 2018).
 A peak discharge of 160 cms, time to peak of 25 minutes (0.417 hours), and an estimated hydrograph duration of approximately 2 hours were adopted to
 represent a reasonable breach scenario for the documented dam characteristics.
 
@@ -241,7 +241,7 @@ potential downstream impacts and arrival times.
 References
 ----------
 
-Khrc (2018, May 28).
+KHRC (2018, May 28).
 *Solai Dam Tragedy*.
 Kenya Human Rights Commission (KHRC).
 https://khrc.or.ke/press-release/solai-dam-tragedy/

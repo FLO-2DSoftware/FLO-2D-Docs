@@ -31,7 +31,7 @@ can be reasonably estimated based on design information, tank geometry, or regul
 used in consequence assessment, tank safety evaluation, and emergency action planning studies where defined
 failure scenario must be simulated ina consistent and repeated manner.
 
-Case Study
+Project
 ----------
 For this study a prescribed breach failure of a tank in Oklahoma near the intersection of N382 Rd and E131 Rd.
 The minimum and maximum elevation of the site is 846.070 and 903.852 ft, respectively.
@@ -62,7 +62,7 @@ are to help participants:
        creating profiles, and animating the breach.
 
 Methodology
-~~~~~~~~~~~
+--------------------
 The workshop follows a step-by-step, hands-on modeling workflow. It begins with software and data preparation,
 where participants install the workshop dataset, configure QGIS, add the FLO-2D and mapping plugins,
 and connect to USGS 3DEP elevation data.
@@ -85,8 +85,8 @@ Finally, the model is exported and run, then results are reviewed through volume
 MapCrafter outputs, profile plots, and animation of the breach flood behavior. Additional exercises
 extend the model to levee breach, culvert/ditch, and secondary containment scenarios.
 
-Sample Results
-~~~~~~~~~~~~~~
+Results
+----------
 
 .. image:: ../../img/tank-breach/tank001.gif
 
