@@ -19,7 +19,7 @@ Step 2: Import DAT files
 
 1. Run the FLO-2D Installer.
 
-.. image:: ../../img/2009/inst001.png
+.. image:: ../img/2009/inst001.png
 
 
 Step 3: Export DAT Files 2009
