@@ -46,6 +46,9 @@ Identify a street that meets the criteria
 
 .. image:: ../../img/Street-Editor/street006.png
 
+Define Street Parameters
+-----------------------------------------
+
 
 1. Define the street width, curb height and n-value.
    This street is 13 ft wide from the curb to the crown.
@@ -106,6 +109,7 @@ Any place where the street can no longer route water should be eliminated.
 .. image:: ../../img/Street-Editor/street011.png
 
 Troubleshooting
+--------------------------
 
 1. The street
    alignment can be adjusted by editing the street line in the user layers.
