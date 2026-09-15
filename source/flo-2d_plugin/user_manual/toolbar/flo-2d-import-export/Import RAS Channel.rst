@@ -5,11 +5,6 @@ Import HEC-RAS Channel
 
 .. important:: A HEC-RAS channel is not necessary for modeling channels with FLO-2D.  
       
-      Extensive channel modeling instructions are available for the |TrainingCourse|.
-
-      FLO-2D :ref:`Channel Modeling Guidelines <channel-modeling-guidelines>` are available in this documentation.
-
-
 This tool imports RAS geometry into the FLO-2D GeoPackage.
 
 

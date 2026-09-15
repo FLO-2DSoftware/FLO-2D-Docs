@@ -9,7 +9,6 @@ Mud and Sediment Transport (SED.DAT)
    - Data Input Manual :ref:`Data Input Manual <data_input_manual>`
    - FLO-2D Pro Reference Manual :ref:`FLO-2D Pro Reference Manual <reference_manual>`
    - Simulating Mudflow Guidelines :ref:`Simulating Mudflow Guidelines <mudflow_guidelines>`
-   - Two Phase Flood Routing Guidelines :ref:`Two Phase Flood Routing Guidelines <two_phase_guidelines>`
 
 1. Click on the Mud and Sediment Transport (SED.DAT).
 
@@ -87,21 +86,6 @@ When exported, the CONT.DAT file must have the ISED switch set to 1 for a Sedime
 
 .. image:: ../../img/Mud/mud012.png
 
-Two Phase
----------
+Two Phase - Not Available for Build 2009
+------------------------------------------
 
-To apply the FLO-2D two-phase flow component, the sediment transport and mudflow model components must run concurrently, exchanging sediment between them.
-The flood hydraulics for conventional sediment transport is first computed and then the mudflow hydraulics are computed in a second loop.
-Water and sediment volume conservation is tracked in both components separately on a grid element basis.
-
-2. Select the Two-phase.
-
-.. image:: ../../img/Mud/mud006.png
-
-In the Control Variables, the Mud/Debris/Sediment switch under Physical Processes must be set to Two Phase for a Two Phase simulation.
-
-.. image:: ../../img/Mud/mud009.png
-
-When exported, the CONT.DAT file must have the MUD switch set to 2 for a Two Phase simulation.
-
-.. image:: ../../img/Mud/mud010.png

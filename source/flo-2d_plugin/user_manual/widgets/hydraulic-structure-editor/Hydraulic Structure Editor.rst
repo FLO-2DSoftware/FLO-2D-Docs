@@ -21,8 +21,6 @@ The editor supports all structure types and configurations available in FLO-2D, 
 
 - Floodplain-to-floodplain culverts using rating curves or culvert equations
 - Channel-to-channel hydraulic structures with optional replacement curves
-- Floodplain-to-channel and channel-to-floodplain interactions
-- Complex bridge hydraulics using detailed coefficient tables
 - Pump systems and simplified storm drain configurations
 
 Purpose
@@ -37,14 +35,6 @@ Hydraulic structures simulate the effect of physical features that convey, restr
 - Previewing structure behavior using visual layout and tooltip guidance
 
 By using the editor, users can ensure structure inputs are consistent with FLO-2D model requirements and avoid common mistakes like mismatched node types or incomplete variable assignments. Each structure is validated in the UI before being saved to the `HYSTRUC.DAT` file, improving simulation reliability and workflow efficiency.
-
-.. note:: An advanced tutorial for modeling hydraulic structures and culverts is available on the Gila Self-Help Tutorials.
-
-          |tut|
-
-.. |tut| raw:: html
-
-   <a href ="https://youtu.be/ebIFoGUuQcI?feature=shared" target="_blank">Gila Self-Help Tutorials - Hydraulic Structures</a>
 
 Structure Editor Layout
 ----------------------------
@@ -114,8 +104,8 @@ Select the hydraulic control method that governs flow through the structure. The
 
 1. **Rating curve** – Defines flow using a depth vs. discharge equation.
 2. **Rating table** – Defines flow using a depth vs. discharge table.
-3. **Culvert equation** – Uses empirical culvert equations to calculate flow based on geometry and headwater conditions.
-4. **Bridge routine** – Applies a specialized bridge flow routine based on physical dimensions and flow coefficients.
+3. **Culvert equation** – Not Available 2009
+4. **Bridge routine** – Not Available 2009
 
 
 **Load Rating Tables**  
@@ -173,9 +163,9 @@ These parameters are used when defining culvert or conduit characteristics for h
 
   If the structure does not use a long culvert or culvert equation, enter **0.0** for length and diameter.
 
-  **Culvert Equation**
+  **Culvert Equation** Not Available 2009
   
-  Defines the total length of the culvert (ft or m). Apply this length when using the **culvert equation** method.
+  
 
   **Long Culvert**
 
@@ -187,14 +177,13 @@ These parameters are used when defining culvert or conduit characteristics for h
 
 **Circular Diameter or Box Culvert Height**
 
-If the structure does not use a long culvert or culvert equation, enter **0.0** for both length and diameter.
+If the structure does not use a long culvert, enter **0.0** for both length and diameter.
 
 Defines the internal size of the culvert (ft or m).
 
-**Culvert Equation**
+**Culvert Equation** Not Available 2009
 
-- For **circular culverts**, enter the **internal diameter**.
-- For **box culverts**, enter the **internal height**.
+
 
 **Long Culvert**
 
@@ -253,53 +242,14 @@ Ensure the first entry begins with `HDEPTH = 0.0` and `QTABLE = 0.0` to allow pr
 .. tip::
    This method is commonly used for culverts, weirs, and other structures where detailed hydraulic calculations have already been performed externally or measured in the field.
 
-**Culvert Equation**
-
-.. image:: ../../img/Hydraulic-Structure-Editor/hydr014.png
-
-The culvert equation method computes flow using geometric and frictional parameters defined by the U.S. Department of Transportation equations. This table allows input of the following:
-
-- `TYPEC` – Culvert shape: 1 = box, 2 = pipe  
-- `TYPEEN` – Entrance configuration (1–3 based on shape)  
-- `CULVERTN` – Manning’s n-value for internal culvert roughness  
-- `KE` – Entrance loss coefficient  
-- `CUBASE` – Width of the box culvert or set to 0 for circular culverts  
-- `MULTBARRELS` – Number of identical culvert barrels or cells
-
-These parameters are used to estimate flow under both inlet and outlet control conditions. 
-For additional guidance on selecting values and entrance types, refer to the :ref:`Culvert Equation Data <culvert_equation_data>` section.
+**Culvert Equation** Not Available 2009
 
 
-**Bridge Routine**
 
-.. image:: ../../img/Hydraulic-Structure-Editor/hydr015.png
+**Bridge Routine** Not Available 2009
 
-The bridge routine provides a detailed method for modeling flow through bridge openings using upstream and downstream cross sections and coefficient-based flow equations derived from U.S. Geological Survey (USGS) research.
-
-This configuration allows input of:
-
-This table defines the upstream and downstream cross sections used in the bridge routine. Cross section geometry is entered as station-elevation points along the bridge profile:
-
-- `XUP` – Station of each cross section point.
-- `YUP` – Elevation of the corresponding upstream cross section.
-- `YB` – Elevation of the corresponding downstream point at the same station.
-
-
-.. note::
-   For a complete example showing how to use this table along with the bridge coefficients and geometry fields, refer to the :ref:`Bridge Example <bridge_example>` in the Examples section.
-
-.. _culvert_equation_data:
-
-Culvert Equation Data
----------------------------
-
-Culvert equations define flow through a culvert based on geometric and hydraulic properties. This information is entered in the **Structures Editor** and the **FLO-2D Table Editor**, as shown below.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/hydr003.png
-   :alt: Structures Editor Interface
-
-.. image:: ../../img/Hydraulic-Structure-Editor/hydr002.png
-   :alt: FLO-2D Culvert Table Editor
+Culvert Equation Data Not Available 2009
+-------------------------------------------
 
 Structures Editor Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -314,131 +264,14 @@ The following fields are available in the **Structures Editor**:
 - **Culvert Length** – Total length of the culvert barrel (ft)
 - **Culvert Diameter or Box Height** – Inside diameter for pipes or height for box culverts (ft)
 
-Culvert Geometry Table
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Culvert Geometry Table Not Available 2009
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The **FLO-2D Table Editor** stores additional culvert equation variables:
-
-+-----------+----------+-----------+--------+--------+-------------+
-| TYPEC     | TYPEEN   | CULVERTN  | KE     | CUBASE | MULTBARRELS |
-+===========+==========+===========+========+========+=============+
-| 1.0       | 1.0      | 0.0180    | 0.4    | 8.0    | 1.0         |
-+-----------+----------+-----------+--------+--------+-------------+
-
-**Field Descriptions:**
-
-- **TYPEC** – Culvert shape: `1` = box, `2` = pipe
-- **TYPEEN** – Entrance type (see below)
-- **CULVERTN** – Manning's n value for the culvert
-- **KE** – Entrance loss coefficient
-- **CUBASE** – Culvert width (for box) or diameter (for pipe)
-- **MULTBARRELS** – Number of barrels (1.0 for single-barrel)
-
-Culvert Type Switch
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The culvert shape is defined using the `TYPEC(I)` variable:
-
-- ``1`` = Box culvert
-- ``2`` = Pipe culvert
-
-.. note:: Box culverts are defined by height and width. Pipe culverts are defined by circular diameter.
-
-Entrance Type Codes
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-**Box Entrance Types (TYPEEN)**
-
-- ``1`` – Wingwall flare 30° to 75°
-- ``2`` – Wingwall flare 90° or 15°
-- ``3`` – Wingwall flare 0°
-
-**Pipe Entrance Types (TYPEEN)**
-
-- ``1`` – Square edge with headwall
-- ``2`` – Socket end with headwall
-- ``3`` – Socket end projecting
-
-Entrance Loss Coefficients
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The entrance head loss is calculated using the following equation:
-
-.. math::
-  :label:
-
-   H_e = K_e \left( \frac{v^2}{2g} \right)
-
-Where:
-   - ``H_e`` is entrance head loss (ft or m)
-   - ``K_e`` is the entrance loss coefficient
-   - ``v`` is velocity in the culvert barrel (ft/s or m/s)
-   - ``g`` is gravitational acceleration (32.2 ft/s² or 9.81 m/s²)
-
-Entrance Loss Coefficient Table (HDS-5)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-**Pipe, Concrete**
-
-.. list-table:: Entrance Loss Coefficients (HDS-5 – Third Edition)
-   :widths: 67 33
-   :header-rows: 1
-
-   * - Type of Structure and Design of Entrance
-     - K\ :sub:`e`
-
-   * - Projecting from fill, socket end (groove-end)
-     - 0.2
-
-   * - Projecting from fill, square cut end
-     - 0.5
-
-   * - Headwall or headwall and wingwalls
-     - 0.2
-
-   * - Socket end of pipe (groove-end)
-     - 0.2
-
-   * - Square-edge
-     - 0.5
-
-   * - Rounded (radius = D/12)
-     - 0.2
-
-   * - Mitered to conform to fill slope
-     - 0.7
-
-   * - End-section conforming to fill slope
-     - 0.5
-
-   * - Beveled edges, 33.7° or 45° bevels
-     - 0.2
-
-   * - Side- or slope-tapered inlet
-     - 0.2
-
-.. note:: These values are based on the *Hydraulic Design of Highway Culverts – HDS-5 – Third Edition* and used in inlet control flow calculations.
-
-.. _bridge_example:
-
-Bridge Data
-----------------
-
-Bridge parameters can be defined for a structure.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau020.png
-
-
-The USGS bridge tables are used to define the flow though a bridge with bridge geometry and discharge coefficients.
-
-.. note:: See `Bridge tutorial and Bridge guidelines <https://documentation.flo-2d.com/Advanced-Lessons/Module%202%20Part%203.html>`__ for a detailed guide.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau021.png
+Bridge Data Not Available 2009
+---------------------------------
 
 Example Hydraulic Structures
 --------------------------------
-
-.. note:: These examples show the final configuration only.  For step by step instructions see the :ref:`Self Help Tutorials <structure_example>` 
 
 Floodplain to Floodplain Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -452,9 +285,6 @@ This example will model a culvert system between two floodplain nodes.
 
 The floodplain structure uses the grid element elevation as it's inlet and outlet invert elevations.
 In this case the inlet invert is 177.24 ft and the outlet invert is 174.13 ft.
-
-.. note:: Because culverts have a headwall, the grid elevation may need an adjustment down to the invert.  The advanced
-   culvert tutorial in the Self Help Kit shows how to make that elevation correction.  :ref:`Self Help Tutorials <correct_elevation>` 
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau010.png
 
@@ -583,54 +413,8 @@ The culvert shape is defined using the `TYPEC(I)` variable:
 
 .. image:: ../../img/Hydraulic-Structure-Editor/hydex005.png
 
-Channel to Floodplain Structure
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  Channel to Floodplain
--  Culvert equation
-
-This example has a channel to floodplain box culvert on the downstream side. 
-The example will not outline the the floodplain to channel circular culvert on the upstream side.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/hydex001.png
-
-The channel to floodplain culvert is a box culvert with a sedimentation weir on the upstream side.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/hydex003.png
+Channel to Floodplain Structure - Not available 2009
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-- This structure is a channel to floodplain culvert that uses a culvert equation.
-- It has a headwater control so the tailwater switch is set to "0" or No tailwater effect.  
-- It has a sedimentation weir so the reference elevation for headwater is 1396.63.  
-- It needs a culvert length 100.00 ft and a culvert height 5.00 ft because it uses the culvert equation.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/hydex002.png
-
-The remaining culvert parameters are defined in the Table Editor.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/hydex004.png
-
-- **TYPEC** =  1 (box) 
-- **TYPEEN** = 1 (wingwall flare)
-- **CULVERTN** = 0.018
-- **KE** 0.4 (wingwall and square edge)
-- **CUBASE** = 8 ft (width)
-- **MULTBARRELS** = 1 (single-barrel)
-
-**Culvert Type Switch**
-
-The culvert shape is defined using the `TYPEC(I)` variable:
-
-- ``1`` = Box culvert
-- ``2`` = Pipe culvert
-
-**Box Entrance Types (TYPEEN)**
-
-- ``1`` – Wingwall flare 30° to 75°
-- ``2`` – Wingwall flare 90° or 15°
-- ``3`` – Wingwall flare 0°
-
-**Box Losses**
-
-.. image:: ../../img/Hydraulic-Structure-Editor/hydex005.png
 
