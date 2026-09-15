@@ -483,8 +483,8 @@ Channel n-Value Interpolator
 
 .. image:: ../../img/User-Cross-Sections-Widget/User051.png
 
-Channel Confluence Editor
-------------------------------
+Channel Confluence Editor - 2009 Different Method
+--------------------------------------------------
 
 1. Set up confluences using the Confluence editor.
 

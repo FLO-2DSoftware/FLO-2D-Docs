@@ -3,6 +3,9 @@
 8. Reduction Factors (ARF and WRF)
 ==========================================
 
+.. important:: 2009 Reduction Factors and PRO Reduction Factors were different.  This section will eventually list
+   the differences and how we navigate the two systems.
+
 .. image:: ../../img/gridtools/Area-and-Width-Reduction-Factor-Buildings/Area003.png
 
 The black polygons below are polygons that represent buildings or other features that displace and

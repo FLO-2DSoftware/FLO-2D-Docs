@@ -5,6 +5,9 @@ Structures Editor
 
 The structures editor is used to set up the data for the HYSTRUCT.DAT file.
 
+.. important:: Build 2009 does not use Culvert Equations, Bridge Equations, and cannot use the Channel to Floodplain method. 
+   Some of the examples below are set up using unavailable tools.  This will be fixed eventually.
+
 .. image:: ../../img/Widgets/structures.png
 
 .. contents:: Contents
