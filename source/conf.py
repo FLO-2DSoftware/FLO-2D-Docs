@@ -38,7 +38,7 @@ html_css_files = [
 
 # -- HTML Context for Version Dropdown (optional enhancement) ----------------
 html_context = {
-    'current_version': "main",
+    'current_version': "Build09",
     # You can populate this with actual versions later using git refs or dynamically.
     # 'versions': [["Build21", "/Build21/"], ["Build23", "/Build23/"], ...]
 }
