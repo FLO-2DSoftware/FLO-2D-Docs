@@ -3,6 +3,8 @@
 QGIS and FLO-2D Plugin Install Instructions
 ============================================
 
+.. important:: To use the FLO-2D Plugin with 2009, please ensure you are using Plugin Version XXXX or higher.
+
 QGIS is an open-source geographic information system software designed for spatial data analysis and visualization.
 The FLO-2D Plugin uses QGIS tools to effectively prepare FLO-2D data,
 providing an enhanced modeling experience within a user-friendly environment.

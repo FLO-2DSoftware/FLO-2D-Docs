@@ -1,7 +1,7 @@
-.. version: Build 25
-.. This is the documentation for Build 25
+.. version: Build 09
+.. This is the documentation for Build 2009
 
-FLO-2D Pro Documentation – Build 25
+FLO-2D 2009 Documentation
 ====================================
 
 .. raw:: html
@@ -55,7 +55,7 @@ FLO-2D Pro Documentation – Build 25
      </script>
    </div>
 
-Welcome to the Build 25 version of the FLO-2D Documentation.
+Welcome to the Build 2009 version of the FLO-2D Documentation.
 
 .. toctree::
    :maxdepth: 1
@@ -67,4 +67,4 @@ Welcome to the Build 25 version of the FLO-2D Documentation.
    flo-2d_mapcrafter/index
    flo-2d_florunner/index
    tutorials/index
-   flo-2d_case_studies/index
+

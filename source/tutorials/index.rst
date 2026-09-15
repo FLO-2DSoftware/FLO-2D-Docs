@@ -6,10 +6,4 @@ FLO-2D Gila Tutorials
 .. toctree::
    :maxdepth: 1
 
-   Self-Help-Kit-Gila/index
-   afma-prereq/index
-   GeoPackage/index
-   hydrowkshp/index
-   Tailings/index
-   TDT/index
-   Two-Phase-Dam-Breach/index
+   FLO-2D 2009/index
