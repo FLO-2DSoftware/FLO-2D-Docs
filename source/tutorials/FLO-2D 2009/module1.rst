@@ -19,12 +19,12 @@ Step 2: Install the FLO-2D Build 25
 
 1. Run the FLO-2D Installer.
 
-.. image:: ../../setup/img/Instructions/inst001a.png
+.. image:: ../../setup/img/2009/inst001a.png
 
 
 2. Check all options and click next.
 
-.. image:: ../../setup/img/Instructions/image15a.png
+.. image:: ../../setup/img/2009/image15a.png
 
 
 3. Click Next and Install to run the installer.
@@ -32,16 +32,16 @@ Step 2: Install the FLO-2D Build 25
 4. The Microsoft Visual C++ redistribution packages are embedded in the FLO-2D installer.  They install passively,
    but may request a restart.
 
-.. image:: ../../setup/img/Instructions/image16.png
+.. image:: ../../setup/img/2009/image16.png
 
 Step 3: Run the FLO-2D AFMA Activator
 ---------------------------------------
 
 1. Run the activator.
 
-.. image:: ../../setup/img/Instructions/inst002a.png
+.. image:: ../../setup/img/2009/inst002a.png
 
-.. image:: ../../setup/img/Instructions/inst003.png
+.. image:: ../../setup/img/2009/inst003.png
 
 Step 4: Install QGIS 3.4x
 ---------------------------------------
@@ -49,12 +49,12 @@ Step 4: Install QGIS 3.4x
 1. Run the QGIS Installer. This one is 3.44 but any version around 3.4x should be fine.
 2. If you have more than 2 versions of QGIS installed, remove the ones you don't need.
 
-.. image:: ../../setup/img/Instructions/inst006a.png
+.. image:: ../../setup/img/2009/inst006a.png
 
    
 3. Finish installing with the default settings. The following image is a bit outdated. 
 
-.. image:: ../../setup/img/Instructions/image8.png
+.. image:: ../../setup/img/2009/image8.png
    :width: 800px
    :class: bordered-img
 
@@ -70,13 +70,13 @@ Build a QGIS User Profile by following these steps:
 
 1. Open QGIS. Your version will be newer.
 
-.. image:: ../../setup/img/Instructions/Worksh002.png
+.. image:: ../../setup/img/2009/Worksh002.png
    :width: 800px
    :class: bordered-img
 
 2. Click **Settings → Options**.
 
-.. image:: ../../setup/img/Instructions/image13.png
+.. image:: ../../setup/img/2009/image13.png
    :width: 800px
    :class: bordered-img
 
@@ -84,7 +84,7 @@ Build a QGIS User Profile by following these steps:
 
 .. important:: This step is critical for the FLO-2D Plugin to function properly.
 
-.. image:: ../../setup/img/Instructions/image14.png
+.. image:: ../../setup/img/2009/image14.png
    :width: 800px
    :class: bordered-img
 
@@ -93,7 +93,7 @@ Step 6: Install FLO-2D Plugins
 
 1. Install the FLO-2D Plugins
 
-.. image:: ../../setup/img/Instructions/inst008.png
+.. image:: ../../setup/img/2009/inst008.png
 
 .. warning::
 
@@ -124,7 +124,7 @@ Step 6: Install FLO-2D Plugins
 
 2. Open to the Plugin Manager and Find the Install from Zip tab.
 
-.. image:: ../../setup/img/Instructions/instplugin001.png
+.. image:: ../../setup/img/2009/instplugin001.png
 
 3. Load the FLO-2D Plugin and install it.
 4. Load FLO-2D MapCrafter and install it the same way.
@@ -143,7 +143,7 @@ Step 7: Recommended Plugins
    - Street View
    - QuickOSM
 
-.. image:: ../../setup/img/Instructions/qgisplugin004.png
+.. image:: ../../setup/img/2009/qgisplugin004.png
    :width: 800px
    :class: bordered-img
 
@@ -151,7 +151,7 @@ Step 7: Recommended Plugins
 
    Click the QMS icon → Settings → More Services → **Get Contributed Pack**.
 
-.. image:: ../../setup/img/Instructions/image15.gif
+.. image:: ../../setup/img/2009/image15.gif
    :width: 800px
    :class: bordered-img
 
@@ -164,7 +164,7 @@ Step 8: Install HEC-RAS 6
 
 1. Run the installer.
 
-.. image:: ../../setup/img/Instructions/inst007.png
+.. image:: ../../setup/img/2009/inst007.png
    :width: 800px
    :class: bordered-img
 
