@@ -1,13 +1,12 @@
 .. vim: syntax=rst
 
-=============================================
-AFMA 2026 Pre-Requisite Workshop
-=============================================
+=================================================
+Working with Build 2009 and FLO-2D Gila Plugin
+================================================
 
 Objectives
 
-If you want to join the FLOODWAY Modeling workshop at the 2026 AFMA Conference this year, you'll need to get ready ahead of time. This simple
-workshop will help you prep your laptop; computer with the required software and test connectivity.
+
 
 Applicants will:
 
