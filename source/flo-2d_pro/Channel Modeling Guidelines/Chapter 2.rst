@@ -94,7 +94,7 @@ This process will probably reveal reasons for discrepancies in capacity.
 Flow Area Variation
 ~~~~~~~~~~~~~~~~~~~
 
-cross-sections can have a similar appearance but have a completely different geometry (Figure 27).
+Cross-sections can have a similar appearance but have a completely different geometry (Figure 27).
 In this figure, two cross-sections are contiguous but only one controls the flow.
 One cross-section has a bank full flow area of 33 ft\ :sup:`2` and the second one has 139 ft\ :sup:`2`.
 It is necessary to review the data source for each cross-section to ensure they represent the physical
