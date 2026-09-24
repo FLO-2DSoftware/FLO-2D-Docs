@@ -2008,7 +2008,7 @@ Rainfall Data
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     0   0                           Line 1: <b>IRAINREAL, IRAINBUILDING</b>
-    3.100   0.000   1   1           Line 2: <b>RTT RAINABS RAINARF MOVINGSTORM</b>
+    3.100   0.000   1   1           Line 2: <b>RTT RAINABS IRAINARF MOVINGSTORM</b>
     R 0.000 0.000                   Line 3: <b>RAINCHAR = ‘R’ R_TIME(I) R_DISTR(I) I=1</b>
     R 0.083 0.050                   Line 3: <b>RAINCHAR = ‘R’ R_TIME(I) R_DISTR(I) I=2</b>
     R 0.167 0.110                   Line 3: <b>RAINCHAR = ‘R’ R_TIME(I) R_DISTR(I) I=3</b>
