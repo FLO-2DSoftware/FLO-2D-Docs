@@ -501,13 +501,20 @@ The QGIS WRF on the right is calculated at 0.44 and that is more accurate (Figur
 *Figure 22.
 WRF Calculator GDS / QGIS Comparison.*
 
+Some versions of the FLO-2D Plugin will have an error when processing Multipolygon Z. This bug was discovered and fixed around August
+5, 2026.  It is not likely that users will be exposed to this error because most building polygons do not 
+have Z or elevation data.
 
+.. image:: ./img/refman/ref022a.png
+
+*Figure 22a.
+Example Multiple Polygon Z.*
 
 Rainfall Interpolation Tool
----------------------------
+----------------------------
 
 The *Rainfall Interpolation Tool* uses rainfall depth rasters like those provided by NOAA Atlas 14.
-The original raster resolution is on the order of 2000 by 2000 ft pixels (**Error! Reference source not found.**).
+The original raster resolution is on the order of 2000 by 2000 ft pixels (Figure 23).
 
 .. image:: ./img/refman/ref023.png
 
@@ -522,7 +529,7 @@ The new raster has these properties:
 - Clipped to Grid layer extent.
 - Aligned to the grid.
 
-The new raster (figure 24) is sampled to the grid using the centroid.
+The new raster (Figure 24) is sampled to the grid using the centroid.
 Raster statistics determine the maximum rainfall value (RAIN\ :sub:`max`).
 The final RAIN\ :sub:`arf` variable is calculated as a ratio of the local rain depth to the max rain depth.
 A rainfall reduction value is calculated for each element in the grid system using equation (1).
