@@ -1044,6 +1044,9 @@ The computed sediment transport capacity for each of the eleven equations can th
 Using this file, the range of sediment transport capacity and those equations that appear to be overestimating or underestimated the sediment load can
 be determined.
 
+Sediment Transport Equations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Each sediment transport equation is briefly described in the following paragraphs.
 The user is encouraged to further research which equation is most appropriate for channel morphology or hydraulics or a specific project.
 When reviewing the SEDTRANS.OUT file, it might be observed that generally the Ackers-White and Engelund-Hansen equations compute the highest sediment
@@ -1052,7 +1055,7 @@ sediment transport capacity.
 This correlation however varies according to project conditions.
 A brief discussion of each sediment transport equation in the FLO-2D model follows:
 
-Ackers-White Method\ *.* Ackers and White (1973) expressed sediment transport in terms of dimensionless parameters, based on Bagnold’s stream power
+**Ackers-White Method**\ *.* Ackers and White (1973) expressed sediment transport in terms of dimensionless parameters, based on Bagnold’s stream power
 concept.
 They proposed that only a portion of the bed shear stress is effective in moving coarse sediment.
 Conversely for fine sediment, the total bed shear stress contributes to the suspended sediment transport.
@@ -1062,13 +1065,13 @@ than 0.8.
 The condition for coarse sediment incipient motion agrees well with Sheild’s criteria.
 The Ackers-White approach tends to overestimate the fine sand transport (Julien, 1995).
 
-Engelund-Hansen Method\ *.* Bagnold’s stream power concept was applied with the similarity principle to derive a sediment transport function.
+**Engelund-Hansen Method**\ *.* Bagnold’s stream power concept was applied with the similarity principle to derive a sediment transport function.
 The method involves the energy slope, velocity, bed shear stress, median particle diameter, specific weight of sediment and water, and gravitational
 acceleration.
 In accordance with the similarity principle, the method should be applied only to flow over dune bed forms, but Engelund and Hansen (1967) determined
 that it could be effectively used in both dune bed forms and upper regime sediment transport (plane bed) for particle sizes greater than 0.15 mm.
 
-Karim-Kennedy Equation\ *.* The simplified Karim-Kennedy equation (F.
+**Karim-Kennedy Equation**\ *.* The simplified Karim-Kennedy equation (F.
 Karim, 1998) is used in the FLO-2D model.
 It is a nonlinear multiple regression equation based on velocity, bed form, sediment size and friction factor using many river flume data sets.
 The data includes sediment sizes ranging from 0.08 mm to 0.40 mm (river) and 0.18 mm to 29 mm (flume), slope ranging from 0.0008 to 0.0017 (river) and
@@ -1076,7 +1079,7 @@ The data includes sediment sizes ranging from 0.08 mm to 0.40 mm (river) and 0.1
 This equation is suggested for non-uniform riverbed conditions for typical large sand and gravel bed rivers.
 It will yield results similar to Laursen’s and Toffaleti’s equations.
 
-Laursen’s Transport Function\ *.* The Laursen (1958) formula was developed for sediments with a specific gravity of 2.65 and had good agreement with
+**Laursen’s Transport Function**\ *.* The Laursen (1958) formula was developed for sediments with a specific gravity of 2.65 and had good agreement with
 field data from small rivers such as the Niobrara River near Cody, Nebraska.
 For larger rivers, the correlation between measured data and predicted sediment transport was poor (Graf, 1971).
 This set of equations involved a functional relationship between the flow hydraulics and sediment discharge.
@@ -1085,14 +1088,14 @@ The relationship between shear velocity and sediment particle fall velocity was 
 The shear velocity and fall velocity ratio expresses the effectiveness of the turbulence in mixing suspended sediments.
 The critical tractive force in the sediment concentration equation is given by the Shields diagram.
 
-MPM-Smart Equation\ *.* This is a modified Meyer-Peter-Mueller (MPM) sediment transport equation (Smart, 1984) for steep channels ranging from 3% to
+**MPM-Smart Equation**\ *.* This is a modified Meyer-Peter-Mueller (MPM) sediment transport equation (Smart, 1984) for steep channels ranging from 3% to
 20%.
 The original MPM equation underestimated sediment transport capacity because of deficiencies in the roughness values.
 This equation can be used for sediment sizes greater than 0.4 mm.
 It was modified to incorporate the effects of nonuniform sediment distributions.
 It will generate sediment transport rates approaching Englund-Hansen on steep slopes.
 
-MPM-Woo Relationship\ *.* For computing the bed material load in steep sloped, sand bed channels such as arroyos, washes and alluvial fans, Mussetter,
+**MPM-Woo Relationship**\ *.* For computing the bed material load in steep sloped, sand bed channels such as arroyos, washes and alluvial fans, Mussetter,
 et al.
 (1994) linked Woo’s relationship for computing the suspended sediment concentration with the Meyer-Peter-Mueller bedload equation.
 Woo et al.
@@ -1106,7 +1109,7 @@ The equation requires estimates of exponents and a coefficient and is applicable
 This equation provides a method for estimating high bed material load in steep, sand bed channels that are beyond the hydraulic conditions for which
 the other sediment transport equations may be applicable.
 
-Parker, Klingeman, and McLean (1982)\ *.* This equation was derived primarily for gravel or sandy bed material load.
+**Parker, Klingeman, and McLean (1982)**\ *.* This equation was derived primarily for gravel or sandy bed material load.
 It was based on Milhous (1973, 1982) sediment transport measurements at Oak Creek, Oregon.
 At low flows, the equation generates sediment load that is entirely bedload.
 For higher flows approaching bankfull discharge, the predicted bed material load is presumed to be mixed suspended and bedload for the smaller
@@ -1114,7 +1117,7 @@ sediment size fractions.
 The substrate-based equation predicts individual size fraction transport rates for channel width average conditions which are then summed to get a
 total bed load.
 
-Toffeleti Approach\ *.* Toffaleti (1969) develop a procedure to calculate the total sediment load by estimating the unmeasured load.
+**Toffeleti Approach**\ *.* Toffaleti (1969) develop a procedure to calculate the total sediment load by estimating the unmeasured load.
 Following the Einstein approach, the bed material load is given by the sum of the bedload discharge and the suspended load in three separate zones.
 Toffaleti computed the bedload concentration from his empirical equation for the lower-zone suspended load discharge and then computed the bedload.
 The Toffaleti approach requires the average velocity in the water column, hydraulic radius, water temperature, stream width, D\ :sub:`65` sediment
@@ -1122,14 +1125,14 @@ size, energy slope and settling velocity.
 Simons and Senturk (1976) reported that Toffaleti’s total load estimated compared well with 339 river and 282 laboratory data sets.
 This equation has several empirical and poorly defined coefficients that may give poor results for highly variable conditions.
 
-Van Rijn\ *.* This equation predicts the total sediment discharge assuming a parabolic distribution of suspended sediment in the lower half of the
+**Van Rijn**\ *.* This equation predicts the total sediment discharge assuming a parabolic distribution of suspended sediment in the lower half of the
 flow and a uniform distribution in the upper half of the flow.
 The uniform sediment distribution in upper flow portion is based on the maximum value of the parabolic in the from the lower flow.
 The bedload discharge and suspended load is computed separately and added together to derive the total sediment load.
 For a discussion between measured and predicted data for the equation using laboratory and field tests revealing see T.W.
 Strum (2001).
 
-Yang Method\ *.* Yang (1973) determined that the total sediment concentration was a function of the potential energy dissipation per unit weight of
+**Yang Method**\ *.* Yang (1973) determined that the total sediment concentration was a function of the potential energy dissipation per unit weight of
 water (stream power) and the stream power was expressed as a function of velocity and slope.
 In this equation, the total sediment concentration is expressed as a series of dimensionless regression relationships.
 The equations were based on measured field and flume data with sediment particles ranging from 0.137 mm to 1.71 mm and flows depths from 0.037 ft to
@@ -1137,7 +1140,7 @@ The equations were based on measured field and flume data with sediment particle
 Most of the data was limited to medium to coarse sands and flow depths less than 3 ft (Julien, 1995).
 Yang’s equations in the FLO-2D model can be applied to sand and gravel.
 
-Zeller-Fullerton Equation\ *.* Zeller-Fullerton is a multiple regression sediment transport equation for a range of channel bed and alluvial
+**Zeller-Fullerton Equation**\ *.* Zeller-Fullerton is a multiple regression sediment transport equation for a range of channel bed and alluvial
 floodplain conditions.
 This empirical equation is a computer-generated solution of the Meyer-Peter, Muller bed-load equation combined with Einstein’s suspended load to
 generate a bed material load (Zeller and Fullerton, 1983).
