@@ -4,7 +4,7 @@ Project Review and Mapping
 Load Results and Maps
 ---------------------
 
-.. note:: Placeholder video. Final version not ready.
+.. note:: Placeholder video. Final version not ready. This is currently under construction. 
 
 .. raw:: html
 
@@ -12,28 +12,43 @@ Load Results and Maps
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Use FLO-2D MapCrafter to create results maps and configure the project for reviewing simulation output.
+Load the maps and results to prepare for the project review.
 
 Step 1: Run FLO-2D MapCrafter
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Open FLO-2D MapCrafter and select the completed model run folder.
-- Review the simulation summary, including model statistics, simulation time, and available results.
-- Select the results maps to generate, such as maximum flow depth, maximum water surface elevation, and maximum velocity.
-- Generate the maps and confirm they are added to the QGIS Layers panel.
-- Move the MapCrafter layer group to an appropriate location in the Layers panel.
-- Turn individual results layers on and off to review the spatial distribution of flooding.
+- Open ``SUMMARY.OUT`` in the completed simulation run folder. Confirm the simulation completed and review the engine build, volume conservation, average time step, output interval, simulation duration, rainfall, infiltration, grid size, number of grid elements, and runtime.
+- Return to QGIS and open FLO-2D MapCrafter.
+- Select the completed model run folder and enter a project ID for the results maps.
+- Verify the coordinate reference system. FLO-2D output files do not contain coordinate system information, so MapCrafter uses the QGIS project coordinate system.
+- Review the MapCrafter simulation summary and completeness information.
+- Open the Flood Maps options. Select the maps needed for the review, including ground elevation, modified ground elevation, basic flood results, and channel depths as appropriate.
+- Click **Create Maps**. The generated maps are added to the QGIS Layers panel under the project ID.
+- Move the MapCrafter group to a convenient position in the Layers panel. Toggle the maps on and off to inspect ground elevations, maximum flow depths, and channel results.
 
-Step 2: Set Up Results Folder
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. note:: The modified ground elevation map reflects elevation adjustments made by the FLO-2D engine during the simulation, such as adjustments at outflow elements, channel banks, or storm drain rims.
 
-- Open the FLO-2D Results folder selection tool.
-- Select the folder containing the completed simulation output files.
-- Verify that the folder path is valid and the required results files are available.
-- Identify the hydraulic results files, including ``HYCROSS.OUT``, ``HYCHAN.OUT``, and ``HYSTRUCT.OUT``.
-- Locate the channel profile and channel results files.
-- Identify the time-dependent results used to generate hydrographs and other plots.
-- Locate storm drain results and profile data, if storm drains are included in the model.
+Step 2: Set the Results Folder
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- In the FLO-2D Plugin panel, locate the results folder path.
+- Click the **...** browse button and select the completed simulation run folder.
+- Confirm that the folder points to the same run used to create the MapCrafter maps.
+- The Results Tool can now access time-dependent output for grid elements and other modeled features. Detailed results plots are covered in the next section.
+
+Step 3: Import the Results Mesh
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Open the QGIS **Data Source Manager** and select **Mesh**.
+- Browse to the completed run folder and select ``DEPTH.OUT`` as the mesh data source.
+- Click **Add**. When the available mesh layers appear, select the **2D mesh** and click **Add Layers**. The 1D mesh is not needed for this exercise.
+- Close the Data Source Manager and locate the new mesh layer in the QGIS Layers panel.
+- The mesh initially displays bed elevation. Open the **Layer Styling** panel to select other results, such as depth, velocity, velocity vectors, or water surface elevation.
+- Select a time-dependent result. At simulation time zero, the displayed results may be empty; select maximum results to confirm that data are available.
+- Open the QGIS **Temporal Controller**, activate temporal navigation, and set the animation range to the full available simulation period.
+- Advance through the time steps to review how rainfall runoff develops and moves through the model domain.
+
+.. note:: Mesh styling and detailed interpretation of time-dependent results are covered in later sections of the tutorial.
 
 Review a Project Run
 --------------------
