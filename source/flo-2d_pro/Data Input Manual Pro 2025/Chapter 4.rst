@@ -2525,9 +2525,9 @@ Infiltration Data
     3                                  Line 1:  <b>INFMETHOD</b>
     0   0.7   1   0.4  10.0  1         Line 2:  <b>ABSTR   SATI   SATF   POROS  SOILD  INFCHAN</b>
     0.1   4.3   0                      Line 3:  <b>HYDCALL   SOILALL   HYDCADJ</b>
-    0.30                               Line 4:  <b>HYDCXX   *See Notes</b>
-    R   0.30                           Line 4a: <b>INFILCHAR = ‘R’   HYDCX(IC)   *See Notes</b>
-    R   0.03   0.3   10.0              Line 4b: <b>INFILCHAR = ‘R’   HYDCX(IC)   HYDCXFINAL(IC)   SOIL_DEPTHCX(IC)</b>
+    0.15                               Line 4:  <b>HYDCXX   *See Notes</b>
+    R   0.15                           Line 4a: <b>INFILCHAR = ‘R’   HYDCX(IC)   *See Notes</b>
+    R   0.15   0.03   10.0              Line 4b: <b>INFILCHAR = ‘R’   HYDCX(IC)   HYDCXFINAL(IC)   SOIL_DEPTHCX(IC)</b>
                                                 <i>IC= number of channel segments or reaches</i>
     99   0                             Line 5:  <b>SCSCNALL   ABSTR1</b>
     F  1730  0.01  4.3  0.3  0.0  0.0  10.0
@@ -2569,8 +2569,8 @@ Infiltration Data
     3
     0   0.7   1   0.4   10.0  1
     0.0   4.3
-    R   0.03   0.2    5.0
-    R   0.12   0.3   10.0
+    R   0.30   0.03   5.0
+    R   0.12   0.30  10.0
     99   0
     F   1730   1.01   4.3   0.3   0.0   0.0    8.5
     F   1730   1.01   4.3   0.3   0.0   0.0  10.0
