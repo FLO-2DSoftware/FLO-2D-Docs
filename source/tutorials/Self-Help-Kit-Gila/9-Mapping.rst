@@ -32,7 +32,7 @@ Step 1: Run FLO-2D MapCrafter
          0.2002             1.319           0.000000     0.000000
             ...               ...               ...          ...
          9.9002             1.242           0.000000     0.000000
-         10.0000             1.252           0.000000     0.000000
+        10.0000             1.252           0.000000     0.000000
 
       ==========================================================
                         MASS BALANCE (ACRE-FEET)
@@ -56,9 +56,6 @@ Step 1: Run FLO-2D MapCrafter
 
       Maximum Inundated Area                     896.141 acres
       Maximum Area (Depth > 0.5 ft)              184.537 acres
-      Grid Element Size                           30.0 ft
-      Number of Grid Elements                     54,306
-      Computer Run Time                           0.108 hrs
 
       ==========================================================
                         SIMULATION SUMMARY
@@ -66,20 +63,20 @@ Step 1: Run FLO-2D MapCrafter
 
       GRID ELEMENT SIZE:   30.0 FT
       TOTAL NUMBER OF GRID ELEMENTS:      54306
-      GRID SYSTEM AREA:         1122.02 ACRES            1.7526 SQ. MI.
+      GRID SYSTEM AREA:         1122.02 ACRES      1.7526 SQ. MI
 
-      TOTAL FLOODPLAIN AND CHANNEL LOOP COMPUTATIONS:           2633059698.
+      FLOODPLAIN AND CHANNEL LOOP COMPUTATIONS:       2633059698
 
 
          COMPUTER RUN TIME:          0.107910 HRS
          OVERLAND LOOP RUN TIME:     0.040020 HRS
 
-         THIS OUTPUT FILE WAS TERMINATED ON:  10/08/2026  AT:  15:29:05
+      OUTPUT FILE WAS TERMINATED ON:  10/08/2026  AT:  15:29:05
 
 
 - Return to QGIS and open FLO-2D MapCrafter.
 
-.. image:  
+.. image:: ../img/shg/9/mrev001.png
 
 - Select the completed model run folder and enter a project ID for the results maps.
 - Verify the coordinate reference system. FLO-2D output files do not contain coordinate system information, so MapCrafter uses the QGIS project coordinate system.
