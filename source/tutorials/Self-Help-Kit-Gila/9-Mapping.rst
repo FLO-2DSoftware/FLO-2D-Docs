@@ -20,8 +20,7 @@ Step 1: Run FLO-2D MapCrafter
 - Open ``SUMMARY.OUT`` in the completed simulation run folder. Confirm the simulation completed and review the engine build, volume conservation, average time step, output interval, simulation duration, rainfall, infiltration, grid size, number of grid elements, and runtime.
 
 
-.. code-block:: text
-   :caption: Example SUMMARY.OUT results
+.. dropdown:: Example SUMMARY.OUT Results
 
    SIMULATION TIME    AVERAGE TIMESTEP    VOLUME CONSERVATION
        (HOURS)           (SECONDS)       (ACRE-FEET)   PERCENT
