@@ -18,7 +18,68 @@ Step 1: Run FLO-2D MapCrafter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Open ``SUMMARY.OUT`` in the completed simulation run folder. Confirm the simulation completed and review the engine build, volume conservation, average time step, output interval, simulation duration, rainfall, infiltration, grid size, number of grid elements, and runtime.
+
+
+.. code-block:: text
+   :caption: Example SUMMARY.OUT results
+
+   SIMULATION TIME    AVERAGE TIMESTEP    VOLUME CONSERVATION
+       (HOURS)           (SECONDS)       (ACRE-FEET)   PERCENT
+
+        0.0003             1.000          -0.000000     0.000000
+        0.1002             1.124          -0.000000     0.000000
+        0.2002             1.319           0.000000     0.000000
+          ...               ...               ...          ...
+        9.9002             1.242           0.000000     0.000000
+       10.0000             1.252           0.000000     0.000000
+
+   ==========================================================
+                     MASS BALANCE (ACRE-FEET)
+   ==========================================================
+
+   INFLOW
+     Rainfall Volume                              328.365
+     Surface Water Inflow                         272.449
+     Total Inflow                                 600.814
+
+   OUTFLOW AND STORAGE
+     Infiltration and Interception                129.608
+     Floodplain Storage                           119.596
+     Channel Storage                                8.459
+     Channel Outflow                              340.932
+     Total Outflow and Storage                    600.816
+
+   ==========================================================
+                       SIMULATION RESULTS
+   ==========================================================
+
+   Maximum Inundated Area                     896.141 acres
+   Maximum Area (Depth > 0.5 ft)              184.537 acres
+   Grid Element Size                           30.0 ft
+   Number of Grid Elements                     54,306
+   Computer Run Time                           0.108 hrs
+
+   ==========================================================
+                       SIMULATION SUMMARY
+   ==========================================================
+
+   GRID ELEMENT SIZE:   30.0 FT
+   TOTAL NUMBER OF GRID ELEMENTS:      54306
+   GRID SYSTEM AREA:         1122.02 ACRES            1.7526 SQ. MI.
+
+   TOTAL FLOODPLAIN AND CHANNEL LOOP COMPUTATIONS:           2633059698.
+
+
+      COMPUTER RUN TIME:          0.107910 HRS
+      OVERLAND LOOP RUN TIME:     0.040020 HRS
+
+      THIS OUTPUT FILE WAS TERMINATED ON:  10/08/2026  AT:  15:29:05
+
+
 - Return to QGIS and open FLO-2D MapCrafter.
+
+.. image:  
+
 - Select the completed model run folder and enter a project ID for the results maps.
 - Verify the coordinate reference system. FLO-2D output files do not contain coordinate system information, so MapCrafter uses the QGIS project coordinate system.
 - Review the MapCrafter simulation summary and completeness information.
