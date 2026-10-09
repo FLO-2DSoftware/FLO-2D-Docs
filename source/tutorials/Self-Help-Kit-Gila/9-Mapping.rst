@@ -75,12 +75,12 @@ Step 1: Run FLO-2D MapCrafter
 
 
 - Return to QGIS and open FLO-2D MapCrafter.
-
-.. image:: ../img/shg/9/mrev001.png
-
 - Select the completed model run folder and enter a project ID for the results maps.
 - Verify the coordinate reference system. FLO-2D output files do not contain coordinate system information, so MapCrafter uses the QGIS project coordinate system.
 - Review the MapCrafter simulation summary and completeness information.
+
+.. image:: ../img/shg/9/mrev001.png
+   
 - Open the Flood Maps options. Select the maps needed for the review, including ground elevation, modified ground elevation, basic flood results, and channel depths as appropriate.
 - Click **Create Maps**. The generated maps are added to the QGIS Layers panel under the project ID.
 - Move the MapCrafter group to a convenient position in the Layers panel. Toggle the maps on and off to inspect ground elevations, maximum flow depths, and channel results.
