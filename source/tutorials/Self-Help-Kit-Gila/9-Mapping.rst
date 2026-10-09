@@ -22,57 +22,59 @@ Step 1: Run FLO-2D MapCrafter
 
 .. dropdown:: Example SUMMARY.OUT Results
 
-   SIMULATION TIME    AVERAGE TIMESTEP    VOLUME CONSERVATION
-       (HOURS)           (SECONDS)       (ACRE-FEET)   PERCENT
+   .. code-block:: text
 
-        0.0003             1.000          -0.000000     0.000000
-        0.1002             1.124          -0.000000     0.000000
-        0.2002             1.319           0.000000     0.000000
-          ...               ...               ...          ...
-        9.9002             1.242           0.000000     0.000000
-       10.0000             1.252           0.000000     0.000000
+      SIMULATION TIME    AVERAGE TIMESTEP    VOLUME CONSERVATION
+         (HOURS)           (SECONDS)       (ACRE-FEET)   PERCENT
 
-   \==========================================================
-                     MASS BALANCE (ACRE-FEET)
-   \==========================================================
+         0.0003             1.000          -0.000000     0.000000
+         0.1002             1.124          -0.000000     0.000000
+         0.2002             1.319           0.000000     0.000000
+            ...               ...               ...          ...
+         9.9002             1.242           0.000000     0.000000
+         10.0000             1.252           0.000000     0.000000
 
-   INFLOW
-     Rainfall Volume                              328.365
-     Surface Water Inflow                         272.449
-     Total Inflow                                 600.814
+      ==========================================================
+                        MASS BALANCE (ACRE-FEET)
+      ==========================================================
 
-   OUTFLOW AND STORAGE
-     Infiltration and Interception                129.608
-     Floodplain Storage                           119.596
-     Channel Storage                                8.459
-     Channel Outflow                              340.932
-     Total Outflow and Storage                    600.816
+      INFLOW
+      Rainfall Volume                              328.365
+      Surface Water Inflow                         272.449
+      Total Inflow                                 600.814
 
-   \==========================================================
-                       SIMULATION RESULTS
-   \==========================================================
+      OUTFLOW AND STORAGE
+      Infiltration and Interception                129.608
+      Floodplain Storage                           119.596
+      Channel Storage                                8.459
+      Channel Outflow                              340.932
+      Total Outflow and Storage                    600.816
 
-   Maximum Inundated Area                     896.141 acres
-   Maximum Area (Depth > 0.5 ft)              184.537 acres
-   Grid Element Size                           30.0 ft
-   Number of Grid Elements                     54,306
-   Computer Run Time                           0.108 hrs
+      ==========================================================
+                        SIMULATION RESULTS
+      ==========================================================
 
-   \==========================================================
-                       SIMULATION SUMMARY
-   \==========================================================
+      Maximum Inundated Area                     896.141 acres
+      Maximum Area (Depth > 0.5 ft)              184.537 acres
+      Grid Element Size                           30.0 ft
+      Number of Grid Elements                     54,306
+      Computer Run Time                           0.108 hrs
 
-   GRID ELEMENT SIZE:   30.0 FT
-   TOTAL NUMBER OF GRID ELEMENTS:      54306
-   GRID SYSTEM AREA:         1122.02 ACRES            1.7526 SQ. MI.
+      ==========================================================
+                        SIMULATION SUMMARY
+      ==========================================================
 
-   TOTAL FLOODPLAIN AND CHANNEL LOOP COMPUTATIONS:           2633059698.
+      GRID ELEMENT SIZE:   30.0 FT
+      TOTAL NUMBER OF GRID ELEMENTS:      54306
+      GRID SYSTEM AREA:         1122.02 ACRES            1.7526 SQ. MI.
+
+      TOTAL FLOODPLAIN AND CHANNEL LOOP COMPUTATIONS:           2633059698.
 
 
-      COMPUTER RUN TIME:          0.107910 HRS
-      OVERLAND LOOP RUN TIME:     0.040020 HRS
+         COMPUTER RUN TIME:          0.107910 HRS
+         OVERLAND LOOP RUN TIME:     0.040020 HRS
 
-      THIS OUTPUT FILE WAS TERMINATED ON:  10/08/2026  AT:  15:29:05
+         THIS OUTPUT FILE WAS TERMINATED ON:  10/08/2026  AT:  15:29:05
 
 
 - Return to QGIS and open FLO-2D MapCrafter.
