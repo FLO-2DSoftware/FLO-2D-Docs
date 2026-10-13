@@ -6,7 +6,7 @@ The installation process is straightforward and can be completed in a few simple
 Prerequisites
 -------------
 
-- FLORunner v1.0.0.7z
+- FLORunner v1.1.0.7z
 - An existing FLO-2D installation with the FLOPRO executable available
 
 Installation Steps
