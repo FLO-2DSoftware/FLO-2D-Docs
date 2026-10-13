@@ -32,9 +32,7 @@ FLORunner allows you to batch run one or more FLO-2D projects in a controlled se
 
 4. Set the execution order.
 
-   Use the **Up Arrow** and **Down Arrow** buttons to define the run order.
-
-   .. figure:: img/project_order.png
+   .. figure:: img/selected_projects.png
       :align: center
 
    .. note::

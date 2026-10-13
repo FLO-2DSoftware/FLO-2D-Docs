@@ -1,7 +1,8 @@
 Multiple domain connectivity
 ========================================
 
-Large-scale urban flood modeling projects often require millions of computational cells, especially when working with detailed topography and infrastructure. Once a project exceeds approximately 6 million cells, performance and workflow bottlenecks can become significant.
+Large-scale urban flood modeling projects often require millions of computational cells, especially when working with detailed 
+topography and infrastructure. Once a project exceeds approximately 6 million cells, performance and workflow bottlenecks can become significant.
 
 A multiple domain setup allows engineers to break the full project area into smaller, connected subdomains. This offers several advantages:
 
@@ -28,4 +29,17 @@ By using a modular approach, engineers can speed up development, improve model m
 
 3. Save and apply connectivity.
 
-   After clicking **OK**, the connectivity information is saved to a temporary file. When the projects are executed, FLORunner reads this file and routes discharge from upstream domains to their corresponding downstream domains according to the defined connectivity.
+   After clicking **OK**, the connectivity information is saved to a temporary file. When the projects are executed, 
+   FLORunner reads this file and routes discharge from upstream domains to their corresponding downstream domains according to the defined connectivity.
+
+4. Click Run to start the Multiple Domain Simulations.
+
+
+.. important::
+
+   FLORunner processes downstream domains by copying the contents of
+   ``INFLOW_DSx.DAT`` into ``INFLOW.DAT`` before each simulation begins.
+
+   **Before rerunning a dataset**, verify that the original
+   ``INFLOW.DAT`` file has been restored to prevent unintended
+   inflow conditions in subsequent simulations.

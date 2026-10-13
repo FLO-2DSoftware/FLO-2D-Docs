@@ -20,7 +20,6 @@ Installation Steps
    Download the FLORunner archive from the FLO-2D ShareFile repository.
 
    .. figure:: img/florun001.png
-      :align: center
       
 
 #. **Extract the files**
@@ -40,7 +39,6 @@ Installation Steps
      present in this directory.
 
    .. figure:: img/florun002.png
-      :align: center
       
 
 #. **Run the application**
@@ -56,5 +54,5 @@ Installation Steps
    the FLOPRO installation.
 
    .. figure:: img/flo_runner_install.png
-      :align: center
+
       
