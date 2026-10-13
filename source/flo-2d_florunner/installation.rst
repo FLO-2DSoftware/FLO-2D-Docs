@@ -12,20 +12,30 @@ Prerequisites
 Installation Steps
 ------------------
 
-1. Download the software
-   Obtain the FLORunner archive from the FLO-2D ShareFile repository.
+.. Note:: FLORunner is installed with FLO-2D Setup Package.  To update a stand alone version follow these steps:
 
+1. Download the software the FLORunner from the FLO-2D ShareFile repository.
+
+.. figure:: img/florun001.png
+   :align: center
+   
 2. Extract the files
-   Unzip the downloaded archive to a temporary or preferred location on your computer.
+   Unzip the downloaded file to a preferred location on your computer.
 
 3. Copy files to the FLOPRO directory
    Copy all extracted files into the FLOPRO installation directory, where FLO-2D is installed.
 
+   - FLO-2D is typically installed to C:\\Program Files (x86)\\FLO-2D Pro
    - Ensure that ``FLORunner.exe`` is located in the same folder as the FLO-2D executable.
    - Verify that the ``resources`` and ``ui`` folders are also present in this directory.
 
+.. figure:: img/florun002.png
+   :align: center
+
 4. Run the application
    Double-click ``FLORunner.exe`` to launch the application.
+
+   - The program can also be called from the FLO-2D Plugin in QGIS.
 
 5. Verify the installation
    When the application opens, confirm that the **Run** button is enabled. This indicates that FLORunner successfully detected the FLOPRO installation.
