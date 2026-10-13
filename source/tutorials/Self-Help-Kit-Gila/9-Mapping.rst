@@ -17,8 +17,9 @@ Load the maps and results to prepare for the project review.
 Step 1: Run FLO-2D MapCrafter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Open ``SUMMARY.OUT`` in the completed simulation run folder. Confirm the simulation completed and review the engine build, volume conservation, average time step, output interval, simulation duration, rainfall, infiltration, grid size, number of grid elements, and runtime.
-
+- Open ``SUMMARY.OUT`` in the completed simulation run folder. 
+- Confirm the simulation completed and review the engine build, volume conservation, rainfall, infiltration, grid size, number of grid elements, and runtime.
+- The following simplified example shows some of the information in this ASCII file.
 
 .. dropdown:: Example SUMMARY.OUT Results
 
@@ -80,7 +81,7 @@ Step 1: Run FLO-2D MapCrafter
 - Review the MapCrafter simulation summary and completeness information.
 
 .. image:: ../img/shg/9/mrev001.png
-   
+
 - Open the Flood Maps options. Select the maps needed for the review, including ground elevation, modified ground elevation, basic flood results, and channel depths as appropriate.
 - Click **Create Maps**. The generated maps are added to the QGIS Layers panel under the project ID.
 - Move the MapCrafter group to a convenient position in the Layers panel. Toggle the maps on and off to inspect ground elevations, maximum flow depths, and channel results.
