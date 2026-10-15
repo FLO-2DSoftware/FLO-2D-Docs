@@ -27,12 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (sidebar) {
         const form = document.createElement("div");
-        form.className = "wy-form";
 
+        selector.style.width = "100%"
         selector.style.borderRadius = "50px";
         selector.style.padding = "6px 12px";
-        selector.style.border = "1px solid #ccc";
-        selector.style.backgroundColor = "#fcfcfc";
 
 
         form.appendChild(selector);
