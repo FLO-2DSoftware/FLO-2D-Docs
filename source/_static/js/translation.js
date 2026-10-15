@@ -30,10 +30,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         selector.style.width = "100%";
         selector.style.borderRadius = "50px";
-        selector.style.backgroundColor = "#2980B9";
+        selector.style.backgroundColor = "rgb(41, 128, 185)";
         selector.style.color = "#FFFFFF";
         selector.style.fontFamily = "inherit";
         selector.style.cursor = "pointer";
+        selector.style.border = "none";
 
         form.style.width = "100%";
 
