@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     selector.innerHTML = `
         <option value="">🌐 Translate</option>
-        <option value="es">Español</option>
-        <option value="ko">한국어 (Korean)</option>
-        <option value="it">Italiano</option>
-        <option value="de">Deutsch</option>
-        <option value="pt">Português</option>
-        <option value="zh-CN">简体中文 (Chinese)</option>
         <option value="ar">العربية (Arabic)</option>
+        <option value="zh-CN">简体中文 (Chinese)</option>
+        <option value="de">Deutsch (German)</option>
+        <option value="it">Italiano (Italian)</option>
+        <option value="ko">한국어 (Korean)</option>
+        <option value="pt">Português (Portuguese)</option>
+        <option value="es">Español (Spanish)</option>
     `;
 
     selector.addEventListener("change", function () {
