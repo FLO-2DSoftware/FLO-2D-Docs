@@ -28,14 +28,18 @@ document.addEventListener("DOMContentLoaded", function () {
     if (sidebar) {
         selector.style.cssText = `
             display: block;
-            width: 90%;
-            margin: 10px auto;
-            padding: 6px;
-            border-radius: 5px;
-            background: white;
-            color: #333;
-            border: 1px solid #ccc;
+            width: 100%;
+            height: 30px;
+            margin: 8px auto 0;
+            padding: 4px 12px;
+            border-radius: 50px;
+            background: #ffffff;
+            color: #666666;
+            border: 1px solid #dddddd;
+            font-size: 13px;
+            font-family: inherit;
             cursor: pointer;
+            box-sizing: border-box;
         `;
     
         sidebar.appendChild(selector);
