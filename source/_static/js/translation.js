@@ -30,8 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
         form.className = "wy-form";
 
         selector.style.width = "100%";
-        selector.style.borderRadius = "20px";
+        selector.style.borderRadius = "50px";
         selector.style.cursor = "pointer";
+        selector.style.paddingRight = "12px"
+        selector.style.paddingLeft - "0px"
 
         form.appendChild(selector);
         sidebar.appendChild(form);
