@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         form.className = "wy-form";
 
         selector.style.width = "100%";
+        selector.style.borderRadius = "20px";
         selector.style.cursor = "pointer";
 
         form.appendChild(selector);
