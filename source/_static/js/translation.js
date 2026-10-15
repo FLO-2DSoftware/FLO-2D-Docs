@@ -32,10 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
             height: 30px;
             margin: 8px auto 0;
             border-radius: 50px;
-            background: #ffffff;
-            color: #666666;
-            border: 1px solid #dddddd;
-            font-size: 13px;
             font-family: inherit;
             cursor: pointer;
             box-sizing: border-box;
