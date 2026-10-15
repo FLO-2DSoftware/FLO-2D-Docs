@@ -23,11 +23,13 @@ extensions = [
     'sphinxcontrib.mermaid',
     'sphinx_multiversion',
     'sphinx_togglebutton',
+    "sphinx_rtd_dark_mode",
     'sphinx_design'
 ]
 html_allow_raw = True
 templates_path = ['_templates']
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+default_dark_mode = False
 
 # -- HTML Output -------------------------------------------------------------
 html_theme = "sphinx_rtd_theme"

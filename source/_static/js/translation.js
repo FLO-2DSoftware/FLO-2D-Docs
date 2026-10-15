@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             width: 100%;
             height: 30px;
             margin: 8px auto 0;
-            padding: 4px 12px;
+            padding: 12px 4px;
             border-radius: 50px;
             background: #ffffff;
             color: #666666;
