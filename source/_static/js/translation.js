@@ -23,5 +23,21 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = url.toString();
     });
 
-    document.body.prepend(selector);
+    const sidebar = document.querySelector(".wy-side-nav-search");
+
+    if (sidebar) {
+        selector.style.cssText = `
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 6px;
+            border-radius: 5px;
+            background: white;
+            color: #333;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        `;
+    
+        sidebar.appendChild(selector);
+    }
 });
