@@ -28,8 +28,17 @@ document.addEventListener("DOMContentLoaded", function () {
     if (sidebar) {
         const form = document.createElement("div");
 
-        selector.style.width = "100%"
+        selector.style.width = "100%";
         selector.style.borderRadius = "50px";
+        selector.style.backgroundColor = "#2980B9";
+        selector.style.color = "#FFFFFF";
+        selector.style.border = "1px solid #2472A4";
+        selector.style.padding = "6px 12px";
+        selector.style.fontFamily = "inherit";
+        selector.style.cursor = "pointer";
+
+        form.style.width = "100%";
+        form.style.padding = "8px";
 
         form.appendChild(selector);
         sidebar.appendChild(form);
