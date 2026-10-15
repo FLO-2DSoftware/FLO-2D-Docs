@@ -32,12 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
         selector.style.borderRadius = "50px";
         selector.style.backgroundColor = "#2980B9";
         selector.style.color = "#FFFFFF";
-        selector.style.padding = "6px 12px";
         selector.style.fontFamily = "inherit";
         selector.style.cursor = "pointer";
 
         form.style.width = "100%";
-        form.style.padding = "8px";
 
         form.appendChild(selector);
         sidebar.appendChild(form);
