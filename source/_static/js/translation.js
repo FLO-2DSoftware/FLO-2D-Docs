@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         selector.style.width = "100%";
         selector.style.borderRadius = "50px";
-        selector.style.backgroundColor = "#005E99;
+        selector.style.backgroundColor = "#005E99";
         selector.style.color = "#FFFFFF";
         selector.style.fontFamily = "inherit";
         selector.style.cursor = "pointer";
