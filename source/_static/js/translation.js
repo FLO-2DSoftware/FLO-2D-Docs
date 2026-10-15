@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const selector = document.createElement("select");
 
     selector.innerHTML = `
-        <option value="">🌐 Translate</option>
+        <option value="">Translate</option>
         <option value="ar">العربية (Arabic)</option>
         <option value="zh-CN">简体中文 (Chinese)</option>
         <option value="de">Deutsch (German)</option>
@@ -30,8 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         selector.style.width = "100%"
         selector.style.borderRadius = "50px";
-        selector.style.padding = "6px 12px";
-
 
         form.appendChild(selector);
         sidebar.appendChild(form);
