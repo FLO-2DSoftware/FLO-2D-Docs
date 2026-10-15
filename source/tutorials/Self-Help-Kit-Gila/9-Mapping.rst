@@ -17,68 +17,12 @@ Load the maps and results to prepare for the project review.
 Step 1: Run FLO-2D MapCrafter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Open ``SUMMARY.OUT`` in the completed simulation run folder. 
-- Confirm the simulation completed and review the engine build, volume conservation, rainfall, infiltration, grid size, number of grid elements, and runtime.
-- The following simplified example shows some of the information in this ASCII file.
-
-.. dropdown:: Example SUMMARY.OUT Results
-
-   .. code-block:: text
-
-      SIMULATION TIME    AVERAGE TIMESTEP    VOLUME CONSERVATION
-         (HOURS)           (SECONDS)       (ACRE-FEET)   PERCENT
-
-         0.0003             1.000          -0.000000     0.000000
-         0.1002             1.124          -0.000000     0.000000
-         0.2002             1.319           0.000000     0.000000
-            ...               ...               ...          ...
-         9.9002             1.242           0.000000     0.000000
-        10.0000             1.252           0.000000     0.000000
-
-      ==========================================================
-                        MASS BALANCE (ACRE-FEET)
-      ==========================================================
-
-      INFLOW
-      Rainfall Volume                              328.365
-      Surface Water Inflow                         272.449
-      Total Inflow                                 600.814
-
-      OUTFLOW AND STORAGE
-      Infiltration and Interception                129.608
-      Floodplain Storage                           119.596
-      Channel Storage                                8.459
-      Channel Outflow                              340.932
-      Total Outflow and Storage                    600.816
-
-      ==========================================================
-                        SIMULATION RESULTS
-      ==========================================================
-
-      Maximum Inundated Area                     896.141 acres
-      Maximum Area (Depth > 0.5 ft)              184.537 acres
-
-      ==========================================================
-                        SIMULATION SUMMARY
-      ==========================================================
-
-      GRID ELEMENT SIZE:   30.0 FT
-      TOTAL NUMBER OF GRID ELEMENTS:      54306
-      GRID SYSTEM AREA:         1122.02 ACRES      1.7526 SQ. MI
-
-      FLOODPLAIN AND CHANNEL LOOP COMPUTATIONS:       2633059698
-
-
-         COMPUTER RUN TIME:          0.107910 HRS
-         OVERLAND LOOP RUN TIME:     0.040020 HRS
-
-      OUTPUT FILE WAS TERMINATED ON:  10/08/2026  AT:  15:29:05
-
-
-- Return to QGIS and open FLO-2D MapCrafter.
-- Select the completed model run folder and enter a project ID for the results maps.
-- Verify the coordinate reference system. FLO-2D output files do not contain coordinate system information, so MapCrafter uses the QGIS project coordinate system.
+- Open FLO-2D MapCrafter.
+- Select the completed model run folder and enter a project ID.
+- Verify the coordinate reference system. 
 - Review the MapCrafter simulation summary and completeness information.
+
+.. note:: FLO-2D output files do not contain coordinate system information, so MapCrafter uses the QGIS project coordinate system.
 
 .. image:: ../img/shg/9/mrev001.png
 
@@ -88,21 +32,30 @@ Step 1: Run FLO-2D MapCrafter
 
 .. note:: The modified ground elevation map reflects elevation adjustments made by the FLO-2D engine during the simulation, such as adjustments at outflow elements, channel banks, or storm drain rims.
 
+.. image:: ../img/shg/9/mrev003.png   
+
 Step 2: Set the Results Folder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- In the FLO-2D Plugin panel, locate the results folder path.
+- In the FLO-2D panel, locate the results folder path.
 - Click the **...** browse button and select the completed simulation run folder.
-- Confirm that the folder points to the same run used to create the MapCrafter maps.
-- The Results Tool can now access time-dependent output for grid elements and other modeled features. Detailed results plots are covered in the next section.
+- The Results Tool can now access time-dependent output for grid elements and other modeled features. 
+- Detailed results plots are covered in the next section.
+
+.. image:: ../img/shg/9/mrev002.png
 
 Step 3: Import the Results Mesh
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Open the QGIS **Data Source Manager** and select **Mesh**.
+- Open the QGIS **Data Source Manager** and select the **Mesh Tab**.
 - Browse to the completed run folder and select ``DEPTH.OUT`` as the mesh data source.
 - Click **Add**. When the available mesh layers appear, select the **2D mesh** and click **Add Layers**. The 1D mesh is not needed for this exercise.
 - Close the Data Source Manager and locate the new mesh layer in the QGIS Layers panel.
+
+.. image:: ../img/shg/9/mrev004.png
+
+.. image:: ../img/shg/9/mrev005.png
+
 - The mesh initially displays bed elevation. Open the **Layer Styling** panel to select other results, such as depth, velocity, velocity vectors, or water surface elevation.
 - Select a time-dependent result. At simulation time zero, the displayed results may be empty; select maximum results to confirm that data are available.
 - Open the QGIS **Temporal Controller**, activate temporal navigation, and set the animation range to the full available simulation period.
