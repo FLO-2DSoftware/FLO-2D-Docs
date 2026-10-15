@@ -26,17 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.querySelector(".wy-side-nav-search");
 
     if (sidebar) {
-        selector.style.cssText = `
-            display: block;
-            width: 100%;
-            height: 30px;
-            margin: 8px auto 0;
-            border-radius: 50px;
-            font-family: inherit;
-            cursor: pointer;
-            box-sizing: border-box;
-        `;
-    
-        sidebar.appendChild(selector);
+        const form = document.createElement("div");
+        form.className = "wy-form";
+
+        selector.style.width = "100%";
+        selector.style.cursor = "pointer";
+
+        form.appendChild(selector);
+        sidebar.appendChild(form);
     }
 });
