@@ -44,6 +44,7 @@ html_js_files = [
 # -- HTML Context for Version Dropdown (optional enhancement) ----------------
 html_context = {
     'current_version': "main",
+    'display_github': "False",
     # You can populate this with actual versions later using git refs or dynamically.
     # 'versions': [["Build21", "/Build21/"], ["Build23", "/Build23/"], ...]
 }

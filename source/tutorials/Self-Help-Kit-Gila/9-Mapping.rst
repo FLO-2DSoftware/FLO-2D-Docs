@@ -22,17 +22,22 @@ Step 1: Run FLO-2D MapCrafter
 - Verify the coordinate reference system. 
 - Review the MapCrafter simulation summary and completeness information.
 
-.. note:: FLO-2D output files do not contain coordinate system information, so MapCrafter uses the QGIS project coordinate system.
-
 .. image:: ../img/shg/9/mrev001.png
 
-- Open the Flood Maps options. Select the maps needed for the review, including ground elevation, modified ground elevation, basic flood results, and channel depths as appropriate.
+- Open the Flood Maps options. Select the maps needed for the review, including:
+    - Ground and Modified Ground Elevation
+    - Basic Flood Maps
+    - Channel Maps
 - Click **Create Maps**. The generated maps are added to the QGIS Layers panel under the project ID.
-- Move the MapCrafter group to a convenient position in the Layers panel. Toggle the maps on and off to inspect ground elevations, maximum flow depths, and channel results.
 
 .. note:: The modified ground elevation map reflects elevation adjustments made by the FLO-2D engine during the simulation, such as adjustments at outflow elements, channel banks, or storm drain rims.
 
-.. image:: ../img/shg/9/mrev003.png   
+.. image:: ../img/shg/9/mrev003.png
+
+
+- Move the MapCrafter group to a convenient position in the Layers panel. 
+
+.. image:: ../img/shg/9/mrev006.png
 
 Step 2: Set the Results Folder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -57,6 +62,9 @@ Step 3: Import the Results Mesh
 .. image:: ../img/shg/9/mrev005.png
 
 - The mesh initially displays bed elevation. Open the **Layer Styling** panel to select other results, such as depth, velocity, velocity vectors, or water surface elevation.
+
+.. image:: ../img/shg/9/mrev007.png
+
 - Select a time-dependent result. At simulation time zero, the displayed results may be empty; select maximum results to confirm that data are available.
 - Open the QGIS **Temporal Controller**, activate temporal navigation, and set the animation range to the full available simulation period.
 - Advance through the time steps to review how rainfall runoff develops and moves through the model domain.
