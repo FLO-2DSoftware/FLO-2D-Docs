@@ -3124,7 +3124,7 @@ Channel Data
     77 4761.00                      Line 3b: <b>IEND WSELEND</b>
     C 501 498                       Line 4:  <b>CHANCHAR = ‘C’ ICONFLO1(J) ICONFLO2(J)</b>
     E 5112                          Line 5:  <b>CHANCHAR = 'E' ICHANGRID(N)</b>
-    B 12.3                          Line 6:  <b>CHANCHAR = 'B' IBASEFLOW(K)</b>
+    B 12.3                          Line 6:  <b>CHANCHAR = 'B' QBASEFLOW(K)</b>
                                              <i>I = number of channel nodes.</i>
                                              <i>J = number of channel confluences</i>
                                              <i>K = number of channel segments</i>
@@ -3341,13 +3341,6 @@ Channel Data
 
        The increased n-values are reported in the ROUGH.OUT and CHAN.RGH files (see comment 7).
 
-   * - IBASEFLOW(K)
-     - **i**
-     - **0.0 - ∞**
-     - Baseflow of a channel to establish a flow condition for floodwave arrival time.
-
-       Place this line after each segment if more than one segment is used.
-
    * - ICHANGRID(I)
      - **i**
      - **1 - NNOD**
@@ -3395,6 +3388,13 @@ Channel Data
 
        The cross-section data is interpolated and assigned in the PROFILES program.
 
+   * - QBASEFLOW(K)
+     - **i**
+     - **0.0 - ∞**
+     - Baseflow of a channel to establish a flow condition for floodwave arrival time.
+
+       Place this line after each segment if more than one segment is used.
+       
    * - ROUGHADJ
      - **r**
      - **0.00 - 1.2**
