@@ -28,11 +28,33 @@ jobs:
             "sphinx<7.3" \
             sphinx-multiversion==0.2.4 \
             sphinx-rtd-theme \
+            sphinx-rtd-dark-mode \
             sphinxcontrib-mermaid \
             sphinx_togglebutton \
             sphinx_design \
             ghp-import
 
+            - name: Remove dark theme footer attribution
+              run: |
+                python - <<'PY'
+                from pathlib import Path
+                import sphinx_rtd_dark_mode
+      
+                js_file = (
+                    Path(sphinx_rtd_dark_mode.__file__).parent
+                    / "static/dark_mode_js/theme_switcher.js"
+                )
+      
+                content = js_file.read_text(encoding="utf-8")
+      
+                start = content.index("  $('footer').html(")
+                end = content.index("\n});", start)
+      
+                content = content[:start] + content[end:]
+                js_file.write_text(content, encoding="utf-8")
+      
+                print("Removed dark theme footer attribution.")
+                PY
       - name: Build multiversion docs
         run: |
           sphinx-multiversion source _site
