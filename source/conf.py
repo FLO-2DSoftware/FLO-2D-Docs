@@ -29,7 +29,8 @@ extensions = [
     'sphinxcontrib.mermaid',
     'sphinx_multiversion',
     'sphinx_togglebutton',
-    'sphinx_design'
+    'sphinx_design',
+    'sphinx_rtd_dark_mode'
 ]
 html_allow_raw = True
 templates_path = ['_templates']
@@ -38,6 +39,8 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 # -- HTML Output -------------------------------------------------------------
 html_theme = "sphinx_rtd_theme"
+html_show_sphinx = False
+default_dark_mode = False
 html_static_path = ['_static']
 html_css_files = [
     ('css/custom.css', {'priority': 1000})
