@@ -134,3 +134,45 @@ img {
 #chapter-4-input-data-file-description ol > li {
     margin-bottom: 1em;
 }
+
+/* ---------------------------------------------------------
+   Dark Mode - Table and Text Styling
+   --------------------------------------------------------- */
+
+/* Alternating table rows */
+html[data-theme="dark"] table.docutils tbody tr:nth-child(odd) {
+    background-color: #252d36;
+}
+
+html[data-theme="dark"] table.docutils tbody tr:nth-child(even) {
+    background-color: #303a45;
+}
+
+/* Table cells and borders */
+html[data-theme="dark"] table.docutils td,
+html[data-theme="dark"] table.docutils th {
+    background-color: transparent;
+    color: #e2e8f0;
+    border-color: #485563;
+}
+
+/* Table headers */
+html[data-theme="dark"] table.docutils thead th {
+    background-color: #1b2530;
+    color: #ffffff;
+}
+
+/* Table links */
+html[data-theme="dark"] table.docutils a {
+    color: #72c7ff;
+}
+
+/* Equation numbers */
+html[data-theme="dark"] div.math .eqno {
+    color: #e2e8f0;
+}
+
+/* Custom H4 headings */
+html[data-theme="dark"] .h4 {
+    color: #e2e8f0;
+}
