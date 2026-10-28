@@ -3139,7 +3139,6 @@ Channel Data
      Repeat 3a and 3b for each channel segment.
      Line 3, 4 and 5: Multiple lines are grouped together.
      Line 6: If a baseflow is used to report a time TIME_TO_ABOVE_BASEFLOW.OUT.
-     Place Line 6 after each segment.
      </pre>
     </div>
 
