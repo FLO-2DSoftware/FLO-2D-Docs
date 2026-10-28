@@ -11,6 +11,8 @@
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=70edf1c7" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=6385869e" />
 
   
@@ -29,6 +31,8 @@
       <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
       <script>window.MathJax = {"tex": {"tags": "none", "useLabelIds": true}, "options": {"displayAlign": "right"}}</script>
       <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../_static/dark_mode_js/theme_switcher.js?v=80b0673b"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -613,11 +617,13 @@ Spatially Variable Data.</em></p>
 <h2>Area and Width Reduction Factor<a class="headerlink" href="#area-and-width-reduction-factor" title="Link to this heading"></a></h2>
 <p>The calculator intersects the polygons in the <em>Blocked Areas</em> (buildings) layer to the polygons in the <em>Grid</em> layer and uses the centroid to set up
 the ARF/WRF table of variables.
-The ARF calculator intersects the <em>Blocked Areas</em> polygon with the grid polygon and calculates the area of the building that occupies each grid.
-If the grid is totally blocked, the ARF = 1.
-If the blockage is greater than 0.9, the ARF is reset to 1.
-If the area of the building is a percentage of the grid, then the value is assessed and written to the ARF attribute.
-Figure 18 shows an ARF that would have a value of 4.74 / 9.29 = 0.51.</p>
+The ARF calculator intersects the <em>Blocked Areas</em> polygon with the grid polygon and calculates the area of the building that occupies each grid.</p>
+<ul class="simple">
+<li><p>If the grid is totally blocked, the ARF = 1.</p></li>
+<li><p>If the blockage is greater than 0.9, the ARF is reset to 1.</p></li>
+<li><p>If the area of the building is a percentage of the grid, then the value is assessed and written to the ARF attribute.</p></li>
+</ul>
+<p>Figure 18 shows an ARF that would have a value of 4.74 / 9.29 = 0.51.</p>
 <img alt="../../_images/ref018.png" src="../../_images/ref018.png" />
 <p><em>Figure 18.
 Area Reduction Intersection.</em></p>
@@ -642,19 +648,23 @@ GDS on the left and QGIS on the right (Figure 21).</p>
 <img alt="../../_images/ref021.png" src="../../_images/ref021.png" />
 <p><em>Figure 21.
 WRF Redundancy GDS / QGIS Comparison.</em></p>
-<ol class="arabic simple">
-<li><p>QGIS calculator is more accurate on cells that have partial WRFs.
+<p>QGIS calculator is more accurate on cells that have partial WRFs.
 The GDS WRF on the left is calculated as 0.98.
-The QGIS WRF on the right is calculated at 0.44 and that is more accurate (Figure 22).</p></li>
-</ol>
+The QGIS WRF on the right is calculated at 0.44 and that is more accurate (Figure 22).</p>
 <img alt="../../_images/ref022.png" src="../../_images/ref022.png" />
 <p><em>Figure 22.
 WRF Calculator GDS / QGIS Comparison.</em></p>
+<p>Some versions of the FLO-2D Plugin will have an error when processing Multipolygon Z. This bug was discovered and fixed around August
+5, 2026.  It is not likely that users will be exposed to this error because most building polygons do not
+have Z or elevation data.</p>
+<img alt="../../_images/ref022a.png" src="../../_images/ref022a.png" />
+<p><em>Figure 22a.
+Example Multiple Polygon Z.</em></p>
 </section>
 <section id="rainfall-interpolation-tool">
 <h2>Rainfall Interpolation Tool<a class="headerlink" href="#rainfall-interpolation-tool" title="Link to this heading"></a></h2>
 <p>The <em>Rainfall Interpolation Tool</em> uses rainfall depth rasters like those provided by NOAA Atlas 14.
-The original raster resolution is on the order of 2000 by 2000 ft pixels (<strong>Error! Reference source not found.</strong>).</p>
+The original raster resolution is on the order of 2000 by 2000 ft pixels (Figure 23).</p>
 <img alt="../../_images/ref023.png" src="../../_images/ref023.png" />
 <p><em>Figure 23.
 Rainfall 24hr 100yr NOAA Atlas 14.</em></p>
@@ -666,7 +676,7 @@ The new raster has these properties:</p>
 <li><p>Clipped to Grid layer extent.</p></li>
 <li><p>Aligned to the grid.</p></li>
 </ul>
-<p>The new raster (figure 24) is sampled to the grid using the centroid.
+<p>The new raster (Figure 24) is sampled to the grid using the centroid.
 Raster statistics determine the maximum rainfall value (RAIN<sub>max</sub>).
 The final RAIN<sub>arf</sub> variable is calculated as a ratio of the local rain depth to the max rain depth.
 A rainfall reduction value is calculated for each element in the grid system using equation (1).</p>
@@ -11046,9 +11056,6 @@ and peak discharge data.</p></td>
     <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

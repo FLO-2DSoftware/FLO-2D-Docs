@@ -449,9 +449,11 @@ Area and Width Reduction Factor
 The calculator intersects the polygons in the *Blocked Areas* (buildings) layer to the polygons in the *Grid* layer and uses the centroid to set up
 the ARF/WRF table of variables.
 The ARF calculator intersects the *Blocked Areas* polygon with the grid polygon and calculates the area of the building that occupies each grid.
-If the grid is totally blocked, the ARF = 1.
-If the blockage is greater than 0.9, the ARF is reset to 1.
-If the area of the building is a percentage of the grid, then the value is assessed and written to the ARF attribute.
+
+- If the grid is totally blocked, the ARF = 1.
+- If the blockage is greater than 0.9, the ARF is reset to 1.
+- If the area of the building is a percentage of the grid, then the value is assessed and written to the ARF attribute.
+
 Figure 18 shows an ARF that would have a value of 4.74 / 9.29 = 0.51.
 
 .. image:: ./img/refman/ref018.png
@@ -490,20 +492,29 @@ GDS on the left and QGIS on the right (Figure 21).
 *Figure 21.
 WRF Redundancy GDS / QGIS Comparison.*
 
-1. QGIS calculator is more accurate on cells that have partial WRFs.
-   The GDS WRF on the left is calculated as 0.98.
-   The QGIS WRF on the right is calculated at 0.44 and that is more accurate (Figure 22).
+QGIS calculator is more accurate on cells that have partial WRFs.
+The GDS WRF on the left is calculated as 0.98.
+The QGIS WRF on the right is calculated at 0.44 and that is more accurate (Figure 22).
 
 .. image:: ./img/refman/ref022.png
 
 *Figure 22.
 WRF Calculator GDS / QGIS Comparison.*
 
+Some versions of the FLO-2D Plugin will have an error when processing Multipolygon Z. This bug was discovered and fixed around August
+5, 2026.  It is not likely that users will be exposed to this error because most building polygons do not 
+have Z or elevation data.
+
+.. image:: ./img/refman/ref022a.png
+
+*Figure 22a.
+Example Multiple Polygon Z.*
+
 Rainfall Interpolation Tool
----------------------------
+----------------------------
 
 The *Rainfall Interpolation Tool* uses rainfall depth rasters like those provided by NOAA Atlas 14.
-The original raster resolution is on the order of 2000 by 2000 ft pixels (**Error! Reference source not found.**).
+The original raster resolution is on the order of 2000 by 2000 ft pixels (Figure 23).
 
 .. image:: ./img/refman/ref023.png
 
@@ -518,7 +529,7 @@ The new raster has these properties:
 - Clipped to Grid layer extent.
 - Aligned to the grid.
 
-The new raster (figure 24) is sampled to the grid using the centroid.
+The new raster (Figure 24) is sampled to the grid using the centroid.
 Raster statistics determine the maximum rainfall value (RAIN\ :sub:`max`).
 The final RAIN\ :sub:`arf` variable is calculated as a ratio of the local rain depth to the max rain depth.
 A rainfall reduction value is calculated for each element in the grid system using equation (1).

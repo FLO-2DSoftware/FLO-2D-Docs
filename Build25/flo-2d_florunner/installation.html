@@ -11,6 +11,8 @@
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
       <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=6385869e" />
 
   
@@ -27,6 +29,8 @@
       <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
       <script src="../_static/design-tabs.js?v=f930bc37"></script>
       <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../_static/dark_mode_js/theme_switcher.js?v=80b0673b"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -105,32 +109,56 @@
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>FLORunner v1.0.0.7z</p></li>
+<li><p>FLORunner v1.1.0.7z</p></li>
 <li><p>An existing FLO-2D installation with the FLOPRO executable available</p></li>
 </ul>
 </section>
 <section id="installation-steps">
 <h2>Installation Steps<a class="headerlink" href="#installation-steps" title="Link to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>Download the software
-Obtain the FLORunner archive from the FLO-2D ShareFile repository.</p></li>
-<li><p>Extract the files
-Unzip the downloaded archive to a temporary or preferred location on your computer.</p></li>
-<li><p>Copy files to the FLOPRO directory
-Copy all extracted files into the FLOPRO installation directory, where FLO-2D is installed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>FLORunner is installed with FLO-2D Setup Package.  To update a stand alone version follow these steps:</p>
+</div>
+<ol class="arabic">
+<li><p><strong>Download the software</strong></p>
+<p>Download the FLORunner archive from the FLO-2D ShareFile repository.</p>
+<figure class="align-default">
+<img alt="../_images/florun001.png" src="../_images/florun001.png" />
+</figure>
+</li>
+<li><p><strong>Extract the files</strong></p>
+<p>Unzip the downloaded archive to a preferred location on your computer.</p>
+</li>
+<li><p><strong>Copy files to the FLOPRO directory</strong></p>
+<p>Copy all extracted files into the FLOPRO installation directory,
+where FLO-2D is installed.</p>
 <ul class="simple">
-<li><p>Ensure that <code class="docutils literal notranslate"><span class="pre">FLORunner.exe</span></code> is located in the same folder as the FLO-2D executable.</p></li>
-<li><p>Verify that the <code class="docutils literal notranslate"><span class="pre">resources</span></code> and <code class="docutils literal notranslate"><span class="pre">ui</span></code> folders are also present in this directory.</p></li>
+<li><p>FLO-2D is typically installed in
+<code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\FLO-2D</span> <span class="pre">Pro</span></code>.</p></li>
+<li><p>Ensure that <code class="docutils literal notranslate"><span class="pre">FLORunner.exe</span></code> is located in the same folder
+as the FLO-2D executable.</p></li>
+<li><p>Verify that the <code class="docutils literal notranslate"><span class="pre">resources</span></code> and <code class="docutils literal notranslate"><span class="pre">ui</span></code> folders are also
+present in this directory.</p></li>
+</ul>
+<figure class="align-default">
+<img alt="../_images/florun002.png" src="../_images/florun002.png" />
+</figure>
+</li>
+<li><p><strong>Run the application</strong></p>
+<p>Double-click <code class="docutils literal notranslate"><span class="pre">FLORunner.exe</span></code> to launch the application.</p>
+<ul class="simple">
+<li><p>FLORunner can also be launched from the FLO-2D Plugin in QGIS.</p></li>
 </ul>
 </li>
-<li><p>Run the application
-Double-click <code class="docutils literal notranslate"><span class="pre">FLORunner.exe</span></code> to launch the application.</p></li>
-<li><p>Verify the installation
-When the application opens, confirm that the <strong>Run</strong> button is enabled. This indicates that FLORunner successfully detected the FLOPRO installation.</p></li>
-</ol>
-<figure class="align-center">
+<li><p><strong>Verify the installation</strong></p>
+<p>When the application opens, confirm that the <strong>Run</strong> button is
+enabled. This indicates that FLORunner successfully detected
+the FLOPRO installation.</p>
+<figure class="align-default">
 <img alt="../_images/flo_runner_install.png" src="../_images/flo_runner_install.png" />
 </figure>
+</li>
+</ol>
 </section>
 </section>
 
@@ -148,9 +176,6 @@ When the application opens, confirm that the <strong>Run</strong> button is enab
     <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

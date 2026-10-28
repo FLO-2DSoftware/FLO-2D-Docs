@@ -3,21 +3,21 @@ FLORunner
 
 FLORunner allows you to batch run one or more FLO-2D projects in a controlled sequence.
 
-1. Select the project folder.
+#. Select the project folder.
 
    Click the **Folder** button and select the ``CONT.DAT`` file located in the FLO-2D project directory.
 
    .. figure:: img/select_cont.png
       :align: center
 
-2. Select multiple project folders (optional).
+#. Select multiple project folders (optional).
 
    Click the **Multiple folders** button to select directories containing multiple FLO-2D projects.
 
    .. figure:: img/select_md.png
       :align: center
 
-3. Review detected projects.
+#. Review detected projects.
 
    FLORunner automatically detects all projects and displays their current status.
 
@@ -30,11 +30,9 @@ FLORunner allows you to batch run one or more FLO-2D projects in a controlled se
       - Blue circle: project is on hold.
       - Red warning icon: project failed.
 
-4. Set the execution order.
+#. Set the execution order.
 
-   Use the **Up Arrow** and **Down Arrow** buttons to define the run order.
-
-   .. figure:: img/project_order.png
+   .. figure:: img/selected_projects.png
       :align: center
 
    .. note::
@@ -42,6 +40,19 @@ FLORunner allows you to batch run one or more FLO-2D projects in a controlled se
       - Order numbers must be unique.
       - Projects with order ``0`` will not run.
 
-5. Run the simulations.
+#. **Run the simulations**
 
-   Click the **Run** button to start the simulations in the defined order.
+   Click the **Run** button to execute the simulations in the
+   specified sequence.
+
+   * FLORunner automatically tracks and displays the progress
+     and status of each simulation.
+   * Simulations run silently in batch mode, without requiring
+     user interaction between runs.
+   * Each simulation starts automatically when the preceding
+     simulation is complete.
+
+   .. figure:: img/florun003.png
+      :align: center
+
+   

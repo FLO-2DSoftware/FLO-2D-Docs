@@ -11,6 +11,8 @@
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=70edf1c7" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=6385869e" />
 
   
@@ -27,6 +29,8 @@
       <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
       <script src="../../_static/design-tabs.js?v=f930bc37"></script>
       <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/dark_mode_js/default_light.js?v=c2e647ce"></script>
+      <script src="../../_static/dark_mode_js/theme_switcher.js?v=80b0673b"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -74,8 +78,8 @@
 <li class="toctree-l3"><a class="reference internal" href="8-Hydraulic.html">Hydraulic Structures - Culverts</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Project Review and Mapping</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#load-results-and-maps">Load Results and Maps</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#next-step">Next Step</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#review-a-project-run">Review a Project Run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#review-scenarios">Review Scenarios</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="10-Troubleshooting.html">Troubleshooting</a></li>
@@ -121,191 +125,170 @@
              
   <section id="project-review-and-mapping">
 <h1>Project Review and Mapping<a class="headerlink" href="#project-review-and-mapping" title="Link to this heading"></a></h1>
-<p>Set up culverts using Rating Tables and Culvert Equations using QGIS and the FLO-2D Plugin.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It will be easier to view these videos on YouTube.</p>
-<p>Set the video playback speed to 2x to complete the lessons faster.</p>
-</div>
 <section id="load-results-and-maps">
 <h2>Load Results and Maps<a class="headerlink" href="#load-results-and-maps" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Place holder video.  Final version not ready.</p>
+<p>Placeholder video. Final version not ready. This is currently under construction.</p>
 </div>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ebIFoGUuQcI?si=XMiARpQIkzIPD5Es"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This lesson introduces the setup of hydraulic structures in FLO-2D using QGIS. It includes visual styling, elevation considerations, and labeling, preparing the dataset for modeling.</p>
-<section id="step-1-load-hydraulic-structures">
-<h3>Step 1: Load Hydraulic Structures<a class="headerlink" href="#step-1-load-hydraulic-structures" title="Link to this heading"></a></h3>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>Load the maps and results to prepare for the project review.</p>
+<section id="step-1-run-flo-2d-mapcrafter">
+<h3>Step 1: Run FLO-2D MapCrafter<a class="headerlink" href="#step-1-run-flo-2d-mapcrafter" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>Load the <strong>hydraulic_structures.shp</strong> shapefile into your QGIS project.</p></li>
-<li><p>Modify the layer style:
-- Change the symbol to an <strong>arrow line</strong> for visualizing flow direction.
-- Adjust the <strong>color</strong> to make structures more visible.</p></li>
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">SUMMARY.OUT</span></code> in the completed simulation run folder.</p></li>
+<li><p>Confirm the simulation completed and review the engine build, volume conservation, rainfall, infiltration, grid size, number of grid elements, and runtime.</p></li>
+<li><p>The following simplified example shows some of the information in this ASCII file.</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example SUMMARY.OUT Results</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>SIMULATION TIME    AVERAGE TIMESTEP    VOLUME CONSERVATION
+   (HOURS)           (SECONDS)       (ACRE-FEET)   PERCENT
+
+   0.0003             1.000          -0.000000     0.000000
+   0.1002             1.124          -0.000000     0.000000
+   0.2002             1.319           0.000000     0.000000
+      ...               ...               ...          ...
+   9.9002             1.242           0.000000     0.000000
+  10.0000             1.252           0.000000     0.000000
+
+==========================================================
+                  MASS BALANCE (ACRE-FEET)
+==========================================================
+
+INFLOW
+Rainfall Volume                              328.365
+Surface Water Inflow                         272.449
+Total Inflow                                 600.814
+
+OUTFLOW AND STORAGE
+Infiltration and Interception                129.608
+Floodplain Storage                           119.596
+Channel Storage                                8.459
+Channel Outflow                              340.932
+Total Outflow and Storage                    600.816
+
+==========================================================
+                  SIMULATION RESULTS
+==========================================================
+
+Maximum Inundated Area                     896.141 acres
+Maximum Area (Depth &gt; 0.5 ft)              184.537 acres
+
+==========================================================
+                  SIMULATION SUMMARY
+==========================================================
+
+GRID ELEMENT SIZE:   30.0 FT
+TOTAL NUMBER OF GRID ELEMENTS:      54306
+GRID SYSTEM AREA:         1122.02 ACRES      1.7526 SQ. MI
+
+FLOODPLAIN AND CHANNEL LOOP COMPUTATIONS:       2633059698
+
+
+   COMPUTER RUN TIME:          0.107910 HRS
+   OVERLAND LOOP RUN TIME:     0.040020 HRS
+
+OUTPUT FILE WAS TERMINATED ON:  10/08/2026  AT:  15:29:05
+</pre></div>
+</div>
+</div>
+</details><ul class="simple">
+<li><p>Return to QGIS and open FLO-2D MapCrafter.</p></li>
+<li><p>Select the completed model run folder and enter a project ID for the results maps.</p></li>
+<li><p>Verify the coordinate reference system. FLO-2D output files do not contain coordinate system information, so MapCrafter uses the QGIS project coordinate system.</p></li>
+<li><p>Review the MapCrafter simulation summary and completeness information.</p></li>
+</ul>
+<img alt="../../_images/mrev001.png" src="../../_images/mrev001.png" />
+<ul class="simple">
+<li><p>Open the Flood Maps options. Select the maps needed for the review, including ground elevation, modified ground elevation, basic flood results, and channel depths as appropriate.</p></li>
+<li><p>Click <strong>Create Maps</strong>. The generated maps are added to the QGIS Layers panel under the project ID.</p></li>
+<li><p>Move the MapCrafter group to a convenient position in the Layers panel. Toggle the maps on and off to inspect ground elevations, maximum flow depths, and channel results.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Arrows indicate the direction of flow: inlet is the first vertex, outlet is the last.</p>
+<p>The modified ground elevation map reflects elevation adjustments made by the FLO-2D engine during the simulation, such as adjustments at outflow elements, channel banks, or storm drain rims.</p>
 </div>
 </section>
-<section id="step-2-understand-elevation-requirements">
-<h3>Step 2: Understand Elevation Requirements<a class="headerlink" href="#step-2-understand-elevation-requirements" title="Link to this heading"></a></h3>
+<section id="step-2-set-the-results-folder">
+<h3>Step 2: Set the Results Folder<a class="headerlink" href="#step-2-set-the-results-folder" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>Each hydraulic structure must move flow from an <strong>inlet</strong> to an <strong>outlet</strong> grid element.</p></li>
-<li><p>Elevations must match the <strong>invert elevations</strong> of culverts and connected features.</p></li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Use the <strong>Identify Features</strong> tool on your elevation raster and grid layers to find elevation mismatches.</p>
-</div>
-</section>
-<section id="common-adjustments">
-<h3>Common adjustments:<a class="headerlink" href="#common-adjustments" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p><strong>Move</strong> the inlet/outlet point to the nearest correct elevation cell.</p></li>
-<li><p>Use <strong>elevation correction polygons</strong> where necessary to model invert slopes and street flow paths.</p></li>
-<li><p>Consider <strong>stilling basins</strong> or <strong>weirs</strong> where sediment control is necessary.</p></li>
+<li><p>In the FLO-2D Plugin panel, locate the results folder path.</p></li>
+<li><p>Click the <strong>…</strong> browse button and select the completed simulation run folder.</p></li>
+<li><p>Confirm that the folder points to the same run used to create the MapCrafter maps.</p></li>
+<li><p>The Results Tool can now access time-dependent output for grid elements and other modeled features. Detailed results plots are covered in the next section.</p></li>
 </ul>
 </section>
-<section id="step-3-examples-of-flow-adjustments">
-<h3>Step 3: Examples of Flow Adjustments<a class="headerlink" href="#step-3-examples-of-flow-adjustments" title="Link to this heading"></a></h3>
+<section id="step-3-import-the-results-mesh">
+<h3>Step 3: Import the Results Mesh<a class="headerlink" href="#step-3-import-the-results-mesh" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>Evaluate upstream/downstream cells:
-- Example: Move from a 1428 ft grid cell to a 1425 ft cell to match invert.</p></li>
-<li><p>Ensure continuity along <strong>trapezoidal channels</strong> feeding culverts.</p></li>
-</ul>
-</section>
-<section id="step-4-assign-structures-to-cross-sections">
-<h3>Step 4: Assign Structures to Cross-Sections<a class="headerlink" href="#step-4-assign-structures-to-cross-sections" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>For culverts connecting to channels:
-- Always assign outlet to the <strong>left bank</strong> of the cross-section.
-- FLO-2D exchanges discharge to cross-sections, not grid elements.</p></li>
+<li><p>Open the QGIS <strong>Data Source Manager</strong> and select <strong>Mesh</strong>.</p></li>
+<li><p>Browse to the completed run folder and select <code class="docutils literal notranslate"><span class="pre">DEPTH.OUT</span></code> as the mesh data source.</p></li>
+<li><p>Click <strong>Add</strong>. When the available mesh layers appear, select the <strong>2D mesh</strong> and click <strong>Add Layers</strong>. The 1D mesh is not needed for this exercise.</p></li>
+<li><p>Close the Data Source Manager and locate the new mesh layer in the QGIS Layers panel.</p></li>
+<li><p>The mesh initially displays bed elevation. Open the <strong>Layer Styling</strong> panel to select other results, such as depth, velocity, velocity vectors, or water surface elevation.</p></li>
+<li><p>Select a time-dependent result. At simulation time zero, the displayed results may be empty; select maximum results to confirm that data are available.</p></li>
+<li><p>Open the QGIS <strong>Temporal Controller</strong>, activate temporal navigation, and set the animation range to the full available simulation period.</p></li>
+<li><p>Advance through the time steps to review how rainfall runoff develops and moves through the model domain.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Right bank assignments can cause ambiguity. Use left bank consistently.</p>
+<p>Mesh styling and detailed interpretation of time-dependent results are covered in later sections of the tutorial.</p>
 </div>
 </section>
-<section id="step-5-label-the-hydraulic-structures">
-<h3>Step 5: Label the Hydraulic Structures<a class="headerlink" href="#step-5-label-the-hydraulic-structures" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Open <strong>Layer Properties &gt; Labels</strong> tab.</p></li>
-<li><p>Label each structure with the <strong>structure_name</strong> field.</p></li>
-<li><p>Recommended settings:
-- Font size: <strong>12 pt</strong>
-- Font color: <strong>white</strong> or a visible contrast color</p></li>
-</ul>
-</section>
-<section id="step-6-check-attribute-table-fields">
-<h3>Step 6: Check Attribute Table Fields<a class="headerlink" href="#step-6-check-attribute-table-fields" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Ensure the attribute table contains:
-- <code class="docutils literal notranslate"><span class="pre">structure_name</span></code>
-- <code class="docutils literal notranslate"><span class="pre">structure_type</span></code> (floodplain-to-floodplain, floodplain-to-channel, etc.)
-- <code class="docutils literal notranslate"><span class="pre">tailwater_switch</span></code> (default = 0)
-- <code class="docutils literal notranslate"><span class="pre">head_reference_elevation</span></code>
-- Additional culvert parameters (used in the advanced setup)</p></li>
-</ul>
-</section>
-<section id="structure-types">
-<h3>Structure Types:<a class="headerlink" href="#structure-types" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p><strong>Floodplain to Floodplain</strong>: Flow between two grid cells</p></li>
-<li><p><strong>Floodplain to Channel</strong>: Connect to left bank of a cross-section</p></li>
-<li><p><strong>Channel to Channel</strong>: Set up previously in the Channel lesson</p></li>
-</ul>
-</section>
-</section>
-<section id="next-step">
-<h2>Next Step<a class="headerlink" href="#next-step" title="Link to this heading"></a></h2>
-<p>In the next lesson, you’ll learn how to define hydraulic structure parameters in the layer attribute table and export your model data.</p>
 </section>
 <section id="review-a-project-run">
 <h2>Review a Project Run<a class="headerlink" href="#review-a-project-run" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Place holder video.  Final version not ready.</p>
+<p>Placeholder video. Final version not ready.</p>
 </div>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ebIFoGUuQcI?si=XMiARpQIkzIPD5Es"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>In this lesson, we begin working with <strong>hydraulic structures</strong> in FLO-2D. This is the first part of a two-part lesson focusing on how to display and prepare culvert data for modeling using rating tables. The second, more advanced lesson will cover converting culverts to use the <strong>Generalized Culvert Equation (CT)</strong>.</p>
-<section id="step-1-add-the-hydraulic-structures-layer">
-<h3>Step 1: Add the Hydraulic Structures Layer<a class="headerlink" href="#step-1-add-the-hydraulic-structures-layer" title="Link to this heading"></a></h3>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>Use the FLO-2D results tools to examine hydraulic conditions at selected locations and evaluate model performance.</p>
+<section id="step-1-use-the-results-tool">
+<h3>Step 1: Use the Results Tool<a class="headerlink" href="#step-1-use-the-results-tool" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>Drag and drop the hydraulic structure shapefile onto your QGIS map canvas.</p></li>
-<li><p>The default symbology may be muted. You should:
-- Change the line style to <strong>arrow</strong> to indicate flow direction.
-- Apply a brighter fill color for better visibility.</p></li>
+<li><p>Open the FLO-2D Results Tool.</p></li>
+<li><p>Select a grid element to review the simulated hydraulic results.</p></li>
+<li><p>Plot available time-dependent results, including flow depth, water surface elevation, and velocity.</p></li>
+<li><p>Examine hydrographs at selected locations to identify peak values and their timing.</p></li>
+<li><p>Review channel, hydraulic structure, and cross-section results where applicable.</p></li>
+<li><p>Compare results at different locations to understand how floodwater moves through the model domain.</p></li>
 </ul>
+</section>
+<section id="step-2-profile-tool">
+<h3>Step 2: Profile Tool<a class="headerlink" href="#step-2-profile-tool" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Open the Profile Tool and select the appropriate profile or channel feature.</p></li>
+<li><p>Generate a longitudinal profile to examine ground elevations and simulated water surface elevations.</p></li>
+<li><p>Review changes in water surface elevation along the selected profile.</p></li>
+<li><p>Identify potential flow restrictions, backwater conditions, and abrupt changes in hydraulic grade.</p></li>
+<li><p>Examine channel profiles and hydraulic structure locations where applicable.</p></li>
+</ul>
+</section>
+</section>
+<section id="review-scenarios">
+<h2>Review Scenarios<a class="headerlink" href="#review-scenarios" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Arrow symbology in QGIS applies an arrowhead at the last vertex of the polyline. This means:
-- <strong>First vertex</strong> = Inlet
-- <strong>Second vertex</strong> = Outlet</p>
+<p>Placeholder video. Final version not ready.</p>
 </div>
-</section>
-<section id="step-2-understand-flow-direction">
-<h3>Step 2: Understand Flow Direction<a class="headerlink" href="#step-2-understand-flow-direction" title="Link to this heading"></a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ebIFoGUuQcI?si=XMiARpQIkzIPD5Es"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>Compare model scenarios to evaluate how changes in terrain, hydraulic structures, or other model parameters affect flooding.</p>
+<section id="step-1-compare-model-results">
+<h3>Step 1: Compare Model Results<a class="headerlink" href="#step-1-compare-model-results" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>FLO-2D hydraulic structures move water <strong>from inlet to outlet</strong>.</p></li>
-<li><p>Even when reverse flow (e.g. tailwater conditions) is possible, always define flow in the expected direction.</p></li>
+<li><p>Load the results from the scenarios being evaluated.</p></li>
+<li><p>Confirm that the scenarios use compatible coordinate systems, grid geometry, and hydrologic conditions.</p></li>
+<li><p>Display the maximum depth, water surface elevation, and velocity maps for each scenario.</p></li>
+<li><p>Compare flood extents and identify areas where hydraulic conditions have changed.</p></li>
+<li><p>Evaluate changes in peak discharge, water surface elevation, and hydrograph timing at selected locations.</p></li>
+<li><p>Document significant differences between scenarios and identify locations requiring additional review.</p></li>
 </ul>
-</section>
-<section id="step-3-elevation-considerations">
-<h3>Step 3: Elevation Considerations<a class="headerlink" href="#step-3-elevation-considerations" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Grid cell elevations are averages of underlying raster pixels.</p></li>
-<li><p>Culverts often require <strong>invert elevations</strong>, not average elevations.</p></li>
-<li><p>Use the <strong>Identify Features</strong> tool on the elevation raster to get correct values.</p></li>
-<li><p>You may need to modify grid cell elevations at the <strong>inlet</strong>, <strong>outlet</strong>, and along small channels leading to the structures.</p></li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Use elevation correction polygons to modify grid cell elevations to match actual invert elevations.</p>
-</div>
-</section>
-<section id="examples">
-<h3>Examples:<a class="headerlink" href="#examples" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>One culvert shows 1409 (grid cell average) while the actual invert is 1405.</p></li>
-<li><p>Another structure has a weir at elevation 1396.5 to separate trash from flow before it enters a stilling basin.</p></li>
-</ul>
-</section>
-<section id="step-4-label-hydraulic-structures">
-<h3>Step 4: Label Hydraulic Structures<a class="headerlink" href="#step-4-label-hydraulic-structures" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Open the attribute table and confirm each structure has a valid name.</p></li>
-<li><p>Use the <cite>structure_name</cite> field to label structures on the map.</p></li>
-<li><p>Adjust label font size and color for clarity.</p></li>
-</ul>
-</section>
-<section id="step-5-classify-structure-types">
-<h3>Step 5: Classify Structure Types<a class="headerlink" href="#step-5-classify-structure-types" title="Link to this heading"></a></h3>
-<p>Hydraulic structures can connect:</p>
-<ul class="simple">
-<li><p>Floodplain to floodplain</p></li>
-<li><p>Floodplain to channel (assign to <strong>Left Bank</strong> only)</p></li>
-<li><p>Channel to channel</p></li>
-</ul>
-<p>Make sure structure types and flow paths are clearly identified.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>FLO-2D links structures to <strong>cross-sections</strong>, not banks. Always connect to the <strong>Left Bank</strong> when targeting channels.</p>
-</div>
-</section>
-<section id="step-6-next-steps">
-<h3>Step 6: Next Steps<a class="headerlink" href="#step-6-next-steps" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>All structures are initially set up with <strong>rating tables</strong>.</p></li>
-<li><p>The tailwater switch is typically left at <cite>0</cite> (inlet-controlled flow).</p></li>
-<li><p>More parameters (head reference, n-value, etc.) will be discussed before data export.</p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The second part of this lesson will cover converting culverts to <strong>CT structures</strong> using the Generalized Culvert Equation.</p>
-</div>
 </section>
 </section>
 </section>
@@ -324,9 +307,6 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
     <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
   </div>
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

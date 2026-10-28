@@ -2008,7 +2008,7 @@ Rainfall Data
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     0   0                           Line 1: <b>IRAINREAL, IRAINBUILDING</b>
-    3.100   0.000   1   1           Line 2: <b>RTT RAINABS RAINARF MOVINGSTORM</b>
+    3.100   0.000   1   1           Line 2: <b>RTT RAINABS IRAINARF MOVINGSTORM</b>
     R 0.000 0.000                   Line 3: <b>RAINCHAR = ‘R’ R_TIME(I) R_DISTR(I) I=1</b>
     R 0.083 0.050                   Line 3: <b>RAINCHAR = ‘R’ R_TIME(I) R_DISTR(I) I=2</b>
     R 0.167 0.110                   Line 3: <b>RAINCHAR = ‘R’ R_TIME(I) R_DISTR(I) I=3</b>
@@ -2525,21 +2525,21 @@ Infiltration Data
     3                                  Line 1:  <b>INFMETHOD</b>
     0   0.7   1   0.4  10.0  1         Line 2:  <b>ABSTR   SATI   SATF   POROS  SOILD  INFCHAN</b>
     0.1   4.3   0                      Line 3:  <b>HYDCALL   SOILALL   HYDCADJ</b>
-    0.03                               Line 4:  <b>HYDCXX   *See Notes</b>
-    R   0.03                           Line 4a: <b>INFILCHAR = ‘R’   HYDCX(IC)   *See Notes</b>
-    R   0.03   0.3   10.0              Line 4b: <b>INFILCHAR = ‘R’   HYDCX(IC)   HYDCXFINAL(IC) SOIL_DEPTHCX(IC)</b>
+    0.15                               Line 4:  <b>HYDCXX   *See Notes</b>
+    R   0.15                           Line 4a: <b>INFILCHAR = ‘R’   HYDCX(IC)   *See Notes</b>
+    R   0.15   0.03   10.0              Line 4b: <b>INFILCHAR = ‘R’   HYDCX(IC)   HYDCXFINAL(IC)   SOIL_DEPTHCX(IC)</b>
                                                 <i>IC= number of channel segments or reaches</i>
     99   0                             Line 5:  <b>SCSCNALL   ABSTR1</b>
     F  1730  0.01  4.3  0.3  0.0  0.0  10.0
-                                       Line 6:  <b>INFILCHAR = ‘F’  INFGRID(IF)  HYDC(IF)
-                                                SOILS(IF)   DTHETA(IF)  ABSTRINF(IF)
+                                       Line 6:  <b>INFILCHAR = ‘F’  INFGRID(IF)   HYDC(IF)
+                                                SOILS(IF)   DTHETA(IF)   ABSTRINF(IF)
                                                 RTIMPF(IF)   SOIL_DEPTH(IF)</b>
                                                 <i>F =  1 - number of infiltration data sets</i>
     S  320   82.00                     Line 7:  <b>INFILCHAR = ‘S’  INFGRID(IF)  SCSCN(IF)</b>
     C  2   0.04                        Line 8:  <b>INFILCHAR = ‘C’  INFCH(N)   HYDCONCH(N)</b>
     I  5.0   1.0   0.0007              Line 9:  <b>INFILCHAR = ‘I’  FHORTONI   FHORTONF DECAYA</b>
-    H  3450   3.0   0.5   0.00018      Line 10: <b>IFILCHAR = ‘H’  INFGRID(IF) FHORTI(INFGRID(IF))
-                                                FHORTF(INFGRID(IF)) DECA(INFGRID(IF))</b>
+    H  3450   3.0   0.5   0.00018      Line 10: <b>INFILCHAR = ‘H’  INFGRID(IF)   FHORTI(INFGRID(IF))
+                                                FHORTF(INFGRID(IF))   DECA(INFGRID(IF))</b>
                                                 <i>IF =  1 - number of Horton infiltration elements</i>
 
     Notes:
@@ -2569,8 +2569,8 @@ Infiltration Data
     3
     0   0.7   1   0.4   10.0  1
     0.0   4.3
-    R   0.03   0.2   5.0
-    R   0.12   0.3   10.0
+    R   0.30   0.03   5.0
+    R   0.12   0.30  10.0
     99   0
     F   1730   1.01   4.3   0.3   0.0   0.0    8.5
     F   1730   1.01   4.3   0.3   0.0   0.0  10.0
@@ -2581,7 +2581,7 @@ Infiltration Data
     S   322   82.50
     S...
     C   2   0.04
-    C  10  0.04
+    C  10   0.04
     C...
     </pre>
     </div>
@@ -2972,7 +2972,7 @@ Infiltration Data
             the decay to half the original hydraulic conductivity in 12 hours.<br>
             t = time (seconds) from when the wetting front reaches the limiting soil depth
 
-16. Horton infiltration for Build23 and on requires an initial abstraction of inches to be assigned to Line 2 of the INFIL.DAT file..
+16. Horton infiltration for Build23 and on requires an initial abstraction of inches to be assigned to Line 2 of the INFIL.DAT file.
 
 
 .. _file-evapor-dat:
