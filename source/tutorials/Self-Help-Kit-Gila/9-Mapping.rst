@@ -87,7 +87,7 @@ Use the FLO-2D results tools to examine hydraulic conditions at selected locatio
 Step 1: Use the Results Tool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Open the FLO-2D Results Tool.
+- Click the FLO-2D Results Tool button.
 - Select a grid element to review the simulated hydraulic results.
 - Plot available time-dependent results, including flow depth, water surface elevation, and velocity.
 - Examine hydrographs at selected locations to identify peak values and their timing.

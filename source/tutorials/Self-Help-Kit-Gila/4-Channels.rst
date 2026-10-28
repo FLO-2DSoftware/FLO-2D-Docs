@@ -161,7 +161,8 @@ Step 7: Save and Schematize
 - If errors occur:
 
   - Adjust the cross section position to ensure it crosses both banks.
-  - Ensure the first cross section endpoints are within the same grid elements as the bank lines.
+  - Ensure the first cross section endpoints are within the same grid elements as the bank line start points.
+  - Ensure that the left bank left bank vertices only touch one cross section.
   - Use the **Vertex Editor** to modify cross section alignment.
 
 - After resolving errors, click **Schematize Channel** again to update the schema layers.
@@ -450,3 +451,4 @@ Channel Summary and Results
 
 This video shows how to view simulation outputs, map flood depths and elevations,
 and evaluate hydraulic structure performance in FLO-2D.
+
