@@ -33,6 +33,7 @@ default_dark_mode = False
 
 # -- HTML Output -------------------------------------------------------------
 html_theme = "sphinx_rtd_theme"
+html_show_sphinx = False
 html_static_path = ['_static']
 html_css_files = [
     ('css/custom.css', {'priority': 1000})
