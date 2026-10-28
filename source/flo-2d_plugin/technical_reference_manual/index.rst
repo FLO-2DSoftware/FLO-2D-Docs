@@ -3,7 +3,7 @@
 FLO-2D Gila for QGIS Technical Reference
 ============================================
 
-FLO-2D Plugin Gila v2.0.0
+FLO-2D Plugin Gila v3.0.0
 
 Updates aim to deliver increased functionality, efficiency, and overall performance for FLO-2D modeling.
 
@@ -13,7 +13,7 @@ If the Plugin is not listed, follow the :ref:`Install Instructions <flo2d_plugin
 .. toctree::
    :hidden:
    :maxdepth: 1
-   :caption: FLO-2D Plugin Version 2.0.0:
+   :caption: FLO-2D Plugin Version 3.0.0:
 
    FLO-2D Plugin Technical Reference Manual.rst
    HDF5 Docs.rst

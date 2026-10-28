@@ -3124,10 +3124,9 @@ Channel Data
     77 4761.00                      Line 3b: <b>IEND WSELEND</b>
     C 501 498                       Line 4:  <b>CHANCHAR = ‘C’ ICONFLO1(J) ICONFLO2(J)</b>
     E 5112                          Line 5:  <b>CHANCHAR = 'E' ICHANGRID(N)</b>
-    B 12.3                          Line 6:  <b>CHANCHAR = 'B' QBASEFLOW(K)</b>
+    B 12.3                          Line 6:  <b>CHANCHAR = 'B' QBASEFLOW</b>
                                              <i>I = number of channel nodes.</i>
                                              <i>J = number of channel confluences</i>
-                                             <i>K = number of channel segments</i>
                                              <i>N = number of nofloc and noexchange data sets</i>
 
     Notes:
@@ -3140,7 +3139,6 @@ Channel Data
      Repeat 3a and 3b for each channel segment.
      Line 3, 4 and 5: Multiple lines are grouped together.
      Line 6: If a baseflow is used to report a time TIME_TO_ABOVE_BASEFLOW.OUT.
-     Place Line 6 after each segment.
      </pre>
     </div>
 
@@ -3389,12 +3387,10 @@ Channel Data
        The cross-section data is interpolated and assigned in the PROFILES program.
 
    * - QBASEFLOW(K)
-     - **i**
+     - **r**
      - **0.0 - ∞**
      - Baseflow of a channel to establish a flow condition for floodwave arrival time.
 
-       Place this line after each segment if more than one segment is used.
-       
    * - ROUGHADJ
      - **r**
      - **0.00 - 1.2**
