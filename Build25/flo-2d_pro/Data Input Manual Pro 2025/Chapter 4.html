@@ -13,7 +13,7 @@
       <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
       <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/general.css?v=c0a7eb24" />
       <link rel="stylesheet" type="text/css" href="../../_static/dark_mode_css/dark.css?v=70edf1c7" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=64b6d3dd" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=03f7f294" />
 
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
@@ -2915,10 +2915,9 @@ N 50 1 0.031 100.00 1
 77 4761.00                      Line 3b: <b>IEND WSELEND</b>
 C 501 498                       Line 4:  <b>CHANCHAR = ‘C’ ICONFLO1(J) ICONFLO2(J)</b>
 E 5112                          Line 5:  <b>CHANCHAR = 'E' ICHANGRID(N)</b>
-B 12.3                          Line 6:  <b>CHANCHAR = 'B' IBASEFLOW(K)</b>
+B 12.3                          Line 6:  <b>CHANCHAR = 'B' QBASEFLOW</b>
                                          <i>I = number of channel nodes.</i>
                                          <i>J = number of channel confluences</i>
-                                         <i>K = number of channel segments</i>
                                          <i>N = number of nofloc and noexchange data sets</i>
 
 Notes:
@@ -3117,24 +3116,17 @@ Char = B Baseflow after a segment.</p>
 <p>The increased n-values are reported in the ROUGH.OUT and CHAN.RGH files (see comment 7).</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>IBASEFLOW(K)</p></td>
-<td><p><strong>i</strong></p></td>
-<td><p><strong>0.0 - ∞</strong></p></td>
-<td><p>Baseflow of a channel to establish a flow condition for floodwave arrival time.</p>
-<p>Place this line after each segment if more than one segment is used.</p>
-</td>
-</tr>
-<tr class="row-even"><td><p>ICHANGRID(I)</p></td>
+<tr class="row-odd"><td><p>ICHANGRID(I)</p></td>
 <td><p><strong>i</strong></p></td>
 <td><p><strong>1 - NNOD</strong></p></td>
 <td><p>Channel grid element number.</p></td>
 </tr>
-<tr class="row-odd"><td><p>IEND</p></td>
+<tr class="row-even"><td><p>IEND</p></td>
 <td><p><strong>i</strong></p></td>
 <td><p><strong>1 - NNOD</strong></p></td>
 <td><p>Last channel element for which a starting water surface elevation is specified.</p></td>
 </tr>
-<tr class="row-even"><td><p>ISEDN(K)</p></td>
+<tr class="row-odd"><td><p>ISEDN(K)</p></td>
 <td><p><strong>i</strong></p></td>
 <td><p><strong>0 - 10</strong></p></td>
 <td><p>Sediment transport equation or data group for routing by size fractions for the channel segment.</p>
@@ -3146,12 +3138,12 @@ Char = B Baseflow after a segment.</p>
 <p>which includes a sediment transport equation).</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>ISTART</p></td>
+<tr class="row-even"><td><p>ISTART</p></td>
 <td><p><strong>i</strong></p></td>
 <td><p><strong>1 - NNOD</strong></p></td>
 <td><p>First channel element for which a starting water surface elevation is specified.</p></td>
 </tr>
-<tr class="row-even"><td><p>NXSECNUM(I)</p></td>
+<tr class="row-odd"><td><p>NXSECNUM(I)</p></td>
 <td><p><strong>i</strong></p></td>
 <td><p><strong>1</strong></p>
 <p><strong>to</strong></p>
@@ -3162,6 +3154,11 @@ Char = B Baseflow after a segment.</p>
 <p>Set NXSECNUM = 0, if there is no cross-section data for the channel element (I).</p>
 <p>The cross-section data is interpolated and assigned in the PROFILES program.</p>
 </td>
+</tr>
+<tr class="row-even"><td><p>QBASEFLOW(K)</p></td>
+<td><p><strong>r</strong></p></td>
+<td><p><strong>0.0 - ∞</strong></p></td>
+<td><p>Baseflow of a channel to establish a flow condition for floodwave arrival time.</p></td>
 </tr>
 <tr class="row-odd"><td><p>ROUGHADJ</p></td>
 <td><p><strong>r</strong></p></td>

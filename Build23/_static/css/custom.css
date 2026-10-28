@@ -165,44 +165,41 @@ table.docutils td {
 
 
 /* ---------------------------------------------------------
-   Dark Mode - Table and Text Styling
+   Dark Mode - Table Styling
+   Match sphinx-rtd-dark-mode colors
    --------------------------------------------------------- */
 
-/* Alternating table rows */
-html[data-theme="dark"] table.docutils tbody tr:nth-child(odd) {
-    background-color: #252d36;
+/* Odd rows */
+html[data-theme="dark"] table.docutils tbody tr:nth-child(odd),
+html[data-theme="dark"] table.docutils tbody tr:nth-child(odd) td {
+    background-color: #181818 !important;
 }
 
-html[data-theme="dark"] table.docutils tbody tr:nth-child(even) {
-    background-color: #303a45;
+/* Even rows */
+html[data-theme="dark"] table.docutils tbody tr:nth-child(even),
+html[data-theme="dark"] table.docutils tbody tr:nth-child(even) td {
+    background-color: #141414 !important;
 }
 
-/* Table cells and borders */
+/* Table text and borders */
 html[data-theme="dark"] table.docutils td,
 html[data-theme="dark"] table.docutils th {
-    background-color: transparent;
-    color: #e2e8f0;
-    border-color: #485563;
+    color: #c1c1c1 !important;
+    border-color: #262626 !important;
 }
 
 /* Table headers */
 html[data-theme="dark"] table.docutils thead th {
-    background-color: #1b2530 !important;
-    color: #ffffff;
-}
-
-/* Table links */
-html[data-theme="dark"] table.docutils a {
-    color: #72c7ff;
+    background-color: #181818 !important;
+    color: #c1c1c1 !important;
 }
 
 /* Equation numbers */
 html[data-theme="dark"] div.math .eqno {
-    color: #e2e8f0;
+    color: #c1c1c1;
 }
 
 /* Custom H4 headings */
 html[data-theme="dark"] .h4 {
-    color: #e2e8f0;
+    color: #c1c1c1;
 }
-
