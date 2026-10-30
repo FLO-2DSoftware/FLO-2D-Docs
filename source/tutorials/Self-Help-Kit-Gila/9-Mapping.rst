@@ -30,7 +30,8 @@ Step 1: Run FLO-2D MapCrafter
     - Channel Maps
 - Click **Create Maps**. The generated maps are added to the QGIS Layers panel under the project ID.
 
-.. note:: The modified ground elevation map reflects elevation adjustments made by the FLO-2D engine during the simulation, such as adjustments at outflow elements, channel banks, or storm drain rims.
+.. note:: The modified ground elevation map reflects elevation adjustments made by the FLO-2D engine during the simulation, 
+   such as adjustments at outflow elements, channel banks, or storm drain rims.
 
 .. image:: ../img/shg/9/mrev003.png
 
@@ -72,7 +73,7 @@ Step 3: Import the Results Mesh
 .. note:: Mesh styling and detailed interpretation of time-dependent results are covered in later sections of the tutorial.
 
 Review a Project Run
---------------------
+---------------------
 
 .. note:: Placeholder video. Final version not ready.
 
@@ -89,6 +90,9 @@ Step 1: Use the Results Tool
 
 - Click the FLO-2D Results Tool button.
 - Select a grid element to review the simulated hydraulic results.
+
+.. image:: ../img/shg/9/mrev008.png
+
 - Plot available time-dependent results, including flow depth, water surface elevation, and velocity.
 - Examine hydrographs at selected locations to identify peak values and their timing.
 - Review channel, hydraulic structure, and cross-section results where applicable.
