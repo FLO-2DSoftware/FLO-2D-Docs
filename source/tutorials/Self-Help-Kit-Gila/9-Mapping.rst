@@ -53,6 +53,34 @@ Step 2: Set the Results Folder
 Step 3: Import the Results Mesh
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. dropdown:: Troubleshooting: HDF5 Mesh Import with Channel Data
+
+   If the FLO-2D model contains channels, the mesh import may fail because
+   the ``Channel`` group in ``TIMDEP.HDF5`` has a different array size
+   than the other datasets.
+
+   To resolve this issue:
+
+   #. Open **HDFView**.
+   #. Open ``TIMDEP.HDF5`` in **Read/Write** mode.
+
+   .. image:: ../img/shg/9/mrev009.png
+
+   #. Expand the HDF5 hierarchy and locate the ``Channel`` group.
+   #. Right-click the ``Channel Water Surface Elevation`` group and select **Delete**.
+
+   .. image:: ../img/shg/9/mrev010.png
+
+   #. Close the file.
+   #. Return to QGIS and import the mesh.
+
+   .. note::
+
+      Make a backup of ``TIMDEP.HDF5`` before deleting the
+      ``Channel`` group. This workaround removes the incompatible
+      channel dataset without modifying the original simulation results
+      stored elsewhere.
+
 - Open the QGIS **Data Source Manager** and select the **Mesh Tab**.
 - Browse to the completed run folder and select ``DEPTH.OUT`` as the mesh data source.
 - Click **Add**. When the available mesh layers appear, select the **2D mesh** and click **Add Layers**. The 1D mesh is not needed for this exercise.
