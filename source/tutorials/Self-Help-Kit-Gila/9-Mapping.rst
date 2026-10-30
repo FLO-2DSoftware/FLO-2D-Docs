@@ -56,7 +56,7 @@ Step 3: Import the Results Mesh
 .. dropdown:: Troubleshooting: HDF5 Mesh Import with Channel Data
 
    If the FLO-2D model contains channels, the mesh import may fail because
-   the ``Channel`` group in ``TIMDEP.HDF5`` has a different array size
+   the ``Channel`` dataset in ``TIMDEP.HDF5`` has a different array size
    than the other datasets.
 
    To resolve this issue:
@@ -66,20 +66,13 @@ Step 3: Import the Results Mesh
 
    .. image:: ../img/shg/9/mrev009.png
 
-   #. Expand the HDF5 hierarchy and locate the ``Channel`` group.
+   #. Expand the HDF5 hierarchy and locate the ``Channel`` dataset.
    #. Right-click the ``Channel Water Surface Elevation`` group and select **Delete**.
 
    .. image:: ../img/shg/9/mrev010.png
 
    #. Close the file.
    #. Return to QGIS and import the mesh.
-
-   .. note::
-
-      Make a backup of ``TIMDEP.HDF5`` before deleting the
-      ``Channel`` group. This workaround removes the incompatible
-      channel dataset without modifying the original simulation results
-      stored elsewhere.
 
 - Open the QGIS **Data Source Manager** and select the **Mesh Tab**.
 - Browse to the completed run folder and select ``DEPTH.OUT`` as the mesh data source.
@@ -90,15 +83,118 @@ Step 3: Import the Results Mesh
 
 .. image:: ../img/shg/9/mrev005.png
 
-- The mesh initially displays bed elevation. Open the **Layer Styling** panel to select other results, such as depth, velocity, velocity vectors, or water surface elevation.
+.. dropdown:: Troubleshooting: Where Is the Mesh Layer?
 
-.. image:: ../img/shg/9/mrev007.png
+   Unlike FLO-2D imported layers, the mesh layer is not automatically
+   added to the top of the QGIS Layers panel. It may be difficult to
+   locate in projects containing many layers.
 
-- Select a time-dependent result. At simulation time zero, the displayed results may be empty; select maximum results to confirm that data are available.
-- Open the QGIS **Temporal Controller**, activate temporal navigation, and set the animation range to the full available simulation period.
-- Advance through the time steps to review how rainfall runoff develops and moves through the model domain.
+   To locate the mesh layer:
 
-.. note:: Mesh styling and detailed interpretation of time-dependent results are covered in later sections of the tutorial.
+   #. Open the QGIS **Locator Bar**.
+   #. Search for ``Mesh`` to filter the available layers.
+   #. Select the mesh layer from the search results to locate it
+      in the Layers panel.
+   #. This is a good time to position the ``Mesh`` layer below the project layers
+      and above the elevation and aerial layers.
+
+   .. image:: ../img/shg/9/mrev011.png
+
+.. dropdown:: Mesh Display Options
+
+   The mesh layer initially displays the **Bed Elevation** dataset.
+   Use the QGIS **Layer Styling** panel to display and customize
+   FLO-2D simulation results.
+
+   **Task 1: Open the Layer Styling Panel**
+
+   #. Select the mesh layer in the QGIS Layers panel.
+   #. Open the **Layer Styling** panel.
+   #. Dock the **Layer Styling** panel with the **FLO-2D** panel.
+   #. Expand the panel until the result visibility icons are displayed.
+
+   **Task 2: Select and Display Results**
+
+   #. Locate the available result datasets in the **Layer Styling** panel.
+   #. Select a scalar result, such as depth, velocity magnitude, or
+      water surface elevation.
+   #. Click the **Color** icon to show or hide the scalar results.
+   #. Click the **Arrow** icon to show or hide velocity vectors.
+   #. Select **Maximum** results to display peak simulation conditions,
+      or **Time** results to display values at individual time steps.
+
+   **Task 3: Style Scalar Results**
+
+   #. Select the desired scalar result dataset.
+   #. Open the **Style** tab.
+   #. Select a color ramp to represent the result values.
+   #. Adjust the classification ranges and minimum and maximum values
+      as needed.
+
+   **Task 4: Style Velocity Vectors**
+
+   #. Enable the velocity vectors using the **Arrow** icon.
+   #. Open the **Vector Style** tab.
+   #. Adjust the arrow size, scaling, and appearance to improve
+      visualization of flow direction and magnitude.
+
+   **Task 5: Review Mesh Display Options**
+
+   #. Switch between **Maximum** and **Time** results to compare
+      peak conditions with time-dependent simulation results.
+   #. Enable or disable mesh edges to display the computational grid.
+   #. Use the QGIS **Temporal Controller** to advance through the
+      simulation and review changes in flow conditions.
+
+
+.. dropdown:: Mesh Temporal Control Options
+
+   The QGIS **Temporal Controller** allows users to visualize
+   time-dependent FLO-2D simulation results and animate changes
+   in flow depth, velocity, and water surface elevation.
+
+   **Task 1: Select Time-Dependent Results**
+
+   #. Select the mesh layer in the QGIS Layers panel.
+   #. Open the **Layer Styling** panel.
+   #. Select a time-dependent result, such as flow depth, velocity
+      magnitude, or water surface elevation.
+   #. If the results are not visible at simulation time zero,
+      select **Maximum** results to confirm that data are available.
+
+   **Task 2: Configure the Temporal Controller**
+
+   #. Open the QGIS **Temporal Controller** panel.
+   #. Select **Animated Temporal Navigation** to enable animation controls.
+   #. Set the animation range to the full available simulation period.
+   #. Configure the time step interval to match the available
+      FLO-2D results.
+
+   **Task 3: Review Time-Dependent Results**
+
+   #. Use the **Next Frame** and **Previous Frame** controls to
+      advance through individual time steps.
+   #. Click **Play** to animate the simulation results.
+   #. Observe how rainfall runoff develops and moves through
+      the model domain.
+   #. Pause the animation at any time to examine flow conditions
+      at a specific simulation time.
+
+   **Task 4: Adjust Animation Settings**
+
+   #. Adjust the animation speed using the **Frames per Second**
+      setting.
+   #. Change the temporal range to focus on a specific portion
+      of the simulation.
+   #. Switch between depth, velocity, and water surface elevation
+      results to compare hydraulic conditions over time.
+
+   .. note::
+
+      The temporal animation displays results at the time intervals
+      stored in the mesh dataset. These intervals may differ from
+      the computational time steps used by FLO-2D.
+
 
 Review a Project Run
 ---------------------
