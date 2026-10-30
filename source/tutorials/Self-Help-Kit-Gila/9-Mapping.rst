@@ -14,44 +14,42 @@ Load Results and Maps
 
 Load the maps and results to prepare for the project review.
 
-Step 1: Run FLO-2D MapCrafter
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. Dropdown:: FLO-2D MapCrafter
 
-- Open FLO-2D MapCrafter.
-- Select the completed model run folder and enter a project ID.
-- Verify the coordinate reference system. 
-- Review the MapCrafter simulation summary and completeness information.
+   - Open FLO-2D MapCrafter.
+   - Select the completed model run folder and enter a project ID.
+   - Verify the coordinate reference system. 
+   - Review the MapCrafter simulation summary and completeness information.
 
-.. image:: ../img/shg/9/mrev001.png
+   .. image:: ../img/shg/9/mrev001.png
 
-- Open the Flood Maps options. Select the maps needed for the review, including:
-    - Ground and Modified Ground Elevation
-    - Basic Flood Maps
-    - Channel Maps
-- Click **Create Maps**. The generated maps are added to the QGIS Layers panel under the project ID.
+   - Open the Flood Maps options. Select the maps needed for the review, including:
+      - Ground and Modified Ground Elevation
+      - Basic Flood Maps
+      - Channel Maps
+   - Click **Create Maps**. The generated maps are added to the QGIS Layers panel under the project ID.
 
-.. note:: The modified ground elevation map reflects elevation adjustments made by the FLO-2D engine during the simulation, 
-   such as adjustments at outflow elements, channel banks, or storm drain rims.
+   .. note:: The modified ground elevation map reflects elevation adjustments made by the FLO-2D engine during the simulation, 
+      such as adjustments at outflow elements, channel banks, or storm drain rims.
 
-.. image:: ../img/shg/9/mrev003.png
+   .. image:: ../img/shg/9/mrev003.png
 
 
-- Move the MapCrafter group to a convenient position in the Layers panel. 
+   - Move the MapCrafter group to a convenient position in the Layers panel. 
 
-.. image:: ../img/shg/9/mrev006.png
+   .. image:: ../img/shg/9/mrev006.png
 
-Step 2: Set the Results Folder
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. dropdown:: Set the Results Folder
 
-- In the FLO-2D panel, locate the results folder path.
-- Click the **...** browse button and select the completed simulation run folder.
-- The Results Tool can now access time-dependent output for grid elements and other modeled features. 
-- Detailed results plots are covered in the next section.
+   - In the FLO-2D panel, locate the results folder path.
+   - Click the **...** browse button and select the completed simulation run folder.
+   - The Results Tool can now access time-dependent output for grid elements and other modeled features. 
+   - Detailed results plots are covered in the next section.
 
-.. image:: ../img/shg/9/mrev002.png
+   .. image:: ../img/shg/9/mrev002.png
 
-Step 3: Import the Results Mesh
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Mesh Mapping Tool
+---------------------
 
 .. dropdown:: Troubleshooting: HDF5 Mesh Import with Channel Data
 
@@ -191,9 +189,12 @@ Step 3: Import the Results Mesh
 
    .. note::
 
-      The temporal animation displays results at the time intervals
-      stored in the mesh dataset. These intervals may differ from
-      the computational time steps used by FLO-2D.
+      **Changing the Temporal Controller from Hours to Minutes**
+
+      To display the animation time steps in minutes instead of hours,
+      open the **Temporal Controller** settings and change the
+      **Step Unit** from **Hours** to **Minutes**. Adjust the
+      **Step** value as needed to match the desired animation interval.
 
 
 Review a Project Run
