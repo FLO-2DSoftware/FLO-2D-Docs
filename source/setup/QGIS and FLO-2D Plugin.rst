@@ -307,41 +307,44 @@ Tutorial data is located here:
    :width: 600px
    :class: bordered-img
 
-Setup Older FLO-2D Plugins (Not Required)
--------------------------------------------
 
-Older versions of the FLO-2D Plugin can be downloaded from the following link:
+.. dropdown:: Previous FLO-2D Plugins (Not Required)
+   :heading: h2
+
+   Previous versions of the FLO-2D Plugin can be downloaded from the following link:
 
    .. raw:: html
 
       <a href="https://flo-2d.com/qgis-plugin/" target="_blank" rel="noopener noreferrer">Download FLO-2D Plugin</a>
 
-.. note::
-   A dedicated QGIS User Profile is recommended when working with older versions of the FLO-2D Plugin.
+   .. note::
 
-1. Open QGIS and access the **Settings** menu.
-2. Select **New Profile**.
+      A dedicated QGIS User Profile is recommended when working with previous versions of the FLO-2D Plugin.
 
-.. image:: img/Instructions/qgisplugin005.png
-   :width: 600px
-   :class: bordered-img
+   1. Open QGIS and access the **Settings** menu.
+   2. Select **New Profile**.
 
-3. QGIS loads in a default state. All required settings must be configured for the new profile.
+   .. image:: img/Instructions/qgisplugin005.png
+      :width: 600px
+      :class: bordered-img
 
-.. image:: img/Instructions/qgisplugin006.png
-   :width: 600px
-   :class: bordered-img
+   3. QGIS loads in a default state. All required settings must be configured for the new profile.
 
-4. Add the required previous build of the FLO-2D Plugin by opening the **Plugin Manager**.
-5. Select the **Install from ZIP** tab.
-6. Navigate to the downloaded ZIP file and select the plugin.
-7. Accept the security warning when prompted.
+   .. image:: img/Instructions/qgisplugin006.png
+      :width: 600px
+      :class: bordered-img
 
-.. image:: img/Instructions/qgisplugin007.png
-   :width: 600px
-   :class: bordered-img
+   4. Add the required previous build of the FLO-2D Plugin by opening the **Plugin Manager**.
+   5. Select the **Install from ZIP** tab.
+   6. Navigate to the downloaded ZIP file and select the plugin.
+   7. Accept the security warning when prompted.
 
-.. note::
-   The FLO-2D plugin toolbar now reflects version 0.10.115.
+   .. image:: img/Instructions/qgisplugin007.png
+      :width: 600px
+      :class: bordered-img
 
-Return to :ref:`Step 2 <flo2d_plugin_step>` to complete the QGIS setup and install any additional required plugins.
+   .. note::
+
+      The FLO-2D Plugin toolbar now reflects version 0.10.115.
+
+   Return to :ref:`Step 2 <flo2d_plugin_step>` to complete the QGIS setup and install any additional required plugins.
