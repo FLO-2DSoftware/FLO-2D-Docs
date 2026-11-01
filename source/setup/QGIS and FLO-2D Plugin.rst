@@ -308,8 +308,10 @@ Tutorial data is located here:
    :class: bordered-img
 
 
-.. dropdown:: Previous FLO-2D Plugins (Not Required)
-   :heading: h2
+Previous FLO-2D Plugins (Not Required)
+-----------------------------------------
+
+.. dropdown:: Open Instructions
 
    Previous versions of the FLO-2D Plugin can be downloaded from the following link:
 
