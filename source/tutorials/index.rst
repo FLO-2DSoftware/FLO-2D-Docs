@@ -7,7 +7,6 @@ FLO-2D Gila Tutorials
    :maxdepth: 1
 
    Self-Help-Kit-Gila/index
-   afma-prereq/index
    GeoPackage/index
    hydrowkshp/index
    Tailings/index
