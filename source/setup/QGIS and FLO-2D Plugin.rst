@@ -322,7 +322,7 @@ The FLO-2D installation includes example projects and supporting data in the fol
 
 **Online Tutorials**
 
-Step-by-step tutorials and modeling exercises are available in the :doc:`FLO-2D Documentation <../tutorials/index>`.
+Step-by-step tutorials and modeling exercises are available in the :doc:`FLO-2D Tutorials <../tutorials/index>`.
 
 These tutorials provide instructions for creating, running, and reviewing FLO-2D models in QGIS.
 
