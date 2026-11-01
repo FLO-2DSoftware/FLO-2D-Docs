@@ -297,51 +297,74 @@ Step 4: Recommended Plugins
    :width: 600px
    :class: bordered-img
 
+Step 5. Complete the QGIS Setup
+--------------------------------------
 
-This concludes the installation and setup.  Please restart QGIS to save the profile.
-Tutorial data is located here:
+The FLO-2D Plugin installation and QGIS configuration are now complete.
 
-``C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials``
+#. **Close QGIS** to save the new QGIS User Profile and its settings.
+#. **Restart QGIS** using the newly configured profile.
+#. Confirm that the FLO-2D Plugin toolbar is available.
+#. Open the FLO-2D tutorial projects to begin learning the modeling workflow.
+
+**Tutorial Project Files**
+
+The FLO-2D installation includes example projects and supporting data in the following folder:
+
+.. code-block:: text
+
+   C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials
 
 .. image:: img/Instructions/image9.png
    :width: 600px
    :class: bordered-img
 
-Setup Older FLO-2D Plugins (Not Required)
--------------------------------------------
+**Online Tutorials**
 
-Older versions of the FLO-2D Plugin can be downloaded from the following link:
+Step-by-step tutorials and modeling exercises are available in the :doc:`FLO-2D Tutorials <../tutorials/index>`.
+
+These tutorials provide instructions for creating, running, and reviewing FLO-2D models in QGIS.
+
+
+Previous FLO-2D Plugins (Not Required)
+-----------------------------------------
+
+.. dropdown:: Open Instructions
+
+   Previous versions of the FLO-2D Plugin can be downloaded from the following link:
 
    .. raw:: html
 
       <a href="https://flo-2d.com/qgis-plugin/" target="_blank" rel="noopener noreferrer">Download FLO-2D Plugin</a>
 
-.. note::
-   A dedicated QGIS User Profile is recommended when working with older versions of the FLO-2D Plugin.
+   .. note::
 
-1. Open QGIS and access the **Settings** menu.
-2. Select **New Profile**.
+      A dedicated QGIS User Profile is recommended when working with previous versions of the FLO-2D Plugin.
 
-.. image:: img/Instructions/qgisplugin005.png
-   :width: 600px
-   :class: bordered-img
+   1. Open QGIS and access the **Settings** menu.
+   2. Select **New Profile**.
 
-3. QGIS loads in a default state. All required settings must be configured for the new profile.
+   .. image:: img/Instructions/qgisplugin005.png
+      :width: 600px
+      :class: bordered-img
 
-.. image:: img/Instructions/qgisplugin006.png
-   :width: 600px
-   :class: bordered-img
+   3. QGIS loads in a default state. All required settings must be configured for the new profile.
 
-4. Add the required previous build of the FLO-2D Plugin by opening the **Plugin Manager**.
-5. Select the **Install from ZIP** tab.
-6. Navigate to the downloaded ZIP file and select the plugin.
-7. Accept the security warning when prompted.
+   .. image:: img/Instructions/qgisplugin006.png
+      :width: 600px
+      :class: bordered-img
 
-.. image:: img/Instructions/qgisplugin007.png
-   :width: 600px
-   :class: bordered-img
+   4. Add the required previous build of the FLO-2D Plugin by opening the **Plugin Manager**.
+   5. Select the **Install from ZIP** tab.
+   6. Navigate to the downloaded ZIP file and select the plugin.
+   7. Accept the security warning when prompted.
 
-.. note::
-   The FLO-2D plugin toolbar now reflects version 0.10.115.
+   .. image:: img/Instructions/qgisplugin007.png
+      :width: 600px
+      :class: bordered-img
 
-Return to :ref:`Step 2 <flo2d_plugin_step>` to complete the QGIS setup and install any additional required plugins.
+   .. note::
+
+      The FLO-2D Plugin toolbar now reflects version 0.10.115.
+
+   Return to :ref:`Step 2 <flo2d_plugin_step>` to complete the QGIS setup and install any additional required plugins.
