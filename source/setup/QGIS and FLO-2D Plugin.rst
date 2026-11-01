@@ -298,14 +298,33 @@ Step 4: Recommended Plugins
    :class: bordered-img
 
 
-This concludes the installation and setup.  Please restart QGIS to save the profile.
-Tutorial data is located here:
+Step 5. Complete the QGIS Setup
+--------------------------------------
 
-``C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials``
+The FLO-2D Plugin installation and QGIS configuration are now complete.
+
+#. **Close QGIS** to save the new QGIS User Profile and its settings.
+#. **Restart QGIS** using the newly configured profile.
+#. Confirm that the FLO-2D Plugin toolbar is available.
+#. Open the FLO-2D tutorial projects to begin learning the modeling workflow.
+
+**Tutorial Project Files**
+
+The FLO-2D installation includes example projects and supporting data in the following folder:
+
+.. code-block:: text
+
+   C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials
 
 .. image:: img/Instructions/image9.png
    :width: 600px
    :class: bordered-img
+
+**Online Tutorials**
+
+Step-by-step tutorials and modeling exercises are available in the :doc:`FLO-2D Documentation <../tutorials/index>`.
+
+These tutorials provide instructions for creating, running, and reviewing FLO-2D models in QGIS.
 
 
 Previous FLO-2D Plugins (Not Required)
