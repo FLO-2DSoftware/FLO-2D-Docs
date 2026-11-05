@@ -6355,12 +6355,45 @@ Floodplain Cross-section Data
          the specified primary direction, excluding contributions from
          adjacent directions.
 
-       Discharge may be positive or negative depending on whether flow
-       is entering or leaving the cross section.
+   * - NODX(N,J)
+     - **i**
+     - **1 - NNOD**
+     - Array of grid elements that constitute a given floodplain cross-section (see comment 2 and 3).
 
-       .. raw:: html
-        
-         <div style="height: 20px; "><b>Examples</b></div>
+   * - NNXSEC(N)
+     - **i**
+     - **1 - 1,000**
+     - Number of floodplain elements in a given cross-section.
+
+       - The selected cross-section grid elements do not have to extend across the entire grid system.
+
+       - Only one grid element is necessary to constitute a floodplain cross-section.
+
+       - The cross-section can include a channel element.
+
+       - If one of the floodplain cross-section grid elements is a channel element, the cross-section discharge hydrograph reported in HYCROSS will include the channel element discharge.
+
+   * - NXPRT
+     - **s**
+     - **0 or 1**
+     - If NXPRT = 1, the cross-section summary information including cross-section discharge,
+
+       average cross-section velocity, width and depth will be reported in the BASE.OUT file.
+
+.. raw:: html
+
+    <br><br>
+
+**Instructional Comments for the FPXSEC.DAT File**
+
+1. The floodplain grid elements can be combined to define a cross-section across a floodplain or alluvial fan.
+   Each floodplain cross-section is assigned flow discharge in only one flow direction given by IFLO.
+   This direction includes the flow contribution from the two contiguous directions.
+   The cross-section routine can be used to isolate the results for a single element.
+   
+   Discharge may be positive or negative depending on whether flow is entering or leaving the cross section.
+
+    *TABLE 4.3. CROSS-SECTION FLOW DIRECTION EXAMPLES*
 
        .. list-table::
           :header-rows: 1
@@ -6381,81 +6414,6 @@ Floodplain Cross-section Data
           * - -6
             - Southeast
             - 6 (SE) only
-
-   * - NODX(N,J)
-     - **i**
-     - **1 - NNOD**
-     - Array of grid elements that constitute a given floodplain cross-section (see comment 2 and 3).
-
-   * - NNXSEC(N)
-     - **i**
-     - **1 - 1,000**
-     - Number of floodplain elements in a given cross-section.
-
-       The selected cross-section grid elements do not have to extend across the entire grid system.
-
-       Only one grid element is necessary to constitute a floodplain cross-section.
-
-       The cross-section can include a channel element.
-
-       If one of the floodplain cross-section grid elements is a channel element, the cross-section
-
-       discharge hydrograph reported in HYCROSS will include the channel element discharge.
-
-   * - NXPRT
-     - **s**
-     - **0 or 1**
-     - If NXPRT = 1, the cross-section summary information including cross-section discharge,
-
-       average cross-section velocity, width and depth will be reported in the BASE.OUT file.
-
-.. raw:: html
-
-    <br><br>
-
-**Instructional Comments for the FPXSEC.DAT File**
-
-1. The floodplain grid elements can be combined to define a cross-section across a floodplain or alluvial fan.
-   Each floodplain cross-section is assigned flow discharge in only one flow direction given by IFLO.
-   This direction includes the flow contribution from the two contiguous directions.
-   The cross-section routine can be used to isolate the results for a single element.
-   The flow directions and associated discharge components are as follows:
-
-    *TABLE 4.3. CROSS-SECTION FLOW DIRECTION*
-
-    .. list-table::
-       :widths: 40 60
-       :header-rows: 1
-
-       * - **Selected Cross-Section Flow**
-         - **Flow Direction Components Added to the Cross-Section Discharge**
-
-       * - north = 1
-         - northeast 5 and northwest 8
-
-       * - east = 2
-         - northeast 5 and southeast 6
-
-       * - south = 3
-         - southeast 6 and southwest 7
-
-       * - west = 4
-         - southwest 7 and northwest 8
-
-       * - northeast = 5
-         - north 1 and east 2
-
-       * - southeast = 6
-         - east 2 and south 3
-
-       * - southwest = 7
-         - south 3 and west 4
-
-       * - northwest = 8
-         - west 4 and north 1
-
-  For the diagonal flow directions (5 thru 8), the discharge for the grid element between the two diagonal corners will be added to the cross-section
-  total discharge for the selected flow direction.
 
 2. If a grid element is listed more than once, the simulation will fail and the ERROR.CHK file will report the redundant element.
 
