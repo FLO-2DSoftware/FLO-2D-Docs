@@ -6346,33 +6346,39 @@ Floodplain Cross-section Data
    * - IFLO(N)
      - **i**
      - **1 - 8**
-     - Defines the general direction that the flow is expected to cross the floodplain
+     - IFLO specifies the primary flow direction used to calculate
+       discharge across a floodplain cross section.
 
-       cross-section (See comment 1).
+       - **Positive IFLO values (1 to 8):** Include discharge in the
+         specified primary direction and the two adjacent flow directions.
+       - **Negative IFLO values (-1 to -8):** Include discharge only in
+         the specified primary direction, excluding contributions from
+         adjacent directions.
 
-       IFLO is set to one of the following:
+       Discharge may be positive or negative depending on whether flow
+       is entering or leaving the cross section.
 
-       1 flow to the north 5 flow to the northeast
+       **Examples**
 
-       2 flow to the east 6 flow to the southeast
+       .. list-table::
+          :header-rows: 1
+          :widths: 15 30 55
 
-       3 flow to the south 7 flow to the southwest
-
-       4 flow to the west 8 flow to the northwest
-
-       If the output is desired from only one direction (i.e.
-
-       without the discharge components from the other component flow directions), set IFLO as negative.
-
-       IFLO is set to the following:
-
-       -1 flow from south only -5 flow from southwest only
-
-       -2 flow from west only -6 flow from northwest only
-
-       -3 flow from north only -7 flow from northeast only
-
-       -4 flow from east only -8 flow from southeast only
+          * - IFLO
+            - Primary direction
+            - Directions included
+          * - 1
+            - North
+            - 1 (N), 5 (NE), 8 (NW)
+          * - -1
+            - North
+            - 1 (N) only
+          * - 6
+            - Southeast
+            - 6 (SE), 2 (E), 3 (S)
+          * - -6
+            - Southeast
+            - 6 (SE) only
 
    * - NODX(N,J)
      - **i**
