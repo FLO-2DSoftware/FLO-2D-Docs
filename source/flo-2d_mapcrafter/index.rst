@@ -1,3 +1,5 @@
+.. _mapcrafter:
+
 FLO-2D MapCrafter
 ==================
 

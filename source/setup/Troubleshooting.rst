@@ -138,7 +138,7 @@ ______________
 Python error messages have clues about the location of the error.
 
 In this case, the error points to a problem with the FLO-2D Plugin.  Use the contact form to send a request to fix the
-but.
+error.
 
 Some error messages are related incorrect data in the QGIS vector or raster layers.  In those cases, use Chat GPT or the
 Stack Exchange to get ideas on how to fix a layer.

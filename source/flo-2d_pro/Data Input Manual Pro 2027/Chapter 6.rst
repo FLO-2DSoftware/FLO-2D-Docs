@@ -3,7 +3,7 @@
 Chapter 6: Post-processor Programs
 ==================================
 
-There are four post-processor programs: FLO-2D MapCrafter, MAXPLOT, HYDROG and PROFILES that display the output data graphically.
+There are four post-processor programs: `FLO-2D MapCrafter <mapcrafter_>`_, MAXPLOT, HYDROG and PROFILES that display the output data graphically.
 FLO-2D MapCrafter and MAXPLOT display the flood inundation depth and velocity plots.
 Channel flood simulations or floodplain cross-sections are required to view hydrographs in HYDROG.
 A channel model is also required to view the channel water surface profiles in PROFILES.
@@ -96,13 +96,11 @@ the Main Menu bar.
 FLO-2D MapCrafter
 ---------------------
 
+
 FLO-2D MapCrafter is the primary post processing tool for FLO-2D software.
 It is a QGIS plugin and can be accessed via the QGIS Plugin Directory using the Plugin Manager.
-The MapCrafter documentation is maintained on the MapCrafter wiki.
 
-.. raw:: html
-
-    <a href="https://github.com/FLO-2DSoftware/FLO-2DMapCrafter/wiki" target="_blank">FLO-2D MapCrafter Wiki</a>
+The MapCrafter documentation is maintained `Here <mapcrafter_>`_.
 
 MapCrafter allows users to visualize FLO-2D results in a GIS environment.
 Users can create flood inundation maps, velocity maps, and other thematic maps based on FLO-2D simulation outputs.
