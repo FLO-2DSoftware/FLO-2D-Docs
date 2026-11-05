@@ -6345,7 +6345,7 @@ Floodplain Cross-section Data
 
    * - IFLO(N)
      - **i**
-     - **1 - 8**
+     - **-8 to 8 (exclude 0)**
      - IFLO specifies the primary flow direction used to calculate
        discharge across a floodplain cross section.
 
@@ -6357,6 +6357,10 @@ Floodplain Cross-section Data
 
        Discharge may be positive or negative depending on whether flow
        is entering or leaving the cross section.
+
+       .. raw:: html
+ 
+        <div style="height: 12px;"></div>
 
        **Examples**
 
