@@ -6359,10 +6359,8 @@ Floodplain Cross-section Data
        is entering or leaving the cross section.
 
        .. raw:: html
- 
-        <div style="height: 12px;"></div>
-
-       **Examples**
+        
+        <div style="height: 20px; "><b>Examples</b></div>
 
        .. list-table::
           :header-rows: 1
