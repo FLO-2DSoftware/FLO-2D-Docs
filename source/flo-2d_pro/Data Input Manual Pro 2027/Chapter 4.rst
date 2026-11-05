@@ -6354,6 +6354,7 @@ Floodplain Cross-section Data
        - **Negative IFLO values (-1 to -8):** Include discharge only in
          the specified primary direction, excluding contributions from
          adjacent directions.
+       - (see Comment 1)  
 
    * - NODX(N,J)
      - **i**
@@ -6414,6 +6415,8 @@ Floodplain Cross-section Data
           * - -6
             - Southeast
             - 6 (SE) only
+
+   .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter4/flodir001.png
 
 2. If a grid element is listed more than once, the simulation will fail and the ERROR.CHK file will report the redundant element.
 
