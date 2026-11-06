@@ -451,15 +451,15 @@ Channel Confluence Editor
 Channel Editor Troubleshooting
 ------------------------------
 
-This section describes common errors and warnings associated
-with channel schematization, interpolation, cross-section
-geometry, and channel data.
-
-Each error is assigned a unique CH-XXX identifier to help
-identify the problem and its corrective action.
+This section describes common errors and warnings associated with
+channel schematization, interpolation, cross-section geometry, and
+channel data. Each error has a CH-XXX identifier, a description of
+the problem, and corrective steps.
 
 Channel Schematization
 ______________________
+
+.. _ch-001:
 
 CH-001: Cross Section Does Not Intersect Both Banks
 +++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -476,6 +476,8 @@ and right channel banks.
 
 .. image:: ../../img/User-Cross-Sections-Widget/user100.png
 
+
+.. _ch-002:
 
 CH-002: Left Bank Intersects a Cross Section More Than Once
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -496,6 +498,8 @@ cross-section line at more than one location.
 .. image:: ../../img/User-Cross-Sections-Widget/user101.png
 
 
+.. _ch-003:
+
 CH-003: Incorrect Starting Cross-Section Alignment
 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -514,48 +518,7 @@ are not located within the corresponding grid elements.
 .. image:: ../../img/User-Cross-Sections-Widget/user102.png
 
 
-Channel Interpolation
-_____________________
-
-CH-004: Insufficient Channel Width
-++++++++++++++++++++++++++++++++++
-
-**Problem:** The channel width is insufficient for
-interpolation.
-
-**Solution:**
-
-1. Run the Channel Check tool.
-2. Select the affected channel from the report.
-3. Inspect the left and right bank alignment.
-4. Move the banks farther apart where necessary.
-5. Save the edits.
-6. Run Schematize and Interpolate again.
-
-.. image:: ../../img/User-Cross-Sections-Widget/user103.png
-
-.. image:: ../../img/User-Cross-Sections-Widget/user104.png
-
-
-CH-005: Missing Manning's n-Value
-+++++++++++++++++++++++++++++++++
-
-**Problem:** One or more channel cross sections are missing
-Manning's roughness coefficients.
-
-**Solution:**
-
-1. Open the Cross Sections attribute table.
-2. Inspect the Manning's n-value field.
-3. Enter the required roughness coefficient for each
-   affected cross section.
-4. Save the changes and run Interpolate again.
-
-.. image:: ../../img/User-Cross-Sections-Widget/user105.png
-
-
-Schematized Channel Data
-________________________
+.. _ch-006:
 
 CH-006: Schematized Channel Segments Layer Is Empty
 +++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -576,6 +539,8 @@ schematized channel segments.
 .. image:: ../../img/User-Cross-Sections-Widget/user106.png
 
 
+.. _ch-007:
+
 CH-007: Channel Segment Missing
 +++++++++++++++++++++++++++++++
 
@@ -594,6 +559,8 @@ in the schematized channel data.
 .. image:: ../../img/User-Cross-Sections-Widget/user107.png
 
 
+.. _ch-008:
+
 CH-008: No Schematized Channel Cross Sections
 +++++++++++++++++++++++++++++++++++++++++++++
 
@@ -611,8 +578,67 @@ for the selected channel element or segment.
 .. image:: ../../img/User-Cross-Sections-Widget/user108.png
 
 
+Channel Interpolation
+_____________________
+
+.. _ch-004:
+
+CH-004: Insufficient Channel Width
+++++++++++++++++++++++++++++++++++
+
+**Problem:** The channel width is insufficient for
+interpolation.
+
+**Solution:**
+
+1. Run the Channel Check tool.
+2. Select the affected channel from the report.
+3. Inspect the left and right bank alignment.
+4. Move the banks farther apart where necessary.
+5. Save the edits.
+6. Run Schematize and Interpolate again.
+
+.. image:: ../../img/User-Cross-Sections-Widget/user103.png
+
+.. image:: ../../img/User-Cross-Sections-Widget/user104.png
+
+If interpolation fails because of insufficient channel width, the
+Channel Check tool can identify the affected channel. Select the
+channel from the report, correct the bank alignment, and run
+Schematize and Interpolate again.
+
+.. image:: ../../img/User-Cross-Sections-Widget/user060.png
+
+.. image:: ../../img/User-Cross-Sections-Widget/User013.png
+
+.. image:: ../../img/User-Cross-Sections-Widget/user059.png
+
+.. image:: ../../img/User-Cross-Sections-Widget/user061.png
+
+
+.. _ch-005:
+
+CH-005: Missing Manning's n-Value
++++++++++++++++++++++++++++++++++
+
+**Problem:** One or more channel cross sections are missing
+Manning's roughness coefficients.
+
+**Solution:**
+
+1. Open the Cross Sections attribute table.
+2. Inspect the Manning's n-value field.
+3. Enter the required roughness coefficient for each
+   affected cross section.
+4. Save the changes and run Interpolate again.
+
+.. image:: ../../img/User-Cross-Sections-Widget/user105.png
+
+
 Cross-Section Geometry Data
 ___________________________
+
+.. _ch-009:
 
 CH-009: Rectangular Cross Section Has No Data
 +++++++++++++++++++++++++++++++++++++++++++++
@@ -634,6 +660,8 @@ are missing.
 .. image:: ../../img/User-Cross-Sections-Widget/user109.png
 
 
+.. _ch-010:
+
 CH-010: Variable Cross Section Has No Data
 ++++++++++++++++++++++++++++++++++++++++++
 
@@ -653,6 +681,8 @@ are missing.
 
 .. image:: ../../img/User-Cross-Sections-Widget/user110.png
 
+
+.. _ch-011:
 
 CH-011: Trapezoidal Cross Section Has No Data
 +++++++++++++++++++++++++++++++++++++++++++++
@@ -674,6 +704,8 @@ are missing.
 .. image:: ../../img/User-Cross-Sections-Widget/user111.png
 
 
+.. _ch-012:
+
 CH-012: Natural Cross Section Has No Data
 +++++++++++++++++++++++++++++++++++++++++
 
@@ -692,22 +724,4 @@ data are missing.
 
 .. image:: ../../img/User-Cross-Sections-Widget/user112.png
 
-Troubleshooting Interpolator
-_______________________________
 
-1. If a cross section data is bad, the interpolator will not run.  An error message may appear.
-
-.. image:: ../../img/User-Cross-Sections-Widget/user060.png
-
-2. Check to see if the channel width is correct by running the clicking the channel check button.
-
-.. image:: ../../img/User-Cross-Sections-Widget/User013.png
-
-3. If the channel is not wide enough, a dialog box will load that allows the user to load the channel that needs to be
-   widened.
-
-.. image:: ../../img/User-Cross-Sections-Widget/user059.png
-
-4. Move the left or right bank further away from each other and run the schematize and interpolator again.
-
-.. image:: ../../img/User-Cross-Sections-Widget/user061.png
