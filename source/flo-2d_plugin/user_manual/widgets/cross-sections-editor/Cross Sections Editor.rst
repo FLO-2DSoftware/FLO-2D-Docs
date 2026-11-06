@@ -9,11 +9,7 @@ It is a compilation and detailed outline of the tools available and how to use t
 
 .. note:: For a channel tutorial series, please see the Gila Self-Help Tutorials.
 
-          |tut|
-
-.. |tut| raw:: html
-
-   <a href ="https://youtube.com/playlist?list=PLkT3KNZwX6zkkfrM5Pcdvt7WqZuHWYU4c&feature=shared" target="_blank">Gila Self-Help Tutorials</a>
+   :ref:`Channel Tutorial <channel-tutorial>`
 
 .. image:: ../../img/Widgets/crosssections.png
 
