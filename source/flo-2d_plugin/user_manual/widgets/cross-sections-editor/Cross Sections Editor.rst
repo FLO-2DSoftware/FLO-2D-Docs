@@ -102,122 +102,128 @@ The finished product will look something like the following image.
 .. image:: ../../img/User-Cross-Sections-Widget/User010.png
 
 
-Natural Cross Section - Station Elevation
-_________________________________________________
+Natural Cross Section
+______________________
 
-The preferred and easiest way to sample elevation data for a cross section is by using the FLO-2D Sample Elevation tool.
-Once the cross sections are digitized onto the map, the Sample Elevation tools are used to sample elevation data from a
-raster into Stations/Elevation
-data sets for all or individual cross sections.
+.. dropdown:: Expand
 
-This section will focus on natural channel geometry (N type).
+   The preferred and easiest way to sample elevation data for a cross section is by using the FLO-2D Sample Elevation tool.
+   Once the cross sections are digitized onto the map, the Sample Elevation tools are used to sample elevation data from a
+   raster into Stations/Elevation
+   data sets for all or individual cross sections.
 
-1. Set the elevation raster as  
-   the Source Raster Layer and use either button to sample one or all cross sections.
+   This section will focus on natural channel geometry (N type).
 
-.. image:: ../../img/User-Cross-Sections-Widget/User011.png
+   1. Set the elevation raster as  
+      the Source Raster Layer and use either button to sample one or all cross sections.
 
-2. The station elevation data is  
-   limited to the point where the left and right bank intersect the cross section.
+   .. image:: ../../img/User-Cross-Sections-Widget/User011.png
 
-3. If too much or too little data  
-   has been sampled, adjust the left or right bank alignment and sample the elevation again.
+   2. The station elevation data is  
+      limited to the point where the left and right bank intersect the cross section.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User012.png
+   3. If too much or too little data  
+      has been sampled, adjust the left or right bank alignment and sample the elevation again.
+
+   .. image:: ../../img/User-Cross-Sections-Widget/User012.png
 
 
 Rectangular Cross Sections
 ____________________________
 
-#. Set up the Editor Widget.
-   Type = Rectangular base n = 0.020
+.. dropdown:: Expand
 
-.. image:: ../../img/User-Cross-Sections-Widget/User027.png
+   #. Set up the Editor Widget.
+      Type = Rectangular base n = 0.020
+
+   .. image:: ../../img/User-Cross-Sections-Widget/User027.png
 
 
-#. Click the create  
-   cross section button.
+   #. Click the create  
+      cross section button.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User028.png
+   .. image:: ../../img/User-Cross-Sections-Widget/User028.png
+      
+   #. Create the first cross section by clicking the left bank point,
+      followed by the right bank point. Right-click to finish the line
+      and press Enter to skip the attribute entry.
+      The attributes will be assigned later.
+
+
+   .. image:: ../../img/User-Cross-Sections-Widget/User029.png
    
-#. Create the first cross section by clicking the left bank point,
-   followed by the right bank point. Right-click to finish the line
-   and press Enter to skip the attribute entry.
-   The attributes will be assigned later.
+   #. Click Save to load  
+      the cross section into the Table Editor.
+
+   .. image:: ../../img/User-Cross-Sections-Widget/User030.png
 
 
-.. image:: ../../img/User-Cross-Sections-Widget/User029.png
-  
-#. Click Save to load  
-   the cross section into the Table Editor.
+   #. Fill the bank elevation data with the sample elevation tool.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User030.png
+      For more detailed instructions
+      See :ref:`Sample bank data <sample-bank-data>`.
 
+   .. image:: ../../img/User-Cross-Sections-Widget/user064.png
 
-#. Fill the bank elevation data with the sample elevation tool.
+   #. Use the table editor to fill the width and depth variables for each cross section.  It is also possible to use the
+      Attribute table editor for the Advanced Layers.
 
-   For more detailed instructions
-   See :ref:`Sample bank data <sample-bank-data>`.
+   .. image:: ../../img/User-Cross-Sections-Widget/user063.png
+   
+   .. note:: A quick way to modify channel width and depth values is to edit them directly in the Advanced Layers attribute table.
 
-.. image:: ../../img/User-Cross-Sections-Widget/user064.png
-
-#. Use the table editor to fill the width and depth variables for each cross section.  It is also possible to use the
-   Attribute table editor for the Advanced Layers.
-
-.. image:: ../../img/User-Cross-Sections-Widget/user063.png
-  
-.. note:: A quick way to modify channel width and depth values is to edit them directly in the Advanced Layers attribute table.
-
-          .. image:: ../../img/User-Cross-Sections-Widget/user062.png
+            .. image:: ../../img/User-Cross-Sections-Widget/user062.png
 
 
 Trapezoidal Cross Sections
 ______________________________
 
-#. Set up the Editor Widget.
-   Type = Trapezoidal base n = 0.020
+.. dropdown:: Expand
 
-.. image:: ../../img/User-Cross-Sections-Widget/user065.png
-  
+   #. Set up the Editor Widget.
+      Type = Trapezoidal base n = 0.020
 
-#. Click the create  
-   cross section button.
-
-.. image:: ../../img/User-Cross-Sections-Widget/User028.png
- 
-
-#. Create the first cross section by clicking the left bank point,
-   followed by the right bank point. Right-click to finish the line
-   and press Enter to skip the attribute entry.
-   The attributes will be assigned later.
-
-.. image:: ../../img/User-Cross-Sections-Widget/user066.png
-  
-
-#. Click Save to load the  
-   cross section into the Table Editor.
-
-.. image:: ../../img/User-Cross-Sections-Widget/User030.png
-
-
-#. Fill the bank elevation data with the sample elevation tool.
-
-   For more detailed instructions
-   See :ref:`Sample Bank Data <sample-bank-data>`.
-
-.. image:: ../../img/User-Cross-Sections-Widget/user064.png
-
-  
-#. Fill the remaining width, depth, and side slope with the table editor.
-
-   It is also possible to use the attribute editor and the Advanced layers.
-
-.. image:: ../../img/User-Cross-Sections-Widget/user068.png
-
-.. note:: A quick way to modify the width, depth, and side slope variables is to use the Advanced Layers Attribute table.
-
-          .. image:: ../../img/User-Cross-Sections-Widget/user067.png
+   .. image:: ../../img/User-Cross-Sections-Widget/user065.png
    
+
+   #. Click the create  
+      cross section button.
+
+   .. image:: ../../img/User-Cross-Sections-Widget/User028.png
+   
+
+   #. Create the first cross section by clicking the left bank point,
+      followed by the right bank point. Right-click to finish the line
+      and press Enter to skip the attribute entry.
+      The attributes will be assigned later.
+
+   .. image:: ../../img/User-Cross-Sections-Widget/user066.png
+   
+
+   #. Click Save to load the  
+      cross section into the Table Editor.
+
+   .. image:: ../../img/User-Cross-Sections-Widget/User030.png
+
+
+   #. Fill the bank elevation data with the sample elevation tool.
+
+      For more detailed instructions
+      See :ref:`Sample Bank Data <sample-bank-data>`.
+
+   .. image:: ../../img/User-Cross-Sections-Widget/user064.png
+
+   
+   #. Fill the remaining width, depth, and side slope with the table editor.
+
+      It is also possible to use the attribute editor and the Advanced layers.
+
+   .. image:: ../../img/User-Cross-Sections-Widget/user068.png
+
+   .. note:: A quick way to modify the width, depth, and side slope variables is to use the Advanced Layers Attribute table.
+
+            .. image:: ../../img/User-Cross-Sections-Widget/user067.png
+      
 
 Schematize 
 -------------------
@@ -225,69 +231,73 @@ Schematize
 Natural Cross Sections
 ____________________________
 
-#. Once the banks and cross sections are complete, the next step is to Schematize the channels.
-   Click the Schematize button.
+.. dropdown:: Expand
 
-.. image:: ../../img/User-Cross-Sections-Widget/User013.png
+   #. Once the banks and cross sections are complete, the next step is to Schematize the channels.
+      Click the Schematize button.
+
+   .. image:: ../../img/User-Cross-Sections-Widget/User013.png
 
 
-#. Errors and warning will appear if  
-   something is not configured correctly.
+   #. Errors and warning will appear if  
+      something is not configured correctly.
 
-   See the :ref:`Troubleshooting <channel-troubleshooting>` if a schematize error pops up.
+      See the :ref:`Troubleshooting <channel-troubleshooting>` if a schematize error pops up.
 
-#. If the channel  
-   schematize process was successful, the log message panel will report the schematize information.
+   #. If the channel  
+      schematize process was successful, the log message panel will report the schematize information.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User018.png
+   .. image:: ../../img/User-Cross-Sections-Widget/User018.png
 
-#. The schematized layers now have complete left bank, right bank, and cross section data.
+   #. The schematized layers now have complete left bank, right bank, and cross section data.
 
-.. note:: It is a good time to realign the left and right banks if they do not have good alignment.
+   .. note:: It is a good time to realign the left and right banks if they do not have good alignment.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User019.png
+   .. image:: ../../img/User-Cross-Sections-Widget/User019.png
 
 Schematize Prismatic
 ___________________________________________________________
 
-1. Once the banks and cross sections are complete, the next step is to Schematize the channels.
-   Click the Schematize button.
+.. dropdown:: Expand
+      
+   1. Once the banks and cross sections are complete, the next step is to Schematize the channels.
+      Click the Schematize button.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User013.png
-
-
-2. Errors and warning will appear if
-   something is not configured correctly.
-
-.. image:: ../../img/User-Cross-Sections-Widget/User014.png
+   .. image:: ../../img/User-Cross-Sections-Widget/User013.png
 
 
-3. At the beginning of each segment,
-   the left bank node, right bank node must be in the same cell as the end nodes on the cross sections.
+   2. Errors and warning will appear if
+      something is not configured correctly.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User015.png
+   .. image:: ../../img/User-Cross-Sections-Widget/User014.png
 
 
-4. If the cross section does
-   not touch the left or right bank, the following message will appear.
+   3. At the beginning of each segment,
+      the left bank node, right bank node must be in the same cell as the end nodes on the cross sections.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User016.png
+   .. image:: ../../img/User-Cross-Sections-Widget/User015.png
 
-5. Correct this condition by
-   making sure each cross section crosses both banks.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User017.png
+   4. If the cross section does
+      not touch the left or right bank, the following message will appear.
 
-6. If the channel
-   schematize process was successful, the log message panel will report the schematize information.
+   .. image:: ../../img/User-Cross-Sections-Widget/User016.png
 
-.. image:: ../../img/User-Cross-Sections-Widget/User018.png
+   5. Correct this condition by
+      making sure each cross section crosses both banks.
 
-7. The schematized layers now have complete left bank, right bank, and cross section data.
+   .. image:: ../../img/User-Cross-Sections-Widget/User017.png
 
-.. note:: It is a good time to realign the left and right banks if they do not have good alignment.
+   6. If the channel
+      schematize process was successful, the log message panel will report the schematize information.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User019.png
+   .. image:: ../../img/User-Cross-Sections-Widget/User018.png
+
+   7. The schematized layers now have complete left bank, right bank, and cross section data.
+
+   .. note:: It is a good time to realign the left and right banks if they do not have good alignment.
+
+   .. image:: ../../img/User-Cross-Sections-Widget/User019.png
 
 Interpolate
 --------------
@@ -295,37 +305,41 @@ Interpolate
 Natural Cross sections
 ________________________
 
-1. Inspect the cross section n-value field to ensure all n-values are present.
-   If missing, fill the required n-value to the field.
+.. dropdown:: Expand
 
-2. Right click on the Cross Sections layer to open the Attribute Table.
+   1. Inspect the cross section n-value field to ensure all n-values are present.
+      If missing, fill the required n-value to the field.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User058.png
+   2. Right click on the Cross Sections layer to open the Attribute Table.
+
+   .. image:: ../../img/User-Cross-Sections-Widget/User058.png
 
 
-3. Click the interpolate button to run the interpolator.
+   3. Click the interpolate button to run the interpolator.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User013.png
+   .. image:: ../../img/User-Cross-Sections-Widget/User013.png
 
-4. If the interpolation is performed correctly, the following message will appear.
+   4. If the interpolation is performed correctly, the following message will appear.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User026.png
+   .. image:: ../../img/User-Cross-Sections-Widget/User026.png
 
 
 Prismatic Cross sections
 ______________________________
 
-1. Click the interpolate button to run the interpolator.
+.. dropdown:: Expand
 
-.. image:: ../../img/User-Cross-Sections-Widget/User013.png
+   1. Click the interpolate button to run the interpolator.
 
-2. If the interpolation is performed correctly, the following message will appear.
+   .. image:: ../../img/User-Cross-Sections-Widget/User013.png
 
-.. image:: ../../img/User-Cross-Sections-Widget/User026.png
+   2. If the interpolation is performed correctly, the following message will appear.
 
-3. An interpolated prismatic channel looks like this.
+   .. image:: ../../img/User-Cross-Sections-Widget/User026.png
 
-.. image:: ../../img/User-Cross-Sections-Widget/User046.png
+   3. An interpolated prismatic channel looks like this.
+
+   .. image:: ../../img/User-Cross-Sections-Widget/User046.png
 
 
 .. _sample-bank-data:
@@ -351,37 +365,41 @@ Two sampling methods are available:
 Sample Elevations from Raster
 _____________________________
 
-This is the preferred method for defining channel bank elevations
-when a suitable elevation raster is available.
+.. dropdown:: Expand
 
-#. Select the **From Raster** radio button in the Sample Elevation tool.
+   This is the preferred method for defining channel bank elevations
+   when a suitable elevation raster is available.
 
-#. Select an individual cross section or all cross sections to sample.
+   #. Select the **From Raster** radio button in the Sample Elevation tool.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User042.png
+   #. Select an individual cross section or all cross sections to sample.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User043.png
+   .. image:: ../../img/User-Cross-Sections-Widget/User042.png
+
+   .. image:: ../../img/User-Cross-Sections-Widget/User043.png
 
 
 Sample Elevations from Grid
 ___________________________
 
-This method uses computational grid elevations to define the channel
-bank elevations. It should only be used when a suitable elevation
-raster is unavailable.
+.. dropdown:: Expand
 
-#. Select the **From Grid** radio button in the Sample Elevation tool.
+   This method uses computational grid elevations to define the channel
+   bank elevations. It should only be used when a suitable elevation
+   raster is unavailable.
 
-#. Select an individual cross section or all cross sections to sample.
+   #. Select the **From Grid** radio button in the Sample Elevation tool.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User038.png
+   #. Select an individual cross section or all cross sections to sample.
 
-.. note::
+   .. image:: ../../img/User-Cross-Sections-Widget/User038.png
 
-   Grid elevations may not accurately represent the channel banks.
-   Because grid elevations can represent an average of the surrounding
-   terrain, they may differ from the actual bank elevations and produce
-   an incorrect channel bed profile.
+   .. note::
+
+      Grid elevations may not accurately represent the channel banks.
+      Because grid elevations can represent an average of the surrounding
+      terrain, they may differ from the actual bank elevations and produce
+      an incorrect channel bed profile.
 
 
 Review the Channel Profile
