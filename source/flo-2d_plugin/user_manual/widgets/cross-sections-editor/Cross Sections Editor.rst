@@ -202,7 +202,7 @@ ______________________________
 #. Fill the bank elevation data with the sample elevation tool.
 
    For more detailed instructions
-   See :ref:`Sample bank data <sample-bank-data>`.
+   See :ref:`Sample Bank Data <sample-bank-data>`.
 
 .. image:: ../../img/User-Cross-Sections-Widget/user064.png
 
