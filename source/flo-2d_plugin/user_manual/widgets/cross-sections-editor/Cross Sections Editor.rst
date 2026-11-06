@@ -165,40 +165,23 @@ Schematize and Interpolate
 Schematize
 ______________
 
-1. Once the banks and cross sections are complete, the next step is to Schematize the channels.
+#. Once the banks and cross sections are complete, the next step is to Schematize the channels.
    Click the Schematize button.
 
 .. image:: ../../img/User-Cross-Sections-Widget/User013.png
 
 
-2. Errors and warning will appear if  
+#. Errors and warning will appear if  
    something is not configured correctly.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User014.png
+   See the :ref:`Troubleshooting <channel-troubleshooting>` if a schematize error pops up.
 
-
-3. At the beginning of each segment,  
-   the left bank node, right bank node must be in the same cell as the end nodes on the cross sections.
-
-.. image:: ../../img/User-Cross-Sections-Widget/User015.png
-  
-
-4. If the cross section does  
-   not touch the left or right bank, the following message will appear.
-
-.. image:: ../../img/User-Cross-Sections-Widget/User016.png
-
-5. Correct this condition by  
-   making sure each cross section crosses both banks.
-
-.. image:: ../../img/User-Cross-Sections-Widget/User017.png
-
-6. If the channel  
+#. If the channel  
    schematize process was successful, the log message panel will report the schematize information.
 
 .. image:: ../../img/User-Cross-Sections-Widget/User018.png
 
-7. The schematized layers now have complete left bank, right bank, and cross section data.
+#. The schematized layers now have complete left bank, right bank, and cross section data.
 
 .. note:: It is a good time to realign the left and right banks if they do not have good alignment.
 
@@ -223,27 +206,6 @@ ______________________
 4. If the interpolation is performed correctly, the following message will appear.
 
 .. image:: ../../img/User-Cross-Sections-Widget/User026.png
-
-
-Troubleshooting cross sections
-_______________________________
-
-1. If a cross section data is bad, the interpolator will not run.  An error message may appear.
-
-.. image:: ../../img/User-Cross-Sections-Widget/user060.png
-
-2. Check to see if the channel width is correct by running the clicking the channel check button.
-
-.. image:: ../../img/User-Cross-Sections-Widget/User013.png
-
-3. If the channel is not wide enough, a dialog box will load that allows the user to load the channel that needs to be
-   widened.
-
-.. image:: ../../img/User-Cross-Sections-Widget/user059.png
-
-4. Move the left or right bank further away from each other and run the schematize and interpolator again.
-
-.. image:: ../../img/User-Cross-Sections-Widget/user061.png
 
 
 Prismatic Cross Sections
@@ -497,7 +459,7 @@ Channel Confluence Editor
 
 
 
-.. _channel_editor_troubleshooting:
+.. _channel-troubleshooting:
 
 Channel Editor Troubleshooting
 ------------------------------
@@ -744,3 +706,25 @@ data are missing.
 .. image:: ../../img/User-Cross-Sections-Widget/user112.png
 
 
+Do we need this
+------------------
+
+Troubleshooting cross sections
+_______________________________
+
+1. If a cross section data is bad, the interpolator will not run.  An error message may appear.
+
+.. image:: ../../img/User-Cross-Sections-Widget/user060.png
+
+2. Check to see if the channel width is correct by running the clicking the channel check button.
+
+.. image:: ../../img/User-Cross-Sections-Widget/User013.png
+
+3. If the channel is not wide enough, a dialog box will load that allows the user to load the channel that needs to be
+   widened.
+
+.. image:: ../../img/User-Cross-Sections-Widget/user059.png
+
+4. Move the left or right bank further away from each other and run the schematize and interpolator again.
+
+.. image:: ../../img/User-Cross-Sections-Widget/user061.png
