@@ -9,15 +9,16 @@ This section provides a comprehensive reference to the tools and features availa
 Rather than presenting a step-by-step workflow, it describes the individual tools, their functions, 
 and how to use them. Users can navigate directly to specific topics as needed.
 
+.. contents:: Quick Navigation
+   :depth: 2
+   :local:
+
+.. image:: ../../img/Widgets/crosssections.png
+
 For a channel tutorial series, please see the Gila Self-Help Tutorials.
 
    :ref:`Channel Tutorial <channel-tutorial>`
 
-.. image:: ../../img/Widgets/crosssections.png
-
-.. contents:: Quick Navigation
-   :depth: 2
-   :local:
 
 Digitize Channels
 --------------------
