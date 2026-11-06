@@ -314,62 +314,6 @@ ________________________
 Prismatic Cross sections
 ______________________________
 
-There are many ways to edit the bank data for R and T type channels.
-This section will show two different ways to create and correct bank elevation data.
-
-.. image:: ../../img/User-Cross-Sections-Widget/User037.png
-
-
-The bank elevation data can be sampled in two methods.
-
-Method 1: Elevation from Grid
-++++++++++++++++++++++++++++++++
-
-The first method is from the Grid layer and the second is from the elevation Raster.
-
-1. Click the From Grid
-   radio button and select Individual or all cross sections to sample.
-
-.. image:: ../../img/User-Cross-Sections-Widget/User038.png
-
-
-The bank data is the reference point to determine the bed elevation of the channel so it can influence the profile.
-For example, if one uses the grid element elevation to set the bank elevation, the channel profile is wrong.
-The Grid method should only be used if a good raster is not available.
-
-2. Click the channel profile tool
-   and the left bank to check the profile of the channel.
-
-.. image:: ../../img/Buttons/run005.png
-
-
-.. image:: ../../img/User-Cross-Sections-Widget/User040.png
-
-
-This is not the preferred method since a grid elevation for a grid is always somewhere in between the bank of the channel
-and the internal channel
-data.
-
-.. image:: ../../img/User-Cross-Sections-Widget/User041.png
-
-
-Method 2: Elevation from Raster
-+++++++++++++++++++++++++++++++++++
-
-This method is used if an elevation raster can be used to define the bank elevation.
-
-1. Click the From Raster radio
-   button and select Individual or all cross sections to sample.
-
-.. image:: ../../img/User-Cross-Sections-Widget/User042.png
-
-
-.. image:: ../../img/User-Cross-Sections-Widget/User043.png
-
-
-Interpolate Prismatic
-_________________________
-
 1. Click the interpolate button to run the interpolator.
 
 .. image:: ../../img/User-Cross-Sections-Widget/User013.png
@@ -382,6 +326,85 @@ _________________________
 
 .. image:: ../../img/User-Cross-Sections-Widget/User046.png
 
+
+.. _sample-bank-data:
+
+Sample Bank Elevations
+-----------------------
+
+Bank elevations are used to define the channel geometry and establish
+the reference elevations for the channel bed. For rectangular (R) and
+trapezoidal (T) cross sections, the Sample Elevation tool can assign
+bank elevations using either an elevation raster or the computational grid.
+
+Two sampling methods are available:
+
+- **From Raster:** Samples bank elevations from an elevation raster.
+  This is the preferred method when suitable elevation data are available.
+
+- **From Grid:** Uses computational grid elevations to assign bank
+  elevations. This method is an alternative when suitable raster data
+  are unavailable.
+
+
+Sample Elevations from Raster
+_____________________________
+
+This is the preferred method for defining channel bank elevations
+when a suitable elevation raster is available.
+
+#. Select the **From Raster** radio button in the Sample Elevation tool.
+
+#. Select an individual cross section or all cross sections to sample.
+
+.. image:: ../../img/User-Cross-Sections-Widget/User042.png
+
+.. image:: ../../img/User-Cross-Sections-Widget/User043.png
+
+
+Sample Elevations from Grid
+___________________________
+
+This method uses computational grid elevations to define the channel
+bank elevations. It should only be used when a suitable elevation
+raster is unavailable.
+
+#. Select the **From Grid** radio button in the Sample Elevation tool.
+
+#. Select an individual cross section or all cross sections to sample.
+
+.. image:: ../../img/User-Cross-Sections-Widget/User038.png
+
+.. note::
+
+   Grid elevations may not accurately represent the channel banks.
+   Because grid elevations can represent an average of the surrounding
+   terrain, they may differ from the actual bank elevations and produce
+   an incorrect channel bed profile.
+
+
+Review the Channel Profile
+__________________________
+
+After sampling bank elevations, use the Channel Profile tool to
+inspect the resulting channel profile.
+
+#. Click the **Channel Profile** tool.
+
+.. image:: ../../img/Buttons/run005.png
+
+#. Select the left bank to display the channel profile.
+
+.. image:: ../../img/User-Cross-Sections-Widget/User040.png
+
+The following example illustrates how grid-based bank elevations
+can affect the channel profile.
+
+.. image:: ../../img/User-Cross-Sections-Widget/User041.png
+
+If the sampled elevations do not adequately represent the channel
+banks, review the elevation source and resample the bank elevations
+as necessary.
 
 Channel n-Value Interpolator
 ------------------------------
