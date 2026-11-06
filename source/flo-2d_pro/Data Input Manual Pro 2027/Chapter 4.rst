@@ -6416,9 +6416,9 @@ Floodplain Cross-section Data
             - Southeast
             - 6 (SE) only
 
-   The example in Table 4.3 is depicted below.  The case on the left shows if `1` or `N` is the selected direction, the accumulated flow from all 3 directions
-   is used to create the cross section discharge. The case on the right `-6` or `primary SE` is selected, then only the flow in the primary direction is used to 
-   create the cross section discharge. The primary discharge method is a `user requested` feature to facilitate design models and to study channel bank flow results
+   The example in Table 4.3 is depicted below.  The case on the left shows if **1** or **N** is the selected direction, the accumulated flow from all 3 directions
+   is used to create the cross section discharge. The case on the right **-6** or **primary SE** is selected, then only the flow in the primary direction is used to 
+   create the cross section discharge. The primary discharge method is a **user requested** feature to facilitate design models and to study channel bank flow results
    in segmented detail.
 
    .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter4/flodir001.png
