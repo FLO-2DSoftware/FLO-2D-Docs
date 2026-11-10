@@ -15,9 +15,7 @@ and how to use them. Users can navigate directly to specific topics as needed.
 
 .. image:: ../../img/Widgets/crosssections.png
 
-For a channel tutorial series, please see the Gila Self-Help Tutorials.
-
-   :ref:`Channel Tutorial <channel-tutorial>`
+For a channel tutorial series, please see the :ref:`Gila Self-Help Channel Tutorials <channel-tutorial>`.
 
 
 Digitize Channels
@@ -40,8 +38,8 @@ The elevation raster symbology can be edited so that the channel is well defined
 
 .. image:: ../../img/User-Cross-Sections-Widget/User057.png
 
-Digitize Left and Right Banks
--------------------------------
+Left and Right Banks
+_________________________
 
 #. Select the
    Left Bank Line layer.
@@ -65,8 +63,8 @@ Digitize Left and Right Banks
 .. image:: ../../img/User-Cross-Sections-Widget/User007.png
 
 
-Digitize Cross Sections
--------------------------
+Cross Sections
+____________________
 
 To create natural cross sections, the cross sections should be numbered consecutively from upstream to downstream for
 each channel segment.
@@ -100,6 +98,9 @@ The cross sections shown in the following image have been digitized.
 The finished product will look something like the following image.
 
 .. image:: ../../img/User-Cross-Sections-Widget/User010.png
+
+Cross Section Geometry
+_____________________________
 
 .. dropdown:: Natural Cross Section
 
@@ -213,10 +214,10 @@ The finished product will look something like the following image.
             .. image:: ../../img/User-Cross-Sections-Widget/user067.png
       
 
-Schematize 
+Schematize Channel
 -------------------
 
-.. dropdown:: Natural Cross Sections
+.. dropdown:: Natural Channel
 
    #. Once the banks and cross sections are complete, the next step is to Schematize the channels.
       Click the Schematize button.
@@ -241,7 +242,7 @@ Schematize
    .. image:: ../../img/User-Cross-Sections-Widget/User019.png
 
 
-.. dropdown:: Schematize Prismatic
+.. dropdown:: Prismatic Channel
       
    1. Once the banks and cross sections are complete, the next step is to Schematize the channels.
       Click the Schematize button.
@@ -285,7 +286,7 @@ Schematize
 Interpolate
 --------------
 
-.. dropdown:: Natural Cross sections
+.. dropdown:: Natural Cross Sections
 
    1. Inspect the cross section n-value field to ensure all n-values are present.
       If missing, fill the required n-value to the field.
