@@ -375,25 +375,25 @@ Two sampling methods are available:
 
 .. dropdown:: Review the Channel Profile
 
-After sampling bank elevations, use the Channel Profile tool to
-inspect the resulting channel profile.
+   After sampling bank elevations, use the Channel Profile tool to
+   inspect the resulting channel profile.
 
-#. Click the **Channel Profile** tool.
+   #. Click the **Channel Profile** tool.
 
-.. image:: ../../img/Buttons/run005.png
+   .. image:: ../../img/Buttons/run005.png
 
-#. Select the left bank to display the channel profile.
+   #. Select the left bank to display the channel profile.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User040.png
+   .. image:: ../../img/User-Cross-Sections-Widget/User040.png
 
-The following example illustrates how grid-based bank elevations
-can affect the channel profile.
+   The following example illustrates how grid-based bank elevations
+   can affect the channel profile.
 
-.. image:: ../../img/User-Cross-Sections-Widget/User041.png
+   .. image:: ../../img/User-Cross-Sections-Widget/User041.png
 
-If the sampled elevations do not adequately represent the channel
-banks, review the elevation source and resample the bank elevations
-as necessary.
+   If the sampled elevations do not adequately represent the channel
+   banks, review the elevation source and resample the bank elevations
+   as necessary.
 
 Channel n-Value Interpolator
 ------------------------------
