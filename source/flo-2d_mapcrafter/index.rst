@@ -18,12 +18,12 @@ easy customization.
    :maxdepth: 2
    :caption: Contents:
 
-   Flood Maps/flood-maps.rst
-   Sediment Transport Maps/sediment-maps.rst
-   Mudflow Maps/mudflow-maps.rst
-   Two-Phase Maps/two-phase-maps.rst
-   Velocity Vector Maps/velocity-vector-maps.rst
-   Hazard Maps/hazard-maps.rst
-   Storm Drain Plots/storm-drain-plots.rst
-   Layouts/layouts.rst
+   1flood-maps.rst
+   2sediment-maps.rst
+   3mudflow-maps.rst
+   4two-phase-maps.rst
+   5velocity-vector-maps.rst
+   6hazard-maps.rst
+   7storm-drain-plots.rst
+   8layouts.rst
 
