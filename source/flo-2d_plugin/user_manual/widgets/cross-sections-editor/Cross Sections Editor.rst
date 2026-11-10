@@ -101,11 +101,7 @@ The finished product will look something like the following image.
 
 .. image:: ../../img/User-Cross-Sections-Widget/User010.png
 
-
-Natural Cross Section
-______________________
-
-.. dropdown:: Expand
+.. dropdown:: Natural Cross Section
 
    The preferred and easiest way to sample elevation data for a cross section is by using the FLO-2D Sample Elevation tool.
    Once the cross sections are digitized onto the map, the Sample Elevation tools are used to sample elevation data from a
@@ -127,11 +123,7 @@ ______________________
 
    .. image:: ../../img/User-Cross-Sections-Widget/User012.png
 
-
-Rectangular Cross Sections
-____________________________
-
-.. dropdown:: Expand
+.. dropdown:: Rectangular Cross Sections
 
    #. Set up the Editor Widget.
       Type = Rectangular base n = 0.020
@@ -174,11 +166,7 @@ ____________________________
 
             .. image:: ../../img/User-Cross-Sections-Widget/user062.png
 
-
-Trapezoidal Cross Sections
-______________________________
-
-.. dropdown:: Expand
+.. dropdown:: Trapezoidal Cross Sections
 
    #. Set up the Editor Widget.
       Type = Trapezoidal base n = 0.020
@@ -228,10 +216,7 @@ ______________________________
 Schematize 
 -------------------
 
-Natural Cross Sections
-____________________________
-
-.. dropdown:: Expand
+.. dropdown:: Natural Cross Sections
 
    #. Once the banks and cross sections are complete, the next step is to Schematize the channels.
       Click the Schematize button.
@@ -255,10 +240,8 @@ ____________________________
 
    .. image:: ../../img/User-Cross-Sections-Widget/User019.png
 
-Schematize Prismatic
-___________________________________________________________
 
-.. dropdown:: Expand
+.. dropdown:: Schematize Prismatic
       
    1. Once the banks and cross sections are complete, the next step is to Schematize the channels.
       Click the Schematize button.
@@ -302,10 +285,7 @@ ___________________________________________________________
 Interpolate
 --------------
 
-Natural Cross sections
-________________________
-
-.. dropdown:: Expand
+.. dropdown:: Natural Cross sections
 
    1. Inspect the cross section n-value field to ensure all n-values are present.
       If missing, fill the required n-value to the field.
@@ -324,10 +304,7 @@ ________________________
    .. image:: ../../img/User-Cross-Sections-Widget/User026.png
 
 
-Prismatic Cross sections
-______________________________
-
-.. dropdown:: Expand
+.. dropdown:: Prismatic Cross sections
 
    1. Click the interpolate button to run the interpolator.
 
@@ -362,10 +339,7 @@ Two sampling methods are available:
   are unavailable.
 
 
-Sample Elevations from Raster
-_____________________________
-
-.. dropdown:: Expand
+.. dropdown:: Sample Elevations from Raster
 
    This is the preferred method for defining channel bank elevations
    when a suitable elevation raster is available.
@@ -379,10 +353,7 @@ _____________________________
    .. image:: ../../img/User-Cross-Sections-Widget/User043.png
 
 
-Sample Elevations from Grid
-___________________________
-
-.. dropdown:: Expand
+.. dropdown:: Sample Elevations from Grid
 
    This method uses computational grid elevations to define the channel
    bank elevations. It should only be used when a suitable elevation
@@ -401,9 +372,7 @@ ___________________________
       terrain, they may differ from the actual bank elevations and produce
       an incorrect channel bed profile.
 
-
-Review the Channel Profile
-__________________________
+.. dropdown:: Review the Channel Profile
 
 After sampling bank elevations, use the Channel Profile tool to
 inspect the resulting channel profile.
@@ -474,10 +443,7 @@ channel schematization, interpolation, cross-section geometry, and
 channel data. Each error has a CH-XXX identifier, a description of
 the problem, and corrective steps.
 
-Channel Schematization
-______________________
-
-.. dropdown:: Expand
+.. dropdown:: Channel Schematization
 
    .. _ch-001:
 
@@ -597,11 +563,7 @@ ______________________
 
    .. image:: ../../img/User-Cross-Sections-Widget/user108.png
 
-
-Channel Interpolation
-_____________________
-
-.. dropdown:: Expand
+.. dropdown:: Channel Interpolation
 
    .. _ch-004:
 
@@ -656,11 +618,7 @@ _____________________
 
    .. image:: ../../img/User-Cross-Sections-Widget/user105.png
 
-
-Cross-Section Geometry Data
-___________________________
-
-.. dropdown:: Expand
+.. dropdown:: Cross-Section Geometry Data
 
    .. _ch-009:
 
