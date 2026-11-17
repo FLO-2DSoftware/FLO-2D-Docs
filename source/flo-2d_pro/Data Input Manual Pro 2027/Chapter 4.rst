@@ -4894,7 +4894,7 @@ Floodplain Area Width Reduction Data
     <pre>
     S 0.
     T 540
-    T 2502]
+    T 2502
     T 3818
     T 3861
     T 4435
