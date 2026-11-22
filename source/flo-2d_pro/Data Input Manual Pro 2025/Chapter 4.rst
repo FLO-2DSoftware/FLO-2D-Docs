@@ -3386,10 +3386,10 @@ Channel Data
 
        The cross-section data is interpolated and assigned in the PROFILES program.
 
-   * - QBASEFLOW(K)
+   * - QBASEFLOW
      - **r**
      - **0.0 - ∞**
-     - Baseflow of a channel to establish a flow condition for floodwave arrival time.
+     - Baseflow of any channel segment to establish a flow condition for floodwave arrival time.
 
    * - ROUGHADJ
      - **r**
